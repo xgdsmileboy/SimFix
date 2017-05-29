@@ -9,7 +9,7 @@ package cofix.common.astnode;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 
-public abstract class Literal extends Identifier{
+public abstract class Literal extends Expr{
 	
 	public abstract Object getValue();
 	

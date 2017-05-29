@@ -4,41 +4,42 @@
  * strictly prohibited Proprietary and Confidential.
  * Written by Jiajun Jiang<jiajun.jiang@pku.edu.cn>.
  */
-
 package cofix.common.astnode;
 
 import org.eclipse.jdt.core.dom.AST;
-import org.eclipse.jdt.core.dom.StringLiteral;
+import org.eclipse.jdt.core.dom.NumberLiteral;
 
-public class StrLiteral extends Literal {
-
-	private String _value = null;
+/**
+ * @author Jiajun
+ *
+ */
+public class LongLiteral extends Literal {
 	
-	public StrLiteral(String value) {
+	private Long _value = 0l;
+	
+	public LongLiteral(long value) {
 		_value = value;
 	}
 	
 	@Override
-	public String getValue() {
+	public Long getValue() {
 		return _value;
-	}
-
-	@Override
-	public Class getType() {
-		return String.class;
 	}
 	
 	@Override
-	public StringLiteral genAST() {
+	public Class getType() {
+		return long.class;
+	}
+	
+	@Override
+	public NumberLiteral genAST() {
 		AST ast = AST.newAST(AST.JLS8);
-		StringLiteral stringLiteral = ast.newStringLiteral();
-		stringLiteral.setLiteralValue(_value);
-		return stringLiteral;
+		return ast.newNumberLiteral(String.valueOf(_value));
 	}
 	
 	@Override
 	public int hashCode() {
-		return _value.hashCode();
+		return Long.valueOf(_value).hashCode();
 	}
 	
 	@Override
@@ -46,16 +47,15 @@ public class StrLiteral extends Literal {
 		if(obj == null){
 			return false;
 		}
-		if(! (obj instanceof StrLiteral)){
+		if(!(obj instanceof LongLiteral)){
 			return false;
 		}
-		StrLiteral other = (StrLiteral) obj;
-		return this._value.equals(other.getValue());
+		LongLiteral other = (LongLiteral)obj;
+		return this._value == other.getValue();
 	}
 	
 	@Override
 	public String toString() {
-		return _value;
+		return String.valueOf(_value);
 	}
-
 }

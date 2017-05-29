@@ -13,12 +13,17 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
+import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ASTVisitor;
+import org.eclipse.jdt.core.dom.Annotation;
 import org.eclipse.jdt.core.dom.ArrayAccess;
 import org.eclipse.jdt.core.dom.ArrayCreation;
 import org.eclipse.jdt.core.dom.ArrayInitializer;
+import org.eclipse.jdt.core.dom.ArrayType;
 import org.eclipse.jdt.core.dom.AssertStatement;
 import org.eclipse.jdt.core.dom.Assignment;
 import org.eclipse.jdt.core.dom.Block;
@@ -33,11 +38,14 @@ import org.eclipse.jdt.core.dom.ConstructorInvocation;
 import org.eclipse.jdt.core.dom.ContinueStatement;
 import org.eclipse.jdt.core.dom.CreationReference;
 import org.eclipse.jdt.core.dom.DoStatement;
+import org.eclipse.jdt.core.dom.EmptyStatement;
 import org.eclipse.jdt.core.dom.EnhancedForStatement;
+import org.eclipse.jdt.core.dom.Expression;
 import org.eclipse.jdt.core.dom.ExpressionMethodReference;
 import org.eclipse.jdt.core.dom.ExpressionStatement;
 import org.eclipse.jdt.core.dom.FieldAccess;
 import org.eclipse.jdt.core.dom.ForStatement;
+import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IfStatement;
 import org.eclipse.jdt.core.dom.InfixExpression;
 import org.eclipse.jdt.core.dom.InstanceofExpression;
@@ -52,7 +60,11 @@ import org.eclipse.jdt.core.dom.NumberLiteral;
 import org.eclipse.jdt.core.dom.ParenthesizedExpression;
 import org.eclipse.jdt.core.dom.PostfixExpression;
 import org.eclipse.jdt.core.dom.PrefixExpression;
+import org.eclipse.jdt.core.dom.QualifiedName;
 import org.eclipse.jdt.core.dom.ReturnStatement;
+import org.eclipse.jdt.core.dom.SimpleName;
+import org.eclipse.jdt.core.dom.SingleVariableDeclaration;
+import org.eclipse.jdt.core.dom.Statement;
 import org.eclipse.jdt.core.dom.StringLiteral;
 import org.eclipse.jdt.core.dom.SuperConstructorInvocation;
 import org.eclipse.jdt.core.dom.SuperFieldAccess;
@@ -70,43 +82,45 @@ import org.eclipse.jdt.core.dom.TypeDeclarationStatement;
 import org.eclipse.jdt.core.dom.TypeLiteral;
 import org.eclipse.jdt.core.dom.TypeMethodReference;
 import org.eclipse.jdt.core.dom.VariableDeclarationExpression;
+import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
 import org.eclipse.jdt.core.dom.VariableDeclarationStatement;
 import org.eclipse.jdt.core.dom.WhileStatement;
 
+import cofix.common.parser.ProjectInfo;
 import cofix.common.util.Pair;
 
 public class CodeBlock {
 	
 	private CompilationUnit _cunit = null;
-	private List<ASTNode> _nodes = null;
+	private List<Statement> _nodes = null;
 	// <name, <type, count>>
-	private Map<String, Pair<Type, Integer>> _variables = null;
+	private Map<Variable, Integer> _variables = null;
 	// <literal, count>
 	private Map<Literal, Integer> _constants = null;
 	// <if, else, for>
 	private List<Structure> _structures = null;
 	// {type.name(p0,p1)}
 	private Set<MethodCall> _methodCalls = null;
-	// <+, 4>
-	private Map<Operator, Integer> _operators = null;
+	
+	private List<Operator> _operators = null;
 	
 	
-	public CodeBlock(CompilationUnit cunit, List<ASTNode> nodes) {
+	public CodeBlock(CompilationUnit cunit, List<Statement> nodes) {
 		_cunit = cunit;
 		_nodes = nodes;
 	}
 	
-	public List<ASTNode> getNodes(){
+	public List<Statement> getNodes(){
 		return _nodes;
 	}
 	
 	public void accept(ASTVisitor visitor){
-		for(ASTNode node : _nodes){
+		for(Statement node : _nodes){
 			node.accept(visitor);
 		}
 	}
 	
-	public Map<String, Pair<Type, Integer>> getVariables(){
+	public Map<Variable, Integer> getVariables(){
 		if(_variables == null){
 			parseNode();
 		}
@@ -134,7 +148,7 @@ public class CodeBlock {
 		return _methodCalls;
 	}
 	
-	public Map<Operator, Integer> getOperators(){
+	public List<Operator> getOperators(){
 		if(_operators == null){
 			parseNode();
 		}
@@ -146,235 +160,710 @@ public class CodeBlock {
 		_constants = new HashMap<>();
 		_structures = new ArrayList<>();
 		_methodCalls = new HashSet<>();
-		_operators = new HashMap<>();
-		ParseVisitor parseVisitor = new ParseVisitor();
-		for(ASTNode node : _nodes){
-			node.accept(parseVisitor);
+		_operators = new ArrayList<>();
+		
+		for(Statement node : _nodes){
+			process(node);
 		}
 	}
 	
-	class ParseVisitor extends ASTVisitor{
-		
-		public boolean visit(AssertStatement node) {
-			return true;
+	/************************** visit start : Statement ***********************/
+	private Expr visit(AssertStatement node) {
+		return null;
+	}
+	
+	private Expr visit(BreakStatement node) {
+		_structures.add(Structure.BREAK);
+		return null;
+	}
+	
+	private Expr visit(Block node) {
+		for(Object object : node.statements()){
+			process((ASTNode) object);
 		}
+		return null;
+	}
+	
+	private Expr visit(ConstructorInvocation node) {
 		
-		public boolean visit(BreakStatement node) {
-			_structures.add(Structure.BREAK);
-			return true;
-		}
-		
-		public boolean visit(Block node) {
-			return true;
-		}
-		
-		public boolean visit(ConstructorInvocation node) {
-			ASTNode parent = node.getParent();
-			String methodName = null;
-			String className = null;
-			while(parent != null){
-				if(parent instanceof MethodDeclaration){
-					methodName = ((MethodDeclaration)parent).getName().getFullyQualifiedName();
-				} else if(parent instanceof TypeDeclaration){
-					className = ((TypeDeclaration)parent).getName().getFullyQualifiedName();
-				}
-				parent = parent.getParent();
+		Pair<String, String> decls = getTypeDecAndMethodDec(node);
+		String className = decls.first();
+		String methodName = decls.second();
+		Expr expr = null;
+		if(methodName != null && className != null){
+			List<Expr> params = new ArrayList<>();
+			for(Object object : node.arguments()){
+				params.add(process((ASTNode)object));
 			}
-			
-			return true;
+			Type type = ProjectInfo.getVariableType(className, methodName, "THIS");
+			expr = new MethodCall(type, "THIS", params);
+			_methodCalls.add((MethodCall) expr);
 		}
 		
-		public boolean visit(ContinueStatement node) {
-			return true;
+		return expr;
+	}
+	
+	private Expr visit(ContinueStatement node) {
+		_structures.add(Structure.CONTINUE);
+		return null;
+	}
+	
+	private Expr visit(DoStatement node) {
+		_structures.add(Structure.WHILE);
+		process(node.getExpression());
+		process(node.getBody());
+		return null;
+	}
+	
+	private Expr visit(EmptyStatement node) {
+		return null;
+	}
+	
+	private Expr visit(EnhancedForStatement node) {
+		_structures.add(Structure.FOR);
+		process(node.getParameter());
+		process(node.getExpression());
+		process(node.getBody());
+		return null;
+	}
+	
+	private Expr visit(ExpressionStatement node) {
+		return process(node.getExpression());
+	}
+	
+	private Expr visit(ForStatement node) {
+		_structures.add(Structure.FOR);
+		for(Object object : node.initializers()){
+			process((ASTNode)object);
+		}
+		process(node.getExpression());
+		for(Object object : node.updaters()){
+			process((ASTNode)object);
+		}
+		process(node.getBody());
+		return null;
+	}
+	
+	private Expr visit(IfStatement node) {
+		_structures.add(Structure.IF);
+		process(node.getExpression());
+		if(node.getThenStatement() != null){
+			process(node.getThenStatement());
+		}
+		if(node.getElseStatement() != null){
+			_structures.add(Structure.ELSE);
+			process(node.getElseStatement());
+		}
+		return null;
+	}
+	
+	private Expr visit(LabeledStatement node) {
+		return null;
+	}
+	
+	private Expr visit(ReturnStatement node) {
+		_structures.add(Structure.RETURN);
+		process(node.getExpression());
+		return null;
+	}
+	
+	private Expr visit(SuperConstructorInvocation node) {
+		
+		Pair<String, String> decls = getTypeDecAndMethodDec(node);
+		String className = decls.first();
+		String methodName = decls.second();
+		MethodCall expr = null;
+		if(methodName != null && className != null){
+			List<Expr> params = new ArrayList<>();
+			for(Object object : node.arguments()){
+				params.add(process((ASTNode) object));
+			}
+			Type type = ProjectInfo.getVariableType(className, methodName, "SUPER");
+			expr = new MethodCall(type, "SUPER", params);
+			_methodCalls.add(expr);
 		}
 		
-		public boolean visit(DoStatement node) {
-			return true;
+		return expr;
+	}
+	
+	private Expr visit(SwitchCase node) {
+		return null;
+	}
+	
+	private Expr visit(SwitchStatement node) {
+		Expression expression = node.getExpression();
+		ITypeBinding typeBinding = expression.resolveTypeBinding();
+		boolean isPrimitive = false;
+		Type type = null;
+		if(typeBinding != null){
+			AST ast = AST.newAST(AST.JLS8);
+			isPrimitive = typeBinding.isPrimitive();
+			if(!isPrimitive){
+				// TODO : 
+				String typeStr = typeBinding.getName();
+				Pattern pattern = Pattern.compile("[a-zA-Z_0-9\\.]+");
+				Matcher matcher = pattern.matcher(typeStr);
+				if(matcher.matches()){
+					type = ast.newSimpleType(ast.newName(typeBinding.getName()));
+				} else {
+					type = ast.newSimpleType(ast.newSimpleName("String"));
+				}
+			}
+		} else {
+			if(expression instanceof NumberLiteral){
+				isPrimitive = true;
+			} else {
+				Pair<String, String> decls = getTypeDecAndMethodDec(node);
+				String className = decls.first();
+				String methodName = decls.second();
+				if(className != null && methodName != null){
+					type = ProjectInfo.getVariableType(className, methodName, expression.toString());
+					isPrimitive = type.isPrimitiveType();
+				}
+			}
 		}
 		
-		public boolean visit(EnhancedForStatement node) {
-			return true;
+		if(isPrimitive){
+			for(Object object : node.statements()){
+				if(object instanceof SwitchCase){
+					_structures.add(Structure.IF);
+					Operator operator = new Operator(Operator.EQ);
+					operator.setLeftOprand(process(expression));
+					operator.setRightOperand(process(((SwitchCase)object).getExpression()));
+					_operators.add(operator);
+				} else {
+					process((ASTNode)object);
+				}
+			}
+		} else {
+			for(Object object : node.statements()){
+				if(object instanceof SwitchCase){
+					_structures.add(Structure.IF);
+					Expr expr = process(((SwitchCase)object).getExpression());
+					List<Expr> params = new ArrayList<>();
+					params.add(expr);
+					MethodCall methodCall = new MethodCall(type, "equals", params);
+					_methodCalls.add(methodCall);
+				} else {
+					process((ASTNode)object);
+				}
+			}
 		}
 		
-		public boolean visit(ExpressionStatement node) {
-			return true;
+		return null;
+	}
+	
+	private Expr visit(SynchronizedStatement node) {
+		return null;
+	}
+	
+	private Expr visit(ThrowStatement node) {
+		_structures.add(Structure.THRWO);
+		process((ASTNode)node.getExpression());
+		return null;
+	}
+	
+	private Expr visit(TryStatement node) {
+		// TODO : catch and finally block
+		process((ASTNode)node.getBody());
+		return null;
+	}
+	
+	private Expr visit(TypeDeclarationStatement node){
+		return null;
+	}
+	
+	private Expr visit(VariableDeclarationStatement node){
+		Type type = node.getType();
+		for(Object object : node.fragments()){
+			VariableDeclarationFragment vdf = (VariableDeclarationFragment) object;
+			String varName = vdf.getName().getFullyQualifiedName();
+			Variable variable = new Variable(type, varName);
+			if(vdf.getInitializer() != null){
+				Operator operator = new Operator(Operator.ASSIGN);
+				operator.setLeftOprand(variable);
+				operator.setRightOperand(process(vdf.getInitializer()));
+				_operators.add(operator);
+			}
+		}
+		return null;
+	}
+	
+	private Expr visit(WhileStatement node) {
+		_structures.add(Structure.WHILE);
+		process(node.getExpression());
+		process(node.getBody());
+		return null;
+	}
+	/*********************** Visit Expression *********************************/
+	private Expr visit(Annotation node){
+		return null;
+	}
+	
+	private Expr visit(ArrayAccess node) {
+		Operator operator = new Operator(Operator.ARRAC);
+		operator.setLeftOprand(process(node.getArray()));
+		operator.setRightOperand(process(node.getIndex()));
+		_operators.add(operator);
+		return operator;
+	}
+	
+	private Expr visit(ArrayCreation node) {
+		// TODO : should be taken into consideration ?
+		Type type = node.getType();
+		MethodCall methodCall = new MethodCall(type, type.toString());
+		_methodCalls.add(methodCall);
+		return methodCall;
+	}
+	
+	private Expr visit(ArrayInitializer node) {
+		// TODO : should be taken into consideration ?
+		return null;
+	}
+	
+	private Expr visit(Assignment node) {
+		Operator operator = new Operator(Operator.ASSIGN);
+		operator.setLeftOprand(process(node.getLeftHandSide()));
+		operator.setRightOperand(process(node.getRightHandSide()));
+		_operators.add(operator);
+		return operator;
+	}
+	
+	private Expr visit(BooleanLiteral node) {
+		BoolLiteral literal = new BoolLiteral(node.booleanValue());
+		Integer count = _constants.get(literal);
+		if(count == null){
+			count = 0;
+		}
+		_constants.put(literal, count + 1);
+		return literal;
+	}
+	
+	private Expr visit(CastExpression node) {
+		return process(node.getExpression());
+	}
+	
+	private Expr visit(CharacterLiteral node) {
+		CharLiteral literal = new CharLiteral(node.charValue());
+		Integer count = _constants.get(literal);
+		if(count == null){
+			count = 0;
+		}
+		_constants.put(literal, count + 1);
+		return literal;
+	}
+	
+	private Expr visit(ClassInstanceCreation node) {
+		Pair<String, String> clazzAndMethodName = getTypeDecAndMethodDec(node);
+		String className = clazzAndMethodName.first();
+		String methodName = clazzAndMethodName.second();
+		MethodCall expr = null;
+		if(className != null && methodName != null){
+			List<Expr> params = new ArrayList<>();
+			for(Object object : node.arguments()){
+				params.add(process((ASTNode) object));
+			}
+			expr = new MethodCall(null, node.getType().toString(), params);
+			_methodCalls.add(expr);
+		}
+		return expr;
+	}
+	
+	private Expr visit(ConditionalExpression node) {
+		_structures.add(Structure.IF);
+		_structures.add(Structure.ELSE);
+		process(node.getExpression());
+		Expr expr = process(node.getThenExpression());
+		process(node.getElseExpression());
+		return expr;
+	}
+	
+	private Expr visit(CreationReference node) {
+		return null;
+	}
+	
+	private Expr visit(ExpressionMethodReference node) {
+		return null;
+	}
+	
+	private Expr visit(FieldAccess node) {
+		Operator operator = new Operator(Operator.FIELDAC);
+		operator.setLeftOprand(process(node.getExpression()));
+		operator.setRightOperand(process(node.getName()));
+		_operators.add(operator);
+		return operator;
+	}
+	
+	private Expr visit(InfixExpression node) {
+		Operator operator = new Operator(node.getOperator().toString());
+		operator.setLeftOprand(process(node.getLeftOperand()));
+		operator.setRightOperand(process(node.getRightOperand()));
+		_operators.add(operator);
+		return operator;
+	}
+	
+	private Expr visit(InstanceofExpression node) {
+		Operator operator = new Operator(Operator.INSTANSOF);
+		operator.setLeftOprand(process(node.getLeftOperand()));
+		operator.setRightOperand(process(node.getRightOperand()));
+		_operators.add(operator);
+		return operator;
+	}
+	
+	private Expr visit(LambdaExpression node) {
+		return null;
+	}
+	
+	private Expr visit(MethodInvocation node) {
+		Pair<String, String> classAndMethodName = getTypeDecAndMethodDec(node);
+		String className = classAndMethodName.first();
+		String methodName = classAndMethodName.second();
+		Expression expression = node.getExpression();
+		Type type = null;
+		// if the method is a member function
+		if(expression == null || expression instanceof ThisExpression){
+			type = ProjectInfo.getVariableType(className, methodName, "THIS");
+		} else {
+			type = parseType(node.getExpression());
+		}
+		List<Expr> params = new ArrayList<>();
+		for(Object object : node.arguments()){
+			params.add(process((ASTNode) object));
 		}
 		
-		public boolean visit(ForStatement node) {
-			return true;
-		}
-		
-		public boolean visit(IfStatement node) {
-			return true;
-		}
-		
-		public boolean visit(LabeledStatement node) {
-			return true;
-		}
-		
-		public boolean visit(ReturnStatement node) {
-			return true;
-		}
-		
-		public boolean visit(SuperConstructorInvocation node) {
-			return true;
-		}
-		
-		public boolean visit(SwitchCase node) {
-			return true;
-		}
-		
-		public boolean visit(SwitchStatement node) {
-			return true;
-		}
-		
-		public boolean visit(SynchronizedStatement node) {
-			return true;
-		}
-		
-		public boolean visit(ThrowStatement node) {
-			return true;
-		}
-		
-		public boolean visit(TryStatement node) {
-			return true;
-		}
-		
-		public boolean visit(TypeDeclarationStatement node){
-			return true;
-		}
-		
-		public boolean visit(VariableDeclarationStatement node){
-			return true;
-		}
-		
-		public boolean visit(WhileStatement node) {
-			return true;
-		}
-		/*********************** Expression *********************************/
-		public boolean visit(ArrayAccess node) {
-			return true;
-		}
-		
-		public boolean visit(ArrayCreation node) {
-			return true;
-		}
-		
-		public boolean visit(ArrayInitializer node) {
-			return true;
-		}
-		
-		public boolean visit(Assignment node) {
-			return true;
-		}
-		
-		public boolean visit(BooleanLiteral node) {
-			return true;
-		}
-		
-		public boolean visit(CastExpression node) {
-			return true;
-		}
-		
-		public boolean visit(CharacterLiteral node) {
-			return true;
-		}
-		
-		public boolean visit(ClassInstanceCreation node) {
-			return true;
-		}
-		
-		public boolean visit(ConditionalExpression node) {
-			return true;
-		}
-		
-		public boolean visit(CreationReference node) {
-			return true;
-		}
-		
-		public boolean visit(ExpressionMethodReference node) {
-			return true;
-		}
-		
-		public boolean visit(FieldAccess node) {
-			return true;
-		}
-		
-		public boolean visit(InfixExpression node) {
-			return true;
-		}
-		
-		public boolean visit(InstanceofExpression node) {
-			return true;
-		}
-		
-		public boolean visit(LambdaExpression node) {
-			return true;
-		}
-		
-		public boolean visit(MethodInvocation node) {
-			return true;
-		}
+		MethodCall methodCall = new MethodCall(type, node.getName().getFullyQualifiedName(), params);
+		_methodCalls.add(methodCall);
+		return methodCall;
+	}
 
-		public boolean visit(MethodReference node) {
-			return true;
-		}
+	private Expr visit(MethodReference node) {
+		return null;
+	}
 
-		public boolean visit(Name node) {
-			return true;
+	private Expr visit(Name node) {
+		Expr expr = null;
+		Type type = parseType(node);
+		Variable variable = new Variable(type, node.getFullyQualifiedName());
+		Integer count = _variables.get(variable);
+		if(count == null){
+			count = 0;
 		}
+		_variables.put(variable, count + 1);
+		return variable;
+	}
 
-		public boolean visit(NullLiteral node) {
-			return true;
+	private Expr visit(NullLiteral node) {
+		NilLiteral literal = new NilLiteral();
+		Integer count = _constants.get(literal);
+		if(count == null){
+			count = 0;
 		}
+		_constants.put(literal, count + 1);
+		return literal;
+	}
 
-		public boolean visit(NumberLiteral node) {
-			return true;
-		}
-
-		public boolean visit(ParenthesizedExpression node) {
-			return true;
-		}
-
-		public boolean visit(PostfixExpression node) {
-			return true;
-		}
-
-		public boolean visit(PrefixExpression node) {
-			return true;
-		}
-
-		public boolean visit(StringLiteral node) {
-			return true;
-		}
-
-		public boolean visit(SuperFieldAccess node) {
-			return true;
-		}
-
-		public boolean visit(SuperMethodInvocation node) {
-			return true;
-		}
-
-		public boolean visit(SuperMethodReference node) {
-			return true;
+	private Expr visit(NumberLiteral node) {
+		String token = node.getToken();
+		Literal expr = null;
+		try{
+			Integer value = Integer.parseInt(token);
+			IntLiteral literal = new IntLiteral(value);
+			expr = literal;
+		} catch (Exception e){}
+		
+		if(expr == null){
+			try{
+				long value = Long.parseLong(token);
+				LongLiteral literal = new LongLiteral(value);
+				expr = literal;
+			} catch (Exception e){}
 		}
 		
-		public boolean visit(ThisExpression node){
-			return true;
+		if(expr == null){
+			try{
+				float value = Float.parseFloat(token);
+				FloatLiteral literal = new FloatLiteral(value);
+				expr = literal;
+			} catch (Exception e){}
 		}
+		
+		if(expr == null){
+			try{
+				double value = Double.parseDouble(token);
+				DoubleLiteral literal = new DoubleLiteral(value);
+				expr = literal;
+			} catch (Exception e){}
+		}
+		
+		if(expr != null){
+			Integer count = _constants.get(expr);
+			if(count == null){
+				count = 0;
+			}
+			_constants.put(expr, count + 1);
+		}
+		
+		return expr;
+	}
 
-		public boolean visit(TypeLiteral node) {
-			return true;
-		}
+	private Expr visit(ParenthesizedExpression node) {
+		ParenthesizedExpression pExpression = (ParenthesizedExpression) node;
+		return process(pExpression.getExpression());
+	}
 
-		public boolean visit(TypeMethodReference node) {
-			return true;
-		}
+	private Expr visit(PostfixExpression node) {
+		Operator operator = new Operator(node.getOperator().toString());
+		operator.setLeftOprand(process(node.getOperand()));
+		_operators.add(operator);
+		return operator;
+	}
 
-		public boolean visit(VariableDeclarationExpression node) {
-			return true;
+	private Expr visit(PrefixExpression node) {
+		Operator operator = new Operator(node.getOperator().toString());
+		operator.setRightOperand(process(node.getOperand()));
+		_operators.add(operator);
+		return operator;
+	}
+
+	private Expr visit(StringLiteral node) {
+		StrLiteral literal = new StrLiteral(node.getLiteralValue());
+		Integer count = _constants.get(literal);
+		if(count == null){
+			count = 0;
 		}
+		_constants.put(literal, count + 1);
+		return literal;
+	}
+
+	private Expr visit(SuperFieldAccess node) {
+		// TODO : No need?
+		return null;
+	}
+
+	private Expr visit(SuperMethodInvocation node) {
+		// TODO : No need?
+		return null;
+	}
+
+	private Expr visit(SuperMethodReference node) {
+		return null;
+	}
+	
+	private Expr visit(ThisExpression node){
+		return null;
+	}
+
+	private Expr visit(TypeLiteral node) {
+		return null;
+	}
+
+	private Expr visit(TypeMethodReference node) {
+		return null;
+	}
+
+	private Expr visit(VariableDeclarationExpression node) {
+		return null;
+	}
+	
+	private Expr process(ASTNode node){
+		if(node == null){
+			return null;
+		}
+		 if(node instanceof AssertStatement){
+			 return visit((AssertStatement)node);
+		 } else if(node instanceof Block){
+			 return visit((Block)node);
+		 } else if(node instanceof BreakStatement){
+			 return visit((BreakStatement)node);
+		 } else if(node instanceof ConstructorInvocation){
+			 return visit((ConstructorInvocation)node);
+		 } else if(node instanceof ContinueStatement){
+			 return visit((ContinueStatement)node);
+		 } else if(node instanceof DoStatement){
+			 return visit((DoStatement)node);
+		 } else if(node instanceof EmptyStatement){
+			 return visit((EmptyStatement)node);
+		 } else if(node instanceof EnhancedForStatement){
+			 return visit((EnhancedForStatement)node);
+		 } else if(node instanceof ExpressionStatement){
+			 return visit((ExpressionStatement)node);
+		 } else if(node instanceof ForStatement){
+			 return visit((ForStatement)node);
+		 } else if(node instanceof IfStatement){
+			 return visit((IfStatement)node);
+		 } else if(node instanceof LabeledStatement){
+			 return visit((LabeledStatement)node);
+		 } else if(node instanceof ReturnStatement){
+			 return visit((ReturnStatement)node);
+		 } else if(node instanceof SuperConstructorInvocation){
+			 return visit((SuperConstructorInvocation)node);
+		 } else if(node instanceof SwitchCase){
+			 return visit((SwitchCase)node);
+		 } else if(node instanceof SwitchStatement){
+			 return visit((SwitchStatement)node);
+		 } else if(node instanceof SynchronizedStatement){
+			 return visit((SynchronizedStatement)node);
+		 } else if(node instanceof ThrowStatement){
+			 return visit((ThrowStatement)node);
+		 } else if(node instanceof TryStatement){
+			 return visit((TryStatement)node);
+		 } else if(node instanceof TypeDeclarationStatement){
+			 return visit((TypeDeclarationStatement)node);
+		 } else if(node instanceof VariableDeclarationStatement){
+			 return visit((VariableDeclarationStatement)node);
+		 } else if(node instanceof WhileStatement){
+			 return visit((WhileStatement)node);
+		 } else if(node instanceof Annotation){
+			 return visit((Annotation)node);
+		 } else if(node instanceof ArrayAccess){
+			 return visit((ArrayAccess)node);
+		 } else if(node instanceof ArrayCreation){
+			 return visit((ArrayCreation)node);
+		 } else if(node instanceof ArrayInitializer){
+			 return visit((ArrayInitializer)node);
+		 } else if(node instanceof Assignment){
+			 return visit((Assignment)node);
+		 } else if(node instanceof BooleanLiteral){
+			 return visit((BooleanLiteral)node);
+		 } else if(node instanceof CastExpression){
+			 return visit((CastExpression)node);
+		 } else if(node instanceof CharacterLiteral){
+			 return visit((CharacterLiteral)node);
+		 } else if(node instanceof ClassInstanceCreation){
+			 return visit((ClassInstanceCreation)node);
+		 } else if(node instanceof ConditionalExpression){
+			 return visit((ConditionalExpression)node);
+		 } else if(node instanceof CreationReference){
+			 return visit((CreationReference)node);
+		 } else if(node instanceof ExpressionMethodReference){
+			 return visit((ExpressionMethodReference)node);
+		 } else if(node instanceof FieldAccess){
+			 return visit((FieldAccess)node);
+		 } else if(node instanceof InfixExpression){
+			 return visit((InfixExpression)node);
+		 } else if(node instanceof InstanceofExpression){
+			 return visit((InstanceofExpression)node);
+		 } else if(node instanceof LambdaExpression){
+			 return visit((LambdaExpression)node);
+		 } else if(node instanceof MethodInvocation){
+			 return visit((MethodInvocation)node);
+		 } else if(node instanceof MethodReference){
+			 return visit((MethodReference)node);
+		 } else if(node instanceof Name){
+			 return visit((Name)node);
+		 } else if(node instanceof NullLiteral){
+			 return visit((NullLiteral)node);
+		 } else if(node instanceof NumberLiteral){
+			 return visit((NumberLiteral)node);
+		 } else if(node instanceof ParenthesizedExpression){
+			 return visit((ParenthesizedExpression)node);
+		 } else if(node instanceof PostfixExpression){
+			 return visit((PostfixExpression)node);
+		 } else if(node instanceof PrefixExpression){
+			 return visit((PrefixExpression)node);
+		 } else if(node instanceof StringLiteral){
+			 return visit((StringLiteral)node);
+		 } else if(node instanceof SuperFieldAccess){
+			 return visit((SuperFieldAccess)node);
+		 } else if(node instanceof SuperMethodInvocation){
+			 return visit((SuperMethodInvocation)node);
+		 } else if(node instanceof SuperMethodReference){
+			 return visit((SuperMethodReference)node);
+		 } else if(node instanceof ThisExpression){
+			 return visit((ThisExpression)node);
+		 } else if(node instanceof TypeLiteral){
+			 return visit((TypeLiteral)node);
+		 } else if(node instanceof TypeMethodReference){
+			 return visit((TypeMethodReference)node);
+		 } else if(node instanceof VariableDeclarationExpression){
+			 return visit((VariableDeclarationExpression)node);
+		 } else if(node instanceof Type){
+			return new Variable((Type)node, node.toString()); 
+		 } else {
+			 return null;
+		 }
+	}
+	
+	private Pair<String, String> getTypeDecAndMethodDec(ASTNode node) {
+		ASTNode parent = node.getParent();
+		String methodName = null;
+		String className = null;
+		while(parent != null){
+			if(parent instanceof MethodDeclaration){
+				MethodDeclaration methodDeclaration = (MethodDeclaration) parent; 
+				methodName = methodDeclaration.getName().getFullyQualifiedName();
+				String params = "";
+				for(Object obj : methodDeclaration.parameters()){
+					SingleVariableDeclaration singleVariableDeclaration = (SingleVariableDeclaration) obj;
+					params += ","+singleVariableDeclaration.getType().toString();
+				}
+				methodName += params;
+			} else if(parent instanceof TypeDeclaration){
+				className = ((TypeDeclaration)parent).getName().getFullyQualifiedName();
+				break;
+			}
+			parent = parent.getParent();
+		}
+		return new Pair<String, String>(className, methodName);
+	}
+	
+	private Type parseType(Expression expression){
+		if(expression == null){
+			return null;
+		}
+		AST ast = AST.newAST(AST.JLS8);
+		Type type = ast.newWildcardType();
+		if(expression instanceof MethodInvocation){
+			MethodInvocation mInvocation = (MethodInvocation) expression;
+			Expression exp = mInvocation.getExpression();
+			Type expType = null;
+			if(exp == null){
+				Pair<String, String> classAndMethodName = getTypeDecAndMethodDec(expression);
+				expType = ProjectInfo.getVariableType(classAndMethodName.first(), classAndMethodName.second(), "THIS");
+			} else {
+				expType = parseType(exp);
+			}
+			if(expType !=  null){
+				type = ProjectInfo.getMethodRetType(expType.toString(), mInvocation.getName().getFullyQualifiedName());
+			}
+		} else if(expression instanceof SimpleName){
+			Pair<String, String> classAndMethodName = getTypeDecAndMethodDec(expression);
+			type = ProjectInfo.getVariableType(classAndMethodName.first(), classAndMethodName.second(), expression.toString());
+		} else if(expression instanceof QualifiedName){
+			QualifiedName qName = (QualifiedName) expression;
+			Type expType = parseType(qName.getQualifier());
+			if(expType != null){
+				type = ProjectInfo.getVariableType(expType.toString(), null, qName.getName().getFullyQualifiedName());
+			}
+		} else if(expression instanceof ArrayAccess){
+			ArrayAccess arrayAccess = (ArrayAccess) expression;
+			Type expType = parseType(arrayAccess.getArray());
+			if(expType != null){
+				if(expType instanceof ArrayType){
+					type = ((ArrayType) expType).getElementType();
+				}
+			}
+		} else if(expression instanceof ThisExpression){
+			Pair<String, String> classAndMethodName = getTypeDecAndMethodDec(expression);
+			type = ProjectInfo.getVariableType(classAndMethodName.first(), classAndMethodName.second(), "THIS");
+		}
+		
+		return type;
+	}
+	
+	
+	public static void main(String[] args) {
+//		String teString = "if(a > 4) a--;";
+//		Statement statement = (Statement) JavaFile.genASTFromSource(teString, ASTParser.K_STATEMENTS);
+//		List<Statement> nodes = new ArrayList<>();
+//		nodes.add(statement);
+//		CodeBlock codeBlock = new CodeBlock(null, nodes);
+//		codeBlock.getStructures();
+		
+		String string = "111111111111111111";
+		Long.parseLong(string);
+		Integer.parseInt(string);
+		
 		
 	}
 	

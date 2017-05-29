@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ASTVisitor;
 import org.eclipse.jdt.core.dom.ConditionalExpression;
@@ -24,9 +25,14 @@ import org.eclipse.jdt.core.dom.VariableDeclarationExpression;
 import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
 import org.eclipse.jdt.core.dom.VariableDeclarationStatement;
 
-public class TypeParseVisitor {
+public class TypeParseVisitor extends ASTVisitor{
 	public boolean visit(TypeDeclaration node) {
 		String clazz = node.getName().getFullyQualifiedName();
+		AST ast = AST.newAST(AST.JLS8);
+		Type type = ast.newSimpleType(ast.newSimpleName(clazz));
+		ProjectInfo.addFieldType(clazz, "THIS", type);
+		Type suType = node.getSuperclassType();
+		ProjectInfo.addFieldType(clazz, "SUPER", suType);
 		FieldDeclaration fields[] = node.getFields();
 		for (FieldDeclaration f : fields) {
 			for (Object o : f.fragments()) {
@@ -51,6 +57,7 @@ public class TypeParseVisitor {
 		}
 		
 		String className = ((TypeDeclaration)parent).getName().getFullyQualifiedName();
+		ProjectInfo.addMethodRetType(className, node.getName().getFullyQualifiedName(), node.getReturnType2());
 		
 		String methodName = node.getName().toString();
 		String params = "";

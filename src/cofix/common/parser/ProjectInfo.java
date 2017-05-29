@@ -1,10 +1,17 @@
 package cofix.common.parser;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+import org.eclipse.jdt.core.dom.ASTParser;
+import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.Type;
+
+import cofix.common.util.JavaFile;
+import cofix.common.util.Subject;
 
 public class ProjectInfo {
 
@@ -12,6 +19,26 @@ public class ProjectInfo {
 
 	private static Map<String, ClassInfo> _classMap = new HashMap<>();
 
+	private static void init(Subject subject){
+		String srcPath = subject.getHome() + subject.getSsrc();
+		List<String> files = JavaFile.ergodic(srcPath, new ArrayList<>());
+		TypeParseVisitor typeParseVisitor = new TypeParseVisitor();
+		for(String file : files){
+			CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+			unit.accept(typeParseVisitor);
+		}
+	}
+	
+	public static void addMethodRetType(String className, String methodName, Type retType){
+		if(_classMap.containsKey(className)){
+			_classMap.get(className).addMethodType(methodName, retType);
+		} else {
+			ClassInfo classInfo = new ClassInfo();
+			classInfo.addMethodType(methodName, retType);
+			_classMap.put(className, classInfo);
+		}
+	}
+	
 	public static void addFieldType(String className, String fieldName, Type type) {
 		if (_classMap.containsKey(className)) {
 			_classMap.get(className).addFieldType(fieldName, type);
@@ -33,6 +60,9 @@ public class ProjectInfo {
 	}
 
 	public static Type getVariableType(String className, String methodName, String varName) {
+		if(className == null){
+			return null;
+		}
 		ClassInfo classInfo = _classMap.get(className);
 		if (classInfo == null) {
 			System.out.println(__name__ + "#getVariableType Parse variable type failed !" + className + "::"
@@ -41,16 +71,35 @@ public class ProjectInfo {
 		}
 		return classInfo.getVariableType(methodName, varName);
 	}
+	
+	public static Type getMethodRetType(String className, String methodName){
+		if(className == null){
+			return null;
+		}
+		ClassInfo classInfo = _classMap.get(className);
+		if(classInfo == null){
+			System.out.println(__name__ + "#getMethodRetType Parse method return type failed !" + className + "::"
+					+ methodName);
+			return null;
+		}
+		return classInfo.getMethodRetType(methodName);
+	}
 
 }
 
 class ClassInfo {
 	private Map<String, Type> fieldTypeMap = new HashMap<>();
 	private Map<String, Map<String, Type>> localTypeMap = new HashMap<>();
+	private Map<String, Type> methodRetTypeMap = new HashMap<>();
 
 	public void resetAll() {
 		fieldTypeMap = new HashMap<>();
 		localTypeMap = new HashMap<>();
+	}
+	
+	public boolean addMethodType(String methodName, Type retType){
+		methodRetTypeMap.put(methodName, retType);
+		return true;
 	}
 
 	public boolean addFieldType(String fieldName, Type type) {
@@ -84,11 +133,18 @@ class ClassInfo {
 	}
 
 	public Type getVariableType(String methodName, String varName) {
-		if (localTypeMap.containsKey(methodName) && localTypeMap.get(methodName).get(varName) != null) {
+		if(varName == null){
+			return null;
+		}
+		if (methodName != null && localTypeMap.containsKey(methodName) && localTypeMap.get(methodName).get(varName) != null) {
 			return localTypeMap.get(methodName).get(varName);
 		} else {
 			return fieldTypeMap.get(varName);
 		}
+	}
+	
+	public Type getMethodRetType(String methodName){
+		return methodRetTypeMap.get(methodName);
 	}
 
 	public static Class<?> convert2Class(Type type) {

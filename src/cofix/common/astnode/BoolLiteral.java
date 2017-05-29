@@ -4,41 +4,43 @@
  * strictly prohibited Proprietary and Confidential.
  * Written by Jiajun Jiang<jiajun.jiang@pku.edu.cn>.
  */
-
 package cofix.common.astnode;
 
 import org.eclipse.jdt.core.dom.AST;
-import org.eclipse.jdt.core.dom.StringLiteral;
+import org.eclipse.jdt.core.dom.BooleanLiteral;
 
-public class StrLiteral extends Literal {
+/**
+ * @author Jiajun
+ *
+ */
+public class BoolLiteral extends Literal {
 
-	private String _value = null;
+	private boolean _value = false;
 	
-	public StrLiteral(String value) {
+	public BoolLiteral(boolean value) {
 		_value = value;
 	}
 	
 	@Override
-	public String getValue() {
+	public Boolean getValue() {
 		return _value;
 	}
 
 	@Override
 	public Class getType() {
-		return String.class;
+		return boolean.class;
 	}
-	
+
 	@Override
-	public StringLiteral genAST() {
+	public BooleanLiteral genAST() {
 		AST ast = AST.newAST(AST.JLS8);
-		StringLiteral stringLiteral = ast.newStringLiteral();
-		stringLiteral.setLiteralValue(_value);
-		return stringLiteral;
+		BooleanLiteral literal = ast.newBooleanLiteral(_value);
+		return literal;
 	}
 	
 	@Override
 	public int hashCode() {
-		return _value.hashCode();
+		return Boolean.valueOf(_value).hashCode();
 	}
 	
 	@Override
@@ -46,16 +48,18 @@ public class StrLiteral extends Literal {
 		if(obj == null){
 			return false;
 		}
-		if(! (obj instanceof StrLiteral)){
+		if(!(obj instanceof BoolLiteral)){
 			return false;
 		}
-		StrLiteral other = (StrLiteral) obj;
-		return this._value.equals(other.getValue());
+		BoolLiteral other = (BoolLiteral) obj;
+		return _value == other.getValue().booleanValue();
 	}
 	
 	@Override
 	public String toString() {
-		return _value;
+		return String.valueOf(_value);
 	}
+	
+	
 
 }

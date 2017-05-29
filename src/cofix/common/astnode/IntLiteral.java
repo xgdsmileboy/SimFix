@@ -8,7 +8,6 @@
 package cofix.common.astnode;
 
 import org.eclipse.jdt.core.dom.AST;
-import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.NumberLiteral;
 
 public class IntLiteral extends Literal{

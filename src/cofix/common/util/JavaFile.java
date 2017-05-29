@@ -39,6 +39,23 @@ public class JavaFile {
 
 	private final static String __name__ = "@JavaFile ";
 
+	public static CompilationUnit getASTFromSource(String icu, String[] classPath, String[] sourcePath){
+		ASTParser parser = ASTParser.newParser(AST.JLS8);
+		parser.setResolveBindings(true);
+		parser.setBindingsRecovery(true);
+		parser.setKind(ASTParser.K_COMPILATION_UNIT);
+		Map<?, ?> options = JavaCore.getOptions();
+		JavaCore.setComplianceOptions(JavaCore.VERSION_1_7, options);
+		parser.setCompilerOptions(options);
+ 
+//		String[] sources = { "C:\\Users\\pc\\workspace\\asttester\\src" }; 
+//		String[] classpath = {"C:\\Program Files\\Java\\jre1.8.0_25\\lib\\rt.jar"};
+ 
+		parser.setEnvironment(classPath, sourcePath, new String[] { "UTF-8"}, true);
+		parser.setSource(icu.toCharArray());
+		return (CompilationUnit) parser.createAST(null);
+	}
+	
 	/**
 	 * generate {@code CompilationUnit} from {@code ICompilationUnit}
 	 * 

@@ -9,7 +9,7 @@ package cofix.common.astnode;
 
 import org.eclipse.jdt.core.dom.Type;
 
-public class Variable extends Identifier {
+public class Variable extends Expr {
 	
 	private Type _type = null; 
 	private String _name = null;

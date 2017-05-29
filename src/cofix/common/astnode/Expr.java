@@ -7,6 +7,6 @@
 
 package cofix.common.astnode;
 
-public abstract class Identifier {
+public abstract class Expr {
 
 }

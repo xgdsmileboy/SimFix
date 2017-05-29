@@ -15,7 +15,7 @@ import java.util.Map;
  * @author Jiajun
  *
  */
-public class CodeLine {
+public class CodeLineId {
 	private static Map<Integer, String> identifiers = new HashMap<>();
 	private static Map<String, Integer> inverseIdentifier = new HashMap<>();
 	private static Integer counter = 0;

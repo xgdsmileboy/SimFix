@@ -12,17 +12,17 @@ import java.util.List;
 
 import org.eclipse.jdt.core.dom.Type;
 
-public class MethodCall {
+public class MethodCall extends Expr{
 	
 	private String _name = null;
 	private Type _exprType = null;
-	private List<Identifier> _parameters = null;
+	private List<Expr> _parameters = null;
 	
 	public MethodCall(Type exprType, String name) {
 		this(exprType, name, new ArrayList<>());
 	}
 	
-	public MethodCall(Type exprType, String name, List<Identifier> parameters){
+	public MethodCall(Type exprType, String name, List<Expr> parameters){
 		_exprType = exprType;
 		_name = name;
 		_parameters = parameters;
@@ -36,7 +36,7 @@ public class MethodCall {
 		return _name;
 	}
 	
-	public List<Identifier> getParameters(){
+	public List<Expr> getParameters(){
 		return _parameters;
 	}
 	
