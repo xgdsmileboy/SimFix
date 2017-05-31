@@ -42,7 +42,9 @@ public class VariableMetric extends Metric {
 			}
 			// TODO : if variable with same name and type does not exit, consider variables with same type ?
 		}
-		
+		if(count == 0){
+			return 1.0f;
+		}
 		return similarity / count;
 	}
 

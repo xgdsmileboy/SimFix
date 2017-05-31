@@ -41,7 +41,9 @@ public class LiteralMetric extends Metric {
 				similarity += entry.getValue() > tarCount ? tarCount : entry.getValue();
 			}
 		}
-		
+		if(count == 0){
+			return 1.0f;
+		}
 		return similarity / count;
 	}
 

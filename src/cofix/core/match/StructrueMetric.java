@@ -9,7 +9,6 @@ package cofix.core.match;
 import java.util.List;
 
 import cofix.common.astnode.CodeBlock;
-import cofix.common.astnode.Operator;
 import cofix.common.astnode.Structure;
 
 /**
@@ -29,7 +28,11 @@ public class StructrueMetric extends Metric {
 	
 	private float getPureSimilarity(CodeBlock src, CodeBlock tar){
 		float similarity = LCS(src.getStructures(), tar.getStructures());
-		return similarity / src.getStructures().size();
+		int count = src.getStructures().size();
+		if(count == 0){
+			return 1.0f;
+		}
+		return similarity / count;
 	}
 	
 	private int LCS(List<Structure> srcStruct, List<Structure> tarStruct){

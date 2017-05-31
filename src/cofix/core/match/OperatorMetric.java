@@ -28,7 +28,11 @@ public class OperatorMetric extends Metric {
 	
 	private float getPureSimilarity(CodeBlock src, CodeBlock tar){
 		float similarity = LCS(src.getOperators(), tar.getOperators());
-		return similarity / src.getOperators().size();
+		int count = src.getOperators().size();
+		if(count == 0){
+			return 1.0f;
+		}
+		return similarity / count;
 	}
 	
 	private int LCS(List<Operator> srcOp, List<Operator> tarOp){
