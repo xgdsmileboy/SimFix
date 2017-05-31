@@ -9,6 +9,7 @@ package cofix.common.code.search;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ASTVisitor;
 import org.eclipse.jdt.core.dom.Block;
 import org.eclipse.jdt.core.dom.CompilationUnit;
@@ -17,6 +18,7 @@ import org.eclipse.jdt.core.dom.EnhancedForStatement;
 import org.eclipse.jdt.core.dom.ForStatement;
 import org.eclipse.jdt.core.dom.IfStatement;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
+import org.eclipse.jdt.core.dom.NodeFinder;
 import org.eclipse.jdt.core.dom.Statement;
 import org.eclipse.jdt.core.dom.WhileStatement;
 
@@ -57,7 +59,19 @@ public class CodeSearch {
 					return false;
 				}
 				
-				process(statement);
+				int position = _unit.getPosition(_buggyLine, 0);
+				
+				NodeFinder finder = new NodeFinder(_unit, position, 20);
+				ASTNode prefind = finder.getCoveringNode();
+				while (prefind != null && !(prefind instanceof Statement)) {
+					prefind = prefind.getParent();
+				}
+//				System.out.println(node2);
+				if(prefind != null){
+					process((Statement)prefind);
+				} else {
+					process(statement);
+				}
 				
 				return false;
 			}
@@ -66,6 +80,8 @@ public class CodeSearch {
 		
 		public boolean process(Statement statement) {
 
+			// TODO : wait for completing ...
+			
 			int start = _unit.getLineNumber(statement.getStartPosition());
 			int end = _unit.getLineNumber(statement.getStartPosition() + statement.getLength());
 
@@ -80,6 +96,9 @@ public class CodeSearch {
 					for(Object object : block.statements()){
 						process((Statement)object);
 					}
+				} else if(end - start < _lineRange){
+					_nodes.add(statement);
+					return false;
 				}
 			}
 

@@ -15,10 +15,10 @@ import org.eclipse.jdt.core.dom.Type;
 
 public class MethodCall extends Expr{
 	
-	private Expr _expr = null;
-	private String _name = null;
-	private Type _retType = null;
-	private List<Expr> _parameters = null;
+	protected Expr _expr = null;
+	protected String _name = null;
+	protected Type _retType = null;
+	protected List<Expr> _parameters = null;
 	
 	public MethodCall(Type retType, Expr expr, String name) {
 		this(retType, expr, name, new ArrayList<>());
@@ -82,6 +82,7 @@ public class MethodCall extends Expr{
 		if(!getExprType().toString().equals(other.getExprType().toString())){
 			return false;
 		}
+		// return type should be same
 		if(!getType().toString().equals(other.getType().toString())){
 			return false;
 		}
@@ -94,15 +95,15 @@ public class MethodCall extends Expr{
 	public String toString() {
 		StringBuffer stringBuffer = new StringBuffer();
 		if(_expr != null){
-			Type type = _expr.getType();
+//			Type type = _expr.getType();
 			stringBuffer.append(_expr);
-			stringBuffer.append("(");
-			if(type == null){
-				stringBuffer.append("null");
-			} else {
-				stringBuffer.append(type);
-			}
-			stringBuffer.append(")");
+//			stringBuffer.append("(");
+//			if(type == null){
+//				stringBuffer.append("null");
+//			} else {
+//				stringBuffer.append(type);
+//			}
+//			stringBuffer.append(")");
 			stringBuffer.append(".");
 		} else {
 		}

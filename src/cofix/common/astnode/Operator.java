@@ -86,7 +86,9 @@ public class Operator extends Expr{
 		if(_leftOprand != null){
 			stringBuffer.append(_leftOprand);
 		}
+		stringBuffer.append(" ");
 		stringBuffer.append(_value);
+		stringBuffer.append(" ");
 		if(_rightOperand != null){
 			stringBuffer.append(_rightOperand);
 		}

@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.eclipse.core.internal.resources.Project;
 import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.Type;
@@ -168,7 +169,13 @@ class ClassInfo {
 		if (methodName != null && _localTypeMap.containsKey(methodName) && _localTypeMap.get(methodName).get(varName) != null) {
 			return _localTypeMap.get(methodName).get(varName);
 		} else {
-			return _fieldTypeMap.get(varName);
+			if(_fieldTypeMap.get(varName) != null){
+				return _fieldTypeMap.get(varName);
+			} else if(_superClass != null){
+				return ProjectInfo.getVariableType(_superClass, methodName, varName);
+			} else {
+				return null;
+			}
 		}
 	}
 	

@@ -6,7 +6,8 @@
  */
 package cofix.core.match;
 
-import java.util.Set;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import cofix.common.astnode.CodeBlock;
 import cofix.common.astnode.MethodCall;
@@ -28,14 +29,18 @@ public class MethodMetric extends Metric {
 	
 	private float getPureSimilarity(CodeBlock src, CodeBlock tar){
 		float similarity = 0.0f;
-		Set<MethodCall> sMethods = src.getMethodCalls();
-		Set<MethodCall> tMethods = tar.getMethodCalls();
-		for(MethodCall methodCall : sMethods){
-			if(tMethods.contains(methodCall)){
-				similarity ++;
+		Map<MethodCall, Integer> sMethods = src.getMethodCalls();
+		Map<MethodCall, Integer> tMethods = tar.getMethodCalls();
+		int count = 0;
+		for(Entry<MethodCall, Integer> entry : sMethods.entrySet()){
+			MethodCall methodCall = entry.getKey();
+			count += entry.getValue();
+			Integer tarCount = tMethods.get(methodCall);
+			if(tarCount != null){
+				similarity += entry.getValue() > tarCount ? tarCount : entry.getValue();
 			}
 		}
-		return similarity / sMethods.size();
+		return similarity / count;
 	}
 
 }

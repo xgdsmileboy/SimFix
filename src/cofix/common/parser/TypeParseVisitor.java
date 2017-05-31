@@ -37,12 +37,11 @@ public class TypeParseVisitor extends ASTVisitor {
 		Type type = ast.newSimpleType(ast.newSimpleName(clazz));
 		ProjectInfo.addFieldType(clazz, "THIS", type);
 		Type suType = node.getSuperclassType();
-		ProjectInfo.addFieldType(clazz, "SUPER", suType);
-		
-		Type superType = node.getSuperclassType();
-		if(superType != null){
-			ProjectInfo.addSuperClass(clazz, superType.toString());
+		if(suType != null){
+			ProjectInfo.addFieldType(clazz, "SUPER", suType);
+			ProjectInfo.addSuperClass(clazz, suType.toString());
 		}
+		
 		List<Object> sInterfaces = node.superInterfaceTypes();
 		if(sInterfaces != null){
 			for(Object object : sInterfaces){

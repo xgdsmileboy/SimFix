@@ -71,8 +71,6 @@ public class CodeBlockTest {
 		metrics.add(methodMetric);
 		CodeBlockMatcher codeBlockMatcher = new CodeBlockMatcher(metrics);
 		System.out.println(codeBlockMatcher.getSimilirity(codeBlock, codeBlock2));
-		
-		
 	}
 	
 	private void print(CodeBlock codeBlock){
@@ -95,8 +93,8 @@ public class CodeBlockTest {
 		}
 		
 		System.out.println("----------------- MethodCall -----------------");
-		for(MethodCall methodCall : codeBlock.getMethodCalls()){
-			System.out.println(methodCall);
+		for(Entry<MethodCall, Integer> entry : codeBlock.getMethodCalls().entrySet()){
+			System.out.println(entry.getKey() + " : " + entry.getValue());
 		}
 	}
 	

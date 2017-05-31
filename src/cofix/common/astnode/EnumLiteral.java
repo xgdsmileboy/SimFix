@@ -54,7 +54,10 @@ public class EnumLiteral extends Literal {
 	
 	@Override
 	public String toString() {
-		return String.valueOf(_value);
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append(_value);
+		stringBuffer.append("(Enum)");
+		return stringBuffer.toString();
 	}
 
 }
