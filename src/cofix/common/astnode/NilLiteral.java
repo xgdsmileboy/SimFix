@@ -9,6 +9,7 @@ package cofix.common.astnode;
 
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.NullLiteral;
+import org.eclipse.jdt.core.dom.Type;
 
 public class NilLiteral extends Literal {
 
@@ -18,8 +19,9 @@ public class NilLiteral extends Literal {
 	}
 
 	@Override
-	public Class getType() {
-		return null;
+	public Type getType() {
+		AST ast = AST.newAST(AST.JLS8);
+		return ast.newWildcardType();
 	}
 	
 	@Override

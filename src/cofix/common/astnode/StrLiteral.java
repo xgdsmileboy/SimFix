@@ -9,6 +9,7 @@ package cofix.common.astnode;
 
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.StringLiteral;
+import org.eclipse.jdt.core.dom.Type;
 
 public class StrLiteral extends Literal {
 
@@ -24,8 +25,9 @@ public class StrLiteral extends Literal {
 	}
 
 	@Override
-	public Class getType() {
-		return String.class;
+	public Type getType() {
+		AST ast = AST.newAST(AST.JLS8);
+		return ast.newSimpleType(ast.newSimpleName("String"));
 	}
 	
 	@Override

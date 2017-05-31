@@ -7,6 +7,10 @@
 
 package cofix.common.astnode;
 
+import org.eclipse.jdt.core.dom.Type;
+
 public abstract class Expr {
+	
+	public abstract Type getType();
 
 }

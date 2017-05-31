@@ -18,6 +18,7 @@ import java.util.regex.Pattern;
 
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
+import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.ASTVisitor;
 import org.eclipse.jdt.core.dom.Annotation;
 import org.eclipse.jdt.core.dom.ArrayAccess;
@@ -60,6 +61,7 @@ import org.eclipse.jdt.core.dom.NumberLiteral;
 import org.eclipse.jdt.core.dom.ParenthesizedExpression;
 import org.eclipse.jdt.core.dom.PostfixExpression;
 import org.eclipse.jdt.core.dom.PrefixExpression;
+import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.QualifiedName;
 import org.eclipse.jdt.core.dom.ReturnStatement;
 import org.eclipse.jdt.core.dom.SimpleName;
@@ -87,6 +89,8 @@ import org.eclipse.jdt.core.dom.VariableDeclarationStatement;
 import org.eclipse.jdt.core.dom.WhileStatement;
 
 import cofix.common.parser.ProjectInfo;
+import cofix.common.util.JavaFile;
+import cofix.common.util.LevelLogger;
 import cofix.common.util.Pair;
 
 public class CodeBlock {
@@ -196,7 +200,7 @@ public class CodeBlock {
 				params.add(process((ASTNode)object));
 			}
 			Type type = ProjectInfo.getVariableType(className, methodName, "THIS");
-			expr = new MethodCall(type, "THIS", params);
+			expr = new MethodCall(type, null, "THIS", params);
 			_methodCalls.add((MethodCall) expr);
 		}
 		
@@ -279,7 +283,7 @@ public class CodeBlock {
 				params.add(process((ASTNode) object));
 			}
 			Type type = ProjectInfo.getVariableType(className, methodName, "SUPER");
-			expr = new MethodCall(type, "SUPER", params);
+			expr = new MethodCall(type, null, "SUPER", params);
 			_methodCalls.add(expr);
 		}
 		
@@ -292,43 +296,14 @@ public class CodeBlock {
 	
 	private Expr visit(SwitchStatement node) {
 		Expression expression = node.getExpression();
-		ITypeBinding typeBinding = expression.resolveTypeBinding();
-		boolean isPrimitive = false;
-		Type type = null;
-		if(typeBinding != null){
-			AST ast = AST.newAST(AST.JLS8);
-			isPrimitive = typeBinding.isPrimitive();
-			if(!isPrimitive){
-				// TODO : 
-				String typeStr = typeBinding.getName();
-				Pattern pattern = Pattern.compile("[a-zA-Z_0-9\\.]+");
-				Matcher matcher = pattern.matcher(typeStr);
-				if(matcher.matches()){
-					type = ast.newSimpleType(ast.newName(typeBinding.getName()));
-				} else {
-					type = ast.newSimpleType(ast.newSimpleName("String"));
-				}
-			}
-		} else {
-			if(expression instanceof NumberLiteral){
-				isPrimitive = true;
-			} else {
-				Pair<String, String> decls = getTypeDecAndMethodDec(node);
-				String className = decls.first();
-				String methodName = decls.second();
-				if(className != null && methodName != null){
-					type = ProjectInfo.getVariableType(className, methodName, expression.toString());
-					isPrimitive = type.isPrimitiveType();
-				}
-			}
-		}
-		
-		if(isPrimitive){
+		Expr switchExp = process(expression);
+		// TODO : switchExp should not be null ?
+		if(switchExp.getType().isPrimitiveType()){
 			for(Object object : node.statements()){
 				if(object instanceof SwitchCase){
 					_structures.add(Structure.IF);
 					Operator operator = new Operator(Operator.EQ);
-					operator.setLeftOprand(process(expression));
+					operator.setLeftOprand(switchExp);
 					operator.setRightOperand(process(((SwitchCase)object).getExpression()));
 					_operators.add(operator);
 				} else {
@@ -342,7 +317,9 @@ public class CodeBlock {
 					Expr expr = process(((SwitchCase)object).getExpression());
 					List<Expr> params = new ArrayList<>();
 					params.add(expr);
-					MethodCall methodCall = new MethodCall(type, "equals", params);
+					AST ast = AST.newAST(AST.JLS8);
+					Type type = ast.newPrimitiveType(PrimitiveType.BOOLEAN);
+					MethodCall methodCall = new MethodCall(type, switchExp, "equals", params);
 					_methodCalls.add(methodCall);
 				} else {
 					process((ASTNode)object);
@@ -379,6 +356,11 @@ public class CodeBlock {
 			VariableDeclarationFragment vdf = (VariableDeclarationFragment) object;
 			String varName = vdf.getName().getFullyQualifiedName();
 			Variable variable = new Variable(type, varName);
+			Integer count = _variables.get(variable);
+			if(count == null){
+				count = 0;
+			}
+			_variables.put(variable, count + 1);
 			if(vdf.getInitializer() != null){
 				Operator operator = new Operator(Operator.ASSIGN);
 				operator.setLeftOprand(variable);
@@ -410,8 +392,8 @@ public class CodeBlock {
 	
 	private Expr visit(ArrayCreation node) {
 		// TODO : should be taken into consideration ?
-		Type type = node.getType();
-		MethodCall methodCall = new MethodCall(type, type.toString());
+		ArrayType type = node.getType();
+		MethodCall methodCall = new MethodCall(type, null, type.getElementType().toString());
 		_methodCalls.add(methodCall);
 		return methodCall;
 	}
@@ -463,7 +445,8 @@ public class CodeBlock {
 			for(Object object : node.arguments()){
 				params.add(process((ASTNode) object));
 			}
-			expr = new MethodCall(null, node.getType().toString(), params);
+			Expr ep = process(node.getExpression());
+			expr = new MethodCall(node.getType(), ep, node.getType().toString(), params);
 			_methodCalls.add(expr);
 		}
 		return expr;
@@ -515,23 +498,29 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(MethodInvocation node) {
-		Pair<String, String> classAndMethodName = getTypeDecAndMethodDec(node);
-		String className = classAndMethodName.first();
-		String methodName = classAndMethodName.second();
+//		Pair<String, String> classAndMethodName = getTypeDecAndMethodDec(node);
+//		String className = classAndMethodName.first();
+//		String methodName = classAndMethodName.second();
 		Expression expression = node.getExpression();
-		Type type = null;
-		// if the method is a member function
-		if(expression == null || expression instanceof ThisExpression){
-			type = ProjectInfo.getVariableType(className, methodName, "THIS");
+		Expr expr = process(expression);
+		String className = null;
+		String methodName = node.getName().getFullyQualifiedName();
+		if(expr != null){
+			if(expr.getType() != null){
+				className = expr.getType().toString();
+			} else {
+				LevelLogger.error("parse type error for method invocation !");
+			}
 		} else {
-			type = parseType(node.getExpression());
+			Pair<String, String> classAndMethodName = getTypeDecAndMethodDec(node);
+			className = classAndMethodName.first();
 		}
+		Type type = ProjectInfo.getMethodRetType(className, methodName);
 		List<Expr> params = new ArrayList<>();
 		for(Object object : node.arguments()){
 			params.add(process((ASTNode) object));
 		}
-		
-		MethodCall methodCall = new MethodCall(type, node.getName().getFullyQualifiedName(), params);
+		MethodCall methodCall = new MethodCall(type, expr, node.getName().getFullyQualifiedName(), params);
 		_methodCalls.add(methodCall);
 		return methodCall;
 	}
@@ -542,14 +531,25 @@ public class CodeBlock {
 
 	private Expr visit(Name node) {
 		Expr expr = null;
-		Type type = parseType(node);
-		Variable variable = new Variable(type, node.getFullyQualifiedName());
-		Integer count = _variables.get(variable);
-		if(count == null){
-			count = 0;
+		if(node instanceof SimpleName){
+			Pair<String, String> classAndMethodName = getTypeDecAndMethodDec(node);
+			Type type = ProjectInfo.getVariableType(classAndMethodName.first(), classAndMethodName.second(), node.toString());
+			Variable variable = new Variable(type, node.getFullyQualifiedName());
+			Integer count = _variables.get(variable);
+			if(count == null){
+				count = 0;
+			}
+			_variables.put(variable, count + 1);
+			expr = variable;
+		} else if(node instanceof QualifiedName){
+			Operator operator = new Operator(Operator.FIELDAC);
+			operator.setLeftOprand(process(((QualifiedName) node).getQualifier()));
+			operator.setRightOperand(process(((QualifiedName) node).getName()));
+			_operators.add(operator);
+			expr = operator;
 		}
-		_variables.put(variable, count + 1);
-		return variable;
+		
+		return expr;
 	}
 
 	private Expr visit(NullLiteral node) {
@@ -650,7 +650,15 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(ThisExpression node){
-		return null;
+		Pair<String, String> classAndMethodName = getTypeDecAndMethodDec(node);
+		Type type = ProjectInfo.getVariableType(classAndMethodName.first(), classAndMethodName.second(), "THIS");
+		Variable variable = new Variable(type, "THIS");
+		Integer count = _variables.get(variable);
+		if(count == null){
+			count = 0;
+		}
+		_variables.put(variable, count + 1);
+		return variable;
 	}
 
 	private Expr visit(TypeLiteral node) {
@@ -815,16 +823,20 @@ public class CodeBlock {
 		Type type = ast.newWildcardType();
 		if(expression instanceof MethodInvocation){
 			MethodInvocation mInvocation = (MethodInvocation) expression;
-			Expression exp = mInvocation.getExpression();
-			Type expType = null;
-			if(exp == null){
-				Pair<String, String> classAndMethodName = getTypeDecAndMethodDec(expression);
-				expType = ProjectInfo.getVariableType(classAndMethodName.first(), classAndMethodName.second(), "THIS");
-			} else {
-				expType = parseType(exp);
-			}
-			if(expType !=  null){
-				type = ProjectInfo.getMethodRetType(expType.toString(), mInvocation.getName().getFullyQualifiedName());
+//			Expression exp = mInvocation.getExpression();
+//			Type expType = null;
+//			if(exp == null){
+//				Pair<String, String> classAndMethodName = getTypeDecAndMethodDec(expression);
+//				expType = ProjectInfo.getVariableType(classAndMethodName.first(), classAndMethodName.second(), "THIS");
+//			} else {
+//				expType = parseType(exp);
+//			}
+//			if(expType !=  null){
+//				type = ProjectInfo.getMethodRetType(expType.toString(), mInvocation.getName().getFullyQualifiedName());
+//			}
+			MethodCall expr = (MethodCall)visit(mInvocation);
+			if(expr != null){
+				type = expr.getExprType();
 			}
 		} else if(expression instanceof SimpleName){
 			Pair<String, String> classAndMethodName = getTypeDecAndMethodDec(expression);
@@ -853,16 +865,12 @@ public class CodeBlock {
 	
 	
 	public static void main(String[] args) {
-//		String teString = "if(a > 4) a--;";
-//		Statement statement = (Statement) JavaFile.genASTFromSource(teString, ASTParser.K_STATEMENTS);
-//		List<Statement> nodes = new ArrayList<>();
-//		nodes.add(statement);
-//		CodeBlock codeBlock = new CodeBlock(null, nodes);
-//		codeBlock.getStructures();
-		
-		String string = "111111111111111111";
-		Long.parseLong(string);
-		Integer.parseInt(string);
+		String teString = "if(a > 4) a--;";
+		Statement statement = (Statement) JavaFile.genASTFromSource(teString, ASTParser.K_STATEMENTS);
+		List<Statement> nodes = new ArrayList<>();
+		nodes.add(statement);
+		CodeBlock codeBlock = new CodeBlock(null, nodes);
+		codeBlock.getStructures();
 		
 		
 	}

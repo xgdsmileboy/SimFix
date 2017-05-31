@@ -13,8 +13,6 @@ public abstract class Literal extends Expr{
 	
 	public abstract Object getValue();
 	
-	public abstract Class getType();
-	
 	public abstract ASTNode genAST();
 	
 }

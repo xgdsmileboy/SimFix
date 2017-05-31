@@ -3,8 +3,10 @@ package cofix.common.parser;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.CompilationUnit;
@@ -19,7 +21,7 @@ public class ProjectInfo {
 
 	private static Map<String, ClassInfo> _classMap = new HashMap<>();
 
-	private static void init(Subject subject){
+	public static void init(Subject subject){
 		String srcPath = subject.getHome() + subject.getSsrc();
 		List<String> files = JavaFile.ergodic(srcPath, new ArrayList<>());
 		TypeParseVisitor typeParseVisitor = new TypeParseVisitor();
@@ -35,6 +37,26 @@ public class ProjectInfo {
 		} else {
 			ClassInfo classInfo = new ClassInfo();
 			classInfo.addMethodType(methodName, retType);
+			_classMap.put(className, classInfo);
+		}
+	}
+	
+	public static void addSuperClass(String className, String superClass){
+		if(_classMap.containsKey(className)){
+			_classMap.get(className).addSuperClass(superClass);
+		} else {
+			ClassInfo classInfo = new ClassInfo();
+			classInfo.addSuperClass(superClass);
+			_classMap.put(className, classInfo);
+		}
+	}
+	
+	public static void addSuperInterface(String className, String superInterface){
+		if(_classMap.containsKey(className)){
+			_classMap.get(className).addSuperInterface(superInterface);
+		} else {
+			ClassInfo classInfo = new ClassInfo();
+			classInfo.addSuperInterface(superInterface);
 			_classMap.put(className, classInfo);
 		}
 	}
@@ -65,7 +87,7 @@ public class ProjectInfo {
 		}
 		ClassInfo classInfo = _classMap.get(className);
 		if (classInfo == null) {
-			System.out.println(__name__ + "#getVariableType Parse variable type failed !" + className + "::"
+			System.out.println(__name__ + "#getVariableType Parse variable type failed : " + className + "::"
 					+ methodName + "::" + varName);
 			return null;
 		}
@@ -78,7 +100,7 @@ public class ProjectInfo {
 		}
 		ClassInfo classInfo = _classMap.get(className);
 		if(classInfo == null){
-			System.out.println(__name__ + "#getMethodRetType Parse method return type failed !" + className + "::"
+			System.out.println(__name__ + "#getMethodRetType Parse method return type failed : " + className + "::"
 					+ methodName);
 			return null;
 		}
@@ -88,39 +110,46 @@ public class ProjectInfo {
 }
 
 class ClassInfo {
-	private Map<String, Type> fieldTypeMap = new HashMap<>();
-	private Map<String, Map<String, Type>> localTypeMap = new HashMap<>();
-	private Map<String, Type> methodRetTypeMap = new HashMap<>();
-
-	public void resetAll() {
-		fieldTypeMap = new HashMap<>();
-		localTypeMap = new HashMap<>();
+	private Map<String, Type> _fieldTypeMap = new HashMap<>();
+	private Map<String, Map<String, Type>> _localTypeMap = new HashMap<>();
+	private Map<String, Type> _methodRetTypeMap = new HashMap<>();
+	private String _superClass = null;
+	private Set<String> _superInterface = new HashSet<>();
+	
+	public boolean addSuperClass(String superClass){
+		_superClass = superClass;
+		return true;
+	}
+	
+	public boolean addSuperInterface(String superInterface){
+		_superInterface.add(superInterface);
+		return true;
 	}
 	
 	public boolean addMethodType(String methodName, Type retType){
-		methodRetTypeMap.put(methodName, retType);
+		_methodRetTypeMap.put(methodName, retType);
 		return true;
 	}
 
 	public boolean addFieldType(String fieldName, Type type) {
-		if (fieldTypeMap.containsKey(fieldName) && !fieldTypeMap.get(fieldName).equals(type)
-				&& !fieldTypeMap.get(fieldName).toString().equals(type.toString())) {
+		if (_fieldTypeMap.containsKey(fieldName) && !_fieldTypeMap.get(fieldName).equals(type)
+				&& !_fieldTypeMap.get(fieldName).toString().equals(type.toString())) {
 			System.out.println("Field type inconsistancy '" + fieldName + "' with types : "
-					+ fieldTypeMap.get(fieldName) + " and " + type);
+					+ _fieldTypeMap.get(fieldName) + " and " + type);
 			return false;
 		}
-		fieldTypeMap.put(fieldName, type);
+		_fieldTypeMap.put(fieldName, type);
 		return true;
 	}
 
 	public boolean addMethodVariableType(String methodName, String varName, Type type) {
-		if (!localTypeMap.containsKey(methodName)) {
+		if (!_localTypeMap.containsKey(methodName)) {
 			Map<String, Type> map = new HashMap<>();
 			map.put(varName, type);
-			localTypeMap.put(methodName, map);
+			_localTypeMap.put(methodName, map);
 			return true;
 		} else {
-			Map<String, Type> map = localTypeMap.get(methodName);
+			Map<String, Type> map = _localTypeMap.get(methodName);
 			if (map.containsKey(varName) && !map.get(varName).equals(type)
 					&& !map.get(varName).toString().equals(type.toString())) {
 				System.out.println("Variable type inconsistancy of '" + varName + "' in method '" + methodName
@@ -136,15 +165,29 @@ class ClassInfo {
 		if(varName == null){
 			return null;
 		}
-		if (methodName != null && localTypeMap.containsKey(methodName) && localTypeMap.get(methodName).get(varName) != null) {
-			return localTypeMap.get(methodName).get(varName);
+		if (methodName != null && _localTypeMap.containsKey(methodName) && _localTypeMap.get(methodName).get(varName) != null) {
+			return _localTypeMap.get(methodName).get(varName);
 		} else {
-			return fieldTypeMap.get(varName);
+			return _fieldTypeMap.get(varName);
 		}
 	}
 	
 	public Type getMethodRetType(String methodName){
-		return methodRetTypeMap.get(methodName);
+		Type type = _methodRetTypeMap.get(methodName);
+		if(type == null){
+			if(_superClass != null){
+				type = ProjectInfo.getMethodRetType(_superClass, methodName);
+			}
+			if(type == null){
+				for(String superInterface : _superInterface){
+					type = ProjectInfo.getMethodRetType(superInterface, methodName);
+					if(type != null){
+						return type;
+					}
+				}
+			}
+		}
+		return type;
 	}
 
 	public static Class<?> convert2Class(Type type) {

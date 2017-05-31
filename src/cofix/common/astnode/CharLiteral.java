@@ -8,6 +8,8 @@ package cofix.common.astnode;
 
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.CharacterLiteral;
+import org.eclipse.jdt.core.dom.PrimitiveType;
+import org.eclipse.jdt.core.dom.Type;
 
 /**
  * @author Jiajun
@@ -30,8 +32,9 @@ public class CharLiteral extends Literal {
 	}
 
 	@Override
-	public Class getType() {
-		return char.class;
+	public Type getType() {
+		AST ast = AST.newAST(AST.JLS8);
+		return ast.newPrimitiveType(PrimitiveType.CHAR);
 	}
 
 	@Override

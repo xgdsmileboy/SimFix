@@ -1,6 +1,7 @@
 package cofix.common.parser;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -25,7 +26,11 @@ import org.eclipse.jdt.core.dom.VariableDeclarationExpression;
 import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
 import org.eclipse.jdt.core.dom.VariableDeclarationStatement;
 
-public class TypeParseVisitor extends ASTVisitor{
+interface a{
+	
+}
+
+public class TypeParseVisitor extends ASTVisitor {
 	public boolean visit(TypeDeclaration node) {
 		String clazz = node.getName().getFullyQualifiedName();
 		AST ast = AST.newAST(AST.JLS8);
@@ -33,6 +38,23 @@ public class TypeParseVisitor extends ASTVisitor{
 		ProjectInfo.addFieldType(clazz, "THIS", type);
 		Type suType = node.getSuperclassType();
 		ProjectInfo.addFieldType(clazz, "SUPER", suType);
+		
+		Type superType = node.getSuperclassType();
+		if(superType != null){
+			ProjectInfo.addSuperClass(clazz, superType.toString());
+		}
+		List<Object> sInterfaces = node.superInterfaceTypes();
+		if(sInterfaces != null){
+			for(Object object : sInterfaces){
+				if(object instanceof Type){
+					Type interfaceType = (Type) object;
+					ProjectInfo.addSuperInterface(clazz, interfaceType.toString());
+				}
+			}
+		}
+		
+		
+		
 		FieldDeclaration fields[] = node.getFields();
 		for (FieldDeclaration f : fields) {
 			for (Object o : f.fragments()) {

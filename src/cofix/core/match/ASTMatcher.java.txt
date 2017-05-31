@@ -16,6 +16,7 @@ import org.eclipse.jdt.core.dom.Statement;
 
 import cofix.common.util.Pair;
 
+@Deprecated
 public class ASTMatcher {
 	
 	private ASTNode source = null; 

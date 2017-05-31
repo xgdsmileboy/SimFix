@@ -7,6 +7,7 @@
 
 package cofix.common.astnode;
 
+import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.Type;
 
 public class Variable extends Expr {
@@ -15,6 +16,10 @@ public class Variable extends Expr {
 	private String _name = null;
 	
 	public Variable(Type type, String name) {
+		if(type == null){
+			AST ast = AST.newAST(AST.JLS8);
+			type = ast.newWildcardType();
+		}
 		_type = type;
 		_name = name;
 	}
@@ -28,8 +33,33 @@ public class Variable extends Expr {
 	}
 	
 	@Override
+	public int hashCode() {
+		return _name.hashCode();
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj == null){
+			return false;
+		}
+		if(!(obj instanceof Variable)){
+			return false;
+		}
+		Variable other = (Variable) obj;
+		
+		if(!_name.equals(other.getName())){
+			return false;
+		}
+		if(_type == null){
+			return other.getType() == null;
+		} else {
+			return _type.toString().equals(other.getType().toString());
+		}
+	}
+	
+	@Override
 	public String toString() {
-		return _name;
+		return _name + "(" + _type + ")";
 	}
 	
 }

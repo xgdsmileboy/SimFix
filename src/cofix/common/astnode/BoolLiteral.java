@@ -8,6 +8,8 @@ package cofix.common.astnode;
 
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.BooleanLiteral;
+import org.eclipse.jdt.core.dom.PrimitiveType;
+import org.eclipse.jdt.core.dom.Type;
 
 /**
  * @author Jiajun
@@ -25,10 +27,11 @@ public class BoolLiteral extends Literal {
 	public Boolean getValue() {
 		return _value;
 	}
-
+	
 	@Override
-	public Class getType() {
-		return boolean.class;
+	public Type getType() {
+		AST ast = AST.newAST(AST.JLS8);
+		return ast.newPrimitiveType(PrimitiveType.BOOLEAN);
 	}
 
 	@Override
@@ -59,7 +62,6 @@ public class BoolLiteral extends Literal {
 	public String toString() {
 		return String.valueOf(_value);
 	}
-	
-	
+
 
 }

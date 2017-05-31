@@ -9,6 +9,7 @@ package cofix.common.astnode;
 
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.Name;
+import org.eclipse.jdt.core.dom.Type;
 
 public class EnumLiteral extends Literal {
 
@@ -24,8 +25,9 @@ public class EnumLiteral extends Literal {
 	}
 
 	@Override
-	public Class getType() {
-		return Enum.class;
+	public Type getType() {
+		AST ast = AST.newAST(AST.JLS8);
+		return ast.newSimpleType(ast.newSimpleName("Enum"));
 	}
 	
 	public Name genAST(){

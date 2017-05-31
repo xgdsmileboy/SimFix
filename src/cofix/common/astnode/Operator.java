@@ -1,5 +1,8 @@
 package cofix.common.astnode;
 
+import org.eclipse.jdt.core.dom.AST;
+import org.eclipse.jdt.core.dom.Type;
+
 public class Operator extends Expr{
 	// compare
 	public final static String EQ = "==";
@@ -79,7 +82,22 @@ public class Operator extends Expr{
 	
 	@Override
 	public String toString() {
-		return _value;
+		StringBuffer stringBuffer = new StringBuffer();
+		if(_leftOprand != null){
+			stringBuffer.append(_leftOprand);
+		}
+		stringBuffer.append(_value);
+		if(_rightOperand != null){
+			stringBuffer.append(_rightOperand);
+		}
+		return stringBuffer.toString();
+	}
+
+	@Override
+	public Type getType() {
+		// TODO : concrete type ?
+		AST ast = AST.newAST(AST.JLS8);
+		return ast.newSimpleType(ast.newSimpleName("OperationType"));
 	}
 	
 }
