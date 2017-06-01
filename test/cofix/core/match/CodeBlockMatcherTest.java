@@ -162,6 +162,13 @@ public class CodeBlockMatcherTest {
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+
+		String file_2 = file;
+		int buggyLine_2 = 848;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 	
 	@Test
@@ -174,6 +181,13 @@ public class CodeBlockMatcherTest {
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+
+		String file_2 = subject.getHome() + subject.getSsrc() + "/com/google/javascript/jscomp/ReplaceStrings.java";
+		int buggyLine_2 = 298;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 	
 	@Test
@@ -186,6 +200,13 @@ public class CodeBlockMatcherTest {
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+
+		String file_2 = file;
+		int buggyLine_2 = 1073;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 	
 	@Test
@@ -203,6 +224,7 @@ public class CodeBlockMatcherTest {
 	
 	@Test
 	public void test_lang_16(){
+		// TODO : compare with it self, similar to closure-77
 		Constant.PROJECT_HOME = "testfile";
 		Subject subject = new Subject("lang", 16, "/src/main/java", "/src/test/java", "", "");
 		ProjectInfo.init(subject);
@@ -219,22 +241,37 @@ public class CodeBlockMatcherTest {
 		Subject subject = new Subject("lang", 33, "/src/main/java", "/src/test/java", "", "");
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang3/ClassUtils.java";
-		int buggyLine = 907;
+		int buggyLine = 909;
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+
+		String file_2 = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang3/ArrayUtils.java";
+		int buggyLine_2 = 2728;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 
 	@Test
 	public void test_lang_35(){
+		// TODO : low similarity
 		Constant.PROJECT_HOME = "testfile";
 		Subject subject = new Subject("lang", 35, "/src/main/java", "/src/test/java", "", "");
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang3/ArrayUtils.java";
-		int buggyLine = 3295;
+		int buggyLine = 3292;
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+
+		String file_2 = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang3/Range.java";
+		int buggyLine_2 = 128;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 
 	@Test
@@ -243,10 +280,17 @@ public class CodeBlockMatcherTest {
 		Subject subject = new Subject("lang", 39, "/src/java", "", "", "");
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang3/StringUtils.java";
-		int buggyLine = 3676;
+		int buggyLine = 3675;
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+
+		String file_2 = file;
+		int buggyLine_2 = 3644;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 
 	@Test
@@ -259,6 +303,13 @@ public class CodeBlockMatcherTest {
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+		
+		String file_2 = file;
+		int buggyLine_2 = 436;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 
 	@Test
@@ -272,6 +323,13 @@ public class CodeBlockMatcherTest {
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+
+		String file_2 = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang/NumberUtils.java";
+		int buggyLine_2 = 193;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 	
 
@@ -285,6 +343,13 @@ public class CodeBlockMatcherTest {
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+
+		String file_2 = file;
+		int buggyLine_2 = 839;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 
 	@Test
@@ -297,6 +362,13 @@ public class CodeBlockMatcherTest {
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+
+		String file_2 = file;
+		int buggyLine_2 = 1167;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 
 	@Test
@@ -309,6 +381,13 @@ public class CodeBlockMatcherTest {
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+
+		String file_2 = file;
+		int buggyLine_2 = 465;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 
 	@Test
@@ -321,6 +400,13 @@ public class CodeBlockMatcherTest {
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+
+		String file_2 = file;
+		int buggyLine_2 = 384;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 
 	@Test
@@ -333,6 +419,14 @@ public class CodeBlockMatcherTest {
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+		
+
+		String file_2 = file;
+		int buggyLine_2 = 101;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 
 	@Test
@@ -345,6 +439,13 @@ public class CodeBlockMatcherTest {
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+
+		String file_2 = file;
+		int buggyLine_2 = 513;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 
 	@Test
@@ -357,6 +458,13 @@ public class CodeBlockMatcherTest {
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+		
+		String file_2 = file;
+		int buggyLine_2 = 397;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 
 	@Test
@@ -369,6 +477,13 @@ public class CodeBlockMatcherTest {
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+
+		String file_2 = file;
+		int buggyLine_2 = 456;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 
 	@Test
@@ -381,6 +496,13 @@ public class CodeBlockMatcherTest {
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+
+		String file_2 = file;
+		int buggyLine_2 = 3491;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 
 	@Test
@@ -393,6 +515,13 @@ public class CodeBlockMatcherTest {
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+
+		String file_2 = file;
+		int buggyLine_2 = 442;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 
 	@Test
@@ -405,6 +534,13 @@ public class CodeBlockMatcherTest {
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+
+		String file_2 = file;
+		int buggyLine_2 = 59;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 	
 	@Test
@@ -417,6 +553,13 @@ public class CodeBlockMatcherTest {
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+
+		String file_2 = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math/ode/nonstiff/AdamsMoultonIntegrator.java";
+		int buggyLine_2 = 291;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 
 	@Test
@@ -429,6 +572,13 @@ public class CodeBlockMatcherTest {
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+		
+		String file_2 = file;
+		int buggyLine_2 = 181;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 
 	@Test
@@ -441,6 +591,13 @@ public class CodeBlockMatcherTest {
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+		
+		String file_2 = file;
+		int buggyLine_2 = 342;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 
 	@Test
@@ -453,6 +610,13 @@ public class CodeBlockMatcherTest {
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+		
+		String file_2 = file;
+		int buggyLine_2 = 1734;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 
 	@Test
@@ -465,6 +629,13 @@ public class CodeBlockMatcherTest {
 		int lineRange = 10;
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
+		
+		String file_2 = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math/linear/RealMatrixImpl.java";
+		int buggyLine_2 = 802;
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		Utils.print(similar);
+		
+		Utils.showSimilarity(codeBlock, similar);
 	}
 	
 }

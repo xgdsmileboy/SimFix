@@ -38,6 +38,7 @@ public class Utils {
 	}
 	
 	public static void print(CodeBlock codeBlock){
+		System.out.println("====================================================================");
 		System.out.println("----------------- Constant -----------------");
 		for(Entry<Literal, Integer> entry : codeBlock.getConstants().entrySet()){
 			System.out.println(entry.getKey() + " : " + entry.getValue());
@@ -60,6 +61,7 @@ public class Utils {
 		for(Entry<MethodCall, Integer> entry : codeBlock.getMethodCalls().entrySet()){
 			System.out.println(entry.getKey() + " : " + entry.getValue());
 		}
+		System.out.println("====================================================================");
 	}
 	
 	public static void showSimilarity(CodeBlock source, CodeBlock similar){

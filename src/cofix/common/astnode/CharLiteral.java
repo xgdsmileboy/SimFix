@@ -64,7 +64,7 @@ public class CharLiteral extends Literal {
 	
 	@Override
 	public String toString() {
-		return String.valueOf(_value);
+		return "'" + _value + "'";
 	}
 
 }

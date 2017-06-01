@@ -668,6 +668,9 @@ public class CodeBlock {
 		}
 		
 		if(expr == null){
+			// should be hexadecimal number or octal number 
+			token = token.replace("X", "x");
+			token = token.replace("F", "f");
 			StrLiteral literal = new StrLiteral(token);
 			expr = literal;
 		}

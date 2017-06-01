@@ -20,6 +20,8 @@ import org.eclipse.jdt.core.dom.IfStatement;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
 import org.eclipse.jdt.core.dom.NodeFinder;
 import org.eclipse.jdt.core.dom.Statement;
+import org.eclipse.jdt.core.dom.SwitchCase;
+import org.eclipse.jdt.core.dom.SwitchStatement;
 import org.eclipse.jdt.core.dom.WhileStatement;
 
 import cofix.common.util.LevelLogger;
@@ -96,6 +98,31 @@ public class CodeSearch {
 					for(Object object : block.statements()){
 						process((Statement)object);
 					}
+				} else if(statement instanceof SwitchStatement){
+					SwitchStatement switchStmt = (SwitchStatement) statement;
+					for(int i = 0; i < switchStmt.statements().size(); i++){
+						Statement stmt = (Statement) switchStmt.statements().get(i);
+						int s = _unit.getLineNumber(stmt.getStartPosition());
+						int e = _unit.getLineNumber(stmt.getStartPosition() + stmt.getLength());
+						if(s <= _buggyLine && _buggyLine <= e){
+							_nodes.add(stmt);
+							if(stmt instanceof SwitchCase){
+								for(int j = i + 1 ; j < switchStmt.statements().size(); j++){
+									Statement SC = (Statement) switchStmt.statements().get(j);
+									if(SC instanceof SwitchCase){
+										return false;
+									} else {
+										_nodes.add(SC);
+									}
+								}
+							} else {
+								_nodes.add(stmt);
+								return false;
+							}
+						}
+					}
+					
+					
 				} else if(end - start < _lineRange){
 					_nodes.add(statement);
 					return false;
