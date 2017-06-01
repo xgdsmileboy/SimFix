@@ -7,10 +7,17 @@
 
 package cofix.common.astnode;
 
+import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
 public abstract class Expr {
 	
+	protected ASTNode _srcNode = null;
+	
 	public abstract Type getType();
+	
+	public ASTNode getOriginalASTnode(){
+		return _srcNode;
+	}
 
 }

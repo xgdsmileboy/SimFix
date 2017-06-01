@@ -7,6 +7,7 @@
 package cofix.common.astnode;
 
 import org.eclipse.jdt.core.dom.AST;
+import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.NumberLiteral;
 import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.Type;
@@ -19,7 +20,8 @@ public class LongLiteral extends Literal {
 	
 	private Long _value = 0l;
 	
-	public LongLiteral(long value) {
+	public LongLiteral(ASTNode node, long value) {
+		_srcNode = node;
 		_value = value;
 	}
 	

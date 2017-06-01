@@ -1,6 +1,7 @@
 package cofix.common.astnode;
 
 import org.eclipse.jdt.core.dom.AST;
+import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
 public class Operator extends Expr{
@@ -43,8 +44,9 @@ public class Operator extends Expr{
 	private String _value = null;
 	private Expr _leftOprand = null;
 	private Expr _rightOperand = null;
-	public Operator(String value){
+	public Operator(ASTNode node, String value){
 		_value = value;
+		_srcNode = node;
 	}
 	
 	public void setLeftOprand(Expr leftOprand){

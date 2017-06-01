@@ -7,6 +7,7 @@
 package cofix.common.astnode;
 
 import org.eclipse.jdt.core.dom.AST;
+import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.BooleanLiteral;
 import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.Type;
@@ -19,7 +20,8 @@ public class BoolLiteral extends Literal {
 
 	private boolean _value = false;
 	
-	public BoolLiteral(boolean value) {
+	public BoolLiteral(ASTNode node, boolean value) {
+		_srcNode = node;
 		_value = value;
 	}
 	

@@ -8,6 +8,7 @@
 package cofix.common.astnode;
 
 import org.eclipse.jdt.core.dom.AST;
+import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.StringLiteral;
 import org.eclipse.jdt.core.dom.Type;
 
@@ -15,7 +16,8 @@ public class StrLiteral extends Literal {
 
 	private String _value = null;
 	
-	public StrLiteral(String value) {
+	public StrLiteral(ASTNode node, String value) {
+		_srcNode = node;
 		_value = value;
 	}
 	

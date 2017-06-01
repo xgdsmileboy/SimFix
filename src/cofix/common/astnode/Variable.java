@@ -8,6 +8,7 @@
 package cofix.common.astnode;
 
 import org.eclipse.jdt.core.dom.AST;
+import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
 public class Variable extends Expr {
@@ -15,11 +16,12 @@ public class Variable extends Expr {
 	private Type _type = null; 
 	private String _name = null;
 	
-	public Variable(Type type, String name) {
+	public Variable(ASTNode node, Type type, String name) {
 		if(type == null){
 			AST ast = AST.newAST(AST.JLS8);
 			type = ast.newWildcardType();
 		}
+		_srcNode = node;
 		_type = type;
 		_name = name;
 	}
@@ -53,6 +55,9 @@ public class Variable extends Expr {
 		if(_type == null){
 			return other.getType() == null;
 		} else {
+			if(other.getType() == null){
+				return false;
+			}
 			return _type.toString().equals(other.getType().toString());
 		}
 	}

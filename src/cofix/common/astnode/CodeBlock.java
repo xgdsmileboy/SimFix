@@ -181,7 +181,7 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(BreakStatement node) {
-		_structures.add(Structure.BREAK);
+		_structures.add(new Structure(node, Structure.BREAK));
 		return null;
 	}
 	
@@ -204,7 +204,7 @@ public class CodeBlock {
 				params.add(process((ASTNode)object));
 			}
 			Type type = ProjectInfo.getVariableType(className, methodName, "THIS");
-			expr = new MethodCall(type, null, "THIS", params);
+			expr = new MethodCall(node, type, null, "THIS", params);
 			Integer count = _methodCalls.get(expr);
 			if(count == null){
 				count = 0;
@@ -216,12 +216,12 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(ContinueStatement node) {
-		_structures.add(Structure.CONTINUE);
+		_structures.add(new Structure(node, Structure.CONTINUE));
 		return null;
 	}
 	
 	private Expr visit(DoStatement node) {
-		_structures.add(Structure.WHILE);
+		_structures.add(new Structure(node, Structure.WHILE));
 		process(node.getExpression());
 		process(node.getBody());
 		return null;
@@ -232,7 +232,7 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(EnhancedForStatement node) {
-		_structures.add(Structure.FOR);
+		_structures.add(new Structure(node, Structure.FOR));
 		process(node.getParameter());
 		process(node.getExpression());
 		process(node.getBody());
@@ -244,7 +244,7 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(ForStatement node) {
-		_structures.add(Structure.FOR);
+		_structures.add(new Structure(node, Structure.FOR));
 		for(Object object : node.initializers()){
 			process((ASTNode)object);
 		}
@@ -257,13 +257,13 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(IfStatement node) {
-		_structures.add(Structure.IF);
+		_structures.add(new Structure(node, Structure.IF));
 		process(node.getExpression());
 		if(node.getThenStatement() != null){
 			process(node.getThenStatement());
 		}
 		if(node.getElseStatement() != null){
-			_structures.add(Structure.ELSE);
+			_structures.add(new Structure(node, Structure.ELSE));
 			process(node.getElseStatement());
 		}
 		return null;
@@ -274,7 +274,7 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(ReturnStatement node) {
-		_structures.add(Structure.RETURN);
+		_structures.add(new Structure(node, Structure.RETURN));
 		process(node.getExpression());
 		return null;
 	}
@@ -291,7 +291,7 @@ public class CodeBlock {
 				params.add(process((ASTNode) object));
 			}
 			Type type = ProjectInfo.getVariableType(className, methodName, "SUPER");
-			expr = new MethodCall(type, null, "SUPER", params);
+			expr = new MethodCall(node, type, null, "SUPER", params);
 			Integer count = _methodCalls.get(expr);
 			if(count == null){
 				count = 0;
@@ -313,8 +313,8 @@ public class CodeBlock {
 		if(switchExp.getType().isPrimitiveType()){
 			for(Object object : node.statements()){
 				if(object instanceof SwitchCase){
-					_structures.add(Structure.IF);
-					Operator operator = new Operator(Operator.EQ);
+					_structures.add(new Structure((ASTNode) object, Structure.IF));
+					Operator operator = new Operator((ASTNode) object, Operator.EQ);
 					operator.setLeftOprand(switchExp);
 					operator.setRightOperand(process(((SwitchCase)object).getExpression()));
 					_operators.add(operator);
@@ -325,13 +325,13 @@ public class CodeBlock {
 		} else {
 			for(Object object : node.statements()){
 				if(object instanceof SwitchCase){
-					_structures.add(Structure.IF);
+					_structures.add(new Structure((ASTNode) object, Structure.IF));
 					Expr expr = process(((SwitchCase)object).getExpression());
 					List<Expr> params = new ArrayList<>();
 					params.add(expr);
 					AST ast = AST.newAST(AST.JLS8);
 					Type type = ast.newPrimitiveType(PrimitiveType.BOOLEAN);
-					MethodCall methodCall = new MethodCall(type, switchExp, "equals", params);
+					MethodCall methodCall = new MethodCall((ASTNode) object, type, switchExp, "equals", params);
 					Integer count = _methodCalls.get(methodCall);
 					if(count == null){
 						count = 0;
@@ -351,7 +351,7 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(ThrowStatement node) {
-		_structures.add(Structure.THRWO);
+		_structures.add(new Structure(node, Structure.THRWO));
 		process((ASTNode)node.getExpression());
 		return null;
 	}
@@ -371,14 +371,14 @@ public class CodeBlock {
 		for(Object object : node.fragments()){
 			VariableDeclarationFragment vdf = (VariableDeclarationFragment) object;
 			String varName = vdf.getName().getFullyQualifiedName();
-			Variable variable = new Variable(type, varName);
+			Variable variable = new Variable(vdf, type, varName);
 			Integer count = _variables.get(variable);
 			if(count == null){
 				count = 0;
 			}
 			_variables.put(variable, count + 1);
 			if(vdf.getInitializer() != null){
-				Operator operator = new Operator(Operator.ASSIGN);
+				Operator operator = new Operator(vdf, Operator.ASSIGN);
 				operator.setLeftOprand(variable);
 				operator.setRightOperand(process(vdf.getInitializer()));
 				_operators.add(operator);
@@ -388,7 +388,7 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(WhileStatement node) {
-		_structures.add(Structure.WHILE);
+		_structures.add(new Structure(node, Structure.WHILE));
 		process(node.getExpression());
 		process(node.getBody());
 		return null;
@@ -399,7 +399,7 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(ArrayAccess node) {
-		Operator operator = new Operator(Operator.ARRAC);
+		Operator operator = new Operator(node, Operator.ARRAC);
 		operator.setLeftOprand(process(node.getArray()));
 		operator.setRightOperand(process(node.getIndex()));
 		_operators.add(operator);
@@ -408,7 +408,7 @@ public class CodeBlock {
 	
 	private Expr visit(ArrayCreation node) {
 		ArrayType type = node.getType();
-		NewArray newArray = new NewArray(type, null, type.getElementType().toString());
+		NewArray newArray = new NewArray(node, type, null, type.getElementType().toString());
 		
 		List<Expr> dimensions = new ArrayList<>();
 		for(Object object : node.dimensions()){
@@ -439,7 +439,7 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(Assignment node) {
-		Operator operator = new Operator(Operator.ASSIGN);
+		Operator operator = new Operator(node, Operator.ASSIGN);
 		operator.setLeftOprand(process(node.getLeftHandSide()));
 		operator.setRightOperand(process(node.getRightHandSide()));
 		_operators.add(operator);
@@ -447,7 +447,7 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(BooleanLiteral node) {
-		BoolLiteral literal = new BoolLiteral(node.booleanValue());
+		BoolLiteral literal = new BoolLiteral(node, node.booleanValue());
 		Integer count = _constants.get(literal);
 		if(count == null){
 			count = 0;
@@ -461,7 +461,7 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(CharacterLiteral node) {
-		CharLiteral literal = new CharLiteral(node.charValue());
+		CharLiteral literal = new CharLiteral(node, node.charValue());
 		Integer count = _constants.get(literal);
 		if(count == null){
 			count = 0;
@@ -481,7 +481,7 @@ public class CodeBlock {
 				params.add(process((ASTNode) object));
 			}
 			Expr ep = process(node.getExpression());
-			expr = new MethodCall(node.getType(), ep, node.getType().toString(), params);
+			expr = new MethodCall(node, node.getType(), ep, node.getType().toString(), params);
 			Integer count = _methodCalls.get(expr);
 			if(count == null){
 				count = 0;
@@ -492,8 +492,8 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(ConditionalExpression node) {
-		_structures.add(Structure.IF);
-		_structures.add(Structure.ELSE);
+		_structures.add(new Structure(node, Structure.IF));
+		_structures.add(new Structure(node, Structure.ELSE));
 		process(node.getExpression());
 		Expr expr = process(node.getThenExpression());
 		process(node.getElseExpression());
@@ -509,7 +509,7 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(FieldAccess node) {
-		Operator operator = new Operator(Operator.FIELDAC);
+		Operator operator = new Operator(node, Operator.FIELDAC);
 		operator.setLeftOprand(process(node.getExpression()));
 		operator.setRightOperand(process(node.getName()));
 		_operators.add(operator);
@@ -517,7 +517,7 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(InfixExpression node) {
-		Operator operator = new Operator(node.getOperator().toString());
+		Operator operator = new Operator(node, node.getOperator().toString());
 		operator.setLeftOprand(process(node.getLeftOperand()));
 		operator.setRightOperand(process(node.getRightOperand()));
 		_operators.add(operator);
@@ -525,7 +525,7 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(InstanceofExpression node) {
-		Operator operator = new Operator(Operator.INSTANSOF);
+		Operator operator = new Operator(node, Operator.INSTANSOF);
 		operator.setLeftOprand(process(node.getLeftOperand()));
 		operator.setRightOperand(process(node.getRightOperand()));
 		_operators.add(operator);
@@ -559,7 +559,7 @@ public class CodeBlock {
 		for(Object object : node.arguments()){
 			params.add(process((ASTNode) object));
 		}
-		MethodCall methodCall = new MethodCall(type, expr, node.getName().getFullyQualifiedName(), params);
+		MethodCall methodCall = new MethodCall(node, type, expr, node.getName().getFullyQualifiedName(), params);
 		Integer count = _methodCalls.get(methodCall);
 		if(count == null){
 			count = 0;
@@ -586,7 +586,7 @@ public class CodeBlock {
 					type = ast.newSimpleType(ast.newSimpleName(name));
 				}
 			}
-			Variable variable = new Variable(type, name);
+			Variable variable = new Variable(node, type, name);
 			Integer count = _variables.get(variable);
 			if(count == null){
 				count = 0;
@@ -605,7 +605,7 @@ public class CodeBlock {
 			Matcher CLASSmatcher = CLASSpattern.matcher(qName.getFullyQualifiedName());
 			
 			if(qName instanceof SimpleName && CONSTmatcher.matches() && CLASSmatcher.matches()){
-				EnumLiteral enumLiteral = new EnumLiteral(node.getFullyQualifiedName());
+				EnumLiteral enumLiteral = new EnumLiteral(node, node.getFullyQualifiedName());
 				Integer count = _constants.get(enumLiteral);
 				if(count == null){
 					count = 0;
@@ -613,7 +613,7 @@ public class CodeBlock {
 				_constants.put(enumLiteral, count + 1);
 				expr = enumLiteral;
 			} else {
-				Operator operator = new Operator(Operator.FIELDAC);
+				Operator operator = new Operator(node, Operator.FIELDAC);
 				operator.setLeftOprand(process(qName));
 				operator.setRightOperand(process(simpleName));
 				_operators.add(operator);
@@ -625,7 +625,7 @@ public class CodeBlock {
 	}
 
 	private Expr visit(NullLiteral node) {
-		NilLiteral literal = new NilLiteral();
+		NilLiteral literal = new NilLiteral(node);
 		Integer count = _constants.get(literal);
 		if(count == null){
 			count = 0;
@@ -639,14 +639,14 @@ public class CodeBlock {
 		Literal expr = null;
 		try{
 			Integer value = Integer.parseInt(token);
-			IntLiteral literal = new IntLiteral(value);
+			IntLiteral literal = new IntLiteral(node, value);
 			expr = literal;
 		} catch (Exception e){}
 		
 		if(expr == null){
 			try{
 				long value = Long.parseLong(token);
-				LongLiteral literal = new LongLiteral(value);
+				LongLiteral literal = new LongLiteral(node, value);
 				expr = literal;
 			} catch (Exception e){}
 		}
@@ -654,7 +654,7 @@ public class CodeBlock {
 		if(expr == null){
 			try{
 				float value = Float.parseFloat(token);
-				FloatLiteral literal = new FloatLiteral(value);
+				FloatLiteral literal = new FloatLiteral(node, value);
 				expr = literal;
 			} catch (Exception e){}
 		}
@@ -662,7 +662,7 @@ public class CodeBlock {
 		if(expr == null){
 			try{
 				double value = Double.parseDouble(token);
-				DoubleLiteral literal = new DoubleLiteral(value);
+				DoubleLiteral literal = new DoubleLiteral(node, value);
 				expr = literal;
 			} catch (Exception e){}
 		}
@@ -671,7 +671,7 @@ public class CodeBlock {
 			// should be hexadecimal number or octal number 
 			token = token.replace("X", "x");
 			token = token.replace("F", "f");
-			StrLiteral literal = new StrLiteral(token);
+			StrLiteral literal = new StrLiteral(node, token);
 			expr = literal;
 		}
 		
@@ -692,21 +692,21 @@ public class CodeBlock {
 	}
 
 	private Expr visit(PostfixExpression node) {
-		Operator operator = new Operator(node.getOperator().toString());
+		Operator operator = new Operator(node, node.getOperator().toString());
 		operator.setLeftOprand(process(node.getOperand()));
 		_operators.add(operator);
 		return operator;
 	}
 
 	private Expr visit(PrefixExpression node) {
-		Operator operator = new Operator(node.getOperator().toString());
+		Operator operator = new Operator(node, node.getOperator().toString());
 		operator.setRightOperand(process(node.getOperand()));
 		_operators.add(operator);
 		return operator;
 	}
 
 	private Expr visit(StringLiteral node) {
-		StrLiteral literal = new StrLiteral(node.getLiteralValue());
+		StrLiteral literal = new StrLiteral(node, node.getLiteralValue());
 		Integer count = _constants.get(literal);
 		if(count == null){
 			count = 0;
@@ -732,7 +732,7 @@ public class CodeBlock {
 	private Expr visit(ThisExpression node){
 		Pair<String, String> classAndMethodName = getTypeDecAndMethodDec(node);
 		Type type = ProjectInfo.getVariableType(classAndMethodName.first(), classAndMethodName.second(), "THIS");
-		Variable variable = new Variable(type, "THIS");
+		Variable variable = new Variable(node, type, "THIS");
 		Integer count = _variables.get(variable);
 		if(count == null){
 			count = 0;
@@ -742,7 +742,7 @@ public class CodeBlock {
 	}
 
 	private Expr visit(TypeLiteral node) {
-		TLiteral literal = new TLiteral(node.getType());
+		TLiteral literal = new TLiteral(node, node.getType());
 		Integer count = _constants.get(literal);
 		if(count == null){
 			count = 0;
@@ -872,7 +872,7 @@ public class CodeBlock {
 		 } else if(node instanceof VariableDeclarationExpression){
 			 return visit((VariableDeclarationExpression)node);
 		 } else if(node instanceof Type){
-			return new Variable((Type)node, node.toString()); 
+			return new Variable(node, (Type)node, node.toString()); 
 		 } else {
 			 return null;
 		 }
@@ -900,55 +900,6 @@ public class CodeBlock {
 		}
 		return new Pair<String, String>(className, methodName);
 	}
-	
-	private Type parseType(Expression expression){
-		if(expression == null){
-			return null;
-		}
-		AST ast = AST.newAST(AST.JLS8);
-		Type type = ast.newWildcardType();
-		if(expression instanceof MethodInvocation){
-			MethodInvocation mInvocation = (MethodInvocation) expression;
-//			Expression exp = mInvocation.getExpression();
-//			Type expType = null;
-//			if(exp == null){
-//				Pair<String, String> classAndMethodName = getTypeDecAndMethodDec(expression);
-//				expType = ProjectInfo.getVariableType(classAndMethodName.first(), classAndMethodName.second(), "THIS");
-//			} else {
-//				expType = parseType(exp);
-//			}
-//			if(expType !=  null){
-//				type = ProjectInfo.getMethodRetType(expType.toString(), mInvocation.getName().getFullyQualifiedName());
-//			}
-			MethodCall expr = (MethodCall)visit(mInvocation);
-			if(expr != null){
-				type = expr.getExprType();
-			}
-		} else if(expression instanceof SimpleName){
-			Pair<String, String> classAndMethodName = getTypeDecAndMethodDec(expression);
-			type = ProjectInfo.getVariableType(classAndMethodName.first(), classAndMethodName.second(), expression.toString());
-		} else if(expression instanceof QualifiedName){
-			QualifiedName qName = (QualifiedName) expression;
-			Type expType = parseType(qName.getQualifier());
-			if(expType != null){
-				type = ProjectInfo.getVariableType(expType.toString(), null, qName.getName().getFullyQualifiedName());
-			}
-		} else if(expression instanceof ArrayAccess){
-			ArrayAccess arrayAccess = (ArrayAccess) expression;
-			Type expType = parseType(arrayAccess.getArray());
-			if(expType != null){
-				if(expType instanceof ArrayType){
-					type = ((ArrayType) expType).getElementType();
-				}
-			}
-		} else if(expression instanceof ThisExpression){
-			Pair<String, String> classAndMethodName = getTypeDecAndMethodDec(expression);
-			type = ProjectInfo.getVariableType(classAndMethodName.first(), classAndMethodName.second(), "THIS");
-		}
-		
-		return type;
-	}
-	
 	
 	public static void main(String[] args) {
 		String teString = "if(a > 4) a--;";

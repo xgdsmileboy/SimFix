@@ -9,6 +9,7 @@ package cofix.common.astnode;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
 /**
@@ -20,16 +21,16 @@ public class NewArray extends MethodCall{
 	private List<Expr> _dimension = null;
 	private List<Expr> _initializers = null;
 	
-	public NewArray(Type retType, Expr expr, String name) {
-		this(retType, expr, name, new ArrayList<>());
+	public NewArray(ASTNode node, Type retType, Expr expr, String name) {
+		this(node, retType, expr, name, new ArrayList<>());
 	}
 	
-	public NewArray(Type retType, Expr expr, String name, List<Expr> dimensions){
-		this(retType, expr, name, dimensions, null);
+	public NewArray(ASTNode node, Type retType, Expr expr, String name, List<Expr> dimensions){
+		this(node, retType, expr, name, dimensions, null);
 	}
 	
-	public NewArray(Type retType, Expr expr, String name, List<Expr> dimensions, List<Expr> initializers){
-		super(retType, expr, name);
+	public NewArray(ASTNode node, Type retType, Expr expr, String name, List<Expr> dimensions, List<Expr> initializers){
+		super(node, retType, expr, name);
 		_dimension = dimensions;
 		_initializers = initializers;
 	}

@@ -11,7 +11,6 @@ import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.NumberLiteral;
 import org.eclipse.jdt.core.dom.PrimitiveType;
-import org.eclipse.jdt.core.dom.PrimitiveType.Code;
 import org.eclipse.jdt.core.dom.Type;
 
 public class FloatLiteral extends Literal{
@@ -19,7 +18,8 @@ public class FloatLiteral extends Literal{
 	private final double threshold = 1e-6;
 	private float _value = 0.0f;
 	
-	public FloatLiteral(float value) {
+	public FloatLiteral(ASTNode node, float value) {
+		_srcNode = node;
 		_value = value;
 	}
 	

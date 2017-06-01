@@ -7,6 +7,7 @@
 package cofix.common.astnode;
 
 import org.eclipse.jdt.core.dom.AST;
+import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.CharacterLiteral;
 import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.Type;
@@ -18,11 +19,9 @@ import org.eclipse.jdt.core.dom.Type;
 public class CharLiteral extends Literal {
 
 	private char _value;
-	
-	/**
-	 * 
-	 */
-	public CharLiteral(char value) {
+
+	public CharLiteral(ASTNode node, char value) {
+		_srcNode = node;
 		_value = value;
 	}
 

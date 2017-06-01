@@ -8,6 +8,7 @@
 package cofix.common.astnode;
 
 import org.eclipse.jdt.core.dom.AST;
+import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.NumberLiteral;
 import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.Type;
@@ -18,7 +19,8 @@ public class DoubleLiteral extends Literal {
 	private final double threshold = 1e-12;
 	private double _value = 0.0;
 	
-	public DoubleLiteral(double value) {
+	public DoubleLiteral(ASTNode node, double value) {
+		_srcNode = node;
 		_value = value;
 	}
 	

@@ -20,7 +20,8 @@ public class TLiteral extends Literal {
 
 	private Type _type = null;
 	
-	public TLiteral(Type type) {
+	public TLiteral(ASTNode node, Type type) {
+		_srcNode = node;
 		_type = type;
 	}
 	

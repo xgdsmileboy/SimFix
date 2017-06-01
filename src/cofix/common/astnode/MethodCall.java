@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.jdt.core.dom.AST;
+import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
 public class MethodCall extends Expr{
@@ -20,15 +21,16 @@ public class MethodCall extends Expr{
 	protected Type _retType = null;
 	protected List<Expr> _parameters = null;
 	
-	public MethodCall(Type retType, Expr expr, String name) {
-		this(retType, expr, name, new ArrayList<>());
+	public MethodCall(ASTNode node, Type retType, Expr expr, String name) {
+		this(node, retType, expr, name, new ArrayList<>());
 	}
 	
-	public MethodCall(Type retType, Expr expr, String name, List<Expr> parameters){
+	public MethodCall(ASTNode node, Type retType, Expr expr, String name, List<Expr> parameters){
 		if(retType == null){
 			AST ast = AST.newAST(AST.JLS8);
 			retType = ast.newWildcardType();
 		}
+		_srcNode = node;
 		_retType = retType;
 		_expr = expr;
 		_name = name;

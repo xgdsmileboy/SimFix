@@ -7,25 +7,36 @@
 
 package cofix.common.astnode;
 
-public enum Structure{
-	IF("if"),
-	ELSE("else"),
-	FOR("for"),
-	WHILE("while"),
-	BREAK("break"),
-	CONTINUE("continue"),
-	RETURN("return"),
-	THRWO("throw");
+import org.eclipse.jdt.core.dom.ASTNode;
+
+public class Structure{
 	
-	private String _value = null;
-	private Structure(String value){
-		_value = value;
+	
+	public static final String IF = "if";
+	public static final String ELSE = "else";
+	public static final String FOR = "for";
+	public static final String WHILE = "while";
+	public static final String BREAK = "break";
+	public static final String CONTINUE = "continue";
+	public static final String RETURN = "return";
+	public static final String THRWO = "throw";
+	
+	
+	private String _name = null;
+	private ASTNode _srcNode = null; 
+	
+	public Structure(ASTNode node, String name){
+		_srcNode = node;
+		_name = name;
 	}
 	
+	public ASTNode getOriginalASTNode(){
+		return _srcNode;
+	}
 	
 	@Override
 	public String toString() {
-		return _value;
+		return _name;
 	}
 	
 }

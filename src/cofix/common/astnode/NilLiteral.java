@@ -8,11 +8,16 @@
 package cofix.common.astnode;
 
 import org.eclipse.jdt.core.dom.AST;
+import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.NullLiteral;
 import org.eclipse.jdt.core.dom.Type;
 
 public class NilLiteral extends Literal {
 
+	public NilLiteral(ASTNode node) {
+		_srcNode = node;
+	}
+	
 	@Override
 	public Object getValue() {
 		return null;

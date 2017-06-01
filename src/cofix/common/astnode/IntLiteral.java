@@ -8,6 +8,7 @@
 package cofix.common.astnode;
 
 import org.eclipse.jdt.core.dom.AST;
+import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.NumberLiteral;
 import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.Type;
@@ -16,7 +17,8 @@ public class IntLiteral extends Literal{
 
 	private Integer _value = 0;
 	
-	public IntLiteral(int value) {
+	public IntLiteral(ASTNode node, int value) {
+		_srcNode = node;
 		_value = value;
 	}
 	

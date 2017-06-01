@@ -77,7 +77,8 @@ public class Utils {
 		metrics.add(operatorMetric);
 		metrics.add(methodMetric);
 		CodeBlockMatcher codeBlockMatcher = new CodeBlockMatcher(metrics);
-		System.out.println(codeBlockMatcher.getSimilirity(source, similar));
+		System.out.println("\n****************** " + codeBlockMatcher.getSimilirity(source, similar) + " ******************\n");
+		System.out.println("------------------------------------------------------------------------------------------");
 	}
 	
 }
