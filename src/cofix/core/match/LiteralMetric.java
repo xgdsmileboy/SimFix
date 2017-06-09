@@ -41,6 +41,10 @@ public class LiteralMetric extends Metric {
 				similarity += entry.getValue() > tarCount ? tarCount : entry.getValue();
 			}
 		}
+		similarity *= 2.0f;
+		for(Entry<Literal, Integer> entry : tarVarMap.entrySet()){
+			count += entry.getValue();
+		}
 		if(count == 0){
 			return 1.0f;
 		}

@@ -40,6 +40,9 @@ public class Constant {
 	public final static String ANT_BUILD_FAILED = "BUILD FAILED";
 	public final static String ANT_BUILD_SUCCESS = "BUILD SUCCESSFUL";
 
+	// code search configure
+	public final static int MAX_BLOCK_LINE = 10;
+	
 	// system command
 	public static String COMMAND_CD = null;
 	public static String COMMAND_RM = null;

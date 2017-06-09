@@ -64,7 +64,7 @@ public class Utils {
 		System.out.println("====================================================================");
 	}
 	
-	public static void showSimilarity(CodeBlock source, CodeBlock similar){
+	public static float computeSimilarity(CodeBlock source, CodeBlock similar){
 		VariableMetric variableMetric = new VariableMetric(.2f);
 		LiteralMetric literalMetric = new LiteralMetric(.2f);
 		StructrueMetric structrueMetric = new StructrueMetric(.2f);
@@ -77,7 +77,11 @@ public class Utils {
 		metrics.add(operatorMetric);
 		metrics.add(methodMetric);
 		CodeBlockMatcher codeBlockMatcher = new CodeBlockMatcher(metrics);
-		System.out.println("\n****************** " + codeBlockMatcher.getSimilirity(source, similar) + " ******************\n");
+		return codeBlockMatcher.getSimilirity(source, similar);
+	}
+	
+	public static void showSimilarity(CodeBlock source, CodeBlock similar){
+		System.out.println("\n****************** " + computeSimilarity(source, similar) + " ******************\n");
 		System.out.println("------------------------------------------------------------------------------------------");
 	}
 	

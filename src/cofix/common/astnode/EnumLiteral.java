@@ -7,10 +7,17 @@
 
 package cofix.common.astnode;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Name;
 import org.eclipse.jdt.core.dom.Type;
+
+import cofix.core.adapt.Modification;
+import cofix.core.adapt.Revision;
 
 public class EnumLiteral extends Literal {
 
@@ -60,6 +67,44 @@ public class EnumLiteral extends Literal {
 		stringBuffer.append(_value);
 		stringBuffer.append("(Enum)");
 		return stringBuffer.toString();
+	}
+
+	@Override
+	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		// exactly match
+		if(expr instanceof EnumLiteral){
+			EnumLiteral other = (EnumLiteral) expr;
+			if(!_value.equals(other.getValue())){
+				Revision revision = new Revision(this);
+				revision.setTar(expr);
+				revision.setModificationComplexity(1);
+				modifications.add(revision);
+			}
+			return true;
+		}
+		return false;
+	}
+	
+	@Override
+	public Expr adapt(Expr tar, Map<String, Type> allUsableVarMap) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Variable> getVariables() {
+		return new ArrayList<>();
+	}
+
+	@Override
+	public void backup() {
+		_backup = new EnumLiteral(_srcNode, _value);
+	}
+
+	@Override
+	public void restore() {
+		this._value = ((EnumLiteral)_backup).getValue();
+		this._srcNode = _backup.getOriginalASTnode();
 	}
 
 }

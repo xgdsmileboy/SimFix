@@ -6,11 +6,20 @@
  */
 package cofix.common.astnode;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.BooleanLiteral;
 import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.Type;
+
+import com.sun.org.apache.regexp.internal.recompile;
+
+import cofix.core.adapt.Modification;
+import cofix.core.adapt.Revision;
 
 /**
  * @author Jiajun
@@ -19,6 +28,8 @@ import org.eclipse.jdt.core.dom.Type;
 public class BoolLiteral extends Literal {
 
 	private boolean _value = false;
+	
+	private Expr _replace = null;
 	
 	public BoolLiteral(ASTNode node, boolean value) {
 		_srcNode = node;
@@ -62,7 +73,78 @@ public class BoolLiteral extends Literal {
 	
 	@Override
 	public String toString() {
+		if(_replace != null){
+			return _replace.toString();
+		}
 		return String.valueOf(_value);
+	}
+
+	@Override
+	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		// exactly match
+		if(expr instanceof BoolLiteral){
+			BoolLiteral other = (BoolLiteral) expr;
+			if(_value != other.getValue()){
+				Revision revision = new Revision(this);
+				revision.setTar(expr);
+				revision.setModificationComplexity(1);
+				modifications.add(revision);
+			}
+			return true;
+		} else if(expr != null) {
+			// type match
+			Type type = expr.getType();
+			if(type != null && type.toString().equals("boolean")){
+				Revision revision = new Revision(this);
+				revision.setTar(expr);
+				revision.setModificationComplexity(1);
+				modifications.add(revision);
+				return true;
+			}
+		}
+		return false;
+	}
+
+	@Override
+	public Expr adapt(Expr tar, Map<String, Type> allUsableVarMap) {
+		Expr newExpr = null;
+		if(tar instanceof BoolLiteral){
+			BoolLiteral other = (BoolLiteral) tar;
+			this._value = other.getValue();
+			newExpr = this;
+		} else {
+			List<Variable> variables = tar.getVariables();
+			for(Variable variable : variables){
+				String name = variable.getName(); 
+				if(!name.equals("THIS")){
+					Type type = allUsableVarMap.get(name);
+					if(!type.toString().equals(variable.getType().toString())){
+						return this;
+					}
+				}
+			}
+			newExpr = tar;
+			_replace = tar;
+		}
+		return newExpr;
+	}
+	
+
+	@Override
+	public List<Variable> getVariables() {
+		return new ArrayList<>();
+	}
+
+	@Override
+	public void backup() {
+		_backup = new BoolLiteral(_srcNode, _value);
+	}
+
+	@Override
+	public void restore() {
+		_replace = null;
+		this._value = ((BoolLiteral)_backup).getValue();
+		this._srcNode = _backup.getOriginalASTnode();
 	}
 
 

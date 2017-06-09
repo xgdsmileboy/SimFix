@@ -40,6 +40,11 @@ public class MethodMetric extends Metric {
 				similarity += entry.getValue() > tarCount ? tarCount : entry.getValue();
 			}
 		}
+		similarity *= 2.0f;
+		for(Entry<MethodCall, Integer> entry : tMethods.entrySet()){
+			count += entry.getValue();
+		}
+		
 		if(count == 0){
 			return 1.0f;
 		}

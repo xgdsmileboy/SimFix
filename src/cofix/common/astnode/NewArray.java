@@ -8,9 +8,12 @@ package cofix.common.astnode;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
+
+import cofix.core.adapt.Modification;
 
 /**
  * @author Jiajun
@@ -69,5 +72,28 @@ public class NewArray extends MethodCall{
 		return stringBuffer.toString();
 	}
 	
+	@Override
+	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
+	@Override
+	public Expr adapt(Expr tar, Map<String, Type> allUsableVarMap) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
+	public List<Variable> getVariables() {
+		List<Variable> variables = super.getVariables();
+		for(Expr expr : _dimension){
+			variables.addAll(expr.getVariables());
+		}
+		for(Expr expr : _initializers){
+			variables.addAll(expr.getVariables());
+		}
+		return variables;
+	}
+	
 }

@@ -88,8 +88,8 @@ public class ProjectInfo {
 		}
 		ClassInfo classInfo = _classMap.get(className);
 		if (classInfo == null) {
-			System.out.println(__name__ + "#getVariableType Parse variable type failed : " + className + "::"
-					+ methodName + "::" + varName);
+//			System.out.println(__name__ + "#getVariableType Parse variable type failed : " + className + "::"
+//					+ methodName + "::" + varName);
 			return null;
 		}
 		return classInfo.getVariableType(methodName, varName);
@@ -101,8 +101,8 @@ public class ProjectInfo {
 		}
 		ClassInfo classInfo = _classMap.get(className);
 		if(classInfo == null){
-			System.out.println(__name__ + "#getMethodRetType Parse method return type failed : " + className + "::"
-					+ methodName);
+//			System.out.println(__name__ + "#getMethodRetType Parse method return type failed : " + className + "::"
+//					+ methodName);
 			return null;
 		}
 		return classInfo.getMethodRetType(methodName);

@@ -7,6 +7,14 @@
 
 package cofix.core.adapt;
 
-public class Adapter {
+import java.util.Map;
 
+import org.eclipse.jdt.core.dom.Type;
+
+import cofix.common.astnode.Expr;
+
+public interface Adapter {
+
+	public Expr adapt(Expr tar, Map<String, Type> allUsableVarMap);
+	
 }

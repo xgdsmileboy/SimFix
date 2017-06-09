@@ -42,6 +42,10 @@ public class VariableMetric extends Metric {
 			}
 			// TODO : if variable with same name and type does not exit, consider variables with same type ?
 		}
+		similarity *= 2.0f;
+		for(Entry<Variable, Integer> entry : tarVarMap.entrySet()){
+			count += entry.getValue();
+		}
 		if(count == 0){
 			return 1.0f;
 		}

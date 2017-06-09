@@ -7,10 +7,16 @@
 
 package cofix.common.astnode;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.NullLiteral;
 import org.eclipse.jdt.core.dom.Type;
+
+import cofix.core.adapt.Modification;
 
 public class NilLiteral extends Literal {
 
@@ -54,6 +60,35 @@ public class NilLiteral extends Literal {
 	@Override
 	public String toString() {
 		return String.valueOf("null");
+	}
+
+	@Override
+	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		if(expr instanceof NilLiteral){
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public Expr adapt(Expr tar, Map<String, Type> allUsableVarMap) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Variable> getVariables() {
+		return new ArrayList<>();
+	}
+
+	@Override
+	public void backup() {
+		_backup = new NilLiteral(_srcNode);
+	}
+
+	@Override
+	public void restore() {
+		this._srcNode = _backup.getOriginalASTnode();
 	}
 
 }

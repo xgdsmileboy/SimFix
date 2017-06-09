@@ -4,64 +4,26 @@
  * strictly prohibited Proprietary and Confidential.
  * Written by Jiajun Jiang<jiajun.jiang@pku.edu.cn>.
  */
-package cofix.core.match;
+package cofix.common.code.search;
 
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 
-import org.eclipse.jdt.core.dom.Type;
+import org.eclipse.jdt.core.dom.Statement;
 import org.junit.Test;
 
 import cofix.common.astnode.CodeBlock;
 import cofix.common.config.Constant;
-import cofix.common.parser.NodeUtils;
 import cofix.common.parser.ProjectInfo;
 import cofix.common.util.Subject;
-import cofix.core.adapt.Modification;
+import cofix.core.match.Utils;
 
 /**
  * @author Jiajun
- * @datae May 31, 2017
+ * @datae Jun 2, 2017
  */
-public class CodeBlockMatcherTest {
-	
-	@Test
-	public void test_match(){
-		Constant.PROJECT_HOME = "testfile";
-		Subject subject = new Subject("chart", 1, "/source", "/tests", "/build", "/build-tests");
-		ProjectInfo.init(subject);
-		String file = subject.getHome() + subject.getSsrc() +"/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java";
-		int buggyLine = 1797;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
-		Utils.print(codeBlock);
-		
-		String file_2 = subject.getHome() + subject.getSsrc() +"/org/jfree/chart/plot/MultiplePiePlot.java";
-		int buggyLine_2 = 566;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
-		Utils.print(similar);
-		
-		Utils.showSimilarity(codeBlock, similar);
-		
-		Map<String, Type> usableVars = NodeUtils.getUsableVarTypes(file, buggyLine);
-		
-		for(Entry<String, Type> entry : usableVars.entrySet()){
-			System.out.println(entry.getKey() + "  " + entry.getValue());
-		}
-		System.out.println("=====================================");
-		List<Modification> modifications = CodeBlockMatcher.match(codeBlock, similar, usableVars);
-		
-		for(Modification modification : modifications){
-			System.out.println(modification);
-			modification.apply(usableVars);
-			Utils.print(codeBlock);
-			modification.restore();
-		}
-		
-		System.out.println(modifications.size());
-		
-	}
+public class SimpleFilterTest {
+
+	private final float guard = 0.5f;
 	
 	@Test
 	public void test_chart_1() {
@@ -74,14 +36,28 @@ public class CodeBlockMatcherTest {
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
 		
-		String file_2 = subject.getHome() + subject.getSsrc() +"/org/jfree/chart/plot/MultiplePiePlot.java";
-		int buggyLine_2 = 566;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
-		Utils.print(similar);
+		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
+		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
 		
-		Utils.showSimilarity(codeBlock, similar);
+		int count = 0;
+		for(CodeBlock block : candidates){
+			float similarity = Utils.computeSimilarity(codeBlock, block);
+			if(similarity < guard || similarity == 1.0){
+				continue;
+			}
+			System.out.println("----------------Similarity : " + similarity + "-------------------------------------");
+			count ++;
+			for(Statement statement : block.getNodes()){
+				System.out.println(statement);
+			}
+			System.out.println("-----------------------------------------------------");
+		}
+		
+		System.out.println("-----------" + count + "-------------");
+		
 	}
 	
+
 	@Test
 	public void test_chart_2() {
 		Constant.PROJECT_HOME = "testfile";
@@ -93,12 +69,24 @@ public class CodeBlockMatcherTest {
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
 		
-		String file_2 = file;
-		int buggyLine_2 = 982;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
-		Utils.print(similar);
+		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
+		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
 		
-		Utils.showSimilarity(codeBlock, similar);
+		int count = 0;
+		for(CodeBlock block : candidates){
+			float similarity = Utils.computeSimilarity(codeBlock, block);
+			if(similarity < 0.3 || similarity == 1.0){
+				continue;
+			}
+			System.out.println("-----------------------------------------------------");
+			count ++;
+			for(Statement statement : block.getNodes()){
+				System.out.println(statement);
+			}
+			System.out.println("-----------------------------------------------------");
+		}
+		
+		System.out.println("-----------" + count + "-------------");
 	}
 	
 	@Test
@@ -112,12 +100,24 @@ public class CodeBlockMatcherTest {
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
 		
-		String file_2 = file;
-		int buggyLine_2 = 190;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
-		Utils.print(similar);
+		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
+		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
 		
-		Utils.showSimilarity(codeBlock, similar);
+		int count = 0;
+		for(CodeBlock block : candidates){
+			float similarity = Utils.computeSimilarity(codeBlock, block);
+			if(similarity < guard || similarity == 1.0){
+				continue;
+			}
+			System.out.println("-----------------------------------------------------");
+			count ++;
+			for(Statement statement : block.getNodes()){
+				System.out.println(statement);
+			}
+			System.out.println("-----------------------------------------------------");
+		}
+		
+		System.out.println("-----------" + count + "-------------");
 	}
 	
 	@Test
@@ -131,12 +131,24 @@ public class CodeBlockMatcherTest {
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
 		
-		String file_2 = file;
-		int buggyLine_2 = 285;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
-		Utils.print(similar);
+		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
+		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
 		
-		Utils.showSimilarity(codeBlock, similar);
+		int count = 0;
+		for(CodeBlock block : candidates){
+			float similarity = Utils.computeSimilarity(codeBlock, block);
+			if(similarity < guard || similarity == 1.0){
+				continue;
+			}
+			System.out.println("-----------------------------------------------------");
+			count ++;
+			for(Statement statement : block.getNodes()){
+				System.out.println(statement);
+			}
+			System.out.println("-----------------------------------------------------");
+		}
+		
+		System.out.println("-----------" + count + "-------------");
 	}
 	
 	@Test
@@ -150,12 +162,24 @@ public class CodeBlockMatcherTest {
 		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
 		Utils.print(codeBlock);
 		
-		String file_2 = file;
-		int buggyLine_2 = 274;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
-		Utils.print(similar);
+		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
+		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
 		
-		Utils.showSimilarity(codeBlock, similar);
+		int count = 0;
+		for(CodeBlock block : candidates){
+			float similarity = Utils.computeSimilarity(codeBlock, block);
+			if(similarity < guard || similarity == 1.0){
+				continue;
+			}
+			System.out.println("-----------------------------------------------------");
+			count ++;
+			for(Statement statement : block.getNodes()){
+				System.out.println(statement);
+			}
+			System.out.println("-----------------------------------------------------");
+		}
+		
+		System.out.println("-----------" + count + "-------------");
 	}
 	
 	@Test

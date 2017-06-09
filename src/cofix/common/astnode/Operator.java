@@ -1,8 +1,16 @@
 package cofix.common.astnode;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
+import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.Type;
+
+import cofix.core.adapt.Modification;
+import cofix.core.adapt.Revision;
 
 public class Operator extends Expr{
 	// compare
@@ -42,11 +50,13 @@ public class Operator extends Expr{
 	public final static String FIELDAC = ".";
 	
 	private String _value = null;
+	private Type _type = null;
 	private Expr _leftOprand = null;
 	private Expr _rightOperand = null;
-	public Operator(ASTNode node, String value){
+	public Operator(ASTNode node, Type type, String value){
 		_value = value;
 		_srcNode = node;
+		_type = type;
 	}
 	
 	public void setLeftOprand(Expr leftOprand){
@@ -55,6 +65,10 @@ public class Operator extends Expr{
 	
 	public void setRightOperand(Expr rightOperand) {
 		_rightOperand = rightOperand;
+	}
+	
+	public String getValue(){
+		return _value;
 	}
 	
 	public Expr getLeftOperand() {
@@ -99,9 +113,130 @@ public class Operator extends Expr{
 
 	@Override
 	public Type getType() {
-		// TODO : concrete type ?
-		AST ast = AST.newAST(AST.JLS8);
-		return ast.newSimpleType(ast.newSimpleName("OperationType"));
+		if(_type != null){
+			return _type;
+		} else {
+			AST ast = AST.newAST(AST.JLS8);
+			switch(_value){
+			case EQ :
+			case NE :
+			case GT :
+			case GE :
+			case LT :
+			case LE :
+			// logical
+			case LAND :
+			case LOR :
+			case LNOT :
+			case INSTANSOF :
+				_type = ast.newPrimitiveType(PrimitiveType.BOOLEAN);
+				break;
+			// compare & logical
+			// TODO : " cond : a ? b " should be converted to "if(cond) a else b"
+			// bit operation
+			case BAND :
+			case BOR :
+			case BNOT :
+			case BOX :
+			case MOD :
+				_type = ast.newPrimitiveType(PrimitiveType.INT);
+				break;
+			// arithmetic
+			case PLUS :
+			case MINUS :
+			case TIMES :
+			case DIV :
+			// assignment
+			case ASSIGN :
+			// array access
+			case ARRAC :
+			// field access
+			case FIELDAC :
+			
+			default :
+				_type = ast.newWildcardType();
+			}
+		}
+		return _type;
+	}
+
+	@Override
+	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		if(expr instanceof Operator){
+			Operator other = (Operator) expr;
+			boolean left = true;
+			boolean right = true;
+			if(_leftOprand == null){
+				left = other.getLeftOperand() == null;
+			} else {
+				List<Modification> tmpModify = new ArrayList<>();
+				left = _leftOprand.matchType(other.getLeftOperand(), allUsableVariables, tmpModify);
+				if(left){
+					modifications.addAll(tmpModify);
+				}
+			}
+			if(_rightOperand == null){
+				right = other.getRightOperand() == null;
+			} else {
+				List<Modification> tmpModify = new ArrayList<>();
+				right = _rightOperand.matchType(other.getRightOperand(), allUsableVariables, modifications);
+				if(right){
+					modifications.addAll(tmpModify);
+				}
+			}
+			
+			if(_value.equals(other._value)){
+				return left & right;
+			} else {
+				if(left && right){
+					Revision revision = new Revision(this);
+					revision.setTar(expr);
+					revision.setModificationComplexity(1);
+					modifications.add(revision);
+					return true;
+				}
+			}
+		}
+		
+		return false;
+	}
+
+	@Override
+	public Expr adapt(Expr tar, Map<String, Type> allUsableVarMap) {
+		if(tar instanceof Operator){
+			Operator operator = (Operator) tar;
+			this._value = operator.getValue();
+		}
+		return this;
+	}
+
+	@Override
+	public List<Variable> getVariables() {
+		List<Variable> variables = new ArrayList<>();
+		if(_leftOprand != null){
+			variables.addAll(_leftOprand.getVariables());
+		}
+		if(_rightOperand != null){
+			variables.addAll(_rightOperand.getVariables());
+		}
+		return variables;
+	}
+
+	@Override
+	public void backup() {
+		_backup = new Operator(_srcNode, _type, _value);
+		((Operator)_backup).setLeftOprand(_leftOprand);
+		((Operator)_backup).setRightOperand(_rightOperand);
+	}
+
+	@Override
+	public void restore() {
+		Operator operator = (Operator)_backup;
+		this._srcNode = operator.getOriginalASTnode();
+		this._type = operator.getType();
+		this._value = operator.getValue();
+		this._leftOprand = operator.getLeftOperand();
+		this._rightOperand = operator.getRightOperand();
 	}
 	
 }

@@ -26,10 +26,6 @@ import org.eclipse.jdt.core.dom.VariableDeclarationExpression;
 import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
 import org.eclipse.jdt.core.dom.VariableDeclarationStatement;
 
-interface a{
-	
-}
-
 public class TypeParseVisitor extends ASTVisitor {
 	public boolean visit(TypeDeclaration node) {
 		String clazz = node.getName().getFullyQualifiedName();

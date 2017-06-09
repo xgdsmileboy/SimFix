@@ -9,10 +9,13 @@ package cofix.common.astnode;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
+
+import cofix.core.adapt.Modification;
 
 public class MethodCall extends Expr{
 	
@@ -97,15 +100,7 @@ public class MethodCall extends Expr{
 	public String toString() {
 		StringBuffer stringBuffer = new StringBuffer();
 		if(_expr != null){
-//			Type type = _expr.getType();
 			stringBuffer.append(_expr);
-//			stringBuffer.append("(");
-//			if(type == null){
-//				stringBuffer.append("null");
-//			} else {
-//				stringBuffer.append(type);
-//			}
-//			stringBuffer.append(")");
 			stringBuffer.append(".");
 		} else {
 		}
@@ -120,6 +115,45 @@ public class MethodCall extends Expr{
 		}
 		stringBuffer.append(")");
 		return stringBuffer.toString();
+	}
+
+	@Override
+	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Expr adapt(Expr tar, Map<String, Type> allUsableVarMap) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Variable> getVariables() {
+		List<Variable> variables = new ArrayList<>();
+		if(_expr != null){
+			variables.addAll(_expr.getVariables());
+		}
+		for(Expr expr : _parameters){
+			variables.addAll(expr.getVariables());
+		}
+		return variables;
+	}
+
+	@Override
+	public void backup() {
+		_backup = new MethodCall(_srcNode, _retType, _expr, _name, _parameters);
+	}
+
+	@Override
+	public void restore() {
+		MethodCall mc = (MethodCall)_backup;
+		this._srcNode = mc.getOriginalASTnode();
+		this._retType = mc.getType();
+		this._expr = mc.getExpr();
+		this._name = mc.getName();
+		this._parameters = mc.getParameters();
 	}
 
 }

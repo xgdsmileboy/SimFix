@@ -89,6 +89,7 @@ public class JavaFile {
 		astParser.setSource(icu.toCharArray());
 		astParser.setKind(type);
 		astParser.setResolveBindings(true);
+		astParser.setBindingsRecovery(true);
 		return astParser.createAST(null);
 	}
 

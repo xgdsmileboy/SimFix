@@ -7,11 +7,20 @@
 
 package cofix.common.astnode;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.NumberLiteral;
 import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.Type;
+
+import com.sun.corba.se.spi.activation._ActivatorStub;
+
+import cofix.core.adapt.Modification;
+import cofix.core.adapt.Revision;
 
 public class FloatLiteral extends Literal{
 
@@ -60,6 +69,57 @@ public class FloatLiteral extends Literal{
 	@Override
 	public String toString() {
 		return String.valueOf(_value);
+	}
+
+	@Override
+	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		// exactly match
+		if(expr instanceof FloatLiteral){
+			FloatLiteral other = (FloatLiteral) expr;
+			if(Math.abs(_value - other.getValue()) > threshold){
+				Revision revision = new Revision(this);
+				revision.setTar(expr);
+				revision.setModificationComplexity(1);
+				modifications.add(revision);
+			}
+			return true;
+		} else if(expr != null){
+			// match type
+			Type type = expr.getType();
+			if(type != null){
+				String typeStr = type.toString();
+				if(typeStr.equals("double") || typeStr.equals("float") || typeStr.equals("int")){
+					Revision revision = new Revision(this);
+					revision.setTar(expr);
+					revision.setModificationComplexity(1);
+					modifications.add(revision);
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+	
+	@Override
+	public Expr adapt(Expr tar, Map<String, Type> allUsableVarMap) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Variable> getVariables() {
+		return new ArrayList<>();
+	}
+
+	@Override
+	public void backup() {
+		_backup = new FloatLiteral(_srcNode, _value);
+	}
+
+	@Override
+	public void restore() {
+		this._value = ((FloatLiteral)_backup).getValue();
+		this._srcNode = _backup.getOriginalASTnode();
 	}
 
 }

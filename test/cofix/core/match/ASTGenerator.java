@@ -20,6 +20,7 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 
+
 public class ASTGenerator {
 	
 	public static ASTNode genAST(String source, int type){
@@ -55,4 +56,5 @@ public class ASTGenerator {
 		
 		return (CompilationUnit) ASTGenerator.genAST(stringBuffer.toString(), ASTParser.K_COMPILATION_UNIT);
 	}
+	
 }

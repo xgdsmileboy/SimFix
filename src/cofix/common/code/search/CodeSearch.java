@@ -24,8 +24,6 @@ import org.eclipse.jdt.core.dom.SwitchCase;
 import org.eclipse.jdt.core.dom.SwitchStatement;
 import org.eclipse.jdt.core.dom.WhileStatement;
 
-import cofix.common.util.LevelLogger;
-
 /**
  * @author Jiajun
  *
@@ -49,6 +47,7 @@ public class CodeSearch {
 
 	class Traverse extends ASTVisitor {
 
+		
 		public boolean visit(MethodDeclaration node){
 			
 			int start = _unit.getLineNumber(node.getStartPosition());
@@ -57,7 +56,7 @@ public class CodeSearch {
 				
 				Statement statement = node.getBody();
 				if(statement == null){
-					LevelLogger.error("non body for code search !");
+//					LevelLogger.error("non body for code search !");
 					return false;
 				}
 				
@@ -121,7 +120,6 @@ public class CodeSearch {
 							}
 						}
 					}
-					
 					
 				} else if(end - start < _lineRange){
 					_nodes.add(statement);

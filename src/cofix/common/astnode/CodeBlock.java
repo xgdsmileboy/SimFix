@@ -9,16 +9,14 @@ package cofix.common.astnode;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
+import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
-import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.ASTVisitor;
 import org.eclipse.jdt.core.dom.Annotation;
 import org.eclipse.jdt.core.dom.ArrayAccess;
@@ -46,13 +44,11 @@ import org.eclipse.jdt.core.dom.ExpressionMethodReference;
 import org.eclipse.jdt.core.dom.ExpressionStatement;
 import org.eclipse.jdt.core.dom.FieldAccess;
 import org.eclipse.jdt.core.dom.ForStatement;
-import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IfStatement;
 import org.eclipse.jdt.core.dom.InfixExpression;
 import org.eclipse.jdt.core.dom.InstanceofExpression;
 import org.eclipse.jdt.core.dom.LabeledStatement;
 import org.eclipse.jdt.core.dom.LambdaExpression;
-import org.eclipse.jdt.core.dom.MethodDeclaration;
 import org.eclipse.jdt.core.dom.MethodInvocation;
 import org.eclipse.jdt.core.dom.MethodReference;
 import org.eclipse.jdt.core.dom.Name;
@@ -65,7 +61,6 @@ import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.QualifiedName;
 import org.eclipse.jdt.core.dom.ReturnStatement;
 import org.eclipse.jdt.core.dom.SimpleName;
-import org.eclipse.jdt.core.dom.SingleVariableDeclaration;
 import org.eclipse.jdt.core.dom.Statement;
 import org.eclipse.jdt.core.dom.StringLiteral;
 import org.eclipse.jdt.core.dom.SuperConstructorInvocation;
@@ -79,7 +74,6 @@ import org.eclipse.jdt.core.dom.ThisExpression;
 import org.eclipse.jdt.core.dom.ThrowStatement;
 import org.eclipse.jdt.core.dom.TryStatement;
 import org.eclipse.jdt.core.dom.Type;
-import org.eclipse.jdt.core.dom.TypeDeclaration;
 import org.eclipse.jdt.core.dom.TypeDeclarationStatement;
 import org.eclipse.jdt.core.dom.TypeLiteral;
 import org.eclipse.jdt.core.dom.TypeMethodReference;
@@ -88,18 +82,16 @@ import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
 import org.eclipse.jdt.core.dom.VariableDeclarationStatement;
 import org.eclipse.jdt.core.dom.WhileStatement;
 
-import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
-
+import cofix.common.parser.NodeUtils;
 import cofix.common.parser.ProjectInfo;
-import cofix.common.util.JavaFile;
 import cofix.common.util.LevelLogger;
 import cofix.common.util.Pair;
-import sun.java2d.pipe.SpanShapeRenderer.Simple;
 
 public class CodeBlock {
 	
 	private CompilationUnit _cunit = null;
 	private List<Statement> _nodes = null;
+	private int _maxLines = 10;
 	// <name, <type, count>>
 	private Map<Variable, Integer> _variables = null;
 	// <literal, count>
@@ -112,14 +104,26 @@ public class CodeBlock {
 	
 	private List<Operator> _operators = null;
 	
+	private Stack<Structure> _exprs = new Stack<>();
+	
 	
 	public CodeBlock(CompilationUnit cunit, List<Statement> nodes) {
 		_cunit = cunit;
 		_nodes = nodes;
 	}
 	
+	public CodeBlock(CompilationUnit cunit, List<Statement> nodes, int maxLines) {
+		_cunit = cunit;
+		_nodes = nodes;
+		_maxLines = maxLines;
+	}
+	
 	public List<Statement> getNodes(){
 		return _nodes;
+	}
+	
+	public int getMaxLines(){
+		return _maxLines;
 	}
 	
 	public void accept(ASTVisitor visitor){
@@ -181,7 +185,11 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(BreakStatement node) {
-		_structures.add(new Structure(node, Structure.BREAK));
+		Structure structure = new Structure(node, Structure.BREAK);
+		if(!_exprs.isEmpty()){
+			_exprs.peek().addExpr(structure);
+		}
+		_structures.add(structure);
 		return null;
 	}
 	
@@ -194,7 +202,7 @@ public class CodeBlock {
 	
 	private Expr visit(ConstructorInvocation node) {
 		
-		Pair<String, String> decls = getTypeDecAndMethodDec(node);
+		Pair<String, String> decls = NodeUtils.getTypeDecAndMethodDec(node);
 		String className = decls.first();
 		String methodName = decls.second();
 		MethodCall expr = null;
@@ -205,6 +213,9 @@ public class CodeBlock {
 			}
 			Type type = ProjectInfo.getVariableType(className, methodName, "THIS");
 			expr = new MethodCall(node, type, null, "THIS", params);
+			if(!_exprs.isEmpty()){
+				_exprs.peek().addExpr(expr);
+			}
 			Integer count = _methodCalls.get(expr);
 			if(count == null){
 				count = 0;
@@ -216,14 +227,27 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(ContinueStatement node) {
-		_structures.add(new Structure(node, Structure.CONTINUE));
+		Structure structure = new Structure(node, Structure.CONTINUE);
+		if(!_exprs.isEmpty()){
+			_exprs.peek().addExpr(structure);
+		}
+		_structures.add(structure);
 		return null;
 	}
 	
 	private Expr visit(DoStatement node) {
-		_structures.add(new Structure(node, Structure.WHILE));
-		process(node.getExpression());
+		Structure structure = new Structure(node, Structure.WHILE);
+		if(!_exprs.isEmpty()){
+			_exprs.peek().addExpr(structure);
+		}
+		_exprs.push(structure);
+		_structures.add(structure);
+		Expr expr = process(node.getExpression());
+		if(expr != null){
+			structure.addExpr(expr);
+		}
 		process(node.getBody());
+		_exprs.pop();
 		return null;
 	}
 	
@@ -232,39 +256,76 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(EnhancedForStatement node) {
-		_structures.add(new Structure(node, Structure.FOR));
+		Structure structure = new Structure(node, Structure.FOR);
+		if(!_exprs.isEmpty()){
+			_exprs.peek().addExpr(structure);
+		}
+		_exprs.push(structure);
+		_structures.add(structure);
 		process(node.getParameter());
-		process(node.getExpression());
+		Expr expr = process(node.getExpression());
+		if(expr != null){
+			structure.addExpr(expr);
+		}
 		process(node.getBody());
+		_exprs.pop();
 		return null;
 	}
 	
 	private Expr visit(ExpressionStatement node) {
-		return process(node.getExpression());
+		Expr expr = process(node.getExpression());
+		if(!_exprs.isEmpty()){
+			_exprs.peek().addExpr(expr);
+		}
+		return expr;
 	}
 	
 	private Expr visit(ForStatement node) {
-		_structures.add(new Structure(node, Structure.FOR));
+		Structure structure = new Structure(node, Structure.FOR);
+		if(!_exprs.isEmpty()){
+			_exprs.peek().addExpr(structure);
+		}
+		_exprs.push(structure);
+		_structures.add(structure);
 		for(Object object : node.initializers()){
 			process((ASTNode)object);
 		}
-		process(node.getExpression());
+		Expr expr = process(node.getExpression());
+		if(expr != null){
+			structure.addExpr(expr);
+		}
 		for(Object object : node.updaters()){
 			process((ASTNode)object);
 		}
 		process(node.getBody());
+		_exprs.pop();
 		return null;
 	}
 	
 	private Expr visit(IfStatement node) {
-		_structures.add(new Structure(node, Structure.IF));
-		process(node.getExpression());
+		Structure structure = new Structure(node, Structure.IF);
+		if(!_exprs.isEmpty()){
+			_exprs.peek().addExpr(structure);
+		}
+		_exprs.push(structure);
+		_structures.add(structure);
+		Expr expr = process(node.getExpression());
+		if(expr != null){
+			structure.addExpr(expr);
+		}
 		if(node.getThenStatement() != null){
 			process(node.getThenStatement());
 		}
+		_exprs.pop();
 		if(node.getElseStatement() != null){
-			_structures.add(new Structure(node, Structure.ELSE));
+			Structure struct = new Structure(node, Structure.ELSE);
+			if(!_exprs.isEmpty()){
+				_exprs.peek().addExpr(struct);
+			}
+			_exprs.add(struct);
+			_structures.add(struct);
 			process(node.getElseStatement());
+			_exprs.pop();
 		}
 		return null;
 	}
@@ -274,14 +335,23 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(ReturnStatement node) {
-		_structures.add(new Structure(node, Structure.RETURN));
-		process(node.getExpression());
+		Structure structure = new Structure(node, Structure.RETURN);
+		if(!_exprs.isEmpty()){
+			_exprs.peek().addExpr(structure);
+		}
+		_exprs.add(structure);
+		_structures.add(structure);
+		Expr expr = process(node.getExpression());
+		if(expr != null){
+			structure.addExpr(expr);
+		}
+		_exprs.pop();
 		return null;
 	}
 	
 	private Expr visit(SuperConstructorInvocation node) {
 		
-		Pair<String, String> decls = getTypeDecAndMethodDec(node);
+		Pair<String, String> decls = NodeUtils.getTypeDecAndMethodDec(node);
 		String className = decls.first();
 		String methodName = decls.second();
 		MethodCall expr = null;
@@ -292,6 +362,9 @@ public class CodeBlock {
 			}
 			Type type = ProjectInfo.getVariableType(className, methodName, "SUPER");
 			expr = new MethodCall(node, type, null, "SUPER", params);
+			if(!_exprs.isEmpty()){
+				_exprs.peek().addExpr(expr);
+			}
 			Integer count = _methodCalls.get(expr);
 			if(count == null){
 				count = 0;
@@ -311,34 +384,55 @@ public class CodeBlock {
 		Expr switchExp = process(expression);
 		// TODO : switchExp should not be null ?
 		if(switchExp.getType().isPrimitiveType()){
+			Structure structure = null;
 			for(Object object : node.statements()){
 				if(object instanceof SwitchCase){
-					_structures.add(new Structure((ASTNode) object, Structure.IF));
-					Operator operator = new Operator((ASTNode) object, Operator.EQ);
+					structure = new Structure((ASTNode) object, Structure.IF);
+					if(!_exprs.isEmpty()){
+						_exprs.peek().addExpr(structure);
+					}
+					_exprs.add(structure);
+					_structures.add(structure);
+					AST ast = AST.newAST(AST.JLS8);
+					Operator operator = new Operator((ASTNode) object, ast.newPrimitiveType(PrimitiveType.BOOLEAN), Operator.EQ);
 					operator.setLeftOprand(switchExp);
 					operator.setRightOperand(process(((SwitchCase)object).getExpression()));
 					_operators.add(operator);
+					structure.addExpr(operator);
+					_exprs.pop();
 				} else {
+					_exprs.push(structure);
 					process((ASTNode)object);
+					_exprs.pop();
 				}
 			}
 		} else {
+			Structure structure = null;
 			for(Object object : node.statements()){
 				if(object instanceof SwitchCase){
-					_structures.add(new Structure((ASTNode) object, Structure.IF));
+					structure = new Structure((ASTNode) object, Structure.IF);
+					if(!_exprs.isEmpty()){
+						_exprs.peek().addExpr(structure);
+					}
+					_exprs.add(structure);
+					_structures.add(structure);
 					Expr expr = process(((SwitchCase)object).getExpression());
 					List<Expr> params = new ArrayList<>();
 					params.add(expr);
 					AST ast = AST.newAST(AST.JLS8);
 					Type type = ast.newPrimitiveType(PrimitiveType.BOOLEAN);
 					MethodCall methodCall = new MethodCall((ASTNode) object, type, switchExp, "equals", params);
+					structure.addExpr(methodCall);
 					Integer count = _methodCalls.get(methodCall);
 					if(count == null){
 						count = 0;
 					}
 					_methodCalls.put(methodCall, count + 1);
+					_exprs.pop();
 				} else {
+					_exprs.push(structure);
 					process((ASTNode)object);
+					_exprs.pop();
 				}
 			}
 		}
@@ -351,8 +445,17 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(ThrowStatement node) {
-		_structures.add(new Structure(node, Structure.THRWO));
-		process((ASTNode)node.getExpression());
+		Structure structure = new Structure(node, Structure.THRWO);
+		if(!_exprs.isEmpty()){
+			_exprs.peek().addExpr(structure);
+		}
+		_exprs.add(structure);
+		_structures.add(structure);
+		Expr expr = process((ASTNode)node.getExpression());
+		if(expr != null){
+			structure.addExpr(expr);
+		}
+		_exprs.pop();
 		return null;
 	}
 	
@@ -377,20 +480,42 @@ public class CodeBlock {
 				count = 0;
 			}
 			_variables.put(variable, count + 1);
+			boolean hasInitializer = false;
+			Operator operator = null;
 			if(vdf.getInitializer() != null){
-				Operator operator = new Operator(vdf, Operator.ASSIGN);
+				hasInitializer = true;
+				AST ast = AST.newAST(AST.JLS8);
+				operator = new Operator(vdf, ast.newWildcardType(), Operator.ASSIGN);
 				operator.setLeftOprand(variable);
 				operator.setRightOperand(process(vdf.getInitializer()));
 				_operators.add(operator);
+			}
+			if(hasInitializer){
+				if(!_exprs.isEmpty()){
+					_exprs.peek().addExpr(operator);
+				}
+			} else {
+				if(!_exprs.isEmpty()){
+					_exprs.peek().addExpr(variable);
+				}
 			}
 		}
 		return null;
 	}
 	
 	private Expr visit(WhileStatement node) {
-		_structures.add(new Structure(node, Structure.WHILE));
-		process(node.getExpression());
+		Structure structure = new Structure(node, Structure.WHILE);
+		if(!_exprs.isEmpty()){
+			_exprs.peek().addExpr(structure);
+		}
+		_exprs.push(structure);
+		_structures.add(structure);
+		Expr expr = process(node.getExpression());
+		if(expr != null){
+			structure.addExpr(expr);
+		}
 		process(node.getBody());
+		_exprs.pop();
 		return null;
 	}
 	/*********************** Visit Expression *********************************/
@@ -399,7 +524,25 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(ArrayAccess node) {
-		Operator operator = new Operator(node, Operator.ARRAC);
+		ASTNode parent = node.getParent();
+		Pair<String, String> classAndMethodName = NodeUtils.getTypeDecAndMethodDec(node);
+		String nodeStr = node.toString();
+		int index = nodeStr.indexOf("[");
+		if(index >= 0){
+			nodeStr = nodeStr.substring(0, index);
+		}
+		Type type = ProjectInfo.getVariableType(classAndMethodName.first(), classAndMethodName.second(), nodeStr);
+		
+		if(type != null){
+			if(type instanceof ArrayType){
+				ArrayType arrayType = (ArrayType) type;
+				type = arrayType.getElementType();
+			} else {
+				System.out.println("ArrayAccess type error : not array type ! " + node.toString());
+			}
+		}
+		
+		Operator operator = new Operator(node, type, Operator.ARRAC);
 		operator.setLeftOprand(process(node.getArray()));
 		operator.setRightOperand(process(node.getIndex()));
 		_operators.add(operator);
@@ -439,7 +582,8 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(Assignment node) {
-		Operator operator = new Operator(node, Operator.ASSIGN);
+		AST ast = AST.newAST(AST.JLS8);
+		Operator operator = new Operator(node, ast.newWildcardType(), Operator.ASSIGN);
 		operator.setLeftOprand(process(node.getLeftHandSide()));
 		operator.setRightOperand(process(node.getRightHandSide()));
 		_operators.add(operator);
@@ -471,7 +615,7 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(ClassInstanceCreation node) {
-		Pair<String, String> clazzAndMethodName = getTypeDecAndMethodDec(node);
+		Pair<String, String> clazzAndMethodName = NodeUtils.getTypeDecAndMethodDec(node);
 		String className = clazzAndMethodName.first();
 		String methodName = clazzAndMethodName.second();
 		MethodCall expr = null;
@@ -509,7 +653,10 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(FieldAccess node) {
-		Operator operator = new Operator(node, Operator.FIELDAC);
+		// TODO : now simply handle this.field
+		Pair<String, String> classAndMethodName = NodeUtils.getTypeDecAndMethodDec(node);
+		Type type = ProjectInfo.getVariableType(classAndMethodName.first(), classAndMethodName.second(), node.getName().toString());
+		Operator operator = new Operator(node, type, Operator.FIELDAC);
 		operator.setLeftOprand(process(node.getExpression()));
 		operator.setRightOperand(process(node.getName()));
 		_operators.add(operator);
@@ -517,7 +664,7 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(InfixExpression node) {
-		Operator operator = new Operator(node, node.getOperator().toString());
+		Operator operator = new Operator(node, null, node.getOperator().toString());
 		operator.setLeftOprand(process(node.getLeftOperand()));
 		operator.setRightOperand(process(node.getRightOperand()));
 		_operators.add(operator);
@@ -525,7 +672,8 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(InstanceofExpression node) {
-		Operator operator = new Operator(node, Operator.INSTANSOF);
+		AST ast = AST.newAST(AST.JLS8);
+		Operator operator = new Operator(node, ast.newPrimitiveType(PrimitiveType.BOOLEAN), Operator.INSTANSOF);
 		operator.setLeftOprand(process(node.getLeftOperand()));
 		operator.setRightOperand(process(node.getRightOperand()));
 		_operators.add(operator);
@@ -537,7 +685,7 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(MethodInvocation node) {
-//		Pair<String, String> classAndMethodName = getTypeDecAndMethodDec(node);
+//		Pair<String, String> classAndMethodName = NodeUtils.getTypeDecAndMethodDec(node);
 //		String className = classAndMethodName.first();
 //		String methodName = classAndMethodName.second();
 		Expression expression = node.getExpression();
@@ -551,7 +699,7 @@ public class CodeBlock {
 				LevelLogger.error("parse type error for method invocation !");
 			}
 		} else {
-			Pair<String, String> classAndMethodName = getTypeDecAndMethodDec(node);
+			Pair<String, String> classAndMethodName = NodeUtils.getTypeDecAndMethodDec(node);
 			className = classAndMethodName.first();
 		}
 		Type type = ProjectInfo.getMethodRetType(className, methodName);
@@ -575,7 +723,7 @@ public class CodeBlock {
 	private Expr visit(Name node) {
 		Expr expr = null;
 		if(node instanceof SimpleName){
-			Pair<String, String> classAndMethodName = getTypeDecAndMethodDec(node);
+			Pair<String, String> classAndMethodName = NodeUtils.getTypeDecAndMethodDec(node);
 			Type type = ProjectInfo.getVariableType(classAndMethodName.first(), classAndMethodName.second(), node.toString());
 			String name = node.getFullyQualifiedName();
 			if(type == null){
@@ -613,7 +761,7 @@ public class CodeBlock {
 				_constants.put(enumLiteral, count + 1);
 				expr = enumLiteral;
 			} else {
-				Operator operator = new Operator(node, Operator.FIELDAC);
+				Operator operator = new Operator(node, null, Operator.FIELDAC);
 				operator.setLeftOprand(process(qName));
 				operator.setRightOperand(process(simpleName));
 				_operators.add(operator);
@@ -692,14 +840,14 @@ public class CodeBlock {
 	}
 
 	private Expr visit(PostfixExpression node) {
-		Operator operator = new Operator(node, node.getOperator().toString());
+		Operator operator = new Operator(node, null, node.getOperator().toString());
 		operator.setLeftOprand(process(node.getOperand()));
 		_operators.add(operator);
 		return operator;
 	}
 
 	private Expr visit(PrefixExpression node) {
-		Operator operator = new Operator(node, node.getOperator().toString());
+		Operator operator = new Operator(node, null, node.getOperator().toString());
 		operator.setRightOperand(process(node.getOperand()));
 		_operators.add(operator);
 		return operator;
@@ -730,7 +878,7 @@ public class CodeBlock {
 	}
 	
 	private Expr visit(ThisExpression node){
-		Pair<String, String> classAndMethodName = getTypeDecAndMethodDec(node);
+		Pair<String, String> classAndMethodName = NodeUtils.getTypeDecAndMethodDec(node);
 		Type type = ProjectInfo.getVariableType(classAndMethodName.first(), classAndMethodName.second(), "THIS");
 		Variable variable = new Variable(node, type, "THIS");
 		Integer count = _variables.get(variable);
@@ -876,40 +1024,6 @@ public class CodeBlock {
 		 } else {
 			 return null;
 		 }
-	}
-	
-	private Pair<String, String> getTypeDecAndMethodDec(ASTNode node) {
-		ASTNode parent = node.getParent();
-		String methodName = null;
-		String className = null;
-		while(parent != null){
-			if(parent instanceof MethodDeclaration){
-				MethodDeclaration methodDeclaration = (MethodDeclaration) parent; 
-				methodName = methodDeclaration.getName().getFullyQualifiedName();
-				String params = "";
-				for(Object obj : methodDeclaration.parameters()){
-					SingleVariableDeclaration singleVariableDeclaration = (SingleVariableDeclaration) obj;
-					params += ","+singleVariableDeclaration.getType().toString();
-				}
-				methodName += params;
-			} else if(parent instanceof TypeDeclaration){
-				className = ((TypeDeclaration)parent).getName().getFullyQualifiedName();
-				break;
-			}
-			parent = parent.getParent();
-		}
-		return new Pair<String, String>(className, methodName);
-	}
-	
-	public static void main(String[] args) {
-		String teString = "if(a > 4) a--;";
-		Statement statement = (Statement) JavaFile.genASTFromSource(teString, ASTParser.K_STATEMENTS);
-		List<Statement> nodes = new ArrayList<>();
-		nodes.add(statement);
-		CodeBlock codeBlock = new CodeBlock(null, nodes);
-		codeBlock.getStructures();
-		
-		
 	}
 	
 }
