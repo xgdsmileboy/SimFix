@@ -7,7 +7,20 @@
 
 package cofix.common.util;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+
 import cofix.common.config.Constant;
+import cofix.common.localization.FLocalization;
 
 /**
  * 
@@ -22,6 +35,8 @@ public class Subject {
 	private String _tsrc = null;
 	private String _sbin = null;
 	private String _tbin = null;
+	private List<String> _instrumentPackages = null;
+	private List<String> _testClasses = null;
 
 	/**
 	 * subject
@@ -71,7 +86,21 @@ public class Subject {
 	public String getTbin() {
 		return _tbin;
 	}
+	
+	public List<String> getTestClasses(){
+		if(_testClasses == null){
+			_testClasses = new ArrayList<>(getTestClasses(new File(getHome() + _tsrc)));
+		}
+		return _testClasses;
+	}
 
+	public List<String> getInstrumentPackage(){
+		if(_instrumentPackages == null){
+			_instrumentPackages = new ArrayList<>(getPackage(getHome() + _ssrc, getHome() + _ssrc));
+		}
+		return _instrumentPackages;
+	}
+	
 	/**
 	 * get absolute home path for subject
 	 * 
@@ -80,10 +109,77 @@ public class Subject {
 	public String getHome() {
 		return Constant.PROJECT_HOME + "/" + _name + "/" + _name + "_" + _id + "_buggy";
 	}
+	
+	private Set<String> getPackage(String rootPath, String currPath){
+		Set<String> packages = new HashSet<>();
+		File file = new File(currPath);
+		File[] files = file.listFiles();
+		for(File f : files){
+			if (f.getName().equals(".DS_Store")) {
+				continue;
+			}
+			if(f.isDirectory()){
+				String absPath = f.getAbsolutePath();
+				String packageName = absPath.replace(rootPath + "/", "");
+				packageName = packageName.replace("/", ".");
+				packages.add(packageName);
+				packages.addAll(getPackage(rootPath, f.getAbsolutePath()));
+			}
+		}
+		return packages;
+	}
+	
+	private Set<String> getTestClasses(File root){
+		Set<String> classes = new HashSet<>();
+		File[] files = root.listFiles();
+		String pack = null;
+		for(File f : files){
+			if(f.isFile()){
+				String fName = f.getName();
+				if (fName.equals(".DS_Store")) {
+					continue;
+				}
+				if(fName.endsWith(".java")){
+					fName = fName.substring(0, fName.length() - 5);
+					if(!fName.endsWith("Tests")){
+						continue;
+					}
+					if(pack != null){
+						classes.add(pack + "." + fName);
+					} else {
+						BufferedReader br = null;
+						try {
+							br = new BufferedReader(new FileReader(f));
+							String line = null;
+							while((line = br.readLine()) != null){
+								line = line.trim();
+								if(line.startsWith("package")){
+									Pattern pattern = Pattern.compile("(?<=package\\s)[\\s\\S]*(?=;)");
+									Matcher matcher = pattern.matcher(line);
+									if(matcher.find()){
+										pack = matcher.group(0);
+										classes.add(pack + "." + fName);
+										break;
+									}
+								}
+							}
+							br.close();
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+				}
+			}else if(f.isDirectory()){
+				classes.addAll(getTestClasses(f));
+			}
+		}
+		return classes;
+	}
 
 	@Override
 	public String toString() {
 		return "[_name=" + _name + ", _id=" + _id + ", _ssrc=" + _ssrc + ", _tsrc=" + _tsrc + ", _sbin=" + _sbin
 				+ ", _tbin=" + _tbin + "]";
 	}
+	
 }

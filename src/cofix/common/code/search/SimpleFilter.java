@@ -3,15 +3,17 @@ package cofix.common.code.search;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.ASTVisitor;
+import org.eclipse.jdt.core.dom.AnonymousClassDeclaration;
 import org.eclipse.jdt.core.dom.CompilationUnit;
+import org.eclipse.jdt.core.dom.MethodDeclaration;
 import org.eclipse.jdt.core.dom.SimpleName;
 import org.eclipse.jdt.core.dom.Type;
 
 import cofix.common.astnode.CodeBlock;
 import cofix.common.astnode.Variable;
-import cofix.common.config.Constant;
 import cofix.common.parser.NodeUtils;
 import cofix.common.parser.ProjectInfo;
 import cofix.common.util.JavaFile;
@@ -53,12 +55,19 @@ public class SimpleFilter {
 			Type type = ProjectInfo.getVariableType(classAndMethodName.first(), classAndMethodName.second(), name);
 			Variable variable = new Variable(node, type, name);
 			if(_buggyCode.getVariables().containsKey(variable)){
-				int line = _unit.getLineNumber(node.getStartPosition());
-				CodeSearch codeSearch = new CodeSearch(_unit, line, Constant.MAX_BLOCK_LINE);
-				CodeBlock codeBlock = new CodeBlock(_unit, codeSearch.getASTNodes());
-				_candidates.add(codeBlock);
+				ASTNode parent = node.getParent();
+				while(parent != null && !(parent instanceof MethodDeclaration)){
+					parent = parent.getParent();
+				}
+				// filter out anonymous classes
+				if(parent != null && !(parent.getParent() instanceof AnonymousClassDeclaration)){
+					int line = _unit.getLineNumber(node.getStartPosition());
+					CodeSearch codeSearch = new CodeSearch(_unit, line, _buggyCode.getCurrentLine());
+					CodeBlock codeBlock = new CodeBlock(_unit, codeSearch.getASTNodes());
+					_candidates.add(codeBlock);
+				}
 			}
-			return super.visit(node);
+			return true;
 		}
 		
 	}

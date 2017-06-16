@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Stack;
+import java.util.PrimitiveIterator.OfDouble;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -90,8 +91,9 @@ import cofix.common.util.Pair;
 public class CodeBlock {
 	
 	private CompilationUnit _cunit = null;
-	private List<Statement> _nodes = null;
+	private List<ASTNode> _nodes = null;
 	private int _maxLines = 10;
+	private int _currlines = 0;
 	// <name, <type, count>>
 	private Map<Variable, Integer> _variables = null;
 	// <literal, count>
@@ -107,19 +109,26 @@ public class CodeBlock {
 	private Stack<Structure> _exprs = new Stack<>();
 	
 	
-	public CodeBlock(CompilationUnit cunit, List<Statement> nodes) {
-		_cunit = cunit;
-		_nodes = nodes;
+	public CodeBlock(CompilationUnit cunit, List<ASTNode> nodes) {
+		this(cunit, nodes, 10);
 	}
 	
-	public CodeBlock(CompilationUnit cunit, List<Statement> nodes, int maxLines) {
+	public CodeBlock(CompilationUnit cunit, List<ASTNode> nodes, int maxLines) {
 		_cunit = cunit;
 		_nodes = nodes;
 		_maxLines = maxLines;
+		_currlines = 0;
+		for(ASTNode s : nodes){
+			_currlines += NodeUtils.getValidLineNumber(s);
+		}
 	}
 	
-	public List<Statement> getNodes(){
+	public List<ASTNode> getNodes(){
 		return _nodes;
+	}
+	
+	public int getCurrentLine(){
+		return _currlines;
 	}
 	
 	public int getMaxLines(){
@@ -127,7 +136,7 @@ public class CodeBlock {
 	}
 	
 	public void accept(ASTVisitor visitor){
-		for(Statement node : _nodes){
+		for(ASTNode node : _nodes){
 			node.accept(visitor);
 		}
 	}
@@ -174,10 +183,12 @@ public class CodeBlock {
 		_methodCalls = new HashMap<>();
 		_operators = new ArrayList<>();
 		
-		for(Statement node : _nodes){
+		for(ASTNode node : _nodes){
 			process(node);
 		}
 	}
+	
+	
 	
 	/************************** visit start : Statement ***********************/
 	private Expr visit(AssertStatement node) {

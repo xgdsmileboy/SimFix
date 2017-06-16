@@ -10,11 +10,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map.Entry;
 
+import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.CompilationUnit;
-import org.eclipse.jdt.core.dom.Statement;
 import org.junit.Test;
 
+import cofix.common.code.search.BuggyCode;
 import cofix.common.code.search.CodeSearch;
 import cofix.common.config.Constant;
 import cofix.common.parser.ProjectInfo;
@@ -44,15 +45,12 @@ public class CodeBlockTest {
 		int buggyLine = 299;
 		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
 		
-		CodeSearch codeSearch = new CodeSearch(unit, buggyLine, 10);
-		List<Statement> nodes = codeSearch.getASTNodes();
-		
-		CodeBlock codeBlock = new CodeBlock(unit, nodes);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
 		
 		print(codeBlock);
 		
-		CodeSearch codeSearch2 = new CodeSearch(unit, 285, 10);
-		List<Statement> nodes2 = codeSearch2.getASTNodes();
+		CodeSearch codeSearch2 = new CodeSearch(unit, 285, codeBlock.getCurrentLine());
+		List<ASTNode> nodes2 = codeSearch2.getASTNodes();
 		CodeBlock codeBlock2 = new CodeBlock(unit, nodes2);
 		
 		print(codeBlock2);
@@ -71,6 +69,24 @@ public class CodeBlockTest {
 		metrics.add(methodMetric);
 		CodeBlockMatcher codeBlockMatcher = new CodeBlockMatcher(metrics);
 		System.out.println(codeBlockMatcher.getSimilirity(codeBlock, codeBlock2));
+	}
+	
+	@Test
+	public void test_lineCount(){
+		Constant.PROJECT_HOME = "testfile";
+		Subject subject = new Subject("chart", 7, "/source", "/tests", "/build", "build-tests");
+		ProjectInfo.init(subject);
+		
+		String file = subject.getHome() + "/source/org/jfree/data/time/TimePeriodValues.java";
+		int buggyLine = 299;
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		
+		CodeSearch codeSearch = new CodeSearch(unit, buggyLine, 10);
+		List<ASTNode> nodes = codeSearch.getASTNodes();
+		
+		CodeBlock codeBlock = new CodeBlock(unit, nodes);
+		
+		System.out.println(codeBlock.getCurrentLine());
 	}
 	
 	private void print(CodeBlock codeBlock){

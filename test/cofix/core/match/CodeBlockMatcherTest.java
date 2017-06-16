@@ -10,13 +10,17 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.eclipse.jdt.core.dom.ASTParser;
+import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.Type;
 import org.junit.Test;
 
 import cofix.common.astnode.CodeBlock;
+import cofix.common.code.search.BuggyCode;
 import cofix.common.config.Constant;
 import cofix.common.parser.NodeUtils;
 import cofix.common.parser.ProjectInfo;
+import cofix.common.util.JavaFile;
 import cofix.common.util.Subject;
 import cofix.core.adapt.Modification;
 
@@ -33,13 +37,14 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() +"/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java";
 		int buggyLine = 1797;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+		
+		CompilationUnit unit = (CompilationUnit)JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
 		Utils.print(codeBlock);
 		
 		String file_2 = subject.getHome() + subject.getSsrc() +"/org/jfree/chart/plot/MultiplePiePlot.java";
 		int buggyLine_2 = 566;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -70,13 +75,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() +"/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java";
 		int buggyLine = 1797;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+		
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 		
 		String file_2 = subject.getHome() + subject.getSsrc() +"/org/jfree/chart/plot/MultiplePiePlot.java";
 		int buggyLine_2 = 566;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -89,13 +96,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/jfree/data/general/DatasetUtilities.java";
 		int buggyLine = 752;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 		
 		String file_2 = file;
 		int buggyLine_2 = 982;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -108,13 +117,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/jfree/data/time/TimeSeries.java";
 		int buggyLine = 1057;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 		
 		String file_2 = file;
 		int buggyLine_2 = 190;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -127,13 +138,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + "/source/org/jfree/data/time/TimePeriodValues.java";
 		int buggyLine = 299;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 		
 		String file_2 = file;
 		int buggyLine_2 = 285;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -146,13 +159,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/jfree/chart/util/ShapeUtilities.java";
 		int buggyLine = 275;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 		
 		String file_2 = file;
 		int buggyLine_2 = 274;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -165,13 +180,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/jfree/chart/plot/MultiplePiePlot.java";
 		int buggyLine = 145;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 
 		String file_2 = file;
 		int buggyLine_2 = 183;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -184,13 +201,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/jfree/chart/plot/ValueMarker.java";
 		int buggyLine = 95;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 
 		String file_2 = subject.getHome() + subject.getSsrc() + "/org/jfree/chart/plot/CategoryMarker.java";
 		int buggyLine_2 = 109;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -203,13 +222,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/com/google/javascript/jscomp/ControlFlowAnalysis.java";
 		int buggyLine = 767;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 
 		String file_2 = file;
 		int buggyLine_2 = 848;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -222,13 +243,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/com/google/javascript/jscomp/ClosureCodingConvention.java";
 		int buggyLine = 197;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 
 		String file_2 = subject.getHome() + subject.getSsrc() + "/com/google/javascript/jscomp/ReplaceStrings.java";
 		int buggyLine_2 = 298;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -241,13 +264,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/com/google/javascript/jscomp/CodeGenerator.java";
 		int buggyLine = 1045;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 
 		String file_2 = file;
 		int buggyLine_2 = 1073;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -261,8 +286,10 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/com/google/javascript/jscomp/CodeGenerator.java";
 		int buggyLine = 966;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 	}
 	
@@ -274,8 +301,10 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang3/math/NumberUtils.java";
 		int buggyLine = 458;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 	}
 
@@ -286,13 +315,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang3/ClassUtils.java";
 		int buggyLine = 909;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 
 		String file_2 = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang3/ArrayUtils.java";
 		int buggyLine_2 = 2728;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -306,13 +337,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang3/ArrayUtils.java";
 		int buggyLine = 3292;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 
 		String file_2 = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang3/Range.java";
 		int buggyLine_2 = 128;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -325,13 +358,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang3/StringUtils.java";
 		int buggyLine = 3675;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 
 		String file_2 = file;
 		int buggyLine_2 = 3644;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -344,13 +379,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang/text/ExtendedMessageFormat.java";
 		int buggyLine = 421;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 		
 		String file_2 = file;
 		int buggyLine_2 = 436;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -364,13 +401,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang/math/NumberUtils.java";
 		int buggyLine = 452;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 
 		String file_2 = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang/NumberUtils.java";
 		int buggyLine_2 = 193;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -384,13 +423,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang/text/StrBuilder.java";
 		int buggyLine = 885;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
-		Utils.print(codeBlock);
 
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
+		Utils.print(codeBlock);
+		
 		String file_2 = file;
 		int buggyLine_2 = 839;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -403,13 +444,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang/text/StrBuilder.java";
 		int buggyLine = 1673;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 
 		String file_2 = file;
 		int buggyLine_2 = 1167;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -422,13 +465,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math3/complex/Complex.java";
 		int buggyLine = 304;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 
 		String file_2 = file;
 		int buggyLine_2 = 465;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -441,13 +486,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math3/optimization/linear/SimplexTableau.java";
 		int buggyLine = 338;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 
 		String file_2 = file;
 		int buggyLine_2 = 384;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -460,14 +507,16 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math3/genetics/ElitisticListPopulation.java";
 		int buggyLine = 51;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 		
 
 		String file_2 = file;
 		int buggyLine_2 = 101;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -480,13 +529,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math/stat/descriptive/moment/Variance.java";
 		int buggyLine = 520;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 
 		String file_2 = file;
 		int buggyLine_2 = 513;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -499,13 +550,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math/linear/OpenMapRealVector.java";
 		int buggyLine = 345;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 		
 		String file_2 = file;
 		int buggyLine_2 = 397;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -518,13 +571,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math/complex/Complex.java";
 		int buggyLine = 153;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 
 		String file_2 = file;
 		int buggyLine_2 = 456;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -537,13 +592,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math/util/FastMath.java";
 		int buggyLine = 3482;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 
 		String file_2 = file;
 		int buggyLine_2 = 3491;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -556,13 +613,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math/util/MathUtils.java";
 		int buggyLine = 417;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 
 		String file_2 = file;
 		int buggyLine_2 = 442;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -575,13 +634,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math/analysis/solvers/BisectionSolver.java";
 		int buggyLine = 72;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 
 		String file_2 = file;
 		int buggyLine_2 = 59;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -594,13 +655,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java";
 		int buggyLine = 294;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 
 		String file_2 = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math/ode/nonstiff/AdamsMoultonIntegrator.java";
 		int buggyLine_2 = 291;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -613,13 +676,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math/analysis/solvers/BrentSolver.java";
 		int buggyLine = 115;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 		
 		String file_2 = file;
 		int buggyLine_2 = 181;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -632,13 +697,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math/stat/Frequency.java";
 		int buggyLine = 303;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 		
 		String file_2 = file;
 		int buggyLine_2 = 342;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -651,13 +718,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math/util/MathUtils.java";
 		int buggyLine = 1626;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 		
 		String file_2 = file;
 		int buggyLine_2 = 1734;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -670,13 +739,15 @@ public class CodeBlockMatcherTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math/linear/BigMatrixImpl.java";
 		int buggyLine = 991;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+
 		Utils.print(codeBlock);
 		
 		String file_2 = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math/linear/RealMatrixImpl.java";
 		int buggyLine_2 = 802;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);

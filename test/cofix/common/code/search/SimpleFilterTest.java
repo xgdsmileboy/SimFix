@@ -6,14 +6,22 @@
  */
 package cofix.common.code.search;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
-import org.eclipse.jdt.core.dom.Statement;
+import org.eclipse.jdt.core.dom.ASTNode;
+import org.eclipse.jdt.core.dom.ASTParser;
+import org.eclipse.jdt.core.dom.Block;
+import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.junit.Test;
 
 import cofix.common.astnode.CodeBlock;
 import cofix.common.config.Constant;
 import cofix.common.parser.ProjectInfo;
+import cofix.common.util.JavaFile;
+import cofix.common.util.Pair;
 import cofix.common.util.Subject;
 import cofix.core.match.Utils;
 
@@ -23,7 +31,7 @@ import cofix.core.match.Utils;
  */
 public class SimpleFilterTest {
 
-	private final float guard = 0.5f;
+	private final float guard = 0.4f;
 	
 	@Test
 	public void test_chart_1() {
@@ -32,8 +40,11 @@ public class SimpleFilterTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() +"/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java";
 		int buggyLine = 1797;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+		
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+		
 		Utils.print(codeBlock);
 		
 		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
@@ -47,7 +58,7 @@ public class SimpleFilterTest {
 			}
 			System.out.println("----------------Similarity : " + similarity + "-------------------------------------");
 			count ++;
-			for(Statement statement : block.getNodes()){
+			for(ASTNode statement : block.getNodes()){
 				System.out.println(statement);
 			}
 			System.out.println("-----------------------------------------------------");
@@ -65,8 +76,11 @@ public class SimpleFilterTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/jfree/data/general/DatasetUtilities.java";
 		int buggyLine = 752;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+		
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+		
 		Utils.print(codeBlock);
 		
 		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
@@ -75,12 +89,12 @@ public class SimpleFilterTest {
 		int count = 0;
 		for(CodeBlock block : candidates){
 			float similarity = Utils.computeSimilarity(codeBlock, block);
-			if(similarity < 0.3 || similarity == 1.0){
+			if(similarity < guard || similarity == 1.0){
 				continue;
 			}
-			System.out.println("-----------------------------------------------------");
+			System.out.println("----------------Similarity : " + similarity + "-------------------------------------");
 			count ++;
-			for(Statement statement : block.getNodes()){
+			for(ASTNode statement : block.getNodes()){
 				System.out.println(statement);
 			}
 			System.out.println("-----------------------------------------------------");
@@ -96,8 +110,10 @@ public class SimpleFilterTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/jfree/data/time/TimeSeries.java";
 		int buggyLine = 1057;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+		
 		Utils.print(codeBlock);
 		
 		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
@@ -111,7 +127,7 @@ public class SimpleFilterTest {
 			}
 			System.out.println("-----------------------------------------------------");
 			count ++;
-			for(Statement statement : block.getNodes()){
+			for(ASTNode statement : block.getNodes()){
 				System.out.println(statement);
 			}
 			System.out.println("-----------------------------------------------------");
@@ -127,8 +143,10 @@ public class SimpleFilterTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + "/source/org/jfree/data/time/TimePeriodValues.java";
 		int buggyLine = 299;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+		
 		Utils.print(codeBlock);
 		
 		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
@@ -142,7 +160,7 @@ public class SimpleFilterTest {
 			}
 			System.out.println("-----------------------------------------------------");
 			count ++;
-			for(Statement statement : block.getNodes()){
+			for(ASTNode statement : block.getNodes()){
 				System.out.println(statement);
 			}
 			System.out.println("-----------------------------------------------------");
@@ -158,8 +176,10 @@ public class SimpleFilterTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/jfree/chart/util/ShapeUtilities.java";
 		int buggyLine = 275;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+		
 		Utils.print(codeBlock);
 		
 		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
@@ -173,7 +193,7 @@ public class SimpleFilterTest {
 			}
 			System.out.println("-----------------------------------------------------");
 			count ++;
-			for(Statement statement : block.getNodes()){
+			for(ASTNode statement : block.getNodes()){
 				System.out.println(statement);
 			}
 			System.out.println("-----------------------------------------------------");
@@ -189,13 +209,15 @@ public class SimpleFilterTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/jfree/chart/plot/MultiplePiePlot.java";
 		int buggyLine = 145;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+		
 		Utils.print(codeBlock);
 
 		String file_2 = file;
 		int buggyLine_2 = 183;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -208,13 +230,15 @@ public class SimpleFilterTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/jfree/chart/plot/ValueMarker.java";
 		int buggyLine = 95;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+		
 		Utils.print(codeBlock);
 
 		String file_2 = subject.getHome() + subject.getSsrc() + "/org/jfree/chart/plot/CategoryMarker.java";
 		int buggyLine_2 = 109;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -227,13 +251,15 @@ public class SimpleFilterTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/com/google/javascript/jscomp/ControlFlowAnalysis.java";
 		int buggyLine = 767;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+		
 		Utils.print(codeBlock);
 
 		String file_2 = file;
 		int buggyLine_2 = 848;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
+		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
 		Utils.print(similar);
 		
 		Utils.showSimilarity(codeBlock, similar);
@@ -349,16 +375,30 @@ public class SimpleFilterTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang3/StringUtils.java";
 		int buggyLine = 3675;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+		
 		Utils.print(codeBlock);
 
-		String file_2 = file;
-		int buggyLine_2 = 3644;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
-		Utils.print(similar);
+		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
+		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
 		
-		Utils.showSimilarity(codeBlock, similar);
+		int count = 0;
+		for(CodeBlock block : candidates){
+			float similarity = Utils.computeSimilarity(codeBlock, block);
+			if(similarity < guard || similarity == 1.0){
+				continue;
+			}
+			System.out.println("----------------Similarity : " + similarity + "-------------------------------------");
+			count ++;
+			for(ASTNode statement : block.getNodes()){
+				System.out.println(statement);
+			}
+			System.out.println("-----------------------------------------------------");
+		}
+		
+		System.out.println("-----------" + count + "-------------");
 	}
 
 	@Test
@@ -368,16 +408,30 @@ public class SimpleFilterTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang/text/ExtendedMessageFormat.java";
 		int buggyLine = 421;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+		
 		Utils.print(codeBlock);
+
+		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
+		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
 		
-		String file_2 = file;
-		int buggyLine_2 = 436;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
-		Utils.print(similar);
+		int count = 0;
+		for(CodeBlock block : candidates){
+			float similarity = Utils.computeSimilarity(codeBlock, block);
+			if(similarity < guard || similarity == 1.0){
+				continue;
+			}
+			System.out.println("----------------Similarity : " + similarity + "-------------------------------------");
+			count ++;
+			for(ASTNode statement : block.getNodes()){
+				System.out.println(statement);
+			}
+			System.out.println("-----------------------------------------------------");
+		}
 		
-		Utils.showSimilarity(codeBlock, similar);
+		System.out.println("-----------" + count + "-------------");
 	}
 
 	@Test
@@ -388,16 +442,33 @@ public class SimpleFilterTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang/math/NumberUtils.java";
 		int buggyLine = 452;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
-		Utils.print(codeBlock);
-
-		String file_2 = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang/NumberUtils.java";
-		int buggyLine_2 = 193;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
-		Utils.print(similar);
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
 		
-		Utils.showSimilarity(codeBlock, similar);
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+		
+//		Utils.print(codeBlock);
+		for(ASTNode statement : codeBlock.getNodes()){
+			System.out.println(statement);
+		}
+
+		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
+		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
+		
+		int count = 0;
+		for(CodeBlock block : candidates){
+			float similarity = Utils.computeSimilarity(codeBlock, block);
+			if(similarity < guard || similarity == 1.0){
+				continue;
+			}
+			System.out.println("----------------Similarity : " + similarity + "-------------------------------------");
+			count ++;
+			for(ASTNode statement : block.getNodes()){
+				System.out.println(statement);
+			}
+			System.out.println("-----------------------------------------------------");
+		}
+		
+		System.out.println("-----------" + count + "-------------");
 	}
 	
 
@@ -408,16 +479,50 @@ public class SimpleFilterTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang/text/StrBuilder.java";
 		int buggyLine = 885;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+		
 		Utils.print(codeBlock);
 
-		String file_2 = file;
-		int buggyLine_2 = 839;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
-		Utils.print(similar);
+		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
+		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
 		
-		Utils.showSimilarity(codeBlock, similar);
+		List<Pair<CodeBlock, Float>> pairs = new ArrayList<>();
+		for(CodeBlock block : candidates){
+			float similarity = Utils.computeSimilarity(codeBlock, block);
+			pairs.add(new Pair<CodeBlock, Float>(block, similarity));
+		}
+		
+		Collections.sort(pairs, new Comparator<Pair<CodeBlock, Float>>() {
+			@Override
+			public int compare(Pair<CodeBlock, Float> o1, Pair<CodeBlock, Float> o2) {
+				Float f1 = o1.second();
+				Float f2 = o2.second();
+				if(f1 < f2){
+					return 1;
+				} else if(f1 > f2){
+					return -1;
+				} else {
+					return 0;
+				}
+			}
+		});
+		
+		int count = 0;
+		for(Pair<CodeBlock, Float> block : pairs){
+			if(block.second() < guard || block.second() == 1.0){
+				continue;
+			}
+			System.out.println("----------------Similarity : " + block.second() + "-------------------------------------");
+			count ++;
+			for(ASTNode statement : block.first().getNodes()){
+				System.out.println(statement);
+			}
+			System.out.println("-----------------------------------------------------");
+		}
+		
+		System.out.println("-----------" + count + "-------------");
 	}
 
 	@Test
@@ -427,16 +532,30 @@ public class SimpleFilterTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang/text/StrBuilder.java";
 		int buggyLine = 1673;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+		
 		Utils.print(codeBlock);
 
-		String file_2 = file;
-		int buggyLine_2 = 1167;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
-		Utils.print(similar);
+		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
+		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
 		
-		Utils.showSimilarity(codeBlock, similar);
+		int count = 0;
+		for(CodeBlock block : candidates){
+			float similarity = Utils.computeSimilarity(codeBlock, block);
+			if(similarity < guard || similarity == 1.0){
+				continue;
+			}
+			System.out.println("----------------Similarity : " + similarity + "-------------------------------------");
+			count ++;
+			for(ASTNode statement : block.getNodes()){
+				System.out.println(statement);
+			}
+			System.out.println("-----------------------------------------------------");
+		}
+		
+		System.out.println("-----------" + count + "-------------");
 	}
 
 	@Test
@@ -465,16 +584,30 @@ public class SimpleFilterTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math3/optimization/linear/SimplexTableau.java";
 		int buggyLine = 338;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+		
 		Utils.print(codeBlock);
 
-		String file_2 = file;
-		int buggyLine_2 = 384;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
-		Utils.print(similar);
+		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
+		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
 		
-		Utils.showSimilarity(codeBlock, similar);
+		int count = 0;
+		for(CodeBlock block : candidates){
+			float similarity = Utils.computeSimilarity(codeBlock, block);
+			if(similarity < guard || similarity == 1.0){
+				continue;
+			}
+			System.out.println("----------------Similarity : " + similarity + "-------------------------------------");
+			count ++;
+			for(ASTNode statement : block.getNodes()){
+				System.out.println(statement);
+			}
+			System.out.println("-----------------------------------------------------");
+		}
+		
+		System.out.println("-----------" + count + "-------------");
 	}
 
 	@Test
@@ -484,17 +617,30 @@ public class SimpleFilterTest {
 		ProjectInfo.init(subject);
 		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math3/genetics/ElitisticListPopulation.java";
 		int buggyLine = 51;
-		int lineRange = 10;
-		CodeBlock codeBlock = Utils.search(file, buggyLine, lineRange);
+		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+		
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
+		
 		Utils.print(codeBlock);
-		
 
-		String file_2 = file;
-		int buggyLine_2 = 101;
-		CodeBlock similar = Utils.search(file_2, buggyLine_2, lineRange);
-		Utils.print(similar);
+		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
+		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
 		
-		Utils.showSimilarity(codeBlock, similar);
+		int count = 0;
+		for(CodeBlock block : candidates){
+			float similarity = Utils.computeSimilarity(codeBlock, block);
+			if(similarity < guard || similarity == 1.0){
+				continue;
+			}
+			System.out.println("----------------Similarity : " + similarity + "-------------------------------------");
+			count ++;
+			for(ASTNode statement : block.getNodes()){
+				System.out.println(statement);
+			}
+			System.out.println("-----------------------------------------------------");
+		}
+		
+		System.out.println("-----------" + count + "-------------");
 	}
 
 	@Test

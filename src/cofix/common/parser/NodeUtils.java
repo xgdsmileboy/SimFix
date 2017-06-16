@@ -6,7 +6,9 @@
  */
 package cofix.common.parser;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -16,11 +18,14 @@ import org.eclipse.jdt.core.dom.ASTVisitor;
 import org.eclipse.jdt.core.dom.Block;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.EnhancedForStatement;
+import org.eclipse.jdt.core.dom.EnumDeclaration;
 import org.eclipse.jdt.core.dom.FieldDeclaration;
 import org.eclipse.jdt.core.dom.ForStatement;
 import org.eclipse.jdt.core.dom.IfStatement;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
+import org.eclipse.jdt.core.dom.Modifier;
 import org.eclipse.jdt.core.dom.SingleVariableDeclaration;
+import org.eclipse.jdt.core.dom.StructuralPropertyDescriptor;
 import org.eclipse.jdt.core.dom.Type;
 import org.eclipse.jdt.core.dom.TypeDeclaration;
 import org.eclipse.jdt.core.dom.VariableDeclarationExpression;
@@ -52,13 +57,75 @@ public class NodeUtils {
 				}
 				methodName += params;
 			} else if(parent instanceof TypeDeclaration){
-				className = ((TypeDeclaration)parent).getName().getFullyQualifiedName();
-				break;
+				TypeDeclaration typeDeclaration = (TypeDeclaration) parent;
+				if(Modifier.isPublic(typeDeclaration.getModifiers()) && className != null){
+					className = typeDeclaration.getName().getFullyQualifiedName() + "$" + className;
+				} else {
+					className = ((TypeDeclaration)parent).getName().getFullyQualifiedName();
+				}
+			} else if(parent instanceof EnumDeclaration){
+				className = ((EnumDeclaration)parent).getName().getFullyQualifiedName();
 			}
 			parent = parent.getParent();
 		}
 		return new Pair<String, String>(className, methodName);
 	}
+	
+	public static int getValidLineNumber(ASTNode statement){
+		if(statement == null){
+			return 0;
+		}
+		String[] contents = statement.toString().split("\n");
+		int line = 0;
+		boolean comment_start_flag = false;
+		for(String string : contents){
+			string = string.trim();
+			// empty line
+			if(string.length() == 0){
+				continue;
+			}
+			// comment for single line
+			if(string.startsWith("//")){
+				continue;
+			}
+			// comment start for multi-lines
+			if(string.startsWith("\\*")){
+				comment_start_flag = true;
+				continue;
+			}
+			// comment end for multi-lines
+			if(string.endsWith("*/")){
+				comment_start_flag = false;
+				continue;
+			}
+			// comment in multi-lines
+			if(comment_start_flag){
+				continue;
+			}
+			// meaningless lines
+			if(string.equals("{") || string.equals("}")){
+				continue;
+			}
+			line ++;
+		}
+		return line;
+	}
+	
+	public static List<ASTNode> getAllSiblingNodes(ASTNode node){
+		List<ASTNode> siblings = new ArrayList<>();
+		StructuralPropertyDescriptor structuralPropertyDescriptor = node.getLocationInParent();
+		if (structuralPropertyDescriptor == null) {
+			return siblings;
+		} else if(structuralPropertyDescriptor.isChildListProperty()){
+			List list = (List) node.getParent().getStructuralProperty(structuralPropertyDescriptor);
+			for(Object object : list){
+				if(object instanceof ASTNode){
+					siblings.add((ASTNode) object);
+				}
+			}
+		}
+		return siblings;
+ 	}
 	
 	public static Map<String, Type> getUsableVarTypes(String file, int line){
 		String content = JavaFile.readFileToString(file);
