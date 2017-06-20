@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<subjects>
+	<subject name="chart" id="1">
+		<ssrc>/source</ssrc>
+		<tsrc>/tests</tsrc>
+		<sbin>/build</sbin>
+		<tbin>/build-tests</tbin>
+		<classpath>
+			<element>/lib/servlet.jar</element>
+			<element>/lib/junit.jar</element>
+			<element>/lib/iText-2.1.4.jar</element>
+		</classpath>
+	</subject>
+</subjects>

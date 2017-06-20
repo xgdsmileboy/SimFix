@@ -9,7 +9,9 @@ package cofix.common.localization;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.gzoltar.core.GZoltar;
 import com.gzoltar.core.components.Statement;
@@ -27,11 +29,13 @@ public class FLocalization {
 	
 	private int _totalTest = 0;
 	private int _failedTest = 0;
-	private List<Pair<String, String>> _failedTrace = null;
+	private Map<String, String> _failedTrace = null;
+	private List<String> _passedTests = null;
 	private List<Statement> _candidates = null;
 	
 	public FLocalization() {
-		_failedTrace = new ArrayList<>();
+		_failedTrace = new HashMap<String, String>();
+		_passedTests = new ArrayList<>();
 		_candidates = new ArrayList<>();
 	}
 	
@@ -39,16 +43,31 @@ public class FLocalization {
 		return _totalTest;
 	}
 	
+	public List<String> getPassedTestCases(){
+		return _passedTests;
+	}
+	
 	public int getFailedTestCases(){
 		return _failedTest;
 	}
 	
-	public List<Pair<String, String>> getFailedTestInfo(){
+	public Map<String, String> getFailedTestInfo(){
 		return _failedTrace;
 	}
 	
 	public List<Statement> getSuspiciousStatement(){
 		return _candidates;
+	}
+	
+	public List<Pair<String, Integer>> getLocations(){
+		List<Pair<String, Integer>> locations = new ArrayList<>();
+		for(Statement statement : _candidates){
+			String stmt = statement.getMethod().getParent().getLabel();
+			Integer line = statement.getLineNumber();
+			Pair<String, Integer> pair = new Pair<String, Integer>(stmt, line);
+			locations.add(pair);
+		}
+		return locations;
 	}
 	
 	public void locateFault(Subject subject, double threshold) {
@@ -83,7 +102,9 @@ public class FLocalization {
 			_totalTest++;
 			if(!tr.wasSuccessful()){
 				_failedTest ++;
-				_failedTrace.add(new Pair<String, String>(tr.getName(), tr.getTrace()));
+				_failedTrace.put(tr.getName(), tr.getTrace());
+			} else {
+				_passedTests.add(tr.getName());
 			}
 		}
 		

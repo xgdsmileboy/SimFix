@@ -11,6 +11,7 @@ import org.junit.Test;
 import com.gzoltar.core.components.Statement;
 
 import cofix.common.config.Constant;
+import cofix.common.util.Pair;
 import cofix.common.util.Subject;
 
 /**
@@ -31,5 +32,11 @@ public class FLocalizationTest {
 		for(Statement stmt : fLocalization.getSuspiciousStatement()){
 			System.out.println(stmt.getMethod().getParent().getLabel() + "," + stmt.getLineNumber() + "," + stmt.getSuspiciousness());
 		}
+		
+//		System.out.println("\n-----------------------------------------\n");
+//		for(String string : fLocalization.getPassedTestCases()){
+//			System.out.println(string);
+//		}
+//		
 	}
 }

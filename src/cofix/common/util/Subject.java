@@ -37,6 +37,7 @@ public class Subject {
 	private String _tbin = null;
 	private List<String> _instrumentPackages = null;
 	private List<String> _testClasses = null;
+	private List<String> _dependency = null;
 
 	/**
 	 * subject
@@ -55,12 +56,17 @@ public class Subject {
 	 *            : relative path for test byte code, e.g., "/test-classes"
 	 */
 	public Subject(String name, int id, String ssrc, String tsrc, String sbin, String tbin) {
+		this(name, id, ssrc, tsrc, sbin, tbin, null);
+	}
+	
+	public Subject(String name, int id, String ssrc, String tsrc, String sbin, String tbin, List<String> dependency) {
 		_name = name;
 		_id = id;
 		_ssrc = ssrc;
 		_tsrc = tsrc;
 		_sbin = sbin;
 		_tbin = tbin;
+		_dependency = dependency;
 	}
 
 	public String getName() {
@@ -85,6 +91,10 @@ public class Subject {
 
 	public String getTbin() {
 		return _tbin;
+	}
+	
+	public List<String> getDependency(){
+		return _dependency;
 	}
 	
 	public List<String> getTestClasses(){
@@ -178,8 +188,8 @@ public class Subject {
 
 	@Override
 	public String toString() {
-		return "[_name=" + _name + ", _id=" + _id + ", _ssrc=" + _ssrc + ", _tsrc=" + _tsrc + ", _sbin=" + _sbin
-				+ ", _tbin=" + _tbin + "]";
+		return "Subject [_name=" + _name + ", _id=" + _id + ", _ssrc=" + _ssrc + ", _tsrc=" + _tsrc + ", _sbin=" + _sbin
+				+ ", _tbin=" + _tbin + ", _dependency=" + _dependency + "]";
 	}
 	
 }

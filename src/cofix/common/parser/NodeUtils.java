@@ -16,6 +16,7 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.ASTVisitor;
 import org.eclipse.jdt.core.dom.Block;
+import org.eclipse.jdt.core.dom.ClassInstanceCreation;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.EnhancedForStatement;
 import org.eclipse.jdt.core.dom.EnumDeclaration;
@@ -42,6 +43,64 @@ import cofix.common.util.Pair;
  */
 public class NodeUtils {
 
+	private static String getFullClazzName(MethodDeclaration node) {
+		String clazz = "";
+		// filter those methods that defined in anonymous classes
+		ASTNode parent = node.getParent();
+		while (parent != null) {
+			if (parent instanceof ClassInstanceCreation) {
+				return null;
+			} else if(parent instanceof TypeDeclaration){
+				clazz = ((TypeDeclaration) parent).getName().getFullyQualifiedName();
+				break;
+			} else if(parent instanceof EnumDeclaration){
+				clazz = ((EnumDeclaration) parent).getName().getFullyQualifiedName();
+				break;
+			}
+			parent = parent.getParent();
+		}
+		if(parent == null){
+			while(parent != null){
+				if(parent instanceof CompilationUnit){
+					String packageName = ((CompilationUnit) parent).getPackage().getName().getFullyQualifiedName();
+					clazz = packageName + "." + clazz;
+					return clazz;
+				}
+				parent = parent.getParent();
+			}
+		}
+		return null;
+	}
+	
+	public static  String buildMethodInfoString(MethodDeclaration node) {
+		String currentClassName = getFullClazzName(node);
+		if (currentClassName == null) {
+			return null;
+		}
+		StringBuffer buffer = new StringBuffer(currentClassName + "#");
+
+		String retType = "?";
+		if (node.getReturnType2() != null) {
+			retType = node.getReturnType2().toString();
+		}
+		StringBuffer param = new StringBuffer("?");
+		for (Object object : node.parameters()) {
+			if (!(object instanceof SingleVariableDeclaration)) {
+				param.append(",?");
+			} else {
+				SingleVariableDeclaration singleVariableDeclaration = (SingleVariableDeclaration) object;
+				param.append("," + singleVariableDeclaration.getType().toString());
+			}
+		}
+		// add method return type
+		buffer.append(retType + "#");
+		// add method name
+		buffer.append(node.getName().getFullyQualifiedName() + "#");
+		// add method params, NOTE: the first parameter starts at index 1.
+		buffer.append(param);
+		return buffer.toString();
+	}
+	
 	public static Pair<String, String> getTypeDecAndMethodDec(ASTNode node) {
 		ASTNode parent = node.getParent();
 		String methodName = null;
