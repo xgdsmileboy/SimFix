@@ -16,7 +16,7 @@ import cofix.common.astnode.Expr;
  * @author Jiajun
  * @datae Jun 7, 2017
  */
-public class Deletion extends Modification {
+public class Deletion extends Delta {
 	
 	public Deletion(Expr expr) {
 		super(expr);

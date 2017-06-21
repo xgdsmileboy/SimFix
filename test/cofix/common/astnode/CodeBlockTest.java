@@ -15,6 +15,9 @@ import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.junit.Test;
 
+import cofix.common.astnode.expr.Variable;
+import cofix.common.astnode.literal.Literal;
+import cofix.common.astnode.structure.Structure;
 import cofix.common.code.search.BuggyCode;
 import cofix.common.code.search.CodeSearch;
 import cofix.common.config.Constant;

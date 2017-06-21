@@ -1,6 +1,8 @@
 package cofix.common.code.search;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import org.eclipse.jdt.core.dom.ASTNode;
@@ -13,11 +15,12 @@ import org.eclipse.jdt.core.dom.SimpleName;
 import org.eclipse.jdt.core.dom.Type;
 
 import cofix.common.astnode.CodeBlock;
-import cofix.common.astnode.Variable;
+import cofix.common.astnode.expr.Variable;
 import cofix.common.parser.NodeUtils;
 import cofix.common.parser.ProjectInfo;
 import cofix.common.util.JavaFile;
 import cofix.common.util.Pair;
+import cofix.core.match.Utils;
 
 public class SimpleFilter {
 	
@@ -28,8 +31,8 @@ public class SimpleFilter {
 		_buggyCode = buggyCode;
 	}
 	
-	public List<CodeBlock> filter(String srcPath){
-		List<String> files = JavaFile.ergodic(srcPath, new ArrayList<>());
+	public List<Pair<CodeBlock, Float>> filter(String srcPath, double guard){
+		List<String> files = JavaFile.ergodic(srcPath, new ArrayList<String>());
 		CollectorVisitor collectorVisitor = new CollectorVisitor();
 		for(String file : files){
 			String content = JavaFile.readFileToString(file);
@@ -37,7 +40,32 @@ public class SimpleFilter {
 			collectorVisitor.setUnit(unit);
 			unit.accept(collectorVisitor);
 		}
-		return _candidates;
+		return filter(guard);
+	}
+	
+	private List<Pair<CodeBlock, Float>> filter(double guard){
+		List<Pair<CodeBlock, Float>> filtered = new ArrayList<>();
+		for(CodeBlock block : _candidates){
+			Float similarity = Utils.computeSimilarity(_buggyCode, block);
+			if(similarity < guard){
+				continue;
+			}
+			filtered.add(new Pair<CodeBlock, Float>(block, similarity));
+		}
+		
+		Collections.sort(filtered, new Comparator<Pair<CodeBlock, Float>>() {
+			@Override
+			public int compare(Pair<CodeBlock, Float> o1, Pair<CodeBlock, Float> o2) {
+				if(o1.getSecond() < o2.getSecond()){
+					return 1;
+				} else if(o1.getSecond() > o2.getSecond()){
+					return -1;
+				} else {
+					return 0;
+				}
+			}
+		});
+		return filtered;
 	}
 	
 	class CollectorVisitor extends ASTVisitor{
@@ -52,7 +80,7 @@ public class SimpleFilter {
 		public boolean visit(SimpleName node) {
 			String name = node.getFullyQualifiedName();
 			Pair<String, String> classAndMethodName = NodeUtils.getTypeDecAndMethodDec(node);
-			Type type = ProjectInfo.getVariableType(classAndMethodName.first(), classAndMethodName.second(), name);
+			Type type = ProjectInfo.getVariableType(classAndMethodName.getFirst(), classAndMethodName.getSecond(), name);
 			Variable variable = new Variable(node, type, name);
 			if(_buggyCode.getVariables().containsKey(variable)){
 				ASTNode parent = node.getParent();

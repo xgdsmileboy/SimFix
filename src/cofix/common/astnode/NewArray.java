@@ -13,7 +13,8 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
-import cofix.core.adapt.Modification;
+import cofix.common.astnode.expr.Variable;
+import cofix.core.adapt.Delta;
 
 /**
  * @author Jiajun
@@ -25,7 +26,7 @@ public class NewArray extends MethodCall{
 	private List<Expr> _initializers = null;
 	
 	public NewArray(ASTNode node, Type retType, Expr expr, String name) {
-		this(node, retType, expr, name, new ArrayList<>());
+		this(node, retType, expr, name, new ArrayList<Expr>());
 	}
 	
 	public NewArray(ASTNode node, Type retType, Expr expr, String name, List<Expr> dimensions){
@@ -73,7 +74,7 @@ public class NewArray extends MethodCall{
 	}
 	
 	@Override
-	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Delta> modifications) {
 		// TODO Auto-generated method stub
 		return false;
 	}

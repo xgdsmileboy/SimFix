@@ -24,7 +24,7 @@ import cofix.common.util.Pair;
 public class TypeParseVisitor extends ASTVisitor {
 	public boolean visit(TypeDeclaration node) {
 		Pair<String, String> clazzAndMethodName = NodeUtils.getTypeDecAndMethodDec(node.getName());
-		String clazz = clazzAndMethodName.first();
+		String clazz = clazzAndMethodName.getFirst();
 		AST ast = AST.newAST(AST.JLS8);
 		Type type = ast.newSimpleType(ast.newSimpleName(clazz));
 		ProjectInfo.addFieldType(clazz, "THIS", type);
@@ -87,8 +87,8 @@ public class TypeParseVisitor extends ASTVisitor {
 		}
 		
 		Pair<String, String> classAndMethodName = NodeUtils.getTypeDecAndMethodDec(node.getBody());
-		String className = classAndMethodName.first();
-		String methodName = classAndMethodName.second();
+		String className = classAndMethodName.getFirst();
+		String methodName = classAndMethodName.getSecond();
 		
 		ProjectInfo.addMethodRetType(className, node.getName().getFullyQualifiedName(), node.getReturnType2());
 		

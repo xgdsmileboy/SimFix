@@ -5,7 +5,7 @@
  * Written by Jiajun Jiang<jiajun.jiang@pku.edu.cn>.
  */
 
-package cofix.common.astnode;
+package cofix.common.astnode.literal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,35 +17,40 @@ import org.eclipse.jdt.core.dom.NumberLiteral;
 import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.Type;
 
-import com.sun.corba.se.spi.activation._ActivatorStub;
-
-import cofix.core.adapt.Modification;
+import cofix.common.astnode.Expr;
+import cofix.common.astnode.expr.Variable;
+import cofix.core.adapt.Delta;
 import cofix.core.adapt.Revision;
 
-public class FloatLiteral extends Literal{
+public class DoubleLiteral extends Literal {
 
-	private final double threshold = 1e-6;
-	private float _value = 0.0f;
+	private final double threshold = 1e-12;
+	private double _value = 0.0;
 	
-	public FloatLiteral(ASTNode node, float value) {
+	public DoubleLiteral(ASTNode node, double value) {
 		_srcNode = node;
 		_value = value;
 	}
 	
 	@Override
-	public Float getValue() {
+	public Double getValue() {
 		return _value;
 	}
 
 	@Override
 	public Type getType() {
 		AST ast = AST.newAST(AST.JLS8);
-		return ast.newPrimitiveType(PrimitiveType.FLOAT);
+		return ast.newPrimitiveType(PrimitiveType.DOUBLE);
+	}
+	
+	public NumberLiteral genAST(){
+		AST ast = AST.newAST(AST.JLS8);
+		return ast.newNumberLiteral(String.valueOf(_value));
 	}
 	
 	@Override
 	public int hashCode() {
-		return Float.valueOf(_value).hashCode();
+		return Double.valueOf(_value).hashCode();
 	}
 	
 	@Override
@@ -53,17 +58,11 @@ public class FloatLiteral extends Literal{
 		if(obj == null){
 			return false;
 		}
-		if(!(obj instanceof FloatLiteral)){
+		if(!(obj instanceof DoubleLiteral)){
 			return false;
 		}
-		FloatLiteral other = (FloatLiteral) obj;
-		return Math.abs((double)_value - other.getValue()) < threshold;
-	}
-
-	@Override
-	public NumberLiteral genAST() {
-		AST ast = AST.newAST(AST.JLS8);
-		return ast.newNumberLiteral(String.valueOf(_value));
+		DoubleLiteral other = (DoubleLiteral) obj;
+		return Math.abs(_value - other.getValue()) < threshold;
 	}
 	
 	@Override
@@ -72,10 +71,10 @@ public class FloatLiteral extends Literal{
 	}
 
 	@Override
-	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		// exactly match
-		if(expr instanceof FloatLiteral){
-			FloatLiteral other = (FloatLiteral) expr;
+	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Delta> modifications) {
+		//exactly match
+		if(expr instanceof DoubleLiteral){
+			DoubleLiteral other = (DoubleLiteral) expr;
 			if(Math.abs(_value - other.getValue()) > threshold){
 				Revision revision = new Revision(this);
 				revision.setTar(expr);
@@ -84,11 +83,11 @@ public class FloatLiteral extends Literal{
 			}
 			return true;
 		} else if(expr != null){
-			// match type
+			// type match
 			Type type = expr.getType();
 			if(type != null){
 				String typeStr = type.toString();
-				if(typeStr.equals("double") || typeStr.equals("float") || typeStr.equals("int")){
+				if(typeStr.equals("double") || type.equals("float") || type.equals("int")){
 					Revision revision = new Revision(this);
 					revision.setTar(expr);
 					revision.setModificationComplexity(1);
@@ -113,12 +112,12 @@ public class FloatLiteral extends Literal{
 
 	@Override
 	public void backup() {
-		_backup = new FloatLiteral(_srcNode, _value);
+		_backup = new DoubleLiteral(_srcNode, _value);
 	}
 
 	@Override
 	public void restore() {
-		this._value = ((FloatLiteral)_backup).getValue();
+		this._value = ((DoubleLiteral)_backup).getValue();
 		this._srcNode = _backup.getOriginalASTnode();
 	}
 

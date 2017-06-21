@@ -24,7 +24,7 @@ public class ProjectInfo {
 
 	public static void init(Subject subject){
 		String srcPath = subject.getHome() + subject.getSsrc();
-		List<String> files = JavaFile.ergodic(srcPath, new ArrayList<>());
+		List<String> files = JavaFile.ergodic(srcPath, new ArrayList<String>());
 		TypeParseVisitor typeParseVisitor = new TypeParseVisitor();
 		for(String file : files){
 			CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);

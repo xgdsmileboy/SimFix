@@ -4,7 +4,7 @@
  * strictly prohibited Proprietary and Confidential.
  * Written by Jiajun Jiang<jiajun.jiang@pku.edu.cn>.
  */
-package cofix.common.astnode;
+package cofix.common.astnode.literal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,9 @@ import org.eclipse.jdt.core.dom.Type;
 
 import com.sun.org.apache.regexp.internal.recompile;
 
-import cofix.core.adapt.Modification;
+import cofix.common.astnode.Expr;
+import cofix.common.astnode.expr.Variable;
+import cofix.core.adapt.Delta;
 import cofix.core.adapt.Revision;
 
 /**
@@ -80,7 +82,7 @@ public class BoolLiteral extends Literal {
 	}
 
 	@Override
-	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Delta> modifications) {
 		// exactly match
 		if(expr instanceof BoolLiteral){
 			BoolLiteral other = (BoolLiteral) expr;

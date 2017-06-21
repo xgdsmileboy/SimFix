@@ -4,8 +4,7 @@
  * strictly prohibited Proprietary and Confidential.
  * Written by Jiajun Jiang<jiajun.jiang@pku.edu.cn>.
  */
-
-package cofix.common.astnode;
+package cofix.common.astnode.literal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,27 +16,33 @@ import org.eclipse.jdt.core.dom.NumberLiteral;
 import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.Type;
 
-import cofix.core.adapt.Modification;
+import cofix.common.astnode.Expr;
+import cofix.common.astnode.expr.Variable;
+import cofix.core.adapt.Delta;
 import cofix.core.adapt.Revision;
 
-public class IntLiteral extends Literal{
-
-	private Integer _value = 0;
+/**
+ * @author Jiajun
+ *
+ */
+public class LongLiteral extends Literal {
 	
-	public IntLiteral(ASTNode node, int value) {
+	private Long _value = 0l;
+	
+	public LongLiteral(ASTNode node, long value) {
 		_srcNode = node;
 		_value = value;
 	}
 	
 	@Override
-	public Integer getValue() {
+	public Long getValue() {
 		return _value;
 	}
 	
 	@Override
 	public Type getType() {
 		AST ast = AST.newAST(AST.JLS8);
-		return ast.newPrimitiveType(PrimitiveType.INT);
+		return ast.newPrimitiveType(PrimitiveType.LONG);
 	}
 	
 	@Override
@@ -48,7 +53,7 @@ public class IntLiteral extends Literal{
 	
 	@Override
 	public int hashCode() {
-		return Integer.valueOf(_value).hashCode();
+		return Long.valueOf(_value).hashCode();
 	}
 	
 	@Override
@@ -56,10 +61,10 @@ public class IntLiteral extends Literal{
 		if(obj == null){
 			return false;
 		}
-		if(!(obj instanceof IntLiteral)){
+		if(!(obj instanceof LongLiteral)){
 			return false;
 		}
-		IntLiteral other = (IntLiteral)obj;
+		LongLiteral other = (LongLiteral)obj;
 		return this._value == other.getValue();
 	}
 	
@@ -69,10 +74,10 @@ public class IntLiteral extends Literal{
 	}
 
 	@Override
-	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Delta> modifications) {
 		// exactly match
-		if(expr instanceof IntLiteral){
-			IntLiteral other = (IntLiteral) expr;
+		if(expr instanceof LongLiteral){
+			LongLiteral other = (LongLiteral) expr;
 			if(_value != other.getValue()){
 				Revision revision = new Revision(this);
 				revision.setTar(expr);
@@ -85,7 +90,7 @@ public class IntLiteral extends Literal{
 			Type type = expr.getType();
 			if(type != null){
 				String typeStr = type.toString();
-				if(typeStr.equals("double") || typeStr.equals("float") || typeStr.equals("int")){
+				if(typeStr.equals("long") || typeStr.equals("int")){
 					Revision revision = new Revision(this);
 					revision.setTar(expr);
 					revision.setModificationComplexity(1);
@@ -110,13 +115,12 @@ public class IntLiteral extends Literal{
 
 	@Override
 	public void backup() {
-		_backup = new IntLiteral(_srcNode, _value);
+		_backup = new LongLiteral(_srcNode, _value);
 	}
 
 	@Override
 	public void restore() {
-		this._value = ((IntLiteral)_backup).getValue();
+		this._value = ((LongLiteral)_backup).getValue();
 		this._srcNode = _backup.getOriginalASTnode();
 	}
-	
 }

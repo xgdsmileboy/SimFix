@@ -22,7 +22,7 @@ import cofix.common.parser.NodeUtils;
 import cofix.common.parser.ProjectInfo;
 import cofix.common.util.JavaFile;
 import cofix.common.util.Subject;
-import cofix.core.adapt.Modification;
+import cofix.core.adapt.Delta;
 
 /**
  * @author Jiajun
@@ -55,9 +55,9 @@ public class CodeBlockMatcherTest {
 			System.out.println(entry.getKey() + "  " + entry.getValue());
 		}
 		System.out.println("=====================================");
-		List<Modification> modifications = CodeBlockMatcher.match(codeBlock, similar, usableVars);
+		List<Delta> modifications = CodeBlockMatcher.match(codeBlock, similar, usableVars);
 		
-		for(Modification modification : modifications){
+		for(Delta modification : modifications){
 			System.out.println(modification);
 			modification.apply(usableVars);
 			Utils.print(codeBlock);

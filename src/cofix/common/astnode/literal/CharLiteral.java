@@ -4,8 +4,7 @@
  * strictly prohibited Proprietary and Confidential.
  * Written by Jiajun Jiang<jiajun.jiang@pku.edu.cn>.
  */
-
-package cofix.common.astnode;
+package cofix.common.astnode.literal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,42 +12,50 @@ import java.util.Map;
 
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
-import org.eclipse.jdt.core.dom.NumberLiteral;
+import org.eclipse.jdt.core.dom.CharacterLiteral;
 import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.Type;
 
-import cofix.core.adapt.Modification;
+import cofix.common.astnode.Expr;
+import cofix.common.astnode.expr.Variable;
+import cofix.core.adapt.Delta;
 import cofix.core.adapt.Revision;
 
-public class DoubleLiteral extends Literal {
+/**
+ * @author Jiajun
+ *
+ */
+public class CharLiteral extends Literal {
 
-	private final double threshold = 1e-12;
-	private double _value = 0.0;
-	
-	public DoubleLiteral(ASTNode node, double value) {
+	private char _value;
+
+	public CharLiteral(ASTNode node, char value) {
 		_srcNode = node;
 		_value = value;
 	}
-	
+
 	@Override
-	public Double getValue() {
+	public Character getValue() {
 		return _value;
 	}
 
 	@Override
 	public Type getType() {
 		AST ast = AST.newAST(AST.JLS8);
-		return ast.newPrimitiveType(PrimitiveType.DOUBLE);
+		return ast.newPrimitiveType(PrimitiveType.CHAR);
 	}
-	
-	public NumberLiteral genAST(){
+
+	@Override
+	public CharacterLiteral genAST() {
 		AST ast = AST.newAST(AST.JLS8);
-		return ast.newNumberLiteral(String.valueOf(_value));
+		CharacterLiteral literal = ast.newCharacterLiteral();
+		literal.setCharValue(_value);
+		return literal;
 	}
 	
 	@Override
 	public int hashCode() {
-		return Double.valueOf(_value).hashCode();
+		return Character.valueOf(_value).hashCode();
 	}
 	
 	@Override
@@ -56,24 +63,24 @@ public class DoubleLiteral extends Literal {
 		if(obj == null){
 			return false;
 		}
-		if(!(obj instanceof DoubleLiteral)){
+		if(!(obj instanceof CharLiteral)){
 			return false;
 		}
-		DoubleLiteral other = (DoubleLiteral) obj;
-		return Math.abs(_value - other.getValue()) < threshold;
+		CharLiteral other = (CharLiteral) obj;
+		return _value == other.getValue().charValue();
 	}
 	
 	@Override
 	public String toString() {
-		return String.valueOf(_value);
+		return "'" + _value + "'";
 	}
 
 	@Override
-	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		//exactly match
-		if(expr instanceof DoubleLiteral){
-			DoubleLiteral other = (DoubleLiteral) expr;
-			if(Math.abs(_value - other.getValue()) > threshold){
+	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Delta> modifications) {
+		// exactly match
+		if(expr instanceof CharLiteral){
+			CharLiteral other = (CharLiteral) expr;
+			if(_value != other.getValue()){
 				Revision revision = new Revision(this);
 				revision.setTar(expr);
 				revision.setModificationComplexity(1);
@@ -83,15 +90,12 @@ public class DoubleLiteral extends Literal {
 		} else if(expr != null){
 			// type match
 			Type type = expr.getType();
-			if(type != null){
-				String typeStr = type.toString();
-				if(typeStr.equals("double") || type.equals("float") || type.equals("int")){
-					Revision revision = new Revision(this);
-					revision.setTar(expr);
-					revision.setModificationComplexity(1);
-					modifications.add(revision);
-					return true;
-				}
+			if(type != null && type.toString().equals("char")){
+				Revision revision = new Revision(this);
+				revision.setTar(expr);
+				revision.setModificationComplexity(1);
+				modifications.add(revision);
+				return true;
 			}
 		}
 		return false;
@@ -110,12 +114,12 @@ public class DoubleLiteral extends Literal {
 
 	@Override
 	public void backup() {
-		_backup = new DoubleLiteral(_srcNode, _value);
+		_backup = new CharLiteral(_srcNode, _value);
 	}
 
 	@Override
 	public void restore() {
-		this._value = ((DoubleLiteral)_backup).getValue();
+		this._value = ((CharLiteral)_backup).getValue();
 		this._srcNode = _backup.getOriginalASTnode();
 	}
 

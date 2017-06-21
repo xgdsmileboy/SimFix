@@ -5,7 +5,7 @@
  * Written by Jiajun Jiang<jiajun.jiang@pku.edu.cn>.
  */
 
-package cofix.common.astnode;
+package cofix.common.astnode.literal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,9 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.NullLiteral;
 import org.eclipse.jdt.core.dom.Type;
 
-import cofix.core.adapt.Modification;
+import cofix.common.astnode.Expr;
+import cofix.common.astnode.expr.Variable;
+import cofix.core.adapt.Delta;
 
 public class NilLiteral extends Literal {
 
@@ -63,7 +65,7 @@ public class NilLiteral extends Literal {
 	}
 
 	@Override
-	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Delta> modifications) {
 		if(expr instanceof NilLiteral){
 			return true;
 		}

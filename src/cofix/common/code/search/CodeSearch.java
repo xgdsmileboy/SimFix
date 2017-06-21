@@ -39,7 +39,6 @@ import org.eclipse.jdt.core.dom.VariableDeclarationStatement;
 import org.eclipse.jdt.core.dom.WhileStatement;
 
 import cofix.common.parser.NodeUtils;
-import javafx.scene.Parent;
 
 /**
  * @author Jiajun

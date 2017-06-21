@@ -15,7 +15,8 @@ import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
-import cofix.core.adapt.Modification;
+import cofix.common.astnode.expr.Variable;
+import cofix.core.adapt.Delta;
 
 public class MethodCall extends Expr{
 	
@@ -25,7 +26,7 @@ public class MethodCall extends Expr{
 	protected List<Expr> _parameters = null;
 	
 	public MethodCall(ASTNode node, Type retType, Expr expr, String name) {
-		this(node, retType, expr, name, new ArrayList<>());
+		this(node, retType, expr, name, new ArrayList<Expr>());
 	}
 	
 	public MethodCall(ASTNode node, Type retType, Expr expr, String name, List<Expr> parameters){
@@ -118,7 +119,7 @@ public class MethodCall extends Expr{
 	}
 
 	@Override
-	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Delta> modifications) {
 		// TODO Auto-generated method stub
 		return false;
 	}

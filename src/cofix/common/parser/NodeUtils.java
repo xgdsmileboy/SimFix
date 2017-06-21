@@ -13,7 +13,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.eclipse.jdt.core.dom.ASTNode;
-import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.ASTVisitor;
 import org.eclipse.jdt.core.dom.Block;
 import org.eclipse.jdt.core.dom.ClassInstanceCreation;
@@ -187,8 +186,7 @@ public class NodeUtils {
  	}
 	
 	public static Map<String, Type> getUsableVarTypes(String file, int line){
-		String content = JavaFile.readFileToString(file);
-		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(content, ASTParser.K_COMPILATION_UNIT);
+		CompilationUnit unit = JavaFile.genASTFromFile(file);
 		VariableVisitor variableVisitor = new VariableVisitor(line, unit);
 		unit.accept(variableVisitor);
 		return variableVisitor.getVars();
@@ -245,9 +243,9 @@ class VariableVisitor extends ASTVisitor {
 		public void dumpVarMap() {
 			for(Entry<Pair<String, Type>, Pair<Integer, Integer>> entry : _tmpVars.entrySet()){
 				Pair<Integer, Integer> range = entry.getValue();
-				if(range.first() < _line && _line <= range.second()){
+				if(range.getFirst() < _line && _line <= range.getSecond()){
 					Pair<String, Type> variable = entry.getKey();
-					_vars.put(variable.first(), variable.second());
+					_vars.put(variable.getFirst(), variable.getSecond());
 				}
 			}
 		}

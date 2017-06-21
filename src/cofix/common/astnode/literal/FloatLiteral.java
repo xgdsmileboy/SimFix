@@ -4,7 +4,8 @@
  * strictly prohibited Proprietary and Confidential.
  * Written by Jiajun Jiang<jiajun.jiang@pku.edu.cn>.
  */
-package cofix.common.astnode;
+
+package cofix.common.astnode.literal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,42 +17,37 @@ import org.eclipse.jdt.core.dom.NumberLiteral;
 import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.Type;
 
-import cofix.core.adapt.Modification;
+import com.sun.corba.se.spi.activation._ActivatorStub;
+
+import cofix.common.astnode.Expr;
+import cofix.common.astnode.expr.Variable;
+import cofix.core.adapt.Delta;
 import cofix.core.adapt.Revision;
 
-/**
- * @author Jiajun
- *
- */
-public class LongLiteral extends Literal {
+public class FloatLiteral extends Literal{
+
+	private final double threshold = 1e-6;
+	private float _value = 0.0f;
 	
-	private Long _value = 0l;
-	
-	public LongLiteral(ASTNode node, long value) {
+	public FloatLiteral(ASTNode node, float value) {
 		_srcNode = node;
 		_value = value;
 	}
 	
 	@Override
-	public Long getValue() {
+	public Float getValue() {
 		return _value;
 	}
-	
+
 	@Override
 	public Type getType() {
 		AST ast = AST.newAST(AST.JLS8);
-		return ast.newPrimitiveType(PrimitiveType.LONG);
-	}
-	
-	@Override
-	public NumberLiteral genAST() {
-		AST ast = AST.newAST(AST.JLS8);
-		return ast.newNumberLiteral(String.valueOf(_value));
+		return ast.newPrimitiveType(PrimitiveType.FLOAT);
 	}
 	
 	@Override
 	public int hashCode() {
-		return Long.valueOf(_value).hashCode();
+		return Float.valueOf(_value).hashCode();
 	}
 	
 	@Override
@@ -59,11 +55,17 @@ public class LongLiteral extends Literal {
 		if(obj == null){
 			return false;
 		}
-		if(!(obj instanceof LongLiteral)){
+		if(!(obj instanceof FloatLiteral)){
 			return false;
 		}
-		LongLiteral other = (LongLiteral)obj;
-		return this._value == other.getValue();
+		FloatLiteral other = (FloatLiteral) obj;
+		return Math.abs((double)_value - other.getValue()) < threshold;
+	}
+
+	@Override
+	public NumberLiteral genAST() {
+		AST ast = AST.newAST(AST.JLS8);
+		return ast.newNumberLiteral(String.valueOf(_value));
 	}
 	
 	@Override
@@ -72,11 +74,11 @@ public class LongLiteral extends Literal {
 	}
 
 	@Override
-	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Delta> modifications) {
 		// exactly match
-		if(expr instanceof LongLiteral){
-			LongLiteral other = (LongLiteral) expr;
-			if(_value != other.getValue()){
+		if(expr instanceof FloatLiteral){
+			FloatLiteral other = (FloatLiteral) expr;
+			if(Math.abs(_value - other.getValue()) > threshold){
 				Revision revision = new Revision(this);
 				revision.setTar(expr);
 				revision.setModificationComplexity(1);
@@ -84,11 +86,11 @@ public class LongLiteral extends Literal {
 			}
 			return true;
 		} else if(expr != null){
-			// type match
+			// match type
 			Type type = expr.getType();
 			if(type != null){
 				String typeStr = type.toString();
-				if(typeStr.equals("long") || typeStr.equals("int")){
+				if(typeStr.equals("double") || typeStr.equals("float") || typeStr.equals("int")){
 					Revision revision = new Revision(this);
 					revision.setTar(expr);
 					revision.setModificationComplexity(1);
@@ -99,7 +101,7 @@ public class LongLiteral extends Literal {
 		}
 		return false;
 	}
-
+	
 	@Override
 	public Expr adapt(Expr tar, Map<String, Type> allUsableVarMap) {
 		// TODO Auto-generated method stub
@@ -113,12 +115,13 @@ public class LongLiteral extends Literal {
 
 	@Override
 	public void backup() {
-		_backup = new LongLiteral(_srcNode, _value);
+		_backup = new FloatLiteral(_srcNode, _value);
 	}
 
 	@Override
 	public void restore() {
-		this._value = ((LongLiteral)_backup).getValue();
+		this._value = ((FloatLiteral)_backup).getValue();
 		this._srcNode = _backup.getOriginalASTnode();
 	}
+
 }

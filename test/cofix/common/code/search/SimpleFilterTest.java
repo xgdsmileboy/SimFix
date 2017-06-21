@@ -6,14 +6,10 @@
  */
 package cofix.common.code.search;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ASTParser;
-import org.eclipse.jdt.core.dom.Block;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.junit.Test;
 
@@ -48,23 +44,17 @@ public class SimpleFilterTest {
 		Utils.print(codeBlock);
 		
 		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
-		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
+		List<Pair<CodeBlock, Float>> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc(), guard);
 		
-		int count = 0;
-		for(CodeBlock block : candidates){
-			float similarity = Utils.computeSimilarity(codeBlock, block);
-			if(similarity < guard || similarity == 1.0){
-				continue;
-			}
-			System.out.println("----------------Similarity : " + similarity + "-------------------------------------");
-			count ++;
-			for(ASTNode statement : block.getNodes()){
+		for(Pair<CodeBlock, Float> block : candidates){
+			System.out.println("----------------Similarity : " + block.getSecond() + "-------------------------------------");
+			for(ASTNode statement : block.getFirst().getNodes()){
 				System.out.println(statement);
 			}
 			System.out.println("-----------------------------------------------------");
 		}
 		
-		System.out.println("-----------" + count + "-------------");
+		System.out.println("-----------" + candidates.size() + "-------------");
 		
 	}
 	
@@ -83,24 +73,19 @@ public class SimpleFilterTest {
 		
 		Utils.print(codeBlock);
 		
+
 		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
-		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
+		List<Pair<CodeBlock, Float>> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc(), guard);
 		
-		int count = 0;
-		for(CodeBlock block : candidates){
-			float similarity = Utils.computeSimilarity(codeBlock, block);
-			if(similarity < guard || similarity == 1.0){
-				continue;
-			}
-			System.out.println("----------------Similarity : " + similarity + "-------------------------------------");
-			count ++;
-			for(ASTNode statement : block.getNodes()){
+		for(Pair<CodeBlock, Float> block : candidates){
+			System.out.println("----------------Similarity : " + block.getSecond() + "-------------------------------------");
+			for(ASTNode statement : block.getFirst().getNodes()){
 				System.out.println(statement);
 			}
 			System.out.println("-----------------------------------------------------");
 		}
 		
-		System.out.println("-----------" + count + "-------------");
+		System.out.println("-----------" + candidates.size() + "-------------");
 	}
 	
 	@Test
@@ -115,25 +100,19 @@ public class SimpleFilterTest {
 		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
 		
 		Utils.print(codeBlock);
-		
+
 		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
-		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
+		List<Pair<CodeBlock, Float>> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc(), guard);
 		
-		int count = 0;
-		for(CodeBlock block : candidates){
-			float similarity = Utils.computeSimilarity(codeBlock, block);
-			if(similarity < guard || similarity == 1.0){
-				continue;
-			}
-			System.out.println("-----------------------------------------------------");
-			count ++;
-			for(ASTNode statement : block.getNodes()){
+		for(Pair<CodeBlock, Float> block : candidates){
+			System.out.println("----------------Similarity : " + block.getSecond() + "-------------------------------------");
+			for(ASTNode statement : block.getFirst().getNodes()){
 				System.out.println(statement);
 			}
 			System.out.println("-----------------------------------------------------");
 		}
 		
-		System.out.println("-----------" + count + "-------------");
+		System.out.println("-----------" + candidates.size() + "-------------");
 	}
 	
 	@Test
@@ -148,25 +127,19 @@ public class SimpleFilterTest {
 		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
 		
 		Utils.print(codeBlock);
-		
+
 		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
-		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
+		List<Pair<CodeBlock, Float>> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc(), guard);
 		
-		int count = 0;
-		for(CodeBlock block : candidates){
-			float similarity = Utils.computeSimilarity(codeBlock, block);
-			if(similarity < guard || similarity == 1.0){
-				continue;
-			}
-			System.out.println("-----------------------------------------------------");
-			count ++;
-			for(ASTNode statement : block.getNodes()){
+		for(Pair<CodeBlock, Float> block : candidates){
+			System.out.println("----------------Similarity : " + block.getSecond() + "-------------------------------------");
+			for(ASTNode statement : block.getFirst().getNodes()){
 				System.out.println(statement);
 			}
 			System.out.println("-----------------------------------------------------");
 		}
 		
-		System.out.println("-----------" + count + "-------------");
+		System.out.println("-----------" + candidates.size() + "-------------");
 	}
 	
 	@Test
@@ -181,25 +154,19 @@ public class SimpleFilterTest {
 		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
 		
 		Utils.print(codeBlock);
-		
+
 		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
-		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
+		List<Pair<CodeBlock, Float>> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc(), guard);
 		
-		int count = 0;
-		for(CodeBlock block : candidates){
-			float similarity = Utils.computeSimilarity(codeBlock, block);
-			if(similarity < guard || similarity == 1.0){
-				continue;
-			}
-			System.out.println("-----------------------------------------------------");
-			count ++;
-			for(ASTNode statement : block.getNodes()){
+		for(Pair<CodeBlock, Float> block : candidates){
+			System.out.println("----------------Similarity : " + block.getSecond() + "-------------------------------------");
+			for(ASTNode statement : block.getFirst().getNodes()){
 				System.out.println(statement);
 			}
 			System.out.println("-----------------------------------------------------");
 		}
 		
-		System.out.println("-----------" + count + "-------------");
+		System.out.println("-----------" + candidates.size() + "-------------");
 	}
 	
 	@Test
@@ -382,23 +349,17 @@ public class SimpleFilterTest {
 		Utils.print(codeBlock);
 
 		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
-		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
+		List<Pair<CodeBlock, Float>> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc(), guard);
 		
-		int count = 0;
-		for(CodeBlock block : candidates){
-			float similarity = Utils.computeSimilarity(codeBlock, block);
-			if(similarity < guard || similarity == 1.0){
-				continue;
-			}
-			System.out.println("----------------Similarity : " + similarity + "-------------------------------------");
-			count ++;
-			for(ASTNode statement : block.getNodes()){
+		for(Pair<CodeBlock, Float> block : candidates){
+			System.out.println("----------------Similarity : " + block.getSecond() + "-------------------------------------");
+			for(ASTNode statement : block.getFirst().getNodes()){
 				System.out.println(statement);
 			}
 			System.out.println("-----------------------------------------------------");
 		}
 		
-		System.out.println("-----------" + count + "-------------");
+		System.out.println("-----------" + candidates.size() + "-------------");
 	}
 
 	@Test
@@ -415,23 +376,17 @@ public class SimpleFilterTest {
 		Utils.print(codeBlock);
 
 		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
-		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
+		List<Pair<CodeBlock, Float>> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc(), guard);
 		
-		int count = 0;
-		for(CodeBlock block : candidates){
-			float similarity = Utils.computeSimilarity(codeBlock, block);
-			if(similarity < guard || similarity == 1.0){
-				continue;
-			}
-			System.out.println("----------------Similarity : " + similarity + "-------------------------------------");
-			count ++;
-			for(ASTNode statement : block.getNodes()){
+		for(Pair<CodeBlock, Float> block : candidates){
+			System.out.println("----------------Similarity : " + block.getSecond() + "-------------------------------------");
+			for(ASTNode statement : block.getFirst().getNodes()){
 				System.out.println(statement);
 			}
 			System.out.println("-----------------------------------------------------");
 		}
 		
-		System.out.println("-----------" + count + "-------------");
+		System.out.println("-----------" + candidates.size() + "-------------");
 	}
 
 	@Test
@@ -452,23 +407,17 @@ public class SimpleFilterTest {
 		}
 
 		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
-		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
+		List<Pair<CodeBlock, Float>> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc(), guard);
 		
-		int count = 0;
-		for(CodeBlock block : candidates){
-			float similarity = Utils.computeSimilarity(codeBlock, block);
-			if(similarity < guard || similarity == 1.0){
-				continue;
-			}
-			System.out.println("----------------Similarity : " + similarity + "-------------------------------------");
-			count ++;
-			for(ASTNode statement : block.getNodes()){
+		for(Pair<CodeBlock, Float> block : candidates){
+			System.out.println("----------------Similarity : " + block.getSecond() + "-------------------------------------");
+			for(ASTNode statement : block.getFirst().getNodes()){
 				System.out.println(statement);
 			}
 			System.out.println("-----------------------------------------------------");
 		}
 		
-		System.out.println("-----------" + count + "-------------");
+		System.out.println("-----------" + candidates.size() + "-------------");
 	}
 	
 
@@ -486,43 +435,17 @@ public class SimpleFilterTest {
 		Utils.print(codeBlock);
 
 		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
-		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
+		List<Pair<CodeBlock, Float>> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc(), guard);
 		
-		List<Pair<CodeBlock, Float>> pairs = new ArrayList<>();
-		for(CodeBlock block : candidates){
-			float similarity = Utils.computeSimilarity(codeBlock, block);
-			pairs.add(new Pair<CodeBlock, Float>(block, similarity));
-		}
-		
-		Collections.sort(pairs, new Comparator<Pair<CodeBlock, Float>>() {
-			@Override
-			public int compare(Pair<CodeBlock, Float> o1, Pair<CodeBlock, Float> o2) {
-				Float f1 = o1.second();
-				Float f2 = o2.second();
-				if(f1 < f2){
-					return 1;
-				} else if(f1 > f2){
-					return -1;
-				} else {
-					return 0;
-				}
-			}
-		});
-		
-		int count = 0;
-		for(Pair<CodeBlock, Float> block : pairs){
-			if(block.second() < guard || block.second() == 1.0){
-				continue;
-			}
-			System.out.println("----------------Similarity : " + block.second() + "-------------------------------------");
-			count ++;
-			for(ASTNode statement : block.first().getNodes()){
+		for(Pair<CodeBlock, Float> block : candidates){
+			System.out.println("----------------Similarity : " + block.getSecond() + "-------------------------------------");
+			for(ASTNode statement : block.getFirst().getNodes()){
 				System.out.println(statement);
 			}
 			System.out.println("-----------------------------------------------------");
 		}
 		
-		System.out.println("-----------" + count + "-------------");
+		System.out.println("-----------" + candidates.size() + "-------------");
 	}
 
 	@Test
@@ -539,23 +462,17 @@ public class SimpleFilterTest {
 		Utils.print(codeBlock);
 
 		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
-		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
+		List<Pair<CodeBlock, Float>> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc(), guard);
 		
-		int count = 0;
-		for(CodeBlock block : candidates){
-			float similarity = Utils.computeSimilarity(codeBlock, block);
-			if(similarity < guard || similarity == 1.0){
-				continue;
-			}
-			System.out.println("----------------Similarity : " + similarity + "-------------------------------------");
-			count ++;
-			for(ASTNode statement : block.getNodes()){
+		for(Pair<CodeBlock, Float> block : candidates){
+			System.out.println("----------------Similarity : " + block.getSecond() + "-------------------------------------");
+			for(ASTNode statement : block.getFirst().getNodes()){
 				System.out.println(statement);
 			}
 			System.out.println("-----------------------------------------------------");
 		}
 		
-		System.out.println("-----------" + count + "-------------");
+		System.out.println("-----------" + candidates.size() + "-------------");
 	}
 
 	@Test
@@ -591,23 +508,17 @@ public class SimpleFilterTest {
 		Utils.print(codeBlock);
 
 		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
-		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
+		List<Pair<CodeBlock, Float>> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc(), guard);
 		
-		int count = 0;
-		for(CodeBlock block : candidates){
-			float similarity = Utils.computeSimilarity(codeBlock, block);
-			if(similarity < guard || similarity == 1.0){
-				continue;
-			}
-			System.out.println("----------------Similarity : " + similarity + "-------------------------------------");
-			count ++;
-			for(ASTNode statement : block.getNodes()){
+		for(Pair<CodeBlock, Float> block : candidates){
+			System.out.println("----------------Similarity : " + block.getSecond() + "-------------------------------------");
+			for(ASTNode statement : block.getFirst().getNodes()){
 				System.out.println(statement);
 			}
 			System.out.println("-----------------------------------------------------");
 		}
 		
-		System.out.println("-----------" + count + "-------------");
+		System.out.println("-----------" + candidates.size() + "-------------");
 	}
 
 	@Test
@@ -624,23 +535,17 @@ public class SimpleFilterTest {
 		Utils.print(codeBlock);
 
 		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
-		List<CodeBlock> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc());
+		List<Pair<CodeBlock, Float>> candidates = simpleFilter.filter(subject.getHome() + subject.getSsrc(), guard);
 		
-		int count = 0;
-		for(CodeBlock block : candidates){
-			float similarity = Utils.computeSimilarity(codeBlock, block);
-			if(similarity < guard || similarity == 1.0){
-				continue;
-			}
-			System.out.println("----------------Similarity : " + similarity + "-------------------------------------");
-			count ++;
-			for(ASTNode statement : block.getNodes()){
+		for(Pair<CodeBlock, Float> block : candidates){
+			System.out.println("----------------Similarity : " + block.getSecond() + "-------------------------------------");
+			for(ASTNode statement : block.getFirst().getNodes()){
 				System.out.println(statement);
 			}
 			System.out.println("-----------------------------------------------------");
 		}
 		
-		System.out.println("-----------" + count + "-------------");
+		System.out.println("-----------" + candidates.size() + "-------------");
 	}
 
 	@Test

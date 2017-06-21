@@ -17,6 +17,7 @@ import com.gzoltar.core.GZoltar;
 import com.gzoltar.core.components.Statement;
 import com.gzoltar.core.instr.testing.TestResult;
 
+import cofix.common.localization.alg.Ochiai;
 import cofix.common.util.Pair;
 import cofix.common.util.Subject;
 
@@ -73,7 +74,7 @@ public class FLocalization {
 	public void locateFault(Subject subject, double threshold) {
 		GZoltar gz = null;
 		try {
-			gz = new GZoltar(subject.getHome());
+			gz = new FLocator(subject.getHome(), new Ochiai());
 		} catch (Throwable t) {
 			System.err.println(t);
 			t.printStackTrace();

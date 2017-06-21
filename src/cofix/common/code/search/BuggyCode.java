@@ -25,6 +25,7 @@ import org.eclipse.jdt.core.dom.SwitchStatement;
 import org.eclipse.jdt.core.dom.WhileStatement;
 
 import cofix.common.astnode.CodeBlock;
+import cofix.common.config.Constant;
 
 /**
  * @author Jiajun
@@ -98,6 +99,10 @@ public class BuggyCode {
 					_nodes.add(statement);
 					return false;
 				} else if(statement instanceof Block){
+					if(statement.getParent() instanceof IfStatement && (end - start) < Constant.MAX_BLOCK_LINE){
+						_nodes.add(statement.getParent());
+						return true;
+					}
 					Block block = (Block) statement;
 					for(Object object : block.statements()){
 						process((Statement)object);

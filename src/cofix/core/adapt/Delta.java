@@ -16,12 +16,12 @@ import cofix.common.astnode.Expr;
  * @author Jiajun
  * @datae Jun 6, 2017
  */
-public abstract class Modification{
+public abstract class Delta{
 	
 	protected Expr _expr = null;
 	protected int _modificationComplexity = 0;
 	
-	public Modification(Expr expr) {
+	public Delta(Expr expr) {
 		_expr = expr;
 	}
 	

@@ -15,11 +15,11 @@ import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 
 import cofix.common.astnode.CodeBlock;
-import cofix.common.astnode.Literal;
 import cofix.common.astnode.MethodCall;
 import cofix.common.astnode.Operator;
-import cofix.common.astnode.Structure;
-import cofix.common.astnode.Variable;
+import cofix.common.astnode.expr.Variable;
+import cofix.common.astnode.literal.Literal;
+import cofix.common.astnode.structure.Structure;
 import cofix.common.code.search.CodeSearch;
 import cofix.common.util.JavaFile;
 

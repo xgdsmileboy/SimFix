@@ -39,7 +39,7 @@ public class JavaFile {
 
 	private final static String __name__ = "@JavaFile ";
 
-	public static CompilationUnit getASTFromSource(String icu, String[] classPath, String[] sourcePath){
+	public static CompilationUnit genASTFromSource(String icu, String[] classPath, String[] sourcePath){
 		ASTParser parser = ASTParser.newParser(AST.JLS8);
 		parser.setResolveBindings(true);
 		parser.setBindingsRecovery(true);
@@ -91,6 +91,10 @@ public class JavaFile {
 		astParser.setResolveBindings(true);
 		astParser.setBindingsRecovery(true);
 		return astParser.createAST(null);
+	}
+	
+	public static CompilationUnit genASTFromFile(String fileName){
+		return (CompilationUnit)genASTFromSource(readFileToString(fileName), ASTParser.K_COMPILATION_UNIT);
 	}
 
 	/**

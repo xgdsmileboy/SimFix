@@ -16,7 +16,7 @@ import cofix.common.astnode.Expr;
  * @author Jiajun
  * @datae Jun 7, 2017
  */
-public class Revision extends Modification {
+public class Revision extends Delta {
 
 	private Expr _tar = null;
 	

@@ -13,8 +13,9 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
+import cofix.common.astnode.expr.Variable;
 import cofix.core.adapt.Adapter;
-import cofix.core.adapt.Modification;
+import cofix.core.adapt.Delta;
 
 public abstract class Expr implements Adapter {
 	
@@ -29,9 +30,9 @@ public abstract class Expr implements Adapter {
 	
 	public abstract List<Variable> getVariables();
 	
-	public abstract boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Modification> modifications);
+	public abstract boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Delta> modifications);
 	
-	protected boolean canReplave(Expr expr, Map<String, Type> allUsableVarMap){
+	protected boolean canReplace(Expr expr, Map<String, Type> allUsableVarMap){
 		List<Variable> variables = expr.getVariables();
 		boolean replacable = true;
 		for(Variable variable : variables){

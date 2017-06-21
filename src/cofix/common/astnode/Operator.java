@@ -9,7 +9,8 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.Type;
 
-import cofix.core.adapt.Modification;
+import cofix.common.astnode.expr.Variable;
+import cofix.core.adapt.Delta;
 import cofix.core.adapt.Revision;
 
 public class Operator extends Expr{
@@ -161,7 +162,7 @@ public class Operator extends Expr{
 	}
 
 	@Override
-	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Delta> modifications) {
 		if(expr instanceof Operator){
 			Operator other = (Operator) expr;
 			boolean left = true;
@@ -169,7 +170,7 @@ public class Operator extends Expr{
 			if(_leftOprand == null){
 				left = other.getLeftOperand() == null;
 			} else {
-				List<Modification> tmpModify = new ArrayList<>();
+				List<Delta> tmpModify = new ArrayList<>();
 				left = _leftOprand.matchType(other.getLeftOperand(), allUsableVariables, tmpModify);
 				if(left){
 					modifications.addAll(tmpModify);
@@ -178,7 +179,7 @@ public class Operator extends Expr{
 			if(_rightOperand == null){
 				right = other.getRightOperand() == null;
 			} else {
-				List<Modification> tmpModify = new ArrayList<>();
+				List<Delta> tmpModify = new ArrayList<>();
 				right = _rightOperand.matchType(other.getRightOperand(), allUsableVariables, modifications);
 				if(right){
 					modifications.addAll(tmpModify);

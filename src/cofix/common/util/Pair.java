@@ -20,11 +20,11 @@ public class Pair<T1, T2> {
 		this.second = snd;
 	}
 	
-	public T1 first(){
+	public T1 getFirst(){
 		return this.first;
 	}
 	
-	public T2 second(){
+	public T2 getSecond(){
 		return this.second;
 	}
 	

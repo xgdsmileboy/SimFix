@@ -16,7 +16,7 @@ import cofix.common.astnode.Expr;
  * @author Jiajun
  * @datae Jun 7, 2017
  */
-public class Insertion extends Modification {
+public class Insertion extends Delta {
 
 	public Insertion(Expr expr) {
 		super(expr);

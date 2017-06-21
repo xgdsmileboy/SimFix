@@ -14,7 +14,7 @@ import javax.swing.text.AbstractDocument.BranchElement;
 import com.sun.org.apache.xpath.internal.operations.String;
 
 import cofix.common.astnode.CodeBlock;
-import cofix.common.astnode.Structure;
+import cofix.common.astnode.structure.Structure;
 
 /**
  * @author Jiajun

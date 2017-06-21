@@ -5,7 +5,7 @@
  * Written by Jiajun Jiang<jiajun.jiang@pku.edu.cn>.
  */
 
-package cofix.common.astnode;
+package cofix.common.astnode.expr;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,8 @@ import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
-import cofix.core.adapt.Modification;
+import cofix.common.astnode.Expr;
+import cofix.core.adapt.Delta;
 import cofix.core.adapt.Revision;
 
 public class Variable extends Expr {
@@ -79,8 +80,8 @@ public class Variable extends Expr {
 	}
 
 	@Override
-	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		if(expr != null && canReplave(expr, allUsableVariables)){
+	public boolean matchType(Expr expr, Map<String, Type> allUsableVariables, List<Delta> modifications) {
+		if(expr != null && canReplace(expr, allUsableVariables)){
 			if(!(expr instanceof Variable) || !((Variable)expr).getName().equals(_name)){
 				Revision revision = new Revision(this);
 				revision.setTar(expr);

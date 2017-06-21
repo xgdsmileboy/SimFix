@@ -11,7 +11,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-import cofix.common.astnode.Structure;
+import cofix.common.astnode.structure.Structure;
 
 /**
  * @author Jiajun

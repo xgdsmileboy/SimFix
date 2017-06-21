@@ -12,7 +12,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Stack;
-import java.util.PrimitiveIterator.OfDouble;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -62,7 +61,6 @@ import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.QualifiedName;
 import org.eclipse.jdt.core.dom.ReturnStatement;
 import org.eclipse.jdt.core.dom.SimpleName;
-import org.eclipse.jdt.core.dom.Statement;
 import org.eclipse.jdt.core.dom.StringLiteral;
 import org.eclipse.jdt.core.dom.SuperConstructorInvocation;
 import org.eclipse.jdt.core.dom.SuperFieldAccess;
@@ -83,6 +81,19 @@ import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
 import org.eclipse.jdt.core.dom.VariableDeclarationStatement;
 import org.eclipse.jdt.core.dom.WhileStatement;
 
+import cofix.common.astnode.expr.Variable;
+import cofix.common.astnode.literal.BoolLiteral;
+import cofix.common.astnode.literal.CharLiteral;
+import cofix.common.astnode.literal.DoubleLiteral;
+import cofix.common.astnode.literal.EnumLiteral;
+import cofix.common.astnode.literal.FloatLiteral;
+import cofix.common.astnode.literal.IntLiteral;
+import cofix.common.astnode.literal.Literal;
+import cofix.common.astnode.literal.LongLiteral;
+import cofix.common.astnode.literal.NilLiteral;
+import cofix.common.astnode.literal.StrLiteral;
+import cofix.common.astnode.literal.TLiteral;
+import cofix.common.astnode.structure.Structure;
 import cofix.common.parser.NodeUtils;
 import cofix.common.parser.ProjectInfo;
 import cofix.common.util.LevelLogger;
@@ -214,8 +225,8 @@ public class CodeBlock {
 	private Expr visit(ConstructorInvocation node) {
 		
 		Pair<String, String> decls = NodeUtils.getTypeDecAndMethodDec(node);
-		String className = decls.first();
-		String methodName = decls.second();
+		String className = decls.getFirst();
+		String methodName = decls.getSecond();
 		MethodCall expr = null;
 		if(methodName != null && className != null){
 			List<Expr> params = new ArrayList<>();
@@ -363,8 +374,8 @@ public class CodeBlock {
 	private Expr visit(SuperConstructorInvocation node) {
 		
 		Pair<String, String> decls = NodeUtils.getTypeDecAndMethodDec(node);
-		String className = decls.first();
-		String methodName = decls.second();
+		String className = decls.getFirst();
+		String methodName = decls.getSecond();
 		MethodCall expr = null;
 		if(methodName != null && className != null){
 			List<Expr> params = new ArrayList<>();
@@ -542,7 +553,7 @@ public class CodeBlock {
 		if(index >= 0){
 			nodeStr = nodeStr.substring(0, index);
 		}
-		Type type = ProjectInfo.getVariableType(classAndMethodName.first(), classAndMethodName.second(), nodeStr);
+		Type type = ProjectInfo.getVariableType(classAndMethodName.getFirst(), classAndMethodName.getSecond(), nodeStr);
 		
 		if(type != null){
 			if(type instanceof ArrayType){
@@ -627,8 +638,8 @@ public class CodeBlock {
 	
 	private Expr visit(ClassInstanceCreation node) {
 		Pair<String, String> clazzAndMethodName = NodeUtils.getTypeDecAndMethodDec(node);
-		String className = clazzAndMethodName.first();
-		String methodName = clazzAndMethodName.second();
+		String className = clazzAndMethodName.getFirst();
+		String methodName = clazzAndMethodName.getSecond();
 		MethodCall expr = null;
 		if(className != null && methodName != null){
 			List<Expr> params = new ArrayList<>();
@@ -666,7 +677,7 @@ public class CodeBlock {
 	private Expr visit(FieldAccess node) {
 		// TODO : now simply handle this.field
 		Pair<String, String> classAndMethodName = NodeUtils.getTypeDecAndMethodDec(node);
-		Type type = ProjectInfo.getVariableType(classAndMethodName.first(), classAndMethodName.second(), node.getName().toString());
+		Type type = ProjectInfo.getVariableType(classAndMethodName.getFirst(), classAndMethodName.getSecond(), node.getName().toString());
 		Operator operator = new Operator(node, type, Operator.FIELDAC);
 		operator.setLeftOprand(process(node.getExpression()));
 		operator.setRightOperand(process(node.getName()));
@@ -711,7 +722,7 @@ public class CodeBlock {
 			}
 		} else {
 			Pair<String, String> classAndMethodName = NodeUtils.getTypeDecAndMethodDec(node);
-			className = classAndMethodName.first();
+			className = classAndMethodName.getFirst();
 		}
 		Type type = ProjectInfo.getMethodRetType(className, methodName);
 		List<Expr> params = new ArrayList<>();
@@ -735,7 +746,7 @@ public class CodeBlock {
 		Expr expr = null;
 		if(node instanceof SimpleName){
 			Pair<String, String> classAndMethodName = NodeUtils.getTypeDecAndMethodDec(node);
-			Type type = ProjectInfo.getVariableType(classAndMethodName.first(), classAndMethodName.second(), node.toString());
+			Type type = ProjectInfo.getVariableType(classAndMethodName.getFirst(), classAndMethodName.getSecond(), node.toString());
 			String name = node.getFullyQualifiedName();
 			if(type == null){
 				Pattern pattern = Pattern.compile("[A-Z][a-zA-Z_0-9]*");
@@ -890,7 +901,7 @@ public class CodeBlock {
 	
 	private Expr visit(ThisExpression node){
 		Pair<String, String> classAndMethodName = NodeUtils.getTypeDecAndMethodDec(node);
-		Type type = ProjectInfo.getVariableType(classAndMethodName.first(), classAndMethodName.second(), "THIS");
+		Type type = ProjectInfo.getVariableType(classAndMethodName.getFirst(), classAndMethodName.getSecond(), "THIS");
 		Variable variable = new Variable(node, type, "THIS");
 		Integer count = _variables.get(variable);
 		if(count == null){

@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import cofix.common.astnode.CodeBlock;
-import cofix.common.astnode.Literal;
+import cofix.common.astnode.literal.Literal;
 
 /**
  * @author Jiajun

@@ -6,23 +6,13 @@
  */
 package cofix.common.junit.runner;
 
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.List;
 
-import javax.print.attribute.standard.PrinterLocation;
-
-import org.junit.internal.TextListener;
-import org.junit.runner.Description;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Request;
 import org.junit.runner.Result;
-import org.junit.runner.notification.Failure;
 
 import cofix.common.util.LevelLogger;
 
@@ -58,6 +48,16 @@ public class JUnitEngine {
 			LevelLogger.error(__name__ + "#runTest Illegal input for running multiple test class.");
 			return null;
 		}
+		
+		ClassLoader currentThreadClassLoader
+		 = Thread.currentThread().getContextClassLoader();
+
+		// Replace the thread classloader - assumes
+		// you have permissions to do so
+		Thread.currentThread().setContextClassLoader(_runtime.getClassLoader());
+
+		// This should work now!
+		Thread.currentThread().getContextClassLoader().getResourceAsStream("context.xml");
 
 		Class[] clazzes = new Class[testClazzes.size()];
 		for (int i = 0; i < testClazzes.size(); i++) {
@@ -84,24 +84,9 @@ public class JUnitEngine {
 			LevelLogger.error(__name__ + "#runTest Illegal input for running single test class.");
 			return null;
 		}
-
-		Class javaClass = null;
-		try {
-			javaClass = Class.forName(clazz, true, _runtime.getClassLoader());
-		} catch (ClassNotFoundException e) {
-			LevelLogger.error(__name__ + "#test Load class failed : " + e.getMessage());
-		}
-		
-		PrintStream old = System.out;
-		if(printStream != null){
-			System.setOut(printStream);
-		}
-		
-		JUnitCore jUnitCore = new JUnitCore();
-		Result result = jUnitCore.run(javaClass);
-		System.setOut(old);
-		
-		return result;
+		List<String> classes = new ArrayList<>();
+		classes.add(clazz);
+		return test(classes, printStream);
 
 	}
 	
@@ -110,6 +95,18 @@ public class JUnitEngine {
 			LevelLogger.error(__name__ + "#test Illegal input for running single test case.");
 			return null;
 		}
+		
+		System.out.println("TESTING : " + clazz + "::" + testMethod);
+		
+		ClassLoader currentThreadClassLoader = Thread.currentThread().getContextClassLoader();
+
+		// Replace the thread classloader - assumes
+		// you have permissions to do so
+		Thread.currentThread().setContextClassLoader(_runtime.getClassLoader());
+
+		// This should work now!
+		Thread.currentThread().getContextClassLoader().getResourceAsStream("context.xml");
+		
 		Class<?> junitTest = null;
 		try {
 			junitTest = Class.forName(clazz, true, _runtime.getClassLoader());

@@ -4,15 +4,19 @@
  * strictly prohibited Proprietary and Confidential.
  * Written by Jiajun Jiang<jiajun.jiang@pku.edu.cn>.
  */
-
-package cofix.common.astnode;
+package cofix.common.astnode.structure;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 
-public abstract class Literal extends Expr{
-	
-	public abstract Object getValue();
-	
-	public abstract ASTNode genAST();
-	
+/**
+ * @author Jiajun
+ * @datae Jun 21, 2017
+ */
+public class Switch extends Structure {
+
+	public Switch(ASTNode node, String name) {
+		super(node, name);
+		// TODO Auto-generated constructor stub
+	}
+
 }
