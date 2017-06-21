@@ -7,14 +7,18 @@
 
 package cofix.common.util;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -308,6 +312,34 @@ public class JavaFile {
 				fileList.add(f.getAbsolutePath());
 		}
 		return fileList;
+	}
+	
+	public static void sourceReplace(String fileName, int startLine, int endLine, String replace) throws IOException{
+		File file = new File(fileName);
+		if(!file.exists()){
+			System.out.println("File : " + fileName + " does not exist!");
+			return;
+		}
+		BufferedReader br = new BufferedReader(new FileReader(file));
+		String line = null;
+		List<String> source = new ArrayList<>();
+		source.add("useless");
+		while((line = br.readLine()) != null){
+			source.add(line);
+		}
+		br.close();
+		
+		BufferedWriter bw = new BufferedWriter(new FileWriter(file, false));
+		for(int i = 1; i < source.size(); i++){
+			if(i == startLine){
+				bw.write(replace);
+			} else if(startLine < i && i <= endLine){
+				continue;
+			} else {
+				bw.write(source.get(i));
+			}
+		}
+		bw.close();
 	}
 
 }
