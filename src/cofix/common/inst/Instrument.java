@@ -46,8 +46,7 @@ public class Instrument {
 		}
 
 		for (File f : fileList) {
-			String source = JavaFile.readFileToString(f);
-			CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(source, ASTParser.K_COMPILATION_UNIT);
+			CompilationUnit unit = JavaFile.genASTFromFile(f);
 			if (unit == null || unit.toString().trim().length() < 1) {
 				continue;
 			}

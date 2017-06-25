@@ -13,8 +13,8 @@ import javax.swing.text.AbstractDocument.BranchElement;
 
 import com.sun.org.apache.xpath.internal.operations.String;
 
-import cofix.common.astnode.CodeBlock;
-import cofix.common.astnode.structure.Structure;
+import cofix.common.parser.astnode.CodeBlock;
+import cofix.common.parser.astnode.structure.Structure;
 
 /**
  * @author Jiajun

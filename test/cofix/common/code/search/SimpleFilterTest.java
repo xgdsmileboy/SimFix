@@ -13,13 +13,15 @@ import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.junit.Test;
 
-import cofix.common.astnode.CodeBlock;
 import cofix.common.config.Constant;
 import cofix.common.parser.ProjectInfo;
+import cofix.common.parser.astnode.CodeBlock;
 import cofix.common.util.JavaFile;
 import cofix.common.util.Pair;
 import cofix.common.util.Subject;
 import cofix.core.match.Utils;
+import cofix.core.search.BuggyCode;
+import cofix.core.search.SimpleFilter;
 
 /**
  * @author Jiajun

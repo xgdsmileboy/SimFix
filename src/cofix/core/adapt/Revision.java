@@ -8,25 +8,32 @@ package cofix.core.adapt;
 
 import java.util.Map;
 
+import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
-import cofix.common.astnode.Expr;
+import cofix.common.parser.astnode.Expr;
 
 /**
  * @author Jiajun
  * @datae Jun 7, 2017
  */
-public class Revision extends Delta {
+public class Revision extends Modification {
 
 	private Expr _tar = null;
+	private ASTNode _replace = null;
 	
 	
 	public Revision(Expr expr) {
 		super(expr);
 	}
 	
-	public void setTar(Expr tar){
+	public void setTar(Expr tar, ASTNode replace){
 		_tar = tar;
+		_replace = replace;
+	}
+	
+	public ASTNode getReplaceAST(){
+		return _replace;
 	}
 	
 	public Expr getSrcExpr() {
@@ -49,7 +56,7 @@ public class Revision extends Delta {
 	@Override
 	public boolean apply(Map<String, Type> allUsableVarMap) {
 		_expr.backup();
-		_expr.adapt(_tar, allUsableVarMap);
+		_expr.adapt(_tar, this, allUsableVarMap);
 		return true;
 	}
 	

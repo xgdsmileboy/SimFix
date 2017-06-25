@@ -15,14 +15,14 @@ import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.Type;
 import org.junit.Test;
 
-import cofix.common.astnode.CodeBlock;
-import cofix.common.code.search.BuggyCode;
 import cofix.common.config.Constant;
 import cofix.common.parser.NodeUtils;
 import cofix.common.parser.ProjectInfo;
+import cofix.common.parser.astnode.CodeBlock;
 import cofix.common.util.JavaFile;
 import cofix.common.util.Subject;
-import cofix.core.adapt.Delta;
+import cofix.core.adapt.Modification;
+import cofix.core.search.BuggyCode;
 
 /**
  * @author Jiajun
@@ -55,9 +55,9 @@ public class CodeBlockMatcherTest {
 			System.out.println(entry.getKey() + "  " + entry.getValue());
 		}
 		System.out.println("=====================================");
-		List<Delta> modifications = CodeBlockMatcher.match(codeBlock, similar, usableVars);
+		List<Modification> modifications = CodeBlockMatcher.match(codeBlock, similar, usableVars);
 		
-		for(Delta modification : modifications){
+		for(Modification modification : modifications){
 			System.out.println(modification);
 			modification.apply(usableVars);
 			Utils.print(codeBlock);

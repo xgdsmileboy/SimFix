@@ -17,18 +17,19 @@ import java.util.Set;
  */
 public class OutStream extends OutputStream{
 
-	private Set<String> _out = new HashSet<>();
+	private Set<Integer> _out = new HashSet<>();
 	
 	@Override
 	public void write(byte[] b, int off, int len) throws IOException {
 		String message = new String(b, off, len, "utf-8").trim();
+		Integer id = null;
 		if(message.length() > 0){
 			try{
-				Integer.parseInt(message);
+				id = Integer.parseInt(message);
 			} catch (Exception e){
 				return;
 			}
-			_out.add(message);
+			_out.add(id);
 		}
 	}
 	
@@ -39,7 +40,7 @@ public class OutStream extends OutputStream{
 	/**
 	 * @return the _out
 	 */
-	public Set<String> getOut() {
+	public Set<Integer> getOut() {
 		return _out;
 	}
 

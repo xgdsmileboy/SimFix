@@ -6,7 +6,6 @@
  */
 package cofix.main;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
@@ -15,14 +14,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.commons.io.FileUtils;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.Type;
 import org.junit.runner.Result;
 
-import cofix.common.astnode.CodeBlock;
-import cofix.common.code.search.BuggyCode;
-import cofix.common.code.search.SimpleFilter;
 import cofix.common.inst.Instrument;
 import cofix.common.inst.MethodInstrumentVisitor;
 import cofix.common.junit.runner.JUnitEngine;
@@ -30,12 +25,16 @@ import cofix.common.junit.runner.JUnitRuntime;
 import cofix.common.junit.runner.OutStream;
 import cofix.common.localization.FLocalization;
 import cofix.common.parser.NodeUtils;
+import cofix.common.parser.astnode.CodeBlock;
 import cofix.common.util.JavaFile;
 import cofix.common.util.Pair;
 import cofix.common.util.Status;
 import cofix.common.util.Subject;
-import cofix.core.adapt.Delta;
+import cofix.core.adapt.Modification;
 import cofix.core.match.CodeBlockMatcher;
+import cofix.core.match.Utils;
+import cofix.core.search.BuggyCode;
+import cofix.core.search.SimpleFilter;
 
 /**
  * @author Jiajun
@@ -46,7 +45,7 @@ public class Repair {
 	private FLocalization _localization = null;
 	private Subject _subject = null;
 	private List<String> _failedTestCases = null;
-	private Map<String, Set<String>> _passedTestCases = null;
+	private Map<Integer, Set<Pair<String, String>>> _passedTestCases = null;
 
 	public Repair(Subject subject, FLocalization fLocalization) {
 		_localization = fLocalization;
@@ -62,8 +61,6 @@ public class Repair {
 	private void computeMethodCoverage() throws IOException{
 		JUnitRuntime runtime = new JUnitRuntime(_subject);
 		String src = _subject.getHome() + _subject.getSsrc();
-		// backup source file
-		FileUtils.copyDirectory(new File(src), new File(src + "_ori"));
 		MethodInstrumentVisitor methodInstrumentVisitor = new MethodInstrumentVisitor();
 		Instrument.execute(src, methodInstrumentVisitor);
 		
@@ -78,49 +75,99 @@ public class Repair {
 				System.out.println("Error : Passed test cases running failed ! => " + clazz);
 				System.exit(0);
 			}
-			for(String method : outStream.getOut()){
-				Set<String> tcases = _passedTestCases.get(method);
+			for(Integer method : outStream.getOut()){
+				Set<Pair<String, String>> tcases = _passedTestCases.get(method);
 				if(tcases == null){
 					tcases = new HashSet<>();
 				}
-				tcases.add(clazz);
+				tcases.add(new Pair<String, String>(clazz, methodName));
 				_passedTestCases.put(method, tcases);
 			}
 		}
 		// restore source file
-		FileUtils.copyDirectory(new File(src + "_ori/"), new File(src));
+		_subject.restore();
 	}
 
 	public Status fix(Timer timer){
 		String src = _subject.getHome() + _subject.getSsrc();
 		for(Pair<String, Integer> loc : _localization.getLocations()){
-			if(timer.timeout()){
-				return Status.TIMEOUT;
-			}
 			System.out.println(loc.getFirst() + "::" + loc.getSecond());
-			
 			String file = _subject.getHome() + _subject.getSsrc() + "/" + loc.getFirst().replace(".", "/") + ".java";
 			CompilationUnit unit = JavaFile.genASTFromFile(file);
 			// get buggy code block
-			CodeBlock block = BuggyCode.getBuggyCodeBlock(unit, loc.getSecond());
+			CodeBlock buggyblock = BuggyCode.getBuggyCodeBlock(unit, loc.getSecond());
+			if(buggyblock.getWrapMethodID() == null){
+				System.out.println("Find no block!");
+				continue;
+			}
+			Utils.print(buggyblock);
+			
 			// get all variables can be used at buggy line
 			Map<String, Type> usableVars = NodeUtils.getUsableVarTypes(file, loc.getSecond());
 			// search candidate similar code block
-			SimpleFilter simpleFilter = new SimpleFilter(block);
+			SimpleFilter simpleFilter = new SimpleFilter(buggyblock);
+			
 			List<Pair<CodeBlock, Float>> candidates = simpleFilter.filter(src, 0.4);
+			List<String> source = null;
+			try {
+				source = JavaFile.readFileToList(file);
+			} catch (IOException e1) {
+				System.err.println("Failed to read file to list : " + file);
+				continue;
+			}
 			for(Pair<CodeBlock, Float> similar : candidates){
+				Utils.print(similar.getFirst());
 				// compute transformation
-				List<Delta> modifications = CodeBlockMatcher.match(block, similar.getFirst(), usableVars);
+				List<Modification> modifications = CodeBlockMatcher.match(buggyblock, similar.getFirst(), usableVars);
 				// try each transformation
-				for(Delta modification : modifications){
+				for(Modification modification : modifications){
+					if(timer.timeout()){
+						return Status.TIMEOUT;
+					}
 					modification.apply(usableVars);
-					// TODO : validate patch
-					
+					// validate correctness of patch
+					Pair<Integer, Integer> range = buggyblock.getLineRangeInSource();
+					try {
+						JavaFile.sourceReplace(file, source, range.getFirst(), range.getSecond(), buggyblock.getNodes());
+					} catch (IOException e) {
+						System.err.println("Failed to replace source code.");
+						continue;
+					}
+					if(validate(buggyblock)){
+						System.out.println("\n----------------------------------------\n");
+						System.out.println("Find a patch :");
+						System.out.println(modification);
+						System.out.println("\n----------------------------------------\n");
+					}
 					modification.restore();
 				}
 			}
 		}
 		return Status.FAILED;
+	}
+	
+	private boolean validate(CodeBlock buggyBlock){
+		JUnitRuntime runtime = new JUnitRuntime(_subject);
+		// validate patch using failed test cases
+		for(String testcase : _failedTestCases){
+			String[] testinfo = testcase.split("#");
+			Result result = JUnitEngine.getInstance(runtime).test(testinfo[0], testinfo[1], null);
+			if(result.getFailureCount() > 0){
+				return false;
+			}
+		}
+		
+		Integer revisedMethod = buggyBlock.getWrapMethodID();
+		Set<Pair<String, String>> coveredPassedTest = _passedTestCases.get(revisedMethod);
+		// validate patch using passed test cases
+		for(Pair<String, String> pair : coveredPassedTest){
+			Result result = JUnitEngine.getInstance(runtime).test(pair.getFirst(), pair.getSecond(), null);
+			if(result.getFailureCount() > 0){
+				return false;
+			}
+		}
+		
+		return true;
 	}
 
 }

@@ -11,10 +11,10 @@ import java.util.Map;
 
 import org.eclipse.jdt.core.dom.Type;
 
-import cofix.common.astnode.Expr;
+import cofix.common.parser.astnode.Expr;
 
 public interface Adapter {
 
-	public Expr adapt(Expr tar, Map<String, Type> allUsableVarMap);
+	public Expr adapt(Expr tar, Modification modify, Map<String, Type> allUsableVarMap);
 	
 }

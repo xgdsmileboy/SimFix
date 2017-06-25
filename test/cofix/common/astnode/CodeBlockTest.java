@@ -15,13 +15,14 @@ import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.junit.Test;
 
-import cofix.common.astnode.expr.Variable;
-import cofix.common.astnode.literal.Literal;
-import cofix.common.astnode.structure.Structure;
-import cofix.common.code.search.BuggyCode;
-import cofix.common.code.search.CodeSearch;
 import cofix.common.config.Constant;
 import cofix.common.parser.ProjectInfo;
+import cofix.common.parser.astnode.CodeBlock;
+import cofix.common.parser.astnode.MethodCall;
+import cofix.common.parser.astnode.Operator;
+import cofix.common.parser.astnode.expr.Variable;
+import cofix.common.parser.astnode.literal.Literal;
+import cofix.common.parser.astnode.structure.Structure;
 import cofix.common.util.JavaFile;
 import cofix.common.util.Subject;
 import cofix.core.match.CodeBlockMatcher;
@@ -31,6 +32,8 @@ import cofix.core.match.Metric;
 import cofix.core.match.OperatorMetric;
 import cofix.core.match.StructrueMetric;
 import cofix.core.match.VariableMetric;
+import cofix.core.search.BuggyCode;
+import cofix.core.search.CodeSearch;
 
 /**
  * @author Jiajun

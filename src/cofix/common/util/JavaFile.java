@@ -100,6 +100,10 @@ public class JavaFile {
 	public static CompilationUnit genASTFromFile(String fileName){
 		return (CompilationUnit)genASTFromSource(readFileToString(fileName), ASTParser.K_COMPILATION_UNIT);
 	}
+	
+	public static CompilationUnit genASTFromFile(File file){
+		return (CompilationUnit)genASTFromSource(readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+	}
 
 	/**
 	 * write {@code string} into file with mode as "not append"
@@ -314,11 +318,11 @@ public class JavaFile {
 		return fileList;
 	}
 	
-	public static void sourceReplace(String fileName, int startLine, int endLine, String replace) throws IOException{
+	public static List<String> readFileToList(String fileName) throws IOException{
 		File file = new File(fileName);
 		if(!file.exists()){
 			System.out.println("File : " + fileName + " does not exist!");
-			return;
+			return null;
 		}
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		String line = null;
@@ -329,6 +333,25 @@ public class JavaFile {
 		}
 		br.close();
 		
+		return source;
+	}
+	
+	public static void sourceReplace(String file, List<String> source, int startLine, int endLine, List<ASTNode> replace) throws IOException{
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append("// start of generated patch\n");
+		for(ASTNode node : replace){
+			stringBuffer.append(node.toString());
+		}
+		stringBuffer.append("// end of generated patch\n");
+		sourceReplace(file, source, startLine, endLine, stringBuffer.toString());
+	}
+	
+	public static void sourceReplace(String fileName, List<String> source, int startLine, int endLine, String replace) throws IOException{
+		File file = new File(fileName);
+		if(!file.exists()){
+			System.out.println("File : " + fileName + " does not exist!");
+			return;
+		}
 		BufferedWriter bw = new BufferedWriter(new FileWriter(file, false));
 		for(int i = 1; i < source.size(); i++){
 			if(i == startLine){

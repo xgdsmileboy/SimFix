@@ -14,14 +14,14 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 
-import cofix.common.astnode.CodeBlock;
-import cofix.common.astnode.MethodCall;
-import cofix.common.astnode.Operator;
-import cofix.common.astnode.expr.Variable;
-import cofix.common.astnode.literal.Literal;
-import cofix.common.astnode.structure.Structure;
-import cofix.common.code.search.CodeSearch;
+import cofix.common.parser.astnode.CodeBlock;
+import cofix.common.parser.astnode.MethodCall;
+import cofix.common.parser.astnode.Operator;
+import cofix.common.parser.astnode.expr.Variable;
+import cofix.common.parser.astnode.literal.Literal;
+import cofix.common.parser.astnode.structure.Structure;
 import cofix.common.util.JavaFile;
+import cofix.core.search.CodeSearch;
 
 /**
  * @author Jiajun

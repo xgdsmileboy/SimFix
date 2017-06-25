@@ -10,6 +10,7 @@ package cofix.common.util;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -17,9 +18,11 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.io.FileUtils;
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
 import cofix.common.config.Constant;
+import cofix.common.config.Identifier;
 import cofix.common.localization.FLocalization;
 
 /**
@@ -66,6 +69,10 @@ public class Subject {
 		_tsrc = tsrc;
 		_sbin = sbin;
 		_tbin = tbin;
+		_dependency = dependency;
+	}
+	
+	public void setDependency(List<String> dependency){
 		_dependency = dependency;
 	}
 
@@ -120,6 +127,24 @@ public class Subject {
 		return Constant.PROJECT_HOME + "/" + _name + "/" + _name + "_" + _id + "_buggy";
 	}
 	
+	public void backup() throws IOException{
+		String src = getHome() + _ssrc;
+		File file = new File(src + "_ori");
+		if (!file.exists()) {
+			FileUtils.copyDirectory(new File(src), new File(src + "_ori"));
+		}
+	}
+	
+	public void restore() throws IOException{
+		String src = getHome() + _ssrc;
+		File file = new File(src + "_ori");
+		if (file.exists()) {
+			FileUtils.copyDirectory(new File(src), new File(src + "_ori"));
+		} else {
+			System.out.println("Restore source file failed : cannot find file " + file.getAbsolutePath());
+		}
+	}
+	
 	private Set<String> getPackage(String rootPath, String currPath){
 		Set<String> packages = new HashSet<>();
 		File file = new File(currPath);
@@ -138,6 +163,7 @@ public class Subject {
 		}
 		return packages;
 	}
+	
 	
 	private Set<String> getTestClasses(File root){
 		Set<String> classes = new HashSet<>();

@@ -19,9 +19,11 @@ import org.eclipse.jdt.core.dom.ClassInstanceCreation;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.EnhancedForStatement;
 import org.eclipse.jdt.core.dom.EnumDeclaration;
+import org.eclipse.jdt.core.dom.Expression;
 import org.eclipse.jdt.core.dom.FieldDeclaration;
 import org.eclipse.jdt.core.dom.ForStatement;
 import org.eclipse.jdt.core.dom.IfStatement;
+import org.eclipse.jdt.core.dom.InfixExpression;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
 import org.eclipse.jdt.core.dom.Modifier;
 import org.eclipse.jdt.core.dom.SingleVariableDeclaration;
@@ -33,6 +35,7 @@ import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
 import org.eclipse.jdt.core.dom.VariableDeclarationStatement;
 import org.eclipse.jdt.core.dom.WhileStatement;
 
+import cofix.common.node.expr.Expr;
 import cofix.common.util.JavaFile;
 import cofix.common.util.Pair;
 
@@ -42,6 +45,32 @@ import cofix.common.util.Pair;
  */
 public class NodeUtils {
 
+	public static Type parseExprType(Expr left, String operator, Expr right){
+		
+		return null;
+	}
+	
+	public static ASTNode replace(ASTNode node, ASTNode replace){
+		ASTNode replacement = ASTNode.copySubtree(node.getAST(), replace);
+		ASTNode parent = node.getParent();
+		if(parent instanceof InfixExpression){
+			InfixExpression infixExpression = (InfixExpression) parent;
+			if(node.equals(infixExpression.getLeftOperand())){
+				infixExpression.setLeftOperand((Expression) replacement);
+			} else {
+				infixExpression.setRightOperand((Expression) replacement);
+			}
+		} else if(parent instanceof IfStatement){
+			IfStatement ifStatement = (IfStatement) parent;
+			if(ifStatement.getExpression().equals(node)){
+				ifStatement.setExpression((Expression) replacement);
+			} else {
+				System.out.println("match if body statement");
+			}
+		}
+		return replacement;
+	}
+	
 	private static String getFullClazzName(MethodDeclaration node) {
 		String clazz = "";
 		// filter those methods that defined in anonymous classes
@@ -58,7 +87,7 @@ public class NodeUtils {
 			}
 			parent = parent.getParent();
 		}
-		if(parent == null){
+		if(parent != null){
 			while(parent != null){
 				if(parent instanceof CompilationUnit){
 					String packageName = ((CompilationUnit) parent).getPackage().getName().getFullyQualifiedName();

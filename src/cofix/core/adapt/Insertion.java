@@ -10,13 +10,13 @@ import java.util.Map;
 
 import org.eclipse.jdt.core.dom.Type;
 
-import cofix.common.astnode.Expr;
+import cofix.common.parser.astnode.Expr;
 
 /**
  * @author Jiajun
  * @datae Jun 7, 2017
  */
-public class Insertion extends Delta {
+public class Insertion extends Modification {
 
 	public Insertion(Expr expr) {
 		super(expr);

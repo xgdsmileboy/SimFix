@@ -6,7 +6,7 @@
  */
 package cofix.core.match;
 
-import cofix.common.astnode.CodeBlock;
+import cofix.common.parser.astnode.CodeBlock;
 
 /**
  * @author Jiajun

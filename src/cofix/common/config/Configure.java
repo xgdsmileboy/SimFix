@@ -18,6 +18,7 @@ import org.dom4j.io.SAXReader;
 
 import cofix.common.util.LevelLogger;
 import cofix.common.util.Subject;
+import sun.tools.jar.resources.jar;
 
 /**
  * @author Jiajun
@@ -35,7 +36,7 @@ public class Configure {
 		try {
 			Document document = saxReader.read(inputXml);
 			Element root = document.getRootElement();
-
+			
 			for (Iterator iterator = root.elementIterator(); iterator.hasNext();) {
 				Element element = (Element) iterator.next();
 				String name = element.attributeValue("name");
@@ -49,6 +50,7 @@ public class Configure {
 				String tsrc = element.elementText("tsrc");
 				String sbin = element.elementText("sbin");
 				String tbin = element.elementText("tbin");
+				Subject subject = new Subject(name, id, ssrc, tsrc, sbin, tbin);
 				
 				Element pathElem = element.element("classpath");
 				
@@ -57,16 +59,34 @@ public class Configure {
 					Element path = (Element) iterInner.next();
 					String clp = path.getText();
 					if(clp != null){
-						classpath.add(clp);
+						for(String jar : getJarFile(new File(subject.getHome() + clp))){
+							classpath.add(jar);
+						}
 					}
 				}
-				Subject subject = new Subject(name, id, ssrc, tsrc, sbin, tbin, classpath);
+				subject.setDependency(classpath);
 				list.add(subject);
 			}
 		} catch (DocumentException e) {
 			LevelLogger.fatal(__name__ + "#getSubjectFromXML parse xml file failed !", e);
 		}
 		return list;
+	}
+	
+	private static List<String> getJarFile(File path){
+		List<String> jars = new ArrayList<>();
+		if(path.isFile()){
+			String file = path.getAbsolutePath();
+			if(file.endsWith(".jar")){
+				jars.add(file);
+			}
+		} else if(path.isDirectory()){
+			File[] files = path.listFiles();
+			for(File f : files){
+				jars.addAll(getJarFile(f));
+			}
+		}
+		return jars;
 	}
 	
 }

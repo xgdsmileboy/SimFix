@@ -9,8 +9,8 @@ package cofix.core.match;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import cofix.common.astnode.CodeBlock;
-import cofix.common.astnode.literal.Literal;
+import cofix.common.parser.astnode.CodeBlock;
+import cofix.common.parser.astnode.literal.Literal;
 
 /**
  * @author Jiajun

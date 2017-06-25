@@ -74,7 +74,7 @@ public class FLocalization {
 	public void locateFault(Subject subject, double threshold) {
 		GZoltar gz = null;
 		try {
-			gz = new FLocator(subject.getHome(), new Ochiai());
+			gz = new Locator(subject.getHome(), new Ochiai());
 		} catch (Throwable t) {
 			System.err.println(t);
 			t.printStackTrace();

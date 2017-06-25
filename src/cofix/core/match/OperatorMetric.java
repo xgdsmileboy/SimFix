@@ -8,8 +8,8 @@ package cofix.core.match;
 
 import java.util.List;
 
-import cofix.common.astnode.CodeBlock;
-import cofix.common.astnode.Operator;
+import cofix.common.parser.astnode.CodeBlock;
+import cofix.common.parser.astnode.Operator;
 
 /**
  * @author Jiajun
