@@ -18,7 +18,6 @@ import org.dom4j.io.SAXReader;
 
 import cofix.common.util.LevelLogger;
 import cofix.common.util.Subject;
-import sun.tools.jar.resources.jar;
 
 /**
  * @author Jiajun
