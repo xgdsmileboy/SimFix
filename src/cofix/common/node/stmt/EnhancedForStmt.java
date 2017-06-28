@@ -6,6 +6,7 @@
  */
 package cofix.common.node.stmt;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -16,12 +17,16 @@ import org.eclipse.jdt.core.dom.Type;
 
 import cofix.common.node.Node;
 import cofix.common.node.expr.Expr;
+import cofix.common.node.expr.Svd;
+import cofix.common.node.metric.CondStruct;
 import cofix.common.node.metric.Literal;
 import cofix.common.node.metric.MethodCall;
 import cofix.common.node.metric.Operator;
-import cofix.common.node.metric.Structure;
+import cofix.common.node.metric.OtherStruct;
+import cofix.common.node.metric.LoopStruct;
 import cofix.common.node.metric.Variable;
 import cofix.common.node.modify.Modification;
+import sun.org.mozilla.javascript.internal.ast.Loop;
 
 /**
  * @author Jiajun
@@ -29,7 +34,7 @@ import cofix.common.node.modify.Modification;
  */
 public class EnhancedForStmt extends Stmt {
 
-	private SingleVariableDeclaration _varDecl = null;
+	private Svd _varDecl = null;
 	private Expr _expression = null;
 	private Stmt _statement = null;
 	
@@ -44,10 +49,9 @@ public class EnhancedForStmt extends Stmt {
 	
 	public EnhancedForStmt(int startLine, int endLine, ASTNode node, Node parent) {
 		super(startLine, endLine, node, parent);
-		EnhancedForStatement enhancedForStatement = null;
 	}
 	
-	public void setParameter(SingleVariableDeclaration varDecl){
+	public void setParameter(Svd varDecl){
 		_varDecl = varDecl;
 	}
 	
@@ -85,31 +89,68 @@ public class EnhancedForStmt extends Stmt {
 
 	@Override
 	public List<Literal> getLiterals() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Literal> list = _varDecl.getLiterals();
+		list.addAll(_expression.getLiterals());
+		if(_statement != null){
+			list.addAll(_statement.getLiterals());
+		}
+		return list;
 	}
 
 	@Override
 	public List<Variable> getVariables() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Variable> list = _varDecl.getVariables();
+		list.addAll(_expression.getVariables());
+		if(_statement != null){
+			list.addAll(_statement.getVariables());
+		}
+		return list;
 	}
 
 	@Override
-	public List<Structure> getStructures() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<LoopStruct> getLoopStruct() {
+		List<LoopStruct> list = new LinkedList<>();
+		LoopStruct loopStruct = new LoopStruct(this, LoopStruct.KIND.EFOR);
+		list.add(loopStruct);
+		if(_statement != null){
+			list.addAll(_statement.getLoopStruct());
+		}
+		return list;
+	}
+	
+	@Override
+	public List<CondStruct> getCondStruct() {
+		List<CondStruct> list = new LinkedList<>();
+		if(_statement != null){
+			list.addAll(_statement.getCondStruct());
+		}
+		return list;
 	}
 
 	@Override
 	public List<MethodCall> getMethodCalls() {
-		// TODO Auto-generated method stub
-		return null;
+		List<MethodCall> list = _expression.getMethodCalls();
+		if(_statement != null){
+			list.addAll(_statement.getMethodCalls());
+		}
+		return list;
 	}
 
 	@Override
 	public List<Operator> getOperators() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Operator> list = _expression.getOperators();
+		if(_statement != null){
+			list.addAll(_statement.getOperators());
+		}
+		return list;
+	}
+	
+	@Override
+	public List<OtherStruct> getOtherStruct() {
+		List<OtherStruct> list = new LinkedList<>();
+		if(_statement != null){
+			list.addAll(_statement.getOtherStruct());
+		}
+		return list;
 	}
 }

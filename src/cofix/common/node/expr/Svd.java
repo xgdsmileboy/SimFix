@@ -13,6 +13,8 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
+import com.sun.org.apache.xml.internal.security.Init;
+
 import cofix.common.node.Node;
 import cofix.common.node.metric.CondStruct;
 import cofix.common.node.metric.Literal;
@@ -25,36 +27,31 @@ import cofix.common.node.modify.Modification;
 
 /**
  * @author Jiajun
- * @datae Jun 23, 2017
+ * @datae Jun 28, 2017
  */
-public class Vdf extends Node {
-
-	private SName _identifier = null;
-	private int _dimensions = 0; 
-	private Expr _expression = null;
+public class Svd extends Expr {
+	
+	private Type _decType = null;
+	private SName _name = null;
+	private Expr _initializer = null;
 	
 	/**
-	 * VariableDeclarationFragment:
-     *	Identifier { Dimension } [ = Expression ]
+	 * { ExtendedModifier } Type {Annotation} [ ... ] Identifier { Dimension } [ = Expression ]
 	 */
-	public Vdf(int startLine, int endLine, ASTNode node) {
+	public Svd(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
 	}
 	
-	public Vdf(int startLine, int endLine, ASTNode node, Node parent) {
-		super(startLine, endLine, node, parent);
+	public void setDecType(Type decType){
+		_decType = decType;
 	}
 	
-	public void setName(SName identifier){
-		_identifier = identifier;
+	public void setName(SName name){
+		_name = name;
 	}
 	
-	public void setDimensions(int dimensions){
-		_dimensions = dimensions;
-	}
-	
-	public void setExpression(Expr expression){
-		_expression = expression;
+	public void setInitializer(Expr initializer){
+		_initializer = initializer;
 	}
 
 	@Override
@@ -83,54 +80,42 @@ public class Vdf extends Node {
 
 	@Override
 	public List<Literal> getLiterals() {
-		List<Literal> list = new LinkedList<>();
-		if(_expression != null){
-			list.addAll(_expression.getLiterals());
+		if(_initializer != null){
+			return _initializer.getLiterals();
 		}
-		return list;
+		return new LinkedList<>();
 	}
 
 	@Override
 	public List<Variable> getVariables() {
-		List<Variable> list = _identifier.getVariables();
-		if(_expression != null){
-			list.addAll(_expression.getVariables());
+		List<Variable> list = _name.getVariables();
+		if(_initializer != null){
+			list.addAll(_initializer.getVariables());
 		}
 		return list;
 	}
-
-	@Override
-	public List<MethodCall> getMethodCalls() {
-		List<MethodCall> list = new LinkedList<>();
-		if(_expression != null){
-			list.addAll(_expression.getMethodCalls());
-		}
-		return list;
-	}
-
-	@Override
-	public List<Operator> getOperators() {
-		if(_expression != null){
-			return _expression.getOperators();
-		}
-		return new LinkedList<>();
-	}
-
+	
 	@Override
 	public List<CondStruct> getCondStruct() {
-		if(_expression != null){
-			return _expression.getCondStruct();
+		if(_initializer != null){
+			return _initializer.getCondStruct();
 		}
-		return new LinkedList<>();
-	}
-
-	@Override
-	public List<LoopStruct> getLoopStruct() {
 		return new LinkedList<>();
 	}
 	
 	@Override
-	public List<OtherStruct> getOtherStruct() {
+	public List<Operator> getOperators() {
+		if(_initializer != null){
+			return _initializer.getOperators();
+		}
+		return new LinkedList<>();
+	}
+	
+	@Override
+	public List<MethodCall> getMethodCalls() {
+		if(_initializer != null){
+			return _initializer.getMethodCalls();
+		}
 		return new LinkedList<>();
 	}
 

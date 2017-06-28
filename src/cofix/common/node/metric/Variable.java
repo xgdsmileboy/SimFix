@@ -6,10 +6,23 @@
  */
 package cofix.common.node.metric;
 
+import org.eclipse.jdt.core.dom.Type;
+
+import cofix.common.node.Node;
+
 /**
  * @author Jiajun
  * @datae Jun 23, 2017
  */
-public class Variable {
+public class Variable extends Feature {
 
+	private String _name = null;
+	private Type _type = null;
+	
+	public Variable(Node node, String name, Type type) {
+		super(node);
+		_name = name;
+		_type = type;
+	}
+	
 }

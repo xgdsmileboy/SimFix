@@ -10,22 +10,22 @@ import cofix.common.node.Node;
 
 /**
  * @author Jiajun
- * @datae Jun 23, 2017
+ * @datae Jun 28, 2017
  */
-public class Operator extends Feature {
-	
-	public static enum KIND{
-		INFIX,
-		POSTFIX,
-		PREFIX,
-		ACC,
-		INS
+public class OtherStruct extends Feature {
+
+	public static enum KIND {
+		BREAK,
+		CONTINUE,
+		RETURN,
+		THROW
 	}
 	
 	private KIND _kind = null;
 	
-	public Operator(Node node, KIND kind) {
+	public OtherStruct(Node node, KIND kind) {
 		super(node);
 		_kind = kind;
 	}
+
 }

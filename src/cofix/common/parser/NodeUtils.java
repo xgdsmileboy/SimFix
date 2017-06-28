@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ASTVisitor;
 import org.eclipse.jdt.core.dom.Block;
@@ -26,6 +27,7 @@ import org.eclipse.jdt.core.dom.IfStatement;
 import org.eclipse.jdt.core.dom.InfixExpression;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
 import org.eclipse.jdt.core.dom.Modifier;
+import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.SingleVariableDeclaration;
 import org.eclipse.jdt.core.dom.StructuralPropertyDescriptor;
 import org.eclipse.jdt.core.dom.Type;
@@ -46,8 +48,112 @@ import cofix.common.util.Pair;
 public class NodeUtils {
 
 	public static Type parseExprType(Expr left, String operator, Expr right){
+		if(left == null){
+			return parsePreExprType(right, operator);
+		}
 		
-		return null;
+		if(right == null){
+			return parsePostExprType(left, operator);
+		}
+		
+		AST ast = AST.newAST(AST.JLS8);
+		switch(operator){
+		case "*":
+		case "/":
+		case "+":
+		case "-":
+			Type type = union(left.getType(), right.getType());
+			if(type == null){
+				type = ast.newPrimitiveType(PrimitiveType.DOUBLE);
+			}
+			return type;
+		case "%":
+		case "<<":
+		case ">>":
+		case ">>>":
+		case "^":
+		case "&":
+		case "|":
+			return ast.newPrimitiveType(PrimitiveType.INT);
+		case "<":
+		case ">":
+		case "<=":
+		case ">=":
+		case "==":
+		case "!=":
+		case "&&":
+		case "||":
+			return ast.newPrimitiveType(PrimitiveType.BOOLEAN);
+		default :
+			return null;
+		}
+		
+	}
+	
+	private static Type union(Type ty1, Type ty2){
+		if(ty1 == null){
+			return ty2;
+		} else if(ty2 == null){
+			return ty1;
+		}
+		
+		if(!ty1.isPrimitiveType() || !ty2.isPrimitiveType()){
+			return null;
+		}
+		
+		String ty1String = ty1.toString().toLowerCase().replace("integer", "int");
+		String ty2String = ty2.toString().toLowerCase().replace("integer", "int");
+		
+		AST ast = AST.newAST(AST.JLS8);
+		if(ty1String.equals("double") || ty2String.equals("double")){
+			
+			return ast.newPrimitiveType(PrimitiveType.DOUBLE);
+			
+		} else if(ty1String.equals("float") || ty2String.equals("float")){
+			
+			return ast.newPrimitiveType(PrimitiveType.FLOAT);
+			
+		} else if(ty1String.equals("long") || ty2String.equals("long")){
+			
+			return ast.newPrimitiveType(PrimitiveType.LONG);
+			
+		} else if(ty1String.equals("int") || ty2String.equals("int")){
+			
+			return ast.newPrimitiveType(PrimitiveType.INT);
+			
+		} else if(ty1String.equals("short") || ty2String.equals("short")){
+			
+			return ast.newPrimitiveType(PrimitiveType.SHORT);
+			
+		} else {
+			
+			return ast.newPrimitiveType(PrimitiveType.BYTE);
+			
+		}
+		
+	}
+	
+	private static Type parsePostExprType(Expr expr, String operator){
+		// ++/--
+		AST ast = AST.newAST(AST.JLS8);
+		return ast.newPrimitiveType(PrimitiveType.INT);
+	}
+	
+	private static Type parsePreExprType(Expr expr, String operator){
+		AST ast = AST.newAST(AST.JLS8);
+		switch(operator){
+		case "++":
+		case "--":
+			return ast.newPrimitiveType(PrimitiveType.INT);
+		case "+":
+		case "-":
+			return expr.getType();
+		case "~":
+		case "!":
+			return ast.newPrimitiveType(PrimitiveType.BOOLEAN);
+		default :
+			return null;
+		}
 	}
 	
 	public static ASTNode replace(ASTNode node, ASTNode replace){
@@ -176,12 +282,12 @@ public class NodeUtils {
 				continue;
 			}
 			// comment start for multi-lines
-			if(string.startsWith("\\*")){
+			if(string.startsWith("/*")){
 				comment_start_flag = true;
 				continue;
 			}
 			// comment end for multi-lines
-			if(string.endsWith("*/")){
+			if(string.contains("*/")){
 				comment_start_flag = false;
 				continue;
 			}

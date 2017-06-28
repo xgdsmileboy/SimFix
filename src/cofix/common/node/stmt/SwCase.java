@@ -7,6 +7,7 @@
 package cofix.common.node.stmt;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -15,10 +16,12 @@ import org.eclipse.jdt.core.dom.Type;
 
 import cofix.common.node.Node;
 import cofix.common.node.expr.Expr;
+import cofix.common.node.metric.CondStruct;
 import cofix.common.node.metric.Literal;
 import cofix.common.node.metric.MethodCall;
 import cofix.common.node.metric.Operator;
-import cofix.common.node.metric.Structure;
+import cofix.common.node.metric.OtherStruct;
+import cofix.common.node.metric.LoopStruct;
 import cofix.common.node.metric.Variable;
 import cofix.common.node.modify.Modification;
 
@@ -29,7 +32,7 @@ import cofix.common.node.modify.Modification;
 public class SwCase extends Stmt {
 
 	private Expr _expression = null;
-	private List<Node> _children = null;
+	private List<Node> _siblings = null;
 	/**
 	 * SwitchCase:
      *           case Expression  :
@@ -47,15 +50,15 @@ public class SwCase extends Stmt {
 		_expression = expression;
 	}
 	
-	public void addChild(Node child){
-		if(_children == null){
-			_children = new ArrayList<>();
+	public void addSibling(Node sibling){
+		if(_siblings == null){
+			_siblings = new ArrayList<>();
 		}
-		_children.add(child);
+		_siblings.add(sibling);
 	}
 	
-	public void setChildren(List<Node> children){
-		_children = children;
+	public void setSiblings(List<Node> siblings){
+		_siblings = siblings;
 	}
 
 	@Override
@@ -84,31 +87,31 @@ public class SwCase extends Stmt {
 
 	@Override
 	public List<Literal> getLiterals() {
-		// TODO Auto-generated method stub
-		return null;
+		return _expression.getLiterals();
 	}
 
 	@Override
 	public List<Variable> getVariables() {
-		// TODO Auto-generated method stub
-		return null;
+		return _expression.getVariables();
 	}
 
+	
 	@Override
-	public List<Structure> getStructures() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<CondStruct> getCondStruct() {
+		List<CondStruct> list = new ArrayList<>();
+		CondStruct condStruct = new CondStruct(this, CondStruct.KIND.SC);
+		list.add(condStruct);
+		return list;
 	}
 
 	@Override
 	public List<MethodCall> getMethodCalls() {
-		// TODO Auto-generated method stub
-		return null;
+		return _expression.getMethodCalls();
 	}
 
 	@Override
 	public List<Operator> getOperators() {
-		// TODO Auto-generated method stub
-		return null;
+		return _expression.getOperators();
 	}
+
 }

@@ -10,8 +10,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
@@ -60,6 +58,7 @@ import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.QualifiedName;
 import org.eclipse.jdt.core.dom.ReturnStatement;
 import org.eclipse.jdt.core.dom.SimpleName;
+import org.eclipse.jdt.core.dom.SingleVariableDeclaration;
 import org.eclipse.jdt.core.dom.StringLiteral;
 import org.eclipse.jdt.core.dom.SuperConstructorInvocation;
 import org.eclipse.jdt.core.dom.SuperFieldAccess;
@@ -76,6 +75,7 @@ import org.eclipse.jdt.core.dom.TypeDeclarationStatement;
 import org.eclipse.jdt.core.dom.TypeLiteral;
 import org.eclipse.jdt.core.dom.TypeMethodReference;
 import org.eclipse.jdt.core.dom.VariableDeclarationExpression;
+import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
 import org.eclipse.jdt.core.dom.VariableDeclarationStatement;
 import org.eclipse.jdt.core.dom.WhileStatement;
 
@@ -115,15 +115,18 @@ import cofix.common.node.expr.StrLiteral;
 import cofix.common.node.expr.SuperFieldAcc;
 import cofix.common.node.expr.SuperMethodInv;
 import cofix.common.node.expr.SuperMethodRef;
+import cofix.common.node.expr.Svd;
 import cofix.common.node.expr.ThisExpr;
 import cofix.common.node.expr.TyLiteral;
 import cofix.common.node.expr.TypeMethodRef;
 import cofix.common.node.expr.VarDeclarationExpr;
 import cofix.common.node.expr.Vdf;
+import cofix.common.node.metric.CondStruct;
 import cofix.common.node.metric.Literal;
+import cofix.common.node.metric.LoopStruct;
 import cofix.common.node.metric.MethodCall;
 import cofix.common.node.metric.Operator;
-import cofix.common.node.metric.Structure;
+import cofix.common.node.metric.OtherStruct;
 import cofix.common.node.metric.Variable;
 import cofix.common.node.stmt.AnonymousClassDecl;
 import cofix.common.node.stmt.AssertStmt;
@@ -172,7 +175,9 @@ public class CodeBlock {
 	// <literal, count>
 	private Map<Literal, Integer> _constants = null;
 	// <if, for, ...>
-	private List<Structure> _structures = null;
+	private List<LoopStruct> _loopStruct = null;
+	private List<CondStruct> _condStructs = null;
+	private List<OtherStruct> _otherStruct = null;
 	// {type.name(p0,p1),...}
 	private Map<MethodCall, Integer> _methodCalls = null;
 	// <+, -, ...>
@@ -283,17 +288,43 @@ public class CodeBlock {
 		return _constants;
 	}
 	
-	public List<Structure> getStructures(){
-		if(_structures == null){
+	public List<LoopStruct> getLoopStruct(){
+		if(_loopStruct == null){
 			if(_parsedNodes == null){
 				parseNode();
 			}
-			_structures = new ArrayList<>();
+			_loopStruct = new ArrayList<>();
 			for(Node node : _parsedNodes){
-				_structures.addAll(node.getStructures());
+				_loopStruct.addAll(node.getLoopStruct());
 			}
 		}
-		return _structures;
+		return _loopStruct;
+	}
+	
+	public List<CondStruct> getCondStruct(){
+		if(_condStructs == null){
+			if(_parsedNodes == null){
+				parseNode();
+			}
+			_condStructs = new ArrayList<>();
+			for(Node node : _parsedNodes){
+				_condStructs.addAll(node.getCondStruct());
+			}
+		}
+		return _condStructs;
+	}
+	
+	public List<OtherStruct> getOtherStruct(){
+		if(_otherStruct == null){
+			if(_parsedNodes == null){
+				parseNode();
+			}
+			_otherStruct = new ArrayList<>();
+			for(Node node : _parsedNodes){
+				_otherStruct.addAll(node.getOtherStruct());
+			}
+		}
+		return _otherStruct;
 	}
 	
 	public Map<MethodCall, Integer> getMethodCalls(){
@@ -417,7 +448,9 @@ public class CodeBlock {
 		int endLine = _cunit.getLineNumber(node.getStartPosition() + node.getLength());
 		EnhancedForStmt enhancedForStmt = new EnhancedForStmt(startLine, endLine, node);
 		
-		enhancedForStmt.setParameter(node.getParameter());
+		Svd svd = (Svd) process(node.getParameter());
+		svd.setParent(enhancedForStmt);
+		enhancedForStmt.setParameter(svd);
 		
 		Expr expression = (Expr) process(node.getExpression());
 		expression.setParent(enhancedForStmt);
@@ -570,7 +603,7 @@ public class CodeBlock {
 			if (stmt instanceof SwCase) {
 				lastSW = (SwCase) stmt;
 			} else if(lastSW != null){
-				lastSW.addChild(stmt);
+				lastSW.addSibling(stmt);
 			}
 			statements.add(stmt);
 		}
@@ -709,6 +742,7 @@ public class CodeBlock {
 		ArrayCreate arrayCreate = new ArrayCreate(startLine, endLine, node);
 		
 		arrayCreate.setArrayType(node.getType());
+		arrayCreate.setType(node.getType());
 		
 		List<Expr> dimension = new ArrayList<>();
 		for(Object object : node.dimensions()){
@@ -888,7 +922,9 @@ public class CodeBlock {
 		expression.setParent(fieldAcc);
 		fieldAcc.setExpression(expression);
 		
-		fieldAcc.setIdentifier(node.getName().getFullyQualifiedName());
+		SName identifier = (SName) process(node.getName());
+		identifier.setParent(fieldAcc);
+		fieldAcc.setIdentifier(identifier);
 		
 		Pair<String, String> classAndMethodName = NodeUtils.getTypeDecAndMethodDec(node);
 		Type type = ProjectInfo.getVariableType(classAndMethodName.getFirst(), classAndMethodName.getSecond(), node.getName().toString());
@@ -1001,15 +1037,6 @@ public class CodeBlock {
 			sName.setName(name);
 			Pair<String, String> classAndMethodName = NodeUtils.getTypeDecAndMethodDec(node);
 			Type type = ProjectInfo.getVariableType(classAndMethodName.getFirst(), classAndMethodName.getSecond(), node.toString());
-			
-			if(type == null){
-				Pattern pattern = Pattern.compile("[A-Z][a-zA-Z_0-9]*");
-				Matcher matcher = pattern.matcher(name);
-				if(matcher.matches()){
-					AST ast = AST.newAST(AST.JLS8);
-					type = ast.newSimpleType(ast.newSimpleName(name));
-				}
-			}
 			
 			sName.setType(type);
 			expr = sName;
@@ -1168,7 +1195,9 @@ public class CodeBlock {
 		int endLine = _cunit.getLineNumber(node.getStartPosition() + node.getLength());
 		SuperFieldAcc superFieldAcc = new SuperFieldAcc(startLine, endLine, node);
 		
-		superFieldAcc.setIdentifier(node.getName().getFullyQualifiedName());
+		SName identifier = (SName) process(node.getName());
+		identifier.setParent(superFieldAcc);
+		superFieldAcc.setIdentifier(identifier);
 		
 		if(node.getQualifier() != null){
 			Label name = (Label) process(node.getQualifier());
@@ -1235,7 +1264,7 @@ public class CodeBlock {
 		int startLine = _cunit.getLineNumber(node.getStartPosition());
 		int endLine = _cunit.getLineNumber(node.getStartPosition() + node.getLength());
 		TyLiteral tyLiteral = new TyLiteral(startLine, endLine, node);
-		
+		tyLiteral.setValue(node.getType());
 		tyLiteral.setType(node.getType());
 		
 		return tyLiteral;
@@ -1264,6 +1293,43 @@ public class CodeBlock {
 		varDeclarationExpr.setVarDeclFrags(vdfs);
 		
 		return varDeclarationExpr;
+	}
+	
+	private Vdf visit(VariableDeclarationFragment node){
+		int startLine = _cunit.getLineNumber(node.getStartPosition());
+		int endLine = _cunit.getLineNumber(node.getStartPosition() + node.getLength());
+		Vdf vdf = new Vdf(startLine, endLine, node);
+		
+		vdf.setDimensions(node.getExtraDimensions());
+		
+		Expr expression = (Expr) process(node.getInitializer());
+		expression.setParent(vdf);
+		vdf.setExpression(expression);
+		
+		SName identifier = (SName) process(node.getName());
+		identifier.setParent(vdf);
+		vdf.setName(identifier);
+		
+		return vdf;
+	}
+	
+	private Svd visit(SingleVariableDeclaration node){
+		int startLine = _cunit.getLineNumber(node.getStartPosition());
+		int endLine = _cunit.getLineNumber(node.getStartPosition() + node.getLength());
+		Svd svd = new Svd(startLine, endLine, node);
+		
+		svd.setDecType(node.getType());
+		if(node.getInitializer() != null){
+			Expr initializer = (Expr) process(node.getInitializer());
+			initializer.setParent(svd);
+			svd.setInitializer(initializer);
+		}
+		
+		SName name = (SName) process(node.getName());
+		name.setParent(svd);
+		svd.setName(name);
+		
+		return svd;
 	}
 	
 	private Node process(ASTNode node){
@@ -1380,6 +1446,10 @@ public class CodeBlock {
 			 return visit((VariableDeclarationExpression)node);
 		 } else if(node instanceof AnonymousClassDeclaration){
 			 return visit((AnonymousClassDeclaration)node);
+		 } else if(node instanceof VariableDeclarationFragment){
+			 return visit((VariableDeclarationFragment) node);
+		 } else if(node instanceof SingleVariableDeclaration){
+			 return visit((SingleVariableDeclaration) node);
 		 } else {
 			 System.out.println("UNKNOWN ASTNode type : " + node.toString());
 			 return null;

@@ -6,10 +6,15 @@
  */
 package cofix.common.node.metric;
 
+import cofix.common.node.Node;
+
 /**
  * @author Jiajun
  * @datae Jun 23, 2017
  */
-public class Literal {
-
+public class Literal extends Feature {
+	
+	public Literal(Node node){
+		super(node);
+	}
 }

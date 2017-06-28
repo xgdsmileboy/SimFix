@@ -54,5 +54,5 @@ public class IntLiteral extends NumLiteral {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
+	
 }

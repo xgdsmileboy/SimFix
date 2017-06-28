@@ -6,18 +6,23 @@
  */
 package cofix.common.node.stmt;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+
+import javax.print.attribute.standard.MediaSize.Other;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
 import cofix.common.node.Node;
 import cofix.common.node.expr.Expr;
+import cofix.common.node.metric.CondStruct;
 import cofix.common.node.metric.Literal;
 import cofix.common.node.metric.MethodCall;
 import cofix.common.node.metric.Operator;
-import cofix.common.node.metric.Structure;
+import cofix.common.node.metric.OtherStruct;
+import cofix.common.node.metric.LoopStruct;
 import cofix.common.node.metric.Variable;
 import cofix.common.node.modify.Modification;
 
@@ -93,31 +98,131 @@ public class ForStmt extends Stmt {
 
 	@Override
 	public List<Literal> getLiterals() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Literal> list = new LinkedList<>();
+		if(_initializers != null){
+			for(Expr expr : _initializers){
+				list.addAll(expr.getLiterals());
+			}
+		}
+		if(_condition != null){
+			list.addAll(_condition.getLiterals());
+		}
+		if(_updaters != null){
+			for(Expr expr : _updaters){
+				list.addAll(expr.getLiterals());
+			}
+		}
+		if(_body != null){
+			list.addAll(_body.getLiterals());
+		}
+		return list;
 	}
 
 	@Override
 	public List<Variable> getVariables() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Variable> list = new LinkedList<>();
+		if(_initializers != null){
+			for(Expr expr : _initializers){
+				list.addAll(expr.getVariables());
+			}
+		}
+		if(_condition != null){
+			list.addAll(_condition.getVariables());
+		}
+		if(_updaters != null){
+			for(Expr expr : _updaters){
+				list.addAll(expr.getVariables());
+			}
+		}
+		if(_body != null){
+			list.addAll(_body.getVariables());
+		}
+		return list;
 	}
 
 	@Override
-	public List<Structure> getStructures() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<LoopStruct> getLoopStruct() {
+		List<LoopStruct> list = new LinkedList<>();
+		LoopStruct loopStruct = new LoopStruct(this, LoopStruct.KIND.FOR);
+		list.add(loopStruct);
+		if(_body != null){
+			list.addAll(_body.getLoopStruct());
+		}
+		return list;
+	}
+	
+	@Override
+	public List<CondStruct> getCondStruct() {
+		List<CondStruct> list = new LinkedList<>();
+		if(_initializers != null){
+			for(Expr expr : _initializers){
+				list.addAll(expr.getCondStruct());
+			}
+		}
+		if(_condition != null){
+			list.addAll(_condition.getCondStruct());
+		}
+		if(_updaters != null){
+			for(Expr expr : _updaters){
+				list.addAll(expr.getCondStruct());
+			}
+		}
+		if(_body != null){
+			list.addAll(_body.getCondStruct());
+		}
+		return list;
 	}
 
 	@Override
 	public List<MethodCall> getMethodCalls() {
-		// TODO Auto-generated method stub
-		return null;
+		List<MethodCall> list = new LinkedList<>();
+		if(_initializers != null){
+			for(Expr expr : _initializers){
+				list.addAll(expr.getMethodCalls());
+			}
+		}
+		if(_condition != null){
+			list.addAll(_condition.getMethodCalls());
+		}
+		if(_updaters != null){
+			for(Expr expr : _updaters){
+				list.addAll(expr.getMethodCalls());
+			}
+		}
+		if(_body != null){
+			list.addAll(_body.getMethodCalls());
+		}
+		return list;
 	}
 
 	@Override
 	public List<Operator> getOperators() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Operator> list = new LinkedList<>();
+		if(_initializers != null){
+			for(Expr expr : _initializers){
+				list.addAll(expr.getOperators());
+			}
+		}
+		if(_condition != null){
+			list.addAll(_condition.getOperators());
+		}
+		if(_updaters != null){
+			for(Expr expr : _updaters){
+				list.addAll(expr.getOperators());
+			}
+		}
+		if(_body != null){
+			list.addAll(_body.getOperators());
+		}
+		return list;
+	}
+	
+	@Override
+	public List<OtherStruct> getOtherStruct() {
+		List<OtherStruct> list = new LinkedList<>();
+		if(_body != null){
+			list.addAll(_body.getOtherStruct());
+		}
+		return list;
 	}
 }

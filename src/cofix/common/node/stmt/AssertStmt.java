@@ -13,11 +13,6 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
 import cofix.common.node.Node;
-import cofix.common.node.metric.Literal;
-import cofix.common.node.metric.MethodCall;
-import cofix.common.node.metric.Operator;
-import cofix.common.node.metric.Structure;
-import cofix.common.node.metric.Variable;
 import cofix.common.node.modify.Modification;
 
 /**
@@ -62,33 +57,4 @@ public class AssertStmt extends Stmt{
 		return false;
 	}
 
-	@Override
-	public List<Literal> getLiterals() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Variable> getVariables() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Structure> getStructures() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<MethodCall> getMethodCalls() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Operator> getOperators() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

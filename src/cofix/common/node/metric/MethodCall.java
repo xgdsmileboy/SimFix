@@ -6,10 +6,16 @@
  */
 package cofix.common.node.metric;
 
+import cofix.common.node.Node;
+
 /**
  * @author Jiajun
  * @datae Jun 23, 2017
  */
-public class MethodCall {
-
+public class MethodCall extends Feature {
+	
+	public MethodCall(Node node) {
+		super(node);
+	}
+	
 }

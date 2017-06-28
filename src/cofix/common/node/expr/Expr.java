@@ -6,11 +6,19 @@
  */
 package cofix.common.node.expr;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
 import cofix.common.node.Node;
+import cofix.common.node.metric.CondStruct;
+import cofix.common.node.metric.LoopStruct;
+import cofix.common.node.metric.MethodCall;
+import cofix.common.node.metric.Operator;
+import cofix.common.node.metric.OtherStruct;
 
 /**
  * @author Jiajun
@@ -35,4 +43,29 @@ public abstract class Expr extends Node {
 	public Type getType(){
 		return _exprType;
 	}
+		
+	@Override
+	public List<LoopStruct> getLoopStruct(){
+		return new LinkedList<>();
+	}
+	
+	@Override
+	public List<CondStruct> getCondStruct() {
+		return new LinkedList<>();
+	}
+	
+	@Override
+	public List<Operator> getOperators() {
+		return new LinkedList<>();
+	}
+	
+	@Override
+	public List<MethodCall> getMethodCalls() {
+		return new LinkedList<>();
+	}
+	
+	public List<OtherStruct> getOtherStruct(){
+		return new LinkedList<>();
+	}
+	
 }

@@ -6,6 +6,7 @@
  */
 package cofix.common.node.stmt;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -14,10 +15,12 @@ import org.eclipse.jdt.core.dom.Type;
 
 import cofix.common.node.Node;
 import cofix.common.node.expr.Expr;
+import cofix.common.node.metric.CondStruct;
 import cofix.common.node.metric.Literal;
+import cofix.common.node.metric.LoopStruct;
 import cofix.common.node.metric.MethodCall;
 import cofix.common.node.metric.Operator;
-import cofix.common.node.metric.Structure;
+import cofix.common.node.metric.OtherStruct;
 import cofix.common.node.metric.Variable;
 import cofix.common.node.modify.Modification;
 
@@ -80,31 +83,64 @@ public class SwitchStmt extends Stmt {
 
 	@Override
 	public List<Literal> getLiterals() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Literal> list = _expression.getLiterals();
+		for(Stmt stmt : _statements){
+			list.addAll(stmt.getLiterals());
+		}
+		return list;
 	}
 
 	@Override
 	public List<Variable> getVariables() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Variable> list = _expression.getVariables();
+		for(Stmt stmt : _statements){
+			list.addAll(stmt.getVariables());
+		}
+		return list;
 	}
 
 	@Override
-	public List<Structure> getStructures() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<LoopStruct> getLoopStruct() {
+		List<LoopStruct> list = new LinkedList<>();
+		for(Stmt stmt : _statements){
+			list.addAll(stmt.getLoopStruct());
+		}
+		return list;
+	}
+	
+	@Override
+	public List<CondStruct> getCondStruct() {
+		List<CondStruct> list = new LinkedList<>();
+		for(Stmt stmt : _statements){
+			list.addAll(stmt.getCondStruct());
+		}
+		return list;
 	}
 
 	@Override
 	public List<MethodCall> getMethodCalls() {
-		// TODO Auto-generated method stub
-		return null;
+		List<MethodCall> list = _expression.getMethodCalls();
+		for(Stmt stmt : _statements){
+			list.addAll(stmt.getMethodCalls());
+		}
+		return list;
 	}
 
 	@Override
 	public List<Operator> getOperators() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Operator> list = _expression.getOperators();
+		for(Stmt stmt : _statements){
+			list.addAll(stmt.getOperators());
+		}
+		return list;
+	}
+
+	@Override
+	public List<OtherStruct> getOtherStruct() {
+		List<OtherStruct> list = new LinkedList<>();
+		for(Stmt stmt : _statements){
+			list.addAll(stmt.getOtherStruct());
+		}
+		return list;
 	}
 }

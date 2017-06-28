@@ -12,10 +12,12 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
+import cofix.common.node.metric.CondStruct;
 import cofix.common.node.metric.Literal;
 import cofix.common.node.metric.MethodCall;
 import cofix.common.node.metric.Operator;
-import cofix.common.node.metric.Structure;
+import cofix.common.node.metric.OtherStruct;
+import cofix.common.node.metric.LoopStruct;
 import cofix.common.node.metric.Variable;
 import cofix.common.node.modify.Modification;
 
@@ -67,7 +69,11 @@ public abstract class Node implements Adapter {
 	
 	public abstract List<Variable> getVariables();
 	
-	public abstract List<Structure> getStructures();
+	public abstract List<LoopStruct> getLoopStruct();
+	
+	public abstract List<CondStruct> getCondStruct();
+	
+	public abstract List<OtherStruct> getOtherStruct();
 	
 	public abstract List<MethodCall> getMethodCalls();
 	

@@ -6,6 +6,7 @@
  */
 package cofix.common.node.expr;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -13,10 +14,10 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
 import cofix.common.node.Node;
+import cofix.common.node.metric.CondStruct;
 import cofix.common.node.metric.Literal;
 import cofix.common.node.metric.MethodCall;
 import cofix.common.node.metric.Operator;
-import cofix.common.node.metric.Structure;
 import cofix.common.node.metric.Variable;
 import cofix.common.node.modify.Modification;
 
@@ -76,31 +77,47 @@ public class ConditionalExpr extends Expr {
 
 	@Override
 	public List<Literal> getLiterals() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Literal> list = new LinkedList<>();
+		list.addAll(_condition.getLiterals());
+		list.addAll(_first.getLiterals());
+		list.addAll(_snd.getLiterals());
+		return list;
 	}
 
 	@Override
 	public List<Variable> getVariables() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Structure> getStructures() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Variable> list = new LinkedList<>();
+		list.addAll(_condition.getVariables());
+		list.addAll(_first.getVariables());
+		list.addAll(_snd.getVariables());
+		return list;
 	}
 
 	@Override
 	public List<MethodCall> getMethodCalls() {
-		// TODO Auto-generated method stub
-		return null;
+		List<MethodCall> list = new LinkedList<>();
+		list.addAll(_condition.getMethodCalls());
+		list.addAll(_first.getMethodCalls());
+		list.addAll(_snd.getMethodCalls());
+		return list;
 	}
 
 	@Override
 	public List<Operator> getOperators() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Operator> list = new LinkedList<>();
+		list.addAll(_condition.getOperators());
+		list.addAll(_first.getOperators());
+		list.addAll(_snd.getOperators());
+		return list;
+	}
+	
+	@Override
+	public List<CondStruct> getCondStruct() {
+		List<CondStruct> list = new LinkedList<>();
+		CondStruct condStruct = new CondStruct(this, CondStruct.KIND.CE);
+		list.add(condStruct);
+		list.addAll(_first.getCondStruct());
+		list.addAll(_snd.getCondStruct());
+		return list;
 	}
 }
