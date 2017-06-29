@@ -60,6 +60,11 @@ public class TypeMethodRef extends Expr {
 		// TODO Auto-generated method stub
 		return false;
 	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		return new StringBuffer(_originalNode.toString());
+	}
 
 	@Override
 	public List<Literal> getLiterals() {

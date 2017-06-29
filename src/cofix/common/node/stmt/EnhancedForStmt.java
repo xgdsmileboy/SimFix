@@ -38,6 +38,8 @@ public class EnhancedForStmt extends Stmt {
 	private Expr _expression = null;
 	private Stmt _statement = null;
 	
+	private Stmt _statement_replace = null;
+	
 	/**
 	 * EnhancedForStatement:
      *	for ( FormalParameter : Expression )
@@ -85,6 +87,21 @@ public class EnhancedForStmt extends Stmt {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append("for(");
+		stringBuffer.append(_varDecl.toSrcString());
+		stringBuffer.append(" : ");
+		stringBuffer.append(_expression.toSrcString());
+		if(_statement_replace != null){
+			stringBuffer.append(_statement_replace.toSrcString());
+		} else {
+			stringBuffer.append(_statement.toSrcString());
+		}
+		return stringBuffer;
 	}
 
 	@Override

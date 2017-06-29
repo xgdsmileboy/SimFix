@@ -23,6 +23,8 @@ public class IntLiteral extends NumLiteral {
 
 	private int _value = 0;
 	
+	private Integer _replace = null;
+	
 	public IntLiteral(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
 	}
@@ -53,6 +55,14 @@ public class IntLiteral extends NumLiteral {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		if(_replace != null){
+			return new StringBuffer(String.valueOf(_replace));
+		}
+		return new StringBuffer(String.valueOf(_value));
 	}
 	
 }

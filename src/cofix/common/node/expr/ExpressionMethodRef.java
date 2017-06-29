@@ -59,6 +59,13 @@ public class ExpressionMethodRef extends Expr {
 	}
 
 	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append(_originalNode.toString());
+		return stringBuffer;
+	}
+	
+	@Override
 	public List<Literal> getLiterals() {
 		return new LinkedList<>();
 	}

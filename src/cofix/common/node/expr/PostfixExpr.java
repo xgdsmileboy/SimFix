@@ -18,7 +18,6 @@ import cofix.common.node.Node;
 import cofix.common.node.metric.Literal;
 import cofix.common.node.metric.MethodCall;
 import cofix.common.node.metric.Operator;
-import cofix.common.node.metric.LoopStruct;
 import cofix.common.node.metric.Variable;
 import cofix.common.node.modify.Modification;
 
@@ -30,6 +29,9 @@ public class PostfixExpr extends Expr {
 
 	private Expr _expression = null;
 	private PostfixExpression.Operator _operator = null;
+	
+	private Expr _expression_replace = null;
+	private PostfixExpression.Operator _operator_replace = null;
 	
 	/**
 	 * PostfixExpression:
@@ -45,6 +47,22 @@ public class PostfixExpr extends Expr {
 	
 	public void setOperator(PostfixExpression.Operator operator){
 		_operator = operator;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		if(_expression_replace != null){
+			stringBuffer.append(_expression_replace.toSrcString());
+		} else {
+			stringBuffer.append(_expression.toSrcString());
+		}
+		if(_operator_replace != null){
+			stringBuffer.append(_operator_replace.toString());
+		} else {
+			stringBuffer.append(_operator.toString());
+		}
+		return stringBuffer;
 	}
 
 	@Override

@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.eclipse.jdt.core.dom.ASTNode;
+import org.eclipse.jdt.core.dom.TryStatement;
 import org.eclipse.jdt.core.dom.Type;
 
 import cofix.common.node.Node;
@@ -71,6 +72,30 @@ public class TryStmt extends Stmt {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer("try");
+		TryStatement tryStatement = (TryStatement)_originalNode;
+		if(tryStatement.resources() != null && tryStatement.resources().size() > 0){
+			stringBuffer.append("(");
+			for(Object object : tryStatement.resources()){
+				stringBuffer.append(object.toString());
+			}
+			stringBuffer.append(")");
+		}
+		stringBuffer.append(_blk.toSrcString());
+		if(tryStatement.catchClauses() != null){
+			for(Object object : tryStatement.catchClauses()){
+				stringBuffer.append(object.toString());
+			}
+		}
+		if(tryStatement.getFinally() != null){
+			stringBuffer.append("finally");
+			stringBuffer.append(tryStatement.getFinally().toString());
+		}
+		return stringBuffer;
 	}
 
 	@Override

@@ -26,6 +26,8 @@ public class CharLiteral extends Expr {
 
 	private char _value = ' ';
 	
+	private Character _replace = null;
+	
 	/**
 	 * Character literal nodes.
 	 */
@@ -59,6 +61,14 @@ public class CharLiteral extends Expr {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		if(_replace != null){
+			return new StringBuffer("'" + _replace + "'");
+		}
+		return new StringBuffer("'" + _value + "'");
 	}
 
 	@Override

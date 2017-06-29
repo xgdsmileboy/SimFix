@@ -6,7 +6,6 @@
  */
 package cofix.common.node.expr;
 
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -18,7 +17,6 @@ import cofix.common.node.metric.CondStruct;
 import cofix.common.node.metric.Literal;
 import cofix.common.node.metric.MethodCall;
 import cofix.common.node.metric.Operator;
-import cofix.common.node.metric.LoopStruct;
 import cofix.common.node.metric.Variable;
 import cofix.common.node.modify.Modification;
 
@@ -29,6 +27,8 @@ import cofix.common.node.modify.Modification;
 public class ParenthesiszedExpr extends Expr {
 
 	private Expr _expression = null;
+	
+	private Expr _expression_replace = null;
 	
 	/**
 	 * ParenthesizedExpression:
@@ -64,6 +64,19 @@ public class ParenthesiszedExpr extends Expr {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append("(");
+		if(_expression_replace != null){
+			stringBuffer.append(_expression_replace.toSrcString());
+		} else {
+			stringBuffer.append(_expression.toSrcString());
+		}
+		stringBuffer.append(")");
+		return stringBuffer;
 	}
 
 	@Override

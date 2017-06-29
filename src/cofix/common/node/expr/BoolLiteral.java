@@ -25,6 +25,7 @@ import cofix.common.node.modify.Modification;
 public class BoolLiteral extends Expr {
 
 	private boolean _value = false;
+	private Boolean _replace = null;
 	
 	/**
 	 * BooleanLiteral:
@@ -55,6 +56,15 @@ public class BoolLiteral extends Expr {
 	public boolean restore(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		if(_replace != null){
+			return new StringBuffer(String.valueOf(_replace));
+		} else {
+			return new StringBuffer(String.valueOf(_value));
+		}
 	}
 
 	@Override

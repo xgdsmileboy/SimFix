@@ -38,6 +38,10 @@ public class IfStmt extends Stmt {
 	private Stmt _then = null;
 	private Stmt _else = null;
 	
+	private Expr _condition_replace = null;
+	private Expr _then_replace = null;
+	private Expr _else_replace = null;
+	
 	/**
 	 * IfStatement:
      *	if ( Expression ) Statement [ else Statement]
@@ -84,6 +88,30 @@ public class IfStmt extends Stmt {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer("if(");
+		if(_condition_replace != null){
+			stringBuffer.append(_condition_replace.toSrcString());
+		} else {
+			stringBuffer.append(_condition.toSrcString());
+		}
+		stringBuffer.append(")");
+		if(_then_replace != null){
+			stringBuffer.append(_then_replace.toSrcString());
+		} else {
+			stringBuffer.append(_then.toSrcString());
+		}
+		if(_else_replace != null){
+			stringBuffer.append("else ");
+			stringBuffer.append(_else_replace.toSrcString());
+		} else if(_else != null){
+			stringBuffer.append("else ");
+			stringBuffer.append(_else.toSrcString());
+		}
+		return stringBuffer;
 	}
 
 	@Override

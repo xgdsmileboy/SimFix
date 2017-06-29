@@ -61,6 +61,14 @@ public class TyLiteral extends Expr {
 		// TODO Auto-generated method stub
 		return false;
 	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append(_type);
+		stringBuffer.append(".class");
+		return stringBuffer;
+	}
 
 	@Override
 	public List<Literal> getLiterals() {

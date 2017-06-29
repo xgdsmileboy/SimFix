@@ -26,6 +26,8 @@ public class FloatLiteral extends NumLiteral {
 
 	private float _value = .0f;
 	
+	private Expr _replace = null;
+	
 	public FloatLiteral(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
 	}
@@ -56,6 +58,14 @@ public class FloatLiteral extends NumLiteral {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		if(_replace != null){
+			return _replace.toSrcString();
+		}
+		return new StringBuffer(String.valueOf(_value));
 	}
 
 	@Override

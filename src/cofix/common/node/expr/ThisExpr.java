@@ -55,6 +55,11 @@ public class ThisExpr extends Expr {
 		// TODO Auto-generated method stub
 		return false;
 	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		return new StringBuffer("this");
+	}
 
 	@Override
 	public List<Literal> getLiterals() {

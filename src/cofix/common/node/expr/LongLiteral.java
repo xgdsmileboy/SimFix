@@ -23,6 +23,8 @@ public class LongLiteral extends NumLiteral {
 
 	private long _value = 0l;
 	
+	private Long _replace = null;
+	
 	public LongLiteral(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
 	}
@@ -53,6 +55,14 @@ public class LongLiteral extends NumLiteral {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		if(_replace != null){
+			return new StringBuffer(String.valueOf(_replace));
+		}
+		return new StringBuffer(String.valueOf(_value));
 	}
 
 }

@@ -60,6 +60,11 @@ public class NumLiteral extends Expr {
 		// TODO Auto-generated method stub
 		return false;
 	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		return new StringBuffer(_token);
+	}
 
 	@Override
 	public List<Literal> getLiterals() {

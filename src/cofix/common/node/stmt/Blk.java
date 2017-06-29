@@ -31,6 +31,7 @@ public class Blk extends Stmt {
 
 	private List<Stmt> _statements = null;
 	
+	private List<Stmt> _statements_replace = null;
 	/**
 	 * Block:
      *	{ { Statement } }
@@ -69,6 +70,25 @@ public class Blk extends Stmt {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append("{\n");
+		if(_statements_replace != null){
+			for(Stmt stmt : _statements_replace){
+				stringBuffer.append(stmt.toSrcString());
+				stringBuffer.append("\n");
+			}
+		} else {
+			for(Stmt stmt : _statements){
+				stringBuffer.append(stmt.toSrcString());
+				stringBuffer.append("\n");
+			}
+		}
+		stringBuffer.append("}\n");
+		return null;
 	}
 
 	@Override

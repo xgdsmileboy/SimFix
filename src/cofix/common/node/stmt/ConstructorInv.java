@@ -15,6 +15,7 @@ import org.eclipse.jdt.core.dom.Type;
 
 import cofix.common.node.Node;
 import cofix.common.node.expr.Expr;
+import cofix.common.node.expr.ExpressionMethodRef;
 import cofix.common.node.metric.CondStruct;
 import cofix.common.node.metric.Literal;
 import cofix.common.node.metric.MethodCall;
@@ -30,6 +31,8 @@ public class ConstructorInv  extends Stmt{
 
 	private Type _thisType = null;
 	private List<Expr> _arguments = null;
+	
+	private List<Expr> _arguments_replace = null;
 	
 	/**
 	 * ConstructorInvocation:
@@ -74,6 +77,28 @@ public class ConstructorInv  extends Stmt{
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer("this(");
+		if(_arguments_replace != null){
+			if(_arguments_replace.size() > 0){
+				stringBuffer.append(_arguments_replace.get(0).toSrcString());
+				for(int i = 1; i < _arguments_replace.size(); i++){
+					stringBuffer.append(",");
+					stringBuffer.append(_arguments_replace.get(i).toSrcString());
+				}
+			}
+		} else if(_arguments != null && _arguments.size() > 0){
+			stringBuffer.append(_arguments.get(0).toSrcString());
+			for(int i = 1; i < _arguments.size(); i++){
+				stringBuffer.append(",");
+				stringBuffer.append(_arguments.get(i).toSrcString());
+			}
+		}
+		stringBuffer.append(");");
+		return stringBuffer;
 	}
 
 	@Override

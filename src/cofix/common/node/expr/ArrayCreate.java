@@ -6,11 +6,13 @@
  */
 package cofix.common.node.expr;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
 import org.eclipse.jdt.core.dom.ASTNode;
+import org.eclipse.jdt.core.dom.ArrayType;
 import org.eclipse.jdt.core.dom.Type;
 
 import cofix.common.node.Node;
@@ -79,6 +81,39 @@ public class ArrayCreate extends Expr {
 		return false;
 	}
 
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append("new ");
+		if(_dimension != null && _dimension.size() > 0){
+			// new a[4][];
+			if(_type instanceof ArrayType){
+				ArrayType arrayType = (ArrayType) _type;
+				stringBuffer.append(arrayType.getElementType());
+				for(int i = 0; i < arrayType.getDimensions(); i++){
+					stringBuffer.append("[");
+					if(_dimension.size() > i){
+						stringBuffer.append(_dimension.get(i).toSrcString());
+					}
+					stringBuffer.append("]");
+				}
+				if(_initializer != null){
+					stringBuffer.append(_initializer.toSrcString());
+				}
+			} else {
+				stringBuffer = new StringBuffer();
+				stringBuffer.append(_originalNode.toString());
+			}
+		} else {
+			// new a[][]{1,2;3,4};
+			stringBuffer.append(_type);
+			if(_initializer != null){
+				stringBuffer.append(_initializer.toSrcString());
+			}
+		}
+		return stringBuffer;
+	}
+	
 	@Override
 	public List<Literal> getLiterals() {
 		List<Literal> list = new LinkedList<>();

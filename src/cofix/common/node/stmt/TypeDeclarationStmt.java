@@ -64,4 +64,9 @@ public class TypeDeclarationStmt extends Stmt {
 		// TODO Auto-generated method stub
 		return false;
 	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		return new StringBuffer(_originalNode.toString());
+	}
 }

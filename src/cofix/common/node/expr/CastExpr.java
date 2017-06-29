@@ -30,6 +30,8 @@ public class CastExpr extends Expr {
 	private Type _castType = null;
 	private Expr _expression = null;
 
+	private Expr _replace = null;
+	
 	/**
 	 * CastExpression:
      *	( Type ) Expression
@@ -68,6 +70,20 @@ public class CastExpr extends Expr {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append("(");
+		stringBuffer.append(_castType);
+		stringBuffer.append(")");
+		if(_replace != null){
+			stringBuffer.append(_replace.toSrcString());
+		} else {
+			stringBuffer.append(_expression.toSrcString());
+		}
+		return stringBuffer;
 	}
 
 	@Override

@@ -10,8 +10,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import javax.print.attribute.standard.MediaSize.Other;
-
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
@@ -19,10 +17,10 @@ import cofix.common.node.Node;
 import cofix.common.node.expr.Expr;
 import cofix.common.node.metric.CondStruct;
 import cofix.common.node.metric.Literal;
+import cofix.common.node.metric.LoopStruct;
 import cofix.common.node.metric.MethodCall;
 import cofix.common.node.metric.Operator;
 import cofix.common.node.metric.OtherStruct;
-import cofix.common.node.metric.LoopStruct;
 import cofix.common.node.metric.Variable;
 import cofix.common.node.modify.Modification;
 
@@ -36,6 +34,9 @@ public class ForStmt extends Stmt {
 	private List<Expr> _updaters = null;
 	private Expr _condition = null;
 	private Stmt _body = null;
+	
+	private Expr _condition_replace = null;
+	private Stmt _body_replace = null;
 	
 	/**
 	 * for (
@@ -72,6 +73,39 @@ public class ForStmt extends Stmt {
 		_body = body;
 	}
 
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer("for(");
+		if(_initializers != null && _initializers.size() > 0){
+			stringBuffer.append(_initializers.get(0).toSrcString());
+			for(int i = 1; i < _initializers.size(); i++){
+				stringBuffer.append(",");
+				stringBuffer.append(_initializers.get(i).toSrcString());
+			}
+		}
+		stringBuffer.append(";");
+		if(_condition_replace != null){
+			stringBuffer.append(_condition_replace.toSrcString());
+		} else {
+			stringBuffer.append(_condition.toSrcString());
+		}
+		stringBuffer.append(";");
+		if(_updaters != null && _updaters.size() > 0){
+			stringBuffer.append(_updaters.get(0).toSrcString());
+			for(int i = 1; i < _updaters.size(); i++){
+				stringBuffer.append(",");
+				stringBuffer.append(_updaters.get(i).toSrcString());
+			}
+		}
+		stringBuffer.append(")");
+		if(_body_replace != null){
+			stringBuffer.append(_body_replace.toSrcString());
+		} else {
+			stringBuffer.append(_body.toSrcString());
+		}
+		return stringBuffer;
+	}
+	
 	@Override
 	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		// TODO Auto-generated method stub

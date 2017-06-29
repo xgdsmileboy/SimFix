@@ -26,6 +26,8 @@ public class SName extends Label {
 
 	private String _name = null; 
 	
+	private Expr _replace = null;
+	
 	/**
 	 * SimpleName:
      *	Identifier
@@ -60,6 +62,14 @@ public class SName extends Label {
 	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		if(_replace != null){
+			return _replace.toSrcString();
+		}
+		return new StringBuffer(_name);
 	}
 
 	@Override

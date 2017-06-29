@@ -34,6 +34,9 @@ public class DoStmt extends Stmt {
 	private Stmt _stmt = null;
 	private Expr _expression = null;
 	
+	private Stmt _stmt_replace = null;
+	private Expr _expression_replace = null;
+	
 	/**
 	 * DoStatement:
      *	do Statement while ( Expression ) ;
@@ -76,6 +79,25 @@ public class DoStmt extends Stmt {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append("do ");
+		if(_stmt_replace != null){
+			stringBuffer.append(_stmt_replace.toSrcString());
+		} else {
+			stringBuffer.append(_stmt.toSrcString());
+		}
+		stringBuffer.append(" while(");
+		if(_expression_replace != null){
+			stringBuffer.append(_expression_replace.toSrcString());
+		} else {
+			stringBuffer.append(_expression.toSrcString());
+		}
+		stringBuffer.append(");");
+		return null;
 	}
 
 	@Override

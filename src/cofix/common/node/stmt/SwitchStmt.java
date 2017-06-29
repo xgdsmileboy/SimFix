@@ -33,6 +33,9 @@ public class SwitchStmt extends Stmt {
 	private Expr _expression = null;
 	private List<Stmt> _statements = null;
 	
+	private Expr _expression_replace = null;
+	private List<Stmt> _statements_replace = null;
+	
 	/**
 	 * SwitchStatement:
      *           switch ( Expression )
@@ -79,6 +82,31 @@ public class SwitchStmt extends Stmt {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer("swtich (");
+		if(_expression_replace != null){
+			stringBuffer.append(_expression_replace.toSrcString());
+		} else {
+			stringBuffer.append(_expression.toSrcString());
+		}
+		stringBuffer.append("){\n");
+		if(_statements_replace != null){
+			for(Stmt stmt : _statements_replace){
+				stringBuffer.append(stmt.toSrcString());
+				stringBuffer.append("\n");
+			}
+		}else{
+			for(Stmt stmt : _statements){
+				stringBuffer.append(stmt.toSrcString());
+				stringBuffer.append("\n");
+			}
+		}
+		
+		stringBuffer.append("}\n");
+		return null;
 	}
 
 	@Override

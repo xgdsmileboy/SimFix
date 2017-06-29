@@ -31,6 +31,10 @@ public class InfixExpr extends Expr {
 	private InfixExpression.Operator _operator = null;
 	private Expr _rhs = null;
 	
+	private Expr _lhs_replace = null;
+	private InfixExpression.Operator _operator_replace = null;
+	private Expr _rhs_replace = null;
+	
 	/**
 	 * InfixExpression:
      *	Expression InfixOperator Expression { InfixOperator Expression }
@@ -73,6 +77,27 @@ public class InfixExpr extends Expr {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		if(_lhs_replace != null){
+			stringBuffer.append(_lhs_replace.toSrcString());
+		} else {
+			stringBuffer.append(_lhs.toSrcString());
+		}
+		if(_operator_replace != null){
+			stringBuffer.append(_operator_replace.toString());
+		} else {
+			stringBuffer.append(_operator.toString());
+		}
+		if(_rhs_replace != null){
+			stringBuffer.append(_rhs_replace.toSrcString());
+		} else {
+			stringBuffer.append(_rhs.toSrcString());
+		}
+		return stringBuffer;
 	}
 
 	@Override

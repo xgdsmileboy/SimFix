@@ -30,6 +30,10 @@ public class MethodInv extends Expr {
 	private String _name = null;
 	private List<Expr> _arguments = null;
 	
+	private Expr _expression_replace = null;
+	private String _name_replace = null;
+	private List<Expr> _arguments_replace = null;
+	
 	/**
 	 *  MethodInvocation:
      *  [ Expression . ]
@@ -75,6 +79,41 @@ public class MethodInv extends Expr {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		if(_expression_replace != null){
+			stringBuffer.append(_expression_replace.toSrcString());
+			stringBuffer.append(".");
+		} else if(_expression != null){
+			stringBuffer.append(_expression.toSrcString());
+			stringBuffer.append(".");
+		}
+		if(_name_replace != null){
+			stringBuffer.append(_name_replace);
+		} else {
+			stringBuffer.append(_name);
+		}
+		stringBuffer.append("(");
+		if(_arguments_replace != null){
+			if(_arguments_replace.size() > 0){
+				stringBuffer.append(_arguments_replace.get(0).toSrcString());
+				for(int i = 1; i < _arguments_replace.size(); i++){
+					stringBuffer.append(",");
+					stringBuffer.append(_arguments_replace.get(i).toSrcString());
+				}
+			}
+		} else if(_arguments != null && _arguments.size() > 0){
+			stringBuffer.append(_arguments.get(0).toSrcString());
+			for(int i = 1; i < _arguments.size(); i++){
+				stringBuffer.append(",");
+				stringBuffer.append(_arguments.get(i).toSrcString());
+			}
+		}
+		stringBuffer.append(")");
+		return null;
 	}
 
 	@Override

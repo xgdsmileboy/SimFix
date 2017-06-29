@@ -13,6 +13,8 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
+import com.sun.tracing.dtrace.ProviderAttributes;
+
 import cofix.common.node.Node;
 import cofix.common.node.metric.Literal;
 import cofix.common.node.metric.LoopStruct;
@@ -32,6 +34,9 @@ public class ClassInstanceCreate extends Expr {
 	private Type _classType = null;
 	private List<Expr> _arguments = null;
 	private AnonymousClassDecl _decl = null;
+	
+	private Expr _expression_replace = null;
+	private List<Expr> _arguments_replace = null;
 	
 	/**
 	 * ClassInstanceCreation:
@@ -84,6 +89,42 @@ public class ClassInstanceCreate extends Expr {
 		return false;
 	}
 
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		if(_expression != null){
+			if(_expression_replace != null){
+				stringBuffer.append(_expression_replace.toSrcString());
+			} else {
+				stringBuffer.append(_expression.toSrcString());
+			}
+			stringBuffer.append(".");
+		}
+		stringBuffer.append("new ");
+		stringBuffer.append(_classType);
+		stringBuffer.append("(");
+		if(_arguments_replace != null){
+			if(_arguments.size() > 0){
+				stringBuffer.append(_arguments_replace.get(0).toSrcString());
+				for(int i = 1; i < _arguments_replace.size(); i++){
+					stringBuffer.append(",");
+					stringBuffer.append(_arguments_replace.get(i).toSrcString());
+				}
+			}
+		}else if(_arguments != null && _arguments.size() > 0){
+			stringBuffer.append(_arguments.get(0).toSrcString());
+			for(int i = 1; i < _arguments.size(); i++){
+				stringBuffer.append(",");
+				stringBuffer.append(_arguments.get(i).toSrcString());
+			}
+		}
+		stringBuffer.append(")");
+		if(_decl != null){
+			stringBuffer.append(_decl.toSrcString());
+		}
+		return stringBuffer;
+	}
+	
 	@Override
 	public List<Literal> getLiterals() {
 		List<Literal> list = new LinkedList<>();

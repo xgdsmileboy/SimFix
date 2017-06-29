@@ -72,6 +72,17 @@ public class ContinueStmt extends Stmt {
 	}
 	
 	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer("continue");
+		if(_identifier != null){
+			stringBuffer.append(" ");
+			stringBuffer.append(_identifier);
+		}
+		stringBuffer.append(";");
+		return stringBuffer;
+	}
+	
+	@Override
 	public List<OtherStruct> getOtherStruct() {
 		List<OtherStruct> list = new LinkedList<>();
 		OtherStruct otherStruct = new OtherStruct(this, OtherStruct.KIND.CONTINUE);

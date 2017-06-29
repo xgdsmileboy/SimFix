@@ -57,6 +57,13 @@ public class Comment extends Expr {
 		// TODO Auto-generated method stub
 		return false;
 	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append(_originalNode.toString());
+		return stringBuffer;
+	}
 
 	@Override
 	public List<Literal> getLiterals() {

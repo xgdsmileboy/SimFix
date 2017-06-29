@@ -13,15 +13,11 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
-import com.sun.org.apache.xml.internal.security.Init;
-
 import cofix.common.node.Node;
 import cofix.common.node.metric.CondStruct;
 import cofix.common.node.metric.Literal;
-import cofix.common.node.metric.LoopStruct;
 import cofix.common.node.metric.MethodCall;
 import cofix.common.node.metric.Operator;
-import cofix.common.node.metric.OtherStruct;
 import cofix.common.node.metric.Variable;
 import cofix.common.node.modify.Modification;
 
@@ -35,8 +31,11 @@ public class Svd extends Expr {
 	private SName _name = null;
 	private Expr _initializer = null;
 	
+	private Expr _initializer_replace = null;
+	
 	/**
 	 * { ExtendedModifier } Type {Annotation} [ ... ] Identifier { Dimension } [ = Expression ]
+	 * "..." should not be appear since it is only used in method declarations
 	 */
 	public Svd(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
@@ -76,6 +75,22 @@ public class Svd extends Expr {
 	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append(_decType);
+		stringBuffer.append(" ");
+		stringBuffer.append(_name);
+		if(_initializer_replace != null){
+			stringBuffer.append("=");
+			stringBuffer.append(_initializer_replace.toSrcString());
+		} else if(_initializer != null){
+			stringBuffer.append("=");
+			stringBuffer.append(_initializer.toSrcString());
+		}
+		return stringBuffer;
 	}
 
 	@Override

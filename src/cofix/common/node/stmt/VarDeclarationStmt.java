@@ -35,6 +35,9 @@ public class VarDeclarationStmt extends Stmt {
 	private Type _declType = null;
 	private List<Vdf> _fragments = null;
 	
+	private Type _declType_replace = null;
+	private List<Vdf> _fragments_replace = null;
+	
 	/**
 	 * VariableDeclarationStatement:
      *	{ ExtendedModifier } Type VariableDeclarationFragment
@@ -79,7 +82,33 @@ public class VarDeclarationStmt extends Stmt {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		if(_declType_replace != null){
+			stringBuffer.append(_declType_replace.toString());
+		} else {
+			stringBuffer.append(_declType.toString());
+		}
+		stringBuffer.append(" ");
+		if(_fragments_replace != null){
+			stringBuffer.append(_fragments_replace.get(0).toSrcString());
+			for(int i = 1; i < _fragments_replace.size(); i++){
+				stringBuffer.append(",");
+				stringBuffer.append(_fragments_replace.get(i).toSrcString());
+			}
+		} else {
+			stringBuffer.append(_fragments.get(0).toSrcString());
+			for(int i = 1; i < _fragments.size(); i++){
+				stringBuffer.append(",");
+				stringBuffer.append(_fragments.get(i).toSrcString());
+			}
+		}
+		stringBuffer.append(";");
+		return stringBuffer;
+	}
+	
 	@Override
 	public List<Literal> getLiterals() {
 		List<Literal> list = new LinkedList<>();

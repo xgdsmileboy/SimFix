@@ -8,8 +8,6 @@ package cofix.common.node.expr;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 
-import cofix.common.node.Node;
-
 /**
  * @author Jiajun
  * @datae Jun 23, 2017

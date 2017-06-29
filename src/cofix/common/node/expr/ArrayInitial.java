@@ -63,6 +63,20 @@ public class ArrayInitial extends Expr {
 		// TODO Auto-generated method stub
 		return false;
 	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer("{");
+		if(_expressions.size() > 0){
+			stringBuffer.append(_expressions.get(0).toSrcString());
+			for(int i = 1; i < _expressions.size(); i++){
+				stringBuffer.append(",");
+				stringBuffer.append(_expressions.get(i).toSrcString());
+			}
+		}
+		stringBuffer.append("}");
+		return stringBuffer;
+	}
 
 	@Override
 	public List<Literal> getLiterals() {

@@ -34,6 +34,8 @@ public class SuperConstructorInv extends Stmt {
 	private Type _superType = null;
 	private List<Expr> _arguments = null;
 	
+	private List<Expr> _arguments_replace = null;
+	
 	/**
 	 * SuperConstructorInvocation:
      *	[ Expression . ]
@@ -82,6 +84,33 @@ public class SuperConstructorInv extends Stmt {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		if(_expression != null){
+			stringBuffer.append(_expression.toSrcString());
+			stringBuffer.append(".");
+		}
+		stringBuffer.append("super(");
+		if(_arguments_replace != null){
+			if(_arguments_replace.size() > 0){
+				stringBuffer.append(_arguments_replace.get(0).toSrcString());
+				for(int i= 1; i < _arguments_replace.size(); i++){
+					stringBuffer.append(",");
+					stringBuffer.append(_arguments_replace.get(i).toSrcString());
+				}
+			}
+		}else if(_arguments != null && _arguments.size() > 0){
+			stringBuffer.append(_arguments.get(0).toSrcString());
+			for(int i= 1; i < _arguments.size(); i++){
+				stringBuffer.append(",");
+				stringBuffer.append(_arguments.get(i).toSrcString());
+			}
+		}
+		stringBuffer.append(");");
+		return null;
 	}
 
 	@Override

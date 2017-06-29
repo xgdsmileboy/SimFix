@@ -32,6 +32,9 @@ public class Assign extends Expr {
 	private Assignment.Operator _operator = null;
 	private Expr _rhs = null;
 	
+	private Assignment.Operator _operator_repalce = null;
+	private Expr _rhs_replace = null;
+	
 	/**
 	 * Assignment:
      *	Expression AssignmentOperator Expression
@@ -74,6 +77,21 @@ public class Assign extends Expr {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append(_lhs.toSrcString());
+		if(_operator_repalce != null){
+			stringBuffer.append(_operator_repalce.toString());
+		} else {
+			stringBuffer.append(_operator.toString());
+		}
+		if(_rhs_replace != null){
+			stringBuffer.append(_rhs.toSrcString());
+		}
+		return stringBuffer;
 	}
 
 	@Override

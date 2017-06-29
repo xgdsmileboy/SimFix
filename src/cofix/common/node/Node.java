@@ -29,7 +29,7 @@ public abstract class Node implements Adapter {
 	
 	protected int _startLine = 0;
 	protected int _endLine = 0;
-	protected ASTNode _orginalNode = null;
+	protected ASTNode _originalNode = null;
 	protected Node _parent = null;
 	
 	protected Node(int startLine, int endLine, ASTNode node){
@@ -39,7 +39,7 @@ public abstract class Node implements Adapter {
 	protected Node(int startLine, int endLine, ASTNode node, Node parent){
 		_startLine = startLine;
 		_endLine = endLine;
-		_orginalNode = node;
+		_originalNode = node;
 		_parent = parent;
 	}
 	
@@ -52,7 +52,7 @@ public abstract class Node implements Adapter {
 	}
 	
 	public ASTNode getOriginalAST(){
-		return _orginalNode;
+		return _originalNode;
 	}
 	
 	public Node getParent(){
@@ -65,6 +65,8 @@ public abstract class Node implements Adapter {
 	
 	public abstract boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications);
 
+	public abstract StringBuffer toSrcString();
+	
 	public abstract List<Literal> getLiterals();
 	
 	public abstract List<Variable> getVariables();

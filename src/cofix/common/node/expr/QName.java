@@ -13,6 +13,8 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
+import com.sun.org.apache.xpath.internal.Expression;
+
 import cofix.common.node.Node;
 import cofix.common.node.metric.Literal;
 import cofix.common.node.metric.Variable;
@@ -26,6 +28,9 @@ public class QName extends Label {
 
 	private Label _name = null;
 	private SName _sname = null;
+	
+	private Expr _name_replace = null;
+	private SName _sname_replace = null;
 	
 	/**
 	 * QualifiedName:
@@ -62,6 +67,23 @@ public class QName extends Label {
 	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		if(_name_replace != null){
+			stringBuffer.append(_name_replace.toSrcString());
+		} else {
+			stringBuffer.append(_name.toSrcString());
+		}
+		stringBuffer.append(".");
+		if(_sname_replace != null){
+			stringBuffer.append(_sname_replace.toSrcString());
+		} else {
+			stringBuffer.append(_sname.toSrcString());
+		}
+		return stringBuffer;
 	}
 
 	@Override

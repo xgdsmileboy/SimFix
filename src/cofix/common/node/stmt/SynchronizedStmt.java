@@ -75,6 +75,15 @@ public class SynchronizedStmt extends Stmt {
 		// TODO Auto-generated method stub
 		return false;
 	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer("synchronized(");
+		stringBuffer.append(_expression.toSrcString());
+		stringBuffer.append(")");
+		stringBuffer.append(_blk.toSrcString());
+		return stringBuffer;
+	}
 
 	@Override
 	public List<Literal> getLiterals() {

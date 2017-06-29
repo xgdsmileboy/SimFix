@@ -69,6 +69,15 @@ public class InstanceofExpr extends Expr {
 		// TODO Auto-generated method stub
 		return false;
 	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append(_expression.toSrcString());
+		stringBuffer.append(" instanceof ");
+		stringBuffer.append(_instanceType.toString());
+		return stringBuffer;
+	}
 
 	@Override
 	public List<Literal> getLiterals() {

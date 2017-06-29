@@ -70,11 +70,18 @@ public class FieldAcc extends Expr {
 	}
 
 	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append(_expression.toSrcString());
+		stringBuffer.append(".");
+		stringBuffer.append(_identifier);
+		return null;
+	}
+	
+	@Override
 	public List<Literal> getLiterals() {
 		List<Literal> list = new LinkedList<>();
-		if(_expression != null){
-			list.addAll(_expression.getLiterals());
-		}
+		list.addAll(_expression.getLiterals());
 		list.addAll(_identifier.getLiterals());
 		return list;
 	}
@@ -82,9 +89,7 @@ public class FieldAcc extends Expr {
 	@Override
 	public List<Variable> getVariables() {
 		List<Variable> list = new LinkedList<>();
-		if(_expression != null){
-			list.addAll(_expression.getVariables());
-		}
+		list.addAll(_expression.getVariables());
 		list.addAll(_identifier.getVariables());
 		return list;
 	}
@@ -92,18 +97,14 @@ public class FieldAcc extends Expr {
 	@Override
 	public List<MethodCall> getMethodCalls() {
 		List<MethodCall> list = new LinkedList<>();
-		if(_expression != null){
-			list.addAll(_expression.getMethodCalls());
-		}
+		list.addAll(_expression.getMethodCalls());
 		return list;
 	}
 
 	@Override
 	public List<Operator> getOperators() {
 		List<Operator> list = new LinkedList<>();
-		if(_expression != null){
-			list.addAll(_expression.getOperators());
-		}
+		list.addAll(_expression.getOperators());
 		return list;
 	}
 }

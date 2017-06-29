@@ -30,6 +30,9 @@ public class VarDeclarationExpr extends Expr {
 	private Type _declType = null;
 	private List<Vdf> _vdfs = null;
 	
+	private Type _declType_replace = null;
+	private List<Vdf> _vdfs_replace = null;
+	
 	/**
 	 * VariableDeclarationExpression:
      *	{ ExtendedModifier } Type VariableDeclarationFragment
@@ -69,6 +72,31 @@ public class VarDeclarationExpr extends Expr {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		if(_declType_replace != null){
+			stringBuffer.append(_declType_replace);
+		} else {
+			stringBuffer.append(_declType);
+		}
+		stringBuffer.append(" ");
+		if(_vdfs_replace != null){
+			stringBuffer.append(_vdfs_replace.get(0).toSrcString());
+			for(int i = 1; i < _vdfs_replace.size(); i++){
+				stringBuffer.append(",");
+				stringBuffer.append(_vdfs_replace.get(i).toSrcString());
+			}
+		} else {
+			stringBuffer.append(_vdfs.get(0).toSrcString());
+			for(int i = 1; i < _vdfs.size(); i++){
+				stringBuffer.append(",");
+				stringBuffer.append(_vdfs.get(i).toSrcString());
+			}
+		}
+		return stringBuffer;
 	}
 
 	@Override

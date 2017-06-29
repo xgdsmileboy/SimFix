@@ -32,6 +32,8 @@ public class ReturnStmt extends Stmt {
 
 	private Expr _expression = null;
 	
+	private Expr _expression_replace = null;
+	
 	/**
 	 * ReturnStatement:
      *	return [ Expression ] ;
@@ -70,6 +72,18 @@ public class ReturnStmt extends Stmt {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer("return ");
+		if(_expression_replace != null){
+			stringBuffer.append(_expression_replace.toSrcString());
+		} else if(_expression != null){
+			stringBuffer.append(_expression.toSrcString());
+		}
+		stringBuffer.append(";");
+		return stringBuffer;
 	}
 
 	@Override

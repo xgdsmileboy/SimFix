@@ -29,6 +29,9 @@ public class ArrayAcc extends Expr {
 	private Expr _index = null;
 	private Expr _array = null;
 	
+	private Expr _index_replace = null;
+	private Expr _array_replace = null;
+	
 	/**
 	 * ArrayAccess:
      *	Expression [ Expression ]
@@ -67,6 +70,24 @@ public class ArrayAcc extends Expr {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		if(_array_replace != null){
+			stringBuffer.append(_array_replace.toSrcString());
+		} else {
+			stringBuffer.append(_array.toSrcString());
+		}
+		stringBuffer.append("[");
+		if(_index_replace != null){
+			stringBuffer.append(_index_replace.toSrcString());
+		} else {
+			stringBuffer.append(_index.toSrcString());
+		}
+		stringBuffer.append("]");
+		return stringBuffer;
 	}
 
 	@Override

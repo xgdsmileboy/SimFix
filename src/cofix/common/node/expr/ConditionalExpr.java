@@ -31,6 +31,10 @@ public class ConditionalExpr extends Expr {
 	private Expr _first = null;
 	private Expr _snd = null;
 	
+	private Expr _condition_replace = null;
+	private Expr _first_replace = null;
+	private Expr _snd_replace = null;
+	
 	/**
 	 * ConditionalExpression:
      *	Expression ? Expression : Expression
@@ -73,6 +77,29 @@ public class ConditionalExpr extends Expr {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		if(_condition_replace != null){
+			stringBuffer.append(_condition_replace.toSrcString());
+		} else {
+			stringBuffer.append(_condition.toSrcString());
+		}
+		stringBuffer.append("?");
+		if(_first_replace != null){
+			stringBuffer.append(_first_replace.toSrcString());
+		} else {
+			stringBuffer.append(_first.toSrcString());
+		}
+		stringBuffer.append(":");
+		if(_snd_replace != null){
+			stringBuffer.append(_snd_replace.toSrcString());
+		} else {
+			stringBuffer.append(_snd.toSrcString());
+		}
+		return stringBuffer;
 	}
 
 	@Override

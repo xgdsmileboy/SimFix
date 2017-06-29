@@ -7,7 +7,6 @@
 package cofix.common.node.stmt;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -20,8 +19,6 @@ import cofix.common.node.metric.CondStruct;
 import cofix.common.node.metric.Literal;
 import cofix.common.node.metric.MethodCall;
 import cofix.common.node.metric.Operator;
-import cofix.common.node.metric.OtherStruct;
-import cofix.common.node.metric.LoopStruct;
 import cofix.common.node.metric.Variable;
 import cofix.common.node.modify.Modification;
 
@@ -33,6 +30,9 @@ public class SwCase extends Stmt {
 
 	private Expr _expression = null;
 	private List<Node> _siblings = null;
+	
+	private List<Node> _siblings_replace = null;
+	
 	/**
 	 * SwitchCase:
      *           case Expression  :
@@ -83,6 +83,30 @@ public class SwCase extends Stmt {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		if(_expression == null){
+			stringBuffer.append("default :\n");
+		} else {
+			stringBuffer.append("case ");
+			stringBuffer.append(_expression.toSrcString());
+			stringBuffer.append(" :\n");
+		}
+		if(_siblings_replace != null){
+			for(Node sibling : _siblings_replace){
+				stringBuffer.append(stringBuffer.append(sibling.toSrcString()));
+				stringBuffer.append("\n");
+			}
+		} else {
+			for(Node sibling : _siblings){
+				stringBuffer.append(stringBuffer.append(sibling.toSrcString()));
+				stringBuffer.append("\n");
+			}
+		}
+		return stringBuffer;
 	}
 
 	@Override

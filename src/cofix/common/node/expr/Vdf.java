@@ -12,6 +12,7 @@ import java.util.Map;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
+import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
 
 import cofix.common.node.Node;
 import cofix.common.node.metric.CondStruct;
@@ -32,6 +33,8 @@ public class Vdf extends Node {
 	private SName _identifier = null;
 	private int _dimensions = 0; 
 	private Expr _expression = null;
+	
+	private Expr _expression_replace = null;
 	
 	/**
 	 * VariableDeclarationFragment:
@@ -79,6 +82,23 @@ public class Vdf extends Node {
 	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append(_identifier.toSrcString());
+		for(int i = 0; i < _dimensions; i++){
+			stringBuffer.append("[]");
+		}
+		if(_expression_replace != null){
+			stringBuffer.append("=");
+			stringBuffer.append(_expression_replace.toSrcString());
+		} else if(_expression != null){
+			stringBuffer.append("=");
+			stringBuffer.append(_expression.toSrcString());
+		}
+		return stringBuffer;
 	}
 
 	@Override

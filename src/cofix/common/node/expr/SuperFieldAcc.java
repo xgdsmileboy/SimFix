@@ -15,9 +15,6 @@ import org.eclipse.jdt.core.dom.Type;
 
 import cofix.common.node.Node;
 import cofix.common.node.metric.Literal;
-import cofix.common.node.metric.MethodCall;
-import cofix.common.node.metric.Operator;
-import cofix.common.node.metric.LoopStruct;
 import cofix.common.node.metric.Variable;
 import cofix.common.node.modify.Modification;
 
@@ -68,6 +65,18 @@ public class SuperFieldAcc extends Expr {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		if(_name != null){
+			stringBuffer.append(_name);
+			stringBuffer.append(".");
+		}
+		stringBuffer.append("super.");
+		stringBuffer.append(_identifier.toSrcString());
+		return stringBuffer;
 	}
 
 	@Override

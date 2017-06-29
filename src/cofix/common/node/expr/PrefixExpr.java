@@ -18,7 +18,6 @@ import cofix.common.node.Node;
 import cofix.common.node.metric.Literal;
 import cofix.common.node.metric.MethodCall;
 import cofix.common.node.metric.Operator;
-import cofix.common.node.metric.LoopStruct;
 import cofix.common.node.metric.Variable;
 import cofix.common.node.modify.Modification;
 
@@ -30,6 +29,9 @@ public class PrefixExpr extends Expr {
 
 	private Expr _expression = null;
 	private PrefixExpression.Operator _operator = null;
+	
+	private Expr _expression_replace = null;
+	private PrefixExpression.Operator _operator_replace = null;
 	
 	/**
 	 * PrefixExpression:
@@ -69,6 +71,22 @@ public class PrefixExpr extends Expr {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		if(_operator_replace != null){
+			stringBuffer.append(_operator_replace.toString());
+		} else {
+			stringBuffer.append(_operator.toString());
+		}
+		if(_expression_replace != null){
+			stringBuffer.append(_expression_replace.toSrcString());
+		} else {
+			stringBuffer.append(_expression.toSrcString());
+		}
+		return stringBuffer;
 	}
 
 	@Override

@@ -32,6 +32,8 @@ public class ThrowStmt extends Stmt {
 
 	private Expr _expression = null;
 	
+	private Expr _expression_replace = null;
+	
 	/**
 	 * ThrowStatement:
      *	throw Expression ;
@@ -70,6 +72,18 @@ public class ThrowStmt extends Stmt {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer("throw ");
+		if(_expression_replace != null){
+			stringBuffer.append(_expression_replace.toSrcString());
+		} else {
+			stringBuffer.append(_expression.toSrcString());
+		}
+		stringBuffer.append(";");
+		return stringBuffer;
 	}
 
 	@Override

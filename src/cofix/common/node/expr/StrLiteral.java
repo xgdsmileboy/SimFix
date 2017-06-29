@@ -26,6 +26,8 @@ public class StrLiteral extends Expr {
 
 	private String _value = null;
 	
+	private String _replace = null;
+	
 	/**
 	 * String literal nodes.
 	 */
@@ -59,6 +61,19 @@ public class StrLiteral extends Expr {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append("\"");
+		if(_replace != null){
+			stringBuffer.append(_replace);
+		} else {
+			stringBuffer.append(_value);
+		}
+		stringBuffer.append("\"");
+		return stringBuffer;
 	}
 
 	@Override

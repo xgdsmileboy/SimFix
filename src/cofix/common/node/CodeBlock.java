@@ -248,6 +248,18 @@ public class CodeBlock {
 		}
 	}
 	
+	public String toSrcString(){
+		if(_parsedNodes == null){
+			parseNode();
+		}
+		StringBuffer stringBuffer = new StringBuffer();
+		for(Node node : _parsedNodes){
+			stringBuffer.append(node.toSrcString());
+			stringBuffer.append("\n");
+		}
+		return stringBuffer.toString();
+	}
+	
 	public Map<Variable, Integer> getVariables(){
 		if(_variables == null){
 			if(_parsedNodes == null){
@@ -602,10 +614,12 @@ public class CodeBlock {
 			stmt.setParent(switchStmt);
 			if (stmt instanceof SwCase) {
 				lastSW = (SwCase) stmt;
+				statements.add(stmt);
 			} else if(lastSW != null){
 				lastSW.addSibling(stmt);
+			} else {
+				statements.add(stmt);
 			}
-			statements.add(stmt);
 		}
 		switchStmt.setStatements(statements);
 		

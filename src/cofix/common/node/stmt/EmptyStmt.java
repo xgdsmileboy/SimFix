@@ -63,4 +63,9 @@ public class EmptyStmt extends Stmt {
 		return false;
 	}
 
+	@Override
+	public StringBuffer toSrcString() {
+		return new StringBuffer();
+	}
+	
 }
