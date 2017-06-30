@@ -6,7 +6,8 @@
  */
 package cofix.core.match;
 
-import cofix.common.node.CodeBlock;
+import cofix.core.metric.FVector;
+import cofix.core.parser.node.CodeBlock;
 
 /**
  * @author Jiajun
@@ -14,8 +15,10 @@ import cofix.common.node.CodeBlock;
  */
 public class CodeBlockMatcher {
 
-	public static float getSimilarity(CodeBlock buggyCode, CodeBlock codeBlock){
-		return 0.0f;
+	public static double getSimilarity(CodeBlock buggyCode, CodeBlock codeBlock){
+		FVector buggy = new FVector(buggyCode);
+		FVector other = new FVector(codeBlock);
+		return buggy.computeSimilarity(other, FVector.ALG.COSINE);
 	}
 	
 	

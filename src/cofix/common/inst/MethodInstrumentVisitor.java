@@ -20,7 +20,7 @@ import org.eclipse.jdt.core.dom.SuperConstructorInvocation;
 
 import cofix.common.config.Identifier;
 import cofix.common.inst.gen.GenStatement;
-import cofix.common.parser.NodeUtils;
+import cofix.core.parser.NodeUtils;
 
 /**
  * @author Jiajun

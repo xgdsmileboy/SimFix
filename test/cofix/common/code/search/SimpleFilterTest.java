@@ -6,23 +6,6 @@
  */
 package cofix.common.code.search;
 
-import java.util.List;
-
-import org.eclipse.jdt.core.dom.ASTNode;
-import org.eclipse.jdt.core.dom.ASTParser;
-import org.eclipse.jdt.core.dom.CompilationUnit;
-import org.junit.Test;
-
-import cofix.common.config.Constant;
-import cofix.common.parser.ProjectInfo;
-import cofix.common.node.CodeBlock;
-import cofix.common.util.JavaFile;
-import cofix.common.util.Pair;
-import cofix.common.util.Subject;
-import cofix.core.match.Utils;
-import cofix.core.search.BuggyCode;
-import cofix.core.search.SimpleFilter;
-
 /**
  * @author Jiajun
  * @datae Jun 2, 2017

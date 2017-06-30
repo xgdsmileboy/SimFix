@@ -24,17 +24,15 @@ import cofix.common.junit.runner.JUnitEngine;
 import cofix.common.junit.runner.JUnitRuntime;
 import cofix.common.junit.runner.OutStream;
 import cofix.common.localization.FLocalization;
-import cofix.common.parser.NodeUtils;
-import cofix.common.node.CodeBlock;
 import cofix.common.util.JavaFile;
 import cofix.common.util.Pair;
 import cofix.common.util.Status;
 import cofix.common.util.Subject;
-import cofix.common.node.modify.Modification;
-import cofix.core.match.CodeBlockMatcher;
-import cofix.core.match.Utils;
-import cofix.core.search.BuggyCode;
-import cofix.core.search.SimpleFilter;
+import cofix.core.modify.Modification;
+import cofix.core.parser.NodeUtils;
+import cofix.core.parser.node.CodeBlock;
+import cofix.core.parser.search.BuggyCode;
+import cofix.core.parser.search.SimpleFilter;
 
 /**
  * @author Jiajun
@@ -107,7 +105,7 @@ public class Repair {
 			// search candidate similar code block
 			SimpleFilter simpleFilter = new SimpleFilter(buggyblock);
 			
-			List<Pair<CodeBlock, Float>> candidates = simpleFilter.filter(src, 0.4);
+			List<Pair<CodeBlock, Double>> candidates = simpleFilter.filter(src, 0.4);
 			List<String> source = null;
 			try {
 				source = JavaFile.readFileToList(file);
@@ -115,7 +113,7 @@ public class Repair {
 				System.err.println("Failed to read file to list : " + file);
 				continue;
 			}
-			for(Pair<CodeBlock, Float> similar : candidates){
+			for(Pair<CodeBlock, Double> similar : candidates){
 //				Utils.print(similar.getFirst());
 				// compute transformation
 //				List<Modification> modifications = CodeBlockMatcher.match(buggyblock, similar.getFirst(), usableVars);
