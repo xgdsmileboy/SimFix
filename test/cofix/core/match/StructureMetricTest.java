@@ -6,39 +6,32 @@
  */
 package cofix.core.match;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.junit.Test;
-
-import cofix.common.parser.astnode.structure.Structure;
-
 /**
  * @author Jiajun
  * @datae Jun 7, 2017
  */
 public class StructureMetricTest {
 	
-	@Test
-	public void test(){
-		List<Structure> src = new ArrayList<>();
-		src.add(new Structure(null, "if"));
-		src.add(new Structure(null, "if"));
-		src.add(new Structure(null, "throw"));
-		src.add(new Structure(null, "else"));
-		src.add(new Structure(null, "return"));
-		List<Structure> tar = new ArrayList<>();
-		tar.add(new Structure(null, "if"));
-		tar.add(new Structure(null, "else"));
-		int[] match = StructrueMetric.LCS_REC(src, tar);
-		for(int i = 0; i < match.length; i++){
-			System.out.print(match[i] + " ");
-		}
-		System.out.println();
-		match = StructrueMetric.LCS_REC(tar, src);
-		for(int i = 0; i < match.length; i++){
-			System.out.print(match[i] + " ");
-		}
-	}
+//	@Test
+//	public void test(){
+//		List<Structure> src = new ArrayList<>();
+//		src.add(new Structure(null, "if"));
+//		src.add(new Structure(null, "if"));
+//		src.add(new Structure(null, "throw"));
+//		src.add(new Structure(null, "else"));
+//		src.add(new Structure(null, "return"));
+//		List<Structure> tar = new ArrayList<>();
+//		tar.add(new Structure(null, "if"));
+//		tar.add(new Structure(null, "else"));
+//		int[] match = StructrueMetric.LCS_REC(src, tar);
+//		for(int i = 0; i < match.length; i++){
+//			System.out.print(match[i] + " ");
+//		}
+//		System.out.println();
+//		match = StructrueMetric.LCS_REC(tar, src);
+//		for(int i = 0; i < match.length; i++){
+//			System.out.print(match[i] + " ");
+//		}
+//	}
 	
 }

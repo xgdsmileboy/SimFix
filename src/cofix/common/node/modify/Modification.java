@@ -6,10 +6,18 @@
  */
 package cofix.common.node.modify;
 
+import java.util.Map;
+
+import org.eclipse.jdt.core.dom.Type;
+
 /**
  * @author Jiajun
  * @datae Jun 23, 2017
  */
 public abstract class Modification {
 
+	public abstract boolean apply(Map<String, Type> usableVars);
+	public abstract boolean backup();
+	public abstract boolean restore();
+	
 }

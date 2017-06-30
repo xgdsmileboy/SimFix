@@ -25,12 +25,12 @@ import cofix.common.junit.runner.JUnitRuntime;
 import cofix.common.junit.runner.OutStream;
 import cofix.common.localization.FLocalization;
 import cofix.common.parser.NodeUtils;
-import cofix.common.parser.astnode.CodeBlock;
+import cofix.common.node.CodeBlock;
 import cofix.common.util.JavaFile;
 import cofix.common.util.Pair;
 import cofix.common.util.Status;
 import cofix.common.util.Subject;
-import cofix.core.adapt.Modification;
+import cofix.common.node.modify.Modification;
 import cofix.core.match.CodeBlockMatcher;
 import cofix.core.match.Utils;
 import cofix.core.search.BuggyCode;
@@ -100,7 +100,7 @@ public class Repair {
 				System.out.println("Find no block!");
 				continue;
 			}
-			Utils.print(buggyblock);
+//			Utils.print(buggyblock);
 			
 			// get all variables can be used at buggy line
 			Map<String, Type> usableVars = NodeUtils.getUsableVarTypes(file, loc.getSecond());
@@ -116,9 +116,10 @@ public class Repair {
 				continue;
 			}
 			for(Pair<CodeBlock, Float> similar : candidates){
-				Utils.print(similar.getFirst());
+//				Utils.print(similar.getFirst());
 				// compute transformation
-				List<Modification> modifications = CodeBlockMatcher.match(buggyblock, similar.getFirst(), usableVars);
+//				List<Modification> modifications = CodeBlockMatcher.match(buggyblock, similar.getFirst(), usableVars);
+				List<Modification> modifications = null;
 				// try each transformation
 				for(Modification modification : modifications){
 					if(timer.timeout()){

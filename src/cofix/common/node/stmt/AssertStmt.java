@@ -14,7 +14,6 @@ import org.eclipse.jdt.core.dom.Type;
 
 import cofix.common.node.Node;
 import cofix.common.node.modify.Modification;
-import cofix.common.parser.astnode.structure.Return;
 
 /**
  * @author Jiajun
