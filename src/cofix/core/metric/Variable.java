@@ -25,4 +25,26 @@ public class Variable extends Feature {
 		_type = type;
 	}
 	
+	@Override
+	public int hashCode() {
+		return _name.hashCode();
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj == null || !(obj instanceof Variable)){
+			return false;
+		}
+		Variable other = (Variable) obj;
+		if(!_name.equals(other._name)){
+			return false;
+		}
+		if(_type == other._type){
+			return true;
+		}
+		if(_type == null || other._type == null){
+			return false;
+		}
+		return  _type.toString().equals(other._type.toString());
+	}
 }

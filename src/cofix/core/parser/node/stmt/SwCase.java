@@ -17,6 +17,7 @@ import org.eclipse.jdt.core.dom.Type;
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
@@ -104,7 +105,7 @@ public class SwCase extends Stmt {
 		} else {
 			if(_siblings != null){
 				for(Node sibling : _siblings){
-					stringBuffer.append(stringBuffer.append(sibling.toSrcString()));
+					stringBuffer.append(sibling.toSrcString());
 					stringBuffer.append("\n");
 				}
 			}
@@ -153,4 +154,18 @@ public class SwCase extends Stmt {
 		return new LinkedList<>();
 	}
 
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
+		_fVector.inc(NewFVector.INDEX_STRUCT_COND);
+		if(_expression != null){
+			_fVector.combineFeature(_expression.getFeatureVector());
+		}
+		if(_siblings != null){
+			for(Node node : _siblings){
+				_fVector.combineFeature(node.getFeatureVector());
+			}
+		}
+	}
+	
 }

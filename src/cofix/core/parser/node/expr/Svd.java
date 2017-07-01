@@ -16,6 +16,7 @@ import org.eclipse.jdt.core.dom.Type;
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
@@ -82,7 +83,7 @@ public class Svd extends Expr {
 		StringBuffer stringBuffer = new StringBuffer();
 		stringBuffer.append(_decType);
 		stringBuffer.append(" ");
-		stringBuffer.append(_name);
+		stringBuffer.append(_name.toSrcString());
 		if(_initializer_replace != null){
 			stringBuffer.append("=");
 			stringBuffer.append(_initializer_replace.toSrcString());
@@ -132,6 +133,15 @@ public class Svd extends Expr {
 			return _initializer.getMethodCalls();
 		}
 		return new LinkedList<>();
+	}
+	
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
+		_fVector.combineFeature(_name.getFeatureVector());
+		if(_initializer != null){
+			_fVector.combineFeature(_initializer.getFeatureVector());
+		}
 	}
 
 }

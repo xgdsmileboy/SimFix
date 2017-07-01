@@ -17,6 +17,7 @@ import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.LoopStruct;
 import cofix.core.metric.MethodCall;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
@@ -258,5 +259,25 @@ public class ForStmt extends Stmt {
 			list.addAll(_body.getOtherStruct());
 		}
 		return list;
+	}
+	
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
+		_fVector.inc(NewFVector.INDEX_STRUCT_FOR);
+		if(_initializers != null){
+			for(Expr expr : _initializers){
+				_fVector.combineFeature(expr.getFeatureVector());
+			}
+		}
+		if(_condition != null){
+			_fVector.combineFeature(_condition.getFeatureVector());
+		}
+		if(_updaters != null){
+			for(Expr expr : _updaters){
+				_fVector.combineFeature(expr.getFeatureVector());
+			}
+		}
+		_fVector.combineFeature(_body.getFeatureVector());
 	}
 }

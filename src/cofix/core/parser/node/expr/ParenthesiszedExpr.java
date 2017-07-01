@@ -15,6 +15,7 @@ import org.eclipse.jdt.core.dom.Type;
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
@@ -102,5 +103,11 @@ public class ParenthesiszedExpr extends Expr {
 	@Override
 	public List<Operator> getOperators() {
 		return _expression.getOperators();
+	}
+	
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
+		_fVector.combineFeature(_expression.getFeatureVector());
 	}
 }

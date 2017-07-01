@@ -14,6 +14,7 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
 import cofix.core.metric.Literal;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
 import cofix.core.parser.node.Node;
@@ -83,6 +84,17 @@ public class SName extends Label {
 		Variable variable = new Variable(this, _name, _exprType);
 		list.add(variable);
 		return list;
+	}
+	
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
+		_fVector.inc(NewFVector.INDEX_VAR);
+	}
+	
+	@Override
+	public String toString() {
+		return _name;
 	}
 
 }

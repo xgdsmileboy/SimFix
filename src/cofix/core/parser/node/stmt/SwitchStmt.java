@@ -17,6 +17,7 @@ import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.LoopStruct;
 import cofix.core.metric.MethodCall;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
@@ -105,7 +106,7 @@ public class SwitchStmt extends Stmt {
 			}
 		}
 		
-		stringBuffer.append("}\n");
+		stringBuffer.append("}");
 		return stringBuffer;
 	}
 
@@ -170,5 +171,14 @@ public class SwitchStmt extends Stmt {
 			list.addAll(stmt.getOtherStruct());
 		}
 		return list;
+	}
+	
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
+		_fVector.combineFeature(_expression.getFeatureVector());
+		for(Stmt stmt : _statements){
+			_fVector.combineFeature(stmt.getFeatureVector());
+		}
 	}
 }

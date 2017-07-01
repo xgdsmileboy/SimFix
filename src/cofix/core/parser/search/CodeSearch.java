@@ -54,15 +54,23 @@ public class CodeSearch {
 	private int _currentLines = 0;
 	private int MAX_LESS_THRESHOLD = 0;
 	private int MAX_MORE_THRESHOLD = 5;
+	
 
 	public CodeSearch(CompilationUnit unit, int extendedLine, int lineRange) {
 		this(unit, extendedLine, lineRange, null);
 	}
 	
 	public CodeSearch(CompilationUnit unit, int extendedLine, int lineRange, Statement extendedStatement){
+		this(unit, extendedLine, lineRange, extendedStatement, 0);
+	}
+	
+	public CodeSearch(CompilationUnit unit, int extendedLine, int lineRange, Statement extendedStatement,
+			int max_less_threshold) {
 		_unit = unit;
 		_extendedLine = extendedLine;
 		_lineRange = lineRange;
+		_extendedStatement = extendedStatement;
+		MAX_LESS_THRESHOLD = max_less_threshold;
 		search();
 	}
 	
@@ -92,6 +100,13 @@ public class CodeSearch {
 				_currentLines = 0;
 				_nodes = extend(_extendedStatement);
 			} else {
+				if(_extendedStatement instanceof Block){
+					ASTNode node = _extendedStatement.getParent();
+					if (node instanceof IfStatement || node instanceof SwitchCase || node instanceof ForStatement
+							|| node instanceof EnhancedForStatement || node instanceof WhileStatement) {
+						_extendedStatement = (Statement) node;
+					}
+				}
 				_nodes.add(_extendedStatement);
 			}
 		}
@@ -168,7 +183,11 @@ public class CodeSearch {
 	    			result.addAll(extend(parent));
 	    		}
 	    	} else {
-	    		result.add(node);
+	    		if(line - _lineRange > MAX_MORE_THRESHOLD || parent instanceof MethodDeclaration){
+	    			result.add(node);
+	    		} else {
+	    			result.add(parent);
+	    		}
 	    	}
 	    }
 	    return result;

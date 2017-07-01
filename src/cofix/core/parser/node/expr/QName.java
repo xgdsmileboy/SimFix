@@ -13,9 +13,8 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
-import com.sun.org.apache.xpath.internal.Expression;
-
 import cofix.core.metric.Literal;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
 import cofix.core.parser.node.Node;
@@ -98,5 +97,18 @@ public class QName extends Label {
 			list.addAll(_name.getVariables());
 		}
 		return list;
+	}
+	
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
+		String name = _name.toString();
+		String sname = _sname.toString();
+		if(_name instanceof SName && Character.isUpperCase(name.charAt(0)) && sname.toUpperCase().equals(sname)){
+			_fVector.inc(NewFVector.INDEX_LITERAL);
+		} else {
+			_fVector.combineFeature(_name.getFeatureVector());
+			_fVector.combineFeature(_sname.getFeatureVector());
+		}
 	}
 }

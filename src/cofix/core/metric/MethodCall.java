@@ -14,8 +14,14 @@ import cofix.core.parser.node.Node;
  */
 public class MethodCall extends Feature {
 	
-	public MethodCall(Node node) {
+	private String _name = null;
+	
+	public MethodCall(Node node, String name) {
 		super(node);
+		_name = name;
 	}
 	
+	public String getName(){
+		return _name;
+	}
 }

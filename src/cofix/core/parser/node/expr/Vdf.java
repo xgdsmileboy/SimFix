@@ -18,6 +18,7 @@ import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.LoopStruct;
 import cofix.core.metric.MethodCall;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
@@ -152,6 +153,15 @@ public class Vdf extends Node {
 	@Override
 	public List<OtherStruct> getOtherStruct() {
 		return new LinkedList<>();
+	}
+	
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
+		_fVector.combineFeature(_identifier.getFeatureVector());
+		if(_expression != null){
+			_fVector.combineFeature(_expression.getFeatureVector());
+		}
 	}
 
 }

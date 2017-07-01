@@ -15,6 +15,7 @@ import org.eclipse.jdt.core.dom.Type;
 
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
@@ -111,5 +112,12 @@ public class ThrowStmt extends Stmt {
 		list.add(otherStruct);
 		list.addAll(_expression.getOtherStruct());
 		return list;
+	}
+	
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
+		_fVector.inc(NewFVector.INDEX_STRUCT_OTHER);
+		_fVector.combineFeature(_expression.getFeatureVector());
 	}
 }

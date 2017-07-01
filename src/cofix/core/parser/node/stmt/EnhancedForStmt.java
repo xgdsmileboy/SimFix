@@ -11,14 +11,13 @@ import java.util.List;
 import java.util.Map;
 
 import org.eclipse.jdt.core.dom.ASTNode;
-import org.eclipse.jdt.core.dom.EnhancedForStatement;
-import org.eclipse.jdt.core.dom.SingleVariableDeclaration;
 import org.eclipse.jdt.core.dom.Type;
 
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.LoopStruct;
 import cofix.core.metric.MethodCall;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
@@ -26,7 +25,6 @@ import cofix.core.modify.Modification;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.expr.Expr;
 import cofix.core.parser.node.expr.Svd;
-import sun.org.mozilla.javascript.internal.ast.Loop;
 
 /**
  * @author Jiajun
@@ -169,5 +167,14 @@ public class EnhancedForStmt extends Stmt {
 			list.addAll(_statement.getOtherStruct());
 		}
 		return list;
+	}
+	
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
+		_fVector.inc(NewFVector.INDEX_STRUCT_ENFOR);
+		_fVector.combineFeature(_varDecl.getFeatureVector());
+		_fVector.combineFeature(_expression.getFeatureVector());
+		_fVector.combineFeature(_statement.getFeatureVector());
 	}
 }

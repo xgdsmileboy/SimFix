@@ -11,7 +11,6 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.LinkedBlockingDeque;
 
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
@@ -88,6 +87,7 @@ import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.LoopStruct;
 import cofix.core.metric.MethodCall;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
@@ -165,12 +165,15 @@ import cofix.core.parser.node.stmt.WhileStmt;
  */
 public class CodeBlock {
 
+	private String _fileName = null;
 	private CompilationUnit _cunit = null;
 	private List<ASTNode> _nodes = null;
 	private List<Node> _parsedNodes = null;
 	private int _maxLines = 10;
 	private int _currlines = 0;
+	private Pair<Integer, Integer> _codeRange = null;
 	private Integer _buggyMethod = null;
+	private NewFVector _fVector = null;
 	
 	// <name, <type, count>>
 	private Map<Variable, Integer> _variables = null;
@@ -185,18 +188,40 @@ public class CodeBlock {
 	// <+, -, ...>
 	private List<Operator> _operators = null;
 	
-	public CodeBlock(CompilationUnit cunit, List<ASTNode> nodes) {
-		this(cunit, nodes, 10);
+	public CodeBlock(String fileName, CompilationUnit cunit, List<ASTNode> nodes) {
+		this(fileName, cunit, nodes, 10);
 	}
 	
-	public CodeBlock(CompilationUnit cunit, List<ASTNode> nodes, int maxLines) {
+	public CodeBlock(String fileName, CompilationUnit cunit, List<ASTNode> nodes, int maxLines) {
+		_fileName = fileName;
 		_cunit = cunit;
 		_nodes = nodes;
 		_maxLines = maxLines;
 		_currlines = 0;
+		int min = Integer.MAX_VALUE;
+		int max = -1;
 		for(ASTNode s : nodes){
 			_currlines += NodeUtils.getValidLineNumber(s);
+			int sline = _cunit.getLineNumber(s.getStartPosition());
+			int eline = _cunit.getLineNumber(s.getStartPosition() + s.getLength());
+			min = min < sline ? min : sline;
+			max = max > eline ? max : eline;
 		}
+		_codeRange = new Pair<Integer, Integer>(min, max);
+	}
+	
+	public boolean hasIntersection(CodeBlock block){
+		if(block._fileName.equals(_fileName)){
+			int min = _codeRange.getFirst();
+			int max = _codeRange.getSecond();
+			int otherMin = block._codeRange.getFirst();
+			int otherMax = block._codeRange.getSecond();
+			if((max >= otherMin && min <= otherMax) ||
+					(otherMax >= min && otherMin <= max )){
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	public List<ASTNode> getNodes(){
@@ -260,6 +285,19 @@ public class CodeBlock {
 			stringBuffer.append("\n");
 		}
 		return stringBuffer.toString();
+	}
+	
+	public NewFVector getFeatureVector(){
+		if(_fVector == null){
+			if(_parsedNodes == null){
+				parseNode();
+			}
+			_fVector = new NewFVector();
+			for(Node node : _parsedNodes){
+				_fVector.combineFeature(node.getFeatureVector());
+			}
+		}
+		return _fVector;
 	}
 	
 	public Map<Variable, Integer> getVariables(){
@@ -377,7 +415,10 @@ public class CodeBlock {
 	private void parseNode(){
 		_parsedNodes = new ArrayList<>();
 		for(ASTNode node : _nodes){
-			_parsedNodes.add(process(node));
+			Node parse = process(node);
+			if(parse != null){
+				_parsedNodes.add(parse);
+			}
 		}
 	}
 	
@@ -580,7 +621,7 @@ public class CodeBlock {
 		for(Object object : node.arguments()){
 			Expr arg = (Expr) process((ASTNode) object);
 			arg.setParent(superConstructorInv);
-			
+			arguments.add(arg);
 		}
 		superConstructorInv.setArguments(arguments);
 		

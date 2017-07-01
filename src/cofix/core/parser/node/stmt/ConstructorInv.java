@@ -16,6 +16,7 @@ import org.eclipse.jdt.core.dom.Type;
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
@@ -136,7 +137,7 @@ public class ConstructorInv  extends Stmt{
 	@Override
 	public List<MethodCall> getMethodCalls() {
 		List<MethodCall> list = new LinkedList<>();
-		MethodCall methodCall = new MethodCall(this);
+		MethodCall methodCall = new MethodCall(this, "this");
 		list.add(methodCall);
 		if(_arguments != null){
 			for(Expr expr : _arguments){
@@ -155,6 +156,17 @@ public class ConstructorInv  extends Stmt{
 			}
 		}
 		return list;
+	}
+	
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
+		_fVector.inc(NewFVector.INDEX_MCALL);
+		if(_arguments != null){
+			for(Expr expr : _arguments){
+				_fVector.combineFeature(expr.getFeatureVector());
+			}
+		}
 	}
 	
 }

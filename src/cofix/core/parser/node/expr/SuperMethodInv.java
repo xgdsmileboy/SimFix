@@ -15,6 +15,7 @@ import org.eclipse.jdt.core.dom.Type;
 
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
@@ -135,7 +136,7 @@ public class SuperMethodInv extends Expr {
 	@Override
 	public List<MethodCall> getMethodCalls() {
 		List<MethodCall> list = new LinkedList<>();
-		MethodCall methodCall = new MethodCall(this);
+		MethodCall methodCall = new MethodCall(this, _name);
 		list.add(methodCall);
 		if(_label != null){
 			list.addAll(_label.getMethodCalls());
@@ -157,5 +158,19 @@ public class SuperMethodInv extends Expr {
 			}
 		}
 		return list;
+	}
+	
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
+		_fVector.inc(NewFVector.INDEX_MCALL);
+		if(_label != null){
+			_fVector.combineFeature(_label.getFeatureVector());
+		}
+		if(_arguments != null){
+			for(Expr expr : _arguments){
+				_fVector.combineFeature(expr.getFeatureVector());
+			}
+		}
 	}
 }

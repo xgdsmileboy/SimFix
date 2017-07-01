@@ -10,17 +10,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import javax.print.attribute.standard.MediaSize.Other;
-
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
-
-import com.sun.org.apache.bcel.internal.generic.LSTORE;
 
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.LoopStruct;
 import cofix.core.metric.MethodCall;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
@@ -198,5 +195,16 @@ public class IfStmt extends Stmt {
 			list.addAll(_else.getOtherStruct());
 		}
 		return list;
+	}
+	
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
+		_fVector.inc(NewFVector.INDEX_STRUCT_COND);
+		_fVector.combineFeature(_condition.getFeatureVector());
+		_fVector.combineFeature(_then.getFeatureVector());
+		if(_else != null){
+			_fVector.combineFeature(_else.getFeatureVector());
+		}
 	}
 }

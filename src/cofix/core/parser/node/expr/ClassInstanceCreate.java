@@ -18,6 +18,7 @@ import com.sun.tracing.dtrace.ProviderAttributes;
 import cofix.core.metric.Literal;
 import cofix.core.metric.LoopStruct;
 import cofix.core.metric.MethodCall;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
@@ -167,7 +168,7 @@ public class ClassInstanceCreate extends Expr {
 	@Override
 	public List<MethodCall> getMethodCalls() {
 		List<MethodCall> list = new LinkedList<>();
-		MethodCall methodCall = new MethodCall(this);
+		MethodCall methodCall = new MethodCall(this, _classType.toString());
 		list.add(methodCall);
 		if(_decl != null){
 			list.addAll(_decl.getMethodCalls());
@@ -182,5 +183,19 @@ public class ClassInstanceCreate extends Expr {
 			list.addAll(_decl.getOperators());
 		}
 		return list;
+	}
+	
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
+		_fVector.inc(NewFVector.INDEX_MCALL);
+		if(_expression != null){
+			_fVector.combineFeature(_expression.getFeatureVector());
+		}
+		if(_arguments != null){
+			for(Expr expr : _arguments){
+				_fVector.combineFeature(expr.getFeatureVector());
+			}
+		}
 	}
 }

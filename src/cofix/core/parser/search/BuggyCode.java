@@ -18,13 +18,13 @@ import org.eclipse.jdt.core.dom.EnhancedForStatement;
 import org.eclipse.jdt.core.dom.ForStatement;
 import org.eclipse.jdt.core.dom.IfStatement;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
-import org.eclipse.jdt.core.dom.NodeFinder;
 import org.eclipse.jdt.core.dom.Statement;
 import org.eclipse.jdt.core.dom.SwitchCase;
 import org.eclipse.jdt.core.dom.SwitchStatement;
 import org.eclipse.jdt.core.dom.WhileStatement;
 
 import cofix.common.config.Constant;
+import cofix.common.util.JavaFile;
 import cofix.core.parser.node.CodeBlock;
 
 /**
@@ -33,10 +33,13 @@ import cofix.core.parser.node.CodeBlock;
  */
 public class BuggyCode {
 
-	public static CodeBlock getBuggyCodeBlock(CompilationUnit unit, int buggyLine){
-		FindNodeVisitor visitor = new FindNodeVisitor(unit, buggyLine);
-		unit.accept(visitor);
-		CodeBlock codeBlock = new CodeBlock(unit, visitor.getNodes());
+	public static CodeBlock getBuggyCodeBlock(String fileName, int buggyLine){
+		CompilationUnit unit = JavaFile.genASTFromFile(fileName);
+//		FindNodeVisitor visitor = new FindNodeVisitor(unit, buggyLine);
+//		unit.accept(visitor);
+//		CodeBlock codeBlock = new CodeBlock(fileName, unit, visitor.getNodes());
+		CodeSearch codeSearch = new CodeSearch(unit, buggyLine, 5, null, 4);
+		CodeBlock codeBlock = new CodeBlock(fileName, unit, codeSearch.getASTNodes());
 		return codeBlock;
 	}
 	
@@ -57,17 +60,17 @@ private static class FindNodeVisitor extends ASTVisitor{
 		
 		public boolean visit(CompilationUnit node){
 			
-			int position = _unit.getPosition(_buggyLine, 0);
-			NodeFinder finder = new NodeFinder(_unit, position, 20);
-			ASTNode prefind = finder.getCoveringNode();
-			while (prefind != null && !(prefind instanceof Statement)) {
-				prefind = prefind.getParent();
-			}
-			
-			if(prefind != null){
-				process((Statement)prefind);
-				return false;
-			}
+//			int position = _unit.getPosition(_buggyLine, 0);
+//			NodeFinder finder = new NodeFinder(_unit, position, 20);
+//			ASTNode prefind = finder.getCoveringNode();
+//			while (prefind != null && !(prefind instanceof Statement)) {
+//				prefind = prefind.getParent();
+//			}
+//			
+//			if(prefind != null){
+//				process((Statement)prefind);
+//				return false;
+//			}
 			return true;
 		}
 		

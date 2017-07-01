@@ -15,6 +15,7 @@ import org.eclipse.jdt.core.dom.Type;
 
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
@@ -122,6 +123,14 @@ public class ArrayAcc extends Expr {
 		list.addAll(_array.getOperators());
 		list.addAll(_index.getOperators());
 		return list;
+	}
+
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
+		_fVector.combineFeature(_array.getFeatureVector());
+		_fVector.combineFeature(_index.getFeatureVector());
+		_fVector.inc(NewFVector.INDEX_OP_ACC);
 	}
 
 }

@@ -36,7 +36,7 @@ public class ProjectInfo {
 		if(_classMap.containsKey(className)){
 			_classMap.get(className).addMethodType(methodName, retType);
 		} else {
-			ClassInfo classInfo = new ClassInfo();
+			ClassInfo classInfo = new ClassInfo(className);
 			classInfo.addMethodType(methodName, retType);
 			_classMap.put(className, classInfo);
 		}
@@ -46,7 +46,7 @@ public class ProjectInfo {
 		if(_classMap.containsKey(className)){
 			_classMap.get(className).addSuperClass(superClass);
 		} else {
-			ClassInfo classInfo = new ClassInfo();
+			ClassInfo classInfo = new ClassInfo(className);
 			classInfo.addSuperClass(superClass);
 			_classMap.put(className, classInfo);
 		}
@@ -56,7 +56,7 @@ public class ProjectInfo {
 		if(_classMap.containsKey(className)){
 			_classMap.get(className).addSuperInterface(superInterface);
 		} else {
-			ClassInfo classInfo = new ClassInfo();
+			ClassInfo classInfo = new ClassInfo(className);
 			classInfo.addSuperInterface(superInterface);
 			_classMap.put(className, classInfo);
 		}
@@ -66,7 +66,7 @@ public class ProjectInfo {
 		if (_classMap.containsKey(className)) {
 			_classMap.get(className).addFieldType(fieldName, type);
 		} else {
-			ClassInfo classInfo = new ClassInfo();
+			ClassInfo classInfo = new ClassInfo(className);
 			classInfo.addFieldType(fieldName, type);
 			_classMap.put(className, classInfo);
 		}
@@ -76,7 +76,7 @@ public class ProjectInfo {
 		if (_classMap.containsKey(className)) {
 			_classMap.get(className).addMethodVariableType(methodName, varName, type);
 		} else {
-			ClassInfo classInfo = new ClassInfo();
+			ClassInfo classInfo = new ClassInfo(className);
 			classInfo.addMethodVariableType(methodName, varName, type);
 			_classMap.put(className, classInfo);
 		}
@@ -116,6 +116,11 @@ class ClassInfo {
 	private Map<String, Type> _methodRetTypeMap = new HashMap<>();
 	private String _superClass = null;
 	private Set<String> _superInterface = new HashSet<>();
+	private String _className = null;
+	
+	public ClassInfo(String className){
+		_className = className;
+	}
 	
 	public boolean addSuperClass(String superClass){
 		_superClass = superClass;

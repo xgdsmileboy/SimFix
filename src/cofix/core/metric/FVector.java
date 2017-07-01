@@ -6,10 +6,6 @@
  */
 package cofix.core.metric;
 
-import javax.swing.event.DocumentListener;
-
-import org.eclipse.jdt.core.dom.ForStatement;
-
 import cofix.core.parser.node.CodeBlock;
 
 /**

@@ -254,7 +254,9 @@ public class NodeUtils {
 				if(Modifier.isPublic(typeDeclaration.getModifiers()) && className != null){
 					className = typeDeclaration.getName().getFullyQualifiedName() + "$" + className;
 				} else {
-					className = ((TypeDeclaration)parent).getName().getFullyQualifiedName();
+					if(className == null) {
+						className = ((TypeDeclaration)parent).getName().getFullyQualifiedName();
+					}
 				}
 			} else if(parent instanceof EnumDeclaration){
 				className = ((EnumDeclaration)parent).getName().getFullyQualifiedName();
@@ -316,7 +318,11 @@ public class NodeUtils {
 					siblings.add((ASTNode) object);
 				}
 			}
-		}
+		} 
+//		else if(structuralPropertyDescriptor.isChildProperty()){
+//			ASTNode child = (ASTNode) node.getParent().getStructuralProperty(structuralPropertyDescriptor);
+//			siblings.add(child);
+//		}
 		return siblings;
  	}
 	

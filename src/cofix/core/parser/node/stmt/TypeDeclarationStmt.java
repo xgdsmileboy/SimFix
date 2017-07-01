@@ -16,6 +16,7 @@ import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.LoopStruct;
 import cofix.core.metric.MethodCall;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
@@ -68,5 +69,9 @@ public class TypeDeclarationStmt extends Stmt {
 	@Override
 	public StringBuffer toSrcString() {
 		return new StringBuffer(_originalNode.toString());
+	}
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
 	}
 }

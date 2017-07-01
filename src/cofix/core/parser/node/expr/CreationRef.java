@@ -14,6 +14,7 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
 import cofix.core.metric.Literal;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
 import cofix.core.parser.node.Node;
@@ -73,5 +74,10 @@ public class CreationRef extends Expr {
 	@Override
 	public List<Variable> getVariables() {
 		return new LinkedList<>();
+	}
+
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
 	}
 }

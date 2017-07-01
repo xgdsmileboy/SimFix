@@ -13,6 +13,7 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.OtherStruct;
 import cofix.core.modify.Modification;
 import cofix.core.parser.node.Node;
@@ -82,5 +83,11 @@ public class BreakStmt extends Stmt{
 		OtherStruct otherStruct = new OtherStruct(this, OtherStruct.KIND.BREAK);
 		list.add(otherStruct);
 		return list;
+	}
+	
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
+		_fVector.inc(NewFVector.INDEX_STRUCT_OTHER);
 	}
 }

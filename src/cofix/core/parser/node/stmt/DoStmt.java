@@ -18,6 +18,7 @@ import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.LoopStruct;
 import cofix.core.metric.MethodCall;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
@@ -163,6 +164,14 @@ public class DoStmt extends Stmt {
 			list.addAll(_stmt.getOtherStruct());
 		}
 		return list;
+	}
+	
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
+		_fVector.inc(NewFVector.INDEX_STRUCT_DO);
+		_fVector.combineFeature(_expression.getFeatureVector());
+		_fVector.combineFeature(_stmt.getFeatureVector());
 	}
 	
 }

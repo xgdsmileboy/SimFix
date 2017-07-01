@@ -17,6 +17,7 @@ import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.LoopStruct;
 import cofix.core.metric.MethodCall;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
@@ -166,5 +167,15 @@ public class Blk extends Stmt {
 			}
 		}
 		return list;
+	}
+	
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
+		if(_statements != null){
+			for(Stmt stmt : _statements){
+				_fVector.combineFeature(stmt.getFeatureVector());
+			}
+		}
 	}
 }

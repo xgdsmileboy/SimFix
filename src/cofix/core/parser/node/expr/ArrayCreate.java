@@ -14,8 +14,10 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ArrayType;
 import org.eclipse.jdt.core.dom.Type;
 
+import cofix.core.metric.FVector;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
@@ -140,7 +142,7 @@ public class ArrayCreate extends Expr {
 	@Override
 	public List<MethodCall> getMethodCalls() {
 		List<MethodCall> list = new LinkedList<>();
-		MethodCall methodCall = new MethodCall(this);
+		MethodCall methodCall = new MethodCall(this, _type.toString());
 		list.add(methodCall);
 		return list;
 	}
@@ -148,6 +150,20 @@ public class ArrayCreate extends Expr {
 	@Override
 	public List<Operator> getOperators() {
 		return new LinkedList<>();
+	}
+
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
+		_fVector.inc(NewFVector.INDEX_MCALL);
+		if(_dimension != null){
+			for(Expr expr : _dimension){
+				_fVector.combineFeature(expr.getFeatureVector());
+			}
+		}
+		if(_initializer != null){
+			_fVector.combineFeature(_initializer.getFeatureVector());
+		}
 	}
 
 }

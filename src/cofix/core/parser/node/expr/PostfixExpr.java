@@ -16,6 +16,7 @@ import org.eclipse.jdt.core.dom.Type;
 
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
+import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
@@ -111,5 +112,12 @@ public class PostfixExpr extends Expr {
 		list.add(operator);
 		list.addAll(_expression.getOperators());
 		return list;
+	}
+	
+	@Override
+	public void computeFeatureVector() {
+		_fVector = new NewFVector();
+		_fVector.inc(_operator.toString());
+		_fVector.combineFeature(_expression.getFeatureVector());
 	}
 }

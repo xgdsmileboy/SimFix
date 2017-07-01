@@ -93,7 +93,7 @@ public class Repair {
 			String file = _subject.getHome() + _subject.getSsrc() + "/" + loc.getFirst().replace(".", "/") + ".java";
 			CompilationUnit unit = JavaFile.genASTFromFile(file);
 			// get buggy code block
-			CodeBlock buggyblock = BuggyCode.getBuggyCodeBlock(unit, loc.getSecond());
+			CodeBlock buggyblock = BuggyCode.getBuggyCodeBlock(file, loc.getSecond());
 			if(buggyblock.getWrapMethodID() == null){
 				System.out.println("Find no block!");
 				continue;
