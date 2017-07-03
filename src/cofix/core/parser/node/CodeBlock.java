@@ -176,15 +176,15 @@ public class CodeBlock {
 	private NewFVector _fVector = null;
 	
 	// <name, <type, count>>
-	private Map<Variable, Integer> _variables = null;
+	private List<Variable> _variables = null;
 	// <literal, count>
-	private Map<Literal, Integer> _constants = null;
+	private List<Literal> _constants = null;
 	// <if, for, ...>
 	private List<LoopStruct> _loopStruct = null;
 	private List<CondStruct> _condStructs = null;
 	private List<OtherStruct> _otherStruct = null;
 	// {type.name(p0,p1),...}
-	private Map<MethodCall, Integer> _methodCalls = null;
+	private List<MethodCall> _methodCalls = null;
 	// <+, -, ...>
 	private List<Operator> _operators = null;
 	
@@ -269,6 +269,13 @@ public class CodeBlock {
 		return _buggyMethod;
 	}
 	
+	public List<Node> getParsedNode(){
+		if(_parsedNodes == null){
+			parseNode();
+		}
+		return _parsedNodes;
+	}
+	
 	public void accept(ASTVisitor visitor){
 		for(ASTNode node : _nodes){
 			node.accept(visitor);
@@ -300,40 +307,32 @@ public class CodeBlock {
 		return _fVector;
 	}
 	
-	public Map<Variable, Integer> getVariables(){
+	public List<Variable> getVariables(){
 		if(_variables == null){
 			if(_parsedNodes == null){
 				parseNode();
 			}
-			_variables = new HashMap<>();
+			_variables = new ArrayList<>();
 			for(Node node : _parsedNodes){
 				List<Variable> vars = node.getVariables();
 				for(Variable variable : vars){
-					Integer count = _variables.get(variable);
-					if(count == null){
-						count = 0;
-					}
-					_variables.put(variable, count + 1);
+					_variables.add(variable);
 				}
 			}
 		}
 		return _variables;
 	}
 	
-	public Map<Literal, Integer> getConstants(){
+	public List<Literal> getConstants(){
 		if(_constants == null){
 			if(_parsedNodes == null){
 				parseNode();
 			}
-			_constants = new HashMap<>();
+			_constants = new ArrayList<>();
 			for(Node node : _parsedNodes){
 				List<Literal> literals = node.getLiterals();
 				for(Literal literal : literals){
-					Integer count = _constants.get(literal);
-					if(count == null){
-						count = 0;
-					}
-					_constants.put(literal, count + 1);
+					_constants.add(literal);
 				}
 			}
 		}
@@ -379,20 +378,16 @@ public class CodeBlock {
 		return _otherStruct;
 	}
 	
-	public Map<MethodCall, Integer> getMethodCalls(){
+	public List<MethodCall> getMethodCalls(){
 		if(_methodCalls == null){
 			if(_parsedNodes == null){
 				parseNode();
 			}
-			_methodCalls = new HashMap<>();
+			_methodCalls = new ArrayList<>();
 			for(Node node : _parsedNodes){
 				List<MethodCall> methods = node.getMethodCalls();
 				for(MethodCall method : methods){
-					Integer count = _methodCalls.get(method);
-					if(count == null){
-						count = 0;
-					}
-					_methodCalls.put(method, count + 1);
+					_methodCalls.add(method);
 				}
 			}
 		}

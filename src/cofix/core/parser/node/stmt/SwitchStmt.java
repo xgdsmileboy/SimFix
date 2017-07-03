@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.stmt;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +22,11 @@ import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
+import cofix.core.metric.Variable.USE_TYPE;
+import cofix.core.modify.Deletion;
+import cofix.core.modify.Insertion;
 import cofix.core.modify.Modification;
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.expr.Expr;
 
@@ -34,8 +39,10 @@ public class SwitchStmt extends Stmt {
 	private Expr _expression = null;
 	private List<Stmt> _statements = null;
 	
-	private Expr _expression_replace = null;
-	private List<Stmt> _statements_replace = null;
+	private String _expression_replace = null;
+	private String _statements_replace = null;
+	
+	private int EXPID = 1000;
 	
 	/**
 	 * SwitchStatement:
@@ -51,6 +58,7 @@ public class SwitchStmt extends Stmt {
 	
 	public SwitchStmt(int startLine, int endLine, ASTNode node, Node parent) {
 		super(startLine, endLine, node, parent);
+		_nodeType = TYPE.SWSTMT;
 	}
 
 	public void setExpression(Expr expression){
@@ -62,20 +70,78 @@ public class SwitchStmt extends Stmt {
 	}
 	
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		boolean match = false;
+		if(node instanceof SwitchStmt){
+			match = true;
+			SwitchStmt other = (SwitchStmt) node;
+			modifications.addAll(NodeUtils.listNodeMatching(this, _nodeType, _statements, other._statements, varTrans, allUsableVariables));
+		} else {
+			List<Node> children = node.getChildren();
+			List<Modification> tmp = new ArrayList<>();
+			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+				match = true;
+				modifications.addAll(tmp);
+			}
+			
+			if(_statements != null){
+				for(Stmt stmt : _statements){
+					tmp = new ArrayList<>();
+					if(stmt.match(node, varTrans, allUsableVariables, tmp)){
+						match = true;
+						modifications.addAll(tmp);
+					}
+				}
+			}
+		}
+		
+		return match;
 	}
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification.getSourceID() == EXPID){
+			_expression_replace = modification.getTargetString();
+		} else if(modification instanceof Deletion){
+			int index = modification.getSourceID();
+			if(index > _statements.size()){
+				return false;
+			}
+			StringBuffer stringBuffer = new StringBuffer();
+			for(int i = 0; i < _statements.size(); i++){
+				if(i == index){
+					continue;
+				}
+				stringBuffer.append(_statements.get(i).toSrcString());
+				stringBuffer.append("\n");
+			}
+			_statements_replace = stringBuffer.toString();
+		} else if(modification instanceof Insertion){
+			int index = modification.getSourceID();
+			if(index > _statements.size()){
+				return false;
+			}
+			StringBuffer stringBuffer = new StringBuffer();
+			for(int i = 0; i < _statements.size(); i++){
+				if(i == index){
+					stringBuffer.append(modification.getTargetString());
+					stringBuffer.append("\n");
+				}
+				stringBuffer.append(_statements.get(i).toSrcString());
+				stringBuffer.append("\n");
+			}
+			_statements_replace = stringBuffer.toString();
+		}
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification.getSourceID() == EXPID){
+			_expression_replace = null;
+		} else {
+			_expression_replace = null;
+		}
 		return false;
 	}
 
@@ -89,16 +155,14 @@ public class SwitchStmt extends Stmt {
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer("swtich (");
 		if(_expression_replace != null){
-			stringBuffer.append(_expression_replace.toSrcString());
+			stringBuffer.append(_expression_replace);
 		} else {
 			stringBuffer.append(_expression.toSrcString());
 		}
 		stringBuffer.append("){\n");
 		if(_statements_replace != null){
-			for(Stmt stmt : _statements_replace){
-				stringBuffer.append(stmt.toSrcString());
-				stringBuffer.append("\n");
-			}
+			stringBuffer.append(_statements_replace);
+			stringBuffer.append("\n");
 		}else{
 			for(Stmt stmt : _statements){
 				stringBuffer.append(stmt.toSrcString());
@@ -181,4 +245,20 @@ public class SwitchStmt extends Stmt {
 			_fVector.combineFeature(stmt.getFeatureVector());
 		}
 	}
+	
+
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		return USE_TYPE.USE_SWSTMT;
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		List<Node> list = new ArrayList<>();
+		for(Stmt stmt : _statements){
+			list.add(stmt);
+		}
+		return list;
+	}
+	
 }

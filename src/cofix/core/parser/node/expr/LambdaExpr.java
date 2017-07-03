@@ -6,12 +6,15 @@
  */
 package cofix.core.parser.node.expr;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
+
+import com.sun.org.apache.bcel.internal.generic.RETURN;
 
 import cofix.core.metric.Literal;
 import cofix.core.metric.NewFVector;
@@ -54,7 +57,7 @@ public class LambdaExpr extends Expr {
 	}
 
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -81,4 +84,8 @@ public class LambdaExpr extends Expr {
 		_fVector = new NewFVector();
 	}
 	
+	@Override
+	public List<Node> getChildren() {
+		return new ArrayList<>();
+	}
 }

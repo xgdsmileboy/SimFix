@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.expr;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -19,8 +20,12 @@ import cofix.core.metric.MethodCall;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
+import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
+import javassist.Modifier;
 
 /**
  * @author Jiajun
@@ -31,8 +36,11 @@ public class VarDeclarationExpr extends Expr {
 	private Type _declType = null;
 	private List<Vdf> _vdfs = null;
 	
-	private Type _declType_replace = null;
-	private List<Vdf> _vdfs_replace = null;
+	private String _declType_replace = null;
+	private String _vdfs_replace = null;
+	
+	private int TYPEID = 0;
+	private int VDFID = 1;
 	
 	/**
 	 * VariableDeclarationExpression:
@@ -41,6 +49,7 @@ public class VarDeclarationExpr extends Expr {
 	 */
 	public VarDeclarationExpr(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
+		_nodeType = TYPE.VARDECLEXPR;
 	}
 	
 	public void setDeclType(Type declType){
@@ -52,9 +61,25 @@ public class VarDeclarationExpr extends Expr {
 	}
 
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		boolean match = false;
+		if(node instanceof VarDeclarationExpr){
+			match = true;
+			VarDeclarationExpr other = (VarDeclarationExpr) node;
+			// TODO : all referenced variable should be changed correspondingly
+			if(_declType.isPrimitiveType() && other._declType.isPrimitiveType() && NodeUtils.isWidenType(_declType, other._declType)){
+				Revision revision = new Revision(this, TYPEID, other._declType.toString(), _nodeType);
+				modifications.add(revision);
+			}
+		} else {
+			List<Node> children = node.getChildren();
+			List<Modification> tmp = new ArrayList<>();
+			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+				match = true;
+				modifications.addAll(tmp);
+			}
+		}
+		return match;
 	}
 
 	@Override
@@ -81,15 +106,11 @@ public class VarDeclarationExpr extends Expr {
 		if(_declType_replace != null){
 			stringBuffer.append(_declType_replace);
 		} else {
-			stringBuffer.append(_declType);
+			stringBuffer.append(_declType.toString());
 		}
 		stringBuffer.append(" ");
 		if(_vdfs_replace != null){
-			stringBuffer.append(_vdfs_replace.get(0).toSrcString());
-			for(int i = 1; i < _vdfs_replace.size(); i++){
-				stringBuffer.append(",");
-				stringBuffer.append(_vdfs_replace.get(i).toSrcString());
-			}
+			stringBuffer.append(_vdfs_replace);
 		} else {
 			stringBuffer.append(_vdfs.get(0).toSrcString());
 			for(int i = 1; i < _vdfs.size(); i++){
@@ -151,5 +172,16 @@ public class VarDeclarationExpr extends Expr {
 		for(Vdf vdf : _vdfs){
 			_fVector.combineFeature(vdf.getFeatureVector());
 		}
+	}
+	
+
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		return USE_TYPE.USE_VAR_DECL;
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		return new ArrayList<>();
 	}
 }

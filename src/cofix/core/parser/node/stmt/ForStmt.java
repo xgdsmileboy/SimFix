@@ -6,12 +6,16 @@
  */
 package cofix.core.parser.node.stmt;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
+import org.omg.CosNaming._NamingContextExtStub;
+
+import com.sun.corba.se.spi.ior.TaggedProfileTemplate;
 
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
@@ -21,7 +25,9 @@ import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
+import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.expr.Expr;
 
@@ -52,6 +58,7 @@ public class ForStmt extends Stmt {
 	 */
 	public ForStmt(int startLine, int endLine, ASTNode node) {
 		this(startLine, endLine, node, null);
+		_nodeType = TYPE.FOR;
 	}
 	
 	public ForStmt(int startLine, int endLine, ASTNode node, Node parent) {
@@ -108,20 +115,39 @@ public class ForStmt extends Stmt {
 	}
 	
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		boolean match = false;
+		if(node instanceof ForStmt){
+			match = true;
+			ForStmt other = (ForStmt) node;
+			if(_condition != null && other._condition != null){
+				List<Modification> tmp = new ArrayList<>();
+				if(_condition.match(other._condition, varTrans, allUsableVariables, tmp)){
+					modifications.addAll(tmp);
+				}
+			}
+			List<Modification> tmp = new ArrayList<>();
+			if(_body.match(other._body, varTrans, allUsableVariables, tmp)){
+				modifications.addAll(tmp);
+			}
+		} else {
+			List<Node> children = node.getChildren();
+			List<Modification> tmp = new ArrayList<>();
+			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+				match = true;
+				modifications.addAll(tmp);
+			}
+		}
+		return match;
 	}
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
@@ -279,5 +305,17 @@ public class ForStmt extends Stmt {
 			}
 		}
 		_fVector.combineFeature(_body.getFeatureVector());
+	}
+
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		return USE_TYPE.USE_LOOP;
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		List<Node> list = new ArrayList<>();
+		list.add(_body);
+		return list;
 	}
 }

@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.expr;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +28,7 @@ public class SName extends Label {
 
 	private String _name = null; 
 	
-	private Expr _replace = null;
+	private String _replace = null;
 	
 	/**
 	 * SimpleName:
@@ -35,10 +36,15 @@ public class SName extends Label {
 	 */
 	public SName(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
+		_nodeType = TYPE.SNAME;
 	}
 	
 	public void setName(String name){
 		_name = name;
+	}
+	
+	public String getName(){
+		return _name;
 	}
 
 	@Override
@@ -60,7 +66,7 @@ public class SName extends Label {
 	}
 
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -68,7 +74,7 @@ public class SName extends Label {
 	@Override
 	public StringBuffer toSrcString() {
 		if(_replace != null){
-			return _replace.toSrcString();
+			return new StringBuffer(_replace);
 		}
 		return new StringBuffer(_name);
 	}
@@ -96,5 +102,10 @@ public class SName extends Label {
 	public String toString() {
 		return _name;
 	}
-
+	
+	@Override
+	public List<Node> getChildren() {
+		return new ArrayList<>();
+	}
+	
 }

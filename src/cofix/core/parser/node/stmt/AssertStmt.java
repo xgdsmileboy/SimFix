@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.stmt;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -28,6 +29,7 @@ public class AssertStmt extends Stmt{
 	 */
 	public AssertStmt(int startLine, int endLine, ASTNode node) {
 		this(startLine, endLine, node, null);
+		_nodeType = TYPE.ASSERT;
 	}
 	
 	public AssertStmt(int startLine, int endLine, ASTNode node, Node parent) {
@@ -35,7 +37,7 @@ public class AssertStmt extends Stmt{
 	}
 
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -66,6 +68,11 @@ public class AssertStmt extends Stmt{
 	@Override
 	public void computeFeatureVector() {
 		_fVector = new NewFVector();
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		return new ArrayList<>();
 	}
 
 }

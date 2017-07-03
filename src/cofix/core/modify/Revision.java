@@ -6,9 +6,8 @@
  */
 package cofix.core.modify;
 
-import java.util.Map;
-
-import org.eclipse.jdt.core.dom.Type;
+import cofix.core.parser.node.Node;
+import cofix.core.parser.node.Node.TYPE;
 
 /**
  * @author Jiajun
@@ -16,22 +15,9 @@ import org.eclipse.jdt.core.dom.Type;
  */
 public class Revision extends Modification {
 
-	@Override
-	public boolean apply(Map<String, Type> usableVars) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean restore() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean backup() {
-		// TODO Auto-generated method stub
-		return false;
+	public Revision(Node node, int srcID, String target, TYPE changeNodeType) {
+		super(node, srcID, target, changeNodeType);
+		// TODO Auto-generated constructor stub
 	}
 
 }

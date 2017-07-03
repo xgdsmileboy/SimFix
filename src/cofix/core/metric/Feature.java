@@ -19,4 +19,8 @@ public abstract class Feature {
 	protected Feature(Node node) {
 		_node = node;
 	}
+	
+	public Node getNode(){
+		return _node;
+	}
 }

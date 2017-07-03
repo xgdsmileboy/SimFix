@@ -18,6 +18,7 @@ import cofix.core.metric.LoopStruct;
 import cofix.core.metric.MethodCall;
 import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
+import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.parser.node.Node;
 
 /**
@@ -66,6 +67,12 @@ public abstract class Expr extends Node {
 	
 	public List<OtherStruct> getOtherStruct(){
 		return new LinkedList<>();
+	}
+	
+
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		return _parent.getUseType(this);
 	}
 	
 }

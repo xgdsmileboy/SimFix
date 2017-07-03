@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.expr;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -20,6 +21,7 @@ import cofix.core.metric.MethodCall;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
+import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
 import cofix.core.parser.node.Node;
 
@@ -42,6 +44,7 @@ public class Assign extends Expr {
 	 */
 	public Assign(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
+		_nodeType = TYPE.ASSIGN;
 	}
 
 	public void setLeftHandSide(Expr lhs){
@@ -57,7 +60,7 @@ public class Assign extends Expr {
 	}
 	
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -70,14 +73,14 @@ public class Assign extends Expr {
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		_operator_repalce = null;
+		_rhs_replace = null;
+		return true;
 	}
 
 	@Override
 	public boolean backup(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 	
 	@Override
@@ -140,5 +143,22 @@ public class Assign extends Expr {
 		_fVector.inc(NewFVector.INDEX_OP_ASSIGN);
 		_fVector.combineFeature(_lhs.getFeatureVector());
 		_fVector.combineFeature(_rhs.getFeatureVector());
+	}
+
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		if(child == _lhs){
+			return USE_TYPE.USE_ASSIGN_LHS;
+		} if(child == _rhs){
+			return USE_TYPE.USE_ASSIGN_RHS;
+		}
+		return USE_TYPE.USE_UNKNOWN;
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		List<Node> list = new ArrayList<>();
+		list.add(_rhs);
+		return list;
 	}
 }

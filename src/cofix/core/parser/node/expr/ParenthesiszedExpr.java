@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.expr;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -37,6 +38,7 @@ public class ParenthesiszedExpr extends Expr {
 	 */
 	public ParenthesiszedExpr(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
+		_nodeType = TYPE.PARENTHESISZED;
 	}
 
 	public void setExpr(Expr expression){
@@ -44,7 +46,7 @@ public class ParenthesiszedExpr extends Expr {
 	}
 	
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -109,5 +111,12 @@ public class ParenthesiszedExpr extends Expr {
 	public void computeFeatureVector() {
 		_fVector = new NewFVector();
 		_fVector.combineFeature(_expression.getFeatureVector());
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		List<Node> list = new ArrayList<>();
+		list.add(_expression);
+		return list;
 	}
 }

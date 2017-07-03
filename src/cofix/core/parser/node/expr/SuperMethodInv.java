@@ -6,9 +6,12 @@
  */
 package cofix.core.parser.node.expr;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+
+import javax.jws.WebParam.Mode;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
@@ -18,8 +21,11 @@ import cofix.core.metric.MethodCall;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
+import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
+import cofix.core.parser.node.stmt.SuperConstructorInv;
 
 /**
  * @author Jiajun
@@ -31,8 +37,9 @@ public class SuperMethodInv extends Expr {
 	private String _name = null;
 	private List<Expr> _arguments = null;
 	
-	private List<Expr> _arguments_replace = null;
+	private String _arguments_replace = null;
 	
+	private int ARGID = 0;
 	/**
 	 * SuperMethodInvocation:
      *	[ ClassName . ] super .
@@ -41,6 +48,7 @@ public class SuperMethodInv extends Expr {
 	 */
 	public SuperMethodInv(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
+		_nodeType = TYPE.SMINVOCATION;
 	}
 	
 	public void setLabel(Label label){
@@ -56,21 +64,41 @@ public class SuperMethodInv extends Expr {
 	}
 
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		boolean match = false;
+		if(node instanceof SuperMethodInv){
+			match = true;
+			SuperMethodInv other = (SuperMethodInv) node;
+			modifications.addAll(NodeUtils.handleArguments(this, ARGID, _nodeType, _arguments, other._arguments, allUsableVariables));
+		} else {
+			List<Node> children = node.getChildren();
+			List<Modification> tmp = new ArrayList<>();
+			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+				match = true;
+				modifications.addAll(tmp);
+			}
+		}
+		return match;
 	}
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		if(modification.getSourceID() == ARGID){
+			_arguments_replace = modification.getTargetString();
+		} else {
+			return false;
+		}
+		return true;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		if(modification.getSourceID() == ARGID){
+			_arguments_replace = null;
+		} else {
+			return false;
+		}
+		return true;
 	}
 
 	@Override
@@ -90,13 +118,7 @@ public class SuperMethodInv extends Expr {
 		stringBuffer.append(_name);
 		stringBuffer.append("(");
 		if(_arguments_replace != null){
-			if(_arguments_replace.size() > 0){
-				stringBuffer.append(_arguments_replace.get(0).toSrcString());
-				for(int i = 1; i < _arguments_replace.size(); i++){
-					stringBuffer.append(",");
-					stringBuffer.append(_arguments_replace.get(i).toSrcString());
-				}
-			}
+			stringBuffer.append(_arguments_replace);
 		} else if(_arguments != null && _arguments.size() > 0){
 			stringBuffer.append(_arguments.get(0).toSrcString());
 			for(int i = 1; i < _arguments.size(); i++){
@@ -172,5 +194,19 @@ public class SuperMethodInv extends Expr {
 				_fVector.combineFeature(expr.getFeatureVector());
 			}
 		}
+	}
+
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		if(_label == child){
+			return USE_TYPE.USE_METHOD_EXP;
+		} else {
+			return USE_TYPE.USE_METHOD_PARAM;
+		}
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		return new ArrayList<>();
 	}
 }

@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.expr;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -13,14 +14,13 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
-import com.sun.tracing.dtrace.ProviderAttributes;
-
 import cofix.core.metric.Literal;
 import cofix.core.metric.LoopStruct;
 import cofix.core.metric.MethodCall;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
+import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.stmt.AnonymousClassDecl;
@@ -48,6 +48,7 @@ public class ClassInstanceCreate extends Expr {
 	 */
 	public ClassInstanceCreate(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
+		_nodeType = TYPE.CLASSCREATION;
 	}
 	
 	public void setExpression(Expr expression){
@@ -67,21 +68,21 @@ public class ClassInstanceCreate extends Expr {
 	}
 
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		_expression_replace = null;
+		_arguments_replace = null;
+		return true;
 	}
 
 	@Override
@@ -197,5 +198,20 @@ public class ClassInstanceCreate extends Expr {
 				_fVector.combineFeature(expr.getFeatureVector());
 			}
 		}
+	}
+	
+
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		if(_expression == child){
+			return USE_TYPE.USE_METHOD_EXP;
+		} else {
+			return USE_TYPE.USE_METHOD_PARAM;
+		}
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		return new ArrayList<>();
 	}
 }

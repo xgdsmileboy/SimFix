@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.expr;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -19,6 +20,7 @@ import cofix.core.metric.MethodCall;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
+import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
 import cofix.core.parser.node.Node;
 
@@ -40,6 +42,7 @@ public class PostfixExpr extends Expr {
 	 */
 	public PostfixExpr(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
+		_nodeType = TYPE.POSTEXPR;
 	}
 	
 	public void setExpression(Expr expression){
@@ -49,25 +52,9 @@ public class PostfixExpr extends Expr {
 	public void setOperator(PostfixExpression.Operator operator){
 		_operator = operator;
 	}
-	
-	@Override
-	public StringBuffer toSrcString() {
-		StringBuffer stringBuffer = new StringBuffer();
-		if(_expression_replace != null){
-			stringBuffer.append(_expression_replace.toSrcString());
-		} else {
-			stringBuffer.append(_expression.toSrcString());
-		}
-		if(_operator_replace != null){
-			stringBuffer.append(_operator_replace.toString());
-		} else {
-			stringBuffer.append(_operator.toString());
-		}
-		return stringBuffer;
-	}
 
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -88,6 +75,22 @@ public class PostfixExpr extends Expr {
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public StringBuffer toSrcString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		if(_expression_replace != null){
+			stringBuffer.append(_expression_replace.toSrcString());
+		} else {
+			stringBuffer.append(_expression.toSrcString());
+		}
+		if(_operator_replace != null){
+			stringBuffer.append(_operator_replace.toString());
+		} else {
+			stringBuffer.append(_operator.toString());
+		}
+		return stringBuffer;
 	}
 
 	@Override
@@ -119,5 +122,18 @@ public class PostfixExpr extends Expr {
 		_fVector = new NewFVector();
 		_fVector.inc(_operator.toString());
 		_fVector.combineFeature(_expression.getFeatureVector());
+	}
+	
+
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		return USE_TYPE.USE_POSTFIX_EXP;
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		List<Node> list = new ArrayList<>();
+		list.add(_expression);
+		return list;
 	}
 }

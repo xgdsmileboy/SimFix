@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.expr;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -37,6 +38,7 @@ public class QName extends Label {
 	 */
 	public QName(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
+		_nodeType = TYPE.QNAME;
 	}
 	
 	public void setName(Label namee, SName sname){
@@ -63,7 +65,7 @@ public class QName extends Label {
 	}
 
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -110,5 +112,13 @@ public class QName extends Label {
 			_fVector.combineFeature(_name.getFeatureVector());
 			_fVector.combineFeature(_sname.getFeatureVector());
 		}
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		List<Node> list = new ArrayList<>();
+		list.add(_name);
+		list.add(_sname);
+		return list;
 	}
 }

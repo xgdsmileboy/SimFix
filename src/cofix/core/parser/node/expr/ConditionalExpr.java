@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.expr;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -19,6 +20,7 @@ import cofix.core.metric.MethodCall;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
+import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
 import cofix.core.parser.node.Node;
 
@@ -42,6 +44,7 @@ public class ConditionalExpr extends Expr {
 	 */
 	public ConditionalExpr(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
+		_nodeType = TYPE.CONDEXPR;
 	}
 
 	public void setCondition(Expr condition){
@@ -57,7 +60,7 @@ public class ConditionalExpr extends Expr {
 	}
 	
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -70,14 +73,15 @@ public class ConditionalExpr extends Expr {
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		_condition_replace = null;
+		_first_replace = null;
+		_snd_replace = null;
+		return true;
 	}
 
 	@Override
 	public boolean backup(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 	
 	@Override
@@ -156,5 +160,19 @@ public class ConditionalExpr extends Expr {
 		_fVector.combineFeature(_condition.getFeatureVector());
 		_fVector.combineFeature(_first.getFeatureVector());
 		_fVector.combineFeature(_snd.getFeatureVector());
+	}
+	
+
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		return USE_TYPE.USE_CONDITIONAL;
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		List<Node> list = new ArrayList<>();
+		list.add(_first);
+		list.add(_snd);
+		return list;
 	}
 }

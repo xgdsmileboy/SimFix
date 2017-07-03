@@ -30,6 +30,7 @@ public class FloatLiteral extends NumLiteral {
 	
 	public FloatLiteral(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
+		_nodeType = TYPE.FLITERAL;
 	}
 	
 	public void setValue(float value){
@@ -37,7 +38,7 @@ public class FloatLiteral extends NumLiteral {
 	}
 
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -50,14 +51,13 @@ public class FloatLiteral extends NumLiteral {
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		_replace = null;
+		return true;
 	}
 
 	@Override
 	public boolean backup(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 	
 	@Override

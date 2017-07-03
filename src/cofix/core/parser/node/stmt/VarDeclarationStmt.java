@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.stmt;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +20,10 @@ import cofix.core.metric.MethodCall;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
+import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.expr.Vdf;
 
@@ -32,9 +36,11 @@ public class VarDeclarationStmt extends Stmt {
 	private Type _declType = null;
 	private List<Vdf> _fragments = null;
 	
-	private Type _declType_replace = null;
-	private List<Vdf> _fragments_replace = null;
+	private String _declType_replace = null;
+	private String _fragments_replace = null;
 	
+	private int TYPEID = 0;
+	private int FRAGID = 1;
 	/**
 	 * VariableDeclarationStatement:
      *	{ ExtendedModifier } Type VariableDeclarationFragment
@@ -46,6 +52,7 @@ public class VarDeclarationStmt extends Stmt {
 
 	public VarDeclarationStmt(int startLine, int endLine, ASTNode node, Node parent) {
 		super(startLine, endLine, node, parent);
+		_nodeType = TYPE.VARDECLSTMT;
 	}
 	
 	public void setDeclType(Type declType){
@@ -57,26 +64,51 @@ public class VarDeclarationStmt extends Stmt {
 	}
 	
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		boolean match = false;
+		if(node instanceof VarDeclarationStmt){
+			match = true;
+			VarDeclarationStmt other = (VarDeclarationStmt) node;
+			Type otherType = other._declType;
+			if(_declType.isPrimitiveType() && otherType.isPrimitiveType()){
+				if(!_declType.toString().equals(otherType.toString())){
+					Revision revision = new Revision(this, TYPEID, otherType.toString(), _nodeType);
+					modifications.add(revision);
+				}
+			}
+		} else {
+			List<Node> children = node.getChildren();
+			List<Modification> tmp = new ArrayList<>();
+			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+				match = true;
+				modifications.addAll(tmp);
+			}
+		}
+		return match;
 	}
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		if(modification.getSourceID() == TYPEID){
+			_declType_replace = modification.getTargetString();
+		} else if(modification.getSourceID() == FRAGID){
+			_fragments_replace = modification.getTargetString();
+		}
+		return true;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		if(modification.getSourceID() == TYPEID){
+			_declType_replace = null;
+		} else if(modification.getSourceID() == FRAGID){
+			_fragments_replace = null;
+		}
+		return true;
 	}
 
 	@Override
 	public boolean backup(Modification modification) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 	
@@ -84,17 +116,13 @@ public class VarDeclarationStmt extends Stmt {
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer();
 		if(_declType_replace != null){
-			stringBuffer.append(_declType_replace.toString());
+			stringBuffer.append(_declType_replace);
 		} else {
 			stringBuffer.append(_declType.toString());
 		}
 		stringBuffer.append(" ");
 		if(_fragments_replace != null){
-			stringBuffer.append(_fragments_replace.get(0).toSrcString());
-			for(int i = 1; i < _fragments_replace.size(); i++){
-				stringBuffer.append(",");
-				stringBuffer.append(_fragments_replace.get(i).toSrcString());
-			}
+			stringBuffer.append(_fragments_replace);
 		} else {
 			stringBuffer.append(_fragments.get(0).toSrcString());
 			for(int i = 1; i < _fragments.size(); i++){
@@ -168,5 +196,16 @@ public class VarDeclarationStmt extends Stmt {
 			_fVector.combineFeature(vdf.getFeatureVector());
 		}
 	}
+	
 
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		return USE_TYPE.USE_VAR_DECL;
+	}
+
+	@Override
+	public List<Node> getChildren() {
+		return new ArrayList<>();
+	}
+	
 }

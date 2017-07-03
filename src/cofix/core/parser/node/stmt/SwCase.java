@@ -20,7 +20,11 @@ import cofix.core.metric.MethodCall;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
+import cofix.core.metric.Variable.USE_TYPE;
+import cofix.core.modify.Deletion;
+import cofix.core.modify.Insertion;
 import cofix.core.modify.Modification;
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.expr.Expr;
 
@@ -33,7 +37,7 @@ public class SwCase extends Stmt {
 	private Expr _expression = null;
 	private List<Node> _siblings = null;
 	
-	private List<Node> _siblings_replace = null;
+	private String _siblings_replace = null;
 	
 	/**
 	 * SwitchCase:
@@ -46,10 +50,15 @@ public class SwCase extends Stmt {
 	
 	public SwCase(int startLine, int endLine, ASTNode node, Node parent) {
 		super(startLine, endLine, node, parent);
+		_nodeType = TYPE.SWCASE;
 	}
 	
 	public void setExpression(Expr expression){
 		_expression = expression;
+	}
+	
+	public Expr getExpression(){
+		return _expression;
 	}
 	
 	public void addSibling(Node sibling){
@@ -62,23 +71,89 @@ public class SwCase extends Stmt {
 	public void setSiblings(List<Node> siblings){
 		_siblings = siblings;
 	}
+	
+	public List<Node> getSiblings(){
+		return _siblings;
+	}
 
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		boolean match = false;
+		if(node instanceof SwCase){
+			match = true;
+			SwCase other = (SwCase) node;
+			modifications.addAll(NodeUtils.listNodeMatching(this, _nodeType, _siblings, other._siblings, varTrans, allUsableVariables));
+		} else if(node instanceof IfStmt){
+			IfStmt other = (IfStmt) node;
+			modifications.addAll(NodeUtils.listNodeMatching(this, _nodeType, _siblings, other.getChildren(), varTrans, allUsableVariables));
+		} else {
+			List<Node> children = node.getChildren();
+			List<Modification> tmp = new ArrayList<>();
+			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+				match = true;
+				modifications.addAll(tmp);
+			}
+
+			if(_siblings != null){
+				for(Node sib : _siblings){
+					tmp = new ArrayList<>();
+					if(sib.match(node, varTrans, allUsableVariables, tmp)){
+						match = true;
+						modifications.addAll(tmp);
+					}
+				}
+			}
+		}
+		return match;
 	}
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		int index = modification.getSourceID();
+		if(_siblings == null  || index > _siblings.size()){
+			return false;
+		}
+		if(modification instanceof Deletion){
+			StringBuffer stringBuffer = new StringBuffer();
+			for(int i = 0; i < _siblings.size(); i++){
+				if (i == index) {
+					continue;
+				}
+				stringBuffer.append(_siblings.get(i).toSrcString());
+				stringBuffer.append("\n");
+			}
+			_siblings_replace = stringBuffer.toString();
+		} else if(modification instanceof Insertion){
+			StringBuffer stringBuffer = new StringBuffer();
+			for(int i = 0; i < _siblings.size(); i++){
+				if (i == index) {
+					stringBuffer.append(modification.getTargetString());
+					stringBuffer.append("\n");
+				}
+				stringBuffer.append(_siblings.get(i).toSrcString());
+				stringBuffer.append("\n");
+			}
+			_siblings_replace = stringBuffer.toString();
+		} else {
+			return false;
+		}
+		return true;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		int index = modification.getSourceID();
+		if(_siblings == null  || index > _siblings.size()){
+			return false;
+		}
+		if(modification instanceof Deletion){
+			_siblings_replace = null;
+		} else if(modification instanceof Insertion){
+			_siblings_replace = null;
+		} else {
+			return false;
+		}
+		return true;
 	}
 
 	@Override
@@ -98,10 +173,8 @@ public class SwCase extends Stmt {
 			stringBuffer.append(" :\n");
 		}
 		if(_siblings_replace != null){
-			for(Node sibling : _siblings_replace){
-				stringBuffer.append(stringBuffer.append(sibling.toSrcString()));
-				stringBuffer.append("\n");
-			}
+			stringBuffer.append(_siblings_replace);
+			stringBuffer.append("\n");
 		} else {
 			if(_siblings != null){
 				for(Node sibling : _siblings){
@@ -166,6 +239,22 @@ public class SwCase extends Stmt {
 				_fVector.combineFeature(node.getFeatureVector());
 			}
 		}
+	}
+
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		return USE_TYPE.USE_SWCASE;
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		List<Node> list = new ArrayList<>();
+		if(_siblings != null){
+			for(Node node : _siblings){
+				list.add(node);
+			}
+		}
+		return list;
 	}
 	
 }

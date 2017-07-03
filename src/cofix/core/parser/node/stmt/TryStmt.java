@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.stmt;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -21,7 +22,9 @@ import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
+import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
 /**
@@ -45,6 +48,7 @@ public class TryStmt extends Stmt {
 
 	public TryStmt(int startLine, int endLine, ASTNode node, Node parent) {
 		super(startLine, endLine, node, parent);
+		_nodeType = TYPE.TRY;
 	}
 	
 	public void setBody(Blk blk){
@@ -52,9 +56,19 @@ public class TryStmt extends Stmt {
 	}
 	
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		boolean match = false;
+		if(node instanceof TryStmt){
+			match = true;
+		} else {
+			List<Node> children = node.getChildren();
+			List<Modification> tmp = new ArrayList<>();
+			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+				match = true;
+				modifications.addAll(tmp);
+			}
+		}
+		return match;
 	}
 
 	@Override
@@ -138,5 +152,17 @@ public class TryStmt extends Stmt {
 	public void computeFeatureVector() {
 		_fVector = new NewFVector();
 		_fVector.combineFeature(_blk.getFeatureVector());
+	}
+
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		return USE_TYPE.USE_TRY;
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		List<Node> list = new ArrayList<>();
+		list.add(_blk);
+		return list;
 	}
 }

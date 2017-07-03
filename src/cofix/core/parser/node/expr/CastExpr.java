@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.expr;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +15,6 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
 import cofix.core.metric.CondStruct;
-import cofix.core.metric.FVector;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
 import cofix.core.metric.NewFVector;
@@ -40,6 +40,7 @@ public class CastExpr extends Expr {
 	 */
 	public CastExpr(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
+		_nodeType = TYPE.CAST;
 	}
 	
 	public void setCastType(Type type){
@@ -51,7 +52,7 @@ public class CastExpr extends Expr {
 	}
 
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -64,14 +65,13 @@ public class CastExpr extends Expr {
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
+		_replace = null;
 		return false;
 	}
 
 	@Override
 	public boolean backup(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 	
 	@Override
@@ -127,5 +127,12 @@ public class CastExpr extends Expr {
 	public void computeFeatureVector() {
 		_fVector = new NewFVector();
 		_fVector.combineFeature(_expression.getFeatureVector());
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		List<Node> list = new ArrayList<>();
+		list.add(_expression);
+		return list;
 	}
 }

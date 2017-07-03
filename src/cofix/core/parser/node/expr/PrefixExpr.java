@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.expr;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -13,12 +14,14 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.PrefixExpression;
 import org.eclipse.jdt.core.dom.Type;
+import org.eclipse.jdt.core.util.ISignatureAttribute;
 
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
+import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
 import cofix.core.parser.node.Node;
 
@@ -31,8 +34,11 @@ public class PrefixExpr extends Expr {
 	private Expr _expression = null;
 	private PrefixExpression.Operator _operator = null;
 	
-	private Expr _expression_replace = null;
-	private PrefixExpression.Operator _operator_replace = null;
+	private String _expression_replace = null;
+	private String _operator_replace = null;
+	
+	private int EXPRID = 0;
+	private int OPID = 1;
 	
 	/**
 	 * PrefixExpression:
@@ -40,6 +46,7 @@ public class PrefixExpr extends Expr {
 	 */
 	public PrefixExpr(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
+		_nodeType = TYPE.PREEXPR;
 	}
 	
 	public void setExpression(Expr expression){
@@ -51,7 +58,7 @@ public class PrefixExpr extends Expr {
 	}
 
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -78,12 +85,12 @@ public class PrefixExpr extends Expr {
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer();
 		if(_operator_replace != null){
-			stringBuffer.append(_operator_replace.toString());
+			stringBuffer.append(_operator_replace);
 		} else {
 			stringBuffer.append(_operator.toString());
 		}
 		if(_expression_replace != null){
-			stringBuffer.append(_expression_replace.toSrcString());
+			stringBuffer.append(_expression_replace);
 		} else {
 			stringBuffer.append(_expression.toSrcString());
 		}
@@ -119,5 +126,17 @@ public class PrefixExpr extends Expr {
 		_fVector = new NewFVector();
 		_fVector.inc(_operator.toString());
 		_fVector.combineFeature(_expression.getFeatureVector());
+	}
+
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		return USE_TYPE.USE_PREFIX_EXP;
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		List<Node> list = new ArrayList<>();
+		list.add(_expression);
+		return list;
 	}
 }

@@ -6,11 +6,67 @@
  */
 package cofix.core.match;
 
+import java.util.List;
+
+import org.junit.Test;
+
+import cofix.common.config.Constant;
+import cofix.common.util.Pair;
+import cofix.common.util.Subject;
+import cofix.core.parser.ProjectInfo;
+import cofix.core.parser.node.CodeBlock;
+import cofix.core.parser.search.BuggyCode;
+import cofix.core.parser.search.SimpleFilter;
+
 /**
  * @author Jiajun
  * @datae May 31, 2017
  */
 public class CodeBlockMatcherTest {
+	
+	@Test
+	public void test_chart_1(){
+		Constant.PROJECT_HOME = System.getProperty("user.dir") + "/testfile";
+		Subject subject = new Subject("chart", 1, "/source", "/tests", "/build", "/build-tests");
+		ProjectInfo.init(subject);
+		String file = subject.getHome() + subject.getSsrc() +"/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java";
+		int buggyLine = 1797;
+		
+		searchAndPrint(file, buggyLine, subject.getHome() + subject.getSsrc());
+	}
+	
+	@Test
+	public void test_chart_7(){
+		Constant.PROJECT_HOME = System.getProperty("user.dir") + "/testfile";
+		Subject subject = new Subject("chart", 7, "/source", "/tests", "/build", "/build-tests");
+		ProjectInfo.init(subject);
+		String file = subject.getHome() + "/source/org/jfree/data/time/TimePeriodValues.java";
+		int buggyLine = 299;
+		
+		searchAndPrint(file, buggyLine, subject.getHome() + subject.getSsrc());
+	}
+	
+	private void searchAndPrint(String buggyFile, int buggyLine, String searchPath){
+		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(buggyFile, buggyLine);
+		System.out.println(codeBlock.toSrcString());
+		System.out.println(codeBlock.getFeatureVector());
+		
+		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
+		List<Pair<CodeBlock, Double>> candidates = simpleFilter.filter(searchPath, 0.5);
+		int i = 1;
+		for(Pair<CodeBlock, Double> block : candidates){
+			System.out.println("---------------- " + (i++) + " ----Similarity : " + block.getSecond() + "-------------------------------------");
+			System.out.println(block.getFirst().getFeatureVector());
+			System.out.println(block.getFirst().toSrcString());
+			
+			CodeBlockMatcher.match(codeBlock, block.getFirst(), null);
+			break;
+		}
+		System.out.println("-----------" + candidates.size() + "-------------");
+	}
+	
+	
+	
 	
 //	@Test
 //	public void test_match(){

@@ -16,13 +16,49 @@ import cofix.core.parser.node.Node;
  */
 public class Variable extends Feature {
 
+	public static enum USE_TYPE{
+		USE_METHOD_EXP,
+		USE_METHOD_PARAM,
+		USE_INFIX_EXP,
+		USE_POSTFIX_EXP,
+		USE_PREFIX_EXP,
+		USE_ARR_ACC,
+		USE_VAR_DECL,
+		USE_ASSIGN_LHS,
+		USE_ASSIGN_RHS,
+		USE_CONDITIONAL,
+		USE_LOOP,
+		USE_IF,
+		USE_RETURN,
+		USE_SWCASE,
+		USE_SWSTMT,
+		USE_SYNC,
+		USE_THROW,
+		USE_TRY,
+		USE_UNKNOWN
+	}
+	
 	private String _name = null;
 	private Type _type = null;
+	private USE_TYPE _kind = null;
 	
 	public Variable(Node node, String name, Type type) {
 		super(node);
 		_name = name;
 		_type = type;
+		if(node != null){
+			_kind = node.getUseType(node);
+		} else {
+			_kind = USE_TYPE.USE_UNKNOWN;
+		}
+	}
+	
+	public String getName(){
+		return _name;
+	}
+	
+	public USE_TYPE getUseType(){
+		return _kind;
 	}
 	
 	@Override
@@ -46,5 +82,10 @@ public class Variable extends Feature {
 			return false;
 		}
 		return  _type.toString().equals(other._type.toString());
+	}
+	
+	@Override
+	public String toString() {
+		return _name;
 	}
 }

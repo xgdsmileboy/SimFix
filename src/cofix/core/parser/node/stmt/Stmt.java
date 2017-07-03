@@ -18,6 +18,7 @@ import cofix.core.metric.MethodCall;
 import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
+import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.parser.node.Node;
 
 /**
@@ -63,5 +64,15 @@ public abstract class Stmt extends Node{
 	@Override
 	public List<OtherStruct> getOtherStruct() {
 		return new LinkedList<>();
+	}
+	
+
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		if(_parent != null){
+			return USE_TYPE.USE_UNKNOWN;
+		} else {
+			return _parent.getUseType(this);
+		}
 	}
 }

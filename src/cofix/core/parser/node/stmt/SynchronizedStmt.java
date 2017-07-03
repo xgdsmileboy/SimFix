@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.stmt;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -20,7 +21,9 @@ import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
+import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.expr.Expr;
 
@@ -43,6 +46,7 @@ public class SynchronizedStmt extends Stmt {
 
 	public SynchronizedStmt(int startLine, int endLine, ASTNode node, Node parent) {
 		super(startLine, endLine, node, parent);
+		_nodeType = TYPE.SYNC;
 	}
 	
 	public void setExpression(Expr expression){
@@ -54,27 +58,39 @@ public class SynchronizedStmt extends Stmt {
 	}
 	
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		boolean match = false;
+		if(node instanceof SynchronizedStmt){
+			match = true;
+			SynchronizedStmt other = (SynchronizedStmt) node;
+			List<Modification> tmp = new ArrayList<>();
+			if(_blk.match(other._blk, varTrans, allUsableVariables, tmp)){
+				modifications.addAll(tmp);
+			}
+		} else {
+			List<Node> children = node.getChildren();
+			List<Modification> tmp = new ArrayList<>();
+			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+				match = true;
+				modifications.addAll(tmp);
+			}
+		}
+		return match;
 	}
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean backup(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 	
 	@Override
@@ -130,6 +146,19 @@ public class SynchronizedStmt extends Stmt {
 		_fVector = new NewFVector();
 		_fVector.combineFeature(_expression.getFeatureVector());
 		_fVector.combineFeature(_blk.getFeatureVector());
+	}
+	
+
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		return USE_TYPE.USE_SYNC;
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		List<Node> list = new ArrayList<>();
+		list.add(_blk);
+		return list;
 	}
 	
 }

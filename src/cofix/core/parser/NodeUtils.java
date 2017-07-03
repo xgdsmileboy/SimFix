@@ -8,9 +8,14 @@ package cofix.core.parser;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+
+import javax.sound.midi.Soundbank;
+
+import java.util.Set;
 
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
@@ -39,7 +44,15 @@ import org.eclipse.jdt.core.dom.WhileStatement;
 
 import cofix.common.util.JavaFile;
 import cofix.common.util.Pair;
+import cofix.core.metric.Variable;
+import cofix.core.modify.Deletion;
+import cofix.core.modify.Insertion;
+import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
+import cofix.core.parser.node.Node;
+import cofix.core.parser.node.Node.TYPE;
 import cofix.core.parser.node.expr.Expr;
+import cofix.core.parser.node.expr.SName;
 
 /**
  * @author Jiajun
@@ -47,6 +60,446 @@ import cofix.core.parser.node.expr.Expr;
  */
 public class NodeUtils {
 
+	public static boolean maybeSameName(String name1, String name2){
+		boolean same = false;
+		// remove digital at the end
+		int index = name1.length() - 1;
+		name1 = name1.replace("_", "");
+		while(index > 0 && Character.isDigit(name1.charAt(index))){
+			index --;
+		}
+		name1 = name1.substring(0, index);
+		
+		index = name2.length() - 1;
+		name2 = name2.replace("_", "");
+		while(index > 0 && Character.isDigit(name2.charAt(index))){
+			index --;
+		}
+		name2 = name2.substring(0, index);
+		
+		if(name1.equals(name2)){
+			return true;
+		}
+		
+		// longest common continuous sub-sequence
+		int[][]c = new int[name1.length()+1][name2.length()+1];
+        int maxlen = 0;
+        for(int i = 1; i <= name1.length(); i++){
+            for(int j = 1; j <= name2.length(); j++){
+                if(name1.charAt(i-1) == name2.charAt(j-1)){
+                    c[i][j] = c[i-1][j-1] + 1;
+                    if(c[i][j] > maxlen){
+                        maxlen = c[i][j];
+                    }
+                }
+            }
+        }
+        
+        double value = (maxlen * 2.0) / (name1.length() + name2.length());
+        same = value > 0.5 ? true : false;
+		return same;
+	}
+	
+	public static void replaceVariable(Map<SName, Pair<String, String>> record){
+		//replace all variable
+		for(Entry<SName, Pair<String, String>> entry : record.entrySet()){
+			entry.getKey().setName(entry.getValue().getSecond());
+		}
+	}
+	
+	public static void restoreVariables(Map<SName, Pair<String, String>> record){
+		//restore all variable
+		for(Entry<SName, Pair<String, String>> entry : record.entrySet()){
+			entry.getKey().setName(entry.getValue().getFirst());
+		}
+	}
+	
+	public static List<Modification> handleArguments(Node currNode, int srcID, TYPE nodeType, List<Expr> srcArg, List<Expr> tarArgs, Map<String, Type> allUsableVariables){
+		List<Modification> modifications = new ArrayList<>();
+		if(srcArg.size() == tarArgs.size()){
+			Set<Integer> change = new HashSet<>();
+			for(int i = 0; i < srcArg.size(); i++){
+				Expr sExpr = srcArg.get(i);
+				Expr tExpr = tarArgs.get(i);
+				if(!sExpr.toSrcString().equals(tExpr.toSrcString())){
+					List<Variable> variables = tExpr.getVariables();
+					boolean canReplaceDirectly = true;
+					for(Variable var : variables){
+						if(!allUsableVariables.containsKey(var.getName())){
+							canReplaceDirectly = false;
+						}
+					}
+					if(canReplaceDirectly){
+						change.add(i);
+					}
+				}
+			}
+			if(change.size() == 0){
+				return modifications;
+			}
+			
+			// change one argument each time
+			for(Integer index : change){
+				StringBuffer stringBuffer = new StringBuffer();
+				if(index == 0){
+					stringBuffer.append(tarArgs.get(0).toSrcString());
+				} else {
+					stringBuffer.append(srcArg.get(0).toSrcString());
+				}
+				for(int i = 1; i < srcArg.size(); i ++){
+					stringBuffer.append(",");
+					if(i == index){
+						stringBuffer.append(tarArgs.get(i).toSrcString());
+					} else {
+						stringBuffer.append(srcArg.get(i).toSrcString());
+					}
+				}
+				Revision revision = new Revision(currNode, srcID, stringBuffer.toString(), nodeType);
+				modifications.add(revision);
+			}
+			//change all arguments one time
+			StringBuffer stringBuffer = new StringBuffer();
+			if(change.contains(0)){
+				stringBuffer.append(tarArgs.get(0).toSrcString());
+			} else {
+				stringBuffer.append(srcArg.get(0).toSrcString());
+			}
+			
+			for(int i = 1; i < srcArg.size(); i++){
+				if(change.contains(i)){
+					stringBuffer.append(",");
+					stringBuffer.append(tarArgs.get(i).toSrcString());
+				} else {
+					stringBuffer.append(",");
+					stringBuffer.append(tarArgs.get(i).toSrcString());
+				}
+			}
+			Revision revision = new Revision(currNode, srcID, stringBuffer.toString(), nodeType);
+			modifications.add(revision);
+		} else if(srcArg.size() > tarArgs.size()){
+			Set<Integer> matchRec = new HashSet<>();
+			for(int i = 0; i < tarArgs.size(); i++){
+				boolean findSame = false;
+				for(int j = 0; j < srcArg.size(); j++){
+					if(matchRec.contains(j)){
+						continue;
+					}
+					if(tarArgs.get(i).toSrcString().equals(srcArg.get(j).toSrcString())){
+						matchRec.add(j);
+						findSame = true;
+						break;
+					}
+				}
+				if(!findSame){
+					for(int j = 0; j < srcArg.size(); j++){
+						if(matchRec.contains(j)){
+							continue;
+						}
+						if(srcArg.get(j).getType().toString().equals(tarArgs.get(i).getType().toString())){
+							matchRec.add(j);
+							findSame = true;
+							break;
+						}
+					}
+					if(!findSame){
+						return modifications;
+					}
+				}
+			}
+			// up to now, each argument in tarArgs is matched with one in srcArg, 
+			// but some one in srcArg matched nothing, should be delete 
+			boolean first = true;
+			StringBuffer stringBuffer = new StringBuffer();
+			for(int i = 0; i < srcArg.size(); i++){
+				// matched argument
+				if(matchRec.contains(i)){
+					if(first){
+						first = false;
+						stringBuffer.append(srcArg.get(i).toSrcString());
+					} else {
+						stringBuffer.append(",");
+						stringBuffer.append(srcArg.get(i).toSrcString());
+					}
+				}
+			}
+			Deletion deletion = new Deletion(currNode, srcID, stringBuffer.toString(), nodeType);
+			modifications.add(deletion);
+		} else {
+			int[] matchRec = new int[tarArgs.size()];
+			for(int i = 0; i < tarArgs.size(); i++){
+				matchRec[i] = -1;
+			}
+			for(int i = 0; i < srcArg.size(); i++){
+				boolean findSame = false;
+				for(int j = 0; j < tarArgs.size(); j++){
+					if(matchRec[j] != -1){
+						continue;
+					}
+					if(srcArg.get(i).toSrcString().equals(tarArgs.get(j).toSrcString())){
+						matchRec[j] = i;
+						findSame = true;
+						break;
+					}
+				}
+				if(!findSame){
+					for(int j = 0; j < tarArgs.size(); j++){
+						if(matchRec[j] != -1){
+							continue;
+						}
+						if(tarArgs.get(j).getType().toString().equals(srcArg.get(i).getType().toString())){
+							matchRec[j] = i;
+							findSame = true;
+							break;
+						}
+					}
+					if(!findSame){
+						return modifications;
+					}
+				}
+			}
+			// up to now, each argument in srcArg is matched to one in tarArgs
+			// but some arguments in tarArgs are not matched, we should try to add them
+			StringBuffer stringBuffer = new StringBuffer();
+			if(matchRec[0] == -1){
+				if(!allUsableVariables.containsKey(tarArgs.get(0).toSrcString())){
+					return modifications;
+				}
+				stringBuffer.append(tarArgs.get(0).toSrcString());
+			} else {
+				stringBuffer.append(srcArg.get(matchRec[0]).toSrcString());
+			}
+			for(int i = 1; i < tarArgs.size(); i++){
+				stringBuffer.append(",");
+				if(matchRec[i] == -1){
+					if(!allUsableVariables.containsKey(tarArgs.get(0).toSrcString())){
+						return modifications;
+					}
+					stringBuffer.append(tarArgs.get(i).toSrcString());
+				} else {
+					stringBuffer.append(srcArg.get(matchRec[i]).toSrcString());
+				}
+			}
+			Insertion insertion = new Insertion(currNode, srcID, stringBuffer.toString(), nodeType);
+			modifications.add(insertion);
+		}
+		
+		return modifications;
+	}
+
+	public static boolean nodeMatchList(Node node, List<? extends Node> tarList,
+			Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		boolean match = false;
+		for (Node child : tarList) {
+			List<Modification> tmp = new ArrayList<>();
+			if (node.match(child, varTrans, allUsableVariables, tmp)) {
+				match = true;
+				modifications.addAll(tmp);
+			}
+		}
+		return match;
+	}
+
+	public static List<Modification> listNodeMatching(Node currNode, Node.TYPE nodeType,
+			List<? extends Node> srcNodeList, List<? extends Node> tarNodeList, Map<String, String> varTrans,
+			Map<String, Type> allUsableVariables) {
+		List<Modification> modifications = new ArrayList<>();
+		if (srcNodeList == null || tarNodeList == null) {
+			return modifications;
+		}
+		int otherLen = tarNodeList.size();
+		int[] record = new int[otherLen];
+		for (int i = 0; i < otherLen; i++) {
+			record[i] = -1;
+		}
+		for (int i = 0; i < srcNodeList.size(); i++) {
+			boolean findMatching = false;
+			for(int j = 0; j < otherLen; j++){
+				if(record[j] != -1){
+					continue;
+				}
+				List<Modification> tmp = new ArrayList<>();
+				if(srcNodeList.get(i).match(tarNodeList.get(j), varTrans, allUsableVariables, tmp)){
+					record[j] = i;
+					findMatching = true;
+					modifications.addAll(tmp);
+					break;
+				}
+			}
+			if(!findMatching){
+				Deletion deletion = new Deletion(currNode, i, "", nodeType);
+				modifications.add(deletion);
+			}
+		}
+		StringBuffer stringBuffer = new StringBuffer();
+		int shouldIns = 1000;
+		for(int i = 0; i < otherLen; i++){
+			if(record[i] == -1){
+				int index = -1;
+				for(int j = i + 1; j < otherLen; j ++){
+					if (record[j] != -1) {
+						index = record[j];
+						break;
+					}
+				}
+				if(index != -1){
+					Node inset = tarNodeList.get(i);
+					Map<SName, Pair<String, String>> revision = NodeUtils.tryReplaceAllVariables(inset, varTrans, allUsableVariables);
+					if(revision != null){
+						NodeUtils.replaceVariable(revision);
+						String target = inset.toSrcString().toString();
+						stringBuffer.append(target + "\n");
+						shouldIns = shouldIns > index ? index : shouldIns;
+						Insertion insertion = new Insertion(currNode, index, target, nodeType);
+						modifications.add(insertion);
+						NodeUtils.restoreVariables(revision);
+					}
+				}
+			}
+		}
+		if(stringBuffer.toString().length() > 0){
+			Insertion insertion = new Insertion(currNode, shouldIns, stringBuffer.toString(), nodeType);
+			modifications.add(insertion);
+		}
+		return modifications;
+	}
+	
+	public static Map<SName, Pair<String, String>> tryReplaceAllVariables(Node replaceNode, Map<String, String> varTrans, Map<String, Type> allUsableVariables){
+		Map<SName, Pair<String, String>> record = new HashMap<>();
+		Set<Variable> variables = new HashSet<>(replaceNode.getVariables());
+		// find replacement for each variable
+		for(Variable variable : variables){
+			if(variable.getNode() instanceof SName){
+				SName sName = (SName) variable.getNode();
+				String name = sName.getName();
+				Type type = sName.getType();
+				String replace = varTrans.get(name);
+				boolean matched = false;
+				// try to replace variable using matched one
+				if(replace != null){
+					Type replaceType = allUsableVariables.get(replace) ;
+					String typeStr = replaceType == null ? "?" : replaceType.toString();
+					if(typeStr.equals(type.toString())){
+						matched = true;
+						record.put(sName, new Pair<String, String>(name, replace));
+					}
+				}
+				// failed to replace variable
+				if(!matched){
+					if(!allUsableVariables.containsKey(name)){
+						boolean findRepalcement = false;
+						for(Entry<String, Type> entry : allUsableVariables.entrySet()){
+							Type type2 = entry.getValue();
+							String typeStr = type2 == null ? "?" : type2.toString();
+							if(type.toString().equals(typeStr)){
+								record.put(sName, new Pair<String, String>(name, entry.getKey()));
+								findRepalcement = true;
+								break;
+							}
+						}
+						if(!findRepalcement){
+							return null;
+						}
+					}
+				}
+			}
+		}
+		return record;
+	}
+	
+	public static boolean replaceExpr(int srcID, Expr srcExpr, Expr tarExpr, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications){
+		if(srcExpr.getType().toString().equals(tarExpr.getType().toString())){
+			Map<SName, Pair<String, String>> record = tryReplaceAllVariables(tarExpr, varTrans, allUsableVariables);
+			if(record != null){
+				//replace all variable
+				replaceVariable(record);
+				Revision revision = new Revision(srcExpr.getParent(), srcID, tarExpr.toSrcString().toString(), srcExpr.getNodeType());
+				modifications.add(revision);
+				//restore all variable
+				restoreVariables(record);
+			}
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public static boolean canReplace(String op1, String op2){
+		if(op1 == null || op2 == null || op1.equals(op2)){
+			return false;
+		}
+		switch(op1){
+		case "*":
+		case "/":
+		case "+":
+		case "-":
+		case "%":
+			switch(op2){
+			case "*":
+			case "/":
+			case "+":
+			case "-":
+			case "%":
+				return true;
+			default :
+				return false;
+			}
+		case "<<":
+		case ">>":
+		case ">>>":
+		case "^":
+		case "&":
+		case "|":
+			switch(op2){
+			case "<<":
+			case ">>":
+			case ">>>":
+			case "^":
+			case "&":
+			case "|":
+				return true;
+			default :
+				return false;
+			}
+		case "<":
+		case ">":
+		case "<=":
+		case ">=":
+		case "==":
+		case "!=":
+			switch(op2){
+			case "<":
+			case ">":
+			case "<=":
+			case ">=":
+			case "==":
+			case "!=":
+				return true;
+			default :
+				return false;
+			}
+		case "&&":
+		case "||":
+			switch(op2){
+			case "&&":
+			case "||":
+				return true;
+			default :
+				return false;
+			}
+		case "++":
+		case "--":
+			switch(op2){
+			case "++":
+			case "--":
+				return true;
+			default :
+				return false;
+			}
+		default :
+			return false;
+		}
+	}
+	
 	public static Type parseExprType(Expr left, String operator, Expr right){
 		if(left == null){
 			return parsePreExprType(right, operator);
@@ -88,6 +541,20 @@ public class NodeUtils {
 			return null;
 		}
 		
+	}
+	
+	public static boolean isWidenType(Type ty1, Type ty2){
+		if(ty1 == null || ty2 == null){
+			return false;
+		}
+		if(ty1.toString().equals(ty2.toString())){
+			return false;
+		}
+		Type union = union(ty1, ty2);
+		if(union != null && union.toString().equals(ty2.toString())){
+			return true;
+		}
+		return false;
 	}
 	
 	private static Type union(Type ty1, Type ty2){

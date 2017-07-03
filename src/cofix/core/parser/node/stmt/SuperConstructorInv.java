@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.stmt;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +20,9 @@ import cofix.core.metric.MethodCall;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
+import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.expr.Expr;
 
@@ -33,7 +36,9 @@ public class SuperConstructorInv extends Stmt {
 	private Type _superType = null;
 	private List<Expr> _arguments = null;
 	
-	private List<Expr> _arguments_replace = null;
+	private String _arguments_replace = null;
+	
+	private int ARGID = 0; 
 	
 	/**
 	 * SuperConstructorInvocation:
@@ -47,6 +52,7 @@ public class SuperConstructorInv extends Stmt {
 
 	public SuperConstructorInv(int startLine, int endLine, ASTNode node, Node parent) {
 		super(startLine, endLine, node, parent);
+		_nodeType = TYPE.SCONSTRUCTORINV;
 	}
 	
 	public void setExpression(Expr expression){
@@ -62,21 +68,33 @@ public class SuperConstructorInv extends Stmt {
 	}
 		
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		boolean match = false;
+		if(node instanceof SuperConstructorInv){
+			match = true;
+			SuperConstructorInv other = (SuperConstructorInv) node;
+			modifications.addAll(NodeUtils.handleArguments(this, ARGID, _nodeType, _arguments, other._arguments, allUsableVariables));
+		} else {
+			List<Node> children = node.getChildren();
+			List<Modification> tmp = new ArrayList<>();
+			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+				match = true;
+				modifications.addAll(tmp);
+			}
+		}
+		return match;
 	}
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		_arguments_replace = modification.getTargetString();
+		return true;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		_arguments_replace = null;
+		return true;
 	}
 
 	@Override
@@ -94,13 +112,7 @@ public class SuperConstructorInv extends Stmt {
 		}
 		stringBuffer.append("super(");
 		if(_arguments_replace != null){
-			if(_arguments_replace.size() > 0){
-				stringBuffer.append(_arguments_replace.get(0).toSrcString());
-				for(int i= 1; i < _arguments_replace.size(); i++){
-					stringBuffer.append(",");
-					stringBuffer.append(_arguments_replace.get(i).toSrcString());
-				}
-			}
+			stringBuffer.append(_arguments_replace);
 		}else if(_arguments != null && _arguments.size() > 0){
 			stringBuffer.append(_arguments.get(0).toSrcString());
 			for(int i= 1; i < _arguments.size(); i++){
@@ -190,5 +202,19 @@ public class SuperConstructorInv extends Stmt {
 				_fVector.combineFeature(expr.getFeatureVector());
 			}
 		}
+	}
+
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		if(_expression == child){
+			return USE_TYPE.USE_METHOD_EXP;
+		} else {
+			return USE_TYPE.USE_METHOD_PARAM;
+		}
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		return new ArrayList<>();
 	}
 }

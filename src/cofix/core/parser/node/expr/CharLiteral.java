@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.expr;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -34,6 +35,7 @@ public class CharLiteral extends Expr {
 	 */
 	public CharLiteral(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
+		_nodeType = TYPE.CLITERAL;
 	}
 	
 	public void setValue(char value){
@@ -41,7 +43,7 @@ public class CharLiteral extends Expr {
 	}
 
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -54,14 +56,13 @@ public class CharLiteral extends Expr {
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		_replace = null;
+		return true;
 	}
 
 	@Override
 	public boolean backup(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 	
 	@Override
@@ -91,5 +92,9 @@ public class CharLiteral extends Expr {
 		_fVector = new NewFVector();
 		_fVector.inc(NewFVector.INDEX_LITERAL);
 	}
-
+	
+	@Override
+	public List<Node> getChildren() {
+		return new ArrayList<>();
+	}
 }

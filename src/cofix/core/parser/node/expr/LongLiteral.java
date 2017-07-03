@@ -27,6 +27,7 @@ public class LongLiteral extends NumLiteral {
 	
 	public LongLiteral(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
+		_nodeType = TYPE.LLITERAL;
 	}
 	
 	public void setValue(long value){
@@ -34,7 +35,7 @@ public class LongLiteral extends NumLiteral {
 	}
 	
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		// TODO Auto-generated method stub
 		return false;
 	}

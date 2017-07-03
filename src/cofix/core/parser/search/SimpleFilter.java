@@ -46,9 +46,9 @@ public class SimpleFilter {
 	
 	public SimpleFilter(CodeBlock buggyCode) {
 		_buggyCode = buggyCode;
-		_variables = _buggyCode.getVariables().keySet();
+		_variables = new HashSet<>(buggyCode.getVariables());
 		_methods = new HashSet<>();
-		for(MethodCall call : _buggyCode.getMethodCalls().keySet()){
+		for(MethodCall call : _buggyCode.getMethodCalls()){
 			_methods.add(call.getName());
 		}
 		_max_line = _buggyCode.getCurrentLine() + DELTA_LINE;

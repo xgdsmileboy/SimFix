@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.stmt;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -13,6 +14,7 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
+import cofix.common.util.Pair;
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.LoopStruct;
@@ -21,9 +23,13 @@ import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
+import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.expr.Expr;
+import cofix.core.parser.node.expr.SName;
 
 /**
  * @author Jiajun
@@ -33,7 +39,9 @@ public class ReturnStmt extends Stmt {
 
 	private Expr _expression = null;
 	
-	private Expr _expression_replace = null;
+	private String _expression_replace = null;
+	
+	private int EXPRID = 0;
 	
 	/**
 	 * ReturnStatement:
@@ -41,6 +49,7 @@ public class ReturnStmt extends Stmt {
 	 */
 	public ReturnStmt(int startLine, int endLine, ASTNode node) {
 		this(startLine, endLine, node, null);
+		_nodeType = TYPE.RETURN;
 	}
 
 	public ReturnStmt(int startLine, int endLine, ASTNode node, Node parent) {
@@ -52,20 +61,54 @@ public class ReturnStmt extends Stmt {
 	}
 	
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		boolean match = false;
+		if(node instanceof ReturnStmt){
+			match = true;
+			ReturnStmt other = (ReturnStmt) node;
+			if(_expression != null && other._expression != null){
+				if(_expression.getType().toString().equals(other._expression.toSrcString())){
+					if(!_expression.toSrcString().toString().equals(other._expression.toSrcString().toString())){
+						Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(other._expression, varTrans, allUsableVariables);
+						if(record != null){
+							NodeUtils.replaceVariable(record);
+							Revision revision = new Revision(this, EXPRID, other._expression.toSrcString().toString(), _nodeType);
+							modifications.add(revision);
+							NodeUtils.restoreVariables(record);
+						}
+					}
+				}
+				List<Modification> tmp = new ArrayList<>();
+				if(_expression.match(_expression, varTrans, allUsableVariables, tmp)){
+					modifications.addAll(tmp);
+				}
+			}
+		} else {
+			List<Node> children = node.getChildren();
+			List<Modification> tmp = new ArrayList<>();
+			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+				match = true;
+				modifications.addAll(tmp);
+			}
+		}
+		return match;
 	}
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification.getSourceID() == EXPRID){
+			_expression_replace = modification.getTargetString();
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification.getSourceID() == EXPRID){
+			_expression_replace = null;
+			return true;
+		}
 		return false;
 	}
 
@@ -79,7 +122,7 @@ public class ReturnStmt extends Stmt {
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer("return ");
 		if(_expression_replace != null){
-			stringBuffer.append(_expression_replace.toSrcString());
+			stringBuffer.append(_expression_replace);
 		} else if(_expression != null){
 			stringBuffer.append(_expression.toSrcString());
 		}
@@ -147,5 +190,16 @@ public class ReturnStmt extends Stmt {
 		if(_expression != null){
 			_fVector.combineFeature(_expression.getFeatureVector());
 		}
+	}
+	
+
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		return USE_TYPE.USE_RETURN;
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		return new ArrayList<>();
 	}
 }

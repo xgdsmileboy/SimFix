@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.stmt;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -49,26 +50,22 @@ public class ExpressionStmt extends Stmt {
 	}
 	
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		return _expression.match(node, varTrans, allUsableVariables, modifications);
 	}
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean backup(Modification modification) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 	
@@ -113,5 +110,12 @@ public class ExpressionStmt extends Stmt {
 	public void computeFeatureVector() {
 		_fVector = new NewFVector();
 		_fVector.combineFeature(_expression.getFeatureVector());
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		List<Node> list = new ArrayList<>();
+		list.add(_expression);
+		return list;
 	}
 }

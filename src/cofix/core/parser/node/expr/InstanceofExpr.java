@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.expr;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -18,6 +19,7 @@ import cofix.core.metric.MethodCall;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
+import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
 import cofix.core.parser.node.Node;
 
@@ -37,6 +39,7 @@ public class InstanceofExpr extends Expr {
 	 */
 	public InstanceofExpr(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
+		_nodeType = TYPE.INSTANCEOF;
 	}
 	
 	public void setExpression(Expr expression){
@@ -48,7 +51,7 @@ public class InstanceofExpr extends Expr {
 	}
 
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -110,4 +113,15 @@ public class InstanceofExpr extends Expr {
 		_fVector.inc(_operator);
 		_fVector.combineFeature(_expression.getFeatureVector());
 	}
+	
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		return USE_TYPE.USE_INFIX_EXP;
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		return new ArrayList<>();
+	}
+	
 }

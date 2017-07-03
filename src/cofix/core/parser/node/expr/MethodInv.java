@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.expr;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,10 @@ import cofix.core.metric.MethodCall;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
+import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
 /**
@@ -31,9 +35,13 @@ public class MethodInv extends Expr {
 	private String _name = null;
 	private List<Expr> _arguments = null;
 	
-	private Expr _expression_replace = null;
+	private String _expression_replace = null;
 	private String _name_replace = null;
-	private List<Expr> _arguments_replace = null;
+	private String _arguments_replace = null;
+	
+	private final int EXPRID = 0;
+	private final int NAMEID = 1;
+	private final int ARGID = 2;
 	
 	/**
 	 *  MethodInvocation:
@@ -43,7 +51,7 @@ public class MethodInv extends Expr {
 	 */
 	public MethodInv(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
-		
+		_nodeType = TYPE.MINVOCATION;
 	}
 	
 	public void setExpression(Expr expression){
@@ -59,21 +67,76 @@ public class MethodInv extends Expr {
 	}
 
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		boolean match = false;
+		if(node instanceof MethodInv){
+			match = true;
+			MethodInv other = (MethodInv) node;
+			if(getType().toString().equals(other.getType().toString())){
+				boolean sameParam = true;
+				if(_arguments.size() == other._arguments.size()){
+					for(int i = 0; i < _arguments.size(); i++){
+						if(!_arguments.get(i).getType().toString().equals(other._arguments.get(i).getType().toString())){
+							sameParam = false;
+						}
+					}
+				} else {
+					sameParam = false;
+				}
+				if(sameParam){
+					Revision revision = new Revision(this, NAMEID, other._name, _nodeType);
+					modifications.add(revision);
+				}
+				modifications.addAll(NodeUtils.handleArguments(this, ARGID, _nodeType, _arguments, other._arguments, allUsableVariables));
+			}
+			
+		} else {
+			List<Node> children = node.getChildren();
+			List<Modification> tmp = new ArrayList<>();
+			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+				match = true;
+				modifications.addAll(tmp);
+			}
+		}
+		return match;
 	}
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		int id = modification.getSourceID();
+		switch (id) {
+		case EXPRID:
+			_expression_replace = modification.getTargetString();
+			break;
+		case NAMEID:
+			_name_replace = modification.getTargetString();
+			break;
+		case ARGID:
+			_arguments_replace = modification.getTargetString();
+			break;
+		default:
+			return false;
+		}
+		return true;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		int id = modification.getSourceID();
+		switch (id) {
+		case EXPRID:
+			_expression_replace = null;
+			break;
+		case NAMEID:
+			_name_replace = null;
+			break;
+		case ARGID:
+			_arguments_replace = null;
+			break;
+		default:
+			return false;
+		}
+		return true;
 	}
 
 	@Override
@@ -86,7 +149,7 @@ public class MethodInv extends Expr {
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer();
 		if(_expression_replace != null){
-			stringBuffer.append(_expression_replace.toSrcString());
+			stringBuffer.append(_expression_replace);
 			stringBuffer.append(".");
 		} else if(_expression != null){
 			stringBuffer.append(_expression.toSrcString());
@@ -99,13 +162,7 @@ public class MethodInv extends Expr {
 		}
 		stringBuffer.append("(");
 		if(_arguments_replace != null){
-			if(_arguments_replace.size() > 0){
-				stringBuffer.append(_arguments_replace.get(0).toSrcString());
-				for(int i = 1; i < _arguments_replace.size(); i++){
-					stringBuffer.append(",");
-					stringBuffer.append(_arguments_replace.get(i).toSrcString());
-				}
-			}
+			stringBuffer.append(_arguments_replace);
 		} else if(_arguments != null && _arguments.size() > 0){
 			stringBuffer.append(_arguments.get(0).toSrcString());
 			for(int i = 1; i < _arguments.size(); i++){
@@ -187,5 +244,23 @@ public class MethodInv extends Expr {
 				_fVector.combineFeature(expr.getFeatureVector());
 			}
 		}
+	}
+	
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		if(child == _expression){
+			return USE_TYPE.USE_METHOD_EXP;
+		} else {
+			return USE_TYPE.USE_METHOD_PARAM;
+		}
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		List<Node> list = new ArrayList<>();
+		if(_expression != null){
+			list.add(_expression);
+		}
+		return list;
 	}
 }

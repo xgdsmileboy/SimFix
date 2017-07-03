@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.node.stmt;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -21,6 +22,7 @@ import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
+import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
 import cofix.core.parser.node.Node;
 
@@ -33,6 +35,7 @@ public class AnonymousClassDecl extends Node {
 	
 	public AnonymousClassDecl(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
+		_nodeType = TYPE.ANONYMOUSCDECL;
 	}
 
 	@Override
@@ -54,7 +57,7 @@ public class AnonymousClassDecl extends Node {
 	}
 
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -104,4 +107,13 @@ public class AnonymousClassDecl extends Node {
 		_fVector = new NewFVector();
 	}
 	
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		return _parent.getUseType(this);
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		return new ArrayList<>();
+	}
 }

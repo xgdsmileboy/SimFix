@@ -6,6 +6,8 @@
  */
 package cofix.core.parser.node.expr;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -13,12 +15,16 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
+import cofix.common.util.Pair;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
+import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
 /**
@@ -30,8 +36,11 @@ public class ArrayAcc extends Expr {
 	private Expr _index = null;
 	private Expr _array = null;
 	
-	private Expr _index_replace = null;
-	private Expr _array_replace = null;
+	private String _index_replace = null;
+	private String _array_replace = null;
+	
+	private final int INDEXID = 0;
+	private final int ARRAYID = 1;
 	
 	/**
 	 * ArrayAccess:
@@ -39,6 +48,7 @@ public class ArrayAcc extends Expr {
 	 */
 	public ArrayAcc(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
+		_nodeType = TYPE.ARRACC;
 	}
 	
 	public void setArray(Expr array){
@@ -50,40 +60,69 @@ public class ArrayAcc extends Expr {
 	}
 
 	@Override
-	public boolean match(Node node, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		boolean match = false;
+		if(node instanceof ArrayAcc){
+			List<Modification> tmp = new ArrayList<>();
+			if(NodeUtils.replaceExpr(INDEXID, _index, ((ArrayAcc)node)._index, varTrans, allUsableVariables, tmp)){
+				modifications.addAll(tmp);
+				match = true;
+			}
+		} else if(node instanceof Expr && node.getNodeType().toString().equals("int")){
+			Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables((Expr)node, varTrans, allUsableVariables);
+			if(record != null){
+				NodeUtils.replaceVariable(record);
+				Revision revision = new Revision(this, INDEXID, node.toSrcString().toString(), _nodeType);
+				modifications.add(revision);
+				match = true;
+				
+			}
+		}
+		return match;
 	}
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		int id = modification.getSourceID();
+		switch(id){
+		case INDEXID:
+			_index_replace = modification.getTargetString();
+			break;
+		case ARRAYID:
+			_array_replace = modification.getTargetString();
+		}
+		return true;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		int id = modification.getSourceID();
+		switch(id){
+		case INDEXID:
+			_index_replace = null;
+			break;
+		case ARRAYID:
+			_array_replace = null;
+		}
+		return true;
 	}
 
 	@Override
 	public boolean backup(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 	
 	@Override
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer();
 		if(_array_replace != null){
-			stringBuffer.append(_array_replace.toSrcString());
+			stringBuffer.append(_array_replace);
 		} else {
 			stringBuffer.append(_array.toSrcString());
 		}
 		stringBuffer.append("[");
 		if(_index_replace != null){
-			stringBuffer.append(_index_replace.toSrcString());
+			stringBuffer.append(_index_replace);
 		} else {
 			stringBuffer.append(_index.toSrcString());
 		}
@@ -131,6 +170,16 @@ public class ArrayAcc extends Expr {
 		_fVector.combineFeature(_array.getFeatureVector());
 		_fVector.combineFeature(_index.getFeatureVector());
 		_fVector.inc(NewFVector.INDEX_OP_ACC);
+	}
+
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		return USE_TYPE.USE_ARR_ACC;
+	}
+	
+	@Override
+	public List<Node> getChildren() {
+		return new ArrayList<>();
 	}
 
 }
