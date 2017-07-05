@@ -70,9 +70,15 @@ public class MethodInv extends Expr {
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		boolean match = false;
 		if(node instanceof MethodInv){
-			match = true;
 			MethodInv other = (MethodInv) node;
 			if(getType().toString().equals(other.getType().toString())){
+				match = true;
+				if(_expression != null && other._expression != null){
+					List<Modification> tmp = new ArrayList<>();
+					if(_expression.match(other._expression, varTrans, allUsableVariables, tmp)){
+						modifications.addAll(tmp);
+					}
+				}
 				boolean sameParam = true;
 				if(_arguments.size() == other._arguments.size()){
 					for(int i = 0; i < _arguments.size(); i++){
@@ -84,10 +90,14 @@ public class MethodInv extends Expr {
 					sameParam = false;
 				}
 				if(sameParam){
-					Revision revision = new Revision(this, NAMEID, other._name, _nodeType);
-					modifications.add(revision);
+					if(!_name.equals(other._name)){
+						Revision revision = new Revision(this, NAMEID, other._name, _nodeType);
+						modifications.add(revision);
+					}
 				}
-				modifications.addAll(NodeUtils.handleArguments(this, ARGID, _nodeType, _arguments, other._arguments, allUsableVariables));
+				if(_name.equals(other._name)){
+					modifications.addAll(NodeUtils.handleArguments(this, ARGID, _nodeType, _arguments, other._arguments, varTrans, allUsableVariables));
+				}
 			}
 			
 		} else {
@@ -235,7 +245,9 @@ public class MethodInv extends Expr {
 	@Override
 	public void computeFeatureVector() {
 		_fVector = new NewFVector();
-		_fVector.inc(NewFVector.INDEX_MCALL);
+		if(_expression == null || !NodeUtils.skipMethodCall(_expression.toSrcString().toString(), _name)){
+			_fVector.inc(NewFVector.INDEX_MCALL);
+		}
 		if(_expression != null){
 			_fVector.combineFeature(_expression.getFeatureVector());
 		}

@@ -18,6 +18,7 @@ import cofix.core.metric.Literal;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
 /**
@@ -66,8 +67,19 @@ public class QName extends Label {
 
 	@Override
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean match = false;
+		if(node instanceof QName){
+			match = true;
+			// TODO : to finish
+		} else {
+			List<Node> children = node.getChildren();
+			List<Modification> tmp = new ArrayList<>();
+			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+				match = true;
+				modifications.addAll(tmp);
+			}
+		}
+		return match;
 	}
 	
 	@Override
@@ -94,9 +106,14 @@ public class QName extends Label {
 
 	@Override
 	public List<Variable> getVariables() {
-		List<Variable> list = _sname.getVariables();
+		List<Variable> list = new LinkedList<>();
+		if(!Character.isUpperCase(_sname.getName().charAt(0))){
+			list.addAll(_sname.getVariables());
+		}
 		if(_name != null){
-			list.addAll(_name.getVariables());
+			if(!Character.isUpperCase(_name.toSrcString().toString().charAt(0))){
+				list.addAll(_name.getVariables());
+			}
 		}
 		return list;
 	}

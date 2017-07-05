@@ -13,6 +13,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.eclipse.jdt.core.dom.BreakStatement;
+import org.eclipse.jdt.core.dom.ThrowStatement;
 import org.eclipse.jdt.core.dom.Type;
 
 import cofix.common.util.Pair;
@@ -20,11 +22,17 @@ import cofix.core.metric.NewFVector;
 import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Deletion;
+import cofix.core.modify.Insertion;
 import cofix.core.modify.Modification;
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.Node.TYPE;
-import cofix.core.parser.node.expr.DoubleLiteral;
+import cofix.core.parser.node.expr.SName;
+import cofix.core.parser.node.stmt.BreakStmt;
+import cofix.core.parser.node.stmt.ContinueStmt;
+import cofix.core.parser.node.stmt.ReturnStmt;
+import cofix.core.parser.node.stmt.ThrowStmt;
 
 /**
  * @author Jiajun
@@ -72,14 +80,42 @@ public class CodeBlockMatcher {
 		// insert nodes at buggy code site
 		for(int j = 0; j < sNodes.size(); j++){
 			if(!reverseMatch.containsKey(j)){
-				// TODO : insert node 
+				Node tarNode = sNodes.get(j);
+				Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(tarNode, varTrans, allUsableVariables);
+				if(record == null){
+					continue;
+				}
+				int nextMatchIndex = -1;
+				for(int index = j; index < sNodes.size(); index++){
+					if(reverseMatch.containsKey(index)){
+						nextMatchIndex = index;
+						break;
+					}
+				}
+				if(nextMatchIndex == -1){
+					int last = bNodes.size() - 1;
+					for(; last >= 0; last --){
+						Node node = bNodes.get(last);
+						if(!(node instanceof ReturnStmt) && !(node instanceof ThrowStmt) && !(node instanceof BreakStmt) && !(node instanceof ContinueStmt)){
+							break;
+						}
+					}
+					nextMatchIndex = last >= 0 ? last : 0;
+				}
+				NodeUtils.replaceVariable(record);
+				String target = tarNode.toSrcString().toString();
+				Insertion insertion = new Insertion(buggyBlock, nextMatchIndex, target, TYPE.UNKNOWN);
+				modifications.add(insertion);
+				NodeUtils.restoreVariables(record);
 			}
 		}
 		
 		// delete nodes at buggy code site
-		for(int i = 0; i < bNodes.size(); i++){
-			if(!match.containsKey(i)){
-				modifications.add(new Deletion(null, i, null, TYPE.UNKNOWN));
+		if(buggyBlock.getParsedNode().size() < 2){
+			for(int i = 0; i < bNodes.size(); i++){
+				if(!match.containsKey(i)){
+					modifications.add(new Deletion(buggyBlock, i, null, TYPE.UNKNOWN));
+				}
 			}
 		}
 		

@@ -63,17 +63,26 @@ public class ArrayAcc extends Expr {
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		boolean match = false;
 		if(node instanceof ArrayAcc){
+			ArrayAcc other = (ArrayAcc) node;
 			List<Modification> tmp = new ArrayList<>();
-			if(NodeUtils.replaceExpr(INDEXID, _index, ((ArrayAcc)node)._index, varTrans, allUsableVariables, tmp)){
-				modifications.addAll(tmp);
+			if(!_index.toSrcString().toString().equals(other._index.toSrcString().toString())){
+				if(NodeUtils.replaceExpr(INDEXID, _index, other._index, varTrans, allUsableVariables, tmp)){
+					modifications.addAll(tmp);
+					match = true;
+				}
+			} else {
 				match = true;
 			}
 		} else if(node instanceof Expr && node.getNodeType().toString().equals("int")){
 			Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables((Expr)node, varTrans, allUsableVariables);
 			if(record != null){
 				NodeUtils.replaceVariable(record);
-				Revision revision = new Revision(this, INDEXID, node.toSrcString().toString(), _nodeType);
-				modifications.add(revision);
+				String target = node.toSrcString().toString();
+				if(!_index.toSrcString().toString().equals(target)){
+					Revision revision = new Revision(this, INDEXID, node.toSrcString().toString(), _nodeType);
+					modifications.add(revision);
+				}
+				NodeUtils.restoreVariables(record);
 				match = true;
 				
 			}

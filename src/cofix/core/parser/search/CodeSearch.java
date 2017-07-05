@@ -169,7 +169,12 @@ public class CodeSearch {
 				_currentLines = 0;
 				result.addAll(extend(node.getParent()));
 			} else {
+				boolean first = true;
 		    	for(int i = left + 1; i < right; i ++){
+		    		if(first && left >= 0 && list.get(left) instanceof SwitchCase){
+		    			result.add(list.get(left));
+		    		}
+		    		first = false;
 		    		result.add(list.get(i));
 		    	}
 	    	}

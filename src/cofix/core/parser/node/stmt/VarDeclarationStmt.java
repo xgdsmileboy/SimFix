@@ -7,9 +7,11 @@
 package cofix.core.parser.node.stmt;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
@@ -74,6 +76,19 @@ public class VarDeclarationStmt extends Stmt {
 				if(!_declType.toString().equals(otherType.toString())){
 					Revision revision = new Revision(this, TYPEID, otherType.toString(), _nodeType);
 					modifications.add(revision);
+				}
+			}
+			Set<Vdf> record = new HashSet<>();
+			for(Vdf vdf : _fragments){
+				for(Vdf ovdf: other._fragments){
+					if(record.contains(ovdf)){
+						continue;
+					}
+					List<Modification> tmp = new ArrayList<>();
+					if(vdf.match(ovdf, varTrans, allUsableVariables, tmp)){
+						record.add(ovdf);
+						modifications.addAll(tmp);
+					}
 				}
 			}
 		} else {

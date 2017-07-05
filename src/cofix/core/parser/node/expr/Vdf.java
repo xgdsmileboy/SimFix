@@ -13,7 +13,6 @@ import java.util.Map;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
-import org.eclipse.jdt.core.util.ISignatureAttribute;
 
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;

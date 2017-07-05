@@ -89,11 +89,26 @@ public class InfixExpr extends Expr {
 				modifications.addAll(tmp);
 			}
 			
-			// try to replace all 
-			Pair<List<Expr>, List<InfixExpression.Operator>> sPair = splitSingleBooleanExpr();
-			Pair<List<Expr>, List<InfixExpression.Operator>> tPair = other.splitSingleBooleanExpr();
+			tmp = new ArrayList<>();
+			if(_lhs.match(node, varTrans, allUsableVariables, tmp)){
+				modifications.addAll(tmp);
+			}
 			
-			// TODO : try to replace all
+			tmp = new ArrayList<>();
+			if(_rhs.match(node, varTrans, allUsableVariables, tmp)){
+				modifications.addAll(tmp);
+			}
+//			
+//			// try to replace all 
+//			Pair<List<Expr>, List<InfixExpression.Operator>> sPair = splitSingleBooleanExpr();
+//			Pair<List<Expr>, List<InfixExpression.Operator>> tPair = other.splitSingleBooleanExpr();
+//			
+//			// TODO : try to replace all
+//			for(Expr tExpr : tPair.getFirst()){
+//				for(Expr sExpr : sPair.getFirst()){
+//					
+//				}
+//			}
 			
 			
 		} else {

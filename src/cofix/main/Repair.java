@@ -23,11 +23,12 @@ import cofix.common.inst.MethodInstrumentVisitor;
 import cofix.common.junit.runner.JUnitEngine;
 import cofix.common.junit.runner.JUnitRuntime;
 import cofix.common.junit.runner.OutStream;
-import cofix.common.localization.FLocalization;
+import cofix.common.localization.AbstractFaultlocalization;
 import cofix.common.util.JavaFile;
 import cofix.common.util.Pair;
 import cofix.common.util.Status;
 import cofix.common.util.Subject;
+import cofix.core.match.CodeBlockMatcher;
 import cofix.core.modify.Modification;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.CodeBlock;
@@ -40,12 +41,12 @@ import cofix.core.parser.search.SimpleFilter;
  */
 public class Repair {
 
-	private FLocalization _localization = null;
+	private AbstractFaultlocalization _localization = null;
 	private Subject _subject = null;
 	private List<String> _failedTestCases = null;
 	private Map<Integer, Set<Pair<String, String>>> _passedTestCases = null;
 
-	public Repair(Subject subject, FLocalization fLocalization) {
+	public Repair(Subject subject, AbstractFaultlocalization fLocalization) {
 		_localization = fLocalization;
 		_subject = subject;
 		_failedTestCases = new ArrayList<>(_localization.getFailedTestInfo().keySet());
@@ -116,8 +117,7 @@ public class Repair {
 			for(Pair<CodeBlock, Double> similar : candidates){
 //				Utils.print(similar.getFirst());
 				// compute transformation
-//				List<Modification> modifications = CodeBlockMatcher.match(buggyblock, similar.getFirst(), usableVars);
-				List<Modification> modifications = null;
+				List<Modification> modifications = CodeBlockMatcher.match(buggyblock, similar.getFirst(), usableVars);
 				// try each transformation
 				for(Modification modification : modifications){
 					if(timer.timeout()){
@@ -146,6 +146,9 @@ public class Repair {
 	}
 	
 	private boolean validate(CodeBlock buggyBlock){
+		
+		// TODO : need to build project first
+		
 		JUnitRuntime runtime = new JUnitRuntime(_subject);
 		// validate patch using failed test cases
 		for(String testcase : _failedTestCases){

@@ -11,10 +11,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import javax.jws.WebParam.Mode;
-
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
+
+import com.sun.jmx.trace.Trace;
 
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
@@ -25,7 +25,6 @@ import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
-import cofix.core.parser.node.stmt.SuperConstructorInv;
 
 /**
  * @author Jiajun
@@ -69,7 +68,7 @@ public class SuperMethodInv extends Expr {
 		if(node instanceof SuperMethodInv){
 			match = true;
 			SuperMethodInv other = (SuperMethodInv) node;
-			modifications.addAll(NodeUtils.handleArguments(this, ARGID, _nodeType, _arguments, other._arguments, allUsableVariables));
+			modifications.addAll(NodeUtils.handleArguments(this, ARGID, _nodeType, _arguments, other._arguments, varTrans, allUsableVariables));
 		} else {
 			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();

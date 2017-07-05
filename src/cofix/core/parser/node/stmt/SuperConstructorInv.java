@@ -73,7 +73,7 @@ public class SuperConstructorInv extends Stmt {
 		if(node instanceof SuperConstructorInv){
 			match = true;
 			SuperConstructorInv other = (SuperConstructorInv) node;
-			modifications.addAll(NodeUtils.handleArguments(this, ARGID, _nodeType, _arguments, other._arguments, allUsableVariables));
+			modifications.addAll(NodeUtils.handleArguments(this, ARGID, _nodeType, _arguments, other._arguments, varTrans, allUsableVariables));
 		} else {
 			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();

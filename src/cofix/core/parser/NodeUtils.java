@@ -12,15 +12,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-
-import javax.sound.midi.Soundbank;
-
 import java.util.Set;
 
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ASTVisitor;
 import org.eclipse.jdt.core.dom.Block;
+import org.eclipse.jdt.core.dom.BreakStatement;
 import org.eclipse.jdt.core.dom.ClassInstanceCreation;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.EnhancedForStatement;
@@ -114,32 +112,44 @@ public class NodeUtils {
 		}
 	}
 	
-	public static List<Modification> handleArguments(Node currNode, int srcID, TYPE nodeType, List<Expr> srcArg, List<Expr> tarArgs, Map<String, Type> allUsableVariables){
+	public static List<Modification> handleArguments(Node currNode, int srcID, TYPE nodeType, List<Expr> srcArg, List<Expr> tarArgs, Map<String, String> varTrans, Map<String, Type> allUsableVariables){
 		List<Modification> modifications = new ArrayList<>();
+		StringBuffer original = new StringBuffer();
+		if(srcArg.size() > 0){
+			original.append(srcArg.get(0).toSrcString());
+		}
+		for(int i = 1; i < srcArg.size(); i ++){
+			original.append(",");
+			original.append(srcArg.get(i).toSrcString());
+		}
+		String originalArgStr = original.toString();
 		if(srcArg.size() == tarArgs.size()){
 			Set<Integer> change = new HashSet<>();
+			Map<Integer, Map<SName, Pair<String, String>>> changeMap = new HashMap<>();
 			for(int i = 0; i < srcArg.size(); i++){
 				Expr sExpr = srcArg.get(i);
 				Expr tExpr = tarArgs.get(i);
-				if(!sExpr.toSrcString().equals(tExpr.toSrcString())){
-					List<Variable> variables = tExpr.getVariables();
-					boolean canReplaceDirectly = true;
-					for(Variable var : variables){
-						if(!allUsableVariables.containsKey(var.getName())){
-							canReplaceDirectly = false;
-						}
-					}
-					if(canReplaceDirectly){
-						change.add(i);
-					}
+				if(sExpr.toSrcString().toString().equals(tExpr.toSrcString().toString())){
+					continue;
+				}
+				Map<SName, Pair<String, String>> tmMap = tryReplaceAllVariables(tExpr, varTrans, allUsableVariables);
+				if(tmMap != null){
+					changeMap.put(i, tmMap);
+					change.add(i);
+				} else {
+					change = new HashSet<>();
+					break;
 				}
 			}
 			if(change.size() == 0){
 				return modifications;
 			}
-			
 			// change one argument each time
 			for(Integer index : change){
+				Map<SName, Pair<String, String>> record = changeMap.get(index);
+				if(record != null){
+					NodeUtils.replaceVariable(record);
+				}
 				StringBuffer stringBuffer = new StringBuffer();
 				if(index == 0){
 					stringBuffer.append(tarArgs.get(0).toSrcString());
@@ -154,28 +164,46 @@ public class NodeUtils {
 						stringBuffer.append(srcArg.get(i).toSrcString());
 					}
 				}
-				Revision revision = new Revision(currNode, srcID, stringBuffer.toString(), nodeType);
-				modifications.add(revision);
-			}
-			//change all arguments one time
-			StringBuffer stringBuffer = new StringBuffer();
-			if(change.contains(0)){
-				stringBuffer.append(tarArgs.get(0).toSrcString());
-			} else {
-				stringBuffer.append(srcArg.get(0).toSrcString());
-			}
-			
-			for(int i = 1; i < srcArg.size(); i++){
-				if(change.contains(i)){
-					stringBuffer.append(",");
-					stringBuffer.append(tarArgs.get(i).toSrcString());
-				} else {
-					stringBuffer.append(",");
-					stringBuffer.append(tarArgs.get(i).toSrcString());
+				String target = stringBuffer.toString();
+				if(!originalArgStr.equals(target)){
+					Revision revision = new Revision(currNode, srcID, target, nodeType);
+					modifications.add(revision);
+				}
+				if(record != null){
+					NodeUtils.restoreVariables(record);
 				}
 			}
-			Revision revision = new Revision(currNode, srcID, stringBuffer.toString(), nodeType);
-			modifications.add(revision);
+			
+			//change all arguments one time
+			if(change.size() > 1){
+				for(Entry<Integer, Map<SName, Pair<String, String>>> entry : changeMap.entrySet()){
+					NodeUtils.replaceVariable(entry.getValue());
+				}
+				StringBuffer stringBuffer = new StringBuffer();
+				if(change.contains(0)){
+					stringBuffer.append(tarArgs.get(0).toSrcString());
+				} else {
+					stringBuffer.append(srcArg.get(0).toSrcString());
+				}
+				
+				for(int i = 1; i < srcArg.size(); i++){
+					if(change.contains(i)){
+						stringBuffer.append(",");
+						stringBuffer.append(tarArgs.get(i).toSrcString());
+					} else {
+						stringBuffer.append(",");
+						stringBuffer.append(tarArgs.get(i).toSrcString());
+					}
+				}
+				String target = stringBuffer.toString();
+				if(!originalArgStr.equals(target)){
+					Revision revision = new Revision(currNode, srcID, target, nodeType);
+					modifications.add(revision);
+				}
+				for(Entry<Integer, Map<SName, Pair<String, String>>> entry : changeMap.entrySet()){
+					NodeUtils.restoreVariables(entry.getValue());
+				}
+			}
 		} else if(srcArg.size() > tarArgs.size()){
 			Set<Integer> matchRec = new HashSet<>();
 			for(int i = 0; i < tarArgs.size(); i++){
@@ -184,7 +212,7 @@ public class NodeUtils {
 					if(matchRec.contains(j)){
 						continue;
 					}
-					if(tarArgs.get(i).toSrcString().equals(srcArg.get(j).toSrcString())){
+					if(tarArgs.get(i).toSrcString().toString().equals(srcArg.get(j).toSrcString().toString())){
 						matchRec.add(j);
 						findSame = true;
 						break;
@@ -235,7 +263,7 @@ public class NodeUtils {
 					if(matchRec[j] != -1){
 						continue;
 					}
-					if(srcArg.get(i).toSrcString().equals(tarArgs.get(j).toSrcString())){
+					if(srcArg.get(i).toSrcString().toString().equals(tarArgs.get(j).toSrcString().toString())){
 						matchRec[j] = i;
 						findSame = true;
 						break;
@@ -261,7 +289,7 @@ public class NodeUtils {
 			// but some arguments in tarArgs are not matched, we should try to add them
 			StringBuffer stringBuffer = new StringBuffer();
 			if(matchRec[0] == -1){
-				if(!allUsableVariables.containsKey(tarArgs.get(0).toSrcString())){
+				if(!allUsableVariables.containsKey(tarArgs.get(0).toSrcString().toString())){
 					return modifications;
 				}
 				stringBuffer.append(tarArgs.get(0).toSrcString());
@@ -380,7 +408,9 @@ public class NodeUtils {
 					String typeStr = replaceType == null ? "?" : replaceType.toString();
 					if(typeStr.equals(type.toString())){
 						matched = true;
-						record.put(sName, new Pair<String, String>(name, replace));
+						if(!name.equals(replace)){
+							record.put(sName, new Pair<String, String>(name, replace));
+						}
 					}
 				}
 				// failed to replace variable
@@ -391,7 +421,9 @@ public class NodeUtils {
 							Type type2 = entry.getValue();
 							String typeStr = type2 == null ? "?" : type2.toString();
 							if(type.toString().equals(typeStr)){
-								record.put(sName, new Pair<String, String>(name, entry.getKey()));
+								if(!name.equals(entry.getKey())){
+									record.put(sName, new Pair<String, String>(name, entry.getKey()));
+								}
 								findRepalcement = true;
 								break;
 							}
@@ -407,13 +439,16 @@ public class NodeUtils {
 	}
 	
 	public static boolean replaceExpr(int srcID, Expr srcExpr, Expr tarExpr, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications){
-		if(srcExpr.getType().toString().equals(tarExpr.getType().toString())){
+		if(srcExpr.getType().toString().equals(tarExpr.getType().toString()) && !srcExpr.toSrcString().toString().equals(tarExpr.toSrcString().toString())){
 			Map<SName, Pair<String, String>> record = tryReplaceAllVariables(tarExpr, varTrans, allUsableVariables);
 			if(record != null){
 				//replace all variable
 				replaceVariable(record);
-				Revision revision = new Revision(srcExpr.getParent(), srcID, tarExpr.toSrcString().toString(), srcExpr.getNodeType());
-				modifications.add(revision);
+				String target = tarExpr.toSrcString().toString();
+				if(!srcExpr.toSrcString().toString().equals(target)){
+					Revision revision = new Revision(srcExpr.getParent(), srcID, target, srcExpr.getNodeType());
+					modifications.add(revision);
+				}
 				//restore all variable
 				restoreVariables(record);
 			}
@@ -422,6 +457,37 @@ public class NodeUtils {
 			return false;
 		}
 	}
+	
+	public static boolean skipMethodCall(String expression, String name){
+		if(expression == null || name == null){
+			return false;
+		}
+		boolean skip = false;
+		switch(expression){
+		case "Double":
+			switch(name){
+			case "isNaN":
+			case "isInfinite":
+				// TODO : some others
+				skip = true;
+				break;
+			}
+			break;
+		case "Math":
+			switch(name){
+			case "abs":
+			case "max":
+			case "min":
+			case "sqrt":
+				// TODO : some others
+				skip = true;
+				break;
+			}
+			break;
+		}
+		return skip;
+	}
+	
 	
 	public static boolean canReplace(String op1, String op2){
 		if(op1 == null || op2 == null || op1.equals(op2)){

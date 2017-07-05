@@ -7,12 +7,16 @@
 package cofix.core.match;
 
 import java.util.List;
+import java.util.Map;
 
+import org.eclipse.jdt.core.dom.Type;
 import org.junit.Test;
 
 import cofix.common.config.Constant;
 import cofix.common.util.Pair;
 import cofix.common.util.Subject;
+import cofix.core.modify.Modification;
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.ProjectInfo;
 import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.search.BuggyCode;
@@ -51,6 +55,8 @@ public class CodeBlockMatcherTest {
 		System.out.println(codeBlock.toSrcString());
 		System.out.println(codeBlock.getFeatureVector());
 		
+		Map<String, Type> allUsableVariabes = NodeUtils.getUsableVarTypes(buggyFile, buggyLine);
+		
 		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
 		List<Pair<CodeBlock, Double>> candidates = simpleFilter.filter(searchPath, 0.5);
 		int i = 1;
@@ -59,8 +65,16 @@ public class CodeBlockMatcherTest {
 			System.out.println(block.getFirst().getFeatureVector());
 			System.out.println(block.getFirst().toSrcString());
 			
-			CodeBlockMatcher.match(codeBlock, block.getFirst(), null);
-			break;
+			List<Modification> modifications = CodeBlockMatcher.match(codeBlock, block.getFirst(), allUsableVariabes);
+			for(Modification modification : modifications){
+				modification.apply(allUsableVariabes);
+				System.out.println("====================changed=====================");
+				System.out.println(codeBlock.toSrcString().toString());
+				modification.restore();
+				System.out.println("====================original=====================");
+				System.out.println(codeBlock.toSrcString().toString());
+			}
+//			break;
 		}
 		System.out.println("-----------" + candidates.size() + "-------------");
 	}
@@ -190,26 +204,16 @@ public class CodeBlockMatcherTest {
 //		Utils.showSimilarity(codeBlock, similar);
 //	}
 //	
-//	@Test
-//	public void test_chart_11(){
-//		Constant.PROJECT_HOME = "testfile";
-//		Subject subject = new Subject("chart", 11, "/source", "/tests", "/build", "/build-tests");
-//		ProjectInfo.init(subject);
-//		String file = subject.getHome() + subject.getSsrc() + "/org/jfree/chart/util/ShapeUtilities.java";
-//		int buggyLine = 275;
-//
-//		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
-//		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
-//
-//		Utils.print(codeBlock);
-//		
-//		String file_2 = file;
-//		int buggyLine_2 = 274;
-//		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
-//		Utils.print(similar);
-//		
-//		Utils.showSimilarity(codeBlock, similar);
-//	}
+	@Test
+	public void test_chart_11(){
+		Constant.PROJECT_HOME = "testfile";
+		Subject subject = new Subject("chart", 11, "/source", "/tests", "/build", "/build-tests");
+		ProjectInfo.init(subject);
+		String file = subject.getHome() + subject.getSsrc() + "/org/jfree/chart/util/ShapeUtilities.java";
+		int buggyLine = 275;
+
+		searchAndPrint(file, buggyLine, subject.getHome() + subject.getSsrc());
+	}
 //	
 //	@Test
 //	public void test_chart_12(){
@@ -232,48 +236,28 @@ public class CodeBlockMatcherTest {
 //		Utils.showSimilarity(codeBlock, similar);
 //	}
 //	
-//	@Test
-//	public void test_chart_20(){
-//		Constant.PROJECT_HOME = "testfile";
-//		Subject subject = new Subject("chart", 20, "/source", "/tests", "/build", "/build-tests");
-//		ProjectInfo.init(subject);
-//		String file = subject.getHome() + subject.getSsrc() + "/org/jfree/chart/plot/ValueMarker.java";
-//		int buggyLine = 95;
-//
-//		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
-//		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
-//
-//		Utils.print(codeBlock);
-//
-//		String file_2 = subject.getHome() + subject.getSsrc() + "/org/jfree/chart/plot/CategoryMarker.java";
-//		int buggyLine_2 = 109;
-//		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
-//		Utils.print(similar);
-//		
-//		Utils.showSimilarity(codeBlock, similar);
-//	}
-//	
-//	@Test
-//	public void test_closure_14(){
-//		Constant.PROJECT_HOME = "testfile";
-//		Subject subject = new Subject("closure", 14, "/src", "/test", "/build/classes", "/build/test");
-//		ProjectInfo.init(subject);
-//		String file = subject.getHome() + subject.getSsrc() + "/com/google/javascript/jscomp/ControlFlowAnalysis.java";
-//		int buggyLine = 767;
-//
-//		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
-//		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
-//
-//		Utils.print(codeBlock);
-//
-//		String file_2 = file;
-//		int buggyLine_2 = 848;
-//		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
-//		Utils.print(similar);
-//		
-//		Utils.showSimilarity(codeBlock, similar);
-//	}
-//	
+	@Test
+	public void test_chart_20(){
+		Constant.PROJECT_HOME = "testfile";
+		Subject subject = new Subject("chart", 20, "/source", "/tests", "/build", "/build-tests");
+		ProjectInfo.init(subject);
+		String file = subject.getHome() + subject.getSsrc() + "/org/jfree/chart/plot/ValueMarker.java";
+		int buggyLine = 95;
+
+		searchAndPrint(file, buggyLine, subject.getHome() + subject.getSsrc());
+	}
+	
+	@Test
+	public void test_closure_14(){
+		Constant.PROJECT_HOME = "testfile";
+		Subject subject = new Subject("closure", 14, "/src", "/test", "/build/classes", "/build/test");
+		ProjectInfo.init(subject);
+		String file = subject.getHome() + subject.getSsrc() + "/com/google/javascript/jscomp/ControlFlowAnalysis.java";
+		int buggyLine = 767;
+
+		searchAndPrint(file, buggyLine, subject.getHome() + subject.getSsrc());
+	}
+	
 //	@Test
 //	public void test_closure_57(){
 //		Constant.PROJECT_HOME = "testfile";
@@ -294,27 +278,17 @@ public class CodeBlockMatcherTest {
 //		
 //		Utils.showSimilarity(codeBlock, similar);
 //	}
-//	
-//	@Test
-//	public void test_closure_73(){
-//		Constant.PROJECT_HOME = "testfile";
-//		Subject subject = new Subject("closure", 73, "/src", "/test", "/build/classes", "/build/test");
-//		ProjectInfo.init(subject);
-//		String file = subject.getHome() + subject.getSsrc() + "/com/google/javascript/jscomp/CodeGenerator.java";
-//		int buggyLine = 1045;
-//
-//		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
-//		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
-//
-//		Utils.print(codeBlock);
-//
-//		String file_2 = file;
-//		int buggyLine_2 = 1073;
-//		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
-//		Utils.print(similar);
-//		
-//		Utils.showSimilarity(codeBlock, similar);
-//	}
+	
+	@Test
+	public void test_closure_73(){
+		Constant.PROJECT_HOME = "testfile";
+		Subject subject = new Subject("closure", 73, "/src", "/test", "/build/classes", "/build/test");
+		ProjectInfo.init(subject);
+		String file = subject.getHome() + subject.getSsrc() + "/com/google/javascript/jscomp/CodeGenerator.java";
+		int buggyLine = 1045;
+
+		searchAndPrint(file, buggyLine, subject.getHome() + subject.getSsrc());
+	}
 //	
 //	@Test
 //	public void test_closure_77(){
@@ -367,27 +341,17 @@ public class CodeBlockMatcherTest {
 //		Utils.showSimilarity(codeBlock, similar);
 //	}
 //
-//	@Test
-//	public void test_lang_35(){
-//		// TODO : low similarity
-//		Constant.PROJECT_HOME = "testfile";
-//		Subject subject = new Subject("lang", 35, "/src/main/java", "/src/test/java", "", "");
-//		ProjectInfo.init(subject);
-//		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang3/ArrayUtils.java";
-//		int buggyLine = 3292;
-//
-//		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
-//		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
-//
-//		Utils.print(codeBlock);
-//
-//		String file_2 = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang3/Range.java";
-//		int buggyLine_2 = 128;
-//		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
-//		Utils.print(similar);
-//		
-//		Utils.showSimilarity(codeBlock, similar);
-//	}
+	@Test
+	public void test_lang_35(){
+		// TODO : low similarity
+		Constant.PROJECT_HOME = "testfile";
+		Subject subject = new Subject("lang", 35, "/src/main/java", "/src/test/java", "", "");
+		ProjectInfo.init(subject);
+		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang3/ArrayUtils.java";
+		int buggyLine = 3292;
+
+		searchAndPrint(file, buggyLine, subject.getHome() + subject.getSsrc());
+	}
 //
 //	@Test
 //	public void test_lang_39(){
@@ -410,70 +374,40 @@ public class CodeBlockMatcherTest {
 //		Utils.showSimilarity(codeBlock, similar);
 //	}
 //
-//	@Test
-//	public void test_lang_43(){
-//		Constant.PROJECT_HOME = "testfile";
-//		Subject subject = new Subject("lang", 43, "/src/java", "", "", "");
-//		ProjectInfo.init(subject);
-//		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang/text/ExtendedMessageFormat.java";
-//		int buggyLine = 421;
-//
-//		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
-//		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
-//
-//		Utils.print(codeBlock);
-//		
-//		String file_2 = file;
-//		int buggyLine_2 = 436;
-//		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
-//		Utils.print(similar);
-//		
-//		Utils.showSimilarity(codeBlock, similar);
-//	}
-//
-//	@Test
-//	public void test_lang_58(){
-//		// TODO : switch case , should be completed
-//		Constant.PROJECT_HOME = "testfile";
-//		Subject subject = new Subject("lang", 58, "/src/java", "", "", "");
-//		ProjectInfo.init(subject);
-//		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang/math/NumberUtils.java";
-//		int buggyLine = 452;
-//
-//		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
-//		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
-//
-//		Utils.print(codeBlock);
-//
-//		String file_2 = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang/NumberUtils.java";
-//		int buggyLine_2 = 193;
-//		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
-//		Utils.print(similar);
-//		
-//		Utils.showSimilarity(codeBlock, similar);
-//	}
-//	
-//
-//	@Test
-//	public void test_lang_59(){
-//		Constant.PROJECT_HOME = "testfile";
-//		Subject subject = new Subject("lang", 59, "/src/java", "", "", "");
-//		ProjectInfo.init(subject);
-//		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang/text/StrBuilder.java";
-//		int buggyLine = 885;
-//
-//		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
-//		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
-//
-//		Utils.print(codeBlock);
-//		
-//		String file_2 = file;
-//		int buggyLine_2 = 839;
-//		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
-//		Utils.print(similar);
-//		
-//		Utils.showSimilarity(codeBlock, similar);
-//	}
+	@Test
+	public void test_lang_43(){
+		Constant.PROJECT_HOME = "testfile";
+		Subject subject = new Subject("lang", 43, "/src/java", "", "", "");
+		ProjectInfo.init(subject);
+		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang/text/ExtendedMessageFormat.java";
+		int buggyLine = 421;
+
+		searchAndPrint(file, buggyLine, subject.getHome() + subject.getSsrc());
+	}
+
+	@Test
+	public void test_lang_58(){
+		// TODO : switch case , should be completed
+		Constant.PROJECT_HOME = "testfile";
+		Subject subject = new Subject("lang", 58, "/src/java", "", "", "");
+		ProjectInfo.init(subject);
+		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang/math/NumberUtils.java";
+		int buggyLine = 452;
+
+		searchAndPrint(file, buggyLine, subject.getHome() + subject.getSsrc());
+	}
+	
+
+	@Test
+	public void test_lang_59(){
+		Constant.PROJECT_HOME = "testfile";
+		Subject subject = new Subject("lang", 59, "/src/java", "", "", "");
+		ProjectInfo.init(subject);
+		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/lang/text/StrBuilder.java";
+		int buggyLine = 884;
+
+		searchAndPrint(file, buggyLine, subject.getHome() + subject.getSsrc());
+	}
 //
 //	@Test
 //	public void test_lang_60(){
@@ -496,47 +430,27 @@ public class CodeBlockMatcherTest {
 //		Utils.showSimilarity(codeBlock, similar);
 //	}
 //
-//	@Test
-//	public void test_math_5(){
-//		Constant.PROJECT_HOME = "testfile";
-//		Subject subject = new Subject("math", 5, "/src/main/java", "", "", "");
-//		ProjectInfo.init(subject);
-//		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math3/complex/Complex.java";
-//		int buggyLine = 304;
-//
-//		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
-//		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
-//
-//		Utils.print(codeBlock);
-//
-//		String file_2 = file;
-//		int buggyLine_2 = 465;
-//		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
-//		Utils.print(similar);
-//		
-//		Utils.showSimilarity(codeBlock, similar);
-//	}
-//
-//	@Test
-//	public void test_math_33(){
-//		Constant.PROJECT_HOME = "testfile";
-//		Subject subject = new Subject("math", 33, "/src/main/java", "", "", "");
-//		ProjectInfo.init(subject);
-//		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math3/optimization/linear/SimplexTableau.java";
-//		int buggyLine = 338;
-//
-//		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
-//		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
-//
-//		Utils.print(codeBlock);
-//
-//		String file_2 = file;
-//		int buggyLine_2 = 384;
-//		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
-//		Utils.print(similar);
-//		
-//		Utils.showSimilarity(codeBlock, similar);
-//	}
+	@Test
+	public void test_math_5(){
+		Constant.PROJECT_HOME = "testfile";
+		Subject subject = new Subject("math", 5, "/src/main/java", "", "", "");
+		ProjectInfo.init(subject);
+		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math3/complex/Complex.java";
+		int buggyLine = 304;
+
+		searchAndPrint(file, buggyLine, subject.getHome() + subject.getSsrc());
+	}
+
+	@Test
+	public void test_math_33(){
+		Constant.PROJECT_HOME = "testfile";
+		Subject subject = new Subject("math", 33, "/src/main/java", "", "", "");
+		ProjectInfo.init(subject);
+		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math3/optimization/linear/SimplexTableau.java";
+		int buggyLine = 338;
+
+		searchAndPrint(file, buggyLine, subject.getHome() + subject.getSsrc());
+	}
 //
 //	@Test
 //	public void test_math_35(){
@@ -623,26 +537,16 @@ public class CodeBlockMatcherTest {
 //		Utils.showSimilarity(codeBlock, similar);
 //	}
 //
-//	@Test
-//	public void test_math_59(){
-//		Constant.PROJECT_HOME = "testfile";
-//		Subject subject = new Subject("math", 59, "/src/main/java", "", "", "");
-//		ProjectInfo.init(subject);
-//		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math/util/FastMath.java";
-//		int buggyLine = 3482;
-//
-//		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
-//		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
-//
-//		Utils.print(codeBlock);
-//
-//		String file_2 = file;
-//		int buggyLine_2 = 3491;
-//		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
-//		Utils.print(similar);
-//		
-//		Utils.showSimilarity(codeBlock, similar);
-//	}
+	@Test
+	public void test_math_59(){
+		Constant.PROJECT_HOME = "testfile";
+		Subject subject = new Subject("math", 59, "/src/main/java", "", "", "");
+		ProjectInfo.init(subject);
+		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math/util/FastMath.java";
+		int buggyLine = 3482;
+
+		searchAndPrint(file, buggyLine, subject.getHome() + subject.getSsrc());
+	}
 //
 //	@Test
 //	public void test_math_63(){
@@ -664,27 +568,17 @@ public class CodeBlockMatcherTest {
 //		
 //		Utils.showSimilarity(codeBlock, similar);
 //	}
-//
-//	@Test
-//	public void test_math_70(){
-//		Constant.PROJECT_HOME = "testfile";
-//		Subject subject = new Subject("math", 70, "/src/main/java", "", "", "");
-//		ProjectInfo.init(subject);
-//		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math/analysis/solvers/BisectionSolver.java";
-//		int buggyLine = 72;
-//
-//		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
-//		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
-//
-//		Utils.print(codeBlock);
-//
-//		String file_2 = file;
-//		int buggyLine_2 = 59;
-//		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
-//		Utils.print(similar);
-//		
-//		Utils.showSimilarity(codeBlock, similar);
-//	}
+
+	@Test
+	public void test_math_70(){
+		Constant.PROJECT_HOME = "testfile";
+		Subject subject = new Subject("math", 70, "/src/main/java", "", "", "");
+		ProjectInfo.init(subject);
+		String file = subject.getHome() + subject.getSsrc() + "/org/apache/commons/math/analysis/solvers/BisectionSolver.java";
+		int buggyLine = 72;
+
+		searchAndPrint(file, buggyLine, subject.getHome() + subject.getSsrc());
+	}
 //	
 //	@Test
 //	public void test_math_71(){

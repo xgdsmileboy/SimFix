@@ -25,7 +25,6 @@ import cofix.core.modify.Modification;
 import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
-import javassist.Modifier;
 
 /**
  * @author Jiajun

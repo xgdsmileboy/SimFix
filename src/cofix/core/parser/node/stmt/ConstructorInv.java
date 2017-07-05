@@ -67,7 +67,7 @@ public class ConstructorInv  extends Stmt{
 		if(node instanceof ConstructorInv){
 			match = true;
 			ConstructorInv other = (ConstructorInv) node;
-			modifications.addAll(NodeUtils.handleArguments(this, ARGID, _nodeType, _arguments, other._arguments, allUsableVariables));
+			modifications.addAll(NodeUtils.handleArguments(this, ARGID, _nodeType, _arguments, other._arguments, varTrans, allUsableVariables));
 		} else {
 			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();

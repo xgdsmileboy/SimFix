@@ -67,19 +67,23 @@ public class ReturnStmt extends Stmt {
 			match = true;
 			ReturnStmt other = (ReturnStmt) node;
 			if(_expression != null && other._expression != null){
-				if(_expression.getType().toString().equals(other._expression.toSrcString())){
-					if(!_expression.toSrcString().toString().equals(other._expression.toSrcString().toString())){
+				if(_expression.getType().toString().equals(other._expression.toSrcString().toString())){
+					String source = _expression.toSrcString().toString();
+					if(!source.equals(other._expression.toSrcString().toString())){
 						Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(other._expression, varTrans, allUsableVariables);
 						if(record != null){
 							NodeUtils.replaceVariable(record);
-							Revision revision = new Revision(this, EXPRID, other._expression.toSrcString().toString(), _nodeType);
-							modifications.add(revision);
+							String target = other._expression.toSrcString().toString();
+							if(!source.equals(target)){
+								Revision revision = new Revision(this, EXPRID, target, _nodeType);
+								modifications.add(revision);
+							}
 							NodeUtils.restoreVariables(record);
 						}
 					}
 				}
 				List<Modification> tmp = new ArrayList<>();
-				if(_expression.match(_expression, varTrans, allUsableVariables, tmp)){
+				if(_expression.match(other._expression, varTrans, allUsableVariables, tmp)){
 					modifications.addAll(tmp);
 				}
 			}

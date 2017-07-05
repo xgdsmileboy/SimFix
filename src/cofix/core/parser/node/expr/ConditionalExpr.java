@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.locks.Condition;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
@@ -22,6 +23,7 @@ import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
 /**
@@ -61,8 +63,32 @@ public class ConditionalExpr extends Expr {
 	
 	@Override
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean match = false;
+		if(node instanceof ConditionalExpr){
+			match = true;
+			ConditionalExpr other = (ConditionalExpr) node;
+			List<Modification> tmp = new ArrayList<>();
+			if(_condition.match(other._condition, varTrans, allUsableVariables, tmp)){
+				modifications.addAll(tmp);
+			}
+			tmp = new ArrayList<>();
+			if(_first.match(other._first, varTrans, allUsableVariables, tmp)){
+				modifications.addAll(tmp);
+			}
+			tmp = new ArrayList<>();
+			if(_snd.match(other._snd, varTrans, allUsableVariables, tmp)){
+				modifications.addAll(tmp);
+			}
+			
+		} else {
+			List<Node> children = node.getChildren();
+			List<Modification> tmp = new ArrayList<>();
+			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+				match = true;
+				modifications.addAll(tmp);
+			}
+		}
+		return match;
 	}
 
 	@Override

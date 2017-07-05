@@ -67,12 +67,16 @@ public class ThrowStmt extends Stmt {
 		if(node instanceof ThrowStmt){
 			match = true;
 			ThrowStmt other = (ThrowStmt) node;
-			if(!_expression.toSrcString().toString().equals(other._expression.toSrcString().toString())){
+			String source = _expression.toSrcString().toString(); 
+			if(!source.equals(other._expression.toSrcString().toString())){
 				Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(other._expression, varTrans, allUsableVariables);
 				if(record != null){
 					NodeUtils.replaceVariable(record);
-					Revision revision = new Revision(this, EXPID, other._expression.toString(), _nodeType);
-					modifications.add(revision);
+					String target = other._expression.toSrcString().toString();
+					if(!source.equals(target)){
+						Revision revision = new Revision(this, EXPID, target, _nodeType);
+						modifications.add(revision);
+					}
 					NodeUtils.restoreVariables(record);
 				}
 			}

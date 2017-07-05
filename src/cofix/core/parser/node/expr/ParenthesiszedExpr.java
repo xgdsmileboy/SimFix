@@ -20,6 +20,7 @@ import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
 /**
@@ -47,8 +48,19 @@ public class ParenthesiszedExpr extends Expr {
 	
 	@Override
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean match = false;
+		if(node instanceof ParenthesiszedExpr){
+			return _expression.match(((ParenthesiszedExpr) node)._expression, varTrans, allUsableVariables, modifications);
+			// TODO : to finish
+		} else {
+			List<Node> children = node.getChildren();
+			List<Modification> tmp = new ArrayList<>();
+			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+				match = true;
+				modifications.addAll(tmp);
+			}
+		}
+		return match;
 	}
 
 	@Override

@@ -11,7 +11,6 @@ import org.junit.Test;
 import com.gzoltar.core.components.Statement;
 
 import cofix.common.config.Constant;
-import cofix.common.util.Pair;
 import cofix.common.util.Subject;
 
 /**

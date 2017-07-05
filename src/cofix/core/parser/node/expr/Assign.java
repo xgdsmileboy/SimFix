@@ -15,6 +15,8 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Assignment;
 import org.eclipse.jdt.core.dom.Type;
 
+import com.sun.org.apache.xalan.internal.xsltc.compiler.NodeTest;
+
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
@@ -23,6 +25,7 @@ import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
 /**
@@ -61,8 +64,19 @@ public class Assign extends Expr {
 	
 	@Override
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean match = false;
+		if(node instanceof Assign){
+			match = true;
+			// TODO : to finish
+		} else {
+			List<Node> children = node.getChildren();
+			List<Modification> tmp = new ArrayList<>();
+			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+				match = true;
+				modifications.addAll(tmp);
+			}
+		}
+		return match;
 	}
 
 	@Override

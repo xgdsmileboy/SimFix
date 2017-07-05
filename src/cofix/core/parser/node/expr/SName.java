@@ -14,10 +14,14 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
+import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
+
 import cofix.core.metric.Literal;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
 /**
@@ -29,6 +33,8 @@ public class SName extends Label {
 	private String _name = null; 
 	
 	private String _replace = null;
+	
+	private final int NAMEID = 0;
 	
 	/**
 	 * SimpleName:
@@ -49,13 +55,19 @@ public class SName extends Label {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification.getSourceID() == NAMEID){
+			_replace = modification.getTargetString();
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification.getSourceID() == NAMEID){
+			_replace = null;
+			return true;
+		}
 		return false;
 	}
 
@@ -67,8 +79,35 @@ public class SName extends Label {
 
 	@Override
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean match = false;
+		if(node instanceof SName){
+			SName other = (SName) node;
+			if(_name.equals(other.getName())){
+				match = true;
+			} else {
+				if(_exprType.toString().equals(((SName) node).getType())){
+					match = true;
+					if(!other.getName().equals(_name) && allUsableVariables.containsKey(_name)){
+						Revision revision = new Revision(this, NAMEID, other.getName(), _nodeType);
+						modifications.add(revision);
+					}
+				} else if(_exprType.isPrimitiveType() && other.getType().isPrimitiveType() && NodeUtils.isWidenType(_exprType, other.getType())){
+					match = true;
+					if(!other.getName().equals(_name) && allUsableVariables.containsKey(_name)){
+						Revision revision = new Revision(this, NAMEID, other.getName(), _nodeType);
+						modifications.add(revision);
+					}
+				}
+			}
+		} else {
+			List<Node> children = node.getChildren();
+			List<Modification> tmp = new ArrayList<>();
+			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+				match = true;
+				modifications.addAll(tmp);
+			}
+		}
+		return match;
 	}
 	
 	@Override
@@ -87,8 +126,10 @@ public class SName extends Label {
 	@Override
 	public List<Variable> getVariables() {
 		List<Variable> list = new LinkedList<>();
-		Variable variable = new Variable(this, _name, _exprType);
-		list.add(variable);
+		if(!_name.toUpperCase().equals(_name)){
+			Variable variable = new Variable(this, _name, _exprType);
+			list.add(variable);
+		}
 		return list;
 	}
 	

@@ -9,7 +9,6 @@ package cofix.common.localization;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -26,17 +25,12 @@ import cofix.common.util.Subject;
  * @author Jiajun
  * @datae Jun 15, 2017
  */
-public class FLocalization {
+public class FLocalization extends AbstractFaultlocalization{
 	
-	private int _totalTest = 0;
-	private int _failedTest = 0;
-	private Map<String, String> _failedTrace = null;
-	private List<String> _passedTests = null;
 	private List<Statement> _candidates = null;
 	
 	public FLocalization() {
-		_failedTrace = new HashMap<String, String>();
-		_passedTests = new ArrayList<>();
+		super();
 		_candidates = new ArrayList<>();
 	}
 	

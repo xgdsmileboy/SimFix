@@ -67,13 +67,21 @@ public class Blk extends Stmt {
 			match = true;
 			Blk other = (Blk) node;
 			if(_statements.size() == 1 && other._statements.size() == 1){
+				Node thisNode = _statements.get(0);
 				Node otherNode = other._statements.get(0);
 				if(otherNode instanceof ThrowStmt || otherNode instanceof ReturnStmt){
-					Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(otherNode, varTrans, allUsableVariables);
-					if(record != null){
-						NodeUtils.replaceVariable(record);
-						Revision revision = new Revision(this, WHOLE, otherNode.toSrcString().toString(), _nodeType);
-						modifications.add(revision);
+					String source = thisNode.toSrcString().toString(); 
+					if(!source.equals(otherNode.toSrcString().toString())){
+						Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(otherNode, varTrans, allUsableVariables);
+						if(record != null){
+							NodeUtils.replaceVariable(record);
+							String target = otherNode.toSrcString().toString();
+							if(!source.equals(target)){
+								Revision revision = new Revision(this, WHOLE, target, _nodeType);
+								modifications.add(revision);
+							}
+							NodeUtils.restoreVariables(record);
+						}
 					}
 				}
 			} else {

@@ -8,9 +8,11 @@ package cofix.core.parser.node;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
@@ -91,6 +93,8 @@ import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
+import cofix.core.metric.Variable.USE_TYPE;
+import cofix.core.modify.Modification;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.ProjectInfo;
 import cofix.core.parser.node.expr.ArrayAcc;
@@ -163,12 +167,14 @@ import cofix.core.parser.node.stmt.WhileStmt;
  * @author Jiajun
  * @datae Jun 24, 2017
  */
-public class CodeBlock {
+public class CodeBlock extends Node{
 
 	private String _fileName = null;
 	private CompilationUnit _cunit = null;
 	private List<ASTNode> _nodes = null;
 	private List<Node> _parsedNodes = null;
+	private Map<Integer, String> _insertions = new HashMap<>();
+	private Set<Integer> _deletions = new HashSet<>();
 	private int _maxLines = 10;
 	private int _currlines = 0;
 	private Pair<Integer, Integer> _codeRange = null;
@@ -192,7 +198,12 @@ public class CodeBlock {
 		this(fileName, cunit, nodes, 10);
 	}
 	
+	private CodeBlock(){
+		super(0, 0, null);
+	}
+	
 	public CodeBlock(String fileName, CompilationUnit cunit, List<ASTNode> nodes, int maxLines) {
+		this();
 		_fileName = fileName;
 		_cunit = cunit;
 		_nodes = nodes;
@@ -282,16 +293,22 @@ public class CodeBlock {
 		}
 	}
 	
-	public String toSrcString(){
+	public StringBuffer toSrcString(){
 		if(_parsedNodes == null){
 			parseNode();
 		}
 		StringBuffer stringBuffer = new StringBuffer();
-		for(Node node : _parsedNodes){
+		for(int i = 0; i < _parsedNodes.size(); i++){
+			Node node = _parsedNodes.get(i);
+			if(_insertions.containsKey(i)){
+				stringBuffer.append(_insertions.get(i));
+			} else if(_deletions.contains(i)){
+				continue;
+			}
 			stringBuffer.append(node.toSrcString());
 			stringBuffer.append("\n");
 		}
-		return stringBuffer.toString();
+		return stringBuffer;
 	}
 	
 	public NewFVector getFeatureVector(){
@@ -409,10 +426,24 @@ public class CodeBlock {
 	
 	private void parseNode(){
 		_parsedNodes = new ArrayList<>();
+		SwCase last = null;
 		for(ASTNode node : _nodes){
 			Node parse = process(node);
 			if(parse != null){
-				_parsedNodes.add(parse);
+				boolean shouldAdd = true;
+				if(last != null){
+					if(parse instanceof SwCase){
+						last = (SwCase) parse;
+					} else {
+						last.addSibling(parse);
+						shouldAdd = false;
+					}
+				} else if(parse instanceof SwCase){
+					last = (SwCase) parse;
+				}
+				if(shouldAdd){
+					_parsedNodes.add(parse);
+				}
 			}
 		}
 	}
@@ -761,7 +792,7 @@ public class CodeBlock {
 		ArrayAcc arrayAcc = new ArrayAcc(startLine, endLine, node);
 		
 		Expr array = (Expr) process(node.getArray());
-		array.setParent(array);
+		array.setParent(arrayAcc);
 		arrayAcc.setArray(array);
 		
 		Expr indexExpr = (Expr) process(node.getIndex());
@@ -1012,7 +1043,7 @@ public class CodeBlock {
 		InstanceofExpr instanceofExpr = new InstanceofExpr(startLine, endLine, node);
 		
 		Expr expression = (Expr) process(node.getLeftOperand());
-		expression.setParent(expression);
+		expression.setParent(instanceofExpr);
 		instanceofExpr.setExpression(expression);
 		
 		instanceofExpr.setInstanceType(node.getRightOperand());
@@ -1509,6 +1540,55 @@ public class CodeBlock {
 			 System.out.println("UNKNOWN ASTNode type : " + node.toString());
 			 return null;
 		 }
+	}
+
+	@Override
+	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables,
+			List<Modification> modifications) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public USE_TYPE getUseType(Node child) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Node> getChildren() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Literal> getLiterals() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void computeFeatureVector() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean adapt(Modification modification) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean restore(Modification modification) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean backup(Modification modification) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	
 	

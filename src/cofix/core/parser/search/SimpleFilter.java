@@ -69,11 +69,12 @@ public class SimpleFilter {
 		List<Pair<CodeBlock, Double>> filtered = new ArrayList<>();
 		int delta = Constant.MAX_BLOCK_LINE - _buggyCode.getCurrentLine();
 		delta = delta > 0 ? delta : 0;
-		guard = guard + ((0.9 - guard) * delta / Constant.MAX_BLOCK_LINE );
+		guard = guard + ((0.7 - guard) * delta / Constant.MAX_BLOCK_LINE ); // 0.9
 		System.out.println("Real guard value : " + guard);
 		Set<String> codeRec = new HashSet<>();
 		for(CodeBlock block : _candidates){
 			Double similarity = CodeBlockMatcher.getSimilarity(_buggyCode, block);
+			System.out.println(block.toSrcString().toString());
 			if(similarity < guard){
 				System.out.println("Filtered by similiraty value : " + similarity);
 				continue;
@@ -102,11 +103,11 @@ public class SimpleFilter {
 				if(hasIntersection){
 					if(replace != -1){
 						filtered.remove(replace);
-						codeRec.add(block.toSrcString());
+						codeRec.add(block.toSrcString().toString());
 						filtered.add(new Pair<CodeBlock, Double>(block, similarity));
 					}
 				} else {
-					codeRec.add(block.toSrcString());
+					codeRec.add(block.toSrcString().toString());
 					filtered.add(new Pair<CodeBlock, Double>(block, similarity));
 				}
 			}

@@ -82,9 +82,23 @@ public class IfStmt extends Stmt {
 			}
 			
 			if(_else != null){
-				tmp = new ArrayList<>();
-				if(_else.match(other._then, varTrans, allUsableVariables, tmp)){
-					modifications.addAll(tmp);
+				if(other._else != null){
+					tmp = new ArrayList<>();
+					if(_else.match(other._else, varTrans, allUsableVariables, tmp)){
+						modifications.addAll(tmp);
+					}
+				} else {
+					tmp = new ArrayList<>();
+					if(_else.match(other._then, varTrans, allUsableVariables, tmp)){
+						modifications.addAll(tmp);
+					}
+				}
+			} else{
+				if(other._else != null){
+					tmp = new ArrayList<>();
+					if(_then.match(other._else, varTrans, allUsableVariables, tmp)){
+						modifications.addAll(tmp);
+					}
 				}
 			}
 			
@@ -95,15 +109,17 @@ public class IfStmt extends Stmt {
 				match = true;
 				if(_then instanceof Blk){
 					List<Node> nodes = _then.getChildren();
-					modifications.addAll(NodeUtils.listNodeMatching(this, _nodeType, nodes, other.getSiblings(), varTrans, allUsableVariables));
+					modifications.addAll(NodeUtils.listNodeMatching(_then, _nodeType, nodes, other.getSiblings(), varTrans, allUsableVariables));
 				}
 			} else {
 				List<Node> siblings = other.getSiblings();
-				for(Node sib : siblings){
-					List<Modification> tmp = new ArrayList<>();
-					if(this.match(sib, varTrans, allUsableVariables, tmp)){
-						match = true;
-						modifications.addAll(tmp);
+				if(siblings != null){
+					for(Node sib : siblings){
+						List<Modification> tmp = new ArrayList<>();
+						if(this.match(sib, varTrans, allUsableVariables, tmp)){
+							match = true;
+							modifications.addAll(tmp);
+						}
 					}
 				}
 			}
