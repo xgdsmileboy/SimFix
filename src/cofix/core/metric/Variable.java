@@ -6,6 +6,7 @@
  */
 package cofix.core.metric;
 
+import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.Type;
 
 import cofix.core.parser.node.Node;
@@ -46,11 +47,19 @@ public class Variable extends Feature {
 		super(node);
 		_name = name;
 		_type = type;
+		if(_type == null){
+			AST ast = AST.newAST(AST.JLS8);
+			_type = ast.newWildcardType();
+		}
 		if(node != null){
 			_kind = node.getUseType(node);
 		} else {
 			_kind = USE_TYPE.USE_UNKNOWN;
 		}
+	}
+	
+	public Type getType(){
+		return _type;
 	}
 	
 	public String getName(){

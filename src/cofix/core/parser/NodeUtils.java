@@ -18,7 +18,6 @@ import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ASTVisitor;
 import org.eclipse.jdt.core.dom.Block;
-import org.eclipse.jdt.core.dom.BreakStatement;
 import org.eclipse.jdt.core.dom.ClassInstanceCreation;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.EnhancedForStatement;
@@ -51,6 +50,7 @@ import cofix.core.parser.node.Node;
 import cofix.core.parser.node.Node.TYPE;
 import cofix.core.parser.node.expr.Expr;
 import cofix.core.parser.node.expr.SName;
+import javassist.compiler.ast.NewExpr;
 
 /**
  * @author Jiajun
@@ -58,8 +58,17 @@ import cofix.core.parser.node.expr.SName;
  */
 public class NodeUtils {
 
-	public static boolean maybeSameName(String name1, String name2){
-		boolean same = false;
+	public static double typeSimilarity(Type t1, Type t2){
+		if(t1 == null || t2 == null){
+			return 0.0;
+		}
+		if(t1.toString().equals(t2.toString()) || (t1.isPrimitiveType() && t2.isPrimitiveType() && isWidenType(t1, t2))){
+			return 1.0;
+		}
+		return 0.0;
+	}
+	
+	public static double nameSimilarity(String name1, String name2){
 		// remove digital at the end
 		int index = name1.length() - 1;
 		name1 = name1.replace("_", "");
@@ -76,26 +85,63 @@ public class NodeUtils {
 		name2 = name2.substring(0, index);
 		
 		if(name1.equals(name2)){
-			return true;
+			return 1.0;
 		}
 		
-		// longest common continuous sub-sequence
-		int[][]c = new int[name1.length()+1][name2.length()+1];
-        int maxlen = 0;
-        for(int i = 1; i <= name1.length(); i++){
-            for(int j = 1; j <= name2.length(); j++){
-                if(name1.charAt(i-1) == name2.charAt(j-1)){
-                    c[i][j] = c[i-1][j-1] + 1;
-                    if(c[i][j] > maxlen){
-                        maxlen = c[i][j];
-                    }
-                }
-            }
-        }
-        
-        double value = (maxlen * 2.0) / (name1.length() + name2.length());
-        same = value > 0.5 ? true : false;
-		return same;
+		Set<String> set1 = new HashSet<>();
+		int lower = 0;
+		for(int i = 0; i < name1.length(); i++){
+			if(Character.isUpperCase(name1.charAt(i))){
+				String subName = name1.substring(lower, i);
+				lower = i;
+				set1.add(subName);
+			} else if(name1.charAt(i) == '_'){
+				String subName = name1.substring(lower, i);
+				lower = i + 1;
+				set1.add(subName);
+			}
+		}
+		
+		Set<String> set2 = new HashSet<>();
+		lower = 0;
+		for(int i = 0; i < name2.length(); i++){
+			if(Character.isUpperCase(name2.charAt(i))){
+				String subName = name2.substring(lower, i);
+				lower = i;
+				set2.add(subName);
+			} else if(name2.charAt(i) == '_'){
+				String subName = name2.substring(lower, i);
+				lower = i + 1;
+				set2.add(subName);
+			}
+		}
+		
+		double count = 0;
+		for(String string : set1){
+			if(set2.contains(string)){
+				count ++;
+			}
+		}
+		
+		return (count * 2.0) / (set1.size() + set2.size());
+		
+		
+//		// longest common continuous sub-sequence
+//		int[][]c = new int[name1.length()+1][name2.length()+1];
+//        int maxlen = 0;
+//        for(int i = 1; i <= name1.length(); i++){
+//            for(int j = 1; j <= name2.length(); j++){
+//                if(name1.charAt(i-1) == name2.charAt(j-1)){
+//                    c[i][j] = c[i-1][j-1] + 1;
+//                    if(c[i][j] > maxlen){
+//                        maxlen = c[i][j];
+//                    }
+//                }
+//            }
+//        }
+//        
+//        double value = (maxlen * 2.0) / (name1.length() + name2.length());
+//		return value;
 	}
 	
 	public static void replaceVariable(Map<SName, Pair<String, String>> record){
@@ -129,8 +175,12 @@ public class NodeUtils {
 			for(int i = 0; i < srcArg.size(); i++){
 				Expr sExpr = srcArg.get(i);
 				Expr tExpr = tarArgs.get(i);
-				if(sExpr.toSrcString().toString().equals(tExpr.toSrcString().toString())){
-					continue;
+				String sString = sExpr.toSrcString().toString();
+				String tString = tExpr.toSrcString().toString();
+				if(sString.equals(tString)){
+					if(varTrans.containsKey(tString) && varTrans.get(tString).equals(sString)){
+						continue;
+					}
 				}
 				Map<SName, Pair<String, String>> tmMap = tryReplaceAllVariables(tExpr, varTrans, allUsableVariables);
 				if(tmMap != null){
@@ -144,6 +194,7 @@ public class NodeUtils {
 			if(change.size() == 0){
 				return modifications;
 			}
+			int revisionCount = 0;
 			// change one argument each time
 			for(Integer index : change){
 				Map<SName, Pair<String, String>> record = changeMap.get(index);
@@ -166,6 +217,7 @@ public class NodeUtils {
 				}
 				String target = stringBuffer.toString();
 				if(!originalArgStr.equals(target)){
+					revisionCount ++;
 					Revision revision = new Revision(currNode, srcID, target, nodeType);
 					modifications.add(revision);
 				}
@@ -175,7 +227,7 @@ public class NodeUtils {
 			}
 			
 			//change all arguments one time
-			if(change.size() > 1){
+			if(revisionCount > 1){
 				for(Entry<Integer, Map<SName, Pair<String, String>>> entry : changeMap.entrySet()){
 					NodeUtils.replaceVariable(entry.getValue());
 				}

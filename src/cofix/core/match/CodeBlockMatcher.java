@@ -13,9 +13,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.eclipse.jdt.core.dom.BreakStatement;
-import org.eclipse.jdt.core.dom.ThrowStatement;
 import org.eclipse.jdt.core.dom.Type;
+
+import com.sun.org.apache.xalan.internal.xsltc.compiler.NodeTest;
 
 import cofix.common.util.Pair;
 import cofix.core.metric.NewFVector;
@@ -111,7 +111,7 @@ public class CodeBlockMatcher {
 		}
 		
 		// delete nodes at buggy code site
-		if(buggyBlock.getParsedNode().size() < 2){
+		if(buggyBlock.getParsedNode().size() > 2){
 			for(int i = 0; i < bNodes.size(); i++){
 				if(!match.containsKey(i)){
 					modifications.add(new Deletion(buggyBlock, i, null, TYPE.UNKNOWN));
@@ -123,7 +123,6 @@ public class CodeBlockMatcher {
 	}
 	
 	private static Map<String, String> matchVariables(List<Variable> bVars, List<Variable> sVars){
-		Map<String, String> matchingMap = new HashMap<>();
 		
 		Map<Variable, List<USE_TYPE>> bMap = new HashMap<>();
 		for(Variable variable : bVars){
@@ -145,29 +144,72 @@ public class CodeBlockMatcher {
 			sMap.put(variable, list);
 		}
 		
-		Map<String, Pair<String, Double>> matching = new HashMap<>();
+		Map<String, Integer> buggyNameMap = new HashMap<>();
+		Map<Integer, String> reverseBuggyNameMap = new HashMap<>(); 
+		int i = 0;
+		for(Variable variable : bMap.keySet()){
+			buggyNameMap.put(variable.getName(), i);
+			reverseBuggyNameMap.put(i, variable.getName());
+			i++;
+		}
+		Map<String, Integer> simNameMap = new HashMap<>();
+		Map<Integer, String> reverseSimNameMap = new HashMap<>();
+		int j = 0;
+		for(Variable variable : sMap.keySet()){
+			simNameMap.put(variable.getName(), j);
+			reverseSimNameMap.put(j, variable.getName());
+			j++;
+		}
+		if(i < 1 || j < 1){
+			return new HashMap<>();
+		}
+		double[][] similarityTable = new double[j][i];
+		
 		for(Entry<Variable, List<USE_TYPE>> sim : sMap.entrySet()){
 			String simName = sim.getKey().getName();
 			for(Entry<Variable, List<USE_TYPE>> buggy : bMap.entrySet()){
 				String buggyName = buggy.getKey().getName();
-				Double similarity = LCS(sim.getValue(), buggy.getValue());
+				Double similarity = 0.7 * LCS(sim.getValue(), buggy.getValue()) + 0.1 * NodeUtils.nameSimilarity(simName, buggyName) + 0.2 * NodeUtils.typeSimilarity(sim.getKey().getType(), buggy.getKey().getType());
 				if(similarity > 0.5){
-					Pair<String, Double> pair = matching.get(simName);
-					if(pair == null || pair.getSecond() < similarity){
-						pair = new Pair<String, Double>(buggyName, similarity);
-						matching.put(simName, pair);
-					}
+					similarityTable[simNameMap.get(simName)][buggyNameMap.get(buggyName)] = similarity;
 				}
 			}
 		}
 		
-		for(Entry<String, Pair<String, Double>> entry : matching.entrySet()){
-			matchingMap.put(entry.getKey(), entry.getValue().getFirst());
-		}
 		
-		return matchingMap;
+		return tryMatch(similarityTable, reverseSimNameMap, reverseBuggyNameMap);
 	}
-	
+	private static Map<String, String> tryMatch(double[][] similarityTable, Map<Integer, String> reverseSimNameMap, Map<Integer, String> reverseBuggyNameMap){
+		Map<String, String> matchTable = new HashMap<>();
+		int rowGuard = similarityTable.length;
+		int colGuard = similarityTable[0].length;
+		while(true){
+			double currentBiggest = 0.1;
+			int row = 0;
+			int colum = 0;
+			for(int i = 0; i < rowGuard; i++){
+				for(int j = 0; j < colGuard; j++){
+					if(similarityTable[i][j] > currentBiggest){
+						currentBiggest = similarityTable[i][j];
+						row = i;
+						colum = j;
+					}
+				}
+			}
+			if(currentBiggest > 0.1){
+				matchTable.put(reverseSimNameMap.get(row), reverseBuggyNameMap.get(colum));
+				for(int j = 0; j < colGuard; j++){
+					similarityTable[row][j] = 0;
+				}
+				for(int i = 0; i < rowGuard; i++){
+					similarityTable[i][colum] = 0;
+				}
+			} else {
+				break;
+			}
+		}
+		return matchTable;
+	}
 	
 	private static double LCS(List<USE_TYPE> first, List<USE_TYPE> snd){
 		int firstLen = first.size();
