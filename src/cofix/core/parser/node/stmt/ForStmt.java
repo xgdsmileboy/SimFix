@@ -95,7 +95,9 @@ public class ForStmt extends Stmt {
 		if(_condition_replace != null){
 			stringBuffer.append(_condition_replace.toSrcString());
 		} else {
-			stringBuffer.append(_condition.toSrcString());
+			if(_condition != null){
+				stringBuffer.append(_condition.toSrcString());
+			}
 		}
 		stringBuffer.append(";");
 		if(_updaters != null && _updaters.size() > 0){
@@ -120,6 +122,12 @@ public class ForStmt extends Stmt {
 		if(node instanceof ForStmt){
 			match = true;
 			ForStmt other = (ForStmt) node;
+			if(_initializers != null && other._initializers != null){
+				List<Modification> tmp = NodeUtils.listNodeMatching(this, _nodeType, _initializers, other._initializers, varTrans, allUsableVariables);
+				if(tmp != null){
+					modifications.addAll(tmp);
+				}
+			}
 			if(_condition != null && other._condition != null){
 				List<Modification> tmp = new ArrayList<>();
 				if(_condition.match(other._condition, varTrans, allUsableVariables, tmp)){
@@ -317,5 +325,58 @@ public class ForStmt extends Stmt {
 		List<Node> list = new ArrayList<>();
 		list.add(_body);
 		return list;
+	}
+	
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		StringBuffer stringBuffer = new StringBuffer("for(");
+		if(_initializers != null && _initializers.size() > 0){
+			int index = 0;
+			for(; index < _initializers.size(); index ++){
+				String init = _initializers.get(index).simplify(varTrans, allUsableVariables);
+				if(init != null){
+					stringBuffer.append(init);
+					break;
+				}
+			}
+			for(index ++; index < _initializers.size(); index++){
+				String init = _initializers.get(index).simplify(varTrans, allUsableVariables);
+				if(init != null){
+					stringBuffer.append(",");
+					stringBuffer.append(init);
+				}
+			}
+		}
+		stringBuffer.append(";");
+		String cond = _condition.simplify(varTrans, allUsableVariables);
+		if(cond == null){
+			return null;
+		}
+		stringBuffer.append(cond);
+		stringBuffer.append(";");
+		if(_updaters != null && _updaters.size() > 0){
+			int index = 0;
+			for(; index < _updaters.size(); index ++){
+				String update = _updaters.get(index).simplify(varTrans, allUsableVariables);
+				if(update != null){
+					stringBuffer.append(update);
+					break;
+				}
+			}
+			for(index ++; index < _updaters.size(); index++){
+				String update = _updaters.get(index).simplify(varTrans, allUsableVariables);
+				if(update != null){
+					stringBuffer.append(",");
+					stringBuffer.append(update);
+				}
+			}
+		}
+		stringBuffer.append(")");
+		String body = _body.simplify(varTrans, allUsableVariables);
+		if(body == null){
+			return null;
+		}
+		stringBuffer.append(body);
+		return stringBuffer.toString();
 	}
 }

@@ -54,12 +54,14 @@ public class Configure {
 				Element pathElem = element.element("classpath");
 				
 				List<String> classpath = new ArrayList<>();
-				for(Iterator iterInner = pathElem.elementIterator(); iterInner.hasNext();){
-					Element path = (Element) iterInner.next();
-					String clp = path.getText();
-					if(clp != null){
-						for(String jar : getJarFile(new File(subject.getHome() + clp))){
-							classpath.add(jar);
+				if(pathElem != null){
+					for(Iterator iterInner = pathElem.elementIterator(); iterInner.hasNext();){
+						Element path = (Element) iterInner.next();
+						String clp = path.getText();
+						if(clp != null){
+							for(String jar : getJarFile(new File(subject.getHome() + clp))){
+								classpath.add(jar);
+							}
 						}
 					}
 				}

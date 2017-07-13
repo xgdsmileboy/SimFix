@@ -17,6 +17,7 @@ import org.eclipse.jdt.core.dom.Type;
 
 import com.sun.org.apache.xalan.internal.xsltc.compiler.NodeTest;
 
+import cofix.common.util.Pair;
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
@@ -27,6 +28,7 @@ import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
+import sun.management.counter.Variability;
 
 /**
  * @author Jiajun
@@ -66,7 +68,19 @@ public class Assign extends Expr {
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		boolean match = false;
 		if(node instanceof Assign){
-			match = true;
+			Assign assign = (Assign) node;
+			List<Variable> tarVars = assign._lhs.getVariables();
+			List<Variable> srcVars = _lhs.getVariables();
+			if(tarVars.size() < 0 || srcVars.size() < 0){
+				String source = varTrans.get(tarVars.get(0).getName()); 
+				if(source != null && source.equals(tarVars.get(0).toString())){
+					match = true;
+					List<Modification> tmp = new ArrayList<>();
+					if(_rhs.match(assign._rhs, varTrans, allUsableVariables, tmp)){
+						modifications.addAll(tmp);
+					}
+				}
+			}
 			// TODO : to finish
 		} else {
 			List<Node> children = node.getChildren();
@@ -174,5 +188,23 @@ public class Assign extends Expr {
 		List<Node> list = new ArrayList<>();
 		list.add(_rhs);
 		return list;
+	}
+
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		Map<SName, Pair<String, String>> recLeft = NodeUtils.tryReplaceAllVariables(_lhs, varTrans, allUsableVariables);
+		if(recLeft == null){
+			return null;
+		}
+		String right = _rhs.simplify(varTrans, allUsableVariables);
+		if(right == null){
+			return null;
+		}
+		StringBuffer stringBuffer = new StringBuffer();
+		NodeUtils.replaceVariable(recLeft);
+		stringBuffer.append(_lhs.toSrcString());
+		stringBuffer.append(_operator.toString());
+		stringBuffer.append(right);
+		return stringBuffer.toString();
 	}
 }

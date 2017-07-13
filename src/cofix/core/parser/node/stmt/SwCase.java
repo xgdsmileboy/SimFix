@@ -27,6 +27,7 @@ import cofix.core.modify.Modification;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.expr.Expr;
+import sun.java2d.pipe.SpanShapeRenderer.Simple;
 
 /**
  * @author Jiajun
@@ -196,10 +197,16 @@ public class SwCase extends Stmt {
 
 	@Override
 	public List<Variable> getVariables() {
+		List<Variable> list = new LinkedList<>();
 		if(_expression != null){
-			return _expression.getVariables();
+			list.addAll(_expression.getVariables());
 		}
-		return new LinkedList<>();
+		if(_siblings != null){
+			for(Node node : _siblings){
+				list.addAll(node.getVariables());
+			}
+		}
+		return list;
 	}
 
 	
@@ -255,6 +262,37 @@ public class SwCase extends Stmt {
 			}
 		}
 		return list;
+	}
+	
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		StringBuffer stringBuffer = new StringBuffer();
+		if(_expression == null){
+			stringBuffer.append("default :\n");
+		} else {
+			stringBuffer.append("case ");
+			String expr = _expression.simplify(varTrans, allUsableVariables);
+			if(expr == null){
+				return null;
+			}
+			stringBuffer.append(expr);
+			stringBuffer.append(" :\n");
+		}
+		boolean empty = true;
+		if(_siblings != null){
+			for(Node sibling : _siblings){
+				String sib = sibling.simplify(varTrans, allUsableVariables);
+				if(sib != null){
+					empty = false;
+					stringBuffer.append(sib);
+					stringBuffer.append("\n");
+				}
+			}
+		}
+		if(empty){
+			return null;
+		}
+		return stringBuffer.toString();
 	}
 	
 }

@@ -80,6 +80,8 @@ public abstract class Node {
 	
 	public abstract boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables,
 			List<Modification> modifications);
+	
+	public abstract String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables);
 
 	public abstract StringBuffer toSrcString();
 	
@@ -106,6 +108,11 @@ public abstract class Node {
 	public abstract boolean adapt(Modification modification);
 	public abstract boolean restore(Modification modification);
 	public abstract boolean backup(Modification modification);
+	
+	@Override
+	public String toString() {
+		return toSrcString().toString();
+	}
 	
 	public static enum TYPE{
 		

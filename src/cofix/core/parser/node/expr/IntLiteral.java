@@ -14,6 +14,7 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
@@ -25,7 +26,9 @@ public class IntLiteral extends NumLiteral {
 
 	private int _value = 0;
 	
-	private Integer _replace = null;
+	private String _replace = null;
+	
+	private final int EXPRID = 0;
 	
 	public IntLiteral(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
@@ -39,9 +42,23 @@ public class IntLiteral extends NumLiteral {
 	@Override
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		boolean match = false;
-		if(node instanceof Assign){
+		if(node instanceof IntLiteral){
 			match = true;
-			// TODO : to finish
+			IntLiteral other = (IntLiteral) node;
+			if(_value != other._value){
+				Revision revision = new Revision(this, EXPRID, other.toSrcString().toString(), _nodeType);
+				modifications.add(revision);
+			}
+		} else if(node instanceof SName || node instanceof QName){
+			Label label = (Label) node;
+			if(label.getType().toString().equals("int")){
+				match = true;
+				String target = node.simplify(varTrans, allUsableVariables);
+				if(target != null){
+					Revision revision = new Revision(this, EXPRID, target, _nodeType);
+					modifications.add(revision);
+				}
+			}
 		} else {
 			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();
@@ -55,13 +72,19 @@ public class IntLiteral extends NumLiteral {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification.getSourceID() == EXPRID){
+			_replace = modification.getTargetString();
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification.getSourceID() == EXPRID){
+			_replace = null;
+			return true;
+		}
 		return false;
 	}
 

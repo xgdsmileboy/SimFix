@@ -7,12 +7,14 @@
 package cofix.common.junit.runner;
 
 import java.io.PrintStream;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Request;
 import org.junit.runner.Result;
+import org.junit.runner.notification.RunNotifier;
 
 import cofix.common.util.LevelLogger;
 
@@ -118,9 +120,71 @@ public class JUnitEngine {
 			System.setOut(printStream);
 		}
 		Request request = Request.method(junitTest, testMethod);
-		Result result = new JUnitCore().run(request);
+		JUnitCore core = new JUnitCore();
+		
+		WatchDog watchDog = new WatchDog(core, Thread.currentThread());
+		Thread thread = new Thread(watchDog);
+		thread.start();
+		
+		System.err.println("begin running testing ...");
+		
+		Result result = null;
+		try{
+			result = core.run(request);
+		} catch(Exception e){
+			
+		}
+		
+		watchDog.interrupt();
+		
 		System.setOut(old);
 		return result;
+	}
+	
+	class WatchDog implements Runnable{
+		
+		private JUnitCore jUnitCore = null;
+		private long start = 0;
+		private long time = 2 * 60 * 1000; // 5 minutes
+		private Thread mainThread = null;
+		
+		public WatchDog(JUnitCore core, Thread thread) {
+			jUnitCore = core;
+			mainThread = thread;
+		}
+		
+		@Override
+		public void run() {
+			System.out.println("run ...");
+			start = System.currentTimeMillis();
+			long current = start;
+			while(current - start < time){
+				System.err.println("Checking ...." + current + "==" + start + "==" + time);
+				try {
+//					mainThread.join();
+					Thread.sleep(30000);
+//					Thread.currentThread().join();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				current = System.currentTimeMillis();
+			}
+			System.err.println("Try to stop ....");
+			try {
+				Field field = JUnitCore.class.getDeclaredField("notifier");
+				field.setAccessible(true);
+				RunNotifier runNotifier = (RunNotifier) field.get(jUnitCore);
+				runNotifier.pleaseStop();
+				jUnitCore = null;
+			} catch (Exception e) {
+				e.printStackTrace();
+			} 
+		}
+		
+		public void interrupt() {
+			System.err.println("Try interrupt ...");
+			time = 0;
+		}
 	}
 	
 }

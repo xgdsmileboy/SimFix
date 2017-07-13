@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <subjects>
-	<subject name="chart" id="7">
+
+		<!-- ==========success========== -->
+<!-- 	<subject name="chart" id="1">
 		<ssrc>/source</ssrc>
 		<tsrc>/tests</tsrc>
 		<sbin>/build</sbin>
@@ -8,5 +10,172 @@
 		<classpath>
 			<element>/lib</element>
 		</classpath>
+	</subject> -->
+	<!-- ==================================TODO================================= -->
+	<!-- <subject name="chart" id="3">
+		<ssrc>/source</ssrc>
+		<tsrc>/tests</tsrc>
+		<sbin>/build</sbin>
+		<tbin>/build-tests</tbin>
+		<classpath>
+			<element>/lib</element>
+		</classpath>
+	</subject>  -->
+		<!-- ================success============= -->
+<!-- 	<subject name="chart" id="20">
+		<ssrc>/source</ssrc>
+		<tsrc>/tests</tsrc>
+		<sbin>/build</sbin>
+		<tbin>/build-tests</tbin>
+		<classpath>
+			<element>/lib</element>
+		</classpath>
+	</subject> -->
+		<!-- ================plausible================ -->
+<!-- 	<subject name="chart" id="7">
+		<ssrc>/source</ssrc>
+		<tsrc>/tests</tsrc>
+		<sbin>/build</sbin>
+		<tbin>/build-tests</tbin>
+		<classpath>
+			<element>/lib</element>
+		</classpath>
+	</subject> -->
+	<!-- ==============success============ -->
+	<!-- <subject name="closure" id="14">
+		<ssrc>/src</ssrc>
+		<tsrc>/test</tsrc>
+		<sbin>/build/classes</sbin>
+		<tbin>/build/test</tbin>
+		<classpath>
+			<element>/lib</element>
+		</classpath>
+	</subject> -->
+		<!-- ============variables match wrong======== -->	
+<!-- 	<subject name="closure" id="57">
+		<ssrc>/src</ssrc>
+		<tsrc>/test</tsrc>
+		<sbin>/build/classes</sbin>
+		<tbin>/build/test</tbin>
+		<classpath>
+			<element>/lib</element>
+		</classpath>
+	</subject> -->
+	 <!-- =============success================== -->	
+<!-- 	<subject name="closure" id="73">
+		<ssrc>/src</ssrc>
+		<tsrc>/test</tsrc>
+		<sbin>/build/classes</sbin>
+		<tbin>/build/test</tbin>
+		<classpath>
+			<element>/lib</element>
+		</classpath>
+	</subject> -->
+	
+	<!-- =================success===split test case to two =========== -->
+	<!-- <subject name="lang" id="35">
+		<ssrc>/src/main/java</ssrc>
+		<tsrc>/src/test/java</tsrc>
+		<sbin>/target/classes</sbin>
+		<tbin>/target/test-classes</tbin>
+	</subject> -->
+	<!-- =============success================== -->	
+<!-- 	<subject name="lang" id="39">
+		<ssrc>/src/java</ssrc>
+		<tsrc>/src/test</tsrc>
+		<sbin>/target/classes</sbin>
+		<tbin>/target/test-classes</tbin>
+	</subject> -->
+	<!-- =============second one is correct================== -->	
+<!-- 	<subject name="lang" id="58">
+		<ssrc>/src/java</ssrc>
+		<tsrc>/src/test</tsrc>
+		<sbin>/target/classes</sbin>
+		<tbin>/target/tests</tbin>
+	</subject> -->
+	
+	<!-- ===============success===split test case to two============ -->
+	<!-- <subject name="lang" id="60">
+		<ssrc>/src/java</ssrc>
+		<tsrc>/src/test</tsrc>
+		<sbin>/target/classes</sbin>
+		<tbin>/target/tests</tbin>
+	</subject> -->
+	<!-- ============success=============== -->
+<!-- 	<subject name="lang" id="43">
+		<ssrc>/src/java</ssrc>
+		<tsrc>/src/test</tsrc>
+		<sbin>/target/classes</sbin>
+		<tbin>/target/tests</tbin>
+	</subject> -->
+	<!-- ============success : plausible : passed test only revise partial condition=============== -->
+<!-- 	<subject name="lang" id="58">
+		<ssrc>/src/java</ssrc>
+		<tsrc>/src/test</tsrc>
+		<sbin>/target/classes</sbin>
+		<tbin>/target/tests</tbin>
+	</subject> -->
+	<!-- ============success=============== -->
+<!-- 	<subject name="math" id="5">
+		<ssrc>/src/main/java</ssrc>
+		<tsrc>/src/test/java</tsrc>
+		<sbin>/target/classes</sbin>
+		<tbin>/target/test-classes</tbin>
+	</subject> -->
+	<!-- ============success=============== -->
+<!-- 	<subject name="math" id="33">
+		<ssrc>/src/main/java</ssrc>
+		<tsrc>/src/test/java</tsrc>
+		<sbin>/target/classes</sbin>
+		<tbin>/target/test-classes</tbin>
+	</subject> -->
+	<!-- ===========success====multi tests trigger two faults, fix separately=== -->
+<!-- 	<subject name="math" id="35">
+		<ssrc>/src/main/java</ssrc>
+		<tsrc>/src/test/java</tsrc>
+		<sbin>/target/classes</sbin>
+		<tbin>/target/test-classes</tbin>
+	</subject> -->
+	
+	<subject name="math" id="41">
+		<ssrc>/src/main/java</ssrc>
+		<tsrc>/src/test/java</tsrc>
+		<sbin>/target/classes</sbin>
+		<tbin>/target/test-classes</tbin>
 	</subject>
+		<!-- ============success=============== -->
+<!-- 	<subject name="math" id="53">
+		<ssrc>/src/main/java</ssrc>
+		<tsrc>/src/test/java</tsrc>
+		<sbin>/target/classes</sbin>
+		<tbin>/target/test-classes</tbin>
+	</subject> -->
+	<!-- ============success=============== -->
+	<!-- <subject name="math" id="59">
+		<ssrc>/src/main/java</ssrc>
+		<tsrc>/src/test/java</tsrc>
+		<sbin>/target/classes</sbin>
+		<tbin>/target/test-classes</tbin>
+	</subject> -->
+	<!-- ============the first one should be right, the second one is right=============== -->
+	<!-- <subject name="math" id="63">
+		<ssrc>/src/main/java</ssrc>
+		<tsrc>/src/test/java</tsrc>
+		<sbin>/target/classes</sbin>
+		<tbin>/target/test-classes</tbin>
+	</subject> -->
+	<!-- ============the first one should be right, the second one is right=============== -->
+	<!-- <subject name="math" id="79">
+		<ssrc>/src/main/java</ssrc>
+		<tsrc>/src/test/java</tsrc>
+		<sbin>/target/classes</sbin>
+		<tbin>/target/test-classes</tbin>
+	</subject> -->
+	<!-- ============success=============== -->
+<!-- 	<subject name="math" id="70">
+		<ssrc>/src/main/java</ssrc>
+		<tsrc>/src/test/java</tsrc>
+		<sbin>/target/classes</sbin>
+		<tbin>/target/test-classes</tbin>
+	</subject> -->
 </subjects>

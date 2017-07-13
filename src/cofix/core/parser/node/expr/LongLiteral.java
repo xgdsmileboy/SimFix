@@ -14,6 +14,7 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
@@ -25,7 +26,9 @@ public class LongLiteral extends NumLiteral {
 
 	private long _value = 0l;
 	
-	private Long _replace = null;
+	private String _replace = null;
+	
+	private final int EXPRID = 0;
 	
 	public LongLiteral(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
@@ -41,7 +44,21 @@ public class LongLiteral extends NumLiteral {
 		boolean match = false;
 		if(node instanceof LongLiteral){
 			match = true;
-			// TODO : to finish
+			LongLiteral other = (LongLiteral) node;
+			if(_value != other._value){
+				Revision revision = new Revision(this, EXPRID, other.toSrcString().toString(), _nodeType);
+				modifications.add(revision);
+			}
+		} else if(node instanceof SName || node instanceof QName){
+			Label label = (Label) node;
+			if(label.getType().toString().equals("long")){
+				match = true;
+				String target = node.simplify(varTrans, allUsableVariables);
+				if(target != null){
+					Revision revision = new Revision(this, EXPRID, target, _nodeType);
+					modifications.add(revision);
+				}
+			}
 		} else {
 			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();
@@ -55,13 +72,19 @@ public class LongLiteral extends NumLiteral {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification.getSourceID() == EXPRID){
+			_replace = modification.getTargetString();
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification.getSourceID() == EXPRID){
+			_replace = null;
+			return true;
+		}
 		return false;
 	}
 

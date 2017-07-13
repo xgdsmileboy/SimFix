@@ -11,13 +11,18 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import javax.management.ObjectName;
+
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
+import org.eclipse.jdt.core.dom.WildcardType;
 
+import cofix.common.util.Pair;
 import cofix.core.metric.Literal;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
@@ -30,8 +35,8 @@ public class QName extends Label {
 	private Label _name = null;
 	private SName _sname = null;
 	
-	private Expr _name_replace = null;
-	private SName _sname_replace = null;
+	private String _replace = null;
+	private int WHOLE = 0;
 	
 	/**
 	 * QualifiedName:
@@ -49,13 +54,19 @@ public class QName extends Label {
 	
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification.getSourceID() == WHOLE){
+			_replace = modification.getTargetString();
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification.getSourceID() == WHOLE){
+			_replace = null;
+			return true;
+		}
 		return false;
 	}
 
@@ -69,8 +80,34 @@ public class QName extends Label {
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		boolean match = false;
 		if(node instanceof QName){
-			match = true;
-			// TODO : to finish
+			QName qName = (QName) node;
+			if(_exprType.toString().equals(qName._exprType.toString()) || NodeUtils.isWidenType(_exprType, qName._exprType)){
+				match = true;
+				String target = node.simplify(varTrans, allUsableVariables);
+				if(target != null && !target.equals(toSrcString().toString())){
+					Revision revision = new Revision(this, WHOLE, target, _nodeType);
+					modifications.add(revision);
+				}
+			}
+		} else if(node instanceof SName){
+			SName sName = (SName) node;
+			if(_exprType.toString().equals(sName._exprType.toString()) || NodeUtils.isWidenType(_exprType, sName._exprType)){
+				match = true;
+				if(allUsableVariables.containsKey(sName.getName())){
+					Revision revision = new Revision(this, WHOLE, sName.getName(), _nodeType);
+					modifications.add(revision);
+				}
+			} else {
+				String mapvar = varTrans.get(sName.getName());
+				if(mapvar != null){
+					String typeStr = allUsableVariables.get(mapvar) == null ? "?" : allUsableVariables.get(mapvar).toString();
+					if(_exprType.toString().equals(typeStr) || NodeUtils.isWidenType(_exprType, allUsableVariables.get(mapvar))){
+						match = true;
+						Revision revision = new Revision(this, WHOLE, mapvar, _nodeType);
+						modifications.add(revision);
+					}
+				}
+			}
 		} else {
 			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();
@@ -85,15 +122,11 @@ public class QName extends Label {
 	@Override
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer();
-		if(_name_replace != null){
-			stringBuffer.append(_name_replace.toSrcString());
+		if(_replace != null){
+			stringBuffer.append(_replace);
 		} else {
 			stringBuffer.append(_name.toSrcString());
-		}
-		stringBuffer.append(".");
-		if(_sname_replace != null){
-			stringBuffer.append(_sname_replace.toSrcString());
-		} else {
+			stringBuffer.append(".");
 			stringBuffer.append(_sname.toSrcString());
 		}
 		return stringBuffer;
@@ -137,5 +170,17 @@ public class QName extends Label {
 		list.add(_name);
 		list.add(_sname);
 		return list;
+	}
+
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(this, varTrans, allUsableVariables);
+		if(record == null){
+			return null;
+		}
+		NodeUtils.replaceVariable(record);
+		String string = toSrcString().toString();
+		NodeUtils.restoreVariables(record);
+		return string;
 	}
 }

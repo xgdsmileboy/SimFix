@@ -38,6 +38,9 @@ import org.eclipse.jdt.core.dom.VariableDeclarationExpression;
 import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
 import org.eclipse.jdt.core.dom.VariableDeclarationStatement;
 import org.eclipse.jdt.core.dom.WhileStatement;
+import org.eclipse.jdt.core.dom.WildcardType;
+
+import com.sun.org.apache.xerces.internal.dom.DeferredAttrImpl;
 
 import cofix.common.util.JavaFile;
 import cofix.common.util.Pair;
@@ -70,19 +73,19 @@ public class NodeUtils {
 	
 	public static double nameSimilarity(String name1, String name2){
 		// remove digital at the end
-		int index = name1.length() - 1;
 		name1 = name1.replace("_", "");
+		int index = name1.length() - 1;
 		while(index > 0 && Character.isDigit(name1.charAt(index))){
 			index --;
 		}
-		name1 = name1.substring(0, index);
+		name1 = name1.substring(0, index + 1);
 		
-		index = name2.length() - 1;
 		name2 = name2.replace("_", "");
+		index = name2.length() - 1;
 		while(index > 0 && Character.isDigit(name2.charAt(index))){
 			index --;
 		}
-		name2 = name2.substring(0, index);
+		name2 = name2.substring(0, index + 1);
 		
 		if(name1.equals(name2)){
 			return 1.0;
@@ -101,6 +104,7 @@ public class NodeUtils {
 				set1.add(subName);
 			}
 		}
+		set1.add(name1.substring(lower));
 		
 		Set<String> set2 = new HashSet<>();
 		lower = 0;
@@ -115,6 +119,8 @@ public class NodeUtils {
 				set2.add(subName);
 			}
 		}
+		
+		set2.add(name2.substring(lower));
 		
 		double count = 0;
 		for(String string : set1){
@@ -414,7 +420,7 @@ public class NodeUtils {
 		int shouldIns = 1000;
 		for(int i = 0; i < otherLen; i++){
 			if(record[i] == -1){
-				int index = -1;
+				int index = 0;
 				for(int j = i + 1; j < otherLen; j ++){
 					if (record[j] != -1) {
 						index = record[j];
@@ -423,16 +429,23 @@ public class NodeUtils {
 				}
 				if(index != -1){
 					Node inset = tarNodeList.get(i);
-					Map<SName, Pair<String, String>> revision = NodeUtils.tryReplaceAllVariables(inset, varTrans, allUsableVariables);
-					if(revision != null){
-						NodeUtils.replaceVariable(revision);
-						String target = inset.toSrcString().toString();
-						stringBuffer.append(target + "\n");
+					String tarString = inset.simplify(varTrans, allUsableVariables);
+					if(tarString != null){
+						stringBuffer.append(tarString + "\n");
 						shouldIns = shouldIns > index ? index : shouldIns;
-						Insertion insertion = new Insertion(currNode, index, target, nodeType);
+						Insertion insertion = new Insertion(currNode, index, tarString, nodeType);
 						modifications.add(insertion);
-						NodeUtils.restoreVariables(revision);
 					}
+//					Map<SName, Pair<String, String>> revision = NodeUtils.tryReplaceAllVariables(inset, varTrans, allUsableVariables);
+//					if(revision != null){
+//						NodeUtils.replaceVariable(revision);
+//						String target = inset.toSrcString().toString();
+//						stringBuffer.append(target + "\n");
+//						shouldIns = shouldIns > index ? index : shouldIns;
+//						Insertion insertion = new Insertion(currNode, index, target, nodeType);
+//						modifications.add(insertion);
+//						NodeUtils.restoreVariables(revision);
+//					}
 				}
 			}
 		}
@@ -458,7 +471,7 @@ public class NodeUtils {
 				if(replace != null){
 					Type replaceType = allUsableVariables.get(replace) ;
 					String typeStr = replaceType == null ? "?" : replaceType.toString();
-					if(typeStr.equals(type.toString())){
+					if(typeStr.equals(type.toString()) || type.toString().equals("?")){
 						matched = true;
 						if(!name.equals(replace)){
 							record.put(sName, new Pair<String, String>(name, replace));
@@ -491,17 +504,23 @@ public class NodeUtils {
 	}
 	
 	public static boolean replaceExpr(int srcID, Expr srcExpr, Expr tarExpr, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications){
-		if(srcExpr.getType().toString().equals(tarExpr.getType().toString()) && !srcExpr.toSrcString().toString().equals(tarExpr.toSrcString().toString())){
+		if(srcExpr.toSrcString().toString().equals(tarExpr.toSrcString().toString())){
+			return true;
+		}
+		Type srcType = srcExpr.getType();
+		Type tarType = tarExpr.getType();
+		if (srcType.toString().equals(tarType.toString()) || srcType instanceof WildcardType
+				|| tarType instanceof WildcardType) {
 			Map<SName, Pair<String, String>> record = tryReplaceAllVariables(tarExpr, varTrans, allUsableVariables);
-			if(record != null){
-				//replace all variable
+			if (record != null) {
+				// replace all variable
 				replaceVariable(record);
 				String target = tarExpr.toSrcString().toString();
-				if(!srcExpr.toSrcString().toString().equals(target)){
+				if (!srcExpr.toSrcString().toString().equals(target)) {
 					Revision revision = new Revision(srcExpr.getParent(), srcID, target, srcExpr.getNodeType());
 					modifications.add(revision);
 				}
-				//restore all variable
+				// restore all variable
 				restoreVariables(record);
 			}
 			return true;
@@ -542,7 +561,7 @@ public class NodeUtils {
 	
 	
 	public static boolean canReplace(String op1, String op2){
-		if(op1 == null || op2 == null || op1.equals(op2)){
+		if(op1 == null || op2 == null){
 			return false;
 		}
 		switch(op1){
@@ -579,16 +598,26 @@ public class NodeUtils {
 				return false;
 			}
 		case "<":
-		case ">":
 		case "<=":
+			switch(op2){
+			case "<":
+			case "<=":
+				return true;
+			default :
+				return false;
+			}
+		case ">":
 		case ">=":
+			switch(op2){
+			case ">":
+			case ">=":
+				return true;
+			default :
+				return false;
+			}
 		case "==":
 		case "!=":
 			switch(op2){
-			case "<":
-			case ">":
-			case "<=":
-			case ">=":
 			case "==":
 			case "!=":
 				return true;

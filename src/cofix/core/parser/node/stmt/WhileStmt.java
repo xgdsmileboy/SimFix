@@ -13,6 +13,7 @@ import java.util.Map;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
+import org.omg.DynamicAny._DynAnyFactoryStub;
 
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
@@ -187,5 +188,22 @@ public class WhileStmt extends Stmt {
 		List<Node> list = new ArrayList<>();
 		list.add(_body);
 		return list;
+	}
+	
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		StringBuffer stringBuffer = new StringBuffer("while(");
+		String cond = _expression.simplify(varTrans, allUsableVariables);
+		if(cond == null){
+			return null;
+		}
+		stringBuffer.append(cond);
+		stringBuffer.append(")");
+		String body = _body.simplify(varTrans, allUsableVariables);
+		if(body == null){
+			return null;
+		}
+		stringBuffer.append(body);
+		return stringBuffer.toString();
 	}
 }

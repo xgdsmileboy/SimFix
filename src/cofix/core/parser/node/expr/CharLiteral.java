@@ -18,6 +18,7 @@ import cofix.core.metric.Literal;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
@@ -29,7 +30,9 @@ public class CharLiteral extends Expr {
 
 	private char _value = ' ';
 	
-	private Character _replace = null;
+	private String _replace = null;
+	
+	private final int EXPRID = 0;
 	
 	/**
 	 * Character literal nodes.
@@ -48,7 +51,21 @@ public class CharLiteral extends Expr {
 		boolean match = false;
 		if(node instanceof CharLiteral){
 			match = true;
-			// TODO : to finish
+			CharLiteral other = (CharLiteral) node;
+			if(_value != other._value){
+				Revision revision = new Revision(this, EXPRID, other.toSrcString().toString(), _nodeType);
+				modifications.add(revision);
+			}
+		} else if(node instanceof SName || node instanceof QName){
+			Label label = (Label) node;
+			if(label.getType().toString().equals("char")){
+				match = true;
+				String target = node.simplify(varTrans, allUsableVariables);
+				if(target != null){
+					Revision revision = new Revision(this, EXPRID, target, _nodeType);
+					modifications.add(revision);
+				}
+			}
 		} else {
 			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();
@@ -62,14 +79,20 @@ public class CharLiteral extends Expr {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification.getSourceID() == EXPRID){
+			_replace = modification.getTargetString();
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		_replace = null;
-		return true;
+		if(modification.getSourceID() == EXPRID){
+			_replace = null;
+			return true;
+		}
+		return false;
 	}
 
 	@Override
@@ -108,5 +131,10 @@ public class CharLiteral extends Expr {
 	@Override
 	public List<Node> getChildren() {
 		return new ArrayList<>();
+	}
+
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		return toSrcString().toString();
 	}
 }

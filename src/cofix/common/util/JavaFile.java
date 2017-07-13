@@ -336,30 +336,38 @@ public class JavaFile {
 		return source;
 	}
 	
-	public static void sourceReplace(String file, List<String> source, int startLine, int endLine, List<ASTNode> replace) throws IOException{
-		StringBuffer stringBuffer = new StringBuffer();
-		stringBuffer.append("// start of generated patch\n");
-		for(ASTNode node : replace){
-			stringBuffer.append(node.toString());
-		}
-		stringBuffer.append("// end of generated patch\n");
-		sourceReplace(file, source, startLine, endLine, stringBuffer.toString());
-	}
-	
 	public static void sourceReplace(String fileName, List<String> source, int startLine, int endLine, String replace) throws IOException{
 		File file = new File(fileName);
 		if(!file.exists()){
 			System.out.println("File : " + fileName + " does not exist!");
 			return;
 		}
+		boolean flag = false;
+		StringBuffer stringBuffer = new StringBuffer();
 		BufferedWriter bw = new BufferedWriter(new FileWriter(file, false));
 		for(int i = 1; i < source.size(); i++){
 			if(i == startLine){
+				String origin = source.get(i).replace(" ", "");
+				if(origin.startsWith("}else")){
+					bw.write("} else ");
+				}
+				bw.write("// start of generated patch\n");
 				bw.write(replace);
+				bw.write("// end of generated patch\n");
+				stringBuffer.append("/* start of original code\n");
+				stringBuffer.append(source.get(i) + "\n");
+				flag = true;
 			} else if(startLine < i && i <= endLine){
+				stringBuffer.append(source.get(i) + "\n");
 				continue;
 			} else {
-				bw.write(source.get(i));
+				if(flag){
+					bw.write(stringBuffer.toString());
+					bw.write(" end of original code*/\n");
+					stringBuffer = null;
+					flag = false;
+				}
+				bw.write(source.get(i) + "\n");
 			}
 		}
 		bw.close();

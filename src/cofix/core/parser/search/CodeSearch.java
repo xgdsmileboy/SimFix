@@ -6,6 +6,7 @@
  */
 package cofix.core.parser.search;
 
+import java.nio.file.attribute.DosFileAttributes;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,8 +38,14 @@ import org.eclipse.jdt.core.dom.TryStatement;
 import org.eclipse.jdt.core.dom.TypeDeclarationStatement;
 import org.eclipse.jdt.core.dom.VariableDeclarationStatement;
 import org.eclipse.jdt.core.dom.WhileStatement;
+import org.eclipse.jdt.core.util.ISignatureAttribute;
+
+import com.gzoltar.core.components.Method;
+import com.sun.xml.internal.ws.message.RelatesToHeader;
 
 import cofix.core.parser.NodeUtils;
+import cofix.core.parser.node.Node;
+import cofix.core.parser.node.expr.ParenthesiszedExpr;
 
 /**
  * @author Jiajun
@@ -95,21 +102,58 @@ public class CodeSearch {
 		}
 		// extend the statement to meet the requirement
 		if(_extendedStatement != null){
-			_currentLines = NodeUtils.getValidLineNumber(_extendedStatement);
-			if(_lineRange - _currentLines > MAX_LESS_THRESHOLD){
-				_currentLines = 0;
-				_nodes = extend(_extendedStatement);
+			List<ASTNode> list = simpleExtend(_extendedStatement);
+			if(list.size() > 0){
+				_nodes.addAll(list);
 			} else {
-				if(_extendedStatement instanceof Block){
-					ASTNode node = _extendedStatement.getParent();
-					if (node instanceof IfStatement || node instanceof SwitchCase || node instanceof ForStatement
-							|| node instanceof EnhancedForStatement || node instanceof WhileStatement) {
-						_extendedStatement = (Statement) node;
+				_currentLines = NodeUtils.getValidLineNumber(_extendedStatement);
+				if(_lineRange - _currentLines > MAX_LESS_THRESHOLD){
+					_currentLines = 0;
+					_nodes = extend(_extendedStatement);
+				} else {
+					if(_extendedStatement instanceof Block){
+						ASTNode node = _extendedStatement.getParent();
+						if (node instanceof IfStatement || node instanceof SwitchCase || node instanceof ForStatement
+								|| node instanceof EnhancedForStatement || node instanceof WhileStatement) {
+							_extendedStatement = (Statement) node;
+						}
 					}
+					_nodes.add(_extendedStatement);
 				}
-				_nodes.add(_extendedStatement);
 			}
 		}
+	}
+	
+	private List<ASTNode> simpleExtend(ASTNode node){
+		List<ASTNode> rslt = new ArrayList<>();
+		ASTNode parent = node;
+		while (parent != null) {
+			if (parent instanceof IfStatement || parent instanceof ForStatement
+					|| parent instanceof EnhancedForStatement || parent instanceof DoStatement
+					|| parent instanceof WhileStatement) {
+				int line = NodeUtils.getValidLineNumber(parent); 
+				if(line - _lineRange < MAX_MORE_THRESHOLD){
+					rslt.add(parent);
+					_currentLines = line;
+				}
+				break;
+			} else if(parent instanceof MethodDeclaration){
+				MethodDeclaration mdDeclaration = (MethodDeclaration) parent;
+				Block block = mdDeclaration.getBody();
+				int line = 0;
+				for(Object object : block.statements()){
+					line += NodeUtils.getValidLineNumber((ASTNode) object);
+				}
+				if(line - _lineRange < MAX_MORE_THRESHOLD){
+					for(Object object : block.statements()){
+						rslt.add((ASTNode) object);
+					}
+					break;
+				}
+			}
+			parent = parent.getParent();
+		}
+		return rslt;
 	}
 	
 	private List<ASTNode> extend(ASTNode node){

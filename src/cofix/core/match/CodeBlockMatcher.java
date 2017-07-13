@@ -15,9 +15,12 @@ import java.util.Map.Entry;
 
 import org.eclipse.jdt.core.dom.Type;
 
+import com.gzoltar.core.components.Method;
 import com.sun.org.apache.xalan.internal.xsltc.compiler.NodeTest;
+import com.sun.org.apache.xpath.internal.SourceTreeManager;
 
 import cofix.common.util.Pair;
+import cofix.core.metric.MethodCall;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
@@ -48,8 +51,9 @@ public class CodeBlockMatcher {
 	
 	public static List<Modification> match(CodeBlock buggyBlock, CodeBlock similarBlock, Map<String, Type> allUsableVariables){
 		List<Modification> modifications = new LinkedList<>();
+		
 		// match variables first
-		Map<String, String> varTrans = matchVariables(buggyBlock.getVariables(), similarBlock.getVariables());
+		Map<String, String> varTrans = matchVariables(buggyBlock, similarBlock);
 		
 		for(Entry<String, String> entry : varTrans.entrySet()){
 			System.out.println(entry.getKey() + " : " + entry.getValue());
@@ -73,6 +77,7 @@ public class CodeBlockMatcher {
 					match.put(i, j);
 					reverseMatch.put(j, i);
 					modifications.addAll(tmp);
+					break;
 				}
 			}
 		}
@@ -88,7 +93,7 @@ public class CodeBlockMatcher {
 				int nextMatchIndex = -1;
 				for(int index = j; index < sNodes.size(); index++){
 					if(reverseMatch.containsKey(index)){
-						nextMatchIndex = index;
+						nextMatchIndex = reverseMatch.get(index);
 						break;
 					}
 				}
@@ -122,7 +127,10 @@ public class CodeBlockMatcher {
 		return modifications;
 	}
 	
-	private static Map<String, String> matchVariables(List<Variable> bVars, List<Variable> sVars){
+	private static Map<String, String> matchVariables(CodeBlock buggyBlock, CodeBlock similarBlock){
+		
+		List<Variable> bVars = buggyBlock.getVariables();
+		List<Variable> sVars = similarBlock.getVariables();
 		
 		Map<Variable, List<USE_TYPE>> bMap = new HashMap<>();
 		for(Variable variable : bVars){
@@ -176,6 +184,24 @@ public class CodeBlockMatcher {
 			}
 		}
 		
+		
+		List<MethodCall> buggyCalls = buggyBlock.getMethodCalls();
+		List<MethodCall> simCalls = similarBlock.getMethodCalls();
+		
+		for(MethodCall methodCall : buggyCalls){
+			for(MethodCall other : simCalls){
+				if(methodCall.equals(other)){
+					Map<String, String> map = methodCall.matchArgs(other);
+					for(Entry<String, String> entry : map.entrySet()){
+						Integer srcIndex = buggyNameMap.get(entry.getKey());
+						Integer tarIndex = simNameMap.get(entry.getValue());
+						if(srcIndex != null && tarIndex != null){
+							similarityTable[tarIndex][srcIndex] += 0.2;
+						}
+					}
+				}
+			}
+		}
 		
 		return tryMatch(similarityTable, reverseSimNameMap, reverseBuggyNameMap);
 	}

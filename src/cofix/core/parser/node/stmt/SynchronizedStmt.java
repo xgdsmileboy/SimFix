@@ -161,4 +161,21 @@ public class SynchronizedStmt extends Stmt {
 		return list;
 	}
 	
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		StringBuffer stringBuffer = new StringBuffer("synchronized(");
+		String expr = _expression.simplify(varTrans, allUsableVariables);
+		if(expr == null){
+			return null;
+		}
+		stringBuffer.append(expr);
+		stringBuffer.append(")");
+		String block = _blk.simplify(varTrans, allUsableVariables);
+		if(block == null){
+			return null;
+		}
+		stringBuffer.append(block);
+		return stringBuffer.toString();
+	}
+	
 }

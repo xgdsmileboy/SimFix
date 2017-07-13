@@ -207,4 +207,23 @@ public class DoStmt extends Stmt {
 		return list;
 	}
 	
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append("do ");
+		String body = _stmt.simplify(varTrans, allUsableVariables);
+		if(body == null){
+			return null;
+		}
+		stringBuffer.append(body);
+		stringBuffer.append(" while(");
+		String cond = _expression.simplify(varTrans, allUsableVariables);
+		if(cond == null){
+			return null;
+		}
+		stringBuffer.append(cond);
+		stringBuffer.append(");");
+		return stringBuffer.toString();
+	}
+	
 }

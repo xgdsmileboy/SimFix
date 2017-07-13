@@ -72,11 +72,14 @@ public class IfStmt extends Stmt {
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		boolean match = false;
 		if(node instanceof IfStmt){
-			match = true;
 			IfStmt other = (IfStmt) node;
-			_condition.match(other._condition, varTrans, allUsableVariables, modifications);
-
 			List<Modification> tmp = new ArrayList<>();
+			if(_condition.match(other._condition, varTrans, allUsableVariables, tmp)){
+				match = true;
+				modifications.addAll(tmp);
+			}
+
+			tmp = new ArrayList<>();
 			if(_then.match(other._then, varTrans, allUsableVariables, tmp)){
 				modifications.addAll(tmp);
 			}
@@ -284,5 +287,29 @@ public class IfStmt extends Stmt {
 			list.add(_else);
 		}
 		return list;
+	}
+	
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		StringBuffer stringBuffer = new StringBuffer("if(");
+		String cond = _condition.simplify(varTrans, allUsableVariables);
+		if(cond == null){
+			return null;
+		}
+		stringBuffer.append(cond);
+		stringBuffer.append(")");
+		String then = _then.simplify(varTrans, allUsableVariables);
+		if(then == null){
+			return null;
+		}
+		stringBuffer.append(then);
+		if(_else != null){
+			String els = _else.simplify(varTrans, allUsableVariables);
+			if(els != null){
+				stringBuffer.append("else ");
+				stringBuffer.append(els);
+			}
+		}
+		return stringBuffer.toString();
 	}
 }

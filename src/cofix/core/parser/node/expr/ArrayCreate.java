@@ -15,6 +15,7 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ArrayType;
 import org.eclipse.jdt.core.dom.Type;
 
+import cofix.common.util.Pair;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
 import cofix.core.metric.NewFVector;
@@ -154,8 +155,8 @@ public class ArrayCreate extends Expr {
 	@Override
 	public List<MethodCall> getMethodCalls() {
 		List<MethodCall> list = new LinkedList<>();
-		MethodCall methodCall = new MethodCall(this, _type.toString());
-		list.add(methodCall);
+//		MethodCall methodCall = new MethodCall(this, _type.toString());
+//		list.add(methodCall);
 		return list;
 	}
 	
@@ -186,6 +187,18 @@ public class ArrayCreate extends Expr {
 	@Override
 	public List<Node> getChildren() {
 		return new ArrayList<>();
+	}
+
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(this, varTrans, allUsableVariables);
+		if(record == null){
+			return null;
+		}
+		NodeUtils.replaceVariable(record);
+		String string = toSrcString().toString();
+		NodeUtils.restoreVariables(record);
+		return string;
 	}
 
 }

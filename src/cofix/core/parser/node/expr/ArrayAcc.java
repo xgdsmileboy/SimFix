@@ -8,12 +8,16 @@ package cofix.core.parser.node.expr;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
+
+import com.sun.org.apache.xpath.internal.operations.Mod;
 
 import cofix.common.util.Pair;
 import cofix.core.metric.Literal;
@@ -38,6 +42,9 @@ public class ArrayAcc extends Expr {
 	
 	private String _index_replace = null;
 	private String _array_replace = null;
+	
+	private Set<String> _indexSet = new HashSet<>();
+	private Set<String> _arraySet = new HashSet<>();
 	
 	private final int INDEXID = 0;
 	private final int ARRAYID = 1;
@@ -67,7 +74,13 @@ public class ArrayAcc extends Expr {
 			List<Modification> tmp = new ArrayList<>();
 			if(!_index.toSrcString().toString().equals(other._index.toSrcString().toString())){
 				if(NodeUtils.replaceExpr(INDEXID, _index, other._index, varTrans, allUsableVariables, tmp)){
-					modifications.addAll(tmp);
+					for(Modification modification : tmp){
+						if(_indexSet.contains(modification.getTargetString())){
+							continue;
+						}
+						modifications.add(modification);
+						_indexSet.add(modification.getTargetString());
+					}
 					match = true;
 				}
 			} else {
@@ -79,8 +92,11 @@ public class ArrayAcc extends Expr {
 				NodeUtils.replaceVariable(record);
 				String target = node.toSrcString().toString();
 				if(!_index.toSrcString().toString().equals(target)){
-					Revision revision = new Revision(this, INDEXID, node.toSrcString().toString(), _nodeType);
-					modifications.add(revision);
+					if(!_indexSet.contains(target)){
+						Revision revision = new Revision(this, INDEXID, target, _nodeType);
+						modifications.add(revision);
+						_indexSet.add(target);
+					}
 				}
 				NodeUtils.restoreVariables(record);
 				match = true;
@@ -189,6 +205,18 @@ public class ArrayAcc extends Expr {
 	@Override
 	public List<Node> getChildren() {
 		return new ArrayList<>();
+	}
+
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(this, varTrans, allUsableVariables);
+		if(record == null){
+			return null;
+		}
+		NodeUtils.replaceVariable(record);
+		String string = toSrcString().toString();
+		NodeUtils.restoreVariables(record);
+		return string;
 	}
 
 }

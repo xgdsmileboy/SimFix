@@ -82,4 +82,9 @@ public class TypeDeclarationStmt extends Stmt {
 	public List<Node> getChildren() {
 		return new ArrayList<>();
 	}
+	
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		return null;
+	}
 }

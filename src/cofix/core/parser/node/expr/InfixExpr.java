@@ -7,9 +7,11 @@
 package cofix.core.parser.node.expr;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.InfixExpression;
@@ -42,6 +44,11 @@ public class InfixExpr extends Expr {
 	private String _operator_replace = null;
 	private String _rhs_replace = null;
 	
+	private Set<String> _allSet = new HashSet<>();
+	private Set<String> _lhsSet = new HashSet<>();
+	private Set<String> _rhsSet = new HashSet<>();
+	private Set<String> _opSet = new HashSet<>();
+	
 	private final int WHOLE = 0;
 	private final int LHSID = 1;
 	private final int OPID = 2;
@@ -72,40 +79,117 @@ public class InfixExpr extends Expr {
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		boolean match = false;
 		if(node instanceof InfixExpr){
-			match = true;
+			List<Variable> tarVars = node.getVariables();
+			List<Variable> srcVars = getVariables();
+			for(Variable var : tarVars){
+				String name = var.getName();
+				name = varTrans.get(name);
+				for(Variable variable : srcVars){
+					if(variable.getName().equals(name)){
+						match = true;
+						break;
+					}
+				}
+				if(match){
+					break;
+				}
+			}
+			if(!match){
+				return false;
+			}
 			InfixExpr other = (InfixExpr) node;
 			
-			// replace operator
-			if(NodeUtils.canReplace(_operator.toString(), other._operator.toString())){
-				modifications.add(new Revision(this, OPID, other._operator.toString(), _nodeType));
-			}
+			boolean matchLeft = false;
+			boolean matchRight = false;
 			// replace left hand side
 			List<Modification> tmp = new ArrayList<>();
-			if(NodeUtils.replaceExpr(LHSID, _lhs, other._lhs, varTrans, allUsableVariables, tmp)){
-				modifications.addAll(tmp);
+			if(other._lhs instanceof NumLiteral){
+				if(_lhs instanceof NumLiteral){
+					if(NodeUtils.replaceExpr(LHSID, _lhs, other._lhs, varTrans, allUsableVariables, tmp)){
+						matchLeft = true;
+						modifications.addAll(tmp);
+					}
+				}
+			} else {
+				if(NodeUtils.replaceExpr(LHSID, _lhs, other._lhs, varTrans, allUsableVariables, tmp)){
+					matchLeft = true;
+					modifications.addAll(tmp);
+				}
 			}
 			tmp = new ArrayList<>();
-			if(NodeUtils.replaceExpr(RHSID, _rhs, other._rhs, varTrans, allUsableVariables, tmp)){
+			if(other._rhs instanceof NumLiteral){
+				if(_rhs instanceof NumLiteral){
+					if(NodeUtils.replaceExpr(RHSID, _rhs, other._rhs, varTrans, allUsableVariables, tmp)){
+						matchRight = true;
+						modifications.addAll(tmp);
+					}
+				}
+			} else {
+				if(NodeUtils.replaceExpr(RHSID, _rhs, other._rhs, varTrans, allUsableVariables, tmp)){
+					matchRight = true;
+					modifications.addAll(tmp);
+				}
+			}
+			
+			boolean compatible = NodeUtils.canReplace(_operator.toString(), other._operator.toString());
+			// replace operator
+			if(matchLeft && matchRight && compatible && !_operator.toString().equals(other._operator.toString())){
+				modifications.add(new Revision(this, OPID, other._operator.toString(), _nodeType));
+			}
+			
+			tmp = new ArrayList<>();
+			if(_lhs.match(other._lhs, varTrans, allUsableVariables, tmp)){
 				modifications.addAll(tmp);
 			}
 			
 			tmp = new ArrayList<>();
-			if(_lhs.match(node, varTrans, allUsableVariables, tmp)){
+			if(_rhs.match(other._rhs, varTrans, allUsableVariables, tmp)){
 				modifications.addAll(tmp);
 			}
 			
-			tmp = new ArrayList<>();
-			if(_rhs.match(node, varTrans, allUsableVariables, tmp)){
-				modifications.addAll(tmp);
+			if(compatible && matchLeft && matchRight){
+				String tarString = other.simplify(varTrans, allUsableVariables);
+				if(other.getType().toString().equals("boolean") && tarString != null && !tarString.equals(toSrcString().toString())){
+					Revision revision = new Revision(this, WHOLE, tarString, _nodeType);
+					modifications.add(revision);
+				}
 			}
-//			
+			
 //			// try to replace all 
-//			Pair<List<Expr>, List<InfixExpression.Operator>> sPair = splitSingleBooleanExpr();
-//			Pair<List<Expr>, List<InfixExpression.Operator>> tPair = other.splitSingleBooleanExpr();
-//			
+//			List<Pair<Expr, InfixExpression.Operator>> sPair = splitSingleBooleanExpr();
+//			List<Pair<Expr, InfixExpression.Operator>> tPair = other.splitSingleBooleanExpr();
+//			List<Pair<String, String>> addedPair = new ArrayList<>();
+//			List<Pair<String, String>> deletePair = new ArrayList<>();
 //			// TODO : try to replace all
-//			for(Expr tExpr : tPair.getFirst()){
-//				for(Expr sExpr : sPair.getFirst()){
+//			Set<Integer> matchRec = new HashSet<>();
+//			for(int i = 0; i < tPair.size(); i++){
+//				Expr tExpr = tPair.get(i).getFirst();
+//				Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(tExpr, varTrans, allUsableVariables);
+//				if(record == null){
+//					continue;
+//				}
+//				NodeUtils.replaceVariable(record);
+//				String tString = tExpr.toSrcString().toString().replace(" ", "");
+//				NodeUtils.restoreVariables(record);
+//				boolean find = false;
+//				for(int j = 0; i < sPair.size(); j++){
+//					if(matchRec.contains(j)){
+//						continue;
+//					}
+//					String sString = sPair.get(j).getFirst().toSrcString().toString().replace(" ", "");
+//					if(tString.equals(sString)){
+//						find = true;
+//						matchRec.add(j);
+//						break;
+//					}
+//				}
+//				if(!find){
+//					addedPair.add(new Pair<String, String>(tString, tPair.get(i).getSecond().toString()));
+//				}
+//			}
+//			
+//			for(int i = 0; i < sPair.size(); i++){
+//				if(matchRec.contains(i)){
 //					
 //				}
 //			}
@@ -228,30 +312,33 @@ public class InfixExpr extends Expr {
 		_fVector.combineFeature(_rhs.getFeatureVector());
 	}
 	
-	public Pair<List<Expr>, List<InfixExpression.Operator>> splitSingleBooleanExpr(){
-		List<Expr> exprs = new ArrayList<>();
-		List<InfixExpression.Operator> operators = new ArrayList<>();
+	public List<Pair<Expr, InfixExpression.Operator>> splitSingleBooleanExpr(){
+		List<Pair<Expr, InfixExpression.Operator>> subExprs = new ArrayList<>();
 		String op = _operator.toString();
 		if(op.equals("&&") || op.equals("||")){
 			if(_lhs instanceof InfixExpr){
-				Pair<List<Expr>, List<InfixExpression.Operator>> pair = ((InfixExpr)_lhs).splitSingleBooleanExpr();
-				exprs.addAll(pair.getFirst());
-				operators.addAll(pair.getSecond());
+				List<Pair<Expr, InfixExpression.Operator>> pair = ((InfixExpr)_lhs).splitSingleBooleanExpr();
+				subExprs.addAll(pair);
 			} else {
-				exprs.add(_lhs);
+				subExprs.add(new Pair<Expr, InfixExpression.Operator>(_lhs, _operator));
 			}
-			operators.add(_operator);
 			if(_rhs instanceof InfixExpr){
-				Pair<List<Expr>, List<InfixExpression.Operator>> pair = ((InfixExpr)_rhs).splitSingleBooleanExpr();
-				exprs.addAll(pair.getFirst());
-				operators.addAll(pair.getSecond());
+				List<Pair<Expr, InfixExpression.Operator>> pair = ((InfixExpr)_rhs).splitSingleBooleanExpr();
+				subExprs.addAll(pair);
 			} else {
-				exprs.add(_rhs);
+				subExprs.add(new Pair<Expr, InfixExpression.Operator>(_rhs, _operator));
 			}
 		} else {
-			exprs.add(this);
+			InfixExpression.Operator operator = InfixExpression.Operator.AND;
+			if(_parent != null && _parent instanceof InfixExpr){
+				InfixExpr infixExpr = (InfixExpr)_parent;
+				operator = infixExpr._operator;
+			}
+			if(operator.toString().equals("&&") || operator.toString().equals("||")){
+				subExprs.add(new Pair<Expr, InfixExpression.Operator>(this, operator));
+			}
 		}
-		return new Pair<List<Expr>, List<InfixExpression.Operator>>(exprs, operators);
+		return subExprs;
 	}
 
 	@Override
@@ -265,5 +352,30 @@ public class InfixExpr extends Expr {
 		list.add(_lhs);
 		list.add(_rhs);
 		return list;
+	}
+
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		String left = _lhs.simplify(varTrans, allUsableVariables);
+		String right = _rhs.simplify(varTrans, allUsableVariables);
+		switch (_operator.toString()) {
+		case "&&":
+		case "||":
+			if(left == null && right == null){
+				return null;
+			} else if(left != null && right != null){
+				return left + _operator.toString() + right;
+			} else if(left != null){
+				return left;
+			} else {
+				return right;
+			}
+		default:
+			if(left == null || right == null){
+				return null;
+			} else {
+				return left + _operator.toString() + right;
+			}
+		}
 	}
 }

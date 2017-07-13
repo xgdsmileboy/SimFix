@@ -7,9 +7,11 @@
 package cofix.core.parser.node.expr;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
@@ -34,7 +36,7 @@ public class CastExpr extends Expr {
 	private Expr _expression = null;
 
 	private Expr _replace = null;
-	
+	private Set<String> _exprSet = new HashSet<>();
 	/**
 	 * CastExpression:
      *	( Type ) Expression
@@ -63,7 +65,12 @@ public class CastExpr extends Expr {
 			List<Modification> tmp = new ArrayList<>();
 			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
 				match = true;
-				modifications.addAll(tmp);
+				for(Modification modification : tmp){
+					if(!_exprSet.contains(modification.getTargetString())){
+						modifications.add(modification);
+						_exprSet.add(modification.getTargetString());
+					}
+				}
 			}
 		}
 		return match;
@@ -146,5 +153,14 @@ public class CastExpr extends Expr {
 		List<Node> list = new ArrayList<>();
 		list.add(_expression);
 		return list;
+	}
+
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		String expr = _expression.simplify(varTrans, allUsableVariables);
+		if(expr == null){
+			return null;
+		}
+		return "(" + _castType + ")" + expr;
 	}
 }

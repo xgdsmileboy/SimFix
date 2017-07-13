@@ -14,6 +14,7 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
+import cofix.common.util.Pair;
 import cofix.core.metric.Literal;
 import cofix.core.metric.LoopStruct;
 import cofix.core.metric.MethodCall;
@@ -181,7 +182,7 @@ public class ClassInstanceCreate extends Expr {
 	@Override
 	public List<MethodCall> getMethodCalls() {
 		List<MethodCall> list = new LinkedList<>();
-		MethodCall methodCall = new MethodCall(this, _classType.toString());
+		MethodCall methodCall = new MethodCall(this, _classType.toString(), _arguments);
 		list.add(methodCall);
 		if(_decl != null){
 			list.addAll(_decl.getMethodCalls());
@@ -225,5 +226,17 @@ public class ClassInstanceCreate extends Expr {
 	@Override
 	public List<Node> getChildren() {
 		return new ArrayList<>();
+	}
+
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(this, varTrans, allUsableVariables);
+		if(record == null){
+			return null;
+		}
+		NodeUtils.replaceVariable(record);
+		String string = toSrcString().toString();
+		NodeUtils.restoreVariables(record);
+		return string;
 	}
 }

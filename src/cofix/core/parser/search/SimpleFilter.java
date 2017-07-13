@@ -74,7 +74,7 @@ public class SimpleFilter {
 		Set<String> codeRec = new HashSet<>();
 		for(CodeBlock block : _candidates){
 			Double similarity = CodeBlockMatcher.getSimilarity(_buggyCode, block);
-			System.out.println(block.toSrcString().toString());
+//			System.out.println(block.toSrcString().toString());
 			if(similarity < guard){
 				System.out.println("Filtered by similiraty value : " + similarity);
 				continue;

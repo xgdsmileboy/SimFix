@@ -12,11 +12,13 @@ import java.util.List;
 import java.util.Map;
 
 import org.eclipse.jdt.core.dom.ASTNode;
+import org.eclipse.jdt.core.dom.BooleanLiteral;
 import org.eclipse.jdt.core.dom.Type;
 
 import cofix.core.metric.Literal;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
@@ -28,7 +30,9 @@ public class FloatLiteral extends NumLiteral {
 
 	private float _value = .0f;
 	
-	private Expr _replace = null;
+	private String _replace = null;
+	
+	private final int EXPRID = 0;
 	
 	public FloatLiteral(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
@@ -44,7 +48,21 @@ public class FloatLiteral extends NumLiteral {
 		boolean match = false;
 		if(node instanceof FloatLiteral){
 			match = true;
-			// TODO : to finish
+			FloatLiteral other = (FloatLiteral) node;
+			if(_value != other._value){
+				Revision revision = new Revision(this, EXPRID, other.toSrcString().toString(), _nodeType);
+				modifications.add(revision);
+			}
+		} else if(node instanceof SName || node instanceof QName){
+			Label label = (Label) node;
+			if(label.getType().toString().equals("float")){
+				match = true;
+				String target = node.simplify(varTrans, allUsableVariables);
+				if(target != null){
+					Revision revision = new Revision(this, EXPRID, target, _nodeType);
+					modifications.add(revision);
+				}
+			}
 		} else {
 			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();
@@ -58,14 +76,20 @@ public class FloatLiteral extends NumLiteral {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification.getSourceID() == EXPRID){
+			_replace = modification.getTargetString();
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		_replace = null;
-		return true;
+		if(modification.getSourceID() == EXPRID){
+			_replace = null;
+			return true;
+		}
+		return false;
 	}
 
 	@Override
@@ -76,7 +100,7 @@ public class FloatLiteral extends NumLiteral {
 	@Override
 	public StringBuffer toSrcString() {
 		if(_replace != null){
-			return _replace.toSrcString();
+			return new StringBuffer(_replace);
 		}
 		return new StringBuffer(String.valueOf(_value));
 	}

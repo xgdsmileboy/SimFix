@@ -14,6 +14,7 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
+import cofix.common.util.Pair;
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
@@ -25,6 +26,7 @@ import cofix.core.modify.Modification;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.expr.Expr;
+import cofix.core.parser.node.expr.SName;
 
 /**
  * @author Jiajun
@@ -166,7 +168,7 @@ public class SuperConstructorInv extends Stmt {
 	@Override
 	public List<MethodCall> getMethodCalls() {
 		List<MethodCall> list = new LinkedList<>();
-		MethodCall methodCall = new MethodCall(this, "super");
+		MethodCall methodCall = new MethodCall(this, "super", _arguments);
 		list.add(methodCall);
 		if(_expression != null){
 			list.addAll(_expression.getMethodCalls());
@@ -216,5 +218,17 @@ public class SuperConstructorInv extends Stmt {
 	@Override
 	public List<Node> getChildren() {
 		return new ArrayList<>();
+	}
+	
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(this, varTrans, allUsableVariables);
+		if(record == null){
+			return null;
+		}
+		NodeUtils.replaceVariable(record);
+		String string = toSrcString().toString();
+		NodeUtils.restoreVariables(record);
+		return string;
 	}
 }

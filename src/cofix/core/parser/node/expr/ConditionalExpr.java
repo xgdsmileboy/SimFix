@@ -7,10 +7,11 @@
 package cofix.core.parser.node.expr;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.locks.Condition;
+import java.util.Set;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
@@ -39,6 +40,10 @@ public class ConditionalExpr extends Expr {
 	private Expr _condition_replace = null;
 	private Expr _first_replace = null;
 	private Expr _snd_replace = null;
+	
+	private Set<String> _conditionSet = new HashSet<>();
+	private Set<String> _firstSet = new HashSet<>();
+	private Set<String> _sndSet = new HashSet<>();
 	
 	/**
 	 * ConditionalExpression:
@@ -69,15 +74,30 @@ public class ConditionalExpr extends Expr {
 			ConditionalExpr other = (ConditionalExpr) node;
 			List<Modification> tmp = new ArrayList<>();
 			if(_condition.match(other._condition, varTrans, allUsableVariables, tmp)){
-				modifications.addAll(tmp);
+				for(Modification modification : tmp){
+					if(!_conditionSet.contains(modification.getTargetString())){
+						modifications.add(modification);
+						_conditionSet.add(modification.getTargetString());
+					}
+				}
 			}
 			tmp = new ArrayList<>();
 			if(_first.match(other._first, varTrans, allUsableVariables, tmp)){
-				modifications.addAll(tmp);
+				for(Modification modification : tmp){
+					if(!_firstSet.contains(modification.getTargetString())){
+						modifications.add(modification);
+						_firstSet.add(modification.getTargetString());
+					}
+				}
 			}
 			tmp = new ArrayList<>();
 			if(_snd.match(other._snd, varTrans, allUsableVariables, tmp)){
-				modifications.addAll(tmp);
+				for(Modification modification : tmp){
+					if(!_sndSet.contains(modification.getTargetString())){
+						modifications.add(modification);
+						_sndSet.add(modification.getTargetString());
+					}
+				}
 			}
 			
 		} else {
@@ -200,5 +220,22 @@ public class ConditionalExpr extends Expr {
 		list.add(_first);
 		list.add(_snd);
 		return list;
+	}
+
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		String cond = _condition.simplify(varTrans, allUsableVariables);
+		if(cond == null){
+			return null;
+		}
+		String fst = _first.simplify(varTrans, allUsableVariables);
+		if(fst == null){
+			return null;
+		}
+		String snd = _snd.simplify(varTrans, allUsableVariables);
+		if(snd == null){
+			return null;
+		}
+		return cond + "?" + fst + ":" + snd;
 	}
 }

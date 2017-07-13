@@ -258,26 +258,16 @@ public class CodeBlockMatcherTest {
 		searchAndPrint(file, buggyLine, subject.getHome() + subject.getSsrc());
 	}
 	
-//	@Test
-//	public void test_closure_57(){
-//		Constant.PROJECT_HOME = "testfile";
-//		Subject subject = new Subject("closure", 57, "/src", "/test", "/build/classes", "/build/test");
-//		ProjectInfo.init(subject);
-//		String file = subject.getHome() + subject.getSsrc() + "/com/google/javascript/jscomp/ClosureCodingConvention.java";
-//		int buggyLine = 197;
-//
-//		CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
-//		CodeBlock codeBlock = BuggyCode.getBuggyCodeBlock(unit, buggyLine);
-//
-//		Utils.print(codeBlock);
-//
-//		String file_2 = subject.getHome() + subject.getSsrc() + "/com/google/javascript/jscomp/ReplaceStrings.java";
-//		int buggyLine_2 = 298;
-//		CodeBlock similar = Utils.search(file_2, buggyLine_2, codeBlock.getCurrentLine());
-//		Utils.print(similar);
-//		
-//		Utils.showSimilarity(codeBlock, similar);
-//	}
+	@Test
+	public void test_closure_57(){
+		Constant.PROJECT_HOME = "testfile";
+		Subject subject = new Subject("closure", 57, "/src", "/test", "/build/classes", "/build/test");
+		ProjectInfo.init(subject);
+		String file = subject.getHome() + subject.getSsrc() + "/com/google/javascript/jscomp/ClosureCodingConvention.java";
+		int buggyLine = 197;
+
+		searchAndPrint(file, buggyLine, subject.getHome() + subject.getSsrc());
+	}
 	
 	@Test
 	public void test_closure_73(){

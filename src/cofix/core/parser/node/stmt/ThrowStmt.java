@@ -14,6 +14,8 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
+import com.sun.org.apache.bcel.internal.generic.RETURN;
+
 import cofix.common.util.Pair;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
@@ -210,5 +212,14 @@ public class ThrowStmt extends Stmt {
 	@Override
 	public List<Node> getChildren() {
 		return new ArrayList<>();
+	}
+	
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		String string = _expression.simplify(varTrans, allUsableVariables);
+		if(string == null){
+			return null;
+		}
+		return "throw " + string + ";";
 	}
 }

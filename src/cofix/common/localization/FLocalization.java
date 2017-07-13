@@ -54,7 +54,7 @@ public class FLocalization extends AbstractFaultlocalization{
 		return _candidates;
 	}
 	
-	public List<Pair<String, Integer>> getLocations(){
+	public List<Pair<String, Integer>> getLocations(Subject subject){
 		List<Pair<String, Integer>> locations = new ArrayList<>();
 		for(Statement statement : _candidates){
 			String stmt = statement.getMethod().getParent().getLabel();

@@ -59,4 +59,11 @@ public abstract class Modification {
 		return _node.restore(this);
 	}
 	
+	public boolean compatible(Modification modification){
+		if(_node == modification._node && _sourceID == modification._sourceID){
+			return false;
+		}
+		return true;
+	}
+	
 }

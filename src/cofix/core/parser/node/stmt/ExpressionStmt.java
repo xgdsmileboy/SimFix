@@ -118,4 +118,13 @@ public class ExpressionStmt extends Stmt {
 		list.add(_expression);
 		return list;
 	}
+	
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		String expression = _expression.simplify(varTrans, allUsableVariables);
+		if(expression == null){
+			return null;
+		}
+		return expression + ";";
+	}
 }

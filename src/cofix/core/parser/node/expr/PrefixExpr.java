@@ -151,4 +151,13 @@ public class PrefixExpr extends Expr {
 		list.add(_expression);
 		return list;
 	}
+
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		String expr = _expression.simplify(varTrans, allUsableVariables);
+		if(expr == null){
+			return null;
+		}
+		return _operator.toString() + expr;
+	}
 }

@@ -261,4 +261,30 @@ public class SwitchStmt extends Stmt {
 		return list;
 	}
 	
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		StringBuffer stringBuffer = new StringBuffer("swtich (");
+		String expr = _expression.simplify(varTrans, allUsableVariables);
+		if(expr == null){
+			return null;
+		}
+		stringBuffer.append(expr);
+		stringBuffer.append("){\n");
+		boolean empty = true;
+		for(Stmt stmt : _statements){
+			String string = stmt.simplify(varTrans, allUsableVariables);
+			if(string != null){
+				empty = false;
+				stringBuffer.append(string);
+				stringBuffer.append("\n");
+			}
+		}
+		if(empty){
+			return null;
+		}
+		
+		stringBuffer.append("}");
+		return stringBuffer.toString();
+	}
+	
 }

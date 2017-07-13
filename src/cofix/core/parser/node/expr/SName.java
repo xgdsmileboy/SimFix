@@ -13,9 +13,11 @@ import java.util.Map;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
+import org.eclipse.jdt.core.dom.WildcardType;
 
 import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
 
+import cofix.common.util.Pair;
 import cofix.core.metric.Literal;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Variable;
@@ -91,11 +93,14 @@ public class SName extends Label {
 						Revision revision = new Revision(this, NAMEID, other.getName(), _nodeType);
 						modifications.add(revision);
 					}
-				} else if(_exprType.isPrimitiveType() && other.getType().isPrimitiveType() && NodeUtils.isWidenType(_exprType, other.getType())){
-					match = true;
-					if(!other.getName().equals(_name) && allUsableVariables.containsKey(_name)){
-						Revision revision = new Revision(this, NAMEID, other.getName(), _nodeType);
-						modifications.add(revision);
+				} else {
+					if((_exprType.isPrimitiveType() && other.getType().isPrimitiveType() && NodeUtils.isWidenType(_exprType, other.getType()))
+							|| (_exprType instanceof WildcardType || other.getType() instanceof WildcardType )){
+						match = true;
+						if(!other.getName().equals(_name) && allUsableVariables.containsKey(_name)){
+							Revision revision = new Revision(this, NAMEID, other.getName(), _nodeType);
+							modifications.add(revision);
+						}
 					}
 				}
 			}
@@ -126,7 +131,7 @@ public class SName extends Label {
 	@Override
 	public List<Variable> getVariables() {
 		List<Variable> list = new LinkedList<>();
-		if(!_name.toUpperCase().equals(_name)){
+		if(!Character.isUpperCase(_name.charAt(0))){
 			Variable variable = new Variable(this, _name, _exprType);
 			list.add(variable);
 		}
@@ -147,6 +152,18 @@ public class SName extends Label {
 	@Override
 	public List<Node> getChildren() {
 		return new ArrayList<>();
+	}
+
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(this, varTrans, allUsableVariables);
+		if(record == null){
+			return null;
+		}
+		NodeUtils.replaceVariable(record);
+		String string = toSrcString().toString();
+		NodeUtils.restoreVariables(record);
+		return string;
 	}
 	
 }

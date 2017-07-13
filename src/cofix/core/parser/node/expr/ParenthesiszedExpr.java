@@ -131,4 +131,13 @@ public class ParenthesiszedExpr extends Expr {
 		list.add(_expression);
 		return list;
 	}
+
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		String string = _expression.simplify(varTrans, allUsableVariables);
+		if(string == null){
+			return null;
+		}
+		return "(" + string + ")";
+	}
 }

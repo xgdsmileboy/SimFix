@@ -249,4 +249,25 @@ public class Blk extends Stmt {
 		}
 		return list;
 	}
+	
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append("{\n");
+		boolean empty = true;
+		for(Stmt stmt : _statements){
+			String string = stmt.simplify(varTrans, allUsableVariables);
+			if(string != null){
+				empty = false;
+				stringBuffer.append(string);
+				stringBuffer.append("\n");
+			}
+		}
+		stringBuffer.append("}");
+		if(empty){
+			return null;
+		}
+		return stringBuffer.toString();
+	}
+	
 }

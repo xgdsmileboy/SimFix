@@ -116,6 +116,7 @@ public class EnhancedForStmt extends Stmt {
 		stringBuffer.append(_varDecl.toSrcString());
 		stringBuffer.append(" : ");
 		stringBuffer.append(_expression.toSrcString());
+		stringBuffer.append(")");
 		if(_statement_replace != null){
 			stringBuffer.append(_statement_replace.toSrcString());
 		} else {
@@ -210,5 +211,29 @@ public class EnhancedForStmt extends Stmt {
 		List<Node> list = new ArrayList<>();
 		list.add(_statement);
 		return list;
+	}
+	
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append("for(");
+		String vd = _varDecl.simplify(varTrans, allUsableVariables);
+		if(vd == null){
+			return null;
+		}
+		stringBuffer.append(vd);
+		stringBuffer.append(" : ");
+		String expr = _expression.simplify(varTrans, allUsableVariables);
+		if(expr == null){
+			return null;
+		}
+		stringBuffer.append(expr);
+		stringBuffer.append(")");
+		String body = _statement.simplify(varTrans, allUsableVariables);
+		if(body == null){
+			return null;
+		}
+		stringBuffer.append(body);
+		return stringBuffer.toString();
 	}
 }

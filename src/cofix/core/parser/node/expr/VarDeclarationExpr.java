@@ -63,12 +63,21 @@ public class VarDeclarationExpr extends Expr {
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		boolean match = false;
 		if(node instanceof VarDeclarationExpr){
-			match = true;
 			VarDeclarationExpr other = (VarDeclarationExpr) node;
 			// TODO : all referenced variable should be changed correspondingly
 			if(_declType.isPrimitiveType() && other._declType.isPrimitiveType() && NodeUtils.isWidenType(_declType, other._declType)){
+				match = true;
 				Revision revision = new Revision(this, TYPEID, other._declType.toString(), _nodeType);
 				modifications.add(revision);
+			} else if(_declType.toString().equals(other._declType.toString())){
+				match = true;
+			}
+			
+			if(match){
+				List<Modification> tmp = NodeUtils.listNodeMatching(this, _nodeType, _vdfs, other._vdfs, varTrans, allUsableVariables);
+				if(tmp != null){
+					modifications.addAll(tmp);
+				}
 			}
 		} else {
 			List<Node> children = node.getChildren();
@@ -182,5 +191,34 @@ public class VarDeclarationExpr extends Expr {
 	@Override
 	public List<Node> getChildren() {
 		return new ArrayList<>();
+	}
+
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append(_declType.toString());
+		stringBuffer.append(" ");
+		int index = 0;
+		boolean find = false;
+		for(; index < _vdfs.size(); index++){
+			String vdf = _vdfs.get(index).simplify(varTrans, allUsableVariables);
+			if(vdf != null){
+				find = true;
+				stringBuffer.append(vdf);
+				break;
+			}
+		}
+		if(!find){
+			return null;
+		}
+		for(index ++; index < _vdfs.size(); index++){
+			String vdf = _vdfs.get(index).simplify(varTrans, allUsableVariables);
+			if(vdf != null){
+				find = true;
+				stringBuffer.append(",");
+				stringBuffer.append(vdf);
+			}
+		}
+		return stringBuffer.toString();
 	}
 }

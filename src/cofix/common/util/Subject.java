@@ -131,7 +131,10 @@ public class Subject {
 		String src = getHome() + _ssrc;
 		File file = new File(src + "_ori");
 		if (!file.exists()) {
-			FileUtils.copyDirectory(new File(src), new File(src + "_ori"));
+			FileUtils.copyDirectory(new File(src), file);
+		} else {
+			FileUtils.deleteDirectory(new File(src));
+			FileUtils.copyDirectory(file, new File(src));
 		}
 	}
 	
@@ -139,7 +142,7 @@ public class Subject {
 		String src = getHome() + _ssrc;
 		File file = new File(src + "_ori");
 		if (file.exists()) {
-			FileUtils.copyDirectory(new File(src), new File(src + "_ori"));
+			FileUtils.copyDirectory(file, new File(src));
 		} else {
 			System.out.println("Restore source file failed : cannot find file " + file.getAbsolutePath());
 		}

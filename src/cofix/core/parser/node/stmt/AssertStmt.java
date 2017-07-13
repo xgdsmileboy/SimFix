@@ -75,4 +75,9 @@ public class AssertStmt extends Stmt{
 		return new ArrayList<>();
 	}
 
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		return toSrcString().toString();
+	}
+	
 }

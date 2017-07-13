@@ -165,4 +165,32 @@ public class TryStmt extends Stmt {
 		list.add(_blk);
 		return list;
 	}
+	
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		String body = _blk.simplify(varTrans, allUsableVariables);
+		if(body == null){
+			return null;
+		}
+		StringBuffer stringBuffer = new StringBuffer("try");
+		TryStatement tryStatement = (TryStatement)_originalNode;
+		if(tryStatement.resources() != null && tryStatement.resources().size() > 0){
+			stringBuffer.append("(");
+			for(Object object : tryStatement.resources()){
+				stringBuffer.append(object.toString());
+			}
+			stringBuffer.append(")");
+		}
+		stringBuffer.append(body);
+		if(tryStatement.catchClauses() != null){
+			for(Object object : tryStatement.catchClauses()){
+				stringBuffer.append(object.toString());
+			}
+		}
+		if(tryStatement.getFinally() != null){
+			stringBuffer.append("finally");
+			stringBuffer.append(tryStatement.getFinally().toString());
+		}
+		return stringBuffer.toString();
+	}
 }

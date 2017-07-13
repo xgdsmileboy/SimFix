@@ -11,8 +11,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import javax.print.attribute.standard.MediaSize.Other;
+
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
+
+import com.sun.org.apache.xml.internal.serializer.ElemDesc;
 
 import cofix.common.util.Pair;
 import cofix.core.metric.CondStruct;
@@ -64,9 +68,10 @@ public class ReturnStmt extends Stmt {
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		boolean match = false;
 		if(node instanceof ReturnStmt){
-			match = true;
 			ReturnStmt other = (ReturnStmt) node;
-			if(_expression != null && other._expression != null){
+			if(_expression == null && other._expression == null){
+				match = true;
+			} else if(_expression != null && other._expression != null){
 				if(_expression.getType().toString().equals(other._expression.toSrcString().toString())){
 					String source = _expression.toSrcString().toString();
 					if(!source.equals(other._expression.toSrcString().toString())){
@@ -84,6 +89,7 @@ public class ReturnStmt extends Stmt {
 				}
 				List<Modification> tmp = new ArrayList<>();
 				if(_expression.match(other._expression, varTrans, allUsableVariables, tmp)){
+					match = true;
 					modifications.addAll(tmp);
 				}
 			}
@@ -205,5 +211,20 @@ public class ReturnStmt extends Stmt {
 	@Override
 	public List<Node> getChildren() {
 		return new ArrayList<>();
+	}
+	
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append("return ");
+		if(_expression != null){
+			String expr = _expression.simplify(varTrans, allUsableVariables);
+			if(expr == null){
+				return null;
+			}
+			stringBuffer.append(expr);
+		}
+		stringBuffer.append(";");
+		return stringBuffer.toString();
 	}
 }

@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 import cofix.common.util.Pair;
+import cofix.common.util.Subject;
 
 /**
  * @author Jiajun
@@ -46,6 +47,8 @@ public abstract class AbstractFaultlocalization {
 		return _failedTrace;
 	}
 	
-	public abstract List<Pair<String, Integer>> getLocations();
+	public abstract void locateFault(Subject subject, double threshold);
+	
+	public abstract List<Pair<String, Integer>> getLocations(Subject subject);
 	
 }

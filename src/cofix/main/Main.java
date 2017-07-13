@@ -11,9 +11,12 @@ import java.util.List;
 
 import cofix.common.config.Configure;
 import cofix.common.config.Constant;
+import cofix.common.localization.AbstractFaultlocalization;
 import cofix.common.localization.FLocalization;
+import cofix.common.localization.ManualLocator;
 import cofix.common.util.Status;
 import cofix.common.util.Subject;
+import cofix.core.parser.ProjectInfo;
 
 /**
  * @author Jiajun
@@ -24,10 +27,11 @@ public class Main {
 	private static void loop(List<Subject> subjects) throws IOException{
 		for (Subject subject : subjects) {
 			subject.backup();
-			FLocalization fLocalization = new FLocalization();
+			ProjectInfo.init(subject);
+			AbstractFaultlocalization fLocalization = new ManualLocator();
 			fLocalization.locateFault(subject, 0);
 			Repair repair = new Repair(subject, fLocalization);
-			Timer timer = new Timer(5, 0);
+			Timer timer = new Timer(5, 20);
 			timer.start();
 			Status status = repair.fix(timer);
 			switch (status) {

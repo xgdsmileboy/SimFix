@@ -94,6 +94,8 @@ import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
+import cofix.core.modify.Deletion;
+import cofix.core.modify.Insertion;
 import cofix.core.modify.Modification;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.ProjectInfo;
@@ -254,7 +256,7 @@ public class CodeBlock extends Node{
 			ASTNode snode = _nodes.get(0);
 			start = _cunit.getLineNumber(snode.getStartPosition());
 			ASTNode enode = _nodes.get(_nodes.size() - 1);
-			end = _cunit.getLineNumber(enode.getStartPosition());
+			end = _cunit.getLineNumber(enode.getStartPosition() + enode.getLength());
 		}
 		return new Pair<Integer, Integer>(start, end);
 	}
@@ -302,6 +304,7 @@ public class CodeBlock extends Node{
 			Node node = _parsedNodes.get(i);
 			if(_insertions.containsKey(i)){
 				stringBuffer.append(_insertions.get(i));
+				stringBuffer.append("\n");
 			} else if(_deletions.contains(i)){
 				continue;
 			}
@@ -562,9 +565,11 @@ public class CodeBlock extends Node{
 		int endLine = _cunit.getLineNumber(node.getStartPosition() + node.getLength());
 		ForStmt forStmt = new ForStmt(startLine, endLine, node);
 		
-		Expr condition = (Expr)process(node.getExpression());
-		condition.setParent(forStmt);
-		forStmt.setCondition(condition);
+		if(node.getExpression() != null){
+			Expr condition = (Expr)process(node.getExpression());
+			condition.setParent(forStmt);
+			forStmt.setCondition(condition);
+		}
 		
 		List<Expr> initializers = new ArrayList<>();
 		for(Object object : node.initializers()){
@@ -749,6 +754,15 @@ public class CodeBlock extends Node{
 		int startLine = _cunit.getLineNumber(node.getStartPosition());
 		int endLine = _cunit.getLineNumber(node.getStartPosition() + node.getLength());
 		VarDeclarationStmt varDeclarationStmt = new VarDeclarationStmt(startLine, endLine, node);
+		String modifier = "";
+		if(node.modifiers() != null && node.modifiers().size() > 0){
+			for(Object object : node.modifiers()){
+				modifier += " " + object.toString();
+			}
+		}
+		if(modifier.length() > 0){
+			varDeclarationStmt.setModifier(modifier);
+		}
 		
 		varDeclarationStmt.setDeclType(node.getType());
 		
@@ -1126,6 +1140,7 @@ public class CodeBlock extends Node{
 			expr = sName;
 		} else if(node instanceof QualifiedName){
 			QualifiedName qualifiedName = (QualifiedName) node;
+//			System.out.println(qualifiedName.toString());
 			QName qName = new QName(startLine, endLine, node);
 			SName sname = (SName) process(qualifiedName.getName());
 			sname.setParent(qName);
@@ -1575,20 +1590,38 @@ public class CodeBlock extends Node{
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		if (modification instanceof Deletion) {
+			_deletions.add(modification.getSourceID());
+		} else if(modification instanceof Insertion){
+			_insertions.put(modification.getSourceID(), modification.getTargetString());
+		} else {
+			return false;
+		}
+		return true;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		if (modification instanceof Deletion) {
+			_deletions.remove(modification.getSourceID());
+		} else if(modification instanceof Insertion){
+			_insertions.remove(modification.getSourceID());
+		} else {
+			return false;
+		}
+		return true;
 	}
 
 	@Override
 	public boolean backup(Modification modification) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	
