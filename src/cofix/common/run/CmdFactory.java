@@ -28,7 +28,7 @@ public class CmdFactory {
 	public static String[] createTestSubjectCmd(Subject subject, int timeout) {
 		StringBuffer stringBuffer = new StringBuffer();
 		stringBuffer.append(Constant.COMMAND_CD + subject.getHome() + " && ");
-		stringBuffer.append("gtimeout " + timeout + " ");
+		stringBuffer.append(Constant.COMMAND_TIMEOUT + timeout + " ");
 		stringBuffer.append(Constant.COMMAND_D4J + "test");
 		String[] cmd = new String[] { "/bin/bash", "-c", stringBuffer.toString() };
 		return cmd;
@@ -37,7 +37,7 @@ public class CmdFactory {
 	public static String[] createTestSingleTestCaseCmd(Subject subject, int timeout, String clazz, String method){
 		StringBuffer stringBuffer = new StringBuffer();
 		stringBuffer.append(Constant.COMMAND_CD + subject.getHome() + " && ");
-		stringBuffer.append("gtimeout " + timeout + " ");
+		stringBuffer.append(Constant.COMMAND_TIMEOUT + timeout + " ");
 		stringBuffer.append(Constant.COMMAND_D4J + "test -t " + clazz + "::" + method);
 		String[] cmd = new String[] { "/bin/bash", "-c", stringBuffer.toString() };
 		return cmd;

@@ -80,18 +80,16 @@ public class MethodInv extends Expr {
 						modifications.addAll(tmp);
 					}
 				}
-				boolean sameParam = true;
 				if(_arguments.size() == other._arguments.size()){
+					// TODO : types of arguments should be compatible
+					boolean compatible = true;
 					for(int i = 0; i < _arguments.size(); i++){
-						if(!_arguments.get(i).getType().toString().equals(other._arguments.get(i).getType().toString())){
-							sameParam = false;
+						if(!NodeUtils.compatibleType(_arguments.get(i).getType(), other._arguments.get(i).getType())){
+							compatible = false;
+							break;
 						}
 					}
-				} else {
-					sameParam = false;
-				}
-				if(sameParam){
-					if(!_name.equals(other._name)){
+					if(compatible && !_name.equals(other._name)){
 						Revision revision = new Revision(this, NAMEID, other._name, _nodeType);
 						modifications.add(revision);
 					}

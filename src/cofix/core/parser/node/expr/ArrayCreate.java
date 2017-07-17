@@ -15,6 +15,8 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ArrayType;
 import org.eclipse.jdt.core.dom.Type;
 
+import com.sun.corba.se.spi.ior.TaggedProfileTemplate;
+
 import cofix.common.util.Pair;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
@@ -67,7 +69,18 @@ public class ArrayCreate extends Expr {
 		boolean match = false;
 		if(node instanceof ArrayCreate){
 			match = true;
-			// TODO : to finish
+			ArrayCreate other = (ArrayCreate) node;
+			if(_dimension != null && other._dimension != null){
+				for(Expr expr : _dimension){
+					for(Expr otherExpr : other._dimension){
+						List<Modification> tmp = new ArrayList<>();
+						if(expr.match(otherExpr, varTrans, allUsableVariables, tmp)){
+							modifications.addAll(tmp);
+						}
+					}
+				}
+				modifications.addAll(NodeUtils.listNodeMatching(this, _nodeType, _dimension, other._dimension, varTrans, allUsableVariables));
+			}
 		} else {
 			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();

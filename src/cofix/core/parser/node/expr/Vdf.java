@@ -69,11 +69,11 @@ public class Vdf extends Node {
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		boolean match = false;
 		if(node instanceof Vdf){
-			match = true;
 			Vdf other = (Vdf) node;
 			if(_expression != null && other._expression != null){
 				List<Modification> tmp = new ArrayList<>();
 				if(_expression.match(other._expression, varTrans, allUsableVariables, tmp)){
+					match = true;
 					modifications.addAll(tmp);
 				}
 			}

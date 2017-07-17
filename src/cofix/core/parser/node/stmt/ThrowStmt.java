@@ -14,8 +14,6 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
-import com.sun.org.apache.bcel.internal.generic.RETURN;
-
 import cofix.common.util.Pair;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
@@ -40,7 +38,7 @@ public class ThrowStmt extends Stmt {
 
 	private Expr _expression = null;
 	
-	private String _insertBefore = null;
+	private List<String> _insertBefore = new ArrayList<>();;
 	private String _expression_replace = null;
 	
 	private final int EXPID = 0; 
@@ -126,7 +124,7 @@ public class ThrowStmt extends Stmt {
 			_expression_replace = modification.getTargetString();
 			break;
 		case INSID:
-			_insertBefore = modification.getTargetString();
+			_insertBefore.add(modification.getTargetString());
 			break;
 		}
 		return true;
@@ -139,7 +137,7 @@ public class ThrowStmt extends Stmt {
 			_expression_replace = null;
 			break;
 		case INSID:
-			_insertBefore = null;
+			_insertBefore.remove(modification.getTargetString());
 			break;
 		}
 		return true;
@@ -153,9 +151,11 @@ public class ThrowStmt extends Stmt {
 	@Override
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer();
-		if(_insertBefore != null){
-			stringBuffer.append(_insertBefore);
-			stringBuffer.append("\n");
+		if(_insertBefore.size() > 0){
+			for(String string : _insertBefore){
+				stringBuffer.append(string);
+				stringBuffer.append("\n");
+			}
 		}
 		stringBuffer.append("throw ");
 		if(_expression_replace != null){

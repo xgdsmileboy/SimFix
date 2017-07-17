@@ -14,8 +14,6 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
-import com.sun.org.apache.xpath.internal.Arg;
-
 import cofix.common.util.Pair;
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;

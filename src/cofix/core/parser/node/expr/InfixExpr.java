@@ -7,11 +7,9 @@
 package cofix.core.parser.node.expr;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.InfixExpression;
@@ -43,11 +41,6 @@ public class InfixExpr extends Expr {
 	private String _lhs_replace = null;
 	private String _operator_replace = null;
 	private String _rhs_replace = null;
-	
-	private Set<String> _allSet = new HashSet<>();
-	private Set<String> _lhsSet = new HashSet<>();
-	private Set<String> _rhsSet = new HashSet<>();
-	private Set<String> _opSet = new HashSet<>();
 	
 	private final int WHOLE = 0;
 	private final int LHSID = 1;
@@ -83,9 +76,9 @@ public class InfixExpr extends Expr {
 			List<Variable> srcVars = getVariables();
 			for(Variable var : tarVars){
 				String name = var.getName();
-				name = varTrans.get(name);
+				String mapName = varTrans.get(name) == null ? name : varTrans.get(name);
 				for(Variable variable : srcVars){
-					if(variable.getName().equals(name)){
+					if(variable.getName().equals(mapName)){
 						match = true;
 						break;
 					}
@@ -99,39 +92,42 @@ public class InfixExpr extends Expr {
 			}
 			InfixExpr other = (InfixExpr) node;
 			
+			boolean compatible = NodeUtils.canReplaceOperator(_operator.toString(), other._operator.toString());
+			
 			boolean matchLeft = false;
 			boolean matchRight = false;
 			// replace left hand side
 			List<Modification> tmp = new ArrayList<>();
-			if(other._lhs instanceof NumLiteral){
-				if(_lhs instanceof NumLiteral){
+			if(compatible){
+				if(other._lhs instanceof NumLiteral){
+					if(_lhs instanceof NumLiteral){
+						if(NodeUtils.replaceExpr(LHSID, _lhs, other._lhs, varTrans, allUsableVariables, tmp)){
+							matchLeft = true;
+							modifications.addAll(tmp);
+						}
+					}
+				} else {
 					if(NodeUtils.replaceExpr(LHSID, _lhs, other._lhs, varTrans, allUsableVariables, tmp)){
 						matchLeft = true;
 						modifications.addAll(tmp);
 					}
 				}
-			} else {
-				if(NodeUtils.replaceExpr(LHSID, _lhs, other._lhs, varTrans, allUsableVariables, tmp)){
-					matchLeft = true;
-					modifications.addAll(tmp);
-				}
-			}
-			tmp = new ArrayList<>();
-			if(other._rhs instanceof NumLiteral){
-				if(_rhs instanceof NumLiteral){
+				tmp = new ArrayList<>();
+				if(other._rhs instanceof NumLiteral){
+					if(_rhs instanceof NumLiteral){
+						if(NodeUtils.replaceExpr(RHSID, _rhs, other._rhs, varTrans, allUsableVariables, tmp)){
+							matchRight = true;
+							modifications.addAll(tmp);
+						}
+					}
+				} else {
 					if(NodeUtils.replaceExpr(RHSID, _rhs, other._rhs, varTrans, allUsableVariables, tmp)){
 						matchRight = true;
 						modifications.addAll(tmp);
 					}
 				}
-			} else {
-				if(NodeUtils.replaceExpr(RHSID, _rhs, other._rhs, varTrans, allUsableVariables, tmp)){
-					matchRight = true;
-					modifications.addAll(tmp);
-				}
 			}
 			
-			boolean compatible = NodeUtils.canReplace(_operator.toString(), other._operator.toString());
 			// replace operator
 			if(matchLeft && matchRight && compatible && !_operator.toString().equals(other._operator.toString())){
 				modifications.add(new Revision(this, OPID, other._operator.toString(), _nodeType));
@@ -147,11 +143,14 @@ public class InfixExpr extends Expr {
 				modifications.addAll(tmp);
 			}
 			
-			if(compatible && matchLeft && matchRight){
-				String tarString = other.simplify(varTrans, allUsableVariables);
-				if(other.getType().toString().equals("boolean") && tarString != null && !tarString.equals(toSrcString().toString())){
-					Revision revision = new Revision(this, WHOLE, tarString, _nodeType);
-					modifications.add(revision);
+			String tarString = other.simplify(varTrans, allUsableVariables);
+			if(tarString != null){
+				String thisStr = this.toSrcString().toString();
+				if((compatible && matchLeft && matchRight) || tarString.contains(thisStr)){
+					if(NodeUtils.compatibleType(_exprType, other.getType()) && !tarString.equals(thisStr)){
+						Revision revision = new Revision(this, WHOLE, tarString, _nodeType);
+						modifications.add(revision);
+					}
 				}
 			}
 			

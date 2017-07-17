@@ -36,6 +36,7 @@ import cofix.core.parser.node.stmt.BreakStmt;
 import cofix.core.parser.node.stmt.ContinueStmt;
 import cofix.core.parser.node.stmt.ReturnStmt;
 import cofix.core.parser.node.stmt.ThrowStmt;
+import cofix.core.parser.search.BuggyCode;
 
 /**
  * @author Jiajun
@@ -47,6 +48,42 @@ public class CodeBlockMatcher {
 		NewFVector buggy = buggyCode.getFeatureVector();
 		NewFVector other = codeBlock.getFeatureVector();
 		return buggy.computeSimilarity(other, NewFVector.ALGO.COSINE);
+	}
+	
+	public static double getRewardSimilarity(CodeBlock buggyCode, CodeBlock codeBlock){
+		List<Variable> buggyVars = buggyCode.getVariables();
+		List<Variable> simVars = codeBlock.getVariables();
+		int total = buggyVars.size() + simVars.size();
+		double varReward = 0;
+		if(total != 0){
+			double varSame = 0;
+			for(Variable variable : buggyVars){
+				if(simVars.contains(variable)){
+					varSame += 1.0;
+				}
+			}
+			varReward = varSame * 2.0 / (double)total;;
+		}
+		
+		
+		
+		List<MethodCall> buggyMethodCalls = buggyCode.getMethodCalls();
+		List<MethodCall> simMethodCalls = codeBlock.getMethodCalls();
+		int allMethods = buggyMethodCalls.size() + simMethodCalls.size();
+		double methodReward = 0;
+		if(allMethods != 0){
+			double methodSame = 0;
+			for(MethodCall methodCall : simMethodCalls){
+				for(MethodCall buggy : buggyMethodCalls){
+					if(methodCall.getName().equals(buggy.getName())){
+						methodSame += 1.0;
+					}
+				}
+			}
+			methodReward = methodSame * 2.0 / (double)allMethods;
+		}
+		
+		return varReward + methodReward;
 	}
 	
 	public static List<Modification> match(CodeBlock buggyBlock, CodeBlock similarBlock, Map<String, Type> allUsableVariables){
@@ -86,6 +123,9 @@ public class CodeBlockMatcher {
 		for(int j = 0; j < sNodes.size(); j++){
 			if(!reverseMatch.containsKey(j)){
 				Node tarNode = sNodes.get(j);
+				if(tarNode instanceof ReturnStmt || tarNode instanceof ThrowStmt || tarNode instanceof BreakStmt || tarNode instanceof ContinueStmt){
+					continue;
+				}
 				Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(tarNode, varTrans, allUsableVariables);
 				if(record == null){
 					continue;
@@ -107,11 +147,15 @@ public class CodeBlockMatcher {
 					}
 					nextMatchIndex = last >= 0 ? last : 0;
 				}
+				
 				NodeUtils.replaceVariable(record);
 				String target = tarNode.toSrcString().toString();
-				Insertion insertion = new Insertion(buggyBlock, nextMatchIndex, target, TYPE.UNKNOWN);
-				modifications.add(insertion);
 				NodeUtils.restoreVariables(record);
+				for(int index = 0; index <= nextMatchIndex; index ++){
+					Insertion insertion = new Insertion(buggyBlock, index, target, TYPE.UNKNOWN);
+					modifications.add(insertion);
+				}
+				
 			}
 		}
 		
@@ -203,7 +247,8 @@ public class CodeBlockMatcher {
 			}
 		}
 		
-		return tryMatch(similarityTable, reverseSimNameMap, reverseBuggyNameMap);
+		Map<String, String> varMap = tryMatch(similarityTable, reverseSimNameMap, reverseBuggyNameMap);; 
+		return varMap;
 	}
 	private static Map<String, String> tryMatch(double[][] similarityTable, Map<Integer, String> reverseSimNameMap, Map<Integer, String> reverseBuggyNameMap){
 		Map<String, String> matchTable = new HashMap<>();

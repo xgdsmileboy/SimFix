@@ -27,7 +27,6 @@ import cofix.core.modify.Modification;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.expr.Expr;
-import sun.java2d.pipe.SpanShapeRenderer.Simple;
 
 /**
  * @author Jiajun

@@ -28,4 +28,8 @@ public class OtherStruct extends Feature {
 		_kind = kind;
 	}
 
+	public KIND getKind(){
+		return _kind;
+	}
+	
 }

@@ -83,6 +83,13 @@ public class DoStmt extends Stmt {
 				match = true;
 				modifications.addAll(tmp);
 			}
+			if(!match){
+				tmp = new ArrayList<>();
+				if(NodeUtils.nodeMatchList(_stmt, children, varTrans, allUsableVariables, tmp)){
+					match = true;
+					modifications.addAll(tmp);
+				}
+			}
 		}
 		
 		return match;

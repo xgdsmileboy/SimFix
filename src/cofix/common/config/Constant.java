@@ -28,6 +28,7 @@ public class Constant {
 	public static String PROJECT_HOME = null;
 	
 	public final static String COMMAND_CD = "cd ";
+	public final static String COMMAND_TIMEOUT = "/usr/local/bin/gtimeout ";
 	public final static String COMMAND_D4J = "/Users/Jiajun/Code/Defects4J/defects4j/framework/bin/defects4j ";
 
 }

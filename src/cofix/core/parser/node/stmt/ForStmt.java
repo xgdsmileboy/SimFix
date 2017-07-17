@@ -13,9 +13,6 @@ import java.util.Map;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
-import org.omg.CosNaming._NamingContextExtStub;
-
-import com.sun.corba.se.spi.ior.TaggedProfileTemplate;
 
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
@@ -144,6 +141,13 @@ public class ForStmt extends Stmt {
 			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
 				match = true;
 				modifications.addAll(tmp);
+			}
+			if(!match){
+				tmp = new ArrayList<>();
+				if(NodeUtils.nodeMatchList(_body, children, varTrans, allUsableVariables, tmp)){
+					match = true;
+					modifications.addAll(tmp);
+				}
 			}
 		}
 		return match;
@@ -348,11 +352,13 @@ public class ForStmt extends Stmt {
 			}
 		}
 		stringBuffer.append(";");
-		String cond = _condition.simplify(varTrans, allUsableVariables);
-		if(cond == null){
-			return null;
+		if(_condition != null){
+			String cond = _condition.simplify(varTrans, allUsableVariables);
+			if(cond == null){
+				return null;
+			}
+			stringBuffer.append(cond);
 		}
-		stringBuffer.append(cond);
 		stringBuffer.append(";");
 		if(_updaters != null && _updaters.size() > 0){
 			int index = 0;

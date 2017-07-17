@@ -33,7 +33,7 @@ public class Runner {
 		
 		boolean success = false;
 		for(int i = message.size() - 1; i >= 0; i--){
-			System.out.println(message.get(i));
+//			System.out.println(message.get(i));
 			if (message.get(i).contains(SUCCESSTEST)) {
 				success = true;
 				break;
@@ -54,7 +54,7 @@ public class Runner {
 		
 		boolean success = false;
 		for(int i = message.size() - 1; i >= 0; i--){
-			System.out.println(message.get(i));
+//			System.out.println(message.get(i));
 			if (message.get(i).contains(SUCCESSTEST)) {
 				success = true;
 				break;

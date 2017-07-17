@@ -14,7 +14,6 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.PrefixExpression;
 import org.eclipse.jdt.core.dom.Type;
-import org.eclipse.jdt.core.util.ISignatureAttribute;
 
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
@@ -62,8 +61,10 @@ public class PrefixExpr extends Expr {
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		boolean match = false;
 		if(node instanceof PrefixExpr){
-			match = true;
-			// TODO : to finish
+			PrefixExpr other = (PrefixExpr) node;
+			if(_expression.match(other, varTrans, allUsableVariables, modifications)){
+				match = true;
+			}
 		} else {
 			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();

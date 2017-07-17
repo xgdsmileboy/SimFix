@@ -7,12 +7,16 @@
 package cofix.core.parser.node.stmt;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
+import org.eclipse.jdt.core.util.ISignatureAttribute;
 
 import cofix.common.util.Pair;
 import cofix.core.metric.CondStruct;
@@ -39,7 +43,10 @@ public class Blk extends Stmt {
 
 	private List<Stmt> _statements = null;
 	
-	private String _statements_replace = null;
+	private String _replace = null;
+	
+	private Map<Integer, List<String>> _insertions = new HashMap<>();
+	private Set<Integer> _deletions = new HashSet<>(); 
 	
 	private int WHOLE = 10000;
 	
@@ -95,30 +102,19 @@ public class Blk extends Stmt {
 	public boolean adapt(Modification modification) {
 		int index = modification.getSourceID();
 		if(index == WHOLE){
-			_statements_replace = modification.getTargetString();
-		} else if(index < _statements.size()){
-			if(modification instanceof Deletion){
-				StringBuffer stringBuffer = new StringBuffer();
-				for(int i = 0; i < _statements.size(); i++){
-					if(i == index){
-						continue;
-					}
-					stringBuffer.append(_statements.get(i).toSrcString());
-					stringBuffer.append("\n");
-				}
-				_statements_replace = stringBuffer.toString();
-			} else if(modification instanceof Insertion){
-				StringBuffer stringBuffer = new StringBuffer();
-				for(int i = 0; i < _statements.size(); i++){
-					if(i == index){
-						stringBuffer.append(modification.getTargetString());
-						stringBuffer.append("\n");
-					}
-					stringBuffer.append(_statements.get(i).toSrcString());
-					stringBuffer.append("\n");
-				}
-				_statements_replace = stringBuffer.toString();
+			_replace = modification.getTargetString();
+		} else if(modification instanceof Insertion){
+			List<String> list = _insertions.get(modification.getSourceID());
+			if(list == null){
+				list = new ArrayList<>();
 			}
+			list.add(modification.getTargetString());
+			_insertions.put(modification.getSourceID(), list);
+		} else if(modification instanceof Deletion){
+			if(!_deletions.contains(modification.getSourceID())){
+				return false;
+			}
+			_deletions.remove(modification.getSourceID());
 		} else {
 			return false;
 		}
@@ -127,8 +123,21 @@ public class Blk extends Stmt {
 
 	@Override
 	public boolean restore(Modification modification) {
-		_statements_replace = null;
-		return false;
+		if(modification.getSourceID() == WHOLE){
+			_replace = null;
+		} else if(modification instanceof Insertion){
+			List<String> list = _insertions.get(modification.getSourceID());
+			if(list != null){
+				list.remove(modification.getTargetString());
+			}
+		} else if(modification instanceof Deletion){
+			if(_deletions.contains(modification.getSourceID())){
+				_deletions.remove(modification.getTargetString());
+			}
+		} else {
+			return false;
+		}
+		return true;
 	}
 
 	@Override
@@ -141,12 +150,20 @@ public class Blk extends Stmt {
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer();
 		stringBuffer.append("{\n");
-		if(_statements_replace != null){
-			stringBuffer.append(_statements_replace);
+		if(_replace != null){
+			stringBuffer.append(_replace);
 			stringBuffer.append("\n");
 		} else {
-			for(Stmt stmt : _statements){
-				stringBuffer.append(stmt.toSrcString());
+			for(int i = 0; i < _statements.size(); i++){
+				if(_insertions.containsKey(i)){
+					for(String string : _insertions.get(i)){
+						stringBuffer.append(string);
+						stringBuffer.append("\n");
+					}
+				} else if(_deletions.contains(i)){
+					continue;
+				}
+				stringBuffer.append(_statements.get(i).toSrcString());
 				stringBuffer.append("\n");
 			}
 		}

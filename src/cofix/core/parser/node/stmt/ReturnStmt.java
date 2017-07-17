@@ -11,12 +11,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import javax.print.attribute.standard.MediaSize.Other;
-
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
-
-import com.sun.org.apache.xml.internal.serializer.ElemDesc;
 
 import cofix.common.util.Pair;
 import cofix.core.metric.CondStruct;

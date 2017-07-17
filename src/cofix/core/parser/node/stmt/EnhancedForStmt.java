@@ -90,6 +90,13 @@ public class EnhancedForStmt extends Stmt {
 				match = true;
 				modifications.addAll(tmp);
 			}
+			if(!match){
+				tmp = new ArrayList<>();
+				if(NodeUtils.nodeMatchList(_statement, children, varTrans, allUsableVariables, tmp)){
+					match = true;
+					modifications.addAll(tmp);
+				}
+			}
 		}
 		return match;
 	}

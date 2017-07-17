@@ -79,29 +79,38 @@ public class IfStmt extends Stmt {
 				modifications.addAll(tmp);
 			}
 
-			tmp = new ArrayList<>();
-			if(_then.match(other._then, varTrans, allUsableVariables, tmp)){
-				modifications.addAll(tmp);
-			}
-			
-			if(_else != null){
-				if(other._else != null){
-					tmp = new ArrayList<>();
-					if(_else.match(other._else, varTrans, allUsableVariables, tmp)){
-						modifications.addAll(tmp);
+			if(match){
+				tmp = new ArrayList<>();
+				if(_then.match(other._then, varTrans, allUsableVariables, tmp)){
+					modifications.addAll(tmp);
+				}
+				
+				if(_else != null){
+					if(other._else != null){
+						tmp = new ArrayList<>();
+						if(_else.match(other._else, varTrans, allUsableVariables, tmp)){
+							modifications.addAll(tmp);
+						}
+					} else {
+						tmp = new ArrayList<>();
+						if(_else.match(other._then, varTrans, allUsableVariables, tmp)){
+							modifications.addAll(tmp);
+						}
 					}
-				} else {
-					tmp = new ArrayList<>();
-					if(_else.match(other._then, varTrans, allUsableVariables, tmp)){
-						modifications.addAll(tmp);
+				} else{
+					if(other._else != null){
+						tmp = new ArrayList<>();
+						if(_then.match(other._else, varTrans, allUsableVariables, tmp)){
+							modifications.addAll(tmp);
+						}
 					}
 				}
-			} else{
-				if(other._else != null){
-					tmp = new ArrayList<>();
-					if(_then.match(other._else, varTrans, allUsableVariables, tmp)){
-						modifications.addAll(tmp);
-					}
+			} else {
+				List<Node> children = node.getChildren();
+				tmp = new ArrayList<>();
+				if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+					match = true;
+					modifications.addAll(tmp);
 				}
 			}
 			

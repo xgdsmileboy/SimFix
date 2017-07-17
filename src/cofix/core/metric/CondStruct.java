@@ -27,4 +27,7 @@ public class CondStruct extends Feature {
 		_kind = kind;
 	}
 
+	public KIND getKind(){
+		return _kind;
+	}
 }

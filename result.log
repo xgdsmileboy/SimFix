@@ -1,0 +1,173 @@
+=================================================
+Project : chart_1	start : 17/07/16 17:33
+
+----------------------------------------
+Find a patch :
+if(dataset==null){
+return result;
+}
+
+----------------------------------------
+
+Successfully find a patch!
+Success time : 17/07/16 17:34
+=================================================
+Project : chart_7	start : 17/07/16 17:34
+
+----------------------------------------
+Find a patch :
+if(this.maxMiddleIndex>=0){
+long s=getDataItem(this.maxMiddleIndex).getPeriod().getStart().getTime();
+long e=getDataItem(this.minMiddleIndex).getPeriod().getEnd().getTime();
+long maxMiddle=s+(e-s)/2;
+if(middle>maxMiddle){
+this.maxMiddleIndex=index;
+}
+}else {
+this.maxMiddleIndex=index;
+}
+
+----------------------------------------
+
+Successfully find a patch!
+
+----------------------------------------
+Find a patch :
+if(this.maxMiddleIndex>=0){
+long s=getDataItem(this.minMiddleIndex).getPeriod().getStart().getTime();
+long e=getDataItem(this.maxMiddleIndex).getPeriod().getEnd().getTime();
+long maxMiddle=s+(e-s)/2;
+if(middle>maxMiddle){
+this.maxMiddleIndex=index;
+}
+}else {
+this.maxMiddleIndex=index;
+}
+
+----------------------------------------
+
+Successfully find a patch!
+
+----------------------------------------
+Find a patch :
+if(this.maxMiddleIndex>=0){
+long s=getDataItem(this.maxMiddleIndex).getPeriod().getStart().getTime();
+long e=getDataItem(this.maxMiddleIndex).getPeriod().getEnd().getTime();
+long maxMiddle=s+(e-s)/2;
+if(middle>maxMiddle){
+this.maxMiddleIndex=index;
+}
+}else {
+this.maxMiddleIndex=index;
+}
+
+----------------------------------------
+
+Successfully find a patch!
+Success time : 17/07/16 17:37
+=================================================
+Project : chart_20	start : 17/07/16 17:37
+
+----------------------------------------
+Find a patch :
+super(paint,stroke,outlinePaint,outlineStroke,alpha);
+this.value=value;
+
+----------------------------------------
+
+Successfully find a patch!
+Success time : 17/07/16 17:38
+=================================================
+Project : closure_14	start : 17/07/16 18:17
+
+》》》》》正确
+
+=================================================
+Project : closure_57	start : 17/07/16 18:24
+
+》》》》》正确
+
+=================================================
+Project : closure_73	start : 17/07/16 18:44
+
+》》》》》正确
+
+=================================================
+Project : lang_35	start : 17/07/16 18:49
+
+----------------------------------------
+Find a patch :
+if(element!=null){
+clss=element.getClass();
+}else {
+throw new IllegalArgumentException("The Array must not be null");
+}
+
+----------------------------------------
+
+Successfully find a patch!
+Success time : 17/07/16 18:51
+=================================================
+Project : lang_39	start : 17/07/16 19:21
+
+----------------------------------------
+Find a patch :
+for(int i=0;i<searchList.length;i++){
+if(noMoreMatchesForReplIndex[i]||searchList[i]==null||searchList[i].length()==0||replacementList[i]==null){
+continue;
+}
+int greater=replacementList[i].length()-searchList[i].length();
+if(greater>0){
+increase+=3*greater;
+}
+}
+
+----------------------------------------
+
+Successfully find a patch!
+Success time : 17/07/16 19:25
+=================================================
+Project : lang_43	start : 17/07/16 19:36
+
+----------------------------------------
+Find a patch :
+if(escapingOn&&c[start]==QUOTE){
+next(pos);
+return appendTo==null?null:appendTo.append(QUOTE);
+}
+
+----------------------------------------
+
+Successfully find a patch!
+Success time : 17/07/16 19:45
+=================================================
+Project : lang_58	start : 17/07/16 19:46
+
+》》》》》正确
+
+=================================================
+Project : lang_60	start : 17/07/16 19:56
+
+》》》》》正确
+=================================================
+Project : math_63	start : 17/07/16 20:07
+
+----------------------------------------
+Find a patch :
+if(Double.isNaN(y)){
+return false;
+}
+return (Double.isNaN(x)&&Double.isNaN(y))||x==y;
+
+----------------------------------------
+
+Successfully find a patch!
+
+----------------------------------------
+Find a patch :
+return equals(x,y,1)||x==y;
+
+----------------------------------------
+
+Successfully find a patch!
+Success time : 17/07/16 20:15

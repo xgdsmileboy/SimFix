@@ -15,8 +15,6 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 import org.eclipse.jdt.core.dom.WildcardType;
 
-import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
-
 import cofix.common.util.Pair;
 import cofix.core.metric.Literal;
 import cofix.core.metric.NewFVector;

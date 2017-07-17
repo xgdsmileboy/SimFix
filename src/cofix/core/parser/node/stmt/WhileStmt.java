@@ -13,7 +13,6 @@ import java.util.Map;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
-import org.omg.DynamicAny._DynAnyFactoryStub;
 
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
@@ -82,6 +81,13 @@ public class WhileStmt extends Stmt {
 			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
 				match = true;
 				modifications.addAll(tmp);
+			}
+			if(!match){
+				tmp = new ArrayList<>();
+				if(NodeUtils.nodeMatchList(_body, children, varTrans, allUsableVariables, tmp)){
+					match = true;
+					modifications.addAll(tmp);
+				}
 			}
 		}
 		return match;

@@ -40,8 +40,6 @@ import org.eclipse.jdt.core.dom.VariableDeclarationStatement;
 import org.eclipse.jdt.core.dom.WhileStatement;
 import org.eclipse.jdt.core.dom.WildcardType;
 
-import com.sun.org.apache.xerces.internal.dom.DeferredAttrImpl;
-
 import cofix.common.util.JavaFile;
 import cofix.common.util.Pair;
 import cofix.core.metric.Variable;
@@ -52,8 +50,8 @@ import cofix.core.modify.Revision;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.Node.TYPE;
 import cofix.core.parser.node.expr.Expr;
+import cofix.core.parser.node.expr.QName;
 import cofix.core.parser.node.expr.SName;
-import javassist.compiler.ast.NewExpr;
 
 /**
  * @author Jiajun
@@ -192,10 +190,11 @@ public class NodeUtils {
 				if(tmMap != null){
 					changeMap.put(i, tmMap);
 					change.add(i);
-				} else {
-					change = new HashSet<>();
-					break;
-				}
+				} 
+//				else {
+//					change = new HashSet<>();
+//					break;
+//				}
 			}
 			if(change.size() == 0){
 				return modifications;
@@ -365,7 +364,7 @@ public class NodeUtils {
 					stringBuffer.append(srcArg.get(matchRec[i]).toSrcString());
 				}
 			}
-			Insertion insertion = new Insertion(currNode, srcID, stringBuffer.toString(), nodeType);
+			Revision insertion = new Revision(currNode, srcID, stringBuffer.toString(), nodeType);
 			modifications.add(insertion);
 		}
 		
@@ -418,6 +417,7 @@ public class NodeUtils {
 		}
 		StringBuffer stringBuffer = new StringBuffer();
 		int shouldIns = 1000;
+		int insertCount = 0;
 		for(int i = 0; i < otherLen; i++){
 			if(record[i] == -1){
 				int index = 0;
@@ -431,10 +431,13 @@ public class NodeUtils {
 					Node inset = tarNodeList.get(i);
 					String tarString = inset.simplify(varTrans, allUsableVariables);
 					if(tarString != null){
+						insertCount ++;
 						stringBuffer.append(tarString + "\n");
 						shouldIns = shouldIns > index ? index : shouldIns;
-						Insertion insertion = new Insertion(currNode, index, tarString, nodeType);
-						modifications.add(insertion);
+						for(int k = 0; k <= index; k ++){
+							Insertion insertion = new Insertion(currNode, k, tarString, nodeType);
+							modifications.add(insertion);
+						}
 					}
 //					Map<SName, Pair<String, String>> revision = NodeUtils.tryReplaceAllVariables(inset, varTrans, allUsableVariables);
 //					if(revision != null){
@@ -449,7 +452,7 @@ public class NodeUtils {
 				}
 			}
 		}
-		if(stringBuffer.toString().length() > 0){
+		if(insertCount > 1){
 			Insertion insertion = new Insertion(currNode, shouldIns, stringBuffer.toString(), nodeType);
 			modifications.add(insertion);
 		}
@@ -464,6 +467,13 @@ public class NodeUtils {
 			if(variable.getNode() instanceof SName){
 				SName sName = (SName) variable.getNode();
 				String name = sName.getName();
+				Node parent = sName.getParent();
+				if(parent instanceof QName){
+					QName qName = (QName) parent;
+					if(name.equals(qName.getIdentifier()) && !"this".equals(qName.getLabel())){
+						continue;
+					}
+				}
 				Type type = sName.getType();
 				String replace = varTrans.get(name);
 				boolean matched = false;
@@ -471,7 +481,7 @@ public class NodeUtils {
 				if(replace != null){
 					Type replaceType = allUsableVariables.get(replace) ;
 					String typeStr = replaceType == null ? "?" : replaceType.toString();
-					if(typeStr.equals(type.toString()) || type.toString().equals("?")){
+					if(typeStr.equals(type.toString()) || type.toString().equals("?") || typeStr.equals("?")){
 						matched = true;
 						if(!name.equals(replace)){
 							record.put(sName, new Pair<String, String>(name, replace));
@@ -481,20 +491,30 @@ public class NodeUtils {
 				// failed to replace variable
 				if(!matched){
 					if(!allUsableVariables.containsKey(name)){
-						boolean findRepalcement = false;
+						Set<String> candidates = new HashSet<>();
 						for(Entry<String, Type> entry : allUsableVariables.entrySet()){
 							Type type2 = entry.getValue();
 							String typeStr = type2 == null ? "?" : type2.toString();
 							if(type.toString().equals(typeStr)){
-								if(!name.equals(entry.getKey())){
-									record.put(sName, new Pair<String, String>(name, entry.getKey()));
+								if(!varTrans.values().contains(entry.getKey())){
+//									record.put(sName, new Pair<String, String>(name, entry.getKey()));
+									candidates.add(entry.getKey());
 								}
-								findRepalcement = true;
-								break;
 							}
 						}
-						if(!findRepalcement){
+						if(candidates.size() == 0){
 							return null;
+						} else {
+							String replaceName = "";
+							double similarity = -1;
+							for(String candidate : candidates){
+								double value = nameSimilarity(candidate, name); 
+								if(value > similarity){
+									similarity = value;
+									replaceName = candidate;
+								}
+							}
+							record.put(sName, new Pair<String, String>(name, replaceName));
 						}
 					}
 				}
@@ -529,6 +549,24 @@ public class NodeUtils {
 		}
 	}
 	
+	private static boolean isPrimitiveType(Type type){
+		if(type == null){
+			return false;
+		}
+		if(type.isPrimitiveType()){
+			return true;
+		}
+		switch(type.toString()){
+		case "Integer":
+		case "Long":
+		case "Float":
+		case "Short":
+		case "Double":
+			return true;
+		}
+		return false;
+	}
+	
 	public static boolean skipMethodCall(String expression, String name){
 		if(expression == null || name == null){
 			return false;
@@ -559,44 +597,65 @@ public class NodeUtils {
 		return skip;
 	}
 	
+	public static boolean compatibleType(Type type1, Type type2){
+		String type2Str = type2.toString();
+		if(type2Str.equals("?")){
+			return true;
+		}
+		if(isPrimitiveType(type1)){
+			if(isPrimitiveType(type2)){
+				return type1.toString().equals(type2Str) || isWidenType(type1, type2) || isWidenType(type2, type1);
+			}
+			if(type2Str.equals("Serializable") || type2Str.startsWith("Comparable<")){
+				return true;
+			}
+		} else {
+			if(isPrimitiveType(type2)){
+				return false;
+			}
+			// parse child-parent type relation in source code
+			return ProjectInfo.isParentType(type1.toString(), type2Str);
+		}
+		return false;
+	}
 	
-	public static boolean canReplace(String op1, String op2){
+	public static boolean canReplaceOperator(String op1, String op2){
 		if(op1 == null || op2 == null){
 			return false;
 		}
 		switch(op1){
-		case "*":
-		case "/":
-		case "+":
-		case "-":
-		case "%":
-			switch(op2){
-			case "*":
-			case "/":
-			case "+":
-			case "-":
-			case "%":
-				return true;
-			default :
-				return false;
-			}
-		case "<<":
-		case ">>":
-		case ">>>":
-		case "^":
-		case "&":
-		case "|":
-			switch(op2){
-			case "<<":
-			case ">>":
-			case ">>>":
-			case "^":
-			case "&":
-			case "|":
-				return true;
-			default :
-				return false;
-			}
+//		case "*":
+//		case "/":
+//		case "+":
+//		case "-":
+//		case "%":
+//			switch(op2){
+//			case "*":
+//			case "/":
+//			case "+":
+//			case "-":
+//			case "%":
+//				return true;
+//			default :
+//				return false;
+//			}
+//		case "<<":
+//		case ">>":
+//		case ">>>":
+//		case "^":
+//		case "&":
+//		case "|":
+//			switch(op2){
+//			case "<<":
+//			case ">>":
+//			case ">>>":
+//			case "^":
+//			case "&":
+//			case "|":
+//				return true;
+//			default :
+//				return false;
+//			}
 		case "<":
 		case "<=":
 			switch(op2){
@@ -633,15 +692,15 @@ public class NodeUtils {
 			default :
 				return false;
 			}
-		case "++":
-		case "--":
-			switch(op2){
-			case "++":
-			case "--":
-				return true;
-			default :
-				return false;
-			}
+//		case "++":
+//		case "--":
+//			switch(op2){
+//			case "++":
+//			case "--":
+//				return true;
+//			default :
+//				return false;
+//			}
 		default :
 			return false;
 		}

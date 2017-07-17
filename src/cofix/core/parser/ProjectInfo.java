@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.eclipse.core.internal.resources.Project;
 import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.Type;
@@ -21,8 +20,9 @@ public class ProjectInfo {
 	private final static String __name__ = "@ProjectInfo ";
 
 	private static Map<String, ClassInfo> _classMap = new HashMap<>();
-
+	
 	public static void init(Subject subject){
+		_classMap = new HashMap<>();
 		String srcPath = subject.getHome() + subject.getSsrc();
 		List<String> files = JavaFile.ergodic(srcPath, new ArrayList<String>());
 		TypeParseVisitor typeParseVisitor = new TypeParseVisitor();
@@ -30,6 +30,13 @@ public class ProjectInfo {
 			CompilationUnit unit = (CompilationUnit) JavaFile.genASTFromSource(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
 			unit.accept(typeParseVisitor);
 		}
+	}
+	
+	public static boolean isParentType(String childType, String parentType){
+		if(_classMap.containsKey(childType)){
+			return _classMap.get(childType).isParentType(parentType);
+		}
+		return false;
 	}
 	
 	public static void addMethodRetType(String className, String methodName, Type retType){
@@ -120,6 +127,30 @@ class ClassInfo {
 	
 	public ClassInfo(String className){
 		_className = className;
+	}
+	
+	public boolean isParentType(String parent){
+		boolean is = false;
+		if(_superClass != null){
+			if(!_superClass.equals(_className)){
+				if(_superClass.equals(parent)){
+					is = true;
+				} else {
+					is = ProjectInfo.isParentType(_superClass, parent);
+				}
+			}
+		}
+		if(!is && _superInterface.size() > 0){
+			for(String inter : _superInterface){
+				if(inter.equals(parent)){
+					is = true;
+					break;
+				} else {
+					is = ProjectInfo.isParentType(inter, parent);
+				}
+			}
+		}
+		return is;
 	}
 	
 	public boolean addSuperClass(String superClass){

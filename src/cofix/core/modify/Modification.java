@@ -8,6 +8,8 @@ package cofix.core.modify;
 
 import java.util.Map;
 
+import javax.jws.WebParam.Mode;
+
 import org.eclipse.jdt.core.dom.Type;
 
 import cofix.core.parser.node.Node;
@@ -60,6 +62,27 @@ public abstract class Modification {
 	}
 	
 	public boolean compatible(Modification modification){
+		if(this instanceof Insertion || modification instanceof Insertion){
+			return true;
+		}
+		if(this instanceof Deletion){
+			Node node = modification.getSrcNode();
+			while(node != null){
+				if(node == _node){
+					return false;
+				}
+				node = node.getParent();
+			}
+		}
+		if(modification instanceof Deletion){
+			Node node = _node;
+			while(node != null){
+				if(node == modification.getSrcNode()){
+					return false;
+				}
+				node = node.getParent();
+			}
+		}
 		if(_node == modification._node && _sourceID == modification._sourceID){
 			return false;
 		}

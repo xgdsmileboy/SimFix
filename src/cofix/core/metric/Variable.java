@@ -88,9 +88,14 @@ public class Variable extends Feature {
 			return true;
 		}
 		if(_type == null || other._type == null){
-			return false;
+			return true;
 		}
-		return  _type.toString().equals(other._type.toString());
+		String thisTypeStr = _type.toString();
+		String otherTypeStr = other._type.toString();
+		if(thisTypeStr.equals("Object") || otherTypeStr.equals("Object")){
+			return true;
+		}
+		return  thisTypeStr.equals(otherTypeStr.toString());
 	}
 	
 	@Override

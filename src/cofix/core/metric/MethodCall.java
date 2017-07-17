@@ -13,6 +13,7 @@ import java.util.Map;
 
 import org.eclipse.jdt.core.dom.Type;
 
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.expr.Expr;
 
@@ -54,7 +55,18 @@ public class MethodCall extends Feature {
 		if(source.size() == tar.size()){
 			for(int i = 0; i < source.size(); i++){
 				if(source.get(i) .equals(tar.get(i))){
-					map.put(_arguments.get(i).toSrcString().toString(), other._arguments.get(i).toSrcString().toString());
+					String name = _arguments.get(i).toSrcString().toString();
+					String newName = other._arguments.get(i).toSrcString().toString();
+					String already = map.get(name);
+					if(already != null){
+						double existSimilary = NodeUtils.nameSimilarity(name, already);
+						double similarity = NodeUtils.nameSimilarity(name, newName);
+						if(similarity > existSimilary){
+							map.put(name, newName);
+						}
+					} else {
+						map.put(name, newName);
+					}
 				}
 			}
 		} else if(source.size() > tar.size()){

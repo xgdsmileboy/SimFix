@@ -11,11 +11,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import javax.management.ObjectName;
+import javax.print.attribute.standard.MediaSize.Other;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
-import org.eclipse.jdt.core.dom.WildcardType;
 
 import cofix.common.util.Pair;
 import cofix.core.metric.Literal;
@@ -50,6 +49,14 @@ public class QName extends Label {
 	public void setName(Label namee, SName sname){
 		_name = namee;
 		_sname = sname;
+	}
+	
+	public String getIdentifier(){
+		return _sname.getName();
+	}
+	
+	public String getLabel(){
+		return _name.toSrcString().toString();
 	}
 	
 	@Override
@@ -91,7 +98,9 @@ public class QName extends Label {
 			}
 		} else if(node instanceof SName){
 			SName sName = (SName) node;
-			if(_exprType.toString().equals(sName._exprType.toString()) || NodeUtils.isWidenType(_exprType, sName._exprType)){
+			String srcType = _exprType.toString();
+			String tarType = sName._exprType.toString();
+			if(srcType.equals("?") || tarType.equals("?") || srcType.equals(tarType) || NodeUtils.isWidenType(_exprType, sName._exprType)){
 				match = true;
 				if(allUsableVariables.containsKey(sName.getName())){
 					Revision revision = new Revision(this, WHOLE, sName.getName(), _nodeType);
@@ -142,11 +151,6 @@ public class QName extends Label {
 		List<Variable> list = new LinkedList<>();
 		if(!Character.isUpperCase(_sname.getName().charAt(0))){
 			list.addAll(_sname.getVariables());
-		}
-		if(_name != null){
-			if(!Character.isUpperCase(_name.toSrcString().toString().charAt(0))){
-				list.addAll(_name.getVariables());
-			}
 		}
 		return list;
 	}

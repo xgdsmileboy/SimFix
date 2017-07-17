@@ -12,10 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.eclipse.jdt.core.dom.ASTNode;
-import org.eclipse.jdt.core.dom.BooleanLiteral;
 import org.eclipse.jdt.core.dom.Type;
-
-import com.apple.laf.AquaButtonLabeledUI.LabeledButtonBorder;
 
 import cofix.core.metric.Literal;
 import cofix.core.metric.NewFVector;

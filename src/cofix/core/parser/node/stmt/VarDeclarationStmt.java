@@ -16,8 +16,6 @@ import java.util.Set;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
-
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
@@ -79,7 +77,7 @@ public class VarDeclarationStmt extends Stmt {
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		boolean match = false;
 		if(node instanceof VarDeclarationStmt){
-			match = true;
+//			match = true;
 			VarDeclarationStmt other = (VarDeclarationStmt) node;
 			Set<Vdf> record = new HashSet<>();
 			for(Vdf vdf : _fragments){

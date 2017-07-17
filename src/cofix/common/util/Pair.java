@@ -28,4 +28,12 @@ public class Pair<T1, T2> {
 		return this.second;
 	}
 	
+	public void setFirst(T1 fst){
+		this.first = fst;
+	}
+	
+	public void setSecond(T2 snd){
+		this.second = snd;
+	}
+	
 }

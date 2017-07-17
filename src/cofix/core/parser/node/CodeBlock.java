@@ -175,7 +175,7 @@ public class CodeBlock extends Node{
 	private CompilationUnit _cunit = null;
 	private List<ASTNode> _nodes = null;
 	private List<Node> _parsedNodes = null;
-	private Map<Integer, String> _insertions = new HashMap<>();
+	private Map<Integer, List<String>> _insertions = new HashMap<>();
 	private Set<Integer> _deletions = new HashSet<>();
 	private int _maxLines = 10;
 	private int _currlines = 0;
@@ -303,8 +303,10 @@ public class CodeBlock extends Node{
 		for(int i = 0; i < _parsedNodes.size(); i++){
 			Node node = _parsedNodes.get(i);
 			if(_insertions.containsKey(i)){
-				stringBuffer.append(_insertions.get(i));
-				stringBuffer.append("\n");
+				for(String string : _insertions.get(i)){
+					stringBuffer.append(string);
+					stringBuffer.append("\n");
+				}
 			} else if(_deletions.contains(i)){
 				continue;
 			}
@@ -813,7 +815,6 @@ public class CodeBlock extends Node{
 		indexExpr.setParent(arrayAcc);
 		arrayAcc.setIndex(indexExpr);
 		
-		ASTNode parent = node.getParent();
 		Pair<String, String> classAndMethodName = NodeUtils.getTypeDecAndMethodDec(node);
 		String nodeStr = node.toString();
 		int index = nodeStr.indexOf("[");
@@ -1593,7 +1594,13 @@ public class CodeBlock extends Node{
 		if (modification instanceof Deletion) {
 			_deletions.add(modification.getSourceID());
 		} else if(modification instanceof Insertion){
-			_insertions.put(modification.getSourceID(), modification.getTargetString());
+			if(_insertions.containsKey(modification.getSourceID())){
+				_insertions.get(modification.getSourceID()).add(modification.getTargetString());
+			} else {
+				List<String> list = new ArrayList<>();
+				list.add(modification.getTargetString());
+				_insertions.put(modification.getSourceID(), list);
+			}
 		} else {
 			return false;
 		}
@@ -1605,7 +1612,11 @@ public class CodeBlock extends Node{
 		if (modification instanceof Deletion) {
 			_deletions.remove(modification.getSourceID());
 		} else if(modification instanceof Insertion){
-			_insertions.remove(modification.getSourceID());
+			List<String> list = _insertions.get(modification.getSourceID());
+			if(list == null){
+				return false;
+			}
+			list.remove(modification.getTargetString());
 		} else {
 			return false;
 		}

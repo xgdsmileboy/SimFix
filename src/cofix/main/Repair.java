@@ -12,10 +12,13 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
+
+import javax.jws.WebParam.Mode;
 
 import org.apache.commons.io.FileUtils;
 import org.eclipse.jdt.core.dom.CompilationUnit;
@@ -24,7 +27,10 @@ import org.junit.internal.runners.statements.Fail;
 import org.junit.runner.Result;
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
+import com.sun.imageio.plugins.common.SubImageInputStream;
+import com.sun.java.swing.plaf.windows.WindowsTreeUI.ExpandedIcon;
 import com.sun.org.apache.xpath.internal.operations.Mod;
+import com.sun.org.glassfish.external.statistics.annotations.Reset;
 
 import cofix.common.inst.Instrument;
 import cofix.common.inst.MethodInstrumentVisitor;
@@ -135,71 +141,98 @@ public class Repair {
 				System.err.println("Failed to read file to list : " + file);
 				continue;
 			}
+			int i = 1;
 			for(Pair<CodeBlock, Double> similar : candidates){
-				System.out.println("===================================================");
+				System.out.println("=====================" + (i++) +"==============================");
 				System.out.println(similar.getFirst().toSrcString().toString());
 				// compute transformation
 				List<Modification> modifications = CodeBlockMatcher.match(buggyblock, similar.getFirst(), usableVars);
-				// try each transformation
-				List<Set<Modification>> list = combineModification(modifications, 2);
-				for(Set<Modification> modifySet : list){
-					if(timer.timeout()){
-						return Status.TIMEOUT;
-					}
-					for(Modification modification : modifySet){
-						modification.apply(usableVars);
-					}
-					// validate correctness of patch
-					Pair<Integer, Integer> range = buggyblock.getLineRangeInSource();
-					String replace = buggyblock.toSrcString().toString();
-					if(haveTry.contains(replace)){
-						System.out.println("already try ...");
+				
+				// try each transformation first
+				List<Set<Modification>> list = new ArrayList<>();
+				for(Modification modification : modifications){
+					Set<Modification> set = new HashSet<>();
+					set.add(modification);
+					list.add(set);
+				}
+				
+				List<Modification> legalModifications = new ArrayList<>();
+				while(true){
+					for(Set<Modification> modifySet : list){
+						if(timer.timeout()){
+							return Status.TIMEOUT;
+						}
+						for(Modification modification : modifySet){
+							modification.apply(usableVars);
+						}
+						// validate correctness of patch
+						Pair<Integer, Integer> range = buggyblock.getLineRangeInSource();
+						String replace = buggyblock.toSrcString().toString();
+						if(haveTry.contains(replace)){
+							System.out.println("already try ...");
+							for(Modification modification : modifySet){
+								modification.restore();
+							}
+							continue;
+						}
+						
+						System.out.println("========");
+						System.out.println(replace);
+						System.out.println("========");
+						
+						haveTry.add(replace);
+						try {
+							JavaFile.sourceReplace(file, source, range.getFirst(), range.getSecond(), replace);
+						} catch (IOException e) {
+							System.err.println("Failed to replace source code.");
+							continue;
+						}
+						try {
+							FileUtils.forceDelete(new File(binFile));
+						} catch (IOException e) {
+						}
+						switch (validate(buggyblock)) {
+						case COMPILE_FAILED:
+							break;
+						case SUCCESS:
+							StringBuffer stringBuffer = new StringBuffer();
+							stringBuffer.append("\n----------------------------------------\n");
+							stringBuffer.append("Find a patch :\n");
+							stringBuffer.append(buggyblock.toSrcString().toString());
+							stringBuffer.append("\n----------------------------------------\n");
+							stringBuffer.append("\nSuccessfully find a patch!\n");
+							System.out.println(stringBuffer.toString());
+							JavaFile.writeStringToFile("result.log", stringBuffer.toString(), true);
+//							return Status.SUCCESS;
+							System.out.print("Continue search ? (Y/N) ");
+							Scanner scanner = new Scanner(System.in);
+							String value = scanner.next();
+							if(value.equals("N")){
+								return Status.SUCCESS;
+							}
+						case TEST_FAILED:
+							if(legalModifications != null){
+								for(Modification modification : modifySet){
+									legalModifications.add(modification);
+								}
+							}
+						}
 						for(Modification modification : modifySet){
 							modification.restore();
 						}
-						continue;
 					}
-					
-					System.out.println("========");
-					System.out.println(replace);
-					System.out.println("========");
-					
-					haveTry.add(replace);
-					try {
-						JavaFile.sourceReplace(file, source, range.getFirst(), range.getSecond(), replace);
-					} catch (IOException e) {
-						System.err.println("Failed to replace source code.");
-						continue;
+					if(legalModifications == null){
+						break;
 					}
-					try {
-						FileUtils.forceDelete(new File(binFile));
-					} catch (IOException e) {
-					}
-					
-					if(validate(buggyblock)){
-						System.out.println("\n----------------------------------------\n");
-						System.out.println("Find a patch :");
-						System.out.println(buggyblock.toSrcString().toString());
-						System.out.println("\n----------------------------------------\n");
-						System.out.println("\nSuccessfully find a patch!\n");
-						System.out.print("Continue search ? (Y/N) ");
-						Scanner scanner = new Scanner(System.in);
-						String value = scanner.next();
-						if(value.equals("N")){
-							return Status.SUCCESS;
-						}
-//						return Status.SUCCESS;
-					}
-					for(Modification modification : modifySet){
-						modification.restore();
-					}
+					list = combineModification(legalModifications);
+					legalModifications = null;
 				}
 			}
 		}
 		return Status.FAILED;
 	}
 	
-	private List<Set<Modification>> combineModification(List<Modification> modifications, int size){
+	private List<Set<Modification>> combineModification(List<Modification> modifications){
 		List<Set<Modification>> list = new ArrayList<>();
 		int length = modifications.size();
 		if(length == 0){
@@ -219,34 +252,68 @@ public class Repair {
 				}
 			}
 		}
-		// for one
+		List<Set<Integer>> baseSet = new ArrayList<>();
 		for(int i = 0; i < modifications.size(); i++){
-			Set<Modification> set = new HashSet<>();
-			set.add(modifications.get(i));
-			list.add(set);
+			Set<Integer> set = new HashSet<>();
+			set.add(i);
+			baseSet.add(set);
 		}
-		// for two
-		for(int i = 0; i < length; i++){
-			for(int j = i + 1; j < length; j++){
-				if(incompatibleMap[i][j] == 0){
-					Set<Modification> set = new HashSet<>();
-					set.add(modifications.get(i));
-					set.add(modifications.get(j));
-					list.add(set);
+		
+		List<Set<Integer>> expanded = expand(incompatibleMap, baseSet, 2, incompatibleMap.length);
+		for(Set<Integer> set : expanded){
+			Set<Modification> combinedModification = new HashSet<>();
+			for(Integer integer : set){
+				combinedModification.add(modifications.get(integer));
+			}
+			list.add(combinedModification);
+		}
+		
+		return list;
+	}
+	
+	private List<Set<Integer>> expand(int[][] incompatibleTabe, List<Set<Integer>> baseSet, int currentSize, int upperbound){
+		List<Set<Integer>> rslt = new LinkedList<>();
+		if(currentSize > upperbound){
+			return rslt;
+		}
+		int length = incompatibleTabe.length;
+		for(Set<Integer> base : baseSet){
+			int minIndex = 0;
+			for(Integer integer : base){
+				if(integer > minIndex){
+					minIndex = integer;
+				}
+			}
+			
+			for(minIndex ++; minIndex < length; minIndex ++){
+				boolean canExd = true;
+				for(Integer integer : base){
+					if(incompatibleTabe[minIndex][integer] == 1){
+						canExd = false;
+						break;
+					}
+				}
+				if(canExd){
+					Set<Integer> expanded = new HashSet<>(base);
+					expanded.add(minIndex);
+					rslt.add(expanded);
 				}
 			}
 		}
 		
-		// for more
-		return list;
+		if(rslt.size() > 0){
+			rslt.addAll(expand(incompatibleTabe, rslt, currentSize + 1, upperbound));
+		}
+		
+		return rslt;
 	}
 	
-	private boolean validate(CodeBlock buggyBlock){
+	private ValidateStatus validate(CodeBlock buggyBlock){
 		
 		// TODO : need to build project first
 		if(!Runner.compileSubject(_subject)){
 			System.err.println("Build failed !");
-			return false;
+			return ValidateStatus.COMPILE_FAILED;
 		}
 		
 //		JUnitRuntime runtime = new JUnitRuntime(_subject);
@@ -254,7 +321,7 @@ public class Repair {
 		for(String testcase : _failedTestCases){
 			String[] testinfo = testcase.split("#");
 			if(!Runner.testSingleTest(_subject, testinfo[0], testinfo[1])){
-				return false;
+				return ValidateStatus.TEST_FAILED;
 			}
 //			Result result = JUnitEngine.getInstance(runtime).test(testinfo[0], testinfo[1], null);
 //			if(result == null || result.getFailureCount() > 0){
@@ -263,7 +330,7 @@ public class Repair {
 		}
 		
 		if(!Runner.runTestSuite(_subject)){
-			return false;
+			return ValidateStatus.TEST_FAILED;
 		}
 		
 //		Integer revisedMethod = buggyBlock.getWrapMethodID();
@@ -278,7 +345,13 @@ public class Repair {
 //			}
 //		}
 		
-		return true;
+		return ValidateStatus.SUCCESS;
+	}
+	
+	private enum ValidateStatus{
+		COMPILE_FAILED,
+		TEST_FAILED,
+		SUCCESS
 	}
 
 }
