@@ -30,6 +30,16 @@
 			<element>/lib</element>
 		</classpath>
 	</subject>  -->
+	
+<!-- 	<subject name="chart" id="11">
+		<ssrc>/source</ssrc>
+		<tsrc>/tests</tsrc>
+		<sbin>/build</sbin>
+		<tbin>/build-tests</tbin>
+		<classpath>
+			<element>/lib</element>
+		</classpath>
+	</subject>  -->
 	<!-- 2================plausible================ -->
 <!-- 	<subject name="chart" id="7">
 		<ssrc>/source</ssrc>
@@ -111,6 +121,12 @@
 		<tbin>/target/tests</tbin>
 	</subject> -->
 	
+	<subject name="lang" id="59">
+		<ssrc>/src/java</ssrc>
+		<tsrc>/src/test</tsrc>
+		<sbin>/target/classes</sbin>
+		<tbin>/target/tests</tbin>
+	</subject>
 	<!--11 ===============success===split test case to two============ -->
 <!-- 	<subject name="lang" id="60">
 		<ssrc>/src/java</ssrc>

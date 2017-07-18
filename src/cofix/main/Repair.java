@@ -142,6 +142,7 @@ public class Repair {
 				continue;
 			}
 			int i = 1;
+			Set<String> already = new HashSet<>();
 			for(Pair<CodeBlock, Double> similar : candidates){
 				System.out.println("=====================" + (i++) +"==============================");
 				System.out.println(similar.getFirst().toSrcString().toString());
@@ -151,82 +152,87 @@ public class Repair {
 				// try each transformation first
 				List<Set<Modification>> list = new ArrayList<>();
 				for(Modification modification : modifications){
+					String modify = modification.toString();
+					if(already.contains(modify)){
+						continue;
+					}
+					already.add(modify);
 					Set<Modification> set = new HashSet<>();
 					set.add(modification);
 					list.add(set);
 				}
 				
-				List<Modification> legalModifications = new ArrayList<>();
-				while(true){
-					for(Set<Modification> modifySet : list){
-						if(timer.timeout()){
-							return Status.TIMEOUT;
-						}
-						for(Modification modification : modifySet){
-							modification.apply(usableVars);
-						}
-						// validate correctness of patch
-						Pair<Integer, Integer> range = buggyblock.getLineRangeInSource();
-						String replace = buggyblock.toSrcString().toString();
-						if(haveTry.contains(replace)){
-							System.out.println("already try ...");
-							for(Modification modification : modifySet){
-								modification.restore();
-							}
-							continue;
-						}
-						
-						System.out.println("========");
-						System.out.println(replace);
-						System.out.println("========");
-						
-						haveTry.add(replace);
-						try {
-							JavaFile.sourceReplace(file, source, range.getFirst(), range.getSecond(), replace);
-						} catch (IOException e) {
-							System.err.println("Failed to replace source code.");
-							continue;
-						}
-						try {
-							FileUtils.forceDelete(new File(binFile));
-						} catch (IOException e) {
-						}
-						switch (validate(buggyblock)) {
-						case COMPILE_FAILED:
-							break;
-						case SUCCESS:
-							StringBuffer stringBuffer = new StringBuffer();
-							stringBuffer.append("\n----------------------------------------\n");
-							stringBuffer.append("Find a patch :\n");
-							stringBuffer.append(buggyblock.toSrcString().toString());
-							stringBuffer.append("\n----------------------------------------\n");
-							stringBuffer.append("\nSuccessfully find a patch!\n");
-							System.out.println(stringBuffer.toString());
-							JavaFile.writeStringToFile("result.log", stringBuffer.toString(), true);
-//							return Status.SUCCESS;
-							System.out.print("Continue search ? (Y/N) ");
-							Scanner scanner = new Scanner(System.in);
-							String value = scanner.next();
-							if(value.equals("N")){
-								return Status.SUCCESS;
-							}
-						case TEST_FAILED:
-							if(legalModifications != null){
-								for(Modification modification : modifySet){
-									legalModifications.add(modification);
-								}
-							}
-						}
-						for(Modification modification : modifySet){
-							modification.restore();
-						}
-					}
-					if(legalModifications == null){
-						break;
-					}
-					list = combineModification(legalModifications);
-					legalModifications = null;
-				}
+//				List<Modification> legalModifications = new ArrayList<>();
+//				while(true){
+//					for(Set<Modification> modifySet : list){
+//						if(timer.timeout()){
+//							return Status.TIMEOUT;
+//						}
+//						for(Modification modification : modifySet){
+//							modification.apply(usableVars);
+//						}
+//						// validate correctness of patch
+//						Pair<Integer, Integer> range = buggyblock.getLineRangeInSource();
+//						String replace = buggyblock.toSrcString().toString();
+//						if(haveTry.contains(replace)){
+//							System.out.println("already try ...");
+//							for(Modification modification : modifySet){
+//								modification.restore();
+//							}
+//							continue;
+//						}
+//						
+//						System.out.println("========");
+//						System.out.println(replace);
+//						System.out.println("========");
+//						
+//						haveTry.add(replace);
+//						try {
+//							JavaFile.sourceReplace(file, source, range.getFirst(), range.getSecond(), replace);
+//						} catch (IOException e) {
+//							System.err.println("Failed to replace source code.");
+//							continue;
+//						}
+//						try {
+//							FileUtils.forceDelete(new File(binFile));
+//						} catch (IOException e) {
+//						}
+//						switch (validate(buggyblock)) {
+//						case COMPILE_FAILED:
+//							break;
+//						case SUCCESS:
+//							StringBuffer stringBuffer = new StringBuffer();
+//							stringBuffer.append("\n----------------------------------------\n");
+//							stringBuffer.append("Find a patch :\n");
+//							stringBuffer.append(buggyblock.toSrcString().toString());
+//							stringBuffer.append("\n----------------------------------------\n");
+//							stringBuffer.append("\nSuccessfully find a patch!\n");
+//							System.out.println(stringBuffer.toString());
+//							JavaFile.writeStringToFile("result.log", stringBuffer.toString(), true);
+////							return Status.SUCCESS;
+//							System.out.print("Continue search ? (Y/N) ");
+//							Scanner scanner = new Scanner(System.in);
+//							String value = scanner.next();
+//							if(value.equals("N")){
+//								return Status.SUCCESS;
+//							}
+//						case TEST_FAILED:
+//							if(legalModifications != null){
+//								for(Modification modification : modifySet){
+//									legalModifications.add(modification);
+//								}
+//							}
+//						}
+//						for(Modification modification : modifySet){
+//							modification.restore();
+//						}
+//					}
+//					if(legalModifications == null){
+//						break;
+//					}
+//					list = combineModification(legalModifications);
+//					legalModifications = null;
+//				}
 			}
 		}
 		return Status.FAILED;

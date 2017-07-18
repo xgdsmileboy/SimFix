@@ -20,4 +20,8 @@ public class Insertion extends Modification {
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public String toString() {
+		return "[INS | " +_nodeType + " | " + _sourceID + "]" + _target;
+	}
 }

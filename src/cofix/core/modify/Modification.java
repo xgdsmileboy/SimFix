@@ -30,6 +30,9 @@ public abstract class Modification {
 		_node = node;
 		_sourceID = srcId;
 		_target = target;
+		if(_target == null){
+			_target = "";
+		}
 		_nodeType = changeNodeType;
 	}
 	

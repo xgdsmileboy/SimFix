@@ -84,6 +84,7 @@ public class SName extends Label {
 			SName other = (SName) node;
 			if(_name.equals(other.getName())){
 				match = true;
+				// try to replace a variable using an similar one
 			} else {
 				if(_exprType.toString().equals(((SName) node).getType())){
 					match = true;
@@ -93,7 +94,7 @@ public class SName extends Label {
 					}
 				} else {
 					if((_exprType.isPrimitiveType() && other.getType().isPrimitiveType() && NodeUtils.isWidenType(_exprType, other.getType()))
-							|| (_exprType instanceof WildcardType || other.getType() instanceof WildcardType )){
+							|| (_exprType instanceof WildcardType || other.getType() instanceof WildcardType ) || _exprType.toString().equals(other.getType().toString())){
 						match = true;
 						if(!other.getName().equals(_name) && allUsableVariables.containsKey(_name)){
 							Revision revision = new Revision(this, NAMEID, other.getName(), _nodeType);

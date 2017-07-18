@@ -21,4 +21,9 @@ public class Deletion extends Modification {
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public String toString() {
+		return "[DEL | " + _nodeType + " | " + _sourceID + "]" + _node.toString().replace("\n", " ");
+	}
+	
 }

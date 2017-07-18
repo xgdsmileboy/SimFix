@@ -20,4 +20,9 @@ public class Revision extends Modification {
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public String toString() {
+		return "[REV | " + _nodeType + " | " + _sourceID + "]" + _node.toString().replace("\n", " ") + "=>" + _target.replace("\n", " ");
+	}
+	
 }
