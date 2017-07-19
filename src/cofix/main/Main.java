@@ -9,13 +9,11 @@ package cofix.main;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
 import cofix.common.config.Configure;
 import cofix.common.config.Constant;
 import cofix.common.localization.AbstractFaultlocalization;
-import cofix.common.localization.FLocalization;
-import cofix.common.localization.ManualLocator;
+import cofix.common.localization.OchiaiResult;
 import cofix.common.util.JavaFile;
 import cofix.common.util.Status;
 import cofix.common.util.Subject;
@@ -27,49 +25,47 @@ import cofix.core.parser.ProjectInfo;
  */
 public class Main {
 	
-	private static void loop(List<Subject> subjects) throws IOException{
-		for (Subject subject : subjects) {
-			StringBuffer stringBuffer = new StringBuffer();
-			stringBuffer.append("=================================================\n");
-			stringBuffer.append("Project : " + subject.getName() + "_" + subject.getId() + "\t");
-			SimpleDateFormat myFmt1=new SimpleDateFormat("yy/MM/dd HH:mm"); 
-			stringBuffer.append("start : " + myFmt1.format(new Date()) + "\n");
-			System.out.println(stringBuffer.toString());
-			JavaFile.writeStringToFile(Constant.HOME + "/result.log", stringBuffer.toString(), true);
-			subject.backup();
-			ProjectInfo.init(subject);
-			AbstractFaultlocalization fLocalization = new ManualLocator();
-			fLocalization.locateFault(subject, 0);
-			Repair repair = new Repair(subject, fLocalization);
-			Timer timer = new Timer(1, 0);
-			timer.start();
-			Status status = repair.fix(timer);
-			switch (status) {
-			case TIMEOUT:
-				System.out.println(status);
-				JavaFile.writeStringToFile("result.log", "Timeout time : " + myFmt1.format(new Date()) + "\n", true);
-				break;
-			case SUCCESS:
-				System.out.println(status);
-				JavaFile.writeStringToFile("result.log", "Success time : " + myFmt1.format(new Date()) + "\n", true);
-				break;
-			case FAILED:
-				System.out.println(status);
-				JavaFile.writeStringToFile("result.log", "Failed time : " + myFmt1.format(new Date()) + "\n", true);
-			default:
-				break;
-			}
-			subject.restore();
+	private static void tryFix(Subject subject) throws IOException{
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append("=================================================\n");
+		stringBuffer.append("Project : " + subject.getName() + "_" + subject.getId() + "\t");
+		SimpleDateFormat myFmt1=new SimpleDateFormat("yy/MM/dd HH:mm"); 
+		stringBuffer.append("start : " + myFmt1.format(new Date()) + "\n");
+		System.out.println(stringBuffer.toString());
+		JavaFile.writeStringToFile(Constant.HOME + "/result.log", stringBuffer.toString(), true);
+		subject.backup();
+		ProjectInfo.init(subject);
+//		AbstractFaultlocalization fLocalization = new ManualLocator(subject);
+		AbstractFaultlocalization fLocalization = new OchiaiResult(subject);
+		Repair repair = new Repair(subject, fLocalization);
+		Timer timer = new Timer(1, 0);
+		timer.start();
+		Status status = repair.fix(timer);
+		switch (status) {
+		case TIMEOUT:
+			System.out.println(status);
+			JavaFile.writeStringToFile("result.log", "Timeout time : " + myFmt1.format(new Date()) + "\n", true);
+			break;
+		case SUCCESS:
+			System.out.println(status);
+			JavaFile.writeStringToFile("result.log", "Success time : " + myFmt1.format(new Date()) + "\n", true);
+			break;
+		case FAILED:
+			System.out.println(status);
+			JavaFile.writeStringToFile("result.log", "Failed time : " + myFmt1.format(new Date()) + "\n", true);
+		default:
 			break;
 		}
+		subject.restore();
 	}
 	
 
 	public static void main(String[] args) throws IOException {
 		Constant.PROJECT_HOME = System.getProperty("user.dir") + "/testfile";
 		System.out.println(Constant.PROJECT_HOME);
-		List<Subject> subjects = Configure.getSubjectFromXML("project.xml");
-		loop(subjects);
+//		List<Subject> subjects = Configure.getSubjectFromXML("project.xml");
+		Subject subject = Configure.getSubject("chart", 1);
+		tryFix(subject);
 	}
 
 }

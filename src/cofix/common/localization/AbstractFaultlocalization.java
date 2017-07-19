@@ -7,9 +7,7 @@
 package cofix.common.localization;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import cofix.common.util.Pair;
 import cofix.common.util.Subject;
@@ -20,35 +18,32 @@ import cofix.common.util.Subject;
  */
 public abstract class AbstractFaultlocalization {
 	
-	protected int _totalTest = 0;
-	protected int _failedTest = 0;
-	protected Map<String, String> _failedTrace = null;
+	protected Subject _subject = null;
+	protected int _total = 0;
+	protected List<String> _failedTests = null;
 	protected List<String> _passedTests = null;
 	
 	
-	public AbstractFaultlocalization() {
-		_failedTrace = new HashMap<String, String>();
+	public AbstractFaultlocalization(Subject subject) {
+		_subject = subject;
+		_failedTests = new ArrayList<>();
 		_passedTests = new ArrayList<>();
 	}
 	
 	public int getTotalTestCases(){
-		return _totalTest;
-	}
-	
-	public int getFailedTestCases(){
-		return _failedTest;
+		return _total;
 	}
 	
 	public List<String> getPassedTestCases(){
 		return _passedTests;
 	}
 	
-	public Map<String, String> getFailedTestInfo(){
-		return _failedTrace;
+	public List<String> getFailedTestCases(){
+		return _failedTests;
 	}
 	
-	public abstract void locateFault(Subject subject, double threshold);
+	protected abstract void locateFault(double threshold);
 	
-	public abstract List<Pair<String, Integer>> getLocations(Subject subject);
+	public abstract List<Pair<String, Integer>> getLocations(int topK);
 	
 }

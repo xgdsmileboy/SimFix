@@ -18,19 +18,11 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
-import javax.jws.WebParam.Mode;
-
 import org.apache.commons.io.FileUtils;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.Type;
-import org.junit.internal.runners.statements.Fail;
 import org.junit.runner.Result;
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
-import com.sun.imageio.plugins.common.SubImageInputStream;
-import com.sun.java.swing.plaf.windows.WindowsTreeUI.ExpandedIcon;
-import com.sun.org.apache.xpath.internal.operations.Mod;
-import com.sun.org.glassfish.external.statistics.annotations.Reset;
+import org.w3c.dom.css.ElementCSSInlineStyle;
 
 import cofix.common.inst.Instrument;
 import cofix.common.inst.MethodInstrumentVisitor;
@@ -50,7 +42,6 @@ import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.search.BuggyCode;
 import cofix.core.parser.search.SimpleFilter;
-import sun.tools.jar.resources.jar;
 
 /**
  * @author Jiajun
@@ -61,16 +52,12 @@ public class Repair {
 	private AbstractFaultlocalization _localization = null;
 	private Subject _subject = null;
 	private List<String> _failedTestCases = null;
-	private Map<Integer, Set<Pair<String, String>>> _passedTestCases = null;
-
+	private Map<Integer, Set<Pair<String, String>>> _passedTestCasesMap = null;
 	public Repair(Subject subject, AbstractFaultlocalization fLocalization) {
 		_localization = fLocalization;
 		_subject = subject;
-//		_failedTestCases = new ArrayList<>(_localization.getFailedTestInfo().keySet());
-		_failedTestCases = new ArrayList<>();
-		_failedTestCases.add(((ManualLocator)fLocalization).getFailedTest(_subject));
-		
-		_passedTestCases = new HashMap<>();
+		_failedTestCases = fLocalization.getFailedTestCases();
+		_passedTestCasesMap = new HashMap<>();
 //		try {
 //			computeMethodCoverage();
 //		} catch (IOException e) {
@@ -101,31 +88,88 @@ public class Repair {
 				System.exit(0);
 			}
 			for(Integer method : outStream.getOut()){
-				Set<Pair<String, String>> tcases = _passedTestCases.get(method);
+				Set<Pair<String, String>> tcases = _passedTestCasesMap.get(method);
 				if(tcases == null){
 					tcases = new HashSet<>();
 				}
 				tcases.add(new Pair<String, String>(clazz, methodName));
-				_passedTestCases.put(method, tcases);
+				_passedTestCasesMap.put(method, tcases);
 			}
 		}
 		// restore source file
 		_subject.restore();
 	}
+	
+//	private void computeMethodCoverage() throws IOException{
+//		JUnitRuntime runtime = new JUnitRuntime(_subject);
+//		String src = _subject.getHome() + _subject.getSsrc();
+//		MethodInstrumentVisitor methodInstrumentVisitor = new MethodInstrumentVisitor();
+//		Instrument.execute(src, methodInstrumentVisitor);
+//		
+//		if(!Runner.compileSubject(_subject)){
+//			System.err.println("Build project failed!");
+//			System.exit(0);
+//		}
+//		
+//		System.out.println("Passed test classes : " + _localization.getPassedTestCases().size());
+//		for(String test : _localization.getPassedTestCases()){
+//			String[] testStr = test.split("#");
+//			String clazz = testStr[0];
+//			String methodName = testStr[1];
+//			OutStream outStream = new OutStream();
+//			Result result = JUnitEngine.getInstance(runtime).test(clazz, methodName, new PrintStream(outStream));
+//			if(result.getFailureCount() > 0){
+//				System.out.println("Error : Passed test cases running failed ! => " + clazz);
+//				System.exit(0);
+//			}
+//			for(Integer method : outStream.getOut()){
+//				Set<Pair<String, String>> tcases = _passedTestCasesMap.get(method);
+//				if(tcases == null){
+//					tcases = new HashSet<>();
+//				}
+//				tcases.add(new Pair<String, String>(clazz, methodName));
+//				_passedTestCasesMap.put(method, tcases);
+//			}
+//		}
+//		// restore source file
+//		_subject.restore();
+//	}
 
 	public Status fix(Timer timer){
 		String src = _subject.getHome() + _subject.getSsrc();
-		for(Pair<String, Integer> loc : _localization.getLocations(_subject)){
+		List<Pair<String, Integer>> locations = _localization.getLocations(20);
+		Map<Integer, Set<Integer>> alreadyTryPlaces = new HashMap<>();
+		for(Pair<String, Integer> loc : locations){
 			System.out.println(loc.getFirst() + "::" + loc.getSecond());
 			String file = _subject.getHome() + _subject.getSsrc() + "/" + loc.getFirst().replace(".", "/") + ".java";
 			String binFile = _subject.getHome() + _subject.getSbin() + "/" + loc.getFirst().replace(".", "/") + ".class";
 			CompilationUnit unit = JavaFile.genASTFromFile(file);
 			// get buggy code block
 			CodeBlock buggyblock = BuggyCode.getBuggyCodeBlock(file, loc.getSecond());
-			if(buggyblock.getWrapMethodID() == null){
+			Integer methodID = buggyblock.getWrapMethodID(); 
+			if(methodID == null){
 				System.out.println("Find no block!");
 				continue;
 			}
+			Pair<Integer, Integer> range = buggyblock.getLineRangeInSource();
+			Set<Integer> places = alreadyTryPlaces.get(methodID);
+			if(places != null){
+				if(places.contains(loc.getSecond())){
+					continue;
+				} else {
+					for(int i = range.getFirst(); i <= range.getSecond(); i++){
+						places.add(i);
+					}
+				}
+			} else {
+				places = new HashSet<>();
+				for(int i = range.getFirst(); i <= range.getSecond(); i++){
+					places.add(i);
+				}
+				alreadyTryPlaces.put(methodID, places);
+			}
+			
+			
 //			Utils.print(buggyblock);
 			Set<String> haveTry = new HashSet<>();
 			// get all variables can be used at buggy line
@@ -162,77 +206,76 @@ public class Repair {
 					list.add(set);
 				}
 				
-//				List<Modification> legalModifications = new ArrayList<>();
-//				while(true){
-//					for(Set<Modification> modifySet : list){
-//						if(timer.timeout()){
-//							return Status.TIMEOUT;
-//						}
-//						for(Modification modification : modifySet){
-//							modification.apply(usableVars);
-//						}
-//						// validate correctness of patch
-//						Pair<Integer, Integer> range = buggyblock.getLineRangeInSource();
-//						String replace = buggyblock.toSrcString().toString();
-//						if(haveTry.contains(replace)){
-//							System.out.println("already try ...");
-//							for(Modification modification : modifySet){
-//								modification.restore();
-//							}
-//							continue;
-//						}
-//						
-//						System.out.println("========");
-//						System.out.println(replace);
-//						System.out.println("========");
-//						
-//						haveTry.add(replace);
-//						try {
-//							JavaFile.sourceReplace(file, source, range.getFirst(), range.getSecond(), replace);
-//						} catch (IOException e) {
-//							System.err.println("Failed to replace source code.");
-//							continue;
-//						}
-//						try {
-//							FileUtils.forceDelete(new File(binFile));
-//						} catch (IOException e) {
-//						}
-//						switch (validate(buggyblock)) {
-//						case COMPILE_FAILED:
-//							break;
-//						case SUCCESS:
-//							StringBuffer stringBuffer = new StringBuffer();
-//							stringBuffer.append("\n----------------------------------------\n");
-//							stringBuffer.append("Find a patch :\n");
-//							stringBuffer.append(buggyblock.toSrcString().toString());
-//							stringBuffer.append("\n----------------------------------------\n");
-//							stringBuffer.append("\nSuccessfully find a patch!\n");
-//							System.out.println(stringBuffer.toString());
-//							JavaFile.writeStringToFile("result.log", stringBuffer.toString(), true);
-////							return Status.SUCCESS;
-//							System.out.print("Continue search ? (Y/N) ");
-//							Scanner scanner = new Scanner(System.in);
-//							String value = scanner.next();
-//							if(value.equals("N")){
-//								return Status.SUCCESS;
-//							}
-//						case TEST_FAILED:
-//							if(legalModifications != null){
-//								for(Modification modification : modifySet){
-//									legalModifications.add(modification);
-//								}
-//							}
-//						}
-//						for(Modification modification : modifySet){
-//							modification.restore();
-//						}
-//					}
-//					if(legalModifications == null){
-//						break;
-//					}
-//					list = combineModification(legalModifications);
-//					legalModifications = null;
-//				}
+				List<Modification> legalModifications = new ArrayList<>();
+				while(true){
+					for(Set<Modification> modifySet : list){
+						if(timer.timeout()){
+							return Status.TIMEOUT;
+						}
+						for(Modification modification : modifySet){
+							modification.apply(usableVars);
+						}
+						// validate correctness of patch
+						String replace = buggyblock.toSrcString().toString();
+						if(haveTry.contains(replace)){
+							System.out.println("already try ...");
+							for(Modification modification : modifySet){
+								modification.restore();
+							}
+							continue;
+						}
+						
+						System.out.println("========");
+						System.out.println(replace);
+						System.out.println("========");
+						
+						haveTry.add(replace);
+						try {
+							JavaFile.sourceReplace(file, source, range.getFirst(), range.getSecond(), replace);
+						} catch (IOException e) {
+							System.err.println("Failed to replace source code.");
+							continue;
+						}
+						try {
+							FileUtils.forceDelete(new File(binFile));
+						} catch (IOException e) {
+						}
+						switch (validate(buggyblock)) {
+						case COMPILE_FAILED:
+							break;
+						case SUCCESS:
+							StringBuffer stringBuffer = new StringBuffer();
+							stringBuffer.append("\n----------------------------------------\n");
+							stringBuffer.append("Find a patch :\n");
+							stringBuffer.append(buggyblock.toSrcString().toString());
+							stringBuffer.append("\n----------------------------------------\n");
+							stringBuffer.append("\nSuccessfully find a patch!\n");
+							System.out.println(stringBuffer.toString());
+							JavaFile.writeStringToFile("result.log", stringBuffer.toString(), true);
+//							return Status.SUCCESS;
+							System.out.print("Continue search ? (Y/N) ");
+							Scanner scanner = new Scanner(System.in);
+							String value = scanner.next();
+							if(value.equals("N")){
+								return Status.SUCCESS;
+							}
+						case TEST_FAILED:
+							if(legalModifications != null){
+								for(Modification modification : modifySet){
+									legalModifications.add(modification);
+								}
+							}
+						}
+						for(Modification modification : modifySet){
+							modification.restore();
+						}
+					}
+					if(legalModifications == null){
+						break;
+					}
+					list = combineModification(legalModifications);
+					legalModifications = null;
+				}
 			}
 		}
 		return Status.FAILED;

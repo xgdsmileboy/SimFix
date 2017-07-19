@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Map;
 
 import com.gzoltar.core.GZoltar;
 import com.gzoltar.core.components.Statement;
@@ -29,46 +28,40 @@ public class FLocalization extends AbstractFaultlocalization{
 	
 	private List<Statement> _candidates = null;
 	
-	public FLocalization() {
-		super();
+	public FLocalization(Subject subject) {
+		this(subject, 0);
+	}
+	
+	public FLocalization(Subject subject, double threshold) {
+		super(subject);
 		_candidates = new ArrayList<>();
-	}
-	
-	public int getTotalTestCases(){
-		return _totalTest;
-	}
-	
-	public List<String> getPassedTestCases(){
-		return _passedTests;
-	}
-	
-	public int getFailedTestCases(){
-		return _failedTest;
-	}
-	
-	public Map<String, String> getFailedTestInfo(){
-		return _failedTrace;
+		locateFault(threshold);
 	}
 	
 	public List<Statement> getSuspiciousStatement(){
 		return _candidates;
 	}
 	
-	public List<Pair<String, Integer>> getLocations(Subject subject){
+	public List<Pair<String, Integer>> getLocations(int topK){
 		List<Pair<String, Integer>> locations = new ArrayList<>();
+		int count = 0;
 		for(Statement statement : _candidates){
 			String stmt = statement.getMethod().getParent().getLabel();
 			Integer line = statement.getLineNumber();
 			Pair<String, Integer> pair = new Pair<String, Integer>(stmt, line);
 			locations.add(pair);
+			count ++;
+			if(count == topK){
+				break;
+			}
 		}
 		return locations;
 	}
 	
-	public void locateFault(Subject subject, double threshold) {
+	protected void locateFault(double threshold) {
 		GZoltar gz = null;
 		try {
-			gz = new Locator(subject.getHome(), new Ochiai());
+			gz = new Locator(_subject.getHome(), new Ochiai());
 		} catch (Throwable t) {
 			System.err.println(t);
 			t.printStackTrace();
@@ -77,15 +70,15 @@ public class FLocalization extends AbstractFaultlocalization{
 			return;
 		}
 		ArrayList<String> classpaths = new ArrayList<>();
-		classpaths.add(subject.getHome() + subject.getSbin());
-		classpaths.add(subject.getHome() + subject.getTbin());
+		classpaths.add(_subject.getHome() + _subject.getSbin());
+		classpaths.add(_subject.getHome() + _subject.getTbin());
 		gz.setClassPaths(classpaths);
 
-		for (String p : subject.getInstrumentPackage()) {
+		for (String p : _subject.getInstrumentPackage()) {
 			gz.addPackageToInstrument(p);
 		}
 		
-		for (String test : subject.getTestClasses()) {
+		for (String test : _subject.getTestClasses()) {
 			gz.addTestToExecute(test);
 			gz.addClassNotToInstrument(test);
 		}
@@ -93,11 +86,10 @@ public class FLocalization extends AbstractFaultlocalization{
 		gz.run();
 
 		List<TestResult> test_rslts = gz.getTestResults();
+		_total = test_rslts.size();
 		for (TestResult tr : test_rslts) {
-			_totalTest++;
 			if(!tr.wasSuccessful()){
-				_failedTest ++;
-				_failedTrace.put(tr.getName(), tr.getTrace());
+				_failedTests.add(tr.getName());
 			} else {
 				_passedTests.add(tr.getName());
 			}

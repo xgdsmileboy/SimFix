@@ -21,12 +21,11 @@ public class FLocalizationTest {
 	@Test
 	public void test_fl2(){
 
-		FLocalization fLocalization = new FLocalization();
-		
 		Constant.PROJECT_HOME = "/Users/Jiajun/Code/Java/fault-fix/SimilarFix/testfile";
 		Subject subject = new Subject("chart", 7, "/source", "/tests", "/build", "/build-tests");
 		
-		fLocalization.locateFault(subject, 0);
+		FLocalization fLocalization = new FLocalization(subject);
+		fLocalization.locateFault(0);
 		
 		for(Statement stmt : fLocalization.getSuspiciousStatement()){
 			System.out.println(stmt.getMethod().getParent().getLabel() + "," + stmt.getLineNumber() + "," + stmt.getSuspiciousness());
