@@ -6,7 +6,11 @@
  */
 package cofix.common.config;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -26,6 +30,44 @@ import cofix.common.util.Subject;
 public class Configure {
 
 	private final static String __name__ = "@Configure ";
+	
+	public static Subject getSubject(String name, int id){
+		String fileName = Constant.PROJINFOR + "/" + name + "/" + id + ".txt";
+		File file = new File(fileName);
+		if(!file.exists()){
+			System.out.println("File : " + fileName + " does not exist!");
+			return null;
+		}
+		BufferedReader br = null;
+		try {
+			br = new BufferedReader(new FileReader(file));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		String line = null;
+		List<String> source = new ArrayList<>();
+		try {
+			while((line = br.readLine()) != null){
+				source.add(line);
+			}
+			br.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		if(source.size() < 4){
+			System.err.println("PROJEC INFO CONFIGURE ERROR !");
+			System.exit(0);
+		}
+		
+		String ssrc = source.get(0);
+		String sbin = source.get(1);
+		String tsrc = source.get(2);
+		String tbin = source.get(3);
+		
+		Subject subject = new Subject(name, id, ssrc, tsrc, sbin, tbin);
+		return subject;
+	}
 	
 	public static List<Subject> getSubjectFromXML(String fileName) throws NumberFormatException {
 		List<Subject> list = new ArrayList<>();

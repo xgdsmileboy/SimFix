@@ -11,10 +11,17 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
+
+import javax.swing.JApplet;
 
 import org.eclipse.jdt.core.dom.CompilationUnit;
 
+import cofix.common.config.Configure;
+import cofix.common.config.Constant;
+import cofix.common.util.JavaFile;
 import cofix.common.util.Pair;
+import cofix.common.util.Subject;
 import fl.util.Utils;
 import fl.visitor.FindMethodVisitor;
 
@@ -32,20 +39,30 @@ public class Main {
 		Map<String, CompilationUnit> unitMap = new HashMap<>();
 		for(Pair<String, Integer> pair : locations){
 			
-			System.out.println("PARSE : " + pair.getFirst() + "," + pair.getSecond());
+//			System.out.println("PARSE : " + pair.getFirst() + "," + pair.getSecond());
 			
-			CompilationUnit unit = unitMap.get(pair.getFirst());
+			String packageName = pair.getFirst();
+			int indexOfDollar = packageName.indexOf("$");
+			if(indexOfDollar > 0){
+				packageName = packageName.substring(0, indexOfDollar);
+			}
+			
+			String name = packageName.substring(packageName.lastIndexOf(".") + 1);
+			
+			String fileName = projectSourcePath + "/" + packageName.replace(".", "/") + ".java";
+			
+			CompilationUnit unit = unitMap.get(fileName);
 			if(unit == null){
-				String file = projectSourcePath + "/" + pair.getFirst().replace(".", "/") + ".java";
-				unit = Utils.genASTFromFile(file);
+				unit = Utils.genASTFromFile(fileName);
 				unitMap.put(pair.getFirst(), unit);
 			}
 			
-			FindMethodVisitor visitor = new FindMethodVisitor(pair.getSecond());
+			FindMethodVisitor visitor = new FindMethodVisitor(pair.getSecond(), name);
 			unit.accept(visitor);
 			String method = visitor.getWrapMethod();
 			if(method == null){
 				System.err.println("NO method found!");
+				JavaFile.writeStringToFile("tmp.txt", fileName + "," + pair.getSecond() + "\n", true);
 				continue;
 			}
 			Integer index = indexMap.get(method);
@@ -70,12 +87,22 @@ public class Main {
 		proj.put("lang", 65);
 		proj.put("math", 106);
 		proj.put("time", 27);
-		String basePath = "/Users/Jiajun/Desktop";
-		String projectSourcePath = basePath + "/lang_35_buggy/src/main/java";
-		String locateFile = "/Users/Jiajun/Desktop/Ochiai/Lang/35.txt";
 		
-		List<Pair<String, List<Integer>>> locations = converter(projectSourcePath, locateFile);
-		Utils.dump2File("/Users/Jiajun/Desktop/35.line", locations);
+		for(Entry<String, Integer> entry : proj.entrySet()){
+			String name = entry.getKey();
+			int guard = entry.getValue();
+			for(int i = 1; i <= guard; i++){
+				System.out.println("PARSING : " + name + " " + i);
+				Subject subject = Configure.getSubject(name, i);
+				String locateFile = Constant.ORI_FAULTLOC + "/" + name + "/" + i + ".txt";
+				List<Pair<String, List<Integer>>> locations = converter(subject.getHome() + subject.getSsrc(), locateFile);
+				String target = Constant.CONVER_FAULTLOC + "/" + name + "/" + i + ".txt";
+				Utils.dump2File(target, locations);
+				System.out.println("FROM : " + locateFile);
+				System.out.println("TO   : " + target + "\n");
+			}
+		}
+		
 	}
 	
 //	public static void main(String[] args) {

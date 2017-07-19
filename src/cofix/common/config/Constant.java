@@ -30,6 +30,7 @@ public class Constant {
 	public static String PROJECT_HOME = "/home/similar-fix/d4j/projects";
 	public static String ORI_FAULTLOC = HOME + "/d4j-info/location/ochiai";
 	public static String CONVER_FAULTLOC = HOME + "/d4j-info/location/conver";
+	public static String PROJINFOR = HOME + "/d4j-info/src_path";
 	
 	// command configuration
 	public final static String COMMAND_CD = "cd ";

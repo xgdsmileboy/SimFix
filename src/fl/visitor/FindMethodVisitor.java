@@ -24,9 +24,11 @@ public class FindMethodVisitor extends ASTVisitor{
 	private int _line = 0; 
 	private String _method = null;
 	private CompilationUnit _unit = null;
+	private String _fileName = null;
 	
-	public FindMethodVisitor(int line) {
+	public FindMethodVisitor(int line, String fileName) {
 		_line = line;
+		_fileName = fileName;
 	}
 	
 	public String getWrapMethod(){
@@ -48,7 +50,7 @@ public class FindMethodVisitor extends ASTVisitor{
 		return true;
 	}
 	
-	private static String getFullClazzName(MethodDeclaration node) {
+	private String getFullClazzName(MethodDeclaration node) {
 		String clazz = "";
 		// filter those methods that defined in anonymous classes
 		ASTNode parent = node.getParent();
@@ -64,6 +66,9 @@ public class FindMethodVisitor extends ASTVisitor{
 			}
 			parent = parent.getParent();
 		}
+		if(!clazz.equals(_fileName)){
+			clazz = _fileName + "$" + clazz;
+		}
 		if(parent != null){
 			while(parent != null){
 				if(parent instanceof CompilationUnit){
@@ -77,7 +82,7 @@ public class FindMethodVisitor extends ASTVisitor{
 		return null;
 	}
 	
-	private static  String buildMethodInfoString(MethodDeclaration node) {
+	private  String buildMethodInfoString(MethodDeclaration node) {
 		String currentClassName = getFullClazzName(node);
 		if (currentClassName == null) {
 			return null;
