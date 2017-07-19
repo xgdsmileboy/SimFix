@@ -1,0 +1,2 @@
+org.apache.commons.math.optimization.general.MinpackTest::testMinpackJennrichSampson
+org.apache.commons.math.optimization.general.MinpackTest::testMinpackFreudensteinRoth

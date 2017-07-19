@@ -1,0 +1,1 @@
+org.apache.commons.lang.text.ExtendedMessageFormatTest::testEscapedQuote_LANG_477

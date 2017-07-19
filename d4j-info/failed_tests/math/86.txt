@@ -1,0 +1,2 @@
+org.apache.commons.math.linear.CholeskyDecompositionImplTest::testMath274
+org.apache.commons.math.linear.CholeskyDecompositionImplTest::testNotPositiveDefinite

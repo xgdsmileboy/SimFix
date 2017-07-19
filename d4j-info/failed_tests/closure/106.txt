@@ -1,0 +1,4 @@
+com.google.javascript.jscomp.CheckSideEffectsTest::testJSDocComments
+com.google.javascript.jscomp.CollapsePropertiesTest::testTwinReferenceCancelsChildCollapsing
+com.google.javascript.jscomp.CollapsePropertiesTest::testCrashInNestedAssign
+com.google.javascript.jscomp.CollapsePropertiesTest::testCrashInCommaOperator

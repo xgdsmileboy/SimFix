@@ -1,0 +1,2 @@
+org.apache.commons.math.linear.ArrayRealVectorTest::testBasicFunctions
+org.apache.commons.math.linear.SparseRealVectorTest::testBasicFunctions

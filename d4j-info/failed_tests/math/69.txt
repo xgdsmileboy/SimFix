@@ -1,0 +1,2 @@
+org.apache.commons.math.stat.correlation.PearsonsCorrelationTest::testPValueNearZero
+org.apache.commons.math.stat.correlation.SpearmansRankCorrelationTest::testPValueNearZero
