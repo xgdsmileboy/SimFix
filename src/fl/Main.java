@@ -6,6 +6,7 @@
  */
 package fl;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -63,6 +64,12 @@ public class Main {
 	
 	
 	public static void main(String[] args) {
+		Map<String, Integer> proj = new HashMap<>();
+		proj.put("chart", 26);
+		proj.put("closure", 133);
+		proj.put("lang", 65);
+		proj.put("math", 106);
+		proj.put("time", 27);
 		String basePath = "/Users/Jiajun/Desktop";
 		String projectSourcePath = basePath + "/lang_35_buggy/src/main/java";
 		String locateFile = "/Users/Jiajun/Desktop/Ochiai/Lang/35.txt";
@@ -70,5 +77,23 @@ public class Main {
 		List<Pair<String, List<Integer>>> locations = converter(projectSourcePath, locateFile);
 		Utils.dump2File("/Users/Jiajun/Desktop/35.line", locations);
 	}
+	
+//	public static void main(String[] args) {
+//		String path = "/home/similar-fix/d4j/projects/time";
+//		for(int i = 12; i < 28; i++){
+//			String src = path + "/time_" + i + "_buggy/src/main/java/org";
+//			String test= path + "/time_" + i + "_buggy/src/test/java/org";
+//			String binSrc = path + "/time_" + i + "_buggy/build/classes/org";
+//			String binTest = path + "/time_" + i + "_buggy/build/tests/org";
+//			File file1 = new File(src);
+//			File file2 = new File(test);
+//			File file3 = new File(binSrc);
+//			File file4 = new File(binTest);
+//			if(!file1.exists() || !file2.exists() || !file3.exists() || !file4.exists()){
+//				System.out.println("ERROR : " + i);
+//			}
+//			
+//		}
+//	}
 	
 }

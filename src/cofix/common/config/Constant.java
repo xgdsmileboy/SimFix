@@ -25,10 +25,17 @@ public class Constant {
 	// code search configure
 	public final static int MAX_BLOCK_LINE = 10;
 
-	public static String PROJECT_HOME = null;
 	
+	// useful file path 
+	public static String PROJECT_HOME = "/home/similar-fix/d4j/projects";
+	public static String ORI_FAULTLOC = HOME + "/d4j-info/location/ochiai";
+	public static String CONVER_FAULTLOC = HOME + "/d4j-info/location/conver";
+	
+	// command configuration
 	public final static String COMMAND_CD = "cd ";
-	public final static String COMMAND_TIMEOUT = "/usr/local/bin/gtimeout ";
-	public final static String COMMAND_D4J = "/Users/Jiajun/Code/Defects4J/defects4j/framework/bin/defects4j ";
+//	public final static String COMMAND_TIMEOUT = "/usr/local/bin/gtimeout ";
+//	public final static String COMMAND_D4J = "/Users/Jiajun/Code/Defects4J/defects4j/framework/bin/defects4j ";
+	public final static String COMMAND_TIMEOUT = "/usr/bin/timeout ";
+	public final static String COMMAND_D4J = "/home/similar-fix/d4j/defects4j/framework/bin/defects4j ";
 
 }
