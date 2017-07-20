@@ -29,12 +29,12 @@ public class Executor {
 		String ligne = "";
 
 		while ((ligne = output.readLine()) != null) {
-		    System.out.println(ligne);
+//		    System.out.println(ligne);
 		    message.add(ligne);
 		}
 
 		while ((ligne = error.readLine()) != null) {
-			System.out.println(ligne);
+//			System.out.println(ligne);
 			message.add(ligne);
 		}
 
