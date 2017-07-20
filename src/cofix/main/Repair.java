@@ -193,7 +193,6 @@ public class Repair {
 			}
 			int i = 1;
 //			Set<String> already = new HashSet<>();
-			Map<String, Set<Node>> already = new HashMap<>();
 			for(Pair<CodeBlock, Double> similar : candidates){
 				// try top 100 candidates
 				if(i > 100){
@@ -203,7 +202,7 @@ public class Repair {
 				System.out.println(similar.getFirst().toSrcString().toString());
 				// compute transformation
 				List<Modification> modifications = CodeBlockMatcher.match(buggyblock, similar.getFirst(), usableVars);
-				
+				Map<String, Set<Node>> already = new HashMap<>();
 				// try each transformation first
 				List<Set<Modification>> list = new ArrayList<>();
 				for(Modification modification : modifications){
@@ -241,6 +240,11 @@ public class Repair {
 							for(Modification modification : modifySet){
 								modification.restore();
 							}
+							if(legalModifications != null){
+								for(Modification modification : modifySet){
+									legalModifications.add(modification);
+								}
+							}
 							continue;
 						}
 						
@@ -261,6 +265,7 @@ public class Repair {
 						}
 						switch (validate(buggyblock)) {
 						case COMPILE_FAILED:
+							haveTry.remove(replace);
 							break;
 						case SUCCESS:
 							StringBuffer stringBuffer = new StringBuffer();

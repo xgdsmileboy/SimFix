@@ -86,9 +86,9 @@ public class Main {
 		Map<String, Set<Integer>> subjects = new HashMap<>();
 		Set<Integer> chartID = new HashSet<>();
 //		chartID.add(1);
-		chartID.add(7);
+//		chartID.add(7);
 //		chartID.add(20);
-		subjects.put("chart", chartID);
+//		subjects.put("chart", chartID);
 //		Set<Integer> closureID = new HashSet<>();
 //		closureID.add(14);
 //		closureID.add(57);
@@ -102,7 +102,7 @@ public class Main {
 //		langID.add(58);
 //		langID.add(60);
 //		subjects.put("lang", langID);
-//		Set<Integer> mathID = new HashSet<>();
+		Set<Integer> mathID = new HashSet<>();
 //		mathID.add(5);
 //		mathID.add(33);
 //		mathID.add(35);
@@ -115,9 +115,9 @@ public class Main {
 ////		mathID.add(71); // need split
 ////		mathID.add(72); // need split
 //		mathID.add(75);
-//		mathID.add(79);
+		mathID.add(79);
 ////		mathID.add(98); // need split
-//		subjects.put("math", mathID);
+		subjects.put("math", mathID);
 		
 		return subjects;
 	}
