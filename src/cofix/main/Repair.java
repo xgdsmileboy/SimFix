@@ -39,6 +39,7 @@ import cofix.core.match.CodeBlockMatcher;
 import cofix.core.modify.Modification;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.CodeBlock;
+import cofix.core.parser.node.Node;
 import cofix.core.parser.search.BuggyCode;
 import cofix.core.parser.search.SimpleFilter;
 
@@ -139,6 +140,7 @@ public class Repair {
 		List<Pair<String, Integer>> locations = _localization.getLocations(200);
 		Map<Integer, Set<Integer>> alreadyTryPlaces = new HashMap<>();
 		int correct = 0;
+		Status status = Status.FAILED;
 		for(Pair<String, Integer> loc : locations){
 			_subject.restore();
 			
@@ -190,7 +192,8 @@ public class Repair {
 				continue;
 			}
 			int i = 1;
-			Set<String> already = new HashSet<>();
+//			Set<String> already = new HashSet<>();
+			Map<String, Set<Node>> already = new HashMap<>();
 			for(Pair<CodeBlock, Double> similar : candidates){
 				// try top 100 candidates
 				if(i > 100){
@@ -205,10 +208,18 @@ public class Repair {
 				List<Set<Modification>> list = new ArrayList<>();
 				for(Modification modification : modifications){
 					String modify = modification.toString();
-					if(already.contains(modify)){
-						continue;
+					Set<Node> tested = already.get(modify);
+					if(tested != null){
+						if(tested.contains(modification.getSrcNode())){
+							continue;
+						} else {
+							tested.add(modification.getSrcNode());
+						}
+					} else {
+						tested = new HashSet<>();
+						tested.add(modification.getSrcNode());
+						already.put(modify, tested);
 					}
-					already.add(modify);
 					Set<Modification> set = new HashSet<>();
 					set.add(modification);
 					list.add(set);
@@ -254,6 +265,7 @@ public class Repair {
 						case SUCCESS:
 							StringBuffer stringBuffer = new StringBuffer();
 							stringBuffer.append("\n----------------------------------------\n");
+							stringBuffer.append("----------------------------------------\n");
 							stringBuffer.append("Find a patch :\n");
 							stringBuffer.append(buggyblock.toSrcString().toString());
 							stringBuffer.append("\n----------------------------------------\n");
@@ -262,7 +274,7 @@ public class Repair {
 							JavaFile.writeStringToFile("result.log", stringBuffer.toString(), true);
 							correct ++;
 							if(correct == 3){
-								return Status.SUCCESS;
+								status = Status.SUCCESS;
 							}
 //							System.out.print("Continue search ? (Y/N) ");
 //							Scanner scanner = new Scanner(System.in);
@@ -289,7 +301,7 @@ public class Repair {
 				}
 			}
 		}
-		return Status.FAILED;
+		return status;
 	}
 	
 	private List<Set<Modification>> combineModification(List<Modification> modifications){
@@ -394,7 +406,6 @@ public class Repair {
 		stringBuffer.append("Pass Single Test :\n");
 		stringBuffer.append(buggyBlock.toSrcString().toString());
 		stringBuffer.append("\n----------------------------------------\n");
-		stringBuffer.append("\nSuccessfully find a patch!\n");
 		System.out.println(stringBuffer.toString());
 		JavaFile.writeStringToFile("result.log", stringBuffer.toString(), true);
 		

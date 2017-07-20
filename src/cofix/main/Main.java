@@ -85,9 +85,9 @@ public class Main {
 	private static Map<String, Set<Integer>> getSubject(){
 		Map<String, Set<Integer>> subjects = new HashMap<>();
 		Set<Integer> chartID = new HashSet<>();
-		chartID.add(1);
+//		chartID.add(1);
 		chartID.add(7);
-		chartID.add(20);
+//		chartID.add(20);
 		subjects.put("chart", chartID);
 //		Set<Integer> closureID = new HashSet<>();
 //		closureID.add(14);
