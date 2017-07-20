@@ -33,7 +33,9 @@ public class FieldAcc extends Expr {
 	private Expr _expression = null;
 	private SName _identifier = null;
 	
-	private Expr _replace = null;
+	private String _replace = null;
+	
+	private final int WHOLE = 0;
 	
 	/**
 	 * FieldAccess:
@@ -59,11 +61,19 @@ public class FieldAcc extends Expr {
 			match = true;
 			// TODO : to finish
 		} else {
-			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();
-			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
-				match = true;
-				modifications.addAll(tmp);
+			if(node instanceof ConditionalExpr){
+				ConditionalExpr conditionalExpr = (ConditionalExpr) node;
+				if(NodeUtils.conditionalMatch(this, WHOLE, conditionalExpr, varTrans, allUsableVariables, tmp)){
+					match = true;
+					modifications.addAll(tmp);
+				}
+			} else {
+				List<Node> children = node.getChildren();
+				if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+					match = true;
+					modifications.addAll(tmp);
+				}
 			}
 		}
 		return match;
@@ -71,13 +81,19 @@ public class FieldAcc extends Expr {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification.getSourceID() == WHOLE){
+			_replace = modification.getTargetString();
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		_replace = null;
+		if(modification.getSourceID() == WHOLE){
+			_replace = null;
+			return false;
+		}
 		return true;
 	}
 
@@ -89,7 +105,7 @@ public class FieldAcc extends Expr {
 	@Override
 	public StringBuffer toSrcString() {
 		if(_replace != null){
-			return _replace.toSrcString();
+			return new StringBuffer(_replace);
 		} else {
 			StringBuffer stringBuffer = new StringBuffer();
 			stringBuffer.append(_expression.toSrcString());

@@ -66,6 +66,18 @@ public class ConditionalExpr extends Expr {
 		_snd = snd;
 	}
 	
+	public Expr getCondition(){
+		return _condition;
+	}
+	
+	public Expr getfirst(){
+		return _first;
+	}
+	
+	public Expr getSecond(){
+		return _snd;
+	}
+	
 	@Override
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		boolean match = false;

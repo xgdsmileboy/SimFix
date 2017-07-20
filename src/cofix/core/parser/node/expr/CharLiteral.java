@@ -14,6 +14,7 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
+import cofix.common.util.Pair;
 import cofix.core.metric.Literal;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Variable;
@@ -67,11 +68,19 @@ public class CharLiteral extends Expr {
 				}
 			}
 		} else {
-			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();
-			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
-				match = true;
-				modifications.addAll(tmp);
+			if(node instanceof ConditionalExpr){
+				ConditionalExpr conditionalExpr = (ConditionalExpr) node;
+				if(NodeUtils.conditionalMatch(this, EXPRID, conditionalExpr, varTrans, allUsableVariables, tmp)){
+					match = true;
+					modifications.addAll(tmp);
+				}
+			} else {
+				List<Node> children = node.getChildren();
+				if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+					match = true;
+					modifications.addAll(tmp);
+				}
 			}
 		}
 		return match;

@@ -67,6 +67,17 @@ public class IfStmt extends Stmt {
 		_else = els;
 	}
 	
+	public Expr getCondition(){
+		return _condition;
+	}
+	
+	public Stmt getThen(){
+		return _then;
+	}
+	
+	public Stmt getElse(){
+		return _else;
+	}
 
 	@Override
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {

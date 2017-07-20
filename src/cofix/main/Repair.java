@@ -22,7 +22,6 @@ import org.apache.commons.io.FileUtils;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.Type;
 import org.junit.runner.Result;
-import org.w3c.dom.css.ElementCSSInlineStyle;
 
 import cofix.common.inst.Instrument;
 import cofix.common.inst.MethodInstrumentVisitor;
@@ -135,11 +134,14 @@ public class Repair {
 //		_subject.restore();
 //	}
 
-	public Status fix(Timer timer){
+	public Status fix(Timer timer) throws IOException{
 		String src = _subject.getHome() + _subject.getSsrc();
-		List<Pair<String, Integer>> locations = _localization.getLocations(20);
+		List<Pair<String, Integer>> locations = _localization.getLocations(200);
 		Map<Integer, Set<Integer>> alreadyTryPlaces = new HashMap<>();
+		int locCount = 0;
 		for(Pair<String, Integer> loc : locations){
+			_subject.restore();
+			locCount ++;
 			System.out.println(loc.getFirst() + "::" + loc.getSecond());
 			String file = _subject.getHome() + _subject.getSsrc() + "/" + loc.getFirst().replace(".", "/") + ".java";
 			String binFile = _subject.getHome() + _subject.getSbin() + "/" + loc.getFirst().replace(".", "/") + ".class";
@@ -188,6 +190,10 @@ public class Repair {
 			int i = 1;
 			Set<String> already = new HashSet<>();
 			for(Pair<CodeBlock, Double> similar : candidates){
+				// try top 100 candidates
+				if(i > 100){
+					break;
+				}
 				System.out.println("=====================" + (i++) +"==============================");
 				System.out.println(similar.getFirst().toSrcString().toString());
 				// compute transformation
@@ -368,7 +374,7 @@ public class Repair {
 //		JUnitRuntime runtime = new JUnitRuntime(_subject);
 		// validate patch using failed test cases
 		for(String testcase : _failedTestCases){
-			String[] testinfo = testcase.split("#");
+			String[] testinfo = testcase.split("::");
 			if(!Runner.testSingleTest(_subject, testinfo[0], testinfo[1])){
 				return ValidateStatus.TEST_FAILED;
 			}

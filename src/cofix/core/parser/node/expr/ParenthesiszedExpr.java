@@ -10,9 +10,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import javax.jws.WebParam.Mode;
+
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
+import cofix.common.util.Pair;
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
@@ -20,6 +23,7 @@ import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
@@ -31,7 +35,9 @@ public class ParenthesiszedExpr extends Expr {
 
 	private Expr _expression = null;
 	
-	private Expr _expression_replace = null;
+	private String _expression_replace = null;
+	
+	private final int WHOLE = 0;
 	
 	/**
 	 * ParenthesizedExpression:
@@ -53,25 +59,32 @@ public class ParenthesiszedExpr extends Expr {
 			return _expression.match(((ParenthesiszedExpr) node)._expression, varTrans, allUsableVariables, modifications);
 			// TODO : to finish
 		} else {
-			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();
+			List<Node> children = node.getChildren();
 			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
 				match = true;
 				modifications.addAll(tmp);
 			}
+			
 		}
 		return match;
 	}
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification.getSourceID() == WHOLE){
+			_expression_replace = modification.getTargetString();
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification.getSourceID() == WHOLE){
+			_expression_replace = null;
+			return true;
+		}
 		return false;
 	}
 
@@ -86,7 +99,7 @@ public class ParenthesiszedExpr extends Expr {
 		StringBuffer stringBuffer = new StringBuffer();
 		stringBuffer.append("(");
 		if(_expression_replace != null){
-			stringBuffer.append(_expression_replace.toSrcString());
+			stringBuffer.append(_expression_replace);
 		} else {
 			stringBuffer.append(_expression.toSrcString());
 		}

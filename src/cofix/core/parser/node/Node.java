@@ -22,6 +22,7 @@ import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.parser.node.expr.Expr;
 
 /**
  * @author Jiajun

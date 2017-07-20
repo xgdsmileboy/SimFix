@@ -40,6 +40,10 @@ import org.eclipse.jdt.core.dom.VariableDeclarationStatement;
 import org.eclipse.jdt.core.dom.WhileStatement;
 import org.eclipse.jdt.core.dom.WildcardType;
 
+import com.sun.jmx.trace.Trace;
+import com.sun.org.apache.bcel.internal.generic.StackInstruction;
+import com.sun.org.apache.xpath.internal.operations.Mod;
+
 import cofix.common.util.JavaFile;
 import cofix.common.util.Pair;
 import cofix.core.metric.Variable;
@@ -49,6 +53,7 @@ import cofix.core.modify.Modification;
 import cofix.core.modify.Revision;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.Node.TYPE;
+import cofix.core.parser.node.expr.ConditionalExpr;
 import cofix.core.parser.node.expr.Expr;
 import cofix.core.parser.node.expr.QName;
 import cofix.core.parser.node.expr.SName;
@@ -370,6 +375,62 @@ public class NodeUtils {
 		
 		return modifications;
 	}
+	
+	public static boolean conditionalMatch(Expr node, int id, ConditionalExpr conditionalExpr, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications){
+		boolean match = false;
+		Expr first = conditionalExpr.getfirst();
+		Expr second = conditionalExpr.getSecond();
+		List<Modification> tmp = new ArrayList<>();
+		if(node.match(first, varTrans, allUsableVariables, tmp)){
+			match = true;
+			modifications.addAll(tmp);
+			Expr condition = conditionalExpr.getCondition();
+			Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(condition, varTrans, allUsableVariables);
+			if(record != null){
+				NodeUtils.replaceVariable(record);
+				String conditionString = condition.toSrcString().toString();
+				NodeUtils.restoreVariables(record);
+				record = NodeUtils.tryReplaceAllVariables(second, varTrans, allUsableVariables);
+				String otherSide = "";
+				if(record != null && second.getType().toString().equals(node.getType().toString())){
+					NodeUtils.replaceVariable(record);
+					otherSide = second.toSrcString().toString();
+					NodeUtils.restoreVariables(record);
+				} else {
+					otherSide = NodeUtils.getDefaultValue(node.getType());
+				}
+				String newStr = conditionString + "?" + node.toSrcString().toString() + ":" + otherSide;
+				Revision revision = new Revision(node, id, newStr, node.getNodeType());
+				modifications.add(revision);
+			}
+		} else {
+			tmp = new ArrayList<>();
+			if(node.match(second, varTrans, allUsableVariables, tmp)){
+				match = true;
+				modifications.addAll(tmp);
+				Expr condition = conditionalExpr.getCondition();
+				Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(condition, varTrans, allUsableVariables);
+				if(record != null){
+					NodeUtils.replaceVariable(record);
+					String conditionString = condition.toSrcString().toString();
+					NodeUtils.restoreVariables(record);
+					record = NodeUtils.tryReplaceAllVariables(first, varTrans, allUsableVariables);
+					String otherSide = "";
+					if(record != null && first.getType().toString().equals(node.getType().toString())){
+						NodeUtils.replaceVariable(record);
+						otherSide = first.toSrcString().toString();
+						NodeUtils.restoreVariables(record);
+					} else {
+						otherSide = NodeUtils.getDefaultValue(node.getType());
+					}
+					String newStr = conditionString + "?" + otherSide + ":" + node.toSrcString().toString();
+					Revision revision = new Revision(node, id, newStr, node.getNodeType());
+					modifications.add(revision);
+				}
+			}
+		}
+		return match;
+	}
 
 	public static boolean nodeMatchList(Node node, List<? extends Node> tarList,
 			Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
@@ -410,10 +471,10 @@ public class NodeUtils {
 					break;
 				}
 			}
-			if(!findMatching){
-				Deletion deletion = new Deletion(currNode, i, "", nodeType);
-				modifications.add(deletion);
-			}
+//			if(!findMatching){
+//				Deletion deletion = new Deletion(currNode, i, "", nodeType);
+//				modifications.add(deletion);
+//			}
 		}
 		StringBuffer stringBuffer = new StringBuffer();
 		int shouldIns = 1000;
@@ -491,30 +552,44 @@ public class NodeUtils {
 				// failed to replace variable
 				if(!matched){
 					if(!allUsableVariables.containsKey(name)){
-						Set<String> candidates = new HashSet<>();
-						for(Entry<String, Type> entry : allUsableVariables.entrySet()){
-							Type type2 = entry.getValue();
-							String typeStr = type2 == null ? "?" : type2.toString();
-							if(type.toString().equals(typeStr)){
-								if(!varTrans.values().contains(entry.getKey())){
-//									record.put(sName, new Pair<String, String>(name, entry.getKey()));
-									candidates.add(entry.getKey());
-								}
+						Expr expr = sName.getDirectDependency();
+						boolean canUse = false;
+						if(expr != null){
+							Map<SName, Pair<String, String>> tryReplace = tryReplaceAllVariables(expr, varTrans, allUsableVariables);
+							if(tryReplace != null){
+								canUse = true;
+								NodeUtils.replaceVariable(tryReplace);
+								String replaceName = expr.toSrcString().toString();
+								record.put(sName, new Pair<String, String>(name, replaceName));
+								NodeUtils.restoreVariables(tryReplace);
 							}
 						}
-						if(candidates.size() == 0){
-							return null;
-						} else {
-							String replaceName = "";
-							double similarity = -1;
-							for(String candidate : candidates){
-								double value = nameSimilarity(candidate, name); 
-								if(value > similarity){
-									similarity = value;
-									replaceName = candidate;
+						if(!canUse){
+							Set<String> candidates = new HashSet<>();
+							for(Entry<String, Type> entry : allUsableVariables.entrySet()){
+								Type type2 = entry.getValue();
+								String typeStr = type2 == null ? "?" : type2.toString();
+								if(type.toString().equals(typeStr)){
+									if(!varTrans.values().contains(entry.getKey())){
+//										record.put(sName, new Pair<String, String>(name, entry.getKey()));
+										candidates.add(entry.getKey());
+									}
 								}
 							}
-							record.put(sName, new Pair<String, String>(name, replaceName));
+							if(candidates.size() == 0){
+								return null;
+							} else {
+								String replaceName = "";
+								double similarity = -1;
+								for(String candidate : candidates){
+									double value = nameSimilarity(candidate, name); 
+									if(value > similarity){
+										similarity = value;
+										replaceName = candidate;
+									}
+								}
+								record.put(sName, new Pair<String, String>(name, replaceName));
+							}
 						}
 					}
 				}
@@ -546,6 +621,33 @@ public class NodeUtils {
 			return true;
 		} else {
 			return false;
+		}
+	}
+	
+	public static String getDefaultValue(Type type){
+		if(type == null){
+			return "null";
+		}
+		if(isPrimitiveType(type)){
+			switch(type.toString()){
+			case "Boolean":
+			case "boolean": return "false";
+			case "Integer":
+			case "int": return "0";
+			case "Float":
+			case "float": return "0f";
+			case "Double":
+			case "double": return "0d";
+			case "Short":
+			case "short": return "0";
+			case "Long":
+			case "long": return "0l";
+			case "Character":
+			case "char": return "' '";
+			default : return null;
+			}
+		} else {
+			return "null";
 		}
 	}
 	
@@ -1057,7 +1159,7 @@ class VariableVisitor extends ASTVisitor {
 		public void dumpVarMap() {
 			for(Entry<Pair<String, Type>, Pair<Integer, Integer>> entry : _tmpVars.entrySet()){
 				Pair<Integer, Integer> range = entry.getValue();
-				if(range.getFirst() < _line && _line <= range.getSecond()){
+				if(range.getFirst() <= _line && _line <= range.getSecond()){
 					Pair<String, Type> variable = entry.getKey();
 					_vars.put(variable.getFirst(), variable.getSecond());
 				}

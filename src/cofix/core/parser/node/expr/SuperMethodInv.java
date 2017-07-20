@@ -24,6 +24,7 @@ import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
+import sun.security.provider.MD2;
 
 /**
  * @author Jiajun
@@ -36,8 +37,10 @@ public class SuperMethodInv extends Expr {
 	private List<Expr> _arguments = null;
 	
 	private String _arguments_replace = null;
+	private String _replace = null;
 	
-	private int ARGID = 0;
+	private final int ARGID = 0;
+	private final int WHOLE = 1;
 	/**
 	 * SuperMethodInvocation:
      *	[ ClassName . ] super .
@@ -69,11 +72,19 @@ public class SuperMethodInv extends Expr {
 			SuperMethodInv other = (SuperMethodInv) node;
 			modifications.addAll(NodeUtils.handleArguments(this, ARGID, _nodeType, _arguments, other._arguments, varTrans, allUsableVariables));
 		} else {
-			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();
-			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
-				match = true;
-				modifications.addAll(tmp);
+			if(node instanceof ConditionalExpr){
+				ConditionalExpr conditionalExpr = (ConditionalExpr) node;
+				if(NodeUtils.conditionalMatch(this, WHOLE, conditionalExpr, varTrans, allUsableVariables, tmp)){
+					match = true;
+					modifications.addAll(tmp);
+				}
+			} else {
+				List<Node> children = node.getChildren();
+				if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+					match = true;
+					modifications.addAll(tmp);
+				}
 			}
 		}
 		return match;
@@ -83,16 +94,20 @@ public class SuperMethodInv extends Expr {
 	public boolean adapt(Modification modification) {
 		if(modification.getSourceID() == ARGID){
 			_arguments_replace = modification.getTargetString();
-		} else {
-			return false;
+			return true;
+		} else if(modification.getSourceID() == WHOLE){
+			_replace = modification.getTargetString();
+			return true;
 		}
-		return true;
+		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
 		if(modification.getSourceID() == ARGID){
 			_arguments_replace = null;
+		}else if(modification.getSourceID() == WHOLE){
+			_replace = null;
 		} else {
 			return false;
 		}
@@ -107,6 +122,9 @@ public class SuperMethodInv extends Expr {
 	
 	@Override
 	public StringBuffer toSrcString() {
+		if(_replace != null){
+			return new StringBuffer(_replace);
+		}
 		StringBuffer stringBuffer = new StringBuffer();
 		if(_label != null){
 			stringBuffer.append(_label.toSrcString());

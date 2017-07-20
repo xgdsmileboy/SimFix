@@ -39,10 +39,12 @@ public class MethodInv extends Expr {
 	private String _expression_replace = null;
 	private String _name_replace = null;
 	private String _arguments_replace = null;
+	private String _replace = null;
 	
 	private final int EXPRID = 0;
 	private final int NAMEID = 1;
 	private final int ARGID = 2;
+	private final int WHOLE = 3;
 	
 	/**
 	 *  MethodInvocation:
@@ -100,11 +102,19 @@ public class MethodInv extends Expr {
 			}
 			
 		} else {
-			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();
-			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
-				match = true;
-				modifications.addAll(tmp);
+			if(node instanceof ConditionalExpr){
+				ConditionalExpr conditionalExpr = (ConditionalExpr) node;
+				if(NodeUtils.conditionalMatch(this, WHOLE, conditionalExpr, varTrans, allUsableVariables, tmp)){
+					match = true;
+					modifications.addAll(tmp);
+				}
+			} else {
+				List<Node> children = node.getChildren();
+				if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+					match = true;
+					modifications.addAll(tmp);
+				}
 			}
 		}
 		return match;
@@ -122,6 +132,9 @@ public class MethodInv extends Expr {
 			break;
 		case ARGID:
 			_arguments_replace = modification.getTargetString();
+			break;
+		case WHOLE:
+			_replace = modification.getTargetString();
 			break;
 		default:
 			return false;
@@ -142,6 +155,9 @@ public class MethodInv extends Expr {
 		case ARGID:
 			_arguments_replace = null;
 			break;
+		case WHOLE:
+			_replace = null;
+			break;
 		default:
 			return false;
 		}
@@ -157,29 +173,33 @@ public class MethodInv extends Expr {
 	@Override
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer();
-		if(_expression_replace != null){
-			stringBuffer.append(_expression_replace);
-			stringBuffer.append(".");
-		} else if(_expression != null){
-			stringBuffer.append(_expression.toSrcString());
-			stringBuffer.append(".");
-		}
-		if(_name_replace != null){
-			stringBuffer.append(_name_replace);
+		if(_replace != null){
+			stringBuffer.append(_replace);
 		} else {
-			stringBuffer.append(_name);
-		}
-		stringBuffer.append("(");
-		if(_arguments_replace != null){
-			stringBuffer.append(_arguments_replace);
-		} else if(_arguments != null && _arguments.size() > 0){
-			stringBuffer.append(_arguments.get(0).toSrcString());
-			for(int i = 1; i < _arguments.size(); i++){
-				stringBuffer.append(",");
-				stringBuffer.append(_arguments.get(i).toSrcString());
+			if(_expression_replace != null){
+				stringBuffer.append(_expression_replace);
+				stringBuffer.append(".");
+			} else if(_expression != null){
+				stringBuffer.append(_expression.toSrcString());
+				stringBuffer.append(".");
 			}
+			if(_name_replace != null){
+				stringBuffer.append(_name_replace);
+			} else {
+				stringBuffer.append(_name);
+			}
+			stringBuffer.append("(");
+			if(_arguments_replace != null){
+				stringBuffer.append(_arguments_replace);
+			} else if(_arguments != null && _arguments.size() > 0){
+				stringBuffer.append(_arguments.get(0).toSrcString());
+				for(int i = 1; i < _arguments.size(); i++){
+					stringBuffer.append(",");
+					stringBuffer.append(_arguments.get(i).toSrcString());
+				}
+			}
+			stringBuffer.append(")");
 		}
-		stringBuffer.append(")");
 		return stringBuffer;
 	}
 

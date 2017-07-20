@@ -10,10 +10,13 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.locks.Condition;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ArrayType;
+import org.eclipse.jdt.core.dom.IfStatement;
 import org.eclipse.jdt.core.dom.Type;
+import org.eclipse.jdt.core.util.ISignatureAttribute;
 
 import com.sun.corba.se.spi.ior.TaggedProfileTemplate;
 
@@ -27,6 +30,7 @@ import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
+import cofix.core.parser.node.stmt.IfStmt;
 
 /**
  * @author Jiajun
@@ -82,12 +86,14 @@ public class ArrayCreate extends Expr {
 				modifications.addAll(NodeUtils.listNodeMatching(this, _nodeType, _dimension, other._dimension, varTrans, allUsableVariables));
 			}
 		} else {
-			List<Node> children = node.getChildren();
+			
 			List<Modification> tmp = new ArrayList<>();
+			List<Node> children = node.getChildren();
 			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
 				match = true;
 				modifications.addAll(tmp);
 			}
+			
 		}
 		return match;
 	}

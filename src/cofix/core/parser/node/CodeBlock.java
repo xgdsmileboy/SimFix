@@ -196,6 +196,8 @@ public class CodeBlock extends Node{
 	// <+, -, ...>
 	private List<Operator> _operators = null;
 	
+	private Map<String, Expr> _newVariableDirectDependency = new HashMap<>();
+	
 	public CodeBlock(String fileName, CompilationUnit cunit, List<ASTNode> nodes) {
 		this(fileName, cunit, nodes, 10);
 	}
@@ -448,6 +450,16 @@ public class CodeBlock extends Node{
 				}
 				if(shouldAdd){
 					_parsedNodes.add(parse);
+				}
+			}
+		}
+		List<Variable> variables = this.getVariables();
+		for(Variable variable : variables){
+			if(variable.getNode() instanceof SName){
+				SName var = (SName) variable.getNode();
+				Expr expr = _newVariableDirectDependency.get(var.getName());
+				if(expr != null){
+					var.setDirectDependency(expr);
 				}
 			}
 		}
@@ -1400,17 +1412,18 @@ public class CodeBlock extends Node{
 		int endLine = _cunit.getLineNumber(node.getStartPosition() + node.getLength());
 		Vdf vdf = new Vdf(startLine, endLine, node);
 		
+		SName identifier = (SName) process(node.getName());
+		identifier.setParent(vdf);
+		vdf.setName(identifier);
+		
 		vdf.setDimensions(node.getExtraDimensions());
 		
 		if(node.getInitializer() != null){
 			Expr expression = (Expr) process(node.getInitializer());
 			expression.setParent(vdf);
 			vdf.setExpression(expression);
+			_newVariableDirectDependency.put(identifier.getName(), expression);
 		}
-		
-		SName identifier = (SName) process(node.getName());
-		identifier.setParent(vdf);
-		vdf.setName(identifier);
 		
 		return vdf;
 	}

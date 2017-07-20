@@ -32,6 +32,8 @@ public class SName extends Label {
 
 	private String _name = null; 
 	
+	private Expr _directDependency = null;
+	
 	private String _replace = null;
 	
 	private final int NAMEID = 0;
@@ -51,6 +53,14 @@ public class SName extends Label {
 	
 	public String getName(){
 		return _name;
+	}
+	
+	public void setDirectDependency(Expr expr){
+		_directDependency = expr;
+	}
+	
+	public Expr getDirectDependency(){
+		return _directDependency;
 	}
 
 	@Override

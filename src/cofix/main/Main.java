@@ -13,7 +13,7 @@ import java.util.Date;
 import cofix.common.config.Configure;
 import cofix.common.config.Constant;
 import cofix.common.localization.AbstractFaultlocalization;
-import cofix.common.localization.OchiaiResult;
+import cofix.common.localization.ManualLocator;
 import cofix.common.util.JavaFile;
 import cofix.common.util.Status;
 import cofix.common.util.Subject;
@@ -35,8 +35,8 @@ public class Main {
 		JavaFile.writeStringToFile(Constant.HOME + "/result.log", stringBuffer.toString(), true);
 		subject.backup();
 		ProjectInfo.init(subject);
-//		AbstractFaultlocalization fLocalization = new ManualLocator(subject);
-		AbstractFaultlocalization fLocalization = new OchiaiResult(subject);
+		AbstractFaultlocalization fLocalization = new ManualLocator(subject);
+//		AbstractFaultlocalization fLocalization = new OchiaiResult(subject);
 		Repair repair = new Repair(subject, fLocalization);
 		Timer timer = new Timer(1, 0);
 		timer.start();
@@ -64,8 +64,9 @@ public class Main {
 		Constant.PROJECT_HOME = System.getProperty("user.dir") + "/testfile";
 		System.out.println(Constant.PROJECT_HOME);
 //		List<Subject> subjects = Configure.getSubjectFromXML("project.xml");
-		Subject subject = Configure.getSubject("chart", 1);
+		Subject subject = Configure.getSubject("lang", 33);
 		tryFix(subject);
+		
 	}
 
 }

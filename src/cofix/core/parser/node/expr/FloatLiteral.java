@@ -63,11 +63,19 @@ public class FloatLiteral extends NumLiteral {
 				}
 			}
 		} else {
-			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();
-			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
-				match = true;
-				modifications.addAll(tmp);
+			if(node instanceof ConditionalExpr){
+				ConditionalExpr conditionalExpr = (ConditionalExpr) node;
+				if(NodeUtils.conditionalMatch(this, EXPRID, conditionalExpr, varTrans, allUsableVariables, tmp)){
+					match = true;
+					modifications.addAll(tmp);
+				}
+			} else {
+				List<Node> children = node.getChildren();
+				if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
+					match = true;
+					modifications.addAll(tmp);
+				}
 			}
 		}
 		return match;

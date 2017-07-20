@@ -36,7 +36,6 @@ public class CastExpr extends Expr {
 	private Expr _expression = null;
 
 	private Expr _replace = null;
-	private Set<String> _exprSet = new HashSet<>();
 	/**
 	 * CastExpression:
      *	( Type ) Expression
@@ -65,12 +64,7 @@ public class CastExpr extends Expr {
 			List<Modification> tmp = new ArrayList<>();
 			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
 				match = true;
-				for(Modification modification : tmp){
-					if(!_exprSet.contains(modification.getTargetString())){
-						modifications.add(modification);
-						_exprSet.add(modification.getTargetString());
-					}
-				}
+				modifications.addAll(tmp);
 			}
 		}
 		return match;
