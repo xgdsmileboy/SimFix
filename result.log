@@ -1,5 +1,15 @@
 =================================================
-Project : chart_1	start : 17/07/16 17:33
+Project : chart_1	start : 17/07/20 16:16
+org.jfree.chart.renderer.category.AbstractCategoryItemRenderer,1797
+----------------------------------------
+Pass Single Test :
+if(dataset==null){
+return result;
+}
+
+----------------------------------------
+
+Successfully find a patch!
 
 ----------------------------------------
 Find a patch :
@@ -10,12 +20,73 @@ return result;
 ----------------------------------------
 
 Successfully find a patch!
-Success time : 17/07/16 17:34
-=================================================
-Project : chart_7	start : 17/07/16 17:34
+
+----------------------------------------
+Pass Single Test :
+if(dataset==this.toolTipGeneratorList.get(index)){
+return result;
+}
+
+----------------------------------------
+
+Successfully find a patch!
 
 ----------------------------------------
 Find a patch :
+if(dataset==this.toolTipGeneratorList.get(index)){
+return result;
+}
+
+----------------------------------------
+
+Successfully find a patch!
+
+----------------------------------------
+Pass Single Test :
+if(dataset!=dataset){
+return result;
+}
+
+----------------------------------------
+
+Successfully find a patch!
+
+----------------------------------------
+Find a patch :
+if(dataset!=dataset){
+return result;
+}
+
+----------------------------------------
+
+Successfully find a patch!
+Success time : 17/07/20 16:21
+=================================================
+Project : chart_20	start : 17/07/20 16:21
+org.jfree.chart.plot.ValueMarker,95
+----------------------------------------
+Pass Single Test :
+super(paint,stroke,outlinePaint,outlineStroke,alpha);
+this.value=value;
+
+----------------------------------------
+
+Successfully find a patch!
+
+----------------------------------------
+Find a patch :
+super(paint,stroke,outlinePaint,outlineStroke,alpha);
+this.value=value;
+
+----------------------------------------
+
+Successfully find a patch!
+Failed time : 17/07/20 16:23
+=================================================
+Project : chart_7	start : 17/07/20 16:23
+org.jfree.data.time.TimePeriodValues,299
+----------------------------------------
+Pass Single Test :
 if(this.maxMiddleIndex>=0){
 long s=getDataItem(this.maxMiddleIndex).getPeriod().getStart().getTime();
 long e=getDataItem(this.minMiddleIndex).getPeriod().getEnd().getTime();
@@ -34,25 +105,8 @@ Successfully find a patch!
 ----------------------------------------
 Find a patch :
 if(this.maxMiddleIndex>=0){
-long s=getDataItem(this.minMiddleIndex).getPeriod().getStart().getTime();
-long e=getDataItem(this.maxMiddleIndex).getPeriod().getEnd().getTime();
-long maxMiddle=s+(e-s)/2;
-if(middle>maxMiddle){
-this.maxMiddleIndex=index;
-}
-}else {
-this.maxMiddleIndex=index;
-}
-
-----------------------------------------
-
-Successfully find a patch!
-
-----------------------------------------
-Find a patch :
-if(this.maxMiddleIndex>=0){
 long s=getDataItem(this.maxMiddleIndex).getPeriod().getStart().getTime();
-long e=getDataItem(this.maxMiddleIndex).getPeriod().getEnd().getTime();
+long e=getDataItem(this.minMiddleIndex).getPeriod().getEnd().getTime();
 long maxMiddle=s+(e-s)/2;
 if(middle>maxMiddle){
 this.maxMiddleIndex=index;
@@ -64,178 +118,3 @@ this.maxMiddleIndex=index;
 ----------------------------------------
 
 Successfully find a patch!
-Success time : 17/07/16 17:37
-=================================================
-Project : chart_20	start : 17/07/16 17:37
-
-----------------------------------------
-Find a patch :
-super(paint,stroke,outlinePaint,outlineStroke,alpha);
-this.value=value;
-
-----------------------------------------
-
-Successfully find a patch!
-Success time : 17/07/16 17:38
-=================================================
-Project : closure_14	start : 17/07/16 18:17
-
-》》》》》正确
-
-=================================================
-Project : closure_57	start : 17/07/16 18:24
-
-》》》》》正确
-
-=================================================
-Project : closure_73	start : 17/07/16 18:44
-
-》》》》》正确
-
-=================================================
-Project : lang_35	start : 17/07/16 18:49
-
-----------------------------------------
-Find a patch :
-if(element!=null){
-clss=element.getClass();
-}else {
-throw new IllegalArgumentException("The Array must not be null");
-}
-
-----------------------------------------
-
-Successfully find a patch!
-Success time : 17/07/16 18:51
-=================================================
-Project : lang_39	start : 17/07/16 19:21
-
-----------------------------------------
-Find a patch :
-for(int i=0;i<searchList.length;i++){
-if(noMoreMatchesForReplIndex[i]||searchList[i]==null||searchList[i].length()==0||replacementList[i]==null){
-continue;
-}
-int greater=replacementList[i].length()-searchList[i].length();
-if(greater>0){
-increase+=3*greater;
-}
-}
-
-----------------------------------------
-
-Successfully find a patch!
-Success time : 17/07/16 19:25
-=================================================
-Project : lang_43	start : 17/07/16 19:36
-
-----------------------------------------
-Find a patch :
-if(escapingOn&&c[start]==QUOTE){
-next(pos);
-return appendTo==null?null:appendTo.append(QUOTE);
-}
-
-----------------------------------------
-
-Successfully find a patch!
-Success time : 17/07/16 19:45
-=================================================
-Project : lang_58	start : 17/07/16 19:46
-
-》》》》》正确
-
-=================================================
-Project : lang_60	start : 17/07/16 19:56
-
-》》》》》正确
-=================================================
-Project : math_63	start : 17/07/16 20:07
-
-----------------------------------------
-Find a patch :
-if(Double.isNaN(y)){
-return false;
-}
-return (Double.isNaN(x)&&Double.isNaN(y))||x==y;
-
-----------------------------------------
-
-Successfully find a patch!
-
-----------------------------------------
-Find a patch :
-return equals(x,y,1)||x==y;
-
-----------------------------------------
-
-Successfully find a patch!
-Success time : 17/07/16 20:15
-=================================================
-Project : chart_3	start : 17/07/18 09:30
-Failed time : 17/07/18 09:31
-=================================================
-Project : chart_3	start : 17/07/18 09:32
-=================================================
-Project : chart_2	start : 17/07/18 09:34
-Failed time : 17/07/18 09:36
-=================================================
-Project : chart_11	start : 17/07/18 09:39
-=================================================
-Project : lang_59	start : 17/07/18 09:55
-=================================================
-Project : lang_59	start : 17/07/18 09:55
-=================================================
-Project : lang_59	start : 17/07/18 10:02
-=================================================
-Project : lang_59	start : 17/07/18 10:12
-=================================================
-Project : lang_59	start : 17/07/18 10:13
-=================================================
-Project : lang_59	start : 17/07/18 10:14
-=================================================
-Project : lang_59	start : 17/07/18 10:17
-=================================================
-Project : chart_1	start : 17/07/19 19:39
-=================================================
-Project : chart_1	start : 17/07/20 00:37
-=================================================
-Project : chart_1	start : 17/07/20 00:38
-=================================================
-Project : chart_1	start : 17/07/20 00:39
-=================================================
-Project : chart_1	start : 17/07/20 00:42
-Failed time : 17/07/20 00:55
-=================================================
-Project : chart_1	start : 17/07/20 00:57
-Failed time : 17/07/20 00:58
-=================================================
-Project : chart_1	start : 17/07/20 00:59
-Failed time : 17/07/20 00:59
-=================================================
-Project : chart_1	start : 17/07/20 01:02
-=================================================
-Project : chart_1	start : 17/07/20 01:08
-Timeout time : 17/07/20 03:27
-=================================================
-Project : lang_39	start : 17/07/20 09:46
-Failed time : 17/07/20 09:53
-=================================================
-Project : lang_39	start : 17/07/20 09:55
-=================================================
-Project : lang_33	start : 17/07/20 10:43
-=================================================
-Project : lang_33	start : 17/07/20 13:59
-=================================================
-Project : lang_33	start : 17/07/20 14:00
-=================================================
-Project : lang_33	start : 17/07/20 14:17
-=================================================
-Project : lang_33	start : 17/07/20 14:25
-=================================================
-Project : lang_33	start : 17/07/20 14:28
-=================================================
-Project : lang_33	start : 17/07/20 14:28
-Failed time : 17/07/20 14:28
-=================================================
-Project : lang_33	start : 17/07/20 14:29

@@ -555,7 +555,9 @@ public class NodeUtils {
 						Expr expr = sName.getDirectDependency();
 						boolean canUse = false;
 						if(expr != null){
+							sName.setDirectDependency(null);
 							Map<SName, Pair<String, String>> tryReplace = tryReplaceAllVariables(expr, varTrans, allUsableVariables);
+							sName.setDirectDependency(expr);
 							if(tryReplace != null){
 								canUse = true;
 								NodeUtils.replaceVariable(tryReplace);
