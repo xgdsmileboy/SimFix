@@ -43,7 +43,7 @@ public class Main {
 		AbstractFaultlocalization fLocalization = new ManualLocator(subject);
 //		AbstractFaultlocalization fLocalization = new OchiaiResult(subject);
 		Repair repair = new Repair(subject, fLocalization);
-		Timer timer = new Timer(1, 0);
+		Timer timer = new Timer(5, 0);
 		timer.start();
 		Status status = repair.fix(timer);
 		switch (status) {
@@ -66,7 +66,7 @@ public class Main {
 	
 
 	public static void main(String[] args) throws IOException {
-		Constant.PROJECT_HOME = System.getProperty("user.dir") + "/testfile";
+//		Constant.PROJECT_HOME = System.getProperty("user.dir") + "/testfile";
 		System.out.println(Constant.PROJECT_HOME);
 //		List<Subject> subjects = Configure.getSubjectFromXML("project.xml");
 		

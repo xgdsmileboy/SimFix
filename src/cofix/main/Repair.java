@@ -138,11 +138,13 @@ public class Repair {
 		String src = _subject.getHome() + _subject.getSsrc();
 		List<Pair<String, Integer>> locations = _localization.getLocations(200);
 		Map<Integer, Set<Integer>> alreadyTryPlaces = new HashMap<>();
-		int locCount = 0;
+		int correct = 0;
 		for(Pair<String, Integer> loc : locations){
 			_subject.restore();
-			locCount ++;
-			System.out.println(loc.getFirst() + "::" + loc.getSecond());
+			
+			System.out.println(loc.getFirst() + "," + loc.getSecond());
+			JavaFile.writeStringToFile("result.log", loc.getFirst() + "," + loc.getSecond(), true);
+			
 			String file = _subject.getHome() + _subject.getSsrc() + "/" + loc.getFirst().replace(".", "/") + ".java";
 			String binFile = _subject.getHome() + _subject.getSbin() + "/" + loc.getFirst().replace(".", "/") + ".class";
 			CompilationUnit unit = JavaFile.genASTFromFile(file);
@@ -212,76 +214,79 @@ public class Repair {
 					list.add(set);
 				}
 				
-//				List<Modification> legalModifications = new ArrayList<>();
-//				while(true){
-//					for(Set<Modification> modifySet : list){
-//						if(timer.timeout()){
-//							return Status.TIMEOUT;
-//						}
-//						for(Modification modification : modifySet){
-//							modification.apply(usableVars);
-//						}
-//						// validate correctness of patch
-//						String replace = buggyblock.toSrcString().toString();
-//						if(haveTry.contains(replace)){
-//							System.out.println("already try ...");
-//							for(Modification modification : modifySet){
-//								modification.restore();
-//							}
-//							continue;
-//						}
-//						
-//						System.out.println("========");
-//						System.out.println(replace);
-//						System.out.println("========");
-//						
-//						haveTry.add(replace);
-//						try {
-//							JavaFile.sourceReplace(file, source, range.getFirst(), range.getSecond(), replace);
-//						} catch (IOException e) {
-//							System.err.println("Failed to replace source code.");
-//							continue;
-//						}
-//						try {
-//							FileUtils.forceDelete(new File(binFile));
-//						} catch (IOException e) {
-//						}
-//						switch (validate(buggyblock)) {
-//						case COMPILE_FAILED:
-//							break;
-//						case SUCCESS:
-//							StringBuffer stringBuffer = new StringBuffer();
-//							stringBuffer.append("\n----------------------------------------\n");
-//							stringBuffer.append("Find a patch :\n");
-//							stringBuffer.append(buggyblock.toSrcString().toString());
-//							stringBuffer.append("\n----------------------------------------\n");
-//							stringBuffer.append("\nSuccessfully find a patch!\n");
-//							System.out.println(stringBuffer.toString());
-//							JavaFile.writeStringToFile("result.log", stringBuffer.toString(), true);
-////							return Status.SUCCESS;
+				List<Modification> legalModifications = new ArrayList<>();
+				while(true){
+					for(Set<Modification> modifySet : list){
+						if(timer.timeout()){
+							return Status.TIMEOUT;
+						}
+						for(Modification modification : modifySet){
+							modification.apply(usableVars);
+						}
+						// validate correctness of patch
+						String replace = buggyblock.toSrcString().toString();
+						if(haveTry.contains(replace)){
+							System.out.println("already try ...");
+							for(Modification modification : modifySet){
+								modification.restore();
+							}
+							continue;
+						}
+						
+						System.out.println("========");
+						System.out.println(replace);
+						System.out.println("========");
+						
+						haveTry.add(replace);
+						try {
+							JavaFile.sourceReplace(file, source, range.getFirst(), range.getSecond(), replace);
+						} catch (IOException e) {
+							System.err.println("Failed to replace source code.");
+							continue;
+						}
+						try {
+							FileUtils.forceDelete(new File(binFile));
+						} catch (IOException e) {
+						}
+						switch (validate(buggyblock)) {
+						case COMPILE_FAILED:
+							break;
+						case SUCCESS:
+							StringBuffer stringBuffer = new StringBuffer();
+							stringBuffer.append("\n----------------------------------------\n");
+							stringBuffer.append("Find a patch :\n");
+							stringBuffer.append(buggyblock.toSrcString().toString());
+							stringBuffer.append("\n----------------------------------------\n");
+							stringBuffer.append("\nSuccessfully find a patch!\n");
+							System.out.println(stringBuffer.toString());
+							JavaFile.writeStringToFile("result.log", stringBuffer.toString(), true);
+							correct ++;
+							if(correct == 3){
+								return Status.SUCCESS;
+							}
 //							System.out.print("Continue search ? (Y/N) ");
 //							Scanner scanner = new Scanner(System.in);
 //							String value = scanner.next();
 //							if(value.equals("N")){
 //								return Status.SUCCESS;
 //							}
-//						case TEST_FAILED:
-//							if(legalModifications != null){
-//								for(Modification modification : modifySet){
-//									legalModifications.add(modification);
-//								}
-//							}
-//						}
-//						for(Modification modification : modifySet){
-//							modification.restore();
-//						}
-//					}
-//					if(legalModifications == null){
-//						break;
-//					}
-//					list = combineModification(legalModifications);
-//					legalModifications = null;
-//				}
+						case TEST_FAILED:
+							if(legalModifications != null){
+								for(Modification modification : modifySet){
+									legalModifications.add(modification);
+								}
+							}
+						}
+						for(Modification modification : modifySet){
+							modification.restore();
+						}
+					}
+					if(legalModifications == null){
+						break;
+					}
+					list = combineModification(legalModifications);
+					legalModifications = null;
+				}
 			}
 		}
 		return Status.FAILED;
@@ -383,6 +388,15 @@ public class Repair {
 //				return false;
 //			}
 		}
+		
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append("\n----------------------------------------\n");
+		stringBuffer.append("Pass Single Test :\n");
+		stringBuffer.append(buggyBlock.toSrcString().toString());
+		stringBuffer.append("\n----------------------------------------\n");
+		stringBuffer.append("\nSuccessfully find a patch!\n");
+		System.out.println(stringBuffer.toString());
+		JavaFile.writeStringToFile("result.log", stringBuffer.toString(), true);
 		
 		if(!Runner.runTestSuite(_subject)){
 			return ValidateStatus.TEST_FAILED;
