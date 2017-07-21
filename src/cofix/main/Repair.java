@@ -174,7 +174,7 @@ public class Repair {
 			CodeBlock buggyblock = BuggyCode.getBuggyCodeBlock(file, loc.getSecond());
 			Integer methodID = buggyblock.getWrapMethodID(); 
 			if(methodID == null){
-				JavaFile.writeStringToFile("result.log", loc.getFirst() + "," + loc.getSecond() + "=>Find no block\n", true);
+				logMessage(new Date(System.currentTimeMillis()).toString() + " : " + loc.getFirst() + "," + loc.getSecond() + "=>Find no block");
 				System.out.println("Find no block!");
 				continue;
 			}
@@ -189,7 +189,7 @@ public class Repair {
 						}
 					}
 					if(intersections >= 2){
-						JavaFile.writeStringToFile("result.log", loc.getFirst() + "," + loc.getSecond() + "=>filtered\n", true);
+						logMessage(loc.getFirst() + "," + loc.getSecond() + "=>filtered");
 						continue;
 					} else {
 						for(int i = range.getFirst(); i <= range.getSecond(); i++){
@@ -204,7 +204,7 @@ public class Repair {
 				}
 				alreadyTryPlaces.put(methodID, places);
 			}
-			JavaFile.writeStringToFile("result.log", loc.getFirst() + "," + loc.getSecond() + "\n", true);
+			logMessage(loc.getFirst() + "," + loc.getSecond());
 			
 			Set<String> haveTry = new HashSet<>();
 			// get all variables can be used at buggy line
@@ -325,6 +325,10 @@ public class Repair {
 			}
 		}
 		return status;
+	}
+	
+	private void logMessage(String message){
+		JavaFile.writeStringToFile("result.log", new Date(System.currentTimeMillis()).toString() + " " + message + "\n", true);
 	}
 	
 	private void dumpPatch(String message, String file, Pair<Integer, Integer> codeRange, String text){
