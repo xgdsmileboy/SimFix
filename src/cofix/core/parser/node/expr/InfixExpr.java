@@ -99,32 +99,40 @@ public class InfixExpr extends Expr {
 			// replace left hand side
 			List<Modification> tmp = new ArrayList<>();
 			if(compatible){
-				if(other._lhs instanceof NumLiteral){
-					if(_lhs instanceof NumLiteral){
+				if(!other._lhs.toSrcString().toString().equals(_rhs.toSrcString().toString())){
+					if(other._lhs instanceof NumLiteral){
+						if(_lhs instanceof NumLiteral){
+							if(NodeUtils.replaceExpr(LHSID, _lhs, other._lhs, varTrans, allUsableVariables, tmp)){
+								matchLeft = true;
+								modifications.addAll(tmp);
+							}
+						}
+					} else {
 						if(NodeUtils.replaceExpr(LHSID, _lhs, other._lhs, varTrans, allUsableVariables, tmp)){
 							matchLeft = true;
 							modifications.addAll(tmp);
 						}
 					}
 				} else {
-					if(NodeUtils.replaceExpr(LHSID, _lhs, other._lhs, varTrans, allUsableVariables, tmp)){
-						matchLeft = true;
-						modifications.addAll(tmp);
-					}
+					match = true;
 				}
-				tmp = new ArrayList<>();
-				if(other._rhs instanceof NumLiteral){
-					if(_rhs instanceof NumLiteral){
+				if(!other._rhs.toSrcString().toString().equals(_lhs.toSrcString().toString())){
+					tmp = new ArrayList<>();
+					if(other._rhs instanceof NumLiteral){
+						if(_rhs instanceof NumLiteral){
+							if(NodeUtils.replaceExpr(RHSID, _rhs, other._rhs, varTrans, allUsableVariables, tmp)){
+								matchRight = true;
+								modifications.addAll(tmp);
+							}
+						}
+					} else {
 						if(NodeUtils.replaceExpr(RHSID, _rhs, other._rhs, varTrans, allUsableVariables, tmp)){
 							matchRight = true;
 							modifications.addAll(tmp);
 						}
 					}
 				} else {
-					if(NodeUtils.replaceExpr(RHSID, _rhs, other._rhs, varTrans, allUsableVariables, tmp)){
-						matchRight = true;
-						modifications.addAll(tmp);
-					}
+					match = true;
 				}
 			}
 			
@@ -153,46 +161,6 @@ public class InfixExpr extends Expr {
 					}
 				}
 			}
-			
-//			// try to replace all 
-//			List<Pair<Expr, InfixExpression.Operator>> sPair = splitSingleBooleanExpr();
-//			List<Pair<Expr, InfixExpression.Operator>> tPair = other.splitSingleBooleanExpr();
-//			List<Pair<String, String>> addedPair = new ArrayList<>();
-//			List<Pair<String, String>> deletePair = new ArrayList<>();
-//			// TODO : try to replace all
-//			Set<Integer> matchRec = new HashSet<>();
-//			for(int i = 0; i < tPair.size(); i++){
-//				Expr tExpr = tPair.get(i).getFirst();
-//				Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(tExpr, varTrans, allUsableVariables);
-//				if(record == null){
-//					continue;
-//				}
-//				NodeUtils.replaceVariable(record);
-//				String tString = tExpr.toSrcString().toString().replace(" ", "");
-//				NodeUtils.restoreVariables(record);
-//				boolean find = false;
-//				for(int j = 0; i < sPair.size(); j++){
-//					if(matchRec.contains(j)){
-//						continue;
-//					}
-//					String sString = sPair.get(j).getFirst().toSrcString().toString().replace(" ", "");
-//					if(tString.equals(sString)){
-//						find = true;
-//						matchRec.add(j);
-//						break;
-//					}
-//				}
-//				if(!find){
-//					addedPair.add(new Pair<String, String>(tString, tPair.get(i).getSecond().toString()));
-//				}
-//			}
-//			
-//			for(int i = 0; i < sPair.size(); i++){
-//				if(matchRec.contains(i)){
-//					
-//				}
-//			}
-			
 			
 		} else {
 			List<Node> children = node.getChildren();

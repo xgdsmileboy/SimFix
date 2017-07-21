@@ -137,18 +137,35 @@ public class Repair {
 //		// restore source file
 //		_subject.restore();
 //	}
+	
+//	public Status splitFix(Timer timer){
+//		Status status = Status.FAILED;
+//		for(int i = 0; i < _failedTestCases.size(); i++){
+//			String failedTest = _failedTestCases.get(i);
+//			String[] clazzAndMethod = failedTest.split("::");
+//			if(clazzAndMethod.length < 2){
+//				System.out.println("Failed test case format error : " + failedTest);
+//				System.exit(0);
+//			}
+//			String clazz = clazzAndMethod[0].replace(".", "/");
+//			String testFile = _subject.getHome() + _subject.getSsrc() + "/" + clazz + ".java";
+//			String testBin = _subject.getHome() + _subject.getTbin() + "/" + clazz + ".class";
+//			
+//		}
+//		
+//		return status;
+//	}
 
 	public Status fix(Timer timer) throws IOException{
 		String src = _subject.getHome() + _subject.getSsrc();
 		List<Pair<String, Integer>> locations = _localization.getLocations(100);
-		Map<Integer, Set<String>> alreadyTryPlaces = new HashMap<>();
+		Map<Integer, Set<Integer>> alreadyTryPlaces = new HashMap<>();
 		int correct = 0;
 		Status status = Status.FAILED;
 		for(Pair<String, Integer> loc : locations){
 			_subject.restore();
 			
 			System.out.println(loc.getFirst() + "," + loc.getSecond());
-			JavaFile.writeStringToFile("result.log", loc.getFirst() + "," + loc.getSecond() + "\n", true);
 			
 			String file = _subject.getHome() + _subject.getSsrc() + "/" + loc.getFirst().replace(".", "/") + ".java";
 			String binFile = _subject.getHome() + _subject.getSbin() + "/" + loc.getFirst().replace(".", "/") + ".class";
@@ -157,25 +174,38 @@ public class Repair {
 			CodeBlock buggyblock = BuggyCode.getBuggyCodeBlock(file, loc.getSecond());
 			Integer methodID = buggyblock.getWrapMethodID(); 
 			if(methodID == null){
+				JavaFile.writeStringToFile("result.log", loc.getFirst() + "," + loc.getSecond() + "=>Find no block\n", true);
 				System.out.println("Find no block!");
 				continue;
 			}
 			Pair<Integer, Integer> range = buggyblock.getLineRangeInSource();
-			Set<String> places = alreadyTryPlaces.get(methodID);
+			Set<Integer> places = alreadyTryPlaces.get(methodID);
 			if(places != null){
 				if(places.contains(loc.getSecond())){
-					continue;
-				} else {
-					places.add(buggyblock.toSrcString().toString());
+					int intersections = 0;
+					for(int i = range.getFirst(); i <= range.getSecond(); i++){
+						if(places.contains(i)){
+							intersections ++;
+						}
+					}
+					if(intersections >= 2){
+						JavaFile.writeStringToFile("result.log", loc.getFirst() + "," + loc.getSecond() + "=>filtered\n", true);
+						continue;
+					} else {
+						for(int i = range.getFirst(); i <= range.getSecond(); i++){
+							places.add(i);
+						}
+					}
 				}
 			} else {
 				places = new HashSet<>();
-				places.add(buggyblock.toSrcString().toString());
+				for(int i = range.getFirst(); i <= range.getSecond(); i++){
+					places.add(i);
+				}
 				alreadyTryPlaces.put(methodID, places);
 			}
+			JavaFile.writeStringToFile("result.log", loc.getFirst() + "," + loc.getSecond() + "\n", true);
 			
-			
-//			Utils.print(buggyblock);
 			Set<String> haveTry = new HashSet<>();
 			// get all variables can be used at buggy line
 			Map<String, Type> usableVars = NodeUtils.getUsableVarTypes(file, loc.getSecond());
@@ -232,7 +262,7 @@ public class Repair {
 						for(Modification modification : modifySet){
 							modification.apply(usableVars);
 						}
-						// validate correctness of patch
+						
 						String replace = buggyblock.toSrcString().toString();
 						if(haveTry.contains(replace)){
 							System.out.println("already try ...");
@@ -262,33 +292,19 @@ public class Repair {
 							FileUtils.forceDelete(new File(binFile));
 						} catch (IOException e) {
 						}
+						
+						// validate correctness of patch
 						switch (validate(buggyblock)) {
 						case COMPILE_FAILED:
 							haveTry.remove(replace);
 							break;
 						case SUCCESS:
-							StringBuffer stringBuffer = new StringBuffer();
-							stringBuffer.append("\n----------------------------------------\n");
-							stringBuffer.append("----------------------------------------\n");
-							stringBuffer.append("Find a patch :\n");
-							stringBuffer.append(buggyblock.toSrcString().toString());
-							SimpleDateFormat simpleFormat=new SimpleDateFormat("yy/MM/dd HH:mm"); 
-							stringBuffer.append("\nTime : " + simpleFormat.format(new Date()) + "\n");
-							stringBuffer.append("----------------------------------------\n");
-							stringBuffer.append("\nSuccessfully find a patch!\n");
-							System.out.println(stringBuffer.toString());
-							JavaFile.writeStringToFile("result.log", stringBuffer.toString(), true);
+							dumpPatch("Find a patch", file, range, buggyblock.toSrcString().toString());
 							status = Status.SUCCESS;
 							correct ++;
 							if(correct == 3){
 								return Status.SUCCESS;
 							}
-//							System.out.print("Continue search ? (Y/N) ");
-//							Scanner scanner = new Scanner(System.in);
-//							String value = scanner.next();
-//							if(value.equals("N")){
-//								return Status.SUCCESS;
-//							}
 						case TEST_FAILED:
 							if(legalModifications != null){
 								for(Modification modification : modifySet){
@@ -309,6 +325,18 @@ public class Repair {
 			}
 		}
 		return status;
+	}
+	
+	private void dumpPatch(String message, String file, Pair<Integer, Integer> codeRange, String text){
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append("\n----------------------------------------\n----------------------------------------");
+		stringBuffer.append(message + " : [" + file + "=>" + codeRange.getFirst() + "," + codeRange.getSecond() + "]\n");
+		stringBuffer.append(text);
+		SimpleDateFormat simpleFormat=new SimpleDateFormat("yy/MM/dd HH:mm"); 
+		stringBuffer.append("\nTime : " + simpleFormat.format(new Date()) + "\n");
+		stringBuffer.append("----------------------------------------\n");
+		System.out.println(stringBuffer.toString());
+		JavaFile.writeStringToFile("result.log", stringBuffer.toString(), true);
 	}
 	
 	private List<Set<Modification>> combineModification(List<Modification> modifications){
@@ -338,7 +366,7 @@ public class Repair {
 			baseSet.add(set);
 		}
 		
-		List<Set<Integer>> expanded = expand(incompatibleMap, baseSet, 2, incompatibleMap.length);
+		List<Set<Integer>> expanded = expand(incompatibleMap, baseSet, 2, 3);
 		for(Set<Integer> set : expanded){
 			Set<Modification> combinedModification = new HashSet<>();
 			for(Integer integer : set){
@@ -389,48 +417,24 @@ public class Repair {
 	
 	private ValidateStatus validate(CodeBlock buggyBlock){
 		
-		// TODO : need to build project first
 		if(!Runner.compileSubject(_subject)){
 			System.err.println("Build failed !");
 			return ValidateStatus.COMPILE_FAILED;
 		}
 		
-//		JUnitRuntime runtime = new JUnitRuntime(_subject);
 		// validate patch using failed test cases
 		for(String testcase : _failedTestCases){
 			String[] testinfo = testcase.split("::");
 			if(!Runner.testSingleTest(_subject, testinfo[0], testinfo[1])){
 				return ValidateStatus.TEST_FAILED;
 			}
-//			Result result = JUnitEngine.getInstance(runtime).test(testinfo[0], testinfo[1], null);
-//			if(result == null || result.getFailureCount() > 0){
-//				return false;
-//			}
 		}
 		
-		StringBuffer stringBuffer = new StringBuffer();
-		stringBuffer.append("\n----------------------------------------\n");
-		stringBuffer.append("Pass Single Test :\n");
-		stringBuffer.append(buggyBlock.toSrcString().toString());
-		stringBuffer.append("\n----------------------------------------\n");
-		System.out.println(stringBuffer.toString());
-		JavaFile.writeStringToFile("result.log", stringBuffer.toString(), true);
+		dumpPatch("Pass Single Test", "", new Pair<Integer, Integer>(0, 0), buggyBlock.toSrcString().toString());
 		
 		if(!Runner.runTestSuite(_subject)){
 			return ValidateStatus.TEST_FAILED;
 		}
-		
-//		Integer revisedMethod = buggyBlock.getWrapMethodID();
-//		Set<Pair<String, String>> coveredPassedTest = _passedTestCases.get(revisedMethod);
-//		if(coveredPassedTest != null){
-//			// validate patch using passed test cases
-//			for(Pair<String, String> pair : coveredPassedTest){
-//				Result result = JUnitEngine.getInstance(runtime).test(pair.getFirst(), pair.getSecond(), null);
-//				if(result.getFailureCount() > 0){
-//					return false;
-//				}
-//			}
-//		}
 		
 		return ValidateStatus.SUCCESS;
 	}
