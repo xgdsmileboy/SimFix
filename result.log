@@ -329,3 +329,118 @@ var=evaluate(values,m,begin,length);
 return var;
 
 ----------------------------------------
+org.apache.commons.math.stat.descriptive.moment.Variance,504
+org.apache.commons.math.stat.descriptive.moment.Variance,506
+org.apache.commons.math.stat.descriptive.moment.Variance,507
+org.apache.commons.math.stat.descriptive.moment.Variance,509
+org.apache.commons.math.stat.descriptive.moment.Variance,510
+org.apache.commons.math.stat.descriptive.moment.Variance,511
+org.apache.commons.math.stat.descriptive.moment.Variance,512
+org.apache.commons.math.stat.descriptive.moment.Variance,513
+org.apache.commons.math.stat.descriptive.moment.Variance,514
+org.apache.commons.math.stat.descriptive.moment.Variance,515
+org.apache.commons.math.stat.descriptive.moment.Variance,516
+org.apache.commons.math.stat.descriptive.moment.Variance,519
+org.apache.commons.math.stat.descriptive.moment.Variance,520
+org.apache.commons.math.stat.descriptive.moment.Variance,521
+org.apache.commons.math.stat.descriptive.moment.Variance,524
+org.apache.commons.math.stat.descriptive.moment.Variance,525
+org.apache.commons.math.stat.descriptive.moment.Variance,531
+org.apache.commons.math.stat.descriptive.moment.Mean,205
+org.apache.commons.math.stat.descriptive.moment.Mean,206
+org.apache.commons.math.stat.descriptive.moment.Mean,209
+org.apache.commons.math.stat.descriptive.moment.Mean,210
+org.apache.commons.math.stat.descriptive.moment.Mean,213
+org.apache.commons.math.stat.descriptive.moment.Mean,214
+org.apache.commons.math.stat.descriptive.moment.Mean,215
+org.apache.commons.math.stat.descriptive.moment.Mean,217
+org.apache.commons.math.stat.descriptive.summary.Sum,159
+org.apache.commons.math.stat.descriptive.summary.Sum,160
+org.apache.commons.math.stat.descriptive.summary.Sum,161
+org.apache.commons.math.stat.descriptive.summary.Sum,162
+org.apache.commons.math.stat.descriptive.summary.Sum,163
+org.apache.commons.math.stat.descriptive.summary.Sum,166
+org.apache.commons.math.stat.descriptive.moment.Variance,204
+org.apache.commons.math.stat.descriptive.moment.Variance,205
+org.apache.commons.math.stat.descriptive.moment.Variance,207
+org.apache.commons.math.stat.descriptive.summary.Sum,120
+
+----------------------------------------
+Pass Single Test :
+for(int i=1;i<length;i++){
+if(value<=values[i]){
+return i-1;
+}
+}
+double sum=Double.NaN;
+if(test(values,begin,length,true)){
+sum=0.0;
+for(int i=begin;i<begin+length;i++){
+sum+=values[i];
+}
+}
+return sum;
+
+----------------------------------------
+org.apache.commons.math.stat.descriptive.summary.Sum,121
+org.apache.commons.math.stat.descriptive.summary.Sum,122
+org.apache.commons.math.stat.descriptive.summary.Sum,123
+org.apache.commons.math.stat.descriptive.summary.Sum,124
+org.apache.commons.math.stat.descriptive.summary.Sum,127
+org.apache.commons.math.stat.descriptive.moment.SecondMoment,92
+org.apache.commons.math.stat.descriptive.moment.SecondMoment,93
+org.apache.commons.math.stat.descriptive.moment.SecondMoment,94
+org.apache.commons.math.stat.descriptive.moment.FirstMoment,117
+org.apache.commons.math.stat.descriptive.moment.FirstMoment,118
+org.apache.commons.math.stat.descriptive.moment.FirstMoment,119
+org.apache.commons.math.stat.descriptive.moment.FirstMoment,120
+org.apache.commons.math.stat.descriptive.moment.FirstMoment,121
+org.apache.commons.math.stat.descriptive.moment.Mean,79
+org.apache.commons.math.stat.descriptive.moment.Mean,80
+org.apache.commons.math.stat.descriptive.moment.Mean,81
+org.apache.commons.math.stat.descriptive.moment.Mean,82
+org.apache.commons.math.stat.descriptive.moment.Variance,97
+org.apache.commons.math.stat.descriptive.moment.Variance,98
+org.apache.commons.math.stat.descriptive.moment.Variance,99
+org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,184
+
+----------------------------------------
+Pass Single Test :
+if(length==length&&!allowEmpty){
+return false;
+}
+return true;
+
+----------------------------------------
+
+----------------------------------------
+Pass Single Test :
+if(!allowEmpty&&!allowEmpty){
+return false;
+}
+return true;
+
+----------------------------------------
+org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,163
+org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,167
+org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,171
+org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,175
+org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,180
+org.apache.commons.math.stat.descriptive.summary.Sum,56
+org.apache.commons.math.stat.descriptive.summary.Sum,57
+org.apache.commons.math.stat.descriptive.summary.Sum,58
+org.apache.commons.math.stat.descriptive.summary.Sum,59
+org.apache.commons.math.stat.descriptive.moment.Variance,75
+org.apache.commons.math.stat.descriptive.moment.Variance,84
+org.apache.commons.math.stat.descriptive.moment.Variance,91
+org.apache.commons.math.util.FastMath,375
+org.apache.commons.math.stat.descriptive.moment.SecondMoment,60
+org.apache.commons.math.stat.descriptive.moment.SecondMoment,61
+org.apache.commons.math.stat.descriptive.moment.SecondMoment,62
+org.apache.commons.math.stat.descriptive.moment.FirstMoment,79
+org.apache.commons.math.stat.descriptive.moment.FirstMoment,80
+org.apache.commons.math.stat.descriptive.moment.FirstMoment,81
+org.apache.commons.math.stat.descriptive.moment.FirstMoment,82
+org.apache.commons.math.stat.descriptive.moment.FirstMoment,83
+org.apache.commons.math.stat.descriptive.moment.FirstMoment,84
+Failed time : 17/07/21 14:01

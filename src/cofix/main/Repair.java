@@ -141,7 +141,7 @@ public class Repair {
 	public Status fix(Timer timer) throws IOException{
 		String src = _subject.getHome() + _subject.getSsrc();
 		List<Pair<String, Integer>> locations = _localization.getLocations(100);
-		Map<Integer, Set<Integer>> alreadyTryPlaces = new HashMap<>();
+		Map<Integer, Set<String>> alreadyTryPlaces = new HashMap<>();
 		int correct = 0;
 		Status status = Status.FAILED;
 		for(Pair<String, Integer> loc : locations){
@@ -161,20 +161,16 @@ public class Repair {
 				continue;
 			}
 			Pair<Integer, Integer> range = buggyblock.getLineRangeInSource();
-			Set<Integer> places = alreadyTryPlaces.get(methodID);
+			Set<String> places = alreadyTryPlaces.get(methodID);
 			if(places != null){
 				if(places.contains(loc.getSecond())){
 					continue;
 				} else {
-					for(int i = range.getFirst(); i <= range.getSecond(); i++){
-						places.add(i);
-					}
+					places.add(buggyblock.toSrcString().toString());
 				}
 			} else {
 				places = new HashSet<>();
-				for(int i = range.getFirst(); i <= range.getSecond(); i++){
-					places.add(i);
-				}
+				places.add(buggyblock.toSrcString().toString());
 				alreadyTryPlaces.put(methodID, places);
 			}
 			

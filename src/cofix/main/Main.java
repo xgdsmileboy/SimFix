@@ -15,13 +15,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import org.apache.commons.io.filefilter.ConditionalFileFilter;
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
 import cofix.common.config.Configure;
 import cofix.common.config.Constant;
 import cofix.common.localization.AbstractFaultlocalization;
-import cofix.common.localization.ManualLocator;
 import cofix.common.localization.OchiaiResult;
 import cofix.common.util.JavaFile;
 import cofix.common.util.Status;
