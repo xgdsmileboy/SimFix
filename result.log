@@ -1,0 +1,331 @@
+=================================================
+Project : math_70	start : 17/07/21 11:26
+org.apache.commons.math.analysis.solvers.BisectionSolver,72
+
+----------------------------------------
+Pass Single Test :
+return solve(f,min,max);
+
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch :
+return solve(f,min,max);
+
+----------------------------------------
+
+Successfully find a patch!
+org.apache.commons.math.analysis.solvers.BisectionSolver,66
+org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils,223
+org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl,165
+org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl,166
+org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl,167
+org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl,208
+org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl,213
+org.apache.commons.math.analysis.solvers.BisectionSolver,79
+=================================================
+Project : math_63	start : 17/07/21 11:41
+=================================================
+Project : math_63	start : 17/07/21 11:43
+org.apache.commons.math.util.MathUtils,417
+
+----------------------------------------
+Pass Single Test :
+if(Double.isNaN(y)){
+return false;
+}
+return (Double.isNaN(x)&&Double.isNaN(y))||x==y;
+
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch :
+if(Double.isNaN(y)){
+return false;
+}
+return (Double.isNaN(x)&&Double.isNaN(y))||x==y;
+
+Time : 17/07/21 11:46
+----------------------------------------
+
+Successfully find a patch!
+
+----------------------------------------
+Pass Single Test :
+return equals(x,y,1)||x==y;
+
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch :
+return equals(x,y,1)||x==y;
+
+Time : 17/07/21 11:48
+----------------------------------------
+
+Successfully find a patch!
+
+----------------------------------------
+Pass Single Test :
+return equals(x,y,1)||FastMath.abs(y-x)<=SAFE_MIN;
+
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch :
+return equals(x,y,1)||FastMath.abs(y-x)<=SAFE_MIN;
+
+Time : 17/07/21 11:49
+----------------------------------------
+
+Successfully find a patch!
+org.apache.commons.math.util.MathUtils,523
+org.apache.commons.math.util.MathUtils,524
+org.apache.commons.math.util.MathUtils,526
+=================================================
+Project : math_59	start : 17/07/21 11:54
+org.apache.commons.math.util.FastMath,3446
+org.apache.commons.math.util.FastMath,3482
+
+----------------------------------------
+Pass Single Test :
+return (a<=b)?b:(Float.isNaN(a+b)?Float.NaN:a);
+
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch :
+return (a<=b)?b:(Float.isNaN(a+b)?Float.NaN:a);
+
+Time : 17/07/21 11:58
+----------------------------------------
+
+Successfully find a patch!
+=================================================
+Project : math_5	start : 17/07/21 12:00
+org.apache.commons.math3.complex.Complex,305
+
+----------------------------------------
+Pass Single Test :
+if(real==0.0&&imaginary==0.0){
+return INF;
+}
+
+----------------------------------------
+=================================================
+Project : math_53	start : 17/07/21 12:03
+org.apache.commons.math.complex.Complex,152
+
+----------------------------------------
+Pass Single Test :
+MathUtils.checkNotNull(rhs);
+if(isNaN||rhs.isNaN){
+return NaN;
+}
+return createComplex(real+rhs.getReal(),imaginary+rhs.getImaginary());
+
+----------------------------------------
+=================================================
+Project : math_41	start : 17/07/21 12:05
+org.apache.commons.math.stat.descriptive.moment.Variance,370
+org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,222
+org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,258
+org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,262
+org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,266
+org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,267
+
+----------------------------------------
+Pass Single Test :
+for(int i=begin;i<begin+length;i++){
+if(Double.isNaN(weights[i])){
+throw new MathIllegalArgumentException(LocalizedFormats.NAN_ELEMENT_AT_INDEX,i);
+}
+if(Double.isInfinite(weights[i])){
+throw new MathIllegalArgumentException(LocalizedFormats.INFINITE_ARRAY_ELEMENT,weights[i],i);
+}
+if(weights[i]<0){
+throw new MathIllegalArgumentException(LocalizedFormats.NEGATIVE_ELEMENT_AT_INDEX,i,weights[i]);
+}
+if(!containsPositiveWeight&&weights[i]>0.0){
+return false;
+}
+}
+
+----------------------------------------
+
+----------------------------------------
+Pass Single Test :
+for(int i=begin;i<begin+length;i++){
+if(Double.isNaN(weights[i])){
+throw new MathIllegalArgumentException(LocalizedFormats.NAN_ELEMENT_AT_INDEX,i);
+}
+if(Double.isInfinite(weights[i])){
+throw new MathIllegalArgumentException(LocalizedFormats.INFINITE_ARRAY_ELEMENT,weights[i],i);
+}
+if(weights[i]<0){
+return false;
+}
+if(!containsPositiveWeight&&weights[i]>0.0){
+return false;
+}
+}
+
+----------------------------------------
+org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,268
+org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,271
+org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,274
+org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,277
+org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,278
+org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,282
+org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,286
+
+----------------------------------------
+Pass Single Test :
+if(!allowEmpty){
+return false;
+}
+return test(values,begin,length,allowEmpty);
+
+----------------------------------------
+org.apache.commons.math.stat.descriptive.moment.Variance,316
+
+----------------------------------------
+Pass Single Test :
+double var=Double.NaN;
+if(test(values,weights,begin,length)){
+clear();
+if(length==1){
+var=0.0;
+}else if(length>1){
+Mean mean=new Mean();
+double m=mean.evaluate(values,weights,begin,length);
+var=evaluate(values,m,begin,length);
+}
+}
+
+----------------------------------------
+
+----------------------------------------
+Pass Single Test :
+double var=Double.NaN;
+if(test(values,begin,length)){
+clear();
+if(length==1){
+var=0.0;
+}else if(length>1){
+Mean mean=new Mean();
+double m=mean.evaluate(values,weights,begin,length);
+var=evaluate(values,m,begin,length);
+}
+}
+
+----------------------------------------
+
+----------------------------------------
+Pass Single Test :
+double var=Double.NaN;
+if(test(values,weights,begin,length)){
+clear();
+if(length==1){
+var=0.0;
+}else if(length>1){
+Mean mean=new Mean();
+double m=mean.evaluate(values,begin,length);
+var=evaluate(values,m,begin,length);
+}
+}
+
+----------------------------------------
+
+----------------------------------------
+Pass Single Test :
+double var=Double.NaN;
+if(test(values,begin,length)){
+clear();
+if(length==1){
+var=0.0;
+}else if(length>1){
+Mean mean=new Mean();
+double m=mean.evaluate(values,begin,length);
+var=evaluate(values,m,begin,length);
+}
+}
+
+----------------------------------------
+org.apache.commons.math.stat.descriptive.moment.Variance,318
+org.apache.commons.math.stat.descriptive.moment.Variance,319
+org.apache.commons.math.stat.descriptive.moment.Variance,320
+org.apache.commons.math.stat.descriptive.moment.Variance,322
+org.apache.commons.math.stat.descriptive.moment.Variance,323
+org.apache.commons.math.stat.descriptive.moment.Variance,324
+org.apache.commons.math.stat.descriptive.moment.Variance,325
+org.apache.commons.math.stat.descriptive.moment.Variance,328
+
+----------------------------------------
+Pass Single Test :
+if(test(values,weights,begin,length)){
+clear();
+if(length==1){
+var=0.0;
+}else if(length>1){
+Mean mean=new Mean();
+double m=mean.evaluate(values,weights,begin,length);
+var=evaluate(values,m,begin,length);
+}
+}
+return var;
+
+----------------------------------------
+
+----------------------------------------
+Pass Single Test :
+if(test(values,begin,length)){
+clear();
+if(length==1){
+var=0.0;
+}else if(length>1){
+Mean mean=new Mean();
+double m=mean.evaluate(values,weights,begin,length);
+var=evaluate(values,m,begin,length);
+}
+}
+return var;
+
+----------------------------------------
+
+----------------------------------------
+Pass Single Test :
+if(test(values,weights,begin,length)){
+clear();
+if(length==1){
+var=0.0;
+}else if(length>1){
+Mean mean=new Mean();
+double m=mean.evaluate(values,begin,length);
+var=evaluate(values,m,begin,length);
+}
+}
+return var;
+
+----------------------------------------
+
+----------------------------------------
+Pass Single Test :
+if(test(values,begin,length)){
+clear();
+if(length==1){
+var=0.0;
+}else if(length>1){
+Mean mean=new Mean();
+double m=mean.evaluate(values,begin,length);
+var=evaluate(values,m,begin,length);
+}
+}
+return var;
+
+----------------------------------------

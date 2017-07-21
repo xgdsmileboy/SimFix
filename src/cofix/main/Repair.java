@@ -9,7 +9,9 @@ package cofix.main;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -23,6 +25,7 @@ import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.Type;
 import org.junit.runner.Result;
 
+import cofix.common.config.Constant;
 import cofix.common.inst.Instrument;
 import cofix.common.inst.MethodInstrumentVisitor;
 import cofix.common.junit.runner.JUnitEngine;
@@ -137,7 +140,7 @@ public class Repair {
 
 	public Status fix(Timer timer) throws IOException{
 		String src = _subject.getHome() + _subject.getSsrc();
-		List<Pair<String, Integer>> locations = _localization.getLocations(200);
+		List<Pair<String, Integer>> locations = _localization.getLocations(100);
 		Map<Integer, Set<Integer>> alreadyTryPlaces = new HashMap<>();
 		int correct = 0;
 		Status status = Status.FAILED;
@@ -145,7 +148,7 @@ public class Repair {
 			_subject.restore();
 			
 			System.out.println(loc.getFirst() + "," + loc.getSecond());
-			JavaFile.writeStringToFile("result.log", loc.getFirst() + "," + loc.getSecond(), true);
+			JavaFile.writeStringToFile("result.log", loc.getFirst() + "," + loc.getSecond() + "\n", true);
 			
 			String file = _subject.getHome() + _subject.getSsrc() + "/" + loc.getFirst().replace(".", "/") + ".java";
 			String binFile = _subject.getHome() + _subject.getSbin() + "/" + loc.getFirst().replace(".", "/") + ".class";
@@ -273,13 +276,16 @@ public class Repair {
 							stringBuffer.append("----------------------------------------\n");
 							stringBuffer.append("Find a patch :\n");
 							stringBuffer.append(buggyblock.toSrcString().toString());
-							stringBuffer.append("\n----------------------------------------\n");
+							SimpleDateFormat simpleFormat=new SimpleDateFormat("yy/MM/dd HH:mm"); 
+							stringBuffer.append("\nTime : " + simpleFormat.format(new Date()) + "\n");
+							stringBuffer.append("----------------------------------------\n");
 							stringBuffer.append("\nSuccessfully find a patch!\n");
 							System.out.println(stringBuffer.toString());
 							JavaFile.writeStringToFile("result.log", stringBuffer.toString(), true);
+							status = Status.SUCCESS;
 							correct ++;
 							if(correct == 3){
-								status = Status.SUCCESS;
+								return Status.SUCCESS;
 							}
 //							System.out.print("Continue search ? (Y/N) ");
 //							Scanner scanner = new Scanner(System.in);
