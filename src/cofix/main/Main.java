@@ -66,8 +66,8 @@ public class Main {
 	
 
 	public static void main(String[] args) throws IOException {
-		Constant.PROJECT_HOME = System.getProperty("user.dir") + "/testfile";
 		System.out.println(Constant.PROJECT_HOME);
+		
 //		List<Subject> subjects = Configure.getSubjectFromXML("project.xml");
 		
 		Map<String, Set<Integer>> subjects = getSubject();
@@ -85,23 +85,23 @@ public class Main {
 	private static Map<String, Set<Integer>> getSubject(){
 		Map<String, Set<Integer>> subjects = new HashMap<>();
 		Set<Integer> chartID = new HashSet<>();
-//		chartID.add(1);
-//		chartID.add(7);
-//		chartID.add(20);
-//		subjects.put("chart", chartID);
-//		Set<Integer> closureID = new HashSet<>();
-//		closureID.add(14);
-//		closureID.add(57);
-//		closureID.add(73);
-//		subjects.put("closure", closureID);
-//		Set<Integer> langID = new HashSet<>();
-//		langID.add(33);
-////		langID.add(35); // need split
-//		langID.add(39);
-//		langID.add(43);
-//		langID.add(58);
-//		langID.add(60);
-//		subjects.put("lang", langID);
+		chartID.add(1);
+		chartID.add(7);
+		chartID.add(20);
+		subjects.put("chart", chartID);
+		Set<Integer> closureID = new HashSet<>();
+		closureID.add(14);
+		closureID.add(57);
+		closureID.add(73);
+		subjects.put("closure", closureID);
+		Set<Integer> langID = new HashSet<>();
+		langID.add(33);
+//		langID.add(35); // need split
+		langID.add(39);
+		langID.add(43);
+		langID.add(58);
+//		langID.add(60); // need split
+		subjects.put("lang", langID);
 		Set<Integer> mathID = new HashSet<>();
 //		mathID.add(5);
 //		mathID.add(33);
@@ -109,7 +109,7 @@ public class Main {
 //		mathID.add(41);
 ////		mathID.add(49); // need split
 //		mathID.add(53);
-//		mathID.add(59);
+		mathID.add(59);
 //		mathID.add(63);
 //		mathID.add(70);
 ////		mathID.add(71); // need split
