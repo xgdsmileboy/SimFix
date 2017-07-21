@@ -27,6 +27,7 @@ public class Constant {
 
 	
 	// useful file path 
+	public static String PROJECT_HOME = "/home/similar-fix/d4j/projects";
 	public static String ORI_FAULTLOC = HOME + "/d4j-info/location/ochiai";
 	public static String CONVER_FAULTLOC = HOME + "/d4j-info/location/conver";
 	public static String PROJINFOR = HOME + "/d4j-info/src_path";
@@ -34,18 +35,9 @@ public class Constant {
 	// command configuration
 	public final static String COMMAND_CD = "cd ";
 	
-	/*
-	 * for mac
-	 */
-//	public final static String COMMAND_TIMEOUT = "/usr/local/bin/gtimeout ";
-//	public final static String COMMAND_D4J = "/Users/Jiajun/Code/Defects4J/defects4j/framework/bin/defects4j ";
-//	public static String PPROJECT_HOME = HOME + "/testfile";
+	public static String ENV_D4J = "DEFECTS4J_HOME";
+	public static String COMMAND_TIMEOUT = "/usr/bin/timeout ";
+	public static String COMMAND_D4J = "/home/similar-fix/d4j/defects4j/framework/bin/defects4j ";
 	
-	/*
-	 * for linux
-	 */
-	public final static String COMMAND_TIMEOUT = "/usr/bin/timeout ";
-	public final static String COMMAND_D4J = "/home/similar-fix/d4j/defects4j/framework/bin/defects4j ";
-	public static String PROJECT_HOME = "/home/similar-fix/d4j/projects";
 
 }

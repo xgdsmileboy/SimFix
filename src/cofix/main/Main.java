@@ -15,6 +15,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.apache.commons.io.filefilter.ConditionalFileFilter;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+
 import cofix.common.config.Configure;
 import cofix.common.config.Constant;
 import cofix.common.localization.AbstractFaultlocalization;
@@ -31,13 +34,15 @@ import cofix.core.parser.ProjectInfo;
 public class Main {
 	
 	private static void tryFix(Subject subject) throws IOException{
+		
 		StringBuffer stringBuffer = new StringBuffer();
 		stringBuffer.append("=================================================\n");
 		stringBuffer.append("Project : " + subject.getName() + "_" + subject.getId() + "\t");
-		SimpleDateFormat myFmt1=new SimpleDateFormat("yy/MM/dd HH:mm"); 
-		stringBuffer.append("start : " + myFmt1.format(new Date()) + "\n");
+		SimpleDateFormat simpleFormat=new SimpleDateFormat("yy/MM/dd HH:mm"); 
+		stringBuffer.append("start : " + simpleFormat.format(new Date()) + "\n");
 		System.out.println(stringBuffer.toString());
 		JavaFile.writeStringToFile(Constant.HOME + "/result.log", stringBuffer.toString(), true);
+		
 		subject.backup();
 		ProjectInfo.init(subject);
 		AbstractFaultlocalization fLocalization = new ManualLocator(subject);
@@ -49,15 +54,15 @@ public class Main {
 		switch (status) {
 		case TIMEOUT:
 			System.out.println(status);
-			JavaFile.writeStringToFile("result.log", "Timeout time : " + myFmt1.format(new Date()) + "\n", true);
+			JavaFile.writeStringToFile("result.log", "Timeout time : " + simpleFormat.format(new Date()) + "\n", true);
 			break;
 		case SUCCESS:
 			System.out.println(status);
-			JavaFile.writeStringToFile("result.log", "Success time : " + myFmt1.format(new Date()) + "\n", true);
+			JavaFile.writeStringToFile("result.log", "Success time : " + simpleFormat.format(new Date()) + "\n", true);
 			break;
 		case FAILED:
 			System.out.println(status);
-			JavaFile.writeStringToFile("result.log", "Failed time : " + myFmt1.format(new Date()) + "\n", true);
+			JavaFile.writeStringToFile("result.log", "Failed time : " + simpleFormat.format(new Date()) + "\n", true);
 		default:
 			break;
 		}
@@ -66,9 +71,12 @@ public class Main {
 	
 
 	public static void main(String[] args) throws IOException {
-		System.out.println(Constant.PROJECT_HOME);
+		// for debug
+		Constant.COMMAND_TIMEOUT = "/usr/local/bin/gtimeout ";
+		Constant.PROJECT_HOME = "/home/similar-fix/d4j/projects";
 		
-//		List<Subject> subjects = Configure.getSubjectFromXML("project.xml");
+		Configure.configEnvironment();
+		System.out.println(Constant.PROJECT_HOME);
 		
 		Map<String, Set<Integer>> subjects = getSubject();
 		

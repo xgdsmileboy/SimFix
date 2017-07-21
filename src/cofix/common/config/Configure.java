@@ -31,6 +31,15 @@ public class Configure {
 
 	private final static String __name__ = "@Configure ";
 	
+	public static void configEnvironment(){
+		String d4jhome = System.getenv("DEFECTS4J_HOME");
+		if(d4jhome == null){
+			System.err.println("Please set defects4j classpath first!");
+			System.exit(0);
+		}
+		Constant.COMMAND_D4J = d4jhome + "/framework/bin/defects4j "; 
+	}
+	
 	public static Subject getSubject(String name, int id){
 		String fileName = Constant.PROJINFOR + "/" + name + "/" + id + ".txt";
 		File file = new File(fileName);
