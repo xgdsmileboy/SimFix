@@ -69,8 +69,8 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 //		// for debug
-		Constant.COMMAND_TIMEOUT = "/usr/local/bin/gtimeout ";
-		Constant.PROJECT_HOME = Constant.HOME + "/testfile";
+//		Constant.COMMAND_TIMEOUT = "/usr/local/bin/gtimeout ";
+//		Constant.PROJECT_HOME = Constant.HOME + "/testfile";
 		
 		Configure.configEnvironment();
 		System.out.println(Constant.PROJECT_HOME);
@@ -96,22 +96,22 @@ public class Main {
 		subjects.put("chart", chartID);
 		Set<Integer> closureID = new HashSet<>();
 //		closureID.add(14);
-		closureID.add(57);
+//		closureID.add(57); //OK
 //		closureID.add(73);
 		subjects.put("closure", closureID);
 		Set<Integer> langID = new HashSet<>();
-//		langID.add(33);
+		langID.add(33);
 //		langID.add(35); // need split
-//		langID.add(39);
-//		langID.add(43);
-//		langID.add(58);
+		langID.add(39);
+		langID.add(43);
+		langID.add(58);
 //		langID.add(60); // need split
 		subjects.put("lang", langID);
 		Set<Integer> mathID = new HashSet<>();
 //		mathID.add(5); //OK
 //		mathID.add(33); //OK
 //		mathID.add(35); // need split
-//		mathID.add(41);
+		mathID.add(41);
 //		mathID.add(49); // need split
 //		mathID.add(53); //OK
 //		mathID.add(59); //OK
