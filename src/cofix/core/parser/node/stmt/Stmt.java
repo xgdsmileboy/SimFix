@@ -19,6 +19,7 @@ import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
+import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.node.Node;
 
 /**
@@ -74,5 +75,14 @@ public abstract class Stmt extends Node{
 		} else {
 			return _parent.getUseType(this);
 		}
+	}
+	
+	@Override
+	public List<CodeBlock> reduce() {
+		List<CodeBlock> linkedList = new LinkedList<>();
+		for(Node node : getChildren()){
+			linkedList.addAll(node.reduce());
+		}
+		return linkedList;
 	}
 }

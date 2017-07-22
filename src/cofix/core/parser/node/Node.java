@@ -106,6 +106,8 @@ public abstract class Node {
 	
 	public abstract void computeFeatureVector();
 	
+	public abstract List<CodeBlock> reduce();
+	
 	public abstract boolean adapt(Modification modification);
 	public abstract boolean restore(Modification modification);
 	public abstract boolean backup(Modification modification);

@@ -27,6 +27,7 @@ import cofix.core.modify.Deletion;
 import cofix.core.modify.Insertion;
 import cofix.core.modify.Modification;
 import cofix.core.parser.NodeUtils;
+import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.expr.Expr;
 
@@ -286,5 +287,4 @@ public class SwitchStmt extends Stmt {
 		stringBuffer.append("}");
 		return stringBuffer.toString();
 	}
-	
 }

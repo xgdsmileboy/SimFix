@@ -24,6 +24,7 @@ import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.node.Node;
 
 /**
@@ -120,5 +121,10 @@ public class AnonymousClassDecl extends Node {
 	@Override
 	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
 		return toSrcString().toString();
+	}
+	
+	@Override
+	public List<CodeBlock> reduce() {
+		return new LinkedList<CodeBlock>();
 	}
 }

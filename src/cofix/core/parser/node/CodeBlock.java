@@ -82,6 +82,8 @@ import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
 import org.eclipse.jdt.core.dom.VariableDeclarationStatement;
 import org.eclipse.jdt.core.dom.WhileStatement;
 
+import com.sun.org.apache.bcel.internal.classfile.Code;
+
 import cofix.common.config.Identifier;
 import cofix.common.util.LevelLogger;
 import cofix.common.util.Pair;
@@ -198,6 +200,7 @@ public class CodeBlock extends Node{
 	
 	private Map<String, Expr> _newVariableDirectDependency = new HashMap<>();
 	
+	
 	public CodeBlock(String fileName, CompilationUnit cunit, List<ASTNode> nodes) {
 		this(fileName, cunit, nodes, 10);
 	}
@@ -213,9 +216,23 @@ public class CodeBlock extends Node{
 		_nodes = nodes;
 		_maxLines = maxLines;
 		_currlines = 0;
+		if(_cunit != null){
+			init();
+		}
+	}
+	
+	public void setFileName(String fileName){
+		_fileName = fileName;
+	}
+	
+	public void setUnit(CompilationUnit unit){
+		_cunit = unit;
+	}
+	
+	public void init(){
 		int min = Integer.MAX_VALUE;
 		int max = -1;
-		for(ASTNode s : nodes){
+		for(ASTNode s : _nodes){
 			_currlines += NodeUtils.getValidLineNumber(s);
 			int sline = _cunit.getLineNumber(s.getStartPosition());
 			int eline = _cunit.getLineNumber(s.getStartPosition() + s.getLength());
@@ -1571,6 +1588,25 @@ public class CodeBlock extends Node{
 		 }
 	}
 
+	public List<CodeBlock> reduce(){
+		if(_parsedNodes == null){
+			parseNode();
+		}
+		List<CodeBlock> list = new LinkedList<>();
+		for(Node node : _parsedNodes){
+			for(CodeBlock codeBlock : node.reduce()){
+				codeBlock.setFileName(_fileName);
+				codeBlock.setUnit(_cunit);
+				codeBlock.init();
+				list.add(codeBlock);
+			}
+		}
+		if(_parsedNodes.size() == 1 && list.size() > 0){
+			list.remove(list.size() - 1);
+		}
+		return list;
+	}
+	
 	@Override
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables,
 			List<Modification> modifications) {

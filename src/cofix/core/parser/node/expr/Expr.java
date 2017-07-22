@@ -19,6 +19,7 @@ import cofix.core.metric.MethodCall;
 import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable.USE_TYPE;
+import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.node.Node;
 
 /**
@@ -73,6 +74,11 @@ public abstract class Expr extends Node {
 	@Override
 	public USE_TYPE getUseType(Node child) {
 		return _parent.getUseType(this);
+	}
+	
+	@Override
+	public List<CodeBlock> reduce() {
+		return new LinkedList<>();
 	}
 	
 }

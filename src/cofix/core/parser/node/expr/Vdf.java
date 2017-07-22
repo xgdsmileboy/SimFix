@@ -26,6 +26,7 @@ import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
 import cofix.core.parser.NodeUtils;
+import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.node.Node;
 
 /**
@@ -192,7 +193,12 @@ public class Vdf extends Node {
 	
 	@Override
 	public List<Node> getChildren() {
-		return new ArrayList<>();
+		return new LinkedList<>();
+	}
+	
+	@Override
+	public List<CodeBlock> reduce() {
+		return new LinkedList<>();
 	}
 
 	@Override

@@ -48,6 +48,7 @@ import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.search.BuggyCode;
 import cofix.core.parser.search.SimpleFilter;
+import javassist.bytecode.analysis.ControlFlow.Block;
 
 /**
  * @author Jiajun
@@ -162,17 +163,15 @@ public class Repair {
 	public Status fix(Timer timer) throws IOException{
 		String src = _subject.getHome() + _subject.getSsrc();
 		List<Pair<String, Integer>> locations = _localization.getLocations(100);
-		Map<Integer, Set<Integer>> alreadyTryPlaces = new HashMap<>();
 		int correct = 0;
+		Set<String> haveTryBuggySourceCode = new HashSet<>();
 		Status status = Status.FAILED;
 		for(Pair<String, Integer> loc : locations){
 			_subject.restore();
-			
 			System.out.println(loc.getFirst() + "," + loc.getSecond());
 			
 			String file = _subject.getHome() + _subject.getSsrc() + "/" + loc.getFirst().replace(".", "/") + ".java";
 			String binFile = _subject.getHome() + _subject.getSbin() + "/" + loc.getFirst().replace(".", "/") + ".class";
-			CompilationUnit unit = JavaFile.genASTFromFile(file);
 			// get buggy code block
 			CodeBlock buggyblock = BuggyCode.getBuggyCodeBlock(file, loc.getSecond());
 			Integer methodID = buggyblock.getWrapMethodID(); 
@@ -181,156 +180,142 @@ public class Repair {
 				System.out.println("Find no block!");
 				continue;
 			}
-			Pair<Integer, Integer> range = buggyblock.getLineRangeInSource();
-//			Set<Integer> places = alreadyTryPlaces.get(methodID);
-//			if(places != null){
-//				if(places.contains(loc.getSecond())){
-//					int intersections = 0;
-//					for(int i = range.getFirst(); i <= range.getSecond(); i++){
-//						if(places.contains(i)){
-//							intersections ++;
-//						}
-//					}
-//					if(intersections >= 2){
-//						logMessage(loc.getFirst() + "," + loc.getSecond() + "=>filtered");
-//						continue;
-//					} else {
-//						for(int i = range.getFirst(); i <= range.getSecond(); i++){
-//							places.add(i);
-//						}
-//					}
-//				}
-//			} else {
-//				places = new HashSet<>();
-//				for(int i = range.getFirst(); i <= range.getSecond(); i++){
-//					places.add(i);
-//				}
-//				alreadyTryPlaces.put(methodID, places);
-//			}
 			logMessage(loc.getFirst() + "," + loc.getSecond());
+			List<CodeBlock> buggyBlockList = new LinkedList<>();
+			buggyBlockList.addAll(buggyblock.reduce());
+			buggyBlockList.add(buggyblock);
 			
-			Set<String> haveTry = new HashSet<>();
-			// get all variables can be used at buggy line
-			Map<String, Type> usableVars = NodeUtils.getUsableVarTypes(file, loc.getSecond());
-			// search candidate similar code block
-			SimpleFilter simpleFilter = new SimpleFilter(buggyblock);
-			
-			List<Pair<CodeBlock, Double>> candidates = simpleFilter.filter(src, 0.3);
-			List<String> source = null;
-			try {
-				source = JavaFile.readFileToList(file);
-			} catch (IOException e1) {
-				System.err.println("Failed to read file to list : " + file);
-				continue;
-			}
-			int i = 1;
-//			Set<String> already = new HashSet<>();
-			for(Pair<CodeBlock, Double> similar : candidates){
-				// try top 100 candidates
-				if(i > 100){
-					break;
+			for(CodeBlock oneBuggyBlock : buggyBlockList){
+				String currentBlockString = oneBuggyBlock.toSrcString().toString();
+				if(haveTryBuggySourceCode.contains(currentBlockString)){
+					continue;
 				}
-				System.out.println("=====================" + (i++) +"==============================");
-				System.out.println(similar.getFirst().toSrcString().toString());
-				// compute transformation
-				List<Modification> modifications = CodeBlockMatcher.match(buggyblock, similar.getFirst(), usableVars);
-				Map<String, Set<Node>> already = new HashMap<>();
-				// try each transformation first
-				List<Set<Modification>> list = new ArrayList<>();
-				for(Modification modification : modifications){
-					String modify = modification.toString();
-					Set<Node> tested = already.get(modify);
-					if(tested != null){
-						if(tested.contains(modification.getSrcNode())){
-							continue;
-						} else {
-							tested.add(modification.getSrcNode());
-						}
-					} else {
-						tested = new HashSet<>();
-						tested.add(modification.getSrcNode());
-						already.put(modify, tested);
-					}
-					Set<Modification> set = new HashSet<>();
-					set.add(modification);
-					list.add(set);
-				}
+				haveTryBuggySourceCode.add(currentBlockString);
+				_subject.restore();
+				Pair<Integer, Integer> range = oneBuggyBlock.getLineRangeInSource();
+				Set<String> haveTryPatches = new HashSet<>();
+				// get all variables can be used at buggy line
+				Map<String, Type> usableVars = NodeUtils.getUsableVarTypes(file, loc.getSecond());
+				// search candidate similar code block
+				SimpleFilter simpleFilter = new SimpleFilter(oneBuggyBlock);
 				
-				List<Modification> legalModifications = new ArrayList<>();
-				while(true){
-					for(Set<Modification> modifySet : list){
-						if(timer.timeout()){
-							return Status.TIMEOUT;
+				List<Pair<CodeBlock, Double>> candidates = simpleFilter.filter(src, 0.3);
+				List<String> source = null;
+				try {
+					source = JavaFile.readFileToList(file);
+				} catch (IOException e1) {
+					System.err.println("Failed to read file to list : " + file);
+					continue;
+				}
+				int i = 1;
+	//			Set<String> already = new HashSet<>();
+				for(Pair<CodeBlock, Double> similar : candidates){
+					// try top 100 candidates
+					if(i > 100){
+						break;
+					}
+					System.out.println("=====================" + (i++) +"==============================");
+					System.out.println(similar.getFirst().toSrcString().toString());
+					// compute transformation
+					List<Modification> modifications = CodeBlockMatcher.match(oneBuggyBlock, similar.getFirst(), usableVars);
+					Map<String, Set<Node>> already = new HashMap<>();
+					// try each transformation first
+					List<Set<Modification>> list = new ArrayList<>();
+					for(Modification modification : modifications){
+						String modify = modification.toString();
+						Set<Node> tested = already.get(modify);
+						if(tested != null){
+							if(tested.contains(modification.getSrcNode())){
+								continue;
+							} else {
+								tested.add(modification.getSrcNode());
+							}
+						} else {
+							tested = new HashSet<>();
+							tested.add(modification.getSrcNode());
+							already.put(modify, tested);
 						}
-						for(Modification modification : modifySet){
-							modification.apply(usableVars);
-						}
-						
-						String replace = buggyblock.toSrcString().toString();
-						if(haveTry.contains(replace)){
-							System.out.println("already try ...");
+						Set<Modification> set = new HashSet<>();
+						set.add(modification);
+						list.add(set);
+					}
+					
+					List<Modification> legalModifications = new ArrayList<>();
+					while(true){
+						for(Set<Modification> modifySet : list){
+							if(timer.timeout()){
+								return Status.TIMEOUT;
+							}
+							for(Modification modification : modifySet){
+								modification.apply(usableVars);
+							}
+							
+							String replace = oneBuggyBlock.toSrcString().toString();
+							if(haveTryPatches.contains(replace)){
+								System.out.println("already try ...");
+								for(Modification modification : modifySet){
+									modification.restore();
+								}
+								if(legalModifications != null){
+									for(Modification modification : modifySet){
+										legalModifications.add(modification);
+									}
+								}
+								continue;
+							}
+							
+							System.out.println("========");
+							System.out.println(replace);
+							System.out.println("========");
+							
+							haveTryPatches.add(replace);
+							try {
+								JavaFile.sourceReplace(file, source, range.getFirst(), range.getSecond(), replace);
+							} catch (IOException e) {
+								System.err.println("Failed to replace source code.");
+								continue;
+							}
+							try {
+								FileUtils.forceDelete(new File(binFile));
+							} catch (IOException e) {
+							}
+							
+							// validate correctness of patch
+							switch (validate(oneBuggyBlock)) {
+							case COMPILE_FAILED:
+								haveTryPatches.remove(replace);
+								break;
+							case SUCCESS:
+								correct ++;
+								dumpPatch("Find a patch", file, range, oneBuggyBlock.toSrcString().toString());
+								String target = Constant.HOME + "/patch/" + _subject.getName() + "/" + _subject.getId();
+								File tarFile = new File(target);
+								if(!tarFile.exists()){
+									tarFile.mkdirs();
+								}
+								File sourceFile = new File(file);
+								FileUtils.copyFile(sourceFile, new File(target + "/" + correct + "_" + sourceFile.getName()));
+								status = Status.SUCCESS;
+								if(correct == 3){
+									return Status.SUCCESS;
+								}
+							case TEST_FAILED:
+								if(legalModifications != null){
+									for(Modification modification : modifySet){
+										legalModifications.add(modification);
+									}
+								}
+							}
 							for(Modification modification : modifySet){
 								modification.restore();
 							}
-							if(legalModifications != null){
-								for(Modification modification : modifySet){
-									legalModifications.add(modification);
-								}
-							}
-							continue;
 						}
-						
-						System.out.println("========");
-						System.out.println(replace);
-						System.out.println("========");
-						
-						haveTry.add(replace);
-						try {
-							JavaFile.sourceReplace(file, source, range.getFirst(), range.getSecond(), replace);
-						} catch (IOException e) {
-							System.err.println("Failed to replace source code.");
-							continue;
-						}
-						try {
-							FileUtils.forceDelete(new File(binFile));
-						} catch (IOException e) {
-						}
-						
-						// validate correctness of patch
-						switch (validate(buggyblock)) {
-						case COMPILE_FAILED:
-							haveTry.remove(replace);
+						if(legalModifications == null){
 							break;
-						case SUCCESS:
-							correct ++;
-							dumpPatch("Find a patch", file, range, buggyblock.toSrcString().toString());
-							String target = Constant.HOME + "/patch/" + _subject.getName() + "/" + _subject.getId();
-							File tarFile = new File(target);
-							if(!tarFile.exists()){
-								tarFile.mkdirs();
-							}
-							File sourceFile = new File(file);
-							FileUtils.copyFile(sourceFile, new File(target + "/" + correct + "_" + sourceFile.getName()));
-							status = Status.SUCCESS;
-							if(correct == 3){
-								return Status.SUCCESS;
-							}
-						case TEST_FAILED:
-							if(legalModifications != null){
-								for(Modification modification : modifySet){
-									legalModifications.add(modification);
-								}
-							}
 						}
-						for(Modification modification : modifySet){
-							modification.restore();
-						}
+						list = combineModification(legalModifications);
+						legalModifications = null;
 					}
-					if(legalModifications == null){
-						break;
-					}
-					list = combineModification(legalModifications);
-					legalModifications = null;
 				}
 			}
 		}

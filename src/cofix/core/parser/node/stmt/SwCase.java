@@ -25,6 +25,7 @@ import cofix.core.modify.Deletion;
 import cofix.core.modify.Insertion;
 import cofix.core.modify.Modification;
 import cofix.core.parser.NodeUtils;
+import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.expr.Expr;
 
@@ -292,6 +293,26 @@ public class SwCase extends Stmt {
 			return null;
 		}
 		return stringBuffer.toString();
+	}
+	
+	@Override
+	public List<CodeBlock> reduce() {
+		List<CodeBlock> list = new LinkedList<>();
+		if(_siblings != null){
+			for(Node node : _siblings){
+				list.addAll(node.reduce());
+			}
+		}
+		List<ASTNode> nodes = new LinkedList<>();
+		nodes.add(_originalNode);
+		if(_siblings != null){
+			for(Node node : _siblings){
+				nodes.add(node.getOriginalAST());
+			}
+		}
+		CodeBlock codeBlock = new CodeBlock(null, null, nodes);
+		list.add(codeBlock);
+		return list;
 	}
 	
 }

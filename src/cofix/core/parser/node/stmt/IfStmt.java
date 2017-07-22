@@ -25,6 +25,7 @@ import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
 import cofix.core.parser.NodeUtils;
+import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.expr.Expr;
 
@@ -332,4 +333,21 @@ public class IfStmt extends Stmt {
 		}
 		return stringBuffer.toString();
 	}
+	
+	@Override
+	public List<CodeBlock> reduce() {
+		List<CodeBlock> list = new LinkedList<>();
+		if(_then != null){
+			list.addAll(_then.reduce());
+		}
+		if(_else != null){
+			list.addAll(_else.reduce());
+		}
+		List<ASTNode> nodes = new LinkedList<>();
+		nodes.add(_originalNode);
+		CodeBlock codeBlock = new CodeBlock(null, null, nodes);
+		list.add(codeBlock);
+		return list;
+	}
+	
 }

@@ -6,7 +6,6 @@
  */
 package cofix.core.parser.search;
 
-import java.nio.file.attribute.DosFileAttributes;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,14 +37,8 @@ import org.eclipse.jdt.core.dom.TryStatement;
 import org.eclipse.jdt.core.dom.TypeDeclarationStatement;
 import org.eclipse.jdt.core.dom.VariableDeclarationStatement;
 import org.eclipse.jdt.core.dom.WhileStatement;
-import org.eclipse.jdt.core.util.ISignatureAttribute;
-
-import com.gzoltar.core.components.Method;
-import com.sun.xml.internal.ws.message.RelatesToHeader;
 
 import cofix.core.parser.NodeUtils;
-import cofix.core.parser.node.Node;
-import cofix.core.parser.node.expr.ParenthesiszedExpr;
 
 /**
  * @author Jiajun
