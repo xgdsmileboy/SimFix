@@ -60,6 +60,14 @@ public class Assign extends Expr {
 		_rhs = rhs;
 	}
 	
+	public Expr getLhs(){
+		return _lhs;
+	}
+	
+	public Expr getRhs(){
+		return _rhs;
+	}
+	
 	@Override
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		boolean match = false;

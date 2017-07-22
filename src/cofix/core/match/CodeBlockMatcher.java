@@ -119,52 +119,54 @@ public class CodeBlockMatcher {
 			}
 		}
 		
-		// insert nodes at buggy code site
-		for(int j = 0; j < sNodes.size(); j++){
-			if(!reverseMatch.containsKey(j)){
-				Node tarNode = sNodes.get(j);
-				if(tarNode instanceof ReturnStmt || tarNode instanceof ThrowStmt || tarNode instanceof BreakStmt || tarNode instanceof ContinueStmt){
-					continue;
-				}
-				Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(tarNode, varTrans, allUsableVariables);
-				if(record == null){
-					continue;
-				}
-				int nextMatchIndex = -1;
-				for(int index = j; index < sNodes.size(); index++){
-					if(reverseMatch.containsKey(index)){
-						nextMatchIndex = reverseMatch.get(index);
-						break;
+		// insert nodes at buggy code site only some node has been matched
+		if(match.size() > 0){
+			for(int j = 0; j < sNodes.size(); j++){
+				if(!reverseMatch.containsKey(j)){
+					Node tarNode = sNodes.get(j);
+					if(tarNode instanceof ReturnStmt || tarNode instanceof ThrowStmt || tarNode instanceof BreakStmt || tarNode instanceof ContinueStmt){
+						continue;
 					}
-				}
-				if(nextMatchIndex == -1){
-					int last = bNodes.size() - 1;
-					for(; last >= 0; last --){
-						Node node = bNodes.get(last);
-						if(!(node instanceof ReturnStmt) && !(node instanceof ThrowStmt) && !(node instanceof BreakStmt) && !(node instanceof ContinueStmt)){
-							List<Variable> bVariables = node.getVariables();
-							List<Variable> sVariables = tarNode.getVariables();
-							boolean dependency = false;
-							for(Variable variable : sVariables){
-								if(bVariables.contains(variable)){
-									dependency = true;
+					Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(tarNode, varTrans, allUsableVariables);
+					if(record == null){
+						continue;
+					}
+					int nextMatchIndex = -1;
+					for(int index = j; index < sNodes.size(); index++){
+						if(reverseMatch.containsKey(index)){
+							nextMatchIndex = reverseMatch.get(index);
+							break;
+						}
+					}
+					if(nextMatchIndex == -1){
+						int last = bNodes.size() - 1;
+						for(; last >= 0; last --){
+							Node node = bNodes.get(last);
+							if(!(node instanceof ReturnStmt) && !(node instanceof ThrowStmt) && !(node instanceof BreakStmt) && !(node instanceof ContinueStmt)){
+								List<Variable> bVariables = node.getVariables();
+								List<Variable> sVariables = tarNode.getVariables();
+								boolean dependency = false;
+								for(Variable variable : sVariables){
+									if(bVariables.contains(variable)){
+										dependency = true;
+										break;
+									}
+								}
+								if(!dependency){
 									break;
 								}
 							}
-							if(!dependency){
-								break;
-							}
 						}
+						nextMatchIndex = last >= 0 ? last : 0;
 					}
-					nextMatchIndex = last >= 0 ? last : 0;
+					
+					NodeUtils.replaceVariable(record);
+					String target = tarNode.toSrcString().toString();
+					NodeUtils.restoreVariables(record);
+					Insertion insertion = new Insertion(buggyBlock, nextMatchIndex, target, TYPE.UNKNOWN);
+					modifications.add(insertion);
+					
 				}
-				
-				NodeUtils.replaceVariable(record);
-				String target = tarNode.toSrcString().toString();
-				NodeUtils.restoreVariables(record);
-				Insertion insertion = new Insertion(buggyBlock, nextMatchIndex, target, TYPE.UNKNOWN);
-				modifications.add(insertion);
-				
 			}
 		}
 		
