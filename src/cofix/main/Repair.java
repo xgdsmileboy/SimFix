@@ -23,7 +23,10 @@ import java.util.Set;
 import org.apache.commons.io.FileUtils;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.Type;
+import org.eclipse.jdt.internal.core.SourceField;
 import org.junit.runner.Result;
+
+import com.sun.org.apache.bcel.internal.classfile.SourceFile;
 
 import cofix.common.config.Constant;
 import cofix.common.inst.Instrument;
@@ -179,31 +182,31 @@ public class Repair {
 				continue;
 			}
 			Pair<Integer, Integer> range = buggyblock.getLineRangeInSource();
-			Set<Integer> places = alreadyTryPlaces.get(methodID);
-			if(places != null){
-				if(places.contains(loc.getSecond())){
-					int intersections = 0;
-					for(int i = range.getFirst(); i <= range.getSecond(); i++){
-						if(places.contains(i)){
-							intersections ++;
-						}
-					}
-					if(intersections >= 2){
-						logMessage(loc.getFirst() + "," + loc.getSecond() + "=>filtered");
-						continue;
-					} else {
-						for(int i = range.getFirst(); i <= range.getSecond(); i++){
-							places.add(i);
-						}
-					}
-				}
-			} else {
-				places = new HashSet<>();
-				for(int i = range.getFirst(); i <= range.getSecond(); i++){
-					places.add(i);
-				}
-				alreadyTryPlaces.put(methodID, places);
-			}
+//			Set<Integer> places = alreadyTryPlaces.get(methodID);
+//			if(places != null){
+//				if(places.contains(loc.getSecond())){
+//					int intersections = 0;
+//					for(int i = range.getFirst(); i <= range.getSecond(); i++){
+//						if(places.contains(i)){
+//							intersections ++;
+//						}
+//					}
+//					if(intersections >= 2){
+//						logMessage(loc.getFirst() + "," + loc.getSecond() + "=>filtered");
+//						continue;
+//					} else {
+//						for(int i = range.getFirst(); i <= range.getSecond(); i++){
+//							places.add(i);
+//						}
+//					}
+//				}
+//			} else {
+//				places = new HashSet<>();
+//				for(int i = range.getFirst(); i <= range.getSecond(); i++){
+//					places.add(i);
+//				}
+//				alreadyTryPlaces.put(methodID, places);
+//			}
 			logMessage(loc.getFirst() + "," + loc.getSecond());
 			
 			Set<String> haveTry = new HashSet<>();
@@ -299,9 +302,16 @@ public class Repair {
 							haveTry.remove(replace);
 							break;
 						case SUCCESS:
-							dumpPatch("Find a patch", file, range, buggyblock.toSrcString().toString());
-							status = Status.SUCCESS;
 							correct ++;
+							dumpPatch("Find a patch", file, range, buggyblock.toSrcString().toString());
+							String target = Constant.HOME + "/patch/" + _subject.getName() + "/" + _subject.getId();
+							File tarFile = new File(target);
+							if(!tarFile.exists()){
+								tarFile.mkdirs();
+							}
+							File sourceFile = new File(file);
+							FileUtils.copyFile(sourceFile, new File(target + "/" + correct + "_" + sourceFile.getName()));
+							status = Status.SUCCESS;
 							if(correct == 3){
 								return Status.SUCCESS;
 							}
@@ -333,7 +343,7 @@ public class Repair {
 	
 	private void dumpPatch(String message, String file, Pair<Integer, Integer> codeRange, String text){
 		StringBuffer stringBuffer = new StringBuffer();
-		stringBuffer.append("\n----------------------------------------\n----------------------------------------");
+		stringBuffer.append("\n----------------------------------------\n----------------------------------------\n");
 		stringBuffer.append(message + " : [" + file + "=>" + codeRange.getFirst() + "," + codeRange.getSecond() + "]\n");
 		stringBuffer.append(text);
 		SimpleDateFormat simpleFormat=new SimpleDateFormat("yy/MM/dd HH:mm"); 

@@ -24,7 +24,7 @@ public class Timer {
 		_timeout += TimeUnit.HOURS.toMillis(hour);
 		_timeout += TimeUnit.MINUTES.toMillis(min);
 		System.out.println("TIMEOUT : " + _timeout);
-		JavaFile.writeStringToFile(Constant.HOME + "/result.log", "TIMEOUT : " + hour + " h " + min + " m (" + _timeout + ")");
+		JavaFile.writeStringToFile(Constant.HOME + "/result.log", "TIMEOUT : " + hour + " h " + min + " m (" + _timeout + ")\n", true);
 	}
 	
 	public String start(){

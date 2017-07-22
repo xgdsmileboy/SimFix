@@ -38,7 +38,7 @@ public class Main {
 		SimpleDateFormat simpleFormat=new SimpleDateFormat("yy/MM/dd HH:mm"); 
 		stringBuffer.append("start : " + simpleFormat.format(new Date()) + "\n");
 		System.out.println(stringBuffer.toString());
-		JavaFile.writeStringToFile(Constant.HOME + "/result.log", stringBuffer.toString(), true);
+		JavaFile.writeStringToFile("result.log", stringBuffer.toString(), true);
 		
 		subject.backup();
 		ProjectInfo.init(subject);
@@ -90,26 +90,26 @@ public class Main {
 	private static Map<String, Set<Integer>> getSubject(){
 		Map<String, Set<Integer>> subjects = new HashMap<>();
 		Set<Integer> chartID = new HashSet<>();
-//		chartID.add(1);
-//		chartID.add(7);
-//		chartID.add(20);
+		chartID.add(1);
+		chartID.add(7);
+		chartID.add(20);
 		subjects.put("chart", chartID);
 		Set<Integer> closureID = new HashSet<>();
-//		closureID.add(14);
-//		closureID.add(57);
-//		closureID.add(73);
+		closureID.add(14);
+		closureID.add(57);
+		closureID.add(73);
 		subjects.put("closure", closureID);
 		Set<Integer> langID = new HashSet<>();
-//		langID.add(33);
+		langID.add(33);
 //		langID.add(35); // need split
-//		langID.add(39);
-//		langID.add(43);
-//		langID.add(58);
+		langID.add(39);
+		langID.add(43);
+		langID.add(58);
 //		langID.add(60); // need split
 		subjects.put("lang", langID);
 		Set<Integer> mathID = new HashSet<>();
 //		mathID.add(5); //OK
-//		mathID.add(33);
+//		mathID.add(33); //OK
 //		mathID.add(35); // need split
 		mathID.add(41);
 //		mathID.add(49); // need split
@@ -119,8 +119,8 @@ public class Main {
 //		mathID.add(70); //OK
 //		mathID.add(71); // need split
 //		mathID.add(72); // need split
-//		mathID.add(75);
-//		mathID.add(79);
+//		mathID.add(75); //OK
+//		mathID.add(79); //OK
 //		mathID.add(98); // need split
 		subjects.put("math", mathID);
 		

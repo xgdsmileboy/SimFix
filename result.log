@@ -1,146 +1,942 @@
 =================================================
-Project : math_70	start : 17/07/21 11:26
-org.apache.commons.math.analysis.solvers.BisectionSolver,72
+Project : math_33	start : 17/07/21 19:09
+TIMEOUT : 5 h 0 m (18000000)
+Fri Jul 21 19:09:54 AEST 2017 org.apache.commons.math3.optimization.linear.Relationship,59
+Fri Jul 21 19:09:57 AEST 2017 org.apache.commons.math3.optimization.linear.SimplexTableau,406
+Fri Jul 21 19:18:56 AEST 2017 org.apache.commons.math3.optimization.linear.SimplexTableau,407=>filtered
+Fri Jul 21 19:18:56 AEST 2017 org.apache.commons.math3.optimization.linear.SimplexTableau,261
+Fri Jul 21 19:19:07 AEST 2017 org.apache.commons.math3.optimization.linear.SimplexTableau,339
 
 ----------------------------------------
-Pass Single Test :
-return solve(f,min,max);
-
-----------------------------------------
-
-----------------------------------------
-----------------------------------------
-Find a patch :
-return solve(f,min,max);
-
-----------------------------------------
-
-Successfully find a patch!
-org.apache.commons.math.analysis.solvers.BisectionSolver,66
-org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils,223
-org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl,165
-org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl,166
-org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl,167
-org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl,208
-org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl,213
-org.apache.commons.math.analysis.solvers.BisectionSolver,79
-=================================================
-Project : math_63	start : 17/07/21 11:41
-=================================================
-Project : math_63	start : 17/07/21 11:43
-org.apache.commons.math.util.MathUtils,417
-
-----------------------------------------
-Pass Single Test :
-if(Double.isNaN(y)){
-return false;
-}
-return (Double.isNaN(x)&&Double.isNaN(y))||x==y;
-
-----------------------------------------
-
-----------------------------------------
-----------------------------------------
-Find a patch :
-if(Double.isNaN(y)){
-return false;
-}
-return (Double.isNaN(x)&&Double.isNaN(y))||x==y;
-
-Time : 17/07/21 11:46
-----------------------------------------
-
-Successfully find a patch!
-
-----------------------------------------
-Pass Single Test :
-return equals(x,y,1)||x==y;
-
-----------------------------------------
-
-----------------------------------------
-----------------------------------------
-Find a patch :
-return equals(x,y,1)||x==y;
-
-Time : 17/07/21 11:48
-----------------------------------------
-
-Successfully find a patch!
-
-----------------------------------------
-Pass Single Test :
-return equals(x,y,1)||FastMath.abs(y-x)<=SAFE_MIN;
-
-----------------------------------------
-
-----------------------------------------
-----------------------------------------
-Find a patch :
-return equals(x,y,1)||FastMath.abs(y-x)<=SAFE_MIN;
-
-Time : 17/07/21 11:49
-----------------------------------------
-
-Successfully find a patch!
-org.apache.commons.math.util.MathUtils,523
-org.apache.commons.math.util.MathUtils,524
-org.apache.commons.math.util.MathUtils,526
-=================================================
-Project : math_59	start : 17/07/21 11:54
-org.apache.commons.math.util.FastMath,3446
-org.apache.commons.math.util.FastMath,3482
-
-----------------------------------------
-Pass Single Test :
-return (a<=b)?b:(Float.isNaN(a+b)?Float.NaN:a);
-
-----------------------------------------
-
-----------------------------------------
-----------------------------------------
-Find a patch :
-return (a<=b)?b:(Float.isNaN(a+b)?Float.NaN:a);
-
-Time : 17/07/21 11:58
-----------------------------------------
-
-Successfully find a patch!
-=================================================
-Project : math_5	start : 17/07/21 12:00
-org.apache.commons.math3.complex.Complex,305
-
-----------------------------------------
-Pass Single Test :
-if(real==0.0&&imaginary==0.0){
-return INF;
+----------------------------------------Pass Single Test : [=>0,0]
+if(Precision.compareTo(entry,0.0,epsilon)>0){
+columnsToDrop.add(i);
 }
 
+Time : 17/07/21 19:19
 ----------------------------------------
-=================================================
-Project : math_53	start : 17/07/21 12:03
-org.apache.commons.math.complex.Complex,152
 
 ----------------------------------------
-Pass Single Test :
-MathUtils.checkNotNull(rhs);
-if(isNaN||rhs.isNaN){
-return NaN;
+----------------------------------------Pass Single Test : [=>0,0]
+if(Precision.compareTo(entry,epsilon,maxUlps)>0){
+columnsToDrop.add(i);
 }
-return createComplex(real+rhs.getReal(),imaginary+rhs.getImaginary());
+
+Time : 17/07/21 19:21
+----------------------------------------
 
 ----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+if(Precision.compareTo(entry,0.0,maxUlps)>maxUlps){
+columnsToDrop.add(i);
+}
+
+Time : 17/07/21 19:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+if(Precision.compareTo(entry,0.0,maxUlps)>=maxUlps){
+columnsToDrop.add(i);
+}
+
+Time : 17/07/21 19:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+if(Precision.compareTo(entry,0.0,maxUlps)>1){
+columnsToDrop.add(i);
+}
+
+Time : 17/07/21 19:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+if(Precision.compareTo(entry,0.0,maxUlps)>this.numArtificialVariables){
+columnsToDrop.add(i);
+}
+
+Time : 17/07/21 19:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+if(Precision.compareTo(entry,0.0,maxUlps)>=this.numArtificialVariables){
+columnsToDrop.add(i);
+}
+
+Time : 17/07/21 19:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+if((i&1)==0){
+continue;
+}
+if(Precision.compareTo(entry,0.0,maxUlps)>0){
+columnsToDrop.add(i);
+}
+
+Time : 17/07/21 19:31
+----------------------------------------
+Fri Jul 21 19:33:14 AEST 2017 Fri Jul 21 19:33:14 AEST 2017 : org.apache.commons.math3.optimization.linear.Relationship,57=>Find no block
+Fri Jul 21 19:33:14 AEST 2017 Fri Jul 21 19:33:14 AEST 2017 : org.apache.commons.math3.optimization.linear.Relationship$1,57=>Find no block
+Fri Jul 21 19:33:14 AEST 2017 org.apache.commons.math3.optimization.linear.SimplexTableau,226
+Fri Jul 21 19:51:16 AEST 2017 org.apache.commons.math3.optimization.PointValuePair,67
+Fri Jul 21 19:52:11 AEST 2017 org.apache.commons.math3.optimization.PointValuePair,68=>filtered
+Fri Jul 21 19:52:11 AEST 2017 org.apache.commons.math3.util.Pair,63
+Fri Jul 21 19:52:18 AEST 2017 org.apache.commons.math3.optimization.linear.SimplexTableau,162
+Fri Jul 21 19:53:41 AEST 2017 org.apache.commons.math3.optimization.linear.SimplexTableau,199
+Fri Jul 21 19:54:25 AEST 2017 org.apache.commons.math3.optimization.linear.SimplexTableau,215
+Fri Jul 21 19:57:46 AEST 2017 org.apache.commons.math3.optimization.linear.SimplexTableau,298
+Fri Jul 21 19:59:59 AEST 2017 org.apache.commons.math3.optimization.linear.SimplexTableau,299=>filtered
+Fri Jul 21 19:59:59 AEST 2017 org.apache.commons.math3.optimization.linear.SimplexTableau,300=>filtered
+Fri Jul 21 20:00:00 AEST 2017 org.apache.commons.math3.optimization.linear.SimplexTableau,302=>filtered
+Fri Jul 21 20:00:00 AEST 2017 org.apache.commons.math3.optimization.linear.SimplexTableau,347
+Fri Jul 21 20:02:58 AEST 2017 Fri Jul 21 20:02:58 AEST 2017 : org.apache.commons.math3.optimization.linear.SimplexSolver,181=>Find no block
+Fri Jul 21 20:02:58 AEST 2017 org.apache.commons.math3.optimization.linear.SimplexTableau,224
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+if(constraint.getRelationship()==Relationship.LEQ){
+matrix.setEntry(row,getArtificialVariableOffset()+slackVar++,1);
+matrix.setRowVector(0,matrix.getRowVector(0).subtract(matrix.getRowVector(row)));
+
+matrix.setRowVector(0,matrix.getRowVector(0).subtract(matrix.getRowVector(row)));
+matrix.setEntry(row,getSlackVariableOffset()+slackVar++,1);
+}else if(constraint.getRelationship()==Relationship.GEQ){
+matrix.setEntry(row,getSlackVariableOffset()+slackVar++,-1);
+}
+
+Time : 17/07/21 20:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+if(constraint.getRelationship()==Relationship.GEQ){
+matrix.setEntry(row,getArtificialVariableOffset()+slackVar++,1);
+matrix.setRowVector(0,matrix.getRowVector(0).subtract(matrix.getRowVector(row)));
+
+matrix.setRowVector(0,matrix.getRowVector(0).subtract(matrix.getRowVector(row)));
+matrix.setEntry(row,getSlackVariableOffset()+slackVar++,1);
+}else if(constraint.getRelationship()==Relationship.GEQ){
+matrix.setEntry(row,getSlackVariableOffset()+slackVar++,-1);
+}
+
+Time : 17/07/21 20:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+if(constraint.getRelationship()==Relationship.LEQ){
+matrix.setEntry(row,getArtificialVariableOffset()+slackVar++,1);
+matrix.setRowVector(0,matrix.getRowVector(0).subtract(matrix.getRowVector(row)));
+
+matrix.setRowVector(0,matrix.getRowVector(0).subtract(matrix.getRowVector(row)));
+matrix.setEntry(0,getSlackVariableOffset()+slackVar++,1);
+}else if(constraint.getRelationship()==Relationship.GEQ){
+matrix.setEntry(row,getSlackVariableOffset()+slackVar++,-1);
+}
+
+Time : 17/07/21 20:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+if(constraint.getRelationship()==Relationship.LEQ){
+matrix.setEntry(row,getArtificialVariableOffset()+slackVar++,1);
+matrix.setRowVector(0,matrix.getRowVector(0).subtract(matrix.getRowVector(row)));
+
+matrix.setRowVector(0,matrix.getRowVector(0).subtract(matrix.getRowVector(row)));
+matrix.setEntry(row,getArtificialVariableOffset()+slackVar,1);
+}else if(constraint.getRelationship()==Relationship.GEQ){
+matrix.setEntry(row,getSlackVariableOffset()+slackVar++,-1);
+}
+
+Time : 17/07/21 20:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+if(constraint.getRelationship()==Relationship.LEQ){
+matrix.setEntry(row,getArtificialVariableOffset()+slackVar++,1);
+matrix.setRowVector(0,matrix.getRowVector(0).subtract(matrix.getRowVector(row)));
+
+matrix.setRowVector(0,matrix.getRowVector(0).subtract(matrix.getRowVector(row)));
+matrix.setEntry(0,getArtificialVariableOffset()+slackVar,1);
+}else if(constraint.getRelationship()==Relationship.GEQ){
+matrix.setEntry(row,getSlackVariableOffset()+slackVar++,-1);
+}
+
+Time : 17/07/21 20:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+if(constraint.getRelationship()==Relationship.LEQ){
+matrix.setEntry(row,getArtificialVariableOffset()+slackVar++,1);
+matrix.setRowVector(0,matrix.getRowVector(0).subtract(matrix.getRowVector(row)));
+
+matrix.setEntry(row,getArtificialVariableOffset()+slackVar++,1);
+matrix.setRowVector(0,matrix.getRowVector(0).subtract(matrix.getRowVector(row)));
+matrix.setEntry(row,getSlackVariableOffset()+slackVar++,1);
+}else if(constraint.getRelationship()==Relationship.GEQ){
+matrix.setEntry(row,getSlackVariableOffset()+slackVar++,-1);
+}
+
+Time : 17/07/21 20:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+if(!restrictToNonNegative){
+matrix.setEntry(row,getSlackVariableOffset()-1,getInvertedCoefficientSum(objectiveCoefficients));
+}
+if(constraint.getRelationship()==Relationship.LEQ){
+matrix.setEntry(row,getSlackVariableOffset()+slackVar++,1);
+}else if(constraint.getRelationship()==Relationship.GEQ){
+matrix.setEntry(row,getSlackVariableOffset()+slackVar++,-1);
+}
+
+Time : 17/07/21 20:21
+----------------------------------------
+Fri Jul 21 20:26:01 AEST 2017 org.apache.commons.math3.optimization.linear.SimplexTableau,332
+Fri Jul 21 20:28:46 AEST 2017 org.apache.commons.math3.optimization.linear.SimplexTableau,333
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+List<Integer> columnsToDrop=new ArrayList<Integer>();
+columnsToDrop.add(0);
+for(int i=getNumObjectiveFunctions();i<getArtificialVariableOffset();i++){
+ final double entry=tableau.getEntry(0,i);
+if(Precision.compareTo(entry,0.0,epsilon)>0){
+columnsToDrop.add(i);
+}
+}
+
+Time : 17/07/21 20:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Find a patch : [/home/similar-fix/d4j/projects/math/math_33_buggy/src/main/java/org/apache/commons/math3/optimization/linear/SimplexTableau.java=>332,341]
+List<Integer> columnsToDrop=new ArrayList<Integer>();
+columnsToDrop.add(0);
+for(int i=getNumObjectiveFunctions();i<getArtificialVariableOffset();i++){
+ final double entry=tableau.getEntry(0,i);
+if(Precision.compareTo(entry,0.0,epsilon)>0){
+columnsToDrop.add(i);
+}
+}
+
+Time : 17/07/21 20:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+List<Integer> columnsToDrop=new ArrayList<Integer>();
+columnsToDrop.add(0);
+for(int i=getNumObjectiveFunctions();i<numArtificialVariables;i++){
+ final double entry=tableau.getEntry(0,i);
+if(Precision.compareTo(entry,0.0,maxUlps)>0){
+columnsToDrop.add(i);
+}
+}
+
+Time : 17/07/21 20:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+List<Integer> columnsToDrop=new ArrayList<Integer>();
+columnsToDrop.add(0);
+for(int i=getNumObjectiveFunctions();i<getArtificialVariableOffset();i++){
+ final double entry=tableau.getEntry(0,i);
+if(Precision.compareTo(entry,epsilon,maxUlps)>0){
+columnsToDrop.add(i);
+}
+}
+
+Time : 17/07/21 20:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Find a patch : [/home/similar-fix/d4j/projects/math/math_33_buggy/src/main/java/org/apache/commons/math3/optimization/linear/SimplexTableau.java=>332,341]
+List<Integer> columnsToDrop=new ArrayList<Integer>();
+columnsToDrop.add(0);
+for(int i=getNumObjectiveFunctions();i<getArtificialVariableOffset();i++){
+ final double entry=tableau.getEntry(0,i);
+if(Precision.compareTo(entry,epsilon,maxUlps)>0){
+columnsToDrop.add(i);
+}
+}
+
+Time : 17/07/21 20:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+List<Integer> columnsToDrop=new ArrayList<Integer>();
+columnsToDrop.add(0);
+for(int i=getNumObjectiveFunctions();i<getNumArtificialVariables();i++){
+ final double entry=tableau.getEntry(0,i);
+if(Precision.compareTo(entry,0.0,maxUlps)>0){
+columnsToDrop.add(i);
+}
+}
+
+Time : 17/07/21 20:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+List<Integer> columnsToDrop=new ArrayList<Integer>();
+columnsToDrop.add(0);
+for(int i=getNumObjectiveFunctions();i<numArtificialVariables;i++){
+ final double entry=tableau.getEntry(i,i);
+if(Precision.compareTo(entry,0.0,maxUlps)>0){
+columnsToDrop.add(i);
+}
+}
+
+Time : 17/07/21 20:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+List<Integer> columnsToDrop=new ArrayList<Integer>();
+columnsToDrop.add(0);
+for(int i=getNumObjectiveFunctions();i<numArtificialVariables;i++){
+ final double entry=tableau.getEntry(0,i+1);
+if(Precision.compareTo(entry,0.0,maxUlps)>0){
+columnsToDrop.add(i);
+}
+}
+
+Time : 17/07/21 20:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+List<Integer> columnsToDrop=new ArrayList<Integer>();
+columnsToDrop.add(0);
+for(int i=getNumObjectiveFunctions();i<numArtificialVariables;i++){
+ final double entry=tableau.getEntry(i,i+1);
+if(Precision.compareTo(entry,0.0,maxUlps)>0){
+columnsToDrop.add(i);
+}
+}
+
+Time : 17/07/21 21:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+List<Integer> columnsToDrop=new ArrayList<Integer>();
+columnsToDrop.add(0);
+for(int i=getNumObjectiveFunctions();i<numArtificialVariables;i++){
+ final double entry=tableau.getEntry(i+1,i);
+if(Precision.compareTo(entry,0.0,maxUlps)>0){
+columnsToDrop.add(i);
+}
+}
+
+Time : 17/07/21 21:02
+----------------------------------------
+Fri Jul 21 21:04:05 AEST 2017 org.apache.commons.math3.optimization.linear.SimplexTableau,336
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+for(int i=getNumObjectiveFunctions();i<getArtificialVariableOffset();i++){
+ final double entry=tableau.getEntry(0,i);
+if(Precision.compareTo(entry,0.0,epsilon)>0){
+columnsToDrop.add(i);
+}
+}
+
+Time : 17/07/21 21:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Find a patch : [/home/similar-fix/d4j/projects/math/math_33_buggy/src/main/java/org/apache/commons/math3/optimization/linear/SimplexTableau.java=>336,341]
+for(int i=getNumObjectiveFunctions();i<getArtificialVariableOffset();i++){
+ final double entry=tableau.getEntry(0,i);
+if(Precision.compareTo(entry,0.0,epsilon)>0){
+columnsToDrop.add(i);
+}
+}
+
+Time : 17/07/21 21:07
+----------------------------------------
+Success time : 17/07/21 21:07
 =================================================
-Project : math_41	start : 17/07/21 12:05
-org.apache.commons.math.stat.descriptive.moment.Variance,370
-org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,222
-org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,258
-org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,262
-org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,266
-org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,267
+Project : math_79	start : 17/07/21 21:07
+TIMEOUT : 5 h 0 m (18000000)
+Fri Jul 21 21:08:15 AEST 2017 Fri Jul 21 21:08:15 AEST 2017 : org.apache.commons.math.stat.clustering.EuclideanIntegerPoint,30=>Find no block
+Fri Jul 21 21:08:15 AEST 2017 Fri Jul 21 21:08:15 AEST 2017 : org.apache.commons.math.stat.clustering.Cluster,45=>Find no block
+Fri Jul 21 21:08:18 AEST 2017 org.apache.commons.math.stat.clustering.Cluster,46
+Fri Jul 21 21:08:20 AEST 2017 org.apache.commons.math.stat.clustering.Cluster,47=>filtered
+Fri Jul 21 21:08:20 AEST 2017 Fri Jul 21 21:08:20 AEST 2017 : org.apache.commons.math.stat.clustering.Cluster,48=>Find no block
+Fri Jul 21 21:08:22 AEST 2017 org.apache.commons.math.stat.clustering.Cluster,71
+Fri Jul 21 21:08:24 AEST 2017 Fri Jul 21 21:08:24 AEST 2017 : org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,40=>Find no block
+Fri Jul 21 21:08:24 AEST 2017 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,41
+Fri Jul 21 21:08:25 AEST 2017 Fri Jul 21 21:08:25 AEST 2017 : org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,42=>Find no block
+Fri Jul 21 21:08:27 AEST 2017 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,56
+Fri Jul 21 21:11:01 AEST 2017 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,57=>filtered
+Fri Jul 21 21:11:01 AEST 2017 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,89
+Fri Jul 21 21:11:19 AEST 2017 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,90=>filtered
+Fri Jul 21 21:11:19 AEST 2017 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,91=>filtered
+Fri Jul 21 21:11:19 AEST 2017 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,107
+Fri Jul 21 21:13:11 AEST 2017 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,108=>filtered
+Fri Jul 21 21:13:11 AEST 2017 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,111=>filtered
+Fri Jul 21 21:13:12 AEST 2017 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,112
+Fri Jul 21 21:14:48 AEST 2017 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,114
+Fri Jul 21 21:16:19 AEST 2017 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,115
+Fri Jul 21 21:21:06 AEST 2017 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,139
+Fri Jul 21 21:25:58 AEST 2017 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,153
+Fri Jul 21 21:26:00 AEST 2017 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,154=>filtered
+Fri Jul 21 21:26:00 AEST 2017 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,155=>filtered
+Fri Jul 21 21:26:00 AEST 2017 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,156=>filtered
+Fri Jul 21 21:26:00 AEST 2017 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,157=>filtered
+Fri Jul 21 21:26:00 AEST 2017 Fri Jul 21 21:26:00 AEST 2017 : org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,161=>Find no block
+Fri Jul 21 21:26:00 AEST 2017 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,162=>filtered
+Fri Jul 21 21:26:00 AEST 2017 org.apache.commons.math.stat.clustering.EuclideanIntegerPoint,57
+Fri Jul 21 21:26:07 AEST 2017 org.apache.commons.math.util.MathUtils,1624
 
 ----------------------------------------
-Pass Single Test :
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=0;
+for(int i=NAN_GAP;i<p1.length;i++){
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=0;
+for(int i=0;i<p1.length;i++){
+ final double dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Find a patch : [/home/similar-fix/d4j/projects/math/math_79_buggy/src/main/java/org/apache/commons/math/util/MathUtils.java=>1624,1629]
+int sum=0;
+for(int i=0;i<p1.length;i++){
+ final double dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+double sum=0;
+for(int i=0;i<p1.length;i++){
+ final double dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Find a patch : [/home/similar-fix/d4j/projects/math/math_79_buggy/src/main/java/org/apache/commons/math/util/MathUtils.java=>1624,1629]
+double sum=0;
+for(int i=0;i<p1.length;i++){
+ final double dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+double sum=0;
+for(int i=NAN_GAP;i<p1.length;i++){
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=0;
+for(int i=0;i<p1.length;i++){
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(0);
+
+Time : 17/07/21 21:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+double sum=0;
+for(int i=0;i<p1.length;i++){
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(0);
+
+Time : 17/07/21 21:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=0;
+for(int i=NAN_GAP;i<p1.length;i++){
+if(SAFE_MIN==0.0){
+break;
+}
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=0;
+for(int i=NAN_GAP;i<p1.length;i++){
+if(100*Math.max(SAFE_MIN,SAFE_MIN)<SAFE_MIN||SAFE_MIN<SAFE_MIN){
+break;
+}
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=0;
+for(int i=NAN_GAP;i<p1.length;i++){
+if(SAFE_MIN==0.0){
+break;
+}
+if(100*Math.max(SAFE_MIN,SAFE_MIN)<SAFE_MIN||SAFE_MIN<SAFE_MIN){
+break;
+}
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=0;
+for(int i=4;i<p1.length;i++){
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=0;
+for(int i=9;i<p1.length;i++){
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=1;
+for(int i=4;i<p1.length;i++){
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=1;
+for(int i=NAN_GAP;i<p1.length;i++){
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=1;
+for(int i=9;i<p1.length;i++){
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+double sum=0;
+for(int i=4;i<p1.length;i++){
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+double sum=0;
+for(int i=9;i<p1.length;i++){
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=0;
+for(int i=4;i<p1.length;i++){
+if(100*SAFE_MIN<SAFE_MIN){
+break;
+}
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=0;
+for(int i=NAN_GAP;i<p1.length;i++){
+if(100*SAFE_MIN<SAFE_MIN){
+break;
+}
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=0;
+for(int i=9;i<p1.length;i++){
+if(100*SAFE_MIN<SAFE_MIN){
+break;
+}
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+double sum=1;
+for(int i=4;i<p1.length;i++){
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+double sum=1;
+for(int i=NAN_GAP;i<p1.length;i++){
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+double sum=1;
+for(int i=9;i<p1.length;i++){
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=1;
+for(int i=4;i<p1.length;i++){
+if(100*SAFE_MIN<SAFE_MIN){
+break;
+}
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=1;
+for(int i=NAN_GAP;i<p1.length;i++){
+if(100*SAFE_MIN<SAFE_MIN){
+break;
+}
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=1;
+for(int i=9;i<p1.length;i++){
+if(100*SAFE_MIN<SAFE_MIN){
+break;
+}
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+double sum=0;
+for(int i=4;i<p1.length;i++){
+if(100*SAFE_MIN<SAFE_MIN){
+break;
+}
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+double sum=0;
+for(int i=NAN_GAP;i<p1.length;i++){
+if(100*SAFE_MIN<SAFE_MIN){
+break;
+}
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+double sum=0;
+for(int i=9;i<p1.length;i++){
+if(100*SAFE_MIN<SAFE_MIN){
+break;
+}
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=0;
+for(int i=0;i<p1.length;i++){
+ final double dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(0);
+
+Time : 17/07/21 21:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+double sum=0;
+for(int i=0;i<p1.length;i++){
+ final double dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(0);
+
+Time : 17/07/21 21:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=0;
+for(int i=10;i<p1.length;i++){
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=0;
+for(int i=4;i<p1.length;i++){
+if(100*Math.max(SAFE_MIN,SAFE_MIN)<SAFE_MIN){
+break;
+}
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=0;
+for(int i=NAN_GAP;i<p1.length;i++){
+if(100*Math.max(SAFE_MIN,SAFE_MIN)<SAFE_MIN){
+break;
+}
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------Pass Single Test : [=>0,0]
+int sum=0;
+for(int i=10;i<p1.length;i++){
+if(100*Math.max(SAFE_MIN,SAFE_MIN)<SAFE_MIN){
+break;
+}
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 17/07/21 21:46
+----------------------------------------
+Fri Jul 21 21:54:14 AEST 2017 org.apache.commons.math.util.MathUtils,1625=>filtered
+Fri Jul 21 21:54:14 AEST 2017 org.apache.commons.math.util.MathUtils,1626=>filtered
+Fri Jul 21 21:54:14 AEST 2017 org.apache.commons.math.util.MathUtils,1627=>filtered
+Fri Jul 21 21:54:14 AEST 2017 org.apache.commons.math.util.MathUtils,1629=>filtered
+Fri Jul 21 21:54:14 AEST 2017 Fri Jul 21 21:54:14 AEST 2017 : org.apache.commons.math.stat.clustering.EuclideanIntegerPoint,43=>Find no block
+Fri Jul 21 21:54:14 AEST 2017 org.apache.commons.math.stat.clustering.EuclideanIntegerPoint,44
+Fri Jul 21 21:54:21 AEST 2017 Fri Jul 21 21:54:21 AEST 2017 : org.apache.commons.math.stat.clustering.EuclideanIntegerPoint,45=>Find no block
+Fri Jul 21 21:54:21 AEST 2017 org.apache.commons.math.stat.clustering.EuclideanIntegerPoint,52
+Fri Jul 21 21:54:28 AEST 2017 Fri Jul 21 21:54:28 AEST 2017 : org.apache.commons.math.util.MathUtils,30=>Find no block
+Fri Jul 21 21:54:28 AEST 2017 Fri Jul 21 21:54:28 AEST 2017 : org.apache.commons.math.util.MathUtils,69=>Find no block
+Fri Jul 21 21:54:28 AEST 2017 org.apache.commons.math.util.MathUtils,82
+Fri Jul 21 21:54:30 AEST 2017 Fri Jul 21 21:54:30 AEST 2017 : org.apache.commons.math.util.MathUtils,83=>Find no block
+Fri Jul 21 21:54:30 AEST 2017 org.apache.commons.math.util.MathUtils,96
+Fri Jul 21 21:55:40 AEST 2017 org.apache.commons.math.util.MathUtils,97=>filtered
+Fri Jul 21 21:55:40 AEST 2017 org.apache.commons.math.util.MathUtils,98=>filtered
+Fri Jul 21 21:55:40 AEST 2017 org.apache.commons.math.util.MathUtils,100=>filtered
+Fri Jul 21 21:55:41 AEST 2017 org.apache.commons.math.util.MathUtils,114
+Fri Jul 21 21:55:42 AEST 2017 org.apache.commons.math.util.MathUtils,130
+Fri Jul 21 21:56:01 AEST 2017 org.apache.commons.math.util.MathUtils,132=>filtered
+Fri Jul 21 21:56:01 AEST 2017 org.apache.commons.math.util.MathUtils,136=>filtered
+Fri Jul 21 21:56:01 AEST 2017 org.apache.commons.math.util.MathUtils,137=>filtered
+Fri Jul 21 21:56:01 AEST 2017 org.apache.commons.math.util.MathUtils,139=>filtered
+Fri Jul 21 21:56:01 AEST 2017 org.apache.commons.math.util.MathUtils,140=>filtered
+Fri Jul 21 21:56:01 AEST 2017 org.apache.commons.math.util.MathUtils,142=>filtered
+Fri Jul 21 21:56:01 AEST 2017 org.apache.commons.math.util.MathUtils,146=>filtered
+Fri Jul 21 21:56:01 AEST 2017 org.apache.commons.math.util.MathUtils,153=>filtered
+Fri Jul 21 21:56:01 AEST 2017 org.apache.commons.math.util.MathUtils,154=>filtered
+Fri Jul 21 21:56:01 AEST 2017 org.apache.commons.math.util.MathUtils,156=>filtered
+Fri Jul 21 21:56:02 AEST 2017 org.apache.commons.math.util.MathUtils,160
+Fri Jul 21 21:57:41 AEST 2017 org.apache.commons.math.util.MathUtils,189
+Fri Jul 21 22:15:58 AEST 2017 org.apache.commons.math.util.MathUtils,190=>filtered
+Fri Jul 21 22:15:58 AEST 2017 org.apache.commons.math.util.MathUtils,191=>filtered
+Fri Jul 21 22:15:58 AEST 2017 org.apache.commons.math.util.MathUtils,193
+Fri Jul 21 22:35:22 AEST 2017 org.apache.commons.math.util.MathUtils,194
+Fri Jul 21 22:55:24 AEST 2017 org.apache.commons.math.util.MathUtils,197
+Fri Jul 21 23:01:05 AEST 2017 org.apache.commons.math.util.MathUtils,198
+Fri Jul 21 23:06:48 AEST 2017 org.apache.commons.math.util.MathUtils,205
+Fri Jul 21 23:40:56 AEST 2017 org.apache.commons.math.util.MathUtils,206
+Sat Jul 22 00:22:24 AEST 2017 org.apache.commons.math.util.MathUtils,208
+Sat Jul 22 00:42:13 AEST 2017 org.apache.commons.math.util.MathUtils,209
+Sat Jul 22 01:02:13 AEST 2017 org.apache.commons.math.util.MathUtils,210
+=================================================
+Project : math_41	start : 17/07/22 01:30
+TIMEOUT : 5 h 0 m (18000000)
+Sat Jul 22 01:30:28 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,370
+Sat Jul 22 01:34:26 AEST 2017 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,222
+Sat Jul 22 01:37:05 AEST 2017 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,258
+Sat Jul 22 01:37:19 AEST 2017 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,262
+Sat Jul 22 01:44:26 AEST 2017 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,266
+Sat Jul 22 01:51:28 AEST 2017 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,267
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
 for(int i=begin;i<begin+length;i++){
 if(Double.isNaN(weights[i])){
 throw new MathIllegalArgumentException(LocalizedFormats.NAN_ELEMENT_AT_INDEX,i);
@@ -156,10 +952,12 @@ return false;
 }
 }
 
+Time : 17/07/22 02:07
 ----------------------------------------
 
 ----------------------------------------
-Pass Single Test :
+----------------------------------------
+Pass Single Test : [=>0,0]
 for(int i=begin;i<begin+length;i++){
 if(Double.isNaN(weights[i])){
 throw new MathIllegalArgumentException(LocalizedFormats.NAN_ELEMENT_AT_INDEX,i);
@@ -175,198 +973,94 @@ return false;
 }
 }
 
+Time : 17/07/22 02:08
 ----------------------------------------
-org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,268
-org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,271
-org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,274
-org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,277
-org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,278
-org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,282
-org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,286
+Sat Jul 22 02:11:41 AEST 2017 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,268
+Sat Jul 22 02:17:49 AEST 2017 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,271
+Sat Jul 22 02:23:34 AEST 2017 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,274
+Sat Jul 22 02:31:28 AEST 2017 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,277
 
 ----------------------------------------
-Pass Single Test :
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!containsPositiveWeight&&weights[i]>0.0){
+return false;
+}
+
+Time : 17/07/22 02:39
+----------------------------------------
+Sat Jul 22 02:46:26 AEST 2017 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,278
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!containsPositiveWeight&&weights[i]>0.0){
+return false;
+}
+
+Time : 17/07/22 02:54
+----------------------------------------
+Sat Jul 22 03:01:23 AEST 2017 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,282
+Sat Jul 22 03:01:27 AEST 2017 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,286
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
 if(!allowEmpty){
 return false;
 }
 return test(values,begin,length,allowEmpty);
 
+Time : 17/07/22 03:03
 ----------------------------------------
-org.apache.commons.math.stat.descriptive.moment.Variance,316
+Sat Jul 22 03:07:13 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,316
+Sat Jul 22 03:21:14 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,318=>filtered
+Sat Jul 22 03:21:14 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,319=>filtered
+Sat Jul 22 03:21:14 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,320=>filtered
+Sat Jul 22 03:21:14 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,322=>filtered
+Sat Jul 22 03:21:14 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,323=>filtered
+Sat Jul 22 03:21:15 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,324=>filtered
+Sat Jul 22 03:21:15 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,325=>filtered
+Sat Jul 22 03:21:15 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,328
+Sat Jul 22 03:36:31 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,504
+Sat Jul 22 03:40:44 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,506=>filtered
+Sat Jul 22 03:40:44 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,507=>filtered
+Sat Jul 22 03:40:44 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,509=>filtered
+Sat Jul 22 03:40:44 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,510=>filtered
+Sat Jul 22 03:40:44 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,511=>filtered
+Sat Jul 22 03:40:45 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,512=>filtered
+Sat Jul 22 03:40:45 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,513=>filtered
+Sat Jul 22 03:40:45 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,514=>filtered
+Sat Jul 22 03:40:45 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,515=>filtered
+Sat Jul 22 03:40:45 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,516=>filtered
+Sat Jul 22 03:40:45 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,519=>filtered
+Sat Jul 22 03:40:46 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,520=>filtered
+Sat Jul 22 03:40:46 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,521=>filtered
+Sat Jul 22 03:40:46 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,524=>filtered
+Sat Jul 22 03:40:46 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,525=>filtered
+Sat Jul 22 03:40:46 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,531=>filtered
+Sat Jul 22 03:40:47 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Mean,205
+Sat Jul 22 04:01:17 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Mean,206=>filtered
+Sat Jul 22 04:01:17 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Mean,209=>filtered
+Sat Jul 22 04:01:18 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Mean,210=>filtered
+Sat Jul 22 04:01:18 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Mean,213=>filtered
+Sat Jul 22 04:01:18 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Mean,214=>filtered
+Sat Jul 22 04:01:18 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Mean,215=>filtered
+Sat Jul 22 04:01:18 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Mean,217=>filtered
+Sat Jul 22 04:01:18 AEST 2017 org.apache.commons.math.stat.descriptive.summary.Sum,159
+Sat Jul 22 04:10:02 AEST 2017 org.apache.commons.math.stat.descriptive.summary.Sum,160=>filtered
+Sat Jul 22 04:10:02 AEST 2017 org.apache.commons.math.stat.descriptive.summary.Sum,161=>filtered
+Sat Jul 22 04:10:02 AEST 2017 org.apache.commons.math.stat.descriptive.summary.Sum,162=>filtered
+Sat Jul 22 04:10:02 AEST 2017 org.apache.commons.math.stat.descriptive.summary.Sum,163=>filtered
+Sat Jul 22 04:10:02 AEST 2017 org.apache.commons.math.stat.descriptive.summary.Sum,166=>filtered
+Sat Jul 22 04:10:02 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,204
+Sat Jul 22 04:10:47 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,205=>filtered
+Sat Jul 22 04:10:47 AEST 2017 Sat Jul 22 04:10:47 AEST 2017 : org.apache.commons.math.stat.descriptive.moment.Variance,207=>Find no block
+Sat Jul 22 04:10:48 AEST 2017 org.apache.commons.math.stat.descriptive.summary.Sum,120
 
 ----------------------------------------
-Pass Single Test :
-double var=Double.NaN;
-if(test(values,weights,begin,length)){
-clear();
-if(length==1){
-var=0.0;
-}else if(length>1){
-Mean mean=new Mean();
-double m=mean.evaluate(values,weights,begin,length);
-var=evaluate(values,m,begin,length);
-}
-}
-
 ----------------------------------------
-
-----------------------------------------
-Pass Single Test :
-double var=Double.NaN;
-if(test(values,begin,length)){
-clear();
-if(length==1){
-var=0.0;
-}else if(length>1){
-Mean mean=new Mean();
-double m=mean.evaluate(values,weights,begin,length);
-var=evaluate(values,m,begin,length);
-}
-}
-
-----------------------------------------
-
-----------------------------------------
-Pass Single Test :
-double var=Double.NaN;
-if(test(values,weights,begin,length)){
-clear();
-if(length==1){
-var=0.0;
-}else if(length>1){
-Mean mean=new Mean();
-double m=mean.evaluate(values,begin,length);
-var=evaluate(values,m,begin,length);
-}
-}
-
-----------------------------------------
-
-----------------------------------------
-Pass Single Test :
-double var=Double.NaN;
-if(test(values,begin,length)){
-clear();
-if(length==1){
-var=0.0;
-}else if(length>1){
-Mean mean=new Mean();
-double m=mean.evaluate(values,begin,length);
-var=evaluate(values,m,begin,length);
-}
-}
-
-----------------------------------------
-org.apache.commons.math.stat.descriptive.moment.Variance,318
-org.apache.commons.math.stat.descriptive.moment.Variance,319
-org.apache.commons.math.stat.descriptive.moment.Variance,320
-org.apache.commons.math.stat.descriptive.moment.Variance,322
-org.apache.commons.math.stat.descriptive.moment.Variance,323
-org.apache.commons.math.stat.descriptive.moment.Variance,324
-org.apache.commons.math.stat.descriptive.moment.Variance,325
-org.apache.commons.math.stat.descriptive.moment.Variance,328
-
-----------------------------------------
-Pass Single Test :
-if(test(values,weights,begin,length)){
-clear();
-if(length==1){
-var=0.0;
-}else if(length>1){
-Mean mean=new Mean();
-double m=mean.evaluate(values,weights,begin,length);
-var=evaluate(values,m,begin,length);
-}
-}
-return var;
-
-----------------------------------------
-
-----------------------------------------
-Pass Single Test :
-if(test(values,begin,length)){
-clear();
-if(length==1){
-var=0.0;
-}else if(length>1){
-Mean mean=new Mean();
-double m=mean.evaluate(values,weights,begin,length);
-var=evaluate(values,m,begin,length);
-}
-}
-return var;
-
-----------------------------------------
-
-----------------------------------------
-Pass Single Test :
-if(test(values,weights,begin,length)){
-clear();
-if(length==1){
-var=0.0;
-}else if(length>1){
-Mean mean=new Mean();
-double m=mean.evaluate(values,begin,length);
-var=evaluate(values,m,begin,length);
-}
-}
-return var;
-
-----------------------------------------
-
-----------------------------------------
-Pass Single Test :
-if(test(values,begin,length)){
-clear();
-if(length==1){
-var=0.0;
-}else if(length>1){
-Mean mean=new Mean();
-double m=mean.evaluate(values,begin,length);
-var=evaluate(values,m,begin,length);
-}
-}
-return var;
-
-----------------------------------------
-org.apache.commons.math.stat.descriptive.moment.Variance,504
-org.apache.commons.math.stat.descriptive.moment.Variance,506
-org.apache.commons.math.stat.descriptive.moment.Variance,507
-org.apache.commons.math.stat.descriptive.moment.Variance,509
-org.apache.commons.math.stat.descriptive.moment.Variance,510
-org.apache.commons.math.stat.descriptive.moment.Variance,511
-org.apache.commons.math.stat.descriptive.moment.Variance,512
-org.apache.commons.math.stat.descriptive.moment.Variance,513
-org.apache.commons.math.stat.descriptive.moment.Variance,514
-org.apache.commons.math.stat.descriptive.moment.Variance,515
-org.apache.commons.math.stat.descriptive.moment.Variance,516
-org.apache.commons.math.stat.descriptive.moment.Variance,519
-org.apache.commons.math.stat.descriptive.moment.Variance,520
-org.apache.commons.math.stat.descriptive.moment.Variance,521
-org.apache.commons.math.stat.descriptive.moment.Variance,524
-org.apache.commons.math.stat.descriptive.moment.Variance,525
-org.apache.commons.math.stat.descriptive.moment.Variance,531
-org.apache.commons.math.stat.descriptive.moment.Mean,205
-org.apache.commons.math.stat.descriptive.moment.Mean,206
-org.apache.commons.math.stat.descriptive.moment.Mean,209
-org.apache.commons.math.stat.descriptive.moment.Mean,210
-org.apache.commons.math.stat.descriptive.moment.Mean,213
-org.apache.commons.math.stat.descriptive.moment.Mean,214
-org.apache.commons.math.stat.descriptive.moment.Mean,215
-org.apache.commons.math.stat.descriptive.moment.Mean,217
-org.apache.commons.math.stat.descriptive.summary.Sum,159
-org.apache.commons.math.stat.descriptive.summary.Sum,160
-org.apache.commons.math.stat.descriptive.summary.Sum,161
-org.apache.commons.math.stat.descriptive.summary.Sum,162
-org.apache.commons.math.stat.descriptive.summary.Sum,163
-org.apache.commons.math.stat.descriptive.summary.Sum,166
-org.apache.commons.math.stat.descriptive.moment.Variance,204
-org.apache.commons.math.stat.descriptive.moment.Variance,205
-org.apache.commons.math.stat.descriptive.moment.Variance,207
-org.apache.commons.math.stat.descriptive.summary.Sum,120
-
-----------------------------------------
-Pass Single Test :
+Pass Single Test : [=>0,0]
 for(int i=1;i<length;i++){
 if(value<=values[i]){
 return i-1;
@@ -381,66 +1075,205 @@ sum+=values[i];
 }
 return sum;
 
+Time : 17/07/22 04:18
 ----------------------------------------
-org.apache.commons.math.stat.descriptive.summary.Sum,121
-org.apache.commons.math.stat.descriptive.summary.Sum,122
-org.apache.commons.math.stat.descriptive.summary.Sum,123
-org.apache.commons.math.stat.descriptive.summary.Sum,124
-org.apache.commons.math.stat.descriptive.summary.Sum,127
-org.apache.commons.math.stat.descriptive.moment.SecondMoment,92
-org.apache.commons.math.stat.descriptive.moment.SecondMoment,93
-org.apache.commons.math.stat.descriptive.moment.SecondMoment,94
-org.apache.commons.math.stat.descriptive.moment.FirstMoment,117
-org.apache.commons.math.stat.descriptive.moment.FirstMoment,118
-org.apache.commons.math.stat.descriptive.moment.FirstMoment,119
-org.apache.commons.math.stat.descriptive.moment.FirstMoment,120
-org.apache.commons.math.stat.descriptive.moment.FirstMoment,121
-org.apache.commons.math.stat.descriptive.moment.Mean,79
-org.apache.commons.math.stat.descriptive.moment.Mean,80
-org.apache.commons.math.stat.descriptive.moment.Mean,81
-org.apache.commons.math.stat.descriptive.moment.Mean,82
-org.apache.commons.math.stat.descriptive.moment.Variance,97
-org.apache.commons.math.stat.descriptive.moment.Variance,98
-org.apache.commons.math.stat.descriptive.moment.Variance,99
-org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,184
+Sat Jul 22 04:20:25 AEST 2017 org.apache.commons.math.stat.descriptive.summary.Sum,121=>filtered
+Sat Jul 22 04:20:25 AEST 2017 org.apache.commons.math.stat.descriptive.summary.Sum,122=>filtered
+Sat Jul 22 04:20:26 AEST 2017 org.apache.commons.math.stat.descriptive.summary.Sum,123=>filtered
+Sat Jul 22 04:20:26 AEST 2017 org.apache.commons.math.stat.descriptive.summary.Sum,124=>filtered
+Sat Jul 22 04:20:26 AEST 2017 org.apache.commons.math.stat.descriptive.summary.Sum,127=>filtered
+Sat Jul 22 04:20:26 AEST 2017 org.apache.commons.math.stat.descriptive.moment.SecondMoment,92
+Sat Jul 22 04:21:23 AEST 2017 org.apache.commons.math.stat.descriptive.moment.SecondMoment,93=>filtered
+Sat Jul 22 04:21:23 AEST 2017 Sat Jul 22 04:21:23 AEST 2017 : org.apache.commons.math.stat.descriptive.moment.SecondMoment,94=>Find no block
+Sat Jul 22 04:21:23 AEST 2017 org.apache.commons.math.stat.descriptive.moment.FirstMoment,117
+Sat Jul 22 04:28:42 AEST 2017 org.apache.commons.math.stat.descriptive.moment.FirstMoment,118=>filtered
+Sat Jul 22 04:28:42 AEST 2017 org.apache.commons.math.stat.descriptive.moment.FirstMoment,119=>filtered
+Sat Jul 22 04:28:42 AEST 2017 org.apache.commons.math.stat.descriptive.moment.FirstMoment,120=>filtered
+Sat Jul 22 04:28:42 AEST 2017 Sat Jul 22 04:28:42 AEST 2017 : org.apache.commons.math.stat.descriptive.moment.FirstMoment,121=>Find no block
+Sat Jul 22 04:28:43 AEST 2017 Sat Jul 22 04:28:43 AEST 2017 : org.apache.commons.math.stat.descriptive.moment.Mean,79=>Find no block
+Sat Jul 22 04:28:43 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Mean,80
+Sat Jul 22 04:29:37 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Mean,81=>filtered
+Sat Jul 22 04:29:37 AEST 2017 Sat Jul 22 04:29:37 AEST 2017 : org.apache.commons.math.stat.descriptive.moment.Mean,82=>Find no block
+Sat Jul 22 04:29:37 AEST 2017 Sat Jul 22 04:29:37 AEST 2017 : org.apache.commons.math.stat.descriptive.moment.Variance,97=>Find no block
+Sat Jul 22 04:29:37 AEST 2017 org.apache.commons.math.stat.descriptive.moment.Variance,98
+Sat Jul 22 04:30:25 AEST 2017 Sat Jul 22 04:30:25 AEST 2017 : org.apache.commons.math.stat.descriptive.moment.Variance,99=>Find no block
+Sat Jul 22 04:30:25 AEST 2017 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,184
 
 ----------------------------------------
-Pass Single Test :
+----------------------------------------
+Pass Single Test : [=>0,0]
 if(length==length&&!allowEmpty){
 return false;
 }
 return true;
 
+Time : 17/07/22 04:31
 ----------------------------------------
 
 ----------------------------------------
-Pass Single Test :
+----------------------------------------
+Pass Single Test : [=>0,0]
 if(!allowEmpty&&!allowEmpty){
 return false;
 }
 return true;
 
+Time : 17/07/22 04:34
 ----------------------------------------
-org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,163
-org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,167
-org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,171
-org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,175
-org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,180
-org.apache.commons.math.stat.descriptive.summary.Sum,56
-org.apache.commons.math.stat.descriptive.summary.Sum,57
-org.apache.commons.math.stat.descriptive.summary.Sum,58
-org.apache.commons.math.stat.descriptive.summary.Sum,59
-org.apache.commons.math.stat.descriptive.moment.Variance,75
-org.apache.commons.math.stat.descriptive.moment.Variance,84
-org.apache.commons.math.stat.descriptive.moment.Variance,91
-org.apache.commons.math.util.FastMath,375
-org.apache.commons.math.stat.descriptive.moment.SecondMoment,60
-org.apache.commons.math.stat.descriptive.moment.SecondMoment,61
-org.apache.commons.math.stat.descriptive.moment.SecondMoment,62
-org.apache.commons.math.stat.descriptive.moment.FirstMoment,79
-org.apache.commons.math.stat.descriptive.moment.FirstMoment,80
-org.apache.commons.math.stat.descriptive.moment.FirstMoment,81
-org.apache.commons.math.stat.descriptive.moment.FirstMoment,82
-org.apache.commons.math.stat.descriptive.moment.FirstMoment,83
-org.apache.commons.math.stat.descriptive.moment.FirstMoment,84
-Failed time : 17/07/21 14:01
+Sat Jul 22 04:37:10 AEST 2017 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,163
+Sat Jul 22 04:37:56 AEST 2017 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,167
+Sat Jul 22 04:42:27 AEST 2017 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,171
+Sat Jul 22 04:47:55 AEST 2017 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,175
+Sat Jul 22 04:52:13 AEST 2017 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,180=>filtered
+Sat Jul 22 04:52:14 AEST 2017 Sat Jul 22 04:52:14 AEST 2017 : org.apache.commons.math.stat.descriptive.summary.Sum,56=>Find no block
+Sat Jul 22 04:52:14 AEST 2017 org.apache.commons.math.stat.descriptive.summary.Sum,57
+Sat Jul 22 04:55:15 AEST 2017 org.apache.commons.math.stat.descriptive.summary.Sum,58=>filtered
+Sat Jul 22 04:55:15 AEST 2017 Sat Jul 22 04:55:15 AEST 2017 : org.apache.commons.math.stat.descriptive.summary.Sum,59=>Find no block
+Sat Jul 22 04:55:15 AEST 2017 Sat Jul 22 04:55:15 AEST 2017 : org.apache.commons.math.stat.descriptive.moment.Variance,75=>Find no block
+Sat Jul 22 04:55:15 AEST 2017 Sat Jul 22 04:55:15 AEST 2017 : org.apache.commons.math.stat.descriptive.moment.Variance,84=>Find no block
+Sat Jul 22 04:55:15 AEST 2017 Sat Jul 22 04:55:15 AEST 2017 : org.apache.commons.math.stat.descriptive.moment.Variance,91=>Find no block
+Sat Jul 22 04:55:16 AEST 2017 org.apache.commons.math.util.FastMath,375
+Sat Jul 22 05:02:39 AEST 2017 org.apache.commons.math.stat.descriptive.moment.SecondMoment,60
+Sat Jul 22 05:03:45 AEST 2017 org.apache.commons.math.stat.descriptive.moment.SecondMoment,61=>filtered
+Sat Jul 22 05:03:45 AEST 2017 Sat Jul 22 05:03:45 AEST 2017 : org.apache.commons.math.stat.descriptive.moment.SecondMoment,62=>Find no block
+Sat Jul 22 05:03:45 AEST 2017 Sat Jul 22 05:03:45 AEST 2017 : org.apache.commons.math.stat.descriptive.moment.FirstMoment,79=>Find no block
+Sat Jul 22 05:03:46 AEST 2017 org.apache.commons.math.stat.descriptive.moment.FirstMoment,80
+Sat Jul 22 05:11:08 AEST 2017 org.apache.commons.math.stat.descriptive.moment.FirstMoment,81=>filtered
+Sat Jul 22 05:11:08 AEST 2017 org.apache.commons.math.stat.descriptive.moment.FirstMoment,82=>filtered
+Sat Jul 22 05:11:09 AEST 2017 org.apache.commons.math.stat.descriptive.moment.FirstMoment,83=>filtered
+Sat Jul 22 05:11:09 AEST 2017 Sat Jul 22 05:11:09 AEST 2017 : org.apache.commons.math.stat.descriptive.moment.FirstMoment,84=>Find no block
+Failed time : 17/07/22 05:11
+=================================================
+Project : math_75	start : 17/07/22 05:11
+TIMEOUT : 5 h 0 m (18000000)
+Sat Jul 22 05:11:11 AEST 2017 org.apache.commons.math.stat.Frequency,303
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return getPct((Comparable<?>)v);
+
+Time : 17/07/22 05:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/similar-fix/d4j/projects/math/math_75_buggy/src/main/java/org/apache/commons/math/stat/Frequency.java=>303,303]
+return getPct((Comparable<?>)v);
+
+Time : 17/07/22 05:12
+----------------------------------------
+Sat Jul 22 05:13:55 AEST 2017 org.apache.commons.math.stat.Frequency,342
+Sat Jul 22 05:14:23 AEST 2017 org.apache.commons.math.stat.Frequency,331
+Sat Jul 22 05:14:43 AEST 2017 org.apache.commons.math.stat.Frequency,386
+Sat Jul 22 05:15:29 AEST 2017 org.apache.commons.math.stat.Frequency,444
+Sat Jul 22 05:16:27 AEST 2017 org.apache.commons.math.stat.Frequency,177
+Sat Jul 22 05:16:59 AEST 2017 Sat Jul 22 05:16:59 AEST 2017 : org.apache.commons.math.stat.Frequency,178=>Find no block
+Sat Jul 22 05:16:59 AEST 2017 org.apache.commons.math.stat.Frequency,320
+Sat Jul 22 05:17:40 AEST 2017 org.apache.commons.math.stat.Frequency,408
+Sat Jul 22 05:20:29 AEST 2017 Sat Jul 22 05:20:29 AEST 2017 : org.apache.commons.math.stat.Frequency$NaturalComparator,541=>Find no block
+Sat Jul 22 05:20:29 AEST 2017 Sat Jul 22 05:20:29 AEST 2017 : org.apache.commons.math.stat.Frequency$NaturalComparator,561=>Find no block
+Sat Jul 22 05:20:29 AEST 2017 org.apache.commons.math.stat.Frequency,142
+Sat Jul 22 05:22:24 AEST 2017 org.apache.commons.math.stat.Frequency,218
+Sat Jul 22 05:25:28 AEST 2017 org.apache.commons.math.stat.Frequency,251
+Sat Jul 22 05:26:32 AEST 2017 org.apache.commons.math.stat.Frequency,316=>filtered
+Sat Jul 22 05:26:32 AEST 2017 org.apache.commons.math.stat.Frequency,317=>filtered
+Sat Jul 22 05:26:32 AEST 2017 org.apache.commons.math.stat.Frequency,385=>filtered
+Sat Jul 22 05:26:32 AEST 2017 org.apache.commons.math.stat.Frequency,388
+Sat Jul 22 05:28:13 AEST 2017 org.apache.commons.math.stat.Frequency,389
+Sat Jul 22 05:28:48 AEST 2017 org.apache.commons.math.stat.Frequency,390
+Sat Jul 22 05:29:22 AEST 2017 org.apache.commons.math.stat.Frequency,392
+Sat Jul 22 05:31:59 AEST 2017 org.apache.commons.math.stat.Frequency,395
+Sat Jul 22 05:34:14 AEST 2017 org.apache.commons.math.stat.Frequency,396
+Sat Jul 22 05:35:29 AEST 2017 org.apache.commons.math.stat.Frequency,397
+Sat Jul 22 05:36:45 AEST 2017 Sat Jul 22 05:36:45 AEST 2017 : org.apache.commons.math.stat.Frequency,401=>Find no block
+Sat Jul 22 05:36:45 AEST 2017 org.apache.commons.math.stat.Frequency,403
+Sat Jul 22 05:39:25 AEST 2017 org.apache.commons.math.stat.Frequency,407
+Sat Jul 22 05:42:12 AEST 2017 org.apache.commons.math.stat.Frequency,495
+Sat Jul 22 05:42:54 AEST 2017 Sat Jul 22 05:42:54 AEST 2017 : org.apache.commons.math.stat.Frequency,159=>Find no block
+Sat Jul 22 05:42:54 AEST 2017 org.apache.commons.math.stat.Frequency,215
+Sat Jul 22 05:53:23 AEST 2017 org.apache.commons.math.stat.Frequency,216
+Sat Jul 22 06:02:29 AEST 2017 org.apache.commons.math.stat.Frequency,217=>filtered
+Sat Jul 22 06:02:29 AEST 2017 org.apache.commons.math.stat.Frequency,220
+Sat Jul 22 06:11:31 AEST 2017 org.apache.commons.math.stat.Frequency,244
+Sat Jul 22 06:12:19 AEST 2017 org.apache.commons.math.stat.Frequency,247
+Sat Jul 22 06:14:41 AEST 2017 org.apache.commons.math.stat.Frequency,249
+Sat Jul 22 06:17:22 AEST 2017 org.apache.commons.math.stat.Frequency,250=>filtered
+Sat Jul 22 06:17:22 AEST 2017 Sat Jul 22 06:17:22 AEST 2017 : org.apache.commons.math.stat.Frequency,255=>Find no block
+Sat Jul 22 06:17:22 AEST 2017 org.apache.commons.math.stat.Frequency,256
+Sat Jul 22 06:19:43 AEST 2017 org.apache.commons.math.stat.Frequency,382
+Sat Jul 22 06:19:56 AEST 2017 org.apache.commons.math.stat.Frequency,491=>filtered
+Sat Jul 22 06:19:56 AEST 2017 org.apache.commons.math.stat.Frequency,492=>filtered
+Sat Jul 22 06:19:56 AEST 2017 org.apache.commons.math.stat.Frequency,133
+Sat Jul 22 06:21:35 AEST 2017 org.apache.commons.math.stat.Frequency,134
+Sat Jul 22 06:23:04 AEST 2017 org.apache.commons.math.stat.Frequency,138
+Sat Jul 22 06:25:29 AEST 2017 org.apache.commons.math.stat.Frequency,139=>filtered
+Sat Jul 22 06:25:29 AEST 2017 org.apache.commons.math.stat.Frequency,140=>filtered
+Sat Jul 22 06:25:29 AEST 2017 Sat Jul 22 06:25:29 AEST 2017 : org.apache.commons.math.stat.Frequency,149=>Find no block
+Sat Jul 22 06:25:29 AEST 2017 Sat Jul 22 06:25:29 AEST 2017 : org.apache.commons.math.stat.Frequency,150=>Find no block
+Sat Jul 22 06:25:30 AEST 2017 org.apache.commons.math.stat.Frequency,158
+Sat Jul 22 06:26:06 AEST 2017 Sat Jul 22 06:26:06 AEST 2017 : org.apache.commons.math.stat.Frequency,59=>Find no block
+Sat Jul 22 06:26:06 AEST 2017 org.apache.commons.math.stat.Frequency,60
+Sat Jul 22 06:26:25 AEST 2017 Sat Jul 22 06:26:25 AEST 2017 : org.apache.commons.math.stat.Frequency,61=>Find no block
+Sat Jul 22 06:26:26 AEST 2017 Sat Jul 22 06:26:26 AEST 2017 : org.apache.commons.math.stat.Frequency,69=>Find no block
+Sat Jul 22 06:26:26 AEST 2017 org.apache.commons.math.stat.Frequency,70
+Sat Jul 22 06:26:57 AEST 2017 Sat Jul 22 06:26:57 AEST 2017 : org.apache.commons.math.stat.Frequency,71=>Find no block
+Sat Jul 22 06:26:57 AEST 2017 org.apache.commons.math.stat.Frequency,81
+Sat Jul 22 06:29:45 AEST 2017 org.apache.commons.math.stat.Frequency,82=>filtered
+Sat Jul 22 06:29:45 AEST 2017 org.apache.commons.math.stat.Frequency,83=>filtered
+Sat Jul 22 06:29:45 AEST 2017 org.apache.commons.math.stat.Frequency,84
+Sat Jul 22 06:35:48 AEST 2017 org.apache.commons.math.stat.Frequency,85
+Sat Jul 22 06:43:01 AEST 2017 org.apache.commons.math.stat.Frequency,86
+Sat Jul 22 06:51:50 AEST 2017 org.apache.commons.math.stat.Frequency,87
+Sat Jul 22 07:00:37 AEST 2017 org.apache.commons.math.stat.Frequency,88
+Sat Jul 22 07:08:55 AEST 2017 org.apache.commons.math.stat.Frequency,89
+Sat Jul 22 07:19:03 AEST 2017 org.apache.commons.math.stat.Frequency,90
+Sat Jul 22 07:28:24 AEST 2017 org.apache.commons.math.stat.Frequency,91
+Sat Jul 22 07:38:43 AEST 2017 org.apache.commons.math.stat.Frequency,92
+Sat Jul 22 07:49:19 AEST 2017 org.apache.commons.math.stat.Frequency,93
+Sat Jul 22 07:54:34 AEST 2017 org.apache.commons.math.stat.Frequency,94
+Sat Jul 22 07:59:49 AEST 2017 Sat Jul 22 07:59:49 AEST 2017 : org.apache.commons.math.stat.Frequency,95=>Find no block
+Sat Jul 22 07:59:49 AEST 2017 org.apache.commons.math.stat.Frequency,96
+Sat Jul 22 08:06:42 AEST 2017 org.apache.commons.math.stat.Frequency,113
+Sat Jul 22 08:13:21 AEST 2017 org.apache.commons.math.stat.Frequency,114=>filtered
+Sat Jul 22 08:13:21 AEST 2017 org.apache.commons.math.stat.Frequency,116=>filtered
+Sat Jul 22 08:13:22 AEST 2017 Sat Jul 22 08:13:22 AEST 2017 : org.apache.commons.math.stat.Frequency,120=>Find no block
+Sat Jul 22 08:13:22 AEST 2017 org.apache.commons.math.stat.Frequency,135
+Sat Jul 22 08:14:49 AEST 2017 Sat Jul 22 08:14:49 AEST 2017 : org.apache.commons.math.stat.Frequency,144=>Find no block
+Sat Jul 22 08:14:49 AEST 2017 org.apache.commons.math.stat.Frequency,146
+Sat Jul 22 08:17:29 AEST 2017 org.apache.commons.math.stat.Frequency,168
+Sat Jul 22 08:18:12 AEST 2017 Sat Jul 22 08:18:12 AEST 2017 : org.apache.commons.math.stat.Frequency,169=>Find no block
+Sat Jul 22 08:18:12 AEST 2017 org.apache.commons.math.stat.Frequency,186
+Sat Jul 22 08:18:48 AEST 2017 Sat Jul 22 08:18:48 AEST 2017 : org.apache.commons.math.stat.Frequency,187=>Find no block
+Sat Jul 22 08:18:49 AEST 2017 org.apache.commons.math.stat.Frequency,191
+Sat Jul 22 08:19:59 AEST 2017 Sat Jul 22 08:19:59 AEST 2017 : org.apache.commons.math.stat.Frequency,192=>Find no block
+Sat Jul 22 08:19:59 AEST 2017 org.apache.commons.math.stat.Frequency,204
+Sat Jul 22 08:20:13 AEST 2017 org.apache.commons.math.stat.Frequency,233
+Sat Jul 22 08:22:32 AEST 2017 org.apache.commons.math.stat.Frequency,245
+Sat Jul 22 08:23:20 AEST 2017 Sat Jul 22 08:23:20 AEST 2017 : org.apache.commons.math.stat.Frequency,253=>Find no block
+Sat Jul 22 08:23:20 AEST 2017 org.apache.commons.math.stat.Frequency,266
+Sat Jul 22 08:24:14 AEST 2017 org.apache.commons.math.stat.Frequency,276
+Sat Jul 22 08:25:14 AEST 2017 org.apache.commons.math.stat.Frequency,286
+Sat Jul 22 08:26:10 AEST 2017 org.apache.commons.math.stat.Frequency,318=>filtered
+Sat Jul 22 08:26:10 AEST 2017 org.apache.commons.math.stat.Frequency,353
+Sat Jul 22 08:26:36 AEST 2017 org.apache.commons.math.stat.Frequency,369
+Sat Jul 22 08:28:56 AEST 2017 org.apache.commons.math.stat.Frequency,383
+Sat Jul 22 08:29:09 AEST 2017 Sat Jul 22 08:29:09 AEST 2017 : org.apache.commons.math.stat.Frequency,399=>Find no block
+Sat Jul 22 08:29:09 AEST 2017 org.apache.commons.math.stat.Frequency,400
+Sat Jul 22 08:32:35 AEST 2017 org.apache.commons.math.stat.Frequency,404
+Sat Jul 22 08:35:12 AEST 2017 org.apache.commons.math.stat.Frequency,411
+Success time : 17/07/22 08:39
+=================================================
+Project : closure_57	start : 17/07/22 08:39
+TIMEOUT : 5 h 0 m (18000000)
+Sat Jul 22 08:39:58 AEST 2017 com.google.javascript.jscomp.ClosureCodingConvention,185
+Sat Jul 22 08:47:08 AEST 2017 com.google.javascript.jscomp.ClosureCodingConvention,192
+Sat Jul 22 09:38:36 AEST 2017 com.google.javascript.jscomp.ClosureCodingConvention,193=>filtered
+Sat Jul 22 09:38:36 AEST 2017 com.google.javascript.jscomp.ClosureCodingConvention,194=>filtered
+Sat Jul 22 09:38:36 AEST 2017 com.google.javascript.jscomp.ClosureCodingConvention,195=>filtered
+Sat Jul 22 09:38:36 AEST 2017 com.google.javascript.jscomp.ClosureCodingConvention,196=>filtered
+Sat Jul 22 09:38:36 AEST 2017 com.google.javascript.jscomp.ClosureCodingConvention,197=>filtered
+Sat Jul 22 09:38:36 AEST 2017 com.google.javascript.jscomp.ClosureCodingConvention,198=>filtered
+Sat Jul 22 09:38:36 AEST 2017 com.google.javascript.jscomp.ClosureCodingConvention,190
+Sat Jul 22 10:22:50 AEST 2017 com.google.javascript.jscomp.ClosureCodingConvention,191=>filtered
+Sat Jul 22 10:22:51 AEST 2017 com.google.javascript.jscomp.ClosureCodingConvention,203
