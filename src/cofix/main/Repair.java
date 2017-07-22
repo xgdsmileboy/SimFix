@@ -166,6 +166,7 @@ public class Repair {
 		int correct = 0;
 		Set<String> haveTryBuggySourceCode = new HashSet<>();
 		Status status = Status.FAILED;
+		Set<String> patches = new HashSet<>();
 		for(Pair<String, Integer> loc : locations){
 			_subject.restore();
 			System.out.println(loc.getFirst() + "," + loc.getSecond());
@@ -286,6 +287,11 @@ public class Repair {
 								haveTryPatches.remove(replace);
 								break;
 							case SUCCESS:
+								String correctPatch = oneBuggyBlock.toSrcString().toString().replace("\\s*|\t|\r|\n", "");
+								if(patches.contains(correctPatch)){
+									continue;
+								}
+								patches.add(correctPatch);
 								correct ++;
 								dumpPatch("Find a patch", file, range, oneBuggyBlock.toSrcString().toString());
 								String target = Constant.HOME + "/patch/" + _subject.getName() + "/" + _subject.getId();
@@ -296,7 +302,7 @@ public class Repair {
 								File sourceFile = new File(file);
 								FileUtils.copyFile(sourceFile, new File(target + "/" + correct + "_" + sourceFile.getName()));
 								status = Status.SUCCESS;
-								if(correct == 3){
+								if(correct == 1){
 									return Status.SUCCESS;
 								}
 							case TEST_FAILED:

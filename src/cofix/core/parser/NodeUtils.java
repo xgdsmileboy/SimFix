@@ -40,10 +40,6 @@ import org.eclipse.jdt.core.dom.VariableDeclarationStatement;
 import org.eclipse.jdt.core.dom.WhileStatement;
 import org.eclipse.jdt.core.dom.WildcardType;
 
-import com.sun.jmx.trace.Trace;
-import com.sun.org.apache.bcel.internal.generic.StackInstruction;
-import com.sun.org.apache.xpath.internal.operations.Mod;
-
 import cofix.common.util.JavaFile;
 import cofix.common.util.Pair;
 import cofix.core.metric.Variable;
@@ -53,6 +49,7 @@ import cofix.core.modify.Modification;
 import cofix.core.modify.Revision;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.Node.TYPE;
+import cofix.core.parser.node.expr.Assign;
 import cofix.core.parser.node.expr.ConditionalExpr;
 import cofix.core.parser.node.expr.Expr;
 import cofix.core.parser.node.expr.QName;
@@ -553,8 +550,15 @@ public class NodeUtils {
 				if(!matched){
 					if(!allUsableVariables.containsKey(name)){
 						Expr expr = sName.getDirectDependency();
+						Node sNameParent = sName.getParent();
+						boolean isDependencyExpr = false;
+						if(sNameParent instanceof Assign){
+							if(sName == ((Assign)sNameParent).getLhs()){
+								isDependencyExpr = true;
+							}
+						}
 						boolean canUse = false;
-						if(expr != null){
+						if(expr != null && !isDependencyExpr){
 							sName.setDirectDependency(null);
 							Map<SName, Pair<String, String>> tryReplace = tryReplaceAllVariables(expr, varTrans, allUsableVariables);
 							sName.setDirectDependency(expr);
