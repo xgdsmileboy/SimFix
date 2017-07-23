@@ -20,8 +20,14 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
+import javax.jws.WebParam.Mode;
+
 import org.apache.commons.io.FileUtils;
+import org.eclipse.jdt.core.dom.ASTNode;
+import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.CompilationUnit;
+import org.eclipse.jdt.core.dom.FieldAccess;
+import org.eclipse.jdt.core.dom.Name;
 import org.eclipse.jdt.core.dom.Type;
 import org.eclipse.jdt.internal.core.SourceField;
 import org.junit.runner.Result;
@@ -365,7 +371,10 @@ public class Repair {
 			for(int j = i+1; j < revisions.size(); j++){
 				Modification other = revisions.get(j);
 				if(modification.compatible(other) && modification.getTargetString().equals(other.getTargetString())){
-					consistant.add(other);
+					ASTNode node = JavaFile.genASTFromSource(modification.getTargetString(), ASTParser.K_EXPRESSION);
+					if(node instanceof Name || node instanceof FieldAccess){
+						consistant.add(other);
+					}
 				}
 			}
 			if(consistant.size() > 0){
