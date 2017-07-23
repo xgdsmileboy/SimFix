@@ -141,7 +141,7 @@ public class CodeBlockMatcher {
 						}
 					}
 					if(nextMatchIndex == -1){
-						int last = bNodes.size() - 1;
+						int last = nextMatchIndex;
 						for(; last >= 0; last --){
 							Node node = bNodes.get(last);
 							if(!(node instanceof ReturnStmt) && !(node instanceof ThrowStmt) && !(node instanceof BreakStmt) && !(node instanceof ContinueStmt)){

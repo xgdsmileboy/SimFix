@@ -54,6 +54,10 @@ import cofix.core.parser.node.expr.ConditionalExpr;
 import cofix.core.parser.node.expr.Expr;
 import cofix.core.parser.node.expr.QName;
 import cofix.core.parser.node.expr.SName;
+import cofix.core.parser.node.stmt.BreakStmt;
+import cofix.core.parser.node.stmt.ContinueStmt;
+import cofix.core.parser.node.stmt.ReturnStmt;
+import cofix.core.parser.node.stmt.ThrowStmt;
 
 /**
  * @author Jiajun
@@ -454,6 +458,7 @@ public class NodeUtils {
 		for (int i = 0; i < otherLen; i++) {
 			record[i] = -1;
 		}
+		boolean existMatchNode = false;
 		for (int i = 0; i < srcNodeList.size(); i++) {
 			boolean findMatching = false;
 			for(int j = 0; j < otherLen; j++){
@@ -462,6 +467,7 @@ public class NodeUtils {
 				}
 				List<Modification> tmp = new ArrayList<>();
 				if(srcNodeList.get(i).match(tarNodeList.get(j), varTrans, allUsableVariables, tmp)){
+					existMatchNode = true;
 					record[j] = i;
 					findMatching = true;
 					modifications.addAll(tmp);
@@ -476,37 +482,47 @@ public class NodeUtils {
 		StringBuffer stringBuffer = new StringBuffer();
 		int shouldIns = 1000;
 		int insertCount = 0;
-		for(int i = 0; i < otherLen; i++){
-			if(record[i] == -1){
-				int index = 0;
-				for(int j = i + 1; j < otherLen; j ++){
-					if (record[j] != -1) {
-						index = record[j];
-						break;
+		if(existMatchNode){
+			for(int i = 0; i < otherLen; i++){
+				if(record[i] == -1){
+					int index = 0;
+					for(int j = i + 1; j < otherLen; j ++){
+						if (record[j] != -1) {
+							index = record[j];
+							break;
+						}
 					}
-				}
-				if(index != -1){
-					Node inset = tarNodeList.get(i);
-					String tarString = inset.simplify(varTrans, allUsableVariables);
-					if(tarString != null){
-						insertCount ++;
-						stringBuffer.append(tarString + "\n");
-						shouldIns = shouldIns > index ? index : shouldIns;
-						for(int k = 0; k <= index; k ++){
-							Insertion insertion = new Insertion(currNode, k, tarString, nodeType);
+					if(index != -1){
+						int last = index;
+						for(; last >= 0; last --){
+							Node node = tarNodeList.get(last);
+							if(!(node instanceof ReturnStmt) && !(node instanceof ThrowStmt) && !(node instanceof BreakStmt) && !(node instanceof ContinueStmt)){
+								List<Variable> bVariables = node.getVariables();
+								List<Variable> sVariables = node.getVariables();
+								boolean dependency = false;
+								for(Variable variable : sVariables){
+									if(bVariables.contains(variable)){
+										dependency = true;
+										break;
+									}
+								}
+								if(!dependency){
+									break;
+								}
+							}
+						}
+						index = last >= 0 ? last : 0;
+							
+						Node inset = tarNodeList.get(i);
+						String tarString = inset.simplify(varTrans, allUsableVariables);
+						if(tarString != null){
+							insertCount ++;
+							stringBuffer.append(tarString + "\n");
+							shouldIns = shouldIns > index ? index : shouldIns;
+							Insertion insertion = new Insertion(currNode, index, tarString, nodeType);
 							modifications.add(insertion);
 						}
 					}
-//					Map<SName, Pair<String, String>> revision = NodeUtils.tryReplaceAllVariables(inset, varTrans, allUsableVariables);
-//					if(revision != null){
-//						NodeUtils.replaceVariable(revision);
-//						String target = inset.toSrcString().toString();
-//						stringBuffer.append(target + "\n");
-//						shouldIns = shouldIns > index ? index : shouldIns;
-//						Insertion insertion = new Insertion(currNode, index, target, nodeType);
-//						modifications.add(insertion);
-//						NodeUtils.restoreVariables(revision);
-//					}
 				}
 			}
 		}
