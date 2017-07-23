@@ -101,7 +101,7 @@ public class Main {
 //		closureID.add(73);
 		subjects.put("closure", closureID);
 		Set<Integer> langID = new HashSet<>();
-		langID.add(33);
+//		langID.add(33);
 //		langID.add(35); // need split
 //		langID.add(39);
 //		langID.add(43);
@@ -112,7 +112,7 @@ public class Main {
 //		mathID.add(5); //OK
 //		mathID.add(33); //OK
 //		mathID.add(35); // need split
-//		mathID.add(41);
+		mathID.add(41);
 //		mathID.add(49); // need split
 //		mathID.add(53); //OK
 //		mathID.add(59); //OK

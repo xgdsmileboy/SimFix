@@ -499,12 +499,18 @@ public class NodeUtils {
 						}
 					}
 					if(index != -1){
+						Node insert = tarNodeList.get(i);
+						if(insert instanceof ReturnStmt || insert instanceof ThrowStmt || insert instanceof BreakStmt || insert instanceof ContinueStmt){
+							if(index != srcNodeList.size() - 1){
+								continue;
+							}
+						}
 						int last = index;
 						for(; last >= 0; last --){
-							Node node = tarNodeList.get(last);
+							Node node = srcNodeList.get(last);
 							if(!(node instanceof ReturnStmt) && !(node instanceof ThrowStmt) && !(node instanceof BreakStmt) && !(node instanceof ContinueStmt)){
 								List<Variable> bVariables = node.getVariables();
-								List<Variable> sVariables = node.getVariables();
+								List<Variable> sVariables = insert.getVariables();
 								boolean dependency = false;
 								for(Variable variable : sVariables){
 									if(bVariables.contains(variable)){
@@ -519,8 +525,7 @@ public class NodeUtils {
 						}
 						index = last >= 0 ? last : 0;
 							
-						Node inset = tarNodeList.get(i);
-						String tarString = inset.simplify(varTrans, allUsableVariables);
+						String tarString = insert.simplify(varTrans, allUsableVariables);
 						if(tarString != null){
 							insertCount ++;
 							stringBuffer.append(tarString + "\n");
