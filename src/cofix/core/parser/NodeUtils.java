@@ -50,8 +50,11 @@ import cofix.core.modify.Revision;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.Node.TYPE;
 import cofix.core.parser.node.expr.Assign;
+import cofix.core.parser.node.expr.BoolLiteral;
+import cofix.core.parser.node.expr.CharLiteral;
 import cofix.core.parser.node.expr.ConditionalExpr;
 import cofix.core.parser.node.expr.Expr;
+import cofix.core.parser.node.expr.NumLiteral;
 import cofix.core.parser.node.expr.QName;
 import cofix.core.parser.node.expr.SName;
 import cofix.core.parser.node.stmt.BreakStmt;
@@ -185,6 +188,9 @@ public class NodeUtils {
 			for(int i = 0; i < srcArg.size(); i++){
 				Expr sExpr = srcArg.get(i);
 				Expr tExpr = tarArgs.get(i);
+				if(sExpr instanceof BoolLiteral || sExpr instanceof NumLiteral || sExpr instanceof CharLiteral){
+					continue;
+				}
 				String sString = sExpr.toSrcString().toString();
 				String tString = tExpr.toSrcString().toString();
 				if(sString.equals(tString)){
@@ -493,12 +499,18 @@ public class NodeUtils {
 						}
 					}
 					if(index != -1){
+						Node insert = tarNodeList.get(i);
+						if(insert instanceof ReturnStmt || insert instanceof ThrowStmt || insert instanceof BreakStmt || insert instanceof ContinueStmt){
+							if(index != srcNodeList.size() - 1){
+								continue;
+							}
+						}
 						int last = index;
 						for(; last >= 0; last --){
-							Node node = tarNodeList.get(last);
+							Node node = srcNodeList.get(last);
 							if(!(node instanceof ReturnStmt) && !(node instanceof ThrowStmt) && !(node instanceof BreakStmt) && !(node instanceof ContinueStmt)){
 								List<Variable> bVariables = node.getVariables();
-								List<Variable> sVariables = node.getVariables();
+								List<Variable> sVariables = insert.getVariables();
 								boolean dependency = false;
 								for(Variable variable : sVariables){
 									if(bVariables.contains(variable)){
@@ -513,8 +525,7 @@ public class NodeUtils {
 						}
 						index = last >= 0 ? last : 0;
 							
-						Node inset = tarNodeList.get(i);
-						String tarString = inset.simplify(varTrans, allUsableVariables);
+						String tarString = insert.simplify(varTrans, allUsableVariables);
 						if(tarString != null){
 							insertCount ++;
 							stringBuffer.append(tarString + "\n");
