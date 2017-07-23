@@ -18,6 +18,7 @@ import org.eclipse.jdt.core.dom.Type;
 import com.gzoltar.core.components.Method;
 import com.sun.org.apache.xalan.internal.xsltc.compiler.NodeTest;
 import com.sun.org.apache.xpath.internal.SourceTreeManager;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 
 import cofix.common.util.Pair;
 import cofix.core.metric.MethodCall;
@@ -27,6 +28,7 @@ import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Deletion;
 import cofix.core.modify.Insertion;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.node.Node;
@@ -179,7 +181,26 @@ public class CodeBlockMatcher {
 //			}
 //		}
 		
-		return modifications;
+		// revision first
+		List<Modification> revisions = new LinkedList<>();
+		List<Modification> insertions = new LinkedList<>();
+		List<Modification> deletions = new LinkedList<>();
+		for(Modification modification : modifications){
+			if(modification instanceof Revision){
+				revisions.add(modification);
+			} else if(modification instanceof Insertion){
+				insertions.add(modification);
+			} else {
+				deletions.add(modification);
+			}
+		}
+		
+		List<Modification> finalModifications = new ArrayList<>(modifications.size());
+		finalModifications.addAll(insertions);
+		finalModifications.addAll(insertions);
+		finalModifications.addAll(deletions);
+		
+		return finalModifications;
 	}
 	
 	private static Map<String, String> matchVariables(CodeBlock buggyBlock, CodeBlock similarBlock){

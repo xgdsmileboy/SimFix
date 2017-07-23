@@ -96,21 +96,22 @@ public class InfixExpr extends Expr {
 			
 			boolean matchLeft = false;
 			boolean matchRight = false;
+			List<Modification> subStructureModifications = new LinkedList<>();
 			// replace left hand side
-			List<Modification> tmp = new ArrayList<>();
+			List<Modification> tmp = new LinkedList<>();
 			if(compatible){
 				if(!other._lhs.toSrcString().toString().equals(_rhs.toSrcString().toString())){
 					if(other._lhs instanceof NumLiteral){
 						if(_lhs instanceof NumLiteral){
 							if(NodeUtils.replaceExpr(LHSID, _lhs, other._lhs, varTrans, allUsableVariables, tmp)){
 								matchLeft = true;
-								modifications.addAll(tmp);
+								subStructureModifications.addAll(tmp);
 							}
 						}
 					} else {
 						if(NodeUtils.replaceExpr(LHSID, _lhs, other._lhs, varTrans, allUsableVariables, tmp)){
 							matchLeft = true;
-							modifications.addAll(tmp);
+							subStructureModifications.addAll(tmp);
 						}
 					}
 				} else {
@@ -122,13 +123,13 @@ public class InfixExpr extends Expr {
 						if(_rhs instanceof NumLiteral){
 							if(NodeUtils.replaceExpr(RHSID, _rhs, other._rhs, varTrans, allUsableVariables, tmp)){
 								matchRight = true;
-								modifications.addAll(tmp);
+								subStructureModifications.addAll(tmp);
 							}
 						}
 					} else {
 						if(NodeUtils.replaceExpr(RHSID, _rhs, other._rhs, varTrans, allUsableVariables, tmp)){
 							matchRight = true;
-							modifications.addAll(tmp);
+							subStructureModifications.addAll(tmp);
 						}
 					}
 				} else {
@@ -143,12 +144,12 @@ public class InfixExpr extends Expr {
 			
 			tmp = new ArrayList<>();
 			if(_lhs.match(other._lhs, varTrans, allUsableVariables, tmp)){
-				modifications.addAll(tmp);
+				subStructureModifications.addAll(tmp);
 			}
 			
 			tmp = new ArrayList<>();
 			if(_rhs.match(other._rhs, varTrans, allUsableVariables, tmp)){
-				modifications.addAll(tmp);
+				subStructureModifications.addAll(tmp);
 			}
 			
 			String tarString = other.simplify(varTrans, allUsableVariables);
@@ -161,6 +162,7 @@ public class InfixExpr extends Expr {
 					}
 				}
 			}
+			modifications.addAll(subStructureModifications);
 			
 		} else {
 			List<Node> children = node.getChildren();

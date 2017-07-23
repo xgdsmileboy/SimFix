@@ -72,10 +72,10 @@ public class ManualLocator extends AbstractFaultlocalization {
 		// need to split test case
 		// first one : triggered by
 		// String[] sa = ArrayUtils.add(stringArray, aString);
-//		_faultLocMap.put("lang_35", new Pair<String, Integer>("org.apache.commons.lang3.ArrayUtils", 3292));
+		_faultLocMap.put("lang_35", new Pair<String, Integer>("org.apache.commons.lang3.ArrayUtils", 3292));
 		// second one : triggered by
 		// String[] sa = ArrayUtils.add(stringArray, 0, aString);
-		_faultLocMap.put("lang_35", new Pair<String, Integer>("org.apache.commons.lang3.ArrayUtils", 3575));
+//		_faultLocMap.put("lang_35", new Pair<String, Integer>("org.apache.commons.lang3.ArrayUtils", 3575));
 		_failedTestMap.put("lang_35", "org.apache.commons.lang3.ArrayUtilsAddTest::testLANG571");
 		
 		_faultLocMap.put("lang_39", new Pair<String, Integer>("org.apache.commons.lang3.StringUtils", 3675));
@@ -93,10 +93,10 @@ public class ManualLocator extends AbstractFaultlocalization {
 		// need to split test case
 		// first one: triggered by
 		// assertFalse( "The contains(char) method is looking beyond the end of the string", sb.contains('h'));
-//		_faultLocMap.put("lang_60", new Pair<String, Integer>("org.apache.commons.lang.text.StrBuilder", 1673));
+		_faultLocMap.put("lang_60", new Pair<String, Integer>("org.apache.commons.lang.text.StrBuilder", 1673));
 		// second one: triggered by 
 		// assertEquals( "The indexOf(char) method is looking beyond the end of the string", -1, sb.indexOf('h'));
-		_faultLocMap.put("lang_60", new Pair<String, Integer>("org.apache.commons.lang.text.StrBuilder", 1730));
+//		_faultLocMap.put("lang_60", new Pair<String, Integer>("org.apache.commons.lang.text.StrBuilder", 1730));
 		_failedTestMap.put("lang_60", "org.apache.commons.lang.text.StrBuilderTest::testLang295");
 		
 		/**================================================================================================================*/
@@ -156,11 +156,11 @@ public class ManualLocator extends AbstractFaultlocalization {
 		_failedTestMap.put("math_71", "org.apache.commons.math.ode.nonstiff.DormandPrince853IntegratorTest::testMissedEndEvent");
 		
 		// triggered by test case:
-		// assertEquals(Math.PI, result, solver.getAbsoluteAccuracy());
-		_faultLocMap.put("math_72", new Pair<String, Integer>("org.apache.commons.math.analysis.solvers.BrentSolver", 115));
+		// result = solver.solve(f, Math.PI, 4, 3.5);
+//		_faultLocMap.put("math_72", new Pair<String, Integer>("org.apache.commons.math.analysis.solvers.BrentSolver", 115));
 		// triggered by Test case:
-		// assertEquals(Math.PI, result, solver.getAbsoluteAccuracy());
-//		_faultLocMap.put("math_72", new Pair<String, Integer>("org.apache.commons.math.analysis.solvers.BrentSolver", 127));
+		// result = solver.solve(f, 3, Math.PI, 3.07);
+		_faultLocMap.put("math_72", new Pair<String, Integer>("org.apache.commons.math.analysis.solvers.BrentSolver", 127));
 		_failedTestMap.put("math_72", "org.apache.commons.math.analysis.solvers.BrentSolverTest::testRootEndpoints");
 		
 		_faultLocMap.put("math_75", new Pair<String, Integer>("org.apache.commons.math.stat.Frequency", 303));

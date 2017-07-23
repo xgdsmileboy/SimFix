@@ -27,6 +27,7 @@ import org.eclipse.jdt.internal.core.SourceField;
 import org.junit.runner.Result;
 
 import com.sun.org.apache.bcel.internal.classfile.SourceFile;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 
 import cofix.common.config.Constant;
 import cofix.common.inst.Instrument;
@@ -43,6 +44,7 @@ import cofix.common.util.Status;
 import cofix.common.util.Subject;
 import cofix.core.match.CodeBlockMatcher;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.node.Node;
@@ -222,6 +224,7 @@ public class Repair {
 					Map<String, Set<Node>> already = new HashMap<>();
 					// try each transformation first
 					List<Set<Modification>> list = new ArrayList<>();
+					list.addAll(consistantModification(modifications));
 					for(Modification modification : modifications){
 						String modify = modification.toString();
 						Set<Node> tested = already.get(modify);
@@ -302,9 +305,10 @@ public class Repair {
 								File sourceFile = new File(file);
 								FileUtils.copyFile(sourceFile, new File(target + "/" + correct + "_" + sourceFile.getName()));
 								status = Status.SUCCESS;
-								if(correct == 1){
+								if(correct == 3){
 									return Status.SUCCESS;
 								}
+								break; //remove passed revision
 							case TEST_FAILED:
 								if(legalModifications != null){
 									for(Modification modification : modifySet){
@@ -344,6 +348,33 @@ public class Repair {
 		JavaFile.writeStringToFile("result.log", stringBuffer.toString(), true);
 	}
 	
+	
+	private List<Set<Modification>> consistantModification(List<Modification> modifications){
+		List<Set<Modification>> result = new LinkedList<>();
+		List<Modification> revisions = new ArrayList<>();
+		for(Modification modification : modifications){
+			if(modification instanceof Revision){
+				revisions.add(modification);
+			}
+		}
+		
+		for(int i = 0; i < revisions.size(); i++){
+			Set<Modification> consistant = new HashSet<>();
+			Modification modification = revisions.get(i);
+			consistant.add(modification);
+			for(int j = i+1; j < revisions.size(); j++){
+				Modification other = revisions.get(j);
+				if(modification.compatible(other) && modification.getTargetString().equals(other.getTargetString())){
+					consistant.add(other);
+				}
+			}
+			if(consistant.size() > 0){
+				result.add(consistant);
+			}
+		}
+		
+		return result;
+	}
 	private List<Set<Modification>> combineModification(List<Modification> modifications){
 		List<Set<Modification>> list = new ArrayList<>();
 		int length = modifications.size();
