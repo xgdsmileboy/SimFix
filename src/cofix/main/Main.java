@@ -101,10 +101,10 @@ public class Main {
 //		closureID.add(73);
 		subjects.put("closure", closureID);
 		Set<Integer> langID = new HashSet<>();
-//		langID.add(33);
+		langID.add(33);
 //		langID.add(35); // need split
 //		langID.add(39);
-		langID.add(43);
+//		langID.add(43);
 //		langID.add(58);
 //		langID.add(60); // need split
 		subjects.put("lang", langID);

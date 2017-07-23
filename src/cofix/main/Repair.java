@@ -287,7 +287,7 @@ public class Repair {
 							// validate correctness of patch
 							switch (validate(oneBuggyBlock)) {
 							case COMPILE_FAILED:
-								haveTryPatches.remove(replace);
+//								haveTryPatches.remove(replace);
 								break;
 							case SUCCESS:
 								String correctPatch = oneBuggyBlock.toSrcString().toString().replace("\\s*|\t|\r|\n", "");
