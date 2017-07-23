@@ -196,7 +196,7 @@ public class CodeBlockMatcher {
 		}
 		
 		List<Modification> finalModifications = new ArrayList<>(modifications.size());
-		finalModifications.addAll(insertions);
+		finalModifications.addAll(revisions);
 		finalModifications.addAll(insertions);
 		finalModifications.addAll(deletions);
 		

@@ -305,7 +305,7 @@ public class Repair {
 								File sourceFile = new File(file);
 								FileUtils.copyFile(sourceFile, new File(target + "/" + correct + "_" + sourceFile.getName()));
 								status = Status.SUCCESS;
-								if(correct == 3){
+								if(correct == Constant.PATCH_NUM){
 									return Status.SUCCESS;
 								}
 								break; //remove passed revision

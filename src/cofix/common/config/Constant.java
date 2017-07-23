@@ -24,7 +24,7 @@ public class Constant {
 
 	// code search configure
 	public final static int MAX_BLOCK_LINE = 10;
-
+	public static int PATCH_NUM = 1;
 	
 	// useful file path 
 	public static String PROJECT_HOME = "/home/similar-fix/d4j/projects";
