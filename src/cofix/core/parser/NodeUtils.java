@@ -50,8 +50,11 @@ import cofix.core.modify.Revision;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.Node.TYPE;
 import cofix.core.parser.node.expr.Assign;
+import cofix.core.parser.node.expr.BoolLiteral;
+import cofix.core.parser.node.expr.CharLiteral;
 import cofix.core.parser.node.expr.ConditionalExpr;
 import cofix.core.parser.node.expr.Expr;
+import cofix.core.parser.node.expr.NumLiteral;
 import cofix.core.parser.node.expr.QName;
 import cofix.core.parser.node.expr.SName;
 import cofix.core.parser.node.stmt.BreakStmt;
@@ -185,6 +188,9 @@ public class NodeUtils {
 			for(int i = 0; i < srcArg.size(); i++){
 				Expr sExpr = srcArg.get(i);
 				Expr tExpr = tarArgs.get(i);
+				if(sExpr instanceof BoolLiteral || sExpr instanceof NumLiteral || sExpr instanceof CharLiteral){
+					continue;
+				}
 				String sString = sExpr.toSrcString().toString();
 				String tString = tExpr.toSrcString().toString();
 				if(sString.equals(tString)){
