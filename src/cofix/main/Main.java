@@ -69,8 +69,8 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 //		// for debug
-		Constant.COMMAND_TIMEOUT = "/usr/local/bin/gtimeout ";
-		Constant.PROJECT_HOME = Constant.HOME + "/testfile";
+//		Constant.COMMAND_TIMEOUT = "/usr/local/bin/gtimeout ";
+//		Constant.PROJECT_HOME = Constant.HOME + "/testfile";
 		
 		Constant.PATCH_NUM = 1;
 		Configure.configEnvironment();
@@ -91,14 +91,14 @@ public class Main {
 	private static Map<String, Set<Integer>> getSubject(){
 		Map<String, Set<Integer>> subjects = new HashMap<>();
 		Set<Integer> chartID = new HashSet<>();
-//		chartID.add(1);
+		chartID.add(1);
 //		chartID.add(7);
-//		chartID.add(20);
+		chartID.add(20);
 		subjects.put("chart", chartID);
 		Set<Integer> closureID = new HashSet<>();
-//		closureID.add(14);
+		closureID.add(14);
 		closureID.add(57); //OK
-//		closureID.add(73);
+		closureID.add(73);
 		subjects.put("closure", closureID);
 		Set<Integer> langID = new HashSet<>();
 //		langID.add(33);
