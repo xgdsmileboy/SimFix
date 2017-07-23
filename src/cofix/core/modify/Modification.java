@@ -66,6 +66,9 @@ public abstract class Modification {
 	
 	public boolean compatible(Modification modification){
 		if(this instanceof Insertion || modification instanceof Insertion){
+			if(this.getTargetString().equals(modification.getTargetString())){
+				return false;
+			}
 			return true;
 		}
 		if(this instanceof Deletion){
