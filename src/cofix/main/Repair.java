@@ -177,6 +177,8 @@ public class Repair {
 		Set<String> patches = new HashSet<>();
 		for(Pair<String, Integer> loc : locations){
 			_subject.restore();
+			FileUtils.deleteDirectory(new File(_subject.getHome() + _subject.getSbin()));
+			FileUtils.deleteDirectory(new File(_subject.getHome() + _subject.getTbin()));
 			System.out.println(loc.getFirst() + "," + loc.getSecond());
 			
 			String file = _subject.getHome() + _subject.getSsrc() + "/" + loc.getFirst().replace(".", "/") + ".java";
