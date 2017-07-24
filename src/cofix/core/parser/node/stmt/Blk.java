@@ -77,6 +77,11 @@ public class Blk extends Stmt {
 				Node thisNode = _statements.get(0);
 				Node otherNode = other._statements.get(0);
 				if(otherNode instanceof ThrowStmt || otherNode instanceof ReturnStmt){
+					if(thisNode instanceof ThrowStmt && otherNode instanceof ThrowStmt){
+						if(((ThrowStmt)thisNode).getExceptionType().equals(((ThrowStmt)otherNode).getExceptionType())){
+							return true;
+						}
+					}
 					String source = thisNode.toSrcString().toString(); 
 					if(!source.equals(otherNode.toSrcString().toString())){
 						Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(otherNode, varTrans, allUsableVariables);

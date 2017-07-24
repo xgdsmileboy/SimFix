@@ -68,6 +68,10 @@ public class ClassInstanceCreate extends Expr {
 	public void setAnonymousClassDecl(AnonymousClassDecl decl){
 		_decl = decl;
 	}
+	
+	public Type getClassType(){
+		return _classType;
+	}
 
 	@Override
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {

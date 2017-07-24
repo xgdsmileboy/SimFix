@@ -27,6 +27,7 @@ import cofix.core.modify.Modification;
 import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
+import cofix.core.parser.node.expr.ClassInstanceCreate;
 import cofix.core.parser.node.expr.Expr;
 import cofix.core.parser.node.expr.SName;
 
@@ -59,6 +60,14 @@ public class ThrowStmt extends Stmt {
 	
 	public void setExpression(Expr expression){
 		_expression = expression;
+	}
+	
+	public String getExceptionType(){
+		if(_expression instanceof ClassInstanceCreate){
+			return ((ClassInstanceCreate)_expression).getClassType().toString();
+		} else {
+			return _expression.getType().toString();
+		}
 	}
 	
 	@Override
