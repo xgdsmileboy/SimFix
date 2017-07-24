@@ -69,10 +69,10 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 //		// for debug
-//		Constant.COMMAND_TIMEOUT = "/usr/local/bin/gtimeout ";
-//		Constant.PROJECT_HOME = Constant.HOME + "/testfile";
+		Constant.COMMAND_TIMEOUT = "/usr/local/bin/gtimeout ";
+		Constant.PROJECT_HOME = Constant.HOME + "/testfile";
 		
-		Constant.PATCH_NUM = 2;
+		Constant.PATCH_NUM = 3;
 		Configure.configEnvironment();
 		System.out.println(Constant.PROJECT_HOME);
 		
@@ -91,9 +91,9 @@ public class Main {
 	private static Map<String, Set<Integer>> getSubject(){
 		Map<String, Set<Integer>> subjects = new HashMap<>();
 		Set<Integer> chartID = new HashSet<>();
-		chartID.add(1);
+//		chartID.add(1);
 //		chartID.add(7);
-		chartID.add(20);
+//		chartID.add(20);
 		subjects.put("chart", chartID);
 		Set<Integer> closureID = new HashSet<>();
 //		closureID.add(14);
@@ -112,7 +112,7 @@ public class Main {
 //		mathID.add(5); //OK
 //		mathID.add(33); //OK
 //		mathID.add(35); // need split
-		mathID.add(41);
+//		mathID.add(41);
 //		mathID.add(49); // need split
 //		mathID.add(53); //OK
 //		mathID.add(59); //OK
@@ -122,7 +122,7 @@ public class Main {
 //		mathID.add(72); // need split
 //		mathID.add(75); //OK
 //		mathID.add(79); //OK
-//		mathID.add(98); // need split
+		mathID.add(98); // need split
 		subjects.put("math", mathID);
 		
 		return subjects;

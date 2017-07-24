@@ -518,12 +518,14 @@ public class NodeUtils {
 										break;
 									}
 								}
-								if(!dependency){
-									break;
+								if(dependency){
+									index = last - 1;
 								}
+							} else {
+								index = last - 1;
 							}
 						}
-						index = last >= 0 ? last : 0;
+						index = index >= 0 ? index : 0;
 							
 						String tarString = insert.simplify(varTrans, allUsableVariables);
 						if(tarString != null){

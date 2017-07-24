@@ -13,6 +13,7 @@ import java.util.Map;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
+import org.eclipse.jdt.core.util.ISignatureAttribute;
 
 import cofix.common.util.Pair;
 import cofix.core.metric.Literal;
@@ -65,9 +66,24 @@ public class ArrayAcc extends Expr {
 			ArrayAcc other = (ArrayAcc) node;
 			List<Modification> tmp = new ArrayList<>();
 			if(!_index.toSrcString().toString().equals(other._index.toSrcString().toString())){
-				if(NodeUtils.replaceExpr(INDEXID, _index, other._index, varTrans, allUsableVariables, tmp)){
-					modifications.addAll(tmp);
-					match = true;
+				boolean canReplace = false;
+				if(_index instanceof SName && other._index instanceof SName){
+					canReplace = true;
+					String srcName = _index.toSrcString().toString();
+					String tarName = other._index.toSrcString().toString();
+					if(srcName.toUpperCase().equals(srcName)){
+						if(!tarName.toUpperCase().equals(tarName)){
+							canReplace = false;
+						}
+					} else if(tarName.toUpperCase().equals(tarName)){
+						canReplace = false;
+					}
+				}
+				if(canReplace){
+					if(NodeUtils.replaceExpr(INDEXID, _index, other._index, varTrans, allUsableVariables, tmp)){
+						modifications.addAll(tmp);
+						match = true;
+					}
 				}
 			} else {
 				match = true;
