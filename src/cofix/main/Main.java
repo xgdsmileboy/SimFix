@@ -35,7 +35,7 @@ import cofix.core.parser.ProjectInfo;
 public class Main {
 	
 	private static void tryFix(Subject subject) throws IOException{
-		String logFile = Constant.PROJLOGBASEPATH = "/" + subject.getName() + "/" + subject.getId() + ".log";
+		String logFile = Constant.PROJLOGBASEPATH + "/" + subject.getName() + "/" + subject.getId() + ".log";
 		StringBuffer stringBuffer = new StringBuffer();
 		stringBuffer.append("=================================================\n");
 		stringBuffer.append("Project : " + subject.getName() + "_" + subject.getId() + "\t");
