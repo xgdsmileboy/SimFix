@@ -32,6 +32,7 @@ public class Constant {
 	public static String CONVER_FAULTLOC = HOME + "/d4j-info/location/conver";
 	public static String PROJINFOR = HOME + "/d4j-info/src_path";
 	public static String PROJJSONFILE = HOME + "/d4j-info/project.json";
+	public static String PROJLOGBASEPATH = HOME + "/log";
 	
 	// command configuration
 	public final static String COMMAND_CD = "cd ";

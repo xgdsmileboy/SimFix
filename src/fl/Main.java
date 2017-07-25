@@ -6,28 +6,15 @@
  */
 package fl;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-
-import javax.swing.JApplet;
 
 import org.eclipse.jdt.core.dom.CompilationUnit;
 
-import cofix.common.config.Configure;
-import cofix.common.config.Constant;
 import cofix.common.util.JavaFile;
 import cofix.common.util.Pair;
-import cofix.common.util.Subject;
 import fl.util.Utils;
 import fl.visitor.FindMethodVisitor;
 

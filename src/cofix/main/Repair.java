@@ -168,7 +168,7 @@ public class Repair {
 //		return status;
 //	}
 
-	public Status fix(Timer timer) throws IOException{
+	public Status fix(Timer timer, String logFile) throws IOException{
 		String src = _subject.getHome() + _subject.getSsrc();
 		List<Pair<String, Integer>> locations = _localization.getLocations(100);
 		int correct = 0;
@@ -187,11 +187,11 @@ public class Repair {
 			CodeBlock buggyblock = BuggyCode.getBuggyCodeBlock(file, loc.getSecond());
 			Integer methodID = buggyblock.getWrapMethodID(); 
 			if(methodID == null){
-				logMessage(new Date(System.currentTimeMillis()).toString() + " : " + loc.getFirst() + "," + loc.getSecond() + "=>Find no block");
+				logMessage(logFile, new Date(System.currentTimeMillis()).toString() + " : " + loc.getFirst() + "," + loc.getSecond() + "=>Find no block");
 				System.out.println("Find no block!");
 				continue;
 			}
-			logMessage(loc.getFirst() + "," + loc.getSecond());
+			logMessage(logFile, loc.getFirst() + "," + loc.getSecond());
 			List<CodeBlock> buggyBlockList = new LinkedList<>();
 			buggyBlockList.addAll(buggyblock.reduce());
 			buggyBlockList.add(buggyblock);
@@ -293,7 +293,7 @@ public class Repair {
 							}
 							
 							// validate correctness of patch
-							switch (validate(oneBuggyBlock)) {
+							switch (validate(logFile, oneBuggyBlock)) {
 							case COMPILE_FAILED:
 //								haveTryPatches.remove(replace);
 								break;
@@ -304,7 +304,7 @@ public class Repair {
 								}
 								patches.add(correctPatch);
 								correct ++;
-								dumpPatch("Find a patch", file, range, oneBuggyBlock.toSrcString().toString());
+								dumpPatch(logFile, "Find a patch", file, range, oneBuggyBlock.toSrcString().toString());
 								String target = Constant.HOME + "/patch/" + _subject.getName() + "/" + _subject.getId();
 								File tarFile = new File(target);
 								if(!tarFile.exists()){
@@ -340,20 +340,20 @@ public class Repair {
 		return status;
 	}
 	
-	private void logMessage(String message){
-		JavaFile.writeStringToFile("result.log", new Date(System.currentTimeMillis()).toString() + " " + message + "\n", true);
+	private void logMessage(String logFile, String message){
+		JavaFile.writeStringToFile(logFile, new Date(System.currentTimeMillis()).toString() + " " + message + "\n", true);
 	}
 	
-	private void dumpPatch(String message, String file, Pair<Integer, Integer> codeRange, String text){
+	private void dumpPatch(String logFile, String message, String buggyFile, Pair<Integer, Integer> codeRange, String text){
 		StringBuffer stringBuffer = new StringBuffer();
 		stringBuffer.append("\n----------------------------------------\n----------------------------------------\n");
-		stringBuffer.append(message + " : [" + file + "=>" + codeRange.getFirst() + "," + codeRange.getSecond() + "]\n");
+		stringBuffer.append(message + " : [" + buggyFile + "=>" + codeRange.getFirst() + "," + codeRange.getSecond() + "]\n");
 		stringBuffer.append(text);
 		SimpleDateFormat simpleFormat=new SimpleDateFormat("yy/MM/dd HH:mm"); 
 		stringBuffer.append("\nTime : " + simpleFormat.format(new Date()) + "\n");
 		stringBuffer.append("----------------------------------------\n");
 		System.out.println(stringBuffer.toString());
-		JavaFile.writeStringToFile("result.log", stringBuffer.toString(), true);
+		JavaFile.writeStringToFile(logFile, stringBuffer.toString(), true);
 	}
 	
 	
@@ -462,7 +462,7 @@ public class Repair {
 		return rslt;
 	}
 	
-	private ValidateStatus validate(CodeBlock buggyBlock){
+	private ValidateStatus validate(String logFile, CodeBlock buggyBlock){
 		
 		if(!Runner.compileSubject(_subject)){
 			System.err.println("Build failed !");
@@ -477,7 +477,7 @@ public class Repair {
 			}
 		}
 		
-		dumpPatch("Pass Single Test", "", new Pair<Integer, Integer>(0, 0), buggyBlock.toSrcString().toString());
+		dumpPatch(logFile, "Pass Single Test", "", new Pair<Integer, Integer>(0, 0), buggyBlock.toSrcString().toString());
 		
 		if(!Runner.runTestSuite(_subject)){
 			return ValidateStatus.TEST_FAILED;

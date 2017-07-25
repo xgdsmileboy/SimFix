@@ -13,6 +13,9 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
+
+import org.eclipse.jdt.internal.eval.CodeSnippetAllocationExpression;
+
 import java.util.Set;
 
 import cofix.common.config.Configure;
@@ -32,14 +35,14 @@ import cofix.core.parser.ProjectInfo;
 public class Main {
 	
 	private static void tryFix(Subject subject) throws IOException{
-		
+		String logFile = Constant.PROJLOGBASEPATH = "/" + subject.getName() + "/" + subject.getId() + ".log";
 		StringBuffer stringBuffer = new StringBuffer();
 		stringBuffer.append("=================================================\n");
 		stringBuffer.append("Project : " + subject.getName() + "_" + subject.getId() + "\t");
 		SimpleDateFormat simpleFormat=new SimpleDateFormat("yy/MM/dd HH:mm"); 
 		stringBuffer.append("start : " + simpleFormat.format(new Date()) + "\n");
 		System.out.println(stringBuffer.toString());
-		JavaFile.writeStringToFile("result.log", stringBuffer.toString(), true);
+		JavaFile.writeStringToFile(logFile, stringBuffer.toString(), true);
 		
 		subject.backup();
 		ProjectInfo.init(subject);
@@ -48,19 +51,19 @@ public class Main {
 		Repair repair = new Repair(subject, fLocalization);
 		Timer timer = new Timer(5, 0);
 		timer.start();
-		Status status = repair.fix(timer);
+		Status status = repair.fix(timer, logFile);
 		switch (status) {
 		case TIMEOUT:
 			System.out.println(status);
-			JavaFile.writeStringToFile("result.log", "Timeout time : " + simpleFormat.format(new Date()) + "\n", true);
+			JavaFile.writeStringToFile(logFile, "Timeout time : " + simpleFormat.format(new Date()) + "\n", true);
 			break;
 		case SUCCESS:
 			System.out.println(status);
-			JavaFile.writeStringToFile("result.log", "Success time : " + simpleFormat.format(new Date()) + "\n", true);
+			JavaFile.writeStringToFile(logFile, "Success time : " + simpleFormat.format(new Date()) + "\n", true);
 			break;
 		case FAILED:
 			System.out.println(status);
-			JavaFile.writeStringToFile("result.log", "Failed time : " + simpleFormat.format(new Date()) + "\n", true);
+			JavaFile.writeStringToFile(logFile, "Failed time : " + simpleFormat.format(new Date()) + "\n", true);
 		default:
 			break;
 		}

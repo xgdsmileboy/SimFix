@@ -20,8 +20,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import javax.xml.stream.events.StartDocument;
-
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
@@ -34,7 +32,6 @@ import org.json.simple.parser.ParseException;
 import cofix.common.util.LevelLogger;
 import cofix.common.util.Pair;
 import cofix.common.util.Subject;
-import cofix.core.modify.Insertion;
 
 /**
  * @author Jiajun
