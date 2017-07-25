@@ -12,16 +12,29 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import javax.xml.stream.events.StartDocument;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import cofix.common.util.LevelLogger;
+import cofix.common.util.Pair;
 import cofix.common.util.Subject;
+import cofix.core.modify.Insertion;
 
 /**
  * @author Jiajun
@@ -38,6 +51,58 @@ public class Configure {
 			System.exit(0);
 		}
 		Constant.COMMAND_D4J = d4jhome + "/framework/bin/defects4j "; 
+	}
+	
+	public static Map<String, Pair<Integer, Set<Integer>>> getProjectInfoFromJSon() {
+		Map<String, Pair<Integer, Set<Integer>>> projectInfo = new HashMap<>();
+		try {
+			// read the json file
+			FileReader reader = new FileReader(Constant.PROJJSONFILE);
+			JSONParser jsonParser = new JSONParser();
+			JSONArray jsonArray = (JSONArray) jsonParser.parse(reader);
+
+			for(int i = 0; i < jsonArray.size(); i++){
+				JSONObject project = (JSONObject)jsonArray.get(i);
+				String name = (String) project.get("name");
+				JSONObject info = (JSONObject) project.get("info");
+				Long number = (Long)info.get("number");
+				String idString = (String) info.get("single");
+				
+				Set<Integer> bugId = new HashSet<>();
+				String[] ids = idString.split(",");
+				for(int j = 0; j < ids.length; j++){
+					int dash = ids[j].indexOf("-");
+					if(dash == -1){
+						bugId.add(Integer.parseInt(ids[j]));
+					} else {
+						int start = Integer.parseInt(ids[j].substring(0, dash));
+						int end = Integer.parseInt(ids[j].substring(dash + 1));
+						for(; start <= end; start ++){
+							bugId.add(start);
+						}
+					}
+				}
+				projectInfo.put(name, new Pair<Integer, Set<Integer>>(number.intValue(), bugId));
+			}
+			reader.close();
+		} catch (FileNotFoundException ex) {
+			ex.printStackTrace();
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		} catch (ParseException ex) {
+			ex.printStackTrace();
+		} catch (NullPointerException ex) {
+			ex.printStackTrace();
+		}
+		return projectInfo;
+	}
+	
+	public static void main(String[] args) {
+		Map<String, Pair<Integer, Set<Integer>>> info = getProjectInfoFromJSon();
+		for(Entry<String, Pair<Integer, Set<Integer>>> entry : info.entrySet()){
+			System.out.println(entry.getKey() + " " + entry.getValue().getFirst());
+			System.out.println(entry.getValue().getSecond());
+		}
 	}
 	
 	public static Subject getSubject(String name, int id){
