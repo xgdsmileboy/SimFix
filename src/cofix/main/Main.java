@@ -113,13 +113,13 @@ public class Main {
 //		mathID.add(33); //OK
 //		mathID.add(35); // need split
 //		mathID.add(41);
-		mathID.add(49); // need split
+//		mathID.add(49); // need split
 //		mathID.add(53); //OK
 //		mathID.add(59); //OK
 //		mathID.add(63); //OK
 //		mathID.add(70); //OK
 //		mathID.add(71); // need split
-//		mathID.add(72); // need split
+		mathID.add(72); // need split
 //		mathID.add(75); //OK
 //		mathID.add(79); //OK
 //		mathID.add(98); // need split

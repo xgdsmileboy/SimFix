@@ -188,6 +188,13 @@ public class Vdf extends Node {
 
 	@Override
 	public USE_TYPE getUseType(Node child) {
+		if(_expression != null){
+			if(child == _identifier){
+				return USE_TYPE.USE_ASSIGN_LHS;
+			} else {
+				return USE_TYPE.USE_ASSIGN_RHS;
+			}
+		}
 		return _parent.getUseType(this);
 	}
 	
