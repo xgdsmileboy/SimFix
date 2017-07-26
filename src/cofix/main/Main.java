@@ -70,6 +70,10 @@ public class Main {
 		subject.restore();
 	}
 	
+	private static void splitFix(Subject subject){
+		
+	}
+	
 
 	public static void main(String[] args) throws IOException {
 //		// for debug

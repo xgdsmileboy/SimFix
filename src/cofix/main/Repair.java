@@ -176,6 +176,9 @@ public class Repair {
 		Status status = Status.FAILED;
 		Set<String> patches = new HashSet<>();
 		for(Pair<String, Integer> loc : locations){
+			if(timer.timeout()){
+				return Status.TIMEOUT;
+			}
 			_subject.restore();
 			FileUtils.deleteDirectory(new File(_subject.getHome() + _subject.getSbin()));
 			FileUtils.deleteDirectory(new File(_subject.getHome() + _subject.getTbin()));
