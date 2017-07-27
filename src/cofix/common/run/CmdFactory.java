@@ -22,7 +22,12 @@ public class CmdFactory {
 	 * @return commands need to be executed
 	 */
 	public static String[] createBuildSubjectCmd(Subject subject) {
-		return createD4JCmd(subject, "compile");
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append(Constant.COMMAND_CD + subject.getHome() + " && ");
+		stringBuffer.append(Constant.COMMAND_TIMEOUT + "120 ");
+		stringBuffer.append(Constant.COMMAND_D4J + "compile");
+		String[] cmd = new String[] { "/bin/bash", "-c", stringBuffer.toString() };
+		return cmd;
 	}
 	
 	public static String[] createTestSubjectCmd(Subject subject, int timeout) {

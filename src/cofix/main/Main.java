@@ -77,15 +77,15 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 //		// for debug
-		Constant.COMMAND_TIMEOUT = "/usr/local/bin/gtimeout ";
-		Constant.PROJECT_HOME = Constant.HOME + "/testfile";
+//		Constant.COMMAND_TIMEOUT = "/usr/local/bin/gtimeout ";
+//		Constant.PROJECT_HOME = Constant.HOME + "/testfile";
 		
 		Constant.PATCH_NUM = 3;
 		Configure.configEnvironment();
 		System.out.println(Constant.PROJECT_HOME);
 		
 //		runSmallDataset();
-		runAllProjectSingle("chart");
+		runAllProjectSingle("time");
 		
 	}
 	
@@ -152,6 +152,10 @@ public class Main {
 		mathID.add(79); //OK
 		mathID.add(98); // need split
 		subjects.put("math", mathID);
+		Set<Integer> timeID = new HashSet<>();
+		timeID.add(4);
+		timeID.add(5);
+		subjects.put("time", timeID);
 		
 		return subjects;
 	}
