@@ -14,6 +14,18 @@ import cofix.common.util.Subject;
  * @datae Jul 11, 2017
  */
 public class CmdFactory {
+	
+	public static String[] createSbflCmd(Subject subject, int timeout){
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append(Constant.COMMAND_CD + Constant.LOCATOR_HOME + " && ");
+		stringBuffer.append(Constant.COMMAND_TIMEOUT + timeout + " ");
+		stringBuffer.append(Constant.COMMAND_LOCATOR + subject.getName());
+		stringBuffer.append(" " + subject.getId());
+		stringBuffer.append(" " + subject.getHome());
+		String[] cmd = new String[] { "/bin/bash", "-c", stringBuffer.toString() };
+		return cmd;
+	}
+	
 	/**
 	 * build execution command for compiling a subject
 	 * 
@@ -36,7 +48,7 @@ public class CmdFactory {
 	public static String[] createTestSingleTestCaseCmd(Subject subject, String clazz, String method){
 		return createD4JCmd(subject, "test -t " + clazz + "::" + method, -1);
 	}
-
+	
 	/**
 	 * create d4j command based on the given argument {@code args}
 	 * 
