@@ -38,8 +38,10 @@ public class ClassInstanceCreate extends Expr {
 	private List<Expr> _arguments = null;
 	private AnonymousClassDecl _decl = null;
 	
-	private Expr _expression_replace = null;
-	private List<Expr> _arguments_replace = null;
+	private String _expression_replace = null;
+	private String _arguments_replace = null;
+	
+	private final int ARGID = 0;
 	
 	/**
 	 * ClassInstanceCreation:
@@ -77,8 +79,11 @@ public class ClassInstanceCreate extends Expr {
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		boolean match = false;
 		if(node instanceof ClassInstanceCreate){
-			match = true;
-			// TODO : to finish
+			ClassInstanceCreate other = (ClassInstanceCreate) node;
+			if(_classType.toString().equals(other._classType)){
+				match = true;
+				modifications.addAll(NodeUtils.handleArguments(this, ARGID, _nodeType, _arguments, other._arguments, varTrans, allUsableVariables));
+			}
 		} else {
 			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();
@@ -92,14 +97,20 @@ public class ClassInstanceCreate extends Expr {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		return true;
+		if(modification.getSourceID() == ARGID){
+			_arguments_replace = modification.getTargetString();
+			return true;
+		}
+		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		_expression_replace = null;
-		_arguments_replace = null;
-		return true;
+		if(modification.getSourceID() == ARGID){
+			_arguments_replace = null;
+			return true;
+		}
+		return false;
 	}
 
 	@Override
@@ -113,9 +124,9 @@ public class ClassInstanceCreate extends Expr {
 		StringBuffer stringBuffer = new StringBuffer();
 		if(_expression != null){
 			if(_expression_replace != null){
-				stringBuffer.append(_expression_replace.toSrcString());
+				stringBuffer.append(_expression_replace);
 			} else {
-				stringBuffer.append(_expression.toSrcString());
+				stringBuffer.append(_expression);
 			}
 			stringBuffer.append(".");
 		}
@@ -123,13 +134,7 @@ public class ClassInstanceCreate extends Expr {
 		stringBuffer.append(_classType);
 		stringBuffer.append("(");
 		if(_arguments_replace != null){
-			if(_arguments.size() > 0){
-				stringBuffer.append(_arguments_replace.get(0).toSrcString());
-				for(int i = 1; i < _arguments_replace.size(); i++){
-					stringBuffer.append(",");
-					stringBuffer.append(_arguments_replace.get(i).toSrcString());
-				}
-			}
+			stringBuffer.append(_arguments_replace);
 		}else if(_arguments != null && _arguments.size() > 0){
 			stringBuffer.append(_arguments.get(0).toSrcString());
 			for(int i = 1; i < _arguments.size(); i++){
