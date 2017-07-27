@@ -225,7 +225,7 @@ public class Repair {
 	//			Set<String> already = new HashSet<>();
 				for(Pair<CodeBlock, Double> similar : candidates){
 					// try top 100 candidates
-					if(i > 100){
+					if(i > 100 || timer.timeout()){
 						break;
 					}
 					System.out.println("=====================" + (i++) +"==============================");
