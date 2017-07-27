@@ -70,7 +70,7 @@ public abstract class Stmt extends Node{
 
 	@Override
 	public USE_TYPE getUseType(Node child) {
-		if(_parent != null){
+		if(_parent == null){
 			return USE_TYPE.USE_UNKNOWN;
 		} else {
 			return _parent.getUseType(this);
