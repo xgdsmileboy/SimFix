@@ -27,7 +27,7 @@ public class Constant {
 	public static int PATCH_NUM = 1;
 	
 	// useful file path 
-	public static String PROJECT_HOME = "/home/similar-fix/d4j/projects";
+	public static String PROJECT_HOME = "/home/similarfix/d4j/projects";
 	public static String ORI_FAULTLOC = HOME + "/d4j-info/location/ochiai";
 	public static String CONVER_FAULTLOC = HOME + "/d4j-info/location/conver";
 	public static String PROJINFOR = HOME + "/d4j-info/src_path";
