@@ -1,0 +1,43 @@
+#!/usr/bin/python
+#
+# Perform various sanity-checks on a killmap to make sure it looks reasonable.
+
+import gzip
+import itertools
+import argparse
+import pyfl
+import sys
+import io
+
+argparser = argparse.ArgumentParser()
+argparser.add_argument('killmaps', nargs='+')
+
+def check_all_lines_look_complete(runs):
+  for test, test_runs in itertools.groupby(runs, (lambda run: run.test)):
+    unmutated_run = next(test_runs)
+    for run in test_runs:
+      if run.traceback and (run.traceback != unmutated_run.traceback) and unmutated_run.traceback.startswith(run.traceback):
+        print('test {} (mutant {}) trace looks like a prefix of unmutated run trace'.format(test, run.mutant_id))
+
+def check_tests_are_run_on_sensible_mutants(runs):
+  for test, test_runs in itertools.groupby(runs, (lambda run: run.test)):
+    unmutated_run = next(test_runs)
+    mutants_run_on = [run.mutant_id for run in test_runs]
+    if len(mutants_run_on) != len(set(mutants_run_on)):
+      print('test {} run on same mutant multiple times'.format(test))
+      sys.exit(1)
+    if not (set(mutants_run_on) <= unmutated_run.covered_mutant_ids):
+      print('test {} run on mutants {} not covered by unmutated run'.format(test, set(mutants_run_on)-unmutated_run.covered_mutant_ids))
+      sys.exit(1)
+
+if __name__ == '__main__':
+
+  args = argparser.parse_args()
+
+  for killmap in args.killmaps:
+    for sanity_check in [check_all_lines_look_complete, check_tests_are_run_on_sensible_mutants]:
+      with io.TextIOWrapper(io.BufferedReader(gzip.open(killmap)), encoding='utf8') as f:
+        sanity_check(pyfl.formats.iter_killmap_test_runs(f))
+        f.close()
+
+  sys.exit(0)
