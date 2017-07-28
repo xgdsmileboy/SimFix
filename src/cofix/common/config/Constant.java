@@ -34,9 +34,13 @@ public class Constant {
 	public static String PROJJSONFILE = HOME + "/d4j-info/project.json";
 	public static String PROJLOGBASEPATH = HOME + "/log";
 	
+	
 	// command configuration
 	public final static String COMMAND_CD = "cd ";
+	public final static int COMPILE_TIMEOUT = 120;
 	
+	public final static String LOCATOR_HOME = HOME + "/sbfl";
+	public final static String COMMAND_LOCATOR = LOCATOR_HOME + "/sbfl.sh ";
 	public static String ENV_D4J = "DEFECTS4J_HOME";
 	public static String COMMAND_TIMEOUT = "/usr/bin/timeout ";
 	public static String COMMAND_D4J = "/home/similar-fix/d4j/defects4j/framework/bin/defects4j ";

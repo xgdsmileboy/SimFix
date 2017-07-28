@@ -127,6 +127,33 @@ public class Subject {
 		return Constant.PROJECT_HOME + "/" + _name + "/" + _name + "_" + _id + "_buggy";
 	}
 	
+	public String getFailedTestRecFile(){
+		return getHome() + "/failing_tests";
+	}
+	
+	public String getAllTestRecFile(){
+		return getHome() + "/all-tests.txt";
+	}
+	
+	public void backup(String folder) throws IOException{
+		File file = new File(folder + "_ori");
+		if (!file.exists()) {
+			FileUtils.copyDirectory(new File(folder), file);
+		} else {
+			FileUtils.deleteDirectory(new File(folder));
+			FileUtils.copyDirectory(file, new File(folder));
+		}
+	}
+	
+	public void restore(String folder) throws IOException{
+		File file = new File(folder + "_ori");
+		if (file.exists()) {
+			FileUtils.copyDirectory(file, new File(folder));
+		} else {
+			System.out.println("Restore source file failed : cannot find file " + file.getAbsolutePath());
+		}
+	}
+	
 	public void backup() throws IOException{
 		String src = getHome() + _ssrc;
 		File file = new File(src + "_ori");
