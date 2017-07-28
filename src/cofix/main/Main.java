@@ -6,6 +6,7 @@
  */
 package cofix.main;
 
+import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -14,6 +15,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.apache.commons.io.FileUtils;
 import org.eclipse.jdt.internal.eval.CodeSnippetAllocationExpression;
 
 import java.util.Set;
@@ -70,7 +72,11 @@ public class Main {
 		subject.restore();
 	}
 	
-	private static void splitFix(Subject subject){
+	private static void splitFix(Subject subject) throws IOException{
+		subject.backup(subject.getHome() + subject.getSsrc());
+		subject.backup(subject.getHome() + subject.getTsrc());
+		FileUtils.forceDelete(new File(subject.getAllTestRecFile()));
+		FileUtils.forceDelete(new File(subject.getFailedTestRecFile()));
 		
 	}
 	
@@ -80,12 +86,12 @@ public class Main {
 //		Constant.COMMAND_TIMEOUT = "/usr/local/bin/gtimeout ";
 //		Constant.PROJECT_HOME = Constant.HOME + "/testfile";
 		
-		Constant.PATCH_NUM = 3;
+		Constant.PATCH_NUM = 1;
 		Configure.configEnvironment();
 		System.out.println(Constant.PROJECT_HOME);
 		
 //		runSmallDataset();
-		runAllProjectSingle("time");
+		runAllProjectSingle("math");
 		
 	}
 	
@@ -151,6 +157,10 @@ public class Main {
 		mathID.add(75); //OK
 		mathID.add(79); //OK
 		mathID.add(98); // need split
+		
+		mathID.add(3);
+		mathID.add(9);
+		
 		subjects.put("math", mathID);
 		Set<Integer> timeID = new HashSet<>();
 		timeID.add(4);

@@ -142,17 +142,23 @@ public class InfixExpr extends Expr {
 				modifications.add(new Revision(this, OPID, other._operator.toString(), _nodeType));
 			}
 			
-			if(!other._lhs.toSrcString().toString().equals(_rhs.toSrcString().toString())){
-				tmp = new ArrayList<>();
-				if(_lhs.match(other._lhs, varTrans, allUsableVariables, tmp)){
-					subStructureModifications.addAll(tmp);
+			tmp = new ArrayList<>();
+			if(_lhs.match(other._lhs, varTrans, allUsableVariables, tmp)){
+				String right = _rhs.toSrcString().toString();
+				for(Modification modification : tmp){
+					if(!right.equals(modification.getTargetString())){
+						subStructureModifications.addAll(tmp);
+					}
 				}
 			}
 			
-			if(!other._rhs.toSrcString().toString().equals(_lhs.toSrcString().toString())){
-				tmp = new ArrayList<>();
-				if(_rhs.match(other._rhs, varTrans, allUsableVariables, tmp)){
-					subStructureModifications.addAll(tmp);
+			tmp = new ArrayList<>();
+			if(_rhs.match(other._rhs, varTrans, allUsableVariables, tmp)){
+				String left = _lhs.toSrcString().toString();
+				for(Modification modification : tmp){
+					if(!left.equals(modification.getTargetString())){
+						subStructureModifications.addAll(tmp);
+					}
 				}
 			}
 			
