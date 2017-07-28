@@ -17,7 +17,6 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.dom4j.Document;
@@ -94,13 +93,13 @@ public class Configure {
 		return projectInfo;
 	}
 	
-	public static void main(String[] args) {
-		Map<String, Pair<Integer, Set<Integer>>> info = getProjectInfoFromJSon();
-		for(Entry<String, Pair<Integer, Set<Integer>>> entry : info.entrySet()){
-			System.out.println(entry.getKey() + " " + entry.getValue().getFirst());
-			System.out.println(entry.getValue().getSecond());
-		}
-	}
+//	public static void main(String[] args) {
+//		Map<String, Pair<Integer, Set<Integer>>> info = getProjectInfoFromJSon();
+//		for(Entry<String, Pair<Integer, Set<Integer>>> entry : info.entrySet()){
+//			System.out.println(entry.getKey() + " " + entry.getValue().getFirst());
+//			System.out.println(entry.getValue().getSecond());
+//		}
+//	}
 	
 	public static Subject getSubject(String name, int id){
 		String fileName = Constant.PROJINFOR + "/" + name + "/" + id + ".txt";

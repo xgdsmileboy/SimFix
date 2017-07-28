@@ -14,6 +14,18 @@ import cofix.common.util.Subject;
  * @datae Jul 11, 2017
  */
 public class CmdFactory {
+	
+	public static String[] createSbflCmd(Subject subject, int timeout){
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append(Constant.COMMAND_CD + Constant.LOCATOR_HOME + " && ");
+		stringBuffer.append(Constant.COMMAND_TIMEOUT + timeout + " ");
+		stringBuffer.append(Constant.COMMAND_LOCATOR + subject.getName());
+		stringBuffer.append(" " + subject.getId());
+		stringBuffer.append(" " + subject.getHome());
+		String[] cmd = new String[] { "/bin/bash", "-c", stringBuffer.toString() };
+		return cmd;
+	}
+	
 	/**
 	 * build execution command for compiling a subject
 	 * 
@@ -22,36 +34,21 @@ public class CmdFactory {
 	 * @return commands need to be executed
 	 */
 	public static String[] createBuildSubjectCmd(Subject subject) {
-		StringBuffer stringBuffer = new StringBuffer();
-		stringBuffer.append(Constant.COMMAND_CD + subject.getHome() + " && ");
-		stringBuffer.append(Constant.COMMAND_TIMEOUT + "120 ");
-		stringBuffer.append(Constant.COMMAND_D4J + "compile");
-		String[] cmd = new String[] { "/bin/bash", "-c", stringBuffer.toString() };
-		return cmd;
+		return createD4JCmd(subject, "compile", Constant.COMPILE_TIMEOUT);
 	}
 	
 	public static String[] createTestSubjectCmd(Subject subject, int timeout) {
-		StringBuffer stringBuffer = new StringBuffer();
-		stringBuffer.append(Constant.COMMAND_CD + subject.getHome() + " && ");
-		stringBuffer.append(Constant.COMMAND_TIMEOUT + timeout + " ");
-		stringBuffer.append(Constant.COMMAND_D4J + "test");
-		String[] cmd = new String[] { "/bin/bash", "-c", stringBuffer.toString() };
-		return cmd;
+		return createD4JCmd(subject, "test", timeout);
 	}
 	
 	public static String[] createTestSingleTestCaseCmd(Subject subject, int timeout, String clazz, String method){
-		StringBuffer stringBuffer = new StringBuffer();
-		stringBuffer.append(Constant.COMMAND_CD + subject.getHome() + " && ");
-		stringBuffer.append(Constant.COMMAND_TIMEOUT + timeout + " ");
-		stringBuffer.append(Constant.COMMAND_D4J + "test -t " + clazz + "::" + method);
-		String[] cmd = new String[] { "/bin/bash", "-c", stringBuffer.toString() };
-		return cmd;
+		return createD4JCmd(subject, "test -t " + clazz + "::" + method, timeout);
 	}
 	
 	public static String[] createTestSingleTestCaseCmd(Subject subject, String clazz, String method){
-		return createD4JCmd(subject, "test -t " + clazz + "::" + method);
+		return createD4JCmd(subject, "test -t " + clazz + "::" + method, -1);
 	}
-
+	
 	/**
 	 * create d4j command based on the given argument {@code args}
 	 * 
@@ -61,9 +58,12 @@ public class CmdFactory {
 	 *            : command to be executed, e.g., "test", "compile", etc.
 	 * @return command need to be executed
 	 */
-	private static String[] createD4JCmd(Subject subject, String args) {
+	private static String[] createD4JCmd(Subject subject, String args, int timeout) {
 		StringBuffer stringBuffer = new StringBuffer();
 		stringBuffer.append(Constant.COMMAND_CD + subject.getHome() + " && ");
+		if(timeout > 0){
+			stringBuffer.append(Constant.COMMAND_TIMEOUT + timeout + " ");
+		}
 		stringBuffer.append(Constant.COMMAND_D4J + args);
 		String[] cmd = new String[] { "/bin/bash", "-c", stringBuffer.toString() };
 		return cmd;
