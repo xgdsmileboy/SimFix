@@ -102,14 +102,14 @@ public class InfixExpr extends Expr {
 			if(compatible){
 				if(!other._lhs.toSrcString().toString().equals(_rhs.toSrcString().toString())){
 					if(other._lhs instanceof NumLiteral){
-						if(_lhs instanceof NumLiteral){
-							if(NodeUtils.replaceExpr(LHSID, _lhs, other._lhs, varTrans, allUsableVariables, tmp)){
+						if(_lhs instanceof NumLiteral && !NodeUtils.isBoundaryValue((NumLiteral) _lhs)){
+							if(NodeUtils.replaceExpr(LHSID, _rhs.toSrcString().toString(), _lhs, other._lhs, varTrans, allUsableVariables, tmp)){
 								matchLeft = true;
 								subStructureModifications.addAll(tmp);
 							}
 						}
 					} else {
-						if(NodeUtils.replaceExpr(LHSID, _lhs, other._lhs, varTrans, allUsableVariables, tmp)){
+						if(NodeUtils.replaceExpr(LHSID, _rhs.toSrcString().toString(), _lhs, other._lhs, varTrans, allUsableVariables, tmp)){
 							matchLeft = true;
 							subStructureModifications.addAll(tmp);
 						}
@@ -120,14 +120,14 @@ public class InfixExpr extends Expr {
 				if(!other._rhs.toSrcString().toString().equals(_lhs.toSrcString().toString())){
 					tmp = new ArrayList<>();
 					if(other._rhs instanceof NumLiteral){
-						if(_rhs instanceof NumLiteral){
-							if(NodeUtils.replaceExpr(RHSID, _rhs, other._rhs, varTrans, allUsableVariables, tmp)){
+						if(_rhs instanceof NumLiteral && !NodeUtils.isBoundaryValue((NumLiteral) _rhs)){
+							if(NodeUtils.replaceExpr(RHSID, _lhs.toSrcString().toString(), _rhs, other._rhs, varTrans, allUsableVariables, tmp)){
 								matchRight = true;
 								subStructureModifications.addAll(tmp);
 							}
 						}
 					} else {
-						if(NodeUtils.replaceExpr(RHSID, _rhs, other._rhs, varTrans, allUsableVariables, tmp)){
+						if(NodeUtils.replaceExpr(RHSID, _lhs.toSrcString().toString(), _rhs, other._rhs, varTrans, allUsableVariables, tmp)){
 							matchRight = true;
 							subStructureModifications.addAll(tmp);
 						}
@@ -142,14 +142,18 @@ public class InfixExpr extends Expr {
 				modifications.add(new Revision(this, OPID, other._operator.toString(), _nodeType));
 			}
 			
-			tmp = new ArrayList<>();
-			if(_lhs.match(other._lhs, varTrans, allUsableVariables, tmp)){
-				subStructureModifications.addAll(tmp);
+			if(!other._lhs.toSrcString().toString().equals(_rhs.toSrcString().toString())){
+				tmp = new ArrayList<>();
+				if(_lhs.match(other._lhs, varTrans, allUsableVariables, tmp)){
+					subStructureModifications.addAll(tmp);
+				}
 			}
 			
-			tmp = new ArrayList<>();
-			if(_rhs.match(other._rhs, varTrans, allUsableVariables, tmp)){
-				subStructureModifications.addAll(tmp);
+			if(!other._rhs.toSrcString().toString().equals(_lhs.toSrcString().toString())){
+				tmp = new ArrayList<>();
+				if(_rhs.match(other._rhs, varTrans, allUsableVariables, tmp)){
+					subStructureModifications.addAll(tmp);
+				}
 			}
 			
 			String tarString = other.simplify(varTrans, allUsableVariables);
@@ -327,6 +331,9 @@ public class InfixExpr extends Expr {
 	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
 		String left = _lhs.simplify(varTrans, allUsableVariables);
 		String right = _rhs.simplify(varTrans, allUsableVariables);
+		if(left != null && right != null && left.equals(right)){
+			return null;
+		}
 		switch (_operator.toString()) {
 		case "&&":
 		case "||":

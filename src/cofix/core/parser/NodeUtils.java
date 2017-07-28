@@ -53,7 +53,11 @@ import cofix.core.parser.node.expr.Assign;
 import cofix.core.parser.node.expr.BoolLiteral;
 import cofix.core.parser.node.expr.CharLiteral;
 import cofix.core.parser.node.expr.ConditionalExpr;
+import cofix.core.parser.node.expr.DoubleLiteral;
 import cofix.core.parser.node.expr.Expr;
+import cofix.core.parser.node.expr.FloatLiteral;
+import cofix.core.parser.node.expr.IntLiteral;
+import cofix.core.parser.node.expr.LongLiteral;
 import cofix.core.parser.node.expr.NumLiteral;
 import cofix.core.parser.node.expr.QName;
 import cofix.core.parser.node.expr.SName;
@@ -633,7 +637,7 @@ public class NodeUtils {
 		return record;
 	}
 	
-	public static boolean replaceExpr(int srcID, Expr srcExpr, Expr tarExpr, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications){
+	public static boolean replaceExpr(int srcID, String avoid, Expr srcExpr, Expr tarExpr, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications){
 		if(srcExpr.toSrcString().toString().equals(tarExpr.toSrcString().toString())){
 			return true;
 		}
@@ -646,7 +650,7 @@ public class NodeUtils {
 				// replace all variable
 				replaceVariable(record);
 				String target = tarExpr.toSrcString().toString();
-				if (!srcExpr.toSrcString().toString().equals(target)) {
+				if (!srcExpr.toSrcString().toString().equals(target) && !avoid.equals(target)) {
 					Revision revision = new Revision(srcExpr.getParent(), srcID, target, srcExpr.getNodeType());
 					modifications.add(revision);
 				}
@@ -657,6 +661,34 @@ public class NodeUtils {
 		} else {
 			return false;
 		}
+	}
+	
+	public static boolean isBoundaryValue(NumLiteral literal){
+		boolean isBoundary = false;
+		double epsilon = 1e-5;
+		if(literal instanceof DoubleLiteral){
+			double value = ((DoubleLiteral)literal).getValue();
+			if(Math.abs(value - 1.0) < epsilon || Math.abs(value - 0) < epsilon || Math.abs(value + 1) < epsilon){
+				isBoundary = true;
+			}
+		} else if(literal instanceof FloatLiteral){
+			float value = ((FloatLiteral)literal).getValue();
+			if(Math.abs(value - 1.0) < epsilon || Math.abs(value - 0) < epsilon || Math.abs(value + 1) < epsilon){
+				isBoundary = true;
+			}
+		} else if(literal instanceof LongLiteral){
+			long value = ((LongLiteral)literal).getValue();
+			if(value == 0l || value == 1l || value == -1l || value == Long.MAX_VALUE || value == Long.MIN_VALUE){
+				isBoundary = true;
+			}
+		} else if(literal instanceof IntLiteral){
+			int value = ((IntLiteral)literal).getValue();
+			if(value == 0l || value == 1l || value == -1l || value == Integer.MAX_VALUE || value == Integer.MIN_VALUE){
+				isBoundary = true;
+			}
+		}
+		
+		return isBoundary;
 	}
 	
 	public static String getDefaultValue(Type type){
