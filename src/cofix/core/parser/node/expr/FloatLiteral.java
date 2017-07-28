@@ -53,8 +53,10 @@ public class FloatLiteral extends NumLiteral {
 			match = true;
 			FloatLiteral other = (FloatLiteral) node;
 			if(_value != other._value){
-				Revision revision = new Revision(this, EXPRID, other.toSrcString().toString(), _nodeType);
-				modifications.add(revision);
+				if(!NodeUtils.isBoundaryValue(this) || (NodeUtils.isBoundaryValue(this) && NodeUtils.isBoundaryValue(other))){
+					Revision revision = new Revision(this, EXPRID, other.toSrcString().toString(), _nodeType);
+					modifications.add(revision);
+				}
 			}
 		} else if(node instanceof SName || node instanceof QName){
 			Label label = (Label) node;

@@ -51,8 +51,10 @@ public class IntLiteral extends NumLiteral {
 			match = true;
 			IntLiteral other = (IntLiteral) node;
 			if(_value != other._value){
-				Revision revision = new Revision(this, EXPRID, other.toSrcString().toString(), _nodeType);
-				modifications.add(revision);
+				if(!NodeUtils.isBoundaryValue(this) || (NodeUtils.isBoundaryValue(this) && NodeUtils.isBoundaryValue(other))){
+					Revision revision = new Revision(this, EXPRID, other.toSrcString().toString(), _nodeType);
+					modifications.add(revision);
+				}
 			}
 		} else if(node instanceof SName || node instanceof QName){
 			Label label = (Label) node;

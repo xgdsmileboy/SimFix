@@ -103,13 +103,13 @@ public class InfixExpr extends Expr {
 				if(!other._lhs.toSrcString().toString().equals(_rhs.toSrcString().toString())){
 					if(other._lhs instanceof NumLiteral){
 						if(_lhs instanceof NumLiteral && !NodeUtils.isBoundaryValue((NumLiteral) _lhs)){
-							if(NodeUtils.replaceExpr(LHSID, _lhs, other._lhs, varTrans, allUsableVariables, tmp)){
+							if(NodeUtils.replaceExpr(LHSID, _rhs.toSrcString().toString(), _lhs, other._lhs, varTrans, allUsableVariables, tmp)){
 								matchLeft = true;
 								subStructureModifications.addAll(tmp);
 							}
 						}
 					} else {
-						if(NodeUtils.replaceExpr(LHSID, _lhs, other._lhs, varTrans, allUsableVariables, tmp)){
+						if(NodeUtils.replaceExpr(LHSID, _rhs.toSrcString().toString(), _lhs, other._lhs, varTrans, allUsableVariables, tmp)){
 							matchLeft = true;
 							subStructureModifications.addAll(tmp);
 						}
@@ -121,13 +121,13 @@ public class InfixExpr extends Expr {
 					tmp = new ArrayList<>();
 					if(other._rhs instanceof NumLiteral){
 						if(_rhs instanceof NumLiteral && !NodeUtils.isBoundaryValue((NumLiteral) _rhs)){
-							if(NodeUtils.replaceExpr(RHSID, _rhs, other._rhs, varTrans, allUsableVariables, tmp)){
+							if(NodeUtils.replaceExpr(RHSID, _lhs.toSrcString().toString(), _rhs, other._rhs, varTrans, allUsableVariables, tmp)){
 								matchRight = true;
 								subStructureModifications.addAll(tmp);
 							}
 						}
 					} else {
-						if(NodeUtils.replaceExpr(RHSID, _rhs, other._rhs, varTrans, allUsableVariables, tmp)){
+						if(NodeUtils.replaceExpr(RHSID, _lhs.toSrcString().toString(), _rhs, other._rhs, varTrans, allUsableVariables, tmp)){
 							matchRight = true;
 							subStructureModifications.addAll(tmp);
 						}
