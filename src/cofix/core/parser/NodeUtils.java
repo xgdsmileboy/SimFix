@@ -637,7 +637,7 @@ public class NodeUtils {
 		return record;
 	}
 	
-	public static boolean replaceExpr(int srcID, Expr srcExpr, Expr tarExpr, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications){
+	public static boolean replaceExpr(int srcID, String avoid, Expr srcExpr, Expr tarExpr, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications){
 		if(srcExpr.toSrcString().toString().equals(tarExpr.toSrcString().toString())){
 			return true;
 		}
@@ -650,7 +650,7 @@ public class NodeUtils {
 				// replace all variable
 				replaceVariable(record);
 				String target = tarExpr.toSrcString().toString();
-				if (!srcExpr.toSrcString().toString().equals(target)) {
+				if (!srcExpr.toSrcString().toString().equals(target) && !avoid.equals(target)) {
 					Revision revision = new Revision(srcExpr.getParent(), srcID, target, srcExpr.getNodeType());
 					modifications.add(revision);
 				}

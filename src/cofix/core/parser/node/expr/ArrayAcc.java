@@ -80,7 +80,7 @@ public class ArrayAcc extends Expr {
 					}
 				}
 				if(canReplace){
-					if(NodeUtils.replaceExpr(INDEXID, _index, other._index, varTrans, allUsableVariables, tmp)){
+					if(NodeUtils.replaceExpr(INDEXID, _index.toSrcString().toString(), _index, other._index, varTrans, allUsableVariables, tmp)){
 						modifications.addAll(tmp);
 						match = true;
 					}
