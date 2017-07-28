@@ -1,0 +1,8 @@
+org/jfree/chart/util/ShapeList.java#111#        ShapeList that = (ShapeList) obj;
+org/jfree/chart/util/ShapeList.java#112#        int listSize = size();
+org/jfree/chart/util/ShapeList.java#113#        for (int i = 0; i < listSize; i++) {
+org/jfree/chart/util/ShapeList.java#114#           if (!ShapeUtilities.equal((Shape) get(i), (Shape) that.get(i))) {
+org/jfree/chart/util/ShapeList.java#115#               return false;
+org/jfree/chart/util/ShapeList.java#116#           }
+org/jfree/chart/util/ShapeList.java#117#        }
+org/jfree/chart/util/ShapeList.java#118#        return true;

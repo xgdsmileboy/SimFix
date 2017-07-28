@@ -1,0 +1,5 @@
+com/google/javascript/jscomp/ProcessCommonJSModules.java#128#    private Set<String> modulesWithExports = Sets.newHashSet();
+com/google/javascript/jscomp/ProcessCommonJSModules.java#208#      if (!modulesWithExports.contains(moduleName)) {
+com/google/javascript/jscomp/ProcessCommonJSModules.java#209#        return;
+com/google/javascript/jscomp/ProcessCommonJSModules.java#210#      }
+com/google/javascript/jscomp/ProcessCommonJSModules.java#232#      modulesWithExports.add(moduleName);

@@ -1,0 +1,13 @@
+org/apache/commons/math3/optimization/direct/CMAESOptimizer.java#540#                for (int i = 0; i < lB.length; i++) {
+org/apache/commons/math3/optimization/direct/CMAESOptimizer.java#541#                    if (Double.isInfinite(boundaries[1][i] - boundaries[0][i])) {
+org/apache/commons/math3/optimization/direct/CMAESOptimizer.java#542#                        final double max = Double.MAX_VALUE + boundaries[0][i];
+org/apache/commons/math3/optimization/direct/CMAESOptimizer.java#543#                        final NumberIsTooLargeException e
+org/apache/commons/math3/optimization/direct/CMAESOptimizer.java#544#                            = new NumberIsTooLargeException(boundaries[1][i],
+org/apache/commons/math3/optimization/direct/CMAESOptimizer.java#545#                                                            max,
+org/apache/commons/math3/optimization/direct/CMAESOptimizer.java#546#                                                            true);
+org/apache/commons/math3/optimization/direct/CMAESOptimizer.java#547#                        e.getContext().addMessage(LocalizedFormats.OVERFLOW);
+org/apache/commons/math3/optimization/direct/CMAESOptimizer.java#548#                        e.getContext().addMessage(LocalizedFormats.INDEX, i);
+org/apache/commons/math3/optimization/direct/CMAESOptimizer.java#549#
+org/apache/commons/math3/optimization/direct/CMAESOptimizer.java#550#                        throw e;
+org/apache/commons/math3/optimization/direct/CMAESOptimizer.java#551#                    }
+org/apache/commons/math3/optimization/direct/CMAESOptimizer.java#552#                }

@@ -1,0 +1,26 @@
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#258#        double[] oldObj  = new double[rows];
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#259#        double[] qtf     = new double[rows];
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#272#            for (int i=0;i<rows;i++) {
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#273#                qtf[i]=residuals[i];
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#274#            }
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#283#            qTy(qtf);
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#321#                            sum += jacobian[i][pj] * qtf[i];
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#329#            	updateResidualsAndCost();
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#330#            	current = new VectorialPointValuePair(point, objective);
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#351#                tmpVec    = objective;
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#352#                objective = oldObj;
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#353#                oldObj    = tmpVec;
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#356#                determineLMParameter(qtf, delta, diag, work1, work2, work3);
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#429#                    xNorm = Math.sqrt(xNorm);
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#430#                    current = new VectorialPointValuePair(point, objective);
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#433#                    if (checker != null) {
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#435#                    	if (checker.converged(getIterations(), previous, current)) {
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#436#                    		return current;
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#437#                    	}
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#438#                    }
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#449#                    tmpVec    = objective;
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#450#                    objective = oldObj;
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#451#                    oldObj    = tmpVec;
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#375#FIX_OF_OMISSION
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#432#FIX_OF_OMISSION
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#460#FIX_OF_OMISSION

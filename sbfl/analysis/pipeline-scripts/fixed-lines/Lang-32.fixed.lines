@@ -1,0 +1,17 @@
+org/apache/commons/lang3/builder/HashCodeBuilder.java#104#    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>();
+org/apache/commons/lang3/builder/HashCodeBuilder.java#147#        Set<IDKey> registry = getRegistry();
+org/apache/commons/lang3/builder/HashCodeBuilder.java#148#        return registry != null && registry.contains(new IDKey(value));
+org/apache/commons/lang3/builder/HashCodeBuilder.java#518#        synchronized (HashCodeBuilder.class) {
+org/apache/commons/lang3/builder/HashCodeBuilder.java#519#            if (getRegistry() == null) {
+org/apache/commons/lang3/builder/HashCodeBuilder.java#520#                REGISTRY.set(new HashSet<IDKey>());
+org/apache/commons/lang3/builder/HashCodeBuilder.java#521#            }
+org/apache/commons/lang3/builder/HashCodeBuilder.java#522#        }
+org/apache/commons/lang3/builder/HashCodeBuilder.java#539#        Set<IDKey> s = getRegistry();
+org/apache/commons/lang3/builder/HashCodeBuilder.java#540#        if (s != null) {
+org/apache/commons/lang3/builder/HashCodeBuilder.java#541#            s.remove(new IDKey(value));
+org/apache/commons/lang3/builder/HashCodeBuilder.java#542#            synchronized (HashCodeBuilder.class) {
+org/apache/commons/lang3/builder/HashCodeBuilder.java#543#                if (s.isEmpty()) {
+org/apache/commons/lang3/builder/HashCodeBuilder.java#544#                    REGISTRY.remove();
+org/apache/commons/lang3/builder/HashCodeBuilder.java#545#                }
+org/apache/commons/lang3/builder/HashCodeBuilder.java#546#            }
+org/apache/commons/lang3/builder/HashCodeBuilder.java#547#        }

@@ -1,0 +1,12 @@
+org/joda/time/Period.java#1628#            long totalMonths = years * 12L + months;
+org/joda/time/Period.java#1629#            if (type.isSupported(DurationFieldType.YEARS_TYPE)) {
+org/joda/time/Period.java#1630#                int normalizedYears = FieldUtils.safeToInt(totalMonths / 12);
+org/joda/time/Period.java#1631#                result = result.withYears(normalizedYears);
+org/joda/time/Period.java#1632#                totalMonths = totalMonths - (normalizedYears * 12);
+org/joda/time/Period.java#1634#            if (type.isSupported(DurationFieldType.MONTHS_TYPE)) {
+org/joda/time/Period.java#1635#                int normalizedMonths = FieldUtils.safeToInt(totalMonths);
+org/joda/time/Period.java#1636#                result = result.withMonths(normalizedMonths);
+org/joda/time/Period.java#1637#                totalMonths = totalMonths - normalizedMonths;
+org/joda/time/Period.java#1638#            }
+org/joda/time/Period.java#1639#            if (totalMonths != 0) {
+org/joda/time/Period.java#1640#                throw new UnsupportedOperationException("Unable to normalize as PeriodType is missing either years or months but period has a month/year amount: " + toString());

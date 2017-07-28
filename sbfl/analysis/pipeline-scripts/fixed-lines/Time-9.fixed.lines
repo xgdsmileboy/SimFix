@@ -1,0 +1,9 @@
+org/joda/time/DateTimeZone.java#258#        if (hoursOffset < -23 || hoursOffset > 23) {
+org/joda/time/DateTimeZone.java#259#            throw new IllegalArgumentException("Hours out of range: " + hoursOffset);
+org/joda/time/DateTimeZone.java#260#        }
+org/joda/time/DateTimeZone.java#266#            int hoursInMinutes = hoursOffset * 60;
+org/joda/time/DateTimeZone.java#268#                minutesOffset = hoursInMinutes - minutesOffset;
+org/joda/time/DateTimeZone.java#270#                minutesOffset = hoursInMinutes + minutesOffset;
+org/joda/time/DateTimeZone.java#286#        if (millisOffset < -MAX_MILLIS || millisOffset > MAX_MILLIS) {
+org/joda/time/DateTimeZone.java#287#            throw new IllegalArgumentException("Millis out of range: " + millisOffset);
+org/joda/time/DateTimeZone.java#288#        }

@@ -1,0 +1,3 @@
+org/apache/commons/math/optimization/univariate/MultiStartUnivariateRealOptimizer.java#146#        return optimize(f, goal, min, max, min + 0.5 * (max - min));
+org/apache/commons/math/optimization/univariate/MultiStartUnivariateRealOptimizer.java#160#                final double s = (i == 0) ? startValue : min + generator.nextDouble() * (max - min);
+org/apache/commons/math/optimization/univariate/MultiStartUnivariateRealOptimizer.java#161#                optima[i] = optimizer.optimize(f, goal, min, max, s);

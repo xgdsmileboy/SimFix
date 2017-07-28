@@ -1,0 +1,12 @@
+org/mockito/internal/invocation/InvocationMatcher.java#123#            for (int position = 0; position < indexOfVararg; position++) {
+org/mockito/internal/invocation/InvocationMatcher.java#124#                Matcher m = matchers.get(position);
+org/mockito/internal/invocation/InvocationMatcher.java#125#                if (m instanceof CapturesArguments) {
+org/mockito/internal/invocation/InvocationMatcher.java#126#                    ((CapturesArguments) m).captureFrom(invocation.getArgumentAt(position, Object.class));
+org/mockito/internal/invocation/InvocationMatcher.java#127#                }
+org/mockito/internal/invocation/InvocationMatcher.java#128#            }
+org/mockito/internal/invocation/InvocationMatcher.java#129#            for (int position = indexOfVararg; position < matchers.size(); position++) {
+org/mockito/internal/invocation/InvocationMatcher.java#130#                Matcher m = matchers.get(position);
+org/mockito/internal/invocation/InvocationMatcher.java#131#                if (m instanceof CapturesArguments) {
+org/mockito/internal/invocation/InvocationMatcher.java#132#                    ((CapturesArguments) m).captureFrom(invocation.getRawArguments()[position - indexOfVararg]);
+org/mockito/internal/invocation/InvocationMatcher.java#133#                }
+org/mockito/internal/invocation/InvocationMatcher.java#134#            }

@@ -1,0 +1,6 @@
+org/joda/time/base/BasePeriod.java#222#        super();
+org/joda/time/base/BasePeriod.java#224#        iType = PeriodType.time();
+org/joda/time/base/BasePeriod.java#225#        int[] values = ISOChronology.getInstanceUTC().get(this, duration);
+org/joda/time/base/BasePeriod.java#226#        iType = PeriodType.standard();
+org/joda/time/base/BasePeriod.java#227#        iValues = new int[8];
+org/joda/time/base/BasePeriod.java#228#        System.arraycopy(values, 0, iValues, 4, 4);

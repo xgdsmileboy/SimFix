@@ -1,0 +1,4 @@
+org/mockito/internal/util/reflection/GenericMaster.java#20#            if (actual instanceof Class) {
+org/mockito/internal/util/reflection/GenericMaster.java#22#            } else if (actual instanceof ParameterizedType) {
+org/mockito/internal/util/reflection/GenericMaster.java#24#                return (Class) ((ParameterizedType) actual).getRawType();
+org/mockito/internal/util/reflection/GenericMaster.java#25#            }

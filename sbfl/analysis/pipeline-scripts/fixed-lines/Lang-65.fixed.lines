@@ -1,0 +1,30 @@
+org/apache/commons/lang/time/DateUtils.java#624#        if (field == Calendar.MILLISECOND) {
+org/apache/commons/lang/time/DateUtils.java#625#            return;
+org/apache/commons/lang/time/DateUtils.java#626#        }
+org/apache/commons/lang/time/DateUtils.java#634#        Date date = val.getTime();
+org/apache/commons/lang/time/DateUtils.java#635#        long time = date.getTime();
+org/apache/commons/lang/time/DateUtils.java#636#        boolean done = false;
+org/apache/commons/lang/time/DateUtils.java#639#        int millisecs = val.get(Calendar.MILLISECOND);
+org/apache/commons/lang/time/DateUtils.java#640#        if (!round || millisecs < 500) {
+org/apache/commons/lang/time/DateUtils.java#641#            time = time - millisecs;
+org/apache/commons/lang/time/DateUtils.java#642#            if (field == Calendar.SECOND) {
+org/apache/commons/lang/time/DateUtils.java#643#                done = true;
+org/apache/commons/lang/time/DateUtils.java#644#            }
+org/apache/commons/lang/time/DateUtils.java#645#        }
+org/apache/commons/lang/time/DateUtils.java#648#        int seconds = val.get(Calendar.SECOND);
+org/apache/commons/lang/time/DateUtils.java#649#        if (!done && (!round || seconds < 30)) {
+org/apache/commons/lang/time/DateUtils.java#650#            time = time - (seconds * 1000L);
+org/apache/commons/lang/time/DateUtils.java#651#            if (field == Calendar.MINUTE) {
+org/apache/commons/lang/time/DateUtils.java#652#                done = true;
+org/apache/commons/lang/time/DateUtils.java#653#            }
+org/apache/commons/lang/time/DateUtils.java#654#        }
+org/apache/commons/lang/time/DateUtils.java#657#        int minutes = val.get(Calendar.MINUTE);
+org/apache/commons/lang/time/DateUtils.java#658#        if (!done && (!round || minutes < 30)) {
+org/apache/commons/lang/time/DateUtils.java#659#            time = time - (minutes * 60000L);
+org/apache/commons/lang/time/DateUtils.java#660#        }
+org/apache/commons/lang/time/DateUtils.java#663#        if (date.getTime() != time) {
+org/apache/commons/lang/time/DateUtils.java#664#            date.setTime(time);
+org/apache/commons/lang/time/DateUtils.java#665#            val.setTime(date);
+org/apache/commons/lang/time/DateUtils.java#666#        }
+org/apache/commons/lang/time/DateUtils.java#737#            if (offset != 0) {
+org/apache/commons/lang/time/DateUtils.java#739#            }

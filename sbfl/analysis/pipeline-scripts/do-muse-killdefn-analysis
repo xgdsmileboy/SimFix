@@ -1,0 +1,43 @@
+#!/bin/bash
+
+die() { echo "$@" >&2; exit 1; }
+[ "$FL_DATA_HOME" ] || die 'FL_DATA_HOME is not set'
+
+USAGE="$0 TAR_DIR BUGS_CSV OUT_DIR"
+[ "$#" = 3 ] || die "usage: $USAGE"
+TAR_BASE_DIR="$1"
+BUGS_CSV="$2"
+OUT_DIR="$3"
+
+RESTRICTIONS_FILE="/tmp/$$-restrictions.json"
+echo '{"family":["mbfl"], "formula":["muse"], "total_defn":["elements"], "aggregate_defn":["avg"], "hybrid_scheme":["none"]}' > "$RESTRICTIONS_FILE"
+touch "/tmp/$$_empty"
+
+while IFS=, read PROJECT BUG; do
+  echo "scoring $PROJECT-$BUG"
+  TAR_DIR="$TAR_BASE_DIR/$PROJECT/$BUG"
+  for KILLMAP_BASENAME_PREFIX in unlimited 168h 32h; do
+    if [ -f "$TAR_DIR/$KILLMAP_BASENAME_PREFIX-killmap-files.tar.gz" ]; then
+      echo '  unzipping'
+      tar xf "$TAR_DIR/$KILLMAP_BASENAME_PREFIX-killmap-files.tar.gz"
+      break
+    fi
+  done
+  if ! [ -f "killmaps/$PROJECT/$BUG/killmap.csv.gz" ]; then
+    echo "  can't find killmap"
+    continue
+  fi
+  mkdir -p "$OUT_DIR/$PROJECT/$BUG"
+  echo '  analyzing'
+  "$FL_DATA_HOME/analysis/pipeline-scripts/do-full-analysis" \
+    --restrictions-file "$RESTRICTIONS_FILE" \
+    "$PROJECT" "$BUG" developer \
+    "/tmp/$$_empty" "/tmp/$$_empty" \
+    "killmaps/$PROJECT/$BUG/killmap.csv.gz" "killmaps/$PROJECT/$BUG/mutants.log" \
+    "/tmp/$$-muse-multikilldefn-scoring-$PROJECT-$BUG" \
+    "$OUT_DIR/$PROJECT/$BUG/scores.csv" \
+    >/dev/null 2>&1
+  rm -r "/tmp/$$-muse-multikilldefn-scoring-$PROJECT-$BUG"
+done < "$BUGS_CSV"
+
+"$FL_DATA_HOME/analysis/pipeline-scripts/cat-csvs" "$OUT_DIR"/*/*/scores.csv > "$OUT_DIR"/scores.csv

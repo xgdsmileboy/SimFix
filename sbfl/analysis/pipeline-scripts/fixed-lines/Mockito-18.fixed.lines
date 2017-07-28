@@ -1,0 +1,2 @@
+org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValues.java#87#        } else if (type == Iterable.class) {
+org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValues.java#88#            return new ArrayList<Object>(0);

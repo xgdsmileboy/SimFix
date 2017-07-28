@@ -1,0 +1,13 @@
+com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java#523#        if (maybeExpr.getType() == Token.EXPR_RESULT) {
+com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java#530#          if (maybeExpr.getFirstChild().getType() == Token.CALL) {
+com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java#531#            Node calledFn = maybeExpr.getFirstChild().getFirstChild();
+com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java#535#            if (calledFn.getType() == Token.GETELEM) {
+com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java#536#              return false;
+com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java#537#            } else if (calledFn.getType() == Token.GETPROP &&
+com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java#538#                       calledFn.getLastChild().getString().startsWith("on")) {
+com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java#539#              return false;
+com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java#540#            }
+com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java#541#          }
+com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java#543#          return true;
+com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java#544#        }
+com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java#545#        return false;

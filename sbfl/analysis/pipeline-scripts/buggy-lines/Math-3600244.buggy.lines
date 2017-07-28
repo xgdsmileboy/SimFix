@@ -1,0 +1,1 @@
+org/apache/commons/math/fraction/BigFraction.java#691#            result = numerator.shiftRight(shift).doubleValue() - denominator.shiftRight(shift).doubleValue();

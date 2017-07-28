@@ -1,0 +1,7 @@
+org/apache/commons/math/ode/nonstiff/RungeKuttaIntegrator.java#180#                interpolator.storeTime(stepStart);
+org/apache/commons/math/ode/nonstiff/RungeKuttaIntegrator.java#181#                System.arraycopy(y, 0, yTmp, 0, y0.length);
+org/apache/commons/math/ode/nonstiff/RungeKuttaIntegrator.java#182#                stepSize = 0;
+org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java#300#                  interpolator.storeTime(stepStart);
+org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java#301#                  System.arraycopy(y, 0, yTmp, 0, y0.length);
+org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java#302#                  hNew     = 0;
+org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java#303#                  stepSize = 0;

@@ -1,0 +1,6 @@
+com/google/javascript/jscomp/CheckGlobalThis.java#92#           jsDoc.isInterface() ||
+com/google/javascript/jscomp/CheckGlobalThis.java#126#        if (NodeUtil.isGet(lhs)) {
+com/google/javascript/jscomp/CheckGlobalThis.java#131#          Node llhs = lhs.getFirstChild();
+com/google/javascript/jscomp/CheckGlobalThis.java#132#          if (llhs.getType() == Token.GETPROP &&
+com/google/javascript/jscomp/CheckGlobalThis.java#133#              llhs.getLastChild().getString().equals("prototype")) {
+com/google/javascript/jscomp/CheckGlobalThis.java#136#        }

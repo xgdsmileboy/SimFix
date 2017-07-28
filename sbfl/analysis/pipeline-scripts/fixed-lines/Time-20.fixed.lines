@@ -1,0 +1,8 @@
+org/joda/time/format/DateTimeFormatterBuilder.java#2542#            String best = null;
+org/joda/time/format/DateTimeFormatterBuilder.java#2545#                	if (best == null || id.length() > best.length()) {
+org/joda/time/format/DateTimeFormatterBuilder.java#2546#                		best = id;
+org/joda/time/format/DateTimeFormatterBuilder.java#2547#                	}
+org/joda/time/format/DateTimeFormatterBuilder.java#2549#            }
+org/joda/time/format/DateTimeFormatterBuilder.java#2550#            if (best != null) {
+org/joda/time/format/DateTimeFormatterBuilder.java#2551#                bucket.setZone(DateTimeZone.forID(best));
+org/joda/time/format/DateTimeFormatterBuilder.java#2552#                return position + best.length();

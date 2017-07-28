@@ -1,0 +1,9 @@
+com/google/javascript/jscomp/ScopedAliases.java#170#    private final Node aliasDefinition;
+com/google/javascript/jscomp/ScopedAliases.java#173#    AliasedTypeNode(Node typeReference, Node aliasDefinition,
+com/google/javascript/jscomp/ScopedAliases.java#176#      this.aliasDefinition = aliasDefinition;
+com/google/javascript/jscomp/ScopedAliases.java#182#      String typeName = typeReference.getString();
+com/google/javascript/jscomp/ScopedAliases.java#183#      String aliasExpanded =
+com/google/javascript/jscomp/ScopedAliases.java#184#          Preconditions.checkNotNull(aliasDefinition.getQualifiedName());
+com/google/javascript/jscomp/ScopedAliases.java#185#      Preconditions.checkState(typeName.startsWith(aliasName));
+com/google/javascript/jscomp/ScopedAliases.java#186#      typeReference.setString(typeName.replaceFirst(aliasName, aliasExpanded));
+com/google/javascript/jscomp/ScopedAliases.java#474#          aliasUsages.add(new AliasedTypeNode(typeNode, aliasedNode, baseName));

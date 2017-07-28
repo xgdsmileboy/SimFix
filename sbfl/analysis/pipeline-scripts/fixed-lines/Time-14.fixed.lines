@@ -1,0 +1,5 @@
+org/joda/time/chrono/BasicMonthOfYearDateTimeField.java#209#        if (partial.size() > 0 && partial.getFieldType(0).equals(DateTimeFieldType.monthOfYear()) && fieldIndex == 0) {
+org/joda/time/chrono/BasicMonthOfYearDateTimeField.java#211#            int curMonth0 = partial.getValue(0) - 1;
+org/joda/time/chrono/BasicMonthOfYearDateTimeField.java#212#            int newMonth = ((curMonth0 + (valueToAdd % 12) + 12) % 12) + 1;
+org/joda/time/chrono/BasicMonthOfYearDateTimeField.java#213#            return set(partial, 0, values, newMonth);
+org/joda/time/chrono/BasicMonthOfYearDateTimeField.java#214#        }

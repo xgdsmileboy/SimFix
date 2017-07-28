@@ -1,0 +1,3 @@
+org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java#9#import java.util.Arrays;
+org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java#61#			String args = Arrays.toString(invocation.getArguments());
+org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java#62#			return invocation.getMethod().getName() + "(" + args.substring(1, args.length() - 1) +	")";

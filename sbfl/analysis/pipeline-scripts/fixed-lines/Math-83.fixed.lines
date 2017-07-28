@@ -1,0 +1,3 @@
+org/apache/commons/math/optimization/linear/SimplexTableau.java#292#        int start = ignoreObjectiveRows ? getNumObjectiveFunctions() : 0;
+org/apache/commons/math/optimization/linear/SimplexTableau.java#341#      Integer negativeVarBasicRow = getBasicRowForSolution(getNegativeDecisionVariableOffset());
+org/apache/commons/math/optimization/linear/SimplexTableau.java#345#          Integer basicRow = getBasicRowForSolution(getNumObjectiveFunctions() + i);

@@ -1,0 +1,3 @@
+org/apache/commons/lang3/StringUtils.java#788#        if (cs1 instanceof String && cs2 instanceof String) {
+org/apache/commons/lang3/StringUtils.java#790#        }
+org/apache/commons/lang3/StringUtils.java#791#        return CharSequenceUtils.regionMatches(cs1, false, 0, cs2, 0, Math.max(cs1.length(), cs2.length()));

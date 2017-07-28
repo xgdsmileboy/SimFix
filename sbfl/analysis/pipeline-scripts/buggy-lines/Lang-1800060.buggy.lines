@@ -1,0 +1,1 @@
+org/apache/commons/lang3/time/FastDateFormat.java#498#                    rule = selectNumberRule(Calendar.YEAR, tokenLen < 4 ? -4 : tokenLen);

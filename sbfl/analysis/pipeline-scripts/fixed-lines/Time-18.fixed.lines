@@ -1,0 +1,12 @@
+org/joda/time/chrono/GJChronology.java#364#        try {
+org/joda/time/chrono/GJChronology.java#368#        } catch (IllegalFieldValueException ex) {
+org/joda/time/chrono/GJChronology.java#369#            if (monthOfYear != 2 || dayOfMonth != 29) {
+org/joda/time/chrono/GJChronology.java#370#                throw ex;
+org/joda/time/chrono/GJChronology.java#371#            }
+org/joda/time/chrono/GJChronology.java#372#            instant = iGregorianChronology.getDateTimeMillis
+org/joda/time/chrono/GJChronology.java#373#                (year, monthOfYear, 28,
+org/joda/time/chrono/GJChronology.java#374#                 hourOfDay, minuteOfHour, secondOfMinute, millisOfSecond);
+org/joda/time/chrono/GJChronology.java#375#            if (instant >= iCutoverMillis) {
+org/joda/time/chrono/GJChronology.java#376#                throw ex;
+org/joda/time/chrono/GJChronology.java#377#            }
+org/joda/time/chrono/GJChronology.java#378#        }

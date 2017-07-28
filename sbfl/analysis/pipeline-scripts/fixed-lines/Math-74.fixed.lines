@@ -1,0 +1,7 @@
+org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java#245#          final double[] scale = new double[y0.length];
+org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java#247#              for (int i = 0; i < scale.length; ++i) {
+org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java#248#                scale[i] = scalAbsoluteTolerance + scalRelativeTolerance * Math.abs(y[i]);
+org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java#249#              }
+org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java#251#              for (int i = 0; i < scale.length; ++i) {
+org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java#252#                scale[i] = vecAbsoluteTolerance[i] + vecRelativeTolerance[i] * Math.abs(y[i]);
+org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java#253#              }

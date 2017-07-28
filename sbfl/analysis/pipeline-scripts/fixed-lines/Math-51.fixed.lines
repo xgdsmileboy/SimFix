@@ -1,0 +1,9 @@
+org/apache/commons/math/analysis/solvers/BaseSecantSolver.java#185#                case REGULA_FALSI:
+org/apache/commons/math/analysis/solvers/BaseSecantSolver.java#186#                    if (x == x1) {
+org/apache/commons/math/analysis/solvers/BaseSecantSolver.java#187#                        final double delta = FastMath.max(rtol * FastMath.abs(x1),
+org/apache/commons/math/analysis/solvers/BaseSecantSolver.java#188#                                                          atol);
+org/apache/commons/math/analysis/solvers/BaseSecantSolver.java#191#                        x0 = 0.5 * (x0 + x1 - delta);
+org/apache/commons/math/analysis/solvers/BaseSecantSolver.java#192#                        f0 = computeObjectiveValue(x0);
+org/apache/commons/math/analysis/solvers/BaseSecantSolver.java#193#                    }
+org/apache/commons/math/analysis/solvers/BaseSecantSolver.java#194#                    break;
+org/apache/commons/math/analysis/solvers/BaseSecantSolver.java#197#                    throw new MathInternalError();

@@ -1,0 +1,4 @@
+org/apache/commons/math/stat/Frequency.java#110#        if (v instanceof Comparable<?>){
+org/apache/commons/math/stat/Frequency.java#112#        } else {
+org/apache/commons/math/stat/Frequency.java#113#            throw new IllegalArgumentException("Object must implement Comparable");
+org/apache/commons/math/stat/Frequency.java#114#        }

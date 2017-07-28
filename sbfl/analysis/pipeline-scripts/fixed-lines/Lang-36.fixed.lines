@@ -1,0 +1,9 @@
+org/apache/commons/lang3/math/NumberUtils.java#491#        if (!Character.isDigit(lastChar) && lastChar != '.') {
+org/apache/commons/lang3/math/NumberUtils.java#1387#            }
+org/apache/commons/lang3/math/NumberUtils.java#1388#            if (chars[i] == '.') {
+org/apache/commons/lang3/math/NumberUtils.java#1389#                if (hasDecPoint || hasExp) {
+org/apache/commons/lang3/math/NumberUtils.java#1390#                    // two decimal points or dec in exponent
+org/apache/commons/lang3/math/NumberUtils.java#1391#                    return false;
+org/apache/commons/lang3/math/NumberUtils.java#1392#                }
+org/apache/commons/lang3/math/NumberUtils.java#1393#                // single trailing decimal point after non-exponent is ok
+org/apache/commons/lang3/math/NumberUtils.java#1394#                return foundDigit;

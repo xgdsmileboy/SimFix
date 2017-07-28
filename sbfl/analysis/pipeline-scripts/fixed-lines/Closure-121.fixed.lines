@@ -1,0 +1,3 @@
+com/google/javascript/jscomp/InlineVariables.java#304#          referenceInfo.isAssignedOnceInLifetime() &&
+com/google/javascript/jscomp/InlineVariables.java#308#          (isInlineableDeclaredConstant(v, referenceInfo) ||
+com/google/javascript/jscomp/InlineVariables.java#309#           referenceInfo.isOnlyAssignmentSameScopeAsDeclaration())) {

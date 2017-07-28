@@ -1,0 +1,6 @@
+com/google/javascript/rhino/IR.java#111#  private static Node blockUnchecked(Node stmt) {
+com/google/javascript/rhino/IR.java#112#    return new Node(Token.BLOCK, stmt);
+com/google/javascript/rhino/IR.java#113#  }
+com/google/javascript/rhino/IR.java#227#    Preconditions.checkState(tryBody.isBlock());
+com/google/javascript/rhino/IR.java#228#    Preconditions.checkState(finallyBody.isBlock());
+com/google/javascript/rhino/IR.java#236#    Node catchBody = blockUnchecked(catchNode).copyInformationFrom(catchNode);

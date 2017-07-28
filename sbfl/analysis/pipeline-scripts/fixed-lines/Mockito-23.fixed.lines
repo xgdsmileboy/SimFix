@@ -1,0 +1,18 @@
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#44#    private transient MockitoCore mockitoCore;
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#45#    private transient ReturnsEmptyValues delegate;
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#52#        instantiateMockitoCoreIfNeeded();
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#53#        instantiateDelegateIfNeeded();
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#61#    private synchronized void instantiateMockitoCoreIfNeeded() {
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#62#        if (mockitoCore == null) {
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#63#            mockitoCore = new MockitoCore();
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#64#        }
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#65#    }
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#67#    private synchronized void instantiateDelegateIfNeeded() {
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#68#        if (delegate == null) {
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#69#            delegate = new ReturnsEmptyValues();
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#70#        }
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#71#    }
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#112#		        .serializable()
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#127#        container.addAnswer(new SerializableAnswer() {
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#136#	abstract class SerializableAnswer implements Answer<Object>, Serializable {
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#138#	}

@@ -1,0 +1,3 @@
+org/apache/commons/lang3/time/FastDateFormat.java#495#                if (tokenLen == 2) {
+org/apache/commons/lang3/time/FastDateFormat.java#496#                    rule = TwoDigitYearField.INSTANCE;
+org/apache/commons/lang3/time/FastDateFormat.java#498#                    rule = selectNumberRule(Calendar.YEAR, tokenLen < 4 ? 4 : tokenLen);

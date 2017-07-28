@@ -1,0 +1,25 @@
+com/google/javascript/rhino/Node.java#554#    if (n == null) {
+com/google/javascript/rhino/Node.java#555#      throw new RuntimeException("node is not a child");
+com/google/javascript/rhino/Node.java#556#    }
+com/google/javascript/jscomp/ScopedAliases.java#358#        boolean isFunctionDecl = NodeUtil.isFunctionDeclaration(parent);
+com/google/javascript/jscomp/ScopedAliases.java#367#        } else if (isVar || isFunctionDecl) {
+com/google/javascript/jscomp/ScopedAliases.java#368#          boolean isHoisted = NodeUtil.isHoistedFunctionDeclaration(parent);
+com/google/javascript/jscomp/ScopedAliases.java#370#          Node value = v.getInitialValue() != null ?
+com/google/javascript/jscomp/ScopedAliases.java#371#              v.getInitialValue() :
+com/google/javascript/jscomp/ScopedAliases.java#373#          Node varNode = null;
+com/google/javascript/jscomp/ScopedAliases.java#385#          if (isFunctionDecl) {
+com/google/javascript/jscomp/ScopedAliases.java#387#            Node existingName = v.getNameNode();
+com/google/javascript/jscomp/ScopedAliases.java#396#            Node newName = IR.name("").useSourceInfoFrom(existingName);
+com/google/javascript/jscomp/ScopedAliases.java#397#            value.replaceChild(existingName, newName);
+com/google/javascript/jscomp/ScopedAliases.java#399#            varNode = IR.var(existingName).useSourceInfoFrom(existingName);
+com/google/javascript/jscomp/ScopedAliases.java#400#            grandparent.replaceChild(parent, varNode);
+com/google/javascript/jscomp/ScopedAliases.java#401#          } else {
+com/google/javascript/jscomp/ScopedAliases.java#402#            if (value != null) {
+com/google/javascript/jscomp/ScopedAliases.java#405#              value.detachFromParent();
+com/google/javascript/jscomp/ScopedAliases.java#406#            }
+com/google/javascript/jscomp/ScopedAliases.java#407#            varNode = parent;
+com/google/javascript/jscomp/ScopedAliases.java#408#          }
+com/google/javascript/jscomp/ScopedAliases.java#422#            if (isHoisted) {
+com/google/javascript/jscomp/ScopedAliases.java#423#              grandparent.addChildToFront(newDecl);
+com/google/javascript/jscomp/ScopedAliases.java#424#            } else {
+com/google/javascript/jscomp/ScopedAliases.java#426#            }

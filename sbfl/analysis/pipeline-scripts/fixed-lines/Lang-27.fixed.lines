@@ -1,0 +1,4 @@
+org/apache/commons/lang3/math/NumberUtils.java#479#                if (expPos < decPos || expPos > str.length()) {
+org/apache/commons/lang3/math/NumberUtils.java#489#                if (expPos > str.length()) {
+org/apache/commons/lang3/math/NumberUtils.java#490#                    throw new NumberFormatException(str + " is not a valid number.");
+org/apache/commons/lang3/math/NumberUtils.java#491#                }

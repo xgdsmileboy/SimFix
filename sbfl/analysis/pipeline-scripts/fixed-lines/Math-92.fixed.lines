@@ -1,0 +1,50 @@
+org/apache/commons/math/util/MathUtils.java#185#        if (k > n / 2)
+org/apache/commons/math/util/MathUtils.java#186#            return binomialCoefficient(n, n - k);
+org/apache/commons/math/util/MathUtils.java#193#        long result = 1;
+org/apache/commons/math/util/MathUtils.java#194#        if (n <= 61) {
+org/apache/commons/math/util/MathUtils.java#196#            for (int j = 1, i = n - k + 1; j <= k; i++, j++) {
+org/apache/commons/math/util/MathUtils.java#197#                result = result * i / j;
+org/apache/commons/math/util/MathUtils.java#198#            }
+org/apache/commons/math/util/MathUtils.java#199#        } else if (n <= 66) {
+org/apache/commons/math/util/MathUtils.java#202#            for (int j = 1, i = n - k + 1; j <= k; i++, j++) {
+org/apache/commons/math/util/MathUtils.java#209#                long d = gcd(i, j);
+org/apache/commons/math/util/MathUtils.java#210#                result = (result / (j / d)) * (i / d);
+org/apache/commons/math/util/MathUtils.java#211#            }
+org/apache/commons/math/util/MathUtils.java#212#        } else {
+org/apache/commons/math/util/MathUtils.java#216#            for (int j = 1, i = n - k + 1; j <= k; i++, j++) {
+org/apache/commons/math/util/MathUtils.java#217#                long d = gcd(i, j);
+org/apache/commons/math/util/MathUtils.java#218#                result = mulAndCheck((result / (j / d)), (i / d));
+org/apache/commons/math/util/MathUtils.java#219#            }
+org/apache/commons/math/util/MathUtils.java#220#        }
+org/apache/commons/math/util/MathUtils.java#247#        if (n < k) {
+org/apache/commons/math/util/MathUtils.java#248#            throw new IllegalArgumentException(
+org/apache/commons/math/util/MathUtils.java#249#                "must have n >= k for binomial coefficient (n,k)");
+org/apache/commons/math/util/MathUtils.java#250#        }
+org/apache/commons/math/util/MathUtils.java#251#        if (n < 0) {
+org/apache/commons/math/util/MathUtils.java#252#            throw new IllegalArgumentException(
+org/apache/commons/math/util/MathUtils.java#253#                "must have n >= 0 for binomial coefficient (n,k)");
+org/apache/commons/math/util/MathUtils.java#254#        }
+org/apache/commons/math/util/MathUtils.java#255#        if ((n == k) || (k == 0)) {
+org/apache/commons/math/util/MathUtils.java#256#            return 1d;
+org/apache/commons/math/util/MathUtils.java#257#        }
+org/apache/commons/math/util/MathUtils.java#258#        if ((k == 1) || (k == n - 1)) {
+org/apache/commons/math/util/MathUtils.java#259#            return n;
+org/apache/commons/math/util/MathUtils.java#260#        }
+org/apache/commons/math/util/MathUtils.java#261#        if (k > n/2) {
+org/apache/commons/math/util/MathUtils.java#262#            return binomialCoefficientDouble(n, n - k);
+org/apache/commons/math/util/MathUtils.java#263#        }
+org/apache/commons/math/util/MathUtils.java#264#        if (n < 67) {
+org/apache/commons/math/util/MathUtils.java#265#            return binomialCoefficient(n,k);
+org/apache/commons/math/util/MathUtils.java#266#        }
+org/apache/commons/math/util/MathUtils.java#268#        double result = 1d;
+org/apache/commons/math/util/MathUtils.java#269#        for (int i = 1; i <= k; i++) {
+org/apache/commons/math/util/MathUtils.java#270#             result *= (double)(n - k + i) / (double)i;
+org/apache/commons/math/util/MathUtils.java#271#        }
+org/apache/commons/math/util/MathUtils.java#273#        return Math.floor(result + 0.5);
+org/apache/commons/math/util/MathUtils.java#314#        if (n < 67) {  
+org/apache/commons/math/util/MathUtils.java#315#            return Math.log(binomialCoefficient(n,k));
+org/apache/commons/math/util/MathUtils.java#316#        }
+org/apache/commons/math/util/MathUtils.java#322#        if (n < 1030) { 
+org/apache/commons/math/util/MathUtils.java#323#            return Math.log(binomialCoefficientDouble(n, k));
+org/apache/commons/math/util/MathUtils.java#324#        } 
+org/apache/commons/math/util/MathUtils.java#184#FIX_OF_OMISSION

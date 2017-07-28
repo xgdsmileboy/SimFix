@@ -1,0 +1,5 @@
+org/mockito/internal/MockHandler.java#20#import org.mockito.internal.verification.MockAwareVerificationMode;
+org/mockito/internal/MockHandler.java#77#            if (verificationMode instanceof MockAwareVerificationMode && ((MockAwareVerificationMode) verificationMode).getMock() == invocation.getMock()) {
+org/mockito/internal/MockHandler.java#81#            }
+org/mockito/internal/MockitoCore.java#23#import org.mockito.internal.verification.MockAwareVerificationMode;
+org/mockito/internal/MockitoCore.java#74#        mockingProgress.verificationStarted(new MockAwareVerificationMode(mock, mode));

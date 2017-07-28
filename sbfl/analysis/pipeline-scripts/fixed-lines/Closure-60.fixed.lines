@@ -1,0 +1,5 @@
+com/google/javascript/jscomp/NodeUtil.java#108#      case Token.VOID:
+com/google/javascript/jscomp/NodeUtil.java#109#        return TernaryValue.FALSE;
+com/google/javascript/jscomp/NodeUtil.java#138#        if (!mayHaveSideEffects(n.getFirstChild())) {
+com/google/javascript/jscomp/NodeUtil.java#140#        }
+com/google/javascript/jscomp/NodeUtil.java#141#        break;

@@ -1,0 +1,2 @@
+org/apache/commons/math/distribution/PoissonDistributionImpl.java#22#import org.apache.commons.math.exception.NotStrictlyPositiveException;
+org/apache/commons/math/distribution/PoissonDistributionImpl.java#94#            throw new NotStrictlyPositiveException(LocalizedFormats.MEAN, p);

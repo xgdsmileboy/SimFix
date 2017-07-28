@@ -1,0 +1,7 @@
+com/google/javascript/jscomp/TypedScopeCreator.java#899#      if (n.getType() == Token.GETPROP && !scope.isGlobal() &&
+com/google/javascript/jscomp/TypedScopeCreator.java#900#          isQnameRootedInGlobalScope(n)) {
+com/google/javascript/jscomp/TypedScopeCreator.java#901#        Scope globalScope = scope.getGlobalScope();
+com/google/javascript/jscomp/TypedScopeCreator.java#905#        if (!globalScope.isDeclared(variableName, false)) {
+com/google/javascript/jscomp/TypedScopeCreator.java#906#          scopeToDeclareIn = scope.getGlobalScope();
+com/google/javascript/jscomp/TypedScopeCreator.java#907#        }
+com/google/javascript/jscomp/TypedScopeCreator.java#908#      }

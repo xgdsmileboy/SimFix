@@ -1,0 +1,3 @@
+org/apache/commons/lang/LocaleUtils.java#114#            if (ch3 == '_') {
+org/apache/commons/lang/LocaleUtils.java#115#                return new Locale(str.substring(0, 2), "", str.substring(4));
+org/apache/commons/lang/LocaleUtils.java#116#            }

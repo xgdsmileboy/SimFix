@@ -1,0 +1,7 @@
+org/apache/commons/lang3/RandomStringUtils.java#230#        if (chars != null && chars.length == 0) {
+org/apache/commons/lang3/RandomStringUtils.java#231#            throw new IllegalArgumentException("The chars array must not be empty");
+org/apache/commons/lang3/RandomStringUtils.java#232#        }
+org/apache/commons/lang3/RandomStringUtils.java#235#            if (chars != null) {
+org/apache/commons/lang3/RandomStringUtils.java#236#                end = chars.length;
+org/apache/commons/lang3/RandomStringUtils.java#237#            } else {
+org/apache/commons/lang3/RandomStringUtils.java#244#            }

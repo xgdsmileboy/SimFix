@@ -1,0 +1,17 @@
+org/mockito/internal/invocation/InvocationMatcher.java#127#            for (Matcher m : uniqueMatcherSet(indexOfVararg)) {
+org/mockito/internal/invocation/InvocationMatcher.java#129#                    Object rawArgument = invocation.getRawArguments()[indexOfVararg];
+org/mockito/internal/invocation/InvocationMatcher.java#130#                    for (int i = 0; i < Array.getLength(rawArgument); i++) {
+org/mockito/internal/invocation/InvocationMatcher.java#131#                        ((CapturesArguments) m).captureFrom(Array.get(rawArgument, i));
+org/mockito/internal/invocation/InvocationMatcher.java#132#                    }
+org/mockito/internal/invocation/InvocationMatcher.java#145#    private Set<Matcher> uniqueMatcherSet(int indexOfVararg) {
+org/mockito/internal/invocation/InvocationMatcher.java#146#        HashSet<Matcher> set = new HashSet<Matcher>();
+org/mockito/internal/invocation/InvocationMatcher.java#147#        for (int position = indexOfVararg; position < matchers.size(); position++) {
+org/mockito/internal/invocation/InvocationMatcher.java#148#            Matcher matcher = matchers.get(position);
+org/mockito/internal/invocation/InvocationMatcher.java#149#            if(matcher instanceof MatcherDecorator) {
+org/mockito/internal/invocation/InvocationMatcher.java#150#                set.add(((MatcherDecorator) matcher).getActualMatcher());
+org/mockito/internal/invocation/InvocationMatcher.java#151#            } else {
+org/mockito/internal/invocation/InvocationMatcher.java#152#                set.add(matcher);
+org/mockito/internal/invocation/InvocationMatcher.java#153#            }
+org/mockito/internal/invocation/InvocationMatcher.java#154#        }
+org/mockito/internal/invocation/InvocationMatcher.java#155#        return set;
+org/mockito/internal/invocation/InvocationMatcher.java#156#    }

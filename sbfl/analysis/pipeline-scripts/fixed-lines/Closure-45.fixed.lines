@@ -1,0 +1,6 @@
+com/google/javascript/jscomp/RemoveUnusedVars.java#732#          boolean maybeEscaped = false;
+com/google/javascript/jscomp/RemoveUnusedVars.java#740#            if (assign.maybeAliased) {
+com/google/javascript/jscomp/RemoveUnusedVars.java#741#              maybeEscaped = true;
+com/google/javascript/jscomp/RemoveUnusedVars.java#742#            }
+com/google/javascript/jscomp/RemoveUnusedVars.java#745#          if ((assignedToUnknownValue || maybeEscaped) && hasPropertyAssign) {
+com/google/javascript/jscomp/RemoveUnusedVars.java#908#      this.maybeAliased = NodeUtil.isExpressionResultUsed(assignNode);

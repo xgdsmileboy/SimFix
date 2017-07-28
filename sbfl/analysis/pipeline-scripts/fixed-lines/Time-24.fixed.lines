@@ -1,0 +1,5 @@
+org/joda/time/format/DateTimeParserBucket.java#355#            if (resetFields) {
+org/joda/time/format/DateTimeParserBucket.java#356#                for (int i = 0; i < count; i++) {
+org/joda/time/format/DateTimeParserBucket.java#357#                    millis = savedFields[i].set(millis, i == (count - 1));
+org/joda/time/format/DateTimeParserBucket.java#358#                }
+org/joda/time/format/DateTimeParserBucket.java#359#            }

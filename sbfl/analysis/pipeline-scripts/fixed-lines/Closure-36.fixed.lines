@@ -1,0 +1,3 @@
+com/google/javascript/jscomp/InlineVariables.java#575#          if (convention.getSingletonGetterClassName(callNode) != null) {
+com/google/javascript/jscomp/InlineVariables.java#576#            return false;
+com/google/javascript/jscomp/InlineVariables.java#577#          }

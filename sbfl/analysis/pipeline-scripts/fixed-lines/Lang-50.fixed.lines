@@ -1,0 +1,8 @@
+org/apache/commons/lang/time/FastDateFormat.java#285#        if (locale == null) {
+org/apache/commons/lang/time/FastDateFormat.java#286#            locale = Locale.getDefault();
+org/apache/commons/lang/time/FastDateFormat.java#289#        key = new Pair(key, locale);
+org/apache/commons/lang/time/FastDateFormat.java#463#        if (locale == null) {
+org/apache/commons/lang/time/FastDateFormat.java#464#            locale = Locale.getDefault();
+org/apache/commons/lang/time/FastDateFormat.java#466#        key = new Pair(key, locale);
+org/apache/commons/lang/time/FastDateFormat.java#293#FIX_OF_OMISSION
+org/apache/commons/lang/time/FastDateFormat.java#470#FIX_OF_OMISSION

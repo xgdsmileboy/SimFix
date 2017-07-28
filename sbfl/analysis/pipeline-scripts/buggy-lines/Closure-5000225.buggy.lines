@@ -1,0 +1,1 @@
+com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java#389#    if ((right != null && right.getType() == Token.STRING) == ",".equals(right.getString())) {

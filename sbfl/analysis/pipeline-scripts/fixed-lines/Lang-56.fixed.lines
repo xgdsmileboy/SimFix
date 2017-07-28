@@ -1,0 +1,6 @@
+org/apache/commons/lang/time/FastDateFormat.java#140#    private transient Rule[] mRules;
+org/apache/commons/lang/time/FastDateFormat.java#144#    private transient int mMaxLengthEstimate;
+org/apache/commons/lang/time/FastDateFormat.java#1022#    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
+org/apache/commons/lang/time/FastDateFormat.java#1023#        in.defaultReadObject();
+org/apache/commons/lang/time/FastDateFormat.java#1024#        init();
+org/apache/commons/lang/time/FastDateFormat.java#1025#    }

@@ -1,0 +1,27 @@
+com/google/javascript/jscomp/parsing/IRFactory.java#341#      Node target = assign.getFirstChild();
+com/google/javascript/jscomp/parsing/IRFactory.java#342#      if (!validAssignmentTarget(target)) {
+com/google/javascript/jscomp/parsing/IRFactory.java#343#        errorReporter.error(
+com/google/javascript/jscomp/parsing/IRFactory.java#344#          "invalid assignment target",
+com/google/javascript/jscomp/parsing/IRFactory.java#345#          sourceName,
+com/google/javascript/jscomp/parsing/IRFactory.java#346#          target.getLineno(), "", 0);
+com/google/javascript/jscomp/parsing/IRFactory.java#347#      }
+com/google/javascript/jscomp/parsing/IRFactory.java#804#        if (type == Token.INC || type == Token.DEC) {
+com/google/javascript/jscomp/parsing/IRFactory.java#805#          if (!validAssignmentTarget(operand)) {
+com/google/javascript/jscomp/parsing/IRFactory.java#806#            String msg = (type == Token.INC)
+com/google/javascript/jscomp/parsing/IRFactory.java#807#                ? "invalid increment target"
+com/google/javascript/jscomp/parsing/IRFactory.java#808#                : "invalid decrement target";
+com/google/javascript/jscomp/parsing/IRFactory.java#809#            errorReporter.error(
+com/google/javascript/jscomp/parsing/IRFactory.java#810#              msg,
+com/google/javascript/jscomp/parsing/IRFactory.java#811#              sourceName,
+com/google/javascript/jscomp/parsing/IRFactory.java#812#              operand.getLineno(), "", 0);
+com/google/javascript/jscomp/parsing/IRFactory.java#813#          }
+com/google/javascript/jscomp/parsing/IRFactory.java#814#        }
+com/google/javascript/jscomp/parsing/IRFactory.java#824#    private boolean validAssignmentTarget(Node target) {
+com/google/javascript/jscomp/parsing/IRFactory.java#825#      switch (target.getType()) {
+com/google/javascript/jscomp/parsing/IRFactory.java#826#        case Token.NAME:
+com/google/javascript/jscomp/parsing/IRFactory.java#827#        case Token.GETPROP:
+com/google/javascript/jscomp/parsing/IRFactory.java#828#        case Token.GETELEM:
+com/google/javascript/jscomp/parsing/IRFactory.java#829#          return true;
+com/google/javascript/jscomp/parsing/IRFactory.java#830#      }
+com/google/javascript/jscomp/parsing/IRFactory.java#831#      return false;
+com/google/javascript/jscomp/parsing/IRFactory.java#832#    }

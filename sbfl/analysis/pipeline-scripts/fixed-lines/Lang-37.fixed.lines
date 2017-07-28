@@ -1,0 +1,8 @@
+org/apache/commons/lang3/ArrayUtils.java#2962#        try {
+org/apache/commons/lang3/ArrayUtils.java#2964#        } catch (ArrayStoreException ase) {
+org/apache/commons/lang3/ArrayUtils.java#2966#            final Class<?> type2 = array2.getClass().getComponentType();
+org/apache/commons/lang3/ArrayUtils.java#2967#            if (!type1.isAssignableFrom(type2)){
+org/apache/commons/lang3/ArrayUtils.java#2968#                throw new IllegalArgumentException("Cannot store "+type2.getName()+" in an array of "+type1.getName());
+org/apache/commons/lang3/ArrayUtils.java#2969#            }
+org/apache/commons/lang3/ArrayUtils.java#2970#            throw ase; // No, so rethrow original
+org/apache/commons/lang3/ArrayUtils.java#2971#        }

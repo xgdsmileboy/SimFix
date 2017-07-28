@@ -1,0 +1,3 @@
+org/apache/commons/lang3/LocaleUtils.java#92#        if (str.contains("#")) { // LANG-879 - Cannot handle Java 7 script & extensions
+org/apache/commons/lang3/LocaleUtils.java#93#            throw new IllegalArgumentException("Invalid locale format: " + str);
+org/apache/commons/lang3/LocaleUtils.java#94#        }

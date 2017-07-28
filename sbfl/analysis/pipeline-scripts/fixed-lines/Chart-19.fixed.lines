@@ -1,0 +1,6 @@
+org/jfree/chart/plot/CategoryPlot.java#698#        if (axis == null) {
+org/jfree/chart/plot/CategoryPlot.java#699#            throw new IllegalArgumentException("Null 'axis' argument.");
+org/jfree/chart/plot/CategoryPlot.java#700#        }
+org/jfree/chart/plot/CategoryPlot.java#976#        if (axis == null) {
+org/jfree/chart/plot/CategoryPlot.java#977#            throw new IllegalArgumentException("Null 'axis' argument.");
+org/jfree/chart/plot/CategoryPlot.java#978#        }

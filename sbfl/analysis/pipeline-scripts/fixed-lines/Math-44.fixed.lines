@@ -1,0 +1,7 @@
+org/apache/commons/math/ode/AbstractIntegrator.java#333#                    for (final EventState remaining : occuringEvents) {
+org/apache/commons/math/ode/AbstractIntegrator.java#334#                        remaining.stepAccepted(eventT, eventY);
+org/apache/commons/math/ode/AbstractIntegrator.java#335#                    }
+org/apache/commons/math/ode/AbstractIntegrator.java#345#                    for (final EventState remaining : occuringEvents) {
+org/apache/commons/math/ode/AbstractIntegrator.java#346#                        remaining.stepAccepted(eventT, eventY);
+org/apache/commons/math/ode/AbstractIntegrator.java#347#                    }
+org/apache/commons/math/ode/AbstractIntegrator.java#280#FIX_OF_OMISSION

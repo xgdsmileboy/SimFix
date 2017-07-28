@@ -1,0 +1,43 @@
+org/apache/commons/lang3/StringUtils.java#1376#        int csLast = csLen - 1;
+org/apache/commons/lang3/StringUtils.java#1378#        int searchLast = searchLen - 1;
+org/apache/commons/lang3/StringUtils.java#1383#                    if (i < csLast && j < searchLast && Character.isHighSurrogate(ch)) {
+org/apache/commons/lang3/StringUtils.java#1385#                        if (searchChars[j + 1] == cs.charAt(i + 1)) {
+org/apache/commons/lang3/StringUtils.java#1386#                            return i;
+org/apache/commons/lang3/StringUtils.java#1387#                        }
+org/apache/commons/lang3/StringUtils.java#1388#                    } else {
+org/apache/commons/lang3/StringUtils.java#1390#                    }
+org/apache/commons/lang3/StringUtils.java#1451#    public static boolean containsAny(String cs, char[] searchChars) {
+org/apache/commons/lang3/StringUtils.java#1463#                    if (Character.isHighSurrogate(ch)) {
+org/apache/commons/lang3/StringUtils.java#1464#                        if (j == searchLast) {
+org/apache/commons/lang3/StringUtils.java#1466#                            return true;
+org/apache/commons/lang3/StringUtils.java#1467#                        }
+org/apache/commons/lang3/StringUtils.java#1468#                        if (i < csLast && searchChars[j + 1] == cs.charAt(i + 1)) {
+org/apache/commons/lang3/StringUtils.java#1508#    public static boolean containsAny(String cs, String searchChars) {
+org/apache/commons/lang3/StringUtils.java#1544#        int csLast = csLen - 1;
+org/apache/commons/lang3/StringUtils.java#1546#        int searchLast = searchLen - 1;
+org/apache/commons/lang3/StringUtils.java#1552#                    if (i < csLast && j < searchLast && Character.isHighSurrogate(ch)) {
+org/apache/commons/lang3/StringUtils.java#1553#                        if (searchChars[j + 1] == cs.charAt(i + 1)) {
+org/apache/commons/lang3/StringUtils.java#1554#                            continue outer;
+org/apache/commons/lang3/StringUtils.java#1555#                        }
+org/apache/commons/lang3/StringUtils.java#1556#                    } else {
+org/apache/commons/lang3/StringUtils.java#1558#                    }
+org/apache/commons/lang3/StringUtils.java#1595#            boolean chFound = searchChars.indexOf(ch) >= 0;
+org/apache/commons/lang3/StringUtils.java#1596#            if (i + 1 < strLen && Character.isHighSurrogate(ch)) {
+org/apache/commons/lang3/StringUtils.java#1597#                char ch2 = str.charAt(i + 1);
+org/apache/commons/lang3/StringUtils.java#1598#                if (chFound && searchChars.indexOf(ch2) < 0) {
+org/apache/commons/lang3/StringUtils.java#1600#                }
+org/apache/commons/lang3/StringUtils.java#1601#            } else {
+org/apache/commons/lang3/StringUtils.java#1602#                if (!chFound) {
+org/apache/commons/lang3/StringUtils.java#1603#                    return i;
+org/apache/commons/lang3/StringUtils.java#1604#                }
+org/apache/commons/lang3/StringUtils.java#1705#        int csLast = csLen - 1;
+org/apache/commons/lang3/StringUtils.java#1707#        int searchLast = searchLen - 1;
+org/apache/commons/lang3/StringUtils.java#1712#                    if (Character.isHighSurrogate(ch)) {
+org/apache/commons/lang3/StringUtils.java#1713#                        if (j == searchLast) {
+org/apache/commons/lang3/StringUtils.java#1715#                            return false;
+org/apache/commons/lang3/StringUtils.java#1716#                        }
+org/apache/commons/lang3/StringUtils.java#1717#                        if (i < csLast && searchChars[j + 1] == cs.charAt(i + 1)) {
+org/apache/commons/lang3/StringUtils.java#1718#                            return false;
+org/apache/commons/lang3/StringUtils.java#1719#                        }
+org/apache/commons/lang3/StringUtils.java#1720#                    } else {
+org/apache/commons/lang3/StringUtils.java#1723#                    }

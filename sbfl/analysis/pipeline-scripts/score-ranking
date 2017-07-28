@@ -1,0 +1,329 @@
+#!/usr/bin/env perl
+#
+# Given a ranking of suspicious lines, a list of buggy code lines, and a
+# scoring scheme, this script determines the fraction of source
+# code that needs to be examined before a buggy line or all buggy lines are
+# found.
+#
+# All supported scoring schemes
+my $MIN   = "first";
+my $MAX   = "last";
+my $MEAN  = "mean";
+my $MEDIAN= "median";
+
+# TODO: Proper pod documentation
+use strict;
+use warnings;
+
+use Getopt::Long;
+
+use List::Util qw(sum);
+use POSIX qw(ceil);
+
+my $DEBUG = 1;
+
+my $PID;
+my $BID;
+my $LINE_SUSPS;
+my $BUGGY_LINES;
+my $SLOC_CSV;
+my $SCHEME;
+
+my $OUT_FILE;
+GetOptions ("project=s"        => \$PID,
+            "bug=i"            => \$BID,
+            "line-susps=s"     => \$LINE_SUSPS,
+            "sloc-csv=s"       => \$SLOC_CSV,
+            "buggy-lines=s"    => \$BUGGY_LINES,
+            "scoring-scheme=s" => \$SCHEME,
+            "output=s"         => \$OUT_FILE)
+    or die "Invalid arguments";
+
+# Check mandatory options
+unless(defined $PID and
+       defined $BID and
+       defined $LINE_SUSPS and
+       defined $BUGGY_LINES and
+       defined $SLOC_CSV and
+       defined $SCHEME and
+       defined $OUT_FILE) {
+    die "usage: $0 --project <PID> --bug <BID> --line-susps <ranking file> " .
+        "--scoring-scheme ($MIN|$MAX|$MEAN|$MEDIAN) --sloc-csv <sloc csv file> ".
+        "--buggy-lines <buggy lines file> --output <output file>";
+}
+# Validate arguments
+-e $LINE_SUSPS  or die "Ranking file doesn't exist: $LINE_SUSPS";
+-e $SLOC_CSV    or die "SLOC csv file doesn't exist: $SLOC_CSV";
+-e $BUGGY_LINES or die "Buggy lines file doesn't exist: $BUGGY_LINES";
+($SCHEME eq $MIN or $SCHEME eq $MAX or $SCHEME eq $MEAN or $SCHEME eq $MEDIAN) or die "Invalid scoring scheme: $SCHEME! Expected: [$MIN|$MAX|$MEAN|$MEDIAN]";
+
+# Determine lines of code for all loaded classes and all classes
+my $sloc = `grep "$PID,$BID," $SLOC_CSV`;
+$sloc =~ /^$PID,$BID,(\d+),(\d+)$/ or die "Unexpected format of sloc csv file!";
+my $sloc_loaded = $1;
+my $sloc_all = $2;
+
+# Cache the mapping from line to suspiciousness
+my %ranks = ();
+open(IN, "<$LINE_SUSPS");
+while(<IN>) {
+    # Skip header if it exists
+    /Line,Suspiciousness/ and next;
+    chomp;
+    /([^#]+#\d+),(.+)/ or die "Unexpected line in ranking file: $_";
+    $ranks{$1}={susp => $2};
+}
+close(IN);
+my $lines_ranking = scalar(keys(%ranks));
+
+# Sort by suspiciousness and store the rank for each file#line
+# Traverse ranking from the smallest to the largest suspiciousness score and
+# assign the mean rank to all lines that have the same suspiciousness score.
+my @keys = sort { $ranks{$a}->{susp} <=> $ranks{$b}->{susp} } keys(%ranks);
+my $index = scalar(@keys);
+my $prev_susp = undef;
+my @ties;
+my $start;
+for (@keys) {
+    if (defined($prev_susp) and $ranks{$_}->{susp} == $prev_susp) {
+        # Still the same suspiciousness score -> add key to all tied statements
+        push(@ties, $_);
+    } else {
+        # If this is not the lowest rank (very first key), compute average rank and assign
+        # it to all tied statements
+        if (defined($prev_susp)) {
+            my $avg = ($start+$index+1)/2;
+            foreach my $key(@ties) {
+                $ranks{$key}->{rank} = $avg;
+            }
+        }
+        $prev_susp = $ranks{$_}->{susp};
+        # Re-init set of tied statements, add current key, and store the current index as
+        # start index.
+        @ties = ();
+        push(@ties, $_);
+        $start = $index;
+    }
+    --$index;
+}
+# Set ranking for the very last (or all tied) key(s).
+my $avg = ($start+$index+1)/2;
+foreach my $key(@ties) {
+    $ranks{$key}->{rank} = $avg;
+}
+
+# Print the ranking if debugging is enabled.
+if ($DEBUG) {
+    $index = scalar(@keys);
+    for (@keys) {
+        print("($index) Rank $ranks{$_}->{rank}: $_ -- $ranks{$_}->{susp}\n");
+        --$index;
+    }
+}
+
+# Determine the rank for each buggy line and the overall min and max rank
+my @ranks_buggy_lines = ();
+open(IN, "<$BUGGY_LINES");
+while(<IN>) {
+    chomp;
+    /([^#]+#\d+)#(.*)/ or die "Unexpected line in buggy lines file: $_";
+    my $key=$1;
+    my $type=$2;
+
+    # Print a warning for buggy lines that are non-executable
+    if ($type =~ /^\s*$/) {
+        print(STDERR "WARNING: Non-executable line ($key) found in buggy lines!\n");
+    }
+    if ($type =~ /^\s*\/\//) {
+        print(STDERR "WARNING: Non-executable line ($key) found in buggy lines!\n");
+    }
+
+    # Print a warning for buggy lines declared as unrankable
+    if (_is_unrankable($key)) {
+        print(STDERR "WARNING: Unrankable line ($key) found in buggy lines!\n");
+    }
+
+    my $current_rank;
+    # For faults of omission, check all candidates and take the min
+    if ($type eq "FAULT_OF_OMISSION") {
+        my @candidates = _get_candidates($key);
+
+        my @cand_ranks = ();
+        foreach (@candidates) {
+            push(@cand_ranks, _get_rank($_));
+        }
+        # Determine the minimum rank for all candidate ranks
+        $current_rank = _get_min_rank(@cand_ranks);
+        # Ranking doesn't contain any candidate line
+        if ($current_rank < 0) {
+            print(STDERR "WARNING: Fault of omission ($key) not found in ranking! None of the candidate lines matches!\n");
+        }
+    } else {
+        $current_rank = _get_rank($key);
+        # Ranking doesn't contain buggy line -> try candidates
+        unless ($current_rank > 0) {
+            my @candidates = _get_candidates($key);
+
+            my @cand_ranks = ();
+            foreach (@candidates) {
+                push(@cand_ranks, _get_rank($_));
+            }
+            # Determine the minimum rank for all candidate ranks
+            $current_rank = _get_min_rank(@cand_ranks);
+            # Ranking doesn't contain any candidate line -> print error message and continue
+            if ($current_rank < 0) {
+                print(STDERR "WARNING: Fault ($key) not found in ranking! None of the candidate lines matches!\n");
+            }
+        }
+    }
+    # Special handling for unranked (NA) lines. The rank for every NA line is:
+    # lines_ranking + (sloc(loaded_classes) - lines_ranking) / 2
+    if ($current_rank < 0) {
+        $current_rank = $lines_ranking + ($sloc_loaded - $lines_ranking)/2;
+    }
+
+    # Add current rank to list of ranks for all buggy lines
+    push(@ranks_buggy_lines, $current_rank);
+}
+
+# Sort the list of all ranks, and determine min, max, mean, median
+@ranks_buggy_lines = sort { $a <=> $b } @ranks_buggy_lines;
+my $min   = $ranks_buggy_lines[0];
+my $max   = $ranks_buggy_lines[-1];
+my $mean  = _get_mean(@ranks_buggy_lines);
+my $median= _get_median_sorted(@ranks_buggy_lines);
+
+if ($DEBUG) {print("Rank of all buggy lines: Min=$min, Max=$max, Mean=$mean, Median=$median\n")};
+
+# Compute the overall score, depending on scoring scheme and considered set of
+# classes (loaded classes vs. all classes)
+my $score_loaded;
+my $score_all;
+if ($SCHEME eq $MIN) {
+    $score_loaded = $min/$sloc_loaded;
+    $score_all    = $min/$sloc_all;
+} elsif ($SCHEME eq $MAX) {
+    $score_loaded = $max/$sloc_loaded;
+    $score_all    = $max/$sloc_all;
+} elsif ($SCHEME eq $MEAN) {
+    $score_loaded = $mean/$sloc_loaded;
+    $score_all    = $mean/$sloc_all;
+} elsif ($SCHEME eq $MEDIAN) {
+    $score_loaded = $median/$sloc_loaded;
+    $score_all    = $median/$sloc_all;
+} else {
+    die "Unexpected scoring scheme: $SCHEME!";
+}
+
+# Write output to file
+close(IN);
+open(OUT, ">$OUT_FILE") or die "Cannot write output file!";
+    print(OUT "$score_all,$score_loaded\n");
+close(OUT);
+
+#
+# Get the ranking for a particular line
+#
+# Returns -1 if the ranking doesn't contain the line
+#
+sub _get_rank {
+    my $key = shift;
+    unless (defined $ranks{$key}) {
+            return -1;
+    }
+    return $ranks{$key}->{rank};
+}
+
+#
+# Determine the minimum rank of an array.
+#
+# Returns the minimum rank or -1 of none of the ranks is valid.
+#
+sub _get_min_rank {
+    my @array = @_;
+    my $min = -1;
+    for my $rank (@array) {
+        $rank != -1 or next;
+        if ($min == -1 or $rank < $min) {
+            $min = $rank;
+        }
+    }
+    return $min;
+}
+
+#
+# Returns true if a given buggy line is unrankable, false otherwise.
+#
+# This routine lazily caches all unrankable lines for a given bug, using the
+# following hash (%unrankable_lines):
+# {file1#line_unrankable1 => 1,
+#  file1#line_unrankable2 => 1,
+#  file2#line_unrankable1 => 1}
+# ...
+#
+my %unrankable_lines = ("init" => 0);
+sub _is_unrankable {
+    my $key = shift;
+    unless ($unrankable_lines{"init"}) {
+        $unrankable_lines{"init"} = 1;
+        $BUGGY_LINES =~ /^(.+)\.buggy\.lines/ or die "Unexpected file name of buggy lines: $BUGGY_LINES";
+        my $unrankable = "$1.unrankable.lines";
+        unless (-e $unrankable) {
+            return 0;
+        }
+        open(RANK, "<$unrankable") or die "Cannot read unrankable lines file: $unrankable";
+        while(<RANK>) {
+            /^([^#]+#\d+)#(.+)$/ or die "Unexpected format in unrankable lines file!";
+            $unrankable_lines{$1}=1;
+        }
+        close(RANK);
+    }
+    return defined($unrankable_lines{$key});
+}
+
+#
+# Returns an array of candidate lines for a fault of omission.
+# Lazily cache all candidate lines, using the following representation:
+#
+# {file1#line_fault1} -> {file#line_candidate1 => 1,
+#                         file#line_candidate2 => 1,
+#                         file#line_candidate3 => 1}
+#
+# {file1#line_fault2} -> {file#line_candidate1 => 1}
+#
+# {file2#line_fault1} -> {file#line_candidate1 => 1}
+# ...
+#
+my %all_candidates = ();
+sub _get_candidates {
+    my $key = shift;
+    unless (defined $all_candidates{$key}) {
+        $BUGGY_LINES =~ /^(.+)\.buggy\.lines/ or die "Unexpected file name of buggy lines: $BUGGY_LINES";
+        my $candidates = "$1.candidates";
+        unless (-e $candidates) {
+            return ();
+        }
+        open(CAND, "<$candidates") or die "Cannot read candidates file: $candidates";
+        while(<CAND>) {
+            /^([^,]+),(.+)$/ or die "Unexpected format in candidates file!";
+            $all_candidates{$1}->{$2}=1;
+        }
+        close(CAND);
+    }
+    #die unless defined $all_candidates{$key};
+    return keys %{$all_candidates{$key}};
+}
+
+#
+# Simple helper subroutine to compete the median in a sorted array
+#
+sub _get_median_sorted {
+    return sum(@_[int($#_/2), ceil($#_/2)])/2;
+}
+
+#
+# Simple helper subroutine to compete the mean in an array
+#
+sub _get_mean {
+    return (sum(@_) / scalar(@_));
+}

@@ -1,0 +1,1 @@
+org/apache/commons/math/optimization/univariate/MultiStartUnivariateRealOptimizer.java#146#        return optimize(f, goal, min, max, min + 0.5 % (max - min));

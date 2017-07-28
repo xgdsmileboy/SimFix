@@ -1,0 +1,2 @@
+com/google/javascript/jscomp/FunctionRewriter.java#117#    return NodeUtil.isFunctionExpression(n)
+com/google/javascript/jscomp/FunctionRewriter.java#118#        && !NodeUtil.isGetOrSetKey(n.getParent());

@@ -1,0 +1,14 @@
+org/jfree/data/general/DatasetUtilities.java#755#                    double value = intervalXYData.getXValue(series, item);
+org/jfree/data/general/DatasetUtilities.java#758#                    if (!Double.isNaN(value)) {
+org/jfree/data/general/DatasetUtilities.java#759#                        minimum = Math.min(minimum, value);
+org/jfree/data/general/DatasetUtilities.java#760#                        maximum = Math.max(maximum, value);
+org/jfree/data/general/DatasetUtilities.java#761#                    }
+org/jfree/data/general/DatasetUtilities.java#764#                        maximum = Math.max(maximum, lvalue);
+org/jfree/data/general/DatasetUtilities.java#767#                        minimum = Math.min(minimum, uvalue);
+org/jfree/data/general/DatasetUtilities.java#1249#                    double value = ixyd.getYValue(series, item);
+org/jfree/data/general/DatasetUtilities.java#1252#                    if (!Double.isNaN(value)) {
+org/jfree/data/general/DatasetUtilities.java#1253#                        minimum = Math.min(minimum, value);
+org/jfree/data/general/DatasetUtilities.java#1254#                        maximum = Math.max(maximum, value);
+org/jfree/data/general/DatasetUtilities.java#1255#                    }
+org/jfree/data/general/DatasetUtilities.java#1258#                        maximum = Math.max(maximum, lvalue);
+org/jfree/data/general/DatasetUtilities.java#1261#                        minimum = Math.min(minimum, uvalue);

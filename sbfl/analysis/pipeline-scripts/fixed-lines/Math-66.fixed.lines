@@ -1,0 +1,15 @@
+org/apache/commons/math/optimization/univariate/BrentOptimizer.java#44#        setMaxEvaluations(1000);
+org/apache/commons/math/optimization/univariate/BrentOptimizer.java#46#        setAbsoluteAccuracy(1e-11);
+org/apache/commons/math/optimization/univariate/BrentOptimizer.java#47#        setRelativeAccuracy(1e-9);
+org/apache/commons/math/optimization/univariate/BrentOptimizer.java#58#                        getMin(), getStartValue(), getMax(),
+org/apache/commons/math/optimization/univariate/BrentOptimizer.java#110#        double fx = computeObjectiveValue(x);
+org/apache/commons/math/optimization/univariate/BrentOptimizer.java#111#        if (!isMinim) {
+org/apache/commons/math/optimization/univariate/BrentOptimizer.java#117#        while (true) {
+org/apache/commons/math/optimization/univariate/BrentOptimizer.java#190#                double fu = computeObjectiveValue(u);
+org/apache/commons/math/optimization/univariate/BrentOptimizer.java#191#                if (!isMinim) {
+org/apache/commons/math/optimization/univariate/BrentOptimizer.java#228#                setFunctionValue(isMinim ? fx : -fx);
+org/apache/commons/math/optimization/univariate/BrentOptimizer.java#231#            incrementIterationsCounter();
+org/apache/commons/math/optimization/univariate/BrentOptimizer.java#57#FIX_OF_OMISSION
+org/apache/commons/math/optimization/univariate/BrentOptimizer.java#61#FIX_OF_OMISSION
+org/apache/commons/math/optimization/univariate/BrentOptimizer.java#87#FIX_OF_OMISSION
+org/apache/commons/math/optimization/univariate/BrentOptimizer.java#233#FIX_OF_OMISSION

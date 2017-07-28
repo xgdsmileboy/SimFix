@@ -1,0 +1,21 @@
+org/apache/commons/lang/enums/ValuedEnum.java#183#        if (other == this) {
+org/apache/commons/lang/enums/ValuedEnum.java#184#            return 0;
+org/apache/commons/lang/enums/ValuedEnum.java#185#        }
+org/apache/commons/lang/enums/ValuedEnum.java#186#        if (other.getClass() != this.getClass()) {
+org/apache/commons/lang/enums/ValuedEnum.java#187#            if (other.getClass().getName().equals(this.getClass().getName())) {
+org/apache/commons/lang/enums/ValuedEnum.java#188#                return iValue - getValueInOtherClassLoader(other);
+org/apache/commons/lang/enums/ValuedEnum.java#189#            }
+org/apache/commons/lang/enums/ValuedEnum.java#190#            throw new ClassCastException(
+org/apache/commons/lang/enums/ValuedEnum.java#191#                    "Different enum class '" + ClassUtils.getShortClassName(other.getClass()) + "'");
+org/apache/commons/lang/enums/ValuedEnum.java#192#        }
+org/apache/commons/lang/enums/ValuedEnum.java#202#    private int getValueInOtherClassLoader(Object other) {
+org/apache/commons/lang/enums/ValuedEnum.java#203#        try {
+org/apache/commons/lang/enums/ValuedEnum.java#204#            Method mth = other.getClass().getMethod("getValue", null);
+org/apache/commons/lang/enums/ValuedEnum.java#205#            Integer value = (Integer) mth.invoke(other, null);
+org/apache/commons/lang/enums/ValuedEnum.java#206#            return value.intValue();
+org/apache/commons/lang/enums/ValuedEnum.java#207#        } catch (NoSuchMethodException e) {
+org/apache/commons/lang/enums/ValuedEnum.java#209#        } catch (IllegalAccessException e) {
+org/apache/commons/lang/enums/ValuedEnum.java#211#        } catch (InvocationTargetException e) {
+org/apache/commons/lang/enums/ValuedEnum.java#213#        }
+org/apache/commons/lang/enums/ValuedEnum.java#214#        throw new IllegalStateException("This should not happen");
+org/apache/commons/lang/enums/ValuedEnum.java#215#    }

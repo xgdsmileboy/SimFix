@@ -1,0 +1,5 @@
+com/google/javascript/jscomp/TypedScopeCreator.java#1291#              JSDocInfo rValueInfo = rValue.getJSDocInfo();
+com/google/javascript/jscomp/TypedScopeCreator.java#1292#              if (rValueInfo != null && rValueInfo.hasType()) {
+com/google/javascript/jscomp/TypedScopeCreator.java#1294#                return rValueInfo.getType().evaluate(scope, typeRegistry);
+com/google/javascript/jscomp/TypedScopeCreator.java#1295#              } else if (rValue.getJSType() != null
+com/google/javascript/jscomp/TypedScopeCreator.java#1296#                  && !rValue.getJSType().isUnknownType()) {

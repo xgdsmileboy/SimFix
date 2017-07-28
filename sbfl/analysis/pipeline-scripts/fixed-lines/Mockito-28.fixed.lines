@@ -1,0 +1,2 @@
+org/mockito/internal/configuration/DefaultInjectionEngine.java#93#            Object injected = mockCandidateFilter.filterCandidate(mocks, field, fieldInstance).thenInject();
+org/mockito/internal/configuration/DefaultInjectionEngine.java#94#            mocks.remove(injected);

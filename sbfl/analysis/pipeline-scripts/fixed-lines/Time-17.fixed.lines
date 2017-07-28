@@ -1,0 +1,18 @@
+org/joda/time/DateTimeZone.java#1167#        long instantBefore = instant - 3 * DateTimeConstants.MILLIS_PER_HOUR;
+org/joda/time/DateTimeZone.java#1168#        long instantAfter = instant + 3 * DateTimeConstants.MILLIS_PER_HOUR;
+org/joda/time/DateTimeZone.java#1169#        long offsetBefore = getOffset(instantBefore);
+org/joda/time/DateTimeZone.java#1170#        long offsetAfter = getOffset(instantAfter);
+org/joda/time/DateTimeZone.java#1171#        if (offsetBefore <= offsetAfter) {
+org/joda/time/DateTimeZone.java#1176#        long diff = offsetBefore - offsetAfter;
+org/joda/time/DateTimeZone.java#1177#        long transition = nextTransition(instantBefore);
+org/joda/time/DateTimeZone.java#1178#        long overlapStart = transition - diff;
+org/joda/time/DateTimeZone.java#1179#        long overlapEnd = transition + diff;
+org/joda/time/DateTimeZone.java#1180#        if (instant < overlapStart || instant >= overlapEnd) {
+org/joda/time/DateTimeZone.java#1181#          return instant;  // not an overlap
+org/joda/time/DateTimeZone.java#1182#        }
+org/joda/time/DateTimeZone.java#1185#        long afterStart = instant - overlapStart;
+org/joda/time/DateTimeZone.java#1186#        if (afterStart >= diff) {
+org/joda/time/DateTimeZone.java#1188#          return earlierOrLater ? instant : instant - diff;
+org/joda/time/DateTimeZone.java#1189#        } else {
+org/joda/time/DateTimeZone.java#1191#          return earlierOrLater ? instant + diff : instant;
+org/joda/time/DateTimeZone.java#1192#        }

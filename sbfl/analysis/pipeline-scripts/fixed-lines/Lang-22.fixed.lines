@@ -1,0 +1,7 @@
+org/apache/commons/lang3/math/Fraction.java#583#        if ((u == 0) || (v == 0)) {
+org/apache/commons/lang3/math/Fraction.java#584#            if ((u == Integer.MIN_VALUE) || (v == Integer.MIN_VALUE)) {
+org/apache/commons/lang3/math/Fraction.java#585#                throw new ArithmeticException("overflow: gcd is 2^31");
+org/apache/commons/lang3/math/Fraction.java#586#            }
+org/apache/commons/lang3/math/Fraction.java#587#            return Math.abs(u) + Math.abs(v);
+org/apache/commons/lang3/math/Fraction.java#588#        }
+org/apache/commons/lang3/math/Fraction.java#590#        if (Math.abs(u) == 1 || Math.abs(v) == 1) {

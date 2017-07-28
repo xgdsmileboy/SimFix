@@ -1,0 +1,5 @@
+org/joda/time/format/PeriodFormatterBuilder.java#1098#                sum = (valueLong < 0 ? Math.max(sum, 5) : Math.max(sum, 4));
+org/joda/time/format/PeriodFormatterBuilder.java#1133#            int bufLen = buf.length();
+org/joda/time/format/PeriodFormatterBuilder.java#1143#                    if (valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND) {
+org/joda/time/format/PeriodFormatterBuilder.java#1144#                        buf.insert(bufLen, '-');
+org/joda/time/format/PeriodFormatterBuilder.java#1145#                    }

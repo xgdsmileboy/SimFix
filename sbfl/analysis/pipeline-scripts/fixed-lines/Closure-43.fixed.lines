@@ -1,0 +1,17 @@
+com/google/javascript/jscomp/TypedScopeCreator.java#420#    private List<Node> lentObjectLiterals = null;
+com/google/javascript/jscomp/TypedScopeCreator.java#548#      if (n.getParent() != null && NodeUtil.isStatement(n) &&
+com/google/javascript/jscomp/TypedScopeCreator.java#549#          lentObjectLiterals != null) {
+com/google/javascript/jscomp/TypedScopeCreator.java#550#        for (Node objLit : lentObjectLiterals) {
+com/google/javascript/jscomp/TypedScopeCreator.java#551#          defineObjectLiteral(objLit);
+com/google/javascript/jscomp/TypedScopeCreator.java#552#        }
+com/google/javascript/jscomp/TypedScopeCreator.java#553#        lentObjectLiterals.clear();
+com/google/javascript/jscomp/TypedScopeCreator.java#554#      }
+com/google/javascript/jscomp/TypedScopeCreator.java#588#          JSDocInfo info = n.getJSDocInfo();
+com/google/javascript/jscomp/TypedScopeCreator.java#589#          if (info != null &&
+com/google/javascript/jscomp/TypedScopeCreator.java#590#              info.getLendsName() != null) {
+com/google/javascript/jscomp/TypedScopeCreator.java#591#            if (lentObjectLiterals == null) {
+com/google/javascript/jscomp/TypedScopeCreator.java#592#              lentObjectLiterals = Lists.newArrayList();
+com/google/javascript/jscomp/TypedScopeCreator.java#593#            }
+com/google/javascript/jscomp/TypedScopeCreator.java#594#            lentObjectLiterals.add(n);
+com/google/javascript/jscomp/TypedScopeCreator.java#595#          } else {
+com/google/javascript/jscomp/TypedScopeCreator.java#597#          }

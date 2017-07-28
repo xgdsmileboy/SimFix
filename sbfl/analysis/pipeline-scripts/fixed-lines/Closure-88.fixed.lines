@@ -1,0 +1,6 @@
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#327#        Preconditions.checkState(n.getParent().getType() == Token.ASSIGN);
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#331#        Node rhs = n.getNext();
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#332#        VariableLiveness state = isVariableReadBeforeKill(rhs, variable);
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#333#        if (state == VariableLiveness.READ) {
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#334#          return state;
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#335#        }

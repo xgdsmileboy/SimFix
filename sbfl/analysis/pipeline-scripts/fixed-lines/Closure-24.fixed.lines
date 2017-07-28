@@ -1,0 +1,5 @@
+com/google/javascript/jscomp/ScopedAliases.java#278#        if (parent.isVar() &&
+com/google/javascript/jscomp/ScopedAliases.java#279#            n.hasChildren() && n.getFirstChild().isQualifiedName()) {
+com/google/javascript/jscomp/ScopedAliases.java#287#        } else if (v.isBleedingFunction()) {
+com/google/javascript/jscomp/ScopedAliases.java#290#        } else if (parent.getType() == Token.LP) {
+com/google/javascript/jscomp/ScopedAliases.java#296#FIX_OF_OMISSION

@@ -1,0 +1,3 @@
+com/google/javascript/jscomp/CodeGenerator.java#122#        unrollBinaryOperator(n, type, opstr, context, rhsContext, p, p + 1);
+com/google/javascript/jscomp/CodeGenerator.java#752#      cc.addOp(opStr, true);
+com/google/javascript/jscomp/CodePrinter.java#334#        if (getLastChar() != ' ' && op.charAt(0) != ',') {

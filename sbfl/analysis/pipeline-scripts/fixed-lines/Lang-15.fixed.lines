@@ -1,0 +1,4 @@
+org/apache/commons/lang3/reflect/TypeUtils.java#219#        for (TypeVariable<?> var : toTypeVarAssigns.keySet()) {
+org/apache/commons/lang3/reflect/TypeUtils.java#220#            Type toTypeArg = unrollVariableAssignments(var, toTypeVarAssigns);
+org/apache/commons/lang3/reflect/TypeUtils.java#221#            Type fromTypeArg = unrollVariableAssignments(var, fromTypeVarAssigns);
+org/apache/commons/lang3/reflect/TypeUtils.java#675#        if (toClass.equals(cls)) {

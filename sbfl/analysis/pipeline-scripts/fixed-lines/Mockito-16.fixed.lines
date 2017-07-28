@@ -1,0 +1,5 @@
+org/mockito/Mockito.java#827#        return MOCKITO_CORE.mock(classToMock, mockSettings, true);
+org/mockito/Mockito.java#899#                .defaultAnswer(CALLS_REAL_METHODS), true); 
+org/mockito/internal/MockitoCore.java#32#    public <T> T mock(Class<T> classToMock, MockSettings mockSettings, boolean shouldResetOngoingStubbing) {
+org/mockito/internal/MockitoCore.java#34#        if (shouldResetOngoingStubbing) {
+org/mockito/internal/MockitoCore.java#36#        }

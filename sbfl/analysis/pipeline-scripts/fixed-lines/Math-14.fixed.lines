@@ -1,0 +1,10 @@
+org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.java#267#        if (m instanceof DiagonalMatrix) {
+org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.java#268#            final int dim = m.getRowDimension();
+org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.java#269#            final RealMatrix sqrtM = new DiagonalMatrix(dim);
+org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.java#270#            for (int i = 0; i < dim; i++) {
+org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.java#271#                sqrtM.setEntry(i, i, FastMath.sqrt(m.getEntry(i, i)));
+org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.java#272#            }
+org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.java#273#            return sqrtM;
+org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.java#274#        } else {
+org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.java#277#        }
+org/apache/commons/math3/optim/nonlinear/vector/Weight.java#43#        weightMatrix = new DiagonalMatrix(weight);

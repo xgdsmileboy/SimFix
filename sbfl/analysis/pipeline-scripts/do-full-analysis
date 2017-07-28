@@ -1,0 +1,85 @@
+#!/bin/bash
+
+HERE=$(readlink --canonicalize "$(dirname "${BASH_SOURCE[0]}")")
+PATH="$HERE:$PATH"
+
+ensure-file-exists() {
+  if [ ! -f "$1" ]; then
+    die "'$1' is not a file" >&2
+  fi
+}
+
+USAGE="$0 [--restrictions-file FILE] PROJECT BUG TEST_SUITE COVERAGE_MATRIX STATEMENT_NAMES OUTCOME_MATRIX MUTANTS_LOG WORKING_DIR OUTPUT"
+die() {
+  echo "$@" >&2
+  exit 1
+}
+
+RESTRICTIONS_FILE=''
+RESTRICTIONS_FILE_SUBARGS=()
+while [[ "$1" = --* ]]; do
+  OPTION=$1; shift
+  case $OPTION in
+    '--help' )
+      echo "usage: $USAGE"
+      exit 0 ;;
+    '--restrictions-file' )
+      RESTRICTIONS_FILE=$(readlink --canonicalize "$1")
+      RESTRICTIONS_FILE_SUBARGS+=('--restrictions-file' "$RESTRICTIONS_FILE")
+      shift;;
+    * )
+      die "usage: $USAGE";;
+  esac
+done
+
+if [ "$#" != 9 ]; then die "usage: $USAGE"; fi
+export PROJECT=$1
+export BUG=$2
+export TEST_SUITE=$3
+COVERAGE_MATRIX=$(readlink --canonicalize "$4"); ensure-file-exists "$COVERAGE_MATRIX"
+if [[ "$COVERAGE_MATRIX" = *.gz ]]; then COVERAGE_MATRIX=${COVERAGE_MATRIX%.gz}; zcat <$COVERAGE_MATRIX.gz >$COVERAGE_MATRIX || die 'unable to unzip coverage matrix'; fi
+STATEMENT_NAMES=$(readlink --canonicalize "$5"); ensure-file-exists "$STATEMENT_NAMES"
+if [[ "$STATEMENT_NAMES" = *.gz ]]; then STATEMENT_NAMES=${STATEMENT_NAMES%.gz}; zcat <$STATEMENT_NAMES.gz >$STATEMENT_NAMES || die 'unable to unzip spectra'; fi
+OUTCOME_MATRIX=$(readlink --canonicalize "$6"); ensure-file-exists "$OUTCOME_MATRIX"
+if [[ "$OUTCOME_MATRIX" = *.gz ]]; then OUTCOME_MATRIX=${OUTCOME_MATRIX%.gz}; zcat <$OUTCOME_MATRIX.gz >$OUTCOME_MATRIX || die 'unable to unzip killmap'; fi
+MUTANTS_LOG=$(readlink --canonicalize "$7"); ensure-file-exists "$MUTANTS_LOG"
+WORKING_DIR=$8
+OUTPUT=$9
+
+if [ ! -d "$HERE/source-code-lines" ]; then
+  tar -zxf "$HERE/source-code-lines.tar.gz" -d "$HERE"
+fi
+
+mkdir -p "$WORKING_DIR"
+pushd "$WORKING_DIR" >/dev/null
+
+mkdir -p sbfl
+pushd sbfl >/dev/null
+if [ ! "$RESTRICTIONS_FILE" ] || python "$HERE/check-restrictions" "$RESTRICTIONS_FILE" --family sbfl; then
+  do-sbfl-analysis "${RESTRICTIONS_FILE_SUBARGS[@]}" "$PROJECT" "$BUG" "$COVERAGE_MATRIX" "$STATEMENT_NAMES"
+fi
+popd >/dev/null
+
+mkdir -p mbfl
+pushd mbfl >/dev/null
+if [ ! "$RESTRICTIONS_FILE" ] || python "$HERE/check-restrictions" "$RESTRICTIONS_FILE" --family mbfl; then
+  do-mbfl-analysis "${RESTRICTIONS_FILE_SUBARGS[@]}" "$PROJECT" "$BUG" "$OUTCOME_MATRIX" "$MUTANTS_LOG"
+fi
+popd >/dev/null
+
+mkdir -p experimental
+pushd experimental >/dev/null
+if [ ! "$RESTRICTIONS_FILE" ] || python "$HERE/check-restrictions" "$RESTRICTIONS_FILE" --family experimental; then
+  do-experimental-analysis "$PROJECT" "$BUG" "$COVERAGE_MATRIX" "$STATEMENT_NAMES" "$OUTCOME_MATRIX" "$MUTANTS_LOG"
+fi
+popd >/dev/null
+
+popd >/dev/null
+
+find "$WORKING_DIR"/{mbfl,sbfl,experimental} -name score.txt | \
+  python3 "$HERE/gather-scores-into-master-scoring-file.py" \
+    --project "$PROJECT" --bug "$BUG" --test-suite "$TEST_SUITE" \
+  > "$OUTPUT" || exit 1
+
+echo "DONE!"
+exit 0

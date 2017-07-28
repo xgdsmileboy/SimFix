@@ -1,0 +1,3 @@
+org/mockito/internal/matchers/Equality.java#13#        if (o1 == o2 ) {
+org/mockito/internal/matchers/Equality.java#14#            return true;
+org/mockito/internal/matchers/Equality.java#15#	} else if (o1 == null || o2 == null) {

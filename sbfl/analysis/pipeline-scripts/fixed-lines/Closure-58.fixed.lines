@@ -1,0 +1,4 @@
+com/google/javascript/jscomp/LiveVariablesAnalysis.java#206#          if (NodeUtil.isName(lhs)) {
+com/google/javascript/jscomp/LiveVariablesAnalysis.java#209#          } else {
+com/google/javascript/jscomp/LiveVariablesAnalysis.java#210#            computeGenKill(lhs, gen, kill, conditional);
+com/google/javascript/jscomp/LiveVariablesAnalysis.java#211#          }

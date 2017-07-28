@@ -1,0 +1,5 @@
+org/apache/commons/lang/time/DurationFormatUtils.java#306#            end.add(Calendar.MONTH, -1);
+org/apache/commons/lang/time/DurationFormatUtils.java#307#            days += end.getActualMaximum(Calendar.DAY_OF_MONTH);
+org/apache/commons/lang/time/DurationFormatUtils.java#314#            end.add(Calendar.MONTH, 1);
+org/apache/commons/lang/time/DurationFormatUtils.java#320#FIX_OF_OMISSION
+org/apache/commons/lang/time/DurationFormatUtils.java#426#FIX_OF_OMISSION

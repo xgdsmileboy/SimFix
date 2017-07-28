@@ -1,0 +1,4 @@
+org/apache/commons/math/linear/CholeskyDecompositionImpl.java#134#            if (ltI[i] < absolutePositivityThreshold) {
+org/apache/commons/math/linear/CholeskyDecompositionImpl.java#135#                throw new NotPositiveDefiniteMatrixException();
+org/apache/commons/math/linear/CholeskyDecompositionImpl.java#136#            }
+org/apache/commons/math/linear/CholeskyDecompositionImpl.java#114#FIX_OF_OMISSION

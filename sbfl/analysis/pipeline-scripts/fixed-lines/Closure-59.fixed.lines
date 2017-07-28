@@ -1,0 +1,2 @@
+com/google/javascript/jscomp/Compiler.java#255#    if (options.checkGlobalThisLevel.isOn() &&
+com/google/javascript/jscomp/Compiler.java#256#        !options.disables(DiagnosticGroups.GLOBAL_THIS)) {

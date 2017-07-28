@@ -1,0 +1,5 @@
+org/mockito/internal/stubbing/answers/CallsRealMethods.java#8#import java.lang.reflect.Modifier;
+org/mockito/internal/stubbing/answers/CallsRealMethods.java#10#import org.mockito.internal.stubbing.defaultanswers.GloballyConfiguredAnswer;
+org/mockito/internal/stubbing/answers/CallsRealMethods.java#38#    	if (Modifier.isAbstract(invocation.getMethod().getModifiers())) {
+org/mockito/internal/stubbing/answers/CallsRealMethods.java#39#    		return new GloballyConfiguredAnswer().answer(invocation);
+org/mockito/internal/stubbing/answers/CallsRealMethods.java#40#    	}

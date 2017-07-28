@@ -1,0 +1,25 @@
+#!/usr/bin/python2.7
+
+import json
+import argparse
+
+parser = argparse.ArgumentParser(description='Exits with status 0 iff the command-line arguments pass the restrictions specified by the given JSON file. The file should be a JSON dict mapping {family,formula,total_defn,kill_defn,hybrid_scheme,aggregate_defn,scoring_scheme} to lists of strings; if a key (e.g. formula) and the corresponding command-line argument (e.g. --formula) are present, and the argument is not present in the list, it is forbidden.')
+parser.add_argument('--family')
+parser.add_argument('--formula')
+parser.add_argument('--total-defn')
+parser.add_argument('--kill-defn')
+parser.add_argument('--hybrid-scheme')
+parser.add_argument('--aggregate-defn')
+parser.add_argument('--scoring-scheme')
+parser.add_argument('restrictions_file')
+args = parser.parse_args()
+
+restrictions = json.load(open(args.restrictions_file))
+
+for attribute in ['family', 'formula', 'total_defn', 'kill_defn', 'aggregate_defn', 'hybrid_scheme']:
+  value = getattr(args, attribute)
+  legal_values = restrictions.get(attribute)
+  if (value is not None) and (legal_values is not None) and (value not in legal_values):
+    exit(1)
+
+exit(0)

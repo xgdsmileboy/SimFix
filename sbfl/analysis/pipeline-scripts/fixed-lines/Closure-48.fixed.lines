@@ -1,0 +1,7 @@
+com/google/javascript/jscomp/TypedScopeCreator.java#1521#      if (inferred && rhsValue != null && rhsValue.isFunction()) {
+com/google/javascript/jscomp/TypedScopeCreator.java#1523#        if (info != null) {
+com/google/javascript/jscomp/TypedScopeCreator.java#1524#          inferred = false;
+com/google/javascript/jscomp/TypedScopeCreator.java#1525#        } else if (!scope.isDeclared(qName, false) &&
+com/google/javascript/jscomp/TypedScopeCreator.java#1526#                   n.isUnscopedQualifiedName()) {
+com/google/javascript/jscomp/TypedScopeCreator.java#1527#          inferred = false;
+com/google/javascript/jscomp/TypedScopeCreator.java#1528#        }

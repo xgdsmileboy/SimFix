@@ -1,0 +1,21 @@
+#!/usr/bin/python2.7
+
+import collections
+import csv
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('stmt_susp_lists', nargs='+', help='files giving suspiciousness values to average')
+parser.add_argument('--output', required=True, help='file to write combined suspiciousness scores to')
+args = parser.parse_args()
+
+stmt_suspss = [collections.defaultdict(float, {row['Statement']: float(row['Suspiciousness']) for row in csv.DictReader(open(f))})
+               for f in args.stmt_susp_lists]
+
+stmts = set.union(*(set(stmt_susps.keys()) for stmt_susps in stmt_suspss))
+
+with open(args.output, 'w') as f:
+  writer = csv.DictWriter(f, fieldnames=['Statement', 'Suspiciousness'])
+  writer.writeheader()
+  for stmt in stmts:
+    writer.writerow({'Statement': stmt, 'Suspiciousness': max(stmt_susps[stmt] for stmt_susps in stmt_suspss)})

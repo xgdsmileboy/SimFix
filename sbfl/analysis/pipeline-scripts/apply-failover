@@ -1,0 +1,22 @@
+#!/usr/bin/python2.7
+
+import collections
+import csv
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('stmt_susp_lists', nargs='+', help='files giving suspiciousness values, in order of highest to lowest preference')
+parser.add_argument('--output', required=True, help='file to write combined suspiciousness scores to')
+args = parser.parse_args()
+
+stmt_susps = {}
+for stmt_susps_filename in reversed(args.stmt_susp_lists):
+  with open(stmt_susps_filename) as f:
+    stmt_susps.update({row['Statement']: row['Suspiciousness']
+                       for row in csv.DictReader(f)})
+
+with open(args.output, 'w') as f:
+  writer = csv.DictWriter(f, fieldnames=['Statement', 'Suspiciousness'])
+  writer.writeheader()
+  for stmt, susp in stmt_susps.items():
+    writer.writerow({'Statement': stmt, 'Suspiciousness': susp})

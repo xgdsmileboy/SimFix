@@ -1,0 +1,6 @@
+com/google/javascript/jscomp/GlobalNamespace.java#907#      Preconditions.checkNotNull(declaration);
+com/google/javascript/jscomp/GlobalNamespace.java#908#      if (declaration.getTwin() != null) {
+com/google/javascript/jscomp/GlobalNamespace.java#909#        return false;
+com/google/javascript/jscomp/GlobalNamespace.java#910#      }
+com/google/javascript/rhino/JSDocInfoBuilder.java#189#FIX_OF_OMISSION
+com/google/javascript/rhino/JSDocInfoBuilder.java#190#FIX_OF_OMISSION

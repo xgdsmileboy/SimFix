@@ -1,0 +1,11 @@
+org/apache/commons/lang3/math/NumberUtils.java#467#            char firstSigDigit = 0; // strip leading zeroes
+org/apache/commons/lang3/math/NumberUtils.java#468#            for(int i = pfxLen; i < str.length(); i++) {
+org/apache/commons/lang3/math/NumberUtils.java#469#                firstSigDigit = str.charAt(i);
+org/apache/commons/lang3/math/NumberUtils.java#470#                if (firstSigDigit == '0') { // count leading zeroes
+org/apache/commons/lang3/math/NumberUtils.java#471#                    pfxLen++;
+org/apache/commons/lang3/math/NumberUtils.java#472#                } else {
+org/apache/commons/lang3/math/NumberUtils.java#473#                    break;
+org/apache/commons/lang3/math/NumberUtils.java#474#                }
+org/apache/commons/lang3/math/NumberUtils.java#475#            }
+org/apache/commons/lang3/math/NumberUtils.java#477#            if (hexDigits > 16 || (hexDigits == 16 && firstSigDigit > '7')) { // too many for Long
+org/apache/commons/lang3/math/NumberUtils.java#480#            if (hexDigits > 8 || (hexDigits == 8 && firstSigDigit > '7')) { // too many for an int

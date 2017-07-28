@@ -1,0 +1,3 @@
+org/apache/commons/math/estimation/AbstractEstimator.java#166#        final int cols = problem.getUnboundParameters().length;
+org/apache/commons/math/estimation/AbstractEstimator.java#202#        int p = problem.getUnboundParameters().length;
+org/apache/commons/math/estimation/AbstractEstimator.java#207#        double[] errors = new double[problem.getUnboundParameters().length];

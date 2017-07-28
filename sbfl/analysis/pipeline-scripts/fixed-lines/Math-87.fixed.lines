@@ -1,0 +1,3 @@
+org/apache/commons/math/optimization/linear/SimplexTableau.java#275#            if (MathUtils.equals(getEntry(i, col), 1.0, epsilon) && (row == null)) {
+org/apache/commons/math/optimization/linear/SimplexTableau.java#277#            } else if (!MathUtils.equals(getEntry(i, col), 0.0, epsilon)) {
+org/apache/commons/math/optimization/linear/SimplexTableau.java#279#FIX_OF_OMISSION

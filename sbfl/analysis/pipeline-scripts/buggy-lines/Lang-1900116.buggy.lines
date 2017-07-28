@@ -1,0 +1,1 @@
+org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java#86#            return 2 + (end - start) + (isHex ? 1 : -1) + (semiNext ? 1 : 0);

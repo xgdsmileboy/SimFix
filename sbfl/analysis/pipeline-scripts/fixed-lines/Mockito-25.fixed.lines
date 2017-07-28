@@ -1,0 +1,29 @@
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#7#import org.mockito.MockSettings;
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#20#import static org.mockito.Mockito.mock;
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#21#import static org.mockito.Mockito.withSettings;
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#56#        return getMock(invocation, returnTypeGenericMetadata);
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#59#    private Object getMock(InvocationOnMock invocation, GenericMetadataSupport returnTypeGenericMetadata) throws Throwable {
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#71#        return recordDeepStubMock(createNewDeepStubMock(returnTypeGenericMetadata), container);
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#80#    private Object createNewDeepStubMock(GenericMetadataSupport returnTypeGenericMetadata) {
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#81#        return mock(
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#82#                returnTypeGenericMetadata.rawType(),
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#83#                withSettingsUsing(returnTypeGenericMetadata)
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#84#        );
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#85#    }
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#87#    private MockSettings withSettingsUsing(GenericMetadataSupport returnTypeGenericMetadata) {
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#88#        MockSettings mockSettings =
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#89#                returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ?
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#90#                withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces())
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#91#                : withSettings();
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#93#        return mockSettings
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#94#                .defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata));
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#95#    }
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#97#    private ReturnsDeepStubs returnsDeepStubsAnswerUsing(final GenericMetadataSupport returnTypeGenericMetadata) {
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#98#        return new ReturnsDeepStubs() {
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#99#            @Override
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#100#            protected GenericMetadataSupport actualParameterizedType(Object mock) {
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#101#                return returnTypeGenericMetadata;
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#102#            }
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#103#        };
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#104#    }
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#106#    private Object recordDeepStubMock(final Object mock, InvocationContainerImpl container) throws Throwable {

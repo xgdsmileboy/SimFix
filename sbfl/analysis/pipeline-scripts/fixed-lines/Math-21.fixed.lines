@@ -1,0 +1,14 @@
+org/apache/commons/math3/linear/RectangularCholeskyDecomposition.java#78#            int swapR = r;
+org/apache/commons/math3/linear/RectangularCholeskyDecomposition.java#81#                int isr = index[swapR];
+org/apache/commons/math3/linear/RectangularCholeskyDecomposition.java#82#                if (c[ii][ii] > c[isr][isr]) {
+org/apache/commons/math3/linear/RectangularCholeskyDecomposition.java#83#                    swapR = i;
+org/apache/commons/math3/linear/RectangularCholeskyDecomposition.java#89#            if (swapR != r) {
+org/apache/commons/math3/linear/RectangularCholeskyDecomposition.java#90#                final int tmpIndex    = index[r];
+org/apache/commons/math3/linear/RectangularCholeskyDecomposition.java#91#                index[r]              = index[swapR];
+org/apache/commons/math3/linear/RectangularCholeskyDecomposition.java#92#                index[swapR]          = tmpIndex;
+org/apache/commons/math3/linear/RectangularCholeskyDecomposition.java#93#                final double[] tmpRow = b[r];
+org/apache/commons/math3/linear/RectangularCholeskyDecomposition.java#94#                b[r]                  = b[swapR];
+org/apache/commons/math3/linear/RectangularCholeskyDecomposition.java#95#                b[swapR]              = tmpRow;
+org/apache/commons/math3/linear/RectangularCholeskyDecomposition.java#126#                final double inverse2 = 1 / c[ir][ir];
+org/apache/commons/math3/linear/RectangularCholeskyDecomposition.java#131#                    c[ii][ii] -= c[ii][ir] * c[ii][ir] * inverse2;
+org/apache/commons/math3/linear/RectangularCholeskyDecomposition.java#69#FIX_OF_OMISSION

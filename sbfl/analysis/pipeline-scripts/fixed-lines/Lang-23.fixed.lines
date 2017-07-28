@@ -1,0 +1,31 @@
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#73#    private static final int HASH_SEED = 31;
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#264#    @Override
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#265#    public boolean equals(Object obj) {
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#266#        if (obj == this) {
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#267#            return true;
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#268#        }
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#269#        if (obj == null) {
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#270#            return false;
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#271#        }
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#272#        if (!super.equals(obj)) {
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#273#            return false;
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#274#        }
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#275#        if (ObjectUtils.notEqual(getClass(), obj.getClass())) {
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#276#          return false;
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#277#        }
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#278#        ExtendedMessageFormat rhs = (ExtendedMessageFormat)obj;
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#279#        if (ObjectUtils.notEqual(toPattern, rhs.toPattern)) {
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#280#            return false;
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#281#        }
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#282#        if (ObjectUtils.notEqual(registry, rhs.registry)) {
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#283#            return false;
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#284#        }
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#285#        return true;
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#286#    }
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#293#    @Override
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#294#    public int hashCode() {
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#295#        int result = super.hashCode();
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#296#        result = HASH_SEED * result + ObjectUtils.hashCode(registry);
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#297#        result = HASH_SEED * result + ObjectUtils.hashCode(toPattern);
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#298#        return result;
+org/apache/commons/lang3/text/ExtendedMessageFormat.java#299#    }

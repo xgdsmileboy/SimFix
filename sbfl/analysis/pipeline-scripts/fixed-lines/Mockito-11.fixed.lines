@@ -1,0 +1,9 @@
+org/mockito/internal/creation/DelegatingMethod.java#55#        if (this == o) {
+org/mockito/internal/creation/DelegatingMethod.java#56#            return true;
+org/mockito/internal/creation/DelegatingMethod.java#57#        }
+org/mockito/internal/creation/DelegatingMethod.java#58#        if (o instanceof DelegatingMethod) {
+org/mockito/internal/creation/DelegatingMethod.java#59#            DelegatingMethod that = (DelegatingMethod) o;
+org/mockito/internal/creation/DelegatingMethod.java#60#            return method.equals(that.method);
+org/mockito/internal/creation/DelegatingMethod.java#61#        } else {
+org/mockito/internal/creation/DelegatingMethod.java#63#        }
+org/mockito/internal/creation/DelegatingMethod.java#68#        return method.hashCode();

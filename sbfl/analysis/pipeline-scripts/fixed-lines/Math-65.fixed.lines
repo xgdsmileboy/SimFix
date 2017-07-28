@@ -1,0 +1,2 @@
+org/apache/commons/math/optimization/general/AbstractLeastSquaresOptimizer.java#240#        return Math.sqrt(getChiSquare() / rows);
+org/apache/commons/math/optimization/general/AbstractLeastSquaresOptimizer.java#253#            chiSquare += residual * residual * residualsWeights[i];

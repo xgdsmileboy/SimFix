@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+# Concatenates the data in the given headered CSV files.
+# (Intended use case: after you've run the pipeline to get a FLT-scoring
+#  CSV for each Defects4J version, this script helps stitch those CSVs
+#  together into a single master CSV.)
+#
+# If you have many CSV files (with headers) and you want to combine
+# their data, you can't just `cat` them all together, because you need
+# to discard the headers from all but the first. This script does that.
+#
+
+ALREADY_PRINTED_HEADERS='no'
+
+for f in "$@"; do
+  if [ "$ALREADY_PRINTED_HEADERS" = 'no' ]; then
+    cat "$f"
+    ALREADY_PRINTED_HEADERS='yes'
+  else
+    tail -n +2 "$f"
+  fi
+done

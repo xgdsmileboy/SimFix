@@ -1,0 +1,2 @@
+org/joda/time/base/BaseSingleFieldPeriod.java#52#    private static final long START_1972 = 2L * 365L * 86400L * 1000L;
+org/joda/time/base/BaseSingleFieldPeriod.java#105#        int[] values = chrono.get(zeroInstance, chrono.set(start, START_1972), chrono.set(end, START_1972));

@@ -1,0 +1,6 @@
+org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java#63#            if(entityValue > 0xFFFF) {
+org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java#64#                char[] chrs = Character.toChars(entityValue);
+org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java#65#                out.write(chrs[0]);
+org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java#66#                out.write(chrs[1]);
+org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java#67#            } else {
+org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java#69#            }

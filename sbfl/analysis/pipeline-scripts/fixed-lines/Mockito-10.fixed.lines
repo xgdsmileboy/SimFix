@@ -1,0 +1,10 @@
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#17#import org.mockito.mock.MockCreationSettings;
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#72#                newDeepStubMock(returnTypeGenericMetadata, invocation.getMock()),
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#88#    private Object newDeepStubMock(GenericMetadataSupport returnTypeGenericMetadata, Object parentMock) {
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#89#        MockCreationSettings parentMockSettings = new MockUtil().getMockSettings(parentMock);
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#92#                withSettingsUsing(returnTypeGenericMetadata, parentMockSettings)
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#96#    private MockSettings withSettingsUsing(GenericMetadataSupport returnTypeGenericMetadata, MockCreationSettings parentMockSettings) {
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#101#        return propagateSerializationSettings(mockSettings, parentMockSettings)
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#105#    private MockSettings propagateSerializationSettings(MockSettings mockSettings, MockCreationSettings parentMockSettings) {
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#106#        return mockSettings.serializable(parentMockSettings.getSerializableMode());
+org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java#107#    }

@@ -1,0 +1,73 @@
+#!/bin/bash
+
+HERE=$(readlink --canonicalize "$(dirname "${BASH_SOURCE[0]}")")
+
+die() { echo "$@" >&2; exit 1; }
+ensure-file-exists() {
+  [ -f "$1" ] || die "'$1' is not a file"
+}
+
+USAGE="$0 [--mbfl-only] PROJECT BUG TEST_SUITE COVERAGE_MATRIX STATEMENT_NAMES OUTCOME_MATRIX MUTANTS_LOG WORKING_DIR OUTPUT"
+if [ "$1" = "--help" ]; then
+  echo "usage: $USAGE"
+  exit 0
+fi
+
+if [ "$1" = '--mbfl-only' ]; then
+  MBFL_ONLY=yes
+  shift
+fi
+[ "$#" == 9 ] || die "usage: $USAGE"
+
+export PROJECT=$1
+export BUG=$2
+export TEST_SUITE=$3
+
+if [ ! "$MBFL_ONLY" ]; then
+  COVERAGE_MATRIX=$(readlink --canonicalize "$4"); ensure-file-exists "$COVERAGE_MATRIX"
+    if [[ "$COVERAGE_MATRIX" == *.gz ]]; then
+      COMPRESSED="$COVERAGE_MATRIX"
+      COVERAGE_MATRIX="${COVERAGE_MATRIX%.gz}"
+      zcat "$COMPRESSED" > "$COVERAGE_MATRIX" || die 'unable to decompress coverage matrix'
+    fi
+  STATEMENT_NAMES=$(readlink --canonicalize "$5"); ensure-file-exists "$STATEMENT_NAMES"
+    if [[ "$STATEMENT_NAMES" == *.gz ]]; then
+      COMPRESSED="$STATEMENT_NAMES"
+      STATEMENT_NAMES="${STATEMENT_NAMES%.gz}"
+      zcat "$COMPRESSED" > "$STATEMENT_NAMES" || die 'unable to decompress statment names'
+    fi
+fi
+OUTCOME_MATRIX=$(readlink --canonicalize "$6"); ensure-file-exists "$OUTCOME_MATRIX"
+MUTANTS_LOG=$(readlink --canonicalize "$7"); ensure-file-exists "$MUTANTS_LOG"
+WORKING_DIR=$8
+OUTPUT=$9
+
+if [ ! -d "$HERE/source-code-lines" ]; then
+  tar -zxf "$HERE/source-code-lines.tar.gz" -d "$HERE"
+fi
+
+mkdir -p "$WORKING_DIR"
+pushd "$WORKING_DIR" >/dev/null
+
+if [ ! "$MBFL_ONLY" ]; then
+  mkdir -p sbfl
+  pushd sbfl >/dev/null
+  "$HERE/previously-studied-flts/sbfl.sh" "$PROJECT" "$BUG" "$COVERAGE_MATRIX" "$STATEMENT_NAMES"
+  popd >/dev/null
+fi
+
+mkdir -p mbfl
+pushd mbfl >/dev/null
+"$HERE/previously-studied-flts/metallaxis.sh" "$PROJECT" "$BUG" "$OUTCOME_MATRIX" "$MUTANTS_LOG"
+"$HERE/previously-studied-flts/muse.sh" "$PROJECT" "$BUG" "$OUTCOME_MATRIX" "$MUTANTS_LOG"
+popd >/dev/null
+
+popd >/dev/null
+
+find "$WORKING_DIR"/{mbfl,sbfl} -name score.txt | \
+  python "$HERE/gather-scores-into-master-scoring-file.py" \
+    --project "$PROJECT" --bug "$BUG" --test-suite "$TEST_SUITE" \
+  > "$OUTPUT" || exit 1
+
+echo "DONE!"
+exit 0
