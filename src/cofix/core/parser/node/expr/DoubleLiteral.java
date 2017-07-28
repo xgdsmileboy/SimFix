@@ -42,6 +42,10 @@ public class DoubleLiteral extends NumLiteral {
 	public void setValue(double value){
 		_value = value;
 	}
+	
+	public double getValue(){
+		return _value;
+	}
 
 	@Override
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {

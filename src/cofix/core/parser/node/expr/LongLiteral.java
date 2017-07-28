@@ -40,6 +40,10 @@ public class LongLiteral extends NumLiteral {
 		_value = value;
 	}
 	
+	public long getValue(){
+		return _value;
+	}
+	
 	@Override
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		boolean match = false;
