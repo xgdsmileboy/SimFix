@@ -41,6 +41,7 @@ public class Constant {
 	
 	public final static String LOCATOR_HOME = HOME + "/sbfl";
 	public final static String COMMAND_LOCATOR = LOCATOR_HOME + "/sbfl.sh ";
+	public final static String LOCATOR_SUSP_FILE_BASE = LOCATOR_HOME + "/ochiai";
 	public static String ENV_D4J = "DEFECTS4J_HOME";
 	public static String COMMAND_TIMEOUT = "/usr/bin/timeout ";
 	public static String COMMAND_D4J = "/home/similar-fix/d4j/defects4j/framework/bin/defects4j ";
