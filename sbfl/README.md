@@ -1,4 +1,4 @@
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) This folder contains the spectrum-based fault localization script cloned from [here](https://bitbucket.org/rjust/fault-localization-data) with some small revisions for easy invoking. We put it in this folder to make our project more self-contained. Please refer to the original [repository](https://bitbucket.org/rjust/fault-localization-data) for any future work.
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) This folder contains the spectrum-based fault localization script cloned from [here](https://bitbucket.org/rjust/fault-localization-data) with some minor revisions for easy invoking. We put it in this folder to make our project more self-contained. Please refer to the original [repository](https://bitbucket.org/rjust/fault-localization-data) for any future work.![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 
 
 
 # Fault-localization-data repository
@@ -13,7 +13,7 @@ Overview
 ========
 The experiments evaluate various fault localization techniques on artificial faults and on real faults.
 
-At a high level, here's how it all works: ==unzip the `data.zip` file first.==
+At a high level, here's how it all works: 
 
 - The real and artificial faults come from the [Defects4J Project](https://github.com/speezepearson/defects4j).
 - For each D4J fault, the scripts in `d4j_integration/` determine which lines are faulty. The resultant files are "buggy-lines" files, and live in `analysis/pipeline-scripts/buggy-lines/`.
