@@ -1,3 +1,6 @@
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) This folder contains the spectrum-based fault localization script cloned from [here](https://bitbucket.org/rjust/fault-localization-data) with some small revisions for easy invoking. We put it in this folder to make our project more self-contained. Please refer to the original [repository](https://bitbucket.org/rjust/fault-localization-data) for any future work.
+
+
 # Fault-localization-data repository
 
 This repository contains data files, data-collection scripts, and data-analysis
