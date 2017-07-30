@@ -63,8 +63,11 @@ import cofix.core.parser.node.expr.QName;
 import cofix.core.parser.node.expr.SName;
 import cofix.core.parser.node.stmt.BreakStmt;
 import cofix.core.parser.node.stmt.ContinueStmt;
+import cofix.core.parser.node.stmt.DoStmt;
+import cofix.core.parser.node.stmt.ForStmt;
 import cofix.core.parser.node.stmt.ReturnStmt;
 import cofix.core.parser.node.stmt.ThrowStmt;
+import cofix.core.parser.node.stmt.WhileStmt;
 
 /**
  * @author Jiajun
@@ -508,6 +511,9 @@ public class NodeUtils {
 							if(index != srcNodeList.size() - 1){
 								continue;
 							}
+						}
+						if(insert instanceof WhileStmt || insert instanceof ForStmt || insert instanceof DoStmt){
+							continue;
 						}
 						int last = index;
 						for(; last >= 0; last --){
