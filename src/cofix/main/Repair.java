@@ -433,6 +433,9 @@ public class Repair {
 		if(currentSize > upperbound){
 			return rslt;
 		}
+		while(baseSet.size() > 1000){
+			baseSet.remove(baseSet.size() - 1);
+		}
 		int length = incompatibleTabe.length;
 		for(Set<Integer> base : baseSet){
 			int minIndex = 0;
