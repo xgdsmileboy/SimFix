@@ -53,7 +53,7 @@ public class Configure {
 		Map<String, Pair<Integer, Set<Integer>>> projectInfo = new HashMap<>();
 		try {
 			// read the json file
-			FileReader reader = new FileReader(Constant.PROJJSONFILE);
+			FileReader reader = new FileReader(Constant.PROJ_JSON_FILE);
 			JSONParser jsonParser = new JSONParser();
 			JSONArray jsonArray = (JSONArray) jsonParser.parse(reader);
 
@@ -102,7 +102,7 @@ public class Configure {
 //	}
 	
 	public static Subject getSubject(String name, int id){
-		String fileName = Constant.PROJINFOR + "/" + name + "/" + id + ".txt";
+		String fileName = Constant.PROJ_INFO + "/" + name + "/" + id + ".txt";
 		File file = new File(fileName);
 		if(!file.exists()){
 			System.out.println("File : " + fileName + " does not exist!");

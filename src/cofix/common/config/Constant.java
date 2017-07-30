@@ -27,24 +27,26 @@ public class Constant {
 	public static int PATCH_NUM = 1;
 	
 	// useful file path 
-	public static String PROJECT_HOME = "/home/similarfix/d4j/projects";
+	public static String PROJECT_HOME = "/home/jiajun/d4j/projects";
 	public static String ORI_FAULTLOC = HOME + "/d4j-info/location/ochiai";
 	public static String CONVER_FAULTLOC = HOME + "/d4j-info/location/conver";
-	public static String PROJINFOR = HOME + "/d4j-info/src_path";
-	public static String PROJJSONFILE = HOME + "/d4j-info/project.json";
-	public static String PROJLOGBASEPATH = HOME + "/log";
+	public static String PROJ_INFO = HOME + "/d4j-info/src_path";
+	public static String PROJ_JSON_FILE = HOME + "/d4j-info/project.json";
+	public static String PROJ_LOG_BASE_PATH = HOME + "/log";
+	public static String PROJ_REALTIME_LOC_BASE = HOME + "/d4j-info/realtime/location";
 	
 	
 	// command configuration
 	public final static String COMMAND_CD = "cd ";
 	public final static int COMPILE_TIMEOUT = 120;
+	public final static int SBFL_TIMEOUT = 600;
 	
 	public final static String LOCATOR_HOME = HOME + "/sbfl";
 	public final static String COMMAND_LOCATOR = LOCATOR_HOME + "/sbfl.sh ";
 	public final static String LOCATOR_SUSP_FILE_BASE = LOCATOR_HOME + "/ochiai";
 	public static String ENV_D4J = "DEFECTS4J_HOME";
 	public static String COMMAND_TIMEOUT = "/usr/bin/timeout ";
-	public static String COMMAND_D4J = "/home/similar-fix/d4j/defects4j/framework/bin/defects4j ";
+	public static String COMMAND_D4J = null;
 	
 
 }

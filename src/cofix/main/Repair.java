@@ -17,23 +17,15 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Scanner;
 import java.util.Set;
-
-import javax.jws.WebParam.Mode;
 
 import org.apache.commons.io.FileUtils;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ASTParser;
-import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.FieldAccess;
 import org.eclipse.jdt.core.dom.Name;
 import org.eclipse.jdt.core.dom.Type;
-import org.eclipse.jdt.internal.core.SourceField;
 import org.junit.runner.Result;
-
-import com.sun.org.apache.bcel.internal.classfile.SourceFile;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 
 import cofix.common.config.Constant;
 import cofix.common.inst.Instrument;
@@ -42,7 +34,6 @@ import cofix.common.junit.runner.JUnitEngine;
 import cofix.common.junit.runner.JUnitRuntime;
 import cofix.common.junit.runner.OutStream;
 import cofix.common.localization.AbstractFaultlocalization;
-import cofix.common.localization.ManualLocator;
 import cofix.common.run.Runner;
 import cofix.common.util.JavaFile;
 import cofix.common.util.Pair;
@@ -56,7 +47,6 @@ import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.search.BuggyCode;
 import cofix.core.parser.search.SimpleFilter;
-import javassist.bytecode.analysis.ControlFlow.Block;
 
 /**
  * @author Jiajun
@@ -168,7 +158,7 @@ public class Repair {
 //		return status;
 //	}
 
-	public Status fix(Timer timer, String logFile) throws IOException{
+	public Status fix(Timer timer, String logFile, int currentTry) throws IOException{
 		String src = _subject.getHome() + _subject.getSsrc();
 		List<Pair<String, Integer>> locations = _localization.getLocations(100);
 		int correct = 0;
@@ -310,7 +300,7 @@ public class Repair {
 								patches.add(correctPatch);
 								correct ++;
 								dumpPatch(logFile, "Find a patch", file, range, oneBuggyBlock.toSrcString().toString());
-								String target = Constant.HOME + "/patch/" + _subject.getName() + "/" + _subject.getId();
+								String target = Constant.HOME + "/patch/" + _subject.getName() + "/" + _subject.getId() + "/" + currentTry;
 								File tarFile = new File(target);
 								if(!tarFile.exists()){
 									tarFile.mkdirs();
