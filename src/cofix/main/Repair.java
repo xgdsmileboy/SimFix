@@ -234,27 +234,6 @@ public class Repair {
 					List<Modification> modifications = CodeBlockMatcher.match(oneBuggyBlock, similar.getFirst(), usableVars);
 					Map<String, Set<Node>> already = new HashMap<>();
 					// try each transformation first
-//					List<Set<Modification>> list = new ArrayList<>();
-//					list.addAll(consistantModification(modifications));
-//					for(Modification modification : modifications){
-//						String modify = modification.toString();
-//						Set<Node> tested = already.get(modify);
-//						if(tested != null){
-//							if(tested.contains(modification.getSrcNode())){
-//								continue;
-//							} else {
-//								tested.add(modification.getSrcNode());
-//							}
-//						} else {
-//							tested = new HashSet<>();
-//							tested.add(modification.getSrcNode());
-//							already.put(modify, tested);
-//						}
-//						Set<Modification> set = new HashSet<>();
-//						set.add(modification);
-//						list.add(set);
-//					}
-					
 					List<Set<Integer>> list = new ArrayList<>();
 					list.addAll(consistantModification(modifications));
 					for(int index = 0; index < modifications.size(); index++){
@@ -273,7 +252,7 @@ public class Repair {
 							already.put(modify, tested);
 						}
 						Set<Integer> set = new HashSet<>();
-						set.add(i);
+						set.add(index);
 						list.add(set);
 					}
 					
@@ -385,28 +364,25 @@ public class Repair {
 	
 	private List<Set<Integer>> consistantModification(List<Modification> modifications){
 		List<Set<Integer>> result = new LinkedList<>();
-		List<Modification> revisions = new ArrayList<>();
-		for(Modification modification : modifications){
+		for(int i = 0; i < modifications.size(); i++){
+			Modification modification = modifications.get(i);
 			if(modification instanceof Revision){
-				revisions.add(modification);
-			}
-		}
-		
-		for(int i = 0; i < revisions.size(); i++){
-			Set<Integer> consistant = new HashSet<>();
-			Modification modification = revisions.get(i);
-			consistant.add(i);
-			for(int j = i+1; j < revisions.size(); j++){
-				Modification other = revisions.get(j);
-				if(modification.compatible(other) && modification.getTargetString().equals(other.getTargetString())){
-					ASTNode node = JavaFile.genASTFromSource(modification.getTargetString(), ASTParser.K_EXPRESSION);
-					if(node instanceof Name || node instanceof FieldAccess){
-						consistant.add(j);
+				Set<Integer> consistant = new HashSet<>();
+				consistant.add(i);
+				for(int j = i + 1; j < modifications.size(); j++){
+					Modification other = modifications.get(j);
+					if(other instanceof Revision){
+						if(modification.compatible(other) && modification.getTargetString().equals(other.getTargetString())){
+							ASTNode node = JavaFile.genASTFromSource(modification.getTargetString(), ASTParser.K_EXPRESSION);
+							if(node instanceof Name || node instanceof FieldAccess){
+								consistant.add(j);
+							}
+						}
 					}
 				}
-			}
-			if(consistant.size() > 0){
-				result.add(consistant);
+				if(consistant.size() > 1){
+					result.add(consistant);
+				}
 			}
 		}
 		
