@@ -1,0 +1,39 @@
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#157#        else {
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#189#        }
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#743#        this.minimumRangeValueRow = -1;
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#744#        this.minimumRangeValueColumn = -1;
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#746#        this.maximumRangeValueRow = -1;
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#747#        this.maximumRangeValueColumn = -1;
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#748#        int rowCount = getRowCount();
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#749#        int columnCount = getColumnCount();
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#750#        for (int r = 0; r < rowCount; r++) {
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#751#            for (int c = 0; c < columnCount; c++) {
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#752#                BoxAndWhiskerItem item = getItem(r, c);
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#753#                if (item != null) {
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#754#                    Number min = item.getMinOutlier();
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#755#                    if (min != null) {
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#756#                        double minv = min.doubleValue();
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#757#                        if (!Double.isNaN(minv)) {
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#758#                            if (minv < this.minimumRangeValue || Double.isNaN(
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#759#                                    this.minimumRangeValue)) {
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#760#                                this.minimumRangeValue = minv;
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#761#                                this.minimumRangeValueRow = r;
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#762#                                this.minimumRangeValueColumn = c;
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#763#                            }
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#764#                        }
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#765#                    }
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#766#                    Number max = item.getMaxOutlier();
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#767#                    if (max != null) {
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#768#                        double maxv = max.doubleValue();
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#769#                        if (!Double.isNaN(maxv)) {
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#770#                            if (maxv > this.maximumRangeValue || Double.isNaN(
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#771#                                    this.maximumRangeValue)) {
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#772#                                this.maximumRangeValue = maxv;
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#773#                                this.maximumRangeValueRow = r;
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#774#                                this.maximumRangeValueColumn = c;
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#775#                            }
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#776#                        }
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#777#                    }
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#778#                }
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#779#            }
+org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java#780#        }

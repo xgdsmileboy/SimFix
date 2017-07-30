@@ -1,0 +1,8 @@
+com/google/javascript/jscomp/TypeInference.java#1192#    Map<TemplateType, JSType> inferred = Maps.filterKeys(
+com/google/javascript/jscomp/TypeInference.java#1193#        inferTemplateTypesFromParameters(fnType, n),
+com/google/javascript/jscomp/TypeInference.java#1194#        new Predicate<TemplateType>() {
+com/google/javascript/jscomp/TypeInference.java#1196#          @Override
+com/google/javascript/jscomp/TypeInference.java#1197#          public boolean apply(TemplateType key) {
+com/google/javascript/jscomp/TypeInference.java#1198#            return keys.contains(key);
+com/google/javascript/jscomp/TypeInference.java#1199#          }}
+com/google/javascript/jscomp/TypeInference.java#1200#        );

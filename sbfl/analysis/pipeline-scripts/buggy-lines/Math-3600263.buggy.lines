@@ -1,0 +1,1 @@
+org/apache/commons/math/fraction/BigFraction.java#742#            int shift = Math.max(numerator.bitLength(), denominator.bitLength()) * Float.MAX_EXPONENT;

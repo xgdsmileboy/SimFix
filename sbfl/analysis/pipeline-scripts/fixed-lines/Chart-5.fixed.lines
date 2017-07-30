@@ -1,0 +1,5 @@
+org/jfree/data/xy/XYSeries.java#544#        if (this.allowDuplicateXValues) {
+org/jfree/data/xy/XYSeries.java#545#            add(x, y);
+org/jfree/data/xy/XYSeries.java#546#            return null;
+org/jfree/data/xy/XYSeries.java#547#        }
+org/jfree/data/xy/XYSeries.java#552#        if (index >= 0) {

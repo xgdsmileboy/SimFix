@@ -1,0 +1,123 @@
+project_name,bug_id,reviewer,agree(y/n),reason
+Closure,11800131,zecarlos,n,Are lines without any code valid candidates? Candidates 495 and 497 seem the right candidates for this bug.
+Closure,13301153,zecarlos,n,Are lines without any code valid candidates? (candidates look ok though)
+Closure,1400295,zecarlos,n,Are lines without any code valid candidates? Candidates 766 and 768 seem right. Why is 769 also a candidate?
+Closure,1600040,zecarlos,n,Are lines without any code valid candidates? (candidates look ok though)
+Closure,1600207,zecarlos,n,Are lines without any code valid candidates? Why is line 476 a candidate?
+Closure,1900023,zecarlos,n,Are lines without any code valid candidates? In my opinion, the candidates are 172, 176, and 177.
+Closure,2500549,zecarlos,n,Are lines without any code valid candidates? (candidates look ok though)
+Closure,2500569,zecarlos,n,Are lines without any code valid candidates? Why is line 1057 a candidate?
+Closure,2600070,zecarlos,n,Are lines without any code valid candidates? Do we really want to include line 212 as a candidate?
+Closure,2600078,zecarlos,n,Are lines without any code valid candidates? (candidates look ok though)
+Lang,4100066,zecarlos,y,
+Lang,4100069,zecarlos,y,
+Lang,4100118,zecarlos,y,
+Lang,4200204,zecarlos,y,
+Lang,4200205,zecarlos,y,
+Lang,4200206,zecarlos,y,
+Lang,4200207,zecarlos,y,
+Lang,4300130,zecarlos,y,
+Lang,4500239,zecarlos,y,
+Lang,4600006,zecarlos,y,
+Closure,6800409,zecarlos,n,Are lines without any code valid candidates? In my opinion, line 870 is the only valid candidate.
+Closure,6800721,zecarlos,n,Are lines without any code valid candidates? In my opinion, line 1710 is the only valid candidate.
+Closure,6800753,zecarlos,n,Are lines without any code valid candidates? In my opinion, line 1763 is the only valid candidate.
+Closure,6900597,zecarlos,n,Are lines without any code valid candidates? In my opinion, lines 1580-1584 are the only valid candidates.
+Closure,7000798,zecarlos,n,Are lines without any code valid candidates? In my opinion, line 1745 is the only valid candidate.
+Closure,7200035,zecarlos,n,Are lines without any code valid candidates? In my opinion, the candidates are 145-150.
+Closure,7600124,zecarlos,n,Are lines without any code valid candidates? In my opinion, line 302 is the only candidate.
+Closure,7600126,zecarlos,n,Are lines without any code valid candidates? (candidates look ok though)
+Closure,7600133,zecarlos,n,Are lines without any code valid candidates? (candidates look ok though)
+Closure,7600134,zecarlos,n,Are lines without any code valid candidates? (candidates look ok though)
+Time,2300166,zecarlos,n,Are lines without any code valid candidates? (candidates look ok though)
+Time,2300168,zecarlos,n,Are lines without any code valid candidates? (candidates look ok though)
+Time,2300170,zecarlos,n,Are lines without any code valid candidates? (candidates look ok though)
+Time,2400083,zecarlos,n,Are lines without any code valid candidates? (candidates look ok though)
+Time,500535,zecarlos,n,Are lines without any code valid candidates? (candidates look ok though)
+Time,500545,zecarlos,n,Are lines without any code valid candidates? In my opinion, 1630 and 1631 are the valid candidates.
+Time,500548,zecarlos,n,Are lines without any code valid candidates? (candidates look ok though)
+Time,500552,zecarlos,n,Are lines without any code valid candidates? In my opinion, 1635 and 1636 are the valid candidates.
+Time,600246,zecarlos,n,Are lines without any code valid candidates? In my opinion, 985 and 987 are the valid candidates.
+Time,600254,zecarlos,n,Are lines without any code valid candidates? In my opinion, the candidates are 990 and 992.
+Math,7800061,zecarlos,n,I do not think we should include line 200. In my opinion, the candidates are 202 and 203.
+Math,7800062,zecarlos,n,Why is line 205 a candidate? In my opinion, the candidates are 201 and 202.
+Math,8800283,zecarlos,y,
+Math,9000010,zecarlos,n,I would also be in favour of including lines 109 and 111.
+Math,900023,zecarlos,y,
+Math,9200092,zecarlos,y,
+Math,9200126,zecarlos,y,
+Math,9200155,zecarlos,y,
+Math,9200201,zecarlos,y,
+Math,9700046,zecarlos,n,In my opinion, only line 144 is a valid candidate.
+Math,2100068,zecarlos,n,I would be in favour of line 130 rather than line 132. Line 130 is *always* executed and line 132 is a loop that might be or not executed.
+Math,2300287,zecarlos,n,In my opinion, only line 234 is a valid candidate.
+Math,2900103,zecarlos,n,Are lines without any code valid candidates? (candidates look ok though)
+Math,2900126,zecarlos,n,Are lines without any code valid candidates? (candidates look ok though)
+Math,3100043,zecarlos,y,
+Math,3100052,zecarlos,n,I would also include line 151 just because line 154 is a if statement.
+Math,3100064,zecarlos,n,Are lines without any code valid candidates? (candidates look ok though)
+Math,3100065,zecarlos,n,Are lines without any code valid candidates? (candidates look ok though)
+Math,3100066,zecarlos,n,Are lines without any code valid candidates? (candidates look ok though)
+Math,3500001,zecarlos,n,I would also be in favour of including line 50 just because line 52 is a '}'.
+Time,800084,zecarlos,n,Are lines without any code valid candidates? (candidates look ok though)
+Time,900074,zecarlos,n,Are lines without any code valid candidates? (candidates look ok though)
+Time,900079,zecarlos,n,Are lines without any code valid candidates? (candidates look ok though)
+Chart,1200001,gordon,y,
+Chart,1200001,gordon,y,
+Chart,1600019,gordon,y,
+Chart,1600022,gordon,y,
+Chart,1700179,gordon,y,
+Chart,1800202,gordon,y,
+Chart,200159,gordon,y,
+Chart,200160,gordon,y,
+Chart,200164,gordon,y,
+Chart,200167,gordon,y,
+Chart,200325,gordon,y,
+Closure,7600137,gordon,n,Previous and succeeding statement are not included, I think it should be 320, 321, 322, 323
+Closure,7900014,gordon,n,Line 121 is the successor statement, why do we include 140?
+Closure,7900344,gordon,n,It's ok in terms of executable statements, but 221-222 would be fine for a developer as well.
+Closure,8100229,gordon,n,Lines 519-520 could be included if we consider non-executable statements; statement 521 would be the successor
+Closure,8400150,gordon,n,Lines 343+344 are non-executable but could be included; line 345 is the successor.
+Closure,8900682,gordon,n,Successor statement missing (489)
+Closure,900013,gordon,n,Are we including non-executable statements or not? Starting from line 116 onwards would be fine.
+Closure,9000351,gordon,n,Successor missing (883)
+Closure,2900060,gordon,n,Successor missing (227)
+Closure,3000103,gordon,y,
+Closure,3000143,gordon,y,
+Closure,3200574,gordon,y,
+Closure,3200583,gordon,y,
+Closure,3200604,gordon,y,
+Closure,3200607,gordon,y,
+Closure,3200635,gordon,y,
+Closure,3300233,gordon,y,
+Closure,3400058,gordon,n,Not sure about 111 and 112, since there is an else-if here.
+Mockito,1300015,gordon,y,
+Mockito,1400020,gordon,n,Wouldn't the previous statement be in line 71?
+Mockito,1700043,gordon,y,
+Mockito,200001,gordon,y,
+Mockito,200014,gordon,y,
+Mockito,2300003,gordon,y,
+Mockito,2300004,gordon,y,
+Mockito,2300010,gordon,y,
+Mockito,2300012,gordon,y,
+Mockito,2300028,gordon,n,Do we include only executable statements? Then it's fine. Else not.
+Math,3500002,gordon,n,Do we include only executable statements? Then it's fine. Else not.
+Math,3600245,gordon,n,The predecessor seems to be in lines 689+690, not 686
+Math,3600270,gordon,n,The predecessor statement seems to be in lines 742+743, not 739
+Math,3900126,gordon,n,252, what about successor (261)?
+Math,4400087,gordon,n,Successor (348)?
+Math,5000073,gordon,y,
+Math,5100090,gordon,n,Predecessor (187,188)?
+Math,5100091,gordon,n,Successor (194)?
+Math,5100092,gordon,y,
+Math,5600104,gordon,n,Predecessor (225)?
+Lang,5000021,gordon,n,Predecessor (285)?
+Lang,5000030,gordon,n,463 (predecessor) missing, not sure why 468 is included
+Lang,5000031,gordon,n,Predecessor (463)?
+Lang,5200061,gordon,y,
+Lang,5200062,gordon,y,
+Lang,5200063,gordon,y,
+Lang,5600232,gordon,y,
+Lang,5900430,gordon,n,Predecessor (883)
+Lang,600026,gordon,y,
+Lang,6200305,gordon,n,Predecessor (850)?

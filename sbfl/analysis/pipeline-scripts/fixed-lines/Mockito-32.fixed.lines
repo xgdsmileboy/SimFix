@@ -1,0 +1,5 @@
+org/mockito/internal/configuration/SpyAnnotationEngine.java#19#import static org.mockito.Mockito.withSettings;
+org/mockito/internal/configuration/SpyAnnotationEngine.java#50#                        field.set(testClass, Mockito.mock(instance.getClass(), withSettings()
+org/mockito/internal/configuration/SpyAnnotationEngine.java#51#                                .spiedInstance(instance)
+org/mockito/internal/configuration/SpyAnnotationEngine.java#52#                                .defaultAnswer(Mockito.CALLS_REAL_METHODS)
+org/mockito/internal/configuration/SpyAnnotationEngine.java#53#                                .name(field.getName())));

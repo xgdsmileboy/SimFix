@@ -1,0 +1,33 @@
+org/jfree/data/KeyedObjects2D.java#232#        int index = rowData.getIndex(columnKey);
+org/jfree/data/KeyedObjects2D.java#233#        if (index >= 0) {
+org/jfree/data/KeyedObjects2D.java#234#            return rowData.getObject(index);
+org/jfree/data/KeyedObjects2D.java#319#        allNull = true;
+org/jfree/data/KeyedObjects2D.java#321#        for (int item = 0, itemCount = this.rows.size(); item < itemCount; 
+org/jfree/data/KeyedObjects2D.java#322#             item++) {
+org/jfree/data/KeyedObjects2D.java#323#            row = (KeyedObjects) this.rows.get(item);
+org/jfree/data/KeyedObjects2D.java#324#            int columnIndex = row.getIndex(columnKey);
+org/jfree/data/KeyedObjects2D.java#325#            if (columnIndex >= 0 && row.getObject(columnIndex) != null) {
+org/jfree/data/KeyedObjects2D.java#326#                allNull = false;
+org/jfree/data/KeyedObjects2D.java#327#                break;
+org/jfree/data/KeyedObjects2D.java#328#            }
+org/jfree/data/KeyedObjects2D.java#329#        }
+org/jfree/data/KeyedObjects2D.java#331#        if (allNull) {
+org/jfree/data/KeyedObjects2D.java#332#            for (int item = 0, itemCount = this.rows.size(); item < itemCount; 
+org/jfree/data/KeyedObjects2D.java#333#                 item++) {
+org/jfree/data/KeyedObjects2D.java#334#                row = (KeyedObjects) this.rows.get(item);
+org/jfree/data/KeyedObjects2D.java#335#                int columnIndex = row.getIndex(columnKey);
+org/jfree/data/KeyedObjects2D.java#336#                if (columnIndex >= 0) {
+org/jfree/data/KeyedObjects2D.java#337#                    row.removeValue(columnIndex);
+org/jfree/data/KeyedObjects2D.java#338#                }
+org/jfree/data/KeyedObjects2D.java#339#            }
+org/jfree/data/KeyedObjects2D.java#340#            this.columnKeys.remove(columnKey);
+org/jfree/data/KeyedObjects2D.java#341#        }
+org/jfree/data/KeyedObjects2D.java#367#        if (index < 0) {
+org/jfree/data/KeyedObjects2D.java#368#            throw new UnknownKeyException("Row key (" + rowKey 
+org/jfree/data/KeyedObjects2D.java#369#                    + ") not recognised.");
+org/jfree/data/KeyedObjects2D.java#370#        }
+org/jfree/data/KeyedObjects2D.java#404#            int i = rowData.getIndex(columnKey);
+org/jfree/data/KeyedObjects2D.java#405#            if (i >= 0) {
+org/jfree/data/KeyedObjects2D.java#406#                rowData.removeValue(i);
+org/jfree/data/KeyedObjects2D.java#407#            }
+org/jfree/data/KeyedObjects2D.java#231#FIX_OF_OMISSION

@@ -1,0 +1,5 @@
+com/google/javascript/jscomp/parsing/IRFactory.java#667#      if (!bodyNode.isBlock()) {
+com/google/javascript/jscomp/parsing/IRFactory.java#671#        Preconditions.checkState(config.isIdeMode);
+com/google/javascript/jscomp/parsing/IRFactory.java#672#        bodyNode = IR.block();
+com/google/javascript/jscomp/parsing/IRFactory.java#673#      }
+com/google/javascript/jscomp/NodeTraversal.java#541#            body.isBlock(), body);

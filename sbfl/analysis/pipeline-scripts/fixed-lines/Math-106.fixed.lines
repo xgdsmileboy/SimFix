@@ -1,0 +1,8 @@
+org/apache/commons/math/fraction/ProperFractionFormat.java#165#        if (num.intValue() < 0) {
+org/apache/commons/math/fraction/ProperFractionFormat.java#167#            pos.setIndex(initialIndex);
+org/apache/commons/math/fraction/ProperFractionFormat.java#168#            return null;
+org/apache/commons/math/fraction/ProperFractionFormat.java#169#        }
+org/apache/commons/math/fraction/ProperFractionFormat.java#204#        if (den.intValue() < 0) {
+org/apache/commons/math/fraction/ProperFractionFormat.java#206#            pos.setIndex(initialIndex);
+org/apache/commons/math/fraction/ProperFractionFormat.java#207#            return null;
+org/apache/commons/math/fraction/ProperFractionFormat.java#208#        }

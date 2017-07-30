@@ -1,0 +1,2 @@
+org/joda/time/format/DateTimeFormatter.java#708#        int defaultYear = DateTimeUtils.getChronology(chrono).year().get(instantMillis);
+org/joda/time/format/DateTimeFormatter.java#711#FIX_OF_OMISSION

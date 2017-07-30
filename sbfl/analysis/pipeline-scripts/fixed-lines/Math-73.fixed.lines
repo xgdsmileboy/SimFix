@@ -1,0 +1,4 @@
+org/apache/commons/math/analysis/solvers/BrentSolver.java#136#        if (yMin * yMax > 0) {
+org/apache/commons/math/analysis/solvers/BrentSolver.java#137#            throw MathRuntimeException.createIllegalArgumentException(
+org/apache/commons/math/analysis/solvers/BrentSolver.java#138#                  NON_BRACKETING_MESSAGE, min, max, yMin, yMax);
+org/apache/commons/math/analysis/solvers/BrentSolver.java#139#        }

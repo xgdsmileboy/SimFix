@@ -1,0 +1,17 @@
+org/apache/commons/math/stat/inference/ChiSquareTestImpl.java#74#        double sumExpected = 0d;
+org/apache/commons/math/stat/inference/ChiSquareTestImpl.java#75#        double sumObserved = 0d;
+org/apache/commons/math/stat/inference/ChiSquareTestImpl.java#76#        for (int i = 0; i < observed.length; i++) {
+org/apache/commons/math/stat/inference/ChiSquareTestImpl.java#77#            sumExpected += expected[i];
+org/apache/commons/math/stat/inference/ChiSquareTestImpl.java#78#            sumObserved += observed[i];
+org/apache/commons/math/stat/inference/ChiSquareTestImpl.java#79#        }
+org/apache/commons/math/stat/inference/ChiSquareTestImpl.java#80#        double ratio = 1.0d;
+org/apache/commons/math/stat/inference/ChiSquareTestImpl.java#81#        boolean rescale = false;
+org/apache/commons/math/stat/inference/ChiSquareTestImpl.java#82#        if (Math.abs(sumExpected - sumObserved) > 10E-6) {
+org/apache/commons/math/stat/inference/ChiSquareTestImpl.java#83#            ratio = sumObserved / sumExpected;
+org/apache/commons/math/stat/inference/ChiSquareTestImpl.java#84#            rescale = true;
+org/apache/commons/math/stat/inference/ChiSquareTestImpl.java#85#        }
+org/apache/commons/math/stat/inference/ChiSquareTestImpl.java#89#            if (rescale) {
+org/apache/commons/math/stat/inference/ChiSquareTestImpl.java#90#                dev = ((double) observed[i] - ratio * expected[i]);
+org/apache/commons/math/stat/inference/ChiSquareTestImpl.java#91#                sumSq += dev * dev / (ratio * expected[i]);
+org/apache/commons/math/stat/inference/ChiSquareTestImpl.java#92#            } else {
+org/apache/commons/math/stat/inference/ChiSquareTestImpl.java#95#            }

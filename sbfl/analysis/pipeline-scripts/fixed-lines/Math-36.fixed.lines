@@ -1,0 +1,12 @@
+org/apache/commons/math/fraction/BigFraction.java#686#        if (Double.isNaN(result)) {
+org/apache/commons/math/fraction/BigFraction.java#689#            int shift = Math.max(numerator.bitLength(),
+org/apache/commons/math/fraction/BigFraction.java#690#                                 denominator.bitLength()) - Double.MAX_EXPONENT;
+org/apache/commons/math/fraction/BigFraction.java#691#            result = numerator.shiftRight(shift).doubleValue() /
+org/apache/commons/math/fraction/BigFraction.java#692#                denominator.shiftRight(shift).doubleValue();
+org/apache/commons/math/fraction/BigFraction.java#693#        }
+org/apache/commons/math/fraction/BigFraction.java#739#        if (Double.isNaN(result)) {
+org/apache/commons/math/fraction/BigFraction.java#742#            int shift = Math.max(numerator.bitLength(),
+org/apache/commons/math/fraction/BigFraction.java#743#                                 denominator.bitLength()) - Float.MAX_EXPONENT;
+org/apache/commons/math/fraction/BigFraction.java#744#            result = numerator.shiftRight(shift).floatValue() /
+org/apache/commons/math/fraction/BigFraction.java#745#                denominator.shiftRight(shift).floatValue();
+org/apache/commons/math/fraction/BigFraction.java#746#        }

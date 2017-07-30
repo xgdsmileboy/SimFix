@@ -1,0 +1,7 @@
+com/google/javascript/jscomp/TypeCheck.java#1580#      if (functionType.isOrdinaryFunction() &&
+com/google/javascript/jscomp/TypeCheck.java#1581#          !functionType.getTypeOfThis().isUnknownType() &&
+com/google/javascript/jscomp/TypeCheck.java#1582#          !functionType.getTypeOfThis().isNativeObjectType() &&
+com/google/javascript/jscomp/TypeCheck.java#1583#          !(child.getType() == Token.GETELEM ||
+com/google/javascript/jscomp/TypeCheck.java#1584#            child.getType() == Token.GETPROP)) {
+com/google/javascript/jscomp/TypeCheck.java#1585#        report(t, n, EXPECTED_THIS_TYPE, functionType.toString());
+com/google/javascript/jscomp/TypeCheck.java#1586#      }

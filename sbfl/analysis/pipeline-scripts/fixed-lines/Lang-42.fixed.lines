@@ -1,0 +1,7 @@
+org/apache/commons/lang/Entities.java#828#            int c = Character.codePointAt(str, i); 
+org/apache/commons/lang/Entities.java#831#                if (c >= 0x010000 && i < len - 1) {
+org/apache/commons/lang/Entities.java#832#                    writer.write("&#");
+org/apache/commons/lang/Entities.java#833#                    writer.write(Integer.toString(c, 10));
+org/apache/commons/lang/Entities.java#834#                    writer.write(';');
+org/apache/commons/lang/Entities.java#835#                    i++;
+org/apache/commons/lang/Entities.java#836#                } else if (c > 0x7F) { 

@@ -1,0 +1,10 @@
+com/google/javascript/jscomp/MustBeReachingVariableDef.java#71#    private boolean unknownDependencies = false;
+com/google/javascript/jscomp/MustBeReachingVariableDef.java#397#        if (n.isName()) {
+com/google/javascript/jscomp/MustBeReachingVariableDef.java#399#          if (dep == null) {
+com/google/javascript/jscomp/MustBeReachingVariableDef.java#400#            def.unknownDependencies = true;
+com/google/javascript/jscomp/MustBeReachingVariableDef.java#401#          } else {
+com/google/javascript/jscomp/MustBeReachingVariableDef.java#403#          }
+com/google/javascript/jscomp/MustBeReachingVariableDef.java#435#    if (def.unknownDependencies) {
+com/google/javascript/jscomp/MustBeReachingVariableDef.java#436#      return true;
+com/google/javascript/jscomp/MustBeReachingVariableDef.java#437#    }
+com/google/javascript/jscomp/FlowSensitiveInlineVariables.java#157#    (new NodeTraversal(compiler, this)).traverseRoots(externs, root);

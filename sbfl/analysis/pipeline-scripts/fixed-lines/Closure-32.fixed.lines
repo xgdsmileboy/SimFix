@@ -1,0 +1,16 @@
+com/google/javascript/jscomp/parsing/JsDocInfoParser.java#1358#    int lineStartChar = -1;
+com/google/javascript/jscomp/parsing/JsDocInfoParser.java#1365#            lineStartChar = stream.getCharno() + 1;
+com/google/javascript/jscomp/parsing/JsDocInfoParser.java#1384#          lineStartChar = 0;
+com/google/javascript/jscomp/parsing/JsDocInfoParser.java#1392#          boolean isEOC = token == JsDocToken.EOC;
+com/google/javascript/jscomp/parsing/JsDocInfoParser.java#1393#          if (!isEOC) {
+com/google/javascript/jscomp/parsing/JsDocInfoParser.java#1394#            if (lineStartChar != -1 && option == WhitespaceOption.PRESERVE) {
+com/google/javascript/jscomp/parsing/JsDocInfoParser.java#1395#              int numSpaces = stream.getCharno() - lineStartChar;
+com/google/javascript/jscomp/parsing/JsDocInfoParser.java#1396#              for (int i = 0; i < numSpaces; i++) {
+com/google/javascript/jscomp/parsing/JsDocInfoParser.java#1397#                builder.append(' ');
+com/google/javascript/jscomp/parsing/JsDocInfoParser.java#1398#              }
+com/google/javascript/jscomp/parsing/JsDocInfoParser.java#1399#              lineStartChar = -1;
+com/google/javascript/jscomp/parsing/JsDocInfoParser.java#1400#            } else if (builder.length() > 0) {
+com/google/javascript/jscomp/parsing/JsDocInfoParser.java#1402#              builder.append(' ');
+com/google/javascript/jscomp/parsing/JsDocInfoParser.java#1403#            }
+com/google/javascript/jscomp/parsing/JsDocInfoParser.java#1404#          }
+com/google/javascript/jscomp/parsing/JsDocInfoParser.java#1429#FIX_OF_OMISSION

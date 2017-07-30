@@ -1,0 +1,9 @@
+org/apache/commons/math/optimization/direct/MultiDirectional.java#64#        final RealConvergenceChecker checker = getConvergenceChecker();
+org/apache/commons/math/optimization/direct/MultiDirectional.java#93#                return;
+org/apache/commons/math/optimization/direct/MultiDirectional.java#94#            }
+org/apache/commons/math/optimization/direct/MultiDirectional.java#97#            final int iter = getIterations();
+org/apache/commons/math/optimization/direct/MultiDirectional.java#98#            boolean converged = true;
+org/apache/commons/math/optimization/direct/MultiDirectional.java#99#            for (int i = 0; i < simplex.length; ++i) {
+org/apache/commons/math/optimization/direct/MultiDirectional.java#100#                converged &= checker.converged(iter, original[i], simplex[i]);
+org/apache/commons/math/optimization/direct/MultiDirectional.java#101#            }
+org/apache/commons/math/optimization/direct/MultiDirectional.java#102#            if (converged) {

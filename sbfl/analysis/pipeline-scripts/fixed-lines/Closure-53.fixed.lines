@@ -1,0 +1,4 @@
+com/google/javascript/jscomp/InlineObjectLiterals.java#331#      if (nodes.isEmpty()) {
+com/google/javascript/jscomp/InlineObjectLiterals.java#332#        replacement = new Node(Token.TRUE);
+com/google/javascript/jscomp/InlineObjectLiterals.java#333#      } else {
+com/google/javascript/jscomp/InlineObjectLiterals.java#353#      }

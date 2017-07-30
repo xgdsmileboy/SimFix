@@ -1,0 +1,2 @@
+com/google/javascript/jscomp/parsing/IRFactory.java#252#    Pattern p = Pattern.compile("(/|(\n[ \t]*))\\*[ \t]*@[a-zA-Z]");
+com/google/javascript/jscomp/parsing/IRFactory.java#253#    if (p.matcher(comment.getValue()).find()) {

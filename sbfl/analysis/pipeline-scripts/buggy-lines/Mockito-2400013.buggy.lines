@@ -1,0 +1,1 @@
+org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValues.java#76#            return invocation.getMock() == invocation.getArguments()[-1] ? 0 : 1;

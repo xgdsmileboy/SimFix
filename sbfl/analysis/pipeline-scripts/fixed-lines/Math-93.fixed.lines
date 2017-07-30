@@ -1,0 +1,10 @@
+org/apache/commons/math/util/MathUtils.java#345#        if (n < 0) {
+org/apache/commons/math/util/MathUtils.java#346#            throw new IllegalArgumentException("must have n >= 0 for n!");
+org/apache/commons/math/util/MathUtils.java#347#        }
+org/apache/commons/math/util/MathUtils.java#348#        if (n > 20) {
+org/apache/commons/math/util/MathUtils.java#379#        if (n < 21) {
+org/apache/commons/math/util/MathUtils.java#380#            return factorial(n);
+org/apache/commons/math/util/MathUtils.java#381#        }
+org/apache/commons/math/util/MathUtils.java#401#        }
+org/apache/commons/math/util/MathUtils.java#402#        if (n < 21) {
+org/apache/commons/math/util/MathUtils.java#403#            return Math.log(factorial(n));

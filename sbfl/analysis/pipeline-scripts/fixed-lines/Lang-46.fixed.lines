@@ -1,0 +1,10 @@
+org/apache/commons/lang/StringEscapeUtils.java#86#        return escapeJavaStyleString(str, false, false);
+org/apache/commons/lang/StringEscapeUtils.java#102#        escapeJavaStyleString(out, str, false, false);
+org/apache/commons/lang/StringEscapeUtils.java#127#        return escapeJavaStyleString(str, true, true);
+org/apache/commons/lang/StringEscapeUtils.java#143#        escapeJavaStyleString(out, str, true, true);
+org/apache/commons/lang/StringEscapeUtils.java#154#    private static String escapeJavaStyleString(String str, boolean escapeSingleQuotes, boolean escapeForwardSlash) {
+org/apache/commons/lang/StringEscapeUtils.java#160#            escapeJavaStyleString(writer, str, escapeSingleQuotes, escapeForwardSlash);
+org/apache/commons/lang/StringEscapeUtils.java#178#    private static void escapeJavaStyleString(Writer out, String str, boolean escapeSingleQuote,
+org/apache/commons/lang/StringEscapeUtils.java#179#            boolean escapeForwardSlash) throws IOException {
+org/apache/commons/lang/StringEscapeUtils.java#245#                        if (escapeForwardSlash) {
+org/apache/commons/lang/StringEscapeUtils.java#247#                        }

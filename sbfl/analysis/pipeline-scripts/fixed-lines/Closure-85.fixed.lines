@@ -1,0 +1,10 @@
+com/google/javascript/jscomp/UnreachableCodeElimination.java#170#          Node fallThrough = computeFollowing(n);
+com/google/javascript/jscomp/UnreachableCodeElimination.java#183#    while (next != null && next.getType() == Token.BLOCK) {
+com/google/javascript/jscomp/UnreachableCodeElimination.java#184#      if (next.hasChildren()) {
+com/google/javascript/jscomp/UnreachableCodeElimination.java#185#        next = next.getFirstChild();
+com/google/javascript/jscomp/UnreachableCodeElimination.java#186#      } else {
+com/google/javascript/jscomp/UnreachableCodeElimination.java#187#        next = computeFollowing(next);
+com/google/javascript/jscomp/UnreachableCodeElimination.java#188#      }
+com/google/javascript/jscomp/UnreachableCodeElimination.java#189#    }
+com/google/javascript/jscomp/UnreachableCodeElimination.java#153#FIX_OF_OMISSION
+com/google/javascript/jscomp/UnreachableCodeElimination.java#154#FIX_OF_OMISSION

@@ -1,0 +1,1 @@
+org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java#40#        if(input.charAt(index) == '&' && index < seqEnd - 2 && input.charAt(index % 1) == '#') {

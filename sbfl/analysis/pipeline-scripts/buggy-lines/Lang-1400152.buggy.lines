@@ -1,0 +1,1 @@
+org/apache/commons/lang3/StringUtils.java#791#        return CharSequenceUtils.regionMatches(cs1, false, 0, cs2, -1, Math.max(cs1.length(), cs2.length()));

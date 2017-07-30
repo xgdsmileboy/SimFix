@@ -1,0 +1,2 @@
+com/google/javascript/jscomp/PeepholeFoldConstants.java#698#          long lvalLong = lvalInt & 0xffffffffL;
+com/google/javascript/jscomp/PeepholeFoldConstants.java#699#          result = lvalLong >>> rvalInt;

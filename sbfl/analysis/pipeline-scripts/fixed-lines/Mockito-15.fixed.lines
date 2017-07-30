@@ -1,0 +1,3 @@
+org/mockito/internal/configuration/injection/FinalMockCandidateFilter.java#4#import org.mockito.internal.util.reflection.BeanPropertySetter;
+org/mockito/internal/configuration/injection/FinalMockCandidateFilter.java#26#                        if (!new BeanPropertySetter(fieldInstance, field).set(matchingMock)) {
+org/mockito/internal/configuration/injection/FinalMockCandidateFilter.java#28#                        }

@@ -1,0 +1,77 @@
+#!/usr/bin/python2.7
+
+"""Turn a test-outcome matrix into a coverage matrix, indicating which tests cover which mutants
+
+Usage:
+
+    outcome-matrix-to-coverage-matrix \
+      --outcomes FILE \
+      --mutants FILE \
+      --output FILE
+
+where `--mutants` points to a "mutants.log" file produced by Major.
+"""
+
+import collections
+import re
+import gzip
+
+PASS = 'PASS'
+
+Outcome = collections.namedtuple(
+  'Outcome',
+  ('test_case', 'mutant_id', 'timeout',
+   'category', 'runtime', 'output_hash', 'covered_mutants', 'stack_trace'))
+
+def parse_outcome_line(line):
+  result = Outcome(*line.split(',', 7))
+  return result._replace(
+    mutant_id=int(result.mutant_id),
+    timeout=int(result.timeout),
+    runtime=int(result.runtime),
+    covered_mutants=(set(int(n) for n in result.covered_mutants.split(' ')) if result.covered_mutants else set()))
+
+def find_covered_mutants(original_outcome, mutated_outcomes, error_partition_scheme):
+  return set(
+    outcome.mutant_id for outcome in mutated_outcomes
+    if not are_outcomes_equivalent(outcome, original_outcome, error_partition_scheme))
+
+def format_coverage_matrix_row(covered_mutants, n_mutants, originally_passing):
+  words = ['1' if i in covered_mutants else '0' for i in range(1, n_mutants+1)]
+  words.append('+' if originally_passing else '-')
+  return ' '.join(words)
+
+def group_outcomes_by_test_case(outcomes):
+  for _test_case, group in itertools.groupby(outcomes, key=(lambda outcome: outcome.test_case)):
+    original_outcome = next(group)
+    if original_outcome.mutant_id != 0:
+      raise ValueError('expected first outcome for test case to be have mutant_id 0, but was not: {}'.format(original_outcome))
+    yield (original_outcome, group)
+
+def count_mutants(mutants_file):
+  return max(
+    int(match.group()) for match in (
+      re.match(r'\d+(?=:)', line) for line in mutants_file)
+    if match)
+
+if __name__ == '__main__':
+
+  import argparse
+  import itertools
+
+  parser = argparse.ArgumentParser()
+  parser.add_argument('--outcomes', required=True, help='path to the outcome matrix produced by Killmap')
+  parser.add_argument('--mutants', required=True, help='path to a Major mutants.log file')
+  parser.add_argument('--output', required=True, help='file to write output coverage matrix to')
+
+  args = parser.parse_args()
+
+  with open(args.mutants) as mutants_file:
+    n_mutants = count_mutants(mutants_file)
+
+  with (gzip.open(args.outcomes, 'rt') if args.outcomes.endswith('.gz') else open(args.outcomes)) as outcome_matrix_file, open(args.output, 'w') as output_file:
+    outcomes = (parse_outcome_line(line) for line in outcome_matrix_file)
+    original_outcomes = (o for o in outcomes if o.mutant_id == 0)
+    for outcome in original_outcomes:
+      output_file.write(format_coverage_matrix_row(outcome.covered_mutants, n_mutants, outcome.category==PASS))
+      output_file.write('\n')

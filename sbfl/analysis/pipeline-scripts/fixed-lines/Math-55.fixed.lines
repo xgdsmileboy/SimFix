@@ -1,0 +1,18 @@
+org/apache/commons/math/geometry/Vector3D.java#459#      final double n1 = v1.getNormSq();
+org/apache/commons/math/geometry/Vector3D.java#460#      final double n2 = v2.getNormSq();
+org/apache/commons/math/geometry/Vector3D.java#461#      if ((n1 * n2) < MathUtils.SAFE_MIN) {
+org/apache/commons/math/geometry/Vector3D.java#462#          return ZERO;
+org/apache/commons/math/geometry/Vector3D.java#463#      }
+org/apache/commons/math/geometry/Vector3D.java#467#      final int deltaExp = (FastMath.getExponent(n1) - FastMath.getExponent(n2)) / 4;
+org/apache/commons/math/geometry/Vector3D.java#468#      final double x1    = FastMath.scalb(v1.x, -deltaExp);
+org/apache/commons/math/geometry/Vector3D.java#469#      final double y1    = FastMath.scalb(v1.y, -deltaExp);
+org/apache/commons/math/geometry/Vector3D.java#470#      final double z1    = FastMath.scalb(v1.z, -deltaExp);
+org/apache/commons/math/geometry/Vector3D.java#471#      final double x2    = FastMath.scalb(v2.x,  deltaExp);
+org/apache/commons/math/geometry/Vector3D.java#472#      final double y2    = FastMath.scalb(v2.y,  deltaExp);
+org/apache/commons/math/geometry/Vector3D.java#473#      final double z2    = FastMath.scalb(v2.z,  deltaExp);
+org/apache/commons/math/geometry/Vector3D.java#482#      final double ratio = (x1 * x2 + y1 * y2 + z1 * z2) / FastMath.scalb(n2, 2 * deltaExp);
+org/apache/commons/math/geometry/Vector3D.java#483#      final double rho   = FastMath.rint(256 * ratio) / 256;
+org/apache/commons/math/geometry/Vector3D.java#485#      final double x3 = x1 - rho * x2;
+org/apache/commons/math/geometry/Vector3D.java#486#      final double y3 = y1 - rho * y2;
+org/apache/commons/math/geometry/Vector3D.java#487#      final double z3 = z1 - rho * z2;
+org/apache/commons/math/geometry/Vector3D.java#490#      return new Vector3D(y3 * z2 - z3 * y2, z3 * x2 - x3 * z2, x3 * y2 - y3 * x2);

@@ -1,0 +1,2 @@
+org/jfree/data/time/TimeSeries.java#857#        TimeSeries clone = (TimeSeries) super.clone();
+org/jfree/data/time/TimeSeries.java#858#        clone.data = (List) ObjectUtilities.deepClone(this.data);

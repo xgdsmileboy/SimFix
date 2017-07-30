@@ -1,0 +1,41 @@
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#300#          if (n.getNext() != null) {
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#301#            state = isVariableReadBeforeKill(
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#302#                n.getNext(), variable);
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#303#            if (state == VariableLiveness.KILL) {
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#304#              state = VariableLiveness.MAYBE_LIVE;
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#305#            }
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#306#          }
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#307#          break;
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#313#          if (n.getNext() != null && n.getNext().getNext() != null) {
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#314#            state = checkHookBranchReadBeforeKill(
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#315#                n.getNext(), n.getNext().getNext(), variable);
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#316#          }
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#317#          break;
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#323#            if (state != VariableLiveness.MAYBE_LIVE) {
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#324#              break;
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#325#            }
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#326#          }
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#327#      }
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#354#    if (ControlFlowGraph.isEnteringNewCfgNode(n)) { // Not a FUNCTION
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#355#      return VariableLiveness.MAYBE_LIVE;
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#356#    }
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#379#        VariableLiveness v1 = isVariableReadBeforeKill(
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#380#          n.getFirstChild(), variable);
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#381#        VariableLiveness v2 = isVariableReadBeforeKill(
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#382#          n.getLastChild(), variable);
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#385#        if (v1 != VariableLiveness.MAYBE_LIVE) {
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#386#          return v1;
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#387#        } else if (v2 == VariableLiveness.READ) {
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#388#          return VariableLiveness.READ;
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#389#        } else {
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#390#          return VariableLiveness.MAYBE_LIVE;
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#391#        }
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#393#        VariableLiveness first = isVariableReadBeforeKill(
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#394#            n.getFirstChild(), variable);
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#395#        if (first != VariableLiveness.MAYBE_LIVE) {
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#396#          return first;
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#397#        }
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#322#FIX_OF_OMISSION
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#334#FIX_OF_OMISSION
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#405#FIX_OF_OMISSION
+com/google/javascript/jscomp/DeadAssignmentsElimination.java#410#FIX_OF_OMISSION

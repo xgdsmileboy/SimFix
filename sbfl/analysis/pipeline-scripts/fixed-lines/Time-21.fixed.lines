@@ -1,0 +1,16 @@
+org/joda/time/tz/DefaultNameProvider.java#66#            String[][] zoneStringsEn = DateTimeUtils.getDateFormatSymbols(Locale.ENGLISH).getZoneStrings();
+org/joda/time/tz/DefaultNameProvider.java#67#            String[] setEn = null;
+org/joda/time/tz/DefaultNameProvider.java#68#            for (String[] strings : zoneStringsEn) {
+org/joda/time/tz/DefaultNameProvider.java#69#              if (strings != null && strings.length == 5 && id.equals(strings[0])) {
+org/joda/time/tz/DefaultNameProvider.java#70#                setEn = strings;
+org/joda/time/tz/DefaultNameProvider.java#71#                break;
+org/joda/time/tz/DefaultNameProvider.java#72#              }
+org/joda/time/tz/DefaultNameProvider.java#73#            }
+org/joda/time/tz/DefaultNameProvider.java#79#                break;
+org/joda/time/tz/DefaultNameProvider.java#80#              }
+org/joda/time/tz/DefaultNameProvider.java#81#            }
+org/joda/time/tz/DefaultNameProvider.java#83#            if (setEn != null && setLoc != null) {
+org/joda/time/tz/DefaultNameProvider.java#84#              byNameKeyCache.put(setEn[2], new String[] {setLoc[2], setLoc[1]});
+org/joda/time/tz/DefaultNameProvider.java#88#              if (setEn[2].equals(setEn[4])) {
+org/joda/time/tz/DefaultNameProvider.java#89#                  byNameKeyCache.put(setEn[4] + "-Summer", new String[] {setLoc[4], setLoc[3]});
+org/joda/time/tz/DefaultNameProvider.java#91#                  byNameKeyCache.put(setEn[4], new String[] {setLoc[4], setLoc[3]});

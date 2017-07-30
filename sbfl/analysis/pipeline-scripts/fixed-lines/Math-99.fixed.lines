@@ -1,0 +1,8 @@
+org/apache/commons/math/util/MathUtils.java#543#            if ((u == Integer.MIN_VALUE) || (v == Integer.MIN_VALUE)) {
+org/apache/commons/math/util/MathUtils.java#544#                throw MathRuntimeException.createArithmeticException(
+org/apache/commons/math/util/MathUtils.java#545#                        "overflow: gcd({0}, {1}) is 2^31",
+org/apache/commons/math/util/MathUtils.java#546#                        new Object[] { p, q });
+org/apache/commons/math/util/MathUtils.java#547#            }
+org/apache/commons/math/util/MathUtils.java#719#        if (lcm == Integer.MIN_VALUE){
+org/apache/commons/math/util/MathUtils.java#720#            throw new ArithmeticException("overflow: lcm is 2^31");
+org/apache/commons/math/util/MathUtils.java#721#        }

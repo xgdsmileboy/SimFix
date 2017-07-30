@@ -1,0 +1,3 @@
+org/mockito/exceptions/Reporter.java#438#    public void smartNullPointerException(Object obj, Location location) {
+org/mockito/exceptions/Reporter.java#442#                obj,
+org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java#56#            new Reporter().smartNullPointerException(obj, location);

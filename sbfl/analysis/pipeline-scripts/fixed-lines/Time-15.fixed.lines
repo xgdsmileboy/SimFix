@@ -1,0 +1,3 @@
+org/joda/time/field/FieldUtils.java#138#                if (val1 == Long.MIN_VALUE) {
+org/joda/time/field/FieldUtils.java#139#                    throw new ArithmeticException("Multiplication overflows a long: " + val1 + " * " + val2);
+org/joda/time/field/FieldUtils.java#140#                }

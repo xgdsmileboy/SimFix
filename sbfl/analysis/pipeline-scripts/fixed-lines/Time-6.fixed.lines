@@ -1,0 +1,26 @@
+org/joda/time/chrono/GJChronology.java#196#            LocalDate cutoverDate = new LocalDate(cutoverInstant.getMillis(), GregorianChronology.getInstance(zone));
+org/joda/time/chrono/GJChronology.java#197#            if (cutoverDate.getYear() <= 0) {
+org/joda/time/chrono/GJChronology.java#198#                throw new IllegalArgumentException("Cutover too early. Must be on or after 0001-01-01.");
+org/joda/time/chrono/GJChronology.java#199#            }
+org/joda/time/chrono/GJChronology.java#983#                        if (iConvertByWeekyear) {
+org/joda/time/chrono/GJChronology.java#984#                            int wyear = iGregorianChronology.weekyear().get(instant);
+org/joda/time/chrono/GJChronology.java#985#                            if (wyear <= 0) {
+org/joda/time/chrono/GJChronology.java#986#                                instant = iGregorianChronology.weekyear().add(instant, -1);
+org/joda/time/chrono/GJChronology.java#987#                            }
+org/joda/time/chrono/GJChronology.java#988#                        } else {
+org/joda/time/chrono/GJChronology.java#989#                            int year = iGregorianChronology.year().get(instant);
+org/joda/time/chrono/GJChronology.java#990#                            if (year <= 0) {
+org/joda/time/chrono/GJChronology.java#991#                                instant = iGregorianChronology.year().add(instant, -1);
+org/joda/time/chrono/GJChronology.java#992#                            }
+org/joda/time/chrono/GJChronology.java#993#                        }
+org/joda/time/chrono/GJChronology.java#1016#                        if (iConvertByWeekyear) {
+org/joda/time/chrono/GJChronology.java#1017#                            int wyear = iGregorianChronology.weekyear().get(instant);
+org/joda/time/chrono/GJChronology.java#1018#                            if (wyear <= 0) {
+org/joda/time/chrono/GJChronology.java#1019#                                instant = iGregorianChronology.weekyear().add(instant, -1);
+org/joda/time/chrono/GJChronology.java#1020#                            }
+org/joda/time/chrono/GJChronology.java#1021#                        } else {
+org/joda/time/chrono/GJChronology.java#1022#                            int year = iGregorianChronology.year().get(instant);
+org/joda/time/chrono/GJChronology.java#1023#                            if (year <= 0) {
+org/joda/time/chrono/GJChronology.java#1024#                                instant = iGregorianChronology.year().add(instant, -1);
+org/joda/time/chrono/GJChronology.java#1025#                            }
+org/joda/time/chrono/GJChronology.java#1026#                        }

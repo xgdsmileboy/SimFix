@@ -1,0 +1,7 @@
+org/joda/time/Partial.java#218#                if (compare < 0) {
+org/joda/time/Partial.java#449#                            if (fieldType.getRangeDurationType() == null) {
+org/joda/time/Partial.java#450#                                break;
+org/joda/time/Partial.java#451#                            }
+org/joda/time/field/UnsupportedDurationField.java#227#        if (durationField.isSupported()) {
+org/joda/time/field/UnsupportedDurationField.java#228#            return 1;
+org/joda/time/field/UnsupportedDurationField.java#229#        }

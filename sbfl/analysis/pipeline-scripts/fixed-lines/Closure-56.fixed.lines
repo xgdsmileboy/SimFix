@@ -1,0 +1,4 @@
+com/google/javascript/jscomp/SourceFile.java#242#      if (pos >= js.length()) {
+com/google/javascript/jscomp/SourceFile.java#244#      } else {
+com/google/javascript/jscomp/SourceFile.java#245#        return js.substring(pos, js.length());
+com/google/javascript/jscomp/SourceFile.java#246#      }

@@ -1,0 +1,14 @@
+org/joda/time/LocalDate.java#210#        int era = calendar.get(Calendar.ERA);
+org/joda/time/LocalDate.java#213#            (era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra),
+org/joda/time/LocalDate.java#244#        if (date.getTime() < 0) {
+org/joda/time/LocalDate.java#246#            GregorianCalendar cal = new GregorianCalendar();
+org/joda/time/LocalDate.java#247#            cal.setTime(date);
+org/joda/time/LocalDate.java#248#            return fromCalendarFields(cal);
+org/joda/time/LocalDate.java#249#        }
+org/joda/time/LocalDateTime.java#199#        int era = calendar.get(Calendar.ERA);
+org/joda/time/LocalDateTime.java#202#            (era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra),
+org/joda/time/LocalDateTime.java#237#        if (date.getTime() < 0) {
+org/joda/time/LocalDateTime.java#239#            GregorianCalendar cal = new GregorianCalendar();
+org/joda/time/LocalDateTime.java#240#            cal.setTime(date);
+org/joda/time/LocalDateTime.java#241#            return fromCalendarFields(cal);
+org/joda/time/LocalDateTime.java#242#        }

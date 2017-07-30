@@ -1,0 +1,8 @@
+com/google/javascript/jscomp/SourceMap.java#138#    int lineBaseOffset = 1;
+com/google/javascript/jscomp/SourceMap.java#139#    if (generator instanceof SourceMapGeneratorV1
+com/google/javascript/jscomp/SourceMap.java#140#        || generator instanceof SourceMapGeneratorV2) {
+com/google/javascript/jscomp/SourceMap.java#141#      lineBaseOffset = 0;
+com/google/javascript/jscomp/SourceMap.java#142#    }
+com/google/javascript/jscomp/SourceMap.java#146#        new FilePosition(node.getLineno() - lineBaseOffset, node.getCharno()),
+com/google/debugging/sourcemap/SourceMapConsumerV3.java#489#        .setLineNumber(entry.getSourceLine() + 1)
+com/google/debugging/sourcemap/SourceMapConsumerV3.java#490#        .setColumnPosition(entry.getSourceColumn() + 1);

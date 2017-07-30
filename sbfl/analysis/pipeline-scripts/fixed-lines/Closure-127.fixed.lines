@@ -1,0 +1,10 @@
+com/google/javascript/jscomp/UnreachableCodeElimination.java#170#            if (nextCfgNode == fallThrough && !inFinally(n.getParent(), n)) {
+com/google/javascript/jscomp/UnreachableCodeElimination.java#177#    private boolean inFinally(Node parent, Node child) {
+com/google/javascript/jscomp/UnreachableCodeElimination.java#178#      if (parent == null || parent.isFunction()) {
+com/google/javascript/jscomp/UnreachableCodeElimination.java#179#        return false;
+com/google/javascript/jscomp/UnreachableCodeElimination.java#180#      } else if (NodeUtil.isTryFinallyNode(parent, child)) {
+com/google/javascript/jscomp/UnreachableCodeElimination.java#181#        return true;
+com/google/javascript/jscomp/UnreachableCodeElimination.java#182#      } else {
+com/google/javascript/jscomp/UnreachableCodeElimination.java#183#        return inFinally(parent.getParent(), parent);
+com/google/javascript/jscomp/UnreachableCodeElimination.java#184#      }
+com/google/javascript/jscomp/UnreachableCodeElimination.java#185#    }

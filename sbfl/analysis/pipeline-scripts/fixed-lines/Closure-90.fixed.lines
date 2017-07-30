@@ -1,0 +1,4 @@
+com/google/javascript/rhino/jstype/FunctionType.java#880#    if (maybeTypeOfThis != null) {
+com/google/javascript/rhino/jstype/FunctionType.java#881#      maybeTypeOfThis = maybeTypeOfThis.restrictByNotNullOrUndefined();
+com/google/javascript/rhino/jstype/FunctionType.java#882#    }
+com/google/javascript/jscomp/FunctionTypeBuilder.java#184#      if (!type.restrictByNotNullOrUndefined().isSubtype(

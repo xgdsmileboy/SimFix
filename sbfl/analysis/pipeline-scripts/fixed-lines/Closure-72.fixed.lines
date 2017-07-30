@@ -1,0 +1,3 @@
+com/google/javascript/jscomp/FunctionToBlockMutator.java#152#    new RenameLabels(compiler, new LabelNameSupplier(idSupplier), false)
+com/google/javascript/jscomp/FunctionToBlockMutator.java#153#        .process(null, fnNode);
+com/google/javascript/jscomp/RenameLabels.java#215#      if (li.referenced || !removeUnused) {

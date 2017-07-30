@@ -1,0 +1,4 @@
+org/apache/commons/math/distribution/NormalDistributionImpl.java#126#        if (FastMath.abs(dev) > 40 * standardDeviation) { 
+org/apache/commons/math/distribution/NormalDistributionImpl.java#127#            return dev < 0 ? 0.0d : 1.0d;
+org/apache/commons/math/distribution/NormalDistributionImpl.java#128#        }
+org/apache/commons/math/distribution/NormalDistributionImpl.java#131#FIX_OF_OMISSION

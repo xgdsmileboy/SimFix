@@ -1,0 +1,9 @@
+org/apache/commons/math3/optimization/univariate/BrentOptimizer.java#151#        UnivariatePointValuePair best = current;
+org/apache/commons/math3/optimization/univariate/BrentOptimizer.java#235#                best = best(best,
+org/apache/commons/math3/optimization/univariate/BrentOptimizer.java#236#                            best(current,
+org/apache/commons/math3/optimization/univariate/BrentOptimizer.java#237#                                 previous,
+org/apache/commons/math3/optimization/univariate/BrentOptimizer.java#238#                                 isMinim),
+org/apache/commons/math3/optimization/univariate/BrentOptimizer.java#239#                            isMinim);
+org/apache/commons/math3/optimization/univariate/BrentOptimizer.java#243#                        return best;
+org/apache/commons/math3/optimization/univariate/BrentOptimizer.java#280#                return best(best,
+org/apache/commons/math3/optimization/univariate/BrentOptimizer.java#283#                                 isMinim),

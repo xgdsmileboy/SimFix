@@ -1,0 +1,4 @@
+org/apache/commons/lang/builder/EqualsBuilder.java#380#            if (lhs instanceof java.math.BigDecimal) {
+org/apache/commons/lang/builder/EqualsBuilder.java#381#                isEquals = (((java.math.BigDecimal)lhs).compareTo(rhs) == 0);
+org/apache/commons/lang/builder/EqualsBuilder.java#382#            } else {
+org/apache/commons/lang/builder/EqualsBuilder.java#385#            }

@@ -1,0 +1,8 @@
+org/apache/commons/lang3/StringUtils.java#1446#		int csLastIndex = csLength - 1;
+org/apache/commons/lang3/StringUtils.java#1447#		int searchLastIndex = searchLength - 1;
+org/apache/commons/lang3/StringUtils.java#1452#					if (i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {
+org/apache/commons/lang3/StringUtils.java#1454#						if (searchChars[j + 1] == cs.charAt(i + 1)) {
+org/apache/commons/lang3/StringUtils.java#1455#							return true;
+org/apache/commons/lang3/StringUtils.java#1456#						}
+org/apache/commons/lang3/StringUtils.java#1457#					} else {
+org/apache/commons/lang3/StringUtils.java#1460#					}

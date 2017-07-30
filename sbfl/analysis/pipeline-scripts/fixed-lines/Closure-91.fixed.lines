@@ -1,0 +1,9 @@
+com/google/javascript/jscomp/CheckGlobalThis.java#115#      Node gramps = parent.getParent();
+com/google/javascript/jscomp/CheckGlobalThis.java#116#      if (NodeUtil.isObjectLitKey(parent, gramps)) {
+com/google/javascript/jscomp/CheckGlobalThis.java#117#        JSDocInfo maybeLends = gramps.getJSDocInfo();
+com/google/javascript/jscomp/CheckGlobalThis.java#118#        if (maybeLends != null &&
+com/google/javascript/jscomp/CheckGlobalThis.java#119#            maybeLends.getLendsName() != null &&
+com/google/javascript/jscomp/CheckGlobalThis.java#120#            maybeLends.getLendsName().endsWith(".prototype")) {
+com/google/javascript/jscomp/CheckGlobalThis.java#121#          return false;
+com/google/javascript/jscomp/CheckGlobalThis.java#122#        }
+com/google/javascript/jscomp/CheckGlobalThis.java#123#      }

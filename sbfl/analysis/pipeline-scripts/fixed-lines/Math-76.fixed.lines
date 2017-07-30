@@ -1,0 +1,14 @@
+org/apache/commons/math/linear/SingularValueDecompositionImpl.java#162#                    eigenDecomposition.getV().getSubMatrix(0, n - 1, 0, p - 1);
+org/apache/commons/math/linear/SingularValueDecompositionImpl.java#166#                for (int i = 0; i < p; ++i) {
+org/apache/commons/math/linear/SingularValueDecompositionImpl.java#171#                    if (i < n - 1) {
+org/apache/commons/math/linear/SingularValueDecompositionImpl.java#177#                    } else {
+org/apache/commons/math/linear/SingularValueDecompositionImpl.java#179#                            wi[j] = mi * ei0[j] / singularValues[j];
+org/apache/commons/math/linear/SingularValueDecompositionImpl.java#181#                    }
+org/apache/commons/math/linear/SingularValueDecompositionImpl.java#182#                }
+org/apache/commons/math/linear/SingularValueDecompositionImpl.java#251#                    eigenDecomposition.getV().getSubMatrix(0, m - 1, 0, p - 1);
+org/apache/commons/math/linear/SingularValueDecompositionImpl.java#255#                for (int i = 0; i < p; ++i) {
+org/apache/commons/math/linear/SingularValueDecompositionImpl.java#259#                    if (i < m - 1) {
+org/apache/commons/math/linear/SingularValueDecompositionImpl.java#265#                    } else {
+org/apache/commons/math/linear/SingularValueDecompositionImpl.java#267#                            wi[j] = mi * ei0[j] / singularValues[j];
+org/apache/commons/math/linear/SingularValueDecompositionImpl.java#269#                    }
+org/apache/commons/math/linear/SingularValueDecompositionImpl.java#270#                }

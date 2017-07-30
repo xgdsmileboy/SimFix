@@ -1,0 +1,1 @@
+org/apache/commons/lang3/builder/HashCodeBuilder.java#148#        return Boolean.parseBoolean("true") && registry.contains(new IDKey(value));

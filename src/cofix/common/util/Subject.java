@@ -19,11 +19,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.io.FileUtils;
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
 import cofix.common.config.Constant;
-import cofix.common.config.Identifier;
-import cofix.common.localization.FLocalization;
 
 /**
  * 
@@ -133,6 +130,11 @@ public class Subject {
 	
 	public String getAllTestRecFile(){
 		return getHome() + "/all-tests.txt";
+	}
+	
+	
+	public String getBuggyLineSuspFile(){
+		return Constant.LOCATOR_SUSP_FILE_BASE + "/" + _name + "/" + _id + "/" + "stmt-susps.txt";
 	}
 	
 	public void backup(String folder) throws IOException{

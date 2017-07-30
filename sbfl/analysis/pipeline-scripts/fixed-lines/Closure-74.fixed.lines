@@ -1,0 +1,15 @@
+com/google/javascript/jscomp/PeepholeFoldConstants.java#907#    int lhType = getNormalizedNodeType(left);
+com/google/javascript/jscomp/PeepholeFoldConstants.java#908#    int rhType = getNormalizedNodeType(right);
+com/google/javascript/jscomp/PeepholeFoldConstants.java#1074#  private int getNormalizedNodeType(Node n) {
+com/google/javascript/jscomp/PeepholeFoldConstants.java#1075#    int type = n.getType();
+com/google/javascript/jscomp/PeepholeFoldConstants.java#1076#    if (type == Token.NOT) {
+com/google/javascript/jscomp/PeepholeFoldConstants.java#1077#      TernaryValue value = NodeUtil.getPureBooleanValue(n);
+com/google/javascript/jscomp/PeepholeFoldConstants.java#1078#      switch (value) {
+com/google/javascript/jscomp/PeepholeFoldConstants.java#1079#        case TRUE:
+com/google/javascript/jscomp/PeepholeFoldConstants.java#1080#          return Token.TRUE;
+com/google/javascript/jscomp/PeepholeFoldConstants.java#1081#        case FALSE:
+com/google/javascript/jscomp/PeepholeFoldConstants.java#1082#          return Token.FALSE;
+com/google/javascript/jscomp/PeepholeFoldConstants.java#1083#      }
+com/google/javascript/jscomp/PeepholeFoldConstants.java#1084#    }
+com/google/javascript/jscomp/PeepholeFoldConstants.java#1085#    return type;
+com/google/javascript/jscomp/PeepholeFoldConstants.java#1086#  }

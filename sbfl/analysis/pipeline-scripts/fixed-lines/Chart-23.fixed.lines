@@ -1,0 +1,19 @@
+org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java#435#    public boolean equals(Object obj) {
+org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java#436#        if (obj == this) {
+org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java#437#            return true;
+org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java#438#        }
+org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java#439#        if (!(obj instanceof MinMaxCategoryRenderer)) {
+org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java#440#            return false;
+org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java#441#        }
+org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java#442#        MinMaxCategoryRenderer that = (MinMaxCategoryRenderer) obj;
+org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java#443#        if (this.plotLines != that.plotLines) {
+org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java#444#            return false;
+org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java#445#        }
+org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java#446#        if (!PaintUtilities.equal(this.groupPaint, that.groupPaint)) {
+org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java#447#            return false;
+org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java#448#        }
+org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java#449#        if (!this.groupStroke.equals(that.groupStroke)) {
+org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java#450#            return false;
+org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java#451#        }
+org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java#452#        return super.equals(obj);
+org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java#453#    }

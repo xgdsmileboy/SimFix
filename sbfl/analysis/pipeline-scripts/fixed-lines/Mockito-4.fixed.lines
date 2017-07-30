@@ -1,0 +1,5 @@
+org/mockito/exceptions/Reporter.java#424#                "But found this interaction on mock '" + safelyGetMockName(undesired.getMock()) + "':",
+org/mockito/exceptions/Reporter.java#434#                "But found this interaction on mock '" + safelyGetMockName(undesired.getMock()) + "':",
+org/mockito/exceptions/Reporter.java#677#        if (details.getCause() == null) {
+org/mockito/exceptions/Reporter.java#678#            return details.getMessage();
+org/mockito/exceptions/Reporter.java#679#        }

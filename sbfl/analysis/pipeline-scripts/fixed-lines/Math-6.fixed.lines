@@ -1,0 +1,18 @@
+org/apache/commons/math3/optim/nonlinear/scalar/noderiv/PowellOptimizer.java#192#            incrementIterationCount();
+org/apache/commons/math3/optim/nonlinear/scalar/noderiv/PowellOptimizer.java#226#                    stop = checker.converged(getIterations(), previous, current);
+org/apache/commons/math3/optim/nonlinear/scalar/gradient/NonLinearConjugateGradientOptimizer.java#216#            incrementIterationCount();
+org/apache/commons/math3/optim/nonlinear/scalar/gradient/NonLinearConjugateGradientOptimizer.java#222#                if (checker.converged(getIterations(), previous, current)) {
+org/apache/commons/math3/optim/nonlinear/scalar/gradient/NonLinearConjugateGradientOptimizer.java#276#            if (getIterations() % n == 0 ||
+org/apache/commons/math3/optim/nonlinear/scalar/noderiv/SimplexOptimizer.java#158#            if (getIterations() > 0) {
+org/apache/commons/math3/optim/nonlinear/scalar/noderiv/SimplexOptimizer.java#175#            incrementIterationCount();
+org/apache/commons/math3/optim/nonlinear/vector/jacobian/GaussNewtonOptimizer.java#107#            incrementIterationCount();
+org/apache/commons/math3/optim/nonlinear/vector/jacobian/GaussNewtonOptimizer.java#159#                converged = checker.converged(getIterations(), previous, current);
+org/apache/commons/math3/optim/nonlinear/scalar/noderiv/CMAESOptimizer.java#388#            incrementIterationCount();
+org/apache/commons/math3/optim/BaseOptimizer.java#51#        iterations = new Incrementor(Integer.MAX_VALUE, new MaxIterCallback());
+org/apache/commons/math3/optim/nonlinear/vector/jacobian/LevenbergMarquardtOptimizer.java#324#            incrementIterationCount();
+org/apache/commons/math3/optim/nonlinear/vector/jacobian/LevenbergMarquardtOptimizer.java#325#
+org/apache/commons/math3/optim/nonlinear/vector/jacobian/LevenbergMarquardtOptimizer.java#489#                        if (checker.converged(getIterations(), previous, current)) {
+org/apache/commons/math3/optim/nonlinear/scalar/noderiv/PowellOptimizer.java#191#FIX_OF_OMISSION
+org/apache/commons/math3/optim/nonlinear/scalar/gradient/NonLinearConjugateGradientOptimizer.java#214#FIX_OF_OMISSION
+org/apache/commons/math3/optim/nonlinear/vector/jacobian/GaussNewtonOptimizer.java#106#FIX_OF_OMISSION
+org/apache/commons/math3/optim/nonlinear/vector/jacobian/LevenbergMarquardtOptimizer.java#322#FIX_OF_OMISSION

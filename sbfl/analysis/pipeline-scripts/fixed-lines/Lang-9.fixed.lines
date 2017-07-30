@@ -1,0 +1,3 @@
+org/apache/commons/lang3/time/FastDateParser.java#144#        if (patternMatcher.regionStart() != patternMatcher.regionEnd()) {
+org/apache/commons/lang3/time/FastDateParser.java#145#            throw new IllegalArgumentException("Failed to parse \""+pattern+"\" ; gave up at index "+patternMatcher.regionStart());
+org/apache/commons/lang3/time/FastDateParser.java#146#        }

@@ -1,0 +1,1 @@
+com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java#537#            } else if (calledFn.getType() == Token.GETPROP == calledFn.getLastChild().getString().startsWith("on")) {

@@ -1,0 +1,8 @@
+org/mockito/internal/stubbing/answers/AnswersValidator.java#28#        if (answer instanceof CallsRealMethods) {
+org/mockito/internal/stubbing/answers/AnswersValidator.java#29#            validateMockingConcreteClass((CallsRealMethods) answer, invocation);
+org/mockito/internal/stubbing/answers/AnswersValidator.java#30#        }
+org/mockito/internal/stubbing/answers/AnswersValidator.java#33#    private void validateMockingConcreteClass(CallsRealMethods answer, Invocation invocation) {
+org/mockito/internal/stubbing/answers/AnswersValidator.java#34#        if (invocation.getMethod().getDeclaringClass().isInterface()) {
+org/mockito/internal/stubbing/answers/AnswersValidator.java#35#            reporter.cannotCallRealMethodOnInterface();
+org/mockito/internal/stubbing/answers/AnswersValidator.java#36#        }
+org/mockito/internal/stubbing/answers/AnswersValidator.java#37#    }

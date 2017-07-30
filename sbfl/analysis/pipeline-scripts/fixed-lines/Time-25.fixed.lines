@@ -1,0 +1,9 @@
+org/joda/time/DateTimeZone.java#899#        } else if (offsetLocal > 0) {
+org/joda/time/DateTimeZone.java#900#            long prev = previousTransition(instantAdjusted);
+org/joda/time/DateTimeZone.java#901#            if (prev < instantAdjusted) {
+org/joda/time/DateTimeZone.java#902#                int offsetPrev = getOffset(prev);
+org/joda/time/DateTimeZone.java#903#                int diff = offsetPrev - offsetLocal;
+org/joda/time/DateTimeZone.java#904#                if (instantAdjusted - prev <= diff) {
+org/joda/time/DateTimeZone.java#905#                    return offsetPrev;
+org/joda/time/DateTimeZone.java#906#                }
+org/joda/time/DateTimeZone.java#907#            }

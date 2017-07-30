@@ -1,0 +1,4 @@
+com/google/javascript/jscomp/InlineCostEstimator.java#102#    @Override
+com/google/javascript/jscomp/InlineCostEstimator.java#103#    void addConstant(String newcode) {
+com/google/javascript/jscomp/InlineCostEstimator.java#104#      add("0");
+com/google/javascript/jscomp/InlineCostEstimator.java#105#    }

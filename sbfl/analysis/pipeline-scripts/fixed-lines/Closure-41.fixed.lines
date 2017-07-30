@@ -1,0 +1,9 @@
+com/google/javascript/jscomp/FunctionTypeBuilder.java#292#      while (oldParams.hasNext()) {
+com/google/javascript/jscomp/FunctionTypeBuilder.java#293#        paramBuilder.newParameterFromNode(oldParams.next());
+com/google/javascript/jscomp/FunctionTypeBuilder.java#294#      }
+com/google/javascript/jscomp/FunctionTypeBuilder.java#486#    if (!isVarArgs) {
+com/google/javascript/jscomp/FunctionTypeBuilder.java#487#      while (oldParameterType != null && !isVarArgs) {
+com/google/javascript/jscomp/FunctionTypeBuilder.java#488#        builder.newParameterFromNode(oldParameterType);
+com/google/javascript/jscomp/FunctionTypeBuilder.java#489#        oldParameterType = oldParameterType.getNext();
+com/google/javascript/jscomp/FunctionTypeBuilder.java#490#      }
+com/google/javascript/jscomp/FunctionTypeBuilder.java#491#    }

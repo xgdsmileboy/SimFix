@@ -1,0 +1,3 @@
+org/mockito/internal/MockHandler.java#77#            if (((MockAwareVerificationMode) verificationMode).getMock() == invocation.getMock()) {                
+org/mockito/internal/MockHandler.java#81#            } else {
+org/mockito/internal/MockHandler.java#84#                mockingProgress.verificationStarted(verificationMode);

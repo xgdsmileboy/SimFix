@@ -1,0 +1,4 @@
+org/apache/commons/math/geometry/euclidean/threed/Rotation.java#344#  final double inPlaneThreshold = 0.001;
+org/apache/commons/math/geometry/euclidean/threed/Rotation.java#345#  if (c <= inPlaneThreshold * k.getNorm() * u3.getNorm()) {
+org/apache/commons/math/geometry/euclidean/threed/Rotation.java#354#    if (c <= inPlaneThreshold * k.getNorm() * u2Prime.getNorm()) {
+org/apache/commons/math/geometry/euclidean/threed/Rotation.java#360#      if (c <= 0) {

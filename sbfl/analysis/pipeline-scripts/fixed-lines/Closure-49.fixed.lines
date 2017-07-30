@@ -1,0 +1,15 @@
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#122#          nameStack.push(renamer);
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#123#        }
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#124#        break;
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#126#      case Token.LP: {
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#127#          Renamer renamer = nameStack.peek().forChildScope();
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#130#          for (Node c = n.getFirstChild(); c != null; c = c.getNext()) {
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#131#            String name = c.getString();
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#132#            renamer.addDeclaredName(name);
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#133#          }
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#136#          Node functionBody = n.getNext();
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#137#          findDeclaredNames(functionBody, null, renamer);
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#176#        nameStack.pop();
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#181#      case Token.LP:
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#185#        break;
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#91#FIX_OF_OMISSION

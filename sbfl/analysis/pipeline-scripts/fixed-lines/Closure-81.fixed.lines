@@ -1,0 +1,7 @@
+com/google/javascript/jscomp/parsing/IRFactory.java#517#        int functionType = functionNode.getFunctionType();
+com/google/javascript/jscomp/parsing/IRFactory.java#518#        if (functionType != FunctionNode.FUNCTION_EXPRESSION) {
+com/google/javascript/jscomp/parsing/IRFactory.java#519#          errorReporter.error(
+com/google/javascript/jscomp/parsing/IRFactory.java#520#            "unnamed function statement",
+com/google/javascript/jscomp/parsing/IRFactory.java#521#            sourceName,
+com/google/javascript/jscomp/parsing/IRFactory.java#522#            functionNode.getLineno(), "", 0);
+com/google/javascript/jscomp/parsing/IRFactory.java#523#        }

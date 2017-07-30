@@ -1,0 +1,19 @@
+org/apache/commons/lang3/SerializationUtils.java#239#        private static final Map<String, Class<?>> primitiveTypes = 
+org/apache/commons/lang3/SerializationUtils.java#240#                new HashMap<String, Class<?>>();
+org/apache/commons/lang3/SerializationUtils.java#254#            primitiveTypes.put("byte", byte.class);
+org/apache/commons/lang3/SerializationUtils.java#255#            primitiveTypes.put("short", short.class);
+org/apache/commons/lang3/SerializationUtils.java#256#            primitiveTypes.put("int", int.class);
+org/apache/commons/lang3/SerializationUtils.java#257#            primitiveTypes.put("long", long.class);
+org/apache/commons/lang3/SerializationUtils.java#258#            primitiveTypes.put("float", float.class);
+org/apache/commons/lang3/SerializationUtils.java#259#            primitiveTypes.put("double", double.class);
+org/apache/commons/lang3/SerializationUtils.java#260#            primitiveTypes.put("boolean", boolean.class);
+org/apache/commons/lang3/SerializationUtils.java#261#            primitiveTypes.put("char", char.class);
+org/apache/commons/lang3/SerializationUtils.java#262#            primitiveTypes.put("void", void.class);
+org/apache/commons/lang3/SerializationUtils.java#279#                try {
+org/apache/commons/lang3/SerializationUtils.java#281#                } catch (ClassNotFoundException cnfe) {
+org/apache/commons/lang3/SerializationUtils.java#282#                    Class<?> cls = primitiveTypes.get(name);
+org/apache/commons/lang3/SerializationUtils.java#283#                    if (cls != null)
+org/apache/commons/lang3/SerializationUtils.java#284#                        return cls;
+org/apache/commons/lang3/SerializationUtils.java#285#                    else
+org/apache/commons/lang3/SerializationUtils.java#286#                        throw cnfe;
+org/apache/commons/lang3/SerializationUtils.java#287#                }

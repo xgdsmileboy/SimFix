@@ -1,0 +1,8 @@
+org/apache/commons/math/analysis/solvers/BracketingNthOrderBrentSolver.java#235#                final int p = agingA - MAXIMAL_AGING;
+org/apache/commons/math/analysis/solvers/BracketingNthOrderBrentSolver.java#236#                final double weightA = (1 << p) - 1;
+org/apache/commons/math/analysis/solvers/BracketingNthOrderBrentSolver.java#237#                final double weightB = p + 1;
+org/apache/commons/math/analysis/solvers/BracketingNthOrderBrentSolver.java#238#                targetY = (weightA * yA - weightB * REDUCTION_FACTOR * yB) / (weightA + weightB);
+org/apache/commons/math/analysis/solvers/BracketingNthOrderBrentSolver.java#241#                final int p = agingB - MAXIMAL_AGING;
+org/apache/commons/math/analysis/solvers/BracketingNthOrderBrentSolver.java#242#                final double weightA = p + 1;
+org/apache/commons/math/analysis/solvers/BracketingNthOrderBrentSolver.java#243#                final double weightB = (1 << p) - 1;
+org/apache/commons/math/analysis/solvers/BracketingNthOrderBrentSolver.java#244#                targetY = (weightB * yB - weightA * REDUCTION_FACTOR * yA) / (weightA + weightB);

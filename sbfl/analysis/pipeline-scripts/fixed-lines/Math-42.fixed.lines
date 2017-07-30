@@ -1,0 +1,3 @@
+org/apache/commons/math/optimization/linear/SimplexTableau.java#410#          if (basicRow != null && basicRow == 0) {
+org/apache/commons/math/optimization/linear/SimplexTableau.java#414#              coefficients[i] = 0;
+org/apache/commons/math/optimization/linear/SimplexTableau.java#415#          } else if (basicRows.contains(basicRow)) {

@@ -1,0 +1,21 @@
+org/apache/commons/lang/ClassUtils.java#191#        StringBuffer arrayPrefix = new StringBuffer();
+org/apache/commons/lang/ClassUtils.java#194#        if (className.startsWith("[")) {
+org/apache/commons/lang/ClassUtils.java#195#            while (className.charAt(0) == '[') {
+org/apache/commons/lang/ClassUtils.java#196#                className = className.substring(1);
+org/apache/commons/lang/ClassUtils.java#197#                arrayPrefix.append("[]");
+org/apache/commons/lang/ClassUtils.java#198#            }
+org/apache/commons/lang/ClassUtils.java#200#            if (className.charAt(0) == 'L' && className.charAt(className.length() - 1) == ';') {
+org/apache/commons/lang/ClassUtils.java#201#                className = className.substring(1, className.length() - 1);
+org/apache/commons/lang/ClassUtils.java#202#            }
+org/apache/commons/lang/ClassUtils.java#203#        }
+org/apache/commons/lang/ClassUtils.java#205#        if (reverseAbbreviationMap.containsKey(className)) {
+org/apache/commons/lang/ClassUtils.java#206#            className = reverseAbbreviationMap.get(className);
+org/apache/commons/lang/ClassUtils.java#207#        }
+org/apache/commons/lang/ClassUtils.java#216#        return out + arrayPrefix;
+org/apache/commons/lang/ClassUtils.java#258#        if (className == null || className.length() == 0) {
+org/apache/commons/lang/ClassUtils.java#263#        while (className.charAt(0) == '[') {
+org/apache/commons/lang/ClassUtils.java#264#            className = className.substring(1);
+org/apache/commons/lang/ClassUtils.java#265#        }
+org/apache/commons/lang/ClassUtils.java#267#        if (className.charAt(0) == 'L' && className.charAt(className.length() - 1) == ';') {
+org/apache/commons/lang/ClassUtils.java#268#            className = className.substring(1);
+org/apache/commons/lang/ClassUtils.java#269#        }

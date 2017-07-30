@@ -1,0 +1,3 @@
+org/apache/commons/math/analysis/solvers/BaseSecantSolver.java#189#                    if (x == x1) {
+org/apache/commons/math/analysis/solvers/BaseSecantSolver.java#190#                        throw new ConvergenceException();
+org/apache/commons/math/analysis/solvers/BaseSecantSolver.java#191#                    }

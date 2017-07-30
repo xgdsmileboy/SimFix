@@ -1,0 +1,1 @@
+org/apache/commons/math/optimization/general/AbstractLeastSquaresOptimizer.java#240#        return Math.sqrt(getChiSquare() * rows);

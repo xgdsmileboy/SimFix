@@ -1,0 +1,6 @@
+com/google/javascript/jscomp/NodeUtil.java#958#      if (nameNode.getFirstChild().getType() == Token.NAME) {
+com/google/javascript/jscomp/NodeUtil.java#959#        String namespaceName = nameNode.getFirstChild().getString();
+com/google/javascript/jscomp/NodeUtil.java#960#        if (namespaceName.equals("Math")) {
+com/google/javascript/jscomp/NodeUtil.java#961#          return false;
+com/google/javascript/jscomp/NodeUtil.java#962#        }
+com/google/javascript/jscomp/NodeUtil.java#963#      }

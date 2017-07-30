@@ -1,0 +1,9 @@
+org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java#250#        if (forward) {
+org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java#251#            if (stepStart + stepSize >= t) {
+org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java#252#                stepSize = t - stepStart;
+org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java#253#            }
+org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java#254#        } else {
+org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java#255#            if (stepStart + stepSize <= t) {
+org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java#256#                stepSize = t - stepStart;
+org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java#257#            }
+org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java#258#        }

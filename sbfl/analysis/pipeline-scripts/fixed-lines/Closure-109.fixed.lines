@@ -1,0 +1,5 @@
+com/google/javascript/jscomp/parsing/JsDocInfoParser.java#1908#    if (token == JsDocToken.QMARK) {
+com/google/javascript/jscomp/parsing/JsDocInfoParser.java#1909#      return newNode(Token.QMARK);
+com/google/javascript/jscomp/parsing/JsDocInfoParser.java#1910#    } else {
+com/google/javascript/jscomp/parsing/JsDocInfoParser.java#1911#      return parseBasicTypeExpression(token);
+com/google/javascript/jscomp/parsing/JsDocInfoParser.java#1912#    }

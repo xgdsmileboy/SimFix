@@ -1,0 +1,26 @@
+org/mockito/internal/configuration/injection/PropertyAndSetterInjection.java#114#            Object injected = mockCandidateFilter.filterCandidate(mocks, field, orderedInstanceFields, instance).thenInject();
+org/mockito/internal/configuration/injection/filter/FinalMockCandidateFilter.java#13#import java.util.List;
+org/mockito/internal/configuration/injection/filter/FinalMockCandidateFilter.java#24#    public OngoingInjecter filterCandidate(final Collection<Object> mocks, final Field field, List<Field> fields, final Object fieldInstance) {
+org/mockito/internal/configuration/injection/filter/MockCandidateFilter.java#9#import java.util.List;
+org/mockito/internal/configuration/injection/filter/MockCandidateFilter.java#16#            List<Field> fields, Object instance
+org/mockito/internal/configuration/injection/filter/NameBasedCandidateFilter.java#23#			Field field, List<Field> fields, Object fieldInstance) {
+org/mockito/internal/configuration/injection/filter/NameBasedCandidateFilter.java#31#			return next.filterCandidate(mockNameMatches, field, fields,
+org/mockito/internal/configuration/injection/filter/NameBasedCandidateFilter.java#42#		} else if (mocks.size() == 1) {
+org/mockito/internal/configuration/injection/filter/NameBasedCandidateFilter.java#43#			String mockName = mockUtil.getMockName(mocks.iterator().next())
+org/mockito/internal/configuration/injection/filter/NameBasedCandidateFilter.java#44#					.toString();
+org/mockito/internal/configuration/injection/filter/NameBasedCandidateFilter.java#45#
+org/mockito/internal/configuration/injection/filter/NameBasedCandidateFilter.java#46#			for (Field otherField : fields) {
+org/mockito/internal/configuration/injection/filter/NameBasedCandidateFilter.java#47#				if (!otherField.equals(field)
+org/mockito/internal/configuration/injection/filter/NameBasedCandidateFilter.java#48#						&& otherField.getType().equals(field.getType())
+org/mockito/internal/configuration/injection/filter/NameBasedCandidateFilter.java#49#						&& otherField.getName().equals(mockName)) {
+org/mockito/internal/configuration/injection/filter/NameBasedCandidateFilter.java#50#
+org/mockito/internal/configuration/injection/filter/NameBasedCandidateFilter.java#51#					return new OngoingInjecter() {
+org/mockito/internal/configuration/injection/filter/NameBasedCandidateFilter.java#52#						public Object thenInject() {
+org/mockito/internal/configuration/injection/filter/NameBasedCandidateFilter.java#53#							return null;
+org/mockito/internal/configuration/injection/filter/NameBasedCandidateFilter.java#54#						}
+org/mockito/internal/configuration/injection/filter/NameBasedCandidateFilter.java#55#					};
+org/mockito/internal/configuration/injection/filter/NameBasedCandidateFilter.java#56#				}
+org/mockito/internal/configuration/injection/filter/NameBasedCandidateFilter.java#57#			}
+org/mockito/internal/configuration/injection/filter/NameBasedCandidateFilter.java#59#		return next.filterCandidate(mocks, field, fields, fieldInstance);
+org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilter.java#20#    public OngoingInjecter filterCandidate(Collection<Object> mocks, Field field, List<Field> fields, Object fieldInstance) {
+org/mockito/internal/configuration/injection/filter/TypeBasedCandidateFilter.java#28#        return next.filterCandidate(mockTypeMatches, field, fields, fieldInstance);

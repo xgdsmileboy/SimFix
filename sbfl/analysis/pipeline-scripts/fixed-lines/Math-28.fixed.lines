@@ -1,0 +1,4 @@
+org/apache/commons/math3/optimization/linear/SimplexSolver.java#119#            if (tableau.getNumArtificialVariables() > 0) {
+org/apache/commons/math3/optimization/linear/SimplexSolver.java#129#            }
+org/apache/commons/math3/optimization/linear/SimplexSolver.java#140#            if (getIterations() < getMaxIterations() / 2) {
+org/apache/commons/math3/optimization/linear/SimplexSolver.java#155#            }

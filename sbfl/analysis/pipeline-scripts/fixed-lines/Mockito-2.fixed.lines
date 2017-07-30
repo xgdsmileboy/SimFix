@@ -1,0 +1,7 @@
+org/mockito/internal/util/Timer.java#3#import org.mockito.exceptions.Reporter;
+org/mockito/internal/util/Timer.java#11#        validateInput(durationMillis);
+org/mockito/internal/util/Timer.java#30#    private void validateInput(long durationMillis) {
+org/mockito/internal/util/Timer.java#31#        if (durationMillis < 0) {
+org/mockito/internal/util/Timer.java#32#            new Reporter().cannotCreateTimerWithNegativeDurationTime(durationMillis);
+org/mockito/internal/util/Timer.java#33#        }
+org/mockito/internal/util/Timer.java#34#    }

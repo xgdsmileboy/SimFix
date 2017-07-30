@@ -1,0 +1,1 @@
+com/google/javascript/jscomp/AnalyzePrototypeProperties.java#316#      if ((n != null && NodeUtil.isVarOrSimpleAssignLhs(n, assign) && n.getType() == Token.GETPROP) == (assign.getParent().getType() == Token.EXPR_RESULT)) {

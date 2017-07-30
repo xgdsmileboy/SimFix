@@ -1,0 +1,20 @@
+org/mockito/internal/creation/instance/ConstructorInstantiator.java#17#        return withParams(cls, outerClassInstance);
+org/mockito/internal/creation/instance/ConstructorInstantiator.java#20#    private static <T> T withParams(Class<T> cls, Object... params) {
+org/mockito/internal/creation/instance/ConstructorInstantiator.java#24#            for (Constructor<?> constructor : cls.getDeclaredConstructors()) {
+org/mockito/internal/creation/instance/ConstructorInstantiator.java#25#                Class<?>[] types = constructor.getParameterTypes();
+org/mockito/internal/creation/instance/ConstructorInstantiator.java#26#                if (paramsMatch(types, params)) {
+org/mockito/internal/creation/instance/ConstructorInstantiator.java#27#                    return (T) constructor.newInstance(params);
+org/mockito/internal/creation/instance/ConstructorInstantiator.java#28#                }
+org/mockito/internal/creation/instance/ConstructorInstantiator.java#29#            }
+org/mockito/internal/creation/instance/ConstructorInstantiator.java#33#        throw paramsException(cls, null);
+org/mockito/internal/creation/instance/ConstructorInstantiator.java#41#    private static boolean paramsMatch(Class<?>[] types, Object[] params) {
+org/mockito/internal/creation/instance/ConstructorInstantiator.java#42#        if (params.length != types.length) {
+org/mockito/internal/creation/instance/ConstructorInstantiator.java#43#            return false;
+org/mockito/internal/creation/instance/ConstructorInstantiator.java#44#        }
+org/mockito/internal/creation/instance/ConstructorInstantiator.java#45#        for (int i = 0; i < params.length; i++) {
+org/mockito/internal/creation/instance/ConstructorInstantiator.java#46#            if (!types[i].isInstance(params[i])) {
+org/mockito/internal/creation/instance/ConstructorInstantiator.java#47#                return false;
+org/mockito/internal/creation/instance/ConstructorInstantiator.java#48#            }
+org/mockito/internal/creation/instance/ConstructorInstantiator.java#49#        }
+org/mockito/internal/creation/instance/ConstructorInstantiator.java#50#        return true;
+org/mockito/internal/creation/instance/ConstructorInstantiator.java#51#    }

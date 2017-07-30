@@ -1,0 +1,15 @@
+org/apache/commons/math3/linear/OpenMapRealVector.java#349#        final int n = getDimension();
+org/apache/commons/math3/linear/OpenMapRealVector.java#350#        for (int i = 0; i < n; i++) {
+org/apache/commons/math3/linear/OpenMapRealVector.java#351#            res.setEntry(i, this.getEntry(i) / v.getEntry(i));
+org/apache/commons/math3/linear/OpenMapRealVector.java#373#        if (v.isNaN() || v.isInfinite()) {
+org/apache/commons/math3/linear/OpenMapRealVector.java#374#            final int n = getDimension();
+org/apache/commons/math3/linear/OpenMapRealVector.java#375#            for (int i = 0; i < n; i++) {
+org/apache/commons/math3/linear/OpenMapRealVector.java#376#                final double y = v.getEntry(i);
+org/apache/commons/math3/linear/OpenMapRealVector.java#377#                if (Double.isNaN(y)) {
+org/apache/commons/math3/linear/OpenMapRealVector.java#378#                    res.setEntry(i, Double.NaN);
+org/apache/commons/math3/linear/OpenMapRealVector.java#379#                } else if (Double.isInfinite(y)) {
+org/apache/commons/math3/linear/OpenMapRealVector.java#380#                    final double x = this.getEntry(i);
+org/apache/commons/math3/linear/OpenMapRealVector.java#381#                    res.setEntry(i, x * y);
+org/apache/commons/math3/linear/OpenMapRealVector.java#382#                }
+org/apache/commons/math3/linear/OpenMapRealVector.java#383#            }
+org/apache/commons/math3/linear/OpenMapRealVector.java#384#        }

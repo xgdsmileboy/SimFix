@@ -1,0 +1,6 @@
+com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java#376#      if (right.getNext() != null || !NodeUtil.isImmutableValue(right)) {
+com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java#389#    if (right != null && right.getType() == Token.STRING
+com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java#390#        && ",".equals(right.getString())) {
+com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java#392#      n.removeChild(right);
+com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java#393#      reportCodeChange();
+com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java#394#    }

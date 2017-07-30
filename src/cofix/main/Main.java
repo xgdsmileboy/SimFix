@@ -9,26 +9,30 @@ package cofix.main;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
-import org.eclipse.jdt.internal.eval.CodeSnippetAllocationExpression;
-
-import java.util.Set;
 
 import cofix.common.config.Configure;
 import cofix.common.config.Constant;
 import cofix.common.localization.AbstractFaultlocalization;
 import cofix.common.localization.OchiaiResult;
+import cofix.common.run.Runner;
 import cofix.common.util.JavaFile;
 import cofix.common.util.Pair;
 import cofix.common.util.Status;
 import cofix.common.util.Subject;
 import cofix.core.parser.ProjectInfo;
+import cofix.test.purification.CommentTestCase;
+import cofix.test.purification.Purification;
+import sbfl.locator.SBFLocator;
 
 /**
  * @author Jiajun
@@ -36,8 +40,8 @@ import cofix.core.parser.ProjectInfo;
  */
 public class Main {
 	
-	private static void tryFix(Subject subject) throws IOException{
-		String logFile = Constant.PROJLOGBASEPATH + "/" + subject.getName() + "/" + subject.getId() + ".log";
+	private static void trySingleFix(Subject subject) throws IOException{
+		String logFile = Constant.PROJ_LOG_BASE_PATH + "/" + subject.getName() + "/" + subject.getId() + ".log";
 		StringBuffer stringBuffer = new StringBuffer();
 		stringBuffer.append("=================================================\n");
 		stringBuffer.append("Project : " + subject.getName() + "_" + subject.getId() + "\t");
@@ -53,7 +57,7 @@ public class Main {
 		Repair repair = new Repair(subject, fLocalization);
 		Timer timer = new Timer(5, 0);
 		timer.start();
-		Status status = repair.fix(timer, logFile);
+		Status status = repair.fix(timer, logFile, 1);
 		switch (status) {
 		case TIMEOUT:
 			System.out.println(status);
@@ -72,26 +76,83 @@ public class Main {
 		subject.restore();
 	}
 	
-	private static void splitFix(Subject subject) throws IOException{
+	private static void trySplitFix(Subject subject) throws IOException{
+		
+		String logFile = Constant.PROJ_LOG_BASE_PATH + "/" + subject.getName() + "/" + subject.getId() + ".log";
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append("=================================================\n");
+		stringBuffer.append("Project : " + subject.getName() + "_" + subject.getId() + "\t");
+		SimpleDateFormat simpleFormat=new SimpleDateFormat("yy/MM/dd HH:mm"); 
+		stringBuffer.append("start : " + simpleFormat.format(new Date()) + "\n");
+		System.out.println(stringBuffer.toString());
+		JavaFile.writeStringToFile(logFile, stringBuffer.toString(), true);
+		
 		subject.backup(subject.getHome() + subject.getSsrc());
 		subject.backup(subject.getHome() + subject.getTsrc());
-		FileUtils.forceDelete(new File(subject.getAllTestRecFile()));
-		FileUtils.forceDelete(new File(subject.getFailedTestRecFile()));
+		Purification purification = new Purification(subject);
+		List<String> purifiedFailedTestCases = purification.purify();
+		File purifiedTest = new File(subject.getHome() + subject.getTsrc());
+		File purifyBackup = new File(subject.getHome() + subject.getTsrc() + "_purify");
+		FileUtils.copyDirectory(purifiedTest, purifyBackup);
+		int currentTry = 0;
+		for(String teString : purifiedFailedTestCases){
+			currentTry ++;
+			JavaFile.writeStringToFile(logFile, "Current failed test : " + teString + " | " + simpleFormat.format(new Date()) + "\n", true);
+			FileUtils.copyDirectory(purifyBackup, purifiedTest);
+			FileUtils.deleteDirectory(new File(subject.getHome() + subject.getTbin()));
+			if(Runner.testSingleTest(subject, teString)){
+				continue;
+			}
+			// can only find one patch now, should be optimized after fixing one test
+			subject.restore(subject.getHome() + subject.getSsrc());
+			CommentTestCase.comment(subject.getHome() + subject.getTsrc(), purifiedFailedTestCases, teString);
+			SBFLocator sbfLocator = new SBFLocator(subject);
+			List<String> currentFailedTests = new ArrayList<>();
+			currentFailedTests.add(teString);
+			sbfLocator.setFailedTest(currentFailedTests);
+			
+			Repair repair = new Repair(subject, sbfLocator);
+			Timer timer = new Timer(0, 300 / purifiedFailedTestCases.size());
+			timer.start();
+			Status status = repair.fix(timer, logFile, currentTry);
+			switch (status) {
+			case TIMEOUT:
+				System.out.println(status);
+				JavaFile.writeStringToFile(logFile, "Timeout time : " + simpleFormat.format(new Date()) + "\n", true);
+				break;
+			case SUCCESS:
+				System.out.println(status);
+				JavaFile.writeStringToFile(logFile, "Success time : " + simpleFormat.format(new Date()) + "\n", true);
+				break;
+			case FAILED:
+				System.out.println(status);
+				JavaFile.writeStringToFile(logFile, "Failed time : " + simpleFormat.format(new Date()) + "\n", true);
+			default:
+				break;
+			}
+		}
 		
+		FileUtils.deleteDirectory(purifyBackup);
+		subject.restore(subject.getHome() + subject.getSsrc());
+		subject.restore(subject.getHome() + subject.getTsrc());
 	}
 	
 
 	public static void main(String[] args) throws IOException {
-//		// for debug
-//		Constant.COMMAND_TIMEOUT = "/usr/local/bin/gtimeout ";
-//		Constant.PROJECT_HOME = Constant.HOME + "/testfile";
+////		// for debug
+////		Constant.COMMAND_TIMEOUT = "/usr/local/bin/gtimeout ";
+////		Constant.PROJECT_HOME = Constant.HOME + "/testfile";
+//		
+//		Constant.PATCH_NUM = 1;
+//		Configure.configEnvironment();
+//		System.out.println(Constant.PROJECT_HOME);
+//		
+////		runSmallDataset();
+//		runAllProjectSingle("math");
 		
-		Constant.PATCH_NUM = 1;
 		Configure.configEnvironment();
-		System.out.println(Constant.PROJECT_HOME);
-		
-//		runSmallDataset();
-		runAllProjectSingle("math");
+		Subject subject = Configure.getSubject("math", 72);
+		trySplitFix(subject);
 		
 	}
 	
@@ -101,7 +162,7 @@ public class Main {
 			String name = entry.getKey();
 			for(Integer id : entry.getValue()){
 				Subject subject = Configure.getSubject(name, id);
-				tryFix(subject);
+				trySingleFix(subject);
 			}
 		}
 	}
@@ -116,7 +177,7 @@ public class Main {
 		for(Integer id : bugIDs.getSecond()){
 			if(!already.contains(id)){
 				Subject subject = Configure.getSubject(projName, id);
-				tryFix(subject);
+				trySingleFix(subject);
 			}
 		}
 	}

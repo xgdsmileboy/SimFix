@@ -1,0 +1,2 @@
+com/google/javascript/jscomp/ProcessCommonJSModules.java#119#    filename = filename.replace("\\", "/");
+com/google/javascript/jscomp/ProcessCommonJSModules.java#184#      String moduleName = guessCJSModuleName(script.getSourceFileName());

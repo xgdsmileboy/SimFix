@@ -1,0 +1,21 @@
+org/apache/commons/math3/util/FastMath.java#82#    private static final double LOG_MAX_VALUE = StrictMath.log(Double.MAX_VALUE);
+org/apache/commons/math3/util/FastMath.java#395#          if (x >= LOG_MAX_VALUE) {
+org/apache/commons/math3/util/FastMath.java#397#              final double t = exp(0.5 * x);
+org/apache/commons/math3/util/FastMath.java#398#              return (0.5 * t) * t;
+org/apache/commons/math3/util/FastMath.java#399#          } else {
+org/apache/commons/math3/util/FastMath.java#402#      } else if (x < -20) {
+org/apache/commons/math3/util/FastMath.java#403#          if (x <= -LOG_MAX_VALUE) {
+org/apache/commons/math3/util/FastMath.java#405#              final double t = exp(-0.5 * x);
+org/apache/commons/math3/util/FastMath.java#406#              return (0.5 * t) * t;
+org/apache/commons/math3/util/FastMath.java#407#          } else {
+org/apache/commons/math3/util/FastMath.java#409#          }
+org/apache/commons/math3/util/FastMath.java#465#          if (x >= LOG_MAX_VALUE) {
+org/apache/commons/math3/util/FastMath.java#467#              final double t = exp(0.5 * x);
+org/apache/commons/math3/util/FastMath.java#468#              return (0.5 * t) * t;
+org/apache/commons/math3/util/FastMath.java#469#          } else {
+org/apache/commons/math3/util/FastMath.java#472#      } else if (x < -20) {
+org/apache/commons/math3/util/FastMath.java#473#          if (x <= -LOG_MAX_VALUE) {
+org/apache/commons/math3/util/FastMath.java#475#              final double t = exp(-0.5 * x);
+org/apache/commons/math3/util/FastMath.java#476#              return (-0.5 * t) * t;
+org/apache/commons/math3/util/FastMath.java#477#          } else {
+org/apache/commons/math3/util/FastMath.java#479#          }

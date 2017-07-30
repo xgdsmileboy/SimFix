@@ -1,0 +1,4 @@
+com/google/javascript/jscomp/CodeGenerator.java#785#    if (len == 0) {
+com/google/javascript/jscomp/CodeGenerator.java#786#      return false;
+com/google/javascript/jscomp/CodeGenerator.java#787#    }
+com/google/javascript/jscomp/CodeGenerator.java#794#    return len == 1 || s.charAt(0) != '0';

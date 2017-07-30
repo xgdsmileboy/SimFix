@@ -1,0 +1,4 @@
+org/apache/commons/lang3/math/NumberUtils.java#718#        if (str.trim().startsWith("--")) {
+org/apache/commons/lang3/math/NumberUtils.java#723#            throw new NumberFormatException(str + " is not a valid number.");
+org/apache/commons/lang3/math/NumberUtils.java#724#        }
+org/apache/commons/lang3/math/NumberUtils.java#452#FIX_OF_OMISSION

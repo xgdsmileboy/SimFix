@@ -1,0 +1,19 @@
+com/google/javascript/jscomp/ReferenceCollectingCallback.java#361#      for (BasicBlock block = ref.getBasicBlock();
+com/google/javascript/jscomp/ReferenceCollectingCallback.java#362#           block != null; block = block.getParent()) {
+com/google/javascript/jscomp/ReferenceCollectingCallback.java#363#        if (block.isFunction) {
+com/google/javascript/jscomp/ReferenceCollectingCallback.java#364#          break;
+com/google/javascript/jscomp/ReferenceCollectingCallback.java#365#        } else if (block.isLoop) {
+com/google/javascript/jscomp/ReferenceCollectingCallback.java#366#          return false;
+com/google/javascript/jscomp/ReferenceCollectingCallback.java#367#        }
+com/google/javascript/jscomp/ReferenceCollectingCallback.java#368#      }
+com/google/javascript/jscomp/ReferenceCollectingCallback.java#553#    private final boolean isFunction;
+com/google/javascript/jscomp/ReferenceCollectingCallback.java#558#    private final boolean isLoop;
+com/google/javascript/jscomp/ReferenceCollectingCallback.java#571#      this.isFunction = root.getType() == Token.FUNCTION;
+com/google/javascript/jscomp/ReferenceCollectingCallback.java#573#      if (root.getParent() != null) {
+com/google/javascript/jscomp/ReferenceCollectingCallback.java#574#        int pType = root.getParent().getType();
+com/google/javascript/jscomp/ReferenceCollectingCallback.java#575#        this.isLoop = pType == Token.DO ||
+com/google/javascript/jscomp/ReferenceCollectingCallback.java#576#            pType == Token.WHILE ||
+com/google/javascript/jscomp/ReferenceCollectingCallback.java#577#            pType == Token.FOR;
+com/google/javascript/jscomp/ReferenceCollectingCallback.java#578#      } else {
+com/google/javascript/jscomp/ReferenceCollectingCallback.java#579#        this.isLoop = false;
+com/google/javascript/jscomp/ReferenceCollectingCallback.java#580#      }

@@ -1,0 +1,76 @@
+<project name="KillMapper" default="compile" basedir=".">
+
+<!-- ##############################################
+      Path to Major and Mutation options 
+      Use -Dmutation="=mml-file" to set path to mml-file
+     ############################################## -->
+    <property environment="env"/>
+    <path id="compile.classpath">
+      <pathelement location="${env.DEFECTS4J_HOME}/major/config/config.jar"/>
+      <pathelement location="${env.DEFECTS4J_HOME}/major/lib/junit-4.11.jar"/>
+      <pathelement location="bin"/>
+    </path>
+
+    <target name="clean" description="Clean">
+      <delete dir="." includes="mutants.log"/>
+      <delete dir="bin" includes="**/*.class"/>
+    </target>
+
+    <target name="init" description="Prepare for compilation">
+      <fail unless="env.DEFECTS4J_HOME" message="DEFECTS4J_HOME must be set"/>
+      <mkdir dir="bin"/>
+    </target>
+
+<!-- Target to compile the project -->
+    <target name="compile" depends="init" description="Compile">
+        <javac includeantruntime="true"
+                debug="true"
+               srcdir="src"
+              destdir="bin"
+	       source="1.7"
+	       target="1.7"
+             includes="**/*.java">
+          <classpath refid="compile.classpath"/>
+        </javac>
+    </target>
+
+  <path id="test.classpath">
+    <pathelement location="bin" />
+  </path>
+
+<!-- Execute the test suite -->
+  <target name="test" depends="compile" description="Run all unit tests">
+    <fail unless="env.KILLMAP_CLASSPATH" message="ugly hack for testing, please set KILLMAP_CLASSPATH=$DEFECTS4J_HOME/major/config/config.jar:$DEFECTS4J_HOME/major/lib/junit-4.11.jar:bin"/>
+    <echo message="Running unit tests ..."/>
+    <junit  printsummary="true"
+            showoutput="true"
+            fork="true"
+            haltonfailure="true">
+      <formatter type="brief" usefile="false"/>
+      <classpath refid="compile.classpath"/>
+      <batchtest>
+        <fileset dir="src/test">
+          <include name="**/*Test.java"/>
+          <exclude name="**/*Dummy*.java"/>
+          <exclude name="**/RemoteTestRunnerTest.java"/>
+        </fileset>
+      </batchtest>
+    </junit>
+
+    <!-- oughta test this without forking, to make sure it works right even
+         though Ant runs it with a funny classloader -->
+    <junit  printsummary="true"
+            showoutput="true"
+            fork="false"
+            haltonfailure="true">
+      <formatter type="brief" usefile="false"/>
+      <classpath refid="compile.classpath"/>
+      <batchtest>
+        <fileset dir="src/test">
+          <include name="**/RemoteTestRunnerTest.java"/>
+        </fileset>
+      </batchtest>
+    </junit>
+  </target>
+
+</project>

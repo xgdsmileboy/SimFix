@@ -1,0 +1,2 @@
+com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java#220#      if (value != null && value.getNext() == null &&
+com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java#221#          NodeUtil.isImmutableValue(value)) {

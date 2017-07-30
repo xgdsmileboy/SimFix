@@ -1,0 +1,4 @@
+org/mockito/internal/invocation/Invocation.java#11#import org.mockito.exceptions.Reporter;
+org/mockito/internal/invocation/Invocation.java#203#        if (this.getMethod().getDeclaringClass().isInterface()) {
+org/mockito/internal/invocation/Invocation.java#204#            new Reporter().cannotCallRealMethodOnInterface();
+org/mockito/internal/invocation/Invocation.java#205#        }

@@ -1,0 +1,7 @@
+org/apache/commons/math/dfp/Dfp.java#273#                if ((bits & 0x8000000000000000L) != 0) {
+org/apache/commons/math/dfp/Dfp.java#274#                    sign = -1;
+org/apache/commons/math/dfp/Dfp.java#275#                }
+org/apache/commons/math/dfp/Dfp.java#2322#        int cmp0 = compare(this, getZero());
+org/apache/commons/math/dfp/Dfp.java#2323#        if (cmp0 == 0) {
+org/apache/commons/math/dfp/Dfp.java#2324#            return sign < 0 ? -0.0 : +0.0;
+org/apache/commons/math/dfp/Dfp.java#2325#        } else if (cmp0 < 0) {

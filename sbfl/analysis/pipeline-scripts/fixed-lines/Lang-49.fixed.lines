@@ -1,0 +1,3 @@
+org/apache/commons/lang/math/Fraction.java#466#        if (numerator == 0) {
+org/apache/commons/lang/math/Fraction.java#467#            return equals(ZERO) ? this : ZERO;
+org/apache/commons/lang/math/Fraction.java#468#        }

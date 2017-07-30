@@ -1,0 +1,4 @@
+com/google/javascript/jscomp/NodeUtil.java#313#    if (rawJsString.contains("\u000b")) {
+com/google/javascript/jscomp/NodeUtil.java#315#      return null;
+com/google/javascript/jscomp/NodeUtil.java#316#    }
+com/google/javascript/jscomp/NodeUtil.java#378#        return TernaryValue.UNKNOWN;  // IE says "no", EcmaScript says "yes"

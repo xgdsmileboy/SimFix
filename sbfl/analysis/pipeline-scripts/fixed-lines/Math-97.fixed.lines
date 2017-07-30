@@ -1,0 +1,16 @@
+org/apache/commons/math/analysis/BrentSolver.java#138#        if (sign > 0) {
+org/apache/commons/math/analysis/BrentSolver.java#140#            if (Math.abs(yMin) <= functionValueAccuracy) {
+org/apache/commons/math/analysis/BrentSolver.java#141#                setResult(min, 0);
+org/apache/commons/math/analysis/BrentSolver.java#142#                ret = min;
+org/apache/commons/math/analysis/BrentSolver.java#143#            } else if (Math.abs(yMax) <= functionValueAccuracy) {
+org/apache/commons/math/analysis/BrentSolver.java#144#                setResult(max, 0);
+org/apache/commons/math/analysis/BrentSolver.java#145#                ret = max;
+org/apache/commons/math/analysis/BrentSolver.java#146#            } else {
+org/apache/commons/math/analysis/BrentSolver.java#152#            }
+org/apache/commons/math/analysis/BrentSolver.java#153#        } else if (sign < 0){
+org/apache/commons/math/analysis/BrentSolver.java#156#        } else {
+org/apache/commons/math/analysis/BrentSolver.java#158#            if (yMin == 0.0) {
+org/apache/commons/math/analysis/BrentSolver.java#159#                ret = min;
+org/apache/commons/math/analysis/BrentSolver.java#160#            } else {
+org/apache/commons/math/analysis/BrentSolver.java#161#                ret = max;
+org/apache/commons/math/analysis/BrentSolver.java#162#            }

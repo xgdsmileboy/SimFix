@@ -1,0 +1,6 @@
+org/apache/commons/math/optimization/linear/SimplexTableau.java#329#        Set<Integer> basicRows = new HashSet<Integer>();
+org/apache/commons/math/optimization/linear/SimplexTableau.java#332#            if (basicRows.contains(basicRow)) {
+org/apache/commons/math/optimization/linear/SimplexTableau.java#335#                coefficients[i] = 0;
+org/apache/commons/math/optimization/linear/SimplexTableau.java#336#            } else {
+org/apache/commons/math/optimization/linear/SimplexTableau.java#337#                basicRows.add(basicRow);
+org/apache/commons/math/optimization/linear/SimplexTableau.java#341#FIX_OF_OMISSION

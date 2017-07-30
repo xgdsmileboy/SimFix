@@ -1,0 +1,7 @@
+com/google/javascript/jscomp/parsing/IRFactory.java#568#      if (loopNode.isForEach()) {
+com/google/javascript/jscomp/parsing/IRFactory.java#569#        errorReporter.error(
+com/google/javascript/jscomp/parsing/IRFactory.java#570#            "unsupported language extension: for each",
+com/google/javascript/jscomp/parsing/IRFactory.java#571#            sourceName,
+com/google/javascript/jscomp/parsing/IRFactory.java#572#            loopNode.getLineno(), "", 0);
+com/google/javascript/jscomp/parsing/IRFactory.java#575#        return newNode(Token.EXPR_RESULT, Node.newNumber(0));
+com/google/javascript/jscomp/parsing/IRFactory.java#576#      }

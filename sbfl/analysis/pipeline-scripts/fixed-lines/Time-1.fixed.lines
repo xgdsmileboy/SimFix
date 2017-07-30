@@ -1,0 +1,11 @@
+org/joda/time/Partial.java#217#                if (loopUnitField.isSupported() == false) {
+org/joda/time/Partial.java#218#                    if (lastUnitField.isSupported()) {
+org/joda/time/Partial.java#219#                        throw new IllegalArgumentException("Types array must be in order largest-smallest: " +
+org/joda/time/Partial.java#220#                                        types[i - 1].getName() + " < " + loopType.getName());
+org/joda/time/Partial.java#221#                    } else {
+org/joda/time/Partial.java#222#                        throw new IllegalArgumentException("Types array must not contain duplicate unsupported: " +
+org/joda/time/Partial.java#223#                                        types[i - 1].getName() + " and " + loopType.getName());
+org/joda/time/Partial.java#224#                    }
+org/joda/time/Partial.java#225#                }
+org/joda/time/Partial.java#230#                } else if (compare == 0 && lastUnitField.equals(loopUnitField)) {
+org/joda/time/field/UnsupportedDurationField.java#227#FIX_OF_OMISSION

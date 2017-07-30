@@ -1,0 +1,8 @@
+org/apache/commons/lang/Entities.java#850#                            if (entityValue > 0xFFFF) {
+org/apache/commons/lang/Entities.java#851#                                entityValue = -1;
+org/apache/commons/lang/Entities.java#852#                            }
+org/apache/commons/lang/Entities.java#923#                                        break;
+org/apache/commons/lang/Entities.java#929#                                if (entityValue > 0xFFFF) {
+org/apache/commons/lang/Entities.java#930#                                    entityValue = -1;
+org/apache/commons/lang/Entities.java#931#                                }
+org/apache/commons/lang/Entities.java#933#                                entityValue = -1;

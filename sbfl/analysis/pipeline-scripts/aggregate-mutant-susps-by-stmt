@@ -1,0 +1,135 @@
+#!/usr/bin/python2.7
+
+"""Takes a mutant-suspiciousness vector and generates a statement-suspiciousness vector.
+
+Usage:
+
+    aggregate-mutant-susps-by-stmt \
+      --accumulator (avg|max) \
+      --mutants FILE \
+      --source-code-lines FILE \
+      --loaded-classes FILE \
+      --mutant-susps FILE \
+      --output FILE
+
+where `--source-code-lines` points to a file whose lines look like "PATH#LINE1:PATH#LINE2", indicating that the statement in file PATH, starting on line LINE1, extends into LINE2. (The `java-parser` tool produces these files.)
+
+`--loaded-classes` points to a file that lists all the project-classes that were loaded by any triggering test. (This file is provided by Defects4J. It's needed because sometimes, Major mutates statements in irrelevant classes, and we don't want those statements to gunk up the rest of the pipeline.)
+"""
+
+from __future__ import division
+import collections
+import re
+import csv
+
+AGGREGATORS = {
+  'avg': (lambda xs: sum(xs)/len(xs)),
+  'max': max
+}
+
+def strip_dollar(classname):
+  return re.sub(r'\$.*', '', classname)
+
+def read_mutant_susps(mutant_suspiciousness_file):
+  '''Parse a mutant-suspiciousness vector into a {mutant_id: suspiciousness} dict.'''
+  return {int(row['Mutant']): float(row['Suspiciousness'])
+          for row in csv.DictReader(mutant_suspiciousness_file)}
+
+# Major's mutants.log files look like:
+#   1:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang3.StringUtils@isEmpty:217:cs == null |==> false
+# i.e.
+#   (id):...:...:...:(class)@(method):(line):...
+mutants_log_parser_pattern = re.compile(r'''
+  (?P<id>\d+):            # id :
+  [^:]*:[^:]*:[^:]*:      # type of mutation : before : after :
+  (?P<classname>[\w.$]+)  # class
+  (@[^:]*)?:              # @ method (sometimes absent) :
+  (?P<line_number>\d+)    # line
+  ''', flags=re.X)
+def read_mutant_lines(mutants_log_file):
+  '''Reads a mutants.log file, returns a mapping from mutant id to containing statement.
+
+  Example output key/value pair: {1: "mypackage.MyClass#202"}
+  '''
+  matches = (mutants_log_parser_pattern.match(line) for line in mutants_log_file)
+  return {int(m.group('id')): '{}#{}'.format(m.group('classname'), m.group('line_number'))
+          for m in matches if m is not None}
+
+def _line_to_classname(s):
+  s = s.replace('/', '.')
+  s = s.replace('.java', '')
+  s = re.sub(r'\$[^#]*', '', s)
+  return s
+def mutant_lines_to_mutant_stmts(mutant_lines, source_code_lines):
+  '''Turns a {mutant: line} dict into a {mutant: line} dict where all lines are statement-roots. Each mutant is mapped to the line on which the containing statement begins.
+  '''
+  stmt_roots = {}
+  for line in source_code_lines:
+    root_path, spanned_path = line.strip().split(':')
+    root, spanned = _line_to_classname(root_path), _line_to_classname(spanned_path)
+    stmt_roots[spanned] = root
+  return {
+    mutant: stmt_roots[mutant_line] if mutant_line in stmt_roots else mutant_line
+    for mutant, mutant_line in mutant_lines.items()}
+
+def invert_dict(d):
+  '''Returns a dict mapping the input-dict's values to the sets of keys that map to them.
+  '''
+  result = collections.defaultdict(set)
+  for key, value in d.items():
+    result[value].add(key)
+  return result
+
+def aggregate_stmt_susps(mutant_stmts, mutant_susps, aggregator):
+  '''Partitions mutants based on statement and aggregates groups' suspiciousnesses to get statement-suspiciousnesses.
+  '''
+  mutants_by_stmt = invert_dict(mutant_stmts)
+  return {
+    stmt: aggregator(list(sorted(mutant_susps[mutant] for mutant in mutants)))
+    for stmt, mutants in mutants_by_stmt.items()}
+  # gotta sort the suspiciousnesses because, when taking averages, sometimes
+  # the order matters because of floating-point dumbness. But we *really*
+  # don't want floating-point dumbness to break ties.
+
+def get_irrelevant_stmts(stmts, loaded_classes):
+  loaded_classes = set(strip_dollar(classname) for classname in loaded_classes)
+  return set(stmt for stmt in stmts if strip_dollar(stmt[:stmt.index('#')]) not in loaded_classes)
+
+if __name__ == '__main__':
+
+  import argparse
+
+  parser = argparse.ArgumentParser()
+  parser.add_argument('--accumulator', required=True, choices=set(AGGREGATORS.keys()))
+  parser.add_argument('--mutants', required=True, help='path to the Major mutants.log file')
+  parser.add_argument('--mutant-susps', required=True, help='path to mutant-suspiciousness vector')
+  parser.add_argument('--source-code-lines', required=True, help='path to statement-span file')
+  parser.add_argument('--loaded-classes', required=True, help='path to file listing classes loaded by failing tests')
+  parser.add_argument('--output', required=True, help='path to file to write output vector')
+
+  args = parser.parse_args()
+  aggregator = AGGREGATORS[args.accumulator]
+
+  with open(args.mutants) as mutants_file:
+    mutant_lines = read_mutant_lines(mutants_file)
+  with open(args.source_code_lines) as source_code_lines:
+    mutant_stmts = mutant_lines_to_mutant_stmts(mutant_lines, source_code_lines)
+  with open(args.loaded_classes) as loaded_classes_file:
+    loaded_classes = [line.strip() for line in loaded_classes_file if line]
+  with open(args.mutant_susps) as mutant_susps_file:
+    mutant_susps = read_mutant_susps(mutant_susps_file)
+
+  stmt_susps = aggregate_stmt_susps(mutant_stmts, mutant_susps, aggregator)
+  irrelevant_stmts = get_irrelevant_stmts(stmt_susps.keys(), loaded_classes)
+  if irrelevant_stmts:
+    print('irrelevant statements: {}'.format(irrelevant_stmts))
+    for irrelevant_stmt in irrelevant_stmts:
+      stmt_susps.pop(irrelevant_stmt)
+
+  with open(args.output, 'w') as stmt_susps_file:
+    writer = csv.DictWriter(stmt_susps_file, ['Statement', 'Suspiciousness'])
+    writer.writeheader()
+    for stmt, susp in stmt_susps.items():
+      writer.writerow({
+        'Statement': stmt,
+        'Suspiciousness': susp})

@@ -1,0 +1,12 @@
+org/mockito/internal/invocation/InvocationMatcher.java#98#        if (m1.getName() != null && m1.getName().equals(m2.getName())) {
+org/mockito/internal/invocation/InvocationMatcher.java#100#        	Class[] params1 = m1.getParameterTypes();
+org/mockito/internal/invocation/InvocationMatcher.java#101#        	Class[] params2 = m2.getParameterTypes();
+org/mockito/internal/invocation/InvocationMatcher.java#102#        	if (params1.length == params2.length) {
+org/mockito/internal/invocation/InvocationMatcher.java#103#        	    for (int i = 0; i < params1.length; i++) {
+org/mockito/internal/invocation/InvocationMatcher.java#104#        		if (params1[i] != params2[i])
+org/mockito/internal/invocation/InvocationMatcher.java#105#        		    return false;
+org/mockito/internal/invocation/InvocationMatcher.java#106#        	    }
+org/mockito/internal/invocation/InvocationMatcher.java#107#        	    return true;
+org/mockito/internal/invocation/InvocationMatcher.java#108#        	}
+org/mockito/internal/invocation/InvocationMatcher.java#109#        }
+org/mockito/internal/invocation/InvocationMatcher.java#110#        return false;

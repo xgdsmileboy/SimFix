@@ -1,0 +1,3 @@
+com/google/javascript/jscomp/PrepareAst.java#166#      while (first.isCast()) {
+com/google/javascript/jscomp/PrepareAst.java#167#        first = first.getFirstChild();
+com/google/javascript/jscomp/PrepareAst.java#168#      }

@@ -1,0 +1,4 @@
+com/google/javascript/jscomp/CollapseVariableDeclarations.java#204#          && !isNamedParameter(var)
+com/google/javascript/jscomp/CollapseVariableDeclarations.java#209#  private boolean isNamedParameter(Var v) {
+com/google/javascript/jscomp/CollapseVariableDeclarations.java#210#    return v.getParentNode().isParamList();
+com/google/javascript/jscomp/CollapseVariableDeclarations.java#211#  }

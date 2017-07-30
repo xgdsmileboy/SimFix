@@ -1,0 +1,12 @@
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#166#        setConvergenceChecker(null);
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#248#        VectorialPointValuePair current = new VectorialPointValuePair(point, objective);
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#254#            VectorialPointValuePair previous = current;
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#306#                return current;
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#348#                current = new VectorialPointValuePair(point, objective);
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#417#                if (checker != null) {
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#419#                    if (checker.converged(getIterations(), previous, current)) {
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#420#                        return current;                        
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#421#                    }
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#422#                } else {
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#428#                        return current;
+org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java#430#                }

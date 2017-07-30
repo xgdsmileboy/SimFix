@@ -1,0 +1,8 @@
+com/google/javascript/jscomp/CheckGlobalThis.java#99#      int pType = parent.getType();
+com/google/javascript/jscomp/CheckGlobalThis.java#100#      if (!(pType == Token.BLOCK ||
+com/google/javascript/jscomp/CheckGlobalThis.java#101#            pType == Token.SCRIPT ||
+com/google/javascript/jscomp/CheckGlobalThis.java#102#            pType == Token.NAME ||
+com/google/javascript/jscomp/CheckGlobalThis.java#103#            pType == Token.ASSIGN)) {
+com/google/javascript/jscomp/CheckGlobalThis.java#104#        return false;
+com/google/javascript/jscomp/CheckGlobalThis.java#105#      }
+com/google/javascript/jscomp/CheckGlobalThis.java#153#    return parent != null && NodeUtil.isGet(parent);

@@ -1,0 +1,5 @@
+com/google/javascript/jscomp/type/ChainableReverseAbstractInterpreter.java#613#        if (resultEqualsValue) {
+com/google/javascript/jscomp/type/ChainableReverseAbstractInterpreter.java#615#          return ctorType.getGreatestSubtype(type);
+com/google/javascript/jscomp/type/ChainableReverseAbstractInterpreter.java#616#        } else {
+com/google/javascript/jscomp/type/ChainableReverseAbstractInterpreter.java#618#          return type.isSubtype(ctorType) ? null : type;
+com/google/javascript/jscomp/type/ChainableReverseAbstractInterpreter.java#619#        }

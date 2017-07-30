@@ -1,0 +1,192 @@
+#!/bin/bash
+
+HERE=$(readlink --canonicalize "$(dirname "${BASH_SOURCE[0]}")")
+PATH="$HERE:$PATH"
+
+if [ "$#" != 6 ]; then echo "usage: $0 PROJECT BUG COVERAGE_MATRIX STATEMENT_NAMES OUTCOME_MATRIX MUTANTS_LOG" >&2; exit 1; fi
+PROJECT=$1
+BUG=$2
+COVERAGE_MATRIX="$(readlink --canonicalize "$3")"; if [ ! -f "$COVERAGE_MATRIX" ]; then echo "given coverage matrix does not exist" >&2; exit 1; fi
+STATEMENT_NAMES="$(readlink --canonicalize "$4")"; if [ ! -f "$STATEMENT_NAMES" ]; then echo "given coverage matrix does not exist" >&2; exit 1; fi
+OUTCOME_MATRIX="$(readlink --canonicalize "$5")"; if [ ! -f "$OUTCOME_MATRIX" ]; then echo "given outcome matrix does not exist" >&2; exit 1; fi
+MUTANTS="$(readlink --canonicalize "$6")"; if [ ! -f "$MUTANTS" ]; then echo "given mutants.log does not exist" >&2; exit 1; fi
+
+MUTANT_NAMES=$(pwd)/mutant-names.txt
+MUTANT_COVERAGES=$(pwd)/mutant-coverages.txt
+KILLS_FILE="$(pwd)/kills.txt"
+SBFL_STMT_SUSPS_FILE="$(pwd)/sbfl-stmt-susps.txt"
+MUTANT_SUSPS_FILE="$(pwd)/mutant-susps.txt"
+MBFL_STMT_SUSPS_FILE="$(pwd)/mbfl-stmt-susps.txt"
+
+cut -f 1 -d ':' <"$MUTANTS" >"$MUTANT_NAMES"
+
+BEST_SBFL_FORMULA='dstar2'
+BEST_SBFL_TOTAL_DEFN='tests'
+BEST_MBFL_FORMULA='dstar2'
+BEST_MBFL_TOTAL_DEFN='tests'
+BEST_MBFL_KILL_DEFN='exact'
+BEST_MBFL_AGGREGATE_DEFN='avg'
+
+###############################################################
+## Susps for best-by-mean-EXAM-score SBFL
+###############################################################
+
+crush-matrix \
+  --formula "$BEST_SBFL_FORMULA" --matrix "$COVERAGE_MATRIX" \
+  --element-type 'Statement' \
+  --element-names "$STATEMENT_NAMES" \
+  --total-defn "$BEST_SBFL_TOTAL_DEFN" \
+  --output "$SBFL_STMT_SUSPS_FILE" || exit 1
+
+###############################################################
+## Susps for best-by-mean-rank MBFL
+###############################################################
+
+outcome-matrix-to-kill-matrix \
+  --error-partition-scheme "$BEST_MBFL_KILL_DEFN" \
+  --outcomes "$OUTCOME_MATRIX" --mutants "$MUTANTS" \
+  --output "$KILLS_FILE" || exit 1
+
+crush-matrix \
+  --formula "$BEST_MBFL_FORMULA" --matrix "$KILLS_FILE" \
+  --element-type 'Mutant' \
+  --element-names "$MUTANT_NAMES" \
+  --total-defn "$BEST_MBFL_TOTAL_DEFN" \
+  --output "$MUTANT_SUSPS_FILE" || exit 1
+
+aggregate-mutant-susps-by-stmt \
+  --accumulator "$BEST_MBFL_AGGREGATE_DEFN" --mutants "$MUTANTS" \
+  --source-code-lines "$HERE/source-code-lines/$PROJECT-${BUG}b.source-code.lines" \
+  --loaded-classes "$DEFECTS4J_HOME/framework/projects/$PROJECT/loaded_classes/$BUG.src" \
+  --mutant-susps "$MUTANT_SUSPS_FILE" \
+  --output "$MBFL_STMT_SUSPS_FILE" || exit 1
+
+
+###############################################################
+## MRSBFL
+###############################################################
+
+mkdir -p mbfl-coverage-only; pushd mbfl-coverage-only >/dev/null
+
+outcome-matrix-to-coverage-matrix \
+  --outcomes "$OUTCOME_MATRIX" --mutants "$MUTANTS" \
+  --output "$MUTANT_COVERAGES" || exit 1
+
+crush-matrix \
+  --formula "$BEST_MBFL_FORMULA" --matrix "$KILLS_FILE" \
+  --element-type 'Mutant' \
+  --element-names "$MUTANT_NAMES" \
+  --hybrid-scheme 'coverage-only' --hybrid-coverage-matrix "$MUTANT_COVERAGES" \
+  --total-defn "$BEST_MBFL_TOTAL_DEFN" \
+  --output 'mutant-susps.csv' || exit 1
+
+MRSBFL_STMT_SUSPS="$(pwd)/stmt-susps.csv"
+aggregate-mutant-susps-by-stmt \
+  --accumulator "$BEST_MBFL_AGGREGATE_DEFN" --mutants "$MUTANTS" \
+  --source-code-lines "$HERE/source-code-lines/$PROJECT-${BUG}b.source-code.lines" \
+  --loaded-classes "$DEFECTS4J_HOME/framework/projects/$PROJECT/loaded_classes/$BUG.src" \
+  --mutant-susps 'mutant-susps.csv' \
+  --output "$MRSBFL_STMT_SUSPS" || exit 1
+
+LINE_SUSPS="$(pwd)/line-susps.csv"
+stmt-susps-to-line-susps \
+  --stmt-susps "$MRSBFL_STMT_SUSPS" \
+  --source-code-lines "$HERE/source-code-lines/$PROJECT-${BUG}b.source-code.lines" \
+  --output 'line-susps.csv'
+
+for SCORING_SCHEME in first last mean median; do
+  mkdir -p "scoring-$SCORING_SCHEME"; pushd "scoring-$SCORING_SCHEME" >/dev/null
+  score-ranking \
+    --project "$PROJECT" --bug "$BUG" \
+    --line-susps <(tail -n +2 "$LINE_SUSPS") \
+    --scoring-scheme "$SCORING_SCHEME" \
+    --sloc-csv "$HERE/buggy-lines/sloc.csv" \
+    --buggy-lines "$HERE/buggy-lines/$PROJECT-$BUG.buggy.lines" \
+    --output 'score.txt'
+  popd >/dev/null
+done
+
+popd >/dev/null
+
+
+###############################################################
+## MCBFL
+###############################################################
+
+mkdir -p mcbfl; pushd mcbfl >/dev/null
+
+crush-matrix \
+  --formula "$BEST_MBFL_FORMULA" --matrix "$KILLS_FILE" \
+  --element-type 'Mutant' \
+  --element-names "$MUTANT_NAMES" \
+  --hybrid-scheme 'mirror' --hybrid-coverage-matrix "$MUTANT_COVERAGES" \
+  --total-defn "$BEST_MBFL_TOTAL_DEFN" \
+  --output 'mutant-susps.csv' || exit 1
+
+MCBFL_STMT_SUSPS="$(pwd)/stmt-susps.csv"
+aggregate-mutant-susps-by-stmt \
+  --accumulator "$BEST_MBFL_AGGREGATE_DEFN" --mutants "$MUTANTS" \
+  --source-code-lines "$HERE/source-code-lines/$PROJECT-${BUG}b.source-code.lines" \
+  --loaded-classes "$DEFECTS4J_HOME/framework/projects/$PROJECT/loaded_classes/$BUG.src" \
+  --mutant-susps 'mutant-susps.csv' \
+  --output "$MCBFL_STMT_SUSPS" || exit 1
+
+LINE_SUSPS="$(pwd)/line-susps.csv"
+stmt-susps-to-line-susps \
+  --stmt-susps "$MCBFL_STMT_SUSPS" \
+  --source-code-lines "$HERE/source-code-lines/$PROJECT-${BUG}b.source-code.lines" \
+  --output "$LINE_SUSPS"
+
+for SCORING_SCHEME in first last mean median; do
+  mkdir -p "scoring-$SCORING_SCHEME"; pushd "scoring-$SCORING_SCHEME" >/dev/null
+  score-ranking \
+    --project "$PROJECT" --bug "$BUG" \
+    --line-susps <(tail -n +2 "$LINE_SUSPS") \
+    --scoring-scheme "$SCORING_SCHEME" \
+    --sloc-csv "$HERE/buggy-lines/sloc.csv" \
+    --buggy-lines "$HERE/buggy-lines/$PROJECT-$BUG.buggy.lines" \
+    --output 'score.txt'
+  popd >/dev/null
+done
+
+popd >/dev/null
+
+###############################################################
+## Failover, susp-{avg,max}
+###############################################################
+
+BEST_MBFLISH_STMT_SUSPS="$MCBFL_STMT_SUSPS"
+
+for TECHNIQUE in 'failover' 'susp-averaging' 'susp-maxing'; do
+  for MBFLISH_STMT_SUSPS in "$BEST_MBFLISH_STMT_SUSPS" "$MRSBFL_STMT_SUSPS"; do
+
+    if [ "$MBFLISH_STMT_SUSPS" = "$MRSBFL_STMT_SUSPS" ]; then DIRNAME="mrsbfl-$TECHNIQUE"
+    else DIRNAME=$TECHNIQUE
+    fi
+
+    mkdir -p "$DIRNAME"; pushd "$DIRNAME" >/dev/null
+    STMT_SUSPS="$(pwd)/stmt-susps.csv"
+    LINE_SUSPS="$(pwd)/line-susps.csv"
+    apply-$TECHNIQUE \
+      "$MBFLISH_STMT_SUSPS" \
+      "$SBFL_STMT_SUSPS_FILE" \
+      --output "$STMT_SUSPS"
+    stmt-susps-to-line-susps \
+      --stmt-susps "$STMT_SUSPS" \
+      --source-code-lines "$HERE/source-code-lines/$PROJECT-${BUG}b.source-code.lines" \
+      --output "$LINE_SUSPS"
+
+    for SCORING_SCHEME in first last mean median; do
+      mkdir -p "scoring-$SCORING_SCHEME"; pushd "scoring-$SCORING_SCHEME" >/dev/null
+      score-ranking \
+        --project "$PROJECT" --bug "$BUG" \
+        --line-susps <(tail -n +2 "$LINE_SUSPS") \
+        --scoring-scheme "$SCORING_SCHEME" \
+        --sloc-csv "$HERE/buggy-lines/sloc.csv" \
+        --buggy-lines "$HERE/buggy-lines/$PROJECT-$BUG.buggy.lines" \
+        --output 'score.txt'
+      popd >/dev/null
+    done
+    popd >/dev/null
+  done
+done

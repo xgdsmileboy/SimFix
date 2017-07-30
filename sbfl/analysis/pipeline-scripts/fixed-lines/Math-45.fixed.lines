@@ -1,0 +1,5 @@
+org/apache/commons/math/linear/OpenMapRealMatrix.java#50#        long lRow = (long) rowDimension;
+org/apache/commons/math/linear/OpenMapRealMatrix.java#51#        long lCol = (long) columnDimension;
+org/apache/commons/math/linear/OpenMapRealMatrix.java#52#        if (lRow * lCol >= (long) Integer.MAX_VALUE) {
+org/apache/commons/math/linear/OpenMapRealMatrix.java#53#            throw new NumberIsTooLargeException(lRow * lCol, Integer.MAX_VALUE, false);
+org/apache/commons/math/linear/OpenMapRealMatrix.java#54#        }

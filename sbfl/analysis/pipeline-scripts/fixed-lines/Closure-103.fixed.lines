@@ -1,0 +1,8 @@
+com/google/javascript/jscomp/DisambiguateProperties.java#763#      if (foundType == null) {
+com/google/javascript/jscomp/DisambiguateProperties.java#764#        ObjectType maybeType = ObjectType.cast(
+com/google/javascript/jscomp/DisambiguateProperties.java#765#            registry.getGreatestSubtypeWithProperty(type, field));
+com/google/javascript/jscomp/DisambiguateProperties.java#769#        if (maybeType != null && maybeType.hasOwnProperty(field)) {
+com/google/javascript/jscomp/DisambiguateProperties.java#770#          foundType = maybeType;
+com/google/javascript/jscomp/DisambiguateProperties.java#771#        }
+com/google/javascript/jscomp/DisambiguateProperties.java#772#      }
+com/google/javascript/jscomp/ControlFlowAnalysis.java#894#      case Token.INSTANCEOF:

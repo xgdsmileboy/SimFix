@@ -1,0 +1,10 @@
+org/apache/commons/math/distribution/NormalDistributionImpl.java#109#        try {
+org/apache/commons/math/distribution/NormalDistributionImpl.java#112#        } catch (MaxIterationsExceededException ex) {
+org/apache/commons/math/distribution/NormalDistributionImpl.java#113#            if (x < (mean - 20 * standardDeviation)) { // JDK 1.5 blows at 38
+org/apache/commons/math/distribution/NormalDistributionImpl.java#114#                return 0.0d;
+org/apache/commons/math/distribution/NormalDistributionImpl.java#115#            } else if (x > (mean + 20 * standardDeviation)) {
+org/apache/commons/math/distribution/NormalDistributionImpl.java#116#                return 1.0d;
+org/apache/commons/math/distribution/NormalDistributionImpl.java#117#            } else {
+org/apache/commons/math/distribution/NormalDistributionImpl.java#118#                throw ex;
+org/apache/commons/math/distribution/NormalDistributionImpl.java#119#            }
+org/apache/commons/math/distribution/NormalDistributionImpl.java#120#        }

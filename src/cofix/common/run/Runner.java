@@ -22,11 +22,11 @@ public class Runner {
 	private final static String SUCCESSTEST = "Failing tests: 0";
 	
 	
-	public static boolean testSingleTest(Subject subject, String clazz, String method){
+	public static boolean testSingleTest(Subject subject, String clazzAndMethod){
 		List<String> message = null;
 		try {
-			System.out.println("TESTING : " + clazz + "::" + method);
-			message = Executor.executeCommand(CmdFactory.createTestSingleTestCaseCmd(subject, 30, clazz, method));
+			System.out.println("TESTING : " + clazzAndMethod);
+			message = Executor.executeCommand(CmdFactory.createTestSingleTestCaseCmd(subject, 30, clazzAndMethod));
 		} catch (Exception e) {
 			LevelLogger.fatal(__name__ + "#buildSubject run test single test case failed !", e);
 		}
@@ -41,6 +41,10 @@ public class Runner {
 		}
 		
 		return success;
+	}
+	
+	public static boolean testSingleTest(Subject subject, String clazz, String method){
+		return testSingleTest(subject, clazz + "::" + method);
 	}
 	
 	public static boolean runTestSuite(Subject subject){

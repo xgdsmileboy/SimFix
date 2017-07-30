@@ -1,0 +1,9 @@
+org/mockito/internal/creation/MockSettingsImpl.java#20#    private boolean serializable;
+org/mockito/internal/creation/MockSettingsImpl.java#23#        this.serializable = true;
+org/mockito/internal/creation/MockSettingsImpl.java#24#        return this;
+org/mockito/internal/creation/MockSettingsImpl.java#76#        return serializable;
+org/mockito/internal/util/MockUtil.java#19#import java.io.Serializable;
+org/mockito/internal/util/MockUtil.java#46#        if (settings.isSerializable()) {
+org/mockito/internal/util/MockUtil.java#47#            ancillaryTypes = interfaces == null ? new Class<?>[] {Serializable.class} : new ArrayUtils().concat(interfaces, Serializable.class);
+org/mockito/internal/util/MockUtil.java#48#        } else {
+org/mockito/internal/util/MockUtil.java#50#        }

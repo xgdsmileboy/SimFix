@@ -1,0 +1,6 @@
+com/google/javascript/jscomp/MaybeReachingVariableUse.java#160#    List<DiGraphEdge<Node, Branch>> branchEdges = getCfg().getOutEdges(cfgNode);
+com/google/javascript/jscomp/MaybeReachingVariableUse.java#161#    for (DiGraphEdge<Node, Branch> edge : branchEdges) {
+com/google/javascript/jscomp/MaybeReachingVariableUse.java#162#      if (edge.getValue() == Branch.ON_EX) {
+com/google/javascript/jscomp/MaybeReachingVariableUse.java#163#        return true;
+com/google/javascript/jscomp/MaybeReachingVariableUse.java#164#      }
+com/google/javascript/jscomp/MaybeReachingVariableUse.java#165#    }

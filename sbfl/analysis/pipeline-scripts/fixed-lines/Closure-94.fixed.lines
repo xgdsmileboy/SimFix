@@ -1,0 +1,19 @@
+com/google/javascript/jscomp/NodeUtil.java#329#      case Token.ADD:
+com/google/javascript/jscomp/NodeUtil.java#334#      case Token.DIV:
+com/google/javascript/jscomp/NodeUtil.java#335#      case Token.EQ:
+com/google/javascript/jscomp/NodeUtil.java#336#      case Token.GE:
+com/google/javascript/jscomp/NodeUtil.java#337#      case Token.GT:
+com/google/javascript/jscomp/NodeUtil.java#338#      case Token.LE:
+com/google/javascript/jscomp/NodeUtil.java#339#      case Token.LSH:
+com/google/javascript/jscomp/NodeUtil.java#340#      case Token.LT:
+com/google/javascript/jscomp/NodeUtil.java#341#      case Token.MOD:
+com/google/javascript/jscomp/NodeUtil.java#342#      case Token.MUL:
+com/google/javascript/jscomp/NodeUtil.java#343#      case Token.NE:
+com/google/javascript/jscomp/NodeUtil.java#344#      case Token.RSH:
+com/google/javascript/jscomp/NodeUtil.java#345#      case Token.SHEQ:
+com/google/javascript/jscomp/NodeUtil.java#346#      case Token.SHNE:
+com/google/javascript/jscomp/NodeUtil.java#347#      case Token.SUB:
+com/google/javascript/jscomp/NodeUtil.java#348#      case Token.URSH:
+com/google/javascript/jscomp/NodeUtil.java#349#        return isValidDefineValue(val.getFirstChild(), defines)
+com/google/javascript/jscomp/NodeUtil.java#350#            && isValidDefineValue(val.getLastChild(), defines);
+com/google/javascript/jscomp/NodeUtil.java#355#      case Token.POS:

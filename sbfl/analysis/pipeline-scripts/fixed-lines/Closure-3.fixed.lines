@@ -1,0 +1,8 @@
+com/google/javascript/jscomp/FlowSensitiveInlineVariables.java#155#      if (c.canInline(t.getScope())) {
+com/google/javascript/jscomp/FlowSensitiveInlineVariables.java#280#    private boolean canInline(final Scope scope) {
+com/google/javascript/jscomp/FlowSensitiveInlineVariables.java#375#                  case Token.NAME:
+com/google/javascript/jscomp/FlowSensitiveInlineVariables.java#376#                    Var var = scope.getOwnSlot(input.getString());
+com/google/javascript/jscomp/FlowSensitiveInlineVariables.java#377#                    if (var != null
+com/google/javascript/jscomp/FlowSensitiveInlineVariables.java#378#                        && var.getParentNode().isCatch()) {
+com/google/javascript/jscomp/FlowSensitiveInlineVariables.java#379#                      return true;
+com/google/javascript/jscomp/FlowSensitiveInlineVariables.java#380#                    }

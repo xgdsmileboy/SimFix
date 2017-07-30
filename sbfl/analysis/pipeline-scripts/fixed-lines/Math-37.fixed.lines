@@ -1,0 +1,14 @@
+org/apache/commons/math/complex/Complex.java#1018#        if (isNaN || Double.isInfinite(real)) {
+org/apache/commons/math/complex/Complex.java#1021#        if (imaginary > 20.0) {
+org/apache/commons/math/complex/Complex.java#1022#            return createComplex(0.0, 1.0);
+org/apache/commons/math/complex/Complex.java#1023#        }
+org/apache/commons/math/complex/Complex.java#1024#        if (imaginary < -20.0) {
+org/apache/commons/math/complex/Complex.java#1025#            return createComplex(0.0, -1.0);
+org/apache/commons/math/complex/Complex.java#1026#        }
+org/apache/commons/math/complex/Complex.java#1069#        if (isNaN || Double.isInfinite(imaginary)) {
+org/apache/commons/math/complex/Complex.java#1071#        }
+org/apache/commons/math/complex/Complex.java#1072#        if (real > 20.0) {
+org/apache/commons/math/complex/Complex.java#1073#            return createComplex(1.0, 0.0);
+org/apache/commons/math/complex/Complex.java#1074#        }
+org/apache/commons/math/complex/Complex.java#1075#        if (real < -20.0) {
+org/apache/commons/math/complex/Complex.java#1076#            return createComplex(-1.0, 0.0);

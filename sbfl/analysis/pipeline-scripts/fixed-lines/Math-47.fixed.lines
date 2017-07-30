@@ -1,0 +1,5 @@
+org/apache/commons/math/complex/Complex.java#82#    private final transient boolean isZero;
+org/apache/commons/math/complex/Complex.java#106#        isZero = real == 0 && imaginary == 0;
+org/apache/commons/math/complex/Complex.java#258#        if (divisor.isZero) {
+org/apache/commons/math/complex/Complex.java#259#            return isZero ? NaN : INF;
+org/apache/commons/math/complex/Complex.java#295#            return isZero ? NaN : INF;

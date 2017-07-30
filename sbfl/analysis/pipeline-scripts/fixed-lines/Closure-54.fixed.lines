@@ -1,0 +1,13 @@
+com/google/javascript/jscomp/TypedScopeCreator.java#1413#          ObjectType qVarType = ObjectType.cast(qVar.getType());
+com/google/javascript/jscomp/TypedScopeCreator.java#1414#          if (qVarType != null &&
+com/google/javascript/jscomp/TypedScopeCreator.java#1415#              rhsValue != null &&
+com/google/javascript/jscomp/TypedScopeCreator.java#1416#              rhsValue.getType() == Token.OBJECTLIT) {
+com/google/javascript/jscomp/TypedScopeCreator.java#1417#            typeRegistry.resetImplicitPrototype(
+com/google/javascript/jscomp/TypedScopeCreator.java#1418#                rhsValue.getJSType(), qVarType.getImplicitPrototype());
+com/google/javascript/jscomp/TypedScopeCreator.java#1419#          } else if (!qVar.isTypeInferred()) {
+com/google/javascript/rhino/jstype/FunctionType.java#365#    PrototypeObjectType oldPrototype = this.prototype;
+com/google/javascript/rhino/jstype/FunctionType.java#366#    boolean replacedPrototype = oldPrototype != null;
+com/google/javascript/rhino/jstype/FunctionType.java#372#    if (oldPrototype != null) {
+com/google/javascript/rhino/jstype/FunctionType.java#375#      oldPrototype.setOwnerFunction(null);
+com/google/javascript/rhino/jstype/FunctionType.java#376#    }
+com/google/javascript/rhino/jstype/FunctionType.java#341#FIX_OF_OMISSION

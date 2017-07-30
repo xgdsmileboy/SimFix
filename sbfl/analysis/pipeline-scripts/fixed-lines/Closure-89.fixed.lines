@@ -1,0 +1,4 @@
+com/google/javascript/jscomp/GlobalNamespace.java#920#      if (aliasingGets > 0) {
+com/google/javascript/jscomp/CollapseProperties.java#484#    if (rvalue != null && rvalue.getType() == Token.FUNCTION) {
+com/google/javascript/jscomp/CollapseProperties.java#485#      checkForHosedThisReferences(rvalue, refName.docInfo, refName);
+com/google/javascript/jscomp/CollapseProperties.java#486#    }

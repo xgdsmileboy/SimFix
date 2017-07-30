@@ -1,0 +1,10 @@
+com/google/javascript/jscomp/InlineObjectLiterals.java#157#      Set<String> validProperties = Sets.newHashSet();
+com/google/javascript/jscomp/InlineObjectLiterals.java#182#          String propName = parent.getLastChild().getString();
+com/google/javascript/jscomp/InlineObjectLiterals.java#183#          if (!validProperties.contains(propName)) {
+com/google/javascript/jscomp/InlineObjectLiterals.java#184#            if (NodeUtil.isVarOrSimpleAssignLhs(parent, gramps)) {
+com/google/javascript/jscomp/InlineObjectLiterals.java#185#              validProperties.add(propName);
+com/google/javascript/jscomp/InlineObjectLiterals.java#186#            } else {
+com/google/javascript/jscomp/InlineObjectLiterals.java#187#              return false;
+com/google/javascript/jscomp/InlineObjectLiterals.java#188#            }
+com/google/javascript/jscomp/InlineObjectLiterals.java#189#          }
+com/google/javascript/jscomp/InlineObjectLiterals.java#225#          validProperties.add(child.getString());
