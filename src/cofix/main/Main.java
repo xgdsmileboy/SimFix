@@ -139,20 +139,16 @@ public class Main {
 	
 
 	public static void main(String[] args) throws IOException {
-////		// for debug
-////		Constant.COMMAND_TIMEOUT = "/usr/local/bin/gtimeout ";
-////		Constant.PROJECT_HOME = Constant.HOME + "/testfile";
-//		
-//		Constant.PATCH_NUM = 1;
-//		Configure.configEnvironment();
-//		System.out.println(Constant.PROJECT_HOME);
-//		
-////		runSmallDataset();
-//		runAllProjectSingle("math");
+//		// for debug
+//		Constant.COMMAND_TIMEOUT = "/usr/local/bin/gtimeout ";
+//		Constant.PROJECT_HOME = Constant.HOME + "/testfile";
 		
+		Constant.PATCH_NUM = 1;
 		Configure.configEnvironment();
-		Subject subject = Configure.getSubject("math", 72);
-		trySplitFix(subject);
+		System.out.println(Constant.PROJECT_HOME);
+		
+//		runSmallDataset();
+		runAllProjectSingle("math");
 		
 	}
 	
@@ -174,6 +170,17 @@ public class Main {
 		Pair<Integer, Set<Integer>> bugIDs = projInfo.get(projName);
 		Set<Integer> already = subjects.get(projName);
 		
+		for(int id = 1; id < bugIDs.getFirst(); id++){
+			if(already.contains(id)){
+				continue;
+			}
+			Subject subject = Configure.getSubject(projName, id);
+			if(bugIDs.getSecond().contains(id)){
+				trySingleFix(subject);
+			} else {
+				trySplitFix(subject);
+			}
+		}
 		for(Integer id : bugIDs.getSecond()){
 			if(!already.contains(id)){
 				Subject subject = Configure.getSubject(projName, id);
@@ -218,14 +225,8 @@ public class Main {
 		mathID.add(75); //OK
 		mathID.add(79); //OK
 		mathID.add(98); // need split
-		
-		mathID.add(3);
-		mathID.add(9);
-		
 		subjects.put("math", mathID);
 		Set<Integer> timeID = new HashSet<>();
-		timeID.add(4);
-		timeID.add(5);
 		subjects.put("time", timeID);
 		
 		return subjects;
