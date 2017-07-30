@@ -39,6 +39,8 @@ import cofix.core.parser.node.stmt.ContinueStmt;
 import cofix.core.parser.node.stmt.ReturnStmt;
 import cofix.core.parser.node.stmt.ThrowStmt;
 import cofix.core.parser.search.BuggyCode;
+import sun.security.provider.MD2;
+import sun.security.x509.UniqueIdentity;
 
 /**
  * @author Jiajun
@@ -180,6 +182,26 @@ public class CodeBlockMatcher {
 //				}
 //			}
 //		}
+		
+		//remove duplicate modifications
+		List<Modification> unique = new LinkedList<>();
+		for (Modification modification : modifications) {
+			boolean exist = false;
+			for (Modification u : unique) {
+				if (u.getRevisionTypeID() == modification.getRevisionTypeID()
+						&& u.getSourceID() == modification.getSourceID()
+						&& u.getTargetString().equals(modification.getTargetString())
+						&& u.getSrcNode().toSrcString().toString()
+								.equals(modification.getSrcNode().toSrcString().toString())) {
+					exist = true;
+					break;
+				}
+			}
+			if(!exist){
+				unique.add(modification);
+			}
+		}
+		modifications = unique;
 		
 		// revision first
 		List<Modification> revisions = new LinkedList<>();

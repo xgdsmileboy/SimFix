@@ -16,7 +16,7 @@ import cofix.core.parser.node.Node.TYPE;
 public class Revision extends Modification {
 
 	public Revision(Node node, int srcID, String target, TYPE changeNodeType) {
-		super(node, srcID, target, changeNodeType);
+		super(node, srcID, target, changeNodeType, 0);
 		// TODO Auto-generated constructor stub
 	}
 

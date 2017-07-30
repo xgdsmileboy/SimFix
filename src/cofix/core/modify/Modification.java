@@ -25,8 +25,9 @@ public abstract class Modification {
 	protected TYPE _nodeType = TYPE.UNKNOWN;
 	protected int _sourceID = -1;
 	protected String _target = null;
+	protected int _type = 0;
 
-	public Modification(Node node, int srcId, String target, TYPE changeNodeType){
+	public Modification(Node node, int srcId, String target, TYPE changeNodeType, int typeID){
 		_node = node;
 		_sourceID = srcId;
 		_target = target;
@@ -34,6 +35,11 @@ public abstract class Modification {
 			_target = "";
 		}
 		_nodeType = changeNodeType;
+		_type = typeID;
+	}
+	
+	public int getRevisionTypeID(){
+		return _type;
 	}
 	
 	public TYPE getNodeType(){

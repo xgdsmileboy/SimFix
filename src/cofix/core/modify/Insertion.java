@@ -16,7 +16,7 @@ import cofix.core.parser.node.Node.TYPE;
 public class Insertion extends Modification {
 
 	public Insertion(Node node, int srcID, String target, TYPE changeNodeType) {
-		super(node, srcID, target, changeNodeType);
+		super(node, srcID, target, changeNodeType, 1);
 		// TODO Auto-generated constructor stub
 	}
 

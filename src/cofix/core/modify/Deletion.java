@@ -15,9 +15,8 @@ import cofix.core.parser.node.Node.TYPE;
  */
 public class Deletion extends Modification {
 
-
 	public Deletion(Node node, int srcID, String target, TYPE changeNodeType) {
-		super(node, srcID, target, changeNodeType);
+		super(node, srcID, target, changeNodeType, -1);
 		// TODO Auto-generated constructor stub
 	}
 
