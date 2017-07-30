@@ -234,9 +234,31 @@ public class Repair {
 					List<Modification> modifications = CodeBlockMatcher.match(oneBuggyBlock, similar.getFirst(), usableVars);
 					Map<String, Set<Node>> already = new HashMap<>();
 					// try each transformation first
-					List<Set<Modification>> list = new ArrayList<>();
+//					List<Set<Modification>> list = new ArrayList<>();
+//					list.addAll(consistantModification(modifications));
+//					for(Modification modification : modifications){
+//						String modify = modification.toString();
+//						Set<Node> tested = already.get(modify);
+//						if(tested != null){
+//							if(tested.contains(modification.getSrcNode())){
+//								continue;
+//							} else {
+//								tested.add(modification.getSrcNode());
+//							}
+//						} else {
+//							tested = new HashSet<>();
+//							tested.add(modification.getSrcNode());
+//							already.put(modify, tested);
+//						}
+//						Set<Modification> set = new HashSet<>();
+//						set.add(modification);
+//						list.add(set);
+//					}
+					
+					List<Set<Integer>> list = new ArrayList<>();
 					list.addAll(consistantModification(modifications));
-					for(Modification modification : modifications){
+					for(int index = 0; index < modifications.size(); index++){
+						Modification modification = modifications.get(index);
 						String modify = modification.toString();
 						Set<Node> tested = already.get(modify);
 						if(tested != null){
@@ -250,30 +272,30 @@ public class Repair {
 							tested.add(modification.getSrcNode());
 							already.put(modify, tested);
 						}
-						Set<Modification> set = new HashSet<>();
-						set.add(modification);
+						Set<Integer> set = new HashSet<>();
+						set.add(i);
 						list.add(set);
 					}
 					
 					List<Modification> legalModifications = new ArrayList<>();
 					while(true){
-						for(Set<Modification> modifySet : list){
+						for(Set<Integer> modifySet : list){
 							if(timer.timeout()){
 								return Status.TIMEOUT;
 							}
-							for(Modification modification : modifySet){
-								modification.apply(usableVars);
+							for(Integer index : modifySet){
+								modifications.get(index).apply(usableVars);
 							}
 							
 							String replace = oneBuggyBlock.toSrcString().toString();
 							if(haveTryPatches.contains(replace)){
 								System.out.println("already try ...");
-								for(Modification modification : modifySet){
-									modification.restore();
+								for(Integer index : modifySet){
+									modifications.get(index).restore();
 								}
 								if(legalModifications != null){
-									for(Modification modification : modifySet){
-										legalModifications.add(modification);
+									for(Integer index : modifySet){
+										legalModifications.add(modifications.get(index));
 									}
 								}
 								continue;
@@ -322,19 +344,20 @@ public class Repair {
 								break; //remove passed revision
 							case TEST_FAILED:
 								if(legalModifications != null){
-									for(Modification modification : modifySet){
-										legalModifications.add(modification);
+									for(Integer index : modifySet){
+										legalModifications.add(modifications.get(index));
 									}
 								}
 							}
-							for(Modification modification : modifySet){
-								modification.restore();
+							for(Integer index : modifySet){
+								modifications.get(index).restore();
 							}
 						}
 						if(legalModifications == null){
 							break;
 						}
 						list = combineModification(legalModifications);
+						modifications = legalModifications;
 						legalModifications = null;
 					}
 				}
@@ -360,8 +383,8 @@ public class Repair {
 	}
 	
 	
-	private List<Set<Modification>> consistantModification(List<Modification> modifications){
-		List<Set<Modification>> result = new LinkedList<>();
+	private List<Set<Integer>> consistantModification(List<Modification> modifications){
+		List<Set<Integer>> result = new LinkedList<>();
 		List<Modification> revisions = new ArrayList<>();
 		for(Modification modification : modifications){
 			if(modification instanceof Revision){
@@ -370,15 +393,15 @@ public class Repair {
 		}
 		
 		for(int i = 0; i < revisions.size(); i++){
-			Set<Modification> consistant = new HashSet<>();
+			Set<Integer> consistant = new HashSet<>();
 			Modification modification = revisions.get(i);
-			consistant.add(modification);
+			consistant.add(i);
 			for(int j = i+1; j < revisions.size(); j++){
 				Modification other = revisions.get(j);
 				if(modification.compatible(other) && modification.getTargetString().equals(other.getTargetString())){
 					ASTNode node = JavaFile.genASTFromSource(modification.getTargetString(), ASTParser.K_EXPRESSION);
 					if(node instanceof Name || node instanceof FieldAccess){
-						consistant.add(other);
+						consistant.add(j);
 					}
 				}
 			}
@@ -389,8 +412,8 @@ public class Repair {
 		
 		return result;
 	}
-	private List<Set<Modification>> combineModification(List<Modification> modifications){
-		List<Set<Modification>> list = new ArrayList<>();
+	private List<Set<Integer>> combineModification(List<Modification> modifications){
+		List<Set<Integer>> list = new ArrayList<>();
 		int length = modifications.size();
 		if(length == 0){
 			return list;
@@ -416,14 +439,15 @@ public class Repair {
 			baseSet.add(set);
 		}
 		
-		List<Set<Integer>> expanded = expand(incompatibleMap, baseSet, 2, 3);
-		for(Set<Integer> set : expanded){
-			Set<Modification> combinedModification = new HashSet<>();
-			for(Integer integer : set){
-				combinedModification.add(modifications.get(integer));
-			}
-			list.add(combinedModification);
-		}
+//		List<Set<Integer>> expanded = expand(incompatibleMap, baseSet, 2, 3);
+//		for(Set<Integer> set : expanded){
+//			Set<Modification> combinedModification = new HashSet<>();
+//			for(Integer integer : set){
+//				combinedModification.add(modifications.get(integer));
+//			}
+//			list.add(combinedModification);
+//		}
+		list.addAll(expand(incompatibleMap, baseSet, 2, 4));
 		
 		return list;
 	}
