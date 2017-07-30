@@ -114,7 +114,6 @@ public class Main {
 		for(Integer id : bugIDs.getSecond()){
 			if(!already.contains(id)){
 				Subject subject = Configure.getSubject(projName, id);
-				subject = Configure.getSubject("chart", 5);
 				tryFix(subject);
 			}
 		}
