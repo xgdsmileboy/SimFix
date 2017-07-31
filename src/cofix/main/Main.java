@@ -100,11 +100,6 @@ public class Main {
 			JavaFile.writeStringToFile(logFile, "Current failed test : " + teString + " | " + simpleFormat.format(new Date()) + "\n", true);
 			FileUtils.copyDirectory(purifyBackup, purifiedTest);
 			FileUtils.deleteDirectory(new File(subject.getHome() + subject.getTbin()));
-			for(int i = currentTry + 1; i < purifiedFailedTestCases.size(); i++){
-				if(Runner.testSingleTest(subject, purifiedFailedTestCases.get(i))){
-					alreadyFix.add(purifiedFailedTestCases.get(i));
-				}
-			}
 			if(alreadyFix.contains(teString)){
 				JavaFile.writeStringToFile(logFile, "Already fixed : " + teString + "\n", true);
 				continue;
@@ -129,6 +124,11 @@ public class Main {
 			case SUCCESS:
 				System.out.println(status);
 				JavaFile.writeStringToFile(logFile, "Success time : " + simpleFormat.format(new Date()) + "\n", true);
+				for(int i = currentTry + 1; i < purifiedFailedTestCases.size(); i++){
+					if(Runner.testSingleTest(subject, purifiedFailedTestCases.get(i))){
+						alreadyFix.add(purifiedFailedTestCases.get(i));
+					}
+				}
 				break;
 			case FAILED:
 				System.out.println(status);
