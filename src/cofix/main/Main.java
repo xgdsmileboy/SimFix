@@ -94,13 +94,19 @@ public class Main {
 		File purifiedTest = new File(subject.getHome() + subject.getTsrc());
 		File purifyBackup = new File(subject.getHome() + subject.getTsrc() + "_purify");
 		FileUtils.copyDirectory(purifiedTest, purifyBackup);
-		int currentTry = 0;
-		for(String teString : purifiedFailedTestCases){
-			currentTry ++;
+		Set<String> alreadyFix = new HashSet<>();
+		for(int currentTry = 0; currentTry < purifiedFailedTestCases.size(); currentTry ++){
+			String teString = purifiedFailedTestCases.get(currentTry);
 			JavaFile.writeStringToFile(logFile, "Current failed test : " + teString + " | " + simpleFormat.format(new Date()) + "\n", true);
 			FileUtils.copyDirectory(purifyBackup, purifiedTest);
 			FileUtils.deleteDirectory(new File(subject.getHome() + subject.getTbin()));
-			if(Runner.testSingleTest(subject, teString)){
+			for(int i = currentTry + 1; i < purifiedFailedTestCases.size(); i++){
+				if(Runner.testSingleTest(subject, purifiedFailedTestCases.get(i))){
+					alreadyFix.add(purifiedFailedTestCases.get(i));
+				}
+			}
+			if(alreadyFix.contains(teString)){
+				JavaFile.writeStringToFile(logFile, "Already fixed : " + teString + "\n", true);
 				continue;
 			}
 			// can only find one patch now, should be optimized after fixing one test
