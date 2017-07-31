@@ -144,6 +144,7 @@ public class Main {
 //		Constant.PROJECT_HOME = Constant.HOME + "/testfile";
 		
 		Constant.PATCH_NUM = 1;
+		Constant.PROJECT_HOME = "/home/jiajun/d4j/projects";
 		Configure.configEnvironment();
 		System.out.println(Constant.PROJECT_HOME);
 		
