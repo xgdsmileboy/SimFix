@@ -219,8 +219,8 @@ public class Repair {
 						break;
 					}
 					
-					System.out.println("=====================" + (i++) +"==============================");
-					System.out.println(similar.getFirst().toSrcString().toString());
+//					System.out.println("=====================" + (i++) +"==============================");
+//					System.out.println(similar.getFirst().toSrcString().toString());
 					// compute transformation
 					List<Modification> modifications = CodeBlockMatcher.match(oneBuggyBlock, similar.getFirst(), usableVars);
 					Map<String, Set<Node>> already = new HashMap<>();
@@ -259,7 +259,7 @@ public class Repair {
 							
 							String replace = oneBuggyBlock.toSrcString().toString();
 							if(haveTryPatches.contains(replace)){
-								System.out.println("already try ...");
+//								System.out.println("already try ...");
 								for(Integer index : modifySet){
 									modifications.get(index).restore();
 								}
@@ -271,9 +271,9 @@ public class Repair {
 								continue;
 							}
 							
-							System.out.println("========");
-							System.out.println(replace);
-							System.out.println("========");
+//							System.out.println("========");
+//							System.out.println(replace);
+//							System.out.println("========");
 							
 							haveTryPatches.add(replace);
 							try {
@@ -348,7 +348,7 @@ public class Repair {
 		SimpleDateFormat simpleFormat=new SimpleDateFormat("yy/MM/dd HH:mm"); 
 		stringBuffer.append("\nTime : " + simpleFormat.format(new Date()) + "\n");
 		stringBuffer.append("----------------------------------------\n");
-		System.out.println(stringBuffer.toString());
+//		System.out.println(stringBuffer.toString());
 		JavaFile.writeStringToFile(logFile, stringBuffer.toString(), true);
 	}
 	
@@ -462,7 +462,7 @@ public class Repair {
 	private ValidateStatus validate(String logFile, CodeBlock buggyBlock){
 		
 		if(!Runner.compileSubject(_subject)){
-			System.err.println("Build failed !");
+//			System.err.println("Build failed !");
 			return ValidateStatus.COMPILE_FAILED;
 		}
 		
