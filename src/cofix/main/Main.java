@@ -139,26 +139,85 @@ public class Main {
 	
 
 	public static void main(String[] args) throws IOException {
-//		// for debug
-//		Constant.COMMAND_TIMEOUT = "/usr/local/bin/gtimeout ";
-//		Constant.PROJECT_HOME = Constant.HOME + "/testfile";
-		
 		Constant.PATCH_NUM = 1;
+		String projName = null;
+		Set<Integer> idSet = new HashSet<>();
+		if(args.length < 3){
+			printUsage();
+			System.exit(0);
+		}
+		Map<String, Pair<Integer, Set<Integer>>> projInfo = Configure.getProjectInfoFromJSon();
+		for(int i = 0; i < args.length; i++){
+			if(args[i].startsWith("--proj_home=")){
+				Constant.PROJECT_HOME = args[i].substring("--proj_home=".length() + 1);
+			} else if(args[i].startsWith("--proj_name=")){
+				projName = args[i].substring("--proj_name=".length() + 1);
+			} else if(args[i].startsWith("--bug_id=")){
+				String idseq = args[i].substring("--bug_id=".length() + 1);
+				if(idseq.equalsIgnoreCase("all")){
+					for(int id = 1; id <= projInfo.get(projName).getFirst(); id++){
+						idSet.add(id);
+					}
+				} else if(idseq.contains("-")){
+					int start = Integer.parseInt(idseq.substring(0, idseq.indexOf("-")));
+					int end = Integer.parseInt(idseq.substring(idseq.indexOf("-") + 1, idseq.length()));
+					for(int id = start; id <= end; id++){
+						idSet.add(id);
+					}
+				} else {
+					int id = Integer.parseInt(idseq);
+					idSet.add(id);
+				}
+			}
+		}
+		
+		if(Constant.PROJECT_HOME == null || projName == null || idSet.size() == 0){
+			printUsage();
+			System.exit(0);
+		}
+		
 		Configure.configEnvironment();
 		System.out.println(Constant.PROJECT_HOME);
 		
 //		runSmallDataset();
-		runAllProjectSingle("math");
+//		runAllProjectSingle("math");
+		flexibelConfigure(projName, idSet, projInfo);
 		
 	}
 	
+	private static void printUsage(){
+		// --proj_home=/home/jiajun/d4j/projects --proj_name=chart --bug_id=3-5/all/1
+		System.err.println("Usage : --proj_home=\"project home\" --proj_name=\"project name\" --bug_id=\"3-5/all/1\"");
+	}
+	
+	private static void flexibelConfigure(String projName, Set<Integer> ids, Map<String, Pair<Integer, Set<Integer>>> projInfo) throws IOException{
+		Map<String, Set<Integer>> subjects = getSubject();
+		
+		Pair<Integer, Set<Integer>> bugIDs = projInfo.get(projName);
+		
+		for(Integer id : ids){
+			Subject subject = Configure.getSubject(projName, id);
+			if(bugIDs.getSecond().contains(id)){
+				trySingleFix(subject);
+			} else {
+				trySplitFix(subject);
+			}
+		}
+	}
+	
 	private static void runSmallDataset() throws IOException{
+		Map<String, Pair<Integer, Set<Integer>>> projInfo = Configure.getProjectInfoFromJSon();
 		Map<String, Set<Integer>> subjects = getSubject();
 		for(Entry<String, Set<Integer>> entry : subjects.entrySet()){
 			String name = entry.getKey();
+			Pair<Integer, Set<Integer>> bugIDs = projInfo.get(name);
 			for(Integer id : entry.getValue()){
 				Subject subject = Configure.getSubject(name, id);
-				trySingleFix(subject);
+				if(bugIDs.getSecond().contains(id)){
+					trySingleFix(subject);
+				} else {
+					trySplitFix(subject);
+				}
 			}
 		}
 	}
@@ -179,12 +238,6 @@ public class Main {
 				trySingleFix(subject);
 			} else {
 				trySplitFix(subject);
-			}
-		}
-		for(Integer id : bugIDs.getSecond()){
-			if(!already.contains(id)){
-				Subject subject = Configure.getSubject(projName, id);
-				trySingleFix(subject);
 			}
 		}
 	}

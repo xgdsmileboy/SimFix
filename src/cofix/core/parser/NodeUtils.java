@@ -390,6 +390,40 @@ public class NodeUtils {
 		return modifications;
 	}
 	
+	public static boolean isSameNodeType(Node src, Node tar){
+		if(isConstant(src)){
+			if(isConstant(tar)){
+				return true;
+			}else {
+				return false;
+			}
+		} else {
+			if(isConstant(tar)){
+				return false;
+			} else {
+				return true;
+			}
+		}
+	}
+	
+	private static boolean isConstant(Node tar){
+		if(tar instanceof NumLiteral){
+			return true;
+		}
+		if(tar instanceof QName){
+			QName qName = (QName) tar;
+			if(Character.isUpperCase(qName.getLabel().charAt(0)) && Character.isUpperCase(qName.getIdentifier().charAt(0))){
+				return true;
+			}
+		} else if(tar instanceof SName){
+			SName sName = (SName)tar;
+			if(sName.getName().toUpperCase().equals(sName.getName())){
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public static boolean conditionalMatch(Expr node, int id, ConditionalExpr conditionalExpr, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications){
 		boolean match = false;
 		Expr first = conditionalExpr.getfirst();
