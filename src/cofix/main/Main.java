@@ -153,12 +153,18 @@ public class Main {
 	}
 	
 	private static void runSmallDataset() throws IOException{
+		Map<String, Pair<Integer, Set<Integer>>> projInfo = Configure.getProjectInfoFromJSon();
 		Map<String, Set<Integer>> subjects = getSubject();
 		for(Entry<String, Set<Integer>> entry : subjects.entrySet()){
 			String name = entry.getKey();
+			Pair<Integer, Set<Integer>> bugIDs = projInfo.get(name);
 			for(Integer id : entry.getValue()){
 				Subject subject = Configure.getSubject(name, id);
-				trySingleFix(subject);
+				if(bugIDs.getSecond().contains(id)){
+					trySingleFix(subject);
+				} else {
+					trySplitFix(subject);
+				}
 			}
 		}
 	}
