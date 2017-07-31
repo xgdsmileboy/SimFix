@@ -100,9 +100,9 @@ public class CodeBlockMatcher {
 		// match variables first
 		Map<String, String> varTrans = matchVariables(buggyBlock, similarBlock);
 		
-		for(Entry<String, String> entry : varTrans.entrySet()){
-			System.out.println(entry.getKey() + " : " + entry.getValue());
-		}
+//		for(Entry<String, String> entry : varTrans.entrySet()){
+//			System.out.println(entry.getKey() + " : " + entry.getValue());
+//		}
 		
 		
 		List<Node> bNodes = buggyBlock.getParsedNode();
