@@ -149,11 +149,11 @@ public class Main {
 		Map<String, Pair<Integer, Set<Integer>>> projInfo = Configure.getProjectInfoFromJSon();
 		for(int i = 0; i < args.length; i++){
 			if(args[i].startsWith("--proj_home=")){
-				Constant.PROJECT_HOME = args[i].substring("--proj_home=".length() + 1);
+				Constant.PROJECT_HOME = args[i].substring("--proj_home=".length());
 			} else if(args[i].startsWith("--proj_name=")){
-				projName = args[i].substring("--proj_name=".length() + 1);
+				projName = args[i].substring("--proj_name=".length());
 			} else if(args[i].startsWith("--bug_id=")){
-				String idseq = args[i].substring("--bug_id=".length() + 1);
+				String idseq = args[i].substring("--bug_id=".length());
 				if(idseq.equalsIgnoreCase("all")){
 					for(int id = 1; id <= projInfo.get(projName).getFirst(); id++){
 						idSet.add(id);
