@@ -103,17 +103,17 @@ public class Main {
 			FileUtils.copyDirectory(purifyBackup, purifiedTest);
 			FileUtils.deleteDirectory(new File(subject.getHome() + subject.getTbin()));
 			if(lastRslt){
-				for(int i = currentTry + 1; i < purifiedFailedTestCases.size(); i++){
+				for(int i = currentTry; i < purifiedFailedTestCases.size(); i++){
 					if(Runner.testSingleTest(subject, purifiedFailedTestCases.get(i))){
 						alreadyFix.add(purifiedFailedTestCases.get(i));
 					}
 				}
 			}
+			lastRslt = false;
 			if(alreadyFix.contains(teString)){
 				JavaFile.writeStringToFile(logFile, "Already fixed : " + teString + "\n", true);
 				continue;
 			}
-			lastRslt = false;
 			// can only find one patch now, should be optimized after fixing one test
 			subject.restore(subject.getHome() + subject.getSsrc());
 			CommentTestCase.comment(subject.getHome() + subject.getTsrc(), purifiedFailedTestCases, teString);
