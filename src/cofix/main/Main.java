@@ -33,6 +33,7 @@ import cofix.core.parser.ProjectInfo;
 import cofix.test.purification.CommentTestCase;
 import cofix.test.purification.Purification;
 import sbfl.locator.SBFLocator;
+import sun.util.resources.CurrencyNames_de_GR;
 
 /**
  * @author Jiajun
@@ -95,15 +96,24 @@ public class Main {
 		File purifyBackup = new File(subject.getHome() + subject.getTsrc() + "_purify");
 		FileUtils.copyDirectory(purifiedTest, purifyBackup);
 		Set<String> alreadyFix = new HashSet<>();
+		boolean lastRslt = false;
 		for(int currentTry = 0; currentTry < purifiedFailedTestCases.size(); currentTry ++){
 			String teString = purifiedFailedTestCases.get(currentTry);
 			JavaFile.writeStringToFile(logFile, "Current failed test : " + teString + " | " + simpleFormat.format(new Date()) + "\n", true);
 			FileUtils.copyDirectory(purifyBackup, purifiedTest);
 			FileUtils.deleteDirectory(new File(subject.getHome() + subject.getTbin()));
+			if(lastRslt){
+				for(int i = currentTry + 1; i < purifiedFailedTestCases.size(); i++){
+					if(Runner.testSingleTest(subject, purifiedFailedTestCases.get(i))){
+						alreadyFix.add(purifiedFailedTestCases.get(i));
+					}
+				}
+			}
 			if(alreadyFix.contains(teString)){
 				JavaFile.writeStringToFile(logFile, "Already fixed : " + teString + "\n", true);
 				continue;
 			}
+			lastRslt = false;
 			// can only find one patch now, should be optimized after fixing one test
 			subject.restore(subject.getHome() + subject.getSsrc());
 			CommentTestCase.comment(subject.getHome() + subject.getTsrc(), purifiedFailedTestCases, teString);
@@ -122,13 +132,9 @@ public class Main {
 				JavaFile.writeStringToFile(logFile, "Timeout time : " + simpleFormat.format(new Date()) + "\n", true);
 				break;
 			case SUCCESS:
+				lastRslt = true;
 				System.out.println(status);
 				JavaFile.writeStringToFile(logFile, "Success time : " + simpleFormat.format(new Date()) + "\n", true);
-				for(int i = currentTry + 1; i < purifiedFailedTestCases.size(); i++){
-					if(Runner.testSingleTest(subject, purifiedFailedTestCases.get(i))){
-						alreadyFix.add(purifiedFailedTestCases.get(i));
-					}
-				}
 				break;
 			case FAILED:
 				System.out.println(status);
