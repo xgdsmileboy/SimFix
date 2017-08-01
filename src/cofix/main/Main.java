@@ -19,6 +19,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
+import org.eclipse.jdt.core.dom.SingleMemberAnnotation;
 
 import cofix.common.config.Configure;
 import cofix.common.config.Constant;
@@ -89,6 +90,8 @@ public class Main {
 		
 		subject.backup(subject.getHome() + subject.getSsrc());
 		subject.backup(subject.getHome() + subject.getTsrc());
+		FileUtils.deleteDirectory(new File(subject.getHome() + subject.getTbin()));
+		FileUtils.deleteDirectory(new File(subject.getHome() + subject.getSbin()));
 		Purification purification = new Purification(subject);
 		List<String> purifiedFailedTestCases = purification.purify();
 		File purifiedTest = new File(subject.getHome() + subject.getTsrc());
@@ -115,6 +118,8 @@ public class Main {
 			}
 			// can only find one patch now, should be optimized after fixing one test
 			subject.restore(subject.getHome() + subject.getSsrc());
+			FileUtils.deleteDirectory(new File(subject.getHome() + subject.getSbin()));
+			FileUtils.deleteDirectory(new File(subject.getHome() + subject.getTbin()));
 			CommentTestCase.comment(subject.getHome() + subject.getTsrc(), purifiedFailedTestCases, teString);
 			SBFLocator sbfLocator = new SBFLocator(subject);
 			List<String> currentFailedTests = new ArrayList<>();
