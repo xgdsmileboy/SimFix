@@ -19,6 +19,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
+import org.eclipse.core.runtime.content.IContentDescriber;
 
 import cofix.common.config.Configure;
 import cofix.common.config.Constant;
@@ -166,7 +167,16 @@ public class Main {
 				projName = args[i].substring("--proj_name=".length());
 			} else if(args[i].startsWith("--bug_id=")){
 				String idseq = args[i].substring("--bug_id=".length());
-				if(idseq.equalsIgnoreCase("all")){
+				if(idseq.equalsIgnoreCase("single")){
+					idSet.addAll(projInfo.get(projName).getSecond());
+				} else if(idseq.equalsIgnoreCase("multi")){
+					for(int id = 1; id <= projInfo.get(projName).getFirst(); id++){
+						if(projInfo.get(projName).getSecond().contains(id)){
+							continue;
+						}
+						idSet.add(id);
+					}
+				} else if(idseq.equalsIgnoreCase("all")){
 					for(int id = 1; id <= projInfo.get(projName).getFirst(); id++){
 						idSet.add(id);
 					}
@@ -177,8 +187,11 @@ public class Main {
 						idSet.add(id);
 					}
 				} else {
-					int id = Integer.parseInt(idseq);
-					idSet.add(id);
+					String[] split = idseq.split(",");
+					for(String string : split){
+						int id = Integer.parseInt(string);
+						idSet.add(id);
+					}
 				}
 			}
 		}
@@ -199,7 +212,7 @@ public class Main {
 	
 	private static void printUsage(){
 		// --proj_home=/home/jiajun/d4j/projects --proj_name=chart --bug_id=3-5/all/1
-		System.err.println("Usage : --proj_home=\"project home\" --proj_name=\"project name\" --bug_id=\"3-5/all/1\"");
+		System.err.println("Usage : --proj_home=\"project home\" --proj_name=\"project name\" --bug_id=\"3-5/all/1/1,2,5/single/multi\"");
 	}
 	
 	private static void flexibelConfigure(String projName, Set<Integer> ids, Map<String, Pair<Integer, Set<Integer>>> projInfo) throws IOException{
