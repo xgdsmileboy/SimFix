@@ -19,7 +19,6 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
-import org.eclipse.core.runtime.content.IContentDescriber;
 
 import cofix.common.config.Configure;
 import cofix.common.config.Constant;
@@ -34,7 +33,6 @@ import cofix.core.parser.ProjectInfo;
 import cofix.test.purification.CommentTestCase;
 import cofix.test.purification.Purification;
 import sbfl.locator.SBFLocator;
-import sun.util.resources.CurrencyNames_de_GR;
 
 /**
  * @author Jiajun

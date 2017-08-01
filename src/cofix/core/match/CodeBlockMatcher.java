@@ -197,8 +197,7 @@ public class CodeBlockMatcher {
 				if (u.getRevisionTypeID() == modification.getRevisionTypeID()
 						&& u.getSourceID() == modification.getSourceID()
 						&& u.getTargetString().equals(modification.getTargetString())
-						&& u.getSrcNode().toSrcString().toString()
-								.equals(modification.getSrcNode().toSrcString().toString())) {
+						&& u.getSrcNode() == modification.getSrcNode()) {
 					exist = true;
 					break;
 				}
