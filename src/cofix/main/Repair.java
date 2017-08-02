@@ -253,6 +253,7 @@ public class Repair {
 							if(timer.timeout()){
 								return Status.TIMEOUT;
 							}
+							
 							for(Integer index : modifySet){
 								modifications.get(index).apply(usableVars);
 							}
@@ -460,7 +461,14 @@ public class Repair {
 	}
 	
 	private ValidateStatus validate(String logFile, CodeBlock buggyBlock){
-		
+		// avoid compilation error
+		File file = new File(_subject.getHome() + "/build/lib");
+		if(file.exists()){
+			try {
+				FileUtils.deleteDirectory(new File(_subject.getHome() + "/build"));
+			} catch (IOException e) {
+			}
+		}
 		if(!Runner.compileSubject(_subject)){
 //			System.err.println("Build failed !");
 			return ValidateStatus.COMPILE_FAILED;

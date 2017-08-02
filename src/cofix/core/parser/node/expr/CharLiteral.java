@@ -111,10 +111,14 @@ public class CharLiteral extends Expr {
 	
 	@Override
 	public StringBuffer toSrcString() {
+		String string = null;
 		if(_replace != null){
-			return new StringBuffer("'" + _replace + "'");
+			string = new String(_replace);
+		} else {
+			string = "" + _value;
 		}
-		return new StringBuffer("'" + _value + "'");
+		string = string.replace("\\", "\\\\").replace("\'", "\\'").replace("\"", "\\\"").replace("\n", "\\n").replace("\b", "\\b").replace("\t", "\\t").replace("\r", "\\r").replace("\f", "\\f").replace("\0", "\\0");
+		return new StringBuffer("\'" + string + "\'");
 	}
 
 	@Override

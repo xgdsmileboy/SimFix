@@ -6,6 +6,7 @@
  */
 package cofix.common.run;
 
+import java.io.File;
 import java.util.List;
 
 import cofix.common.config.Constant;
