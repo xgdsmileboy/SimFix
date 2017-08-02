@@ -40,7 +40,9 @@ public class StrLiteral extends Expr {
 	}
 	
 	public void setValue(String value){
-		_value = value;
+		_value = value.replace("\\", "\\\\").replace("\'", "\\'").replace("\"", "\\\"").replace("\n", "\\n")
+				.replace("\b", "\\b").replace("\t", "\\t").replace("\r", "\\r").replace("\f", "\\f")
+				.replace("\0", "\\0");
 	}
 
 	@Override
