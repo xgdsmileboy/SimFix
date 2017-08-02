@@ -1,17 +1,20 @@
 package sbfl.locator;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 
-import cofix.common.config.Configure;
+import cofix.common.config.Constant;
 import cofix.common.localization.AbstractFaultlocalization;
 import cofix.common.run.CmdFactory;
 import cofix.common.run.Executor;
@@ -19,60 +22,73 @@ import cofix.common.util.Pair;
 import cofix.common.util.Subject;
 
 public class SBFLocator extends AbstractFaultlocalization {
-
-	public static void main(String[] args) {
-		Subject subject = Configure.getSubject("chart", 1);
-		for(String string : CmdFactory.createSbflCmd(subject, 20)){
-			System.out.println(string);
-		}
-		try {
-			Executor.executeCommand(CmdFactory.createSbflCmd(subject, 300));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		List<Pair<String, Integer>> lines = null;
-		try {
-			lines = getSortedSuspStmt(subject.getBuggyLineSuspFile());
-		} catch (NumberFormatException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		int i = 0;
-		for(Pair<String, Integer> pair : lines){
-			if(++ i >= 100){
-				break;
-			}
-			System.out.println(pair.getFirst() + "#" + pair.getSecond());
-		}
-		
-	}
 	
 	public SBFLocator(Subject subject) {
 		super(subject);
+		locateFault(0);
 	}
+	
+	public void setFailedTest(List<String> failedTests){
+		_failedTests = failedTests;
+	}
+	
 
 	@Override
 	protected void locateFault(double threshold) {
-		// TODO Auto-generated method stub
-		
+		try {
+			Executor.executeCommand(CmdFactory.createSbflCmd(_subject, Constant.SBFL_TIMEOUT));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Override
+	public List<String> getFailedTestCases() {
+		if(_failedTests == null || _failedTests.size() == 0){
+			try {
+				Executor.executeCommand(CmdFactory.createTestSubjectCmd(_subject, 600));
+				parseFailedTestFromFile(_subject.getFailedTestRecFile());
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return _failedTests;
+	}
+	
+	private void parseFailedTestFromFile(String fileName) throws IOException{
+		File file = new File(fileName);
+		if(!file.exists()){
+			System.err.println("Failed test file not exist : " + fileName);
+		}
+		BufferedReader bReader = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
+		String line = null;
+		while((line = bReader.readLine()) != null){
+			line = line.trim();
+			if(line.startsWith("---")){
+				line = line.substring(3).trim();
+				_failedTests.add(line);
+			}
+		}
+		bReader.close();
 	}
 
 	@Override
 	public List<Pair<String, Integer>> getLocations(int topK) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Pair<String, Integer>> lines = new ArrayList<>();
+		try {
+			lines = getSortedSuspStmt(_subject.getBuggyLineSuspFile());
+		} catch (NumberFormatException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		while(lines.size() > topK){
+			lines.remove(lines.size() - 1);
+		}
+		return lines;
 	}
 	
-	private static List<Pair<String, Integer>> getSortedSuspStmt(String fileName) throws NumberFormatException, IOException{
+	private List<Pair<String, Integer>> getSortedSuspStmt(String fileName) throws NumberFormatException, IOException{
 		List<Pair<String, Double>> suspStmt = new ArrayList<>();
 		//org.jfree.chart.renderer.category.LineAndShapeRenderer#201,0.1889822365046136
 		File file = new File(fileName);
@@ -111,8 +127,16 @@ public class SBFLocator extends AbstractFaultlocalization {
 			}
 		});
 		
+		File realtimeLocFile = new File(Constant.PROJ_REALTIME_LOC_BASE + "/" + _subject.getName() + "/" + _subject.getId() + "txt");
+		if(!realtimeLocFile.exists()){
+			realtimeLocFile.getParentFile().mkdirs();
+			realtimeLocFile.createNewFile();
+		}
+		BufferedWriter bWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(realtimeLocFile, false), "UTF-8"));
+		
 		List<Pair<String, Integer>> buggyLines = new LinkedList<>();
 		for(Pair<String, Double> pair : suspStmt){
+			bWriter.write(pair.getFirst() + "," + pair.getSecond() + "\n");
 			String[] clazzAndLine = pair.getFirst().split("#");
 			if(clazzAndLine.length != 2){
 				System.err.println("Suspicous statement format error : " + pair.getFirst());
@@ -127,6 +151,7 @@ public class SBFLocator extends AbstractFaultlocalization {
 			int lineNum = Integer.parseInt(clazzAndLine[1]);
 			buggyLines.add(new Pair<String, Integer>(clazz, lineNum));
 		}
+		bWriter.close();
 		return buggyLines;
 	}
 }

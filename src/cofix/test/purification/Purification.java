@@ -6,12 +6,22 @@
  */
 package cofix.test.purification;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.Map.Entry;
 
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
@@ -24,11 +34,13 @@ import org.eclipse.jdt.core.dom.MethodDeclaration;
 import org.eclipse.jdt.core.dom.MethodInvocation;
 import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.SimpleName;
+import org.eclipse.jdt.core.dom.TypeDeclaration;
 import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
 import org.eclipse.jdt.core.dom.VariableDeclarationStatement;
 
+import cofix.common.config.Constant;
+import cofix.common.run.Runner;
 import cofix.common.util.JavaFile;
-import cofix.common.util.Pair;
 import cofix.common.util.Subject;
 
 /**
@@ -38,44 +50,109 @@ import cofix.common.util.Subject;
 public class Purification {
 	
 	private Subject _subject = null;
-	private String _failedTestClazz = null;
-	private String _failedTestCase = null;
-	private List<Pair<String, MethodDeclaration>> _purifiedTestCases = null;
+	private List<String> _failedTests = null;
+	private final String _failedTestsPath = Constant.HOME + "/d4j-info/failed_tests";
 	
-	public Purification(Subject subject, String failedTest){
+	public Purification(Subject subject){
 		_subject = subject;
-		String[] info = failedTest.split("::");
-		if(info.length != 2){
-			System.err.println("@Purification Test format error : " + failedTest);
-		}
-		_failedTestClazz = info[0];
-		_failedTestCase = info[1];
+		readFailedTests(_failedTestsPath + "/" + subject.getName() + "/" + subject.getId() + ".txt");
 	}
 	
-	public List<Pair<String, MethodDeclaration>> purify(){
-		if(_purifiedTestCases == null){
-			String testFile = _subject.getHome() + _subject.getTsrc() + "/" + _failedTestClazz.replace(".", "/") + ".java";
+	public List<String> purify(){
+		Map<String, List<String>> purifiedMap = new HashMap<>();
+		for(String test : _failedTests){
+			String[] testInfo = test.split("::");
+			if(testInfo.length != 2){
+				System.err.println("Failed test format error : " + test);
+				continue;
+			}
+			String failedTestClazz = testInfo[0];
+			String failedTestCase = testInfo[1];
+			String testFile = _subject.getHome() + _subject.getTsrc() + "/" + failedTestClazz.replace(".", "/") + ".java";
 			CompilationUnit unit = JavaFile.genASTFromFile(testFile);
-			_purifiedTestCases = new FindMethod().getMethod(unit, _failedTestCase);
+			FindMethod findMethod = new FindMethod();
+			List<String> newTests = findMethod.getMethod(unit, failedTestClazz, failedTestCase);
+			purifiedMap.put(test, newTests);
+			JavaFile.writeStringToFile(testFile, unit.toString());
 		}
-		return _purifiedTestCases;
+		return validateEachPurifiedTestCases(purifiedMap);
+	}
+	
+	private List<String> validateEachPurifiedTestCases(Map<String, List<String>> purifiedMap){
+		List<String> failedTests = new LinkedList<>();
+		for(Entry<String, List<String>> entry : purifiedMap.entrySet()){
+			boolean containFailed = false;
+			for(String t : entry.getValue()){
+				if(!Runner.testSingleTest(_subject, t)){
+					containFailed = true;
+					failedTests.add(t);
+				}
+			}
+			if(!containFailed){
+				System.err.println("Test purification failed : NO failed test cases after purification for " + entry.getKey());
+			}
+		}
+		return failedTests;
+	}
+	
+	private void readFailedTests(String path){
+		_failedTests = new LinkedList<>();
+		File file = new File(path);
+		if(!file.exists()){
+			System.err.println("Failed test file does not exist : " + path);
+			System.exit(0);
+		}
+		
+		BufferedReader bufferedReader = null;
+		try {
+			bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		String line = null;
+		try {
+			while((line = bufferedReader.readLine()) != null){
+				if(line.length() > 0){
+					_failedTests.add(line);
+				}
+			}
+			bufferedReader.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	private class FindMethod extends ASTVisitor{	
 		
-		private List<Pair<String, MethodDeclaration>> _purifiedTestCases = new LinkedList<>();
-		
+		private List<String> _purifiedTestCases = new LinkedList<>();
+		private String _clazz = null;
 		private String _methodName = null;
-		public List<Pair<String, MethodDeclaration>> getMethod(CompilationUnit unit, String method){
+		
+		public List<String> getMethod(CompilationUnit unit, String clazz, String method){
+			_clazz = clazz;
 			_methodName = method;
 			unit.accept(this);
 			return _purifiedTestCases;
 		}
 		public boolean visit(MethodDeclaration node){
 			if(node.getName().getFullyQualifiedName().equals(_methodName)){
+				ASTNode parent = node.getParent();
+				while(parent != null){
+					if(parent instanceof TypeDeclaration){
+						break;
+					}
+					parent = parent.getParent();
+				}
+				if(parent == null){
+					return false;
+				}
+				TypeDeclaration typeDeclaration = (TypeDeclaration) parent;
 				Set<Integer> assertLines = analysis(node);
 				if(assertLines.size() <= 1){
-					_purifiedTestCases.add(new Pair<String, MethodDeclaration>(_failedTestClazz + "::" + _methodName, node));
+					_purifiedTestCases.add(_clazz + "::" + _methodName);
 				} else {
 					int methodID = 1;
 					for(Integer line : assertLines){
@@ -104,8 +181,10 @@ public class Purification {
 							body.statements().add(ASTNode.copySubtree(ast, astNode));
 						}
 						newMethod.setBody(body);
-						_purifiedTestCases.add(new Pair<String, MethodDeclaration>(_failedTestClazz + "::" + newName, newMethod));
+						typeDeclaration.bodyDeclarations().add(ASTNode.copySubtree(node.getAST(), newMethod));
+						_purifiedTestCases.add(_clazz + "::" + newName);
 					}
+					node.getBody().statements().clear();
 				}
 				return false;
 			}
@@ -182,6 +261,7 @@ public class Purification {
 			return assertLine;
 		}
 	}
+	
 	
 	private class AssertFinder extends ASTVisitor{
 		

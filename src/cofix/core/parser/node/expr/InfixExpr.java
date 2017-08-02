@@ -147,7 +147,7 @@ public class InfixExpr extends Expr {
 				String right = _rhs.toSrcString().toString();
 				for(Modification modification : tmp){
 					if(!right.equals(modification.getTargetString())){
-						subStructureModifications.addAll(tmp);
+						subStructureModifications.add(modification);
 					}
 				}
 			}
@@ -157,7 +157,7 @@ public class InfixExpr extends Expr {
 				String left = _lhs.toSrcString().toString();
 				for(Modification modification : tmp){
 					if(!left.equals(modification.getTargetString())){
-						subStructureModifications.addAll(tmp);
+						subStructureModifications.add(modification);
 					}
 				}
 			}
