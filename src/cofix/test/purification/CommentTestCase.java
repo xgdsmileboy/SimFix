@@ -7,10 +7,16 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.eclipse.jdt.core.dom.AST;
+import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ASTVisitor;
 import org.eclipse.jdt.core.dom.Block;
 import org.eclipse.jdt.core.dom.CompilationUnit;
+import org.eclipse.jdt.core.dom.MarkerAnnotation;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
+import org.eclipse.jdt.core.dom.Name;
+import org.eclipse.jdt.core.dom.NormalAnnotation;
+import org.eclipse.jdt.core.dom.SingleMemberAnnotation;
 
 import cofix.common.util.JavaFile;
 
@@ -60,6 +66,21 @@ public class CommentTestCase {
 			if(_testsToBeCommented.contains(name)){
 				Block emptyBody = node.getAST().newBlock();
 				node.setBody(emptyBody);
+				for(int i = 0; i < node.modifiers().size(); i++){
+					if(node.modifiers().get(i) instanceof NormalAnnotation){
+						NormalAnnotation normalAnnotation = (NormalAnnotation) node.modifiers().get(i);
+						AST ast = node.getAST();
+						MarkerAnnotation annotation = ast.newMarkerAnnotation();
+						annotation.setTypeName((Name) ASTNode.copySubtree(ast, normalAnnotation.getTypeName()));
+						node.modifiers().set(i, annotation);
+					} else if(node.modifiers().get(i) instanceof SingleMemberAnnotation){
+						SingleMemberAnnotation singleMemberAnnotation = (SingleMemberAnnotation) node.modifiers().get(i);
+						AST ast = node.getAST();
+						MarkerAnnotation annotation = ast.newMarkerAnnotation();
+						annotation.setTypeName((Name) ASTNode.copySubtree(ast, singleMemberAnnotation.getTypeName()));
+						node.modifiers().set(i, annotation);
+					}
+				}
 			}
 			return true;
 		}

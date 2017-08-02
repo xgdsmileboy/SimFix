@@ -100,9 +100,9 @@ public class CodeBlockMatcher {
 		// match variables first
 		Map<String, String> varTrans = matchVariables(buggyBlock, similarBlock);
 		
-		for(Entry<String, String> entry : varTrans.entrySet()){
-			System.out.println(entry.getKey() + " : " + entry.getValue());
-		}
+//		for(Entry<String, String> entry : varTrans.entrySet()){
+//			System.out.println(entry.getKey() + " : " + entry.getValue());
+//		}
 		
 		
 		List<Node> bNodes = buggyBlock.getParsedNode();
@@ -197,8 +197,7 @@ public class CodeBlockMatcher {
 				if (u.getRevisionTypeID() == modification.getRevisionTypeID()
 						&& u.getSourceID() == modification.getSourceID()
 						&& u.getTargetString().equals(modification.getTargetString())
-						&& u.getSrcNode().toSrcString().toString()
-								.equals(modification.getSrcNode().toSrcString().toString())) {
+						&& u.getSrcNode() == modification.getSrcNode()) {
 					exist = true;
 					break;
 				}

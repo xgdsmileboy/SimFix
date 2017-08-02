@@ -19,6 +19,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
+import org.eclipse.jdt.core.dom.SingleMemberAnnotation;
 
 import cofix.common.config.Configure;
 import cofix.common.config.Constant;
@@ -89,22 +90,36 @@ public class Main {
 		
 		subject.backup(subject.getHome() + subject.getSsrc());
 		subject.backup(subject.getHome() + subject.getTsrc());
+		FileUtils.deleteDirectory(new File(subject.getHome() + subject.getTbin()));
+		FileUtils.deleteDirectory(new File(subject.getHome() + subject.getSbin()));
 		Purification purification = new Purification(subject);
 		List<String> purifiedFailedTestCases = purification.purify();
 		File purifiedTest = new File(subject.getHome() + subject.getTsrc());
 		File purifyBackup = new File(subject.getHome() + subject.getTsrc() + "_purify");
 		FileUtils.copyDirectory(purifiedTest, purifyBackup);
-		int currentTry = 0;
-		for(String teString : purifiedFailedTestCases){
-			currentTry ++;
+		Set<String> alreadyFix = new HashSet<>();
+		boolean lastRslt = false;
+		for(int currentTry = 0; currentTry < purifiedFailedTestCases.size(); currentTry ++){
+			String teString = purifiedFailedTestCases.get(currentTry);
 			JavaFile.writeStringToFile(logFile, "Current failed test : " + teString + " | " + simpleFormat.format(new Date()) + "\n", true);
 			FileUtils.copyDirectory(purifyBackup, purifiedTest);
 			FileUtils.deleteDirectory(new File(subject.getHome() + subject.getTbin()));
-			if(Runner.testSingleTest(subject, teString)){
+			if(lastRslt){
+				for(int i = currentTry; i < purifiedFailedTestCases.size(); i++){
+					if(Runner.testSingleTest(subject, purifiedFailedTestCases.get(i))){
+						alreadyFix.add(purifiedFailedTestCases.get(i));
+					}
+				}
+			}
+			lastRslt = false;
+			if(alreadyFix.contains(teString)){
+				JavaFile.writeStringToFile(logFile, "Already fixed : " + teString + "\n", true);
 				continue;
 			}
 			// can only find one patch now, should be optimized after fixing one test
 			subject.restore(subject.getHome() + subject.getSsrc());
+			FileUtils.deleteDirectory(new File(subject.getHome() + subject.getSbin()));
+			FileUtils.deleteDirectory(new File(subject.getHome() + subject.getTbin()));
 			CommentTestCase.comment(subject.getHome() + subject.getTsrc(), purifiedFailedTestCases, teString);
 			SBFLocator sbfLocator = new SBFLocator(subject);
 			List<String> currentFailedTests = new ArrayList<>();
@@ -121,6 +136,7 @@ public class Main {
 				JavaFile.writeStringToFile(logFile, "Timeout time : " + simpleFormat.format(new Date()) + "\n", true);
 				break;
 			case SUCCESS:
+				lastRslt = true;
 				System.out.println(status);
 				JavaFile.writeStringToFile(logFile, "Success time : " + simpleFormat.format(new Date()) + "\n", true);
 				break;
@@ -154,7 +170,16 @@ public class Main {
 				projName = args[i].substring("--proj_name=".length());
 			} else if(args[i].startsWith("--bug_id=")){
 				String idseq = args[i].substring("--bug_id=".length());
-				if(idseq.equalsIgnoreCase("all")){
+				if(idseq.equalsIgnoreCase("single")){
+					idSet.addAll(projInfo.get(projName).getSecond());
+				} else if(idseq.equalsIgnoreCase("multi")){
+					for(int id = 1; id <= projInfo.get(projName).getFirst(); id++){
+						if(projInfo.get(projName).getSecond().contains(id)){
+							continue;
+						}
+						idSet.add(id);
+					}
+				} else if(idseq.equalsIgnoreCase("all")){
 					for(int id = 1; id <= projInfo.get(projName).getFirst(); id++){
 						idSet.add(id);
 					}
@@ -165,8 +190,11 @@ public class Main {
 						idSet.add(id);
 					}
 				} else {
-					int id = Integer.parseInt(idseq);
-					idSet.add(id);
+					String[] split = idseq.split(",");
+					for(String string : split){
+						int id = Integer.parseInt(string);
+						idSet.add(id);
+					}
 				}
 			}
 		}
@@ -187,7 +215,7 @@ public class Main {
 	
 	private static void printUsage(){
 		// --proj_home=/home/jiajun/d4j/projects --proj_name=chart --bug_id=3-5/all/1
-		System.err.println("Usage : --proj_home=\"project home\" --proj_name=\"project name\" --bug_id=\"3-5/all/1\"");
+		System.err.println("Usage : --proj_home=\"project home\" --proj_name=\"project name\" --bug_id=\"3-5/all/1/1,2,5/single/multi\"");
 	}
 	
 	private static void flexibelConfigure(String projName, Set<Integer> ids, Map<String, Pair<Integer, Set<Integer>>> projInfo) throws IOException{
