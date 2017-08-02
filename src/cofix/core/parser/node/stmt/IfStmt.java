@@ -183,17 +183,26 @@ public class IfStmt extends Stmt {
 			stringBuffer.append(_condition.toSrcString());
 		}
 		stringBuffer.append(")");
+		String then = null;
 		if(_then_replace != null){
-			stringBuffer.append(_then_replace.toSrcString());
+			then = _then_replace.toSrcString().toString();
 		} else {
-			stringBuffer.append(_then.toSrcString());
+			then = _then.toSrcString().toString();
 		}
+		String els = null;
 		if(_else_replace != null){
-			stringBuffer.append("else ");
-			stringBuffer.append(_else_replace.toSrcString());
+			els = _else_replace.toSrcString().toString();
 		} else if(_else != null){
+			els = _else.toSrcString().toString();
+		}
+		stringBuffer.append(then);
+		if(els != null){
 			stringBuffer.append("else ");
-			stringBuffer.append(_else.toSrcString());
+			if(els.equals(then)){
+				stringBuffer.append("error");
+			} else {
+				stringBuffer.append(els);
+			}
 		}
 		return stringBuffer;
 	}

@@ -14,6 +14,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.eclipse.jdt.core.dom.Type;
+import org.eclipse.jdt.core.util.ISignatureAttribute;
 
 import com.gzoltar.core.components.Method;
 import com.sun.org.apache.xalan.internal.xsltc.compiler.NodeTest;
@@ -36,8 +37,11 @@ import cofix.core.parser.node.Node.TYPE;
 import cofix.core.parser.node.expr.SName;
 import cofix.core.parser.node.stmt.BreakStmt;
 import cofix.core.parser.node.stmt.ContinueStmt;
+import cofix.core.parser.node.stmt.DoStmt;
+import cofix.core.parser.node.stmt.ForStmt;
 import cofix.core.parser.node.stmt.ReturnStmt;
 import cofix.core.parser.node.stmt.ThrowStmt;
+import cofix.core.parser.node.stmt.WhileStmt;
 import cofix.core.parser.search.BuggyCode;
 import sun.security.provider.MD2;
 import sun.security.x509.UniqueIdentity;
@@ -96,9 +100,9 @@ public class CodeBlockMatcher {
 		// match variables first
 		Map<String, String> varTrans = matchVariables(buggyBlock, similarBlock);
 		
-		for(Entry<String, String> entry : varTrans.entrySet()){
-			System.out.println(entry.getKey() + " : " + entry.getValue());
-		}
+//		for(Entry<String, String> entry : varTrans.entrySet()){
+//			System.out.println(entry.getKey() + " : " + entry.getValue());
+//		}
 		
 		
 		List<Node> bNodes = buggyBlock.getParsedNode();
@@ -128,7 +132,9 @@ public class CodeBlockMatcher {
 			for(int j = 0; j < sNodes.size(); j++){
 				if(!reverseMatch.containsKey(j)){
 					Node tarNode = sNodes.get(j);
-					if(tarNode instanceof ReturnStmt || tarNode instanceof ThrowStmt || tarNode instanceof BreakStmt || tarNode instanceof ContinueStmt){
+					if (tarNode instanceof ReturnStmt || tarNode instanceof ThrowStmt || tarNode instanceof BreakStmt
+							|| tarNode instanceof ContinueStmt || tarNode instanceof WhileStmt
+							|| tarNode instanceof ForStmt || tarNode instanceof DoStmt) {
 						continue;
 					}
 					Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(tarNode, varTrans, allUsableVariables);
@@ -191,8 +197,7 @@ public class CodeBlockMatcher {
 				if (u.getRevisionTypeID() == modification.getRevisionTypeID()
 						&& u.getSourceID() == modification.getSourceID()
 						&& u.getTargetString().equals(modification.getTargetString())
-						&& u.getSrcNode().toSrcString().toString()
-								.equals(modification.getSrcNode().toSrcString().toString())) {
+						&& u.getSrcNode() == modification.getSrcNode()) {
 					exist = true;
 					break;
 				}

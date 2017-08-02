@@ -109,7 +109,7 @@ public class SimpleFilter {
 		int delta = Constant.MAX_BLOCK_LINE - _buggyCode.getCurrentLine();
 		delta = delta > 0 ? delta : 0;
 		guard = guard + ((0.7 - guard) * delta / Constant.MAX_BLOCK_LINE ); // 0.9
-		System.out.println("Real guard value : " + guard);
+//		System.out.println("Real guard value : " + guard);
 		Set<String> codeRec = new HashSet<>();
 		for(CodeBlock block : _candidates){
 			if(_otherStruct.size() + _condStruct.size() > 0){
@@ -120,7 +120,7 @@ public class SimpleFilter {
 			Double similarity = CodeBlockMatcher.getSimilarity(_buggyCode, block);
 //			System.out.println(block.toSrcString().toString());
 			if(similarity < guard){
-				System.out.println("Filtered by similiraty value : " + similarity);
+//				System.out.println("Filtered by similiraty value : " + similarity);
 				continue;
 			}
 //			similarity += CodeBlockMatcher.getRewardSimilarity(_buggyCode, block);

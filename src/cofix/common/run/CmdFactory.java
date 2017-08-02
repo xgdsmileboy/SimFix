@@ -41,6 +41,10 @@ public class CmdFactory {
 		return createD4JCmd(subject, "test", timeout);
 	}
 	
+	public static String[] createTestSingleTestCaseCmd(Subject subject, int timeout, String clazzAndMethod){
+		return createD4JCmd(subject, "test -t " + clazzAndMethod, timeout);
+	}
+	
 	public static String[] createTestSingleTestCaseCmd(Subject subject, int timeout, String clazz, String method){
 		return createD4JCmd(subject, "test -t " + clazz + "::" + method, timeout);
 	}
