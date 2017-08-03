@@ -225,11 +225,11 @@ public class Main {
 		
 		for(Integer id : ids){
 			Subject subject = Configure.getSubject(projName, id);
-			if(bugIDs.getSecond().contains(id)){
-				trySingleFix(subject);
-			} else {
+//			if(bugIDs.getSecond().contains(id)){
+//				trySingleFix(subject);
+//			} else {
 				trySplitFix(subject);
-			}
+//			}
 		}
 	}
 	
