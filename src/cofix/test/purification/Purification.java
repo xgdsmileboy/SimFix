@@ -72,6 +72,9 @@ public class Purification {
 			CompilationUnit unit = JavaFile.genASTFromFile(testFile);
 			FindMethod findMethod = new FindMethod();
 			List<String> newTests = findMethod.getMethod(unit, failedTestClazz, failedTestCase);
+			if(newTests.size() == 0){
+				newTests.add(test);
+			}
 			purifiedMap.put(test, newTests);
 			JavaFile.writeStringToFile(testFile, unit.toString());
 		}
