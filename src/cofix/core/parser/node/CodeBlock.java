@@ -286,9 +286,7 @@ public class CodeBlock extends Node{
 				ASTNode node = _nodes.get(0);
 				while(node != null){
 					if(node instanceof MethodDeclaration){
-						if(node.getParent() instanceof AnonymousClassDeclaration){
-							continue;
-						} else {
+						if(!(node.getParent() instanceof AnonymousClassDeclaration)){
 							String methodString = NodeUtils.buildMethodInfoString((MethodDeclaration) node);
 							_buggyMethod = Identifier.getIdentifier(methodString);
 							break;
