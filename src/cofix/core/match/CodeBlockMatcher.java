@@ -39,8 +39,10 @@ import cofix.core.parser.node.stmt.BreakStmt;
 import cofix.core.parser.node.stmt.ContinueStmt;
 import cofix.core.parser.node.stmt.DoStmt;
 import cofix.core.parser.node.stmt.ForStmt;
+import cofix.core.parser.node.stmt.IfStmt;
 import cofix.core.parser.node.stmt.ReturnStmt;
 import cofix.core.parser.node.stmt.ThrowStmt;
+import cofix.core.parser.node.stmt.VarDeclarationStmt;
 import cofix.core.parser.node.stmt.WhileStmt;
 import cofix.core.parser.search.BuggyCode;
 import sun.security.provider.MD2;
@@ -134,7 +136,7 @@ public class CodeBlockMatcher {
 					Node tarNode = sNodes.get(j);
 					if (tarNode instanceof ReturnStmt || tarNode instanceof ThrowStmt || tarNode instanceof BreakStmt
 							|| tarNode instanceof ContinueStmt || tarNode instanceof WhileStmt
-							|| tarNode instanceof ForStmt || tarNode instanceof DoStmt) {
+							|| tarNode instanceof ForStmt || tarNode instanceof DoStmt || tarNode instanceof VarDeclarationStmt) {
 						continue;
 					}
 					Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(tarNode, varTrans, allUsableVariables);
@@ -212,17 +214,21 @@ public class CodeBlockMatcher {
 		List<Modification> revisions = new LinkedList<>();
 		List<Modification> insertions = new LinkedList<>();
 		List<Modification> deletions = new LinkedList<>();
+		List<Modification> finalModifications = new ArrayList<>(modifications.size());
 		for(Modification modification : modifications){
 			if(modification instanceof Revision){
 				revisions.add(modification);
 			} else if(modification instanceof Insertion){
-				insertions.add(modification);
+//				if(modification.getTargetString().startsWith("if(")){
+//					finalModifications.add(modification);
+//				} else {
+					insertions.add(modification);
+//				}
 			} else {
 				deletions.add(modification);
 			}
 		}
 		
-		List<Modification> finalModifications = new ArrayList<>(modifications.size());
 		finalModifications.addAll(revisions);
 		finalModifications.addAll(insertions);
 		finalModifications.addAll(deletions);
@@ -306,7 +312,7 @@ public class CodeBlockMatcher {
 			}
 		}
 		
-		Map<String, String> varMap = tryMatch(similarityTable, reverseSimNameMap, reverseBuggyNameMap);; 
+		Map<String, String> varMap = tryMatch(similarityTable, reverseSimNameMap, reverseBuggyNameMap);
 		return varMap;
 	}
 	private static Map<String, String> tryMatch(double[][] similarityTable, Map<Integer, String> reverseSimNameMap, Map<Integer, String> reverseBuggyNameMap){

@@ -67,6 +67,7 @@ import cofix.core.parser.node.stmt.DoStmt;
 import cofix.core.parser.node.stmt.ForStmt;
 import cofix.core.parser.node.stmt.ReturnStmt;
 import cofix.core.parser.node.stmt.ThrowStmt;
+import cofix.core.parser.node.stmt.VarDeclarationStmt;
 import cofix.core.parser.node.stmt.WhileStmt;
 
 /**
@@ -546,7 +547,7 @@ public class NodeUtils {
 								continue;
 							}
 						}
-						if(insert instanceof WhileStmt || insert instanceof ForStmt || insert instanceof DoStmt){
+						if(insert instanceof WhileStmt || insert instanceof ForStmt || insert instanceof DoStmt || insert instanceof VarDeclarationStmt){
 							continue;
 						}
 						int last = index;
@@ -631,7 +632,7 @@ public class NodeUtils {
 							}
 						}
 						boolean canUse = false;
-						if(expr != null && !isDependencyExpr){
+						if(expr != null && !(expr instanceof NumLiteral) && !isDependencyExpr){
 							sName.setDirectDependency(null);
 							Map<SName, Pair<String, String>> tryReplace = tryReplaceAllVariables(expr, varTrans, allUsableVariables);
 							sName.setDirectDependency(expr);
