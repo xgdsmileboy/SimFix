@@ -7,6 +7,7 @@
 package cofix.core.parser.node.expr;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -208,7 +209,10 @@ public class ArrayAcc extends Expr {
 
 	@Override
 	public String simplify(Map<String, String> varTrans, Map<String, Type> allUsableVariables) {
-		Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(this, varTrans, allUsableVariables);
+		Map<SName, Pair<String, String>> record = new HashMap<>();
+		if(!allUsableVariables.containsKey(_array) && allUsableVariables.containsKey(_index)){
+			record = NodeUtils.tryReplaceAllVariables(this, varTrans, allUsableVariables);
+		}
 		if(record == null){
 			return null;
 		}
