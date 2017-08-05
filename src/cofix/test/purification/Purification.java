@@ -58,6 +58,10 @@ public class Purification {
 		readFailedTests(_failedTestsPath + "/" + subject.getName() + "/" + subject.getId() + ".txt");
 	}
 	
+	public List<String> getFailedTest(){
+		return _failedTests;
+	}
+	
 	public List<String> purify(){
 		Map<String, List<String>> purifiedMap = new HashMap<>();
 		for(String test : _failedTests){

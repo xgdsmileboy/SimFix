@@ -18,6 +18,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.regex.Pattern;
 
 import org.apache.commons.io.FileUtils;
 import org.eclipse.jdt.core.dom.ASTNode;
@@ -160,7 +161,7 @@ public class Repair {
 
 	public Status fix(Timer timer, String logFile, int currentTry) throws IOException{
 		String src = _subject.getHome() + _subject.getSsrc();
-		List<Pair<String, Integer>> locations = _localization.getLocations(100);
+		List<Pair<String, Integer>> locations = _localization.getLocations(200);
 		int correct = 0;
 		Set<String> haveTryBuggySourceCode = new HashSet<>();
 		Status status = Status.FAILED;
@@ -191,6 +192,9 @@ public class Repair {
 			
 			for(CodeBlock oneBuggyBlock : buggyBlockList){
 				String currentBlockString = oneBuggyBlock.toSrcString().toString();
+				if(currentBlockString == null || currentBlockString.length() <= 0){
+					continue;
+				}
 				if(haveTryBuggySourceCode.contains(currentBlockString)){
 					continue;
 				}
@@ -227,6 +231,7 @@ public class Repair {
 					// try each transformation first
 					List<Set<Integer>> list = new ArrayList<>();
 					list.addAll(consistantModification(modifications));
+					modifications = removeDuplicateModifications(modifications);
 					for(int index = 0; index < modifications.size(); index++){
 						Modification modification = modifications.get(index);
 						String modify = modification.toString();
@@ -353,9 +358,32 @@ public class Repair {
 		JavaFile.writeStringToFile(logFile, stringBuffer.toString(), true);
 	}
 	
+	private List<Modification> removeDuplicateModifications(List<Modification> modifications){
+		//remove duplicate modifications
+		List<Modification> unique = new LinkedList<>();
+		for (Modification modification : modifications) {
+			boolean exist = false;
+			for (Modification u : unique) {
+				if (u.getRevisionTypeID() == modification.getRevisionTypeID()
+						&& u.getSourceID() == modification.getSourceID()
+						&& u.getTargetString().equals(modification.getTargetString())
+						&& u.getSrcNode().toSrcString().toString().equals(modification.getSrcNode())) {
+					exist = true;
+					break;
+				}
+			}
+			if(!exist){
+				unique.add(modification);
+			}
+		}
+		return unique;
+	}
+	
 	
 	private List<Set<Integer>> consistantModification(List<Modification> modifications){
 		List<Set<Integer>> result = new LinkedList<>();
+		String regex = "[A-Za-z_][0-9A-Za-z_.]*";
+		Pattern pattern = Pattern.compile(regex);
 		for(int i = 0; i < modifications.size(); i++){
 			Modification modification = modifications.get(i);
 			if(modification instanceof Revision){
@@ -366,7 +394,7 @@ public class Repair {
 					if(other instanceof Revision){
 						if(modification.compatible(other) && modification.getTargetString().equals(other.getTargetString())){
 							ASTNode node = JavaFile.genASTFromSource(modification.getTargetString(), ASTParser.K_EXPRESSION);
-							if(node instanceof Name || node instanceof FieldAccess){
+							if(node instanceof Name || node instanceof FieldAccess || pattern.matcher(modification.getTargetString()).matches()){
 								consistant.add(j);
 							}
 						}

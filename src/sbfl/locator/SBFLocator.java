@@ -127,7 +127,7 @@ public class SBFLocator extends AbstractFaultlocalization {
 			}
 		});
 		
-		File realtimeLocFile = new File(Constant.PROJ_REALTIME_LOC_BASE + "/" + _subject.getName() + "/" + _subject.getId() + "txt");
+		File realtimeLocFile = new File(Constant.PROJ_REALTIME_LOC_BASE + "/" + _subject.getName() + "/" + _subject.getId() + ".txt");
 		if(!realtimeLocFile.exists()){
 			realtimeLocFile.getParentFile().mkdirs();
 			realtimeLocFile.createNewFile();

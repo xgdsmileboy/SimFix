@@ -1599,7 +1599,7 @@ public class CodeBlock extends Node{
 				list.add(codeBlock);
 			}
 		}
-		if(_parsedNodes.size() == 1 && list.size() > 0){
+		if((_parsedNodes.size() == 1 && list.size() > 0) || (_parsedNodes.size() <= 3 && list.size()==1)){
 			list.remove(list.size() - 1);
 		}
 		return list;

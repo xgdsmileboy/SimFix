@@ -77,7 +77,7 @@ public class Main {
 		subject.restore();
 	}
 	
-	private static void trySplitFix(Subject subject) throws IOException{
+	private static void trySplitFix(Subject subject, boolean purify) throws IOException{
 		
 		String logFile = Constant.PROJ_LOG_BASE_PATH + "/" + subject.getName() + "/" + subject.getId() + ".log";
 		StringBuffer stringBuffer = new StringBuffer();
@@ -88,12 +88,19 @@ public class Main {
 		System.out.println(stringBuffer.toString());
 		JavaFile.writeStringToFile(logFile, stringBuffer.toString(), true);
 		
+		ProjectInfo.init(subject);
 		subject.backup(subject.getHome() + subject.getSsrc());
 		subject.backup(subject.getHome() + subject.getTsrc());
 		FileUtils.deleteDirectory(new File(subject.getHome() + subject.getTbin()));
 		FileUtils.deleteDirectory(new File(subject.getHome() + subject.getSbin()));
 		Purification purification = new Purification(subject);
-		List<String> purifiedFailedTestCases = purification.purify();
+		List<String> purifiedFailedTestCases = null;
+		if(purify){
+			purifiedFailedTestCases = purification.purify();
+		}
+		if(purifiedFailedTestCases == null || purifiedFailedTestCases.size() == 0){
+			purifiedFailedTestCases = purification.getFailedTest();
+		}
 		File purifiedTest = new File(subject.getHome() + subject.getTsrc());
 		File purifyBackup = new File(subject.getHome() + subject.getTsrc() + "_purify");
 		FileUtils.copyDirectory(purifiedTest, purifyBackup);
@@ -225,11 +232,8 @@ public class Main {
 		
 		for(Integer id : ids){
 			Subject subject = Configure.getSubject(projName, id);
-//			if(bugIDs.getSecond().contains(id)){
-//				trySingleFix(subject);
-//			} else {
-				trySplitFix(subject);
-//			}
+//			trySplitFix(subject, !bugIDs.getSecond().contains(id));
+			trySingleFix(subject);
 		}
 	}
 	
@@ -244,7 +248,7 @@ public class Main {
 				if(bugIDs.getSecond().contains(id)){
 					trySingleFix(subject);
 				} else {
-					trySplitFix(subject);
+					trySplitFix(subject, true);
 				}
 			}
 		}
@@ -265,7 +269,7 @@ public class Main {
 			if(bugIDs.getSecond().contains(id)){
 				trySingleFix(subject);
 			} else {
-				trySplitFix(subject);
+				trySplitFix(subject, true);
 			}
 		}
 	}

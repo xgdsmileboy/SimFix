@@ -91,7 +91,7 @@ public class MethodInv extends Expr {
 							break;
 						}
 					}
-					if(compatible && !_name.equals(other._name)){
+					if(compatible && !_name.equals(other._name) && _arguments.size() > 0){
 						Revision revision = new Revision(this, NAMEID, other._name, _nodeType);
 						modifications.add(revision);
 					}

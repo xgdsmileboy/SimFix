@@ -189,24 +189,24 @@ public class CodeBlockMatcher {
 //			}
 //		}
 		
-		//remove duplicate modifications
-		List<Modification> unique = new LinkedList<>();
-		for (Modification modification : modifications) {
-			boolean exist = false;
-			for (Modification u : unique) {
-				if (u.getRevisionTypeID() == modification.getRevisionTypeID()
-						&& u.getSourceID() == modification.getSourceID()
-						&& u.getTargetString().equals(modification.getTargetString())
-						&& u.getSrcNode() == modification.getSrcNode()) {
-					exist = true;
-					break;
-				}
-			}
-			if(!exist){
-				unique.add(modification);
-			}
-		}
-		modifications = unique;
+//		//remove duplicate modifications
+//		List<Modification> unique = new LinkedList<>();
+//		for (Modification modification : modifications) {
+//			boolean exist = false;
+//			for (Modification u : unique) {
+//				if (u.getRevisionTypeID() == modification.getRevisionTypeID()
+//						&& u.getSourceID() == modification.getSourceID()
+//						&& u.getTargetString().equals(modification.getTargetString())
+//						&& u.getSrcNode() == modification.getSrcNode()) {
+//					exist = true;
+//					break;
+//				}
+//			}
+//			if(!exist){
+//				unique.add(modification);
+//			}
+//		}
+//		modifications = unique;
 		
 		// revision first
 		List<Modification> revisions = new LinkedList<>();
