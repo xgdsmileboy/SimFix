@@ -19,11 +19,11 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
-import org.eclipse.jdt.core.dom.SingleMemberAnnotation;
 
 import cofix.common.config.Configure;
 import cofix.common.config.Constant;
 import cofix.common.localization.AbstractFaultlocalization;
+import cofix.common.localization.MFLocalization;
 import cofix.common.localization.OchiaiResult;
 import cofix.common.run.Runner;
 import cofix.common.util.JavaFile;
@@ -33,7 +33,6 @@ import cofix.common.util.Subject;
 import cofix.core.parser.ProjectInfo;
 import cofix.test.purification.CommentTestCase;
 import cofix.test.purification.Purification;
-import sbfl.locator.SBFLocator;
 
 /**
  * @author Jiajun
@@ -128,7 +127,8 @@ public class Main {
 			FileUtils.deleteDirectory(new File(subject.getHome() + subject.getSbin()));
 			FileUtils.deleteDirectory(new File(subject.getHome() + subject.getTbin()));
 			CommentTestCase.comment(subject.getHome() + subject.getTsrc(), purifiedFailedTestCases, teString);
-			SBFLocator sbfLocator = new SBFLocator(subject);
+//			SBFLocator sbfLocator = new SBFLocator(subject);
+			MFLocalization sbfLocator = new MFLocalization(subject);
 			List<String> currentFailedTests = new ArrayList<>();
 			currentFailedTests.add(teString);
 			sbfLocator.setFailedTest(currentFailedTests);
@@ -232,8 +232,8 @@ public class Main {
 		
 		for(Integer id : ids){
 			Subject subject = Configure.getSubject(projName, id);
-//			trySplitFix(subject, !bugIDs.getSecond().contains(id));
-			trySingleFix(subject);
+			trySplitFix(subject, !bugIDs.getSecond().contains(id));
+//			trySingleFix(subject);
 		}
 	}
 	
