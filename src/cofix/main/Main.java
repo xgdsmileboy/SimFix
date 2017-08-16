@@ -134,7 +134,7 @@ public class Main {
 			sbfLocator.setFailedTest(currentFailedTests);
 			
 			Repair repair = new Repair(subject, sbfLocator);
-			Timer timer = new Timer(5, 0);
+			Timer timer = new Timer(0, 600 / purifiedFailedTestCases.size());
 			timer.start();
 			Status status = repair.fix(timer, logFile, currentTry);
 			switch (status) {
