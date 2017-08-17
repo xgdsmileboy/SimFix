@@ -305,6 +305,9 @@ public class Repair {
 								}
 								patches.add(correctPatch);
 								correct ++;
+								// for debug
+								dumpPatch(logFile, "Similar code block : " + similar.getSecond(), file, new Pair<Integer, Integer>(0, 0), similar.getFirst().toSrcString().toString());
+								dumpPatch(logFile, "Original source code", file, range, currentBlockString); 
 								dumpPatch(logFile, "Find a patch", file, range, oneBuggyBlock.toSrcString().toString());
 								String target = Constant.HOME + "/patch/" + _subject.getName() + "/" + _subject.getId() + "/" + currentTry;
 								File tarFile = new File(target);
