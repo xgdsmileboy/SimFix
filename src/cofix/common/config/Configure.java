@@ -8,9 +8,12 @@ package cofix.common.config;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -47,6 +50,37 @@ public class Configure {
 			System.exit(0);
 		}
 		Constant.COMMAND_D4J = d4jhome + "/framework/bin/defects4j "; 
+	}
+	
+	public static List<String> getFailedTests(Subject subject){
+		String path = Constant.HOME + "/d4j-info/failed_tests/" + subject.getName() + "/" + subject.getId() + ".txt"; 
+		File file = new File(path);
+		if(!file.exists()){
+			System.err.println("Failed test file does not exist : " + path);
+			System.exit(0);
+		}
+		List<String> failedTest = new ArrayList<>();
+		BufferedReader bufferedReader = null;
+		try {
+			bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		String line = null;
+		try {
+			while((line = bufferedReader.readLine()) != null){
+				if(line.length() > 0){
+					failedTest.add(line);
+				}
+			}
+			bufferedReader.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return failedTest;
 	}
 	
 	public static Map<String, Pair<Integer, Set<Integer>>> getProjectInfoFromJSon() {
