@@ -19,7 +19,6 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
-import org.eclipse.jdt.core.dom.SingleMemberAnnotation;
 
 import cofix.common.config.Configure;
 import cofix.common.config.Constant;
@@ -129,12 +128,13 @@ public class Main {
 			FileUtils.deleteDirectory(new File(subject.getHome() + subject.getTbin()));
 			CommentTestCase.comment(subject.getHome() + subject.getTsrc(), purifiedFailedTestCases, teString);
 			SBFLocator sbfLocator = new SBFLocator(subject);
+//			MFLocalization sbfLocator = new MFLocalization(subject);
 			List<String> currentFailedTests = new ArrayList<>();
 			currentFailedTests.add(teString);
 			sbfLocator.setFailedTest(currentFailedTests);
 			
 			Repair repair = new Repair(subject, sbfLocator);
-			Timer timer = new Timer(5, 0);
+			Timer timer = new Timer(0, 600 / purifiedFailedTestCases.size());
 			timer.start();
 			Status status = repair.fix(timer, logFile, currentTry);
 			switch (status) {
@@ -232,8 +232,8 @@ public class Main {
 		
 		for(Integer id : ids){
 			Subject subject = Configure.getSubject(projName, id);
-//			trySplitFix(subject, !bugIDs.getSecond().contains(id));
-			trySingleFix(subject);
+			trySplitFix(subject, !bugIDs.getSecond().contains(id));
+//			trySingleFix(subject);
 		}
 	}
 	

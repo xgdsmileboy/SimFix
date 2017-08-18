@@ -141,7 +141,12 @@ public class OchiaiResult extends AbstractFaultlocalization {
 					}
 					String[] linesInfo = info[1].split(",");
 					Integer lineNumber = Integer.parseInt(linesInfo[0]);
-					locations.add(new Pair<String, Integer>(info[0], lineNumber));
+					String stmt = info[0];
+					int index = stmt.indexOf("$");
+					if(index > 0){
+						stmt = stmt.substring(0, index);
+					}
+					locations.add(new Pair<String, Integer>(stmt, lineNumber));
 					count ++;
 					if(count == topK){
 						break;

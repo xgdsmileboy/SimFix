@@ -39,7 +39,7 @@ public class Constant {
 	// command configuration
 	public final static String COMMAND_CD = "cd ";
 	public final static int COMPILE_TIMEOUT = 120;
-	public final static int SBFL_TIMEOUT = 600;
+	public final static int SBFL_TIMEOUT = 3600;
 	
 	public final static String LOCATOR_HOME = HOME + "/sbfl";
 	public final static String COMMAND_LOCATOR = LOCATOR_HOME + "/sbfl.sh ";
