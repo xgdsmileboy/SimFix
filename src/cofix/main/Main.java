@@ -93,10 +93,7 @@ public class Main {
 		FileUtils.deleteDirectory(new File(subject.getHome() + subject.getTbin()));
 		FileUtils.deleteDirectory(new File(subject.getHome() + subject.getSbin()));
 		Purification purification = new Purification(subject);
-		List<String> purifiedFailedTestCases = null;
-		if(purify){
-			purifiedFailedTestCases = purification.purify();
-		}
+		List<String> purifiedFailedTestCases = purification.purify(purify);
 		if(purifiedFailedTestCases == null || purifiedFailedTestCases.size() == 0){
 			purifiedFailedTestCases = purification.getFailedTest();
 		}
@@ -126,17 +123,17 @@ public class Main {
 			subject.restore(subject.getHome() + subject.getSsrc());
 			FileUtils.deleteDirectory(new File(subject.getHome() + subject.getSbin()));
 			FileUtils.deleteDirectory(new File(subject.getHome() + subject.getTbin()));
-			CommentTestCase.comment(subject.getHome() + subject.getTsrc(), purifiedFailedTestCases, teString);
-			SBFLocator sbfLocator = new SBFLocator(subject);
-//			MFLocalization sbfLocator = new MFLocalization(subject);
 			List<String> currentFailedTests = new ArrayList<>();
 			int timeout = 300;
 			if(purify){
 				timeout /= purifiedFailedTestCases.size();
 				currentFailedTests.add(teString);
+				CommentTestCase.comment(subject.getHome() + subject.getTsrc(), purifiedFailedTestCases, teString);
 			} else {
 				currentFailedTests.addAll(purifiedFailedTestCases);
 			}
+			SBFLocator sbfLocator = new SBFLocator(subject);
+//			MFLocalization sbfLocator = new MFLocalization(subject);
 			sbfLocator.setFailedTest(currentFailedTests);
 			
 			Repair repair = new Repair(subject, sbfLocator);
@@ -235,14 +232,10 @@ public class Main {
 	}
 	
 	private static void flexibelConfigure(String projName, Set<Integer> ids, Map<String, Pair<Integer, Set<Integer>>> projInfo) throws IOException{
-		Map<String, Set<Integer>> subjects = getSubject();
-		
 		Pair<Integer, Set<Integer>> bugIDs = projInfo.get(projName);
-		
 		for(Integer id : ids){
 			Subject subject = Configure.getSubject(projName, id);
 			trySplitFix(subject, !bugIDs.getSecond().contains(id));
-//			trySingleFix(subject);
 		}
 	}
 	

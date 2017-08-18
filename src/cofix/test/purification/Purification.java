@@ -62,7 +62,10 @@ public class Purification {
 		return _failedTests;
 	}
 	
-	public List<String> purify(){
+	public List<String> purify(boolean purify){
+		if(!purify){
+			return null;
+		}
 		Map<String, List<String>> purifiedMap = new HashMap<>();
 		for(String test : _failedTests){
 			String[] testInfo = test.split("::");

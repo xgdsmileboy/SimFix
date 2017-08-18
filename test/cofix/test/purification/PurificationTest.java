@@ -48,7 +48,7 @@ public class PurificationTest {
 			e.printStackTrace();
 		}
 		Purification purification = new Purification(subject);
-		List<String> purifiedFailedTestCases = purification.purify();
+		List<String> purifiedFailedTestCases = purification.purify(true);
 		for(String teString : purifiedFailedTestCases){
 			System.out.println(teString);
 		}

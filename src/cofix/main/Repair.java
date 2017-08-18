@@ -230,7 +230,7 @@ public class Repair {
 					Map<String, Set<Node>> already = new HashMap<>();
 					// try each transformation first
 					List<Set<Integer>> list = new ArrayList<>();
-					list.addAll(consistantModification(modifications));
+					list.addAll(consistentModification(modifications));
 					modifications = removeDuplicateModifications(modifications);
 					for(int index = 0; index < modifications.size(); index++){
 						Modification modification = modifications.get(index);
@@ -383,7 +383,7 @@ public class Repair {
 	}
 	
 	
-	private List<Set<Integer>> consistantModification(List<Modification> modifications){
+	private List<Set<Integer>> consistentModification(List<Modification> modifications){
 		List<Set<Integer>> result = new LinkedList<>();
 		String regex = "[A-Za-z_][0-9A-Za-z_.]*";
 		Pattern pattern = Pattern.compile(regex);
@@ -492,14 +492,6 @@ public class Repair {
 	}
 	
 	private ValidateStatus validate(String logFile, CodeBlock buggyBlock){
-//		// avoid compilation error
-//		File file = new File(_subject.getHome() + "/build/lib");
-//		if(file.exists()){
-//			try {
-//				FileUtils.deleteDirectory(new File(_subject.getHome() + "/build"));
-//			} catch (IOException e) {
-//			}
-//		}
 		if(!Runner.compileSubject(_subject)){
 //			System.err.println("Build failed !");
 			return ValidateStatus.COMPILE_FAILED;
