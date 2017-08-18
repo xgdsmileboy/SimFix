@@ -130,11 +130,17 @@ public class Main {
 			SBFLocator sbfLocator = new SBFLocator(subject);
 //			MFLocalization sbfLocator = new MFLocalization(subject);
 			List<String> currentFailedTests = new ArrayList<>();
-			currentFailedTests.add(teString);
+			int timeout = 300;
+			if(purify){
+				timeout /= purifiedFailedTestCases.size();
+				currentFailedTests.add(teString);
+			} else {
+				currentFailedTests.addAll(purifiedFailedTestCases);
+			}
 			sbfLocator.setFailedTest(currentFailedTests);
 			
 			Repair repair = new Repair(subject, sbfLocator);
-			Timer timer = new Timer(0, 600 / purifiedFailedTestCases.size());
+			Timer timer = new Timer(0, timeout);
 			timer.start();
 			Status status = repair.fix(timer, logFile, currentTry);
 			switch (status) {
@@ -151,6 +157,9 @@ public class Main {
 				System.out.println(status);
 				JavaFile.writeStringToFile(logFile, "Failed time : " + simpleFormat.format(new Date()) + "\n", true);
 			default:
+				break;
+			}
+			if(!purify){
 				break;
 			}
 		}
