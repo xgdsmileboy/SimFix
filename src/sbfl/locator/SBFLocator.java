@@ -16,6 +16,7 @@ import java.util.List;
 
 import cofix.common.config.Constant;
 import cofix.common.localization.AbstractFaultlocalization;
+import cofix.common.localization.OchiaiResult;
 import cofix.common.run.CmdFactory;
 import cofix.common.run.Executor;
 import cofix.common.util.Pair;
@@ -94,7 +95,9 @@ public class SBFLocator extends AbstractFaultlocalization {
 		File file = new File(fileName);
 		if(!file.exists()){
 			System.err.println("Cannot get suspicious statement for non-existing file : " + fileName);
-			return new ArrayList<>();
+			OchiaiResult ochiaiResult = new OchiaiResult(_subject);
+			return ochiaiResult.getLocations(500);
+//			return new ArrayList<>();
 		}
 		String line = null;
 		BufferedReader bReader = null;
