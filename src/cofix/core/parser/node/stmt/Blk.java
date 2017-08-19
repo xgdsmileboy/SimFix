@@ -82,17 +82,24 @@ public class Blk extends Stmt {
 							return true;
 						}
 					}
-					String source = thisNode.toSrcString().toString(); 
-					if(!source.equals(otherNode.toSrcString().toString())){
-						Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(otherNode, varTrans, allUsableVariables);
-						if(record != null){
-							NodeUtils.replaceVariable(record);
-							String target = otherNode.toSrcString().toString();
-							if(!source.equals(target)){
-								Revision revision = new Revision(this, WHOLE, target, _nodeType);
-								modifications.add(revision);
+					if(thisNode instanceof ReturnStmt && otherNode instanceof ReturnStmt){
+						List<Modification> tmp = new LinkedList<>();
+						if(thisNode.match(otherNode, varTrans, allUsableVariables, tmp)){
+							modifications.addAll(tmp);
+						}
+					} else {
+						String source = thisNode.toSrcString().toString(); 
+						if(!source.equals(otherNode.toSrcString().toString())){
+							Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(otherNode, varTrans, allUsableVariables);
+							if(record != null){
+								NodeUtils.replaceVariable(record);
+								String target = otherNode.toSrcString().toString();
+								if(!source.equals(target)){
+									Revision revision = new Revision(this, WHOLE, target, _nodeType);
+									modifications.add(revision);
+								}
+								NodeUtils.restoreVariables(record);
 							}
-							NodeUtils.restoreVariables(record);
 						}
 					}
 				}
