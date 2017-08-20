@@ -58,6 +58,7 @@ import cofix.core.parser.node.expr.DoubleLiteral;
 import cofix.core.parser.node.expr.Expr;
 import cofix.core.parser.node.expr.FieldAcc;
 import cofix.core.parser.node.expr.FloatLiteral;
+import cofix.core.parser.node.expr.InfixExpr;
 import cofix.core.parser.node.expr.IntLiteral;
 import cofix.core.parser.node.expr.LongLiteral;
 import cofix.core.parser.node.expr.MethodInv;
@@ -716,6 +717,9 @@ public class NodeUtils {
 				return false;
 			}
 		} else if(tarExpr instanceof MethodInv){
+			return false;
+		}
+		if(srcExpr instanceof InfixExpr && !(tarExpr instanceof InfixExpr)){
 			return false;
 		}
 		Type srcType = srcExpr.getType();
