@@ -226,7 +226,9 @@ public class SimpleFilter {
 					int line = _unit.getLineNumber(node.getStartPosition());
 					CodeSearch codeSearch = new CodeSearch(_unit, line, _buggyCode.getCurrentLine(), statement);
 					CodeBlock codeBlock = new CodeBlock(_fileName, _unit, codeSearch.getASTNodes());
-					_candidates.add(codeBlock);
+					if(codeBlock.getCurrentLine() < _max_line){
+						_candidates.add(codeBlock);
+					}
 				}
 			}
 			return true;
