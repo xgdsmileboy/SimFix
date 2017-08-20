@@ -192,16 +192,6 @@ public class NodeUtils {
 			original.append(",");
 			original.append(srcArg.get(i).toSrcString());
 		}
-		for(Expr expr : srcArg){
-			if(!(expr instanceof SName || expr instanceof QName || expr instanceof FieldAcc)){
-				return modifications;
-			}
-		}
-		for(Expr expr : tarArgs){
-			if(!(expr instanceof SName || expr instanceof QName || expr instanceof FieldAcc)){
-				continue;
-			}
-		}
 		String originalArgStr = original.toString();
 		if(srcArg.size() == tarArgs.size()){
 			Set<Integer> change = new HashSet<>();
@@ -209,9 +199,9 @@ public class NodeUtils {
 			for(int i = 0; i < srcArg.size(); i++){
 				Expr sExpr = srcArg.get(i);
 				Expr tExpr = tarArgs.get(i);
-//				if(sExpr instanceof BoolLiteral || sExpr instanceof NumLiteral || sExpr instanceof CharLiteral){
-//					continue;
-//				}
+				if(!canReplaceArg(sExpr) || !canReplaceArg(tExpr)){
+					continue;
+				}
 				String sString = sExpr.toSrcString().toString();
 				String tString = tExpr.toSrcString().toString();
 				if(sString.equals(tString)){
@@ -299,9 +289,12 @@ public class NodeUtils {
 			for(int i = 0; i < tarArgs.size(); i++){
 				boolean findSame = false;
 				Expr tExpr = tarArgs.get(i);
+				if(!canReplaceArg(tExpr)){
+					continue;
+				}
 				for(int j = 0; j < srcArg.size(); j++){
 					Expr sExpr = srcArg.get(j);
-					if(matchRec.contains(j)){
+					if(!canReplaceArg(sExpr) || matchRec.contains(j)){
 						continue;
 					}
 					if(tExpr.toSrcString().toString().equals(sExpr.toSrcString().toString())){
@@ -313,7 +306,7 @@ public class NodeUtils {
 				if(!findSame){
 					for(int j = 0; j < srcArg.size(); j++){
 						Expr sExpr = srcArg.get(j);
-						if(matchRec.contains(j)){
+						if(!canReplaceArg(sExpr) || matchRec.contains(j)){
 							continue;
 						}
 						if(sExpr.getType().toString().equals(tExpr.getType().toString())){
@@ -353,9 +346,12 @@ public class NodeUtils {
 			for(int i = 0; i < srcArg.size(); i++){
 				boolean findSame = false;
 				Expr sExpr = srcArg.get(i);
+				if(!canReplaceArg(sExpr)){
+					continue;
+				}
 				for(int j = 0; j < tarArgs.size(); j++){
 					Expr tExpr = tarArgs.get(j);
-					if(matchRec[j] != -1){
+					if(!canReplaceArg(tExpr) || matchRec[j] != -1){
 						continue;
 					}
 					if(sExpr.toSrcString().toString().equals(tExpr.toSrcString().toString())){
@@ -367,7 +363,7 @@ public class NodeUtils {
 				if(!findSame){
 					for(int j = 0; j < tarArgs.size(); j++){
 						Expr tExpr = tarArgs.get(i);
-						if(matchRec[j] != -1){
+						if(!canReplaceArg(tExpr) || matchRec[j] != -1){
 							continue;
 						}
 						if(tExpr.getType().toString().equals(sExpr.getType().toString())){
@@ -408,6 +404,13 @@ public class NodeUtils {
 		}
 		
 		return modifications;
+	}
+	
+	private static boolean canReplaceArg(Expr expr){
+		if(expr instanceof SName || expr instanceof QName || expr instanceof FieldAcc){
+			return true;
+		}
+		return false;
 	}
 	
 	public static boolean isSameNodeType(Node src, Node tar){
