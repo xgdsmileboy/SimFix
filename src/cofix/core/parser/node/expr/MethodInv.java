@@ -68,6 +68,10 @@ public class MethodInv extends Expr {
 	public void setArguments(List<Expr> arguments){
 		_arguments = arguments;
 	}
+	
+	public Expr getExpression(){
+		return _expression;
+	}
 
 	@Override
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {

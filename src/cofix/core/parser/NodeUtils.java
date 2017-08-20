@@ -9,6 +9,7 @@ package cofix.core.parser;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -700,7 +701,18 @@ public class NodeUtils {
 		if(srcExpr.toSrcString().toString().equals(tarExpr.toSrcString().toString())){
 			return true;
 		}
-		if((srcExpr instanceof MethodInv && !(tarExpr instanceof MethodInv)) || (!(srcExpr instanceof MethodInv) && tarExpr instanceof MethodInv)){
+		if(srcExpr instanceof MethodInv){
+			if(tarExpr instanceof MethodInv){
+				MethodInv srcMethod = (MethodInv) srcExpr;
+				MethodInv tarMethod = (MethodInv) tarExpr;
+				List<Modification> tmp = new LinkedList<>();
+				if(srcMethod.getExpression() != null && tarMethod.getExpression() != null && !srcMethod.getExpression().match(tarMethod.getExpression(), varTrans, allUsableVariables, tmp)){
+					return false;
+				}
+			} else {
+				return false;
+			}
+		} else if(tarExpr instanceof MethodInv){
 			return false;
 		}
 		Type srcType = srcExpr.getType();
