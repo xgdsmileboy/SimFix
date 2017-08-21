@@ -68,7 +68,8 @@ public class ReturnStmt extends Stmt {
 			if(_expression == null && other._expression == null){
 				match = true;
 			} else if(_expression != null && other._expression != null){
-				if(_expression.getType().toString().equals(other._expression.toSrcString().toString())){
+				String otherStr = other._expression.toSrcString().toString();
+				if(_expression.getType().toString().equals(otherStr) && otherStr.length() > 1){
 					String source = _expression.toSrcString().toString();
 					if(!source.equals(other._expression.toSrcString().toString()) && NodeUtils.isSameNodeType(_expression, other._expression)){
 						Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(other._expression, varTrans, allUsableVariables);
@@ -86,7 +87,9 @@ public class ReturnStmt extends Stmt {
 				List<Modification> tmp = new ArrayList<>();
 				if(_expression.match(other._expression, varTrans, allUsableVariables, tmp)){
 					match = true;
-					modifications.addAll(tmp);
+					if(otherStr.length() > 1){
+						modifications.addAll(tmp);
+					}
 				}
 			}
 		} else {

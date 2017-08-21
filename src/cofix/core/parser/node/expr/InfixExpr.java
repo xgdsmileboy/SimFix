@@ -67,6 +67,18 @@ public class InfixExpr extends Expr {
 	public void setRightHandSide(Expr rhs){
 		_rhs = rhs;
 	}
+	
+	public String getOperator(){
+		return _operator.toString();
+	}
+	
+	public Expr getLhs(){
+		return _lhs;
+	}
+	
+	public Expr getRhs(){
+		return _rhs;
+	}
 
 	@Override
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
@@ -165,7 +177,7 @@ public class InfixExpr extends Expr {
 			}
 			
 			String tarString = other.simplify(varTrans, allUsableVariables);
-			if(tarString != null){
+			if(tarString != null && other.getLhs().toSrcString().toString().length() > 1 && other.getRhs().toSrcString().toString().length() > 1){
 				String thisStr = this.toSrcString().toString();
 				if((compatible && matchLeft && matchRight) || tarString.contains(thisStr)){
 					if(NodeUtils.compatibleType(_exprType, other.getType()) && !tarString.equals(thisStr)){

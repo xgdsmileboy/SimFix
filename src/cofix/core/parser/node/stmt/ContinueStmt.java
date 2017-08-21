@@ -57,8 +57,8 @@ public class ContinueStmt extends Stmt {
 			match = true;
 		} else if(node instanceof BreakStmt){
 			match = true;
-			Revision revision = new Revision(this, STMTID, node.toSrcString().toString(), _nodeType);
-			modifications.add(revision);
+//			Revision revision = new Revision(this, STMTID, node.toSrcString().toString(), _nodeType);
+//			modifications.add(revision);
 		} else {
 			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();

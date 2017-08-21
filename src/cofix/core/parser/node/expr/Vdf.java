@@ -72,8 +72,14 @@ public class Vdf extends Node {
 		if(node instanceof Vdf){
 			Vdf other = (Vdf) node;
 			if(_expression != null && other._expression != null){
+				if(_expression instanceof NumLiteral && other._expression instanceof NumLiteral){
+					match = true;
+					if(NodeUtils.isBoundaryValue((NumLiteral) _expression) && NodeUtils.isBoundaryValue((NumLiteral) other._expression)){
+						return match;
+					}
+				}
 				List<Modification> tmp = new ArrayList<>();
-				if(_expression.match(other._expression, varTrans, allUsableVariables, tmp)){
+				if(!match && _expression.match(other._expression, varTrans, allUsableVariables, tmp)){
 					match = true;
 					modifications.addAll(tmp);
 				}

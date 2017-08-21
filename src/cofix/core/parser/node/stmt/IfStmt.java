@@ -28,6 +28,7 @@ import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.expr.Expr;
+import cofix.core.parser.node.expr.Label;
 
 /**
  * @author Jiajun
@@ -88,7 +89,9 @@ public class IfStmt extends Stmt {
 			List<Modification> tmp = new ArrayList<>();
 			if(_condition.match(other._condition, varTrans, allUsableVariables, tmp)){
 				match = true;
-				modifications.addAll(tmp);
+				if(!(_condition instanceof Label || other._condition instanceof Label)){
+					modifications.addAll(tmp);
+				}
 			}
 
 			if(match){

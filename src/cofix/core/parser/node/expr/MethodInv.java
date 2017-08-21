@@ -7,9 +7,11 @@
 package cofix.core.parser.node.expr;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
@@ -45,6 +47,14 @@ public class MethodInv extends Expr {
 	private final int NAMEID = 1;
 	private final int ARGID = 2;
 	private final int WHOLE = 3;
+	
+	private static Set<String> _avoid = new HashSet<>(); 
+	static{
+		_avoid.add("equals");
+		_avoid.add("toString");
+		_avoid.add("hash");
+		_avoid.add("clone");
+	}
 	
 	/**
 	 *  MethodInvocation:
@@ -95,7 +105,7 @@ public class MethodInv extends Expr {
 							break;
 						}
 					}
-					if(compatible && !_name.equals(other._name) && _arguments.size() > 0){
+					if(compatible && !_name.equals(other._name) && !MethodInv._avoid.contains(_name) && !MethodInv._avoid.contains(other._name) && _arguments.size() > 0){
 						Revision revision = new Revision(this, NAMEID, other._name, _nodeType);
 						modifications.add(revision);
 					}

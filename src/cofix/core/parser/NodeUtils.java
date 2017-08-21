@@ -30,6 +30,7 @@ import org.eclipse.jdt.core.dom.IfStatement;
 import org.eclipse.jdt.core.dom.InfixExpression;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
 import org.eclipse.jdt.core.dom.Modifier;
+import org.eclipse.jdt.core.dom.NumberLiteral;
 import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.SingleVariableDeclaration;
 import org.eclipse.jdt.core.dom.StructuralPropertyDescriptor;
@@ -660,11 +661,25 @@ public class NodeUtils {
 							Map<SName, Pair<String, String>> tryReplace = tryReplaceAllVariables(expr, varTrans, allUsableVariables);
 							sName.setDirectDependency(expr);
 							if(tryReplace != null){
-								canUse = true;
-								NodeUtils.replaceVariable(tryReplace);
-								String replaceName = expr.toSrcString().toString();
-								record.put(sName, new Pair<String, String>(name, replaceName));
-								NodeUtils.restoreVariables(tryReplace);
+								boolean duplicate = false;
+								if (expr instanceof SName) {
+									for (Entry<SName, Pair<String, String>> entry : tryReplace.entrySet()) {
+										for (Entry<SName, Pair<String, String>> exist : record.entrySet()) {
+											if (duplicate || (!exist.getKey().getName().equals(name) && exist.getValue()
+													.getSecond().equals(entry.getValue().getSecond()))) {
+												duplicate = true;
+												break;
+											}
+										}
+									}
+								}
+								if(!duplicate){
+									canUse = true;
+									NodeUtils.replaceVariable(tryReplace);
+									String replaceName = expr.toSrcString().toString();
+									record.put(sName, new Pair<String, String>(name, replaceName));
+									NodeUtils.restoreVariables(tryReplace);
+								}
 							}
 						}
 						if(!canUse){
@@ -705,6 +720,9 @@ public class NodeUtils {
 		if(srcExpr.toSrcString().toString().equals(tarExpr.toSrcString().toString())){
 			return true;
 		}
+		if(srcExpr.toSrcString().toString().length() < 2){
+			return false;
+		}
 		if(srcExpr instanceof MethodInv){
 			if(tarExpr instanceof MethodInv){
 				MethodInv srcMethod = (MethodInv) srcExpr;
@@ -719,8 +737,19 @@ public class NodeUtils {
 		} else if(tarExpr instanceof MethodInv){
 			return false;
 		}
-		if(srcExpr instanceof InfixExpr && !(tarExpr instanceof InfixExpr)){
-			return false;
+		if(srcExpr instanceof InfixExpr){
+			if(!(tarExpr instanceof InfixExpr)){
+				return false;
+			} else if(!canReplaceOperator(((InfixExpr)srcExpr).getOperator(), ((InfixExpr)tarExpr).getOperator())){
+				return false;
+			}
+		} else if(tarExpr instanceof InfixExpr){
+			InfixExpr infixExpr = (InfixExpr) tarExpr;
+			if(infixExpr.getLhs() instanceof NumLiteral && NodeUtils.isBoundaryValue((NumLiteral) infixExpr.getLhs())){
+				return false;
+			} else if(infixExpr.getRhs() instanceof NumLiteral && NodeUtils.isBoundaryValue((NumLiteral) infixExpr.getRhs())){
+				return false;
+			}
 		}
 		Type srcType = srcExpr.getType();
 		Type tarType = tarExpr.getType();

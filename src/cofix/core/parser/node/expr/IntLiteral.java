@@ -61,7 +61,7 @@ public class IntLiteral extends NumLiteral {
 			if(label.getType().toString().equals("int")){
 				match = true;
 				String target = node.simplify(varTrans, allUsableVariables);
-				if(target != null){
+				if(target != null && target.length() > 1){
 					Revision revision = new Revision(this, EXPRID, target, _nodeType);
 					modifications.add(revision);
 				}
