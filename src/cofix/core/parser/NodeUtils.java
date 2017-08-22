@@ -329,20 +329,22 @@ public class NodeUtils {
 			// but some one in srcArg matched nothing, should be delete 
 			boolean first = true;
 			StringBuffer stringBuffer = new StringBuffer();
-			for(int i = 0; i < srcArg.size(); i++){
-				// matched argument
-				if(matchRec.contains(i)){
-					if(first){
-						first = false;
-						stringBuffer.append(srcArg.get(i).toSrcString());
-					} else {
-						stringBuffer.append(",");
-						stringBuffer.append(srcArg.get(i).toSrcString());
+			if(matchRec.size() > 0){
+				for(int i = 0; i < srcArg.size(); i++){
+					// matched argument
+					if(matchRec.contains(i)){
+						if(first){
+							first = false;
+							stringBuffer.append(srcArg.get(i).toSrcString());
+						} else {
+							stringBuffer.append(",");
+							stringBuffer.append(srcArg.get(i).toSrcString());
+						}
 					}
 				}
+				Revision revision = new Revision(currNode, srcID, stringBuffer.toString(), nodeType);
+				modifications.add(revision);
 			}
-			Revision revision = new Revision(currNode, srcID, stringBuffer.toString(), nodeType);
-			modifications.add(revision);
 		} else if (srcArg.size() < tarArgs.size() && srcArg.size() + 2 >= tarArgs.size()){
 			int[] matchRec = new int[tarArgs.size()];
 			for(int i = 0; i < tarArgs.size(); i++){
