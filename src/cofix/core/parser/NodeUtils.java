@@ -13,6 +13,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+
+import javax.imageio.spi.IIOServiceProvider;
+
 import java.util.Set;
 
 import org.eclipse.jdt.core.dom.AST;
@@ -983,6 +986,30 @@ public class NodeUtils {
 		default :
 			return false;
 		}
+	}
+	
+	public static boolean isOperator(String operator){
+		if(operator == null){
+			return false;
+		}
+		switch(operator){
+		case "<":
+		case ">":
+		case "<=":
+		case ">=":
+		case "==":
+		case "!=":
+		case "&&":
+		case "||":
+			return true;
+		default :
+			return false;
+		}
+	}
+	
+	public static boolean isClass(String name){
+		if(name == null) return false;
+		return Character.isUpperCase(name.charAt(0)) && !name.toUpperCase().equals(name);
 	}
 	
 	public static Type parseExprType(Expr left, String operator, Expr right){
