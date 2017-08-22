@@ -51,7 +51,7 @@ public class IntLiteral extends NumLiteral {
 			match = true;
 			IntLiteral other = (IntLiteral) node;
 			if(_value != other._value){
-				if(!NodeUtils.isBoundaryValue(this) || (NodeUtils.isBoundaryValue(this) && NodeUtils.isBoundaryValue(other))){
+				if(!NodeUtils.isBoundaryValue(this)){
 					Revision revision = new Revision(this, EXPRID, other.toSrcString().toString(), _nodeType);
 					modifications.add(revision);
 				}

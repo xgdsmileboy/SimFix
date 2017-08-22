@@ -13,9 +13,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-
-import javax.imageio.spi.IIOServiceProvider;
-
 import java.util.Set;
 
 import org.eclipse.jdt.core.dom.AST;
@@ -33,7 +30,6 @@ import org.eclipse.jdt.core.dom.IfStatement;
 import org.eclipse.jdt.core.dom.InfixExpression;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
 import org.eclipse.jdt.core.dom.Modifier;
-import org.eclipse.jdt.core.dom.NumberLiteral;
 import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.SingleVariableDeclaration;
 import org.eclipse.jdt.core.dom.StructuralPropertyDescriptor;
@@ -48,15 +44,12 @@ import org.eclipse.jdt.core.dom.WildcardType;
 import cofix.common.util.JavaFile;
 import cofix.common.util.Pair;
 import cofix.core.metric.Variable;
-import cofix.core.modify.Deletion;
 import cofix.core.modify.Insertion;
 import cofix.core.modify.Modification;
 import cofix.core.modify.Revision;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.Node.TYPE;
 import cofix.core.parser.node.expr.Assign;
-import cofix.core.parser.node.expr.BoolLiteral;
-import cofix.core.parser.node.expr.CharLiteral;
 import cofix.core.parser.node.expr.ConditionalExpr;
 import cofix.core.parser.node.expr.DoubleLiteral;
 import cofix.core.parser.node.expr.Expr;
@@ -733,8 +726,18 @@ public class NodeUtils {
 				MethodInv srcMethod = (MethodInv) srcExpr;
 				MethodInv tarMethod = (MethodInv) tarExpr;
 				List<Modification> tmp = new LinkedList<>();
-				if(srcMethod.getExpression() != null && tarMethod.getExpression() != null && !srcMethod.getExpression().match(tarMethod.getExpression(), varTrans, allUsableVariables, tmp)){
-					return false;
+				if (srcMethod.getExpression() != null && tarMethod.getExpression() != null) {
+					Expr src = srcMethod.getExpression();
+					Expr tar = tarMethod.getExpression();
+					if ((src instanceof SName || tar instanceof SName)
+							&& ((NodeUtils.isClass(src.toSrcString().toString())
+									&& !NodeUtils.isClass(tar.toSrcString().toString()))
+									|| (!NodeUtils.isClass(src.toSrcString().toString())
+											&& NodeUtils.isClass(tar.toSrcString().toString())))) {
+						return false;
+					} else if(!srcMethod.getExpression().match(tarMethod.getExpression(), varTrans, allUsableVariables,tmp)){
+						return false;
+					}
 				}
 			} else {
 				return false;
