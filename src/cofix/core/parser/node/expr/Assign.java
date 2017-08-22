@@ -78,7 +78,7 @@ public class Assign extends Expr {
 			if(tarVars.size() > 0 && srcVars.size() > 0){
 				String source = varTrans.get(tarVars.get(0).getName()); 
 				if(source != null && source.equals(srcVars.get(0).toString())){
-					match = true;for(int i = 0; i < 4; i++);
+					match = true;
 					List<Modification> tmp = new ArrayList<>();
 					if(_rhs.match(assign._rhs, varTrans, allUsableVariables, tmp)){
 						modifications.addAll(tmp);
