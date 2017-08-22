@@ -152,7 +152,7 @@ public class InfixExpr extends Expr {
 			}
 			
 			// replace operator
-			if(matchLeft && matchRight && compatible && !_operator.toString().equals(other._operator.toString())){
+			if((matchLeft || matchRight) && compatible && !_operator.toString().equals(other._operator.toString())){
 				if(!other._operator.toString().equals("||")){
 					modifications.add(new Revision(this, OPID, other._operator.toString(), _nodeType));
 				}
