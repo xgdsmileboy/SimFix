@@ -191,10 +191,13 @@ public class InfixExpr extends Expr {
 			for(Modification modification : subStructureModifications){
 				if(NodeUtils.isOperator(modification.getTargetString())){
 					modifications.add(modification);
-					subStructureModifications.remove(modification);
 				}
 			}
-			modifications.addAll(subStructureModifications);
+			for(Modification modification : subStructureModifications){
+				if(!NodeUtils.isOperator(modification.getTargetString())){
+					modifications.add(modification);
+				}
+			}
 			
 		} else {
 			List<Node> children = node.getChildren();
