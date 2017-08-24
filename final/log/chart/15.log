@@ -1,0 +1,118 @@
+=================================================
+Project : chart_15	start : 17/08/24 15:09
+Current failed test : org.jfree.chart.plot.junit.PiePlot3DTests::testDrawWithNullDataset | 17/08/24 15:09
+Thu Aug 24 15:10:34 AEST 2017 org.jfree.data.general.DatasetUtilities,153
+Thu Aug 24 15:11:03 AEST 2017 org.jfree.chart.plot.PiePlot,2613
+Thu Aug 24 15:12:01 AEST 2017 org.jfree.chart.plot.PiePlot3D,230
+Thu Aug 24 15:17:39 AEST 2017 org.jfree.chart.plot.PiePlot3D,231
+Thu Aug 24 15:17:40 AEST 2017 org.jfree.chart.plot.PiePlot3D,233
+Thu Aug 24 15:23:36 AEST 2017 org.jfree.chart.plot.PiePlot3D,234
+Thu Aug 24 15:25:00 AEST 2017 org.jfree.chart.plot.PiePlot3D,239
+Thu Aug 24 15:31:31 AEST 2017 org.jfree.chart.plot.PiePlot3D,241
+Thu Aug 24 15:40:46 AEST 2017 org.jfree.chart.plot.PiePlot3D,242
+Thu Aug 24 15:50:28 AEST 2017 org.jfree.chart.plot.PiePlot3D,245
+Thu Aug 24 16:00:06 AEST 2017 org.jfree.chart.plot.PiePlot3D,246
+Thu Aug 24 16:00:30 AEST 2017 org.jfree.chart.plot.PiePlot3D,247
+Thu Aug 24 16:00:33 AEST 2017 org.jfree.chart.plot.PiePlot3D,248
+Thu Aug 24 16:00:33 AEST 2017 org.jfree.chart.plot.PiePlot3D,250
+Thu Aug 24 16:07:34 AEST 2017 org.jfree.chart.plot.PiePlot3D,252
+Thu Aug 24 16:07:34 AEST 2017 org.jfree.chart.plot.PiePlot3D,266
+Thu Aug 24 16:27:55 AEST 2017 org.jfree.chart.plot.PiePlot3D,267
+Thu Aug 24 16:35:20 AEST 2017 org.jfree.chart.plot.PiePlot3D,268
+Thu Aug 24 16:45:23 AEST 2017 org.jfree.chart.plot.PiePlot3D,269
+Thu Aug 24 16:58:15 AEST 2017 org.jfree.chart.plot.PiePlot3D,272
+Thu Aug 24 16:58:19 AEST 2017 org.jfree.chart.plot.PiePlot3D,280
+Thu Aug 24 17:00:08 AEST 2017 org.jfree.chart.plot.PiePlot,670
+Thu Aug 24 17:00:11 AEST 2017 org.jfree.chart.plot.PiePlot,1398
+Thu Aug 24 17:00:13 AEST 2017 org.jfree.chart.plot.PiePlot,1423
+Thu Aug 24 17:00:16 AEST 2017 org.jfree.chart.plot.PiePlot,1448
+Thu Aug 24 17:00:19 AEST 2017 org.jfree.chart.plot.Plot,931
+Thu Aug 24 17:02:20 AEST 2017 org.jfree.chart.plot.Plot,932
+Thu Aug 24 17:02:20 AEST 2017 Thu Aug 24 17:02:20 AEST 2017 : org.jfree.chart.plot.Plot,933=>Find no block
+Thu Aug 24 17:02:20 AEST 2017 org.jfree.chart.plot.Plot,946
+Thu Aug 24 17:03:05 AEST 2017 Thu Aug 24 17:03:05 AEST 2017 : org.jfree.chart.plot.Plot,947=>Find no block
+Thu Aug 24 17:03:05 AEST 2017 org.jfree.chart.plot.PiePlotState,89
+Thu Aug 24 17:03:50 AEST 2017 org.jfree.chart.plot.PiePlotState,90
+Thu Aug 24 17:03:50 AEST 2017 org.jfree.chart.plot.PiePlotState,91
+Thu Aug 24 17:03:50 AEST 2017 Thu Aug 24 17:03:50 AEST 2017 : org.jfree.chart.plot.PiePlotState,92=>Find no block
+Thu Aug 24 17:03:51 AEST 2017 org.jfree.chart.plot.PiePlotState,109
+Thu Aug 24 17:04:13 AEST 2017 Thu Aug 24 17:04:13 AEST 2017 : org.jfree.chart.plot.PiePlotState,110=>Find no block
+Thu Aug 24 17:04:13 AEST 2017 org.jfree.chart.plot.PiePlot,706
+Thu Aug 24 17:04:16 AEST 2017 org.jfree.chart.plot.PiePlot,2049
+Thu Aug 24 17:06:31 AEST 2017 org.jfree.chart.plot.PiePlot,2050
+Thu Aug 24 17:06:31 AEST 2017 org.jfree.chart.plot.PiePlot,2051
+Thu Aug 24 17:06:32 AEST 2017 org.jfree.data.general.DatasetUtilities,152
+Thu Aug 24 17:06:32 AEST 2017 org.jfree.chart.ChartFactory,694
+Thu Aug 24 17:09:15 AEST 2017 org.jfree.chart.ChartFactory,695
+Thu Aug 24 17:09:15 AEST 2017 org.jfree.chart.ChartFactory,696
+Thu Aug 24 17:09:15 AEST 2017 org.jfree.chart.ChartFactory,699
+Thu Aug 24 17:09:15 AEST 2017 org.jfree.chart.ChartFactory,702
+Thu Aug 24 17:09:15 AEST 2017 org.jfree.chart.plot.PiePlot,2611
+Thu Aug 24 17:11:37 AEST 2017 org.jfree.chart.plot.PiePlot,2612
+Thu Aug 24 17:11:37 AEST 2017 org.jfree.chart.plot.PiePlot3D,151
+Thu Aug 24 17:12:01 AEST 2017 Thu Aug 24 17:12:01 AEST 2017 : org.jfree.chart.plot.PiePlot3D,126=>Find no block
+Thu Aug 24 17:12:01 AEST 2017 Thu Aug 24 17:12:01 AEST 2017 : org.jfree.chart.plot.PiePlot3D,134=>Find no block
+Thu Aug 24 17:12:01 AEST 2017 org.jfree.chart.plot.PiePlot3D,152
+Thu Aug 24 17:12:01 AEST 2017 Thu Aug 24 17:12:01 AEST 2017 : org.jfree.chart.plot.PiePlot3D,153=>Find no block
+Thu Aug 24 17:12:01 AEST 2017 org.jfree.chart.plot.PiePlot,551
+Thu Aug 24 17:12:04 AEST 2017 org.jfree.chart.plot.PiePlot,731
+Thu Aug 24 17:25:57 AEST 2017 org.jfree.chart.plot.PiePlot,732
+Thu Aug 24 17:37:32 AEST 2017 Thu Aug 24 17:37:32 AEST 2017 : org.jfree.chart.plot.PiePlot,735=>Find no block
+Thu Aug 24 17:37:32 AEST 2017 org.jfree.chart.title.LegendTitle,472
+Thu Aug 24 17:37:35 AEST 2017 org.jfree.chart.block.LineBorder,146
+Thu Aug 24 17:38:05 AEST 2017 org.jfree.chart.plot.Plot,504
+Thu Aug 24 17:38:40 AEST 2017 Thu Aug 24 17:38:40 AEST 2017 : org.jfree.chart.plot.Plot,505=>Find no block
+Thu Aug 24 17:38:40 AEST 2017 org.jfree.chart.plot.Plot,519
+Thu Aug 24 17:38:43 AEST 2017 org.jfree.chart.plot.Plot,522
+Thu Aug 24 17:41:07 AEST 2017 org.jfree.chart.plot.Plot,523
+Thu Aug 24 17:41:08 AEST 2017 org.jfree.chart.plot.Plot,524
+Thu Aug 24 17:41:08 AEST 2017 org.jfree.chart.plot.Plot,525
+Thu Aug 24 17:41:08 AEST 2017 Thu Aug 24 17:41:08 AEST 2017 : org.jfree.chart.plot.Plot,529=>Find no block
+Thu Aug 24 17:41:08 AEST 2017 org.jfree.chart.util.RectangleInsets,192
+Thu Aug 24 17:41:34 AEST 2017 Thu Aug 24 17:41:34 AEST 2017 : org.jfree.chart.renderer.RendererState,62=>Find no block
+Thu Aug 24 17:41:35 AEST 2017 org.jfree.chart.renderer.RendererState,63
+Thu Aug 24 17:41:38 AEST 2017 Thu Aug 24 17:41:38 AEST 2017 : org.jfree.chart.renderer.RendererState,64=>Find no block
+Thu Aug 24 17:41:38 AEST 2017 Thu Aug 24 17:41:38 AEST 2017 : org.jfree.chart.block.LengthConstraintType,74=>Find no block
+Thu Aug 24 17:41:38 AEST 2017 org.jfree.chart.block.LengthConstraintType,75
+Thu Aug 24 17:42:04 AEST 2017 Thu Aug 24 17:42:04 AEST 2017 : org.jfree.chart.block.LengthConstraintType,76=>Find no block
+Thu Aug 24 17:42:04 AEST 2017 org.jfree.chart.util.ObjectUtilities,255
+Thu Aug 24 17:42:07 AEST 2017 org.jfree.chart.util.ObjectUtilities,258
+Thu Aug 24 17:51:03 AEST 2017 org.jfree.chart.util.ObjectUtilities,259
+Thu Aug 24 17:51:04 AEST 2017 org.jfree.chart.util.ObjectUtilities,261
+Thu Aug 24 17:51:04 AEST 2017 org.jfree.chart.util.ObjectUtilities,262
+Thu Aug 24 17:51:04 AEST 2017 org.jfree.chart.util.ObjectUtilities,439
+Thu Aug 24 17:51:36 AEST 2017 org.jfree.chart.util.ObjectUtilities,440
+Thu Aug 24 17:51:39 AEST 2017 org.jfree.chart.util.ObjectUtilities,442
+Thu Aug 24 17:51:39 AEST 2017 org.jfree.chart.util.ObjectUtilities,443
+Thu Aug 24 17:51:39 AEST 2017 org.jfree.chart.util.ObjectUtilities,439
+Thu Aug 24 17:51:39 AEST 2017 Thu Aug 24 17:51:39 AEST 2017 : org.jfree.chart.text.TextBlockAnchor,100=>Find no block
+Thu Aug 24 17:51:39 AEST 2017 org.jfree.chart.text.TextBlockAnchor,101
+Thu Aug 24 17:51:39 AEST 2017 Thu Aug 24 17:51:39 AEST 2017 : org.jfree.chart.text.TextBlockAnchor,102=>Find no block
+Thu Aug 24 17:51:40 AEST 2017 org.jfree.chart.plot.Plot,963
+Thu Aug 24 17:52:30 AEST 2017 org.jfree.chart.plot.Plot,966
+Thu Aug 24 17:54:03 AEST 2017 org.jfree.chart.plot.Plot,969
+Thu Aug 24 18:10:52 AEST 2017 org.jfree.chart.plot.Plot,970
+Thu Aug 24 18:10:52 AEST 2017 org.jfree.chart.plot.Plot,985
+Thu Aug 24 18:26:07 AEST 2017 org.jfree.chart.plot.Plot,986
+Thu Aug 24 18:37:44 AEST 2017 org.jfree.chart.plot.Plot,988
+Thu Aug 24 18:45:53 AEST 2017 org.jfree.chart.plot.Plot,989
+Thu Aug 24 18:51:44 AEST 2017 org.jfree.chart.plot.Plot,990
+Thu Aug 24 18:51:44 AEST 2017 Thu Aug 24 18:51:44 AEST 2017 : org.jfree.chart.plot.Plot,991=>Find no block
+Thu Aug 24 18:51:44 AEST 2017 org.jfree.chart.plot.Plot,1005
+Thu Aug 24 18:55:34 AEST 2017 Thu Aug 24 18:55:34 AEST 2017 : org.jfree.chart.plot.Plot,1018=>Find no block
+Thu Aug 24 18:55:34 AEST 2017 org.jfree.chart.JFreeChart,1195
+Thu Aug 24 18:58:45 AEST 2017 org.jfree.chart.JFreeChart,1197
+Thu Aug 24 18:58:45 AEST 2017 org.jfree.chart.JFreeChart,1252
+Thu Aug 24 19:07:00 AEST 2017 org.jfree.chart.JFreeChart,1305
+Thu Aug 24 19:11:33 AEST 2017 org.jfree.chart.JFreeChart,1306
+Thu Aug 24 19:11:34 AEST 2017 org.jfree.chart.JFreeChart,1308
+Thu Aug 24 19:23:39 AEST 2017 org.jfree.chart.JFreeChart,1309
+Thu Aug 24 19:23:39 AEST 2017 Thu Aug 24 19:23:39 AEST 2017 : org.jfree.chart.JFreeChart,1312=>Find no block
+Thu Aug 24 19:23:39 AEST 2017 org.jfree.chart.JFreeChart,1343
+Thu Aug 24 19:23:42 AEST 2017 org.jfree.chart.JFreeChart,1344
+Thu Aug 24 19:23:42 AEST 2017 org.jfree.chart.title.TextTitle,439
+Thu Aug 24 19:24:06 AEST 2017 org.jfree.chart.title.TextTitle,440
+Thu Aug 24 19:24:06 AEST 2017 org.jfree.chart.title.TextTitle,441
+Thu Aug 24 19:24:30 AEST 2017 org.jfree.chart.title.TextTitle,442
+Thu Aug 24 19:24:30 AEST 2017 org.jfree.chart.title.TextTitle,443
+Timeout time : 17/08/24 20:10
