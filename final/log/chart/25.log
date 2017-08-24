@@ -1,0 +1,255 @@
+=================================================
+Project : chart_25	start : 17/08/23 21:43
+Current failed test : org.jfree.chart.renderer.category.junit.StatisticalBarRendererTests::testDrawWithNullMeanVertical | 17/08/23 21:43
+Wed Aug 23 21:44:24 AEST 2017 Wed Aug 23 21:44:24 AEST 2017 : org.jfree.data.KeyedObjects,67=>Find no block
+Wed Aug 23 21:44:24 AEST 2017 org.jfree.data.KeyedObjects,68
+Wed Aug 23 21:44:35 AEST 2017 Wed Aug 23 21:44:35 AEST 2017 : org.jfree.data.KeyedObjects,69=>Find no block
+Wed Aug 23 21:44:35 AEST 2017 org.jfree.data.KeyedObjects,88
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(kobj==null){
+result=kobj.getObject();
+}
+
+Time : 17/08/23 21:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(kobj==null){
+throw new IllegalArgumentException("Null \'values\' argument.");
+}
+
+Time : 17/08/23 21:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(kobj==null){
+throw new IllegalArgumentException("Null \'stream\' argument.");
+}
+
+Time : 17/08/23 21:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(kobj==null){
+throw new IllegalArgumentException("Null \'info\' argument.");
+}
+
+Time : 17/08/23 21:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(kobj==null){
+throw new IllegalArgumentException("Null \'group\' argument.");
+}
+
+Time : 17/08/23 21:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(kobj==null){
+throw new IllegalArgumentException("Null \'source\' argument.");
+}
+
+Time : 17/08/23 21:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.data.remove(item);
+if(item>=0&&item<this.data.size()){
+KeyedObject kobj=(KeyedObject)this.data.get(item);
+if(kobj!=null){
+result=kobj.getObject();
+}
+}
+
+Time : 17/08/23 21:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.data.remove(item);
+Object result=null;
+if(item>=0&&item<this.data.size()){
+KeyedObject kobj=(KeyedObject)this.data.get(item);
+if(kobj!=null){
+result=kobj.getObject();
+}
+}
+return result;
+
+Time : 17/08/23 21:54
+----------------------------------------
+Wed Aug 23 21:58:51 AEST 2017 org.jfree.data.KeyedObjects,89
+Wed Aug 23 21:58:51 AEST 2017 org.jfree.data.KeyedObjects,90
+Wed Aug 23 21:58:51 AEST 2017 org.jfree.data.KeyedObjects,91
+Wed Aug 23 21:58:51 AEST 2017 org.jfree.data.KeyedObjects,92
+Wed Aug 23 21:58:52 AEST 2017 org.jfree.data.KeyedObjects,95
+Wed Aug 23 21:58:52 AEST 2017 org.jfree.data.KeyedObjects,126
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+i++;
+while(iterator.hasNext()){
+KeyedObject ko=(KeyedObject)iterator.next();
+if(ko.getKey().equals(key)){
+result=i;
+}
+i++;
+}
+
+Time : 17/08/23 22:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+i++;
+result=result;
+while(iterator.hasNext()){
+KeyedObject ko=(KeyedObject)iterator.next();
+if(ko.getKey().equals(key)){
+result=i;
+}
+i++;
+}
+
+Time : 17/08/23 22:09
+----------------------------------------
+Wed Aug 23 22:14:28 AEST 2017 org.jfree.data.KeyedObjects,127
+Wed Aug 23 22:14:28 AEST 2017 org.jfree.data.KeyedObjects,128
+Wed Aug 23 22:14:28 AEST 2017 org.jfree.data.KeyedObjects,129
+Wed Aug 23 22:14:28 AEST 2017 org.jfree.data.KeyedObjects,130
+Wed Aug 23 22:14:28 AEST 2017 org.jfree.data.KeyedObjects,131
+Wed Aug 23 22:14:29 AEST 2017 org.jfree.data.KeyedObjects,132
+Wed Aug 23 22:14:29 AEST 2017 org.jfree.data.KeyedObjects,134
+Wed Aug 23 22:14:29 AEST 2017 Wed Aug 23 22:14:29 AEST 2017 : org.jfree.data.KeyedObjects,135=>Find no block
+Wed Aug 23 22:14:29 AEST 2017 org.jfree.data.KeyedObjects,136
+Wed Aug 23 22:14:29 AEST 2017 org.jfree.data.KeyedObjects,163
+Wed Aug 23 22:14:32 AEST 2017 org.jfree.data.KeyedObjects,186
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.data=new java.util.ArrayList();
+int keyIndex=getIndex(key);
+if(keyIndex>=0){
+KeyedObject ko=(KeyedObject)this.data.get(keyIndex);
+ko.setObject(object);
+}else {
+KeyedObject ko=new KeyedObject(key,object);
+this.data.add(ko);
+}
+
+Time : 17/08/23 22:22
+----------------------------------------
+Wed Aug 23 22:22:43 AEST 2017 org.jfree.data.KeyedObjects,187
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.data=new java.util.ArrayList();
+if(keyIndex>=0){
+KeyedObject ko=(KeyedObject)this.data.get(keyIndex);
+ko.setObject(object);
+}else {
+KeyedObject ko=new KeyedObject(key,object);
+this.data.add(ko);
+}
+
+Time : 17/08/23 22:25
+----------------------------------------
+Wed Aug 23 22:26:36 AEST 2017 org.jfree.data.KeyedObjects,192
+Wed Aug 23 22:26:37 AEST 2017 org.jfree.data.KeyedObjects,193
+Wed Aug 23 22:26:37 AEST 2017 Wed Aug 23 22:26:37 AEST 2017 : org.jfree.data.KeyedObjects,195=>Find no block
+Wed Aug 23 22:26:37 AEST 2017 org.jfree.data.general.DatasetUtilities,564
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(dataset!=null){
+return true;
+}
+
+Time : 17/08/23 22:27
+----------------------------------------
+Wed Aug 23 22:27:52 AEST 2017 org.jfree.data.general.DatasetUtilities,568
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(dataset!=null){
+return true;
+}
+int rowCount=dataset.getRowCount();
+int columnCount=dataset.getColumnCount();
+
+Time : 17/08/23 22:28
+----------------------------------------
+Wed Aug 23 22:29:56 AEST 2017 org.jfree.data.general.DatasetUtilities,569
+Wed Aug 23 22:31:29 AEST 2017 org.jfree.data.general.DatasetUtilities,570
+Wed Aug 23 22:32:03 AEST 2017 org.jfree.data.general.DatasetUtilities,574
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(dataset.getValue(r,c)==dataset){
+return false;
+}
+
+Time : 17/08/23 22:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.0631855099684224 : [/home/similarfix/d4j/projects/chart/chart_25_buggy/source/org/jfree/data/general/DatasetUtilities.java=>0,0]
+if(this.datasets.get(i)==dataset){
+result=(CategoryItemRenderer)this.renderers.get(i);
+break;
+}
+
+Time : 17/08/23 22:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/similarfix/d4j/projects/chart/chart_25_buggy/source/org/jfree/data/general/DatasetUtilities.java=>576,578]
+if(dataset.getValue(r,c)!=null){
+return false;
+}
+
+Time : 17/08/23 22:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/similarfix/d4j/projects/chart/chart_25_buggy/source/org/jfree/data/general/DatasetUtilities.java=>576,578]
+if(dataset.getValue(r,c)==dataset){
+return false;
+}
+
+Time : 17/08/23 22:33
+----------------------------------------
+Success time : 17/08/23 22:33
+Current failed test : org.jfree.chart.renderer.category.junit.StatisticalBarRendererTests::testDrawWithNullDeviationVertical | 17/08/23 22:33
+Already fixed : org.jfree.chart.renderer.category.junit.StatisticalBarRendererTests::testDrawWithNullDeviationVertical
+Current failed test : org.jfree.chart.renderer.category.junit.StatisticalBarRendererTests::testDrawWithNullDeviationHorizontal | 17/08/23 22:33
+Already fixed : org.jfree.chart.renderer.category.junit.StatisticalBarRendererTests::testDrawWithNullDeviationHorizontal
+Current failed test : org.jfree.chart.renderer.category.junit.StatisticalBarRendererTests::testDrawWithNullMeanHorizontal | 17/08/23 22:33
+Already fixed : org.jfree.chart.renderer.category.junit.StatisticalBarRendererTests::testDrawWithNullMeanHorizontal

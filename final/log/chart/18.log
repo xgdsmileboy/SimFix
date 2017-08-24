@@ -1,0 +1,251 @@
+=================================================
+Project : chart_18	start : 17/08/23 06:58
+Current failed test : org.jfree.data.category.junit.DefaultCategoryDatasetTests::testBug1835955 | 17/08/23 06:58
+Wed Aug 23 06:59:26 AEST 2017 org.jfree.data.DefaultKeyedValues,335
+Wed Aug 23 07:01:44 AEST 2017 org.jfree.data.category.DefaultCategoryDataset,350
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.data.removeColumn(columnKey);
+this.data.clear();
+fireDatasetChanged();
+
+Time : 17/08/23 07:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.2412407071619302 : [/home/similarfix/d4j/projects/chart/chart_18_buggy/source/org/jfree/data/category/DefaultCategoryDataset.java=>0,0]
+Iterator iterator=this.data.iterator();
+while(iterator.hasNext()){
+TaskSeries series=(TaskSeries)iterator.next();
+series.removeChangeListener(this);
+}
+this.data.clear();
+fireDatasetChanged();
+
+Time : 17/08/23 07:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/similarfix/d4j/projects/chart/chart_18_buggy/source/org/jfree/data/category/DefaultCategoryDataset.java=>350,351]
+this.data.removeColumn(columnKey);
+fireDatasetChanged();
+
+Time : 17/08/23 07:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/similarfix/d4j/projects/chart/chart_18_buggy/source/org/jfree/data/category/DefaultCategoryDataset.java=>350,351]
+this.data.removeColumn(columnKey);
+this.data.clear();
+fireDatasetChanged();
+
+Time : 17/08/23 07:02
+----------------------------------------
+Success time : 17/08/23 07:02
+Current failed test : org.jfree.data.junit.DefaultKeyedValuesTests::testRemoveValue_purify_3 | 17/08/23 07:02
+Wed Aug 23 07:03:26 AEST 2017 org.jfree.data.DefaultKeyedValues,335
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new UnknownKeyException("Row key ("+key);
+}
+
+Time : 17/08/23 07:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.534909808791126 : [/home/similarfix/d4j/projects/chart/chart_18_buggy/source/org/jfree/data/DefaultKeyedValues.java=>0,0]
+if(index<0){
+throw new UnknownKeyException("Row key ("+rowKey);
+}
+
+Time : 17/08/23 07:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/similarfix/d4j/projects/chart/chart_18_buggy/source/org/jfree/data/DefaultKeyedValues.java=>334,336]
+if(index<0){
+return ;
+}
+
+Time : 17/08/23 07:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/similarfix/d4j/projects/chart/chart_18_buggy/source/org/jfree/data/DefaultKeyedValues.java=>334,336]
+if(index<0){
+throw new UnknownKeyException("Row key ("+key);
+}
+
+Time : 17/08/23 07:04
+----------------------------------------
+Success time : 17/08/23 07:04
+Current failed test : org.jfree.data.junit.DefaultKeyedValuesTests::testGetIndex2_purify_3 | 17/08/23 07:04
+Wed Aug 23 07:05:16 AEST 2017 org.jfree.data.DefaultKeyedValues,316
+Wed Aug 23 07:07:59 AEST 2017 org.jfree.data.DefaultKeyedValues,317
+Wed Aug 23 07:07:59 AEST 2017 org.jfree.data.DefaultKeyedValues,318
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<=this.keys.size()){
+rebuildIndex();
+}
+
+Time : 17/08/23 07:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.2981462390204985 : [/home/similarfix/d4j/projects/chart/chart_18_buggy/source/org/jfree/data/DefaultKeyedValues.java=>0,0]
+if(position<=this.data.size()){
+this.data.add(position,item);
+}else {
+this.data.add(item);
+}
+
+Time : 17/08/23 07:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/similarfix/d4j/projects/chart/chart_18_buggy/source/org/jfree/data/DefaultKeyedValues.java=>318,320]
+if(index<this.keys.size()){
+rebuildIndex();
+}
+
+Time : 17/08/23 07:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/similarfix/d4j/projects/chart/chart_18_buggy/source/org/jfree/data/DefaultKeyedValues.java=>318,320]
+if(index<=this.keys.size()){
+rebuildIndex();
+}
+
+Time : 17/08/23 07:09
+----------------------------------------
+Success time : 17/08/23 07:09
+Current failed test : org.jfree.data.junit.DefaultKeyedValues2DTests::testRemoveColumnByKey_purify_1 | 17/08/23 07:09
+Already fixed : org.jfree.data.junit.DefaultKeyedValues2DTests::testRemoveColumnByKey_purify_1
+Current failed test : org.jfree.data.junit.DefaultKeyedValues2DTests::testRemoveColumnByKey_purify_2 | 17/08/23 07:09
+Wed Aug 23 07:10:08 AEST 2017 org.jfree.data.DefaultKeyedValues,335
+Wed Aug 23 07:12:26 AEST 2017 org.jfree.data.DefaultKeyedValues2D,455
+Wed Aug 23 07:14:41 AEST 2017 org.jfree.data.DefaultKeyedValues2D,456
+Wed Aug 23 07:16:57 AEST 2017 org.jfree.data.DefaultKeyedValues2D,457
+Wed Aug 23 07:16:57 AEST 2017 org.jfree.data.DefaultKeyedValues2D,458
+Wed Aug 23 07:16:57 AEST 2017 Wed Aug 23 07:16:57 AEST 2017 : org.jfree.data.DefaultKeyedValues2D,459=>Find no block
+Wed Aug 23 07:16:57 AEST 2017 org.jfree.data.DefaultKeyedValues2D,460
+Wed Aug 23 07:16:57 AEST 2017 Wed Aug 23 07:16:57 AEST 2017 : org.jfree.data.DefaultKeyedValues2D,461=>Find no block
+Wed Aug 23 07:16:57 AEST 2017 org.jfree.data.DefaultKeyedValues,316
+Wed Aug 23 07:19:40 AEST 2017 org.jfree.data.DefaultKeyedValues,317
+Wed Aug 23 07:19:40 AEST 2017 org.jfree.data.DefaultKeyedValues,318
+Wed Aug 23 07:22:11 AEST 2017 Wed Aug 23 07:22:11 AEST 2017 : org.jfree.data.DefaultKeyedValues,321=>Find no block
+Wed Aug 23 07:22:11 AEST 2017 org.jfree.data.DefaultKeyedValues,333
+Wed Aug 23 07:25:39 AEST 2017 org.jfree.data.DefaultKeyedValues,334
+Wed Aug 23 07:25:39 AEST 2017 org.jfree.data.DefaultKeyedValues,337
+Wed Aug 23 07:25:39 AEST 2017 Wed Aug 23 07:25:39 AEST 2017 : org.jfree.data.DefaultKeyedValues,338=>Find no block
+Wed Aug 23 07:25:39 AEST 2017 org.jfree.data.DefaultKeyedValues,234
+Wed Aug 23 07:27:36 AEST 2017 org.jfree.data.DefaultKeyedValues2D,323
+Wed Aug 23 07:27:40 AEST 2017 org.jfree.data.DefaultKeyedValues2D,189
+Wed Aug 23 07:28:36 AEST 2017 org.jfree.data.DefaultKeyedValues2D,303
+Wed Aug 23 07:29:53 AEST 2017 Wed Aug 23 07:29:53 AEST 2017 : org.jfree.data.DefaultKeyedValues2D,304=>Find no block
+Wed Aug 23 07:29:53 AEST 2017 org.jfree.data.DefaultKeyedValues2D,333
+Wed Aug 23 07:31:18 AEST 2017 org.jfree.data.DefaultKeyedValues2D,334
+Wed Aug 23 07:31:18 AEST 2017 org.jfree.data.DefaultKeyedValues2D,182
+Wed Aug 23 07:31:42 AEST 2017 org.jfree.data.DefaultKeyedValues2D,185
+Wed Aug 23 07:31:43 AEST 2017 org.jfree.data.DefaultKeyedValues2D,320
+Wed Aug 23 07:37:28 AEST 2017 org.jfree.data.DefaultKeyedValues2D,322
+Wed Aug 23 07:37:28 AEST 2017 org.jfree.data.DefaultKeyedValues2D,326
+Wed Aug 23 07:38:45 AEST 2017 org.jfree.data.DefaultKeyedValues2D,327
+Wed Aug 23 07:38:46 AEST 2017 org.jfree.data.DefaultKeyedValues2D,337
+Wed Aug 23 07:41:31 AEST 2017 org.jfree.data.DefaultKeyedValues2D,339
+Wed Aug 23 07:41:31 AEST 2017 org.jfree.data.DefaultKeyedValues2D,340
+Wed Aug 23 07:46:13 AEST 2017 org.jfree.data.DefaultKeyedValues2D,341
+Wed Aug 23 07:46:13 AEST 2017 Wed Aug 23 07:46:13 AEST 2017 : org.jfree.data.DefaultKeyedValues2D,343=>Find no block
+Wed Aug 23 07:46:13 AEST 2017 org.jfree.data.DefaultKeyedValues,157
+Wed Aug 23 07:47:41 AEST 2017 org.jfree.data.DefaultKeyedValues2D,95
+Wed Aug 23 07:47:44 AEST 2017 Wed Aug 23 07:47:44 AEST 2017 : org.jfree.data.DefaultKeyedValues2D,96=>Find no block
+Wed Aug 23 07:47:44 AEST 2017 Wed Aug 23 07:47:44 AEST 2017 : org.jfree.data.DefaultKeyedValues2D,103=>Find no block
+Wed Aug 23 07:47:44 AEST 2017 org.jfree.data.DefaultKeyedValues2D,104
+Wed Aug 23 07:47:47 AEST 2017 org.jfree.data.DefaultKeyedValues2D,105
+Wed Aug 23 07:47:47 AEST 2017 org.jfree.data.DefaultKeyedValues2D,106
+Wed Aug 23 07:47:47 AEST 2017 org.jfree.data.DefaultKeyedValues2D,107
+Wed Aug 23 07:47:47 AEST 2017 Wed Aug 23 07:47:47 AEST 2017 : org.jfree.data.DefaultKeyedValues2D,108=>Find no block
+Wed Aug 23 07:47:47 AEST 2017 org.jfree.data.DefaultKeyedValues,229
+Wed Aug 23 07:47:48 AEST 2017 org.jfree.data.DefaultKeyedValues,232
+Wed Aug 23 07:49:55 AEST 2017 org.jfree.data.DefaultKeyedValues,233
+Wed Aug 23 07:49:55 AEST 2017 org.jfree.data.DefaultKeyedValues,238
+Wed Aug 23 07:49:56 AEST 2017 org.jfree.data.DefaultKeyedValues,239
+Wed Aug 23 07:49:56 AEST 2017 org.jfree.data.DefaultKeyedValues,240
+Wed Aug 23 07:49:56 AEST 2017 Wed Aug 23 07:49:56 AEST 2017 : org.jfree.data.DefaultKeyedValues,242=>Find no block
+Wed Aug 23 07:49:56 AEST 2017 org.jfree.data.DefaultKeyedValues,150
+Wed Aug 23 07:49:56 AEST 2017 org.jfree.data.DefaultKeyedValues,153
+Wed Aug 23 07:49:56 AEST 2017 org.jfree.data.DefaultKeyedValues,154
+Wed Aug 23 07:49:56 AEST 2017 org.jfree.data.DefaultKeyedValues,155
+Wed Aug 23 07:49:56 AEST 2017 Wed Aug 23 07:49:56 AEST 2017 : org.jfree.data.DefaultKeyedValues,98=>Find no block
+Wed Aug 23 07:49:56 AEST 2017 org.jfree.data.DefaultKeyedValues,99
+Wed Aug 23 07:49:59 AEST 2017 org.jfree.data.DefaultKeyedValues,100
+Wed Aug 23 07:49:59 AEST 2017 org.jfree.data.DefaultKeyedValues,101
+Wed Aug 23 07:49:59 AEST 2017 Wed Aug 23 07:49:59 AEST 2017 : org.jfree.data.DefaultKeyedValues,102=>Find no block
+Wed Aug 23 07:50:00 AEST 2017 Wed Aug 23 07:50:00 AEST 2017 : org.jfree.data.general.AbstractDataset,94=>Find no block
+Wed Aug 23 07:50:00 AEST 2017 org.jfree.data.general.AbstractDataset,95
+Wed Aug 23 07:50:27 AEST 2017 org.jfree.data.general.AbstractDataset,96
+Wed Aug 23 07:50:27 AEST 2017 Wed Aug 23 07:50:27 AEST 2017 : org.jfree.data.general.AbstractDataset,97=>Find no block
+Wed Aug 23 07:50:28 AEST 2017 org.jfree.data.general.AbstractDataset,107
+Wed Aug 23 07:50:30 AEST 2017 org.jfree.data.general.AbstractDataset,118
+Wed Aug 23 07:50:33 AEST 2017 org.jfree.data.general.AbstractDataset,119
+Wed Aug 23 07:50:33 AEST 2017 org.jfree.data.general.AbstractDataset,121
+Wed Aug 23 07:50:36 AEST 2017 Wed Aug 23 07:50:36 AEST 2017 : org.jfree.data.general.AbstractDataset,122=>Find no block
+Wed Aug 23 07:50:36 AEST 2017 org.jfree.data.general.AbstractDataset,132
+Wed Aug 23 07:51:40 AEST 2017 Wed Aug 23 07:51:40 AEST 2017 : org.jfree.data.general.AbstractDataset,133=>Find no block
+Wed Aug 23 07:51:40 AEST 2017 org.jfree.data.general.AbstractDataset,144
+Wed Aug 23 07:52:23 AEST 2017 Wed Aug 23 07:52:23 AEST 2017 : org.jfree.data.general.AbstractDataset,145=>Find no block
+Wed Aug 23 07:52:23 AEST 2017 org.jfree.data.general.AbstractDataset,160
+Wed Aug 23 07:52:33 AEST 2017 org.jfree.data.general.AbstractDataset,161
+Wed Aug 23 07:52:33 AEST 2017 org.jfree.data.general.AbstractDataset,170
+Wed Aug 23 07:53:06 AEST 2017 Wed Aug 23 07:53:06 AEST 2017 : org.jfree.data.general.AbstractDataset,171=>Find no block
+Wed Aug 23 07:53:06 AEST 2017 org.jfree.data.general.AbstractDataset,184
+Wed Aug 23 08:02:21 AEST 2017 org.jfree.data.general.AbstractDataset,185
+Wed Aug 23 08:02:21 AEST 2017 org.jfree.data.general.AbstractDataset,186
+Wed Aug 23 08:02:21 AEST 2017 org.jfree.data.general.AbstractDataset,187
+Wed Aug 23 08:02:21 AEST 2017 Wed Aug 23 08:02:21 AEST 2017 : org.jfree.data.general.AbstractDataset,192=>Find no block
+Wed Aug 23 08:02:21 AEST 2017 org.jfree.data.general.AbstractDataset,205
+Wed Aug 23 08:07:13 AEST 2017 org.jfree.data.general.AbstractDataset,206
+Wed Aug 23 08:07:13 AEST 2017 org.jfree.data.general.AbstractDataset,207
+Wed Aug 23 08:07:14 AEST 2017 org.jfree.data.general.AbstractDataset,218
+Wed Aug 23 08:07:16 AEST 2017 Wed Aug 23 08:07:16 AEST 2017 : org.jfree.data.general.AbstractDataset,219=>Find no block
+Wed Aug 23 08:07:17 AEST 2017 org.jfree.data.general.AbstractDataset,231
+Wed Aug 23 08:07:41 AEST 2017 org.jfree.data.general.AbstractDataset,232
+Wed Aug 23 08:07:42 AEST 2017 org.jfree.data.general.AbstractDataset,233
+Wed Aug 23 08:07:42 AEST 2017 Wed Aug 23 08:07:42 AEST 2017 : org.jfree.data.general.AbstractDataset,235=>Find no block
+Wed Aug 23 08:07:42 AEST 2017 org.jfree.data.general.AbstractDataset,255
+Wed Aug 23 08:08:07 AEST 2017 Wed Aug 23 08:08:07 AEST 2017 : org.jfree.data.general.AbstractDataset,256=>Find no block
+Wed Aug 23 08:08:07 AEST 2017 org.jfree.data.general.AbstractDataset,132
+Wed Aug 23 08:08:07 AEST 2017 org.jfree.data.general.DatasetChangeEvent,71
+Wed Aug 23 08:08:10 AEST 2017 org.jfree.data.general.DatasetChangeEvent,72
+Wed Aug 23 08:08:10 AEST 2017 Wed Aug 23 08:08:10 AEST 2017 : org.jfree.data.general.DatasetChangeEvent,73=>Find no block
+Wed Aug 23 08:08:10 AEST 2017 org.jfree.data.general.DatasetChangeEvent,83
+Wed Aug 23 08:08:13 AEST 2017 org.jfree.data.general.DatasetGroup,63
+Wed Aug 23 08:08:33 AEST 2017 org.jfree.data.general.DatasetGroup,64
+Wed Aug 23 08:08:33 AEST 2017 Wed Aug 23 08:08:33 AEST 2017 : org.jfree.data.general.DatasetGroup,65=>Find no block
+Wed Aug 23 08:08:33 AEST 2017 Wed Aug 23 08:08:33 AEST 2017 : org.jfree.data.general.DatasetGroup,72=>Find no block
+Wed Aug 23 08:08:33 AEST 2017 org.jfree.data.general.DatasetGroup,73
+Wed Aug 23 08:08:36 AEST 2017 org.jfree.data.general.DatasetGroup,74
+Wed Aug 23 08:08:36 AEST 2017 org.jfree.data.general.DatasetGroup,76
+Wed Aug 23 08:08:39 AEST 2017 Wed Aug 23 08:08:39 AEST 2017 : org.jfree.data.general.DatasetGroup,77=>Find no block
+Wed Aug 23 08:08:39 AEST 2017 org.jfree.data.general.DatasetGroup,85
+Wed Aug 23 08:08:42 AEST 2017 org.jfree.data.general.DatasetGroup,96
+Wed Aug 23 08:08:45 AEST 2017 org.jfree.data.general.DatasetGroup,107
+Timeout time : 17/08/23 08:10

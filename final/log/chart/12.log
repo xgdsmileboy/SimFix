@@ -1,0 +1,69 @@
+=================================================
+Project : chart_12	start : 17/08/23 22:33
+Current failed test : org.jfree.chart.plot.junit.MultiplePiePlotTests::testConstructor | 17/08/23 22:33
+Wed Aug 23 22:34:26 AEST 2017 org.jfree.chart.plot.MultiplePiePlot,166
+Wed Aug 23 22:34:29 AEST 2017 org.jfree.data.general.AbstractDataset,160
+Wed Aug 23 22:34:39 AEST 2017 org.jfree.data.general.AbstractDataset,161
+Wed Aug 23 22:34:40 AEST 2017 org.jfree.chart.plot.MultiplePiePlot,135
+Wed Aug 23 22:34:42 AEST 2017 Wed Aug 23 22:34:42 AEST 2017 : org.jfree.chart.plot.MultiplePiePlot,136=>Find no block
+Wed Aug 23 22:34:42 AEST 2017 org.jfree.chart.JFreeChart,664
+Wed Aug 23 22:34:45 AEST 2017 Wed Aug 23 22:34:45 AEST 2017 : org.jfree.chart.JFreeChart,665=>Find no block
+Wed Aug 23 22:34:45 AEST 2017 org.jfree.chart.JFreeChart,795
+Wed Aug 23 22:37:15 AEST 2017 org.jfree.chart.JFreeChart,796
+Wed Aug 23 22:37:15 AEST 2017 Wed Aug 23 22:37:15 AEST 2017 : org.jfree.chart.JFreeChart,797=>Find no block
+Wed Aug 23 22:37:15 AEST 2017 org.jfree.chart.title.LegendTitle,542
+Wed Aug 23 22:38:48 AEST 2017 org.jfree.chart.plot.MultiplePiePlot,144
+Wed Aug 23 22:39:51 AEST 2017 Wed Aug 23 22:39:51 AEST 2017 : org.jfree.chart.plot.MultiplePiePlot,111=>Find no block
+Wed Aug 23 22:39:51 AEST 2017 org.jfree.chart.plot.MultiplePiePlot,145
+Wed Aug 23 22:39:51 AEST 2017 org.jfree.chart.plot.MultiplePiePlot,146
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(dataset!=null){
+dataset.addChangeListener(this);
+}
+this.dataset=dataset;
+PiePlot piePlot=new PiePlot(null);
+this.pieChart=new JFreeChart(piePlot);
+
+Time : 17/08/23 22:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.2416254115301733 : [/home/similarfix/d4j/projects/chart/chart_12_buggy/source/org/jfree/chart/plot/MultiplePiePlot.java=>0,0]
+if(extract==null){
+throw new IllegalArgumentException("Null \'extract\' argument.");
+}
+this.dataset=dataset;
+if(dataset!=null){
+dataset.addChangeListener(this);
+}
+
+Time : 17/08/23 22:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/similarfix/d4j/projects/chart/chart_12_buggy/source/org/jfree/chart/plot/MultiplePiePlot.java=>145,147]
+this.dataset=dataset;
+PiePlot piePlot=new PiePlot(null);
+this.pieChart=new JFreeChart(piePlot);
+
+Time : 17/08/23 22:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/similarfix/d4j/projects/chart/chart_12_buggy/source/org/jfree/chart/plot/MultiplePiePlot.java=>145,147]
+if(dataset!=null){
+dataset.addChangeListener(this);
+}
+this.dataset=dataset;
+PiePlot piePlot=new PiePlot(null);
+this.pieChart=new JFreeChart(piePlot);
+
+Time : 17/08/23 22:41
+----------------------------------------
+Success time : 17/08/23 22:41

@@ -1,0 +1,152 @@
+=================================================
+Project : chart_7	start : 17/08/23 20:47
+Current failed test : org.jfree.data.time.junit.TimePeriodValuesTests::testGetMaxMiddleIndex | 17/08/23 20:47
+Wed Aug 23 20:47:53 AEST 2017 org.jfree.data.time.TimePeriodValues,552
+Wed Aug 23 20:47:56 AEST 2017 org.jfree.data.time.TimePeriodValues,267
+Wed Aug 23 20:49:59 AEST 2017 org.jfree.data.time.TimePeriodValues,292
+Wed Aug 23 20:51:11 AEST 2017 org.jfree.data.time.TimePeriodValues,317
+Wed Aug 23 20:53:14 AEST 2017 Wed Aug 23 20:53:14 AEST 2017 : org.jfree.data.time.SimpleTimePeriod,76=>Find no block
+Wed Aug 23 20:53:14 AEST 2017 org.jfree.data.time.SimpleTimePeriod,77
+Wed Aug 23 20:53:46 AEST 2017 org.jfree.data.time.SimpleTimePeriod,80
+Wed Aug 23 20:54:23 AEST 2017 org.jfree.data.time.SimpleTimePeriod,81
+Wed Aug 23 20:54:23 AEST 2017 Wed Aug 23 20:54:23 AEST 2017 : org.jfree.data.time.SimpleTimePeriod,82=>Find no block
+Wed Aug 23 20:54:23 AEST 2017 org.jfree.data.time.SimpleTimePeriod,100
+Wed Aug 23 20:54:25 AEST 2017 org.jfree.data.time.SimpleTimePeriod,120
+Wed Aug 23 20:54:28 AEST 2017 Wed Aug 23 20:54:28 AEST 2017 : org.jfree.data.time.Year,96=>Find no block
+Wed Aug 23 20:54:28 AEST 2017 org.jfree.data.time.Year,97
+Wed Aug 23 20:58:34 AEST 2017 org.jfree.data.time.Year,103
+Wed Aug 23 21:02:24 AEST 2017 org.jfree.data.time.Year,104
+Wed Aug 23 21:02:24 AEST 2017 Wed Aug 23 21:02:24 AEST 2017 : org.jfree.data.time.Year,105=>Find no block
+Wed Aug 23 21:02:24 AEST 2017 org.jfree.data.time.Year,150
+Wed Aug 23 21:02:27 AEST 2017 org.jfree.data.time.Year,164
+Wed Aug 23 21:02:29 AEST 2017 org.jfree.data.time.Year,176
+Wed Aug 23 21:02:53 AEST 2017 org.jfree.data.time.Year,177
+Wed Aug 23 21:02:53 AEST 2017 Wed Aug 23 21:02:53 AEST 2017 : org.jfree.data.time.Year,178=>Find no block
+Wed Aug 23 21:02:53 AEST 2017 org.jfree.data.time.Year,233
+Wed Aug 23 21:06:18 AEST 2017 org.jfree.data.time.Year,234
+Wed Aug 23 21:06:18 AEST 2017 org.jfree.data.time.Year,237
+Wed Aug 23 21:06:18 AEST 2017 org.jfree.data.time.Year,252
+Wed Aug 23 21:09:44 AEST 2017 org.jfree.data.time.Year,253
+Wed Aug 23 21:09:44 AEST 2017 org.jfree.data.time.Year,256
+Wed Aug 23 21:09:44 AEST 2017 org.jfree.data.time.TimePeriodValues,363
+Wed Aug 23 21:11:35 AEST 2017 org.jfree.data.time.TimePeriodValues,364
+Wed Aug 23 21:11:35 AEST 2017 Wed Aug 23 21:11:35 AEST 2017 : org.jfree.data.time.TimePeriodValues,365=>Find no block
+Wed Aug 23 21:11:35 AEST 2017 org.jfree.data.time.TimePeriodValues,375
+Wed Aug 23 21:11:35 AEST 2017 org.jfree.data.time.TimePeriodValues,376
+Wed Aug 23 21:11:36 AEST 2017 Wed Aug 23 21:11:36 AEST 2017 : org.jfree.data.time.TimePeriodValues,377=>Find no block
+Wed Aug 23 21:11:36 AEST 2017 Wed Aug 23 21:11:36 AEST 2017 : org.jfree.data.time.RegularTimePeriod,70=>Find no block
+Wed Aug 23 21:11:36 AEST 2017 org.jfree.data.time.RegularTimePeriod,182
+Wed Aug 23 21:11:39 AEST 2017 org.jfree.data.time.RegularTimePeriod,194
+Wed Aug 23 21:11:41 AEST 2017 org.jfree.data.time.TimePeriodValue,88
+Wed Aug 23 21:11:53 AEST 2017 Wed Aug 23 21:11:53 AEST 2017 : org.jfree.data.time.TimePeriodValue,89=>Find no block
+Wed Aug 23 21:11:53 AEST 2017 org.jfree.data.general.SeriesChangeEvent,61
+Wed Aug 23 21:11:56 AEST 2017 Wed Aug 23 21:11:56 AEST 2017 : org.jfree.data.general.SeriesChangeEvent,62=>Find no block
+Wed Aug 23 21:11:56 AEST 2017 org.jfree.data.general.Series,313
+Wed Aug 23 21:13:38 AEST 2017 org.jfree.data.general.Series,314
+Wed Aug 23 21:13:38 AEST 2017 Wed Aug 23 21:13:38 AEST 2017 : org.jfree.data.general.Series,316=>Find no block
+Wed Aug 23 21:13:38 AEST 2017 org.jfree.data.general.Series,326
+Wed Aug 23 21:28:25 AEST 2017 org.jfree.data.general.Series,327
+Wed Aug 23 21:28:25 AEST 2017 Wed Aug 23 21:28:25 AEST 2017 : org.jfree.data.general.Series,334=>Find no block
+Wed Aug 23 21:28:26 AEST 2017 Wed Aug 23 21:28:26 AEST 2017 : org.jfree.data.time.TimePeriodValue,70=>Find no block
+Wed Aug 23 21:28:26 AEST 2017 org.jfree.data.time.TimePeriodValue,71
+Wed Aug 23 21:28:54 AEST 2017 org.jfree.data.time.TimePeriodValue,74
+Wed Aug 23 21:29:22 AEST 2017 org.jfree.data.time.TimePeriodValue,75
+Wed Aug 23 21:29:22 AEST 2017 Wed Aug 23 21:29:22 AEST 2017 : org.jfree.data.time.TimePeriodValue,76=>Find no block
+Wed Aug 23 21:29:22 AEST 2017 org.jfree.data.time.TimePeriodValue,97
+Wed Aug 23 21:29:25 AEST 2017 org.jfree.data.time.TimePeriodValues,205
+Wed Aug 23 21:29:52 AEST 2017 org.jfree.data.time.TimePeriodValues,243
+Wed Aug 23 21:30:14 AEST 2017 org.jfree.data.time.TimePeriodValues,246
+Wed Aug 23 21:33:07 AEST 2017 org.jfree.data.time.TimePeriodValues,247
+Wed Aug 23 21:33:07 AEST 2017 org.jfree.data.time.TimePeriodValues,248
+Wed Aug 23 21:33:07 AEST 2017 Wed Aug 23 21:33:07 AEST 2017 : org.jfree.data.time.TimePeriodValues,249=>Find no block
+Wed Aug 23 21:33:08 AEST 2017 org.jfree.data.time.TimePeriodValues,259
+Wed Aug 23 21:34:04 AEST 2017 org.jfree.data.time.TimePeriodValues,260
+Wed Aug 23 21:34:05 AEST 2017 org.jfree.data.time.TimePeriodValues,261
+Wed Aug 23 21:37:40 AEST 2017 org.jfree.data.time.TimePeriodValues,263
+Wed Aug 23 21:37:41 AEST 2017 org.jfree.data.time.TimePeriodValues,264
+Wed Aug 23 21:37:41 AEST 2017 org.jfree.data.time.TimePeriodValues,266
+Wed Aug 23 21:37:41 AEST 2017 Wed Aug 23 21:37:41 AEST 2017 : org.jfree.data.time.TimePeriodValues,269=>Find no block
+Wed Aug 23 21:37:41 AEST 2017 org.jfree.data.time.TimePeriodValues,271
+Wed Aug 23 21:37:41 AEST 2017 org.jfree.data.time.TimePeriodValues,274
+Wed Aug 23 21:40:38 AEST 2017 org.jfree.data.time.TimePeriodValues,275
+Wed Aug 23 21:40:38 AEST 2017 org.jfree.data.time.TimePeriodValues,277
+Wed Aug 23 21:40:39 AEST 2017 org.jfree.data.time.TimePeriodValues,278
+Wed Aug 23 21:40:39 AEST 2017 Wed Aug 23 21:40:39 AEST 2017 : org.jfree.data.time.TimePeriodValues,280=>Find no block
+Wed Aug 23 21:40:39 AEST 2017 org.jfree.data.time.TimePeriodValues,282
+Wed Aug 23 21:40:39 AEST 2017 org.jfree.data.time.TimePeriodValues,285
+Wed Aug 23 21:41:51 AEST 2017 org.jfree.data.time.TimePeriodValues,286
+Wed Aug 23 21:41:51 AEST 2017 org.jfree.data.time.TimePeriodValues,288
+Wed Aug 23 21:41:51 AEST 2017 org.jfree.data.time.TimePeriodValues,290
+Wed Aug 23 21:41:51 AEST 2017 org.jfree.data.time.TimePeriodValues,291
+Wed Aug 23 21:41:51 AEST 2017 Wed Aug 23 21:41:51 AEST 2017 : org.jfree.data.time.TimePeriodValues,294=>Find no block
+Wed Aug 23 21:41:51 AEST 2017 org.jfree.data.time.TimePeriodValues,296
+Wed Aug 23 21:41:52 AEST 2017 org.jfree.data.time.TimePeriodValues,299
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(this.maxMiddleIndex>=0){
+long s=getDataItem(this.maxMiddleIndex).getPeriod().getStart().getTime();
+long e=getDataItem(this.maxMiddleIndex).getPeriod().getEnd().getTime();
+long maxMiddle=s+(e-s)/2;
+if(middle>maxMiddle){
+this.maxMiddleIndex=index;
+}
+}else {
+this.maxMiddleIndex=index;
+}
+
+Time : 17/08/23 21:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 3.416666666666667 : [/home/similarfix/d4j/projects/chart/chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java=>0,0]
+if(this.minMiddleIndex>=0){
+long s=getDataItem(this.minMiddleIndex).getPeriod().getStart().getTime();
+long e=getDataItem(this.minMiddleIndex).getPeriod().getEnd().getTime();
+long minMiddle=s+(e-s)/2;
+if(middle<minMiddle){
+this.minMiddleIndex=index;
+}
+}else {
+this.minMiddleIndex=index;
+}
+
+Time : 17/08/23 21:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/similarfix/d4j/projects/chart/chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java=>299,311]
+if(this.maxMiddleIndex>=0){
+long s=getDataItem(this.minMiddleIndex).getPeriod().getStart().getTime();
+long e=getDataItem(this.minMiddleIndex).getPeriod().getEnd().getTime();
+long maxMiddle=s+(e-s)/2;
+if(middle>maxMiddle){
+this.maxMiddleIndex=index;
+}
+}else {
+this.maxMiddleIndex=index;
+}
+
+Time : 17/08/23 21:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/similarfix/d4j/projects/chart/chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java=>299,311]
+if(this.maxMiddleIndex>=0){
+long s=getDataItem(this.maxMiddleIndex).getPeriod().getStart().getTime();
+long e=getDataItem(this.maxMiddleIndex).getPeriod().getEnd().getTime();
+long maxMiddle=s+(e-s)/2;
+if(middle>maxMiddle){
+this.maxMiddleIndex=index;
+}
+}else {
+this.maxMiddleIndex=index;
+}
+
+Time : 17/08/23 21:43
+----------------------------------------
+Success time : 17/08/23 21:43
