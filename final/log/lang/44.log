@@ -1,0 +1,95 @@
+=================================================
+Project : lang_44	start : 17/08/23 23:56
+Current failed test : org.apache.commons.lang.NumberUtilsTest::testLang457 | 17/08/23 23:56
+Wed Aug 23 23:56:58 AEST 2017 org.apache.commons.lang.NumberUtils,139
+Wed Aug 23 23:57:13 AEST 2017 org.apache.commons.lang.NumberUtils,142
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(val.length()!=0){
+throw new NumberFormatException("\"\" is not a valid number.");
+}
+
+Time : 17/08/23 23:57
+----------------------------------------
+Wed Aug 23 23:59:01 AEST 2017 org.apache.commons.lang.NumberUtils,145
+Wed Aug 23 23:59:24 AEST 2017 org.apache.commons.lang.NumberUtils,152
+Wed Aug 23 23:59:59 AEST 2017 org.apache.commons.lang.NumberUtils,155
+Thu Aug 24 00:04:21 AEST 2017 org.apache.commons.lang.NumberUtils,159
+Thu Aug 24 00:06:23 AEST 2017 org.apache.commons.lang.NumberUtils,160
+Thu Aug 24 00:06:23 AEST 2017 org.apache.commons.lang.NumberUtils,162
+Thu Aug 24 00:17:21 AEST 2017 org.apache.commons.lang.NumberUtils,174
+Thu Aug 24 00:17:21 AEST 2017 org.apache.commons.lang.NumberUtils,177
+Thu Aug 24 00:17:21 AEST 2017 org.apache.commons.lang.NumberUtils,179
+Thu Aug 24 00:19:57 AEST 2017 org.apache.commons.lang.NumberUtils,181
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(expPos>-1&&expPos<val.length()-1){
+exp=val.substring(expPos+1,val.length()-1);
+}else {
+throw new NumberFormatException("\"\" is not a valid number.");
+}
+
+Time : 17/08/24 00:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(dec==null&&exp==null&&expPos<numeric.length()-1){
+try{
+return createLong(numeric);
+}catch (NumberFormatException nfe) {
+}
+
+return createBigInteger(numeric);
+}
+
+Time : 17/08/24 00:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.2094681193855221 : [/home/similarfix/d4j/projects/lang/lang_44_buggy/src/java/org/apache/commons/lang/NumberUtils.java=>0,0]
+if(expPos>-1&&expPos<val.length()-1){
+exp=val.substring(expPos+1,val.length());
+}else {
+exp=null;
+}
+
+Time : 17/08/24 00:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/similarfix/d4j/projects/lang/lang_44_buggy/src/java/org/apache/commons/lang/NumberUtils.java=>193,203]
+if(dec==null&&exp==null&&(numeric.charAt(0)=='-'&&isDigits(numeric.substring(1))||isDigits(numeric))){
+try{
+return createLong(numeric);
+}catch (NumberFormatException nfe) {
+}
+
+return createBigInteger(numeric);
+}
+
+Time : 17/08/24 00:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/similarfix/d4j/projects/lang/lang_44_buggy/src/java/org/apache/commons/lang/NumberUtils.java=>193,203]
+if(dec==null&&exp==null&&expPos<numeric.length()-1){
+try{
+return createLong(numeric);
+}catch (NumberFormatException nfe) {
+}
+
+return createBigInteger(numeric);
+}
+
+Time : 17/08/24 00:33
+----------------------------------------
+Success time : 17/08/24 00:33

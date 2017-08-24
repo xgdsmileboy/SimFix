@@ -1,0 +1,736 @@
+=================================================
+Project : lang_50	start : 17/08/23 09:35
+Current failed test : org.apache.commons.lang.time.FastDateFormatTest::test_changeDefault_Locale_DateTimeInstance | 17/08/23 09:36
+Wed Aug 23 09:36:21 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1717
+Wed Aug 23 09:37:09 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1721
+Wed Aug 23 09:37:10 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1725
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(this==obj){
+return true;
+}
+if(!(obj instanceof Pair)){
+return false;
+}
+Pair key=(Pair)obj;
+return mObj1==mObj2&&(mObj2==null?key.mObj2==null:mObj2.equals(key.mObj2));
+
+Time : 17/08/23 09:37
+----------------------------------------
+Wed Aug 23 09:38:36 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1727
+Wed Aug 23 09:38:36 AEST 2017 Wed Aug 23 09:38:36 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1538=>Find no block
+Wed Aug 23 09:38:36 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1539
+Wed Aug 23 09:38:46 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1540
+Wed Aug 23 09:38:46 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1541
+Wed Aug 23 09:39:04 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1542
+Wed Aug 23 09:39:46 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1544
+Wed Aug 23 09:39:56 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1548
+Wed Aug 23 09:39:56 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1549
+Wed Aug 23 09:39:56 AEST 2017 Wed Aug 23 09:39:56 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1551=>Find no block
+Wed Aug 23 09:39:56 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1557
+Wed Aug 23 09:43:06 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1559
+Wed Aug 23 09:43:06 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1560
+Wed Aug 23 09:43:06 AEST 2017 org.apache.commons.lang.time.FastDateFormat,408
+Wed Aug 23 09:43:06 AEST 2017 org.apache.commons.lang.time.FastDateFormat,425
+Wed Aug 23 09:43:07 AEST 2017 org.apache.commons.lang.time.FastDateFormat,461
+Wed Aug 23 09:43:23 AEST 2017 org.apache.commons.lang.time.FastDateFormat,462
+Wed Aug 23 09:43:38 AEST 2017 org.apache.commons.lang.time.FastDateFormat,465
+Wed Aug 23 09:43:52 AEST 2017 org.apache.commons.lang.time.FastDateFormat,466
+Wed Aug 23 09:43:52 AEST 2017 org.apache.commons.lang.time.FastDateFormat,469
+Wed Aug 23 09:44:31 AEST 2017 org.apache.commons.lang.time.FastDateFormat,470
+Wed Aug 23 09:45:05 AEST 2017 org.apache.commons.lang.time.FastDateFormat,471
+Wed Aug 23 09:45:06 AEST 2017 org.apache.commons.lang.time.FastDateFormat,472
+Wed Aug 23 09:45:06 AEST 2017 org.apache.commons.lang.time.FastDateFormat,475
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(locale!=null){
+key=new Pair(key,locale);
+}
+SimpleDateFormat formatter=(SimpleDateFormat)DateFormat.getDateTimeInstance(dateStyle,timeStyle,locale);
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+
+Time : 17/08/23 09:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(timeZone!=null){
+key=new Pair(key,timeZone);
+}
+if(locale!=null){
+key=new Pair(key,locale);
+}
+SimpleDateFormat formatter=(SimpleDateFormat)DateFormat.getDateTimeInstance(dateStyle,timeStyle,locale);
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+
+Time : 17/08/23 09:46
+----------------------------------------
+Wed Aug 23 09:47:06 AEST 2017 org.apache.commons.lang.time.FastDateFormat,477
+Wed Aug 23 09:47:06 AEST 2017 org.apache.commons.lang.time.FastDateFormat,478
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+cDateInstanceCache.put(key,format);
+
+Time : 17/08/23 09:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+cTimeInstanceCache.put(key,format);
+
+Time : 17/08/23 09:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+cDateTimeInstanceCache.put(pattern,format);
+
+Time : 17/08/23 09:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(locale!=null){
+key=new Pair(key,locale);
+}
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+cDateTimeInstanceCache.put(key,format);
+
+Time : 17/08/23 09:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(timeZone!=null){
+key=new Pair(key,timeZone);
+}
+if(locale!=null){
+key=new Pair(key,locale);
+}
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+cDateTimeInstanceCache.put(key,format);
+
+Time : 17/08/23 09:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+cTimeZoneDisplayCache.put(key,format);
+
+Time : 17/08/23 09:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+cTimeZoneDisplayCache.put(key,pattern);
+
+Time : 17/08/23 09:50
+----------------------------------------
+Wed Aug 23 09:51:55 AEST 2017 org.apache.commons.lang.time.FastDateFormat,479
+Wed Aug 23 09:51:55 AEST 2017 Wed Aug 23 09:51:55 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,483=>Find no block
+Wed Aug 23 09:51:56 AEST 2017 org.apache.commons.lang.time.FastDateFormat,485
+Wed Aug 23 09:52:04 AEST 2017 org.apache.commons.lang.time.FastDateFormat,620
+Wed Aug 23 09:53:42 AEST 2017 org.apache.commons.lang.time.FastDateFormat,672
+Wed Aug 23 09:54:15 AEST 2017 org.apache.commons.lang.time.FastDateFormat,675
+Wed Aug 23 09:54:15 AEST 2017 org.apache.commons.lang.time.FastDateFormat,677
+Wed Aug 23 09:56:08 AEST 2017 Wed Aug 23 09:56:08 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1447=>Find no block
+Wed Aug 23 09:56:09 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1448
+Wed Aug 23 09:56:09 AEST 2017 Wed Aug 23 09:56:09 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1449=>Find no block
+Wed Aug 23 09:56:09 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1455
+Wed Aug 23 09:56:10 AEST 2017 Wed Aug 23 09:56:10 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1708=>Find no block
+Wed Aug 23 09:56:10 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1709
+Wed Aug 23 09:56:10 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1710
+Wed Aug 23 09:56:10 AEST 2017 Wed Aug 23 09:56:10 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1711=>Find no block
+Wed Aug 23 09:56:10 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1738
+Wed Aug 23 09:56:11 AEST 2017 org.apache.commons.lang.time.FastDateFormat,633
+Wed Aug 23 09:56:29 AEST 2017 org.apache.commons.lang.time.FastDateFormat,634
+Wed Aug 23 09:56:30 AEST 2017 org.apache.commons.lang.time.FastDateFormat,663
+Wed Aug 23 09:56:49 AEST 2017 org.apache.commons.lang.time.FastDateFormat,664
+Wed Aug 23 09:56:51 AEST 2017 Wed Aug 23 09:56:51 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1185=>Find no block
+Wed Aug 23 09:56:51 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1186
+Wed Aug 23 09:57:00 AEST 2017 Wed Aug 23 09:57:00 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1187=>Find no block
+Wed Aug 23 09:57:00 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1193
+Wed Aug 23 09:57:01 AEST 2017 Wed Aug 23 09:57:01 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1112=>Find no block
+Wed Aug 23 09:57:01 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1113
+Wed Aug 23 09:57:06 AEST 2017 Wed Aug 23 09:57:06 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1114=>Find no block
+Wed Aug 23 09:57:06 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1120
+Wed Aug 23 09:57:20 AEST 2017 org.apache.commons.lang.time.FastDateFormat,648
+Wed Aug 23 09:57:40 AEST 2017 org.apache.commons.lang.time.FastDateFormat,649
+Wed Aug 23 09:57:41 AEST 2017 org.apache.commons.lang.time.FastDateFormat,690
+Wed Aug 23 10:00:45 AEST 2017 org.apache.commons.lang.time.FastDateFormat,692
+Wed Aug 23 10:04:25 AEST 2017 org.apache.commons.lang.time.FastDateFormat,772
+Wed Aug 23 10:04:34 AEST 2017 org.apache.commons.lang.time.FastDateFormat,954
+Wed Aug 23 10:04:34 AEST 2017 Wed Aug 23 10:04:34 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1145=>Find no block
+Wed Aug 23 10:04:34 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1146
+Wed Aug 23 10:04:42 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1147
+Wed Aug 23 10:04:42 AEST 2017 Wed Aug 23 10:04:42 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1148=>Find no block
+Wed Aug 23 10:04:42 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1154
+Wed Aug 23 10:15:19 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1155
+Wed Aug 23 10:15:19 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1156
+Wed Aug 23 10:15:19 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1157
+Wed Aug 23 10:15:19 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1158
+Wed Aug 23 10:15:19 AEST 2017 Wed Aug 23 10:15:19 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1160=>Find no block
+Wed Aug 23 10:15:19 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1161
+Wed Aug 23 10:15:19 AEST 2017 org.apache.commons.lang.time.FastDateFormat,741
+Wed Aug 23 10:23:20 AEST 2017 org.apache.commons.lang.time.FastDateFormat,746
+Wed Aug 23 10:23:20 AEST 2017 org.apache.commons.lang.time.FastDateFormat,642
+Wed Aug 23 10:24:12 AEST 2017 org.apache.commons.lang.time.FastDateFormat,643
+Wed Aug 23 10:24:48 AEST 2017 org.apache.commons.lang.time.FastDateFormat,636
+Wed Aug 23 10:25:41 AEST 2017 org.apache.commons.lang.time.FastDateFormat,637
+Wed Aug 23 10:26:17 AEST 2017 org.apache.commons.lang.time.FastDateFormat,639
+Wed Aug 23 10:27:15 AEST 2017 org.apache.commons.lang.time.FastDateFormat,640
+Wed Aug 23 10:27:57 AEST 2017 org.apache.commons.lang.time.FastDateFormat,630
+Wed Aug 23 10:28:49 AEST 2017 org.apache.commons.lang.time.FastDateFormat,631
+Wed Aug 23 10:29:26 AEST 2017 org.apache.commons.lang.time.FastDateFormat,546
+Wed Aug 23 10:29:40 AEST 2017 Wed Aug 23 10:29:40 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1272=>Find no block
+Wed Aug 23 10:29:40 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1273
+Wed Aug 23 10:30:35 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1277
+Wed Aug 23 10:31:53 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1278
+Wed Aug 23 10:31:53 AEST 2017 Wed Aug 23 10:31:53 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1279=>Find no block
+Wed Aug 23 10:31:53 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1285
+Wed Aug 23 10:31:53 AEST 2017 org.apache.commons.lang.time.FastDateFormat,613
+Wed Aug 23 10:32:12 AEST 2017 org.apache.commons.lang.time.FastDateFormat,776
+Wed Aug 23 10:32:12 AEST 2017 org.apache.commons.lang.time.FastDateFormat,612
+Wed Aug 23 10:32:12 AEST 2017 org.apache.commons.lang.time.FastDateFormat,619
+Wed Aug 23 10:32:12 AEST 2017 Wed Aug 23 10:32:12 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1081=>Find no block
+Wed Aug 23 10:32:12 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1082
+Wed Aug 23 10:32:12 AEST 2017 Wed Aug 23 10:32:12 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1083=>Find no block
+Wed Aug 23 10:32:12 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1089
+Wed Aug 23 10:32:13 AEST 2017 Wed Aug 23 10:32:13 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1332=>Find no block
+Wed Aug 23 10:32:13 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1333
+Wed Aug 23 10:32:13 AEST 2017 Wed Aug 23 10:32:13 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1334=>Find no block
+Wed Aug 23 10:32:13 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1340
+Wed Aug 23 10:32:14 AEST 2017 org.apache.commons.lang.time.FastDateFormat,215
+Wed Aug 23 10:32:49 AEST 2017 org.apache.commons.lang.time.FastDateFormat,216
+Wed Aug 23 10:32:50 AEST 2017 org.apache.commons.lang.time.FastDateFormat,217
+Wed Aug 23 10:32:50 AEST 2017 org.apache.commons.lang.time.FastDateFormat,686
+Wed Aug 23 10:33:17 AEST 2017 org.apache.commons.lang.time.FastDateFormat,687
+Wed Aug 23 10:33:17 AEST 2017 org.apache.commons.lang.time.FastDateFormat,688
+Wed Aug 23 10:33:17 AEST 2017 org.apache.commons.lang.time.FastDateFormat,733
+Timeout time : 17/08/23 10:36
+Current failed test : org.apache.commons.lang.time.FastDateFormatTest::test_changeDefault_Locale_DateInstance | 17/08/23 10:36
+Wed Aug 23 10:36:43 AEST 2017 org.apache.commons.lang.time.FastDateFormat,234
+Wed Aug 23 10:36:57 AEST 2017 org.apache.commons.lang.time.FastDateFormat,293
+Wed Aug 23 10:37:13 AEST 2017 org.apache.commons.lang.time.FastDateFormat,620
+Wed Aug 23 10:38:50 AEST 2017 Wed Aug 23 10:38:50 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1708=>Find no block
+Wed Aug 23 10:38:50 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1709
+Wed Aug 23 10:38:51 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1710
+Wed Aug 23 10:38:51 AEST 2017 Wed Aug 23 10:38:51 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1711=>Find no block
+Wed Aug 23 10:38:51 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1738
+Wed Aug 23 10:38:52 AEST 2017 org.apache.commons.lang.time.FastDateFormat,249
+Wed Aug 23 10:39:06 AEST 2017 org.apache.commons.lang.time.FastDateFormat,280
+Wed Aug 23 10:39:22 AEST 2017 org.apache.commons.lang.time.FastDateFormat,281
+Wed Aug 23 10:39:36 AEST 2017 org.apache.commons.lang.time.FastDateFormat,285
+Wed Aug 23 10:39:50 AEST 2017 org.apache.commons.lang.time.FastDateFormat,286
+Wed Aug 23 10:39:51 AEST 2017 org.apache.commons.lang.time.FastDateFormat,290
+Wed Aug 23 10:40:29 AEST 2017 org.apache.commons.lang.time.FastDateFormat,291
+Wed Aug 23 10:40:58 AEST 2017 org.apache.commons.lang.time.FastDateFormat,292
+Wed Aug 23 10:40:58 AEST 2017 org.apache.commons.lang.time.FastDateFormat,296
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(locale!=null){
+key=new Pair(key,locale);
+}
+SimpleDateFormat formatter=(SimpleDateFormat)DateFormat.getDateInstance(style,locale);
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+
+Time : 17/08/23 10:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(timeZone!=null){
+key=new Pair(key,timeZone);
+}
+if(locale!=null){
+key=new Pair(key,locale);
+}
+SimpleDateFormat formatter=(SimpleDateFormat)DateFormat.getDateInstance(style,locale);
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+
+Time : 17/08/23 10:42
+----------------------------------------
+Wed Aug 23 10:42:56 AEST 2017 org.apache.commons.lang.time.FastDateFormat,297
+Wed Aug 23 10:42:57 AEST 2017 org.apache.commons.lang.time.FastDateFormat,298
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+cTimeInstanceCache.put(key,format);
+
+Time : 17/08/23 10:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+cDateTimeInstanceCache.put(key,format);
+
+Time : 17/08/23 10:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+cDateInstanceCache.put(pattern,format);
+
+Time : 17/08/23 10:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(locale!=null){
+key=new Pair(key,locale);
+}
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+cDateInstanceCache.put(key,format);
+
+Time : 17/08/23 10:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(timeZone!=null){
+key=new Pair(key,timeZone);
+}
+if(locale!=null){
+key=new Pair(key,locale);
+}
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+cDateInstanceCache.put(key,format);
+
+Time : 17/08/23 10:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+cTimeZoneDisplayCache.put(key,format);
+
+Time : 17/08/23 10:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+cTimeZoneDisplayCache.put(key,pattern);
+
+Time : 17/08/23 10:46
+----------------------------------------
+Wed Aug 23 10:47:54 AEST 2017 org.apache.commons.lang.time.FastDateFormat,299
+Wed Aug 23 10:47:54 AEST 2017 Wed Aug 23 10:47:54 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,303=>Find no block
+Wed Aug 23 10:47:54 AEST 2017 org.apache.commons.lang.time.FastDateFormat,305
+Wed Aug 23 10:48:01 AEST 2017 Wed Aug 23 10:48:01 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1185=>Find no block
+Wed Aug 23 10:48:02 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1186
+Wed Aug 23 10:48:11 AEST 2017 Wed Aug 23 10:48:11 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1187=>Find no block
+Wed Aug 23 10:48:11 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1193
+Wed Aug 23 10:48:12 AEST 2017 Wed Aug 23 10:48:12 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1112=>Find no block
+Wed Aug 23 10:48:12 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1113
+Wed Aug 23 10:48:17 AEST 2017 Wed Aug 23 10:48:17 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1114=>Find no block
+Wed Aug 23 10:48:17 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1120
+Wed Aug 23 10:48:31 AEST 2017 org.apache.commons.lang.time.FastDateFormat,648
+Wed Aug 23 10:48:51 AEST 2017 org.apache.commons.lang.time.FastDateFormat,649
+Wed Aug 23 10:48:52 AEST 2017 org.apache.commons.lang.time.FastDateFormat,690
+Wed Aug 23 10:51:56 AEST 2017 org.apache.commons.lang.time.FastDateFormat,692
+Wed Aug 23 10:55:35 AEST 2017 org.apache.commons.lang.time.FastDateFormat,772
+Wed Aug 23 10:55:43 AEST 2017 org.apache.commons.lang.time.FastDateFormat,954
+Wed Aug 23 10:55:44 AEST 2017 Wed Aug 23 10:55:44 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1145=>Find no block
+Wed Aug 23 10:55:44 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1146
+Wed Aug 23 10:55:51 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1147
+Wed Aug 23 10:55:51 AEST 2017 Wed Aug 23 10:55:51 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1148=>Find no block
+Wed Aug 23 10:55:51 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1154
+Wed Aug 23 11:06:25 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1155
+Wed Aug 23 11:06:25 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1156
+Wed Aug 23 11:06:25 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1157
+Wed Aug 23 11:06:25 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1158
+Wed Aug 23 11:06:25 AEST 2017 Wed Aug 23 11:06:25 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1160=>Find no block
+Wed Aug 23 11:06:25 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1161
+Wed Aug 23 11:06:25 AEST 2017 org.apache.commons.lang.time.FastDateFormat,630
+Wed Aug 23 11:07:17 AEST 2017 org.apache.commons.lang.time.FastDateFormat,631
+Wed Aug 23 11:07:53 AEST 2017 org.apache.commons.lang.time.FastDateFormat,546
+Wed Aug 23 11:08:07 AEST 2017 Wed Aug 23 11:08:07 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1272=>Find no block
+Wed Aug 23 11:08:07 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1273
+Wed Aug 23 11:09:02 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1277
+Wed Aug 23 11:10:19 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1278
+Wed Aug 23 11:10:19 AEST 2017 Wed Aug 23 11:10:19 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1279=>Find no block
+Wed Aug 23 11:10:19 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1285
+Wed Aug 23 11:10:19 AEST 2017 org.apache.commons.lang.time.FastDateFormat,613
+Wed Aug 23 11:10:39 AEST 2017 org.apache.commons.lang.time.FastDateFormat,776
+Wed Aug 23 11:10:39 AEST 2017 org.apache.commons.lang.time.FastDateFormat,612
+Wed Aug 23 11:10:39 AEST 2017 org.apache.commons.lang.time.FastDateFormat,619
+Wed Aug 23 11:10:39 AEST 2017 Wed Aug 23 11:10:39 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1081=>Find no block
+Wed Aug 23 11:10:39 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1082
+Wed Aug 23 11:10:39 AEST 2017 Wed Aug 23 11:10:39 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1083=>Find no block
+Wed Aug 23 11:10:39 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1089
+Wed Aug 23 11:10:39 AEST 2017 org.apache.commons.lang.time.FastDateFormat,215
+Wed Aug 23 11:11:15 AEST 2017 org.apache.commons.lang.time.FastDateFormat,216
+Wed Aug 23 11:11:15 AEST 2017 org.apache.commons.lang.time.FastDateFormat,217
+Wed Aug 23 11:11:15 AEST 2017 org.apache.commons.lang.time.FastDateFormat,686
+Wed Aug 23 11:11:43 AEST 2017 org.apache.commons.lang.time.FastDateFormat,687
+Wed Aug 23 11:11:43 AEST 2017 org.apache.commons.lang.time.FastDateFormat,688
+Wed Aug 23 11:11:43 AEST 2017 org.apache.commons.lang.time.FastDateFormat,733
+Wed Aug 23 11:24:40 AEST 2017 org.apache.commons.lang.time.FastDateFormat,735
+Wed Aug 23 11:24:40 AEST 2017 org.apache.commons.lang.time.FastDateFormat,737
+Wed Aug 23 11:28:28 AEST 2017 org.apache.commons.lang.time.FastDateFormat,738
+Wed Aug 23 11:28:31 AEST 2017 org.apache.commons.lang.time.FastDateFormat,740
+Wed Aug 23 11:28:31 AEST 2017 org.apache.commons.lang.time.FastDateFormat,748
+Wed Aug 23 11:28:31 AEST 2017 org.apache.commons.lang.time.FastDateFormat,750
+Wed Aug 23 11:28:31 AEST 2017 org.apache.commons.lang.time.FastDateFormat,751
+Wed Aug 23 11:28:31 AEST 2017 org.apache.commons.lang.time.FastDateFormat,753
+Wed Aug 23 11:28:31 AEST 2017 org.apache.commons.lang.time.FastDateFormat,538
+Wed Aug 23 11:28:51 AEST 2017 org.apache.commons.lang.time.FastDateFormat,539
+Wed Aug 23 11:29:13 AEST 2017 org.apache.commons.lang.time.FastDateFormat,542
+Wed Aug 23 11:29:51 AEST 2017 org.apache.commons.lang.time.FastDateFormat,544
+Wed Aug 23 11:30:23 AEST 2017 org.apache.commons.lang.time.FastDateFormat,545
+Wed Aug 23 11:30:23 AEST 2017 org.apache.commons.lang.time.FastDateFormat,548
+Wed Aug 23 11:30:49 AEST 2017 org.apache.commons.lang.time.FastDateFormat,550
+Wed Aug 23 11:31:14 AEST 2017 org.apache.commons.lang.time.FastDateFormat,551
+Wed Aug 23 11:31:14 AEST 2017 org.apache.commons.lang.time.FastDateFormat,554
+Wed Aug 23 11:31:35 AEST 2017 Wed Aug 23 11:31:35 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,555=>Find no block
+Wed Aug 23 11:31:35 AEST 2017 org.apache.commons.lang.time.FastDateFormat,212
+Wed Aug 23 11:32:56 AEST 2017 org.apache.commons.lang.time.FastDateFormat,213
+Wed Aug 23 11:32:56 AEST 2017 org.apache.commons.lang.time.FastDateFormat,214
+Wed Aug 23 11:32:56 AEST 2017 org.apache.commons.lang.time.FastDateFormat,219
+Wed Aug 23 11:32:56 AEST 2017 org.apache.commons.lang.time.FastDateFormat,561
+Timeout time : 17/08/23 11:36
+Current failed test : org.apache.commons.lang.text.MessageFormatExtensionTest::testLongTime | 17/08/23 11:36
+Wed Aug 23 11:37:02 AEST 2017 Wed Aug 23 11:37:02 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1145=>Find no block
+Wed Aug 23 11:37:02 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1146
+Wed Aug 23 11:37:09 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1147
+Wed Aug 23 11:37:09 AEST 2017 Wed Aug 23 11:37:09 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1148=>Find no block
+Wed Aug 23 11:37:09 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1154
+Wed Aug 23 11:47:44 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1155
+Wed Aug 23 11:47:44 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1156
+Wed Aug 23 11:47:44 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1157
+Wed Aug 23 11:47:44 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1158
+Wed Aug 23 11:47:44 AEST 2017 Wed Aug 23 11:47:44 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1160=>Find no block
+Wed Aug 23 11:47:44 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1161
+Wed Aug 23 11:47:44 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1168
+Wed Aug 23 11:48:29 AEST 2017 Wed Aug 23 11:48:29 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1169=>Find no block
+Wed Aug 23 11:48:29 AEST 2017 Wed Aug 23 11:48:29 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1489=>Find no block
+Wed Aug 23 11:48:29 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1490
+Wed Aug 23 11:48:30 AEST 2017 Wed Aug 23 11:48:30 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1491=>Find no block
+Wed Aug 23 11:48:30 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1497
+Wed Aug 23 11:48:30 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1504
+Wed Aug 23 11:50:46 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1505
+Wed Aug 23 11:51:34 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1506
+Wed Aug 23 11:51:34 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1508
+Wed Aug 23 11:51:34 AEST 2017 Wed Aug 23 11:51:34 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1509=>Find no block
+Wed Aug 23 11:51:34 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1515
+Wed Aug 23 11:52:02 AEST 2017 Wed Aug 23 11:52:02 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1516=>Find no block
+Wed Aug 23 11:52:02 AEST 2017 Wed Aug 23 11:52:02 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1081=>Find no block
+Wed Aug 23 11:52:02 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1082
+Wed Aug 23 11:52:07 AEST 2017 Wed Aug 23 11:52:07 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1083=>Find no block
+Wed Aug 23 11:52:07 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1089
+Wed Aug 23 11:52:08 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1096
+Wed Aug 23 11:53:20 AEST 2017 Wed Aug 23 11:53:20 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1097=>Find no block
+Wed Aug 23 11:53:20 AEST 2017 Wed Aug 23 11:53:20 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1447=>Find no block
+Wed Aug 23 11:53:20 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1448
+Wed Aug 23 11:53:20 AEST 2017 Wed Aug 23 11:53:20 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1449=>Find no block
+Wed Aug 23 11:53:20 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1455
+Wed Aug 23 11:53:20 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1462
+Wed Aug 23 11:55:36 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1463
+Wed Aug 23 11:56:25 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1464
+Wed Aug 23 11:56:25 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1466
+Wed Aug 23 11:56:25 AEST 2017 Wed Aug 23 11:56:25 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1467=>Find no block
+Wed Aug 23 11:56:25 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1473
+Wed Aug 23 11:56:25 AEST 2017 Wed Aug 23 11:56:25 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1474=>Find no block
+Wed Aug 23 11:56:25 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1373
+Wed Aug 23 11:56:25 AEST 2017 Wed Aug 23 11:56:25 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1374=>Find no block
+Wed Aug 23 11:56:25 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1380
+Wed Aug 23 11:56:26 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1387
+Wed Aug 23 11:56:50 AEST 2017 Wed Aug 23 11:56:50 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1388=>Find no block
+Wed Aug 23 11:56:50 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1394
+Wed Aug 23 11:58:15 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1395
+Wed Aug 23 11:58:15 AEST 2017 Wed Aug 23 11:58:15 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1396=>Find no block
+Wed Aug 23 11:58:16 AEST 2017 Wed Aug 23 11:58:16 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1332=>Find no block
+Wed Aug 23 11:58:16 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1333
+Wed Aug 23 11:58:25 AEST 2017 Wed Aug 23 11:58:25 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1334=>Find no block
+Wed Aug 23 11:58:25 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1340
+Wed Aug 23 11:58:25 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1347
+Wed Aug 23 11:58:49 AEST 2017 Wed Aug 23 11:58:49 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1348=>Find no block
+Wed Aug 23 11:58:49 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1354
+Wed Aug 23 12:01:44 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1355
+Wed Aug 23 12:01:44 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1356
+Wed Aug 23 12:01:44 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1358
+Wed Aug 23 12:01:44 AEST 2017 Wed Aug 23 12:01:44 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1360=>Find no block
+Wed Aug 23 12:01:44 AEST 2017 Wed Aug 23 12:01:44 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1658=>Find no block
+Wed Aug 23 12:01:44 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1659
+Wed Aug 23 12:02:12 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1660
+Wed Aug 23 12:02:12 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1661
+Wed Aug 23 12:02:12 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1663
+Wed Aug 23 12:02:12 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1664
+Wed Aug 23 12:02:12 AEST 2017 Wed Aug 23 12:02:12 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1665=>Find no block
+Wed Aug 23 12:02:12 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1671
+Wed Aug 23 12:02:17 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1678
+Wed Aug 23 12:03:04 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1679
+Wed Aug 23 12:03:04 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1681
+Wed Aug 23 12:03:26 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1682
+Wed Aug 23 12:03:26 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1683
+Wed Aug 23 12:03:26 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1688
+Wed Aug 23 12:04:46 AEST 2017 Wed Aug 23 12:04:46 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1708=>Find no block
+Wed Aug 23 12:04:46 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1709
+Wed Aug 23 12:04:47 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1710
+Wed Aug 23 12:04:47 AEST 2017 Wed Aug 23 12:04:47 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1711=>Find no block
+Wed Aug 23 12:04:47 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1717
+Wed Aug 23 12:04:47 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1718
+Wed Aug 23 12:04:47 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1721
+Wed Aug 23 12:04:48 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1722
+Wed Aug 23 12:04:48 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1725
+Wed Aug 23 12:05:55 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1727
+Wed Aug 23 12:05:56 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1738
+Wed Aug 23 12:05:56 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1747
+Wed Aug 23 12:06:10 AEST 2017 Wed Aug 23 12:06:10 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1602=>Find no block
+Wed Aug 23 12:06:10 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1603
+Wed Aug 23 12:06:11 AEST 2017 Wed Aug 23 12:06:11 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1604=>Find no block
+Wed Aug 23 12:06:11 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1610
+Wed Aug 23 12:06:11 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1617
+Wed Aug 23 12:07:26 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1619
+Wed Aug 23 12:33:52 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1620
+Wed Aug 23 12:33:52 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1621
+Wed Aug 23 12:33:52 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1623
+Wed Aug 23 12:33:52 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1626
+Timeout time : 17/08/23 12:37
+Current failed test : org.apache.commons.lang.text.ExtendedMessageFormatBaselineTest::testLongTime | 17/08/23 12:37
+Wed Aug 23 12:37:22 AEST 2017 Wed Aug 23 12:37:22 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1145=>Find no block
+Wed Aug 23 12:37:22 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1146
+Wed Aug 23 12:37:30 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1147
+Wed Aug 23 12:37:30 AEST 2017 Wed Aug 23 12:37:30 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1148=>Find no block
+Wed Aug 23 12:37:30 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1154
+Wed Aug 23 12:48:04 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1155
+Wed Aug 23 12:48:04 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1156
+Wed Aug 23 12:48:04 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1157
+Wed Aug 23 12:48:04 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1158
+Wed Aug 23 12:48:04 AEST 2017 Wed Aug 23 12:48:04 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1160=>Find no block
+Wed Aug 23 12:48:04 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1161
+Wed Aug 23 12:48:04 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1168
+Wed Aug 23 12:48:49 AEST 2017 Wed Aug 23 12:48:49 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1169=>Find no block
+Wed Aug 23 12:48:49 AEST 2017 Wed Aug 23 12:48:49 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1489=>Find no block
+Wed Aug 23 12:48:49 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1490
+Wed Aug 23 12:48:50 AEST 2017 Wed Aug 23 12:48:50 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1491=>Find no block
+Wed Aug 23 12:48:50 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1497
+Wed Aug 23 12:48:50 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1504
+Wed Aug 23 12:51:05 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1505
+Wed Aug 23 12:51:54 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1506
+Wed Aug 23 12:51:54 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1508
+Wed Aug 23 12:51:54 AEST 2017 Wed Aug 23 12:51:54 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1509=>Find no block
+Wed Aug 23 12:51:54 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1515
+Wed Aug 23 12:52:22 AEST 2017 Wed Aug 23 12:52:22 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1516=>Find no block
+Wed Aug 23 12:52:22 AEST 2017 Wed Aug 23 12:52:22 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1081=>Find no block
+Wed Aug 23 12:52:22 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1082
+Wed Aug 23 12:52:27 AEST 2017 Wed Aug 23 12:52:27 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1083=>Find no block
+Wed Aug 23 12:52:27 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1089
+Wed Aug 23 12:52:28 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1096
+Wed Aug 23 12:53:40 AEST 2017 Wed Aug 23 12:53:40 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1097=>Find no block
+Wed Aug 23 12:53:40 AEST 2017 Wed Aug 23 12:53:40 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1447=>Find no block
+Wed Aug 23 12:53:40 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1448
+Wed Aug 23 12:53:40 AEST 2017 Wed Aug 23 12:53:40 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1449=>Find no block
+Wed Aug 23 12:53:40 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1455
+Wed Aug 23 12:53:40 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1462
+Wed Aug 23 12:55:55 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1463
+Wed Aug 23 12:56:44 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1464
+Wed Aug 23 12:56:44 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1466
+Wed Aug 23 12:56:44 AEST 2017 Wed Aug 23 12:56:44 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1467=>Find no block
+Wed Aug 23 12:56:44 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1473
+Wed Aug 23 12:56:44 AEST 2017 Wed Aug 23 12:56:44 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1474=>Find no block
+Wed Aug 23 12:56:44 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1373
+Wed Aug 23 12:56:45 AEST 2017 Wed Aug 23 12:56:45 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1374=>Find no block
+Wed Aug 23 12:56:45 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1380
+Wed Aug 23 12:56:45 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1387
+Wed Aug 23 12:57:09 AEST 2017 Wed Aug 23 12:57:09 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1388=>Find no block
+Wed Aug 23 12:57:09 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1394
+Wed Aug 23 12:58:35 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1395
+Wed Aug 23 12:58:35 AEST 2017 Wed Aug 23 12:58:35 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1396=>Find no block
+Wed Aug 23 12:58:35 AEST 2017 Wed Aug 23 12:58:35 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1332=>Find no block
+Wed Aug 23 12:58:35 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1333
+Wed Aug 23 12:58:44 AEST 2017 Wed Aug 23 12:58:44 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1334=>Find no block
+Wed Aug 23 12:58:44 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1340
+Wed Aug 23 12:58:44 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1347
+Wed Aug 23 12:59:08 AEST 2017 Wed Aug 23 12:59:08 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1348=>Find no block
+Wed Aug 23 12:59:08 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1354
+Wed Aug 23 13:02:03 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1355
+Wed Aug 23 13:02:03 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1356
+Wed Aug 23 13:02:03 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1358
+Wed Aug 23 13:02:03 AEST 2017 Wed Aug 23 13:02:03 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1360=>Find no block
+Wed Aug 23 13:02:03 AEST 2017 Wed Aug 23 13:02:03 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1658=>Find no block
+Wed Aug 23 13:02:03 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1659
+Wed Aug 23 13:02:31 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1660
+Wed Aug 23 13:02:31 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1661
+Wed Aug 23 13:02:31 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1663
+Wed Aug 23 13:02:31 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1664
+Wed Aug 23 13:02:31 AEST 2017 Wed Aug 23 13:02:31 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1665=>Find no block
+Wed Aug 23 13:02:31 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1671
+Wed Aug 23 13:02:36 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1678
+Wed Aug 23 13:03:23 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1679
+Wed Aug 23 13:03:23 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1681
+Wed Aug 23 13:03:45 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1682
+Wed Aug 23 13:03:45 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1683
+Wed Aug 23 13:03:45 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1688
+Wed Aug 23 13:05:06 AEST 2017 Wed Aug 23 13:05:06 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1708=>Find no block
+Wed Aug 23 13:05:06 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1709
+Wed Aug 23 13:05:06 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1710
+Wed Aug 23 13:05:06 AEST 2017 Wed Aug 23 13:05:06 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1711=>Find no block
+Wed Aug 23 13:05:06 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1717
+Wed Aug 23 13:05:06 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1718
+Wed Aug 23 13:05:06 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1721
+Wed Aug 23 13:05:07 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1722
+Wed Aug 23 13:05:07 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1725
+Wed Aug 23 13:06:15 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1727
+Wed Aug 23 13:06:15 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1738
+Wed Aug 23 13:06:16 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1747
+Wed Aug 23 13:06:29 AEST 2017 Wed Aug 23 13:06:29 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1602=>Find no block
+Wed Aug 23 13:06:29 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1603
+Wed Aug 23 13:06:30 AEST 2017 Wed Aug 23 13:06:30 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1604=>Find no block
+Wed Aug 23 13:06:30 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1610
+Wed Aug 23 13:06:30 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1617
+Wed Aug 23 13:07:46 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1619
+Wed Aug 23 13:34:11 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1620
+Wed Aug 23 13:34:11 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1621
+Wed Aug 23 13:34:11 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1623
+Wed Aug 23 13:34:11 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1626
+Timeout time : 17/08/23 13:37
+Current failed test : org.apache.commons.lang.text.MessageFormatTest::testLongTime | 17/08/23 13:37
+Wed Aug 23 13:37:42 AEST 2017 Wed Aug 23 13:37:42 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1145=>Find no block
+Wed Aug 23 13:37:42 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1146
+Wed Aug 23 13:37:49 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1147
+Wed Aug 23 13:37:49 AEST 2017 Wed Aug 23 13:37:49 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1148=>Find no block
+Wed Aug 23 13:37:49 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1154
+Wed Aug 23 13:48:24 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1155
+Wed Aug 23 13:48:24 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1156
+Wed Aug 23 13:48:24 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1157
+Wed Aug 23 13:48:24 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1158
+Wed Aug 23 13:48:24 AEST 2017 Wed Aug 23 13:48:24 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1160=>Find no block
+Wed Aug 23 13:48:24 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1161
+Wed Aug 23 13:48:24 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1168
+Wed Aug 23 13:49:09 AEST 2017 Wed Aug 23 13:49:09 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1169=>Find no block
+Wed Aug 23 13:49:09 AEST 2017 Wed Aug 23 13:49:09 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1489=>Find no block
+Wed Aug 23 13:49:09 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1490
+Wed Aug 23 13:49:10 AEST 2017 Wed Aug 23 13:49:10 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1491=>Find no block
+Wed Aug 23 13:49:10 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1497
+Wed Aug 23 13:49:10 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1504
+Wed Aug 23 13:51:25 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1505
+Wed Aug 23 13:52:14 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1506
+Wed Aug 23 13:52:14 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1508
+Wed Aug 23 13:52:14 AEST 2017 Wed Aug 23 13:52:14 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1509=>Find no block
+Wed Aug 23 13:52:14 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1515
+Wed Aug 23 13:52:42 AEST 2017 Wed Aug 23 13:52:42 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1516=>Find no block
+Wed Aug 23 13:52:42 AEST 2017 Wed Aug 23 13:52:42 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1081=>Find no block
+Wed Aug 23 13:52:42 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1082
+Wed Aug 23 13:52:47 AEST 2017 Wed Aug 23 13:52:47 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1083=>Find no block
+Wed Aug 23 13:52:47 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1089
+Wed Aug 23 13:52:47 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1096
+Wed Aug 23 13:54:00 AEST 2017 Wed Aug 23 13:54:00 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1097=>Find no block
+Wed Aug 23 13:54:00 AEST 2017 Wed Aug 23 13:54:00 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1447=>Find no block
+Wed Aug 23 13:54:00 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1448
+Wed Aug 23 13:54:00 AEST 2017 Wed Aug 23 13:54:00 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1449=>Find no block
+Wed Aug 23 13:54:00 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1455
+Wed Aug 23 13:54:00 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1462
+Wed Aug 23 13:56:15 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1463
+Wed Aug 23 13:57:04 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1464
+Wed Aug 23 13:57:04 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1466
+Wed Aug 23 13:57:04 AEST 2017 Wed Aug 23 13:57:04 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1467=>Find no block
+Wed Aug 23 13:57:04 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1473
+Wed Aug 23 13:57:04 AEST 2017 Wed Aug 23 13:57:04 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1474=>Find no block
+Wed Aug 23 13:57:04 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1373
+Wed Aug 23 13:57:04 AEST 2017 Wed Aug 23 13:57:04 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1374=>Find no block
+Wed Aug 23 13:57:04 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1380
+Wed Aug 23 13:57:05 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1387
+Wed Aug 23 13:57:29 AEST 2017 Wed Aug 23 13:57:29 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1388=>Find no block
+Wed Aug 23 13:57:29 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1394
+Wed Aug 23 13:58:55 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1395
+Wed Aug 23 13:58:55 AEST 2017 Wed Aug 23 13:58:55 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1396=>Find no block
+Wed Aug 23 13:58:55 AEST 2017 Wed Aug 23 13:58:55 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1332=>Find no block
+Wed Aug 23 13:58:55 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1333
+Wed Aug 23 13:59:04 AEST 2017 Wed Aug 23 13:59:04 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1334=>Find no block
+Wed Aug 23 13:59:04 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1340
+Wed Aug 23 13:59:04 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1347
+Wed Aug 23 13:59:28 AEST 2017 Wed Aug 23 13:59:28 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1348=>Find no block
+Wed Aug 23 13:59:28 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1354
+Wed Aug 23 14:02:23 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1355
+Wed Aug 23 14:02:23 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1356
+Wed Aug 23 14:02:23 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1358
+Wed Aug 23 14:02:23 AEST 2017 Wed Aug 23 14:02:23 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1360=>Find no block
+Wed Aug 23 14:02:23 AEST 2017 Wed Aug 23 14:02:23 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1658=>Find no block
+Wed Aug 23 14:02:23 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1659
+Wed Aug 23 14:02:51 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1660
+Wed Aug 23 14:02:51 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1661
+Wed Aug 23 14:02:51 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1663
+Wed Aug 23 14:02:51 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1664
+Wed Aug 23 14:02:51 AEST 2017 Wed Aug 23 14:02:51 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1665=>Find no block
+Wed Aug 23 14:02:51 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1671
+Wed Aug 23 14:02:56 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1678
+Wed Aug 23 14:03:43 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1679
+Wed Aug 23 14:03:43 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1681
+Wed Aug 23 14:04:05 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1682
+Wed Aug 23 14:04:05 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1683
+Wed Aug 23 14:04:05 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1688
+Wed Aug 23 14:05:25 AEST 2017 Wed Aug 23 14:05:25 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1708=>Find no block
+Wed Aug 23 14:05:25 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1709
+Wed Aug 23 14:05:26 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1710
+Wed Aug 23 14:05:26 AEST 2017 Wed Aug 23 14:05:26 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1711=>Find no block
+Wed Aug 23 14:05:26 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1717
+Wed Aug 23 14:05:26 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1718
+Wed Aug 23 14:05:26 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1721
+Wed Aug 23 14:05:26 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1722
+Wed Aug 23 14:05:26 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1725
+Wed Aug 23 14:06:34 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1727
+Wed Aug 23 14:06:34 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1738
+Wed Aug 23 14:06:35 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1747
+Wed Aug 23 14:06:49 AEST 2017 Wed Aug 23 14:06:49 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1602=>Find no block
+Wed Aug 23 14:06:49 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1603
+Wed Aug 23 14:06:49 AEST 2017 Wed Aug 23 14:06:49 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1604=>Find no block
+Wed Aug 23 14:06:49 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1610
+Wed Aug 23 14:06:50 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1617
+Wed Aug 23 14:08:05 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1619
+Wed Aug 23 14:34:26 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1620
+Wed Aug 23 14:34:26 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1621
+Wed Aug 23 14:34:26 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1623
+Wed Aug 23 14:34:26 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1626
+Wed Aug 23 14:37:38 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1627
+Timeout time : 17/08/23 14:37

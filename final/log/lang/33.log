@@ -1,0 +1,50 @@
+=================================================
+Project : lang_33	start : 17/08/23 14:41
+Current failed test : org.apache.commons.lang3.ClassUtilsTest::testToClass_object | 17/08/23 14:41
+Wed Aug 23 14:41:29 AEST 2017 org.apache.commons.lang3.ClassUtils,903
+Wed Aug 23 14:43:13 AEST 2017 org.apache.commons.lang3.ClassUtils,904
+Wed Aug 23 14:43:13 AEST 2017 org.apache.commons.lang3.ClassUtils,905
+Wed Aug 23 14:43:13 AEST 2017 org.apache.commons.lang3.ClassUtils,906
+Wed Aug 23 14:43:13 AEST 2017 org.apache.commons.lang3.ClassUtils,908
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<array.length;i++){
+classes[i]=array[i]==null?null:array[i].getClass();
+}
+
+Time : 17/08/23 14:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.5915452583170533 : [/home/similarfix/d4j/projects/lang/lang_33_buggy/src/main/java/org/apache/commons/lang3/ClassUtils.java=>0,0]
+for(int i=0;i<array.length;i++){
+Character b=array[i];
+result[i]=(b==null?valueForNull:b.charValue());
+}
+
+Time : 17/08/23 14:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/similarfix/d4j/projects/lang/lang_33_buggy/src/main/java/org/apache/commons/lang3/ClassUtils.java=>909,911]
+for(int i=0;i<array.length;i++){
+classes[i]=array[i].getClass();
+}
+
+Time : 17/08/23 14:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/similarfix/d4j/projects/lang/lang_33_buggy/src/main/java/org/apache/commons/lang3/ClassUtils.java=>909,911]
+for(int i=0;i<array.length;i++){
+classes[i]=array[i]==null?null:array[i].getClass();
+}
+
+Time : 17/08/23 14:44
+----------------------------------------
+Success time : 17/08/23 14:44
