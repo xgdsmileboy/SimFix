@@ -1,0 +1,168 @@
+=================================================
+Project : time_11	start : 17/08/23 00:32
+Current failed test : org.joda.time.tz.TestCompiler::testDateTimeZoneBuilder | 17/08/23 00:32
+Wed Aug 23 00:32:45 AEST 2017 org.joda.time.DateTimeUtils,86
+Wed Aug 23 00:34:51 AEST 2017 org.joda.time.DateTimeUtils,317
+Wed Aug 23 00:39:02 AEST 2017 org.joda.time.chrono.GregorianChronology,209
+Wed Aug 23 00:42:51 AEST 2017 org.joda.time.chrono.BaseChronology,276
+Wed Aug 23 01:05:27 AEST 2017 org.joda.time.chrono.BaseChronology,277
+Wed Aug 23 01:05:27 AEST 2017 org.joda.time.chrono.BaseChronology,278
+Wed Aug 23 01:05:27 AEST 2017 org.joda.time.chrono.BaseChronology,289
+Wed Aug 23 01:14:44 AEST 2017 org.joda.time.DateTimeUtils,515
+Wed Aug 23 01:14:45 AEST 2017 org.joda.time.PeriodType,595
+Wed Aug 23 01:17:33 AEST 2017 org.joda.time.PeriodType,596
+Wed Aug 23 01:17:33 AEST 2017 org.joda.time.PeriodType,597
+Wed Aug 23 01:17:33 AEST 2017 org.joda.time.PeriodType,598
+Wed Aug 23 01:17:33 AEST 2017 Wed Aug 23 01:17:33 AEST 2017 : org.joda.time.PeriodType,599=>Find no block
+Wed Aug 23 01:17:33 AEST 2017 org.joda.time.PeriodType,102
+Wed Aug 23 01:22:02 AEST 2017 org.joda.time.PeriodType,103
+Wed Aug 23 01:22:29 AEST 2017 org.joda.time.PeriodType,104
+Wed Aug 23 01:22:29 AEST 2017 org.joda.time.PeriodType,114
+Wed Aug 23 01:22:29 AEST 2017 org.joda.time.PeriodType,116
+Wed Aug 23 01:22:29 AEST 2017 org.joda.time.PeriodType,165
+Wed Aug 23 01:22:30 AEST 2017 org.joda.time.PeriodType,173
+Wed Aug 23 01:22:30 AEST 2017 org.joda.time.PeriodType,674
+Wed Aug 23 01:25:07 AEST 2017 org.joda.time.PeriodType,675
+Wed Aug 23 01:25:07 AEST 2017 org.joda.time.tz.DateTimeZoneBuilder,800
+Wed Aug 23 01:25:08 AEST 2017 org.joda.time.tz.DateTimeZoneBuilder,804
+Wed Aug 23 01:25:10 AEST 2017 org.joda.time.tz.DateTimeZoneBuilder,1460
+Wed Aug 23 01:27:57 AEST 2017 org.joda.time.tz.DateTimeZoneBuilder,1464
+Wed Aug 23 01:30:04 AEST 2017 org.joda.time.tz.DateTimeZoneBuilder,1465
+Wed Aug 23 01:30:04 AEST 2017 org.joda.time.base.BasePeriod,254
+Wed Aug 23 01:34:43 AEST 2017 org.joda.time.base.BasePeriod,255
+Wed Aug 23 01:34:43 AEST 2017 org.joda.time.base.BasePeriod,256
+Wed Aug 23 01:34:43 AEST 2017 org.joda.time.base.BasePeriod,257
+Wed Aug 23 01:34:43 AEST 2017 org.joda.time.base.BasePeriod,258
+Wed Aug 23 01:34:43 AEST 2017 Wed Aug 23 01:34:43 AEST 2017 : org.joda.time.base.BasePeriod,259=>Find no block
+Wed Aug 23 01:34:43 AEST 2017 org.joda.time.base.BasePeriod,329
+Wed Aug 23 01:34:44 AEST 2017 Wed Aug 23 01:34:44 AEST 2017 : org.joda.time.base.BasePeriod,57=>Find no block
+Wed Aug 23 01:34:44 AEST 2017 org.joda.time.Period,298
+Wed Aug 23 01:34:45 AEST 2017 Wed Aug 23 01:34:45 AEST 2017 : org.joda.time.Period,299=>Find no block
+Wed Aug 23 01:34:45 AEST 2017 org.joda.time.Period,704
+Wed Aug 23 01:36:36 AEST 2017 org.joda.time.Period,713
+Wed Aug 23 01:38:27 AEST 2017 org.joda.time.DurationFieldType,114
+Wed Aug 23 01:38:28 AEST 2017 org.joda.time.DurationFieldType,123
+Wed Aug 23 01:38:29 AEST 2017 org.joda.time.DurationFieldType,132
+Wed Aug 23 01:38:30 AEST 2017 org.joda.time.DurationFieldType,160
+Wed Aug 23 01:38:31 AEST 2017 org.joda.time.DurationFieldType,187
+Wed Aug 23 01:38:32 AEST 2017 org.joda.time.DateTimeUtils,283
+Wed Aug 23 01:40:40 AEST 2017 org.joda.time.DateTimeUtils,316
+Wed Aug 23 01:40:40 AEST 2017 org.joda.time.DateTimeUtils,319
+Wed Aug 23 01:43:00 AEST 2017 org.joda.time.field.BaseDateTimeField,253
+Wed Aug 23 01:49:00 AEST 2017 org.joda.time.chrono.BasicGJChronology,134
+Wed Aug 23 01:49:01 AEST 2017 org.joda.time.chrono.BasicGJChronology,148
+Wed Aug 23 01:54:46 AEST 2017 org.joda.time.chrono.BasicGJChronology,149
+Wed Aug 23 01:54:46 AEST 2017 org.joda.time.chrono.BasicGJChronology,152
+Wed Aug 23 01:58:49 AEST 2017 org.joda.time.chrono.BasicGJChronology,153
+Wed Aug 23 02:01:04 AEST 2017 org.joda.time.chrono.BasicGJChronology,156
+Wed Aug 23 02:01:04 AEST 2017 org.joda.time.chrono.BasicGJChronology,157
+Wed Aug 23 02:01:04 AEST 2017 org.joda.time.chrono.BasicGJChronology,161
+Wed Aug 23 02:01:04 AEST 2017 org.joda.time.chrono.BasicGJChronology,166
+Wed Aug 23 02:02:14 AEST 2017 org.joda.time.chrono.BasicGJChronology,167
+Wed Aug 23 02:02:14 AEST 2017 org.joda.time.chrono.BasicGJChronology,168
+Wed Aug 23 02:02:14 AEST 2017 org.joda.time.chrono.BasicGJChronology,170
+Wed Aug 23 02:02:41 AEST 2017 org.joda.time.chrono.BasicGJChronology,175
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int thisYear=getWeekOfWeekyear(instant);
+int dayOfYear=getDayOfYear(instant,thisYear);
+int millisOfDay=getMillisOfDay(instant);
+
+Time : 17/08/23 02:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int thisYear=getDayOfYear(instant);
+int dayOfYear=getDayOfYear(instant,thisYear);
+int millisOfDay=getMillisOfDay(instant);
+
+Time : 17/08/23 02:07
+----------------------------------------
+Wed Aug 23 02:08:06 AEST 2017 org.joda.time.chrono.BasicGJChronology,176
+Wed Aug 23 02:08:06 AEST 2017 org.joda.time.chrono.BasicGJChronology,177
+Wed Aug 23 02:17:03 AEST 2017 org.joda.time.chrono.BasicGJChronology,179
+Wed Aug 23 02:17:03 AEST 2017 org.joda.time.chrono.BasicGJChronology,180
+Wed Aug 23 02:17:03 AEST 2017 org.joda.time.chrono.BasicGJChronology,182
+Wed Aug 23 02:17:03 AEST 2017 org.joda.time.chrono.BasicGJChronology,184
+Wed Aug 23 02:17:03 AEST 2017 org.joda.time.chrono.BasicGJChronology,188
+Wed Aug 23 02:17:03 AEST 2017 org.joda.time.chrono.BasicGJChronology,190
+Wed Aug 23 02:17:03 AEST 2017 org.joda.time.chrono.BasicGJChronology,195
+Wed Aug 23 02:20:53 AEST 2017 org.joda.time.chrono.BasicGJChronology,196
+Wed Aug 23 02:25:39 AEST 2017 org.joda.time.chrono.BasicGJChronology,198
+Wed Aug 23 02:25:39 AEST 2017 org.joda.time.chrono.BasicChronology,371
+Wed Aug 23 02:30:47 AEST 2017 org.joda.time.chrono.BasicChronology,372
+Wed Aug 23 02:30:47 AEST 2017 org.joda.time.chrono.BasicChronology,373
+Wed Aug 23 02:30:48 AEST 2017 org.joda.time.chrono.BasicChronology,402
+Wed Aug 23 02:30:48 AEST 2017 org.joda.time.chrono.BasicChronology,410
+Wed Aug 23 02:30:50 AEST 2017 org.joda.time.chrono.BasicChronology,485
+Wed Aug 23 02:35:44 AEST 2017 org.joda.time.chrono.BasicChronology,486
+Wed Aug 23 02:35:44 AEST 2017 org.joda.time.chrono.BasicChronology,537
+Wed Aug 23 02:40:05 AEST 2017 org.joda.time.chrono.BasicChronology,539
+Wed Aug 23 02:40:05 AEST 2017 org.joda.time.chrono.BasicChronology,540
+Wed Aug 23 02:40:05 AEST 2017 org.joda.time.chrono.BasicChronology,554
+Wed Aug 23 02:42:19 AEST 2017 org.joda.time.chrono.BaseChronology,255
+Wed Aug 23 03:01:14 AEST 2017 org.joda.time.chrono.BaseChronology,256
+Wed Aug 23 03:01:14 AEST 2017 org.joda.time.chrono.BaseChronology,257
+Wed Aug 23 03:01:14 AEST 2017 org.joda.time.chrono.BaseChronology,258
+Wed Aug 23 03:01:14 AEST 2017 org.joda.time.chrono.BaseChronology,259
+Wed Aug 23 03:01:14 AEST 2017 org.joda.time.chrono.BaseChronology,260
+Wed Aug 23 03:01:14 AEST 2017 org.joda.time.chrono.BaseChronology,261
+Wed Aug 23 03:01:14 AEST 2017 org.joda.time.chrono.BaseChronology,262
+Wed Aug 23 03:01:14 AEST 2017 org.joda.time.chrono.BaseChronology,265
+Wed Aug 23 03:01:15 AEST 2017 org.joda.time.field.PreciseDurationField,114
+Wed Aug 23 03:03:24 AEST 2017 org.joda.time.field.PreciseDurationField,115
+Wed Aug 23 03:03:24 AEST 2017 org.joda.time.field.BaseDurationField,141
+Wed Aug 23 03:06:02 AEST 2017 org.joda.time.field.PreciseDateTimeField,79
+Wed Aug 23 03:11:56 AEST 2017 org.joda.time.field.PreciseDateTimeField,82
+Wed Aug 23 03:11:56 AEST 2017 org.joda.time.field.PreciseDateTimeField,111
+Wed Aug 23 03:26:32 AEST 2017 org.joda.time.field.PreciseDateTimeField,112
+Wed Aug 23 03:26:32 AEST 2017 org.joda.time.field.PreciseDateTimeField,131
+Wed Aug 23 03:30:42 AEST 2017 org.joda.time.chrono.BasicYearDateTimeField,54
+Wed Aug 23 03:35:23 AEST 2017 org.joda.time.chrono.BasicYearDateTimeField,58
+Wed Aug 23 03:38:36 AEST 2017 org.joda.time.chrono.BasicYearDateTimeField,59
+Wed Aug 23 03:38:36 AEST 2017 org.joda.time.chrono.BasicYearDateTimeField,61
+Wed Aug 23 03:52:23 AEST 2017 org.joda.time.chrono.BasicYearDateTimeField,62
+Wed Aug 23 03:52:23 AEST 2017 org.joda.time.chrono.BasicYearDateTimeField,63
+Wed Aug 23 03:52:23 AEST 2017 org.joda.time.chrono.BasicYearDateTimeField,82
+Wed Aug 23 03:59:57 AEST 2017 org.joda.time.chrono.BasicYearDateTimeField,84
+Wed Aug 23 03:59:57 AEST 2017 org.joda.time.chrono.BasicYearDateTimeField,88
+Wed Aug 23 04:02:48 AEST 2017 org.joda.time.chrono.BasicYearDateTimeField,91
+Wed Aug 23 04:06:06 AEST 2017 org.joda.time.field.ImpreciseDateTimeField,91
+Wed Aug 23 04:06:06 AEST 2017 org.joda.time.chrono.BasicDayOfMonthDateTimeField,55
+Wed Aug 23 04:06:07 AEST 2017 org.joda.time.chrono.BasicDayOfMonthDateTimeField,96
+Wed Aug 23 04:07:13 AEST 2017 org.joda.time.chrono.BasicMonthOfYearDateTimeField,243
+Wed Aug 23 04:09:43 AEST 2017 org.joda.time.chrono.BasicMonthOfYearDateTimeField,247
+Wed Aug 23 04:16:17 AEST 2017 org.joda.time.chrono.BasicMonthOfYearDateTimeField,248
+Wed Aug 23 04:19:31 AEST 2017 org.joda.time.chrono.BasicMonthOfYearDateTimeField,249
+Wed Aug 23 04:21:10 AEST 2017 org.joda.time.chrono.BasicMonthOfYearDateTimeField,250
+Wed Aug 23 04:26:35 AEST 2017 org.joda.time.chrono.BasicMonthOfYearDateTimeField,252
+Wed Aug 23 04:30:58 AEST 2017 org.joda.time.chrono.BasicMonthOfYearDateTimeField,256
+Wed Aug 23 04:42:11 AEST 2017 org.joda.time.chrono.BasicMonthOfYearDateTimeField,258
+Wed Aug 23 04:42:11 AEST 2017 org.joda.time.chrono.BasicMonthOfYearDateTimeField,271
+Wed Aug 23 04:47:52 AEST 2017 org.joda.time.chrono.BasicMonthOfYearDateTimeField,273
+Wed Aug 23 04:50:49 AEST 2017 org.joda.time.chrono.BasicMonthOfYearDateTimeField,276
+Wed Aug 23 04:50:49 AEST 2017 org.joda.time.chrono.BasicMonthOfYearDateTimeField,280
+Wed Aug 23 04:50:49 AEST 2017 org.joda.time.field.ImpreciseDateTimeField,190
+Wed Aug 23 04:50:50 AEST 2017 org.joda.time.chrono.ISOChronology,86
+Wed Aug 23 04:53:00 AEST 2017 Wed Aug 23 04:53:00 AEST 2017 : org.joda.time.chrono.ISOChronology,104=>Find no block
+Wed Aug 23 04:53:00 AEST 2017 org.joda.time.chrono.ISOChronology,105
+Wed Aug 23 04:55:59 AEST 2017 org.joda.time.chrono.ISOChronology,106
+Wed Aug 23 04:57:06 AEST 2017 Wed Aug 23 04:57:06 AEST 2017 : org.joda.time.chrono.ISOChronology,110=>Find no block
+Wed Aug 23 04:57:06 AEST 2017 org.joda.time.chrono.ISOChronology,111
+Wed Aug 23 05:00:00 AEST 2017 org.joda.time.chrono.ISOChronology,112
+Wed Aug 23 05:00:00 AEST 2017 org.joda.time.DurationFieldType,282
+Wed Aug 23 05:23:31 AEST 2017 Wed Aug 23 05:23:31 AEST 2017 : org.joda.time.DurationFieldType,284=>Find no block
+Wed Aug 23 05:23:31 AEST 2017 org.joda.time.DurationFieldType,292
+Wed Aug 23 05:23:33 AEST 2017 org.joda.time.DurationFieldType,294
+Wed Aug 23 05:23:35 AEST 2017 org.joda.time.DurationFieldType,298
+Wed Aug 23 05:23:37 AEST 2017 org.joda.time.PeriodType,163
+Wed Aug 23 05:28:15 AEST 2017 org.joda.time.PeriodType,164
+Wed Aug 23 05:28:15 AEST 2017 org.joda.time.PeriodType,175
+Wed Aug 23 05:28:15 AEST 2017 org.joda.time.PeriodType,617
+Wed Aug 23 05:30:46 AEST 2017 org.joda.time.PeriodType,628
+Wed Aug 23 05:30:47 AEST 2017 org.joda.time.tz.DateTimeZoneBuilder,761
+Timeout time : 17/08/23 05:33

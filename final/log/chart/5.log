@@ -1,0 +1,204 @@
+=================================================
+Project : chart_5	start : 17/08/24 02:20
+Current failed test : org.jfree.data.xy.junit.XYSeriesTests::testBug1955483 | 17/08/24 02:20
+Thu Aug 24 02:20:57 AEST 2017 org.jfree.data.xy.XYSeries,527
+Thu Aug 24 02:21:00 AEST 2017 org.jfree.data.xy.XYSeries,564
+Thu Aug 24 02:23:33 AEST 2017 org.jfree.data.xy.XYSeries,563
+Thu Aug 24 02:23:33 AEST 2017 org.jfree.data.xy.XYSeries,570
+Thu Aug 24 02:27:36 AEST 2017 org.jfree.data.xy.XYSeries,541
+Thu Aug 24 02:27:58 AEST 2017 org.jfree.data.xy.XYSeries,546
+Thu Aug 24 02:28:46 AEST 2017 org.jfree.data.xy.XYSeries,547
+Thu Aug 24 02:28:46 AEST 2017 org.jfree.data.xy.XYSeries,548
+Thu Aug 24 02:35:55 AEST 2017 org.jfree.data.xy.XYSeries,574
+Thu Aug 24 02:45:50 AEST 2017 org.jfree.data.xy.XYSeries,575
+Thu Aug 24 02:45:50 AEST 2017 org.jfree.data.xy.XYSeries,590
+Thu Aug 24 02:55:54 AEST 2017 org.jfree.data.xy.XYDataItem,191
+Thu Aug 24 02:56:17 AEST 2017 org.jfree.data.xy.XYSeries,589
+Thu Aug 24 02:56:18 AEST 2017 org.jfree.data.xy.XYDataItem,179
+Thu Aug 24 02:57:28 AEST 2017 org.jfree.data.xy.XYDataItem,180
+Thu Aug 24 02:58:34 AEST 2017 org.jfree.data.xy.XYDataItem,181
+Thu Aug 24 02:58:35 AEST 2017 org.jfree.data.xy.XYDataItem,183
+Thu Aug 24 02:58:35 AEST 2017 org.jfree.data.xy.XYDataItem,187
+Thu Aug 24 02:58:35 AEST 2017 Thu Aug 24 02:58:35 AEST 2017 : org.jfree.data.xy.XYDataItem,194=>Find no block
+Thu Aug 24 02:58:35 AEST 2017 org.jfree.data.xy.XYDataItem,203
+Thu Aug 24 03:01:14 AEST 2017 org.jfree.data.xy.XYDataItem,96
+Thu Aug 24 03:01:17 AEST 2017 Thu Aug 24 03:01:17 AEST 2017 : org.jfree.data.xy.XYDataItem,72=>Find no block
+Thu Aug 24 03:01:17 AEST 2017 org.jfree.data.xy.XYDataItem,73
+Thu Aug 24 03:01:17 AEST 2017 org.jfree.data.xy.XYDataItem,76
+Thu Aug 24 03:01:41 AEST 2017 org.jfree.data.xy.XYDataItem,77
+Thu Aug 24 03:01:41 AEST 2017 Thu Aug 24 03:01:41 AEST 2017 : org.jfree.data.xy.XYDataItem,78=>Find no block
+Thu Aug 24 03:01:41 AEST 2017 org.jfree.data.xy.XYSeries,186
+Thu Aug 24 03:02:06 AEST 2017 org.jfree.data.general.Series,313
+Thu Aug 24 03:03:18 AEST 2017 org.jfree.data.general.Series,314
+Thu Aug 24 03:03:18 AEST 2017 Thu Aug 24 03:03:18 AEST 2017 : org.jfree.data.general.Series,316=>Find no block
+Thu Aug 24 03:03:18 AEST 2017 org.jfree.data.general.Series,326
+Thu Aug 24 03:18:31 AEST 2017 org.jfree.data.general.Series,327
+Thu Aug 24 03:18:31 AEST 2017 Thu Aug 24 03:18:31 AEST 2017 : org.jfree.data.general.Series,334=>Find no block
+Thu Aug 24 03:18:31 AEST 2017 org.jfree.data.general.SeriesChangeEvent,61
+Thu Aug 24 03:18:34 AEST 2017 Thu Aug 24 03:18:34 AEST 2017 : org.jfree.data.general.SeriesChangeEvent,62=>Find no block
+Thu Aug 24 03:18:35 AEST 2017 org.jfree.data.xy.XYSeries,153
+Thu Aug 24 03:20:11 AEST 2017 Thu Aug 24 03:20:11 AEST 2017 : org.jfree.data.xy.XYSeries,109=>Find no block
+Thu Aug 24 03:20:11 AEST 2017 org.jfree.data.xy.XYSeries,154
+Thu Aug 24 03:20:11 AEST 2017 org.jfree.data.xy.XYSeries,155
+Thu Aug 24 03:20:11 AEST 2017 org.jfree.data.xy.XYSeries,156
+Thu Aug 24 03:20:11 AEST 2017 Thu Aug 24 03:20:11 AEST 2017 : org.jfree.data.xy.XYSeries,157=>Find no block
+Thu Aug 24 03:20:11 AEST 2017 org.jfree.data.general.Series,102
+Thu Aug 24 03:20:14 AEST 2017 Thu Aug 24 03:20:14 AEST 2017 : org.jfree.data.general.Series,103=>Find no block
+Thu Aug 24 03:20:15 AEST 2017 Thu Aug 24 03:20:15 AEST 2017 : org.jfree.data.general.Series,111=>Find no block
+Thu Aug 24 03:20:15 AEST 2017 org.jfree.data.general.Series,112
+Thu Aug 24 03:20:18 AEST 2017 org.jfree.data.general.Series,115
+Thu Aug 24 03:21:27 AEST 2017 org.jfree.data.general.Series,116
+Thu Aug 24 03:21:28 AEST 2017 org.jfree.data.general.Series,117
+Thu Aug 24 03:21:28 AEST 2017 org.jfree.data.general.Series,118
+Thu Aug 24 03:21:28 AEST 2017 org.jfree.data.general.Series,119
+Thu Aug 24 03:21:28 AEST 2017 Thu Aug 24 03:21:28 AEST 2017 : org.jfree.data.general.Series,120=>Find no block
+Thu Aug 24 03:21:28 AEST 2017 org.jfree.data.general.Series,113
+Thu Aug 24 03:21:28 AEST 2017 org.jfree.data.general.Series,130
+Thu Aug 24 03:21:50 AEST 2017 org.jfree.data.general.Series,142
+Thu Aug 24 03:21:50 AEST 2017 org.jfree.data.general.Series,143
+Thu Aug 24 03:21:50 AEST 2017 org.jfree.data.general.Series,145
+Thu Aug 24 03:24:12 AEST 2017 org.jfree.data.general.Series,146
+Thu Aug 24 03:24:12 AEST 2017 org.jfree.data.general.Series,147
+Thu Aug 24 03:24:12 AEST 2017 Thu Aug 24 03:24:12 AEST 2017 : org.jfree.data.general.Series,148=>Find no block
+Thu Aug 24 03:24:12 AEST 2017 org.jfree.data.general.Series,158
+Thu Aug 24 03:24:15 AEST 2017 org.jfree.data.general.Series,170
+Thu Aug 24 03:28:14 AEST 2017 org.jfree.data.general.Series,171
+Thu Aug 24 03:28:14 AEST 2017 org.jfree.data.general.Series,172
+Thu Aug 24 03:28:14 AEST 2017 Thu Aug 24 03:28:14 AEST 2017 : org.jfree.data.general.Series,174=>Find no block
+Thu Aug 24 03:28:14 AEST 2017 org.jfree.data.general.Series,185
+Thu Aug 24 03:28:17 AEST 2017 org.jfree.data.general.Series,197
+Thu Aug 24 03:36:07 AEST 2017 org.jfree.data.general.Series,198
+Thu Aug 24 03:36:08 AEST 2017 org.jfree.data.general.Series,199
+Thu Aug 24 03:36:08 AEST 2017 Thu Aug 24 03:36:08 AEST 2017 : org.jfree.data.general.Series,201=>Find no block
+Thu Aug 24 03:36:08 AEST 2017 org.jfree.data.general.Series,212
+Thu Aug 24 03:36:11 AEST 2017 org.jfree.data.general.Series,241
+Thu Aug 24 03:42:18 AEST 2017 org.jfree.data.general.Series,242
+Thu Aug 24 03:42:19 AEST 2017 org.jfree.data.general.Series,243
+Thu Aug 24 03:42:19 AEST 2017 org.jfree.data.general.Series,244
+Thu Aug 24 03:42:19 AEST 2017 org.jfree.data.general.Series,256
+Thu Aug 24 03:43:49 AEST 2017 org.jfree.data.general.Series,257
+Thu Aug 24 03:43:49 AEST 2017 org.jfree.data.general.Series,259
+Thu Aug 24 03:44:17 AEST 2017 org.jfree.data.general.Series,260
+Thu Aug 24 03:44:17 AEST 2017 org.jfree.data.general.Series,262
+Thu Aug 24 03:48:53 AEST 2017 org.jfree.data.general.Series,263
+Thu Aug 24 03:48:53 AEST 2017 org.jfree.data.general.Series,264
+Thu Aug 24 03:48:53 AEST 2017 org.jfree.data.general.Series,266
+Thu Aug 24 03:48:57 AEST 2017 org.jfree.data.general.Series,267
+Thu Aug 24 03:48:57 AEST 2017 org.jfree.data.general.Series,269
+Thu Aug 24 03:49:30 AEST 2017 org.jfree.data.general.Series,279
+Thu Aug 24 03:50:52 AEST 2017 org.jfree.data.general.Series,280
+Thu Aug 24 03:50:52 AEST 2017 org.jfree.data.general.Series,282
+Thu Aug 24 03:50:52 AEST 2017 org.jfree.data.general.Series,295
+Thu Aug 24 03:52:11 AEST 2017 Thu Aug 24 03:52:11 AEST 2017 : org.jfree.data.general.Series,296=>Find no block
+Thu Aug 24 03:52:11 AEST 2017 org.jfree.data.general.Series,305
+Thu Aug 24 03:53:04 AEST 2017 Thu Aug 24 03:53:04 AEST 2017 : org.jfree.data.general.Series,306=>Find no block
+Thu Aug 24 03:53:04 AEST 2017 org.jfree.data.general.Series,328
+Thu Aug 24 03:53:04 AEST 2017 org.jfree.data.general.Series,329
+Thu Aug 24 03:53:04 AEST 2017 org.jfree.data.general.Series,342
+Thu Aug 24 03:53:44 AEST 2017 Thu Aug 24 03:53:44 AEST 2017 : org.jfree.data.general.Series,343=>Find no block
+Thu Aug 24 03:53:45 AEST 2017 org.jfree.data.general.Series,351
+Thu Aug 24 03:54:25 AEST 2017 Thu Aug 24 03:54:25 AEST 2017 : org.jfree.data.general.Series,352=>Find no block
+Thu Aug 24 03:54:25 AEST 2017 org.jfree.data.general.Series,363
+Thu Aug 24 03:56:57 AEST 2017 Thu Aug 24 03:56:57 AEST 2017 : org.jfree.data.general.Series,365=>Find no block
+Thu Aug 24 03:56:57 AEST 2017 org.jfree.data.general.Series,295
+Thu Aug 24 03:56:57 AEST 2017 org.jfree.data.general.SeriesException,61
+Thu Aug 24 03:57:00 AEST 2017 Thu Aug 24 03:57:00 AEST 2017 : org.jfree.data.general.SeriesException,62=>Find no block
+Thu Aug 24 03:57:00 AEST 2017 org.jfree.data.xy.XYDataItem,74
+Thu Aug 24 03:57:00 AEST 2017 org.jfree.data.xy.XYDataItem,87
+Thu Aug 24 03:57:04 AEST 2017 Thu Aug 24 03:57:04 AEST 2017 : org.jfree.data.xy.XYDataItem,88=>Find no block
+Thu Aug 24 03:57:04 AEST 2017 org.jfree.data.xy.XYDataItem,111
+Thu Aug 24 03:57:07 AEST 2017 org.jfree.data.xy.XYDataItem,120
+Thu Aug 24 03:57:10 AEST 2017 org.jfree.data.xy.XYDataItem,134
+Thu Aug 24 03:59:03 AEST 2017 org.jfree.data.xy.XYDataItem,135
+Thu Aug 24 03:59:58 AEST 2017 org.jfree.data.xy.XYDataItem,136
+Thu Aug 24 03:59:58 AEST 2017 org.jfree.data.xy.XYDataItem,138
+Thu Aug 24 03:59:58 AEST 2017 org.jfree.data.xy.XYDataItem,148
+Thu Aug 24 04:00:16 AEST 2017 Thu Aug 24 04:00:16 AEST 2017 : org.jfree.data.xy.XYDataItem,149=>Find no block
+Thu Aug 24 04:00:16 AEST 2017 org.jfree.data.xy.XYDataItem,158
+Thu Aug 24 04:00:50 AEST 2017 Thu Aug 24 04:00:50 AEST 2017 : org.jfree.data.xy.XYDataItem,159=>Find no block
+Thu Aug 24 04:00:50 AEST 2017 org.jfree.data.xy.XYDataItem,184
+Thu Aug 24 04:00:50 AEST 2017 org.jfree.data.xy.XYDataItem,188
+Thu Aug 24 04:00:50 AEST 2017 org.jfree.data.xy.XYDataItem,200
+Thu Aug 24 04:01:15 AEST 2017 org.jfree.data.xy.XYDataItem,216
+Thu Aug 24 04:01:18 AEST 2017 org.jfree.data.xy.XYDataItem,228
+Thu Aug 24 04:01:19 AEST 2017 org.jfree.data.xy.XYDataItem,229
+Thu Aug 24 04:01:19 AEST 2017 org.jfree.data.xy.XYDataItem,231
+Thu Aug 24 04:01:47 AEST 2017 org.jfree.data.xy.XYDataItem,232
+Thu Aug 24 04:01:47 AEST 2017 org.jfree.data.xy.XYDataItem,234
+Thu Aug 24 04:13:22 AEST 2017 org.jfree.data.xy.XYDataItem,235
+Thu Aug 24 04:13:22 AEST 2017 org.jfree.data.xy.XYDataItem,236
+Thu Aug 24 04:13:22 AEST 2017 org.jfree.data.xy.XYDataItem,238
+Thu Aug 24 04:24:41 AEST 2017 org.jfree.data.xy.XYDataItem,239
+Thu Aug 24 04:24:42 AEST 2017 org.jfree.data.xy.XYDataItem,241
+Thu Aug 24 04:35:22 AEST 2017 org.jfree.data.xy.XYDataItem,251
+Thu Aug 24 04:36:09 AEST 2017 org.jfree.data.xy.XYDataItem,252
+Thu Aug 24 04:36:10 AEST 2017 org.jfree.data.xy.XYDataItem,253
+Thu Aug 24 04:36:10 AEST 2017 org.jfree.data.xy.XYDataItem,263
+Thu Aug 24 04:36:13 AEST 2017 org.jfree.data.xy.XYSeries,125
+Thu Aug 24 04:36:25 AEST 2017 Thu Aug 24 04:36:25 AEST 2017 : org.jfree.data.xy.XYSeries,126=>Find no block
+Thu Aug 24 04:36:25 AEST 2017 org.jfree.data.xy.XYSeries,137
+Thu Aug 24 04:36:49 AEST 2017 Thu Aug 24 04:36:49 AEST 2017 : org.jfree.data.xy.XYSeries,138=>Find no block
+Thu Aug 24 04:36:49 AEST 2017 org.jfree.data.xy.XYSeries,167
+Thu Aug 24 04:36:52 AEST 2017 org.jfree.data.xy.XYSeries,177
+Thu Aug 24 04:36:55 AEST 2017 org.jfree.data.xy.XYSeries,196
+Thu Aug 24 04:37:37 AEST 2017 org.jfree.data.xy.XYSeries,207
+Thu Aug 24 04:37:40 AEST 2017 org.jfree.data.xy.XYSeries,225
+Thu Aug 24 04:45:52 AEST 2017 org.jfree.data.xy.XYSeries,226
+Thu Aug 24 04:45:52 AEST 2017 org.jfree.data.xy.XYSeries,227
+Thu Aug 24 04:45:52 AEST 2017 org.jfree.data.xy.XYSeries,228
+Thu Aug 24 04:45:52 AEST 2017 org.jfree.data.xy.XYSeries,229
+Thu Aug 24 04:45:52 AEST 2017 org.jfree.data.xy.XYSeries,231
+Thu Aug 24 04:45:52 AEST 2017 org.jfree.data.xy.XYSeries,232
+Thu Aug 24 04:45:53 AEST 2017 Thu Aug 24 04:45:53 AEST 2017 : org.jfree.data.xy.XYSeries,234=>Find no block
+Thu Aug 24 04:45:53 AEST 2017 org.jfree.data.xy.XYSeries,244
+Thu Aug 24 04:47:05 AEST 2017 Thu Aug 24 04:47:05 AEST 2017 : org.jfree.data.xy.XYSeries,245=>Find no block
+Thu Aug 24 04:47:05 AEST 2017 org.jfree.data.xy.XYSeries,255
+Thu Aug 24 04:47:40 AEST 2017 Thu Aug 24 04:47:40 AEST 2017 : org.jfree.data.xy.XYSeries,256=>Find no block
+Thu Aug 24 04:47:40 AEST 2017 org.jfree.data.xy.XYSeries,269
+Thu Aug 24 04:48:35 AEST 2017 Thu Aug 24 04:48:35 AEST 2017 : org.jfree.data.xy.XYSeries,270=>Find no block
+Thu Aug 24 04:48:35 AEST 2017 org.jfree.data.xy.XYSeries,281
+Thu Aug 24 04:49:22 AEST 2017 Thu Aug 24 04:49:22 AEST 2017 : org.jfree.data.xy.XYSeries,282=>Find no block
+Thu Aug 24 04:49:22 AEST 2017 org.jfree.data.xy.XYSeries,296
+Thu Aug 24 04:50:25 AEST 2017 Thu Aug 24 04:50:25 AEST 2017 : org.jfree.data.xy.XYSeries,297=>Find no block
+Thu Aug 24 04:50:25 AEST 2017 org.jfree.data.xy.XYSeries,315
+Thu Aug 24 04:51:04 AEST 2017 Thu Aug 24 04:51:04 AEST 2017 : org.jfree.data.xy.XYSeries,316=>Find no block
+Thu Aug 24 04:51:04 AEST 2017 org.jfree.data.xy.XYSeries,333
+Thu Aug 24 04:52:53 AEST 2017 org.jfree.data.xy.XYSeries,334
+Thu Aug 24 04:52:53 AEST 2017 Thu Aug 24 04:52:53 AEST 2017 : org.jfree.data.xy.XYSeries,335=>Find no block
+Thu Aug 24 04:52:53 AEST 2017 org.jfree.data.xy.XYSeries,348
+Thu Aug 24 04:53:15 AEST 2017 org.jfree.data.xy.XYSeries,349
+Thu Aug 24 04:53:16 AEST 2017 org.jfree.data.xy.XYSeries,352
+Thu Aug 24 05:41:00 AEST 2017 org.jfree.data.xy.XYSeries,353
+Thu Aug 24 05:41:16 AEST 2017 org.jfree.data.xy.XYSeries,354
+Thu Aug 24 05:41:16 AEST 2017 org.jfree.data.xy.XYSeries,355
+Thu Aug 24 05:41:20 AEST 2017 org.jfree.data.xy.XYSeries,358
+Thu Aug 24 05:41:21 AEST 2017 org.jfree.data.xy.XYSeries,360
+Thu Aug 24 05:49:36 AEST 2017 Thu Aug 24 05:49:36 AEST 2017 : org.jfree.data.xy.XYSeries,362=>Find no block
+Thu Aug 24 05:49:36 AEST 2017 org.jfree.data.xy.XYSeries,363
+Thu Aug 24 05:49:36 AEST 2017 org.jfree.data.xy.XYSeries,365
+Thu Aug 24 05:49:36 AEST 2017 org.jfree.data.xy.XYSeries,366
+Thu Aug 24 05:49:36 AEST 2017 org.jfree.data.xy.XYSeries,369
+Thu Aug 24 05:49:36 AEST 2017 Thu Aug 24 05:49:36 AEST 2017 : org.jfree.data.xy.XYSeries,371=>Find no block
+Thu Aug 24 05:49:36 AEST 2017 org.jfree.data.xy.XYSeries,373
+Thu Aug 24 05:49:37 AEST 2017 Thu Aug 24 05:49:37 AEST 2017 : org.jfree.data.xy.XYSeries,376=>Find no block
+Thu Aug 24 05:49:37 AEST 2017 org.jfree.data.xy.XYSeries,378
+Thu Aug 24 05:49:37 AEST 2017 org.jfree.data.xy.XYSeries,381
+Thu Aug 24 05:49:37 AEST 2017 org.jfree.data.xy.XYSeries,382
+Thu Aug 24 05:49:37 AEST 2017 org.jfree.data.xy.XYSeries,383
+Thu Aug 24 05:49:37 AEST 2017 org.jfree.data.xy.XYSeries,386
+Thu Aug 24 05:52:47 AEST 2017 org.jfree.data.xy.XYSeries,388
+Thu Aug 24 05:52:47 AEST 2017 org.jfree.data.xy.XYSeries,389
+Thu Aug 24 05:52:47 AEST 2017 org.jfree.data.xy.XYSeries,391
+Thu Aug 24 05:54:26 AEST 2017 org.jfree.data.xy.XYSeries,392
+Thu Aug 24 05:54:26 AEST 2017 Thu Aug 24 05:54:26 AEST 2017 : org.jfree.data.xy.XYSeries,394=>Find no block
+Thu Aug 24 05:54:27 AEST 2017 org.jfree.data.xy.XYSeries,404
+Thu Aug 24 06:06:07 AEST 2017 org.jfree.data.xy.XYSeries,405
+Thu Aug 24 06:06:07 AEST 2017 org.jfree.data.xy.XYSeries,407
+Thu Aug 24 06:17:46 AEST 2017 Thu Aug 24 06:17:46 AEST 2017 : org.jfree.data.xy.XYSeries,408=>Find no block
+Thu Aug 24 06:17:46 AEST 2017 org.jfree.data.xy.XYSeries,419
+Thu Aug 24 06:20:21 AEST 2017 org.jfree.data.xy.XYSeries,420
+Thu Aug 24 06:20:21 AEST 2017 org.jfree.data.xy.XYSeries,421
+Thu Aug 24 06:20:21 AEST 2017 org.jfree.data.xy.XYSeries,433
+Thu Aug 24 06:20:24 AEST 2017 org.jfree.data.xy.XYSeries,440
+Thu Aug 24 06:20:49 AEST 2017 org.jfree.data.xy.XYSeries,441
+Failed time : 17/08/24 06:20

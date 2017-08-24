@@ -1,0 +1,536 @@
+=================================================
+Project : chart_9	start : 17/08/24 09:42
+Current failed test : org.jfree.data.time.junit.TimeSeriesTests::testBug1864222 | 17/08/24 09:42
+Thu Aug 24 09:42:41 AEST 2017 org.jfree.data.time.TimeSeries,883
+Thu Aug 24 09:43:17 AEST 2017 org.jfree.data.time.TimeSeries,921
+Thu Aug 24 09:43:20 AEST 2017 org.jfree.data.time.TimeSeries,924
+Thu Aug 24 09:43:42 AEST 2017 org.jfree.data.time.TimeSeries,927
+Thu Aug 24 09:43:45 AEST 2017 org.jfree.data.time.TimeSeries,931
+Thu Aug 24 09:44:29 AEST 2017 org.jfree.data.time.TimeSeries,932
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(startIndex!=this.data.size()){
+emptyRange=true;
+}
+
+Time : 17/08/24 09:48
+----------------------------------------
+Thu Aug 24 09:54:23 AEST 2017 org.jfree.data.time.TimeSeries,933
+Thu Aug 24 09:54:23 AEST 2017 org.jfree.data.time.TimeSeries,934
+Thu Aug 24 09:54:23 AEST 2017 org.jfree.data.time.TimeSeries,935
+Thu Aug 24 09:54:23 AEST 2017 org.jfree.data.time.TimeSeries,939
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(startIndex<0){
+startIndex=-(startIndex+1);
+if(startIndex==this.data.size()){
+emptyRange=true;
+}
+}
+data.clear();
+int endIndex=getIndex(end);
+if(endIndex<0){
+endIndex=-(endIndex+1);
+endIndex=endIndex-1;
+}
+
+Time : 17/08/24 09:57
+----------------------------------------
+Thu Aug 24 09:57:32 AEST 2017 org.jfree.data.time.TimeSeries,940
+Thu Aug 24 09:57:32 AEST 2017 org.jfree.data.time.TimeSeries,941
+Thu Aug 24 09:57:32 AEST 2017 org.jfree.data.time.TimeSeries,942
+Thu Aug 24 09:57:33 AEST 2017 org.jfree.data.time.TimeSeries,944
+Thu Aug 24 09:57:54 AEST 2017 org.jfree.data.time.TimeSeries,947
+Thu Aug 24 10:01:03 AEST 2017 org.jfree.data.time.TimeSeries,953
+Thu Aug 24 10:01:03 AEST 2017 org.jfree.data.time.TimeSeries,879
+Thu Aug 24 10:01:35 AEST 2017 org.jfree.data.time.TimeSeries,882
+Thu Aug 24 10:01:35 AEST 2017 Thu Aug 24 10:01:35 AEST 2017 : org.jfree.data.time.Day,122=>Find no block
+Thu Aug 24 10:01:35 AEST 2017 org.jfree.data.time.Day,123
+Thu Aug 24 10:02:58 AEST 2017 org.jfree.data.time.Day,124
+Thu Aug 24 10:02:58 AEST 2017 Thu Aug 24 10:02:58 AEST 2017 : org.jfree.data.time.Day,125=>Find no block
+Thu Aug 24 10:02:59 AEST 2017 org.jfree.data.time.SpreadsheetDate,452
+Thu Aug 24 10:03:01 AEST 2017 org.jfree.data.time.Day,302
+Thu Aug 24 10:03:04 AEST 2017 org.jfree.data.time.TimeSeries,430
+Thu Aug 24 10:03:30 AEST 2017 org.jfree.data.time.TimeSeries,433
+Thu Aug 24 10:04:13 AEST 2017 org.jfree.data.time.TimeSeries,435
+Thu Aug 24 10:04:13 AEST 2017 org.jfree.data.time.Day,183
+Thu Aug 24 10:04:16 AEST 2017 org.jfree.data.time.Day,404
+Thu Aug 24 10:04:37 AEST 2017 org.jfree.data.time.Day,405
+Thu Aug 24 10:04:37 AEST 2017 org.jfree.data.time.Day,406
+Thu Aug 24 10:04:37 AEST 2017 Thu Aug 24 10:04:37 AEST 2017 : org.jfree.data.time.Day,407=>Find no block
+Thu Aug 24 10:04:37 AEST 2017 org.jfree.data.time.Day,423
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(o1 instanceof Day){
+Day d=(Day)o1;
+result=-d.getSerialDate().compare(this.serialDate);
+}else if(o1 instanceof RegularTimePeriod){
+result=0;
+}else {
+result=1;
+}
+result=37*this.DATE_FORMAT_LONG.hashCode();
+return result;
+
+Time : 17/08/24 10:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(o1 instanceof Day){
+Day d=(Day)o1;
+result=-d.getSerialDate().compare(this.serialDate);
+}else if(o1 instanceof RegularTimePeriod){
+result=0;
+}else {
+result=1;
+}
+result=37*result+this.DATE_FORMAT_LONG.hashCode();
+return result;
+
+Time : 17/08/24 10:06
+----------------------------------------
+Thu Aug 24 10:07:07 AEST 2017 org.jfree.data.time.SpreadsheetDate,211
+Thu Aug 24 10:07:09 AEST 2017 org.jfree.data.time.SpreadsheetDate,308
+Thu Aug 24 10:07:12 AEST 2017 org.jfree.data.time.Day,250
+Thu Aug 24 10:07:36 AEST 2017 org.jfree.data.time.Day,251
+Thu Aug 24 10:07:36 AEST 2017 Thu Aug 24 10:07:36 AEST 2017 : org.jfree.data.time.Day,252=>Find no block
+Thu Aug 24 10:07:37 AEST 2017 org.jfree.data.time.Day,317
+Thu Aug 24 10:20:35 AEST 2017 org.jfree.data.time.Day,318
+Thu Aug 24 10:20:36 AEST 2017 org.jfree.data.time.Day,319
+Thu Aug 24 10:20:36 AEST 2017 org.jfree.data.time.Day,320
+Thu Aug 24 10:20:36 AEST 2017 org.jfree.data.time.Day,321
+Thu Aug 24 10:20:36 AEST 2017 org.jfree.data.time.Day,322
+Thu Aug 24 10:20:36 AEST 2017 org.jfree.data.time.Day,324
+Thu Aug 24 10:20:36 AEST 2017 org.jfree.data.time.Day,339
+Thu Aug 24 10:33:35 AEST 2017 org.jfree.data.time.Day,340
+Thu Aug 24 10:33:35 AEST 2017 org.jfree.data.time.Day,341
+Thu Aug 24 10:33:35 AEST 2017 org.jfree.data.time.Day,342
+Thu Aug 24 10:33:35 AEST 2017 org.jfree.data.time.Day,343
+Thu Aug 24 10:33:35 AEST 2017 org.jfree.data.time.Day,344
+Thu Aug 24 10:33:36 AEST 2017 org.jfree.data.time.Day,346
+Thu Aug 24 10:33:36 AEST 2017 Thu Aug 24 10:33:36 AEST 2017 : org.jfree.data.time.SerialDate,210=>Find no block
+Thu Aug 24 10:33:36 AEST 2017 Thu Aug 24 10:33:36 AEST 2017 : org.jfree.data.time.SerialDate,211=>Find no block
+Thu Aug 24 10:33:36 AEST 2017 org.jfree.data.time.SerialDate,499
+Thu Aug 24 10:33:44 AEST 2017 org.jfree.data.time.SerialDate,500
+Thu Aug 24 10:33:44 AEST 2017 org.jfree.data.time.SerialDate,526
+Thu Aug 24 10:33:47 AEST 2017 org.jfree.data.time.SerialDate,527
+Thu Aug 24 10:33:47 AEST 2017 org.jfree.data.time.SerialDate,528
+Thu Aug 24 10:33:47 AEST 2017 org.jfree.data.time.SerialDate,529
+Thu Aug 24 10:33:47 AEST 2017 org.jfree.data.time.SerialDate,792
+Thu Aug 24 10:33:50 AEST 2017 Thu Aug 24 10:33:50 AEST 2017 : org.jfree.data.time.SpreadsheetDate,107=>Find no block
+Thu Aug 24 10:33:50 AEST 2017 org.jfree.data.time.SpreadsheetDate,109
+Thu Aug 24 10:38:59 AEST 2017 org.jfree.data.time.SpreadsheetDate,110
+Thu Aug 24 10:38:59 AEST 2017 org.jfree.data.time.SpreadsheetDate,118
+Thu Aug 24 10:40:46 AEST 2017 org.jfree.data.time.SpreadsheetDate,120
+Thu Aug 24 10:40:46 AEST 2017 org.jfree.data.time.SpreadsheetDate,128
+Thu Aug 24 10:47:13 AEST 2017 org.jfree.data.time.SpreadsheetDate,129
+Thu Aug 24 10:47:13 AEST 2017 org.jfree.data.time.SpreadsheetDate,136
+Thu Aug 24 10:52:46 AEST 2017 Thu Aug 24 10:52:46 AEST 2017 : org.jfree.data.time.SpreadsheetDate,138=>Find no block
+Thu Aug 24 10:52:46 AEST 2017 org.jfree.data.time.SpreadsheetDate,231
+Thu Aug 24 10:52:49 AEST 2017 org.jfree.data.time.SpreadsheetDate,240
+Thu Aug 24 10:52:52 AEST 2017 org.jfree.data.time.SpreadsheetDate,249
+Thu Aug 24 10:52:54 AEST 2017 org.jfree.data.time.SpreadsheetDate,449
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int yy=((y-1900)*365)+SerialDate.leapYearCount(y-1);
+int mm=SerialDate.AGGREGATE_DAYS_TO_END_OF_PRECEDING_MONTH[m];
+if(m>MonthConstants.FEBRUARY){
+if(SerialDate.isLeapYear(y)){
+mm=mm+1;
+}
+}
+ final int dd=y;
+return yy+mm;
+
+Time : 17/08/24 10:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int yy=((y-1900)*365)+SerialDate.leapYearCount(y-1);
+int mm=SerialDate.AGGREGATE_DAYS_TO_END_OF_PRECEDING_MONTH[m];
+if(m>MonthConstants.FEBRUARY){
+if(SerialDate.isLeapYear(y)){
+mm=mm+1;
+}
+}
+ final double dd=d;
+return yy+mm;
+
+Time : 17/08/24 10:54
+----------------------------------------
+Thu Aug 24 10:54:52 AEST 2017 org.jfree.data.time.SpreadsheetDate,450
+Thu Aug 24 10:54:53 AEST 2017 org.jfree.data.time.SpreadsheetDate,451
+Thu Aug 24 10:54:53 AEST 2017 org.jfree.data.time.SpreadsheetDate,456
+Thu Aug 24 10:54:53 AEST 2017 org.jfree.data.time.SpreadsheetDate,457
+Thu Aug 24 10:54:53 AEST 2017 org.jfree.data.time.TimeSeries,142
+Thu Aug 24 10:55:04 AEST 2017 Thu Aug 24 10:55:04 AEST 2017 : org.jfree.data.time.TimeSeries,144=>Find no block
+Thu Aug 24 10:55:05 AEST 2017 org.jfree.data.time.SerialDate,544
+Thu Aug 24 10:59:11 AEST 2017 org.jfree.data.time.SerialDate,545
+Thu Aug 24 10:59:11 AEST 2017 org.jfree.data.time.SerialDate,546
+Thu Aug 24 10:59:11 AEST 2017 org.jfree.data.time.TimeSeriesDataItem,203
+Thu Aug 24 10:59:36 AEST 2017 org.jfree.data.time.TimeSeriesDataItem,204
+Thu Aug 24 10:59:36 AEST 2017 org.jfree.data.time.TimeSeriesDataItem,205
+Thu Aug 24 10:59:36 AEST 2017 Thu Aug 24 10:59:36 AEST 2017 : org.jfree.data.time.TimeSeriesDataItem,206=>Find no block
+Thu Aug 24 10:59:36 AEST 2017 org.jfree.data.time.TimeSeriesDataItem,215
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(o1 instanceof TimeSeriesDataItem){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+result=this.value.hashCode();
+return result;
+
+Time : 17/08/24 11:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(o1 instanceof TimeSeriesDataItem){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+result=(this.period!=null?this.period.hashCode():0);
+return result;
+
+Time : 17/08/24 11:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(o1 instanceof TimeSeriesDataItem){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+result=29*result+(this.value!=null?this.value.hashCode():0);
+return result;
+
+Time : 17/08/24 11:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(o1 instanceof TimeSeriesDataItem){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+result=(this.period!=null?this.period.hashCode():0);
+result=29*result+(this.value!=null?this.value.hashCode():0);
+return result;
+
+Time : 17/08/24 11:01
+----------------------------------------
+Thu Aug 24 11:02:51 AEST 2017 org.jfree.data.time.TimeSeries,561
+Thu Aug 24 11:04:00 AEST 2017 Thu Aug 24 11:04:00 AEST 2017 : org.jfree.data.time.TimeSeries,562=>Find no block
+Thu Aug 24 11:04:00 AEST 2017 org.jfree.data.time.TimeSeries,574
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.maximumItemCount+=maximumItemCount;
+TimeSeriesDataItem item=new TimeSeriesDataItem(period,value);
+add(item,notify);
+
+Time : 17/08/24 11:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+maximumItemCount++;
+TimeSeriesDataItem item=new TimeSeriesDataItem(period,value);
+add(item,notify);
+
+Time : 17/08/24 11:05
+----------------------------------------
+Thu Aug 24 11:07:16 AEST 2017 org.jfree.data.time.TimeSeries,575
+Thu Aug 24 11:07:16 AEST 2017 Thu Aug 24 11:07:16 AEST 2017 : org.jfree.data.time.TimeSeries,576=>Find no block
+Thu Aug 24 11:07:16 AEST 2017 Thu Aug 24 11:07:16 AEST 2017 : org.jfree.data.time.Year,96=>Find no block
+Thu Aug 24 11:07:16 AEST 2017 org.jfree.data.time.Year,97
+Thu Aug 24 11:11:26 AEST 2017 org.jfree.data.time.Year,103
+Thu Aug 24 11:15:19 AEST 2017 org.jfree.data.time.Year,104
+Thu Aug 24 11:15:19 AEST 2017 Thu Aug 24 11:15:19 AEST 2017 : org.jfree.data.time.Year,105=>Find no block
+Thu Aug 24 11:15:19 AEST 2017 org.jfree.data.time.Year,136
+Thu Aug 24 11:15:20 AEST 2017 org.jfree.data.time.Year,176
+Thu Aug 24 11:15:20 AEST 2017 org.jfree.data.time.Year,177
+Thu Aug 24 11:15:20 AEST 2017 Thu Aug 24 11:15:20 AEST 2017 : org.jfree.data.time.Year,178=>Find no block
+Thu Aug 24 11:15:20 AEST 2017 org.jfree.data.time.Year,218
+Thu Aug 24 11:15:20 AEST 2017 org.jfree.data.time.Year,233
+Thu Aug 24 11:18:49 AEST 2017 org.jfree.data.time.Year,234
+Thu Aug 24 11:18:49 AEST 2017 org.jfree.data.time.Year,237
+Thu Aug 24 11:18:49 AEST 2017 org.jfree.data.time.Year,252
+Thu Aug 24 11:22:19 AEST 2017 org.jfree.data.time.Year,253
+Thu Aug 24 11:22:20 AEST 2017 org.jfree.data.time.Year,256
+Thu Aug 24 11:22:20 AEST 2017 org.jfree.data.time.Year,317
+Thu Aug 24 11:22:40 AEST 2017 org.jfree.data.time.Year,318
+Thu Aug 24 11:22:40 AEST 2017 org.jfree.data.time.Year,319
+Thu Aug 24 11:22:40 AEST 2017 Thu Aug 24 11:22:40 AEST 2017 : org.jfree.data.time.Year,320=>Find no block
+Thu Aug 24 11:22:40 AEST 2017 org.jfree.data.time.Year,336
+Thu Aug 24 11:24:04 AEST 2017 org.jfree.data.time.TimeSeries,588
+Thu Aug 24 11:24:04 AEST 2017 Thu Aug 24 11:24:04 AEST 2017 : org.jfree.data.time.TimeSeries,589=>Find no block
+Thu Aug 24 11:24:04 AEST 2017 org.jfree.data.time.TimeSeries,602
+Thu Aug 24 11:24:04 AEST 2017 org.jfree.data.time.TimeSeries,603
+Thu Aug 24 11:24:04 AEST 2017 Thu Aug 24 11:24:04 AEST 2017 : org.jfree.data.time.TimeSeries,604=>Find no block
+Thu Aug 24 11:24:05 AEST 2017 org.jfree.data.time.TimeSeriesDataItem,107
+Thu Aug 24 11:24:17 AEST 2017 Thu Aug 24 11:24:17 AEST 2017 : org.jfree.data.time.TimeSeriesDataItem,108=>Find no block
+Thu Aug 24 11:24:17 AEST 2017 org.jfree.data.time.TimeSeries,155
+Thu Aug 24 11:24:28 AEST 2017 Thu Aug 24 11:24:28 AEST 2017 : org.jfree.data.time.TimeSeries,157=>Find no block
+Thu Aug 24 11:24:28 AEST 2017 Thu Aug 24 11:24:28 AEST 2017 : org.jfree.data.time.RegularTimePeriod,70=>Find no block
+Thu Aug 24 11:24:29 AEST 2017 org.jfree.data.time.TimeSeries,341
+Thu Aug 24 11:24:57 AEST 2017 org.jfree.data.time.TimeSeries,372
+Thu Aug 24 11:25:00 AEST 2017 org.jfree.data.time.TimeSeries,491
+Thu Aug 24 11:25:22 AEST 2017 org.jfree.data.time.TimeSeries,494
+Thu Aug 24 11:32:43 AEST 2017 org.jfree.data.time.TimeSeries,506
+Thu Aug 24 11:39:58 AEST 2017 org.jfree.data.time.TimeSeries,507
+Thu Aug 24 11:47:28 AEST 2017 org.jfree.data.time.TimeSeries,508
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(count==0){
+this.data.remove(item);
+added=true;
+}else {
+RegularTimePeriod last=getTimePeriod(getItemCount()-1);
+if(item.getPeriod().compareTo(last)>0){
+this.data.add(item);
+added=true;
+}else {
+int index=Collections.binarySearch(this.data,item);
+if(index<0){
+this.data.add(-index-1,item);
+added=true;
+}else {
+StringBuffer b=new StringBuffer();
+b.append("You are attempting to add an observation for ");
+b.append("the time period ");
+b.append(item.getPeriod().toString());
+b.append(" but the series already contains an observation");
+b.append(" for that time period. Duplicates are not ");
+b.append("permitted.  Try using the addOrUpdate() method.");
+throw new SeriesException(b.toString());
+}
+}
+}
+
+Time : 17/08/24 12:16
+----------------------------------------
+Thu Aug 24 12:17:36 AEST 2017 org.jfree.data.time.TimeSeries,509
+Thu Aug 24 12:17:49 AEST 2017 org.jfree.data.time.TimeSeries,510
+Thu Aug 24 12:17:49 AEST 2017 org.jfree.data.time.TimeSeries,513
+Thu Aug 24 12:17:59 AEST 2017 org.jfree.data.time.TimeSeries,514
+Thu Aug 24 12:17:59 AEST 2017 org.jfree.data.time.TimeSeries,515
+Thu Aug 24 12:17:59 AEST 2017 org.jfree.data.time.TimeSeries,516
+Thu Aug 24 12:17:59 AEST 2017 org.jfree.data.time.TimeSeries,536
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(getItemCount()>count){
+this.data.remove(0);
+}
+
+Time : 17/08/24 12:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.maximumItemCount=count;
+if(getItemCount()>this.maximumItemCount){
+this.data.remove(0);
+}
+
+Time : 17/08/24 12:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(count<0){
+throw new IllegalArgumentException("Negative \'maximum\' argument.");
+}
+if(getItemCount()>count){
+this.data.remove(0);
+}
+
+Time : 17/08/24 12:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.maximumItemCount=count;
+if(getItemCount()>count){
+this.data.remove(0);
+}
+
+Time : 17/08/24 12:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(count<0){
+throw new IllegalArgumentException("Negative \'maximum\' argument.");
+}
+this.maximumItemCount=count;
+if(getItemCount()>this.maximumItemCount){
+this.data.remove(0);
+}
+
+Time : 17/08/24 12:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(count<0){
+throw new IllegalArgumentException("Negative \'maximum\' argument.");
+}
+this.maximumItemCount=count;
+if(getItemCount()>count){
+this.data.remove(0);
+}
+
+Time : 17/08/24 12:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(notify){
+this.data.remove(count);
+fireSeriesChanged();
+}
+
+Time : 17/08/24 12:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.data.remove(count);
+if(added){
+if(getItemCount()>this.maximumItemCount){
+this.data.remove(0);
+}
+removeAgedItems(false);
+if(notify){
+fireSeriesChanged();
+}
+}
+
+Time : 17/08/24 12:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.maximumItemCount=count;
+if(added){
+if(getItemCount()>this.maximumItemCount){
+this.data.remove(0);
+}
+removeAgedItems(false);
+if(notify){
+fireSeriesChanged();
+}
+}
+
+Time : 17/08/24 12:27
+----------------------------------------
+Thu Aug 24 12:30:00 AEST 2017 org.jfree.data.time.TimeSeries,538
+Thu Aug 24 12:30:00 AEST 2017 org.jfree.data.time.TimeSeries,542
+Thu Aug 24 12:30:01 AEST 2017 org.jfree.data.time.TimeSeries,545
+Thu Aug 24 12:30:01 AEST 2017 org.jfree.data.time.TimeSeries,546
+Thu Aug 24 12:30:01 AEST 2017 Thu Aug 24 12:30:01 AEST 2017 : org.jfree.data.time.TimeSeries,550=>Find no block
+Thu Aug 24 12:30:01 AEST 2017 org.jfree.data.time.TimeSeries,740
+Thu Aug 24 12:33:30 AEST 2017 org.jfree.data.time.TimeSeries,741
+Thu Aug 24 12:33:31 AEST 2017 org.jfree.data.time.TimeSeries,742
+Thu Aug 24 12:33:31 AEST 2017 Thu Aug 24 12:33:31 AEST 2017 : org.jfree.data.time.TimeSeries,744=>Find no block
+Thu Aug 24 12:33:31 AEST 2017 org.jfree.data.time.TimeSeries,748
+Thu Aug 24 12:33:31 AEST 2017 Thu Aug 24 12:33:31 AEST 2017 : org.jfree.data.time.TimeSeries,752=>Find no block
+Thu Aug 24 12:33:31 AEST 2017 org.jfree.data.general.Series,313
+Thu Aug 24 12:35:15 AEST 2017 org.jfree.data.general.Series,314
+Thu Aug 24 12:35:15 AEST 2017 Thu Aug 24 12:35:15 AEST 2017 : org.jfree.data.general.Series,316=>Find no block
+Thu Aug 24 12:35:15 AEST 2017 org.jfree.data.general.Series,326
+Thu Aug 24 12:50:16 AEST 2017 org.jfree.data.general.Series,327
+Thu Aug 24 12:50:16 AEST 2017 Thu Aug 24 12:50:16 AEST 2017 : org.jfree.data.general.Series,334=>Find no block
+Thu Aug 24 12:50:17 AEST 2017 Thu Aug 24 12:50:17 AEST 2017 : org.jfree.data.time.TimeSeriesDataItem,92=>Find no block
+Thu Aug 24 12:50:17 AEST 2017 org.jfree.data.time.TimeSeriesDataItem,93
+Thu Aug 24 12:50:17 AEST 2017 org.jfree.data.time.TimeSeriesDataItem,96
+Thu Aug 24 12:50:53 AEST 2017 org.jfree.data.time.TimeSeriesDataItem,97
+Thu Aug 24 12:50:54 AEST 2017 Thu Aug 24 12:50:54 AEST 2017 : org.jfree.data.time.TimeSeriesDataItem,98=>Find no block
+Thu Aug 24 12:50:54 AEST 2017 org.jfree.data.time.TimeSeriesDataItem,116
+Thu Aug 24 12:50:56 AEST 2017 org.jfree.data.general.SeriesChangeEvent,61
+Thu Aug 24 12:50:59 AEST 2017 Thu Aug 24 12:50:59 AEST 2017 : org.jfree.data.general.SeriesChangeEvent,62=>Find no block
+Thu Aug 24 12:50:59 AEST 2017 org.jfree.data.time.TimeSeries,240
+Thu Aug 24 12:51:27 AEST 2017 org.jfree.data.time.TimeSeries,174
+Thu Aug 24 12:52:28 AEST 2017 org.jfree.data.time.TimeSeries,175
+Thu Aug 24 12:52:29 AEST 2017 org.jfree.data.time.TimeSeries,176
+Thu Aug 24 12:52:29 AEST 2017 org.jfree.data.time.TimeSeries,177
+Thu Aug 24 12:52:29 AEST 2017 org.jfree.data.time.TimeSeries,178
+Thu Aug 24 12:52:29 AEST 2017 org.jfree.data.time.TimeSeries,179
+Thu Aug 24 12:52:29 AEST 2017 org.jfree.data.time.TimeSeries,180
+Thu Aug 24 12:52:29 AEST 2017 Thu Aug 24 12:52:29 AEST 2017 : org.jfree.data.time.TimeSeries,181=>Find no block
+Thu Aug 24 12:52:30 AEST 2017 org.jfree.data.general.Series,102
+Thu Aug 24 12:52:33 AEST 2017 Thu Aug 24 12:52:33 AEST 2017 : org.jfree.data.general.Series,103=>Find no block
+Thu Aug 24 12:52:33 AEST 2017 Thu Aug 24 12:52:33 AEST 2017 : org.jfree.data.general.Series,111=>Find no block
+Thu Aug 24 12:52:33 AEST 2017 org.jfree.data.general.Series,112
+Thu Aug 24 12:52:36 AEST 2017 org.jfree.data.general.Series,115
+Thu Aug 24 12:53:42 AEST 2017 org.jfree.data.general.Series,116
+Thu Aug 24 12:53:43 AEST 2017 org.jfree.data.general.Series,117
+Thu Aug 24 12:53:43 AEST 2017 org.jfree.data.general.Series,118
+Thu Aug 24 12:53:43 AEST 2017 org.jfree.data.general.Series,119
+Thu Aug 24 12:53:43 AEST 2017 Thu Aug 24 12:53:43 AEST 2017 : org.jfree.data.general.Series,120=>Find no block
+Thu Aug 24 12:53:43 AEST 2017 org.jfree.data.time.Day,112
+Thu Aug 24 12:53:46 AEST 2017 Thu Aug 24 12:53:46 AEST 2017 : org.jfree.data.time.Day,113=>Find no block
+Thu Aug 24 12:53:46 AEST 2017 Thu Aug 24 12:53:46 AEST 2017 : org.jfree.data.time.Day,132=>Find no block
+Thu Aug 24 12:53:46 AEST 2017 org.jfree.data.time.Day,133
+Thu Aug 24 12:53:49 AEST 2017 org.jfree.data.time.Day,134
+Thu Aug 24 12:53:49 AEST 2017 org.jfree.data.time.Day,136
+Thu Aug 24 12:54:01 AEST 2017 org.jfree.data.time.Day,137
+Thu Aug 24 12:54:01 AEST 2017 Thu Aug 24 12:54:01 AEST 2017 : org.jfree.data.time.Day,138=>Find no block
+Thu Aug 24 12:54:01 AEST 2017 org.jfree.data.time.Day,148
+Thu Aug 24 12:54:04 AEST 2017 Thu Aug 24 12:54:04 AEST 2017 : org.jfree.data.time.Day,149=>Find no block
+Thu Aug 24 12:54:04 AEST 2017 Thu Aug 24 12:54:04 AEST 2017 : org.jfree.data.time.Day,157=>Find no block
+Thu Aug 24 12:54:04 AEST 2017 org.jfree.data.time.Day,158
+Thu Aug 24 12:54:07 AEST 2017 org.jfree.data.time.Day,159
+Thu Aug 24 12:54:07 AEST 2017 org.jfree.data.time.Day,161
+Thu Aug 24 12:54:10 AEST 2017 org.jfree.data.time.Day,162
+Thu Aug 24 12:54:10 AEST 2017 org.jfree.data.time.Day,164
+Thu Aug 24 12:55:10 AEST 2017 org.jfree.data.time.Day,165
+Thu Aug 24 12:57:36 AEST 2017 org.jfree.data.time.Day,166
+Failed time : 17/08/24 13:00
