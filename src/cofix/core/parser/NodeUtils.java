@@ -440,7 +440,7 @@ public class NodeUtils {
 			}
 		} else if(tar instanceof SName){
 			SName sName = (SName)tar;
-			if(sName.getName().toUpperCase().equals(sName.getName())){
+			if(sName.getName().toUpperCase().equals(sName.getName()) || sName.getName().equals("NaN")){
 				return true;
 			}
 		}
