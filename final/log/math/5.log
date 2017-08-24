@@ -1,0 +1,45 @@
+=================================================
+Project : math_5	start : 17/08/24 14:50
+Current failed test : org.apache.commons.math3.complex.ComplexTest::testReciprocalZero | 17/08/24 14:50
+Thu Aug 24 14:50:57 AEST 2017 org.apache.commons.math3.complex.Complex,305
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(real==0.0&&imaginary==0.0){
+return INF;
+}
+
+Time : 17/08/24 14:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.7606388292556647 : [/home/similarfix/d4j/projects/math/math_5_buggy/src/main/java/org/apache/commons/math3/complex/Complex.java=>0,0]
+if(Double.isInfinite(real)||Double.isInfinite(imaginary)){
+return INF;
+}
+
+Time : 17/08/24 14:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/similarfix/d4j/projects/math/math_5_buggy/src/main/java/org/apache/commons/math3/complex/Complex.java=>304,306]
+if(real==0.0&&imaginary==0.0){
+return NaN;
+}
+
+Time : 17/08/24 14:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/similarfix/d4j/projects/math/math_5_buggy/src/main/java/org/apache/commons/math3/complex/Complex.java=>304,306]
+if(real==0.0&&imaginary==0.0){
+return INF;
+}
+
+Time : 17/08/24 14:54
+----------------------------------------
+Success time : 17/08/24 14:54

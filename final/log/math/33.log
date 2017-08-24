@@ -1,0 +1,52 @@
+=================================================
+Project : math_33	start : 17/08/23 09:44
+Current failed test : org.apache.commons.math3.optimization.linear.SimplexSolverTest::testMath781 | 17/08/23 09:44
+Wed Aug 23 09:45:33 AEST 2017 org.apache.commons.math3.optimization.linear.Relationship,59
+Wed Aug 23 09:45:40 AEST 2017 org.apache.commons.math3.optimization.linear.SimplexTableau,406
+Wed Aug 23 09:49:04 AEST 2017 org.apache.commons.math3.optimization.linear.SimplexTableau,407
+Wed Aug 23 09:49:04 AEST 2017 org.apache.commons.math3.optimization.linear.SimplexTableau,261
+Wed Aug 23 09:49:07 AEST 2017 org.apache.commons.math3.optimization.linear.SimplexTableau,339
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Precision.compareTo(entry,0.0,epsilon)>0){
+columnsToDrop.add(i);
+}
+
+Time : 17/08/23 09:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.641374071802713 : [/home/similarfix/d4j/projects/math/math_33_buggy/src/main/java/org/apache/commons/math3/optimization/linear/SimplexTableau.java=>0,0]
+for(int i=getNumObjectiveFunctions();i<getWidth()-1;i++){
+ final double entry=tableau.getEntry(0,i);
+if(Precision.compareTo(entry,0.0,epsilon)<0){
+return false;
+}
+}
+
+Time : 17/08/23 09:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/similarfix/d4j/projects/math/math_33_buggy/src/main/java/org/apache/commons/math3/optimization/linear/SimplexTableau.java=>338,340]
+if(Precision.compareTo(entry,0.0,maxUlps)>0){
+columnsToDrop.add(i);
+}
+
+Time : 17/08/23 09:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/similarfix/d4j/projects/math/math_33_buggy/src/main/java/org/apache/commons/math3/optimization/linear/SimplexTableau.java=>338,340]
+if(Precision.compareTo(entry,0.0,epsilon)>0){
+columnsToDrop.add(i);
+}
+
+Time : 17/08/23 09:51
+----------------------------------------
+Success time : 17/08/23 09:51

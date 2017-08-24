@@ -1,0 +1,37 @@
+=================================================
+Project : math_75	start : 17/08/24 10:14
+Current failed test : org.apache.commons.math.stat.FrequencyTest::testPcts | 17/08/24 10:14
+Thu Aug 24 10:14:28 AEST 2017 org.apache.commons.math.stat.Frequency,303
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return getPct((Comparable<?>)v);
+
+Time : 17/08/24 10:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.9622504486493764 : [/home/similarfix/d4j/projects/math/math_75_buggy/src/main/java/org/apache/commons/math/stat/Frequency.java=>0,0]
+return getPct(Long.valueOf(v));
+
+Time : 17/08/24 10:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/similarfix/d4j/projects/math/math_75_buggy/src/main/java/org/apache/commons/math/stat/Frequency.java=>303,303]
+return getCumPct((Comparable<?>)v);
+
+Time : 17/08/24 10:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/similarfix/d4j/projects/math/math_75_buggy/src/main/java/org/apache/commons/math/stat/Frequency.java=>303,303]
+return getPct((Comparable<?>)v);
+
+Time : 17/08/24 10:15
+----------------------------------------
+Success time : 17/08/24 10:15

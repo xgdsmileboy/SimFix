@@ -1,0 +1,37 @@
+=================================================
+Project : math_70	start : 17/08/22 22:09
+Current failed test : org.apache.commons.math.analysis.solvers.BisectionSolverTest::testMath369 | 17/08/22 22:09
+Tue Aug 22 22:10:20 AEST 2017 org.apache.commons.math.analysis.solvers.BisectionSolver,72
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return solve(f,min,max);
+
+Time : 17/08/22 22:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.7847319278346623 : [/home/similarfix/d4j/projects/math/math_70_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BisectionSolver.java=>0,0]
+return solve(f,min,max);
+
+Time : 17/08/22 22:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/similarfix/d4j/projects/math/math_70_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BisectionSolver.java=>72,72]
+return solve(min,max);
+
+Time : 17/08/22 22:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/similarfix/d4j/projects/math/math_70_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BisectionSolver.java=>72,72]
+return solve(f,min,max);
+
+Time : 17/08/22 22:11
+----------------------------------------
+Success time : 17/08/22 22:11
