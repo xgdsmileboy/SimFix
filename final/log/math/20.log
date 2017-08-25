@@ -1,0 +1,106 @@
+=================================================
+Project : math_20	start : 17/08/25 14:56
+Current failed test : org.apache.commons.math3.optimization.direct.CMAESOptimizerTest::testMath864 | 17/08/25 14:56
+Fri Aug 25 15:08:19 AEST 2017 org.apache.commons.math3.optimization.direct.CMAESOptimizer,240
+Fri Aug 25 15:08:22 AEST 2017 Fri Aug 25 15:08:22 AEST 2017 : org.apache.commons.math3.optimization.direct.CMAESOptimizer,241=>Find no block
+Fri Aug 25 15:08:22 AEST 2017 org.apache.commons.math3.optimization.direct.CMAESOptimizer,247
+Fri Aug 25 15:08:24 AEST 2017 Fri Aug 25 15:08:24 AEST 2017 : org.apache.commons.math3.optimization.direct.CMAESOptimizer,250=>Find no block
+Fri Aug 25 15:08:24 AEST 2017 org.apache.commons.math3.optimization.direct.CMAESOptimizer,476
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+sigma=damps+cs*bestValue;
+if(bestValue==fitness[arindex[(int)(0.1+lambda/4.0)]]){
+sigma=sigma*Math.exp(0.2+cs/damps);
+}
+
+Time : 17/08/25 15:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.sigma=1/bestValue;
+if(bestValue==fitness[arindex[(int)(0.1+lambda/4.0)]]){
+sigma=sigma*Math.exp(0.2+cs/damps);
+}
+
+Time : 17/08/25 15:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.sigma=1/bestValue;
+this.chiN=0.5*sigma;
+if(sigma==fitness[arindex[(int)(0.1+lambda/4.0)]]){
+sigma=sigma*Math.exp(0.2+cs/damps);
+}
+
+Time : 17/08/25 15:13
+----------------------------------------
+Fri Aug 25 15:18:25 AEST 2017 org.apache.commons.math3.optimization.direct.CMAESOptimizer,562
+Fri Aug 25 15:26:34 AEST 2017 org.apache.commons.math3.optimization.direct.CMAESOptimizer,730
+Fri Aug 25 15:26:36 AEST 2017 org.apache.commons.math3.optimization.direct.CMAESOptimizer,995
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x[i]>0.0){
+repaired[i]=1.0;
+}else {
+repaired[i]=x[i];
+}
+
+Time : 17/08/25 15:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x[i]>1.0){
+repaired[i]=0.0;
+}else {
+repaired[i]=x[i];
+}
+
+Time : 17/08/25 15:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.4708589321123817 : [/home/similarfix/d4j/projects/math/math_20_buggy/src/main/java/org/apache/commons/math3/optimization/direct/CMAESOptimizer.java=>0,0]
+if(e[i+1]==0.0){
+realEigenvalues[i+1]-=u;
+e[m]=0.0;
+break;
+}
+
+Time : 17/08/25 15:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/similarfix/d4j/projects/math/math_20_buggy/src/main/java/org/apache/commons/math3/optimization/direct/CMAESOptimizer.java=>994,998]
+if(x[i]>1.0){
+repaired[i]=1.0;
+}else {
+repaired[i]=x[i];
+}
+
+Time : 17/08/25 15:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/similarfix/d4j/projects/math/math_20_buggy/src/main/java/org/apache/commons/math3/optimization/direct/CMAESOptimizer.java=>994,998]
+if(x[i]>1.0){
+repaired[i]=0.0;
+}else {
+repaired[i]=x[i];
+}
+
+Time : 17/08/25 15:31
+----------------------------------------
+Success time : 17/08/25 15:31
