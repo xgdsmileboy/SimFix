@@ -1,0 +1,80 @@
+=================================================
+Project : lang_7	start : 17/08/23 17:41
+Current failed test : org.apache.commons.lang3.math.NumberUtilsTest::testCreateNumber | 17/08/23 17:42
+Wed Aug 23 17:42:51 AEST 2017 org.apache.commons.lang3.math.NumberUtils,458
+Wed Aug 23 17:44:39 AEST 2017 org.apache.commons.lang3.math.NumberUtils,486
+Wed Aug 23 17:48:38 AEST 2017 Wed Aug 23 17:48:38 AEST 2017 : org.apache.commons.lang3.math.NumberUtils,511=>Find no block
+Wed Aug 23 17:48:39 AEST 2017 org.apache.commons.lang3.math.NumberUtils,514
+Wed Aug 23 17:50:22 AEST 2017 Wed Aug 23 17:50:22 AEST 2017 : org.apache.commons.lang3.math.NumberUtils,530=>Find no block
+Wed Aug 23 17:50:22 AEST 2017 Wed Aug 23 17:50:22 AEST 2017 : org.apache.commons.lang3.math.NumberUtils,541=>Find no block
+Wed Aug 23 17:50:22 AEST 2017 Wed Aug 23 17:50:22 AEST 2017 : org.apache.commons.lang3.math.NumberUtils,584=>Find no block
+Wed Aug 23 17:50:22 AEST 2017 org.apache.commons.lang3.math.NumberUtils,587
+Wed Aug 23 17:50:51 AEST 2017 org.apache.commons.lang3.math.NumberUtils,588
+Wed Aug 23 17:50:52 AEST 2017 org.apache.commons.lang3.SystemUtils,1277
+Wed Aug 23 17:50:53 AEST 2017 org.apache.commons.lang3.SystemUtils,1288
+Wed Aug 23 17:50:54 AEST 2017 org.apache.commons.lang3.SystemUtils,1298
+Wed Aug 23 17:50:56 AEST 2017 org.apache.commons.lang3.SystemUtils,1316
+Wed Aug 23 17:50:57 AEST 2017 org.apache.commons.lang3.SystemUtils,1383
+Wed Aug 23 17:50:58 AEST 2017 org.apache.commons.lang3.SystemUtils,1399
+Wed Aug 23 17:51:02 AEST 2017 org.apache.commons.lang3.SystemUtils,1402
+Wed Aug 23 17:51:49 AEST 2017 org.apache.commons.lang3.SystemUtils,1418
+Wed Aug 23 17:51:50 AEST 2017 org.apache.commons.lang3.SystemUtils,1421
+Wed Aug 23 17:51:51 AEST 2017 org.apache.commons.lang3.SystemUtils,1435
+Wed Aug 23 17:52:21 AEST 2017 org.apache.commons.lang3.SystemUtils,1438
+Wed Aug 23 17:53:05 AEST 2017 Wed Aug 23 17:53:05 AEST 2017 : org.apache.commons.lang3.JavaVersion,89=>Find no block
+Wed Aug 23 17:53:05 AEST 2017 org.apache.commons.lang3.JavaVersion,90
+Wed Aug 23 17:53:18 AEST 2017 org.apache.commons.lang3.JavaVersion,91
+Wed Aug 23 17:53:19 AEST 2017 Wed Aug 23 17:53:19 AEST 2017 : org.apache.commons.lang3.JavaVersion,92=>Find no block
+Wed Aug 23 17:53:19 AEST 2017 org.apache.commons.lang3.JavaVersion,105
+Wed Aug 23 17:53:43 AEST 2017 org.apache.commons.lang3.JavaVersion,132
+Wed Aug 23 18:01:10 AEST 2017 org.apache.commons.lang3.JavaVersion,134
+Wed Aug 23 18:01:10 AEST 2017 org.apache.commons.lang3.JavaVersion,136
+Wed Aug 23 18:01:10 AEST 2017 org.apache.commons.lang3.JavaVersion,138
+Wed Aug 23 18:01:11 AEST 2017 org.apache.commons.lang3.JavaVersion,140
+Wed Aug 23 18:01:12 AEST 2017 org.apache.commons.lang3.JavaVersion,142
+Wed Aug 23 18:01:13 AEST 2017 org.apache.commons.lang3.JavaVersion,144
+Wed Aug 23 18:01:14 AEST 2017 org.apache.commons.lang3.JavaVersion,146
+Wed Aug 23 18:01:14 AEST 2017 org.apache.commons.lang3.JavaVersion,147
+Wed Aug 23 18:01:14 AEST 2017 org.apache.commons.lang3.math.NumberUtils,447
+Wed Aug 23 18:02:50 AEST 2017 org.apache.commons.lang3.math.NumberUtils,453
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(str.startsWith("--")){
+throw new NumberFormatException("A blank string is not a valid number");
+}
+
+Time : 17/08/23 18:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.8528028654224418 : [/home/hz985/jiajun/d4j/projects/lang/lang_7_buggy/src/main/java/org/apache/commons/lang3/math/NumberUtils.java=>0,0]
+if(StringUtils.isBlank(str)){
+throw new NumberFormatException("A blank string is not a valid number");
+}
+
+Time : 17/08/23 18:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/lang/lang_7_buggy/src/main/java/org/apache/commons/lang3/math/NumberUtils.java=>452,454]
+if(str.startsWith("--")){
+return null;
+}
+
+Time : 17/08/23 18:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/lang/lang_7_buggy/src/main/java/org/apache/commons/lang3/math/NumberUtils.java=>452,454]
+if(str.startsWith("--")){
+throw new NumberFormatException("A blank string is not a valid number");
+}
+
+Time : 17/08/23 18:03
+----------------------------------------
+Success time : 17/08/23 18:03

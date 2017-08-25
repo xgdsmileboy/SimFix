@@ -1,0 +1,457 @@
+=================================================
+Project : math_84	start : 17/08/24 05:17
+Current failed test : org.apache.commons.math.optimization.direct.MultiDirectionalTest::testMath283_purify_1 | 17/08/24 05:20
+Thu Aug 24 05:21:13 AEST 2017 org.apache.commons.math.optimization.OptimizationException,50
+Thu Aug 24 05:21:19 AEST 2017 Thu Aug 24 05:21:19 AEST 2017 : org.apache.commons.math.optimization.OptimizationException,51=>Find no block
+Thu Aug 24 05:21:20 AEST 2017 org.apache.commons.math.ConvergenceException,45
+Thu Aug 24 05:22:41 AEST 2017 Thu Aug 24 05:22:41 AEST 2017 : org.apache.commons.math.ConvergenceException,46=>Find no block
+Thu Aug 24 05:22:43 AEST 2017 org.apache.commons.math.ConvergenceException,53
+Thu Aug 24 05:22:45 AEST 2017 Thu Aug 24 05:22:45 AEST 2017 : org.apache.commons.math.ConvergenceException,54=>Find no block
+Thu Aug 24 05:22:46 AEST 2017 org.apache.commons.math.MathException,166
+Thu Aug 24 05:22:51 AEST 2017 org.apache.commons.math.MathException,172
+Thu Aug 24 05:22:55 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,320
+Thu Aug 24 05:23:59 AEST 2017 org.apache.commons.math.MaxIterationsExceededException,43
+Thu Aug 24 05:24:04 AEST 2017 org.apache.commons.math.MaxIterationsExceededException,44
+Thu Aug 24 05:24:05 AEST 2017 Thu Aug 24 05:24:05 AEST 2017 : org.apache.commons.math.MaxIterationsExceededException,45=>Find no block
+Thu Aug 24 05:24:06 AEST 2017 org.apache.commons.math.MathException,106
+Thu Aug 24 05:24:31 AEST 2017 org.apache.commons.math.MathException,107
+Thu Aug 24 05:24:32 AEST 2017 org.apache.commons.math.MathException,108
+Thu Aug 24 05:24:34 AEST 2017 Thu Aug 24 05:24:34 AEST 2017 : org.apache.commons.math.MathException,109=>Find no block
+Thu Aug 24 05:24:35 AEST 2017 org.apache.commons.math.MathException,119
+Thu Aug 24 05:24:39 AEST 2017 org.apache.commons.math.MathException,120
+Thu Aug 24 05:24:40 AEST 2017 org.apache.commons.math.MathException,121
+Thu Aug 24 05:24:43 AEST 2017 Thu Aug 24 05:24:43 AEST 2017 : org.apache.commons.math.MathException,122=>Find no block
+Thu Aug 24 05:24:44 AEST 2017 org.apache.commons.math.MathException,60
+Thu Aug 24 05:24:48 AEST 2017 Thu Aug 24 05:24:48 AEST 2017 : org.apache.commons.math.MathException,67=>Find no block
+Thu Aug 24 05:24:49 AEST 2017 org.apache.commons.math.MathException,73
+Thu Aug 24 05:24:50 AEST 2017 org.apache.commons.math.MathException,85
+Thu Aug 24 05:24:54 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,268
+Thu Aug 24 05:26:26 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,269
+Thu Aug 24 05:26:26 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,270
+Thu Aug 24 05:26:28 AEST 2017 Thu Aug 24 05:26:28 AEST 2017 : org.apache.commons.math.optimization.RealPointValuePair,61=>Find no block
+Thu Aug 24 05:26:29 AEST 2017 org.apache.commons.math.optimization.RealPointValuePair,62
+Thu Aug 24 05:27:36 AEST 2017 org.apache.commons.math.optimization.RealPointValuePair,63
+Thu Aug 24 05:27:37 AEST 2017 Thu Aug 24 05:27:37 AEST 2017 : org.apache.commons.math.optimization.RealPointValuePair,64=>Find no block
+Thu Aug 24 05:27:37 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,142
+Thu Aug 24 05:56:45 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,143
+Thu Aug 24 05:56:46 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,144
+Thu Aug 24 05:56:47 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,145
+Thu Aug 24 05:56:48 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,146
+Thu Aug 24 05:56:49 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,147
+Thu Aug 24 05:56:51 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,152
+Thu Aug 24 05:56:55 AEST 2017 Thu Aug 24 05:56:55 AEST 2017 : org.apache.commons.math.optimization.direct.DirectSearchOptimizer,155=>Find no block
+Thu Aug 24 05:56:56 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,291
+Thu Aug 24 06:00:12 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,294
+Timeout time : 17/08/24 06:11
+Current failed test : org.apache.commons.math.optimization.direct.MultiDirectionalTest::testMath283_purify_2 | 17/08/24 06:11
+Thu Aug 24 06:11:56 AEST 2017 org.apache.commons.math.optimization.OptimizationException,50
+Thu Aug 24 06:12:01 AEST 2017 Thu Aug 24 06:12:01 AEST 2017 : org.apache.commons.math.optimization.OptimizationException,51=>Find no block
+Thu Aug 24 06:12:02 AEST 2017 org.apache.commons.math.ConvergenceException,45
+Thu Aug 24 06:13:21 AEST 2017 Thu Aug 24 06:13:21 AEST 2017 : org.apache.commons.math.ConvergenceException,46=>Find no block
+Thu Aug 24 06:13:21 AEST 2017 org.apache.commons.math.ConvergenceException,53
+Thu Aug 24 06:13:22 AEST 2017 Thu Aug 24 06:13:22 AEST 2017 : org.apache.commons.math.ConvergenceException,54=>Find no block
+Thu Aug 24 06:13:24 AEST 2017 org.apache.commons.math.MathException,166
+Thu Aug 24 06:13:27 AEST 2017 org.apache.commons.math.MathException,172
+Thu Aug 24 06:13:31 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,320
+Thu Aug 24 06:14:36 AEST 2017 org.apache.commons.math.MaxIterationsExceededException,43
+Thu Aug 24 06:14:41 AEST 2017 org.apache.commons.math.MaxIterationsExceededException,44
+Thu Aug 24 06:14:41 AEST 2017 Thu Aug 24 06:14:41 AEST 2017 : org.apache.commons.math.MaxIterationsExceededException,45=>Find no block
+Thu Aug 24 06:14:42 AEST 2017 org.apache.commons.math.MathException,106
+Thu Aug 24 06:15:07 AEST 2017 org.apache.commons.math.MathException,107
+Thu Aug 24 06:15:08 AEST 2017 org.apache.commons.math.MathException,108
+Thu Aug 24 06:15:09 AEST 2017 Thu Aug 24 06:15:09 AEST 2017 : org.apache.commons.math.MathException,109=>Find no block
+Thu Aug 24 06:15:09 AEST 2017 org.apache.commons.math.MathException,119
+Thu Aug 24 06:15:14 AEST 2017 org.apache.commons.math.MathException,120
+Thu Aug 24 06:15:15 AEST 2017 org.apache.commons.math.MathException,121
+Thu Aug 24 06:15:16 AEST 2017 Thu Aug 24 06:15:16 AEST 2017 : org.apache.commons.math.MathException,122=>Find no block
+Thu Aug 24 06:15:17 AEST 2017 org.apache.commons.math.MathException,60
+Thu Aug 24 06:15:20 AEST 2017 Thu Aug 24 06:15:20 AEST 2017 : org.apache.commons.math.MathException,67=>Find no block
+Thu Aug 24 06:15:21 AEST 2017 org.apache.commons.math.MathException,73
+Thu Aug 24 06:15:22 AEST 2017 org.apache.commons.math.MathException,85
+Thu Aug 24 06:15:26 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,268
+Thu Aug 24 06:16:58 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,269
+Thu Aug 24 06:16:59 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,270
+Thu Aug 24 06:17:00 AEST 2017 Thu Aug 24 06:17:00 AEST 2017 : org.apache.commons.math.optimization.RealPointValuePair,61=>Find no block
+Thu Aug 24 06:17:01 AEST 2017 org.apache.commons.math.optimization.RealPointValuePair,62
+Thu Aug 24 06:18:07 AEST 2017 org.apache.commons.math.optimization.RealPointValuePair,63
+Thu Aug 24 06:18:08 AEST 2017 Thu Aug 24 06:18:08 AEST 2017 : org.apache.commons.math.optimization.RealPointValuePair,64=>Find no block
+Thu Aug 24 06:18:09 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,142
+Thu Aug 24 06:46:58 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,143
+Thu Aug 24 06:46:59 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,144
+Thu Aug 24 06:46:59 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,145
+Thu Aug 24 06:47:00 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,146
+Thu Aug 24 06:47:01 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,147
+Thu Aug 24 06:47:02 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,152
+Thu Aug 24 06:47:02 AEST 2017 Thu Aug 24 06:47:02 AEST 2017 : org.apache.commons.math.optimization.direct.DirectSearchOptimizer,155=>Find no block
+Thu Aug 24 06:47:03 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,291
+Thu Aug 24 06:50:20 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,294
+Timeout time : 17/08/24 07:02
+Current failed test : org.apache.commons.math.optimization.direct.MultiDirectionalTest::testMath283_purify_3 | 17/08/24 07:02
+Thu Aug 24 07:02:46 AEST 2017 org.apache.commons.math.optimization.OptimizationException,50
+Thu Aug 24 07:02:48 AEST 2017 Thu Aug 24 07:02:48 AEST 2017 : org.apache.commons.math.optimization.OptimizationException,51=>Find no block
+Thu Aug 24 07:02:49 AEST 2017 org.apache.commons.math.ConvergenceException,45
+Thu Aug 24 07:04:10 AEST 2017 Thu Aug 24 07:04:10 AEST 2017 : org.apache.commons.math.ConvergenceException,46=>Find no block
+Thu Aug 24 07:04:11 AEST 2017 org.apache.commons.math.ConvergenceException,53
+Thu Aug 24 07:04:12 AEST 2017 Thu Aug 24 07:04:12 AEST 2017 : org.apache.commons.math.ConvergenceException,54=>Find no block
+Thu Aug 24 07:04:13 AEST 2017 org.apache.commons.math.MathException,166
+Thu Aug 24 07:04:16 AEST 2017 org.apache.commons.math.MathException,172
+Thu Aug 24 07:04:19 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,320
+Thu Aug 24 07:05:22 AEST 2017 org.apache.commons.math.MaxIterationsExceededException,43
+Thu Aug 24 07:05:25 AEST 2017 org.apache.commons.math.MaxIterationsExceededException,44
+Thu Aug 24 07:05:25 AEST 2017 Thu Aug 24 07:05:25 AEST 2017 : org.apache.commons.math.MaxIterationsExceededException,45=>Find no block
+Thu Aug 24 07:05:26 AEST 2017 org.apache.commons.math.MathException,106
+Thu Aug 24 07:05:50 AEST 2017 org.apache.commons.math.MathException,107
+Thu Aug 24 07:05:51 AEST 2017 org.apache.commons.math.MathException,108
+Thu Aug 24 07:05:52 AEST 2017 Thu Aug 24 07:05:52 AEST 2017 : org.apache.commons.math.MathException,109=>Find no block
+Thu Aug 24 07:05:53 AEST 2017 org.apache.commons.math.MathException,119
+Thu Aug 24 07:05:55 AEST 2017 org.apache.commons.math.MathException,120
+Thu Aug 24 07:05:56 AEST 2017 org.apache.commons.math.MathException,121
+Thu Aug 24 07:05:57 AEST 2017 Thu Aug 24 07:05:57 AEST 2017 : org.apache.commons.math.MathException,122=>Find no block
+Thu Aug 24 07:05:58 AEST 2017 org.apache.commons.math.MathException,60
+Thu Aug 24 07:06:01 AEST 2017 Thu Aug 24 07:06:01 AEST 2017 : org.apache.commons.math.MathException,67=>Find no block
+Thu Aug 24 07:06:02 AEST 2017 org.apache.commons.math.MathException,73
+Thu Aug 24 07:06:03 AEST 2017 org.apache.commons.math.MathException,85
+Thu Aug 24 07:06:06 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,268
+Thu Aug 24 07:07:33 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,269
+Thu Aug 24 07:07:34 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,270
+Thu Aug 24 07:07:36 AEST 2017 Thu Aug 24 07:07:36 AEST 2017 : org.apache.commons.math.optimization.RealPointValuePair,61=>Find no block
+Thu Aug 24 07:07:36 AEST 2017 org.apache.commons.math.optimization.RealPointValuePair,62
+Thu Aug 24 07:08:42 AEST 2017 org.apache.commons.math.optimization.RealPointValuePair,63
+Thu Aug 24 07:08:43 AEST 2017 Thu Aug 24 07:08:43 AEST 2017 : org.apache.commons.math.optimization.RealPointValuePair,64=>Find no block
+Thu Aug 24 07:08:44 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,142
+Thu Aug 24 07:42:16 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,143
+Thu Aug 24 07:42:17 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,144
+Thu Aug 24 07:42:18 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,145
+Thu Aug 24 07:42:19 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,146
+Thu Aug 24 07:42:20 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,147
+Thu Aug 24 07:42:21 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,152
+Thu Aug 24 07:42:22 AEST 2017 Thu Aug 24 07:42:22 AEST 2017 : org.apache.commons.math.optimization.direct.DirectSearchOptimizer,155=>Find no block
+Thu Aug 24 07:42:22 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,291
+Thu Aug 24 07:47:09 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,294
+Timeout time : 17/08/24 07:52
+Current failed test : org.apache.commons.math.optimization.direct.MultiDirectionalTest::testMinimizeMaximize_purify_9 | 17/08/24 07:52
+Thu Aug 24 07:53:56 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,245
+Thu Aug 24 07:53:59 AEST 2017 Thu Aug 24 07:53:59 AEST 2017 : org.apache.commons.math.optimization.RealPointValuePair,61=>Find no block
+Thu Aug 24 07:54:00 AEST 2017 org.apache.commons.math.optimization.RealPointValuePair,62
+Thu Aug 24 07:55:28 AEST 2017 org.apache.commons.math.optimization.RealPointValuePair,63
+Thu Aug 24 07:55:30 AEST 2017 Thu Aug 24 07:55:30 AEST 2017 : org.apache.commons.math.optimization.RealPointValuePair,64=>Find no block
+Thu Aug 24 07:55:30 AEST 2017 Thu Aug 24 07:55:30 AEST 2017 : org.apache.commons.math.optimization.SimpleScalarValueChecker,65=>Find no block
+Thu Aug 24 07:55:31 AEST 2017 org.apache.commons.math.optimization.SimpleScalarValueChecker,66
+Thu Aug 24 07:56:43 AEST 2017 org.apache.commons.math.optimization.SimpleScalarValueChecker,67
+Thu Aug 24 07:56:44 AEST 2017 Thu Aug 24 07:56:44 AEST 2017 : org.apache.commons.math.optimization.SimpleScalarValueChecker,68=>Find no block
+Thu Aug 24 07:56:45 AEST 2017 org.apache.commons.math.optimization.SimpleScalarValueChecker,74
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double p=previous.getValue();
+ final double c=current.getValue();
+ final double difference=Math.abs(p-c);
+ final double size=(difference<1.0E-15)?Math.max(Math.abs(p),Math.abs(c)):Math.pow(0.01/difference,1.0/iteration);
+return (difference<=(size*relativeThreshold))||(difference<=absoluteThreshold);
+
+Time : 17/08/24 07:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double p=previous.getValue();
+ final double c=current.getValue();
+ final double difference=Math.log(p-c);
+ final double size=Math.max(Math.abs(p),Math.abs(c));
+return (difference<=(size*relativeThreshold))||(difference<=absoluteThreshold);
+
+Time : 17/08/24 08:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double p=previous.getValue();
+ final double c=current.getValue();
+ final double difference=Math.floor(p-c);
+ final double size=Math.max(Math.abs(p),Math.abs(c));
+return (difference<=(size*relativeThreshold))||(difference<=absoluteThreshold);
+
+Time : 17/08/24 08:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double p=previous.getValue();
+ final double c=current.getValue();
+ final double difference=Math.ulp(p-c);
+ final double size=Math.max(Math.abs(p),Math.abs(c));
+return (difference<=(size*relativeThreshold))||(difference<=absoluteThreshold);
+
+Time : 17/08/24 08:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double p=previous.getValue();
+ final double c=current.getValue();
+ final double difference=Math.round(p-c);
+ final double size=Math.max(Math.abs(p),Math.abs(c));
+return (difference<=(size*relativeThreshold))||(difference<=absoluteThreshold);
+
+Time : 17/08/24 08:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double p=previous.getValue();
+ final double c=current.getValue();
+ final long difference=Math.round(p-c);
+ final double size=Math.max(Math.abs(p),Math.abs(c));
+return (difference<=(size*relativeThreshold))||(difference<=absoluteThreshold);
+
+Time : 17/08/24 08:04
+----------------------------------------
+Thu Aug 24 08:06:29 AEST 2017 org.apache.commons.math.optimization.SimpleScalarValueChecker,75
+Thu Aug 24 08:06:30 AEST 2017 org.apache.commons.math.optimization.SimpleScalarValueChecker,76
+Thu Aug 24 08:06:31 AEST 2017 org.apache.commons.math.optimization.SimpleScalarValueChecker,77
+Thu Aug 24 08:06:32 AEST 2017 org.apache.commons.math.optimization.SimpleScalarValueChecker,78
+Thu Aug 24 08:06:33 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,142
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+i++;
+for(int j=0;j<i+1;++j){
+if(steps[j]==0.0){
+throw MathRuntimeException.createIllegalArgumentException("equals vertices {0} and {1} in simplex configuration",j,j+1);
+}
+System.arraycopy(steps,0,vertexI,0,j+1);
+}
+
+Time : 17/08/24 08:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<n;++i){
+i++;
+ final double[] vertexI=startConfiguration[i];
+for(int j=0;j<i+1;++j){
+if(steps[j]==0.0){
+throw MathRuntimeException.createIllegalArgumentException("equals vertices {0} and {1} in simplex configuration",j,j+1);
+}
+System.arraycopy(steps,0,vertexI,0,j+1);
+}
+}
+
+Time : 17/08/24 08:26
+----------------------------------------
+Timeout time : 17/08/24 08:43
+Current failed test : org.apache.commons.math.optimization.direct.MultiDirectionalTest::testMinimizeMaximize_purify_11 | 17/08/24 08:43
+Thu Aug 24 08:44:59 AEST 2017 org.apache.commons.math.optimization.RealPointValuePair,70
+Thu Aug 24 08:46:50 AEST 2017 Thu Aug 24 08:46:50 AEST 2017 : org.apache.commons.math.optimization.RealPointValuePair,61=>Find no block
+Thu Aug 24 08:46:51 AEST 2017 org.apache.commons.math.optimization.RealPointValuePair,62
+Thu Aug 24 08:48:23 AEST 2017 org.apache.commons.math.optimization.RealPointValuePair,63
+Thu Aug 24 08:48:24 AEST 2017 Thu Aug 24 08:48:24 AEST 2017 : org.apache.commons.math.optimization.RealPointValuePair,64=>Find no block
+Thu Aug 24 08:48:24 AEST 2017 Thu Aug 24 08:48:24 AEST 2017 : org.apache.commons.math.optimization.SimpleScalarValueChecker,65=>Find no block
+Thu Aug 24 08:48:28 AEST 2017 org.apache.commons.math.optimization.SimpleScalarValueChecker,66
+Thu Aug 24 08:49:42 AEST 2017 org.apache.commons.math.optimization.SimpleScalarValueChecker,67
+Thu Aug 24 08:49:43 AEST 2017 Thu Aug 24 08:49:43 AEST 2017 : org.apache.commons.math.optimization.SimpleScalarValueChecker,68=>Find no block
+Thu Aug 24 08:49:44 AEST 2017 org.apache.commons.math.optimization.SimpleScalarValueChecker,74
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double p=previous.getValue();
+ final double c=current.getValue();
+ final double difference=Math.abs(p-c);
+ final double size=(difference<1.0E-15)?Math.max(Math.abs(p),Math.abs(c)):Math.pow(0.01/difference,1.0/iteration);
+return (difference<=(size*relativeThreshold))||(difference<=absoluteThreshold);
+
+Time : 17/08/24 08:51
+----------------------------------------
+Thu Aug 24 08:56:34 AEST 2017 org.apache.commons.math.optimization.SimpleScalarValueChecker,75
+Thu Aug 24 08:56:37 AEST 2017 org.apache.commons.math.optimization.SimpleScalarValueChecker,76
+Thu Aug 24 08:56:38 AEST 2017 org.apache.commons.math.optimization.SimpleScalarValueChecker,77
+Thu Aug 24 08:56:38 AEST 2017 org.apache.commons.math.optimization.SimpleScalarValueChecker,78
+Thu Aug 24 08:56:39 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,142
+Thu Aug 24 09:32:36 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,143
+Thu Aug 24 09:32:37 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,144
+Thu Aug 24 09:32:38 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,145
+Thu Aug 24 09:32:39 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,146
+Thu Aug 24 09:32:40 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,147
+Thu Aug 24 09:32:41 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,152
+Thu Aug 24 09:32:42 AEST 2017 Thu Aug 24 09:32:42 AEST 2017 : org.apache.commons.math.optimization.direct.DirectSearchOptimizer,155=>Find no block
+Thu Aug 24 09:32:42 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,291
+Timeout time : 17/08/24 09:34
+Current failed test : org.apache.commons.math.optimization.direct.MultiDirectionalTest::testMinimizeMaximize_purify_14 | 17/08/24 09:34
+Thu Aug 24 09:35:44 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,245
+Thu Aug 24 09:35:47 AEST 2017 Thu Aug 24 09:35:47 AEST 2017 : org.apache.commons.math.optimization.RealPointValuePair,61=>Find no block
+Thu Aug 24 09:35:48 AEST 2017 org.apache.commons.math.optimization.RealPointValuePair,62
+Thu Aug 24 09:36:56 AEST 2017 org.apache.commons.math.optimization.RealPointValuePair,63
+Thu Aug 24 09:36:57 AEST 2017 Thu Aug 24 09:36:57 AEST 2017 : org.apache.commons.math.optimization.RealPointValuePair,64=>Find no block
+Thu Aug 24 09:36:58 AEST 2017 Thu Aug 24 09:36:58 AEST 2017 : org.apache.commons.math.optimization.SimpleScalarValueChecker,65=>Find no block
+Thu Aug 24 09:36:59 AEST 2017 org.apache.commons.math.optimization.SimpleScalarValueChecker,66
+Thu Aug 24 09:37:53 AEST 2017 org.apache.commons.math.optimization.SimpleScalarValueChecker,67
+Thu Aug 24 09:37:54 AEST 2017 Thu Aug 24 09:37:54 AEST 2017 : org.apache.commons.math.optimization.SimpleScalarValueChecker,68=>Find no block
+Thu Aug 24 09:37:55 AEST 2017 org.apache.commons.math.optimization.SimpleScalarValueChecker,74
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double p=previous.getValue();
+ final double c=current.getValue();
+ final double difference=Math.abs(p-c);
+ final double size=(difference<1.0E-15)?Math.max(Math.abs(p),Math.abs(c)):Math.pow(0.01/difference,1.0/iteration);
+return (difference<=(size*relativeThreshold))||(difference<=absoluteThreshold);
+
+Time : 17/08/24 09:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double p=previous.getValue();
+ final double c=current.getValue();
+ final double difference=Math.log(p-c);
+ final double size=Math.max(Math.abs(p),Math.abs(c));
+return (difference<=(size*relativeThreshold))||(difference<=absoluteThreshold);
+
+Time : 17/08/24 09:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double p=previous.getValue();
+ final double c=current.getValue();
+ final double difference=Math.floor(p-c);
+ final double size=Math.max(Math.abs(p),Math.abs(c));
+return (difference<=(size*relativeThreshold))||(difference<=absoluteThreshold);
+
+Time : 17/08/24 09:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double p=previous.getValue();
+ final double c=current.getValue();
+ final double difference=Math.ulp(p-c);
+ final double size=Math.max(Math.abs(p),Math.abs(c));
+return (difference<=(size*relativeThreshold))||(difference<=absoluteThreshold);
+
+Time : 17/08/24 09:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double p=previous.getValue();
+ final double c=current.getValue();
+ final double difference=Math.round(p-c);
+ final double size=Math.max(Math.abs(p),Math.abs(c));
+return (difference<=(size*relativeThreshold))||(difference<=absoluteThreshold);
+
+Time : 17/08/24 09:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double p=previous.getValue();
+ final double c=current.getValue();
+ final long difference=Math.round(p-c);
+ final double size=Math.max(Math.abs(p),Math.abs(c));
+return (difference<=(size*relativeThreshold))||(difference<=absoluteThreshold);
+
+Time : 17/08/24 09:44
+----------------------------------------
+Thu Aug 24 09:45:43 AEST 2017 org.apache.commons.math.optimization.SimpleScalarValueChecker,75
+Thu Aug 24 09:45:44 AEST 2017 org.apache.commons.math.optimization.SimpleScalarValueChecker,76
+Thu Aug 24 09:45:45 AEST 2017 org.apache.commons.math.optimization.SimpleScalarValueChecker,77
+Thu Aug 24 09:45:46 AEST 2017 org.apache.commons.math.optimization.SimpleScalarValueChecker,78
+Thu Aug 24 09:45:47 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,142
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+i++;
+for(int j=0;j<i+1;++j){
+if(steps[j]==0.0){
+throw MathRuntimeException.createIllegalArgumentException("equals vertices {0} and {1} in simplex configuration",j,j+1);
+}
+System.arraycopy(steps,0,vertexI,0,j+1);
+}
+
+Time : 17/08/24 09:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<n;++i){
+i++;
+ final double[] vertexI=startConfiguration[i];
+for(int j=0;j<i+1;++j){
+if(steps[j]==0.0){
+throw MathRuntimeException.createIllegalArgumentException("equals vertices {0} and {1} in simplex configuration",j,j+1);
+}
+System.arraycopy(steps,0,vertexI,0,j+1);
+}
+}
+
+Time : 17/08/24 09:59
+----------------------------------------
+Thu Aug 24 10:15:43 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,143
+Thu Aug 24 10:15:44 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,144
+Thu Aug 24 10:15:45 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,145
+Thu Aug 24 10:15:46 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,146
+Thu Aug 24 10:15:46 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,147
+Thu Aug 24 10:15:47 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,152
+Thu Aug 24 10:15:48 AEST 2017 Thu Aug 24 10:15:48 AEST 2017 : org.apache.commons.math.optimization.direct.DirectSearchOptimizer,155=>Find no block
+Thu Aug 24 10:15:49 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,291
+Thu Aug 24 10:18:55 AEST 2017 org.apache.commons.math.optimization.direct.DirectSearchOptimizer,294
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=maxEvaluations;i<simplex.length;++i){
+converged&=checker.converged(iterations,previous[i],simplex[i]);
+}
+
+Time : 17/08/24 10:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=iterations;i<simplex.length;++i){
+converged&=checker.converged(iterations,previous[i],simplex[i]);
+}
+
+Time : 17/08/24 10:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=maxEvaluations;i<maxEvaluations;++i){
+converged&=checker.converged(iterations,previous[i],simplex[i]);
+}
+
+Time : 17/08/24 10:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=maxEvaluations;i<=simplex.length;++i){
+converged&=checker.converged(iterations,previous[i],simplex[i]);
+}
+
+Time : 17/08/24 10:25
+----------------------------------------
+Timeout time : 17/08/24 10:26

@@ -1,0 +1,204 @@
+=================================================
+Project : math_45	start : 17/08/24 15:21
+Current failed test : org.apache.commons.math.linear.OpenMapRealMatrixTest::testMath679 | 17/08/24 15:22
+Thu Aug 24 15:24:28 AEST 2017 org.apache.commons.math.linear.OpenMapRealMatrix,49
+Thu Aug 24 15:30:29 AEST 2017 org.apache.commons.math.linear.OpenMapRealMatrix,50
+Thu Aug 24 15:30:30 AEST 2017 org.apache.commons.math.linear.OpenMapRealMatrix,51
+Thu Aug 24 15:30:31 AEST 2017 org.apache.commons.math.linear.OpenMapRealMatrix,52
+Thu Aug 24 15:30:32 AEST 2017 Thu Aug 24 15:30:32 AEST 2017 : org.apache.commons.math.linear.OpenMapRealMatrix,53=>Find no block
+Thu Aug 24 15:30:34 AEST 2017 org.apache.commons.math.linear.AbstractRealMatrix,57
+Thu Aug 24 15:31:22 AEST 2017 Thu Aug 24 15:31:22 AEST 2017 : org.apache.commons.math.linear.AbstractRealMatrix,60=>Find no block
+Thu Aug 24 15:31:23 AEST 2017 Thu Aug 24 15:31:23 AEST 2017 : org.apache.commons.math.linear.AbstractRealMatrix,53=>Find no block
+Thu Aug 24 15:31:24 AEST 2017 org.apache.commons.math.linear.AbstractRealMatrix,54
+Thu Aug 24 15:32:13 AEST 2017 Thu Aug 24 15:32:13 AEST 2017 : org.apache.commons.math.linear.RealLinearOperator,52=>Find no block
+Thu Aug 24 15:32:14 AEST 2017 org.apache.commons.math.exception.NumberIsTooSmallException,50
+Thu Aug 24 15:32:18 AEST 2017 Thu Aug 24 15:32:18 AEST 2017 : org.apache.commons.math.exception.NumberIsTooSmallException,54=>Find no block
+Thu Aug 24 15:32:19 AEST 2017 org.apache.commons.math.exception.NumberIsTooSmallException,68
+Thu Aug 24 15:33:40 AEST 2017 org.apache.commons.math.exception.NumberIsTooSmallException,70
+Thu Aug 24 15:33:41 AEST 2017 org.apache.commons.math.exception.NumberIsTooSmallException,71
+Thu Aug 24 15:33:42 AEST 2017 Thu Aug 24 15:33:42 AEST 2017 : org.apache.commons.math.exception.NumberIsTooSmallException,72=>Find no block
+Thu Aug 24 15:33:44 AEST 2017 org.apache.commons.math.exception.NumberIsTooSmallException,78
+Thu Aug 24 15:33:47 AEST 2017 org.apache.commons.math.exception.NumberIsTooSmallException,85
+Thu Aug 24 15:33:50 AEST 2017 org.apache.commons.math.exception.MathIllegalNumberException,46
+Thu Aug 24 15:35:50 AEST 2017 org.apache.commons.math.exception.MathIllegalNumberException,47
+Thu Aug 24 15:35:51 AEST 2017 Thu Aug 24 15:35:51 AEST 2017 : org.apache.commons.math.exception.MathIllegalNumberException,48=>Find no block
+Thu Aug 24 15:35:52 AEST 2017 org.apache.commons.math.exception.MathIllegalNumberException,54
+Thu Aug 24 15:35:55 AEST 2017 Thu Aug 24 15:35:55 AEST 2017 : org.apache.commons.math.exception.MathIllegalArgumentException,44=>Find no block
+Thu Aug 24 15:35:57 AEST 2017 org.apache.commons.math.exception.MathIllegalArgumentException,45
+Thu Aug 24 15:36:14 AEST 2017 org.apache.commons.math.exception.MathIllegalArgumentException,46
+Thu Aug 24 15:36:15 AEST 2017 Thu Aug 24 15:36:15 AEST 2017 : org.apache.commons.math.exception.MathIllegalArgumentException,47=>Find no block
+Thu Aug 24 15:36:16 AEST 2017 org.apache.commons.math.exception.MathIllegalArgumentException,51
+Thu Aug 24 15:36:19 AEST 2017 org.apache.commons.math.exception.MathIllegalArgumentException,57
+Thu Aug 24 15:36:22 AEST 2017 org.apache.commons.math.exception.MathIllegalArgumentException,63
+Thu Aug 24 15:36:26 AEST 2017 Thu Aug 24 15:36:26 AEST 2017 : org.apache.commons.math.exception.util.ExceptionContext,64=>Find no block
+Thu Aug 24 15:36:26 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,65
+Thu Aug 24 15:36:30 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,66
+Thu Aug 24 15:36:32 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,67
+Thu Aug 24 15:36:33 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,68
+Thu Aug 24 15:36:34 AEST 2017 Thu Aug 24 15:36:34 AEST 2017 : org.apache.commons.math.exception.util.ExceptionContext,69=>Find no block
+Thu Aug 24 15:36:35 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,75
+Thu Aug 24 15:36:39 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,87
+Thu Aug 24 15:39:26 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,88
+Thu Aug 24 15:39:26 AEST 2017 Thu Aug 24 15:39:26 AEST 2017 : org.apache.commons.math.exception.util.ExceptionContext,89=>Find no block
+Thu Aug 24 15:39:27 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,100
+Thu Aug 24 15:41:12 AEST 2017 Thu Aug 24 15:41:12 AEST 2017 : org.apache.commons.math.exception.util.ExceptionContext,101=>Find no block
+Thu Aug 24 15:41:13 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,110
+Thu Aug 24 15:41:16 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,119
+Thu Aug 24 15:41:20 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,128
+Thu Aug 24 15:41:24 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,137
+Thu Aug 24 15:41:27 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,147
+Thu Aug 24 15:41:30 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,159
+Thu Aug 24 15:41:35 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,171
+Thu Aug 24 15:43:28 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,172
+Thu Aug 24 15:43:29 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,173
+Thu Aug 24 16:15:27 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,174
+Thu Aug 24 16:15:28 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,175
+Thu Aug 24 16:15:29 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,176
+Thu Aug 24 16:15:30 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,177
+Thu Aug 24 16:15:31 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,179
+Thu Aug 24 16:15:32 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,180
+Thu Aug 24 16:15:33 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,182
+Thu Aug 24 16:15:34 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,186
+Thu Aug 24 16:33:32 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,197
+Thu Aug 24 16:33:48 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,198
+Thu Aug 24 16:33:49 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,199
+Thu Aug 24 16:33:50 AEST 2017 Thu Aug 24 16:33:50 AEST 2017 : org.apache.commons.math.exception.util.ExceptionContext,200=>Find no block
+Thu Aug 24 16:33:52 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,211
+Thu Aug 24 16:35:47 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,212
+Thu Aug 24 16:35:48 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,213
+Thu Aug 24 16:35:50 AEST 2017 Thu Aug 24 16:35:50 AEST 2017 : org.apache.commons.math.exception.util.ExceptionContext,214=>Find no block
+Thu Aug 24 16:35:51 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,225
+Thu Aug 24 16:38:43 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,226
+Thu Aug 24 16:38:44 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,228
+Thu Aug 24 17:02:21 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,229
+Thu Aug 24 17:06:27 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,231
+Thu Aug 24 17:06:28 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,232
+Thu Aug 24 17:15:10 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,233
+Thu Aug 24 17:24:20 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,235
+Thu Aug 24 17:40:05 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,236
+Thu Aug 24 17:40:06 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,237
+Thu Aug 24 17:40:08 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,239
+Thu Aug 24 17:40:09 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,242
+Thu Aug 24 17:40:10 AEST 2017 Thu Aug 24 17:40:10 AEST 2017 : org.apache.commons.math.exception.util.ExceptionContext,246=>Find no block
+Thu Aug 24 17:40:11 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,259
+Thu Aug 24 17:41:49 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,260
+Thu Aug 24 17:41:50 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,261
+Thu Aug 24 18:25:50 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,263
+Thu Aug 24 18:25:51 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,265
+Thu Aug 24 18:25:51 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,266
+Thu Aug 24 18:25:52 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,268
+Thu Aug 24 18:25:53 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,269
+Thu Aug 24 18:25:54 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,270
+Thu Aug 24 18:25:55 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,272
+Thu Aug 24 18:25:56 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,274
+Thu Aug 24 18:25:57 AEST 2017 Thu Aug 24 18:25:57 AEST 2017 : org.apache.commons.math.exception.util.ExceptionContext,276=>Find no block
+Thu Aug 24 18:25:58 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,287
+Thu Aug 24 18:33:59 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,288
+Thu Aug 24 18:34:00 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,289
+Thu Aug 24 18:34:00 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,291
+Thu Aug 24 18:34:01 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,292
+Thu Aug 24 18:34:02 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,293
+Thu Aug 24 18:34:03 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,295
+Thu Aug 24 18:34:04 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,298
+Thu Aug 24 18:34:05 AEST 2017 Thu Aug 24 18:34:05 AEST 2017 : org.apache.commons.math.exception.util.ExceptionContext,300=>Find no block
+Thu Aug 24 18:34:06 AEST 2017 Thu Aug 24 18:34:06 AEST 2017 : org.apache.commons.math.exception.util.ExceptionContext,301=>Find no block
+Thu Aug 24 18:34:06 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,314
+Thu Aug 24 18:46:17 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,315
+Thu Aug 24 18:46:19 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,316
+Thu Aug 24 19:04:02 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,318
+Thu Aug 24 19:04:03 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,320
+Thu Aug 24 19:04:04 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,321
+Thu Aug 24 19:04:05 AEST 2017 Thu Aug 24 19:04:05 AEST 2017 : org.apache.commons.math.exception.util.ExceptionContext,323=>Find no block
+Thu Aug 24 19:04:05 AEST 2017 org.apache.commons.math.exception.util.ExceptionContext,333
+Thu Aug 24 19:04:12 AEST 2017 Thu Aug 24 19:04:12 AEST 2017 : org.apache.commons.math.exception.util.LocalizedFormats,358=>Find no block
+Thu Aug 24 19:04:12 AEST 2017 org.apache.commons.math.exception.util.LocalizedFormats,359
+Thu Aug 24 19:04:16 AEST 2017 Thu Aug 24 19:04:16 AEST 2017 : org.apache.commons.math.exception.util.LocalizedFormats,360=>Find no block
+Thu Aug 24 19:04:16 AEST 2017 Thu Aug 24 19:04:16 AEST 2017 : org.apache.commons.math.exception.util.LocalizedFormats,39=>Find no block
+Thu Aug 24 19:04:17 AEST 2017 Thu Aug 24 19:04:17 AEST 2017 : org.apache.commons.math.exception.util.LocalizedFormats,39=>Find no block
+Thu Aug 24 19:04:18 AEST 2017 org.apache.commons.math.exception.util.LocalizedFormats,364
+Thu Aug 24 19:04:21 AEST 2017 org.apache.commons.math.exception.util.LocalizedFormats,370
+Thu Aug 24 19:08:35 AEST 2017 org.apache.commons.math.exception.util.LocalizedFormats,372
+Thu Aug 24 19:08:51 AEST 2017 org.apache.commons.math.exception.util.LocalizedFormats,374
+Thu Aug 24 19:08:52 AEST 2017 Thu Aug 24 19:08:52 AEST 2017 : org.apache.commons.math.exception.util.LocalizedFormats,379=>Find no block
+Thu Aug 24 19:08:53 AEST 2017 Thu Aug 24 19:08:53 AEST 2017 : org.apache.commons.math.exception.util.LocalizedFormats,377=>Find no block
+Thu Aug 24 19:08:54 AEST 2017 org.apache.commons.math.exception.util.LocalizedFormats,383
+Thu Aug 24 19:08:54 AEST 2017 Thu Aug 24 19:08:54 AEST 2017 : org.apache.commons.math.exception.util.ArgUtils,32=>Find no block
+Thu Aug 24 19:08:56 AEST 2017 org.apache.commons.math.exception.util.ArgUtils,42
+Thu Aug 24 19:12:28 AEST 2017 org.apache.commons.math.exception.util.ArgUtils,43
+Thu Aug 24 19:12:29 AEST 2017 org.apache.commons.math.exception.util.ArgUtils,44
+Thu Aug 24 19:12:30 AEST 2017 org.apache.commons.math.exception.util.ArgUtils,45
+Thu Aug 24 19:12:31 AEST 2017 org.apache.commons.math.exception.util.ArgUtils,46
+Thu Aug 24 19:12:32 AEST 2017 org.apache.commons.math.exception.util.ArgUtils,47
+Thu Aug 24 19:12:33 AEST 2017 org.apache.commons.math.exception.util.ArgUtils,50
+Thu Aug 24 19:12:34 AEST 2017 org.apache.commons.math.exception.util.ArgUtils,54
+Thu Aug 24 19:12:34 AEST 2017 org.apache.commons.math.exception.NumberIsTooLargeException,50
+Thu Aug 24 19:12:39 AEST 2017 Thu Aug 24 19:12:39 AEST 2017 : org.apache.commons.math.exception.NumberIsTooLargeException,54=>Find no block
+Thu Aug 24 19:12:40 AEST 2017 org.apache.commons.math.exception.NumberIsTooLargeException,67
+Thu Aug 24 19:13:48 AEST 2017 org.apache.commons.math.exception.NumberIsTooLargeException,69
+Thu Aug 24 19:13:49 AEST 2017 org.apache.commons.math.exception.NumberIsTooLargeException,70
+Thu Aug 24 19:13:50 AEST 2017 Thu Aug 24 19:13:50 AEST 2017 : org.apache.commons.math.exception.NumberIsTooLargeException,71=>Find no block
+Thu Aug 24 19:13:51 AEST 2017 org.apache.commons.math.exception.NumberIsTooLargeException,77
+Thu Aug 24 19:13:52 AEST 2017 org.apache.commons.math.exception.NumberIsTooLargeException,84
+Thu Aug 24 19:13:55 AEST 2017 org.apache.commons.math.exception.NoDataException,37
+Thu Aug 24 19:13:59 AEST 2017 Thu Aug 24 19:13:59 AEST 2017 : org.apache.commons.math.exception.NoDataException,38=>Find no block
+Thu Aug 24 19:13:59 AEST 2017 org.apache.commons.math.exception.NoDataException,45
+Thu Aug 24 19:14:03 AEST 2017 Thu Aug 24 19:14:03 AEST 2017 : org.apache.commons.math.exception.NoDataException,46=>Find no block
+Thu Aug 24 19:14:03 AEST 2017 org.apache.commons.math.exception.DimensionMismatchException,44
+Thu Aug 24 19:17:10 AEST 2017 org.apache.commons.math.exception.DimensionMismatchException,45
+Thu Aug 24 19:17:14 AEST 2017 Thu Aug 24 19:17:14 AEST 2017 : org.apache.commons.math.exception.DimensionMismatchException,46=>Find no block
+Thu Aug 24 19:17:15 AEST 2017 org.apache.commons.math.exception.DimensionMismatchException,56
+Thu Aug 24 19:17:18 AEST 2017 Thu Aug 24 19:17:18 AEST 2017 : org.apache.commons.math.exception.DimensionMismatchException,57=>Find no block
+Thu Aug 24 19:17:19 AEST 2017 org.apache.commons.math.exception.DimensionMismatchException,63
+Thu Aug 24 19:17:22 AEST 2017 org.apache.commons.math.exception.MultiDimensionMismatchException,45
+Thu Aug 24 19:17:26 AEST 2017 Thu Aug 24 19:17:26 AEST 2017 : org.apache.commons.math.exception.MultiDimensionMismatchException,46=>Find no block
+Thu Aug 24 19:17:27 AEST 2017 org.apache.commons.math.exception.MultiDimensionMismatchException,59
+Thu Aug 24 19:18:07 AEST 2017 org.apache.commons.math.exception.MultiDimensionMismatchException,60
+Thu Aug 24 19:18:08 AEST 2017 org.apache.commons.math.exception.MultiDimensionMismatchException,61
+Thu Aug 24 19:18:09 AEST 2017 Thu Aug 24 19:18:09 AEST 2017 : org.apache.commons.math.exception.MultiDimensionMismatchException,62=>Find no block
+Thu Aug 24 19:18:10 AEST 2017 org.apache.commons.math.exception.MultiDimensionMismatchException,68
+Thu Aug 24 19:18:51 AEST 2017 org.apache.commons.math.exception.MultiDimensionMismatchException,74
+Thu Aug 24 19:19:30 AEST 2017 org.apache.commons.math.exception.MultiDimensionMismatchException,82
+Thu Aug 24 19:19:57 AEST 2017 org.apache.commons.math.exception.MultiDimensionMismatchException,89
+Thu Aug 24 19:20:25 AEST 2017 org.apache.commons.math.exception.NotStrictlyPositiveException,38
+Thu Aug 24 19:20:28 AEST 2017 Thu Aug 24 19:20:28 AEST 2017 : org.apache.commons.math.exception.NotStrictlyPositiveException,39=>Find no block
+Thu Aug 24 19:20:29 AEST 2017 org.apache.commons.math.exception.NotStrictlyPositiveException,48
+Thu Aug 24 19:20:44 AEST 2017 Thu Aug 24 19:20:44 AEST 2017 : org.apache.commons.math.exception.NotStrictlyPositiveException,49=>Find no block
+Thu Aug 24 19:20:45 AEST 2017 Thu Aug 24 19:20:45 AEST 2017 : org.apache.commons.math.linear.RealVector,860=>Find no block
+Thu Aug 24 19:20:46 AEST 2017 org.apache.commons.math.linear.RealVector,861
+Thu Aug 24 19:20:52 AEST 2017 org.apache.commons.math.linear.RealVector,862
+Thu Aug 24 19:20:52 AEST 2017 org.apache.commons.math.linear.RealVector,863
+Thu Aug 24 19:20:53 AEST 2017 org.apache.commons.math.linear.RealVector,864
+Thu Aug 24 19:20:54 AEST 2017 org.apache.commons.math.linear.RealVector,865
+Thu Aug 24 19:20:55 AEST 2017 Thu Aug 24 19:20:55 AEST 2017 : org.apache.commons.math.linear.RealVector,867=>Find no block
+Thu Aug 24 19:20:56 AEST 2017 org.apache.commons.math.linear.RealVector,875
+Thu Aug 24 19:20:59 AEST 2017 org.apache.commons.math.linear.RealVector,876
+Thu Aug 24 19:21:00 AEST 2017 org.apache.commons.math.linear.RealVector,879
+Thu Aug 24 19:22:55 AEST 2017 org.apache.commons.math.linear.RealVector,880
+Thu Aug 24 19:22:56 AEST 2017 org.apache.commons.math.linear.RealVector,881
+Thu Aug 24 19:25:19 AEST 2017 org.apache.commons.math.linear.RealVector,882
+Thu Aug 24 19:25:20 AEST 2017 Thu Aug 24 19:25:20 AEST 2017 : org.apache.commons.math.linear.RealVector,884=>Find no block
+Thu Aug 24 19:25:20 AEST 2017 org.apache.commons.math.linear.RealVector,888
+Thu Aug 24 19:25:23 AEST 2017 org.apache.commons.math.linear.RealVector,893
+Thu Aug 24 19:27:50 AEST 2017 org.apache.commons.math.linear.RealVector,894
+Thu Aug 24 19:27:53 AEST 2017 org.apache.commons.math.linear.RealVector,895
+Thu Aug 24 19:27:53 AEST 2017 org.apache.commons.math.linear.RealVector,897
+Thu Aug 24 19:27:55 AEST 2017 org.apache.commons.math.linear.RealVector,898
+Thu Aug 24 19:27:56 AEST 2017 org.apache.commons.math.linear.RealVector,899
+Thu Aug 24 19:27:56 AEST 2017 org.apache.commons.math.linear.RealVector,904
+Thu Aug 24 19:27:59 AEST 2017 Thu Aug 24 19:27:59 AEST 2017 : org.apache.commons.math.linear.RealVector,58=>Find no block
+Thu Aug 24 19:28:00 AEST 2017 Thu Aug 24 19:28:00 AEST 2017 : org.apache.commons.math.linear.RealVector,851=>Find no block
+Thu Aug 24 19:28:01 AEST 2017 org.apache.commons.math.linear.RealVector,149
+Thu Aug 24 19:29:39 AEST 2017 Thu Aug 24 19:29:39 AEST 2017 : org.apache.commons.math.linear.RealVector,150=>Find no block
+Thu Aug 24 19:29:40 AEST 2017 org.apache.commons.math.linear.RealVector,160
+Thu Aug 24 19:35:10 AEST 2017 org.apache.commons.math.linear.RealVector,161
+Thu Aug 24 19:39:05 AEST 2017 org.apache.commons.math.linear.RealVector,162
+Thu Aug 24 19:39:06 AEST 2017 Thu Aug 24 19:39:06 AEST 2017 : org.apache.commons.math.linear.RealVector,164=>Find no block
+Thu Aug 24 19:39:07 AEST 2017 org.apache.commons.math.linear.RealVector,173
+Thu Aug 24 19:40:27 AEST 2017 org.apache.commons.math.linear.RealVector,175
+Thu Aug 24 19:40:28 AEST 2017 Thu Aug 24 19:40:28 AEST 2017 : org.apache.commons.math.linear.RealVector,178=>Find no block
+Thu Aug 24 19:40:28 AEST 2017 org.apache.commons.math.linear.RealVector,190
+Thu Aug 24 19:46:45 AEST 2017 org.apache.commons.math.linear.RealVector,191
+Thu Aug 24 19:46:46 AEST 2017 org.apache.commons.math.linear.RealVector,193
+Thu Aug 24 19:46:47 AEST 2017 org.apache.commons.math.linear.RealVector,194
+Thu Aug 24 19:46:48 AEST 2017 org.apache.commons.math.linear.RealVector,195
+Failed time : 17/08/24 19:46

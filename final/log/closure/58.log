@@ -1,0 +1,102 @@
+=================================================
+Project : closure_58	start : 17/08/23 22:42
+Current failed test : com.google.javascript.jscomp.LiveVariableAnalysisTest::testExpressionInForIn | 17/08/23 22:43
+Wed Aug 23 22:43:34 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,421
+Wed Aug 23 22:51:12 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,422
+Wed Aug 23 22:51:13 AEST 2017 Wed Aug 23 22:51:13 AEST 2017 : com.google.javascript.jscomp.parsing.IRFactory,423=>Find no block
+Wed Aug 23 22:51:14 AEST 2017 com.google.javascript.jscomp.LiveVariablesAnalysis,200
+Wed Aug 23 23:04:18 AEST 2017 com.google.javascript.jscomp.LiveVariablesAnalysis,201
+Wed Aug 23 23:04:19 AEST 2017 com.google.javascript.jscomp.LiveVariablesAnalysis,202
+Wed Aug 23 23:05:00 AEST 2017 com.google.javascript.jscomp.LiveVariablesAnalysis,206
+Wed Aug 23 23:06:28 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,415
+Wed Aug 23 23:06:32 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,419
+Wed Aug 23 23:17:35 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,420
+Wed Aug 23 23:17:36 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,424
+Wed Aug 23 23:17:37 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,568
+Wed Aug 23 23:17:45 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,146
+Wed Aug 23 23:18:54 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,219
+Wed Aug 23 23:19:00 AEST 2017 com.google.javascript.jscomp.ControlFlowAnalysis,420
+Wed Aug 23 23:38:25 AEST 2017 com.google.javascript.jscomp.ControlFlowAnalysis,421
+Wed Aug 23 23:38:26 AEST 2017 com.google.javascript.jscomp.ControlFlowAnalysis,422
+Wed Aug 23 23:50:07 AEST 2017 com.google.javascript.jscomp.ControlFlowAnalysis,424
+Wed Aug 23 23:58:11 AEST 2017 com.google.javascript.jscomp.ControlFlowAnalysis,426
+Wed Aug 23 23:59:16 AEST 2017 com.google.javascript.jscomp.ControlFlowAnalysis,428
+Wed Aug 23 23:59:17 AEST 2017 com.google.javascript.jscomp.ControlFlowAnalysis,731
+Thu Aug 24 00:02:46 AEST 2017 com.google.javascript.jscomp.ControlFlowAnalysis,792
+Thu Aug 24 00:04:27 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,547
+Thu Aug 24 00:04:41 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,231
+Thu Aug 24 00:05:52 AEST 2017 com.google.javascript.jscomp.LiveVariablesAnalysis,195
+Thu Aug 24 00:09:29 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,218
+Thu Aug 24 00:09:30 AEST 2017 com.google.javascript.jscomp.ControlFlowAnalysis,254
+Thu Aug 24 00:14:12 AEST 2017 com.google.javascript.jscomp.ControlFlowAnalysis,307
+Thu Aug 24 00:18:56 AEST 2017 com.google.javascript.jscomp.ControlFlowAnalysis,308
+Thu Aug 24 00:21:28 AEST 2017 com.google.javascript.jscomp.ControlFlowAnalysis,396
+Thu Aug 24 00:24:00 AEST 2017 Thu Aug 24 00:24:00 AEST 2017 : com.google.javascript.jscomp.ControlFlowAnalysis,430=>Find no block
+Thu Aug 24 00:24:01 AEST 2017 com.google.javascript.jscomp.ControlFlowAnalysis,730
+Thu Aug 24 00:24:02 AEST 2017 com.google.javascript.jscomp.ControlFlowAnalysis,791
+Thu Aug 24 00:24:03 AEST 2017 Thu Aug 24 00:24:03 AEST 2017 : com.google.javascript.rhino.Node,496=>Find no block
+Thu Aug 24 00:24:03 AEST 2017 com.google.javascript.rhino.Node,497
+Thu Aug 24 00:29:56 AEST 2017 com.google.javascript.rhino.Node,498
+Thu Aug 24 00:29:57 AEST 2017 com.google.javascript.rhino.Node,499
+Thu Aug 24 00:35:53 AEST 2017 com.google.javascript.rhino.Node,500
+Thu Aug 24 00:41:45 AEST 2017 com.google.javascript.rhino.Node,501
+Thu Aug 24 00:47:37 AEST 2017 com.google.javascript.rhino.Node,502
+Thu Aug 24 00:56:46 AEST 2017 com.google.javascript.rhino.Node,503
+Thu Aug 24 01:06:45 AEST 2017 com.google.javascript.rhino.Node,504
+Thu Aug 24 01:12:03 AEST 2017 com.google.javascript.rhino.Node,505
+Thu Aug 24 01:15:56 AEST 2017 com.google.javascript.rhino.Node,506
+Thu Aug 24 01:19:19 AEST 2017 com.google.javascript.rhino.Node,507
+Thu Aug 24 01:23:27 AEST 2017 com.google.javascript.rhino.Node,508
+Thu Aug 24 01:27:20 AEST 2017 com.google.javascript.rhino.Node,509
+Thu Aug 24 01:30:45 AEST 2017 com.google.javascript.rhino.Node,510
+Thu Aug 24 01:34:34 AEST 2017 com.google.javascript.rhino.Node,511
+Thu Aug 24 01:36:46 AEST 2017 com.google.javascript.rhino.Node,512
+Thu Aug 24 01:38:59 AEST 2017 com.google.javascript.rhino.Node,513
+Thu Aug 24 01:39:00 AEST 2017 Thu Aug 24 01:39:00 AEST 2017 : com.google.javascript.rhino.Node,514=>Find no block
+Thu Aug 24 01:39:01 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1284
+Thu Aug 24 01:39:07 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,697
+Thu Aug 24 01:39:19 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,702
+Thu Aug 24 01:44:16 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,703
+Thu Aug 24 01:44:17 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,704
+Thu Aug 24 01:44:18 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,705
+Thu Aug 24 01:55:09 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,706
+Thu Aug 24 01:55:10 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,709
+Thu Aug 24 02:02:01 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,711
+Thu Aug 24 02:09:35 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,712
+Thu Aug 24 02:11:23 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,714
+Thu Aug 24 02:12:12 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,716
+Thu Aug 24 02:12:59 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,718
+Thu Aug 24 02:14:44 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,719
+Thu Aug 24 02:14:44 AEST 2017 Thu Aug 24 02:14:44 AEST 2017 : com.google.javascript.jscomp.parsing.IRFactory,720=>Find no block
+Thu Aug 24 02:14:45 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,721
+Thu Aug 24 02:30:38 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,722
+Thu Aug 24 02:30:38 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,203
+Thu Aug 24 02:30:43 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,204
+Thu Aug 24 02:30:44 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,239
+Thu Aug 24 02:31:56 AEST 2017 com.google.javascript.jscomp.ControlFlowAnalysis,350
+Thu Aug 24 02:32:07 AEST 2017 com.google.javascript.jscomp.ControlFlowAnalysis,796
+Thu Aug 24 02:35:14 AEST 2017 com.google.javascript.jscomp.Compiler,1323
+Thu Aug 24 02:37:36 AEST 2017 com.google.javascript.jscomp.Compiler,1324
+Thu Aug 24 02:37:37 AEST 2017 com.google.javascript.jscomp.Compiler,1326
+Thu Aug 24 02:37:37 AEST 2017 com.google.javascript.jscomp.Compiler,1327
+Thu Aug 24 02:37:38 AEST 2017 com.google.javascript.jscomp.Compiler,1329
+Thu Aug 24 02:37:39 AEST 2017 com.google.javascript.jscomp.Compiler,1330
+Thu Aug 24 02:37:39 AEST 2017 com.google.javascript.jscomp.ControlFlowAnalysis,268
+Thu Aug 24 02:41:33 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,859
+Thu Aug 24 02:41:36 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,173
+Thu Aug 24 02:41:40 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,174
+Thu Aug 24 02:41:40 AEST 2017 com.google.javascript.jscomp.DataFlowAnalysis,316
+Thu Aug 24 02:45:07 AEST 2017 com.google.javascript.jscomp.DataFlowAnalysis,317
+Thu Aug 24 02:45:07 AEST 2017 com.google.javascript.jscomp.DataFlowAnalysis,318
+Thu Aug 24 02:45:08 AEST 2017 com.google.javascript.jscomp.DataFlowAnalysis,319
+Thu Aug 24 02:45:09 AEST 2017 Thu Aug 24 02:45:09 AEST 2017 : com.google.javascript.jscomp.DataFlowAnalysis,320=>Find no block
+Thu Aug 24 02:45:10 AEST 2017 com.google.javascript.jscomp.DataFlowAnalysis,321
+Thu Aug 24 02:45:10 AEST 2017 com.google.javascript.jscomp.LiveVariablesAnalysis,56
+Thu Aug 24 02:48:31 AEST 2017 com.google.javascript.jscomp.LiveVariablesAnalysis,57
+Thu Aug 24 02:51:38 AEST 2017 com.google.javascript.jscomp.LiveVariablesAnalysis,58
+Thu Aug 24 02:51:40 AEST 2017 com.google.javascript.jscomp.LiveVariablesAnalysis,60
+Thu Aug 24 02:51:41 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,203
+Thu Aug 24 03:10:51 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,204
+Thu Aug 24 03:22:35 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,216
+Thu Aug 24 03:38:43 AEST 2017 com.google.javascript.rhino.Node,2006
+Timeout time : 17/08/24 03:43

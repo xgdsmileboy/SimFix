@@ -1,0 +1,226 @@
+=================================================
+Project : lang_46	start : 17/08/24 05:08
+Current failed test : org.apache.commons.lang.StringEscapeUtilsTest::testEscapeJavaWithSlash | 17/08/24 05:09
+Thu Aug 24 05:09:52 AEST 2017 org.apache.commons.lang.StringEscapeUtils,244
+Thu Aug 24 05:10:37 AEST 2017 org.apache.commons.lang.StringEscapeUtils,245
+Thu Aug 24 05:11:37 AEST 2017 org.apache.commons.lang.StringEscapeUtils,246
+Thu Aug 24 05:12:12 AEST 2017 org.apache.commons.lang.StringEscapeUtils,86
+Thu Aug 24 05:12:13 AEST 2017 org.apache.commons.lang.StringEscapeUtils,155
+Thu Aug 24 05:15:17 AEST 2017 org.apache.commons.lang.StringEscapeUtils,159
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(str==null){
+return null;
+}
+if(StringUtils.containsNone(str,CSV_SEARCH_CHARS)){
+return str;
+}
+try{
+StringWriter writer=new StringWriter(str.length()*2);
+escapeJavaStyleString(writer,str,escapeSingleQuotes);
+return writer.toString();
+}catch (IOException ioe) {
+  ioe.printStackTrace();
+  return null;
+}
+
+
+Time : 17/08/24 05:15
+----------------------------------------
+Thu Aug 24 05:20:43 AEST 2017 org.apache.commons.lang.StringEscapeUtils,160
+Thu Aug 24 05:20:43 AEST 2017 org.apache.commons.lang.StringEscapeUtils,161
+Thu Aug 24 05:20:44 AEST 2017 org.apache.commons.lang.StringEscapeUtils,179
+Thu Aug 24 05:20:44 AEST 2017 org.apache.commons.lang.StringEscapeUtils,182
+Thu Aug 24 05:23:58 AEST 2017 org.apache.commons.lang.StringEscapeUtils,186
+Thu Aug 24 05:30:33 AEST 2017 org.apache.commons.lang.StringEscapeUtils,187
+Thu Aug 24 05:59:12 AEST 2017 org.apache.commons.lang.StringEscapeUtils,188
+Thu Aug 24 05:59:14 AEST 2017 org.apache.commons.lang.StringEscapeUtils,191
+Thu Aug 24 05:59:15 AEST 2017 org.apache.commons.lang.StringEscapeUtils,193
+Thu Aug 24 05:59:15 AEST 2017 org.apache.commons.lang.StringEscapeUtils,195
+Thu Aug 24 05:59:15 AEST 2017 org.apache.commons.lang.StringEscapeUtils,197
+Thu Aug 24 05:59:16 AEST 2017 Thu Aug 24 05:59:16 AEST 2017 : org.apache.commons.lang.StringEscapeUtils,228=>Find no block
+Thu Aug 24 05:59:16 AEST 2017 org.apache.commons.lang.StringEscapeUtils,248
+Thu Aug 24 05:59:16 AEST 2017 Thu Aug 24 05:59:16 AEST 2017 : org.apache.commons.lang.StringEscapeUtils,253=>Find no block
+Thu Aug 24 05:59:16 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,60
+Thu Aug 24 05:59:17 AEST 2017 Thu Aug 24 05:59:17 AEST 2017 : org.apache.commons.lang.exception.NestableRuntimeException,47=>Find no block
+Thu Aug 24 05:59:17 AEST 2017 Thu Aug 24 05:59:17 AEST 2017 : org.apache.commons.lang.exception.NestableRuntimeException,53=>Find no block
+Thu Aug 24 05:59:17 AEST 2017 Thu Aug 24 05:59:17 AEST 2017 : org.apache.commons.lang.exception.NestableRuntimeException,61=>Find no block
+Thu Aug 24 05:59:17 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,70
+Thu Aug 24 05:59:26 AEST 2017 Thu Aug 24 05:59:26 AEST 2017 : org.apache.commons.lang.exception.NestableRuntimeException,71=>Find no block
+Thu Aug 24 05:59:27 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,81
+Thu Aug 24 05:59:27 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,82
+Thu Aug 24 05:59:28 AEST 2017 Thu Aug 24 05:59:28 AEST 2017 : org.apache.commons.lang.exception.NestableRuntimeException,83=>Find no block
+Thu Aug 24 05:59:28 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,94
+Thu Aug 24 05:59:36 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,95
+Thu Aug 24 05:59:36 AEST 2017 Thu Aug 24 05:59:36 AEST 2017 : org.apache.commons.lang.exception.NestableRuntimeException,96=>Find no block
+Thu Aug 24 05:59:37 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,102
+Thu Aug 24 05:59:37 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,113
+Thu Aug 24 06:00:01 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,114
+Thu Aug 24 06:00:01 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,115
+Thu Aug 24 06:00:01 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,116
+Thu Aug 24 06:00:02 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,118
+Thu Aug 24 06:00:02 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,126
+Thu Aug 24 06:00:56 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,127
+Thu Aug 24 06:00:57 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,129
+Thu Aug 24 06:02:09 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,136
+Thu Aug 24 06:02:10 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,143
+Thu Aug 24 06:02:11 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,150
+Thu Aug 24 06:02:11 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,157
+Thu Aug 24 06:02:12 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,164
+Thu Aug 24 06:02:13 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,171
+Thu Aug 24 06:02:14 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,178
+Thu Aug 24 06:02:14 AEST 2017 Thu Aug 24 06:02:14 AEST 2017 : org.apache.commons.lang.exception.NestableRuntimeException,179=>Find no block
+Thu Aug 24 06:02:15 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,185
+Thu Aug 24 06:02:43 AEST 2017 Thu Aug 24 06:02:43 AEST 2017 : org.apache.commons.lang.exception.NestableRuntimeException,186=>Find no block
+Thu Aug 24 06:02:43 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,192
+Thu Aug 24 06:02:43 AEST 2017 Thu Aug 24 06:02:43 AEST 2017 : org.apache.commons.lang.exception.NestableRuntimeException,193=>Find no block
+Thu Aug 24 06:02:44 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,199
+Thu Aug 24 06:02:45 AEST 2017 Thu Aug 24 06:02:45 AEST 2017 : org.apache.commons.lang.exception.NestableRuntimeException,200=>Find no block
+Thu Aug 24 06:02:45 AEST 2017 org.apache.commons.lang.StringEscapeUtils,59
+Thu Aug 24 06:02:45 AEST 2017 Thu Aug 24 06:02:45 AEST 2017 : org.apache.commons.lang.StringEscapeUtils,60=>Find no block
+Thu Aug 24 06:02:45 AEST 2017 org.apache.commons.lang.StringEscapeUtils,102
+Thu Aug 24 06:02:46 AEST 2017 Thu Aug 24 06:02:46 AEST 2017 : org.apache.commons.lang.StringEscapeUtils,103=>Find no block
+Thu Aug 24 06:02:46 AEST 2017 org.apache.commons.lang.StringEscapeUtils,127
+Thu Aug 24 06:02:47 AEST 2017 org.apache.commons.lang.StringEscapeUtils,143
+Thu Aug 24 06:02:48 AEST 2017 Thu Aug 24 06:02:48 AEST 2017 : org.apache.commons.lang.StringEscapeUtils,144=>Find no block
+Thu Aug 24 06:02:49 AEST 2017 org.apache.commons.lang.StringEscapeUtils,156
+Thu Aug 24 06:02:49 AEST 2017 Thu Aug 24 06:02:49 AEST 2017 : org.apache.commons.lang.StringEscapeUtils,162=>Find no block
+Thu Aug 24 06:02:49 AEST 2017 org.apache.commons.lang.StringEscapeUtils,164
+Thu Aug 24 06:02:49 AEST 2017 org.apache.commons.lang.StringEscapeUtils,165
+Thu Aug 24 06:02:50 AEST 2017 org.apache.commons.lang.StringEscapeUtils,180
+Thu Aug 24 06:02:50 AEST 2017 org.apache.commons.lang.StringEscapeUtils,183
+Thu Aug 24 06:02:50 AEST 2017 org.apache.commons.lang.StringEscapeUtils,192
+Thu Aug 24 06:02:51 AEST 2017 org.apache.commons.lang.StringEscapeUtils,194
+Thu Aug 24 06:02:55 AEST 2017 org.apache.commons.lang.StringEscapeUtils,196
+Thu Aug 24 06:02:56 AEST 2017 Thu Aug 24 06:02:56 AEST 2017 : org.apache.commons.lang.StringEscapeUtils,198=>Find no block
+Thu Aug 24 06:02:56 AEST 2017 org.apache.commons.lang.StringEscapeUtils,200
+Thu Aug 24 06:03:40 AEST 2017 org.apache.commons.lang.StringEscapeUtils,201
+Thu Aug 24 06:03:41 AEST 2017 org.apache.commons.lang.StringEscapeUtils,202
+Thu Aug 24 06:03:48 AEST 2017 org.apache.commons.lang.StringEscapeUtils,204
+Thu Aug 24 06:04:33 AEST 2017 org.apache.commons.lang.StringEscapeUtils,205
+Thu Aug 24 06:04:33 AEST 2017 org.apache.commons.lang.StringEscapeUtils,206
+Thu Aug 24 06:04:40 AEST 2017 org.apache.commons.lang.StringEscapeUtils,208
+Thu Aug 24 06:05:25 AEST 2017 org.apache.commons.lang.StringEscapeUtils,209
+Thu Aug 24 06:05:25 AEST 2017 org.apache.commons.lang.StringEscapeUtils,210
+Thu Aug 24 06:05:33 AEST 2017 org.apache.commons.lang.StringEscapeUtils,212
+Thu Aug 24 06:06:18 AEST 2017 org.apache.commons.lang.StringEscapeUtils,213
+Thu Aug 24 06:06:18 AEST 2017 org.apache.commons.lang.StringEscapeUtils,214
+Thu Aug 24 06:06:25 AEST 2017 org.apache.commons.lang.StringEscapeUtils,216
+Thu Aug 24 06:07:11 AEST 2017 org.apache.commons.lang.StringEscapeUtils,217
+Thu Aug 24 06:07:11 AEST 2017 org.apache.commons.lang.StringEscapeUtils,218
+Thu Aug 24 06:07:45 AEST 2017 org.apache.commons.lang.StringEscapeUtils,220
+Thu Aug 24 06:07:45 AEST 2017 org.apache.commons.lang.StringEscapeUtils,221
+Thu Aug 24 06:07:45 AEST 2017 org.apache.commons.lang.StringEscapeUtils,223
+Thu Aug 24 06:07:45 AEST 2017 org.apache.commons.lang.StringEscapeUtils,225
+Thu Aug 24 06:07:46 AEST 2017 org.apache.commons.lang.StringEscapeUtils,230
+Thu Aug 24 06:07:46 AEST 2017 org.apache.commons.lang.StringEscapeUtils,231
+Thu Aug 24 06:07:46 AEST 2017 org.apache.commons.lang.StringEscapeUtils,233
+Thu Aug 24 06:07:46 AEST 2017 org.apache.commons.lang.StringEscapeUtils,234
+Thu Aug 24 06:07:54 AEST 2017 org.apache.commons.lang.StringEscapeUtils,236
+Thu Aug 24 06:08:41 AEST 2017 org.apache.commons.lang.StringEscapeUtils,237
+Thu Aug 24 06:08:41 AEST 2017 org.apache.commons.lang.StringEscapeUtils,238
+Thu Aug 24 06:08:50 AEST 2017 org.apache.commons.lang.StringEscapeUtils,240
+Thu Aug 24 06:09:35 AEST 2017 org.apache.commons.lang.StringEscapeUtils,241
+Thu Aug 24 06:09:35 AEST 2017 org.apache.commons.lang.StringEscapeUtils,242
+Thu Aug 24 06:09:43 AEST 2017 org.apache.commons.lang.StringEscapeUtils,263
+Thu Aug 24 06:10:07 AEST 2017 org.apache.commons.lang.StringEscapeUtils,276
+Thu Aug 24 06:10:07 AEST 2017 org.apache.commons.lang.StringEscapeUtils,277
+Thu Aug 24 06:10:08 AEST 2017 org.apache.commons.lang.StringEscapeUtils,280
+Thu Aug 24 06:16:51 AEST 2017 org.apache.commons.lang.StringEscapeUtils,281
+Thu Aug 24 06:16:51 AEST 2017 org.apache.commons.lang.StringEscapeUtils,282
+Thu Aug 24 06:16:52 AEST 2017 Thu Aug 24 06:16:52 AEST 2017 : org.apache.commons.lang.StringEscapeUtils,283=>Find no block
+Thu Aug 24 06:16:53 AEST 2017 org.apache.commons.lang.StringEscapeUtils,285
+Thu Aug 24 06:16:53 AEST 2017 org.apache.commons.lang.StringEscapeUtils,286
+Thu Aug 24 06:16:53 AEST 2017 org.apache.commons.lang.StringEscapeUtils,306
+Thu Aug 24 06:16:53 AEST 2017 org.apache.commons.lang.StringEscapeUtils,307
+Thu Aug 24 06:16:53 AEST 2017 org.apache.commons.lang.StringEscapeUtils,309
+Thu Aug 24 06:16:53 AEST 2017 org.apache.commons.lang.StringEscapeUtils,310
+Thu Aug 24 06:16:53 AEST 2017 org.apache.commons.lang.StringEscapeUtils,312
+Thu Aug 24 06:32:05 AEST 2017 org.apache.commons.lang.StringEscapeUtils,313
+Thu Aug 24 06:40:36 AEST 2017 org.apache.commons.lang.StringEscapeUtils,314
+Thu Aug 24 06:40:37 AEST 2017 org.apache.commons.lang.StringEscapeUtils,315
+Thu Aug 24 06:40:37 AEST 2017 org.apache.commons.lang.StringEscapeUtils,316
+Thu Aug 24 07:57:26 AEST 2017 org.apache.commons.lang.StringEscapeUtils,317
+Thu Aug 24 07:57:42 AEST 2017 org.apache.commons.lang.StringEscapeUtils,318
+Thu Aug 24 07:57:42 AEST 2017 org.apache.commons.lang.StringEscapeUtils,321
+Thu Aug 24 08:06:16 AEST 2017 org.apache.commons.lang.StringEscapeUtils,322
+Thu Aug 24 08:06:16 AEST 2017 org.apache.commons.lang.StringEscapeUtils,326
+Thu Aug 24 08:06:16 AEST 2017 org.apache.commons.lang.StringEscapeUtils,327
+Thu Aug 24 08:06:16 AEST 2017 org.apache.commons.lang.StringEscapeUtils,328
+Thu Aug 24 08:06:16 AEST 2017 org.apache.commons.lang.StringEscapeUtils,329
+Thu Aug 24 08:06:16 AEST 2017 org.apache.commons.lang.StringEscapeUtils,330
+Thu Aug 24 08:06:16 AEST 2017 Thu Aug 24 08:06:16 AEST 2017 : org.apache.commons.lang.StringEscapeUtils,333=>Find no block
+Thu Aug 24 08:06:17 AEST 2017 Thu Aug 24 08:06:17 AEST 2017 : org.apache.commons.lang.StringEscapeUtils,331=>Find no block
+Thu Aug 24 08:06:17 AEST 2017 org.apache.commons.lang.StringEscapeUtils,332
+Thu Aug 24 08:06:17 AEST 2017 org.apache.commons.lang.StringEscapeUtils,337
+Thu Aug 24 08:06:17 AEST 2017 org.apache.commons.lang.StringEscapeUtils,339
+Thu Aug 24 08:06:18 AEST 2017 Thu Aug 24 08:06:18 AEST 2017 : org.apache.commons.lang.StringEscapeUtils,340=>Find no block
+Thu Aug 24 08:06:18 AEST 2017 org.apache.commons.lang.StringEscapeUtils,342
+Thu Aug 24 08:06:19 AEST 2017 org.apache.commons.lang.StringEscapeUtils,343
+Thu Aug 24 08:07:24 AEST 2017 org.apache.commons.lang.StringEscapeUtils,345
+Thu Aug 24 08:07:24 AEST 2017 org.apache.commons.lang.StringEscapeUtils,346
+Thu Aug 24 08:08:23 AEST 2017 org.apache.commons.lang.StringEscapeUtils,348
+Thu Aug 24 08:08:23 AEST 2017 org.apache.commons.lang.StringEscapeUtils,349
+Thu Aug 24 08:09:36 AEST 2017 org.apache.commons.lang.StringEscapeUtils,351
+Thu Aug 24 08:09:36 AEST 2017 org.apache.commons.lang.StringEscapeUtils,352
+Thu Aug 24 08:10:52 AEST 2017 org.apache.commons.lang.StringEscapeUtils,354
+Thu Aug 24 08:10:52 AEST 2017 org.apache.commons.lang.StringEscapeUtils,355
+Thu Aug 24 08:12:07 AEST 2017 org.apache.commons.lang.StringEscapeUtils,357
+Thu Aug 24 08:12:07 AEST 2017 org.apache.commons.lang.StringEscapeUtils,358
+Thu Aug 24 08:13:16 AEST 2017 org.apache.commons.lang.StringEscapeUtils,360
+Thu Aug 24 08:13:17 AEST 2017 org.apache.commons.lang.StringEscapeUtils,361
+Thu Aug 24 08:14:23 AEST 2017 org.apache.commons.lang.StringEscapeUtils,363
+Thu Aug 24 08:14:23 AEST 2017 org.apache.commons.lang.StringEscapeUtils,364
+Thu Aug 24 08:15:23 AEST 2017 org.apache.commons.lang.StringEscapeUtils,368
+Thu Aug 24 08:15:24 AEST 2017 org.apache.commons.lang.StringEscapeUtils,369
+Thu Aug 24 08:15:25 AEST 2017 org.apache.commons.lang.StringEscapeUtils,372
+Thu Aug 24 08:15:25 AEST 2017 org.apache.commons.lang.StringEscapeUtils,373
+Thu Aug 24 08:15:25 AEST 2017 org.apache.commons.lang.StringEscapeUtils,376
+Thu Aug 24 08:15:25 AEST 2017 org.apache.commons.lang.StringEscapeUtils,377
+Thu Aug 24 08:15:25 AEST 2017 org.apache.commons.lang.StringEscapeUtils,378
+Thu Aug 24 08:15:25 AEST 2017 org.apache.commons.lang.StringEscapeUtils,380
+Thu Aug 24 09:00:29 AEST 2017 org.apache.commons.lang.StringEscapeUtils,382
+Thu Aug 24 09:01:50 AEST 2017 org.apache.commons.lang.StringEscapeUtils,385
+Thu Aug 24 09:01:50 AEST 2017 Thu Aug 24 09:01:50 AEST 2017 : org.apache.commons.lang.StringEscapeUtils,387=>Find no block
+Thu Aug 24 09:01:50 AEST 2017 org.apache.commons.lang.StringEscapeUtils,401
+Thu Aug 24 09:01:51 AEST 2017 org.apache.commons.lang.StringEscapeUtils,421
+Thu Aug 24 09:01:55 AEST 2017 Thu Aug 24 09:01:55 AEST 2017 : org.apache.commons.lang.StringEscapeUtils,422=>Find no block
+Thu Aug 24 09:01:56 AEST 2017 org.apache.commons.lang.StringEscapeUtils,453
+Thu Aug 24 09:01:56 AEST 2017 org.apache.commons.lang.StringEscapeUtils,454
+Thu Aug 24 09:01:56 AEST 2017 org.apache.commons.lang.StringEscapeUtils,457
+Thu Aug 24 09:06:37 AEST 2017 org.apache.commons.lang.StringEscapeUtils,458
+Thu Aug 24 09:06:38 AEST 2017 org.apache.commons.lang.StringEscapeUtils,459
+Thu Aug 24 09:06:38 AEST 2017 Thu Aug 24 09:06:38 AEST 2017 : org.apache.commons.lang.StringEscapeUtils,460=>Find no block
+Thu Aug 24 09:06:38 AEST 2017 org.apache.commons.lang.StringEscapeUtils,463
+Thu Aug 24 09:06:38 AEST 2017 org.apache.commons.lang.StringEscapeUtils,464
+Thu Aug 24 09:06:38 AEST 2017 org.apache.commons.lang.StringEscapeUtils,498
+Thu Aug 24 09:06:45 AEST 2017 org.apache.commons.lang.StringEscapeUtils,499
+Thu Aug 24 09:06:45 AEST 2017 org.apache.commons.lang.StringEscapeUtils,501
+Thu Aug 24 09:07:27 AEST 2017 org.apache.commons.lang.StringEscapeUtils,502
+Thu Aug 24 09:07:27 AEST 2017 org.apache.commons.lang.StringEscapeUtils,504
+Thu Aug 24 09:08:32 AEST 2017 Thu Aug 24 09:08:32 AEST 2017 : org.apache.commons.lang.StringEscapeUtils,505=>Find no block
+Thu Aug 24 09:08:33 AEST 2017 org.apache.commons.lang.StringEscapeUtils,525
+Thu Aug 24 09:08:33 AEST 2017 org.apache.commons.lang.StringEscapeUtils,526
+Thu Aug 24 09:08:33 AEST 2017 org.apache.commons.lang.StringEscapeUtils,529
+Thu Aug 24 09:13:12 AEST 2017 org.apache.commons.lang.StringEscapeUtils,530
+Thu Aug 24 09:13:12 AEST 2017 org.apache.commons.lang.StringEscapeUtils,531
+Thu Aug 24 09:13:12 AEST 2017 Thu Aug 24 09:13:12 AEST 2017 : org.apache.commons.lang.StringEscapeUtils,532=>Find no block
+Thu Aug 24 09:13:12 AEST 2017 org.apache.commons.lang.StringEscapeUtils,535
+Thu Aug 24 09:13:12 AEST 2017 org.apache.commons.lang.StringEscapeUtils,536
+Thu Aug 24 09:13:13 AEST 2017 org.apache.commons.lang.StringEscapeUtils,559
+Thu Aug 24 09:13:13 AEST 2017 org.apache.commons.lang.StringEscapeUtils,560
+Thu Aug 24 09:13:13 AEST 2017 org.apache.commons.lang.StringEscapeUtils,562
+Thu Aug 24 09:13:13 AEST 2017 org.apache.commons.lang.StringEscapeUtils,563
+Thu Aug 24 09:13:13 AEST 2017 org.apache.commons.lang.StringEscapeUtils,565
+Thu Aug 24 09:14:16 AEST 2017 Thu Aug 24 09:14:16 AEST 2017 : org.apache.commons.lang.StringEscapeUtils,566=>Find no block
+Thu Aug 24 09:14:16 AEST 2017 org.apache.commons.lang.StringEscapeUtils,589
+Thu Aug 24 09:14:16 AEST 2017 org.apache.commons.lang.StringEscapeUtils,590
+Thu Aug 24 09:14:16 AEST 2017 org.apache.commons.lang.StringEscapeUtils,592
+Thu Aug 24 09:14:16 AEST 2017 org.apache.commons.lang.StringEscapeUtils,593
+Thu Aug 24 09:14:17 AEST 2017 org.apache.commons.lang.StringEscapeUtils,595
+Thu Aug 24 09:18:06 AEST 2017 Thu Aug 24 09:18:06 AEST 2017 : org.apache.commons.lang.StringEscapeUtils,596=>Find no block
+Thu Aug 24 09:18:06 AEST 2017 org.apache.commons.lang.StringEscapeUtils,616
+Thu Aug 24 09:18:06 AEST 2017 org.apache.commons.lang.StringEscapeUtils,617
+Failed time : 17/08/24 09:18

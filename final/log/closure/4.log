@@ -1,0 +1,197 @@
+=================================================
+Project : closure_4	start : 17/08/23 17:41
+Current failed test : com.google.javascript.jscomp.TypeCheckTest::testImplementsExtendsLoop | 17/08/23 17:42
+Wed Aug 23 17:42:50 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,497
+Wed Aug 23 17:43:35 AEST 2017 com.google.javascript.jscomp.TypeCheck,1613
+Wed Aug 23 17:44:26 AEST 2017 com.google.javascript.jscomp.TypeCheck,1619
+Wed Aug 23 17:49:22 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,1196
+Wed Aug 23 17:49:38 AEST 2017 com.google.javascript.jscomp.CodingConventions,400
+Wed Aug 23 17:49:48 AEST 2017 com.google.javascript.rhino.jstype.NamedType,305
+Wed Aug 23 17:50:12 AEST 2017 com.google.javascript.jscomp.CodingConventions,225
+Wed Aug 23 17:50:23 AEST 2017 com.google.javascript.jscomp.ClosureCodingConvention,318
+Wed Aug 23 17:54:38 AEST 2017 com.google.javascript.jscomp.ClosureCodingConvention,319
+Wed Aug 23 17:54:39 AEST 2017 com.google.javascript.rhino.jstype.NamedType,369
+Wed Aug 23 17:54:41 AEST 2017 com.google.javascript.rhino.jstype.NamedType,372
+Wed Aug 23 17:54:42 AEST 2017 com.google.javascript.rhino.jstype.NamedType,373
+Wed Aug 23 17:54:42 AEST 2017 com.google.javascript.jscomp.NodeUtil,2843
+Wed Aug 23 18:01:24 AEST 2017 com.google.javascript.rhino.jstype.CanCastToVisitor,104
+Wed Aug 23 18:12:33 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,496
+Wed Aug 23 18:12:34 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,187
+Wed Aug 23 18:13:51 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,488
+Wed Aug 23 18:14:03 AEST 2017 Wed Aug 23 18:14:03 AEST 2017 : com.google.javascript.rhino.jstype.FunctionType,489=>Find no block
+Wed Aug 23 18:14:04 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,494
+Wed Aug 23 18:19:26 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,495
+Wed Aug 23 18:19:27 AEST 2017 com.google.javascript.jscomp.TypeCheck,1606
+Wed Aug 23 18:20:48 AEST 2017 com.google.javascript.jscomp.TypeCheck,1607
+Wed Aug 23 18:20:48 AEST 2017 com.google.javascript.jscomp.TypeCheck,1608
+Wed Aug 23 18:20:49 AEST 2017 com.google.javascript.jscomp.TypeCheck,1609
+Wed Aug 23 18:20:49 AEST 2017 com.google.javascript.jscomp.TypeCheck,1611
+Wed Aug 23 18:20:50 AEST 2017 Wed Aug 23 18:20:50 AEST 2017 : com.google.javascript.jscomp.TypeCheck,1615=>Find no block
+Wed Aug 23 18:20:50 AEST 2017 com.google.javascript.jscomp.TypeCheck,1618
+Wed Aug 23 18:20:51 AEST 2017 Wed Aug 23 18:20:51 AEST 2017 : com.google.javascript.jscomp.TypeCheck,1621=>Find no block
+Wed Aug 23 18:20:51 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,179
+Wed Aug 23 18:20:52 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,176
+Wed Aug 23 18:22:22 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,344
+Wed Aug 23 18:24:18 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,172
+Wed Aug 23 18:24:35 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,173
+Wed Aug 23 18:25:32 AEST 2017 com.google.javascript.rhino.jstype.NamedType,152
+Wed Aug 23 18:25:35 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,1191
+Wed Aug 23 18:31:48 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,1192
+Wed Aug 23 18:31:49 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,1193
+Wed Aug 23 18:31:50 AEST 2017 Wed Aug 23 18:31:50 AEST 2017 : com.google.javascript.rhino.jstype.FunctionType,1194=>Find no block
+Wed Aug 23 18:31:50 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,339
+Wed Aug 23 18:42:08 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,340
+Wed Aug 23 18:42:09 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,341
+Wed Aug 23 18:42:09 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,342
+Wed Aug 23 18:42:10 AEST 2017 Wed Aug 23 18:42:10 AEST 2017 : com.google.javascript.jscomp.FunctionTypeBuilder,346=>Find no block
+Wed Aug 23 18:42:10 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,634
+Wed Aug 23 18:42:19 AEST 2017 Wed Aug 23 18:42:19 AEST 2017 : com.google.javascript.jscomp.FunctionTypeBuilder,169=>Find no block
+Wed Aug 23 18:42:19 AEST 2017 com.google.javascript.rhino.JSDocInfo,1283
+Wed Aug 23 18:42:51 AEST 2017 com.google.javascript.rhino.JSDocInfo,1286
+Wed Aug 23 18:44:06 AEST 2017 com.google.javascript.rhino.JSDocInfo,1297
+Wed Aug 23 18:45:19 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,338
+Wed Aug 23 18:50:59 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,2068
+Wed Aug 23 18:58:24 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,2069
+Wed Aug 23 18:58:25 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,2064
+Wed Aug 23 19:17:14 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,2065
+Wed Aug 23 19:17:15 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,2066
+Wed Aug 23 19:17:15 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,2067
+Wed Aug 23 19:17:16 AEST 2017 com.google.javascript.jscomp.NodeUtil,2841
+Wed Aug 23 19:17:17 AEST 2017 com.google.javascript.jscomp.BasicErrorManager,161
+Wed Aug 23 19:17:39 AEST 2017 com.google.javascript.rhino.jstype.NamedType,195
+Wed Aug 23 19:17:52 AEST 2017 com.google.javascript.rhino.jstype.NamedType,196
+Wed Aug 23 19:17:52 AEST 2017 com.google.javascript.rhino.jstype.NamedType,197
+Wed Aug 23 19:17:53 AEST 2017 com.google.javascript.rhino.jstype.NamedType,222
+Wed Aug 23 19:18:45 AEST 2017 com.google.javascript.rhino.jstype.NamedType,223
+Wed Aug 23 19:18:45 AEST 2017 com.google.javascript.rhino.JSDocInfo,1265
+Timeout time : 17/08/23 19:22
+Current failed test : com.google.javascript.jscomp.TypeCheckTest::testConversionFromInterfaceToRecursiveConstructor | 17/08/23 19:22
+Wed Aug 23 19:22:57 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,497
+Wed Aug 23 19:23:07 AEST 2017 com.google.javascript.jscomp.TypeCheck,1613
+Wed Aug 23 19:23:25 AEST 2017 com.google.javascript.jscomp.TypeCheck,1619
+Wed Aug 23 19:26:55 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,1196
+Wed Aug 23 19:27:03 AEST 2017 com.google.javascript.jscomp.CodingConventions,400
+Wed Aug 23 19:27:06 AEST 2017 com.google.javascript.rhino.jstype.NamedType,305
+Wed Aug 23 19:27:24 AEST 2017 com.google.javascript.jscomp.CodingConventions,225
+Wed Aug 23 19:27:32 AEST 2017 com.google.javascript.jscomp.ClosureCodingConvention,318
+Wed Aug 23 19:30:56 AEST 2017 com.google.javascript.jscomp.ClosureCodingConvention,319
+Wed Aug 23 19:30:57 AEST 2017 com.google.javascript.rhino.jstype.NamedType,369
+Wed Aug 23 19:31:00 AEST 2017 com.google.javascript.rhino.jstype.NamedType,372
+Wed Aug 23 19:31:00 AEST 2017 com.google.javascript.rhino.jstype.NamedType,373
+Wed Aug 23 19:31:01 AEST 2017 com.google.javascript.jscomp.NodeUtil,2843
+Wed Aug 23 19:37:22 AEST 2017 com.google.javascript.rhino.jstype.CanCastToVisitor,104
+Wed Aug 23 19:48:07 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,496
+Wed Aug 23 19:48:07 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,187
+Wed Aug 23 19:49:01 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,488
+Wed Aug 23 19:49:11 AEST 2017 Wed Aug 23 19:49:11 AEST 2017 : com.google.javascript.rhino.jstype.FunctionType,489=>Find no block
+Wed Aug 23 19:49:12 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,494
+Wed Aug 23 19:55:01 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,495
+Wed Aug 23 19:55:01 AEST 2017 com.google.javascript.jscomp.TypeCheck,1606
+Wed Aug 23 19:56:27 AEST 2017 com.google.javascript.jscomp.TypeCheck,1607
+Wed Aug 23 19:56:28 AEST 2017 com.google.javascript.jscomp.TypeCheck,1608
+Wed Aug 23 19:56:28 AEST 2017 com.google.javascript.jscomp.TypeCheck,1609
+Wed Aug 23 19:56:29 AEST 2017 com.google.javascript.jscomp.TypeCheck,1611
+Wed Aug 23 19:56:29 AEST 2017 Wed Aug 23 19:56:29 AEST 2017 : com.google.javascript.jscomp.TypeCheck,1615=>Find no block
+Wed Aug 23 19:56:30 AEST 2017 com.google.javascript.jscomp.TypeCheck,1618
+Wed Aug 23 19:56:30 AEST 2017 Wed Aug 23 19:56:30 AEST 2017 : com.google.javascript.jscomp.TypeCheck,1621=>Find no block
+Wed Aug 23 19:56:31 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,179
+Wed Aug 23 19:56:31 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,176
+Wed Aug 23 19:57:44 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,344
+Wed Aug 23 19:59:46 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,172
+Wed Aug 23 20:00:06 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,173
+Wed Aug 23 20:01:03 AEST 2017 com.google.javascript.rhino.jstype.NamedType,152
+Wed Aug 23 20:01:06 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,1191
+Wed Aug 23 20:07:34 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,1192
+Wed Aug 23 20:07:35 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,1193
+Wed Aug 23 20:07:35 AEST 2017 Wed Aug 23 20:07:35 AEST 2017 : com.google.javascript.rhino.jstype.FunctionType,1194=>Find no block
+Wed Aug 23 20:07:36 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,339
+Wed Aug 23 20:18:11 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,340
+Wed Aug 23 20:18:11 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,341
+Wed Aug 23 20:18:11 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,342
+Wed Aug 23 20:18:12 AEST 2017 Wed Aug 23 20:18:12 AEST 2017 : com.google.javascript.jscomp.FunctionTypeBuilder,346=>Find no block
+Wed Aug 23 20:18:13 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,634
+Wed Aug 23 20:18:18 AEST 2017 Wed Aug 23 20:18:18 AEST 2017 : com.google.javascript.jscomp.FunctionTypeBuilder,169=>Find no block
+Wed Aug 23 20:18:19 AEST 2017 com.google.javascript.rhino.JSDocInfo,1283
+Wed Aug 23 20:18:51 AEST 2017 com.google.javascript.rhino.JSDocInfo,1286
+Wed Aug 23 20:20:07 AEST 2017 com.google.javascript.rhino.JSDocInfo,1297
+Wed Aug 23 20:21:26 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,338
+Wed Aug 23 20:26:36 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,2068
+Wed Aug 23 20:33:38 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,2069
+Wed Aug 23 20:33:39 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,2064
+Wed Aug 23 20:51:29 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,2065
+Wed Aug 23 20:51:29 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,2066
+Wed Aug 23 20:51:30 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,2067
+Wed Aug 23 20:51:30 AEST 2017 com.google.javascript.jscomp.NodeUtil,2841
+Wed Aug 23 20:51:31 AEST 2017 com.google.javascript.jscomp.BasicErrorManager,161
+Wed Aug 23 20:51:53 AEST 2017 com.google.javascript.rhino.jstype.NamedType,195
+Wed Aug 23 20:52:05 AEST 2017 com.google.javascript.rhino.jstype.NamedType,196
+Wed Aug 23 20:52:06 AEST 2017 com.google.javascript.rhino.jstype.NamedType,197
+Wed Aug 23 20:52:06 AEST 2017 com.google.javascript.rhino.jstype.NamedType,222
+Wed Aug 23 20:52:57 AEST 2017 com.google.javascript.rhino.jstype.NamedType,223
+Wed Aug 23 20:52:58 AEST 2017 com.google.javascript.rhino.JSDocInfo,1265
+Timeout time : 17/08/23 21:02
+Current failed test : com.google.javascript.jscomp.TypeCheckTest::testImplementsLoop | 17/08/23 21:02
+Wed Aug 23 21:03:05 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,497
+Wed Aug 23 21:03:16 AEST 2017 com.google.javascript.jscomp.TypeCheck,1613
+Wed Aug 23 21:03:35 AEST 2017 com.google.javascript.jscomp.TypeCheck,1619
+Wed Aug 23 21:06:55 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,1196
+Wed Aug 23 21:07:04 AEST 2017 com.google.javascript.jscomp.CodingConventions,400
+Wed Aug 23 21:07:07 AEST 2017 com.google.javascript.rhino.jstype.NamedType,305
+Wed Aug 23 21:07:27 AEST 2017 com.google.javascript.jscomp.CodingConventions,225
+Wed Aug 23 21:07:34 AEST 2017 com.google.javascript.jscomp.ClosureCodingConvention,318
+Wed Aug 23 21:10:54 AEST 2017 com.google.javascript.jscomp.ClosureCodingConvention,319
+Wed Aug 23 21:10:54 AEST 2017 com.google.javascript.rhino.jstype.NamedType,369
+Wed Aug 23 21:10:57 AEST 2017 com.google.javascript.rhino.jstype.NamedType,372
+Wed Aug 23 21:10:57 AEST 2017 com.google.javascript.rhino.jstype.NamedType,373
+Wed Aug 23 21:10:58 AEST 2017 com.google.javascript.jscomp.NodeUtil,2843
+Wed Aug 23 21:17:18 AEST 2017 com.google.javascript.rhino.jstype.CanCastToVisitor,104
+Wed Aug 23 21:28:42 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,496
+Wed Aug 23 21:28:42 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,187
+Wed Aug 23 21:29:40 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,488
+Wed Aug 23 21:29:51 AEST 2017 Wed Aug 23 21:29:51 AEST 2017 : com.google.javascript.rhino.jstype.FunctionType,489=>Find no block
+Wed Aug 23 21:29:51 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,494
+Wed Aug 23 21:36:19 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,495
+Wed Aug 23 21:36:21 AEST 2017 com.google.javascript.jscomp.TypeCheck,1606
+Wed Aug 23 21:37:55 AEST 2017 com.google.javascript.jscomp.TypeCheck,1607
+Wed Aug 23 21:37:56 AEST 2017 com.google.javascript.jscomp.TypeCheck,1608
+Wed Aug 23 21:37:56 AEST 2017 com.google.javascript.jscomp.TypeCheck,1609
+Wed Aug 23 21:37:57 AEST 2017 com.google.javascript.jscomp.TypeCheck,1611
+Wed Aug 23 21:37:57 AEST 2017 Wed Aug 23 21:37:57 AEST 2017 : com.google.javascript.jscomp.TypeCheck,1615=>Find no block
+Wed Aug 23 21:37:58 AEST 2017 com.google.javascript.jscomp.TypeCheck,1618
+Wed Aug 23 21:37:58 AEST 2017 Wed Aug 23 21:37:58 AEST 2017 : com.google.javascript.jscomp.TypeCheck,1621=>Find no block
+Wed Aug 23 21:37:59 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,179
+Wed Aug 23 21:37:59 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,176
+Wed Aug 23 21:39:18 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,344
+Wed Aug 23 21:41:22 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,172
+Wed Aug 23 21:41:41 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,173
+Wed Aug 23 21:42:39 AEST 2017 com.google.javascript.rhino.jstype.NamedType,152
+Wed Aug 23 21:42:42 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,1191
+Wed Aug 23 21:49:07 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,1192
+Wed Aug 23 21:49:08 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,1193
+Wed Aug 23 21:49:08 AEST 2017 Wed Aug 23 21:49:08 AEST 2017 : com.google.javascript.rhino.jstype.FunctionType,1194=>Find no block
+Wed Aug 23 21:49:09 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,339
+Wed Aug 23 21:59:56 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,340
+Wed Aug 23 21:59:56 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,341
+Wed Aug 23 21:59:57 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,342
+Wed Aug 23 21:59:57 AEST 2017 Wed Aug 23 21:59:57 AEST 2017 : com.google.javascript.jscomp.FunctionTypeBuilder,346=>Find no block
+Wed Aug 23 21:59:58 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,634
+Wed Aug 23 22:00:04 AEST 2017 Wed Aug 23 22:00:04 AEST 2017 : com.google.javascript.jscomp.FunctionTypeBuilder,169=>Find no block
+Wed Aug 23 22:00:04 AEST 2017 com.google.javascript.rhino.JSDocInfo,1283
+Wed Aug 23 22:00:38 AEST 2017 com.google.javascript.rhino.JSDocInfo,1286
+Wed Aug 23 22:01:58 AEST 2017 com.google.javascript.rhino.JSDocInfo,1297
+Wed Aug 23 22:03:16 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,338
+Wed Aug 23 22:09:00 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,2068
+Wed Aug 23 22:16:47 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,2069
+Wed Aug 23 22:16:48 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,2064
+Wed Aug 23 22:36:40 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,2065
+Wed Aug 23 22:36:41 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,2066
+Wed Aug 23 22:36:41 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,2067
+Wed Aug 23 22:36:42 AEST 2017 com.google.javascript.jscomp.NodeUtil,2841
+Wed Aug 23 22:36:42 AEST 2017 com.google.javascript.jscomp.BasicErrorManager,161
+Wed Aug 23 22:37:05 AEST 2017 com.google.javascript.rhino.jstype.NamedType,195
+Wed Aug 23 22:37:21 AEST 2017 com.google.javascript.rhino.jstype.NamedType,196
+Wed Aug 23 22:37:21 AEST 2017 com.google.javascript.rhino.jstype.NamedType,197
+Wed Aug 23 22:37:22 AEST 2017 com.google.javascript.rhino.jstype.NamedType,222
+Wed Aug 23 22:38:17 AEST 2017 com.google.javascript.rhino.jstype.NamedType,223
+Wed Aug 23 22:38:18 AEST 2017 com.google.javascript.rhino.JSDocInfo,1265
+Timeout time : 17/08/23 22:43

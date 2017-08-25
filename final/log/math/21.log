@@ -1,0 +1,399 @@
+=================================================
+Project : math_21	start : 17/08/24 10:10
+Current failed test : org.apache.commons.math3.linear.RectangularCholeskyDecompositionTest::testMath789_purify_3 | 17/08/24 10:11
+Thu Aug 24 10:13:48 AEST 2017 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,100
+Thu Aug 24 10:14:36 AEST 2017 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,105
+Thu Aug 24 10:30:00 AEST 2017 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,106
+Thu Aug 24 10:30:01 AEST 2017 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,115
+Thu Aug 24 10:44:50 AEST 2017 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,116
+Thu Aug 24 10:44:51 AEST 2017 org.apache.commons.math3.util.FastMath,3508
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(a>b){
+return b;
+}
+
+Time : 17/08/24 10:46
+----------------------------------------
+Thu Aug 24 11:03:39 AEST 2017 org.apache.commons.math3.util.FastMath,3511
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(a<b){
+return a;
+}
+
+Time : 17/08/24 11:06
+----------------------------------------
+Thu Aug 24 11:19:37 AEST 2017 org.apache.commons.math3.linear.MatrixUtils,130
+Thu Aug 24 11:19:55 AEST 2017 org.apache.commons.math3.linear.MatrixUtils,134
+Thu Aug 24 11:22:32 AEST 2017 org.apache.commons.math3.linear.MatrixUtils,523
+Thu Aug 24 11:23:48 AEST 2017 Thu Aug 24 11:23:48 AEST 2017 : org.apache.commons.math3.linear.MatrixUtils,528=>Find no block
+Thu Aug 24 11:23:49 AEST 2017 org.apache.commons.math3.linear.Array2DRowRealMatrix,456
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<j;++i){
+visitor.visit(i,j,data[i][j]);
+}
+
+Time : 17/08/24 11:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=rows;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+
+Time : 17/08/24 11:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<(rows-1);++i){
+visitor.visit(i,j,data[i][j]);
+}
+
+Time : 17/08/24 11:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=rows;i<(rows-1);++i){
+visitor.visit(i,j,data[i][j]);
+}
+
+Time : 17/08/24 11:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<columns;++j){
+for(int i=0;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 17/08/24 11:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=columns;j<columns;++j){
+for(int i=0;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 17/08/24 11:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<columns;++j){
+for(int i=0;i<j;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 17/08/24 11:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<columns;++j){
+for(int i=rows;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 17/08/24 12:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<columns;++j){
+for(int i=0;i<columns-i;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 17/08/24 12:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<rows;++j){
+for(int i=0;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 17/08/24 12:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<columns;++j){
+for(int i=rows;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 17/08/24 12:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<columns;++j){
+for(int i=0;i<=rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 17/08/24 12:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<columns;++j){
+for(int i=0;i<columns;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 17/08/24 12:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<=columns;++j){
+for(int i=rows;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 17/08/24 12:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<columns;++j){
+for(int i=rows;i<columns;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 17/08/24 12:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<=columns;++j){
+for(int i=rows;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 17/08/24 12:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<columns;++j){
+for(int i=rows;i<=rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 17/08/24 12:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<columns;++j){
+for(int i=rows;i<columns;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 17/08/24 12:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<columns;++j){
+for(int i=0;i<=columns;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 17/08/24 12:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<=columns;++j){
+for(int i=rows;i<columns;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 17/08/24 12:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<=columns;++j){
+for(int i=rows;i<columns;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 17/08/24 12:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<columns;++j){
+for(int i=rows;i<=columns;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 17/08/24 12:40
+----------------------------------------
+Timeout time : 17/08/24 12:43
+Current failed test : org.apache.commons.math3.linear.RectangularCholeskyDecompositionTest::testFullRank_purify_2 | 17/08/24 12:43
+Thu Aug 24 12:45:56 AEST 2017 org.apache.commons.math3.util.FastMath,3508
+Thu Aug 24 12:49:53 AEST 2017 org.apache.commons.math3.util.FastMath,3511
+Thu Aug 24 12:54:09 AEST 2017 org.apache.commons.math3.linear.MatrixUtils,130
+Thu Aug 24 12:54:13 AEST 2017 org.apache.commons.math3.linear.MatrixUtils,134
+Thu Aug 24 12:55:58 AEST 2017 org.apache.commons.math3.linear.MatrixUtils,523
+Thu Aug 24 12:56:57 AEST 2017 Thu Aug 24 12:56:57 AEST 2017 : org.apache.commons.math3.linear.MatrixUtils,528=>Find no block
+Thu Aug 24 12:56:58 AEST 2017 org.apache.commons.math3.linear.Array2DRowRealMatrix,456
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<rows;++i){
+visitor.visit(j,j,data[i][j]);
+}
+
+Time : 17/08/24 12:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<=j;++i){
+visitor.visit(i,j,data[i][j]);
+}
+
+Time : 17/08/24 13:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<columns;++j){
+for(int i=0;i<=j;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 17/08/24 13:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=0;j<columns;++j){
+for(int i=0;i<=j;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 17/08/24 13:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=0;j<rows;++j){
+for(int i=0;i<=j;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 17/08/24 13:44
+----------------------------------------
+Thu Aug 24 13:57:28 AEST 2017 org.apache.commons.math3.linear.Array2DRowRealMatrix,457
+Thu Aug 24 13:57:29 AEST 2017 org.apache.commons.math3.linear.Array2DRowRealMatrix,458
+Thu Aug 24 13:57:30 AEST 2017 org.apache.commons.math3.linear.Array2DRowRealMatrix,459
+Thu Aug 24 13:57:31 AEST 2017 org.apache.commons.math3.linear.Array2DRowRealMatrix,460
+Thu Aug 24 13:57:32 AEST 2017 org.apache.commons.math3.linear.Array2DRowRealMatrix,461
+Thu Aug 24 13:57:32 AEST 2017 org.apache.commons.math3.linear.Array2DRowRealMatrix,464
+Thu Aug 24 13:57:33 AEST 2017 org.apache.commons.math3.linear.AbstractRealMatrix,97
+Thu Aug 24 14:30:39 AEST 2017 org.apache.commons.math3.linear.AbstractRealMatrix,99
+Thu Aug 24 14:30:39 AEST 2017 org.apache.commons.math3.linear.AbstractRealMatrix,100
+Thu Aug 24 14:30:40 AEST 2017 org.apache.commons.math3.linear.AbstractRealMatrix,101
+Thu Aug 24 14:30:41 AEST 2017 org.apache.commons.math3.linear.AbstractRealMatrix,102
+Thu Aug 24 14:30:42 AEST 2017 org.apache.commons.math3.linear.AbstractRealMatrix,103
+Thu Aug 24 14:30:43 AEST 2017 org.apache.commons.math3.linear.AbstractRealMatrix,104
+Thu Aug 24 14:30:44 AEST 2017 org.apache.commons.math3.linear.AbstractRealMatrix,108
+Thu Aug 24 14:30:45 AEST 2017 org.apache.commons.math3.linear.AbstractRealMatrix,241
+Thu Aug 24 14:30:48 AEST 2017 org.apache.commons.math3.linear.AbstractRealMatrix,241
+Thu Aug 24 14:30:49 AEST 2017 org.apache.commons.math3.linear.AbstractRealMatrix,256
+Thu Aug 24 14:30:53 AEST 2017 org.apache.commons.math3.linear.AbstractRealMatrix,257
+Thu Aug 24 14:30:54 AEST 2017 org.apache.commons.math3.linear.AbstractRealMatrix,258
+Thu Aug 24 14:30:55 AEST 2017 Thu Aug 24 14:30:55 AEST 2017 : org.apache.commons.math3.linear.AbstractRealMatrix,259=>Find no block
+Thu Aug 24 14:30:55 AEST 2017 org.apache.commons.math3.linear.AbstractRealMatrix,263
+Thu Aug 24 14:50:56 AEST 2017 org.apache.commons.math3.linear.AbstractRealMatrix,264
+Thu Aug 24 14:54:58 AEST 2017 org.apache.commons.math3.linear.AbstractRealMatrix,265
+Thu Aug 24 14:54:59 AEST 2017 org.apache.commons.math3.linear.AbstractRealMatrix,266
+Thu Aug 24 14:55:00 AEST 2017 Thu Aug 24 14:55:00 AEST 2017 : org.apache.commons.math3.linear.AbstractRealMatrix,268=>Find no block
+Thu Aug 24 14:55:01 AEST 2017 org.apache.commons.math3.linear.AbstractRealMatrix,272
+Thu Aug 24 14:55:05 AEST 2017 org.apache.commons.math3.util.FastMath,3507
+Thu Aug 24 14:55:06 AEST 2017 org.apache.commons.math3.util.FastMath,3510
+Thu Aug 24 14:55:07 AEST 2017 Thu Aug 24 14:55:07 AEST 2017 : org.apache.commons.math3.linear.RectangularCholeskyDecomposition,63=>Find no block
+Thu Aug 24 14:55:08 AEST 2017 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,65
+Thu Aug 24 15:01:05 AEST 2017 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,66
+Thu Aug 24 15:01:06 AEST 2017 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,67
+Thu Aug 24 15:04:14 AEST 2017 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,69
+Thu Aug 24 15:08:48 AEST 2017 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,70
+Timeout time : 17/08/24 15:15

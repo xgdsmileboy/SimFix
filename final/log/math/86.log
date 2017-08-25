@@ -1,0 +1,358 @@
+=================================================
+Project : math_86	start : 17/08/24 09:50
+Current failed test : org.apache.commons.math.linear.CholeskyDecompositionImplTest::testMath274 | 17/08/24 09:51
+Thu Aug 24 09:52:42 AEST 2017 Thu Aug 24 09:52:42 AEST 2017 : org.apache.commons.math.linear.CholeskyDecompositionImpl,76=>Find no block
+Thu Aug 24 09:52:43 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,132
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int q=order-1;q>i;--q){
+ltI[q]*=inverse;
+ final double[] ltQ=lTData[q];
+for(int p=q;p<order;++p){
+throw new NotPositiveDefiniteMatrixException();
+}
+}
+
+Time : 17/08/24 09:56
+----------------------------------------
+Thu Aug 24 10:38:17 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,134
+Thu Aug 24 10:38:18 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,138
+Thu Aug 24 10:38:19 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,139
+Thu Aug 24 10:38:20 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,141
+Thu Aug 24 10:38:21 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,142
+Thu Aug 24 10:38:21 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,143
+Thu Aug 24 10:38:29 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,144
+Thu Aug 24 10:38:30 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,145
+Thu Aug 24 10:38:30 AEST 2017 Thu Aug 24 10:38:30 AEST 2017 : org.apache.commons.math.linear.CholeskyDecompositionImpl,151=>Find no block
+Thu Aug 24 10:38:32 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,104
+Thu Aug 24 10:40:29 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,105
+Thu Aug 24 10:43:04 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,106
+Thu Aug 24 10:44:07 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,107
+Thu Aug 24 10:44:08 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,110
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(DEFAULT_ABSOLUTE_POSITIVITY_THRESHOLD<=absolutePositivityThreshold){
+throw new NotPositiveDefiniteMatrixException();
+}
+
+Time : 17/08/24 10:49
+----------------------------------------
+Thu Aug 24 11:24:16 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,112
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double[] lI=lTData[i];
+if(DEFAULT_ABSOLUTE_POSITIVITY_THRESHOLD<=absolutePositivityThreshold){
+throw new NotPositiveDefiniteMatrixException();
+}
+
+Time : 17/08/24 11:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double[] lI=lTData[i];
+if(lTData[i][i]<=lI[i]){
+throw new NotPositiveDefiniteMatrixException();
+}
+
+Time : 17/08/24 11:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double[] lI=lTData[i];
+if(DEFAULT_ABSOLUTE_POSITIVITY_THRESHOLD<lI[i]){
+throw new NotPositiveDefiniteMatrixException();
+}
+
+Time : 17/08/24 11:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double[] lI=lTData[i];
+if(DEFAULT_ABSOLUTE_POSITIVITY_THRESHOLD<=lI[i]){
+throw new NotPositiveDefiniteMatrixException();
+}
+
+Time : 17/08/24 11:34
+----------------------------------------
+Thu Aug 24 11:36:22 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,114
+Thu Aug 24 11:36:23 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,118
+Thu Aug 24 11:36:24 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,119
+Thu Aug 24 11:36:24 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,120
+Thu Aug 24 11:36:25 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,121
+Thu Aug 24 11:36:26 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,122
+Thu Aug 24 11:36:27 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,124
+Thu Aug 24 11:36:27 AEST 2017 org.apache.commons.math.linear.CholeskyDecompositionImpl,127
+Thu Aug 24 11:36:28 AEST 2017 org.apache.commons.math.linear.DenseRealMatrix,618
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int p=pStart;p<pEnd;++p){
+ final double[] dataP=data[p];
+int blockIndex=iBlock*blockColumns;
+int dataPos=0;
+for(int jBlock=0;jBlock<blockColumns-1;++jBlock){
+System.arraycopy(blocks[blockIndex++],regularPos,dataP,dataPos,BLOCK_SIZE);
+dataPos+=BLOCK_SIZE;
+}
+System.arraycopy(blocks[blockIndex],lastPos,dataP,dataPos,dataPos);
+regularPos+=BLOCK_SIZE;
+lastPos+=lastColumns;
+}
+
+Time : 17/08/24 11:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int p=pStart;p<data.length;++p){
+ final double[] dataP=data[p];
+int blockIndex=iBlock*blockColumns;
+int dataPos=0;
+for(int jBlock=0;jBlock<blockColumns-1;++jBlock){
+System.arraycopy(blocks[blockIndex++],regularPos,dataP,dataPos,BLOCK_SIZE);
+dataPos+=BLOCK_SIZE;
+}
+System.arraycopy(blocks[blockIndex],lastPos,dataP,dataPos,dataPos);
+regularPos+=BLOCK_SIZE;
+lastPos+=lastColumns;
+}
+
+Time : 17/08/24 11:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int p=pStart;p<iBlock;++p){
+ final double[] dataP=data[p];
+int blockIndex=iBlock*blockColumns;
+int dataPos=0;
+for(int jBlock=0;jBlock<blockColumns-1;++jBlock){
+System.arraycopy(blocks[blockIndex++],regularPos,dataP,dataPos,BLOCK_SIZE);
+dataPos+=BLOCK_SIZE;
+}
+System.arraycopy(blocks[blockIndex],lastPos,dataP,dataPos,lastColumns);
+regularPos+=BLOCK_SIZE;
+lastPos+=lastColumns;
+}
+
+Time : 17/08/24 12:05
+----------------------------------------
+Thu Aug 24 12:08:15 AEST 2017 org.apache.commons.math.linear.DenseRealMatrix,619
+Thu Aug 24 12:08:15 AEST 2017 org.apache.commons.math.linear.DenseRealMatrix,621
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int iBlock=0;iBlock<blockRows;++iBlock){
+ final int pStart=iBlock*BLOCK_SIZE;
+ final int pEnd=Math.min(pStart+BLOCK_SIZE,rows);
+int regularPos=0;
+int lastPos=0;
+for(int p=pStart;p<pEnd;++p){
+ final double[] dataP=data[p];
+int blockIndex=iBlock*blockColumns;
+int dataPos=0;
+for(int jBlock=0;jBlock<blockColumns-1;++jBlock){
+System.arraycopy(blocks[blockIndex++],regularPos,dataP,dataPos,BLOCK_SIZE);
+dataPos+=BLOCK_SIZE;
+}
+System.arraycopy(blocks[blockIndex],lastPos,dataP,dataPos,pStart);
+regularPos+=BLOCK_SIZE;
+lastPos+=lastColumns;
+}
+}
+
+Time : 17/08/24 12:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int iBlock=0;iBlock<blockColumns;++iBlock){
+ final int pStart=iBlock*BLOCK_SIZE;
+ final int pEnd=Math.min(pStart+BLOCK_SIZE,rows);
+int regularPos=0;
+int lastPos=0;
+for(int p=pStart;p<pEnd;++p){
+ final double[] dataP=data[p];
+int blockIndex=iBlock*blockColumns;
+int dataPos=0;
+for(int jBlock=0;jBlock<blockColumns-1;++jBlock){
+System.arraycopy(blocks[blockIndex++],regularPos,dataP,dataPos,BLOCK_SIZE);
+dataPos+=BLOCK_SIZE;
+}
+System.arraycopy(blocks[blockIndex],lastPos,dataP,dataPos,pStart);
+regularPos+=BLOCK_SIZE;
+lastPos+=lastColumns;
+}
+}
+
+Time : 17/08/24 12:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int iBlock=0;iBlock<blockRows;++iBlock){
+ final int pStart=iBlock*BLOCK_SIZE;
+ final int pEnd=Math.min(pStart+BLOCK_SIZE,rows);
+int regularPos=BLOCK_SIZE;
+int lastPos=0;
+for(int p=pStart;p<pEnd;++p){
+ final double[] dataP=data[p];
+int blockIndex=iBlock*blockColumns;
+int dataPos=0;
+for(int jBlock=0;jBlock<blockColumns-1;++jBlock){
+System.arraycopy(blocks[blockIndex++],regularPos,dataP,dataPos,BLOCK_SIZE);
+dataPos+=BLOCK_SIZE;
+}
+System.arraycopy(blocks[blockIndex],lastPos,dataP,dataPos,pStart);
+regularPos+=BLOCK_SIZE;
+lastPos+=lastColumns;
+}
+}
+
+Time : 17/08/24 12:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int iBlock=0;iBlock<blockRows;++iBlock){
+ final int pStart=iBlock*BLOCK_SIZE;
+ final int pEnd=Math.min(pStart+BLOCK_SIZE,rows);
+int regularPos=0;
+int lastPos=pEnd;
+for(int p=pStart;p<pEnd;++p){
+ final double[] dataP=data[p];
+int blockIndex=iBlock*blockColumns;
+int dataPos=0;
+for(int jBlock=0;jBlock<blockColumns-1;++jBlock){
+System.arraycopy(blocks[blockIndex++],regularPos,dataP,dataPos,BLOCK_SIZE);
+dataPos+=BLOCK_SIZE;
+}
+System.arraycopy(blocks[blockIndex],lastPos,dataP,dataPos,pStart);
+regularPos+=BLOCK_SIZE;
+lastPos+=lastColumns;
+}
+}
+
+Time : 17/08/24 12:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int iBlock=0;iBlock<blockRows;++iBlock){
+ final int pStart=iBlock*BLOCK_SIZE;
+ final int pEnd=Math.min(pStart+BLOCK_SIZE,rows);
+int regularPos=0;
+int lastPos=regularPos;
+for(int p=pStart;p<pEnd;++p){
+ final double[] dataP=data[p];
+int blockIndex=iBlock*blockColumns;
+int dataPos=0;
+for(int jBlock=0;jBlock<blockColumns-1;++jBlock){
+System.arraycopy(blocks[blockIndex++],regularPos,dataP,dataPos,BLOCK_SIZE);
+dataPos+=BLOCK_SIZE;
+}
+System.arraycopy(blocks[blockIndex],lastPos,dataP,dataPos,pStart);
+regularPos+=BLOCK_SIZE;
+lastPos+=lastColumns;
+}
+}
+
+Time : 17/08/24 12:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int iBlock=0;iBlock<blockColumns;++iBlock){
+ final int pStart=iBlock*BLOCK_SIZE;
+ final int pEnd=Math.min(pStart+BLOCK_SIZE,rows);
+int regularPos=BLOCK_SIZE;
+int lastPos=0;
+for(int p=pStart;p<pEnd;++p){
+ final double[] dataP=data[p];
+int blockIndex=iBlock*blockColumns;
+int dataPos=0;
+for(int jBlock=0;jBlock<blockColumns-1;++jBlock){
+System.arraycopy(blocks[blockIndex++],regularPos,dataP,dataPos,BLOCK_SIZE);
+dataPos+=BLOCK_SIZE;
+}
+System.arraycopy(blocks[blockIndex],lastPos,dataP,dataPos,pStart);
+regularPos+=BLOCK_SIZE;
+lastPos+=lastColumns;
+}
+}
+
+Time : 17/08/24 12:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int iBlock=0;iBlock<blockColumns;++iBlock){
+ final int pStart=iBlock*BLOCK_SIZE;
+ final int pEnd=Math.min(pStart+BLOCK_SIZE,rows);
+int regularPos=0;
+int lastPos=pEnd;
+for(int p=pStart;p<pEnd;++p){
+ final double[] dataP=data[p];
+int blockIndex=iBlock*blockColumns;
+int dataPos=0;
+for(int jBlock=0;jBlock<blockColumns-1;++jBlock){
+System.arraycopy(blocks[blockIndex++],regularPos,dataP,dataPos,BLOCK_SIZE);
+dataPos+=BLOCK_SIZE;
+}
+System.arraycopy(blocks[blockIndex],lastPos,dataP,dataPos,pStart);
+regularPos+=BLOCK_SIZE;
+lastPos+=lastColumns;
+}
+}
+
+Time : 17/08/24 12:22
+----------------------------------------
+Timeout time : 17/08/24 12:23
+Current failed test : org.apache.commons.math.linear.CholeskyDecompositionImplTest::testNotPositiveDefinite | 17/08/24 12:23
+Thu Aug 24 12:23:59 AEST 2017 org.apache.commons.math.linear.AbstractRealMatrix,991
+Thu Aug 24 12:26:17 AEST 2017 org.apache.commons.math.linear.AbstractRealMatrix,992
+Thu Aug 24 12:26:18 AEST 2017 org.apache.commons.math.linear.AbstractRealMatrix,993
+Thu Aug 24 12:27:40 AEST 2017 org.apache.commons.math.linear.AbstractRealMatrix,994
+Thu Aug 24 12:27:53 AEST 2017 org.apache.commons.math.linear.AbstractRealMatrix,995
+Thu Aug 24 12:30:51 AEST 2017 org.apache.commons.math.linear.AbstractRealMatrix,996
+Thu Aug 24 12:30:52 AEST 2017 org.apache.commons.math.linear.AbstractRealMatrix,998
+Thu Aug 24 12:58:10 AEST 2017 org.apache.commons.math.linear.AbstractRealMatrix,999
+Thu Aug 24 12:58:11 AEST 2017 org.apache.commons.math.linear.AbstractRealMatrix,1000
+Thu Aug 24 12:58:12 AEST 2017 org.apache.commons.math.linear.AbstractRealMatrix,1002
+Thu Aug 24 12:58:13 AEST 2017 org.apache.commons.math.linear.AbstractRealMatrix,1003
+Thu Aug 24 12:58:14 AEST 2017 org.apache.commons.math.linear.AbstractRealMatrix,1004
+Thu Aug 24 12:58:16 AEST 2017 org.apache.commons.math.linear.AbstractRealMatrix,1005
+Thu Aug 24 12:58:17 AEST 2017 org.apache.commons.math.linear.AbstractRealMatrix,1007
+Thu Aug 24 12:58:18 AEST 2017 org.apache.commons.math.linear.AbstractRealMatrix,1009
+Thu Aug 24 12:58:19 AEST 2017 org.apache.commons.math.linear.AbstractRealMatrix,1012
+Thu Aug 24 13:21:08 AEST 2017 org.apache.commons.math.linear.AbstractRealMatrix,1013
+Thu Aug 24 13:50:54 AEST 2017 org.apache.commons.math.linear.MatrixUtils,627
+Thu Aug 24 13:52:02 AEST 2017 Thu Aug 24 13:52:02 AEST 2017 : org.apache.commons.math.linear.MatrixUtils,633=>Find no block
+Thu Aug 24 13:52:03 AEST 2017 org.apache.commons.math.linear.DenseRealMatrix,492
+Thu Aug 24 13:52:08 AEST 2017 org.apache.commons.math.linear.DenseRealMatrix,555
+Thu Aug 24 13:55:12 AEST 2017 org.apache.commons.math.linear.DenseRealMatrix,557
+Thu Aug 24 13:55:13 AEST 2017 org.apache.commons.math.linear.DenseRealMatrix,560
+Thu Aug 24 13:55:14 AEST 2017 org.apache.commons.math.linear.DenseRealMatrix,561
+Timeout time : 17/08/24 14:54

@@ -1,0 +1,678 @@
+=================================================
+Project : closure_99	start : 17/08/23 22:44
+Current failed test : com.google.javascript.jscomp.CheckGlobalThisTest::testInterface1 | 17/08/23 22:45
+Wed Aug 23 22:46:46 AEST 2017 com.google.javascript.rhino.JSDocInfo,276
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+setFlag(value,MASK_CONSTRUCTOR);
+
+Time : 17/08/23 22:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+setFlag(value,MASK_OVERRIDE);
+
+Time : 17/08/23 22:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+setFlag(value,MASK_EXTERNS);
+
+Time : 17/08/23 22:52
+----------------------------------------
+Wed Aug 23 22:55:14 AEST 2017 Wed Aug 23 22:55:14 AEST 2017 : com.google.javascript.rhino.JSDocInfo,277=>Find no block
+Wed Aug 23 22:55:15 AEST 2017 com.google.javascript.rhino.JSDocInfoBuilder,677
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!hasAnySingletonTypeTags()&&!currentInfo.isConstructor()){
+currentInfo.setConstructor(true);
+populated=true;
+return true;
+}else {
+return false;
+}
+
+Time : 17/08/23 22:55
+----------------------------------------
+Wed Aug 23 22:59:57 AEST 2017 com.google.javascript.rhino.JSDocInfoBuilder,679
+Wed Aug 23 22:59:58 AEST 2017 com.google.javascript.rhino.JSDocInfoBuilder,680
+Wed Aug 23 22:59:58 AEST 2017 com.google.javascript.rhino.JSDocInfoBuilder,681
+Wed Aug 23 23:00:00 AEST 2017 com.google.javascript.jscomp.parsing.JsDocInfoParser,228
+Wed Aug 23 23:02:21 AEST 2017 com.google.javascript.jscomp.parsing.JsDocInfoParser,237
+Wed Aug 23 23:06:03 AEST 2017 com.google.javascript.jscomp.parsing.JsDocInfoParser,238
+Wed Aug 23 23:10:39 AEST 2017 com.google.javascript.rhino.JSDocInfo,365
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return getFlag(MASK_INTERFACE);
+
+Time : 17/08/23 23:12
+----------------------------------------
+Wed Aug 23 23:15:33 AEST 2017 com.google.javascript.jscomp.CheckGlobalThis,154
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(assignLhsChild!=null){
+return true;
+}
+return parent==null&&NodeUtil.isGet(parent);
+
+Time : 17/08/23 23:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(assignLhsChild!=null){
+return true;
+}
+return parent.getFirstChild()==assignLhsChild&&NodeUtil.isGet(parent);
+
+Time : 17/08/23 23:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(assignLhsChild!=null){
+return true;
+}
+return parent==assignLhsChild&&NodeUtil.isGet(parent);
+
+Time : 17/08/23 23:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(parent!=null){
+return false;
+}
+return parent!=null&&NodeUtil.isGet(parent);
+
+Time : 17/08/23 23:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n!=null){
+return false;
+}
+return parent!=null&&NodeUtil.isGet(parent);
+
+Time : 17/08/23 23:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(assignLhsChild==null){
+return false;
+}
+return parent!=null&&NodeUtil.isGet(parent);
+
+Time : 17/08/23 23:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(assignLhsChild!=parent.getFirstChild()){
+return false;
+}
+return parent!=null&&NodeUtil.isGet(parent);
+
+Time : 17/08/23 23:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(assignLhsChild==null){
+if(parent.getFirstChild().getQualifiedName()!=null&&parent.getFirstChild().getQualifiedName().contains(".prototype.")){
+return false;
+}
+return false;
+}
+return parent!=null&&NodeUtil.isGet(parent);
+
+Time : 17/08/23 23:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(assignLhsChild!=parent.getFirstChild()){
+if(parent.getFirstChild().getQualifiedName()!=null&&parent.getFirstChild().getQualifiedName().contains(".prototype.")){
+return false;
+}
+return false;
+}
+return parent!=null&&NodeUtil.isGet(parent);
+
+Time : 17/08/23 23:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n!=null){
+if(parent.getFirstChild().getQualifiedName()!=null&&parent.getFirstChild().getQualifiedName().contains(".prototype.")){
+return false;
+}
+return false;
+}
+return parent!=null&&NodeUtil.isGet(parent);
+
+Time : 17/08/23 23:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n==parent.getFirstChild()){
+return false;
+}
+return parent!=null&&NodeUtil.isGet(parent);
+
+Time : 17/08/23 23:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(parent!=assignLhsChild){
+return false;
+}
+return parent!=null&&NodeUtil.isGet(parent);
+
+Time : 17/08/23 23:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(assignLhsChild!=null){
+return true;
+}
+return n.getType()==Token.BLOCK&&NodeUtil.isGet(parent);
+
+Time : 17/08/23 23:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(assignLhsChild!=null){
+return true;
+}
+return parent!=null&&NodeUtil.isCall(parent);
+
+Time : 17/08/23 23:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(assignLhsChild!=null){
+return true;
+}
+return parent==null&&NodeUtil.isCall(parent);
+
+Time : 17/08/23 23:55
+----------------------------------------
+Thu Aug 24 00:04:32 AEST 2017 com.google.javascript.jscomp.JSError,187
+Thu Aug 24 00:04:35 AEST 2017 com.google.javascript.jscomp.CheckGlobalThis,140
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.NAME&&shouldReportThis(n,parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 00:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.LP&&shouldReportThis(n,parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 00:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.THIS&&NodeUtil.isAssignmentOp(parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 00:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.OBJECTLIT&&shouldReportThis(n,parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 00:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.THIS&&NodeUtil.isExpressionNode(parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 00:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.ASSIGN&&shouldReportThis(n,parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 00:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getJSType()!=null&&shouldReportThis(n,parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 00:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.THIS&&t.inGlobalScope()){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 00:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.DEC&&shouldReportThis(n,parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 00:25
+----------------------------------------
+Timeout time : 17/08/24 00:27
+Current failed test : com.google.javascript.jscomp.CheckGlobalThisTest::testMethod4 | 17/08/24 00:27
+Thu Aug 24 00:28:47 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,913
+Thu Aug 24 00:28:54 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,145
+Thu Aug 24 00:31:54 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,232
+Thu Aug 24 00:35:05 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,458
+Thu Aug 24 00:35:08 AEST 2017 com.google.javascript.rhino.Node,1705
+Thu Aug 24 00:40:08 AEST 2017 com.google.javascript.jscomp.CheckGlobalThis,150
+Thu Aug 24 00:41:13 AEST 2017 com.google.javascript.rhino.Node,1707
+Thu Aug 24 00:41:14 AEST 2017 com.google.javascript.rhino.Node,507
+Thu Aug 24 00:41:16 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,258
+Thu Aug 24 00:44:26 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,713
+Thu Aug 24 00:53:10 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,714
+Thu Aug 24 00:53:10 AEST 2017 com.google.javascript.jscomp.JSError,187
+Thu Aug 24 00:53:13 AEST 2017 com.google.javascript.jscomp.CheckGlobalThis,140
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.LP&&shouldReportThis(n,parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 00:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.THIS&&NodeUtil.isAssignmentOp(parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 00:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.OBJECTLIT&&shouldReportThis(n,parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 00:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.THIS&&NodeUtil.isExpressionNode(parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 01:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.ASSIGN&&shouldReportThis(n,parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 01:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getJSType()!=null&&shouldReportThis(n,parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 01:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.THIS&&t.inGlobalScope()){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 01:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.DEC&&shouldReportThis(n,parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 01:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.THIS&&parent.hasOneChild()){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 01:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.INSTANCEOF&&shouldReportThis(n,parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 01:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.THIS&&NodeUtil.isVar(parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 01:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.COMMA&&shouldReportThis(n,parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 01:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.THIS&&n.getNext().getString().equals("call")){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 01:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.THIS&&n.hasChildren()){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 01:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.THIS&&NodeUtil.isLhs(n,parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 01:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.THIS&&NodeUtil.isFunctionExpression(n)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 01:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.THIS&&NodeUtil.isFunction(n)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 01:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.THIS&&NodeUtil.isGetProp(n)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 01:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.VAR&&shouldReportThis(n,parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 01:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.THIS&&NodeUtil.isStatementBlock(n)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 01:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getJSDocInfo()!=null&&n.getJSDocInfo().isExterns()){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 01:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getJSDocInfo()!=null&&shouldReportThis(n,parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 01:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getJSDocInfo()!=null&&n.getJSDocInfo().isExterns()){
+assignLhsChild.addChildToBack(n);
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 01:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getJSDocInfo()!=null&&shouldReportThis(n,parent)){
+assignLhsChild.addChildToBack(n);
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 02:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n==null&&shouldReportThis(n,parent)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 02:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.THIS&&NodeUtil.isControlStructure(n)){
+compiler.report(t.makeError(n,level,GLOBAL_THIS));
+}
+
+Time : 17/08/24 02:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()==Token.THIS&&NodeUtil.isControlStructure(n)){
+throw new IllegalArgumentException(Token.name(n.getType())+" nodes are not supported.");
+}
+
+Time : 17/08/24 02:08
+----------------------------------------
+Timeout time : 17/08/24 02:10
+Current failed test : com.google.javascript.jscomp.CheckGlobalThisTest::testPropertyOfMethod | 17/08/24 02:10
+Thu Aug 24 02:11:48 AEST 2017 com.google.javascript.jscomp.CheckGlobalThis,130
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lhs.getType()==Token.GETPROP&&lhs.getLastChild().getString().equals("prototype")){
+return false;
+}
+
+Time : 17/08/24 02:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lhs.getQualifiedName()==null&&lhs.getQualifiedName().contains(".prototype.")){
+return false;
+}
+
+Time : 17/08/24 02:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lhs.getQualifiedName()!=null&&lhs.getLastChild().getString().equals("prototype")){
+return false;
+}
+
+Time : 17/08/24 02:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lhs.getQualifiedName()==null&&lhs.getLastChild().getString().equals("prototype")){
+return false;
+}
+
+Time : 17/08/24 02:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lhs.getType()==Token.ASSIGN&&lhs.getQualifiedName().contains(".prototype.")){
+return false;
+}
+
+Time : 17/08/24 02:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lhs.getType()==Token.NAME&&lhs.getQualifiedName().contains(".prototype.")){
+return false;
+}
+
+Time : 17/08/24 02:23
+----------------------------------------
+Thu Aug 24 02:27:11 AEST 2017 com.google.javascript.jscomp.PrepareAst,202
+Timeout time : 17/08/24 03:51

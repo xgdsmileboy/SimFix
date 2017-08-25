@@ -1,0 +1,134 @@
+=================================================
+Project : closure_42	start : 17/08/23 17:41
+Current failed test : com.google.javascript.jscomp.parsing.ParserTest::testForEach | 17/08/23 17:42
+Wed Aug 23 17:42:27 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,218
+Wed Aug 23 17:42:36 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,570
+Wed Aug 23 17:42:44 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,182
+Wed Aug 23 17:43:48 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,492
+Wed Aug 23 17:47:40 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,493
+Wed Aug 23 17:48:24 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,499
+Wed Aug 23 17:48:25 AEST 2017 Wed Aug 23 17:48:25 AEST 2017 : com.google.javascript.rhino.jstype.SimpleSourceFile,50=>Find no block
+Wed Aug 23 17:48:26 AEST 2017 com.google.javascript.rhino.jstype.SimpleSourceFile,51
+Wed Aug 23 17:49:05 AEST 2017 com.google.javascript.rhino.jstype.SimpleSourceFile,52
+Wed Aug 23 17:49:06 AEST 2017 Wed Aug 23 17:49:06 AEST 2017 : com.google.javascript.rhino.jstype.SimpleSourceFile,53=>Find no block
+Wed Aug 23 17:49:07 AEST 2017 com.google.javascript.rhino.jstype.SimpleSourceFile,57
+Wed Aug 23 17:49:27 AEST 2017 com.google.javascript.jscomp.parsing.ParserRunner,57
+Wed Aug 23 17:49:30 AEST 2017 com.google.javascript.rhino.jstype.JSTypeRegistry,199
+Wed Aug 23 17:49:34 AEST 2017 Wed Aug 23 17:49:34 AEST 2017 : com.google.javascript.rhino.jstype.JSTypeRegistry,200=>Find no block
+Wed Aug 23 17:49:35 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1112
+Wed Aug 23 17:49:44 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,217
+Wed Aug 23 17:49:45 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1297
+Wed Aug 23 17:49:50 AEST 2017 Wed Aug 23 17:49:50 AEST 2017 : com.google.javascript.rhino.Node,392=>Find no block
+Wed Aug 23 17:49:51 AEST 2017 com.google.javascript.rhino.Node,393
+Wed Aug 23 17:55:35 AEST 2017 com.google.javascript.rhino.Node,394
+Wed Aug 23 17:55:35 AEST 2017 com.google.javascript.rhino.Node,395
+Wed Aug 23 18:01:17 AEST 2017 com.google.javascript.rhino.Node,396
+Wed Aug 23 18:06:58 AEST 2017 com.google.javascript.rhino.Node,397
+Wed Aug 23 18:12:41 AEST 2017 com.google.javascript.rhino.Node,398
+Wed Aug 23 18:22:22 AEST 2017 com.google.javascript.rhino.Node,399
+Wed Aug 23 18:33:04 AEST 2017 com.google.javascript.rhino.Node,400
+Wed Aug 23 18:39:39 AEST 2017 com.google.javascript.rhino.Node,401
+Wed Aug 23 18:45:13 AEST 2017 com.google.javascript.rhino.Node,402
+Wed Aug 23 18:50:00 AEST 2017 com.google.javascript.rhino.Node,403
+Wed Aug 23 18:56:01 AEST 2017 com.google.javascript.rhino.Node,404
+Wed Aug 23 19:01:32 AEST 2017 com.google.javascript.rhino.Node,405
+Wed Aug 23 19:06:29 AEST 2017 com.google.javascript.rhino.Node,406
+Wed Aug 23 19:11:54 AEST 2017 com.google.javascript.rhino.Node,407
+Wed Aug 23 19:15:03 AEST 2017 com.google.javascript.rhino.Node,408
+Wed Aug 23 19:18:31 AEST 2017 com.google.javascript.rhino.Node,409
+Wed Aug 23 19:18:33 AEST 2017 Wed Aug 23 19:18:33 AEST 2017 : com.google.javascript.rhino.Node,410=>Find no block
+Wed Aug 23 19:18:33 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,236
+Wed Aug 23 19:20:05 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,667
+Wed Aug 23 19:32:06 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,668
+Wed Aug 23 19:32:07 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,669
+Wed Aug 23 19:32:08 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,670
+Wed Aug 23 19:32:09 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,673
+Wed Aug 23 19:32:10 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1168
+Wed Aug 23 19:32:19 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,173
+Wed Aug 23 19:32:22 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,174
+Wed Aug 23 19:32:23 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,860
+Wed Aug 23 19:32:27 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,211
+Wed Aug 23 19:36:07 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,212
+Wed Aug 23 19:37:37 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,224
+Wed Aug 23 19:41:21 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,197
+Wed Aug 23 19:42:35 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,555
+Wed Aug 23 19:45:02 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,556
+Wed Aug 23 19:45:03 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,142
+Wed Aug 23 19:45:16 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,143
+Wed Aug 23 19:45:23 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,144
+Wed Aug 23 19:46:34 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,215
+Wed Aug 23 19:47:45 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,690
+Wed Aug 23 19:48:00 AEST 2017 com.google.javascript.rhino.jstype.PrototypeObjectType,153
+Wed Aug 23 19:52:26 AEST 2017 com.google.javascript.rhino.jstype.PrototypeObjectType,154
+Wed Aug 23 19:52:27 AEST 2017 com.google.javascript.rhino.jstype.PrototypeObjectType,155
+Wed Aug 23 19:52:29 AEST 2017 com.google.javascript.rhino.jstype.PrototypeObjectType,157
+Wed Aug 23 19:52:30 AEST 2017 com.google.javascript.rhino.jstype.PrototypeObjectType,158
+Wed Aug 23 19:52:31 AEST 2017 com.google.javascript.rhino.jstype.PrototypeObjectType,163
+Wed Aug 23 19:52:31 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,371
+Wed Aug 23 19:52:40 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,384
+Wed Aug 23 19:59:22 AEST 2017 Wed Aug 23 19:59:22 AEST 2017 : com.google.javascript.jscomp.parsing.IRFactory,385=>Find no block
+Wed Aug 23 19:59:22 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,655
+Wed Aug 23 20:04:14 AEST 2017 Wed Aug 23 20:04:14 AEST 2017 : com.google.javascript.jscomp.parsing.IRFactory,656=>Find no block
+Wed Aug 23 20:04:15 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1197
+Wed Aug 23 20:04:23 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,232
+Wed Aug 23 20:05:44 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,822
+Wed Aug 23 20:07:37 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,823
+Wed Aug 23 20:07:38 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,825
+Wed Aug 23 20:07:39 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,826
+Wed Aug 23 20:07:39 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,827
+Wed Aug 23 20:07:40 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,828
+Wed Aug 23 20:07:41 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,159
+Wed Aug 23 20:08:54 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,429
+Wed Aug 23 20:24:31 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,430
+Wed Aug 23 20:24:32 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,431
+Wed Aug 23 20:24:33 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,437
+Wed Aug 23 20:24:33 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,282
+Wed Aug 23 20:25:32 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,283
+Wed Aug 23 20:25:33 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,284
+Wed Aug 23 20:25:33 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,287
+Wed Aug 23 20:25:34 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,288
+Wed Aug 23 20:25:34 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,401
+Wed Aug 23 20:25:41 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,730
+Wed Aug 23 20:26:40 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1009
+Wed Aug 23 20:31:08 AEST 2017 Wed Aug 23 20:31:08 AEST 2017 : com.google.javascript.jscomp.parsing.IRFactory,1005=>Find no block
+Wed Aug 23 20:31:09 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,400
+Wed Aug 23 20:31:10 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,409
+Wed Aug 23 20:40:45 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,410
+Wed Aug 23 20:40:46 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,646
+Wed Aug 23 20:41:20 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,265
+Wed Aug 23 20:41:28 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,266
+Wed Aug 23 20:41:30 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,267
+Wed Aug 23 20:41:30 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,268
+Wed Aug 23 20:41:31 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1016
+Wed Aug 23 20:42:15 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1021
+Wed Aug 23 21:02:00 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1022
+Wed Aug 23 21:02:01 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1023
+Wed Aug 23 21:02:02 AEST 2017 Wed Aug 23 21:02:02 AEST 2017 : com.google.javascript.jscomp.parsing.IRFactory,1024=>Find no block
+Wed Aug 23 21:02:03 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1025
+Wed Aug 23 21:02:04 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1030
+Wed Aug 23 21:06:19 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1031
+Wed Aug 23 21:07:21 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1035
+Wed Aug 23 21:07:22 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,678
+Wed Aug 23 21:19:51 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,682
+Wed Aug 23 21:19:52 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,683
+Wed Aug 23 21:19:52 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,684
+Wed Aug 23 21:19:54 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,685
+Wed Aug 23 21:19:54 AEST 2017 com.google.javascript.rhino.Node,2321
+Wed Aug 23 21:19:58 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,228
+Wed Aug 23 21:21:20 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,604
+Wed Aug 23 21:24:09 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,605
+Wed Aug 23 21:24:10 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,606
+Wed Aug 23 21:24:11 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,621
+Wed Aug 23 21:27:50 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,622
+Wed Aug 23 21:31:32 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,623
+Wed Aug 23 21:31:58 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,636
+Wed Aug 23 21:43:47 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,637
+Wed Aug 23 21:57:30 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,644
+Wed Aug 23 21:59:24 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,645
+Wed Aug 23 21:59:25 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,650
+Wed Aug 23 22:00:44 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,653
+Wed Aug 23 22:08:21 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,654
+Wed Aug 23 22:08:22 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,657
+Wed Aug 23 22:25:38 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,659
+Wed Aug 23 22:35:41 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,660
+Timeout time : 17/08/23 22:42

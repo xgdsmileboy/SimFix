@@ -1,0 +1,238 @@
+=================================================
+Project : math_97	start : 17/08/24 10:32
+Current failed test : org.apache.commons.math.analysis.BrentSolverTest::testRootEndpoints | 17/08/24 10:32
+Thu Aug 24 10:33:27 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,169
+Thu Aug 24 10:34:07 AEST 2017 org.apache.commons.math.analysis.BrentSolver,141
+Thu Aug 24 10:37:42 AEST 2017 org.apache.commons.math.analysis.BrentSolver,193
+Thu Aug 24 10:41:46 AEST 2017 org.apache.commons.math.analysis.BrentSolver,194
+Thu Aug 24 10:41:46 AEST 2017 org.apache.commons.math.analysis.BrentSolver,182
+Thu Aug 24 11:12:57 AEST 2017 org.apache.commons.math.analysis.BrentSolver,183
+Thu Aug 24 11:12:57 AEST 2017 org.apache.commons.math.analysis.BrentSolver,184
+Thu Aug 24 11:12:57 AEST 2017 org.apache.commons.math.analysis.BrentSolver,185
+Thu Aug 24 11:12:58 AEST 2017 org.apache.commons.math.analysis.BrentSolver,186
+Thu Aug 24 11:12:59 AEST 2017 org.apache.commons.math.analysis.BrentSolver,187
+Thu Aug 24 11:12:59 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,140
+Thu Aug 24 11:13:15 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,141
+Thu Aug 24 11:13:15 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,142
+Thu Aug 24 11:13:15 AEST 2017 Thu Aug 24 11:13:15 AEST 2017 : org.apache.commons.math.analysis.UnivariateRealSolverImpl,143=>Find no block
+Thu Aug 24 11:13:16 AEST 2017 org.apache.commons.math.analysis.BrentSolver,151
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sign*ret>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+return ret;
+
+Time : 17/08/24 11:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+clearResult();
+if(sign*ret>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+return ret;
+
+Time : 17/08/24 11:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+verifyInterval(min,max);
+if(sign*ret>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+return ret;
+
+Time : 17/08/24 11:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+clearResult();
+verifyInterval(min,max);
+if(sign*ret>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+return ret;
+
+Time : 17/08/24 11:16
+----------------------------------------
+Thu Aug 24 11:19:54 AEST 2017 org.apache.commons.math.analysis.BrentSolver,147
+Thu Aug 24 11:19:54 AEST 2017 org.apache.commons.math.analysis.BrentSolver,175
+Thu Aug 24 11:23:31 AEST 2017 org.apache.commons.math.analysis.BrentSolver,176
+Thu Aug 24 11:23:31 AEST 2017 org.apache.commons.math.analysis.BrentSolver,178
+Thu Aug 24 11:23:32 AEST 2017 org.apache.commons.math.analysis.BrentSolver,179
+Thu Aug 24 14:18:02 AEST 2017 org.apache.commons.math.analysis.BrentSolver,180
+Thu Aug 24 14:18:02 AEST 2017 org.apache.commons.math.analysis.BrentSolver,189
+Thu Aug 24 14:18:03 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,149
+Thu Aug 24 14:19:08 AEST 2017 Thu Aug 24 14:19:08 AEST 2017 : org.apache.commons.math.analysis.UnivariateRealSolverImpl,150=>Find no block
+Thu Aug 24 14:19:08 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,295
+Thu Aug 24 14:19:36 AEST 2017 Thu Aug 24 14:19:36 AEST 2017 : org.apache.commons.math.analysis.UnivariateRealSolverImpl,300=>Find no block
+Thu Aug 24 14:19:36 AEST 2017 org.apache.commons.math.analysis.BrentSolver,128
+Thu Aug 24 14:20:18 AEST 2017 org.apache.commons.math.analysis.BrentSolver,129
+Thu Aug 24 14:20:19 AEST 2017 org.apache.commons.math.analysis.BrentSolver,131
+Thu Aug 24 14:23:09 AEST 2017 org.apache.commons.math.analysis.BrentSolver,133
+Thu Aug 24 14:26:08 AEST 2017 org.apache.commons.math.analysis.BrentSolver,134
+Thu Aug 24 14:28:34 AEST 2017 org.apache.commons.math.analysis.BrentSolver,137
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double yMax=f.value(max);
+double sign=yMin*yMax;
+sign=Math.max(ret*Math.abs(min),yMin);
+if(sign>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+
+Time : 17/08/24 14:35
+----------------------------------------
+Thu Aug 24 14:36:32 AEST 2017 org.apache.commons.math.analysis.BrentSolver,138
+Thu Aug 24 14:36:32 AEST 2017 Thu Aug 24 14:36:32 AEST 2017 : org.apache.commons.math.analysis.BrentSolver,43=>Find no block
+Thu Aug 24 14:36:33 AEST 2017 org.apache.commons.math.analysis.BrentSolver,42
+Thu Aug 24 14:36:40 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,93
+Thu Aug 24 14:39:07 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,94
+Thu Aug 24 14:42:18 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,95
+Thu Aug 24 14:43:16 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,96
+Thu Aug 24 14:45:47 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,97
+Thu Aug 24 14:46:54 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,98
+Thu Aug 24 14:48:02 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,99
+Thu Aug 24 14:48:48 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,100
+Thu Aug 24 14:50:02 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,101
+Thu Aug 24 14:50:02 AEST 2017 Thu Aug 24 14:50:02 AEST 2017 : org.apache.commons.math.analysis.UnivariateRealSolverImpl,102=>Find no block
+Thu Aug 24 14:50:03 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,87
+Thu Aug 24 14:50:56 AEST 2017 Thu Aug 24 14:50:56 AEST 2017 : org.apache.commons.math.analysis.UnivariateRealSolverImpl,61=>Find no block
+Thu Aug 24 14:50:56 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,89
+Thu Aug 24 14:51:50 AEST 2017 org.apache.commons.math.MaxIterationsExceededException,43
+Thu Aug 24 14:51:51 AEST 2017 org.apache.commons.math.MaxIterationsExceededException,45
+Thu Aug 24 14:51:51 AEST 2017 Thu Aug 24 14:51:51 AEST 2017 : org.apache.commons.math.MaxIterationsExceededException,46=>Find no block
+Thu Aug 24 14:51:52 AEST 2017 org.apache.commons.math.MaxIterationsExceededException,57
+Thu Aug 24 14:52:42 AEST 2017 org.apache.commons.math.MaxIterationsExceededException,58
+Thu Aug 24 14:52:42 AEST 2017 Thu Aug 24 14:52:42 AEST 2017 : org.apache.commons.math.MaxIterationsExceededException,59=>Find no block
+Thu Aug 24 14:52:42 AEST 2017 org.apache.commons.math.MaxIterationsExceededException,65
+Thu Aug 24 14:52:43 AEST 2017 org.apache.commons.math.ConvergenceException,34
+Thu Aug 24 14:52:44 AEST 2017 Thu Aug 24 14:52:44 AEST 2017 : org.apache.commons.math.ConvergenceException,35=>Find no block
+Thu Aug 24 14:52:45 AEST 2017 org.apache.commons.math.ConvergenceException,45
+Thu Aug 24 14:53:15 AEST 2017 Thu Aug 24 14:53:15 AEST 2017 : org.apache.commons.math.ConvergenceException,46=>Find no block
+Thu Aug 24 14:53:16 AEST 2017 org.apache.commons.math.ConvergenceException,53
+Thu Aug 24 14:53:17 AEST 2017 Thu Aug 24 14:53:17 AEST 2017 : org.apache.commons.math.ConvergenceException,54=>Find no block
+Thu Aug 24 14:53:17 AEST 2017 org.apache.commons.math.ConvergenceException,65
+Thu Aug 24 14:54:03 AEST 2017 Thu Aug 24 14:54:03 AEST 2017 : org.apache.commons.math.ConvergenceException,66=>Find no block
+Thu Aug 24 14:54:03 AEST 2017 org.apache.commons.math.MathException,124
+Thu Aug 24 14:54:04 AEST 2017 org.apache.commons.math.MathException,125
+Thu Aug 24 14:54:05 AEST 2017 org.apache.commons.math.MathException,126
+Thu Aug 24 14:54:05 AEST 2017 org.apache.commons.math.MathException,127
+Thu Aug 24 14:54:05 AEST 2017 Thu Aug 24 14:54:05 AEST 2017 : org.apache.commons.math.MathException,128=>Find no block
+Thu Aug 24 14:54:06 AEST 2017 org.apache.commons.math.MathException,138
+Thu Aug 24 14:54:13 AEST 2017 org.apache.commons.math.MathException,139
+Thu Aug 24 14:54:14 AEST 2017 org.apache.commons.math.MathException,140
+Thu Aug 24 14:54:14 AEST 2017 org.apache.commons.math.MathException,141
+Thu Aug 24 14:54:14 AEST 2017 Thu Aug 24 14:54:14 AEST 2017 : org.apache.commons.math.MathException,142=>Find no block
+Thu Aug 24 14:54:14 AEST 2017 org.apache.commons.math.MathException,152
+Thu Aug 24 14:54:16 AEST 2017 org.apache.commons.math.MathException,153
+Thu Aug 24 14:54:16 AEST 2017 org.apache.commons.math.MathException,154
+Thu Aug 24 14:54:17 AEST 2017 org.apache.commons.math.MathException,155
+Thu Aug 24 14:54:17 AEST 2017 Thu Aug 24 14:54:17 AEST 2017 : org.apache.commons.math.MathException,156=>Find no block
+Thu Aug 24 14:54:17 AEST 2017 org.apache.commons.math.MathException,169
+Thu Aug 24 14:54:25 AEST 2017 org.apache.commons.math.MathException,170
+Thu Aug 24 14:54:25 AEST 2017 org.apache.commons.math.MathException,171
+Thu Aug 24 14:54:26 AEST 2017 org.apache.commons.math.MathException,172
+Thu Aug 24 14:54:26 AEST 2017 Thu Aug 24 14:54:26 AEST 2017 : org.apache.commons.math.MathException,173=>Find no block
+Thu Aug 24 14:54:26 AEST 2017 org.apache.commons.math.MathException,84
+Thu Aug 24 14:54:27 AEST 2017 org.apache.commons.math.MathException,86
+Thu Aug 24 14:54:28 AEST 2017 org.apache.commons.math.MathException,90
+Thu Aug 24 14:54:30 AEST 2017 org.apache.commons.math.MathException,92
+Thu Aug 24 14:54:30 AEST 2017 Thu Aug 24 14:54:30 AEST 2017 : org.apache.commons.math.MathException,97=>Find no block
+Thu Aug 24 14:54:30 AEST 2017 Thu Aug 24 14:54:30 AEST 2017 : org.apache.commons.math.MathException,95=>Find no block
+Thu Aug 24 14:54:31 AEST 2017 org.apache.commons.math.MathException,101
+Thu Aug 24 14:54:32 AEST 2017 org.apache.commons.math.MathException,114
+Thu Aug 24 14:54:39 AEST 2017 org.apache.commons.math.MathException,115
+Thu Aug 24 14:54:40 AEST 2017 org.apache.commons.math.MathException,116
+Thu Aug 24 14:54:40 AEST 2017 org.apache.commons.math.MathException,181
+Thu Aug 24 14:54:41 AEST 2017 org.apache.commons.math.MathException,190
+Thu Aug 24 14:54:42 AEST 2017 org.apache.commons.math.MathException,201
+Thu Aug 24 14:54:43 AEST 2017 org.apache.commons.math.MathException,210
+Thu Aug 24 14:54:45 AEST 2017 org.apache.commons.math.MathException,217
+Thu Aug 24 14:54:46 AEST 2017 Thu Aug 24 14:54:46 AEST 2017 : org.apache.commons.math.MathException,218=>Find no block
+Thu Aug 24 14:54:46 AEST 2017 Thu Aug 24 14:54:46 AEST 2017 : org.apache.commons.math.MathException,226=>Find no block
+Thu Aug 24 14:54:47 AEST 2017 org.apache.commons.math.MathException,227
+Thu Aug 24 14:55:24 AEST 2017 org.apache.commons.math.MathException,228
+Thu Aug 24 14:55:24 AEST 2017 org.apache.commons.math.MathException,230
+Thu Aug 24 14:55:25 AEST 2017 Thu Aug 24 14:55:25 AEST 2017 : org.apache.commons.math.MathException,231=>Find no block
+Thu Aug 24 14:55:25 AEST 2017 Thu Aug 24 14:55:25 AEST 2017 : org.apache.commons.math.MathException,232=>Find no block
+Thu Aug 24 14:55:25 AEST 2017 Thu Aug 24 14:55:25 AEST 2017 : org.apache.commons.math.MathException,240=>Find no block
+Thu Aug 24 14:55:26 AEST 2017 org.apache.commons.math.MathException,241
+Thu Aug 24 14:55:27 AEST 2017 org.apache.commons.math.MathException,242
+Thu Aug 24 14:55:28 AEST 2017 org.apache.commons.math.MathException,243
+Thu Aug 24 14:55:28 AEST 2017 org.apache.commons.math.MathException,244
+Thu Aug 24 14:55:29 AEST 2017 Thu Aug 24 14:55:29 AEST 2017 : org.apache.commons.math.MathException,246=>Find no block
+Thu Aug 24 14:55:29 AEST 2017 Thu Aug 24 14:55:29 AEST 2017 : org.apache.commons.math.MathException,247=>Find no block
+Thu Aug 24 14:55:29 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,90
+Thu Aug 24 14:55:29 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,111
+Thu Aug 24 14:59:42 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,112
+Thu Aug 24 14:59:42 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,114
+Thu Aug 24 14:59:42 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,126
+Thu Aug 24 15:00:56 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,127
+Thu Aug 24 15:00:56 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,129
+Thu Aug 24 15:00:57 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,160
+Thu Aug 24 15:01:27 AEST 2017 Thu Aug 24 15:01:27 AEST 2017 : org.apache.commons.math.analysis.UnivariateRealSolverImpl,161=>Find no block
+Thu Aug 24 15:01:27 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,176
+Thu Aug 24 15:01:57 AEST 2017 Thu Aug 24 15:01:57 AEST 2017 : org.apache.commons.math.analysis.UnivariateRealSolverImpl,177=>Find no block
+Thu Aug 24 15:01:57 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,185
+Thu Aug 24 15:02:21 AEST 2017 Thu Aug 24 15:02:21 AEST 2017 : org.apache.commons.math.analysis.UnivariateRealSolverImpl,186=>Find no block
+Thu Aug 24 15:02:21 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,194
+Thu Aug 24 15:02:35 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,201
+Thu Aug 24 15:02:43 AEST 2017 Thu Aug 24 15:02:43 AEST 2017 : org.apache.commons.math.analysis.UnivariateRealSolverImpl,202=>Find no block
+Thu Aug 24 15:02:43 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,212
+Thu Aug 24 15:03:06 AEST 2017 Thu Aug 24 15:03:06 AEST 2017 : org.apache.commons.math.analysis.UnivariateRealSolverImpl,213=>Find no block
+Thu Aug 24 15:03:07 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,220
+Thu Aug 24 15:03:39 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,227
+Thu Aug 24 15:03:47 AEST 2017 Thu Aug 24 15:03:47 AEST 2017 : org.apache.commons.math.analysis.UnivariateRealSolverImpl,228=>Find no block
+Thu Aug 24 15:03:47 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,238
+Thu Aug 24 15:04:10 AEST 2017 Thu Aug 24 15:04:10 AEST 2017 : org.apache.commons.math.analysis.UnivariateRealSolverImpl,239=>Find no block
+Thu Aug 24 15:04:11 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,246
+Thu Aug 24 15:04:36 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,253
+Thu Aug 24 15:04:44 AEST 2017 Thu Aug 24 15:04:44 AEST 2017 : org.apache.commons.math.analysis.UnivariateRealSolverImpl,254=>Find no block
+Thu Aug 24 15:04:44 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,269
+Thu Aug 24 15:05:55 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,270
+Thu Aug 24 15:05:56 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,271
+Thu Aug 24 15:05:56 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,283
+Thu Aug 24 15:05:57 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,296
+Thu Aug 24 15:05:57 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,312
+Thu Aug 24 15:06:28 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,313
+Thu Aug 24 15:06:28 AEST 2017 Thu Aug 24 15:06:28 AEST 2017 : org.apache.commons.math.analysis.UnivariateRealSolverImpl,317=>Find no block
+Thu Aug 24 15:06:28 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,333
+Thu Aug 24 15:09:27 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,334
+Thu Aug 24 15:09:28 AEST 2017 org.apache.commons.math.analysis.UnivariateRealSolverImpl,335
+Thu Aug 24 15:09:28 AEST 2017 Thu Aug 24 15:09:28 AEST 2017 : org.apache.commons.math.analysis.UnivariateRealSolverImpl,340=>Find no block
+Thu Aug 24 15:09:29 AEST 2017 org.apache.commons.math.analysis.BrentSolver,67
+Thu Aug 24 15:10:43 AEST 2017 org.apache.commons.math.analysis.BrentSolver,68
+Thu Aug 24 15:10:43 AEST 2017 org.apache.commons.math.analysis.BrentSolver,74
+Thu Aug 24 15:19:23 AEST 2017 org.apache.commons.math.analysis.BrentSolver,75
+Thu Aug 24 15:19:24 AEST 2017 org.apache.commons.math.analysis.BrentSolver,76
+Thu Aug 24 15:19:24 AEST 2017 org.apache.commons.math.analysis.BrentSolver,77
+Thu Aug 24 15:19:24 AEST 2017 org.apache.commons.math.analysis.BrentSolver,81
+Thu Aug 24 15:28:46 AEST 2017 org.apache.commons.math.analysis.BrentSolver,82
+Thu Aug 24 15:28:47 AEST 2017 org.apache.commons.math.analysis.BrentSolver,83
+Thu Aug 24 15:28:47 AEST 2017 org.apache.commons.math.analysis.BrentSolver,84
+Thu Aug 24 15:28:47 AEST 2017 org.apache.commons.math.analysis.BrentSolver,88
+Thu Aug 24 15:31:07 AEST 2017 org.apache.commons.math.analysis.BrentSolver,89
+Thu Aug 24 15:31:08 AEST 2017 org.apache.commons.math.analysis.BrentSolver,93
+Timeout time : 17/08/24 15:33

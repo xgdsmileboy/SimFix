@@ -1,0 +1,98 @@
+=================================================
+Project : math_13	start : 17/08/24 05:04
+Current failed test : org.apache.commons.math3.optimization.fitting.PolynomialFitterTest::testLargeSample | 17/08/24 05:05
+Thu Aug 24 05:27:02 AEST 2017 org.apache.commons.math3.optimization.fitting.PolynomialFitter,63
+Thu Aug 24 05:27:28 AEST 2017 org.apache.commons.math3.optimization.fitting.PolynomialFitter,64
+Thu Aug 24 05:27:30 AEST 2017 Thu Aug 24 05:27:30 AEST 2017 : org.apache.commons.math3.optimization.fitting.PolynomialFitter,65=>Find no block
+Thu Aug 24 05:27:32 AEST 2017 org.apache.commons.math3.optimization.fitting.PolynomialFitter,110
+Thu Aug 24 05:28:23 AEST 2017 org.apache.commons.math3.analysis.polynomials.PolynomialFunction,69
+Thu Aug 24 05:57:37 AEST 2017 org.apache.commons.math3.analysis.polynomials.PolynomialFunction,70
+Thu Aug 24 05:57:38 AEST 2017 org.apache.commons.math3.analysis.polynomials.PolynomialFunction,71
+Thu Aug 24 05:57:40 AEST 2017 org.apache.commons.math3.analysis.polynomials.PolynomialFunction,72
+Thu Aug 24 05:57:41 AEST 2017 org.apache.commons.math3.analysis.polynomials.PolynomialFunction,75
+Thu Aug 24 05:57:43 AEST 2017 org.apache.commons.math3.analysis.polynomials.PolynomialFunction,78
+Thu Aug 24 05:57:45 AEST 2017 org.apache.commons.math3.analysis.polynomials.PolynomialFunction,79
+Thu Aug 24 05:57:47 AEST 2017 Thu Aug 24 05:57:47 AEST 2017 : org.apache.commons.math3.analysis.polynomials.PolynomialFunction,80=>Find no block
+Thu Aug 24 05:57:48 AEST 2017 org.apache.commons.math3.analysis.polynomials.PolynomialFunction,94
+Thu Aug 24 05:59:26 AEST 2017 org.apache.commons.math3.analysis.polynomials.PolynomialFunction,130
+Thu Aug 24 06:43:23 AEST 2017 org.apache.commons.math3.analysis.polynomials.PolynomialFunction,131
+Thu Aug 24 06:43:24 AEST 2017 org.apache.commons.math3.analysis.polynomials.PolynomialFunction,132
+Thu Aug 24 06:43:26 AEST 2017 org.apache.commons.math3.analysis.polynomials.PolynomialFunction,135
+Thu Aug 24 06:43:28 AEST 2017 org.apache.commons.math3.analysis.polynomials.PolynomialFunction,136
+Thu Aug 24 06:43:29 AEST 2017 org.apache.commons.math3.analysis.polynomials.PolynomialFunction,139
+Thu Aug 24 06:43:31 AEST 2017 Thu Aug 24 06:43:31 AEST 2017 : org.apache.commons.math3.analysis.polynomials.PolynomialFunction,395=>Find no block
+Thu Aug 24 06:43:33 AEST 2017 org.apache.commons.math3.optimization.fitting.CurveFitter,153
+Thu Aug 24 06:44:23 AEST 2017 Thu Aug 24 06:44:23 AEST 2017 : org.apache.commons.math3.optimization.fitting.CurveFitter,210=>Find no block
+Thu Aug 24 06:44:26 AEST 2017 org.apache.commons.math3.optimization.fitting.CurveFitter,211
+Thu Aug 24 06:44:32 AEST 2017 Thu Aug 24 06:44:32 AEST 2017 : org.apache.commons.math3.optimization.fitting.CurveFitter,212=>Find no block
+Thu Aug 24 06:44:33 AEST 2017 org.apache.commons.math3.optimization.fitting.WeightedObservedPoint,59
+Thu Aug 24 06:44:39 AEST 2017 org.apache.commons.math3.optimization.fitting.CurveFitter,176
+Thu Aug 24 06:47:25 AEST 2017 org.apache.commons.math3.optimization.fitting.CurveFitter,177
+Thu Aug 24 06:47:31 AEST 2017 org.apache.commons.math3.optimization.fitting.CurveFitter,178
+Thu Aug 24 06:52:51 AEST 2017 org.apache.commons.math3.optimization.fitting.CurveFitter,179
+Thu Aug 24 07:01:56 AEST 2017 org.apache.commons.math3.optimization.fitting.CurveFitter,180
+Thu Aug 24 07:01:57 AEST 2017 org.apache.commons.math3.optimization.fitting.CurveFitter,181
+Thu Aug 24 07:01:59 AEST 2017 org.apache.commons.math3.optimization.fitting.CurveFitter,182
+Thu Aug 24 07:02:03 AEST 2017 Thu Aug 24 07:02:03 AEST 2017 : org.apache.commons.math3.optimization.fitting.CurveFitter,183=>Find no block
+Thu Aug 24 07:02:05 AEST 2017 org.apache.commons.math3.optimization.fitting.CurveFitter,187
+Thu Aug 24 07:02:53 AEST 2017 org.apache.commons.math3.optimization.fitting.CurveFitter,189
+Thu Aug 24 07:02:54 AEST 2017 org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizer,423
+Thu Aug 24 07:03:00 AEST 2017 org.apache.commons.math3.optimization.fitting.WeightedObservedPoint,73
+Thu Aug 24 07:04:38 AEST 2017 org.apache.commons.math3.optimization.fitting.CurveFitter,109
+Thu Aug 24 07:05:38 AEST 2017 Thu Aug 24 07:05:38 AEST 2017 : org.apache.commons.math3.optimization.fitting.CurveFitter,110=>Find no block
+Thu Aug 24 07:05:39 AEST 2017 Thu Aug 24 07:05:39 AEST 2017 : org.apache.commons.math3.optimization.fitting.WeightedObservedPoint,49=>Find no block
+Thu Aug 24 07:05:41 AEST 2017 org.apache.commons.math3.optimization.fitting.WeightedObservedPoint,50
+Thu Aug 24 07:15:15 AEST 2017 org.apache.commons.math3.optimization.fitting.WeightedObservedPoint,51
+Thu Aug 24 07:15:16 AEST 2017 org.apache.commons.math3.optimization.fitting.WeightedObservedPoint,52
+Thu Aug 24 07:15:25 AEST 2017 Thu Aug 24 07:15:25 AEST 2017 : org.apache.commons.math3.optimization.fitting.WeightedObservedPoint,53=>Find no block
+Thu Aug 24 07:15:26 AEST 2017 Thu Aug 24 07:15:26 AEST 2017 : org.apache.commons.math3.optimization.fitting.CurveFitter,69=>Find no block
+Thu Aug 24 07:15:28 AEST 2017 org.apache.commons.math3.optimization.fitting.CurveFitter,70
+Thu Aug 24 07:15:57 AEST 2017 org.apache.commons.math3.optimization.fitting.CurveFitter,71
+Thu Aug 24 07:15:58 AEST 2017 org.apache.commons.math3.optimization.fitting.CurveFitter,72
+Thu Aug 24 07:16:00 AEST 2017 Thu Aug 24 07:16:00 AEST 2017 : org.apache.commons.math3.optimization.fitting.CurveFitter,73=>Find no block
+Thu Aug 24 07:16:12 AEST 2017 org.apache.commons.math3.optimization.general.LevenbergMarquardtOptimizer,158
+Thu Aug 24 07:16:17 AEST 2017 Thu Aug 24 07:16:17 AEST 2017 : org.apache.commons.math3.optimization.general.LevenbergMarquardtOptimizer,159=>Find no block
+Thu Aug 24 07:16:18 AEST 2017 org.apache.commons.math3.optimization.general.LevenbergMarquardtOptimizer,270
+Thu Aug 24 07:21:01 AEST 2017 org.apache.commons.math3.optimization.general.LevenbergMarquardtOptimizer,271
+Thu Aug 24 07:21:02 AEST 2017 org.apache.commons.math3.optimization.general.LevenbergMarquardtOptimizer,272
+Thu Aug 24 07:21:05 AEST 2017 org.apache.commons.math3.optimization.general.LevenbergMarquardtOptimizer,273
+Thu Aug 24 07:21:07 AEST 2017 org.apache.commons.math3.optimization.general.LevenbergMarquardtOptimizer,274
+Thu Aug 24 07:21:11 AEST 2017 org.apache.commons.math3.optimization.general.LevenbergMarquardtOptimizer,275
+Thu Aug 24 07:21:12 AEST 2017 Thu Aug 24 07:21:12 AEST 2017 : org.apache.commons.math3.optimization.general.LevenbergMarquardtOptimizer,276=>Find no block
+Thu Aug 24 07:21:14 AEST 2017 org.apache.commons.math3.linear.MatrixUtils,401
+Thu Aug 24 08:42:14 AEST 2017 org.apache.commons.math3.linear.MatrixUtils,402
+Thu Aug 24 08:42:16 AEST 2017 org.apache.commons.math3.linear.MatrixUtils,403
+Thu Aug 24 08:42:17 AEST 2017 org.apache.commons.math3.util.FastMath,3532
+Thu Aug 24 08:47:48 AEST 2017 org.apache.commons.math3.util.FastMath,3535
+Thu Aug 24 08:52:44 AEST 2017 org.apache.commons.math3.util.FastMath,3539
+Thu Aug 24 08:57:06 AEST 2017 org.apache.commons.math3.util.FastMath,3544
+Thu Aug 24 09:14:24 AEST 2017 org.apache.commons.math3.util.FastMath,3545
+Thu Aug 24 09:14:26 AEST 2017 org.apache.commons.math3.util.FastMath,3548
+Thu Aug 24 09:27:06 AEST 2017 Thu Aug 24 09:27:06 AEST 2017 : org.apache.commons.math3.optimization.Target,39=>Find no block
+Thu Aug 24 09:27:07 AEST 2017 org.apache.commons.math3.optimization.Target,40
+Thu Aug 24 09:33:19 AEST 2017 Thu Aug 24 09:33:19 AEST 2017 : org.apache.commons.math3.optimization.Target,41=>Find no block
+Thu Aug 24 09:33:21 AEST 2017 org.apache.commons.math3.optimization.Target,49
+Thu Aug 24 09:37:50 AEST 2017 Thu Aug 24 09:37:50 AEST 2017 : org.apache.commons.math3.optimization.Weight,43=>Find no block
+Thu Aug 24 09:37:52 AEST 2017 org.apache.commons.math3.optimization.Weight,44
+Thu Aug 24 09:38:12 AEST 2017 Thu Aug 24 09:38:12 AEST 2017 : org.apache.commons.math3.optimization.Weight,45=>Find no block
+Thu Aug 24 09:38:14 AEST 2017 org.apache.commons.math3.optimization.Weight,67
+Thu Aug 24 09:38:48 AEST 2017 Thu Aug 24 09:38:48 AEST 2017 : org.apache.commons.math3.optimization.InitialGuess,37=>Find no block
+Thu Aug 24 09:38:49 AEST 2017 org.apache.commons.math3.optimization.InitialGuess,38
+Thu Aug 24 09:45:18 AEST 2017 Thu Aug 24 09:45:18 AEST 2017 : org.apache.commons.math3.optimization.InitialGuess,39=>Find no block
+Thu Aug 24 09:45:20 AEST 2017 org.apache.commons.math3.optimization.InitialGuess,47
+Thu Aug 24 09:49:38 AEST 2017 org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizer,496
+Thu Aug 24 09:50:37 AEST 2017 org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizer,502
+Thu Aug 24 10:02:49 AEST 2017 org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizer,505
+Thu Aug 24 10:02:50 AEST 2017 org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizer,508
+Thu Aug 24 10:02:52 AEST 2017 org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizer,562
+Thu Aug 24 10:03:02 AEST 2017 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateVectorOptimizer,231
+Thu Aug 24 10:04:40 AEST 2017 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateVectorOptimizer,232
+Thu Aug 24 10:04:42 AEST 2017 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateVectorOptimizer,233
+Thu Aug 24 10:04:46 AEST 2017 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateVectorOptimizer,235
+Thu Aug 24 10:04:50 AEST 2017 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateVectorOptimizer,237
+Thu Aug 24 10:04:52 AEST 2017 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateVectorOptimizer,239
+Thu Aug 24 10:04:54 AEST 2017 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateVectorOptimizer,260
+Thu Aug 24 10:04:55 AEST 2017 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateVectorOptimizer,321
+Thu Aug 24 10:21:05 AEST 2017 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateVectorOptimizer,322
+Thu Aug 24 10:21:06 AEST 2017 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateVectorOptimizer,323
+Timeout time : 17/08/24 10:26

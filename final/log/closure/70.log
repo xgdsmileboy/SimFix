@@ -1,0 +1,72 @@
+=================================================
+Project : closure_70	start : 17/08/23 17:41
+Current failed test : com.google.javascript.jscomp.LooseTypeCheckTest::testDuplicateLocalVarDecl | 17/08/23 17:42
+Wed Aug 23 17:55:25 AEST 2017 com.google.javascript.jscomp.Scope,265
+Wed Aug 23 17:56:23 AEST 2017 com.google.javascript.jscomp.Scope,268
+Wed Aug 23 17:56:24 AEST 2017 com.google.javascript.jscomp.TypeValidator,552
+Wed Aug 23 18:12:36 AEST 2017 com.google.javascript.jscomp.TypeValidator,553
+Wed Aug 23 18:12:37 AEST 2017 com.google.javascript.jscomp.parsing.JsDocInfoParser,1662
+Wed Aug 23 18:33:49 AEST 2017 com.google.javascript.jscomp.parsing.JsDocInfoParser,1652
+Wed Aug 23 18:54:04 AEST 2017 com.google.javascript.jscomp.parsing.JsDocInfoParser,1653
+Wed Aug 23 19:11:34 AEST 2017 com.google.javascript.jscomp.TypeValidator,549
+Wed Aug 23 20:04:09 AEST 2017 com.google.javascript.jscomp.ChainableReverseAbstractInterpreter,79
+Wed Aug 23 20:07:22 AEST 2017 com.google.javascript.jscomp.ChainableReverseAbstractInterpreter,80
+Wed Aug 23 20:07:23 AEST 2017 com.google.javascript.jscomp.ChainableReverseAbstractInterpreter,81
+Wed Aug 23 20:07:24 AEST 2017 com.google.javascript.jscomp.ChainableReverseAbstractInterpreter,82
+Wed Aug 23 20:07:27 AEST 2017 com.google.javascript.jscomp.ChainableReverseAbstractInterpreter,89
+Wed Aug 23 20:08:44 AEST 2017 com.google.javascript.jscomp.ProcessClosurePrimitives,239
+Wed Aug 23 20:29:38 AEST 2017 com.google.javascript.jscomp.ProcessClosurePrimitives,240
+Wed Aug 23 20:29:39 AEST 2017 com.google.javascript.jscomp.ProcessClosurePrimitives,241
+Wed Aug 23 20:29:40 AEST 2017 Wed Aug 23 20:29:40 AEST 2017 : com.google.javascript.jscomp.ProcessClosurePrimitives,244=>Find no block
+Wed Aug 23 20:29:41 AEST 2017 com.google.javascript.jscomp.TypeCheck,925
+Wed Aug 23 20:32:18 AEST 2017 com.google.javascript.jscomp.LinkedFlowScope,453
+Wed Aug 23 20:36:06 AEST 2017 com.google.javascript.jscomp.TypeCheck,1236
+Wed Aug 23 20:38:06 AEST 2017 com.google.javascript.jscomp.TypeCheck,1234
+Wed Aug 23 20:44:28 AEST 2017 com.google.javascript.jscomp.TypeCheck,1235
+Wed Aug 23 20:44:29 AEST 2017 com.google.javascript.rhino.jstype.JSTypeRegistry,1382
+Wed Aug 23 20:47:47 AEST 2017 com.google.javascript.jscomp.Compiler,1778
+Wed Aug 23 20:47:51 AEST 2017 com.google.javascript.jscomp.MemoizedScopeCreator,56
+Wed Aug 23 20:51:18 AEST 2017 Wed Aug 23 20:51:18 AEST 2017 : com.google.javascript.jscomp.ClosureReverseAbstractInterpreter,164=>Find no block
+Wed Aug 23 20:51:19 AEST 2017 com.google.javascript.jscomp.ClosureReverseAbstractInterpreter,123
+Wed Aug 23 20:51:24 AEST 2017 Wed Aug 23 20:51:24 AEST 2017 : com.google.javascript.jscomp.ClosureReverseAbstractInterpreter,50=>Find no block
+Wed Aug 23 20:51:24 AEST 2017 Wed Aug 23 20:51:24 AEST 2017 : com.google.javascript.jscomp.ClosureReverseAbstractInterpreter,69=>Find no block
+Wed Aug 23 20:51:26 AEST 2017 Wed Aug 23 20:51:26 AEST 2017 : com.google.javascript.jscomp.ClosureReverseAbstractInterpreter,81=>Find no block
+Wed Aug 23 20:51:26 AEST 2017 Wed Aug 23 20:51:26 AEST 2017 : com.google.javascript.jscomp.ClosureReverseAbstractInterpreter,102=>Find no block
+Wed Aug 23 20:51:27 AEST 2017 com.google.javascript.jscomp.ClosureReverseAbstractInterpreter,124
+Wed Aug 23 20:51:58 AEST 2017 Wed Aug 23 20:51:58 AEST 2017 : com.google.javascript.jscomp.ClosureReverseAbstractInterpreter,197=>Find no block
+Wed Aug 23 20:52:01 AEST 2017 Wed Aug 23 20:52:01 AEST 2017 : com.google.javascript.jscomp.ClosureReverseAbstractInterpreter,144=>Find no block
+Wed Aug 23 20:52:02 AEST 2017 Wed Aug 23 20:52:02 AEST 2017 : com.google.javascript.jscomp.ClosureReverseAbstractInterpreter,169=>Find no block
+Wed Aug 23 20:52:03 AEST 2017 Wed Aug 23 20:52:03 AEST 2017 : com.google.javascript.jscomp.ClosureReverseAbstractInterpreter,126=>Find no block
+Wed Aug 23 20:52:04 AEST 2017 Wed Aug 23 20:52:04 AEST 2017 : com.google.javascript.jscomp.ClosureReverseAbstractInterpreter,82=>Find no block
+Wed Aug 23 20:52:05 AEST 2017 Wed Aug 23 20:52:05 AEST 2017 : com.google.javascript.jscomp.ClosureReverseAbstractInterpreter,103=>Find no block
+Wed Aug 23 20:52:06 AEST 2017 Wed Aug 23 20:52:06 AEST 2017 : com.google.javascript.jscomp.ClosureReverseAbstractInterpreter,185=>Find no block
+Wed Aug 23 20:52:07 AEST 2017 Wed Aug 23 20:52:07 AEST 2017 : com.google.javascript.jscomp.ClosureReverseAbstractInterpreter,154=>Find no block
+Wed Aug 23 20:52:08 AEST 2017 Wed Aug 23 20:52:08 AEST 2017 : com.google.javascript.jscomp.ClosureReverseAbstractInterpreter,135=>Find no block
+Wed Aug 23 20:52:08 AEST 2017 Wed Aug 23 20:52:08 AEST 2017 : com.google.javascript.jscomp.ClosureReverseAbstractInterpreter,174=>Find no block
+Wed Aug 23 20:52:10 AEST 2017 Wed Aug 23 20:52:10 AEST 2017 : com.google.javascript.jscomp.ClosureReverseAbstractInterpreter,51=>Find no block
+Wed Aug 23 20:52:10 AEST 2017 Wed Aug 23 20:52:10 AEST 2017 : com.google.javascript.jscomp.ClosureReverseAbstractInterpreter,159=>Find no block
+Wed Aug 23 20:52:11 AEST 2017 Wed Aug 23 20:52:11 AEST 2017 : com.google.javascript.jscomp.ClosureReverseAbstractInterpreter,70=>Find no block
+Wed Aug 23 20:52:12 AEST 2017 com.google.javascript.jscomp.parsing.JsDocTokenStream,124
+Wed Aug 23 20:52:22 AEST 2017 com.google.javascript.rhino.jstype.JSTypeRegistry,1378
+Wed Aug 23 21:08:39 AEST 2017 com.google.javascript.rhino.jstype.JSTypeRegistry,1379
+Wed Aug 23 21:08:39 AEST 2017 com.google.javascript.rhino.jstype.JSType,660
+Wed Aug 23 21:11:07 AEST 2017 com.google.javascript.rhino.jstype.JSType,661
+Wed Aug 23 21:11:09 AEST 2017 com.google.javascript.rhino.jstype.JSType,662
+Wed Aug 23 21:11:10 AEST 2017 com.google.javascript.rhino.jstype.JSType,663
+Wed Aug 23 21:11:11 AEST 2017 Wed Aug 23 21:11:11 AEST 2017 : com.google.javascript.rhino.jstype.JSType,667=>Find no block
+Wed Aug 23 21:11:13 AEST 2017 com.google.javascript.rhino.jstype.JSType,669
+Wed Aug 23 21:13:26 AEST 2017 Wed Aug 23 21:13:26 AEST 2017 : com.google.javascript.jscomp.ChainableReverseAbstractInterpreter,373=>Find no block
+Wed Aug 23 21:13:27 AEST 2017 Wed Aug 23 21:13:27 AEST 2017 : com.google.javascript.jscomp.ChainableReverseAbstractInterpreter,413=>Find no block
+Wed Aug 23 21:13:28 AEST 2017 com.google.javascript.jscomp.Scope,162
+Wed Aug 23 21:14:25 AEST 2017 com.google.javascript.jscomp.ProcessClosurePrimitives,237
+Wed Aug 23 21:14:26 AEST 2017 com.google.javascript.jscomp.parsing.JsDocTokenStream,165
+Wed Aug 23 21:17:05 AEST 2017 com.google.javascript.jscomp.parsing.JsDocTokenStream,166
+Wed Aug 23 21:17:06 AEST 2017 com.google.javascript.jscomp.parsing.JsDocTokenStream,167
+Wed Aug 23 21:19:52 AEST 2017 com.google.javascript.jscomp.parsing.JsDocTokenStream,168
+Wed Aug 23 21:19:54 AEST 2017 com.google.javascript.jscomp.LinkedFlowScope,446
+Wed Aug 23 21:22:30 AEST 2017 com.google.javascript.jscomp.LinkedFlowScope,448
+Wed Aug 23 21:22:31 AEST 2017 com.google.javascript.jscomp.LinkedFlowScope,449
+Wed Aug 23 21:22:33 AEST 2017 com.google.javascript.jscomp.LinkedFlowScope,455
+Wed Aug 23 21:36:30 AEST 2017 com.google.javascript.rhino.jstype.StringType,102
+Wed Aug 23 21:39:10 AEST 2017 com.google.javascript.jscomp.SemanticReverseAbstractInterpreter,255
+Timeout time : 17/08/23 22:55

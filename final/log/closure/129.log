@@ -1,0 +1,72 @@
+=================================================
+Project : closure_129	start : 17/08/23 17:42
+Current failed test : com.google.javascript.jscomp.IntegrationTest::testIssue937 | 17/08/23 17:42
+Wed Aug 23 17:42:45 AEST 2017 com.google.javascript.rhino.Node,1546
+Wed Aug 23 17:43:28 AEST 2017 com.google.javascript.jscomp.NodeUtil,3165
+Wed Aug 23 17:45:18 AEST 2017 com.google.javascript.rhino.Node,132
+Wed Aug 23 17:45:31 AEST 2017 com.google.javascript.rhino.Node,1428
+Wed Aug 23 17:45:38 AEST 2017 com.google.javascript.rhino.Node,1444
+Wed Aug 23 17:45:43 AEST 2017 com.google.javascript.rhino.Node,1457
+Wed Aug 23 17:45:49 AEST 2017 Wed Aug 23 17:45:49 AEST 2017 : com.google.javascript.rhino.Node,2163=>Find no block
+Wed Aug 23 17:45:50 AEST 2017 com.google.javascript.rhino.Node,2164
+Wed Aug 23 17:45:56 AEST 2017 com.google.javascript.rhino.Node,2165
+Wed Aug 23 17:45:57 AEST 2017 Wed Aug 23 17:45:57 AEST 2017 : com.google.javascript.rhino.Node,2166=>Find no block
+Wed Aug 23 17:45:58 AEST 2017 com.google.javascript.jscomp.CodeGenerator,530
+Wed Aug 23 17:56:16 AEST 2017 com.google.javascript.jscomp.CodeGenerator,531
+Wed Aug 23 17:56:17 AEST 2017 com.google.javascript.jscomp.CodeGenerator,532
+Wed Aug 23 17:56:18 AEST 2017 com.google.javascript.jscomp.ConvertToDottedProperties,61
+Wed Aug 23 18:02:33 AEST 2017 com.google.javascript.jscomp.ConvertToDottedProperties,62
+Wed Aug 23 18:02:34 AEST 2017 com.google.javascript.jscomp.ConvertToDottedProperties,63
+Wed Aug 23 18:02:35 AEST 2017 com.google.javascript.jscomp.ConvertToDottedProperties,64
+Wed Aug 23 18:02:36 AEST 2017 com.google.javascript.jscomp.Normalize,414
+Wed Aug 23 18:08:39 AEST 2017 com.google.javascript.jscomp.PeepholeFoldConstants,1332
+Wed Aug 23 18:29:10 AEST 2017 com.google.javascript.jscomp.ConvertToDottedProperties,57
+Wed Aug 23 18:38:39 AEST 2017 com.google.javascript.jscomp.ConvertToDottedProperties,58
+Wed Aug 23 18:55:56 AEST 2017 com.google.javascript.jscomp.ConvertToDottedProperties,59
+Wed Aug 23 18:55:57 AEST 2017 com.google.javascript.jscomp.PeepholeFoldConstants,1329
+Wed Aug 23 18:55:57 AEST 2017 com.google.javascript.jscomp.PeepholeFoldConstants,122
+Wed Aug 23 18:57:30 AEST 2017 com.google.javascript.jscomp.PeepholeFoldConstants,1323
+Wed Aug 23 18:57:31 AEST 2017 com.google.javascript.jscomp.PeepholeFoldConstants,1325
+Wed Aug 23 18:57:32 AEST 2017 com.google.javascript.jscomp.PeepholeReplaceKnownMethods,403
+Wed Aug 23 19:01:57 AEST 2017 com.google.javascript.jscomp.PeepholeFoldConstants,82
+Wed Aug 23 19:03:02 AEST 2017 com.google.javascript.jscomp.PeepholeFoldConstants,1258
+Wed Aug 23 19:08:38 AEST 2017 com.google.javascript.jscomp.PeepholeFoldConstants,1261
+Wed Aug 23 19:11:14 AEST 2017 com.google.javascript.jscomp.PeepholeFoldConstants,1264
+Wed Aug 23 19:11:14 AEST 2017 com.google.javascript.jscomp.PeepholeFoldConstants,1269
+Wed Aug 23 19:16:40 AEST 2017 com.google.javascript.jscomp.PeepholeFoldConstants,1275
+Wed Aug 23 19:20:13 AEST 2017 com.google.javascript.jscomp.PeepholeFoldConstants,1278
+Wed Aug 23 19:32:31 AEST 2017 com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax,140
+Wed Aug 23 19:33:46 AEST 2017 com.google.javascript.rhino.Node,122
+Wed Aug 23 19:33:56 AEST 2017 com.google.javascript.rhino.Node,134
+Wed Aug 23 19:34:06 AEST 2017 com.google.javascript.rhino.InputId,74
+Wed Aug 23 19:34:10 AEST 2017 com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax,138
+Wed Aug 23 19:37:18 AEST 2017 com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax,139
+Wed Aug 23 19:37:20 AEST 2017 com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax,1346
+Wed Aug 23 20:24:59 AEST 2017 com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax,1351
+Wed Aug 23 20:25:00 AEST 2017 com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax,1352
+Wed Aug 23 20:25:00 AEST 2017 com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax,1353
+Wed Aug 23 20:25:02 AEST 2017 com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax,1354
+Wed Aug 23 20:25:02 AEST 2017 com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax,1362
+Wed Aug 23 20:25:03 AEST 2017 com.google.javascript.rhino.Node,347
+Wed Aug 23 20:25:10 AEST 2017 com.google.javascript.rhino.Node,1007
+Wed Aug 23 20:25:14 AEST 2017 com.google.javascript.rhino.Node,1012
+Wed Aug 23 20:25:19 AEST 2017 com.google.javascript.rhino.Node,1013
+Wed Aug 23 20:25:20 AEST 2017 com.google.javascript.rhino.Node,1014
+Wed Aug 23 20:25:21 AEST 2017 com.google.javascript.rhino.Node,1021
+Wed Aug 23 20:25:26 AEST 2017 Wed Aug 23 20:25:26 AEST 2017 : com.google.javascript.rhino.Node,1022=>Find no block
+Wed Aug 23 20:25:28 AEST 2017 com.google.javascript.rhino.Node,1026
+Wed Aug 23 20:32:29 AEST 2017 com.google.javascript.rhino.Node,1027
+Wed Aug 23 20:32:30 AEST 2017 com.google.javascript.rhino.Node,1029
+Wed Aug 23 21:12:53 AEST 2017 com.google.javascript.rhino.Node,1030
+Wed Aug 23 21:12:54 AEST 2017 Wed Aug 23 21:12:54 AEST 2017 : com.google.javascript.rhino.Node,1031=>Find no block
+Wed Aug 23 21:12:55 AEST 2017 com.google.javascript.rhino.Node,1032
+Wed Aug 23 21:12:55 AEST 2017 com.google.javascript.rhino.Node,1034
+Wed Aug 23 21:12:56 AEST 2017 Wed Aug 23 21:12:56 AEST 2017 : com.google.javascript.rhino.Node,1033=>Find no block
+Wed Aug 23 21:12:56 AEST 2017 Wed Aug 23 21:12:56 AEST 2017 : com.google.javascript.rhino.Node,1036=>Find no block
+Wed Aug 23 21:12:57 AEST 2017 com.google.javascript.jscomp.PeepholeReplaceKnownMethods,100
+Wed Aug 23 21:14:47 AEST 2017 com.google.javascript.jscomp.PeepholeReplaceKnownMethods,412
+Wed Aug 23 21:25:39 AEST 2017 com.google.javascript.jscomp.PeepholeReplaceKnownMethods,402
+Wed Aug 23 21:25:40 AEST 2017 com.google.javascript.jscomp.NodeUtil,1171
+Wed Aug 23 21:25:51 AEST 2017 com.google.javascript.jscomp.PeepholeReplaceKnownMethods,407
+Wed Aug 23 22:05:06 AEST 2017 com.google.javascript.jscomp.PeepholeReplaceKnownMethods,408
+Timeout time : 17/08/23 22:42

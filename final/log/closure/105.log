@@ -1,0 +1,77 @@
+=================================================
+Project : closure_105	start : 17/08/24 04:15
+Current failed test : com.google.javascript.jscomp.FoldConstantsTest::testStringJoinAdd | 17/08/24 04:15
+Thu Aug 24 04:18:11 AEST 2017 Thu Aug 24 04:18:11 AEST 2017 : com.google.javascript.rhino.Node,177=>Find no block
+Thu Aug 24 04:18:11 AEST 2017 com.google.javascript.rhino.Node,197
+Thu Aug 24 04:18:19 AEST 2017 com.google.javascript.rhino.Node,222
+Thu Aug 24 04:18:24 AEST 2017 com.google.javascript.rhino.Node,805
+Thu Aug 24 04:20:50 AEST 2017 com.google.javascript.rhino.Node,810
+Thu Aug 24 04:24:54 AEST 2017 com.google.javascript.rhino.Node,811
+Thu Aug 24 04:24:55 AEST 2017 com.google.javascript.rhino.Node,903
+Thu Aug 24 04:25:13 AEST 2017 com.google.javascript.rhino.Node,904
+Thu Aug 24 04:25:16 AEST 2017 com.google.javascript.rhino.Node,909
+Thu Aug 24 04:34:52 AEST 2017 com.google.javascript.rhino.Node,910
+Thu Aug 24 04:42:44 AEST 2017 com.google.javascript.rhino.Node,911
+Thu Aug 24 04:42:44 AEST 2017 com.google.javascript.rhino.Node,912
+Thu Aug 24 04:48:56 AEST 2017 com.google.javascript.rhino.Node,913
+Thu Aug 24 04:54:33 AEST 2017 com.google.javascript.rhino.Node,915
+Thu Aug 24 05:01:43 AEST 2017 com.google.javascript.rhino.Node,916
+Thu Aug 24 05:09:33 AEST 2017 com.google.javascript.rhino.Node,917
+Thu Aug 24 05:15:32 AEST 2017 com.google.javascript.rhino.Node,918
+Thu Aug 24 05:23:02 AEST 2017 com.google.javascript.rhino.Node,919
+Thu Aug 24 05:23:03 AEST 2017 com.google.javascript.rhino.Node,921
+Thu Aug 24 05:36:15 AEST 2017 com.google.javascript.rhino.Node,936
+Thu Aug 24 05:47:21 AEST 2017 com.google.javascript.rhino.Node,937
+Thu Aug 24 05:47:21 AEST 2017 com.google.javascript.rhino.Node,938
+Thu Aug 24 05:54:55 AEST 2017 com.google.javascript.rhino.Node,939
+Thu Aug 24 06:03:04 AEST 2017 com.google.javascript.rhino.Node,940
+Thu Aug 24 06:10:30 AEST 2017 Thu Aug 24 06:10:30 AEST 2017 : com.google.javascript.rhino.Node,942=>Find no block
+Thu Aug 24 06:10:30 AEST 2017 com.google.javascript.rhino.Node,978
+Thu Aug 24 06:12:49 AEST 2017 com.google.javascript.rhino.Node,979
+Thu Aug 24 06:12:50 AEST 2017 com.google.javascript.rhino.Node,980
+Thu Aug 24 06:12:50 AEST 2017 com.google.javascript.rhino.Node,982
+Thu Aug 24 06:12:51 AEST 2017 com.google.javascript.rhino.Node,986
+Thu Aug 24 06:38:37 AEST 2017 com.google.javascript.rhino.Node,987
+Thu Aug 24 06:38:37 AEST 2017 com.google.javascript.rhino.Node,1005
+Thu Aug 24 06:38:40 AEST 2017 com.google.javascript.rhino.Node,1010
+Thu Aug 24 06:38:43 AEST 2017 com.google.javascript.rhino.Node,1011
+Thu Aug 24 06:38:43 AEST 2017 com.google.javascript.rhino.Node,1012
+Thu Aug 24 06:38:45 AEST 2017 com.google.javascript.rhino.Node,1019
+Thu Aug 24 06:38:48 AEST 2017 Thu Aug 24 06:38:48 AEST 2017 : com.google.javascript.rhino.Node,1020=>Find no block
+Thu Aug 24 06:38:49 AEST 2017 com.google.javascript.rhino.Node,1026
+Thu Aug 24 06:51:57 AEST 2017 com.google.javascript.rhino.Node,1027
+Thu Aug 24 06:51:57 AEST 2017 com.google.javascript.rhino.Node,1029
+Thu Aug 24 07:51:54 AEST 2017 com.google.javascript.rhino.Node,1030
+Thu Aug 24 07:51:55 AEST 2017 com.google.javascript.rhino.Node,1031
+Thu Aug 24 07:51:55 AEST 2017 com.google.javascript.rhino.Node,1034
+Thu Aug 24 07:51:56 AEST 2017 Thu Aug 24 07:51:56 AEST 2017 : com.google.javascript.rhino.Node,1032=>Find no block
+Thu Aug 24 07:51:57 AEST 2017 Thu Aug 24 07:51:57 AEST 2017 : com.google.javascript.rhino.Node,1037=>Find no block
+Thu Aug 24 07:51:58 AEST 2017 com.google.javascript.rhino.Node,1330
+Thu Aug 24 07:52:16 AEST 2017 com.google.javascript.rhino.Token,294
+Thu Aug 24 07:52:22 AEST 2017 com.google.javascript.rhino.Token,311
+Thu Aug 24 07:52:28 AEST 2017 com.google.javascript.rhino.Token,336
+Thu Aug 24 07:52:34 AEST 2017 com.google.javascript.rhino.Token,359
+Thu Aug 24 07:52:42 AEST 2017 com.google.javascript.rhino.Token,397
+Thu Aug 24 07:52:50 AEST 2017 com.google.javascript.rhino.Token,402
+Thu Aug 24 07:52:57 AEST 2017 com.google.javascript.rhino.Token,404
+Thu Aug 24 07:53:03 AEST 2017 com.google.javascript.rhino.ScriptOrFnNode,54
+Thu Aug 24 07:53:12 AEST 2017 com.google.javascript.rhino.ScriptOrFnNode,60
+Thu Aug 24 07:53:15 AEST 2017 com.google.javascript.rhino.ScriptOrFnNode,62
+Thu Aug 24 07:53:17 AEST 2017 com.google.javascript.rhino.ScriptOrFnNode,69
+Thu Aug 24 07:53:20 AEST 2017 com.google.javascript.rhino.ScriptOrFnNode,77
+Thu Aug 24 07:53:23 AEST 2017 com.google.javascript.jscomp.FoldConstants,1484
+Thu Aug 24 07:56:04 AEST 2017 com.google.javascript.jscomp.FoldConstants,1490
+Thu Aug 24 07:58:19 AEST 2017 com.google.javascript.jscomp.FoldConstants,1491
+Thu Aug 24 07:58:20 AEST 2017 com.google.javascript.jscomp.FoldConstants,1492
+Thu Aug 24 07:58:20 AEST 2017 com.google.javascript.jscomp.FoldConstants,1511
+Thu Aug 24 08:16:50 AEST 2017 com.google.javascript.jscomp.FoldConstants,1512
+Thu Aug 24 08:39:12 AEST 2017 com.google.javascript.jscomp.FoldConstants,1513
+Thu Aug 24 08:58:04 AEST 2017 com.google.javascript.jscomp.FoldConstants,1518
+Thu Aug 24 08:58:07 AEST 2017 com.google.javascript.jscomp.FoldConstants,1533
+Thu Aug 24 08:58:42 AEST 2017 com.google.javascript.jscomp.FoldConstants,1534
+Thu Aug 24 08:58:42 AEST 2017 com.google.javascript.jscomp.FoldConstants,1536
+Thu Aug 24 08:59:19 AEST 2017 com.google.javascript.jscomp.FoldConstants,1537
+Thu Aug 24 09:03:58 AEST 2017 com.google.javascript.jscomp.FoldConstants,1538
+Thu Aug 24 09:09:14 AEST 2017 com.google.javascript.jscomp.FoldConstants,1539
+Thu Aug 24 09:09:15 AEST 2017 com.google.javascript.jscomp.FoldConstants,1542
+Timeout time : 17/08/24 09:18

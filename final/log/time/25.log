@@ -1,0 +1,62 @@
+=================================================
+Project : time_25	start : 17/08/24 07:44
+Current failed test : org.joda.time.TestDateTimeZoneCutover::test_DateTime_constructor_Moscow_Autumn | 17/08/24 07:44
+Thu Aug 24 07:47:04 AEST 2017 org.joda.time.tz.DateTimeZoneBuilder,552
+Thu Aug 24 07:48:22 AEST 2017 org.joda.time.DateTime,160
+Thu Aug 24 07:49:40 AEST 2017 Thu Aug 24 07:49:40 AEST 2017 : org.joda.time.DateTime,161=>Find no block
+Thu Aug 24 07:49:40 AEST 2017 org.joda.time.DateTime,285
+Thu Aug 24 07:50:14 AEST 2017 Thu Aug 24 07:50:14 AEST 2017 : org.joda.time.DateTime,287=>Find no block
+Thu Aug 24 07:50:14 AEST 2017 org.joda.time.tz.CachedDateTimeZone,210
+Thu Aug 24 08:06:08 AEST 2017 org.joda.time.base.BaseDateTime,110
+Thu Aug 24 08:06:11 AEST 2017 Thu Aug 24 08:06:11 AEST 2017 : org.joda.time.base.BaseDateTime,111=>Find no block
+Thu Aug 24 08:06:11 AEST 2017 org.joda.time.DateTimeZone,893
+Thu Aug 24 08:09:50 AEST 2017 org.joda.time.DateTimeZone,894
+Thu Aug 24 08:09:51 AEST 2017 org.joda.time.DateTimeZone,895
+Thu Aug 24 08:09:51 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,2091
+Thu Aug 24 08:21:58 AEST 2017 org.joda.time.tz.CachedDateTimeZone,123
+Thu Aug 24 08:24:39 AEST 2017 org.joda.time.base.AbstractInstant,424
+Thu Aug 24 08:24:56 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,1895
+Thu Aug 24 08:43:16 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,1896
+Thu Aug 24 08:43:16 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,1897
+Thu Aug 24 08:43:17 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,1904
+Thu Aug 24 08:58:32 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,2115
+Thu Aug 24 09:18:20 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,2116
+Thu Aug 24 09:18:20 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,2117
+Thu Aug 24 09:18:21 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,2109
+Thu Aug 24 09:25:43 AEST 2017 Thu Aug 24 09:25:43 AEST 2017 : org.joda.time.base.BaseDateTime,225=>Find no block
+Thu Aug 24 09:25:44 AEST 2017 org.joda.time.base.BaseDateTime,223
+Thu Aug 24 09:25:45 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,2090
+Thu Aug 24 09:25:45 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,2097
+Thu Aug 24 09:43:22 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,2098
+Thu Aug 24 09:52:13 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,2099
+Thu Aug 24 09:52:15 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,2102
+Thu Aug 24 09:59:28 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,2103
+Thu Aug 24 09:59:28 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,2107
+Thu Aug 24 10:18:39 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,2108
+Thu Aug 24 10:18:40 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,2111
+Thu Aug 24 10:27:04 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,2112
+Thu Aug 24 10:27:04 AEST 2017 org.joda.time.format.ISODateTimeFormat,936
+Thu Aug 24 10:51:09 AEST 2017 org.joda.time.format.ISODateTimeFormat,942
+Thu Aug 24 11:15:57 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,1846
+Thu Aug 24 11:16:00 AEST 2017 Thu Aug 24 11:16:00 AEST 2017 : org.joda.time.format.DateTimeFormatterBuilder,1849=>Find no block
+Thu Aug 24 11:16:00 AEST 2017 Thu Aug 24 11:16:00 AEST 2017 : org.joda.time.format.DateTimeFormatterBuilder,1850=>Find no block
+Thu Aug 24 11:16:01 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,2083
+Thu Aug 24 11:16:02 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,2086
+Thu Aug 24 11:25:46 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,1879
+Thu Aug 24 11:31:00 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,1880
+Thu Aug 24 11:31:00 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,1884
+Thu Aug 24 11:31:49 AEST 2017 Thu Aug 24 11:31:49 AEST 2017 : org.joda.time.format.DateTimeFormatterBuilder,1892=>Find no block
+Thu Aug 24 11:31:50 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,1894
+Thu Aug 24 11:31:50 AEST 2017 org.joda.time.field.PreciseDurationDateTimeField,127
+Thu Aug 24 11:43:01 AEST 2017 org.joda.time.field.PreciseDurationDateTimeField,126
+Thu Aug 24 11:43:02 AEST 2017 org.joda.time.DateTimeZone,889
+Thu Aug 24 11:43:02 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,2517
+Thu Aug 24 11:43:05 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,1151
+Thu Aug 24 11:44:10 AEST 2017 Thu Aug 24 11:44:10 AEST 2017 : org.joda.time.format.DateTimeFormatterBuilder,1152=>Find no block
+Thu Aug 24 11:44:11 AEST 2017 org.joda.time.format.FormatUtils,68
+Thu Aug 24 11:59:12 AEST 2017 org.joda.time.format.FormatUtils,74
+Thu Aug 24 12:16:13 AEST 2017 org.joda.time.format.FormatUtils,75
+Thu Aug 24 12:24:33 AEST 2017 org.joda.time.format.FormatUtils,77
+Thu Aug 24 12:24:34 AEST 2017 Thu Aug 24 12:24:34 AEST 2017 : org.joda.time.format.FormatUtils,78=>Find no block
+Thu Aug 24 12:24:35 AEST 2017 org.joda.time.format.DateTimeFormatterBuilder,2510
+Timeout time : 17/08/24 12:47

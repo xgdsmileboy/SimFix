@@ -1,0 +1,689 @@
+=================================================
+Project : lang_36	start : 17/08/24 09:17
+Current failed test : org.apache.commons.lang3.math.NumberUtilsTest::testCreateNumber_purify_23 | 17/08/24 09:21
+Thu Aug 24 09:21:47 AEST 2017 org.apache.commons.lang3.math.NumberUtils,546
+Thu Aug 24 09:23:53 AEST 2017 org.apache.commons.lang3.math.NumberUtils,480
+Thu Aug 24 09:32:06 AEST 2017 org.apache.commons.lang3.math.NumberUtils,495
+Thu Aug 24 09:43:37 AEST 2017 org.apache.commons.lang3.math.NumberUtils,482
+Thu Aug 24 09:49:19 AEST 2017 org.apache.commons.lang3.math.NumberUtils,474
+Thu Aug 24 09:49:19 AEST 2017 org.apache.commons.lang3.math.NumberUtils,492
+Thu Aug 24 09:49:19 AEST 2017 org.apache.commons.lang3.math.NumberUtils,498
+Thu Aug 24 10:02:04 AEST 2017 org.apache.commons.lang3.math.NumberUtils,499
+Thu Aug 24 10:02:04 AEST 2017 Thu Aug 24 10:02:04 AEST 2017 : org.apache.commons.lang3.math.NumberUtils,500=>Find no block
+Thu Aug 24 10:02:04 AEST 2017 org.apache.commons.lang3.math.NumberUtils,610
+Thu Aug 24 10:06:38 AEST 2017 org.apache.commons.lang3.math.NumberUtils,611
+Thu Aug 24 10:06:39 AEST 2017 org.apache.commons.lang3.math.NumberUtils,606
+Thu Aug 24 10:08:45 AEST 2017 org.apache.commons.lang3.math.NumberUtils,609
+Thu Aug 24 10:12:24 AEST 2017 org.apache.commons.lang3.math.NumberUtils,491
+Thu Aug 24 10:32:14 AEST 2017 org.apache.commons.lang3.math.NumberUtils,465
+Thu Aug 24 10:36:22 AEST 2017 org.apache.commons.lang3.math.NumberUtils,469
+Thu Aug 24 10:39:31 AEST 2017 org.apache.commons.lang3.math.NumberUtils,470
+Thu Aug 24 10:39:31 AEST 2017 org.apache.commons.lang3.math.NumberUtils,472
+Thu Aug 24 11:32:36 AEST 2017 org.apache.commons.lang3.math.NumberUtils,462
+Thu Aug 24 11:34:49 AEST 2017 org.apache.commons.lang3.math.NumberUtils,455
+Thu Aug 24 11:36:10 AEST 2017 org.apache.commons.lang3.math.NumberUtils,452
+Thu Aug 24 11:37:09 AEST 2017 org.apache.commons.lang3.StringUtils,232
+Thu Aug 24 11:40:22 AEST 2017 org.apache.commons.lang3.StringUtils,233
+Thu Aug 24 11:40:22 AEST 2017 org.apache.commons.lang3.StringUtils,234
+Thu Aug 24 11:40:23 AEST 2017 org.apache.commons.lang3.StringUtils,229
+Thu Aug 24 11:43:28 AEST 2017 org.apache.commons.lang3.math.NumberUtils,449
+Thu Aug 24 11:45:18 AEST 2017 org.apache.commons.lang3.SystemUtils,1114
+Thu Aug 24 11:45:18 AEST 2017 Thu Aug 24 11:45:18 AEST 2017 : org.apache.commons.lang3.SystemUtils,1115=>Find no block
+Thu Aug 24 11:45:19 AEST 2017 org.apache.commons.lang3.SystemUtils,1133
+Thu Aug 24 11:45:19 AEST 2017 org.apache.commons.lang3.SystemUtils,1134
+Thu Aug 24 11:45:20 AEST 2017 org.apache.commons.lang3.SystemUtils,1136
+Timeout time : 17/08/24 11:51
+Current failed test : org.apache.commons.lang3.math.NumberUtilsTest::testIsNumber_purify_12 | 17/08/24 11:51
+Thu Aug 24 11:52:10 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1401
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars==null||start==0){
+return foundDigit&&!hasExp;
+}
+return false;
+
+Time : 17/08/24 11:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||start==0){
+return foundDigit&&!hasExp;
+}
+return false;
+
+Time : 17/08/24 11:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return foundDigit;
+
+Time : 17/08/24 11:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+return foundDigit&&!hasExp;
+}
+return foundDigit;
+
+Time : 17/08/24 11:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+return foundDigit&&!hasExp;
+}
+return foundDigit;
+
+Time : 17/08/24 11:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+return foundDigit&&!hasExp;
+}
+return foundDigit;
+
+Time : 17/08/24 11:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+return foundDigit&&!hasExp;
+}
+return foundDigit;
+
+Time : 17/08/24 11:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+return foundDigit&&!hasExp;
+}
+return foundDigit;
+
+Time : 17/08/24 11:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+return foundDigit&&!hasExp;
+}
+return foundDigit;
+
+Time : 17/08/24 11:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+return foundDigit&&!hasExp;
+}
+return foundDigit;
+
+Time : 17/08/24 11:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]!='L'){
+return foundDigit&&!hasExp;
+}
+return false;
+
+Time : 17/08/24 11:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]==chars[start+i]){
+return foundDigit&&!hasExp;
+}
+return false;
+
+Time : 17/08/24 11:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[start+i]!='L'){
+return foundDigit&&!hasExp;
+}
+return false;
+
+Time : 17/08/24 11:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[start+i]==chars[start+i]){
+return foundDigit&&!hasExp;
+}
+return false;
+
+Time : 17/08/24 11:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]!=' '){
+return foundDigit&&!hasExp;
+}
+return false;
+
+Time : 17/08/24 12:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return true;
+
+Time : 17/08/24 12:01
+----------------------------------------
+Thu Aug 24 12:02:00 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1395
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars==null||start==0){
+return foundDigit&&!hasExp;
+}
+
+Time : 17/08/24 12:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||start==0){
+return foundDigit&&!hasExp;
+}
+
+Time : 17/08/24 12:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]!='L'){
+return foundDigit&&!hasExp;
+}
+
+Time : 17/08/24 12:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]==chars[start+i]){
+return foundDigit&&!hasExp;
+}
+
+Time : 17/08/24 12:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[start+i]!='L'){
+return foundDigit&&!hasExp;
+}
+
+Time : 17/08/24 12:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[start+i]==chars[start+i]){
+return foundDigit&&!hasExp;
+}
+
+Time : 17/08/24 12:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]!=' '){
+return foundDigit&&!hasExp;
+}
+
+Time : 17/08/24 12:05
+----------------------------------------
+Thu Aug 24 12:06:29 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1388
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return foundDigit;
+}
+
+Time : 17/08/24 12:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!allowSigns&&(chars[i]<'a'||chars[i]>'f')){
+return foundDigit;
+}
+
+Time : 17/08/24 12:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!allowSigns){
+return foundDigit;
+}
+
+Time : 17/08/24 12:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!allowSigns&&i<str.length()){
+return foundDigit;
+}
+
+Time : 17/08/24 12:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<str.length()&&i<str.length()){
+return foundDigit;
+}
+
+Time : 17/08/24 12:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((i!=0)){
+return foundDigit;
+}
+
+Time : 17/08/24 12:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!allowSigns&&(i!=0)){
+return foundDigit;
+}
+
+Time : 17/08/24 12:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((Character.isLetter(str.charAt(i))==false)&&(str.charAt(i)!=' ')){
+return foundDigit;
+}
+
+Time : 17/08/24 12:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!allowSigns&&(str.charAt(i)!=' ')){
+return foundDigit;
+}
+
+Time : 17/08/24 12:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((Character.isLetterOrDigit(str.charAt(i))==false)&&(str.charAt(i)!=' ')){
+return foundDigit;
+}
+
+Time : 17/08/24 12:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((Character.isDigit(str.charAt(i))==false)&&(str.charAt(i)!=' ')){
+return foundDigit;
+}
+
+Time : 17/08/24 12:11
+----------------------------------------
+Thu Aug 24 12:12:11 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1384
+Thu Aug 24 12:18:00 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1379
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((start+i)>=start&&chars[i]<='9'){
+return true;
+}
+
+Time : 17/08/24 12:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<chars.length){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return true;
+}
+
+Time : 17/08/24 12:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<sz-2){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return false;
+}
+
+Time : 17/08/24 12:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<sz){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return false;
+}
+
+Time : 17/08/24 12:22
+----------------------------------------
+Thu Aug 24 12:23:51 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1380
+Thu Aug 24 12:23:51 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1348
+Thu Aug 24 12:23:52 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1349
+Thu Aug 24 12:23:52 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1377
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]>='0'&&chars[i]<='9'){
+start=++i;
+foundDigit=true;
+allowSigns=false;
+}else if(chars[i]=='.'){
+if(hasDecPoint||hasExp){
+return false;
+}
+hasDecPoint=true;
+}else if(chars[i]=='e'||chars[i]=='E'){
+if(hasExp){
+return false;
+}
+if(!foundDigit){
+return false;
+}
+hasExp=true;
+allowSigns=true;
+}else if(chars[i]=='+'||chars[i]=='-'){
+if(!allowSigns){
+return false;
+}
+allowSigns=false;
+foundDigit=false;
+}else {
+return false;
+}
+
+Time : 17/08/24 12:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]>='0'&&chars[i]<='9'){
+start=++i;
+foundDigit=true;
+allowSigns=false;
+}else if(chars[i]=='.'){
+if(hasDecPoint||hasExp){
+return false;
+}
+hasDecPoint=true;
+}else if(chars[i]=='e'||chars[i]=='E'){
+if(hasExp){
+return false;
+}
+if(!foundDigit){
+return false;
+}
+hasExp=true;
+allowSigns=true;
+}else if(chars[i]=='+'||chars[i]=='-'){
+if(!allowSigns){
+return false;
+}
+allowSigns=false;
+foundDigit=false;
+}else {
+return false;
+}
+i++;
+
+Time : 17/08/24 12:46
+----------------------------------------
+Thu Aug 24 12:46:30 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1347
+Thu Aug 24 12:46:31 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1325
+Thu Aug 24 13:17:39 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1341
+Thu Aug 24 13:31:46 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1343
+Thu Aug 24 13:44:19 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1346
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+while(i<sz||(i<sz+1&&allowSigns&&!foundDigit)){
+if(chars[i]>='0'&&chars[i]<='9'){
+start=++i;
+foundDigit=true;
+allowSigns=false;
+}else if(chars[i]=='.'){
+if(hasDecPoint||hasExp){
+return false;
+}
+hasDecPoint=true;
+}else if(chars[i]=='e'||chars[i]=='E'){
+if(hasExp){
+return false;
+}
+if(!foundDigit){
+return false;
+}
+hasExp=true;
+allowSigns=true;
+}else if(chars[i]=='+'||chars[i]=='-'){
+if(!allowSigns){
+return false;
+}
+allowSigns=false;
+foundDigit=false;
+}else {
+return false;
+}
+i++;
+}
+
+Time : 17/08/24 13:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+while(i<sz&&(i<sz+1&&allowSigns&&!foundDigit)){
+if(chars[i]>='0'&&chars[i]<='9'){
+foundDigit=true;
+allowSigns=false;
+}else if(chars[i]=='.'){
+if(hasDecPoint||hasExp){
+return false;
+}
+hasDecPoint=true;
+}else if(chars[i]=='e'||chars[i]=='E'){
+if(hasExp){
+return false;
+}
+if(!foundDigit){
+return false;
+}
+hasExp=true;
+allowSigns=true;
+}else if(chars[i]=='+'||chars[i]=='-'){
+if(!allowSigns){
+return false;
+}
+allowSigns=false;
+foundDigit=false;
+}else {
+return false;
+}
+i++;
+}
+
+Time : 17/08/24 13:46
+----------------------------------------
+Thu Aug 24 13:47:04 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1316
+Thu Aug 24 13:50:35 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1317
+Thu Aug 24 13:53:43 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1318
+Thu Aug 24 13:56:05 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1319
+Thu Aug 24 13:56:05 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1320
+Thu Aug 24 13:56:06 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1321
+Thu Aug 24 13:56:13 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1323
+Thu Aug 24 13:56:13 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1324
+Thu Aug 24 13:56:13 AEST 2017 org.apache.commons.lang3.math.NumberUtils,1313
+Thu Aug 24 13:57:37 AEST 2017 org.apache.commons.lang3.StringUtils,191
+Thu Aug 24 13:58:25 AEST 2017 org.apache.commons.lang3.SystemUtils,1114
+Thu Aug 24 13:58:26 AEST 2017 Thu Aug 24 13:58:26 AEST 2017 : org.apache.commons.lang3.SystemUtils,1115=>Find no block
+Thu Aug 24 13:58:26 AEST 2017 org.apache.commons.lang3.SystemUtils,1133
+Thu Aug 24 13:58:26 AEST 2017 org.apache.commons.lang3.SystemUtils,1134
+Thu Aug 24 13:58:26 AEST 2017 org.apache.commons.lang3.SystemUtils,1136
+Thu Aug 24 14:12:28 AEST 2017 org.apache.commons.lang3.SystemUtils,1137
+Thu Aug 24 14:12:28 AEST 2017 org.apache.commons.lang3.SystemUtils,1138
+Thu Aug 24 14:12:29 AEST 2017 org.apache.commons.lang3.SystemUtils,1141
+Thu Aug 24 14:12:29 AEST 2017 Thu Aug 24 14:12:29 AEST 2017 : org.apache.commons.lang3.SystemUtils,1142=>Find no block
+Thu Aug 24 14:12:29 AEST 2017 org.apache.commons.lang3.SystemUtils,1143
+Thu Aug 24 14:12:29 AEST 2017 org.apache.commons.lang3.SystemUtils,1162
+Thu Aug 24 14:12:31 AEST 2017 org.apache.commons.lang3.SystemUtils,1163
+Thu Aug 24 14:12:31 AEST 2017 org.apache.commons.lang3.SystemUtils,1165
+Thu Aug 24 14:15:57 AEST 2017 org.apache.commons.lang3.SystemUtils,1166
+Thu Aug 24 14:21:52 AEST 2017 org.apache.commons.lang3.SystemUtils,1167
+Thu Aug 24 14:21:53 AEST 2017 org.apache.commons.lang3.SystemUtils,1168
+Thu Aug 24 14:21:54 AEST 2017 org.apache.commons.lang3.SystemUtils,1170
+Thu Aug 24 14:21:54 AEST 2017 org.apache.commons.lang3.SystemUtils,1173
+Timeout time : 17/08/24 14:22

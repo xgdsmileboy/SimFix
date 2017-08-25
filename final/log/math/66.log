@@ -1,0 +1,628 @@
+=================================================
+Project : math_66	start : 17/08/24 15:25
+Current failed test : org.apache.commons.math.optimization.univariate.BrentOptimizerTest::testQuinticMinStatistics_purify_1 | 17/08/24 15:28
+Thu Aug 24 15:28:40 AEST 2017 Thu Aug 24 15:28:40 AEST 2017 : org.apache.commons.math.util.ResizableDoubleArray,142=>Find no block
+Thu Aug 24 15:28:41 AEST 2017 Thu Aug 24 15:28:41 AEST 2017 : org.apache.commons.math.util.ResizableDoubleArray,90=>Find no block
+Thu Aug 24 15:28:42 AEST 2017 Thu Aug 24 15:28:42 AEST 2017 : org.apache.commons.math.util.ResizableDoubleArray,100=>Find no block
+Thu Aug 24 15:28:42 AEST 2017 Thu Aug 24 15:28:42 AEST 2017 : org.apache.commons.math.util.ResizableDoubleArray,106=>Find no block
+Thu Aug 24 15:28:43 AEST 2017 Thu Aug 24 15:28:43 AEST 2017 : org.apache.commons.math.util.ResizableDoubleArray,112=>Find no block
+Thu Aug 24 15:28:44 AEST 2017 Thu Aug 24 15:28:44 AEST 2017 : org.apache.commons.math.util.ResizableDoubleArray,123=>Find no block
+Thu Aug 24 15:28:44 AEST 2017 Thu Aug 24 15:28:44 AEST 2017 : org.apache.commons.math.util.ResizableDoubleArray,131=>Find no block
+Thu Aug 24 15:28:45 AEST 2017 org.apache.commons.math.util.ResizableDoubleArray,143
+Thu Aug 24 15:32:06 AEST 2017 Thu Aug 24 15:32:06 AEST 2017 : org.apache.commons.math.util.ResizableDoubleArray,144=>Find no block
+Thu Aug 24 15:32:07 AEST 2017 org.apache.commons.math.util.ResizableDoubleArray,267
+Thu Aug 24 15:57:02 AEST 2017 org.apache.commons.math.util.ResizableDoubleArray,268
+Thu Aug 24 15:57:02 AEST 2017 org.apache.commons.math.util.ResizableDoubleArray,269
+Thu Aug 24 15:57:04 AEST 2017 org.apache.commons.math.util.ResizableDoubleArray,271
+Thu Aug 24 15:57:05 AEST 2017 org.apache.commons.math.util.ResizableDoubleArray,272
+Thu Aug 24 15:57:05 AEST 2017 org.apache.commons.math.util.ResizableDoubleArray,273
+Thu Aug 24 15:57:06 AEST 2017 Thu Aug 24 15:57:06 AEST 2017 : org.apache.commons.math.util.ResizableDoubleArray,275=>Find no block
+Thu Aug 24 15:57:07 AEST 2017 org.apache.commons.math.util.ResizableDoubleArray,382
+Timeout time : 17/08/24 16:01
+Current failed test : org.apache.commons.math.optimization.univariate.BrentOptimizerTest::testSinMin_purify_3 | 17/08/24 16:01
+Thu Aug 24 16:02:25 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,66
+Thu Aug 24 16:03:04 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,107
+Thu Aug 24 16:07:49 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,108
+Thu Aug 24 16:07:49 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,158
+Timeout time : 17/08/24 16:35
+Current failed test : org.apache.commons.math.optimization.univariate.BrentOptimizerTest::testSinMin_purify_5 | 17/08/24 16:35
+Thu Aug 24 16:36:03 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,167
+Thu Aug 24 16:56:03 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,66
+Thu Aug 24 16:56:44 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,164
+Thu Aug 24 16:56:45 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,220
+Timeout time : 17/08/24 17:09
+Current failed test : org.apache.commons.math.optimization.univariate.BrentOptimizerTest::testSinMin_purify_8 | 17/08/24 17:09
+Thu Aug 24 17:09:45 AEST 2017 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,152
+Thu Aug 24 17:09:48 AEST 2017 Thu Aug 24 17:09:48 AEST 2017 : org.apache.commons.math.optimization.univariate.BrentOptimizer,43=>Find no block
+Thu Aug 24 17:09:49 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,44
+Thu Aug 24 17:10:33 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,45
+Thu Aug 24 17:10:34 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,46
+Thu Aug 24 17:10:34 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,47
+Thu Aug 24 17:10:35 AEST 2017 Thu Aug 24 17:10:35 AEST 2017 : org.apache.commons.math.optimization.univariate.BrentOptimizer,48=>Find no block
+Thu Aug 24 17:10:36 AEST 2017 Thu Aug 24 17:10:36 AEST 2017 : org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,82=>Find no block
+Thu Aug 24 17:10:37 AEST 2017 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,142
+Thu Aug 24 17:11:01 AEST 2017 Thu Aug 24 17:11:01 AEST 2017 : org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,143=>Find no block
+Thu Aug 24 17:11:01 AEST 2017 Thu Aug 24 17:11:01 AEST 2017 : org.apache.commons.math.ConvergingAlgorithmImpl,78=>Find no block
+Thu Aug 24 17:11:02 AEST 2017 org.apache.commons.math.ConvergingAlgorithmImpl,87
+Thu Aug 24 17:11:53 AEST 2017 Thu Aug 24 17:11:53 AEST 2017 : org.apache.commons.math.ConvergingAlgorithmImpl,88=>Find no block
+Thu Aug 24 17:11:54 AEST 2017 org.apache.commons.math.ConvergingAlgorithmImpl,102
+Thu Aug 24 17:12:29 AEST 2017 Thu Aug 24 17:12:29 AEST 2017 : org.apache.commons.math.ConvergingAlgorithmImpl,103=>Find no block
+Thu Aug 24 17:12:31 AEST 2017 org.apache.commons.math.ConvergingAlgorithmImpl,117
+Thu Aug 24 17:13:15 AEST 2017 Thu Aug 24 17:13:15 AEST 2017 : org.apache.commons.math.ConvergingAlgorithmImpl,118=>Find no block
+Thu Aug 24 17:13:15 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,57
+Thu Aug 24 17:13:18 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,60
+Thu Aug 24 17:14:20 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,61
+Thu Aug 24 17:14:21 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,66
+Thu Aug 24 17:15:00 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,99
+Thu Aug 24 17:15:03 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,100
+Thu Aug 24 17:15:04 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,102
+Thu Aug 24 17:16:11 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,103
+Thu Aug 24 17:16:12 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,106
+Thu Aug 24 17:20:50 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,107
+Thu Aug 24 17:20:51 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,108
+Thu Aug 24 17:20:52 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,110
+Thu Aug 24 17:20:52 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,111
+Thu Aug 24 17:20:53 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,114
+Thu Aug 24 17:31:13 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,115
+Thu Aug 24 17:35:49 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,116
+Thu Aug 24 17:40:19 AEST 2017 org.apache.commons.math.optimization.univariate.BrentOptimizer,117
+Timeout time : 17/08/24 17:42
+Current failed test : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testSinMin_purify_3 | 17/08/24 17:42
+Thu Aug 24 17:43:23 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,122
+Thu Aug 24 17:43:26 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,196
+Thu Aug 24 17:45:05 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,222
+Thu Aug 24 17:46:47 AEST 2017 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,105
+Thu Aug 24 17:48:57 AEST 2017 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,113
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+evaluations=0;
+return functionValue;
+
+Time : 17/08/24 17:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+evaluations=0;
+return result;
+
+Time : 17/08/24 17:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+this.min=min;
+evaluations=0;
+return functionValue;
+
+Time : 17/08/24 17:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+this.max=max;
+evaluations=0;
+return functionValue;
+
+Time : 17/08/24 17:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+this.startValue=startValue;
+evaluations=0;
+return functionValue;
+
+Time : 17/08/24 17:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+this.goal=goal;
+evaluations=0;
+return functionValue;
+
+Time : 17/08/24 17:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+this.function=function;
+evaluations=0;
+return functionValue;
+
+Time : 17/08/24 17:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+functionValue=Double.NaN;
+evaluations=0;
+return functionValue;
+
+Time : 17/08/24 17:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+evaluations=0;
+resetIterationsCounter();
+return functionValue;
+
+Time : 17/08/24 18:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+this.min=min;
+evaluations=0;
+return result;
+
+Time : 17/08/24 18:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+this.max=max;
+evaluations=0;
+return result;
+
+Time : 17/08/24 18:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+this.startValue=startValue;
+evaluations=0;
+return result;
+
+Time : 17/08/24 18:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+this.goal=goal;
+evaluations=0;
+return result;
+
+Time : 17/08/24 18:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+this.function=function;
+evaluations=0;
+return result;
+
+Time : 17/08/24 18:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+functionValue=Double.NaN;
+evaluations=0;
+return result;
+
+Time : 17/08/24 18:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+evaluations=0;
+resetIterationsCounter();
+return result;
+
+Time : 17/08/24 18:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+this.min=min;
+this.max=max;
+evaluations=0;
+return functionValue;
+
+Time : 17/08/24 18:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+this.min=min;
+this.startValue=startValue;
+evaluations=0;
+return functionValue;
+
+Time : 17/08/24 18:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+this.min=min;
+this.goal=goal;
+evaluations=0;
+return functionValue;
+
+Time : 17/08/24 18:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+this.min=min;
+this.function=function;
+evaluations=0;
+return functionValue;
+
+Time : 17/08/24 18:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+this.min=min;
+functionValue=Double.NaN;
+evaluations=0;
+return functionValue;
+
+Time : 17/08/24 18:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+this.min=min;
+evaluations=0;
+resetIterationsCounter();
+return functionValue;
+
+Time : 17/08/24 18:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+this.max=max;
+this.startValue=startValue;
+evaluations=0;
+return functionValue;
+
+Time : 17/08/24 18:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+this.max=max;
+this.goal=goal;
+evaluations=0;
+return functionValue;
+
+Time : 17/08/24 18:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+this.max=max;
+this.function=function;
+evaluations=0;
+return functionValue;
+
+Time : 17/08/24 18:16
+----------------------------------------
+Timeout time : 17/08/24 18:16
+Current failed test : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_3 | 17/08/24 18:16
+Thu Aug 24 18:17:12 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,107
+Thu Aug 24 18:17:15 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,280
+Thu Aug 24 18:19:57 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,281
+Thu Aug 24 18:19:58 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,282
+Thu Aug 24 18:19:59 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,283
+Thu Aug 24 18:31:07 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,284
+Thu Aug 24 18:31:08 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,285
+Thu Aug 24 18:31:08 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,286
+Thu Aug 24 18:31:09 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,287
+Thu Aug 24 18:31:10 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,288
+Thu Aug 24 18:31:10 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,294
+Thu Aug 24 18:37:33 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,295
+Thu Aug 24 18:45:55 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,296
+Timeout time : 17/08/24 18:50
+Current failed test : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_4 | 17/08/24 18:50
+Thu Aug 24 18:51:06 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,122
+Thu Aug 24 18:51:08 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,280
+Thu Aug 24 18:53:50 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,281
+Thu Aug 24 18:53:51 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,282
+Thu Aug 24 18:53:51 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,283
+Thu Aug 24 19:04:52 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,284
+Thu Aug 24 19:04:53 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,285
+Thu Aug 24 19:04:54 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,286
+Thu Aug 24 19:04:54 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,287
+Thu Aug 24 19:04:55 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,288
+Thu Aug 24 19:04:56 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,294
+Thu Aug 24 19:11:20 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,295
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+totalEvaluations=0;
+optima[i+1]=currX;
+optimaValues[i+1]=currY;
+currX=optima[j];
+
+Time : 17/08/24 19:12
+----------------------------------------
+Thu Aug 24 19:20:12 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,296
+Timeout time : 17/08/24 19:24
+Current failed test : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_8 | 17/08/24 19:24
+Thu Aug 24 19:24:53 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,280
+Thu Aug 24 19:27:31 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,281
+Thu Aug 24 19:27:32 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,282
+Thu Aug 24 19:27:33 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,283
+Thu Aug 24 19:38:25 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,284
+Thu Aug 24 19:38:25 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,285
+Thu Aug 24 19:38:26 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,286
+Thu Aug 24 19:38:27 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,287
+Thu Aug 24 19:38:27 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,288
+Thu Aug 24 19:38:28 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,294
+Thu Aug 24 19:45:03 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,295
+Thu Aug 24 19:53:25 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,296
+Timeout time : 17/08/24 19:57
+Current failed test : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_9 | 17/08/24 19:57
+Thu Aug 24 19:58:35 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,97
+Thu Aug 24 19:58:37 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,280
+Thu Aug 24 20:01:13 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,281
+Thu Aug 24 20:01:14 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,282
+Thu Aug 24 20:01:14 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,283
+Thu Aug 24 20:12:01 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,284
+Thu Aug 24 20:12:02 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,285
+Thu Aug 24 20:12:02 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,286
+Thu Aug 24 20:12:03 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,287
+Thu Aug 24 20:12:04 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,288
+Thu Aug 24 20:12:04 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,294
+Thu Aug 24 20:18:37 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,295
+Thu Aug 24 20:26:40 AEST 2017 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,296
+Timeout time : 17/08/24 20:31

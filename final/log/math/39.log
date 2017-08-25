@@ -1,0 +1,343 @@
+=================================================
+Project : math_39	start : 17/08/24 10:20
+Current failed test : org.apache.commons.math.ode.nonstiff.DormandPrince853IntegratorTest::testTooLargeFirstStep | 17/08/24 10:20
+Thu Aug 24 10:21:58 AEST 2017 org.apache.commons.math.util.FastMath,3252
+Thu Aug 24 10:45:28 AEST 2017 org.apache.commons.math.util.FastMath,3254
+Thu Aug 24 10:45:29 AEST 2017 org.apache.commons.math.util.FastMath,3256
+Thu Aug 24 10:45:30 AEST 2017 org.apache.commons.math.util.FastMath,3258
+Thu Aug 24 10:45:31 AEST 2017 org.apache.commons.math.util.FastMath,3259
+Thu Aug 24 10:45:32 AEST 2017 org.apache.commons.math.util.FastMath,3264
+Thu Aug 24 11:06:08 AEST 2017 org.apache.commons.math.util.FastMath,3265
+Thu Aug 24 11:10:12 AEST 2017 org.apache.commons.math.util.FastMath,3266
+Thu Aug 24 11:12:21 AEST 2017 org.apache.commons.math.util.FastMath,3267
+Thu Aug 24 11:12:22 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,244
+Thu Aug 24 11:36:33 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,246
+Thu Aug 24 11:57:03 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,248
+Thu Aug 24 11:58:09 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,249
+Thu Aug 24 11:58:11 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,250
+Thu Aug 24 11:58:12 AEST 2017 Thu Aug 24 11:58:12 AEST 2017 : org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,273=>Find no block
+Thu Aug 24 11:58:13 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,278
+Thu Aug 24 11:58:17 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,288
+Thu Aug 24 12:49:36 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,290
+Thu Aug 24 12:49:37 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,292
+Thu Aug 24 12:49:38 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,293
+Thu Aug 24 12:49:39 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,294
+Thu Aug 24 12:49:40 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,297
+Thu Aug 24 12:49:41 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,298
+Thu Aug 24 12:49:42 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,299
+Thu Aug 24 12:49:43 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,302
+Thu Aug 24 12:49:44 AEST 2017 Thu Aug 24 12:49:44 AEST 2017 : org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,304=>Find no block
+Thu Aug 24 12:49:45 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,309
+Thu Aug 24 12:51:41 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,310
+Thu Aug 24 12:51:42 AEST 2017 Thu Aug 24 12:51:42 AEST 2017 : org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,311=>Find no block
+Thu Aug 24 12:51:43 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,407
+Thu Aug 24 12:52:23 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,409
+Thu Aug 24 12:52:25 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853Integrator,220
+Thu Aug 24 12:53:43 AEST 2017 Thu Aug 24 12:53:43 AEST 2017 : org.apache.commons.math.ode.nonstiff.DormandPrince853Integrator,223=>Find no block
+Thu Aug 24 12:53:44 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853Integrator,247
+Thu Aug 24 12:53:48 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,231
+Thu Aug 24 12:54:39 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,232
+Thu Aug 24 12:54:40 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,233
+Thu Aug 24 12:54:41 AEST 2017 org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,234
+Thu Aug 24 12:54:42 AEST 2017 Thu Aug 24 12:54:42 AEST 2017 : org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator,235=>Find no block
+Thu Aug 24 12:54:43 AEST 2017 org.apache.commons.math.util.FastMath,3473
+Thu Aug 24 12:56:32 AEST 2017 org.apache.commons.math.util.FastMath,3474
+Thu Aug 24 12:56:34 AEST 2017 org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator,236
+Thu Aug 24 13:11:28 AEST 2017 org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator,237
+Thu Aug 24 13:11:29 AEST 2017 org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator,115
+Thu Aug 24 13:14:03 AEST 2017 org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator,117
+Thu Aug 24 13:14:04 AEST 2017 org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator,118
+Thu Aug 24 13:15:50 AEST 2017 org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator,119
+Thu Aug 24 13:17:37 AEST 2017 org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator,120
+Thu Aug 24 13:18:27 AEST 2017 org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator,121
+Thu Aug 24 13:20:08 AEST 2017 org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator,123
+Thu Aug 24 13:21:17 AEST 2017 org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator,126
+Thu Aug 24 13:22:00 AEST 2017 org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator,127
+Thu Aug 24 13:22:17 AEST 2017 org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator,128
+Thu Aug 24 13:22:18 AEST 2017 Thu Aug 24 13:22:18 AEST 2017 : org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator,130=>Find no block
+Thu Aug 24 13:22:20 AEST 2017 org.apache.commons.math.ode.nonstiff.AdaptiveStepsizeIntegrator,110
+Thu Aug 24 13:23:39 AEST 2017 org.apache.commons.math.ode.nonstiff.AdaptiveStepsizeIntegrator,111
+Thu Aug 24 13:23:40 AEST 2017 org.apache.commons.math.ode.nonstiff.AdaptiveStepsizeIntegrator,112
+Thu Aug 24 13:23:40 AEST 2017 Thu Aug 24 13:23:40 AEST 2017 : org.apache.commons.math.ode.nonstiff.AdaptiveStepsizeIntegrator,114=>Find no block
+Thu Aug 24 13:23:41 AEST 2017 org.apache.commons.math.ode.nonstiff.AdaptiveStepsizeIntegrator,157
+Thu Aug 24 13:27:04 AEST 2017 org.apache.commons.math.ode.nonstiff.AdaptiveStepsizeIntegrator,158
+Thu Aug 24 13:27:05 AEST 2017 org.apache.commons.math.ode.nonstiff.AdaptiveStepsizeIntegrator,159
+Thu Aug 24 13:27:06 AEST 2017 org.apache.commons.math.ode.nonstiff.AdaptiveStepsizeIntegrator,161
+Thu Aug 24 13:27:07 AEST 2017 org.apache.commons.math.ode.nonstiff.AdaptiveStepsizeIntegrator,162
+Thu Aug 24 13:27:08 AEST 2017 org.apache.commons.math.ode.nonstiff.AdaptiveStepsizeIntegrator,163
+Thu Aug 24 13:27:09 AEST 2017 org.apache.commons.math.ode.nonstiff.AdaptiveStepsizeIntegrator,164
+Thu Aug 24 13:27:13 AEST 2017 Thu Aug 24 13:27:13 AEST 2017 : org.apache.commons.math.ode.nonstiff.AdaptiveStepsizeIntegrator,166=>Find no block
+Thu Aug 24 13:27:14 AEST 2017 org.apache.commons.math.util.FastMath,827
+Thu Aug 24 13:32:40 AEST 2017 org.apache.commons.math.util.FastMath,829
+Thu Aug 24 13:32:41 AEST 2017 org.apache.commons.math.util.FastMath,837
+Thu Aug 24 13:36:53 AEST 2017 org.apache.commons.math.util.FastMath,847
+Thu Aug 24 13:40:59 AEST 2017 org.apache.commons.math.util.FastMath,857
+Thu Aug 24 13:49:14 AEST 2017 org.apache.commons.math.util.FastMath,859
+Thu Aug 24 13:50:21 AEST 2017 org.apache.commons.math.util.FastMath,860
+Thu Aug 24 13:51:25 AEST 2017 org.apache.commons.math.util.FastMath,862
+Thu Aug 24 13:51:26 AEST 2017 org.apache.commons.math.ode.nonstiff.AdaptiveStepsizeIntegrator,258
+Thu Aug 24 13:52:14 AEST 2017 org.apache.commons.math.ode.nonstiff.AdaptiveStepsizeIntegrator,259
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int yOnScale2=0;
+double yDotOnScale2=0;
+for(int j=0;j<scale.length;++j){
+ratio=y0[j]/scale[j];
+yOnScale2+=ratio*ratio;
+ratio=yDot0[j]/scale[j];
+yDotOnScale2+=ratio*ratio;
+}
+
+Time : 17/08/24 13:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int yOnScale2=mainSetDimension;
+double yDotOnScale2=0;
+for(int j=0;j<scale.length;++j){
+ratio=y0[j]/scale[j];
+yOnScale2+=ratio*ratio;
+ratio=yDot0[j]/scale[j];
+yDotOnScale2+=ratio*ratio;
+}
+
+Time : 17/08/24 13:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double yOnScale2=0;
+double yDotOnScale2=0;
+for(int j=mainSetDimension;j<scale.length;++j){
+ratio=y0[j]/scale[j];
+yOnScale2+=ratio*ratio;
+ratio=yDot0[j]/scale[j];
+yDotOnScale2+=ratio*ratio;
+}
+
+Time : 17/08/24 13:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double yOnScale2=0;
+double yDotOnScale2=0;
+for(int j=mainSetDimension;j<mainSetDimension;++j){
+ratio=y0[j]/scale[j];
+yOnScale2+=ratio*ratio;
+ratio=yDot0[j]/scale[j];
+yDotOnScale2+=ratio*ratio;
+}
+
+Time : 17/08/24 14:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double yOnScale2=0;
+double yDotOnScale2=0;
+for(int j=0;j<mainSetDimension-mainSetDimension;++j){
+ratio=y0[j]/scale[j];
+yOnScale2+=ratio*ratio;
+ratio=yDot0[j]/scale[j];
+yDotOnScale2+=ratio*ratio;
+}
+
+Time : 17/08/24 14:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int yOnScale2=mainSetDimension*mainSetDimension;
+double yDotOnScale2=0;
+for(int j=0;j<scale.length;++j){
+ratio=y0[j]/scale[j];
+yOnScale2+=ratio*ratio;
+ratio=yDot0[j]/scale[j];
+yDotOnScale2+=ratio*ratio;
+}
+
+Time : 17/08/24 14:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int yOnScale2=0;
+double yDotOnScale2=0;
+for(int j=mainSetDimension;j<scale.length;++j){
+ratio=y0[j]/scale[j];
+yOnScale2+=ratio*ratio;
+ratio=yDot0[j]/scale[j];
+yDotOnScale2+=ratio*ratio;
+}
+
+Time : 17/08/24 14:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int yOnScale2=0;
+double yDotOnScale2=0;
+mainSetDimension=mainSetDimension;
+for(int j=0;j<scale.length;++j){
+ratio=y0[j]/scale[j];
+yOnScale2+=ratio*ratio;
+ratio=yDot0[j]/scale[j];
+yDotOnScale2+=ratio*ratio;
+}
+
+Time : 17/08/24 14:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int yOnScale2=0;
+double yDotOnScale2=mainSetDimension;
+for(int j=0;j<scale.length;++j){
+ratio=y0[j]/scale[j];
+yOnScale2+=ratio*ratio;
+ratio=yDot0[j]/scale[j];
+yDotOnScale2+=ratio*ratio;
+}
+
+Time : 17/08/24 14:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int yOnScale2=mainSetDimension;
+double yDotOnScale2=mainSetDimension;
+for(int j=0;j<scale.length;++j){
+ratio=y0[j]/scale[j];
+yOnScale2+=ratio*ratio;
+ratio=yDot0[j]/scale[j];
+yDotOnScale2+=ratio*ratio;
+}
+
+Time : 17/08/24 14:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int yOnScale2=0;
+double yDotOnScale2=mainSetDimension+1-mainSetDimension;
+for(int j=0;j<scale.length;++j){
+ratio=y0[j]/scale[j];
+yOnScale2+=ratio*ratio;
+ratio=yDot0[j]/scale[j];
+yDotOnScale2+=ratio*ratio;
+}
+
+Time : 17/08/24 14:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int yOnScale2=mainSetDimension;
+double yDotOnScale2=mainSetDimension+1-mainSetDimension;
+for(int j=0;j<scale.length;++j){
+ratio=y0[j]/scale[j];
+yOnScale2+=ratio*ratio;
+ratio=yDot0[j]/scale[j];
+yDotOnScale2+=ratio*ratio;
+}
+
+Time : 17/08/24 14:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+char yOnScale2=0;
+double yDotOnScale2=0;
+for(int j=0;j<scale.length;++j){
+ratio=y0[j]/scale[j];
+yOnScale2+=ratio*ratio;
+ratio=yDot0[j]/scale[j];
+yDotOnScale2+=ratio*ratio;
+}
+
+Time : 17/08/24 14:42
+----------------------------------------
+Thu Aug 24 14:44:43 AEST 2017 org.apache.commons.math.ode.nonstiff.AdaptiveStepsizeIntegrator,260
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=mainSetDimension;j<scale.length;++j){
+ratio=y0[j]/scale[j];
+yOnScale2+=ratio*ratio;
+ratio=yDot0[j]/scale[j];
+yDotOnScale2+=ratio*ratio;
+}
+
+Time : 17/08/24 14:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=mainSetDimension;j<mainSetDimension;++j){
+ratio=y0[j]/scale[j];
+yOnScale2+=ratio*ratio;
+ratio=yDot0[j]/scale[j];
+yDotOnScale2+=ratio*ratio;
+}
+
+Time : 17/08/24 14:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<mainSetDimension-mainSetDimension;++j){
+ratio=y0[j]/scale[j];
+yOnScale2+=ratio*ratio;
+ratio=yDot0[j]/scale[j];
+yDotOnScale2+=ratio*ratio;
+}
+
+Time : 17/08/24 15:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<scale.length;++j){
+ratio=y0[j]/scale[j];
+yOnScale2+=ratio*stepStart;
+ratio=yDot0[j]/scale[j];
+yDotOnScale2+=ratio*ratio;
+}
+
+Time : 17/08/24 15:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(y0,0,y0,0,y0.length);
+for(int j=0;j<scale.length;++j){
+ratio=y0[j]/scale[j];
+yOnScale2+=ratio*stepStart;
+ratio=yDot0[j]/scale[j];
+yDotOnScale2+=ratio*ratio;
+}
+
+Time : 17/08/24 15:21
+----------------------------------------
+Timeout time : 17/08/24 15:22

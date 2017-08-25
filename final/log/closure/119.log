@@ -1,0 +1,58 @@
+=================================================
+Project : closure_119	start : 17/08/23 17:41
+Current failed test : com.google.javascript.jscomp.CheckGlobalNamesTest::testGlobalCatch | 17/08/23 17:42
+Wed Aug 23 17:42:48 AEST 2017 com.google.javascript.jscomp.CheckGlobalNames,220
+Wed Aug 23 17:43:02 AEST 2017 com.google.javascript.jscomp.AstValidator,523
+Wed Aug 23 17:50:52 AEST 2017 com.google.javascript.jscomp.AstValidator,524
+Wed Aug 23 17:50:53 AEST 2017 com.google.javascript.jscomp.AstValidator,539
+Wed Aug 23 17:54:01 AEST 2017 com.google.javascript.jscomp.AstValidator,540
+Wed Aug 23 17:54:02 AEST 2017 com.google.javascript.jscomp.AstValidator,541
+Wed Aug 23 17:54:03 AEST 2017 com.google.javascript.jscomp.AstValidator,542
+Wed Aug 23 17:54:04 AEST 2017 Wed Aug 23 17:54:04 AEST 2017 : com.google.javascript.jscomp.AstValidator,543=>Find no block
+Wed Aug 23 17:54:05 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,655
+Wed Aug 23 18:00:15 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,656
+Wed Aug 23 18:00:16 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,657
+Wed Aug 23 18:00:17 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,663
+Wed Aug 23 18:00:18 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,664
+Wed Aug 23 18:00:19 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1155
+Wed Aug 23 18:00:45 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1156
+Wed Aug 23 18:00:46 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1157
+Wed Aug 23 18:00:47 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1158
+Wed Aug 23 18:00:48 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1160
+Wed Aug 23 18:07:44 AEST 2017 Wed Aug 23 18:07:44 AEST 2017 : com.google.javascript.jscomp.parsing.IRFactory,1161=>Find no block
+Wed Aug 23 18:07:46 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,191
+Wed Aug 23 18:08:53 AEST 2017 com.google.javascript.jscomp.SyntacticScopeCreator,149
+Wed Aug 23 18:11:57 AEST 2017 com.google.javascript.jscomp.SyntacticScopeCreator,150
+Wed Aug 23 18:19:02 AEST 2017 com.google.javascript.jscomp.SyntacticScopeCreator,154
+Wed Aug 23 18:48:27 AEST 2017 com.google.javascript.jscomp.SyntacticScopeCreator,155
+Wed Aug 23 19:18:02 AEST 2017 com.google.javascript.jscomp.SyntacticScopeCreator,157
+Wed Aug 23 19:35:46 AEST 2017 com.google.javascript.jscomp.SyntacticScopeCreator,158
+Wed Aug 23 19:37:07 AEST 2017 com.google.javascript.jscomp.SyntacticScopeCreator,159
+Wed Aug 23 19:38:12 AEST 2017 com.google.javascript.jscomp.AstValidator,135
+Wed Aug 23 19:44:09 AEST 2017 com.google.javascript.jscomp.AstValidator,136
+Wed Aug 23 19:47:07 AEST 2017 com.google.javascript.jscomp.AstValidator,511
+Wed Aug 23 19:54:50 AEST 2017 com.google.javascript.jscomp.AstValidator,512
+Wed Aug 23 19:54:51 AEST 2017 com.google.javascript.jscomp.AstValidator,513
+Wed Aug 23 19:58:38 AEST 2017 com.google.javascript.jscomp.AstValidator,514
+Wed Aug 23 20:05:00 AEST 2017 com.google.javascript.jscomp.AstValidator,516
+Wed Aug 23 20:26:39 AEST 2017 com.google.javascript.jscomp.AstValidator,519
+Wed Aug 23 20:47:28 AEST 2017 com.google.javascript.jscomp.AstValidator,520
+Wed Aug 23 21:01:09 AEST 2017 com.google.javascript.jscomp.AstValidator,521
+Wed Aug 23 21:13:23 AEST 2017 com.google.javascript.jscomp.AstValidator,522
+Wed Aug 23 21:13:24 AEST 2017 com.google.javascript.jscomp.AstValidator,528
+Wed Aug 23 21:17:29 AEST 2017 com.google.javascript.jscomp.AstValidator,533
+Wed Aug 23 21:20:24 AEST 2017 Wed Aug 23 21:20:24 AEST 2017 : com.google.javascript.jscomp.AstValidator,536=>Find no block
+Wed Aug 23 21:20:25 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1147
+Wed Aug 23 21:24:35 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1149
+Wed Aug 23 21:24:36 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1150
+Wed Aug 23 21:36:56 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1152
+Wed Aug 23 21:36:57 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1162
+Wed Aug 23 22:02:03 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1164
+Wed Aug 23 22:19:08 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1165
+Wed Aug 23 22:21:55 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1172
+Wed Aug 23 22:24:34 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1177
+Wed Aug 23 22:33:55 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,266
+Wed Aug 23 22:36:15 AEST 2017 com.google.javascript.jscomp.CheckGlobalNames,159
+Wed Aug 23 22:36:33 AEST 2017 com.google.javascript.jscomp.CheckGlobalNames,218
+Wed Aug 23 22:36:34 AEST 2017 com.google.javascript.jscomp.CheckGlobalNames,223
+Timeout time : 17/08/23 22:42

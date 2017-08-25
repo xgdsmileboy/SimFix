@@ -1,0 +1,216 @@
+=================================================
+Project : lang_56	start : 17/08/24 08:33
+Current failed test : org.apache.commons.lang.time.FastDateFormatTest::testLang303 | 17/08/24 08:34
+Thu Aug 24 08:34:45 AEST 2017 Thu Aug 24 08:34:45 AEST 2017 : org.apache.commons.lang.exception.NestableRuntimeException,47=>Find no block
+Thu Aug 24 08:34:45 AEST 2017 Thu Aug 24 08:34:45 AEST 2017 : org.apache.commons.lang.exception.NestableRuntimeException,53=>Find no block
+Thu Aug 24 08:34:45 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,81
+Thu Aug 24 08:34:46 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,82
+Thu Aug 24 08:34:46 AEST 2017 Thu Aug 24 08:34:46 AEST 2017 : org.apache.commons.lang.exception.NestableRuntimeException,83=>Find no block
+Thu Aug 24 08:34:46 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,102
+Thu Aug 24 08:34:47 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,113
+Thu Aug 24 08:35:06 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,115
+Thu Aug 24 08:35:06 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,116
+Thu Aug 24 08:35:06 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,193
+Thu Aug 24 08:35:25 AEST 2017 Thu Aug 24 08:35:25 AEST 2017 : org.apache.commons.lang.exception.NestableRuntimeException,194=>Find no block
+Thu Aug 24 08:35:25 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,200
+Thu Aug 24 08:35:26 AEST 2017 Thu Aug 24 08:35:26 AEST 2017 : org.apache.commons.lang.exception.NestableRuntimeException,201=>Find no block
+Thu Aug 24 08:35:26 AEST 2017 org.apache.commons.lang.SerializationException,65
+Thu Aug 24 08:35:37 AEST 2017 Thu Aug 24 08:35:37 AEST 2017 : org.apache.commons.lang.SerializationException,66=>Find no block
+Thu Aug 24 08:35:37 AEST 2017 org.apache.commons.lang.SerializationUtils,101
+Thu Aug 24 08:35:38 AEST 2017 org.apache.commons.lang.SerializationUtils,104
+Thu Aug 24 08:35:38 AEST 2017 org.apache.commons.lang.SerializationUtils,107
+Thu Aug 24 08:35:57 AEST 2017 org.apache.commons.lang.SerializationUtils,108
+Thu Aug 24 08:35:57 AEST 2017 Thu Aug 24 08:35:57 AEST 2017 : org.apache.commons.lang.SerializationUtils,110=>Find no block
+Thu Aug 24 08:35:57 AEST 2017 org.apache.commons.lang.SerializationUtils,111
+Thu Aug 24 08:36:16 AEST 2017 Thu Aug 24 08:36:16 AEST 2017 : org.apache.commons.lang.SerializationUtils,113=>Find no block
+Thu Aug 24 08:36:16 AEST 2017 org.apache.commons.lang.SerializationUtils,132
+Thu Aug 24 08:36:56 AEST 2017 org.apache.commons.lang.SerializationUtils,133
+Thu Aug 24 08:36:56 AEST 2017 org.apache.commons.lang.time.FastDateFormat,167
+Thu Aug 24 08:36:56 AEST 2017 org.apache.commons.lang.time.FastDateFormat,980
+Thu Aug 24 08:37:44 AEST 2017 org.apache.commons.lang.time.FastDateFormat,983
+Thu Aug 24 08:39:44 AEST 2017 Thu Aug 24 08:39:44 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,984=>Find no block
+Thu Aug 24 08:39:44 AEST 2017 org.apache.commons.lang.time.FastDateFormat,991
+Thu Aug 24 08:39:44 AEST 2017 org.apache.commons.lang.time.FastDateFormat,547
+Thu Aug 24 08:40:04 AEST 2017 org.apache.commons.lang.time.FastDateFormat,553
+Thu Aug 24 08:40:25 AEST 2017 org.apache.commons.lang.time.FastDateFormat,539
+Thu Aug 24 08:40:26 AEST 2017 org.apache.commons.lang.time.FastDateFormat,540
+Thu Aug 24 08:40:26 AEST 2017 org.apache.commons.lang.time.FastDateFormat,543
+Thu Aug 24 08:40:51 AEST 2017 org.apache.commons.lang.time.FastDateFormat,545
+Thu Aug 24 08:41:25 AEST 2017 org.apache.commons.lang.time.FastDateFormat,546
+Thu Aug 24 08:41:25 AEST 2017 org.apache.commons.lang.time.FastDateFormat,549
+Thu Aug 24 08:42:00 AEST 2017 org.apache.commons.lang.time.FastDateFormat,551
+Thu Aug 24 08:42:31 AEST 2017 org.apache.commons.lang.time.FastDateFormat,552
+Thu Aug 24 08:42:31 AEST 2017 org.apache.commons.lang.time.FastDateFormat,555
+Thu Aug 24 08:42:57 AEST 2017 Thu Aug 24 08:42:57 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,556=>Find no block
+Thu Aug 24 08:42:57 AEST 2017 org.apache.commons.lang.time.FastDateFormat,213
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(format!=null){
+format=emptyFormat;
+format.init();
+cInstanceCache.put(format,format);
+}
+
+Time : 17/08/24 08:43
+----------------------------------------
+Thu Aug 24 08:44:37 AEST 2017 org.apache.commons.lang.time.FastDateFormat,214
+Thu Aug 24 08:44:37 AEST 2017 org.apache.commons.lang.time.FastDateFormat,215
+Thu Aug 24 08:44:37 AEST 2017 org.apache.commons.lang.time.FastDateFormat,220
+Thu Aug 24 08:44:37 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1002
+Thu Aug 24 08:44:52 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1003
+Thu Aug 24 08:44:52 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1004
+Thu Aug 24 08:44:52 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1005
+Thu Aug 24 08:44:53 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1006
+Thu Aug 24 08:44:53 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1007
+Thu Aug 24 08:44:53 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1008
+Thu Aug 24 08:44:53 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,60
+Thu Aug 24 08:44:53 AEST 2017 Thu Aug 24 08:44:53 AEST 2017 : org.apache.commons.lang.exception.NestableRuntimeException,61=>Find no block
+Thu Aug 24 08:44:53 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,70
+Thu Aug 24 08:45:00 AEST 2017 Thu Aug 24 08:45:00 AEST 2017 : org.apache.commons.lang.exception.NestableRuntimeException,71=>Find no block
+Thu Aug 24 08:45:00 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,94
+Thu Aug 24 08:45:07 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,95
+Thu Aug 24 08:45:07 AEST 2017 Thu Aug 24 08:45:07 AEST 2017 : org.apache.commons.lang.exception.NestableRuntimeException,96=>Find no block
+Thu Aug 24 08:45:07 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,114
+Thu Aug 24 08:45:07 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,118
+Thu Aug 24 08:45:07 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,126
+Thu Aug 24 08:46:25 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,127
+Thu Aug 24 08:46:25 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,129
+Thu Aug 24 08:46:25 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,137
+Thu Aug 24 08:46:26 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,144
+Thu Aug 24 08:46:27 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,151
+Thu Aug 24 08:46:27 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,158
+Thu Aug 24 08:46:28 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,165
+Thu Aug 24 08:46:28 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,172
+Thu Aug 24 08:46:29 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,179
+Thu Aug 24 08:46:29 AEST 2017 Thu Aug 24 08:46:29 AEST 2017 : org.apache.commons.lang.exception.NestableRuntimeException,180=>Find no block
+Thu Aug 24 08:46:29 AEST 2017 org.apache.commons.lang.exception.NestableRuntimeException,186
+Thu Aug 24 08:46:30 AEST 2017 Thu Aug 24 08:46:30 AEST 2017 : org.apache.commons.lang.exception.NestableRuntimeException,187=>Find no block
+Thu Aug 24 08:46:30 AEST 2017 org.apache.commons.lang.SerializationException,44
+Thu Aug 24 08:46:31 AEST 2017 Thu Aug 24 08:46:31 AEST 2017 : org.apache.commons.lang.SerializationException,45=>Find no block
+Thu Aug 24 08:46:31 AEST 2017 org.apache.commons.lang.SerializationException,54
+Thu Aug 24 08:46:31 AEST 2017 Thu Aug 24 08:46:31 AEST 2017 : org.apache.commons.lang.SerializationException,55=>Find no block
+Thu Aug 24 08:46:31 AEST 2017 org.apache.commons.lang.SerializationException,77
+Thu Aug 24 08:46:59 AEST 2017 Thu Aug 24 08:46:59 AEST 2017 : org.apache.commons.lang.SerializationException,78=>Find no block
+Thu Aug 24 08:46:59 AEST 2017 org.apache.commons.lang.SerializationUtils,61
+Thu Aug 24 08:46:59 AEST 2017 Thu Aug 24 08:46:59 AEST 2017 : org.apache.commons.lang.SerializationUtils,62=>Find no block
+Thu Aug 24 08:46:59 AEST 2017 org.apache.commons.lang.SerializationUtils,80
+Thu Aug 24 08:47:00 AEST 2017 org.apache.commons.lang.SerializationUtils,102
+Thu Aug 24 08:47:00 AEST 2017 org.apache.commons.lang.SerializationUtils,114
+Thu Aug 24 08:47:00 AEST 2017 org.apache.commons.lang.SerializationUtils,115
+Thu Aug 24 08:47:00 AEST 2017 Thu Aug 24 08:47:00 AEST 2017 : org.apache.commons.lang.SerializationUtils,119=>Find no block
+Thu Aug 24 08:47:01 AEST 2017 Thu Aug 24 08:47:01 AEST 2017 : org.apache.commons.lang.SerializationUtils,117=>Find no block
+Thu Aug 24 08:47:01 AEST 2017 Thu Aug 24 08:47:01 AEST 2017 : org.apache.commons.lang.SerializationUtils,120=>Find no block
+Thu Aug 24 08:47:01 AEST 2017 Thu Aug 24 08:47:01 AEST 2017 : org.apache.commons.lang.SerializationUtils,121=>Find no block
+Thu Aug 24 08:47:01 AEST 2017 org.apache.commons.lang.SerializationUtils,134
+Thu Aug 24 08:47:01 AEST 2017 org.apache.commons.lang.SerializationUtils,155
+Thu Aug 24 08:47:02 AEST 2017 org.apache.commons.lang.SerializationUtils,156
+Thu Aug 24 08:47:02 AEST 2017 org.apache.commons.lang.SerializationUtils,158
+Thu Aug 24 08:47:02 AEST 2017 org.apache.commons.lang.SerializationUtils,161
+Thu Aug 24 08:47:03 AEST 2017 org.apache.commons.lang.SerializationUtils,162
+Thu Aug 24 08:47:03 AEST 2017 org.apache.commons.lang.SerializationUtils,170
+Thu Aug 24 08:47:04 AEST 2017 org.apache.commons.lang.SerializationUtils,171
+Thu Aug 24 08:47:04 AEST 2017 Thu Aug 24 08:47:04 AEST 2017 : org.apache.commons.lang.SerializationUtils,175=>Find no block
+Thu Aug 24 08:47:04 AEST 2017 Thu Aug 24 08:47:04 AEST 2017 : org.apache.commons.lang.SerializationUtils,173=>Find no block
+Thu Aug 24 08:47:04 AEST 2017 Thu Aug 24 08:47:04 AEST 2017 : org.apache.commons.lang.SerializationUtils,164=>Find no block
+Thu Aug 24 08:47:04 AEST 2017 org.apache.commons.lang.SerializationUtils,165
+Thu Aug 24 08:47:05 AEST 2017 Thu Aug 24 08:47:05 AEST 2017 : org.apache.commons.lang.SerializationUtils,166=>Find no block
+Thu Aug 24 08:47:05 AEST 2017 org.apache.commons.lang.SerializationUtils,167
+Thu Aug 24 08:47:05 AEST 2017 Thu Aug 24 08:47:05 AEST 2017 : org.apache.commons.lang.SerializationUtils,169=>Find no block
+Thu Aug 24 08:47:05 AEST 2017 org.apache.commons.lang.SerializationUtils,188
+Thu Aug 24 08:47:06 AEST 2017 org.apache.commons.lang.SerializationUtils,189
+Thu Aug 24 08:47:06 AEST 2017 org.apache.commons.lang.SerializationUtils,191
+Thu Aug 24 08:47:07 AEST 2017 org.apache.commons.lang.SerializationUtils,192
+Thu Aug 24 08:47:07 AEST 2017 Thu Aug 24 08:47:07 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1070=>Find no block
+Thu Aug 24 08:47:07 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1071
+Thu Aug 24 08:47:14 AEST 2017 Thu Aug 24 08:47:14 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1072=>Find no block
+Thu Aug 24 08:47:14 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1078
+Thu Aug 24 08:47:15 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1085
+Thu Aug 24 08:48:30 AEST 2017 Thu Aug 24 08:48:30 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1086=>Find no block
+Thu Aug 24 08:48:31 AEST 2017 Thu Aug 24 08:48:31 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1101=>Find no block
+Thu Aug 24 08:48:31 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1102
+Thu Aug 24 08:48:31 AEST 2017 Thu Aug 24 08:48:31 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1103=>Find no block
+Thu Aug 24 08:48:31 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1109
+Thu Aug 24 08:48:46 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1116
+Thu Aug 24 08:48:46 AEST 2017 Thu Aug 24 08:48:46 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1117=>Find no block
+Thu Aug 24 08:48:46 AEST 2017 Thu Aug 24 08:48:46 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1134=>Find no block
+Thu Aug 24 08:48:46 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1135
+Thu Aug 24 08:48:56 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1136
+Thu Aug 24 08:48:56 AEST 2017 Thu Aug 24 08:48:56 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1137=>Find no block
+Thu Aug 24 08:48:56 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1143
+Thu Aug 24 09:00:11 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1144
+Thu Aug 24 09:00:11 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1145
+Thu Aug 24 09:00:11 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1146
+Thu Aug 24 09:00:11 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1147
+Thu Aug 24 09:00:11 AEST 2017 Thu Aug 24 09:00:11 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1149=>Find no block
+Thu Aug 24 09:00:11 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1150
+Thu Aug 24 09:00:12 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1157
+Thu Aug 24 09:01:03 AEST 2017 Thu Aug 24 09:01:03 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1158=>Find no block
+Thu Aug 24 09:01:03 AEST 2017 Thu Aug 24 09:01:03 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1591=>Find no block
+Thu Aug 24 09:01:03 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1592
+Thu Aug 24 09:01:04 AEST 2017 Thu Aug 24 09:01:04 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1593=>Find no block
+Thu Aug 24 09:01:04 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1599
+Thu Aug 24 09:01:04 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1606
+Thu Aug 24 09:02:32 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1608
+Thu Aug 24 09:32:24 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1609
+Thu Aug 24 09:32:24 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1610
+Thu Aug 24 09:32:24 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1612
+Thu Aug 24 09:32:24 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1615
+Thu Aug 24 09:36:16 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1616
+Thu Aug 24 09:38:30 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1617
+Thu Aug 24 09:40:46 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1619
+Thu Aug 24 09:42:21 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1620
+Thu Aug 24 09:42:21 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1623
+Thu Aug 24 09:46:04 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1624
+Thu Aug 24 09:48:10 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1625
+Thu Aug 24 09:48:10 AEST 2017 Thu Aug 24 09:48:10 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1626=>Find no block
+Thu Aug 24 09:48:10 AEST 2017 Thu Aug 24 09:48:10 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1321=>Find no block
+Thu Aug 24 09:48:10 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1322
+Thu Aug 24 09:48:25 AEST 2017 Thu Aug 24 09:48:25 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1323=>Find no block
+Thu Aug 24 09:48:25 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1329
+Thu Aug 24 09:48:26 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1336
+Thu Aug 24 09:48:50 AEST 2017 Thu Aug 24 09:48:50 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1337=>Find no block
+Thu Aug 24 09:48:50 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1343
+Thu Aug 24 09:53:27 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1344
+Thu Aug 24 09:53:27 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1345
+Thu Aug 24 09:53:27 AEST 2017 org.apache.commons.lang.time.FastDateFormat,1347
+Thu Aug 24 09:53:27 AEST 2017 Thu Aug 24 09:53:27 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,1349=>Find no block
+Thu Aug 24 09:53:27 AEST 2017 org.apache.commons.lang.time.FastDateFormat,541
+Thu Aug 24 09:53:27 AEST 2017 org.apache.commons.lang.time.FastDateFormat,154
+Thu Aug 24 09:53:28 AEST 2017 org.apache.commons.lang.time.FastDateFormat,182
+Thu Aug 24 09:53:28 AEST 2017 org.apache.commons.lang.time.FastDateFormat,196
+Thu Aug 24 09:53:29 AEST 2017 org.apache.commons.lang.time.FastDateFormat,216
+Thu Aug 24 09:53:29 AEST 2017 org.apache.commons.lang.time.FastDateFormat,217
+Thu Aug 24 09:53:29 AEST 2017 org.apache.commons.lang.time.FastDateFormat,218
+Thu Aug 24 09:53:29 AEST 2017 org.apache.commons.lang.time.FastDateFormat,235
+Thu Aug 24 09:53:50 AEST 2017 org.apache.commons.lang.time.FastDateFormat,250
+Thu Aug 24 09:54:13 AEST 2017 org.apache.commons.lang.time.FastDateFormat,266
+Thu Aug 24 09:54:34 AEST 2017 org.apache.commons.lang.time.FastDateFormat,281
+Thu Aug 24 09:54:59 AEST 2017 org.apache.commons.lang.time.FastDateFormat,282
+Thu Aug 24 09:55:21 AEST 2017 org.apache.commons.lang.time.FastDateFormat,283
+Thu Aug 24 09:55:22 AEST 2017 org.apache.commons.lang.time.FastDateFormat,285
+Thu Aug 24 09:55:43 AEST 2017 org.apache.commons.lang.time.FastDateFormat,286
+Thu Aug 24 09:55:43 AEST 2017 org.apache.commons.lang.time.FastDateFormat,289
+Thu Aug 24 09:56:36 AEST 2017 org.apache.commons.lang.time.FastDateFormat,290
+Thu Aug 24 09:57:05 AEST 2017 org.apache.commons.lang.time.FastDateFormat,291
+Thu Aug 24 09:57:05 AEST 2017 org.apache.commons.lang.time.FastDateFormat,292
+Thu Aug 24 09:57:05 AEST 2017 org.apache.commons.lang.time.FastDateFormat,296
+Thu Aug 24 09:58:51 AEST 2017 org.apache.commons.lang.time.FastDateFormat,297
+Thu Aug 24 09:58:51 AEST 2017 org.apache.commons.lang.time.FastDateFormat,298
+Thu Aug 24 10:01:39 AEST 2017 org.apache.commons.lang.time.FastDateFormat,299
+Thu Aug 24 10:01:39 AEST 2017 Thu Aug 24 10:01:39 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,303=>Find no block
+Thu Aug 24 10:01:40 AEST 2017 Thu Aug 24 10:01:40 AEST 2017 : org.apache.commons.lang.time.FastDateFormat,301=>Find no block
+Thu Aug 24 10:01:40 AEST 2017 org.apache.commons.lang.time.FastDateFormat,302
+Thu Aug 24 10:02:28 AEST 2017 org.apache.commons.lang.time.FastDateFormat,305
+Thu Aug 24 10:02:40 AEST 2017 org.apache.commons.lang.time.FastDateFormat,320
+Thu Aug 24 10:03:02 AEST 2017 org.apache.commons.lang.time.FastDateFormat,335
+Thu Aug 24 10:03:24 AEST 2017 org.apache.commons.lang.time.FastDateFormat,351
+Thu Aug 24 10:03:46 AEST 2017 org.apache.commons.lang.time.FastDateFormat,367
+Thu Aug 24 10:03:46 AEST 2017 org.apache.commons.lang.time.FastDateFormat,368
+Thu Aug 24 10:03:46 AEST 2017 org.apache.commons.lang.time.FastDateFormat,369
+Thu Aug 24 10:03:46 AEST 2017 org.apache.commons.lang.time.FastDateFormat,371
+Thu Aug 24 10:03:46 AEST 2017 org.apache.commons.lang.time.FastDateFormat,372
+Thu Aug 24 10:03:46 AEST 2017 org.apache.commons.lang.time.FastDateFormat,375
+Thu Aug 24 10:04:40 AEST 2017 org.apache.commons.lang.time.FastDateFormat,376
+Failed time : 17/08/24 10:05

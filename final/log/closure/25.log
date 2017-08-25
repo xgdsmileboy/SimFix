@@ -1,0 +1,45 @@
+=================================================
+Project : closure_25	start : 17/08/23 17:41
+Current failed test : com.google.javascript.jscomp.TypeInferenceTest::testBackwardsInferenceNew | 17/08/23 17:43
+Wed Aug 23 17:57:21 AEST 2017 Wed Aug 23 17:57:21 AEST 2017 : com.google.javascript.rhino.JSDocInfo,77=>Find no block
+Wed Aug 23 17:57:26 AEST 2017 Wed Aug 23 17:57:26 AEST 2017 : com.google.javascript.jscomp.parsing.JsDocToken,25=>Find no block
+Wed Aug 23 17:57:30 AEST 2017 Wed Aug 23 17:57:30 AEST 2017 : com.google.javascript.jscomp.parsing.JsDocToken,25=>Find no block
+Wed Aug 23 17:57:34 AEST 2017 Wed Aug 23 17:57:34 AEST 2017 : com.google.javascript.jscomp.parsing.JsDocInfoParser,119=>Find no block
+Wed Aug 23 17:57:39 AEST 2017 Wed Aug 23 17:57:39 AEST 2017 : com.google.javascript.jscomp.parsing.Annotation,27=>Find no block
+Wed Aug 23 17:57:44 AEST 2017 com.google.javascript.rhino.jstype.JSTypeRegistry,1629
+Wed Aug 23 18:32:20 AEST 2017 com.google.javascript.rhino.jstype.JSTypeRegistry,1630
+Wed Aug 23 18:32:25 AEST 2017 com.google.javascript.rhino.jstype.JSTypeRegistry,1647
+Wed Aug 23 18:43:09 AEST 2017 com.google.javascript.jscomp.parsing.JsDocInfoParser,2149
+Wed Aug 23 19:04:52 AEST 2017 com.google.javascript.jscomp.parsing.JsDocInfoParser,2153
+Wed Aug 23 19:24:15 AEST 2017 com.google.javascript.jscomp.parsing.JsDocInfoParser,2154
+Wed Aug 23 20:01:49 AEST 2017 com.google.javascript.jscomp.parsing.JsDocInfoParser,2156
+Wed Aug 23 20:01:52 AEST 2017 com.google.javascript.jscomp.parsing.JsDocInfoParser,2160
+Wed Aug 23 20:24:36 AEST 2017 com.google.javascript.jscomp.parsing.JsDocInfoParser,2161
+Wed Aug 23 21:17:03 AEST 2017 com.google.javascript.jscomp.parsing.JsDocInfoParser,2162
+Wed Aug 23 21:51:33 AEST 2017 com.google.javascript.jscomp.parsing.JsDocInfoParser,2163
+Wed Aug 23 21:51:34 AEST 2017 com.google.javascript.rhino.jstype.RecordType,79
+Wed Aug 23 22:10:38 AEST 2017 Wed Aug 23 22:10:38 AEST 2017 : com.google.javascript.rhino.jstype.RecordType,67=>Find no block
+Wed Aug 23 22:10:38 AEST 2017 Wed Aug 23 22:10:38 AEST 2017 : com.google.javascript.rhino.jstype.RecordType,68=>Find no block
+Wed Aug 23 22:10:39 AEST 2017 com.google.javascript.rhino.jstype.RecordType,80
+Wed Aug 23 22:10:40 AEST 2017 com.google.javascript.rhino.jstype.RecordType,82
+Wed Aug 23 22:10:40 AEST 2017 com.google.javascript.rhino.jstype.RecordType,83
+Wed Aug 23 22:10:41 AEST 2017 com.google.javascript.rhino.jstype.RecordType,84
+Wed Aug 23 22:10:41 AEST 2017 com.google.javascript.rhino.jstype.RecordType,88
+Wed Aug 23 22:10:42 AEST 2017 Wed Aug 23 22:10:42 AEST 2017 : com.google.javascript.rhino.jstype.RecordType,89=>Find no block
+Wed Aug 23 22:10:42 AEST 2017 com.google.javascript.rhino.jstype.RecordType,92
+Wed Aug 23 22:10:43 AEST 2017 Wed Aug 23 22:10:43 AEST 2017 : com.google.javascript.rhino.jstype.RecordType,93=>Find no block
+Wed Aug 23 22:10:43 AEST 2017 com.google.javascript.rhino.jstype.RecordType,122
+Wed Aug 23 22:12:26 AEST 2017 com.google.javascript.rhino.jstype.RecordType,128
+Wed Aug 23 22:13:55 AEST 2017 com.google.javascript.rhino.jstype.RecordType,132
+Wed Aug 23 22:19:25 AEST 2017 com.google.javascript.rhino.jstype.RecordType,133
+Wed Aug 23 22:19:26 AEST 2017 com.google.javascript.rhino.jstype.RecordType,136
+Wed Aug 23 22:22:06 AEST 2017 com.google.javascript.rhino.jstype.RecordType,272
+Wed Aug 23 22:35:48 AEST 2017 com.google.javascript.rhino.jstype.RecordType,273
+Wed Aug 23 22:35:48 AEST 2017 com.google.javascript.rhino.jstype.RecordType,274
+Wed Aug 23 22:35:49 AEST 2017 com.google.javascript.rhino.jstype.RecordType,275
+Wed Aug 23 22:35:50 AEST 2017 Wed Aug 23 22:35:50 AEST 2017 : com.google.javascript.rhino.jstype.RecordType,278=>Find no block
+Wed Aug 23 22:35:51 AEST 2017 com.google.javascript.rhino.jstype.RecordType,279
+Wed Aug 23 22:44:35 AEST 2017 com.google.javascript.rhino.jstype.JSTypeRegistry,1314
+Wed Aug 23 22:44:37 AEST 2017 com.google.javascript.rhino.jstype.JSTypeRegistry,1456
+Wed Aug 23 22:54:39 AEST 2017 com.google.javascript.rhino.jstype.JSTypeRegistry,1617
+Timeout time : 17/08/23 22:57

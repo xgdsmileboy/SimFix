@@ -1,0 +1,904 @@
+=================================================
+Project : time_4	start : 17/08/24 06:55
+Current failed test : org.joda.time.TestPartial_Basics::testWith3 | 17/08/24 06:56
+Thu Aug 24 06:57:18 AEST 2017 org.joda.time.field.ZeroIsMaxDateTimeField,111
+Thu Aug 24 06:57:22 AEST 2017 org.joda.time.field.ZeroIsMaxDateTimeField,138
+Thu Aug 24 06:57:23 AEST 2017 org.joda.time.field.ZeroIsMaxDateTimeField,178
+Thu Aug 24 06:58:17 AEST 2017 org.joda.time.field.ZeroIsMaxDateTimeField,148
+Thu Aug 24 06:58:18 AEST 2017 org.joda.time.DateTimeFieldType,514
+Thu Aug 24 07:01:11 AEST 2017 org.joda.time.Partial,447
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<2){
+throw new IllegalArgumentException("The divisor must be at least 2");
+}
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+
+Time : 17/08/24 07:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isSupported(fieldType)==false){
+throw new IllegalArgumentException("Field \'"+fieldType);
+}
+if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(fieldType==null){
+throw new IllegalArgumentException("Field must not be null");
+}
+if(isSupported(fieldType)==false){
+throw new IllegalArgumentException("Field \'"+fieldType);
+}
+if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:11
+----------------------------------------
+Thu Aug 24 07:18:48 AEST 2017 org.joda.time.Partial,448
+Thu Aug 24 07:18:48 AEST 2017 org.joda.time.Partial,449
+Thu Aug 24 07:18:49 AEST 2017 org.joda.time.Partial,445
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(compare>0){
+throw new IllegalArgumentException("Types array must be in order largest-smallest: "+iTypes[i-1].getName());
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(compare>0){
+throw new IllegalArgumentException("Types array must be in order largest-smallest: "+iTypes[i-1].getName());
+}else if(compare==0){
+DurationField rangeField=loopType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(compare>0){
+throw new IllegalArgumentException("The DateTimeFieldType must not be null");
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isSupported(fieldType)==false){
+throw new IllegalArgumentException("Field \'"+fieldType);
+}
+if(compare>0){
+break;
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(fieldType==null){
+throw new IllegalArgumentException("Field must not be null");
+}
+if(isSupported(fieldType)==false){
+throw new IllegalArgumentException("Field \'"+fieldType);
+}
+if(compare>0){
+break;
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(compare>0){
+throw new IllegalArgumentException("Maximum value exceeded for add");
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(compare>0){
+throw new IllegalArgumentException("Values array must be the same length as the types array");
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(iTypes==null){
+throw new IllegalArgumentException("Types array must not be null");
+}
+if(compare>0){
+throw new IllegalArgumentException("Values array must be the same length as the types array");
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(iValues==null){
+throw new IllegalArgumentException("Values array must not be null");
+}
+if(compare>0){
+throw new IllegalArgumentException("Values array must be the same length as the types array");
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(iTypes==null){
+throw new IllegalArgumentException("Types array must not be null");
+}
+if(iValues==null){
+throw new IllegalArgumentException("Values array must not be null");
+}
+if(compare>0){
+throw new IllegalArgumentException("Values array must be the same length as the types array");
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(compare>0){
+throw new IllegalArgumentException("The divisor must be at least 2");
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+i=compare;
+if(compare>0){
+throw new IllegalArgumentException("The divisor must be at least 2");
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0||compare<=0){
+throw new IllegalArgumentException();
+}
+if(compare>0){
+break;
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0||compare<=0){
+throw new IllegalArgumentException();
+}
+if(compare>index){
+break;
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(fieldType==null){
+throw new IllegalArgumentException("Field type must not be null");
+}
+if(index<0||compare<=0){
+throw new IllegalArgumentException();
+}
+if(compare>0){
+break;
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(fieldType==null){
+throw new IllegalArgumentException("Field type must not be null");
+}
+if(index<0||compare<=0){
+throw new IllegalArgumentException();
+}
+if(compare>index){
+break;
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(compare>0){
+throw new IllegalFieldValueException(fieldType,Integer.valueOf(compare),Integer.valueOf(index),Integer.valueOf(index));
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(value>0){
+throw new IllegalFieldValueException(fieldType,Integer.valueOf(compare),Integer.valueOf(index),Integer.valueOf(index));
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(compare>index){
+throw new IllegalFieldValueException(fieldType,Integer.valueOf(compare),Integer.valueOf(index),Integer.valueOf(index));
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(value>index){
+throw new IllegalFieldValueException(fieldType,Integer.valueOf(compare),Integer.valueOf(index),Integer.valueOf(index));
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(compare>0){
+throw new IllegalArgumentException("Illegal number of digits: "+compare);
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(fieldType==null){
+throw new IllegalArgumentException("Field type must not be null");
+}
+if(compare>0){
+throw new IllegalArgumentException("Illegal number of digits: "+compare);
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+
+Time : 17/08/24 07:55
+----------------------------------------
+Thu Aug 24 07:57:24 AEST 2017 org.joda.time.field.BaseDurationField,150
+Thu Aug 24 07:57:28 AEST 2017 org.joda.time.DateTimeFieldType,457
+Thu Aug 24 07:57:30 AEST 2017 Thu Aug 24 07:57:30 AEST 2017 : org.joda.time.Partial,446=>Find no block
+Thu Aug 24 07:57:30 AEST 2017 org.joda.time.Partial,443
+Thu Aug 24 07:59:12 AEST 2017 org.joda.time.Partial,444
+Thu Aug 24 07:59:12 AEST 2017 org.joda.time.DateTimeFieldType,227
+Thu Aug 24 07:59:15 AEST 2017 org.joda.time.Partial,439
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isSupported(fieldType)==false){
+throw new IllegalArgumentException("Field \'"+fieldType);
+}
+for(;i<iTypes.length;i++){
+DateTimeFieldType loopType=iTypes[i];
+DurationField loopUnitField=loopType.getDurationType().getField(iChronology);
+if(loopUnitField.isSupported()){
+int compare=unitField.compareTo(loopUnitField);
+if(compare>0){
+break;
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+}
+}
+
+Time : 17/08/24 08:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isSupported(fieldType)==false){
+throw new IllegalArgumentException("Field \'"+fieldType);
+}
+if(index==0){
+return this;
+}
+for(;i<iTypes.length;i++){
+DateTimeFieldType loopType=iTypes[i];
+DurationField loopUnitField=loopType.getDurationType().getField(iChronology);
+if(loopUnitField.isSupported()){
+int compare=unitField.compareTo(loopUnitField);
+if(compare>0){
+break;
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+}
+}
+
+Time : 17/08/24 08:04
+----------------------------------------
+Thu Aug 24 08:09:11 AEST 2017 org.joda.time.Partial,440
+Thu Aug 24 08:09:31 AEST 2017 org.joda.time.Partial,441
+Thu Aug 24 08:09:31 AEST 2017 org.joda.time.Partial,442
+Thu Aug 24 08:09:31 AEST 2017 org.joda.time.Partial,432
+Thu Aug 24 08:11:23 AEST 2017 org.joda.time.Partial,433
+Thu Aug 24 08:11:23 AEST 2017 org.joda.time.Partial,436
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int[] newValues=new int[newTypes.length];
+int i=0;
+if(isSupported(fieldType)==false){
+throw new IllegalArgumentException("Field \'"+fieldType);
+}
+DurationField unitField=fieldType.getDurationType().getField(iChronology);
+
+Time : 17/08/24 08:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int[] newValues=new int[newTypes.length];
+int i=0;
+if(fieldType==null){
+throw new IllegalArgumentException("Field must not be null");
+}
+if(isSupported(fieldType)==false){
+throw new IllegalArgumentException("Field \'"+fieldType);
+}
+DurationField unitField=fieldType.getDurationType().getField(iChronology);
+
+Time : 17/08/24 08:14
+----------------------------------------
+Thu Aug 24 08:21:17 AEST 2017 org.joda.time.Partial,437
+Thu Aug 24 08:21:17 AEST 2017 org.joda.time.Partial,438
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(unitField.isSupported()){
+throw new IllegalArgumentException("Field \'"+fieldType);
+}
+
+Time : 17/08/24 08:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(fieldType==null){
+throw new IllegalArgumentException("The DateTimeFieldType must not be null");
+}
+if(unitField.isSupported()){
+throw new IllegalArgumentException("Field \'"+fieldType);
+}
+
+Time : 17/08/24 08:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(unitField.isSupported()){
+throw new IllegalArgumentException("Fields invalid for add");
+}
+
+Time : 17/08/24 08:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(unitField.isSupported()){
+throw new IllegalArgumentException("ReadablePartial objects must have the same set of fields");
+}
+
+Time : 17/08/24 08:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(unitField.isSupported()){
+throw new IllegalArgumentException();
+}
+
+Time : 17/08/24 08:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(unitField.isSupported()){
+throw new IllegalArgumentException("The field must be supported");
+}
+
+Time : 17/08/24 08:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(unitField.isSupported()){
+throw new IllegalArgumentException("Invalid pattern specification");
+}
+
+Time : 17/08/24 08:30
+----------------------------------------
+Thu Aug 24 08:31:46 AEST 2017 org.joda.time.Partial,456
+Thu Aug 24 08:46:02 AEST 2017 org.joda.time.Partial,457
+Thu Aug 24 08:46:03 AEST 2017 org.joda.time.Partial,458
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+value=newValues[0];
+System.arraycopy(iValues,0,newValues,0,i);
+newTypes[i]=fieldType;
+newValues[i]=value;
+
+Time : 17/08/24 08:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+value-='0';
+System.arraycopy(iValues,0,newValues,0,i);
+newTypes[i]=fieldType;
+newValues[i]=value;
+
+Time : 17/08/24 08:58
+----------------------------------------
+Thu Aug 24 08:58:54 AEST 2017 org.joda.time.Partial,459
+Thu Aug 24 09:08:24 AEST 2017 org.joda.time.Partial,460
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+iChronology.validate(new Partial(iChronology,newTypes,newValues),newValues);
+newValues[i]=value;
+System.arraycopy(iTypes,i,newTypes,i+1,newTypes.length-i);
+System.arraycopy(iValues,i,newValues,i+1,newValues.length-i);
+
+Time : 17/08/24 09:10
+----------------------------------------
+Thu Aug 24 09:18:39 AEST 2017 org.joda.time.Partial,461
+Thu Aug 24 09:27:03 AEST 2017 org.joda.time.Partial,464
+Thu Aug 24 09:32:03 AEST 2017 org.joda.time.Partial,465
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Partial newPartial=new Partial(iChronology,newTypes,newValues);
+iChronology.validate(new TimeOfDay(this,iChronology),newValues);
+return newPartial;
+
+Time : 17/08/24 09:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Partial newPartial=new Partial(iChronology,newTypes,newValues);
+iChronology.validate(new MonthDay(this,iChronology),newValues);
+return newPartial;
+
+Time : 17/08/24 09:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Partial newPartial=new Partial(iChronology,newTypes,newValues);
+iChronology.validate(new YearMonth(this,iChronology),newValues);
+return newPartial;
+
+Time : 17/08/24 09:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Partial newPartial=new Partial(iChronology,newTypes,newValues);
+iChronology.validate(new YearMonthDay(this,iChronology),newValues);
+return newPartial;
+
+Time : 17/08/24 09:38
+----------------------------------------
+Thu Aug 24 09:40:06 AEST 2017 org.joda.time.Partial,466
+Thu Aug 24 09:40:06 AEST 2017 org.joda.time.Partial,430
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isSupported(fieldType)==false){
+throw new IllegalArgumentException("Field \'"+fieldType);
+}
+if(fieldType==null){
+throw new IllegalArgumentException("The field type must not be null");
+}
+int index=indexOf(fieldType);
+
+Time : 17/08/24 09:41
+----------------------------------------
+Thu Aug 24 09:42:09 AEST 2017 org.joda.time.Partial,431
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isSupported(fieldType)==false){
+throw new IllegalArgumentException("Field \'"+fieldType);
+}
+if(index==-1){
+DateTimeFieldType[] newTypes=new DateTimeFieldType[iTypes.length+1];
+int[] newValues=new int[newTypes.length];
+int i=0;
+DurationField unitField=fieldType.getDurationType().getField(iChronology);
+if(unitField.isSupported()){
+for(;i<iTypes.length;i++){
+DateTimeFieldType loopType=iTypes[i];
+DurationField loopUnitField=loopType.getDurationType().getField(iChronology);
+if(loopUnitField.isSupported()){
+int compare=unitField.compareTo(loopUnitField);
+if(compare>0){
+break;
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+}
+}
+}
+System.arraycopy(iTypes,0,newTypes,0,i);
+System.arraycopy(iValues,0,newValues,0,i);
+newTypes[i]=fieldType;
+newValues[i]=value;
+System.arraycopy(iTypes,i,newTypes,i+1,newTypes.length-i);
+System.arraycopy(iValues,i,newValues,i+1,newValues.length-i);
+Partial newPartial=new Partial(iChronology,newTypes,newValues);
+iChronology.validate(newPartial,newValues);
+return newPartial;
+}
+
+Time : 17/08/24 09:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(fieldType==null){
+throw new IllegalArgumentException("Field must not be null");
+}
+if(isSupported(fieldType)==false){
+throw new IllegalArgumentException("Field \'"+fieldType);
+}
+if(index==-1){
+DateTimeFieldType[] newTypes=new DateTimeFieldType[iTypes.length+1];
+int[] newValues=new int[newTypes.length];
+int i=0;
+DurationField unitField=fieldType.getDurationType().getField(iChronology);
+if(unitField.isSupported()){
+for(;i<iTypes.length;i++){
+DateTimeFieldType loopType=iTypes[i];
+DurationField loopUnitField=loopType.getDurationType().getField(iChronology);
+if(loopUnitField.isSupported()){
+int compare=unitField.compareTo(loopUnitField);
+if(compare>0){
+break;
+}else if(compare==0){
+DurationField rangeField=fieldType.getRangeDurationType().getField(iChronology);
+DurationField loopRangeField=loopType.getRangeDurationType().getField(iChronology);
+if(rangeField.compareTo(loopRangeField)>0){
+break;
+}
+}
+}
+}
+}
+System.arraycopy(iTypes,0,newTypes,0,i);
+System.arraycopy(iValues,0,newValues,0,i);
+newTypes[i]=fieldType;
+newValues[i]=value;
+System.arraycopy(iTypes,i,newTypes,i+1,newTypes.length-i);
+System.arraycopy(iValues,i,newValues,i+1,newValues.length-i);
+Partial newPartial=new Partial(iChronology,newTypes,newValues);
+iChronology.validate(newPartial,newValues);
+return newPartial;
+}
+
+Time : 17/08/24 09:47
+----------------------------------------
+Thu Aug 24 09:50:49 AEST 2017 org.joda.time.Partial,427
+Thu Aug 24 09:51:01 AEST 2017 org.joda.time.Partial,296
+Thu Aug 24 09:55:11 AEST 2017 org.joda.time.Partial,297
+Thu Aug 24 09:55:11 AEST 2017 org.joda.time.Partial,298
+Thu Aug 24 09:55:11 AEST 2017 org.joda.time.Partial,299
+Thu Aug 24 09:55:11 AEST 2017 Thu Aug 24 09:55:11 AEST 2017 : org.joda.time.Partial,300=>Find no block
+Thu Aug 24 09:55:12 AEST 2017 org.joda.time.chrono.AssembledChronology,200
+Thu Aug 24 09:55:13 AEST 2017 org.joda.time.base.AbstractPartial,175
+Thu Aug 24 10:32:43 AEST 2017 org.joda.time.Partial,217
+Thu Aug 24 10:54:17 AEST 2017 org.joda.time.Partial,218
+Thu Aug 24 11:00:15 AEST 2017 org.joda.time.Partial,221
+Thu Aug 24 11:00:15 AEST 2017 org.joda.time.field.BaseDurationField,155
+Thu Aug 24 11:00:17 AEST 2017 org.joda.time.DurationFieldType,298
+Thu Aug 24 11:03:18 AEST 2017 org.joda.time.Partial,248
+Thu Aug 24 11:09:24 AEST 2017 Thu Aug 24 11:09:24 AEST 2017 : org.joda.time.Partial,249=>Find no block
+Thu Aug 24 11:09:24 AEST 2017 org.joda.time.Partial,246
+Thu Aug 24 11:09:24 AEST 2017 org.joda.time.Partial,247
+Thu Aug 24 11:09:25 AEST 2017 org.joda.time.Partial,212
+Thu Aug 24 11:24:20 AEST 2017 org.joda.time.Partial,213
+Thu Aug 24 11:32:31 AEST 2017 org.joda.time.Partial,214
+Thu Aug 24 11:32:41 AEST 2017 org.joda.time.Partial,215
+Thu Aug 24 11:32:41 AEST 2017 org.joda.time.Partial,216
+Thu Aug 24 11:32:41 AEST 2017 org.joda.time.Partial,243
+Thu Aug 24 11:36:53 AEST 2017 org.joda.time.Partial,207
+Thu Aug 24 11:36:53 AEST 2017 org.joda.time.Partial,208
+Thu Aug 24 11:36:54 AEST 2017 org.joda.time.Partial,202
+Thu Aug 24 11:40:05 AEST 2017 org.joda.time.Partial,199
+Thu Aug 24 11:47:29 AEST 2017 org.joda.time.field.BaseDurationField,146
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long otherMillis=otherField.getUnitMillis();
+long thisMillis=getUnitMillis();
+if(thisMillis==otherMillis){
+throw new IllegalArgumentException("The effective range must be at least 2");
+}
+if(thisMillis<otherMillis){
+return -1;
+}else {
+return 1;
+}
+
+Time : 17/08/24 11:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long otherMillis=otherField.getUnitMillis();
+long thisMillis=getUnitMillis();
+if(thisMillis==otherMillis){
+throw new IllegalArgumentException("The unit milliseconds must be at least 1");
+}
+if(thisMillis<otherMillis){
+return -1;
+}else {
+return 1;
+}
+
+Time : 17/08/24 11:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long otherMillis=otherField.getUnitMillis();
+long thisMillis=getUnitMillis();
+otherMillis=otherField.getUnitMillis();
+if(thisMillis==otherMillis){
+throw new IllegalArgumentException("The unit milliseconds must be at least 1");
+}
+if(thisMillis<otherMillis){
+return -1;
+}else {
+return 1;
+}
+
+Time : 17/08/24 11:51
+----------------------------------------
+Thu Aug 24 11:52:31 AEST 2017 org.joda.time.field.BaseDurationField,147
+Thu Aug 24 11:52:31 AEST 2017 org.joda.time.field.BaseDurationField,149
+Thu Aug 24 11:52:31 AEST 2017 org.joda.time.field.BaseDurationField,152
+Thu Aug 24 11:52:32 AEST 2017 org.joda.time.Partial,196
+Thu Aug 24 11:52:34 AEST 2017 org.joda.time.Partial,190
+Thu Aug 24 11:55:54 AEST 2017 org.joda.time.Partial,191
+Thu Aug 24 11:55:55 AEST 2017 org.joda.time.Partial,192
+Timeout time : 17/08/24 11:57

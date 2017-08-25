@@ -1,0 +1,81 @@
+=================================================
+Project : closure_118	start : 17/08/23 22:42
+Current failed test : com.google.javascript.jscomp.DisambiguatePropertiesTest::testOneType4 | 17/08/23 22:43
+Wed Aug 23 22:43:36 AEST 2017 com.google.javascript.jscomp.DisambiguateProperties,497
+Wed Aug 23 23:40:54 AEST 2017 com.google.javascript.jscomp.DisambiguateProperties,498
+Wed Aug 23 23:40:55 AEST 2017 com.google.javascript.jscomp.DisambiguateProperties,500
+Wed Aug 23 23:40:56 AEST 2017 com.google.javascript.jscomp.DisambiguateProperties,501
+Wed Aug 23 23:40:56 AEST 2017 Wed Aug 23 23:40:56 AEST 2017 : com.google.javascript.jscomp.DisambiguateProperties,493=>Find no block
+Wed Aug 23 23:40:57 AEST 2017 com.google.javascript.rhino.jstype.UnionType,171
+Wed Aug 23 23:41:29 AEST 2017 com.google.javascript.rhino.jstype.UnionType,172
+Wed Aug 23 23:41:30 AEST 2017 com.google.javascript.rhino.jstype.UnionType,173
+Wed Aug 23 23:41:30 AEST 2017 com.google.javascript.jscomp.DisambiguateProperties,442
+Thu Aug 24 00:00:54 AEST 2017 Thu Aug 24 00:00:54 AEST 2017 : com.google.javascript.jscomp.DisambiguateProperties,491=>Find no block
+Thu Aug 24 00:00:54 AEST 2017 com.google.javascript.jscomp.DisambiguateProperties,492
+Thu Aug 24 00:00:55 AEST 2017 Thu Aug 24 00:00:55 AEST 2017 : com.google.javascript.jscomp.DisambiguateProperties,513=>Find no block
+Thu Aug 24 00:00:56 AEST 2017 com.google.javascript.rhino.Node,1430
+Thu Aug 24 00:01:03 AEST 2017 com.google.javascript.rhino.Node,1446
+Thu Aug 24 00:01:07 AEST 2017 com.google.javascript.rhino.Node,1459
+Thu Aug 24 00:01:11 AEST 2017 Thu Aug 24 00:01:11 AEST 2017 : com.google.javascript.rhino.Node,2194=>Find no block
+Thu Aug 24 00:01:11 AEST 2017 com.google.javascript.rhino.Node,2195
+Thu Aug 24 00:01:15 AEST 2017 com.google.javascript.rhino.Node,2196
+Thu Aug 24 00:01:16 AEST 2017 Thu Aug 24 00:01:16 AEST 2017 : com.google.javascript.rhino.Node,2197=>Find no block
+Thu Aug 24 00:01:16 AEST 2017 com.google.javascript.rhino.jstype.JSTypeRegistry,1417
+Thu Aug 24 00:01:26 AEST 2017 com.google.javascript.rhino.jstype.JSTypeRegistry,1418
+Thu Aug 24 00:01:26 AEST 2017 com.google.javascript.rhino.jstype.JSTypeRegistry,1419
+Thu Aug 24 00:01:27 AEST 2017 com.google.javascript.rhino.jstype.JSTypeRegistry,1420
+Thu Aug 24 00:01:28 AEST 2017 com.google.javascript.rhino.jstype.JSTypeRegistry,1421
+Thu Aug 24 00:01:29 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,1571
+Thu Aug 24 00:09:09 AEST 2017 com.google.javascript.rhino.jstype.StringType,81
+Thu Aug 24 00:09:13 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,1675
+Thu Aug 24 00:12:00 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,1670
+Thu Aug 24 00:18:49 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,1671
+Thu Aug 24 00:18:50 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,1672
+Thu Aug 24 00:18:51 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,1673
+Thu Aug 24 00:18:52 AEST 2017 com.google.javascript.rhino.jstype.InstanceObjectType,117
+Thu Aug 24 00:18:55 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,714
+Thu Aug 24 00:20:41 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,787
+Thu Aug 24 00:23:08 AEST 2017 com.google.javascript.jscomp.DisambiguateProperties,933
+Thu Aug 24 00:25:05 AEST 2017 com.google.javascript.jscomp.CodeGenerator,656
+Thu Aug 24 00:36:39 AEST 2017 com.google.javascript.jscomp.CodeGenerator,658
+Thu Aug 24 00:53:00 AEST 2017 com.google.javascript.jscomp.CodeGenerator,659
+Thu Aug 24 00:58:57 AEST 2017 com.google.javascript.jscomp.CodeGenerator,705
+Thu Aug 24 00:59:01 AEST 2017 com.google.javascript.jscomp.TypeValidator,346
+Thu Aug 24 01:29:53 AEST 2017 com.google.javascript.jscomp.TypeCheck,945
+Thu Aug 24 01:51:54 AEST 2017 com.google.javascript.jscomp.TypeCheck,946
+Thu Aug 24 01:51:55 AEST 2017 com.google.javascript.jscomp.TypeCheck,949
+Thu Aug 24 01:51:55 AEST 2017 com.google.javascript.jscomp.TypeCheck,954
+Thu Aug 24 01:51:56 AEST 2017 com.google.javascript.jscomp.TypedScopeCreator,1582
+Thu Aug 24 01:56:29 AEST 2017 com.google.javascript.jscomp.CodeGenerator,798
+Thu Aug 24 01:56:45 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,1152
+Thu Aug 24 01:56:48 AEST 2017 com.google.javascript.jscomp.DisambiguateProperties,874
+Thu Aug 24 01:57:42 AEST 2017 com.google.javascript.jscomp.DisambiguateProperties,932
+Thu Aug 24 01:57:43 AEST 2017 com.google.javascript.jscomp.CodeGenerator,815
+Thu Aug 24 01:58:14 AEST 2017 com.google.javascript.jscomp.DisambiguateProperties,564
+Thu Aug 24 01:58:25 AEST 2017 com.google.javascript.jscomp.DisambiguateProperties,827
+Thu Aug 24 01:58:40 AEST 2017 com.google.javascript.jscomp.DisambiguateProperties,927
+Thu Aug 24 02:05:34 AEST 2017 com.google.javascript.jscomp.DisambiguateProperties,928
+Thu Aug 24 02:09:13 AEST 2017 com.google.javascript.jscomp.DisambiguateProperties,930
+Thu Aug 24 02:09:14 AEST 2017 com.google.javascript.jscomp.DisambiguateProperties,937
+Thu Aug 24 02:09:15 AEST 2017 com.google.javascript.jscomp.DisambiguateProperties,938
+Thu Aug 24 02:09:16 AEST 2017 com.google.javascript.jscomp.DisambiguateProperties,951
+Thu Aug 24 02:09:18 AEST 2017 com.google.javascript.jscomp.DisambiguateProperties,952
+Thu Aug 24 02:09:19 AEST 2017 Thu Aug 24 02:09:19 AEST 2017 : com.google.javascript.jscomp.DisambiguateProperties,958=>Find no block
+Thu Aug 24 02:09:20 AEST 2017 com.google.javascript.jscomp.TypeValidator,345
+Thu Aug 24 02:09:21 AEST 2017 com.google.javascript.jscomp.DisambiguateProperties,892
+Thu Aug 24 02:09:54 AEST 2017 com.google.javascript.jscomp.graph.StandardUnionFind,119
+Thu Aug 24 02:36:24 AEST 2017 com.google.javascript.jscomp.graph.StandardUnionFind,120
+Thu Aug 24 02:36:25 AEST 2017 com.google.javascript.jscomp.graph.StandardUnionFind,121
+Thu Aug 24 02:36:26 AEST 2017 com.google.javascript.jscomp.graph.StandardUnionFind,122
+Thu Aug 24 02:36:27 AEST 2017 com.google.javascript.jscomp.graph.StandardUnionFind,123
+Thu Aug 24 02:36:28 AEST 2017 com.google.javascript.jscomp.graph.StandardUnionFind,124
+Thu Aug 24 02:36:29 AEST 2017 com.google.javascript.jscomp.graph.StandardUnionFind,125
+Thu Aug 24 02:36:29 AEST 2017 com.google.javascript.jscomp.graph.StandardUnionFind,127
+Thu Aug 24 02:36:31 AEST 2017 Thu Aug 24 02:36:31 AEST 2017 : com.google.javascript.jscomp.graph.StandardUnionFind,128=>Find no block
+Thu Aug 24 02:36:31 AEST 2017 com.google.javascript.jscomp.graph.StandardUnionFind,129
+Thu Aug 24 02:58:01 AEST 2017 com.google.javascript.jscomp.graph.StandardUnionFind,130
+Thu Aug 24 02:58:02 AEST 2017 com.google.javascript.jscomp.graph.StandardUnionFind,131
+Thu Aug 24 02:58:03 AEST 2017 Thu Aug 24 02:58:03 AEST 2017 : com.google.javascript.jscomp.graph.StandardUnionFind,132=>Find no block
+Thu Aug 24 02:58:03 AEST 2017 com.google.javascript.jscomp.graph.StandardUnionFind,133
+Thu Aug 24 03:04:53 AEST 2017 com.google.javascript.jscomp.DisambiguateProperties,456
+Timeout time : 17/08/24 03:43

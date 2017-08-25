@@ -1,0 +1,184 @@
+=================================================
+Project : time_3	start : 17/08/24 16:22
+Current failed test : org.joda.time.TestMutableDateTime_Adds::testAddWeeks_int_dstOverlapWinter_addZero_purify_2 | 17/08/24 16:24
+Thu Aug 24 16:25:24 AEST 2017 org.joda.time.MutableDateTime,723
+Thu Aug 24 16:26:27 AEST 2017 Thu Aug 24 16:26:27 AEST 2017 : org.joda.time.MutableDateTime,724=>Find no block
+Thu Aug 24 16:26:28 AEST 2017 org.joda.time.MutableDateTime,785
+Thu Aug 24 16:27:31 AEST 2017 Thu Aug 24 16:27:31 AEST 2017 : org.joda.time.MutableDateTime,786=>Find no block
+Thu Aug 24 16:27:31 AEST 2017 org.joda.time.DateTimeZone,931
+Thu Aug 24 16:29:00 AEST 2017 org.joda.time.chrono.ZonedChronology,351
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 17/08/24 16:39
+----------------------------------------
+Thu Aug 24 16:50:58 AEST 2017 org.joda.time.chrono.ZonedChronology,352
+Thu Aug 24 16:50:58 AEST 2017 org.joda.time.chrono.ZonedChronology,354
+Thu Aug 24 16:50:58 AEST 2017 org.joda.time.chrono.ZonedChronology,357
+Thu Aug 24 16:50:59 AEST 2017 org.joda.time.MutableDateTime,351
+Thu Aug 24 16:51:48 AEST 2017 Thu Aug 24 16:51:48 AEST 2017 : org.joda.time.MutableDateTime,353=>Find no block
+Thu Aug 24 16:51:48 AEST 2017 Thu Aug 24 16:51:48 AEST 2017 : org.joda.time.tz.ZoneInfoProvider,151=>Find no block
+Thu Aug 24 16:51:48 AEST 2017 org.joda.time.tz.ZoneInfoProvider,152
+Thu Aug 24 16:52:35 AEST 2017 org.joda.time.tz.ZoneInfoProvider,153
+Thu Aug 24 16:52:35 AEST 2017 org.joda.time.tz.ZoneInfoProvider,154
+Thu Aug 24 16:52:35 AEST 2017 org.joda.time.tz.ZoneInfoProvider,149
+Thu Aug 24 16:52:36 AEST 2017 org.joda.time.DateTimeZone,211
+Thu Aug 24 17:15:24 AEST 2017 org.joda.time.DateTimeZone,212
+Thu Aug 24 17:15:25 AEST 2017 org.joda.time.DateTimeZone,213
+Thu Aug 24 17:15:25 AEST 2017 org.joda.time.tz.ZoneInfoProvider,135
+Thu Aug 24 17:17:07 AEST 2017 org.joda.time.tz.ZoneInfoProvider,139
+Thu Aug 24 17:22:01 AEST 2017 org.joda.time.tz.ZoneInfoProvider,140
+Thu Aug 24 17:22:01 AEST 2017 org.joda.time.tz.ZoneInfoProvider,144
+Thu Aug 24 17:25:04 AEST 2017 org.joda.time.DateTimeZone,205
+Timeout time : 17/08/24 17:25
+Current failed test : org.joda.time.TestMutableDateTime_Adds::testAdd_DurationFieldType_int_dstOverlapWinter_addZero_purify_2 | 17/08/24 17:25
+Thu Aug 24 17:26:38 AEST 2017 org.joda.time.MutableDateTime,639
+Thu Aug 24 17:30:10 AEST 2017 Thu Aug 24 17:30:10 AEST 2017 : org.joda.time.MutableDateTime,640=>Find no block
+Thu Aug 24 17:30:10 AEST 2017 org.joda.time.MutableDateTime,636
+Thu Aug 24 17:30:11 AEST 2017 org.joda.time.chrono.BasicYearDateTimeField,60
+Thu Aug 24 17:33:38 AEST 2017 org.joda.time.MutableDateTime,785
+Thu Aug 24 17:34:43 AEST 2017 Thu Aug 24 17:34:43 AEST 2017 : org.joda.time.MutableDateTime,786=>Find no block
+Thu Aug 24 17:34:44 AEST 2017 org.joda.time.field.ImpreciseDateTimeField,183
+Thu Aug 24 17:39:19 AEST 2017 org.joda.time.DateTimeZone,931
+Thu Aug 24 17:40:47 AEST 2017 org.joda.time.DurationFieldType,292
+Thu Aug 24 17:43:00 AEST 2017 org.joda.time.chrono.ZonedChronology,351
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 17/08/24 17:53
+----------------------------------------
+Thu Aug 24 18:05:14 AEST 2017 org.joda.time.chrono.ZonedChronology,352
+Thu Aug 24 18:05:14 AEST 2017 org.joda.time.chrono.ZonedChronology,354
+Thu Aug 24 18:05:14 AEST 2017 org.joda.time.chrono.ZonedChronology,357
+Thu Aug 24 18:05:14 AEST 2017 org.joda.time.MutableDateTime,351
+Thu Aug 24 18:06:04 AEST 2017 Thu Aug 24 18:06:04 AEST 2017 : org.joda.time.MutableDateTime,353=>Find no block
+Thu Aug 24 18:06:04 AEST 2017 Thu Aug 24 18:06:04 AEST 2017 : org.joda.time.tz.ZoneInfoProvider,151=>Find no block
+Thu Aug 24 18:06:05 AEST 2017 org.joda.time.tz.ZoneInfoProvider,152
+Thu Aug 24 18:06:51 AEST 2017 org.joda.time.tz.ZoneInfoProvider,153
+Thu Aug 24 18:06:51 AEST 2017 org.joda.time.tz.ZoneInfoProvider,154
+Thu Aug 24 18:06:51 AEST 2017 org.joda.time.tz.ZoneInfoProvider,149
+Thu Aug 24 18:06:51 AEST 2017 org.joda.time.DateTimeZone,211
+Timeout time : 17/08/24 18:26
+Current failed test : org.joda.time.TestMutableDateTime_Adds::testAddMonths_int_dstOverlapWinter_addZero_purify_2 | 17/08/24 18:26
+Thu Aug 24 18:27:45 AEST 2017 org.joda.time.MutableDateTime,702
+Thu Aug 24 18:28:47 AEST 2017 Thu Aug 24 18:28:47 AEST 2017 : org.joda.time.MutableDateTime,703=>Find no block
+Thu Aug 24 18:28:47 AEST 2017 org.joda.time.chrono.BasicMonthOfYearDateTimeField,94
+Thu Aug 24 18:35:07 AEST 2017 org.joda.time.MutableDateTime,785
+Thu Aug 24 18:36:09 AEST 2017 Thu Aug 24 18:36:09 AEST 2017 : org.joda.time.MutableDateTime,786=>Find no block
+Thu Aug 24 18:36:10 AEST 2017 org.joda.time.field.ImpreciseDateTimeField,183
+Thu Aug 24 18:40:45 AEST 2017 org.joda.time.DateTimeZone,931
+Thu Aug 24 18:42:13 AEST 2017 org.joda.time.chrono.ZonedChronology,351
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 17/08/24 18:52
+----------------------------------------
+Thu Aug 24 19:04:03 AEST 2017 org.joda.time.chrono.ZonedChronology,352
+Thu Aug 24 19:04:03 AEST 2017 org.joda.time.chrono.ZonedChronology,354
+Thu Aug 24 19:04:04 AEST 2017 org.joda.time.chrono.ZonedChronology,357
+Thu Aug 24 19:04:04 AEST 2017 org.joda.time.MutableDateTime,351
+Thu Aug 24 19:04:54 AEST 2017 Thu Aug 24 19:04:54 AEST 2017 : org.joda.time.MutableDateTime,353=>Find no block
+Thu Aug 24 19:04:54 AEST 2017 Thu Aug 24 19:04:54 AEST 2017 : org.joda.time.tz.ZoneInfoProvider,151=>Find no block
+Thu Aug 24 19:04:54 AEST 2017 org.joda.time.tz.ZoneInfoProvider,152
+Thu Aug 24 19:05:40 AEST 2017 org.joda.time.tz.ZoneInfoProvider,153
+Thu Aug 24 19:05:41 AEST 2017 org.joda.time.tz.ZoneInfoProvider,154
+Thu Aug 24 19:05:41 AEST 2017 org.joda.time.tz.ZoneInfoProvider,149
+Thu Aug 24 19:05:41 AEST 2017 org.joda.time.DateTimeZone,211
+Timeout time : 17/08/24 19:27
+Current failed test : org.joda.time.TestMutableDateTime_Adds::testAddYears_int_dstOverlapWinter_addZero_purify_2 | 17/08/24 19:27
+Thu Aug 24 19:28:44 AEST 2017 org.joda.time.MutableDateTime,660
+Thu Aug 24 19:29:47 AEST 2017 Thu Aug 24 19:29:47 AEST 2017 : org.joda.time.MutableDateTime,661=>Find no block
+Thu Aug 24 19:29:47 AEST 2017 org.joda.time.chrono.BasicYearDateTimeField,60
+Thu Aug 24 19:33:13 AEST 2017 org.joda.time.MutableDateTime,785
+Thu Aug 24 19:34:16 AEST 2017 Thu Aug 24 19:34:16 AEST 2017 : org.joda.time.MutableDateTime,786=>Find no block
+Thu Aug 24 19:34:16 AEST 2017 org.joda.time.field.ImpreciseDateTimeField,183
+Thu Aug 24 19:38:51 AEST 2017 org.joda.time.DateTimeZone,931
+Thu Aug 24 19:40:18 AEST 2017 org.joda.time.chrono.ZonedChronology,351
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 17/08/24 19:50
+----------------------------------------
+Thu Aug 24 20:02:31 AEST 2017 org.joda.time.chrono.ZonedChronology,352
+Thu Aug 24 20:02:31 AEST 2017 org.joda.time.chrono.ZonedChronology,354
+Thu Aug 24 20:02:31 AEST 2017 org.joda.time.chrono.ZonedChronology,357
+Thu Aug 24 20:02:31 AEST 2017 org.joda.time.MutableDateTime,351
+Thu Aug 24 20:03:23 AEST 2017 Thu Aug 24 20:03:23 AEST 2017 : org.joda.time.MutableDateTime,353=>Find no block
+Thu Aug 24 20:03:23 AEST 2017 Thu Aug 24 20:03:23 AEST 2017 : org.joda.time.tz.ZoneInfoProvider,151=>Find no block
+Thu Aug 24 20:03:23 AEST 2017 org.joda.time.tz.ZoneInfoProvider,152
+Thu Aug 24 20:04:13 AEST 2017 org.joda.time.tz.ZoneInfoProvider,153
+Thu Aug 24 20:04:13 AEST 2017 org.joda.time.tz.ZoneInfoProvider,154
+Thu Aug 24 20:04:14 AEST 2017 org.joda.time.tz.ZoneInfoProvider,149
+Thu Aug 24 20:04:14 AEST 2017 org.joda.time.DateTimeZone,211
+Thu Aug 24 20:28:27 AEST 2017 org.joda.time.DateTimeZone,212
+Thu Aug 24 20:28:27 AEST 2017 org.joda.time.DateTimeZone,213
+Thu Aug 24 20:28:28 AEST 2017 org.joda.time.tz.ZoneInfoProvider,135
+Timeout time : 17/08/24 20:29
+Current failed test : org.joda.time.TestMutableDateTime_Adds::testAddDays_int_dstOverlapWinter_addZero_purify_2 | 17/08/24 20:29
+Thu Aug 24 20:30:23 AEST 2017 org.joda.time.MutableDateTime,764
+Thu Aug 24 20:31:31 AEST 2017 Thu Aug 24 20:31:31 AEST 2017 : org.joda.time.MutableDateTime,765=>Find no block
+Thu Aug 24 20:31:31 AEST 2017 org.joda.time.MutableDateTime,785
+Thu Aug 24 20:32:39 AEST 2017 Thu Aug 24 20:32:39 AEST 2017 : org.joda.time.MutableDateTime,786=>Find no block
+Thu Aug 24 20:32:39 AEST 2017 org.joda.time.DateTimeZone,931
+Thu Aug 24 20:34:12 AEST 2017 org.joda.time.chrono.ZonedChronology,351
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 17/08/24 20:44
+----------------------------------------
+Thu Aug 24 20:57:30 AEST 2017 org.joda.time.chrono.ZonedChronology,352
+Thu Aug 24 20:57:31 AEST 2017 org.joda.time.chrono.ZonedChronology,354
+Thu Aug 24 20:57:31 AEST 2017 org.joda.time.chrono.ZonedChronology,357
+Thu Aug 24 20:57:31 AEST 2017 org.joda.time.MutableDateTime,351
+Thu Aug 24 20:58:25 AEST 2017 Thu Aug 24 20:58:25 AEST 2017 : org.joda.time.MutableDateTime,353=>Find no block
+Thu Aug 24 20:58:25 AEST 2017 Thu Aug 24 20:58:25 AEST 2017 : org.joda.time.tz.ZoneInfoProvider,151=>Find no block
+Thu Aug 24 20:58:25 AEST 2017 org.joda.time.tz.ZoneInfoProvider,152
+Thu Aug 24 20:59:15 AEST 2017 org.joda.time.tz.ZoneInfoProvider,153
+Thu Aug 24 20:59:15 AEST 2017 org.joda.time.tz.ZoneInfoProvider,154
+Thu Aug 24 20:59:15 AEST 2017 org.joda.time.tz.ZoneInfoProvider,149
+Thu Aug 24 20:59:16 AEST 2017 org.joda.time.DateTimeZone,211
+Thu Aug 24 21:23:23 AEST 2017 org.joda.time.DateTimeZone,212
+Thu Aug 24 21:23:24 AEST 2017 org.joda.time.DateTimeZone,213
+Thu Aug 24 21:23:24 AEST 2017 org.joda.time.tz.ZoneInfoProvider,135
+Thu Aug 24 21:25:21 AEST 2017 org.joda.time.tz.ZoneInfoProvider,139
+Timeout time : 17/08/24 21:30

@@ -1,0 +1,314 @@
+=================================================
+Project : math_78	start : 17/08/24 15:29
+Current failed test : org.apache.commons.math.ode.events.EventStateTest::closeEvents_purify_1 | 17/08/24 15:31
+Thu Aug 24 15:32:34 AEST 2017 org.apache.commons.math.ode.sampling.DummyStepInterpolator,99
+Thu Aug 24 15:40:00 AEST 2017 Thu Aug 24 15:40:00 AEST 2017 : org.apache.commons.math.ode.sampling.DummyStepInterpolator,100=>Find no block
+Thu Aug 24 15:40:01 AEST 2017 org.apache.commons.math.ode.sampling.DummyStepInterpolator,66
+Thu Aug 24 15:40:05 AEST 2017 Thu Aug 24 15:40:05 AEST 2017 : org.apache.commons.math.ode.sampling.DummyStepInterpolator,67=>Find no block
+Thu Aug 24 15:40:06 AEST 2017 Thu Aug 24 15:40:06 AEST 2017 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,107=>Find no block
+Thu Aug 24 15:40:07 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,109
+Thu Aug 24 15:42:57 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,110
+Thu Aug 24 15:42:59 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,111
+Thu Aug 24 15:46:51 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,112
+Thu Aug 24 15:51:05 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,114
+Thu Aug 24 15:57:14 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,115
+Thu Aug 24 16:02:01 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,116
+Thu Aug 24 16:08:06 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,118
+Thu Aug 24 16:16:12 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,119
+Thu Aug 24 16:21:23 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,120
+Thu Aug 24 16:21:24 AEST 2017 Thu Aug 24 16:21:24 AEST 2017 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,122=>Find no block
+Thu Aug 24 16:21:25 AEST 2017 org.apache.commons.math.ode.events.EventState,271
+Thu Aug 24 16:21:30 AEST 2017 org.apache.commons.math.ode.events.EventState,242
+Thu Aug 24 16:21:34 AEST 2017 org.apache.commons.math.ode.events.EventState,243
+Thu Aug 24 16:21:35 AEST 2017 org.apache.commons.math.ode.events.EventState,249
+Thu Aug 24 16:22:32 AEST 2017 org.apache.commons.math.ode.events.EventState,250
+Thu Aug 24 16:22:33 AEST 2017 org.apache.commons.math.ode.events.EventState,251
+Thu Aug 24 16:22:35 AEST 2017 org.apache.commons.math.ode.events.EventState,285
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+t0=t;
+g0=handler.g(t,y);
+pendingEvent=nextAction>0;
+if(pendingEvent){
+previousEventTime=t;
+g0Positive=increasing;
+nextAction=handler.eventOccurred(t,y,!(increasing^forward));
+}else {
+g0Positive=g0>=0;
+nextAction=EventHandler.CONTINUE;
+}
+
+Time : 17/08/24 16:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+t0=t0;
+g0=handler.g(t,y);
+if(pendingEvent){
+previousEventTime=t;
+g0Positive=increasing;
+nextAction=handler.eventOccurred(t,y,!(increasing^forward));
+}else {
+g0Positive=g0>=0;
+nextAction=EventHandler.CONTINUE;
+}
+
+Time : 17/08/24 16:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+t0=t;
+g0=handler.g(t,y);
+pendingEvent=true;
+if(pendingEvent){
+previousEventTime=t;
+g0Positive=increasing;
+nextAction=handler.eventOccurred(t,y,!(increasing^forward));
+}else {
+g0Positive=g0>=0;
+nextAction=EventHandler.CONTINUE;
+}
+
+Time : 17/08/24 16:27
+----------------------------------------
+Thu Aug 24 16:29:57 AEST 2017 org.apache.commons.math.ode.events.EventState,286
+Thu Aug 24 16:29:58 AEST 2017 org.apache.commons.math.ode.events.EventState,288
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+pendingEvent=nextAction>0;
+if(pendingEvent){
+previousEventTime=t;
+g0Positive=increasing;
+nextAction=handler.eventOccurred(t,y,!(increasing^forward));
+}else {
+g0Positive=g0>=0;
+nextAction=EventHandler.CONTINUE;
+}
+
+Time : 17/08/24 16:32
+----------------------------------------
+Thu Aug 24 16:38:51 AEST 2017 org.apache.commons.math.ode.events.EventState,294
+Thu Aug 24 16:38:52 AEST 2017 org.apache.commons.math.ode.events.EventState,295
+Thu Aug 24 16:38:53 AEST 2017 Thu Aug 24 16:38:53 AEST 2017 : org.apache.commons.math.ode.events.EventState,297=>Find no block
+Thu Aug 24 16:38:54 AEST 2017 org.apache.commons.math.ode.events.EventState,151
+Thu Aug 24 16:41:28 AEST 2017 org.apache.commons.math.ode.events.EventState,152
+Thu Aug 24 16:41:29 AEST 2017 org.apache.commons.math.ode.events.EventState,153
+Thu Aug 24 16:41:30 AEST 2017 Thu Aug 24 16:41:30 AEST 2017 : org.apache.commons.math.ode.events.EventState,154=>Find no block
+Thu Aug 24 16:41:31 AEST 2017 org.apache.commons.math.ode.events.EventState,172
+Thu Aug 24 16:49:22 AEST 2017 org.apache.commons.math.ode.events.EventState,173
+Thu Aug 24 16:49:23 AEST 2017 org.apache.commons.math.ode.events.EventState,174
+Thu Aug 24 17:00:23 AEST 2017 org.apache.commons.math.ode.events.EventState,175
+Timeout time : 17/08/24 17:12
+Current failed test : org.apache.commons.math.ode.events.EventStateTest::closeEvents_purify_2 | 17/08/24 17:12
+Thu Aug 24 17:14:07 AEST 2017 org.apache.commons.math.ode.sampling.DummyStepInterpolator,66
+Thu Aug 24 17:14:10 AEST 2017 Thu Aug 24 17:14:10 AEST 2017 : org.apache.commons.math.ode.sampling.DummyStepInterpolator,67=>Find no block
+Thu Aug 24 17:14:11 AEST 2017 Thu Aug 24 17:14:11 AEST 2017 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,107=>Find no block
+Thu Aug 24 17:14:12 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,109
+Thu Aug 24 17:17:09 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,110
+Thu Aug 24 17:17:10 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,111
+Thu Aug 24 17:21:15 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,112
+Thu Aug 24 17:25:30 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,114
+Thu Aug 24 17:32:01 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,115
+Thu Aug 24 17:36:50 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,116
+Thu Aug 24 17:43:10 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,118
+Thu Aug 24 17:52:05 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,119
+Thu Aug 24 17:57:15 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,120
+Thu Aug 24 17:57:15 AEST 2017 Thu Aug 24 17:57:15 AEST 2017 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,122=>Find no block
+Thu Aug 24 17:57:16 AEST 2017 org.apache.commons.math.ode.events.EventState,271
+Thu Aug 24 17:57:20 AEST 2017 org.apache.commons.math.ode.events.EventState,285
+Thu Aug 24 18:03:05 AEST 2017 org.apache.commons.math.ode.events.EventState,286
+Thu Aug 24 18:03:07 AEST 2017 org.apache.commons.math.ode.events.EventState,288
+Thu Aug 24 18:11:43 AEST 2017 org.apache.commons.math.ode.events.EventState,294
+Thu Aug 24 18:11:44 AEST 2017 org.apache.commons.math.ode.events.EventState,295
+Thu Aug 24 18:11:45 AEST 2017 Thu Aug 24 18:11:45 AEST 2017 : org.apache.commons.math.ode.events.EventState,297=>Find no block
+Thu Aug 24 18:11:46 AEST 2017 org.apache.commons.math.ode.events.EventState,151
+Thu Aug 24 18:14:21 AEST 2017 org.apache.commons.math.ode.events.EventState,152
+Thu Aug 24 18:14:22 AEST 2017 org.apache.commons.math.ode.events.EventState,153
+Thu Aug 24 18:14:23 AEST 2017 Thu Aug 24 18:14:23 AEST 2017 : org.apache.commons.math.ode.events.EventState,154=>Find no block
+Thu Aug 24 18:14:24 AEST 2017 Thu Aug 24 18:14:24 AEST 2017 : org.apache.commons.math.ode.events.EventState,95=>Find no block
+Thu Aug 24 18:14:25 AEST 2017 org.apache.commons.math.ode.events.EventState,96
+Thu Aug 24 18:17:50 AEST 2017 org.apache.commons.math.ode.events.EventState,97
+Thu Aug 24 18:17:51 AEST 2017 org.apache.commons.math.ode.events.EventState,98
+Thu Aug 24 18:21:37 AEST 2017 org.apache.commons.math.ode.events.EventState,99
+Thu Aug 24 18:23:54 AEST 2017 org.apache.commons.math.ode.events.EventState,102
+Thu Aug 24 18:25:49 AEST 2017 org.apache.commons.math.ode.events.EventState,103
+Thu Aug 24 18:27:31 AEST 2017 org.apache.commons.math.ode.events.EventState,104
+Thu Aug 24 18:28:36 AEST 2017 org.apache.commons.math.ode.events.EventState,105
+Thu Aug 24 18:30:19 AEST 2017 org.apache.commons.math.ode.events.EventState,106
+Thu Aug 24 18:32:02 AEST 2017 org.apache.commons.math.ode.events.EventState,107
+Thu Aug 24 18:33:11 AEST 2017 org.apache.commons.math.ode.events.EventState,108
+Thu Aug 24 18:34:27 AEST 2017 org.apache.commons.math.ode.events.EventState,109
+Thu Aug 24 18:34:28 AEST 2017 Thu Aug 24 18:34:28 AEST 2017 : org.apache.commons.math.ode.events.EventState,111=>Find no block
+Thu Aug 24 18:34:29 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,211
+Thu Aug 24 18:36:40 AEST 2017 Thu Aug 24 18:36:40 AEST 2017 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,212=>Find no block
+Thu Aug 24 18:36:41 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,219
+Thu Aug 24 18:42:39 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,220
+Thu Aug 24 18:42:40 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,221
+Thu Aug 24 18:42:41 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,224
+Thu Aug 24 18:42:42 AEST 2017 Thu Aug 24 18:42:42 AEST 2017 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,226=>Find no block
+Thu Aug 24 18:42:43 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,245
+Thu Aug 24 18:45:58 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,246
+Thu Aug 24 18:45:59 AEST 2017 Thu Aug 24 18:45:59 AEST 2017 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,247=>Find no block
+Thu Aug 24 18:46:01 AEST 2017 org.apache.commons.math.MaxIterationsExceededException,43
+Thu Aug 24 18:46:07 AEST 2017 org.apache.commons.math.MaxIterationsExceededException,44
+Thu Aug 24 18:46:08 AEST 2017 Thu Aug 24 18:46:08 AEST 2017 : org.apache.commons.math.MaxIterationsExceededException,45=>Find no block
+Thu Aug 24 18:46:10 AEST 2017 org.apache.commons.math.MaxIterationsExceededException,56
+Thu Aug 24 18:47:19 AEST 2017 org.apache.commons.math.MaxIterationsExceededException,57
+Thu Aug 24 18:47:20 AEST 2017 Thu Aug 24 18:47:20 AEST 2017 : org.apache.commons.math.MaxIterationsExceededException,58=>Find no block
+Thu Aug 24 18:47:21 AEST 2017 org.apache.commons.math.MaxIterationsExceededException,64
+Thu Aug 24 18:47:25 AEST 2017 org.apache.commons.math.ConvergenceException,34
+Thu Aug 24 18:47:33 AEST 2017 Thu Aug 24 18:47:33 AEST 2017 : org.apache.commons.math.ConvergenceException,35=>Find no block
+Thu Aug 24 18:47:34 AEST 2017 org.apache.commons.math.ConvergenceException,45
+Thu Aug 24 18:49:20 AEST 2017 Thu Aug 24 18:49:20 AEST 2017 : org.apache.commons.math.ConvergenceException,46=>Find no block
+Thu Aug 24 18:49:21 AEST 2017 org.apache.commons.math.ConvergenceException,53
+Thu Aug 24 18:49:24 AEST 2017 Thu Aug 24 18:49:24 AEST 2017 : org.apache.commons.math.ConvergenceException,54=>Find no block
+Thu Aug 24 18:49:25 AEST 2017 org.apache.commons.math.ConvergenceException,65
+Thu Aug 24 18:51:08 AEST 2017 Thu Aug 24 18:51:08 AEST 2017 : org.apache.commons.math.ConvergenceException,66=>Find no block
+Thu Aug 24 18:51:10 AEST 2017 Thu Aug 24 18:51:10 AEST 2017 : org.apache.commons.math.MathException,55=>Find no block
+Thu Aug 24 18:51:10 AEST 2017 org.apache.commons.math.MathException,56
+Thu Aug 24 18:51:13 AEST 2017 org.apache.commons.math.MathException,57
+Thu Aug 24 18:51:14 AEST 2017 Thu Aug 24 18:51:14 AEST 2017 : org.apache.commons.math.MathException,58=>Find no block
+Thu Aug 24 18:51:15 AEST 2017 Thu Aug 24 18:51:15 AEST 2017 : org.apache.commons.math.MathException,67=>Find no block
+Thu Aug 24 18:51:16 AEST 2017 org.apache.commons.math.MathException,68
+Thu Aug 24 18:51:52 AEST 2017 org.apache.commons.math.MathException,69
+Thu Aug 24 18:51:53 AEST 2017 Thu Aug 24 18:51:53 AEST 2017 : org.apache.commons.math.MathException,70=>Find no block
+Thu Aug 24 18:51:54 AEST 2017 org.apache.commons.math.MathException,80
+Thu Aug 24 18:51:57 AEST 2017 org.apache.commons.math.MathException,81
+Thu Aug 24 18:51:58 AEST 2017 org.apache.commons.math.MathException,82
+Thu Aug 24 18:51:59 AEST 2017 Thu Aug 24 18:51:59 AEST 2017 : org.apache.commons.math.MathException,83=>Find no block
+Thu Aug 24 18:52:00 AEST 2017 org.apache.commons.math.MathException,96
+Thu Aug 24 18:52:35 AEST 2017 org.apache.commons.math.MathException,97
+Thu Aug 24 18:52:36 AEST 2017 org.apache.commons.math.MathException,98
+Thu Aug 24 18:52:37 AEST 2017 Thu Aug 24 18:52:37 AEST 2017 : org.apache.commons.math.MathException,99=>Find no block
+Thu Aug 24 18:52:38 AEST 2017 org.apache.commons.math.MathException,110
+Thu Aug 24 18:52:42 AEST 2017 org.apache.commons.math.MathException,112
+Thu Aug 24 18:53:01 AEST 2017 org.apache.commons.math.MathException,114
+Thu Aug 24 18:53:02 AEST 2017 Thu Aug 24 18:53:02 AEST 2017 : org.apache.commons.math.MathException,119=>Find no block
+Thu Aug 24 18:53:03 AEST 2017 Thu Aug 24 18:53:03 AEST 2017 : org.apache.commons.math.MathException,117=>Find no block
+Thu Aug 24 18:53:04 AEST 2017 org.apache.commons.math.MathException,123
+Thu Aug 24 18:53:08 AEST 2017 org.apache.commons.math.MathException,133
+Thu Aug 24 18:53:11 AEST 2017 org.apache.commons.math.MathException,142
+Thu Aug 24 18:54:03 AEST 2017 org.apache.commons.math.MathException,153
+Timeout time : 17/08/24 18:54
+Current failed test : org.apache.commons.math.ode.events.EventStateTest::closeEvents_purify_4 | 17/08/24 18:54
+Thu Aug 24 18:55:32 AEST 2017 org.apache.commons.math.ode.sampling.DummyStepInterpolator,66
+Thu Aug 24 18:55:35 AEST 2017 Thu Aug 24 18:55:35 AEST 2017 : org.apache.commons.math.ode.sampling.DummyStepInterpolator,67=>Find no block
+Thu Aug 24 18:55:36 AEST 2017 Thu Aug 24 18:55:36 AEST 2017 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,107=>Find no block
+Thu Aug 24 18:55:37 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,109
+Thu Aug 24 18:58:28 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,110
+Thu Aug 24 18:58:30 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,111
+Thu Aug 24 19:02:36 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,112
+Thu Aug 24 19:07:06 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,114
+Thu Aug 24 19:13:32 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,115
+Thu Aug 24 19:18:27 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,116
+Thu Aug 24 19:24:33 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,118
+Thu Aug 24 19:33:11 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,119
+Thu Aug 24 19:38:27 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,120
+Thu Aug 24 19:38:28 AEST 2017 Thu Aug 24 19:38:28 AEST 2017 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,122=>Find no block
+Thu Aug 24 19:38:29 AEST 2017 org.apache.commons.math.ode.events.EventState,271
+Thu Aug 24 19:38:32 AEST 2017 org.apache.commons.math.ode.events.EventState,151
+Thu Aug 24 19:41:14 AEST 2017 org.apache.commons.math.ode.events.EventState,152
+Thu Aug 24 19:41:14 AEST 2017 org.apache.commons.math.ode.events.EventState,153
+Thu Aug 24 19:41:15 AEST 2017 Thu Aug 24 19:41:15 AEST 2017 : org.apache.commons.math.ode.events.EventState,154=>Find no block
+Thu Aug 24 19:41:16 AEST 2017 Thu Aug 24 19:41:16 AEST 2017 : org.apache.commons.math.ode.events.EventState,95=>Find no block
+Thu Aug 24 19:41:16 AEST 2017 org.apache.commons.math.ode.events.EventState,96
+Thu Aug 24 19:44:50 AEST 2017 org.apache.commons.math.ode.events.EventState,97
+Thu Aug 24 19:44:51 AEST 2017 org.apache.commons.math.ode.events.EventState,98
+Thu Aug 24 19:48:37 AEST 2017 org.apache.commons.math.ode.events.EventState,99
+Thu Aug 24 19:50:52 AEST 2017 org.apache.commons.math.ode.events.EventState,102
+Thu Aug 24 19:52:50 AEST 2017 org.apache.commons.math.ode.events.EventState,103
+Thu Aug 24 19:54:32 AEST 2017 org.apache.commons.math.ode.events.EventState,104
+Thu Aug 24 19:55:38 AEST 2017 org.apache.commons.math.ode.events.EventState,105
+Thu Aug 24 19:57:19 AEST 2017 org.apache.commons.math.ode.events.EventState,106
+Thu Aug 24 19:59:03 AEST 2017 org.apache.commons.math.ode.events.EventState,107
+Thu Aug 24 20:00:16 AEST 2017 org.apache.commons.math.ode.events.EventState,108
+Thu Aug 24 20:01:30 AEST 2017 org.apache.commons.math.ode.events.EventState,109
+Thu Aug 24 20:01:31 AEST 2017 Thu Aug 24 20:01:31 AEST 2017 : org.apache.commons.math.ode.events.EventState,111=>Find no block
+Thu Aug 24 20:01:31 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,211
+Thu Aug 24 20:03:38 AEST 2017 Thu Aug 24 20:03:38 AEST 2017 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,212=>Find no block
+Thu Aug 24 20:03:39 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,219
+Thu Aug 24 20:09:27 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,220
+Thu Aug 24 20:09:28 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,221
+Thu Aug 24 20:09:29 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,224
+Thu Aug 24 20:09:30 AEST 2017 Thu Aug 24 20:09:30 AEST 2017 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,226=>Find no block
+Thu Aug 24 20:09:31 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,245
+Thu Aug 24 20:12:36 AEST 2017 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,246
+Thu Aug 24 20:12:37 AEST 2017 Thu Aug 24 20:12:37 AEST 2017 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,247=>Find no block
+Thu Aug 24 20:12:37 AEST 2017 org.apache.commons.math.MaxIterationsExceededException,43
+Thu Aug 24 20:12:41 AEST 2017 org.apache.commons.math.MaxIterationsExceededException,44
+Thu Aug 24 20:12:42 AEST 2017 Thu Aug 24 20:12:42 AEST 2017 : org.apache.commons.math.MaxIterationsExceededException,45=>Find no block
+Thu Aug 24 20:12:42 AEST 2017 org.apache.commons.math.MaxIterationsExceededException,56
+Thu Aug 24 20:13:49 AEST 2017 org.apache.commons.math.MaxIterationsExceededException,57
+Thu Aug 24 20:13:50 AEST 2017 Thu Aug 24 20:13:50 AEST 2017 : org.apache.commons.math.MaxIterationsExceededException,58=>Find no block
+Thu Aug 24 20:13:51 AEST 2017 org.apache.commons.math.MaxIterationsExceededException,64
+Thu Aug 24 20:13:54 AEST 2017 org.apache.commons.math.ConvergenceException,34
+Thu Aug 24 20:13:57 AEST 2017 Thu Aug 24 20:13:57 AEST 2017 : org.apache.commons.math.ConvergenceException,35=>Find no block
+Thu Aug 24 20:13:58 AEST 2017 org.apache.commons.math.ConvergenceException,45
+Thu Aug 24 20:15:41 AEST 2017 Thu Aug 24 20:15:41 AEST 2017 : org.apache.commons.math.ConvergenceException,46=>Find no block
+Thu Aug 24 20:15:42 AEST 2017 org.apache.commons.math.ConvergenceException,53
+Thu Aug 24 20:15:45 AEST 2017 Thu Aug 24 20:15:45 AEST 2017 : org.apache.commons.math.ConvergenceException,54=>Find no block
+Thu Aug 24 20:15:46 AEST 2017 org.apache.commons.math.ConvergenceException,65
+Thu Aug 24 20:17:27 AEST 2017 Thu Aug 24 20:17:27 AEST 2017 : org.apache.commons.math.ConvergenceException,66=>Find no block
+Thu Aug 24 20:17:28 AEST 2017 Thu Aug 24 20:17:28 AEST 2017 : org.apache.commons.math.MathException,55=>Find no block
+Thu Aug 24 20:17:29 AEST 2017 org.apache.commons.math.MathException,56
+Thu Aug 24 20:17:31 AEST 2017 org.apache.commons.math.MathException,57
+Thu Aug 24 20:17:32 AEST 2017 Thu Aug 24 20:17:32 AEST 2017 : org.apache.commons.math.MathException,58=>Find no block
+Thu Aug 24 20:17:33 AEST 2017 Thu Aug 24 20:17:33 AEST 2017 : org.apache.commons.math.MathException,67=>Find no block
+Thu Aug 24 20:17:35 AEST 2017 org.apache.commons.math.MathException,68
+Thu Aug 24 20:18:11 AEST 2017 org.apache.commons.math.MathException,69
+Thu Aug 24 20:18:13 AEST 2017 Thu Aug 24 20:18:13 AEST 2017 : org.apache.commons.math.MathException,70=>Find no block
+Thu Aug 24 20:18:14 AEST 2017 org.apache.commons.math.MathException,80
+Thu Aug 24 20:18:17 AEST 2017 org.apache.commons.math.MathException,81
+Thu Aug 24 20:18:17 AEST 2017 org.apache.commons.math.MathException,82
+Thu Aug 24 20:18:18 AEST 2017 Thu Aug 24 20:18:18 AEST 2017 : org.apache.commons.math.MathException,83=>Find no block
+Thu Aug 24 20:18:19 AEST 2017 org.apache.commons.math.MathException,96
+Thu Aug 24 20:18:54 AEST 2017 org.apache.commons.math.MathException,97
+Thu Aug 24 20:18:55 AEST 2017 org.apache.commons.math.MathException,98
+Thu Aug 24 20:18:56 AEST 2017 Thu Aug 24 20:18:56 AEST 2017 : org.apache.commons.math.MathException,99=>Find no block
+Thu Aug 24 20:18:57 AEST 2017 org.apache.commons.math.MathException,110
+Thu Aug 24 20:19:00 AEST 2017 org.apache.commons.math.MathException,112
+Thu Aug 24 20:19:19 AEST 2017 org.apache.commons.math.MathException,114
+Thu Aug 24 20:19:19 AEST 2017 Thu Aug 24 20:19:19 AEST 2017 : org.apache.commons.math.MathException,119=>Find no block
+Thu Aug 24 20:19:20 AEST 2017 Thu Aug 24 20:19:20 AEST 2017 : org.apache.commons.math.MathException,117=>Find no block
+Thu Aug 24 20:19:21 AEST 2017 org.apache.commons.math.MathException,123
+Thu Aug 24 20:19:22 AEST 2017 org.apache.commons.math.MathException,133
+Thu Aug 24 20:19:25 AEST 2017 org.apache.commons.math.MathException,142
+Thu Aug 24 20:20:15 AEST 2017 org.apache.commons.math.MathException,153
+Thu Aug 24 20:20:18 AEST 2017 org.apache.commons.math.MathException,159
+Thu Aug 24 20:20:21 AEST 2017 org.apache.commons.math.MathException,165
+Thu Aug 24 20:20:25 AEST 2017 org.apache.commons.math.MathException,173
+Thu Aug 24 20:20:28 AEST 2017 Thu Aug 24 20:20:28 AEST 2017 : org.apache.commons.math.MathException,174=>Find no block
+Thu Aug 24 20:20:28 AEST 2017 Thu Aug 24 20:20:28 AEST 2017 : org.apache.commons.math.MathException,183=>Find no block
+Thu Aug 24 20:20:30 AEST 2017 org.apache.commons.math.MathException,184
+Thu Aug 24 20:20:33 AEST 2017 org.apache.commons.math.MathException,185
+Thu Aug 24 20:20:34 AEST 2017 org.apache.commons.math.MathException,187
+Thu Aug 24 20:20:36 AEST 2017 Thu Aug 24 20:20:36 AEST 2017 : org.apache.commons.math.MathException,188=>Find no block
+Thu Aug 24 20:20:36 AEST 2017 Thu Aug 24 20:20:36 AEST 2017 : org.apache.commons.math.MathException,189=>Find no block
+Thu Aug 24 20:20:37 AEST 2017 org.apache.commons.math.FunctionEvaluationException,48
+Thu Aug 24 20:20:40 AEST 2017 org.apache.commons.math.FunctionEvaluationException,49
+Thu Aug 24 20:20:41 AEST 2017 Thu Aug 24 20:20:41 AEST 2017 : org.apache.commons.math.FunctionEvaluationException,50=>Find no block
+Thu Aug 24 20:20:42 AEST 2017 org.apache.commons.math.FunctionEvaluationException,60
+Thu Aug 24 20:25:43 AEST 2017 org.apache.commons.math.FunctionEvaluationException,61
+Thu Aug 24 20:25:44 AEST 2017 Thu Aug 24 20:25:44 AEST 2017 : org.apache.commons.math.FunctionEvaluationException,62=>Find no block
+Thu Aug 24 20:25:44 AEST 2017 org.apache.commons.math.FunctionEvaluationException,74
+Thu Aug 24 20:27:18 AEST 2017 org.apache.commons.math.FunctionEvaluationException,75
+Thu Aug 24 20:27:19 AEST 2017 Thu Aug 24 20:27:19 AEST 2017 : org.apache.commons.math.FunctionEvaluationException,76=>Find no block
+Thu Aug 24 20:27:20 AEST 2017 org.apache.commons.math.FunctionEvaluationException,88
+Thu Aug 24 20:29:36 AEST 2017 org.apache.commons.math.FunctionEvaluationException,89
+Thu Aug 24 20:29:37 AEST 2017 Thu Aug 24 20:29:37 AEST 2017 : org.apache.commons.math.FunctionEvaluationException,90=>Find no block
+Thu Aug 24 20:29:38 AEST 2017 org.apache.commons.math.FunctionEvaluationException,100
+Thu Aug 24 20:29:58 AEST 2017 org.apache.commons.math.FunctionEvaluationException,101
+Thu Aug 24 20:29:59 AEST 2017 Thu Aug 24 20:29:59 AEST 2017 : org.apache.commons.math.FunctionEvaluationException,102=>Find no block
+Thu Aug 24 20:30:00 AEST 2017 org.apache.commons.math.FunctionEvaluationException,112
+Thu Aug 24 20:35:20 AEST 2017 org.apache.commons.math.FunctionEvaluationException,113
+Thu Aug 24 20:35:21 AEST 2017 Thu Aug 24 20:35:21 AEST 2017 : org.apache.commons.math.FunctionEvaluationException,114=>Find no block
+Thu Aug 24 20:35:22 AEST 2017 org.apache.commons.math.FunctionEvaluationException,128
+Timeout time : 17/08/24 20:36

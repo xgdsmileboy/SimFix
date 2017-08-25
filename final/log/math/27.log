@@ -1,0 +1,157 @@
+=================================================
+Project : math_27	start : 17/08/24 10:12
+Current failed test : org.apache.commons.math3.fraction.FractionTest::testMath835 | 17/08/24 10:12
+Thu Aug 24 10:13:56 AEST 2017 org.apache.commons.math3.fraction.Fraction,597
+Thu Aug 24 10:14:01 AEST 2017 org.apache.commons.math3.fraction.Fraction,555
+Thu Aug 24 10:14:09 AEST 2017 org.apache.commons.math3.fraction.Fraction,319
+Thu Aug 24 10:14:14 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,430
+Thu Aug 24 10:15:54 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,426
+Thu Aug 24 10:16:37 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,400
+Thu Aug 24 10:16:57 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,399
+Thu Aug 24 10:16:58 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,402
+Thu Aug 24 10:18:13 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,403
+Thu Aug 24 10:18:14 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,406
+Thu Aug 24 10:24:32 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,407
+Thu Aug 24 10:24:33 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,413
+Thu Aug 24 10:29:50 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,419
+Thu Aug 24 10:32:39 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,425
+Thu Aug 24 10:32:40 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,429
+Thu Aug 24 10:32:41 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,435
+Thu Aug 24 10:32:44 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,438
+Thu Aug 24 10:32:45 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,439
+Thu Aug 24 10:33:56 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,385
+Thu Aug 24 10:52:52 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,386
+Thu Aug 24 10:52:54 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,387
+Thu Aug 24 10:52:55 AEST 2017 Thu Aug 24 10:52:55 AEST 2017 : org.apache.commons.math3.fraction.Fraction,256=>Find no block
+Thu Aug 24 10:52:56 AEST 2017 org.apache.commons.math3.fraction.Fraction,257
+Thu Aug 24 10:53:49 AEST 2017 org.apache.commons.math3.fraction.Fraction,261
+Thu Aug 24 10:53:55 AEST 2017 org.apache.commons.math3.fraction.Fraction,271
+Thu Aug 24 10:57:03 AEST 2017 org.apache.commons.math3.fraction.Fraction,272
+Thu Aug 24 10:57:04 AEST 2017 org.apache.commons.math3.fraction.Fraction,278
+Thu Aug 24 10:57:44 AEST 2017 org.apache.commons.math3.fraction.Fraction,282
+Thu Aug 24 10:58:43 AEST 2017 org.apache.commons.math3.fraction.Fraction,283
+Thu Aug 24 10:58:45 AEST 2017 Thu Aug 24 10:58:45 AEST 2017 : org.apache.commons.math3.fraction.Fraction,284=>Find no block
+Thu Aug 24 10:58:46 AEST 2017 Thu Aug 24 10:58:46 AEST 2017 : org.apache.commons.math3.exception.MathIllegalStateException,45=>Find no block
+Thu Aug 24 10:58:47 AEST 2017 org.apache.commons.math3.exception.MathIllegalStateException,46
+Thu Aug 24 10:58:50 AEST 2017 org.apache.commons.math3.exception.MathIllegalStateException,47
+Thu Aug 24 10:58:51 AEST 2017 Thu Aug 24 10:58:51 AEST 2017 : org.apache.commons.math3.exception.MathIllegalStateException,48=>Find no block
+Thu Aug 24 10:58:52 AEST 2017 org.apache.commons.math3.exception.MathIllegalStateException,60
+Thu Aug 24 10:58:56 AEST 2017 org.apache.commons.math3.exception.MathIllegalStateException,61
+Thu Aug 24 10:58:57 AEST 2017 org.apache.commons.math3.exception.MathIllegalStateException,62
+Thu Aug 24 10:58:58 AEST 2017 Thu Aug 24 10:58:58 AEST 2017 : org.apache.commons.math3.exception.MathIllegalStateException,63=>Find no block
+Thu Aug 24 10:58:59 AEST 2017 org.apache.commons.math3.exception.MathIllegalStateException,69
+Thu Aug 24 10:59:02 AEST 2017 Thu Aug 24 10:59:02 AEST 2017 : org.apache.commons.math3.exception.MathIllegalStateException,70=>Find no block
+Thu Aug 24 10:59:03 AEST 2017 org.apache.commons.math3.exception.MathIllegalStateException,74
+Thu Aug 24 10:59:07 AEST 2017 org.apache.commons.math3.exception.MathIllegalStateException,80
+Thu Aug 24 10:59:10 AEST 2017 org.apache.commons.math3.exception.MathIllegalStateException,86
+Thu Aug 24 10:59:14 AEST 2017 org.apache.commons.math3.exception.NumberIsTooSmallException,50
+Thu Aug 24 10:59:17 AEST 2017 Thu Aug 24 10:59:17 AEST 2017 : org.apache.commons.math3.exception.NumberIsTooSmallException,54=>Find no block
+Thu Aug 24 10:59:18 AEST 2017 org.apache.commons.math3.exception.NumberIsTooSmallException,68
+Thu Aug 24 11:00:26 AEST 2017 org.apache.commons.math3.exception.NumberIsTooSmallException,70
+Thu Aug 24 11:00:27 AEST 2017 org.apache.commons.math3.exception.NumberIsTooSmallException,71
+Thu Aug 24 11:00:28 AEST 2017 Thu Aug 24 11:00:28 AEST 2017 : org.apache.commons.math3.exception.NumberIsTooSmallException,72=>Find no block
+Thu Aug 24 11:00:30 AEST 2017 org.apache.commons.math3.exception.NumberIsTooSmallException,78
+Thu Aug 24 11:00:33 AEST 2017 org.apache.commons.math3.exception.NumberIsTooSmallException,85
+Thu Aug 24 11:00:37 AEST 2017 org.apache.commons.math3.exception.MathIllegalNumberException,46
+Thu Aug 24 11:01:34 AEST 2017 org.apache.commons.math3.exception.MathIllegalNumberException,47
+Thu Aug 24 11:01:35 AEST 2017 Thu Aug 24 11:01:35 AEST 2017 : org.apache.commons.math3.exception.MathIllegalNumberException,48=>Find no block
+Thu Aug 24 11:01:36 AEST 2017 org.apache.commons.math3.exception.MathIllegalNumberException,54
+Thu Aug 24 11:01:39 AEST 2017 Thu Aug 24 11:01:39 AEST 2017 : org.apache.commons.math3.exception.MathIllegalArgumentException,44=>Find no block
+Thu Aug 24 11:01:40 AEST 2017 org.apache.commons.math3.exception.MathIllegalArgumentException,45
+Thu Aug 24 11:01:41 AEST 2017 org.apache.commons.math3.exception.MathIllegalArgumentException,46
+Thu Aug 24 11:01:42 AEST 2017 Thu Aug 24 11:01:42 AEST 2017 : org.apache.commons.math3.exception.MathIllegalArgumentException,47=>Find no block
+Thu Aug 24 11:01:43 AEST 2017 org.apache.commons.math3.exception.MathIllegalArgumentException,51
+Thu Aug 24 11:01:44 AEST 2017 org.apache.commons.math3.exception.MathIllegalArgumentException,57
+Thu Aug 24 11:01:45 AEST 2017 org.apache.commons.math3.exception.MathIllegalArgumentException,63
+Thu Aug 24 11:01:46 AEST 2017 org.apache.commons.math3.exception.NotPositiveException,37
+Thu Aug 24 11:01:49 AEST 2017 Thu Aug 24 11:01:49 AEST 2017 : org.apache.commons.math3.exception.NotPositiveException,38=>Find no block
+Thu Aug 24 11:01:50 AEST 2017 org.apache.commons.math3.exception.NotPositiveException,47
+Thu Aug 24 11:02:08 AEST 2017 Thu Aug 24 11:02:08 AEST 2017 : org.apache.commons.math3.exception.NotPositiveException,48=>Find no block
+Thu Aug 24 11:02:09 AEST 2017 Thu Aug 24 11:02:09 AEST 2017 : org.apache.commons.math3.exception.MathArithmeticException,43=>Find no block
+Thu Aug 24 11:02:10 AEST 2017 org.apache.commons.math3.exception.MathArithmeticException,44
+Thu Aug 24 11:02:57 AEST 2017 org.apache.commons.math3.exception.MathArithmeticException,45
+Thu Aug 24 11:02:58 AEST 2017 Thu Aug 24 11:02:58 AEST 2017 : org.apache.commons.math3.exception.MathArithmeticException,46=>Find no block
+Thu Aug 24 11:02:59 AEST 2017 Thu Aug 24 11:02:59 AEST 2017 : org.apache.commons.math3.exception.MathArithmeticException,56=>Find no block
+Thu Aug 24 11:03:00 AEST 2017 org.apache.commons.math3.exception.MathArithmeticException,57
+Thu Aug 24 11:03:01 AEST 2017 org.apache.commons.math3.exception.MathArithmeticException,58
+Thu Aug 24 11:03:02 AEST 2017 Thu Aug 24 11:03:02 AEST 2017 : org.apache.commons.math3.exception.MathArithmeticException,59=>Find no block
+Thu Aug 24 11:03:04 AEST 2017 org.apache.commons.math3.exception.MathArithmeticException,63
+Thu Aug 24 11:03:05 AEST 2017 org.apache.commons.math3.exception.MathArithmeticException,69
+Thu Aug 24 11:03:06 AEST 2017 org.apache.commons.math3.exception.MathArithmeticException,75
+Thu Aug 24 11:03:07 AEST 2017 org.apache.commons.math3.exception.NumberIsTooLargeException,50
+Thu Aug 24 11:03:11 AEST 2017 Thu Aug 24 11:03:11 AEST 2017 : org.apache.commons.math3.exception.NumberIsTooLargeException,54=>Find no block
+Thu Aug 24 11:03:12 AEST 2017 org.apache.commons.math3.exception.NumberIsTooLargeException,67
+Thu Aug 24 11:04:21 AEST 2017 org.apache.commons.math3.exception.NumberIsTooLargeException,69
+Thu Aug 24 11:04:22 AEST 2017 org.apache.commons.math3.exception.NumberIsTooLargeException,70
+Thu Aug 24 11:04:23 AEST 2017 Thu Aug 24 11:04:23 AEST 2017 : org.apache.commons.math3.exception.NumberIsTooLargeException,71=>Find no block
+Thu Aug 24 11:04:24 AEST 2017 org.apache.commons.math3.exception.NumberIsTooLargeException,77
+Thu Aug 24 11:04:25 AEST 2017 org.apache.commons.math3.exception.NumberIsTooLargeException,84
+Thu Aug 24 11:04:29 AEST 2017 org.apache.commons.math3.exception.NullArgumentException,41
+Thu Aug 24 11:04:33 AEST 2017 Thu Aug 24 11:04:33 AEST 2017 : org.apache.commons.math3.exception.NullArgumentException,42=>Find no block
+Thu Aug 24 11:04:34 AEST 2017 org.apache.commons.math3.exception.NullArgumentException,50
+Thu Aug 24 11:04:38 AEST 2017 Thu Aug 24 11:04:38 AEST 2017 : org.apache.commons.math3.exception.NullArgumentException,51=>Find no block
+Thu Aug 24 11:04:39 AEST 2017 org.apache.commons.math3.exception.ConvergenceException,37
+Thu Aug 24 11:04:42 AEST 2017 Thu Aug 24 11:04:42 AEST 2017 : org.apache.commons.math3.exception.ConvergenceException,38=>Find no block
+Thu Aug 24 11:04:43 AEST 2017 Thu Aug 24 11:04:43 AEST 2017 : org.apache.commons.math3.exception.ConvergenceException,48=>Find no block
+Thu Aug 24 11:04:44 AEST 2017 org.apache.commons.math3.exception.ConvergenceException,49
+Thu Aug 24 11:05:29 AEST 2017 Thu Aug 24 11:05:29 AEST 2017 : org.apache.commons.math3.exception.ConvergenceException,50=>Find no block
+Thu Aug 24 11:05:37 AEST 2017 Thu Aug 24 11:05:37 AEST 2017 : org.apache.commons.math3.util.FastMath,3720=>Find no block
+Thu Aug 24 11:05:38 AEST 2017 org.apache.commons.math3.util.FastMath,3723
+Thu Aug 24 11:06:11 AEST 2017 org.apache.commons.math3.util.FastMath,3729
+Thu Aug 24 11:15:05 AEST 2017 org.apache.commons.math3.util.FastMath,3730
+Thu Aug 24 11:15:06 AEST 2017 org.apache.commons.math3.util.FastMath,3731
+Thu Aug 24 11:20:01 AEST 2017 org.apache.commons.math3.util.FastMath,3733
+Thu Aug 24 11:31:45 AEST 2017 org.apache.commons.math3.util.FastMath,3734
+Thu Aug 24 11:41:04 AEST 2017 org.apache.commons.math3.util.FastMath,3735
+Thu Aug 24 11:50:33 AEST 2017 org.apache.commons.math3.util.FastMath,3736
+Thu Aug 24 11:55:44 AEST 2017 org.apache.commons.math3.util.FastMath,3738
+Thu Aug 24 12:03:47 AEST 2017 org.apache.commons.math3.util.FastMath,3739
+Thu Aug 24 12:13:51 AEST 2017 org.apache.commons.math3.util.FastMath,3740
+Thu Aug 24 12:21:20 AEST 2017 org.apache.commons.math3.util.FastMath,3741
+Thu Aug 24 12:24:50 AEST 2017 org.apache.commons.math3.util.FastMath,3743
+Thu Aug 24 12:24:54 AEST 2017 org.apache.commons.math3.util.FastMath,3744
+Thu Aug 24 12:24:55 AEST 2017 org.apache.commons.math3.util.FastMath,3750
+Thu Aug 24 12:27:38 AEST 2017 Thu Aug 24 12:27:38 AEST 2017 : org.apache.commons.math3.util.FastMath,3751=>Find no block
+Thu Aug 24 12:27:39 AEST 2017 org.apache.commons.math3.util.FastMath,3753
+Thu Aug 24 12:30:59 AEST 2017 org.apache.commons.math3.util.FastMath,3754
+Thu Aug 24 12:31:00 AEST 2017 org.apache.commons.math3.util.FastMath,3755
+Thu Aug 24 12:31:01 AEST 2017 Thu Aug 24 12:31:01 AEST 2017 : org.apache.commons.math3.util.FastMath,3756=>Find no block
+Thu Aug 24 12:31:02 AEST 2017 org.apache.commons.math3.util.FastMath,3762
+Thu Aug 24 12:31:06 AEST 2017 org.apache.commons.math3.util.FastMath,3768
+Thu Aug 24 12:31:09 AEST 2017 org.apache.commons.math3.util.FastMath,3774
+Thu Aug 24 12:31:13 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,46
+Thu Aug 24 12:31:17 AEST 2017 Thu Aug 24 12:31:17 AEST 2017 : org.apache.commons.math3.util.ArithmeticUtils,47=>Find no block
+Thu Aug 24 12:31:18 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,60
+Thu Aug 24 12:34:13 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,61
+Thu Aug 24 12:37:42 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,62
+Thu Aug 24 12:37:44 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,64
+Thu Aug 24 12:37:45 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,78
+Thu Aug 24 12:37:48 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,108
+Thu Aug 24 12:47:14 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,109
+Thu Aug 24 12:56:18 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,110
+Thu Aug 24 12:56:19 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,112
+Thu Aug 24 13:07:15 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,113
+Thu Aug 24 13:07:16 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,116
+Thu Aug 24 13:15:35 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,117
+Thu Aug 24 13:15:36 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,125
+Thu Aug 24 13:25:48 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,126
+Thu Aug 24 14:18:51 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,128
+Thu Aug 24 14:27:08 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,129
+Thu Aug 24 14:27:09 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,130
+Thu Aug 24 14:27:10 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,131
+Thu Aug 24 14:27:10 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,133
+Thu Aug 24 14:27:11 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,136
+Thu Aug 24 14:35:05 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,137
+Thu Aug 24 14:35:06 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,144
+Thu Aug 24 14:35:07 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,145
+Thu Aug 24 14:35:10 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,146
+Thu Aug 24 14:35:11 AEST 2017 Thu Aug 24 14:35:11 AEST 2017 : org.apache.commons.math3.util.ArithmeticUtils,148=>Find no block
+Thu Aug 24 14:35:12 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,152
+Thu Aug 24 14:42:26 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,153
+Thu Aug 24 14:42:27 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,154
+Thu Aug 24 14:42:28 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,155
+Thu Aug 24 14:42:29 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,156
+Thu Aug 24 14:42:30 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,159
+Thu Aug 24 15:02:23 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,186
+Thu Aug 24 15:11:52 AEST 2017 org.apache.commons.math3.util.ArithmeticUtils,187
+Timeout time : 17/08/24 15:13

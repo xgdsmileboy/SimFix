@@ -1,0 +1,65 @@
+=================================================
+Project : closure_112	start : 17/08/24 03:53
+Current failed test : com.google.javascript.jscomp.TypeCheckTest::testIssue1058 | 17/08/24 03:53
+Thu Aug 24 04:02:38 AEST 2017 com.google.javascript.rhino.jstype.JSType,621
+Thu Aug 24 04:20:53 AEST 2017 com.google.javascript.rhino.jstype.TemplateTypeMapReplacer,74
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hasVisitedType(type)&&!replacements.hasTemplateType(type)){
+return type;
+}else {
+JSType replacement=replacements.getTemplateType(type);
+visitedTypes.push(type);
+JSType visitedReplacement=replacement.visit(this);
+visitedTypes.pop();
+return visitedReplacement;
+}
+
+Time : 17/08/24 04:22
+----------------------------------------
+Thu Aug 24 04:26:45 AEST 2017 com.google.javascript.jscomp.TypeInference,1041
+Thu Aug 24 04:47:27 AEST 2017 com.google.javascript.jscomp.TypeInference,1042
+Thu Aug 24 04:47:29 AEST 2017 com.google.javascript.jscomp.TypeInference,1151
+Thu Aug 24 04:50:56 AEST 2017 com.google.javascript.jscomp.TypeInference,1152
+Thu Aug 24 04:50:57 AEST 2017 com.google.javascript.jscomp.TypeInference,1356
+Thu Aug 24 05:02:41 AEST 2017 com.google.javascript.jscomp.TypeInference,1357
+Thu Aug 24 05:02:42 AEST 2017 com.google.javascript.jscomp.TypeInference,1359
+Thu Aug 24 05:02:43 AEST 2017 com.google.javascript.rhino.jstype.ModificationVisitor,95
+Thu Aug 24 05:03:12 AEST 2017 com.google.javascript.jscomp.TypeValidator,688
+Thu Aug 24 05:11:25 AEST 2017 com.google.javascript.rhino.jstype.TemplateTypeMapReplacer,70
+Thu Aug 24 05:11:27 AEST 2017 com.google.javascript.rhino.jstype.TemplateTypeMapReplacer,94
+Thu Aug 24 05:11:34 AEST 2017 com.google.javascript.rhino.jstype.TemplateTypeMapReplacer,99
+Thu Aug 24 05:11:38 AEST 2017 com.google.javascript.jscomp.TypeInference,1065
+Thu Aug 24 06:08:51 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,353
+Thu Aug 24 08:25:03 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,354
+Thu Aug 24 08:25:03 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,355
+Thu Aug 24 08:25:05 AEST 2017 Thu Aug 24 08:25:05 AEST 2017 : com.google.javascript.jscomp.FunctionTypeBuilder,356=>Find no block
+Thu Aug 24 08:25:06 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,357
+Thu Aug 24 08:25:07 AEST 2017 com.google.javascript.jscomp.FunctionTypeBuilder,358
+Thu Aug 24 08:25:08 AEST 2017 com.google.javascript.rhino.jstype.TemplateTypeMap,115
+Thu Aug 24 08:25:13 AEST 2017 com.google.javascript.rhino.jstype.ModificationVisitor,124
+Thu Aug 24 08:30:38 AEST 2017 com.google.javascript.rhino.jstype.ModificationVisitor,147
+Thu Aug 24 08:30:43 AEST 2017 com.google.javascript.jscomp.TypeInference,1049
+Thu Aug 24 08:39:38 AEST 2017 com.google.javascript.jscomp.TypeInference,1119
+Thu Aug 24 08:39:43 AEST 2017 Thu Aug 24 08:39:43 AEST 2017 : com.google.javascript.jscomp.TypeInference,1121=>Find no block
+Thu Aug 24 08:39:44 AEST 2017 com.google.javascript.jscomp.TypeInference,1127
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+callParams.next();
+while(declParams.hasNext()&&callParams.hasNext()){
+Node declParam=declParams.next();
+maybeResolveTemplatedType(getJSType(declParam),getJSType(callParams.next()),resolvedTypes);
+if(declParam.isVarArgs()){
+while(callParams.hasNext()){
+maybeResolveTemplatedType(getJSType(declParam),getJSType(callParams.next()),resolvedTypes);
+}
+}
+}
+
+Time : 17/08/24 08:56
+----------------------------------------
+Timeout time : 17/08/24 09:02

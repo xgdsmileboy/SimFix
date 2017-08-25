@@ -1,0 +1,159 @@
+=================================================
+Project : time_27	start : 17/08/24 12:47
+Current failed test : org.joda.time.format.TestPeriodFormatterBuilder::testBug2495455 | 17/08/24 12:47
+Thu Aug 24 12:48:35 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1736
+Thu Aug 24 13:04:27 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1351
+Thu Aug 24 13:20:13 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,192
+Thu Aug 24 13:20:15 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,195
+Thu Aug 24 13:20:36 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,196
+Thu Aug 24 13:20:36 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,197
+Thu Aug 24 13:20:36 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,818
+Thu Aug 24 13:20:50 AEST 2017 org.joda.time.format.PeriodFormatter,324
+Thu Aug 24 13:33:23 AEST 2017 org.joda.time.format.PeriodFormatter,326
+Thu Aug 24 13:48:30 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1304
+Thu Aug 24 13:48:33 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1305
+Thu Aug 24 13:48:33 AEST 2017 org.joda.time.convert.ReadablePeriodConverter,81
+Thu Aug 24 13:48:35 AEST 2017 org.joda.time.convert.ReadableDurationConverter,88
+Thu Aug 24 13:48:36 AEST 2017 org.joda.time.convert.ConverterManager,105
+Thu Aug 24 13:51:04 AEST 2017 org.joda.time.convert.ConverterManager,107
+Thu Aug 24 13:51:04 AEST 2017 org.joda.time.convert.ConverterManager,116
+Thu Aug 24 13:51:05 AEST 2017 org.joda.time.convert.ConverterManager,126
+Thu Aug 24 13:51:05 AEST 2017 org.joda.time.convert.ConverterManager,134
+Thu Aug 24 13:51:05 AEST 2017 org.joda.time.convert.ConverterManager,142
+Thu Aug 24 13:51:06 AEST 2017 Thu Aug 24 13:51:06 AEST 2017 : org.joda.time.convert.ConverterManager,147=>Find no block
+Thu Aug 24 13:51:06 AEST 2017 org.joda.time.convert.ConverterManager,90
+Thu Aug 24 13:51:08 AEST 2017 org.joda.time.convert.LongConverter,40
+Thu Aug 24 13:51:09 AEST 2017 Thu Aug 24 13:51:09 AEST 2017 : org.joda.time.convert.LongConverter,41=>Find no block
+Thu Aug 24 13:51:09 AEST 2017 org.joda.time.convert.ReadablePartialConverter,41
+Thu Aug 24 13:51:10 AEST 2017 Thu Aug 24 13:51:10 AEST 2017 : org.joda.time.convert.ReadablePartialConverter,42=>Find no block
+Thu Aug 24 13:51:10 AEST 2017 org.joda.time.convert.ReadableInstantConverter,42
+Thu Aug 24 13:51:10 AEST 2017 Thu Aug 24 13:51:10 AEST 2017 : org.joda.time.convert.ReadableInstantConverter,43=>Find no block
+Thu Aug 24 13:51:11 AEST 2017 org.joda.time.convert.CalendarConverter,49
+Thu Aug 24 13:51:11 AEST 2017 Thu Aug 24 13:51:11 AEST 2017 : org.joda.time.convert.CalendarConverter,50=>Find no block
+Thu Aug 24 13:51:11 AEST 2017 org.joda.time.convert.DateConverter,41
+Thu Aug 24 13:51:12 AEST 2017 Thu Aug 24 13:51:12 AEST 2017 : org.joda.time.convert.DateConverter,42=>Find no block
+Thu Aug 24 13:51:12 AEST 2017 org.joda.time.convert.ReadablePeriodConverter,42
+Thu Aug 24 13:51:12 AEST 2017 Thu Aug 24 13:51:12 AEST 2017 : org.joda.time.convert.ReadablePeriodConverter,43=>Find no block
+Thu Aug 24 13:51:13 AEST 2017 org.joda.time.convert.NullConverter,45
+Thu Aug 24 13:51:13 AEST 2017 Thu Aug 24 13:51:13 AEST 2017 : org.joda.time.convert.NullConverter,46=>Find no block
+Thu Aug 24 13:51:13 AEST 2017 org.joda.time.convert.ReadableIntervalConverter,42
+Thu Aug 24 13:51:13 AEST 2017 Thu Aug 24 13:51:13 AEST 2017 : org.joda.time.convert.ReadableIntervalConverter,43=>Find no block
+Thu Aug 24 13:51:14 AEST 2017 org.joda.time.convert.ReadableDurationConverter,42
+Thu Aug 24 13:51:14 AEST 2017 Thu Aug 24 13:51:14 AEST 2017 : org.joda.time.convert.ReadableDurationConverter,43=>Find no block
+Thu Aug 24 13:51:14 AEST 2017 org.joda.time.convert.StringConverter,50
+Thu Aug 24 13:51:15 AEST 2017 Thu Aug 24 13:51:15 AEST 2017 : org.joda.time.convert.StringConverter,51=>Find no block
+Thu Aug 24 13:51:15 AEST 2017 org.joda.time.format.ISOPeriodFormat,66
+Thu Aug 24 13:53:19 AEST 2017 org.joda.time.convert.AbstractConverter,38
+Thu Aug 24 13:53:19 AEST 2017 Thu Aug 24 13:53:19 AEST 2017 : org.joda.time.convert.AbstractConverter,39=>Find no block
+Thu Aug 24 13:53:19 AEST 2017 org.joda.time.MutablePeriod,925
+Thu Aug 24 13:53:21 AEST 2017 Thu Aug 24 13:53:21 AEST 2017 : org.joda.time.MutablePeriod,926=>Find no block
+Thu Aug 24 13:53:21 AEST 2017 org.joda.time.MutablePeriod,947
+Thu Aug 24 13:53:22 AEST 2017 Thu Aug 24 13:53:22 AEST 2017 : org.joda.time.MutablePeriod,948=>Find no block
+Thu Aug 24 13:53:23 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1303
+Thu Aug 24 14:49:03 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1520
+Thu Aug 24 14:51:47 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1521
+Thu Aug 24 14:54:05 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1523
+Thu Aug 24 14:56:52 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,500
+Thu Aug 24 15:01:01 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,501
+Thu Aug 24 15:01:01 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,555
+Thu Aug 24 15:02:33 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,652
+Thu Aug 24 15:02:44 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,552
+Thu Aug 24 15:03:40 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1600
+Thu Aug 24 15:03:42 AEST 2017 Thu Aug 24 15:03:42 AEST 2017 : org.joda.time.format.PeriodFormatterBuilder,857=>Find no block
+Thu Aug 24 15:03:42 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,858
+Thu Aug 24 15:04:07 AEST 2017 Thu Aug 24 15:04:07 AEST 2017 : org.joda.time.format.PeriodFormatterBuilder,859=>Find no block
+Thu Aug 24 15:04:08 AEST 2017 org.joda.time.convert.ConverterSet,266
+Thu Aug 24 15:06:46 AEST 2017 org.joda.time.convert.ConverterSet,269
+Thu Aug 24 15:08:09 AEST 2017 org.joda.time.convert.ConverterSet,271
+Thu Aug 24 15:08:09 AEST 2017 org.joda.time.convert.ReadableIntervalConverter,113
+Thu Aug 24 15:08:12 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,898
+Thu Aug 24 15:08:14 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,901
+Thu Aug 24 15:10:55 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,592
+Thu Aug 24 15:11:21 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,593
+Thu Aug 24 15:11:22 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,605
+Thu Aug 24 15:11:51 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,606
+Thu Aug 24 15:14:37 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,607
+Thu Aug 24 15:18:27 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,608
+Thu Aug 24 15:23:22 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,609
+Thu Aug 24 15:26:20 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,611
+Thu Aug 24 15:26:20 AEST 2017 Thu Aug 24 15:26:20 AEST 2017 : org.joda.time.format.PeriodFormatterBuilder,1062=>Find no block
+Thu Aug 24 15:26:20 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1063
+Thu Aug 24 15:29:04 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1064
+Thu Aug 24 15:29:04 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1065
+Thu Aug 24 15:31:53 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1066
+Thu Aug 24 15:33:06 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1067
+Thu Aug 24 15:33:50 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1068
+Thu Aug 24 15:34:34 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1069
+Thu Aug 24 15:36:09 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1070
+Thu Aug 24 15:36:59 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1073
+Thu Aug 24 15:37:13 AEST 2017 Thu Aug 24 15:37:13 AEST 2017 : org.joda.time.format.PeriodFormatterBuilder,1074=>Find no block
+Thu Aug 24 15:37:13 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1529
+Thu Aug 24 15:37:29 AEST 2017 org.joda.time.chrono.ISOChronology,122
+Thu Aug 24 15:37:45 AEST 2017 Thu Aug 24 15:37:45 AEST 2017 : org.joda.time.chrono.ISOChronology,123=>Find no block
+Thu Aug 24 15:37:46 AEST 2017 Thu Aug 24 15:37:46 AEST 2017 : org.joda.time.chrono.ISOChronology,104=>Find no block
+Thu Aug 24 15:37:47 AEST 2017 org.joda.time.chrono.ISOChronology,105
+Thu Aug 24 15:39:06 AEST 2017 org.joda.time.chrono.ISOChronology,106
+Thu Aug 24 15:40:52 AEST 2017 org.joda.time.chrono.ISOChronology,107
+Thu Aug 24 15:40:53 AEST 2017 org.joda.time.chrono.ISOChronology,108
+Thu Aug 24 15:40:53 AEST 2017 Thu Aug 24 15:40:53 AEST 2017 : org.joda.time.chrono.ISOChronology,110=>Find no block
+Thu Aug 24 15:40:53 AEST 2017 org.joda.time.chrono.ISOChronology,111
+Thu Aug 24 15:42:16 AEST 2017 org.joda.time.chrono.ISOChronology,112
+Thu Aug 24 15:42:16 AEST 2017 org.joda.time.chrono.ISOChronology,169
+Thu Aug 24 15:42:19 AEST 2017 Thu Aug 24 15:42:19 AEST 2017 : org.joda.time.chrono.ISOChronology,180=>Find no block
+Thu Aug 24 15:42:19 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,463
+Thu Aug 24 15:46:20 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,464
+Thu Aug 24 15:46:21 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,591
+Thu Aug 24 15:46:21 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,599
+Thu Aug 24 15:46:22 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,730
+Thu Aug 24 15:52:13 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,734
+Thu Aug 24 16:00:26 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,737
+Thu Aug 24 16:05:38 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,738
+Thu Aug 24 16:05:39 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,750
+Thu Aug 24 16:16:13 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,751
+Thu Aug 24 16:16:13 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,752
+Thu Aug 24 16:16:15 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,757
+Thu Aug 24 16:16:15 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,761
+Thu Aug 24 16:19:32 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,764
+Thu Aug 24 16:19:33 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,765
+Thu Aug 24 16:19:33 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,766
+Thu Aug 24 16:19:33 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,770
+Thu Aug 24 16:19:34 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,771
+Thu Aug 24 16:19:34 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,774
+Thu Aug 24 16:23:55 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,800
+Thu Aug 24 16:24:44 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,801
+Thu Aug 24 16:24:44 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,802
+Thu Aug 24 16:24:44 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,803
+Thu Aug 24 16:24:45 AEST 2017 Thu Aug 24 16:24:45 AEST 2017 : org.joda.time.format.PeriodFormatterBuilder,1593=>Find no block
+Thu Aug 24 16:24:45 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1594
+Thu Aug 24 16:34:59 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1595
+Thu Aug 24 16:35:00 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1597
+Thu Aug 24 16:49:28 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1616
+Thu Aug 24 16:49:40 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1617
+Thu Aug 24 16:49:41 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1618
+Thu Aug 24 16:49:52 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1619
+Thu Aug 24 16:49:53 AEST 2017 Thu Aug 24 16:49:53 AEST 2017 : org.joda.time.format.PeriodFormatterBuilder,1620=>Find no block
+Thu Aug 24 16:49:53 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1720
+Thu Aug 24 17:20:44 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1721
+Thu Aug 24 17:20:44 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1722
+Thu Aug 24 17:20:45 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1748
+Thu Aug 24 17:20:55 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1749
+Thu Aug 24 17:20:55 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1750
+Thu Aug 24 17:20:55 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,228
+Thu Aug 24 17:21:42 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,231
+Thu Aug 24 17:23:19 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,232
+Thu Aug 24 17:23:19 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,233
+Thu Aug 24 17:23:20 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,234
+Thu Aug 24 17:23:20 AEST 2017 Thu Aug 24 17:23:20 AEST 2017 : org.joda.time.format.PeriodFormatterBuilder,1542=>Find no block
+Thu Aug 24 17:23:20 AEST 2017 org.joda.time.format.PeriodFormatterBuilder,1543
+Thu Aug 24 17:23:21 AEST 2017 Thu Aug 24 17:23:21 AEST 2017 : org.joda.time.format.PeriodFormatterBuilder,1544=>Find no block
+Thu Aug 24 17:23:21 AEST 2017 Thu Aug 24 17:23:21 AEST 2017 : org.joda.time.convert.ConverterSet,32=>Find no block
+Thu Aug 24 17:23:21 AEST 2017 org.joda.time.convert.ConverterSet,35
+Thu Aug 24 17:23:31 AEST 2017 org.joda.time.convert.ConverterSet,36
+Thu Aug 24 17:23:31 AEST 2017 Thu Aug 24 17:23:31 AEST 2017 : org.joda.time.convert.ConverterSet,37=>Find no block
+Thu Aug 24 17:23:32 AEST 2017 org.joda.time.convert.ConverterSet,216
+Thu Aug 24 17:26:37 AEST 2017 org.joda.time.convert.ConverterSet,217
+Thu Aug 24 17:26:37 AEST 2017 org.joda.time.convert.ConverterSet,218
+Thu Aug 24 17:29:20 AEST 2017 org.joda.time.convert.ConverterSet,222
+Thu Aug 24 17:30:51 AEST 2017 org.joda.time.convert.ConverterSet,226
+Thu Aug 24 17:34:00 AEST 2017 org.joda.time.convert.ConverterSet,228
+Timeout time : 17/08/24 17:48

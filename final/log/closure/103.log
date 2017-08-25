@@ -1,0 +1,498 @@
+=================================================
+Project : closure_103	start : 17/08/23 17:41
+Current failed test : com.google.javascript.jscomp.DisambiguatePropertiesTest::testSupertypeReferenceOfSubtypeProperty | 17/08/23 17:42
+Wed Aug 23 17:45:52 AEST 2017 com.google.javascript.rhino.Node,1330
+Wed Aug 23 17:46:07 AEST 2017 Wed Aug 23 17:46:07 AEST 2017 : com.google.javascript.rhino.Node,177=>Find no block
+Wed Aug 23 17:46:07 AEST 2017 com.google.javascript.rhino.Node,197
+Wed Aug 23 17:46:16 AEST 2017 com.google.javascript.rhino.Node,213
+Wed Aug 23 17:46:24 AEST 2017 com.google.javascript.rhino.Node,222
+Wed Aug 23 17:46:30 AEST 2017 com.google.javascript.rhino.Node,803
+Wed Aug 23 17:55:25 AEST 2017 com.google.javascript.rhino.Node,804
+Wed Aug 23 17:55:26 AEST 2017 com.google.javascript.rhino.Node,805
+Wed Aug 23 17:55:26 AEST 2017 com.google.javascript.rhino.Node,808
+Wed Aug 23 17:55:27 AEST 2017 com.google.javascript.rhino.Node,809
+Wed Aug 23 17:55:27 AEST 2017 com.google.javascript.rhino.Node,810
+Wed Aug 23 17:55:28 AEST 2017 com.google.javascript.rhino.Node,811
+Wed Aug 23 17:55:28 AEST 2017 com.google.javascript.rhino.Node,814
+Wed Aug 23 17:55:29 AEST 2017 com.google.javascript.rhino.Node,815
+Wed Aug 23 17:55:29 AEST 2017 com.google.javascript.rhino.Node,872
+Wed Aug 23 17:55:55 AEST 2017 com.google.javascript.rhino.Node,881
+Wed Aug 23 18:01:48 AEST 2017 com.google.javascript.rhino.Node,882
+Wed Aug 23 18:01:49 AEST 2017 com.google.javascript.rhino.Node,883
+Wed Aug 23 18:01:51 AEST 2017 com.google.javascript.rhino.Node,895
+Timeout time : 17/08/23 19:25
+Current failed test : com.google.javascript.jscomp.ControlFlowAnalysisTest::testInstanceOf | 17/08/23 19:25
+Wed Aug 23 19:38:56 AEST 2017 Wed Aug 23 19:38:56 AEST 2017 : com.google.javascript.jscomp.CreateSyntheticBlocks,77=>Find no block
+Wed Aug 23 19:38:57 AEST 2017 com.google.javascript.jscomp.CreateSyntheticBlocks,78
+Wed Aug 23 19:45:35 AEST 2017 com.google.javascript.jscomp.CreateSyntheticBlocks,79
+Wed Aug 23 19:45:35 AEST 2017 com.google.javascript.jscomp.CreateSyntheticBlocks,80
+Wed Aug 23 19:45:36 AEST 2017 com.google.javascript.jscomp.CreateSyntheticBlocks,81
+Wed Aug 23 19:45:36 AEST 2017 Wed Aug 23 19:45:36 AEST 2017 : com.google.javascript.jscomp.CreateSyntheticBlocks,82=>Find no block
+Wed Aug 23 19:45:37 AEST 2017 com.google.javascript.jscomp.CreateSyntheticBlocks,86
+Wed Aug 23 20:01:45 AEST 2017 com.google.javascript.jscomp.CreateSyntheticBlocks,88
+Wed Aug 23 20:12:55 AEST 2017 Wed Aug 23 20:12:55 AEST 2017 : com.google.javascript.jscomp.CreateSyntheticBlocks,92=>Find no block
+Wed Aug 23 20:12:55 AEST 2017 Wed Aug 23 20:12:55 AEST 2017 : com.google.javascript.jscomp.CreateSyntheticBlocks,94=>Find no block
+Wed Aug 23 20:12:56 AEST 2017 com.google.javascript.jscomp.CreateSyntheticBlocks,97
+Timeout time : 17/08/23 21:18
+Current failed test : com.google.javascript.jscomp.CheckUnreachableCodeTest::testInstanceOfThrowsException | 17/08/23 21:18
+Wed Aug 23 21:28:12 AEST 2017 com.google.javascript.jscomp.ControlFlowAnalysis,628
+Wed Aug 23 21:46:59 AEST 2017 Wed Aug 23 21:46:59 AEST 2017 : com.google.javascript.jscomp.ControlFlowAnalysis,637=>Find no block
+Wed Aug 23 21:46:59 AEST 2017 com.google.javascript.jscomp.JSError,215
+Wed Aug 23 21:47:08 AEST 2017 com.google.javascript.jscomp.CheckUnreachableCode,65
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getLineno()!=-1&&n.getType()!=Token.EMPTY&&n.getType()==Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 21:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getLineno()!=-1&&n.getType()!=Token.EMPTY&&n.getType()==Token.THIS){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 21:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getLineno()!=-1&&n.getType()==Token.EMPTY&&n.getType()!=Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 21:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getLineno()!=-1&&n.getType()!=Token.EMPTY&&n.getFirstChild()==n){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 21:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getLineno()!=-1&&n.getType()==Token.CASE&&n.getType()!=Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 21:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(parent.getLineno()!=-1&&n.getType()==Token.EMPTY&&n.getType()!=Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(parent.getLineno()!=-1&&n.getType()!=Token.EMPTY&&n.getType()==Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(parent.getLineno()!=-1&&n.getType()!=Token.EMPTY&&n.getFirstChild()==n){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(parent.getLineno()!=-1&&n.getType()==Token.CASE&&n.getType()!=Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getLineno()!=-1&&parent.getType()==Token.EMPTY&&n.getType()!=Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getLineno()!=-1&&parent.getType()!=Token.EMPTY&&n.getType()==Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getLineno()!=-1&&parent.getType()!=Token.EMPTY&&n.getFirstChild()==n){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getLineno()!=-1&&n.getType()!=Token.CASE&&n.getType()==Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getLineno()!=-1&&n.getType()!=Token.CASE&&n.getFirstChild()==n){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getLineno()!=-1&&n.getType()==Token.EMPTY&&n.getType()==Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getLineno()!=-1&&n.getType()==Token.EMPTY&&n.getFirstChild()==n){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getLineno()!=-1&&n.getType()==Token.CASE&&n.getType()==Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getLineno()!=-1&&n.getType()==Token.CASE&&n.getFirstChild()==n){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(parent.getLineno()!=-1&&parent.getType()==Token.EMPTY&&n.getType()!=Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(parent.getLineno()!=-1&&parent.getType()!=Token.EMPTY&&n.getType()==Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(parent.getLineno()!=-1&&parent.getType()!=Token.EMPTY&&n.getFirstChild()==n){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(parent.getLineno()!=-1&&n.getType()!=Token.CASE&&n.getType()==Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(parent.getLineno()!=-1&&n.getType()!=Token.CASE&&n.getFirstChild()==n){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(parent.getLineno()!=-1&&n.getType()==Token.EMPTY&&n.getType()==Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(parent.getLineno()!=-1&&n.getType()==Token.EMPTY&&n.getFirstChild()==n){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(parent.getLineno()!=-1&&n.getType()==Token.CASE&&n.getType()==Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(parent.getLineno()!=-1&&n.getType()==Token.CASE&&n.getFirstChild()==n){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getLineno()!=-1&&parent.getType()==Token.CASE&&n.getType()!=Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getLineno()!=-1&&parent.getType()!=Token.CASE&&n.getType()==Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getLineno()!=-1&&parent.getType()!=Token.CASE&&n.getFirstChild()==n){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getLineno()!=-1&&parent.getType()==Token.EMPTY&&n.getType()==Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getLineno()!=-1&&parent.getType()==Token.EMPTY&&n.getFirstChild()==n){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(parent.getLineno()!=-1&&parent.getType()==Token.CASE&&n.getType()!=Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(parent.getLineno()!=-1&&parent.getType()!=Token.CASE&&n.getType()==Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 22:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(parent.getLineno()!=-1&&parent.getType()!=Token.CASE&&n.getFirstChild()==n){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 23:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(parent.getLineno()!=-1&&parent.getType()==Token.EMPTY&&n.getType()==Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 23:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(parent.getLineno()!=-1&&parent.getType()==Token.EMPTY&&n.getFirstChild()==n){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 23:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getLineno()!=-1&&parent.getType()==Token.CASE&&n.getType()==Token.BREAK){
+compiler.report(JSError.make(t,n,level,UNREACHABLE_CODE));
+new GraphReachability<Node,ControlFlowGraph.Branch>(t.getControlFlowGraph()).recompute(n);
+return false;
+}
+
+Time : 17/08/23 23:06
+----------------------------------------
+Timeout time : 17/08/23 23:08

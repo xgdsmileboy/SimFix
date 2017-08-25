@@ -1,0 +1,186 @@
+=================================================
+Project : math_52	start : 17/08/24 10:36
+Current failed test : org.apache.commons.math.geometry.euclidean.threed.RotationTest::testIssue639_purify_1 | 17/08/24 10:37
+Thu Aug 24 10:38:48 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Vector3D,224
+Thu Aug 24 10:40:41 AEST 2017 Thu Aug 24 10:40:41 AEST 2017 : org.apache.commons.math.geometry.euclidean.threed.Rotation,313=>Find no block
+Thu Aug 24 10:40:43 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,316
+Thu Aug 24 10:42:04 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,317
+Thu Aug 24 10:42:05 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,318
+Thu Aug 24 10:44:04 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,319
+Thu Aug 24 10:57:16 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,320
+Thu Aug 24 10:58:23 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,325
+Thu Aug 24 11:03:27 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,328
+Thu Aug 24 11:05:37 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,329
+Thu Aug 24 11:07:31 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,330
+Thu Aug 24 11:09:41 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,331
+Thu Aug 24 11:15:49 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,332
+Thu Aug 24 11:22:16 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,333
+Thu Aug 24 11:27:36 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,334
+Thu Aug 24 11:29:37 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,337
+Thu Aug 24 11:31:19 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,338
+Thu Aug 24 11:33:10 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,339
+Thu Aug 24 11:34:47 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,340
+Thu Aug 24 11:36:18 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,341
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Vector3D v2Su2=v1.subtract(u1);
+Vector3D k=v1Su1.crossProduct(v2Su2);
+Vector3D u3=u1.crossProduct(u2);
+
+Time : 17/08/24 11:38
+----------------------------------------
+Thu Aug 24 11:43:39 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,342
+Thu Aug 24 11:47:27 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,343
+Thu Aug 24 11:47:28 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,344
+Thu Aug 24 11:53:20 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,378
+Timeout time : 17/08/24 11:54
+Current failed test : org.apache.commons.math.geometry.euclidean.threed.RotationTest::testIssue639_purify_2 | 17/08/24 11:54
+Thu Aug 24 11:55:09 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Vector3D,224
+Thu Aug 24 11:57:03 AEST 2017 Thu Aug 24 11:57:03 AEST 2017 : org.apache.commons.math.geometry.euclidean.threed.Rotation,313=>Find no block
+Thu Aug 24 11:57:04 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,316
+Thu Aug 24 11:58:26 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,317
+Thu Aug 24 11:58:27 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,318
+Thu Aug 24 12:00:24 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,319
+Thu Aug 24 12:13:34 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,320
+Thu Aug 24 12:14:43 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,325
+Thu Aug 24 12:19:53 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,328
+Thu Aug 24 12:22:01 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,329
+Thu Aug 24 12:23:58 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,330
+Thu Aug 24 12:26:08 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,331
+Thu Aug 24 12:32:21 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,332
+Thu Aug 24 12:38:49 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,333
+Thu Aug 24 12:44:15 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,334
+Thu Aug 24 12:46:22 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,337
+Thu Aug 24 12:48:12 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,338
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Vector3D uRef=u1;
+Vector3D vRef=v1;
+Vector3D v1Su1=u1.subtract(u1);
+
+Time : 17/08/24 12:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Vector3D uRef=u1;
+Vector3D vRef=v1;
+uRef=v1.crossProduct(vRef.subtract(u1));
+Vector3D v1Su1=u1.subtract(u1);
+
+Time : 17/08/24 12:50
+----------------------------------------
+Thu Aug 24 12:52:32 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,339
+Thu Aug 24 12:54:10 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,340
+Thu Aug 24 12:55:42 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,341
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Vector3D v2Su2=v1.subtract(u1);
+Vector3D k=v1Su1.crossProduct(v2Su2);
+Vector3D u3=u1.crossProduct(u2);
+
+Time : 17/08/24 12:57
+----------------------------------------
+Thu Aug 24 13:03:01 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,342
+Thu Aug 24 13:06:51 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,343
+Thu Aug 24 13:06:52 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,344
+Timeout time : 17/08/24 13:10
+Current failed test : org.apache.commons.math.geometry.euclidean.threed.RotationTest::testIssue639_purify_3 | 17/08/24 13:10
+Thu Aug 24 13:11:12 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Vector3D,224
+Thu Aug 24 13:13:12 AEST 2017 Thu Aug 24 13:13:12 AEST 2017 : org.apache.commons.math.geometry.euclidean.threed.Rotation,313=>Find no block
+Thu Aug 24 13:13:13 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,316
+Thu Aug 24 13:14:41 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,317
+Thu Aug 24 13:14:43 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,318
+Thu Aug 24 13:16:41 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,319
+Thu Aug 24 13:29:58 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,320
+Thu Aug 24 13:31:06 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,325
+Thu Aug 24 13:36:18 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,328
+Thu Aug 24 13:38:32 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,329
+Thu Aug 24 13:40:29 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,330
+Thu Aug 24 13:42:38 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,331
+Thu Aug 24 13:48:55 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,332
+Thu Aug 24 13:55:24 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,333
+Thu Aug 24 14:00:49 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,334
+Thu Aug 24 14:02:54 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,337
+Thu Aug 24 14:04:45 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,338
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Vector3D uRef=u1;
+Vector3D vRef=v1;
+Vector3D v1Su1=u1.subtract(u1);
+
+Time : 17/08/24 14:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Vector3D uRef=u1;
+Vector3D vRef=v1;
+uRef=v1.crossProduct(vRef.subtract(u1));
+Vector3D v1Su1=u1.subtract(u1);
+
+Time : 17/08/24 14:07
+----------------------------------------
+Thu Aug 24 14:09:02 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,339
+Thu Aug 24 14:10:38 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,340
+Thu Aug 24 14:12:09 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,341
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Vector3D v2Su2=v1.subtract(u1);
+Vector3D k=v1Su1.crossProduct(v2Su2);
+Vector3D u3=u1.crossProduct(u2);
+
+Time : 17/08/24 14:14
+----------------------------------------
+Thu Aug 24 14:19:38 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,342
+Thu Aug 24 14:23:23 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,343
+Thu Aug 24 14:23:24 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,344
+Timeout time : 17/08/24 14:26
+Current failed test : org.apache.commons.math.geometry.euclidean.threed.RotationTest::testIssue639_purify_4 | 17/08/24 14:26
+Thu Aug 24 14:27:16 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Vector3D,224
+Thu Aug 24 14:29:10 AEST 2017 Thu Aug 24 14:29:10 AEST 2017 : org.apache.commons.math.geometry.euclidean.threed.Rotation,313=>Find no block
+Thu Aug 24 14:29:11 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,316
+Thu Aug 24 14:30:34 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,317
+Thu Aug 24 14:30:35 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,318
+Thu Aug 24 14:32:33 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,319
+Thu Aug 24 14:45:48 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,320
+Thu Aug 24 14:46:55 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,325
+Thu Aug 24 14:52:02 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,328
+Thu Aug 24 14:54:10 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,329
+Thu Aug 24 14:56:09 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,330
+Thu Aug 24 14:58:18 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,331
+Thu Aug 24 15:04:31 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,332
+Thu Aug 24 15:10:58 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,333
+Thu Aug 24 15:16:15 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,334
+Thu Aug 24 15:18:17 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,337
+Thu Aug 24 15:20:03 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,338
+Thu Aug 24 15:21:47 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,339
+Thu Aug 24 15:23:14 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,340
+Thu Aug 24 15:24:36 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,341
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Vector3D v2Su2=v1.subtract(u1);
+Vector3D k=v1Su1.crossProduct(v2Su2);
+Vector3D u3=u1.crossProduct(u2);
+
+Time : 17/08/24 15:26
+----------------------------------------
+Thu Aug 24 15:31:16 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,342
+Thu Aug 24 15:34:43 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,343
+Thu Aug 24 15:34:44 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,344
+Thu Aug 24 15:40:19 AEST 2017 org.apache.commons.math.geometry.euclidean.threed.Rotation,378
+Timeout time : 17/08/24 15:42

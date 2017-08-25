@@ -1,0 +1,204 @@
+=================================================
+Project : closure_31	start : 17/08/24 03:43
+Current failed test : com.google.javascript.jscomp.CommandLineRunnerTest::testDependencySortingWhitespaceMode | 17/08/24 03:44
+Thu Aug 24 03:44:30 AEST 2017 com.google.javascript.rhino.Node,1430
+Thu Aug 24 03:44:42 AEST 2017 com.google.javascript.rhino.Node,1446
+Thu Aug 24 03:44:49 AEST 2017 com.google.javascript.rhino.Node,1459
+Thu Aug 24 03:44:53 AEST 2017 Thu Aug 24 03:44:53 AEST 2017 : com.google.javascript.rhino.Node,2143=>Find no block
+Thu Aug 24 03:44:54 AEST 2017 com.google.javascript.rhino.Node,2144
+Thu Aug 24 03:44:56 AEST 2017 com.google.javascript.rhino.Node,2145
+Thu Aug 24 03:44:57 AEST 2017 Thu Aug 24 03:44:57 AEST 2017 : com.google.javascript.rhino.Node,2146=>Find no block
+Thu Aug 24 03:44:58 AEST 2017 com.google.javascript.jscomp.CompilerOptions,1019
+Thu Aug 24 03:45:06 AEST 2017 Thu Aug 24 03:45:06 AEST 2017 : com.google.javascript.jscomp.CompilerOptions,1020=>Find no block
+Thu Aug 24 03:45:07 AEST 2017 com.google.javascript.jscomp.CompilationLevel,56
+Thu Aug 24 03:45:47 AEST 2017 com.google.javascript.jscomp.CompilationLevel,57
+Thu Aug 24 03:46:23 AEST 2017 com.google.javascript.jscomp.CompilationLevel,82
+Thu Aug 24 03:47:42 AEST 2017 com.google.javascript.jscomp.CompilationLevel,85
+Thu Aug 24 03:47:42 AEST 2017 Thu Aug 24 03:47:42 AEST 2017 : com.google.javascript.jscomp.CompilationLevel,87=>Find no block
+Thu Aug 24 03:47:43 AEST 2017 com.google.javascript.jscomp.CommandLineRunner,460
+Thu Aug 24 03:51:17 AEST 2017 com.google.javascript.jscomp.CommandLineRunner,461
+Thu Aug 24 03:51:17 AEST 2017 com.google.javascript.jscomp.CommandLineRunner,457
+Thu Aug 24 03:51:18 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,243
+Thu Aug 24 03:53:41 AEST 2017 com.google.javascript.jscomp.CompilerOptions,1278
+Thu Aug 24 03:55:46 AEST 2017 com.google.javascript.jscomp.CompilerOptions,1279
+Thu Aug 24 03:55:47 AEST 2017 Thu Aug 24 03:55:47 AEST 2017 : com.google.javascript.jscomp.CompilerOptions,1280=>Find no block
+Thu Aug 24 03:55:47 AEST 2017 com.google.javascript.jscomp.DependencyOptions,96
+Thu Aug 24 03:55:50 AEST 2017 com.google.javascript.jscomp.DependencyOptions,97
+Thu Aug 24 03:55:51 AEST 2017 com.google.javascript.jscomp.DependencyOptions,113
+Thu Aug 24 03:56:43 AEST 2017 com.google.javascript.jscomp.DependencyOptions,114
+Thu Aug 24 03:56:44 AEST 2017 com.google.javascript.jscomp.DependencyOptions,115
+Thu Aug 24 03:56:44 AEST 2017 com.google.javascript.jscomp.DependencyOptions,73
+Thu Aug 24 03:56:47 AEST 2017 com.google.javascript.jscomp.DependencyOptions,74
+Thu Aug 24 03:56:48 AEST 2017 Thu Aug 24 03:56:48 AEST 2017 : com.google.javascript.jscomp.CommandLineRunner,448=>Find no block
+Thu Aug 24 03:56:48 AEST 2017 com.google.javascript.jscomp.CommandLineRunner,454
+Thu Aug 24 04:03:47 AEST 2017 com.google.javascript.jscomp.CommandLineRunner,455
+Thu Aug 24 04:03:48 AEST 2017 com.google.javascript.rhino.Node,129
+Thu Aug 24 04:03:55 AEST 2017 com.google.javascript.rhino.Node,143
+Thu Aug 24 04:04:02 AEST 2017 com.google.javascript.rhino.InputId,74
+Thu Aug 24 04:04:05 AEST 2017 com.google.javascript.jscomp.CommandLineRunner,445
+Thu Aug 24 04:04:08 AEST 2017 com.google.javascript.jscomp.CommandLineRunner,447
+Thu Aug 24 04:04:11 AEST 2017 com.google.javascript.jscomp.CommandLineRunner,450
+Thu Aug 24 04:04:41 AEST 2017 com.google.javascript.rhino.Node,1011
+Thu Aug 24 04:04:44 AEST 2017 com.google.javascript.rhino.Node,1016
+Thu Aug 24 04:04:47 AEST 2017 com.google.javascript.rhino.Node,1017
+Thu Aug 24 04:04:48 AEST 2017 com.google.javascript.rhino.Node,1018
+Thu Aug 24 04:04:48 AEST 2017 com.google.javascript.rhino.Node,1025
+Thu Aug 24 04:04:52 AEST 2017 Thu Aug 24 04:04:52 AEST 2017 : com.google.javascript.rhino.Node,1026=>Find no block
+Thu Aug 24 04:04:53 AEST 2017 com.google.javascript.rhino.Node,1030
+Thu Aug 24 04:11:26 AEST 2017 com.google.javascript.rhino.Node,1031
+Thu Aug 24 04:11:26 AEST 2017 com.google.javascript.rhino.Node,1033
+Thu Aug 24 04:45:41 AEST 2017 com.google.javascript.rhino.Node,1034
+Thu Aug 24 04:45:42 AEST 2017 Thu Aug 24 04:45:42 AEST 2017 : com.google.javascript.rhino.Node,1035=>Find no block
+Thu Aug 24 04:45:42 AEST 2017 com.google.javascript.rhino.Node,1036
+Thu Aug 24 04:45:43 AEST 2017 com.google.javascript.rhino.Node,1038
+Thu Aug 24 04:45:44 AEST 2017 Thu Aug 24 04:45:44 AEST 2017 : com.google.javascript.rhino.Node,1037=>Find no block
+Thu Aug 24 04:45:44 AEST 2017 Thu Aug 24 04:45:44 AEST 2017 : com.google.javascript.rhino.Node,1040=>Find no block
+Thu Aug 24 04:45:45 AEST 2017 com.google.javascript.rhino.Node,352
+Thu Aug 24 04:45:50 AEST 2017 Thu Aug 24 04:45:50 AEST 2017 : com.google.javascript.rhino.Node,117=>Find no block
+Thu Aug 24 04:45:51 AEST 2017 com.google.javascript.rhino.Node,142
+Thu Aug 24 04:45:59 AEST 2017 com.google.javascript.rhino.Node,881
+Thu Aug 24 04:47:44 AEST 2017 com.google.javascript.rhino.Node,886
+Thu Aug 24 04:50:25 AEST 2017 com.google.javascript.rhino.Node,887
+Thu Aug 24 04:50:26 AEST 2017 com.google.javascript.rhino.Node,974
+Thu Aug 24 04:54:15 AEST 2017 com.google.javascript.rhino.Node,975
+Thu Aug 24 04:54:15 AEST 2017 com.google.javascript.rhino.Node,982
+Thu Aug 24 05:00:20 AEST 2017 com.google.javascript.rhino.Node,983
+Thu Aug 24 05:00:20 AEST 2017 com.google.javascript.rhino.Node,984
+Thu Aug 24 05:05:16 AEST 2017 com.google.javascript.rhino.Node,985
+Thu Aug 24 05:09:50 AEST 2017 com.google.javascript.rhino.Node,986
+Thu Aug 24 05:14:47 AEST 2017 Thu Aug 24 05:14:47 AEST 2017 : com.google.javascript.rhino.Node,988=>Find no block
+Thu Aug 24 05:14:47 AEST 2017 com.google.javascript.rhino.Node,990
+Thu Aug 24 05:14:59 AEST 2017 com.google.javascript.rhino.Node,993
+Thu Aug 24 05:20:51 AEST 2017 com.google.javascript.rhino.Node,994
+Thu Aug 24 05:20:52 AEST 2017 com.google.javascript.jscomp.SourceFile,305
+Thu Aug 24 05:20:58 AEST 2017 com.google.javascript.rhino.Node,320
+Thu Aug 24 05:21:07 AEST 2017 com.google.javascript.rhino.Node,879
+Thu Aug 24 05:25:08 AEST 2017 com.google.javascript.rhino.Node,880
+Thu Aug 24 05:25:09 AEST 2017 com.google.javascript.rhino.Node,884
+Thu Aug 24 05:25:09 AEST 2017 com.google.javascript.rhino.Node,885
+Thu Aug 24 05:25:10 AEST 2017 com.google.javascript.rhino.Node,890
+Thu Aug 24 05:25:10 AEST 2017 com.google.javascript.rhino.Node,891
+Thu Aug 24 05:25:11 AEST 2017 com.google.javascript.rhino.Node,936
+Thu Aug 24 05:25:14 AEST 2017 com.google.javascript.rhino.Node,972
+Thu Aug 24 05:26:39 AEST 2017 com.google.javascript.rhino.Node,973
+Thu Aug 24 05:26:40 AEST 2017 com.google.javascript.rhino.Node,980
+Thu Aug 24 05:27:10 AEST 2017 com.google.javascript.rhino.Node,981
+Thu Aug 24 05:38:33 AEST 2017 com.google.javascript.rhino.Node,999
+Thu Aug 24 05:39:51 AEST 2017 com.google.javascript.rhino.Node,955
+Thu Aug 24 05:40:08 AEST 2017 com.google.javascript.rhino.Node,956
+Thu Aug 24 05:40:08 AEST 2017 com.google.javascript.rhino.Node,967
+Thu Aug 24 05:44:05 AEST 2017 com.google.javascript.rhino.Node,957
+Thu Aug 24 05:59:06 AEST 2017 com.google.javascript.rhino.Node,943
+Thu Aug 24 06:00:33 AEST 2017 com.google.javascript.rhino.Node,944
+Thu Aug 24 06:00:34 AEST 2017 com.google.javascript.rhino.Node,945
+Thu Aug 24 06:00:34 AEST 2017 com.google.javascript.rhino.Node,953
+Thu Aug 24 06:06:27 AEST 2017 com.google.javascript.rhino.Node,954
+Thu Aug 24 06:06:27 AEST 2017 com.google.javascript.rhino.Node,971
+Thu Aug 24 06:06:28 AEST 2017 com.google.javascript.rhino.Node,979
+Thu Aug 24 06:06:28 AEST 2017 com.google.javascript.rhino.Node,998
+Thu Aug 24 06:07:21 AEST 2017 Thu Aug 24 06:07:21 AEST 2017 : com.google.javascript.rhino.Node,1007=>Find no block
+Thu Aug 24 06:07:21 AEST 2017 com.google.javascript.jscomp.CommandLineRunner,563
+Thu Aug 24 06:07:25 AEST 2017 com.google.javascript.jscomp.CommandLineRunner,564
+Thu Aug 24 06:07:26 AEST 2017 Thu Aug 24 06:07:26 AEST 2017 : com.google.javascript.jscomp.CommandLineRunner,565=>Find no block
+Thu Aug 24 06:07:26 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,133
+Thu Aug 24 06:07:29 AEST 2017 Thu Aug 24 06:07:29 AEST 2017 : com.google.javascript.jscomp.AbstractCommandLineRunner,134=>Find no block
+Thu Aug 24 06:07:30 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1172
+Thu Aug 24 06:07:38 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,805
+Thu Aug 24 06:07:41 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,810
+Thu Aug 24 06:07:42 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1171
+Thu Aug 24 06:07:42 AEST 2017 com.google.javascript.jscomp.CommandLineRunner,583
+Thu Aug 24 06:12:48 AEST 2017 com.google.javascript.jscomp.CommandLineRunner,585
+Thu Aug 24 06:12:49 AEST 2017 com.google.javascript.jscomp.CommandLineRunner,586
+Thu Aug 24 06:17:40 AEST 2017 com.google.javascript.jscomp.CommandLineRunner,587
+Thu Aug 24 06:21:17 AEST 2017 com.google.javascript.jscomp.CommandLineRunner,590
+Thu Aug 24 06:21:18 AEST 2017 Thu Aug 24 06:21:18 AEST 2017 : com.google.javascript.jscomp.CommandLineRunner,592=>Find no block
+Thu Aug 24 06:21:19 AEST 2017 com.google.javascript.jscomp.WarningLevel,39
+Thu Aug 24 06:21:51 AEST 2017 com.google.javascript.jscomp.WarningLevel,40
+Thu Aug 24 06:22:15 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,653
+Thu Aug 24 06:29:29 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,654
+Thu Aug 24 06:36:52 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,679
+Thu Aug 24 06:37:00 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,680
+Thu Aug 24 06:37:00 AEST 2017 Thu Aug 24 06:37:00 AEST 2017 : com.google.javascript.jscomp.AbstractCommandLineRunner,682=>Find no block
+Thu Aug 24 06:37:01 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,804
+Thu Aug 24 06:40:13 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,857
+Thu Aug 24 06:42:15 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,865
+Thu Aug 24 06:44:43 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,868
+Thu Aug 24 06:44:45 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,869
+Thu Aug 24 06:45:03 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,871
+Thu Aug 24 06:45:21 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1223
+Thu Aug 24 06:45:26 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1224
+Thu Aug 24 06:45:26 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1225
+Thu Aug 24 06:45:35 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1228
+Thu Aug 24 06:45:42 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1237
+Thu Aug 24 06:46:28 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1246
+Thu Aug 24 06:47:17 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1256
+Thu Aug 24 06:48:51 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1262
+Thu Aug 24 06:50:23 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1268
+Thu Aug 24 06:51:00 AEST 2017 Thu Aug 24 06:51:00 AEST 2017 : com.google.javascript.jscomp.AbstractCommandLineRunner,1279=>Find no block
+Thu Aug 24 06:51:00 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1360
+Thu Aug 24 06:51:06 AEST 2017 Thu Aug 24 06:51:06 AEST 2017 : com.google.javascript.jscomp.AbstractCommandLineRunner,1361=>Find no block
+Thu Aug 24 06:51:06 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1364
+Thu Aug 24 06:51:11 AEST 2017 Thu Aug 24 06:51:11 AEST 2017 : com.google.javascript.jscomp.AbstractCommandLineRunner,1365=>Find no block
+Thu Aug 24 06:51:12 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1373
+Thu Aug 24 06:52:16 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1374
+Thu Aug 24 06:52:17 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,448
+Thu Aug 24 06:52:20 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,736
+Thu Aug 24 06:53:28 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,739
+Thu Aug 24 06:53:29 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,447
+Thu Aug 24 06:53:29 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,735
+Thu Aug 24 06:54:45 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,298
+Thu Aug 24 06:56:50 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,300
+Thu Aug 24 06:56:50 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,295
+Thu Aug 24 06:57:08 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,721
+Thu Aug 24 06:57:11 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,722
+Thu Aug 24 06:57:12 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1141
+Thu Aug 24 06:57:15 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1145
+Thu Aug 24 06:57:15 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,785
+Thu Aug 24 07:00:35 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,796
+Thu Aug 24 07:02:04 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,798
+Thu Aug 24 07:14:07 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,803
+Thu Aug 24 07:14:07 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,877
+Thu Aug 24 07:22:15 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1502
+Thu Aug 24 07:29:31 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1503
+Thu Aug 24 07:36:39 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1511
+Thu Aug 24 07:36:39 AEST 2017 com.google.javascript.jscomp.PrintStreamErrorManager,67
+Thu Aug 24 07:36:45 AEST 2017 Thu Aug 24 07:36:45 AEST 2017 : com.google.javascript.jscomp.PrintStreamErrorManager,78=>Find no block
+Thu Aug 24 07:36:46 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,158
+Thu Aug 24 07:39:09 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,160
+Thu Aug 24 07:39:10 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,161
+Thu Aug 24 07:39:10 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,162
+Thu Aug 24 07:39:11 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,163
+Thu Aug 24 07:39:11 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,164
+Thu Aug 24 07:39:12 AEST 2017 Thu Aug 24 07:39:12 AEST 2017 : com.google.javascript.jscomp.AbstractCommandLineRunner,165=>Find no block
+Thu Aug 24 07:39:12 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,241
+Thu Aug 24 07:39:13 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,334
+Thu Aug 24 07:39:18 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,342
+Thu Aug 24 07:39:21 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,343
+Thu Aug 24 07:39:21 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,344
+Thu Aug 24 07:39:28 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,349
+Thu Aug 24 07:40:36 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,350
+Thu Aug 24 07:40:37 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,351
+Thu Aug 24 07:40:38 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,352
+Thu Aug 24 07:40:38 AEST 2017 Thu Aug 24 07:40:38 AEST 2017 : com.google.javascript.jscomp.AbstractCommandLineRunner,360=>Find no block
+Thu Aug 24 07:40:39 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,362
+Thu Aug 24 07:40:41 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,367
+Thu Aug 24 07:40:44 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,368
+Thu Aug 24 07:40:45 AEST 2017 Thu Aug 24 07:40:45 AEST 2017 : com.google.javascript.jscomp.AbstractCommandLineRunner,372=>Find no block
+Thu Aug 24 07:40:45 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,374
+Thu Aug 24 07:41:04 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,375
+Thu Aug 24 07:41:04 AEST 2017 Thu Aug 24 07:41:04 AEST 2017 : com.google.javascript.jscomp.AbstractCommandLineRunner,379=>Find no block
+Thu Aug 24 07:41:05 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,743
+Thu Aug 24 07:41:11 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,747
+Thu Aug 24 07:41:14 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,748
+Thu Aug 24 07:41:14 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,750
+Thu Aug 24 07:41:17 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,758
+Thu Aug 24 07:41:20 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,762
+Thu Aug 24 07:43:47 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,773
+Thu Aug 24 07:47:12 AEST 2017 com.google.javascript.jscomp.PhaseOptimizer,103
+Thu Aug 24 07:47:14 AEST 2017 com.google.javascript.jscomp.PhaseOptimizer,110
+Thu Aug 24 07:47:40 AEST 2017 Thu Aug 24 07:47:40 AEST 2017 : com.google.javascript.jscomp.PhaseOptimizer,111=>Find no block
+Thu Aug 24 07:47:41 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1524
+Thu Aug 24 07:47:47 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1525
+Thu Aug 24 07:47:48 AEST 2017 Thu Aug 24 07:47:48 AEST 2017 : com.google.javascript.jscomp.AbstractCommandLineRunner,1526=>Find no block
+Thu Aug 24 07:47:49 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,1532
+Failed time : 17/08/24 07:48

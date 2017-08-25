@@ -1,0 +1,102 @@
+=================================================
+Project : lang_3	start : 17/08/24 01:03
+Current failed test : org.apache.commons.lang3.math.NumberUtilsTest::testStringCreateNumberEnsureNoPrecisionLoss_purify_2 | 17/08/24 01:03
+Thu Aug 24 01:04:31 AEST 2017 org.apache.commons.lang3.math.NumberUtils,492
+Thu Aug 24 01:20:49 AEST 2017 org.apache.commons.lang3.math.NumberUtils,571
+Thu Aug 24 01:37:40 AEST 2017 org.apache.commons.lang3.math.NumberUtils,594
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!(f.isInfinite()||(DOUBLE_ZERO.floatValue()==0.0&&!allZeros))){
+return f;
+}
+
+Time : 17/08/24 01:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!(f.isInfinite()||(DOUBLE_ZERO.doubleValue()==0.0&&!allZeros))){
+return f;
+}
+
+Time : 17/08/24 01:38
+----------------------------------------
+Thu Aug 24 01:39:15 AEST 2017 org.apache.commons.lang3.math.NumberUtils,595
+Thu Aug 24 01:39:15 AEST 2017 org.apache.commons.lang3.math.NumberUtils,489
+Thu Aug 24 01:39:15 AEST 2017 org.apache.commons.lang3.math.NumberUtils,496
+Thu Aug 24 01:53:58 AEST 2017 org.apache.commons.lang3.math.NumberUtils,497
+Thu Aug 24 01:53:59 AEST 2017 org.apache.commons.lang3.math.NumberUtils,570
+Thu Aug 24 01:53:59 AEST 2017 org.apache.commons.lang3.math.NumberUtils,575
+Thu Aug 24 01:56:18 AEST 2017 org.apache.commons.lang3.math.NumberUtils,591
+Thu Aug 24 01:59:37 AEST 2017 org.apache.commons.lang3.math.NumberUtils,593
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Float f=createFloat(str);
+if(!(f.isInfinite()||(DOUBLE_ZERO.floatValue()==0.0&&!allZeros))){
+return f;
+}
+
+Time : 17/08/24 02:00
+----------------------------------------
+Thu Aug 24 02:00:42 AEST 2017 org.apache.commons.lang3.math.NumberUtils,488
+Thu Aug 24 02:00:43 AEST 2017 org.apache.commons.lang3.math.NumberUtils,509
+Thu Aug 24 02:28:00 AEST 2017 org.apache.commons.lang3.math.NumberUtils,621
+Thu Aug 24 02:30:01 AEST 2017 org.apache.commons.lang3.math.NumberUtils,624
+Thu Aug 24 02:41:11 AEST 2017 org.apache.commons.lang3.math.NumberUtils,625
+Thu Aug 24 02:41:12 AEST 2017 org.apache.commons.lang3.math.NumberUtils,626
+Thu Aug 24 02:41:12 AEST 2017 org.apache.commons.lang3.math.NumberUtils,643
+Thu Aug 24 02:42:59 AEST 2017 org.apache.commons.lang3.math.NumberUtils,646
+Thu Aug 24 02:45:46 AEST 2017 org.apache.commons.lang3.math.NumberUtils,451
+Thu Aug 24 02:45:50 AEST 2017 org.apache.commons.lang3.math.NumberUtils,454
+Thu Aug 24 02:46:46 AEST 2017 org.apache.commons.lang3.math.NumberUtils,458
+Thu Aug 24 02:47:49 AEST 2017 org.apache.commons.lang3.math.NumberUtils,459
+Thu Aug 24 03:00:24 AEST 2017 org.apache.commons.lang3.math.NumberUtils,460
+Thu Aug 24 03:00:24 AEST 2017 org.apache.commons.lang3.math.NumberUtils,461
+Thu Aug 24 03:00:24 AEST 2017 org.apache.commons.lang3.math.NumberUtils,466
+Thu Aug 24 03:12:52 AEST 2017 org.apache.commons.lang3.math.NumberUtils,476
+Thu Aug 24 03:26:50 AEST 2017 org.apache.commons.lang3.math.NumberUtils,480
+Thu Aug 24 03:30:50 AEST 2017 org.apache.commons.lang3.math.NumberUtils,481
+Timeout time : 17/08/24 03:34
+Current failed test : org.apache.commons.lang3.math.NumberUtilsTest::testStringCreateNumberEnsureNoPrecisionLoss_purify_3 | 17/08/24 03:34
+Thu Aug 24 03:35:07 AEST 2017 Thu Aug 24 03:35:07 AEST 2017 : org.apache.commons.lang3.math.NumberUtils,599=>Find no block
+Thu Aug 24 03:35:07 AEST 2017 org.apache.commons.lang3.math.NumberUtils,602
+Thu Aug 24 03:35:38 AEST 2017 org.apache.commons.lang3.math.NumberUtils,603
+Thu Aug 24 03:35:38 AEST 2017 org.apache.commons.lang3.math.NumberUtils,492
+Thu Aug 24 03:51:03 AEST 2017 org.apache.commons.lang3.math.NumberUtils,571
+Thu Aug 24 04:06:51 AEST 2017 org.apache.commons.lang3.math.NumberUtils,594
+Thu Aug 24 04:07:23 AEST 2017 org.apache.commons.lang3.math.NumberUtils,601
+Thu Aug 24 04:07:59 AEST 2017 org.apache.commons.lang3.math.NumberUtils,489
+Thu Aug 24 04:07:59 AEST 2017 org.apache.commons.lang3.math.NumberUtils,496
+Thu Aug 24 04:21:42 AEST 2017 org.apache.commons.lang3.math.NumberUtils,497
+Thu Aug 24 04:21:43 AEST 2017 org.apache.commons.lang3.math.NumberUtils,570
+Thu Aug 24 04:21:43 AEST 2017 org.apache.commons.lang3.math.NumberUtils,575
+Thu Aug 24 04:23:52 AEST 2017 org.apache.commons.lang3.math.NumberUtils,591
+Thu Aug 24 04:26:56 AEST 2017 org.apache.commons.lang3.math.NumberUtils,593
+Thu Aug 24 04:27:27 AEST 2017 org.apache.commons.lang3.math.NumberUtils,488
+Thu Aug 24 04:27:27 AEST 2017 org.apache.commons.lang3.math.NumberUtils,659
+Thu Aug 24 04:29:08 AEST 2017 org.apache.commons.lang3.math.NumberUtils,662
+Thu Aug 24 04:31:45 AEST 2017 org.apache.commons.lang3.math.NumberUtils,509
+Thu Aug 24 04:57:18 AEST 2017 org.apache.commons.lang3.math.NumberUtils,621
+Thu Aug 24 04:59:11 AEST 2017 org.apache.commons.lang3.math.NumberUtils,624
+Thu Aug 24 05:09:51 AEST 2017 org.apache.commons.lang3.math.NumberUtils,625
+Thu Aug 24 05:09:51 AEST 2017 org.apache.commons.lang3.math.NumberUtils,626
+Thu Aug 24 05:09:51 AEST 2017 org.apache.commons.lang3.math.NumberUtils,643
+Thu Aug 24 05:09:51 AEST 2017 org.apache.commons.lang3.math.NumberUtils,646
+Thu Aug 24 05:12:35 AEST 2017 org.apache.commons.lang3.math.NumberUtils,451
+Thu Aug 24 05:12:35 AEST 2017 org.apache.commons.lang3.math.NumberUtils,454
+Thu Aug 24 05:13:30 AEST 2017 org.apache.commons.lang3.math.NumberUtils,458
+Thu Aug 24 05:14:32 AEST 2017 org.apache.commons.lang3.math.NumberUtils,459
+Thu Aug 24 05:26:47 AEST 2017 org.apache.commons.lang3.math.NumberUtils,460
+Thu Aug 24 05:26:47 AEST 2017 org.apache.commons.lang3.math.NumberUtils,461
+Thu Aug 24 05:26:47 AEST 2017 org.apache.commons.lang3.math.NumberUtils,466
+Thu Aug 24 05:39:04 AEST 2017 org.apache.commons.lang3.math.NumberUtils,476
+Thu Aug 24 05:52:48 AEST 2017 org.apache.commons.lang3.math.NumberUtils,480
+Thu Aug 24 05:56:42 AEST 2017 org.apache.commons.lang3.math.NumberUtils,481
+Thu Aug 24 06:01:22 AEST 2017 org.apache.commons.lang3.math.NumberUtils,485
+Thu Aug 24 06:01:23 AEST 2017 org.apache.commons.lang3.math.NumberUtils,486
+Timeout time : 17/08/24 06:05

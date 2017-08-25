@@ -1,0 +1,29 @@
+=================================================
+Project : closure_96	start : 17/08/23 17:41
+Current failed test : com.google.javascript.jscomp.TypeCheckTest::testFunctionArguments16 | 17/08/23 17:42
+Wed Aug 23 18:02:19 AEST 2017 com.google.javascript.rhino.jstype.JSTypeRegistry,1342
+Wed Aug 23 18:07:17 AEST 2017 com.google.javascript.jscomp.parsing.JsDocInfoParser,1337
+Wed Aug 23 18:17:56 AEST 2017 com.google.javascript.jscomp.parsing.JsDocInfoParser,1338
+Wed Aug 23 18:17:57 AEST 2017 com.google.javascript.jscomp.parsing.JsDocInfoParser,1342
+Wed Aug 23 18:17:57 AEST 2017 com.google.javascript.jscomp.parsing.JsDocInfoParser,1349
+Wed Aug 23 18:35:44 AEST 2017 com.google.javascript.jscomp.parsing.JsDocTokenStream,145
+Wed Aug 23 19:21:13 AEST 2017 com.google.javascript.jscomp.parsing.JsDocTokenStream,146
+Wed Aug 23 19:21:13 AEST 2017 com.google.javascript.jscomp.parsing.JsDocTokenStream,147
+Wed Aug 23 19:21:15 AEST 2017 com.google.javascript.jscomp.parsing.JsDocTokenStream,148
+Wed Aug 23 19:21:16 AEST 2017 com.google.javascript.rhino.jstype.FunctionType,240
+Wed Aug 23 19:40:02 AEST 2017 com.google.javascript.jscomp.parsing.JsDocTokenStream,141
+Wed Aug 23 19:42:16 AEST 2017 com.google.javascript.jscomp.parsing.JsDocTokenStream,142
+Wed Aug 23 20:11:37 AEST 2017 com.google.javascript.jscomp.TypeCheck,473
+Wed Aug 23 20:38:04 AEST 2017 com.google.javascript.jscomp.TypeCheck,474
+Wed Aug 23 20:53:31 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,982
+Wed Aug 23 20:53:39 AEST 2017 com.google.javascript.jscomp.TypeInference,418
+Wed Aug 23 21:10:30 AEST 2017 com.google.javascript.jscomp.TypeInference,419
+Wed Aug 23 21:24:38 AEST 2017 com.google.javascript.jscomp.TypeInference,420
+Wed Aug 23 21:34:31 AEST 2017 com.google.javascript.jscomp.TypeValidator,360
+Wed Aug 23 21:43:07 AEST 2017 Wed Aug 23 21:43:07 AEST 2017 : com.google.javascript.jscomp.TypeValidator,367=>Find no block
+Wed Aug 23 21:43:07 AEST 2017 com.google.javascript.jscomp.TypeInference,854
+Wed Aug 23 22:49:57 AEST 2017 com.google.javascript.jscomp.TypeInference,855
+Wed Aug 23 22:49:58 AEST 2017 com.google.javascript.jscomp.TypeInference,870
+Wed Aug 23 22:52:28 AEST 2017 Wed Aug 23 22:52:28 AEST 2017 : com.google.javascript.jscomp.TypeInference,871=>Find no block
+Wed Aug 23 22:52:29 AEST 2017 com.google.javascript.jscomp.TypeCheck,1412
+Timeout time : 17/08/23 23:02

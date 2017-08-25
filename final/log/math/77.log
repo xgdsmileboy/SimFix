@@ -1,0 +1,271 @@
+=================================================
+Project : math_77	start : 17/08/24 10:22
+Current failed test : org.apache.commons.math.linear.ArrayRealVectorTest::testBasicFunctions_purify_8 | 17/08/24 10:26
+Thu Aug 24 10:27:44 AEST 2017 org.apache.commons.math.linear.ArrayRealVector,719
+Thu Aug 24 10:33:37 AEST 2017 org.apache.commons.math.linear.ArrayRealVector,720
+Thu Aug 24 10:40:07 AEST 2017 org.apache.commons.math.linear.ArrayRealVector,721
+Thu Aug 24 10:40:08 AEST 2017 org.apache.commons.math.linear.ArrayRealVector,723
+Thu Aug 24 10:40:10 AEST 2017 org.apache.commons.math.linear.ArrayRealVector,709
+Thu Aug 24 10:45:19 AEST 2017 org.apache.commons.math.linear.ArrayRealVector,710
+Thu Aug 24 10:52:25 AEST 2017 org.apache.commons.math.linear.ArrayRealVector,711
+Thu Aug 24 10:52:26 AEST 2017 org.apache.commons.math.linear.ArrayRealVector,713
+Thu Aug 24 10:52:27 AEST 2017 org.apache.commons.math.linear.ArrayRealVector,699
+Thu Aug 24 10:56:30 AEST 2017 org.apache.commons.math.linear.ArrayRealVector,700
+Thu Aug 24 10:59:29 AEST 2017 org.apache.commons.math.linear.ArrayRealVector,701
+Thu Aug 24 10:59:30 AEST 2017 org.apache.commons.math.linear.ArrayRealVector,703
+Thu Aug 24 10:59:31 AEST 2017 Thu Aug 24 10:59:31 AEST 2017 : org.apache.commons.math.linear.ArrayRealVector,82=>Find no block
+Thu Aug 24 10:59:32 AEST 2017 org.apache.commons.math.linear.ArrayRealVector,83
+Thu Aug 24 11:01:25 AEST 2017 Thu Aug 24 11:01:25 AEST 2017 : org.apache.commons.math.linear.ArrayRealVector,84=>Find no block
+Thu Aug 24 11:01:26 AEST 2017 Thu Aug 24 11:01:26 AEST 2017 : org.apache.commons.math.linear.AbstractRealVector,34=>Find no block
+Thu Aug 24 11:01:27 AEST 2017 Thu Aug 24 11:01:27 AEST 2017 : org.apache.commons.math.linear.AbstractRealVector,819=>Find no block
+Thu Aug 24 11:01:28 AEST 2017 org.apache.commons.math.MathRuntimeException,495
+Thu Aug 24 11:01:30 AEST 2017 org.apache.commons.math.MathRuntimeException,503
+Thu Aug 24 11:01:43 AEST 2017 org.apache.commons.math.MathRuntimeException,509
+Thu Aug 24 11:01:55 AEST 2017 Thu Aug 24 11:01:55 AEST 2017 : org.apache.commons.math.MathRuntimeException,59=>Find no block
+Thu Aug 24 11:01:56 AEST 2017 org.apache.commons.math.MathRuntimeException,60
+Thu Aug 24 11:02:19 AEST 2017 org.apache.commons.math.MathRuntimeException,61
+Thu Aug 24 11:02:20 AEST 2017 Thu Aug 24 11:02:20 AEST 2017 : org.apache.commons.math.MathRuntimeException,62=>Find no block
+Thu Aug 24 11:02:21 AEST 2017 org.apache.commons.math.MathRuntimeException,72
+Thu Aug 24 11:02:24 AEST 2017 org.apache.commons.math.MathRuntimeException,73
+Thu Aug 24 11:02:26 AEST 2017 org.apache.commons.math.MathRuntimeException,74
+Thu Aug 24 11:02:27 AEST 2017 Thu Aug 24 11:02:27 AEST 2017 : org.apache.commons.math.MathRuntimeException,75=>Find no block
+Thu Aug 24 11:02:28 AEST 2017 org.apache.commons.math.MathRuntimeException,88
+Thu Aug 24 11:02:51 AEST 2017 org.apache.commons.math.MathRuntimeException,89
+Thu Aug 24 11:02:52 AEST 2017 org.apache.commons.math.MathRuntimeException,90
+Thu Aug 24 11:02:53 AEST 2017 Thu Aug 24 11:02:53 AEST 2017 : org.apache.commons.math.MathRuntimeException,91=>Find no block
+Thu Aug 24 11:02:54 AEST 2017 org.apache.commons.math.MathRuntimeException,102
+Thu Aug 24 11:02:57 AEST 2017 org.apache.commons.math.MathRuntimeException,104
+Thu Aug 24 11:03:10 AEST 2017 org.apache.commons.math.MathRuntimeException,106
+Thu Aug 24 11:03:11 AEST 2017 Thu Aug 24 11:03:11 AEST 2017 : org.apache.commons.math.MathRuntimeException,111=>Find no block
+Thu Aug 24 11:03:11 AEST 2017 Thu Aug 24 11:03:11 AEST 2017 : org.apache.commons.math.MathRuntimeException,109=>Find no block
+Thu Aug 24 11:03:12 AEST 2017 org.apache.commons.math.MathRuntimeException,115
+Thu Aug 24 11:03:13 AEST 2017 org.apache.commons.math.MathRuntimeException,128
+Thu Aug 24 11:03:16 AEST 2017 org.apache.commons.math.MathRuntimeException,136
+Thu Aug 24 11:03:19 AEST 2017 org.apache.commons.math.MathRuntimeException,144
+Thu Aug 24 11:03:54 AEST 2017 org.apache.commons.math.MathRuntimeException,154
+Thu Aug 24 11:03:57 AEST 2017 org.apache.commons.math.MathRuntimeException,160
+Thu Aug 24 11:04:01 AEST 2017 org.apache.commons.math.MathRuntimeException,166
+Thu Aug 24 11:04:03 AEST 2017 org.apache.commons.math.MathRuntimeException,174
+Thu Aug 24 11:04:06 AEST 2017 Thu Aug 24 11:04:06 AEST 2017 : org.apache.commons.math.MathRuntimeException,175=>Find no block
+Thu Aug 24 11:04:07 AEST 2017 Thu Aug 24 11:04:07 AEST 2017 : org.apache.commons.math.MathRuntimeException,184=>Find no block
+Thu Aug 24 11:04:07 AEST 2017 org.apache.commons.math.MathRuntimeException,185
+Thu Aug 24 11:04:10 AEST 2017 org.apache.commons.math.MathRuntimeException,186
+Thu Aug 24 11:04:11 AEST 2017 org.apache.commons.math.MathRuntimeException,188
+Thu Aug 24 11:04:11 AEST 2017 Thu Aug 24 11:04:11 AEST 2017 : org.apache.commons.math.MathRuntimeException,189=>Find no block
+Thu Aug 24 11:04:12 AEST 2017 Thu Aug 24 11:04:12 AEST 2017 : org.apache.commons.math.MathRuntimeException,190=>Find no block
+Thu Aug 24 11:04:13 AEST 2017 org.apache.commons.math.MathRuntimeException,201
+Thu Aug 24 11:04:16 AEST 2017 org.apache.commons.math.MathRuntimeException,230
+Thu Aug 24 11:04:18 AEST 2017 org.apache.commons.math.MathRuntimeException,259
+Thu Aug 24 11:04:22 AEST 2017 org.apache.commons.math.MathRuntimeException,291
+Thu Aug 24 11:05:10 AEST 2017 org.apache.commons.math.MathRuntimeException,292
+Thu Aug 24 11:05:10 AEST 2017 org.apache.commons.math.MathRuntimeException,293
+Thu Aug 24 11:05:11 AEST 2017 org.apache.commons.math.MathRuntimeException,305
+Thu Aug 24 11:05:14 AEST 2017 org.apache.commons.math.MathRuntimeException,333
+Thu Aug 24 11:06:03 AEST 2017 org.apache.commons.math.MathRuntimeException,334
+Thu Aug 24 11:06:04 AEST 2017 org.apache.commons.math.MathRuntimeException,335
+Thu Aug 24 11:06:04 AEST 2017 org.apache.commons.math.MathRuntimeException,347
+Thu Aug 24 11:06:07 AEST 2017 org.apache.commons.math.MathRuntimeException,376
+Thu Aug 24 11:06:10 AEST 2017 org.apache.commons.math.MathRuntimeException,405
+Thu Aug 24 11:06:12 AEST 2017 org.apache.commons.math.MathRuntimeException,434
+Thu Aug 24 11:06:15 AEST 2017 org.apache.commons.math.MathRuntimeException,466
+Thu Aug 24 11:06:17 AEST 2017 org.apache.commons.math.MathRuntimeException,492
+Thu Aug 24 11:06:18 AEST 2017 org.apache.commons.math.MathRuntimeException,493
+Thu Aug 24 11:06:19 AEST 2017 org.apache.commons.math.MathRuntimeException,495
+Thu Aug 24 11:06:20 AEST 2017 org.apache.commons.math.MathRuntimeException,201
+Thu Aug 24 11:06:20 AEST 2017 org.apache.commons.math.MathRuntimeException,209
+Thu Aug 24 11:06:23 AEST 2017 org.apache.commons.math.MathRuntimeException,215
+Thu Aug 24 11:06:25 AEST 2017 org.apache.commons.math.MathRuntimeException,466
+Thu Aug 24 11:06:26 AEST 2017 org.apache.commons.math.MathRuntimeException,474
+Thu Aug 24 11:06:27 AEST 2017 org.apache.commons.math.MathRuntimeException,480
+Thu Aug 24 11:06:28 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,102
+Thu Aug 24 11:06:56 AEST 2017 Thu Aug 24 11:06:56 AEST 2017 : org.apache.commons.math.util.OpenIntToDoubleHashMap,103=>Find no block
+Thu Aug 24 11:06:57 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,110
+Thu Aug 24 11:06:59 AEST 2017 Thu Aug 24 11:06:59 AEST 2017 : org.apache.commons.math.util.OpenIntToDoubleHashMap,111=>Find no block
+Thu Aug 24 11:07:00 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,118
+Thu Aug 24 11:07:03 AEST 2017 Thu Aug 24 11:07:03 AEST 2017 : org.apache.commons.math.util.OpenIntToDoubleHashMap,119=>Find no block
+Thu Aug 24 11:07:04 AEST 2017 Thu Aug 24 11:07:04 AEST 2017 : org.apache.commons.math.util.OpenIntToDoubleHashMap,127=>Find no block
+Thu Aug 24 11:07:04 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,128
+Thu Aug 24 11:11:16 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,129
+Thu Aug 24 11:11:16 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,130
+Thu Aug 24 11:11:17 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,131
+Thu Aug 24 11:11:18 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,132
+Thu Aug 24 11:11:18 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,133
+Thu Aug 24 11:11:19 AEST 2017 Thu Aug 24 11:11:19 AEST 2017 : org.apache.commons.math.util.OpenIntToDoubleHashMap,134=>Find no block
+Thu Aug 24 11:11:20 AEST 2017 Thu Aug 24 11:11:20 AEST 2017 : org.apache.commons.math.util.OpenIntToDoubleHashMap,140=>Find no block
+Thu Aug 24 11:11:21 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,141
+Thu Aug 24 11:23:15 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,142
+Thu Aug 24 11:23:16 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,143
+Thu Aug 24 11:33:40 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,144
+Thu Aug 24 11:44:28 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,145
+Thu Aug 24 11:53:37 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,146
+Thu Aug 24 12:13:25 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,147
+Thu Aug 24 12:27:08 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,148
+Thu Aug 24 12:45:49 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,149
+Thu Aug 24 12:50:13 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,150
+Timeout time : 17/08/24 12:57
+Current failed test : org.apache.commons.math.linear.SparseRealVectorTest::testBasicFunctions_purify_5 | 17/08/24 12:57
+Thu Aug 24 12:59:22 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,499
+Thu Aug 24 13:10:35 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,500
+Thu Aug 24 13:10:37 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,501
+Thu Aug 24 13:10:39 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,502
+Thu Aug 24 13:10:40 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,503
+Thu Aug 24 13:10:41 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,505
+Thu Aug 24 13:10:42 AEST 2017 org.apache.commons.math.linear.AbstractRealVector,222
+Thu Aug 24 13:18:50 AEST 2017 org.apache.commons.math.linear.AbstractRealVector,223
+Thu Aug 24 13:18:52 AEST 2017 org.apache.commons.math.linear.AbstractRealVector,225
+Thu Aug 24 13:18:53 AEST 2017 org.apache.commons.math.linear.AbstractRealVector,226
+Thu Aug 24 13:18:55 AEST 2017 org.apache.commons.math.linear.AbstractRealVector,228
+Thu Aug 24 13:18:57 AEST 2017 org.apache.commons.math.linear.AbstractRealVector,210
+Thu Aug 24 13:34:42 AEST 2017 org.apache.commons.math.linear.AbstractRealVector,211
+Thu Aug 24 13:34:43 AEST 2017 org.apache.commons.math.linear.AbstractRealVector,213
+Thu Aug 24 13:34:44 AEST 2017 org.apache.commons.math.linear.AbstractRealVector,214
+Thu Aug 24 13:34:45 AEST 2017 org.apache.commons.math.linear.AbstractRealVector,215
+Thu Aug 24 13:34:47 AEST 2017 Thu Aug 24 13:34:47 AEST 2017 : org.apache.commons.math.linear.AbstractRealVector,216=>Find no block
+Thu Aug 24 13:34:48 AEST 2017 org.apache.commons.math.linear.AbstractRealVector,217
+Thu Aug 24 13:34:49 AEST 2017 Thu Aug 24 13:34:49 AEST 2017 : org.apache.commons.math.linear.OpenMapRealVector,863=>Find no block
+Thu Aug 24 13:34:50 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,864
+Thu Aug 24 13:34:54 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,865
+Thu Aug 24 13:34:55 AEST 2017 Thu Aug 24 13:34:55 AEST 2017 : org.apache.commons.math.linear.OpenMapRealVector,866=>Find no block
+Thu Aug 24 13:34:56 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,870
+Thu Aug 24 13:34:59 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,875
+Thu Aug 24 13:36:13 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,876
+Thu Aug 24 13:36:14 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,809
+Thu Aug 24 13:36:18 AEST 2017 Thu Aug 24 13:36:18 AEST 2017 : org.apache.commons.math.linear.OpenMapRealVector,825=>Find no block
+Thu Aug 24 13:36:20 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,826
+Thu Aug 24 13:36:56 AEST 2017 Thu Aug 24 13:36:56 AEST 2017 : org.apache.commons.math.linear.OpenMapRealVector,827=>Find no block
+Thu Aug 24 13:36:57 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,832
+Thu Aug 24 13:37:30 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,117
+Thu Aug 24 13:37:34 AEST 2017 Thu Aug 24 13:37:34 AEST 2017 : org.apache.commons.math.linear.OpenMapRealVector,118=>Find no block
+Thu Aug 24 13:37:35 AEST 2017 Thu Aug 24 13:37:35 AEST 2017 : org.apache.commons.math.linear.OpenMapRealVector,126=>Find no block
+Thu Aug 24 13:37:36 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,127
+Thu Aug 24 13:59:22 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,128
+Thu Aug 24 13:59:24 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,129
+Thu Aug 24 13:59:25 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,130
+Thu Aug 24 13:59:27 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,131
+Thu Aug 24 13:59:28 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,132
+Thu Aug 24 13:59:29 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,133
+Thu Aug 24 13:59:31 AEST 2017 Thu Aug 24 13:59:31 AEST 2017 : org.apache.commons.math.linear.OpenMapRealVector,136=>Find no block
+Thu Aug 24 13:59:32 AEST 2017 org.apache.commons.math.linear.OpenMapRealVector,205
+Thu Aug 24 14:01:45 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,248
+Thu Aug 24 14:01:51 AEST 2017 Thu Aug 24 14:01:51 AEST 2017 : org.apache.commons.math.util.OpenIntToDoubleHashMap,505=>Find no block
+Thu Aug 24 14:01:52 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,508
+Thu Aug 24 14:02:48 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,511
+Thu Aug 24 14:02:49 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,513
+Thu Aug 24 14:02:50 AEST 2017 Thu Aug 24 14:02:50 AEST 2017 : org.apache.commons.math.util.OpenIntToDoubleHashMap,516=>Find no block
+Thu Aug 24 14:02:53 AEST 2017 Thu Aug 24 14:02:53 AEST 2017 : org.apache.commons.math.util.OpenIntToDoubleHashMap,518=>Find no block
+Thu Aug 24 14:02:54 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,525
+Thu Aug 24 14:03:01 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,554
+Thu Aug 24 14:03:05 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,558
+Thu Aug 24 14:04:22 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,561
+Thu Aug 24 14:05:16 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,572
+Thu Aug 24 14:05:17 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,578
+Thu Aug 24 14:06:17 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,582
+Thu Aug 24 14:06:18 AEST 2017 Thu Aug 24 14:06:18 AEST 2017 : org.apache.commons.math.util.OpenIntToDoubleHashMap,590=>Find no block
+Thu Aug 24 14:06:19 AEST 2017 Thu Aug 24 14:06:19 AEST 2017 : org.apache.commons.math.util.OpenIntToDoubleHashMap,585=>Find no block
+Thu Aug 24 14:06:21 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,586
+Thu Aug 24 14:06:22 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,587
+Thu Aug 24 14:06:23 AEST 2017 Thu Aug 24 14:06:23 AEST 2017 : org.apache.commons.math.util.OpenIntToDoubleHashMap,592=>Find no block
+Thu Aug 24 14:06:25 AEST 2017 Thu Aug 24 14:06:25 AEST 2017 : org.apache.commons.math.linear.RealVector,72=>Find no block
+Thu Aug 24 14:06:26 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,110
+Thu Aug 24 14:06:31 AEST 2017 Thu Aug 24 14:06:31 AEST 2017 : org.apache.commons.math.util.OpenIntToDoubleHashMap,111=>Find no block
+Thu Aug 24 14:06:32 AEST 2017 Thu Aug 24 14:06:32 AEST 2017 : org.apache.commons.math.util.OpenIntToDoubleHashMap,127=>Find no block
+Thu Aug 24 14:06:34 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,128
+Thu Aug 24 14:12:55 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,129
+Thu Aug 24 14:12:56 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,130
+Thu Aug 24 14:12:58 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,131
+Thu Aug 24 14:12:59 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,132
+Thu Aug 24 14:13:00 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,133
+Thu Aug 24 14:13:01 AEST 2017 Thu Aug 24 14:13:01 AEST 2017 : org.apache.commons.math.util.OpenIntToDoubleHashMap,134=>Find no block
+Thu Aug 24 14:13:02 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,160
+Thu Aug 24 14:13:07 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,163
+Thu Aug 24 14:13:56 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,164
+Thu Aug 24 14:13:58 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,165
+Thu Aug 24 14:13:59 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,166
+Thu Aug 24 14:14:00 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,266
+Thu Aug 24 14:14:04 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,279
+Thu Aug 24 14:21:03 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,280
+Thu Aug 24 14:21:05 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,281
+Thu Aug 24 14:21:06 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,282
+Thu Aug 24 14:21:07 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,417
+Thu Aug 24 14:24:43 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,418
+Thu Aug 24 14:24:44 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,419
+Thu Aug 24 14:30:43 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,420
+Thu Aug 24 14:32:52 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,425
+Thu Aug 24 14:38:31 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,426
+Thu Aug 24 14:45:35 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,427
+Thu Aug 24 15:00:32 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,428
+Thu Aug 24 15:00:33 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,429
+Thu Aug 24 15:00:34 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,430
+Thu Aug 24 15:00:35 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,433
+Thu Aug 24 15:00:36 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,435
+Thu Aug 24 15:08:14 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,476
+Thu Aug 24 15:08:17 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,485
+Thu Aug 24 15:09:48 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,486
+Thu Aug 24 15:09:48 AEST 2017 Thu Aug 24 15:09:48 AEST 2017 : org.apache.commons.math.linear.AbstractRealVector,34=>Find no block
+Thu Aug 24 15:09:49 AEST 2017 Thu Aug 24 15:09:49 AEST 2017 : org.apache.commons.math.linear.AbstractRealVector,819=>Find no block
+Thu Aug 24 15:09:50 AEST 2017 org.apache.commons.math.MathRuntimeException,495
+Thu Aug 24 15:09:53 AEST 2017 org.apache.commons.math.MathRuntimeException,503
+Thu Aug 24 15:10:13 AEST 2017 org.apache.commons.math.MathRuntimeException,509
+Thu Aug 24 15:10:31 AEST 2017 Thu Aug 24 15:10:31 AEST 2017 : org.apache.commons.math.MathRuntimeException,59=>Find no block
+Thu Aug 24 15:10:32 AEST 2017 org.apache.commons.math.MathRuntimeException,60
+Thu Aug 24 15:11:08 AEST 2017 org.apache.commons.math.MathRuntimeException,61
+Thu Aug 24 15:11:09 AEST 2017 Thu Aug 24 15:11:09 AEST 2017 : org.apache.commons.math.MathRuntimeException,62=>Find no block
+Thu Aug 24 15:11:11 AEST 2017 org.apache.commons.math.MathRuntimeException,72
+Thu Aug 24 15:11:14 AEST 2017 org.apache.commons.math.MathRuntimeException,73
+Thu Aug 24 15:11:15 AEST 2017 org.apache.commons.math.MathRuntimeException,74
+Thu Aug 24 15:11:16 AEST 2017 Thu Aug 24 15:11:16 AEST 2017 : org.apache.commons.math.MathRuntimeException,75=>Find no block
+Thu Aug 24 15:11:17 AEST 2017 org.apache.commons.math.MathRuntimeException,88
+Thu Aug 24 15:11:53 AEST 2017 org.apache.commons.math.MathRuntimeException,89
+Thu Aug 24 15:11:54 AEST 2017 org.apache.commons.math.MathRuntimeException,90
+Thu Aug 24 15:11:55 AEST 2017 Thu Aug 24 15:11:55 AEST 2017 : org.apache.commons.math.MathRuntimeException,91=>Find no block
+Thu Aug 24 15:11:56 AEST 2017 org.apache.commons.math.MathRuntimeException,102
+Thu Aug 24 15:11:59 AEST 2017 org.apache.commons.math.MathRuntimeException,104
+Thu Aug 24 15:12:21 AEST 2017 org.apache.commons.math.MathRuntimeException,106
+Thu Aug 24 15:12:22 AEST 2017 Thu Aug 24 15:12:22 AEST 2017 : org.apache.commons.math.MathRuntimeException,111=>Find no block
+Thu Aug 24 15:12:23 AEST 2017 Thu Aug 24 15:12:23 AEST 2017 : org.apache.commons.math.MathRuntimeException,109=>Find no block
+Thu Aug 24 15:12:24 AEST 2017 org.apache.commons.math.MathRuntimeException,115
+Thu Aug 24 15:12:25 AEST 2017 org.apache.commons.math.MathRuntimeException,128
+Thu Aug 24 15:12:28 AEST 2017 org.apache.commons.math.MathRuntimeException,136
+Thu Aug 24 15:12:31 AEST 2017 org.apache.commons.math.MathRuntimeException,144
+Thu Aug 24 15:13:25 AEST 2017 org.apache.commons.math.MathRuntimeException,154
+Thu Aug 24 15:13:28 AEST 2017 org.apache.commons.math.MathRuntimeException,160
+Thu Aug 24 15:13:31 AEST 2017 org.apache.commons.math.MathRuntimeException,166
+Thu Aug 24 15:13:35 AEST 2017 org.apache.commons.math.MathRuntimeException,174
+Thu Aug 24 15:13:38 AEST 2017 Thu Aug 24 15:13:38 AEST 2017 : org.apache.commons.math.MathRuntimeException,175=>Find no block
+Thu Aug 24 15:13:39 AEST 2017 Thu Aug 24 15:13:39 AEST 2017 : org.apache.commons.math.MathRuntimeException,184=>Find no block
+Thu Aug 24 15:13:40 AEST 2017 org.apache.commons.math.MathRuntimeException,185
+Thu Aug 24 15:13:43 AEST 2017 org.apache.commons.math.MathRuntimeException,186
+Thu Aug 24 15:13:44 AEST 2017 org.apache.commons.math.MathRuntimeException,188
+Thu Aug 24 15:13:44 AEST 2017 Thu Aug 24 15:13:44 AEST 2017 : org.apache.commons.math.MathRuntimeException,189=>Find no block
+Thu Aug 24 15:13:45 AEST 2017 Thu Aug 24 15:13:45 AEST 2017 : org.apache.commons.math.MathRuntimeException,190=>Find no block
+Thu Aug 24 15:13:46 AEST 2017 org.apache.commons.math.MathRuntimeException,201
+Thu Aug 24 15:13:49 AEST 2017 org.apache.commons.math.MathRuntimeException,230
+Thu Aug 24 15:13:52 AEST 2017 org.apache.commons.math.MathRuntimeException,259
+Thu Aug 24 15:13:55 AEST 2017 org.apache.commons.math.MathRuntimeException,291
+Thu Aug 24 15:15:11 AEST 2017 org.apache.commons.math.MathRuntimeException,292
+Thu Aug 24 15:15:12 AEST 2017 org.apache.commons.math.MathRuntimeException,293
+Thu Aug 24 15:15:13 AEST 2017 org.apache.commons.math.MathRuntimeException,305
+Thu Aug 24 15:15:16 AEST 2017 org.apache.commons.math.MathRuntimeException,333
+Thu Aug 24 15:16:28 AEST 2017 org.apache.commons.math.MathRuntimeException,334
+Thu Aug 24 15:16:29 AEST 2017 org.apache.commons.math.MathRuntimeException,335
+Thu Aug 24 15:16:30 AEST 2017 org.apache.commons.math.MathRuntimeException,347
+Thu Aug 24 15:16:33 AEST 2017 org.apache.commons.math.MathRuntimeException,376
+Thu Aug 24 15:16:37 AEST 2017 org.apache.commons.math.MathRuntimeException,405
+Thu Aug 24 15:16:39 AEST 2017 org.apache.commons.math.MathRuntimeException,434
+Thu Aug 24 15:16:44 AEST 2017 org.apache.commons.math.MathRuntimeException,466
+Thu Aug 24 15:16:47 AEST 2017 org.apache.commons.math.MathRuntimeException,492
+Thu Aug 24 15:16:48 AEST 2017 org.apache.commons.math.MathRuntimeException,493
+Thu Aug 24 15:16:49 AEST 2017 org.apache.commons.math.MathRuntimeException,495
+Thu Aug 24 15:16:50 AEST 2017 org.apache.commons.math.MathRuntimeException,201
+Thu Aug 24 15:16:51 AEST 2017 org.apache.commons.math.MathRuntimeException,209
+Thu Aug 24 15:16:54 AEST 2017 org.apache.commons.math.MathRuntimeException,215
+Thu Aug 24 15:16:58 AEST 2017 org.apache.commons.math.MathRuntimeException,466
+Thu Aug 24 15:16:59 AEST 2017 org.apache.commons.math.MathRuntimeException,474
+Thu Aug 24 15:17:00 AEST 2017 org.apache.commons.math.MathRuntimeException,480
+Thu Aug 24 15:17:01 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,102
+Thu Aug 24 15:17:06 AEST 2017 Thu Aug 24 15:17:06 AEST 2017 : org.apache.commons.math.util.OpenIntToDoubleHashMap,103=>Find no block
+Thu Aug 24 15:17:07 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,118
+Thu Aug 24 15:17:13 AEST 2017 Thu Aug 24 15:17:13 AEST 2017 : org.apache.commons.math.util.OpenIntToDoubleHashMap,119=>Find no block
+Thu Aug 24 15:17:14 AEST 2017 Thu Aug 24 15:17:14 AEST 2017 : org.apache.commons.math.util.OpenIntToDoubleHashMap,140=>Find no block
+Thu Aug 24 15:17:15 AEST 2017 org.apache.commons.math.util.OpenIntToDoubleHashMap,141
+Timeout time : 17/08/24 15:29

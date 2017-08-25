@@ -1,0 +1,42 @@
+=================================================
+Project : closure_81	start : 17/08/23 17:41
+Current failed test : com.google.javascript.jscomp.parsing.ParserTest::testUnnamedFunctionStatement | 17/08/23 17:42
+Wed Aug 23 17:49:55 AEST 2017 com.google.javascript.jscomp.parsing.ParserRunner,107
+Wed Aug 23 17:50:17 AEST 2017 com.google.javascript.jscomp.parsing.ParserRunner,108
+Wed Aug 23 17:50:18 AEST 2017 com.google.javascript.rhino.jstype.JSTypeRegistry,189
+Wed Aug 23 17:50:22 AEST 2017 Wed Aug 23 17:50:22 AEST 2017 : com.google.javascript.rhino.jstype.JSTypeRegistry,190=>Find no block
+Wed Aug 23 17:50:22 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,198
+Wed Aug 23 17:52:57 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,467
+Wed Aug 23 17:58:59 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,468
+Wed Aug 23 17:59:00 AEST 2017 com.google.javascript.rhino.jstype.PrototypeObjectType,127
+Wed Aug 23 18:05:14 AEST 2017 com.google.javascript.rhino.jstype.PrototypeObjectType,128
+Wed Aug 23 18:05:15 AEST 2017 com.google.javascript.rhino.jstype.PrototypeObjectType,129
+Wed Aug 23 18:05:16 AEST 2017 com.google.javascript.rhino.jstype.PrototypeObjectType,131
+Wed Aug 23 18:05:17 AEST 2017 com.google.javascript.rhino.jstype.PrototypeObjectType,132
+Wed Aug 23 18:05:18 AEST 2017 com.google.javascript.rhino.jstype.PrototypeObjectType,133
+Wed Aug 23 18:05:19 AEST 2017 com.google.javascript.rhino.jstype.PrototypeObjectType,134
+Wed Aug 23 18:05:19 AEST 2017 Wed Aug 23 18:05:19 AEST 2017 : com.google.javascript.rhino.jstype.PrototypeObjectType,136=>Find no block
+Wed Aug 23 18:05:20 AEST 2017 com.google.javascript.rhino.jstype.PrototypeObjectType,137
+Wed Aug 23 18:05:21 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,517
+Wed Aug 23 18:05:57 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,518
+Wed Aug 23 18:05:57 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,519
+Wed Aug 23 18:05:58 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,526
+Wed Aug 23 18:13:26 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,530
+Wed Aug 23 18:13:26 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,532
+Wed Aug 23 18:13:27 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,547
+Wed Aug 23 18:17:59 AEST 2017 com.google.javascript.rhino.Node,1148
+Wed Aug 23 18:35:24 AEST 2017 com.google.javascript.rhino.jstype.PrototypeObjectType,149
+Wed Aug 23 18:45:30 AEST 2017 com.google.javascript.rhino.jstype.PrototypeObjectType,145
+Wed Aug 23 18:45:31 AEST 2017 com.google.javascript.rhino.jstype.PrototypeObjectType,146
+Wed Aug 23 18:45:32 AEST 2017 com.google.javascript.rhino.jstype.PrototypeObjectType,142
+Wed Aug 23 18:45:33 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,229
+Wed Aug 23 18:49:13 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,215
+Wed Aug 23 21:10:03 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,216
+Wed Aug 23 21:10:04 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,514
+Wed Aug 23 21:14:18 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,515
+Wed Aug 23 21:14:18 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,516
+Wed Aug 23 21:14:19 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,521
+Wed Aug 23 21:29:06 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,522
+Wed Aug 23 21:57:48 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,523
+Wed Aug 23 21:57:49 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,535
+Timeout time : 17/08/23 22:49

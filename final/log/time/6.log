@@ -1,0 +1,122 @@
+=================================================
+Project : time_6	start : 17/08/24 16:59
+Current failed test : org.joda.time.chrono.TestGJDate::test_plusYears_positiveToZero_crossCutover | 17/08/24 17:01
+Thu Aug 24 17:05:29 AEST 2017 org.joda.time.IllegalFieldValueException,314
+Thu Aug 24 17:05:30 AEST 2017 org.joda.time.chrono.JulianChronology,80
+Thu Aug 24 17:10:49 AEST 2017 org.joda.time.chrono.GJChronology,975
+Timeout time : 17/08/24 18:05
+Current failed test : org.joda.time.chrono.TestGJDate::test_plusWeekyears_positiveToZero_crossCutover | 17/08/24 18:05
+Thu Aug 24 18:09:49 AEST 2017 org.joda.time.IllegalFieldValueException,314
+Thu Aug 24 18:09:50 AEST 2017 org.joda.time.LocalDate,1965
+Thu Aug 24 18:12:25 AEST 2017 org.joda.time.LocalDate,1500
+Thu Aug 24 18:17:15 AEST 2017 org.joda.time.LocalDate,1531
+Thu Aug 24 18:22:05 AEST 2017 org.joda.time.LocalDate,1663
+Thu Aug 24 18:23:02 AEST 2017 org.joda.time.LocalDate,1708
+Thu Aug 24 18:24:01 AEST 2017 org.joda.time.LocalDate,1763
+Thu Aug 24 18:24:02 AEST 2017 org.joda.time.LocalDate,1894
+Thu Aug 24 18:30:01 AEST 2017 org.joda.time.LocalDate,1895
+Thu Aug 24 18:30:01 AEST 2017 org.joda.time.LocalDate,1896
+Thu Aug 24 18:30:01 AEST 2017 Thu Aug 24 18:30:01 AEST 2017 : org.joda.time.LocalDate,1897=>Find no block
+Thu Aug 24 18:30:01 AEST 2017 org.joda.time.field.SkipDateTimeField,90
+Thu Aug 24 18:37:07 AEST 2017 org.joda.time.field.SkipDateTimeField,91
+Thu Aug 24 18:37:07 AEST 2017 org.joda.time.chrono.GJChronology,922
+Thu Aug 24 18:47:04 AEST 2017 org.joda.time.chrono.GJChronology,96
+Thu Aug 24 18:54:02 AEST 2017 org.joda.time.chrono.GJChronology,596
+Thu Aug 24 18:55:50 AEST 2017 org.joda.time.chrono.GJChronology,975
+Timeout time : 17/08/24 19:09
+Current failed test : org.joda.time.chrono.TestGJDate::test_cutoverPreZero | 17/08/24 19:09
+Thu Aug 24 19:14:43 AEST 2017 org.joda.time.base.AbstractInstant,137
+Thu Aug 24 19:14:44 AEST 2017 org.joda.time.chrono.BasicChronology,507
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(week>51){
+throw new IllegalArgumentException("Specified date does not exist");
+}else {
+return year;
+}
+
+Time : 17/08/24 19:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(instant>51){
+return getYear(instant-(2*DateTimeConstants.MILLIS_PER_WEEK));
+}else {
+throw new IllegalArgumentException("Specified date does not exist");
+}
+
+Time : 17/08/24 19:20
+----------------------------------------
+Thu Aug 24 19:38:22 AEST 2017 org.joda.time.chrono.BasicChronology,531
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(instant>=firstWeekMillis2){
+throw new IllegalArgumentException("Specified date does not exist");
+}
+
+Time : 17/08/24 19:41
+----------------------------------------
+Thu Aug 24 19:47:06 AEST 2017 org.joda.time.LocalDate,728
+Thu Aug 24 20:06:48 AEST 2017 org.joda.time.LocalDate,729
+Thu Aug 24 20:06:48 AEST 2017 org.joda.time.LocalDate,730
+Thu Aug 24 20:06:49 AEST 2017 org.joda.time.LocalDate,731
+Thu Aug 24 20:06:49 AEST 2017 org.joda.time.LocalDate,732
+Thu Aug 24 20:06:49 AEST 2017 org.joda.time.LocalDate,733
+Thu Aug 24 20:06:49 AEST 2017 org.joda.time.chrono.BasicChronology,506
+Thu Aug 24 20:06:49 AEST 2017 org.joda.time.chrono.GJChronology,174
+Thu Aug 24 20:10:22 AEST 2017 org.joda.time.chrono.GJChronology,270
+Thu Aug 24 20:10:23 AEST 2017 Thu Aug 24 20:10:23 AEST 2017 : org.joda.time.chrono.GJChronology,271=>Find no block
+Thu Aug 24 20:10:23 AEST 2017 org.joda.time.chrono.GJChronology,215
+Timeout time : 17/08/24 20:15
+Current failed test : org.joda.time.chrono.TestGJDate::test_plusYears_positiveToNegative_crossCutover | 17/08/24 20:15
+Thu Aug 24 20:19:51 AEST 2017 org.joda.time.chrono.GJChronology,975
+Timeout time : 17/08/24 21:19
+Current failed test : org.joda.time.chrono.TestGJDate::test_plusWeekyears_positiveToNegative_crossCutover | 17/08/24 21:19
+Thu Aug 24 21:26:24 AEST 2017 org.joda.time.field.SkipDateTimeField,94
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+value--;
+if(value<=iSkip){
+if(value==iSkip){
+throw new IllegalFieldValueException(DateTimeFieldType.year(),Integer.valueOf(value),null,null);
+}
+value++;
+}
+
+Time : 17/08/24 21:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(iSkip<value){
+if(value==iSkip){
+throw new IllegalFieldValueException(DateTimeFieldType.year(),Integer.valueOf(value),null,null);
+}
+value++;
+}
+
+Time : 17/08/24 21:47
+----------------------------------------
+Thu Aug 24 21:49:46 AEST 2017 org.joda.time.LocalDate,1965
+Thu Aug 24 21:52:18 AEST 2017 org.joda.time.LocalDate,1500
+Thu Aug 24 21:57:05 AEST 2017 org.joda.time.LocalDate,1531
+Thu Aug 24 22:01:56 AEST 2017 org.joda.time.LocalDate,1663
+Thu Aug 24 22:02:50 AEST 2017 org.joda.time.LocalDate,1708
+Thu Aug 24 22:03:51 AEST 2017 org.joda.time.LocalDate,1763
+Thu Aug 24 22:03:52 AEST 2017 org.joda.time.LocalDate,1894
+Thu Aug 24 22:10:02 AEST 2017 org.joda.time.LocalDate,1895
+Thu Aug 24 22:10:03 AEST 2017 org.joda.time.LocalDate,1896
+Thu Aug 24 22:10:03 AEST 2017 Thu Aug 24 22:10:03 AEST 2017 : org.joda.time.LocalDate,1897=>Find no block
+Thu Aug 24 22:10:03 AEST 2017 org.joda.time.field.SkipDateTimeField,90
+Thu Aug 24 22:10:03 AEST 2017 org.joda.time.chrono.GJChronology,922
+Thu Aug 24 22:19:50 AEST 2017 org.joda.time.chrono.GJChronology,96
+Timeout time : 17/08/24 22:26

@@ -1,0 +1,254 @@
+=================================================
+Project : lang_61	start : 17/08/24 09:16
+Current failed test : org.apache.commons.lang.text.StrBuilderTest::testIndexOfLang294 | 17/08/24 09:16
+Thu Aug 24 09:17:02 AEST 2017 org.apache.commons.lang.text.StrBuilder,1184
+Thu Aug 24 09:36:27 AEST 2017 org.apache.commons.lang.text.StrBuilder,1185
+Thu Aug 24 09:36:27 AEST 2017 org.apache.commons.lang.text.StrBuilder,1186
+Thu Aug 24 09:36:27 AEST 2017 org.apache.commons.lang.text.StrBuilder,1187
+Thu Aug 24 09:36:27 AEST 2017 org.apache.commons.lang.text.StrBuilder,1188
+Thu Aug 24 09:36:28 AEST 2017 org.apache.commons.lang.text.StrBuilder,1189
+Thu Aug 24 09:36:28 AEST 2017 org.apache.commons.lang.text.StrBuilder,1202
+Thu Aug 24 09:50:56 AEST 2017 org.apache.commons.lang.text.StrBuilder,1203
+Thu Aug 24 09:50:56 AEST 2017 org.apache.commons.lang.text.StrBuilder,1204
+Thu Aug 24 09:50:56 AEST 2017 org.apache.commons.lang.text.StrBuilder,1205
+Thu Aug 24 09:50:56 AEST 2017 org.apache.commons.lang.text.StrBuilder,1206
+Thu Aug 24 09:50:56 AEST 2017 org.apache.commons.lang.text.StrBuilder,1209
+Thu Aug 24 09:50:57 AEST 2017 org.apache.commons.lang.text.StrBuilder,1747
+Thu Aug 24 09:51:23 AEST 2017 org.apache.commons.lang.text.StrBuilder,1761
+Thu Aug 24 10:00:49 AEST 2017 org.apache.commons.lang.text.StrBuilder,1762
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(str==null||(startIndex+CAPACITY)>=size){
+return -1;
+}
+
+Time : 17/08/24 10:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(str==null||(startIndex+CAPACITY)>size){
+return -1;
+}
+
+Time : 17/08/24 10:05
+----------------------------------------
+Thu Aug 24 10:08:44 AEST 2017 org.apache.commons.lang.text.StrBuilder,1765
+Thu Aug 24 10:30:21 AEST 2017 org.apache.commons.lang.text.StrBuilder,1766
+Thu Aug 24 10:30:21 AEST 2017 org.apache.commons.lang.text.StrBuilder,1769
+Thu Aug 24 10:33:17 AEST 2017 org.apache.commons.lang.text.StrBuilder,1772
+Thu Aug 24 10:35:53 AEST 2017 org.apache.commons.lang.text.StrBuilder,1775
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(strLen>size){
+return -1;
+}
+char[] thisBuf=buffer;
+int len=size-strLen;
+
+Time : 17/08/24 10:37
+----------------------------------------
+Thu Aug 24 10:47:30 AEST 2017 org.apache.commons.lang.text.StrBuilder,1776
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+char[] thisBuf=buffer;
+int len=size-strLen;
+outer: for (int i=startIndex; i < len; i++) {
+  for (int j=0; j < strLen; j++) {
+    if (str.charAt(j) != thisBuf[i + j]) {
+      continue outer;
+    }
+  }
+  return i;
+}
+
+
+Time : 17/08/24 10:48
+----------------------------------------
+Thu Aug 24 10:50:05 AEST 2017 org.apache.commons.lang.text.StrBuilder,1778
+Thu Aug 24 11:08:18 AEST 2017 org.apache.commons.lang.text.StrBuilder,1779
+Thu Aug 24 11:08:18 AEST 2017 org.apache.commons.lang.text.StrBuilder,1780
+Thu Aug 24 11:08:18 AEST 2017 org.apache.commons.lang.text.StrBuilder,1781
+Thu Aug 24 11:08:18 AEST 2017 org.apache.commons.lang.text.StrBuilder,1784
+Thu Aug 24 11:08:19 AEST 2017 org.apache.commons.lang.text.StrBuilder,1114
+Thu Aug 24 11:13:16 AEST 2017 org.apache.commons.lang.text.StrBuilder,1115
+Thu Aug 24 11:13:16 AEST 2017 Thu Aug 24 11:13:16 AEST 2017 : org.apache.commons.lang.text.StrBuilder,1116=>Find no block
+Thu Aug 24 11:13:16 AEST 2017 org.apache.commons.lang.text.StrBuilder,121
+Thu Aug 24 11:18:24 AEST 2017 org.apache.commons.lang.text.StrBuilder,122
+Thu Aug 24 11:23:55 AEST 2017 org.apache.commons.lang.text.StrBuilder,125
+Thu Aug 24 11:23:55 AEST 2017 org.apache.commons.lang.text.StrBuilder,126
+Thu Aug 24 11:23:55 AEST 2017 Thu Aug 24 11:23:55 AEST 2017 : org.apache.commons.lang.text.StrBuilder,128=>Find no block
+Thu Aug 24 11:23:55 AEST 2017 org.apache.commons.lang.text.StrBuilder,474
+Thu Aug 24 11:29:39 AEST 2017 org.apache.commons.lang.text.StrBuilder,475
+Thu Aug 24 11:29:39 AEST 2017 org.apache.commons.lang.text.StrBuilder,476
+Thu Aug 24 11:29:39 AEST 2017 org.apache.commons.lang.text.StrBuilder,477
+Thu Aug 24 11:29:40 AEST 2017 org.apache.commons.lang.text.StrBuilder,469
+Thu Aug 24 11:33:01 AEST 2017 org.apache.commons.lang.text.StrBuilder,472
+Thu Aug 24 11:49:13 AEST 2017 org.apache.commons.lang.text.StrBuilder,473
+Thu Aug 24 11:49:14 AEST 2017 org.apache.commons.lang.text.StrBuilder,479
+Thu Aug 24 11:49:14 AEST 2017 org.apache.commons.lang.text.StrBuilder,182
+Thu Aug 24 11:49:35 AEST 2017 org.apache.commons.lang.text.StrBuilder,228
+Thu Aug 24 12:01:24 AEST 2017 org.apache.commons.lang.text.StrBuilder,233
+Thu Aug 24 12:14:04 AEST 2017 org.apache.commons.lang.text.StrBuilder,2213
+Thu Aug 24 12:14:04 AEST 2017 Thu Aug 24 12:14:04 AEST 2017 : org.apache.commons.lang.text.StrBuilder,2212=>Find no block
+Thu Aug 24 12:14:04 AEST 2017 Thu Aug 24 12:14:04 AEST 2017 : org.apache.commons.lang.text.StrBuilder,2214=>Find no block
+Thu Aug 24 12:14:05 AEST 2017 org.apache.commons.lang.text.StrBuilder,2218
+Thu Aug 24 12:15:01 AEST 2017 org.apache.commons.lang.text.StrBuilder,2219
+Thu Aug 24 12:15:01 AEST 2017 org.apache.commons.lang.text.StrBuilder,2221
+Thu Aug 24 12:15:02 AEST 2017 org.apache.commons.lang.text.StrBuilder,2227
+Thu Aug 24 12:19:40 AEST 2017 org.apache.commons.lang.text.StrBuilder,2228
+Thu Aug 24 12:24:07 AEST 2017 org.apache.commons.lang.text.StrBuilder,2229
+Thu Aug 24 12:24:07 AEST 2017 org.apache.commons.lang.text.StrBuilder,2231
+Thu Aug 24 12:24:07 AEST 2017 org.apache.commons.lang.text.StrTokenizer,241
+Thu Aug 24 12:24:33 AEST 2017 Thu Aug 24 12:24:33 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,118=>Find no block
+Thu Aug 24 12:24:33 AEST 2017 Thu Aug 24 12:24:33 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,120=>Find no block
+Thu Aug 24 12:24:34 AEST 2017 Thu Aug 24 12:24:34 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,122=>Find no block
+Thu Aug 24 12:24:34 AEST 2017 Thu Aug 24 12:24:34 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,124=>Find no block
+Thu Aug 24 12:24:34 AEST 2017 Thu Aug 24 12:24:34 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,127=>Find no block
+Thu Aug 24 12:24:34 AEST 2017 Thu Aug 24 12:24:34 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,129=>Find no block
+Thu Aug 24 12:24:34 AEST 2017 org.apache.commons.lang.text.StrTokenizer,242
+Thu Aug 24 12:24:34 AEST 2017 Thu Aug 24 12:24:34 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,243=>Find no block
+Thu Aug 24 12:24:34 AEST 2017 org.apache.commons.lang.text.StrTokenizer,252
+Thu Aug 24 12:25:07 AEST 2017 org.apache.commons.lang.text.StrTokenizer,253
+Thu Aug 24 12:25:40 AEST 2017 org.apache.commons.lang.text.StrTokenizer,254
+Thu Aug 24 12:25:40 AEST 2017 org.apache.commons.lang.text.StrTokenizer,256
+Thu Aug 24 12:25:40 AEST 2017 Thu Aug 24 12:25:40 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,258=>Find no block
+Thu Aug 24 12:25:41 AEST 2017 org.apache.commons.lang.text.StrTokenizer,267
+Thu Aug 24 12:25:57 AEST 2017 org.apache.commons.lang.text.StrTokenizer,268
+Thu Aug 24 12:25:57 AEST 2017 Thu Aug 24 12:25:57 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,269=>Find no block
+Thu Aug 24 12:25:57 AEST 2017 org.apache.commons.lang.text.StrTokenizer,278
+Thu Aug 24 12:25:58 AEST 2017 org.apache.commons.lang.text.StrTokenizer,279
+Thu Aug 24 12:25:58 AEST 2017 Thu Aug 24 12:25:58 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,280=>Find no block
+Thu Aug 24 12:25:58 AEST 2017 org.apache.commons.lang.text.StrTokenizer,289
+Thu Aug 24 12:25:59 AEST 2017 org.apache.commons.lang.text.StrTokenizer,290
+Thu Aug 24 12:25:59 AEST 2017 Thu Aug 24 12:25:59 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,291=>Find no block
+Thu Aug 24 12:25:59 AEST 2017 org.apache.commons.lang.text.StrTokenizer,302
+Thu Aug 24 12:26:25 AEST 2017 org.apache.commons.lang.text.StrTokenizer,303
+Thu Aug 24 12:26:25 AEST 2017 Thu Aug 24 12:26:25 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,304=>Find no block
+Thu Aug 24 12:26:26 AEST 2017 org.apache.commons.lang.text.StrTokenizer,315
+Thu Aug 24 12:26:42 AEST 2017 org.apache.commons.lang.text.StrTokenizer,316
+Thu Aug 24 12:26:42 AEST 2017 Thu Aug 24 12:26:42 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,317=>Find no block
+Thu Aug 24 12:26:42 AEST 2017 org.apache.commons.lang.text.StrTokenizer,329
+Thu Aug 24 12:27:16 AEST 2017 org.apache.commons.lang.text.StrTokenizer,330
+Thu Aug 24 12:27:16 AEST 2017 Thu Aug 24 12:27:16 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,331=>Find no block
+Thu Aug 24 12:27:16 AEST 2017 org.apache.commons.lang.text.StrTokenizer,343
+Thu Aug 24 12:27:16 AEST 2017 org.apache.commons.lang.text.StrTokenizer,344
+Thu Aug 24 12:27:16 AEST 2017 Thu Aug 24 12:27:16 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,345=>Find no block
+Thu Aug 24 12:27:16 AEST 2017 org.apache.commons.lang.text.StrTokenizer,357
+Thu Aug 24 12:27:16 AEST 2017 org.apache.commons.lang.text.StrTokenizer,358
+Thu Aug 24 12:27:16 AEST 2017 Thu Aug 24 12:27:16 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,359=>Find no block
+Thu Aug 24 12:27:17 AEST 2017 org.apache.commons.lang.text.StrTokenizer,371
+Thu Aug 24 12:27:17 AEST 2017 org.apache.commons.lang.text.StrTokenizer,372
+Thu Aug 24 12:27:17 AEST 2017 Thu Aug 24 12:27:17 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,373=>Find no block
+Thu Aug 24 12:27:17 AEST 2017 org.apache.commons.lang.text.StrTokenizer,387
+Thu Aug 24 12:27:17 AEST 2017 org.apache.commons.lang.text.StrTokenizer,388
+Thu Aug 24 12:27:17 AEST 2017 Thu Aug 24 12:27:17 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,389=>Find no block
+Thu Aug 24 12:27:17 AEST 2017 org.apache.commons.lang.text.StrTokenizer,403
+Thu Aug 24 12:27:17 AEST 2017 org.apache.commons.lang.text.StrTokenizer,404
+Thu Aug 24 12:27:17 AEST 2017 Thu Aug 24 12:27:17 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,405=>Find no block
+Thu Aug 24 12:27:18 AEST 2017 org.apache.commons.lang.text.StrTokenizer,139
+Thu Aug 24 12:27:24 AEST 2017 org.apache.commons.lang.text.StrTokenizer,152
+Thu Aug 24 12:27:25 AEST 2017 org.apache.commons.lang.text.StrTokenizer,165
+Thu Aug 24 12:27:43 AEST 2017 org.apache.commons.lang.text.StrTokenizer,166
+Thu Aug 24 12:27:43 AEST 2017 org.apache.commons.lang.text.StrTokenizer,167
+Thu Aug 24 12:27:44 AEST 2017 org.apache.commons.lang.text.StrTokenizer,180
+Thu Aug 24 12:27:44 AEST 2017 org.apache.commons.lang.text.StrTokenizer,181
+Thu Aug 24 12:27:44 AEST 2017 org.apache.commons.lang.text.StrTokenizer,182
+Thu Aug 24 12:27:44 AEST 2017 org.apache.commons.lang.text.StrTokenizer,191
+Thu Aug 24 12:27:50 AEST 2017 org.apache.commons.lang.text.StrTokenizer,204
+Thu Aug 24 12:27:51 AEST 2017 org.apache.commons.lang.text.StrTokenizer,215
+Thu Aug 24 12:28:09 AEST 2017 org.apache.commons.lang.text.StrTokenizer,216
+Thu Aug 24 12:28:10 AEST 2017 org.apache.commons.lang.text.StrTokenizer,217
+Thu Aug 24 12:28:10 AEST 2017 org.apache.commons.lang.text.StrTokenizer,228
+Thu Aug 24 12:28:10 AEST 2017 org.apache.commons.lang.text.StrTokenizer,229
+Thu Aug 24 12:28:10 AEST 2017 org.apache.commons.lang.text.StrTokenizer,230
+Thu Aug 24 12:28:10 AEST 2017 org.apache.commons.lang.text.StrTokenizer,415
+Thu Aug 24 12:28:42 AEST 2017 org.apache.commons.lang.text.StrTokenizer,416
+Thu Aug 24 12:28:42 AEST 2017 org.apache.commons.lang.text.StrTokenizer,425
+Thu Aug 24 12:28:43 AEST 2017 org.apache.commons.lang.text.StrTokenizer,426
+Thu Aug 24 12:28:43 AEST 2017 org.apache.commons.lang.text.StrTokenizer,428
+Thu Aug 24 12:28:44 AEST 2017 org.apache.commons.lang.text.StrTokenizer,437
+Thu Aug 24 12:28:44 AEST 2017 org.apache.commons.lang.text.StrTokenizer,438
+Thu Aug 24 12:28:44 AEST 2017 org.apache.commons.lang.text.StrTokenizer,440
+Thu Aug 24 12:28:45 AEST 2017 org.apache.commons.lang.text.StrTokenizer,449
+Thu Aug 24 12:28:45 AEST 2017 org.apache.commons.lang.text.StrTokenizer,450
+Thu Aug 24 12:28:45 AEST 2017 org.apache.commons.lang.text.StrTokenizer,459
+Thu Aug 24 12:38:44 AEST 2017 org.apache.commons.lang.text.StrTokenizer,460
+Thu Aug 24 12:38:44 AEST 2017 org.apache.commons.lang.text.StrTokenizer,461
+Thu Aug 24 12:38:44 AEST 2017 org.apache.commons.lang.text.StrTokenizer,462
+Thu Aug 24 12:38:44 AEST 2017 org.apache.commons.lang.text.StrTokenizer,464
+Thu Aug 24 12:38:44 AEST 2017 org.apache.commons.lang.text.StrTokenizer,475
+Thu Aug 24 12:38:45 AEST 2017 org.apache.commons.lang.text.StrTokenizer,476
+Thu Aug 24 12:38:45 AEST 2017 org.apache.commons.lang.text.StrTokenizer,477
+Thu Aug 24 12:38:45 AEST 2017 org.apache.commons.lang.text.StrTokenizer,489
+Thu Aug 24 12:39:48 AEST 2017 org.apache.commons.lang.text.StrTokenizer,490
+Thu Aug 24 12:40:21 AEST 2017 org.apache.commons.lang.text.StrTokenizer,491
+Thu Aug 24 12:40:21 AEST 2017 org.apache.commons.lang.text.StrTokenizer,493
+Thu Aug 24 12:40:22 AEST 2017 org.apache.commons.lang.text.StrTokenizer,495
+Thu Aug 24 12:40:22 AEST 2017 org.apache.commons.lang.text.StrTokenizer,510
+Thu Aug 24 12:40:45 AEST 2017 org.apache.commons.lang.text.StrTokenizer,511
+Thu Aug 24 12:40:45 AEST 2017 org.apache.commons.lang.text.StrTokenizer,512
+Thu Aug 24 12:40:46 AEST 2017 org.apache.commons.lang.text.StrTokenizer,523
+Thu Aug 24 12:40:47 AEST 2017 org.apache.commons.lang.text.StrTokenizer,524
+Thu Aug 24 12:40:47 AEST 2017 org.apache.commons.lang.text.StrTokenizer,533
+Thu Aug 24 12:40:47 AEST 2017 org.apache.commons.lang.text.StrTokenizer,534
+Thu Aug 24 12:40:47 AEST 2017 org.apache.commons.lang.text.StrTokenizer,536
+Thu Aug 24 12:41:10 AEST 2017 org.apache.commons.lang.text.StrTokenizer,545
+Thu Aug 24 12:41:29 AEST 2017 org.apache.commons.lang.text.StrTokenizer,554
+Thu Aug 24 12:41:29 AEST 2017 org.apache.commons.lang.text.StrTokenizer,555
+Thu Aug 24 12:41:30 AEST 2017 org.apache.commons.lang.text.StrTokenizer,564
+Thu Aug 24 12:41:30 AEST 2017 org.apache.commons.lang.text.StrTokenizer,565
+Thu Aug 24 12:41:30 AEST 2017 org.apache.commons.lang.text.StrTokenizer,567
+Thu Aug 24 12:41:46 AEST 2017 org.apache.commons.lang.text.StrTokenizer,576
+Thu Aug 24 12:42:04 AEST 2017 org.apache.commons.lang.text.StrTokenizer,585
+Thu Aug 24 12:42:04 AEST 2017 org.apache.commons.lang.text.StrTokenizer,594
+Thu Aug 24 12:42:05 AEST 2017 org.apache.commons.lang.text.StrTokenizer,603
+Thu Aug 24 12:42:05 AEST 2017 org.apache.commons.lang.text.StrTokenizer,612
+Thu Aug 24 12:43:48 AEST 2017 org.apache.commons.lang.text.StrTokenizer,613
+Thu Aug 24 12:43:49 AEST 2017 org.apache.commons.lang.text.StrTokenizer,615
+Thu Aug 24 12:43:49 AEST 2017 org.apache.commons.lang.text.StrTokenizer,616
+Thu Aug 24 12:43:49 AEST 2017 Thu Aug 24 12:43:49 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,617=>Find no block
+Thu Aug 24 12:43:49 AEST 2017 org.apache.commons.lang.text.StrTokenizer,618
+Thu Aug 24 12:43:49 AEST 2017 org.apache.commons.lang.text.StrTokenizer,619
+Thu Aug 24 12:43:49 AEST 2017 Thu Aug 24 12:43:49 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,622=>Find no block
+Thu Aug 24 12:43:49 AEST 2017 org.apache.commons.lang.text.StrTokenizer,645
+Thu Aug 24 12:47:22 AEST 2017 org.apache.commons.lang.text.StrTokenizer,646
+Thu Aug 24 12:47:22 AEST 2017 org.apache.commons.lang.text.StrTokenizer,648
+Thu Aug 24 12:51:16 AEST 2017 org.apache.commons.lang.text.StrTokenizer,649
+Thu Aug 24 12:51:28 AEST 2017 org.apache.commons.lang.text.StrTokenizer,650
+Thu Aug 24 12:58:54 AEST 2017 org.apache.commons.lang.text.StrTokenizer,653
+Thu Aug 24 12:58:54 AEST 2017 org.apache.commons.lang.text.StrTokenizer,655
+Thu Aug 24 12:58:54 AEST 2017 org.apache.commons.lang.text.StrTokenizer,658
+Thu Aug 24 12:58:54 AEST 2017 org.apache.commons.lang.text.StrTokenizer,659
+Thu Aug 24 12:58:54 AEST 2017 org.apache.commons.lang.text.StrTokenizer,662
+Thu Aug 24 13:01:49 AEST 2017 org.apache.commons.lang.text.StrTokenizer,672
+Thu Aug 24 13:04:34 AEST 2017 org.apache.commons.lang.text.StrTokenizer,673
+Thu Aug 24 13:04:34 AEST 2017 org.apache.commons.lang.text.StrTokenizer,674
+Thu Aug 24 13:04:34 AEST 2017 org.apache.commons.lang.text.StrTokenizer,676
+Thu Aug 24 13:04:34 AEST 2017 org.apache.commons.lang.text.StrTokenizer,677
+Thu Aug 24 13:04:34 AEST 2017 org.apache.commons.lang.text.StrTokenizer,680
+Thu Aug 24 13:08:19 AEST 2017 Thu Aug 24 13:08:19 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,681=>Find no block
+Thu Aug 24 13:08:19 AEST 2017 org.apache.commons.lang.text.StrTokenizer,697
+Thu Aug 24 13:14:59 AEST 2017 org.apache.commons.lang.text.StrTokenizer,698
+Thu Aug 24 13:15:00 AEST 2017 org.apache.commons.lang.text.StrTokenizer,701
+Thu Aug 24 13:15:00 AEST 2017 org.apache.commons.lang.text.StrTokenizer,704
+Thu Aug 24 13:15:00 AEST 2017 org.apache.commons.lang.text.StrTokenizer,706
+Thu Aug 24 13:15:00 AEST 2017 Thu Aug 24 13:15:00 AEST 2017 : org.apache.commons.lang.text.StrTokenizer,707=>Find no block
+Thu Aug 24 13:15:00 AEST 2017 org.apache.commons.lang.text.StrTokenizer,710
+Thu Aug 24 13:17:24 AEST 2017 org.apache.commons.lang.text.StrTokenizer,711
+Thu Aug 24 13:17:24 AEST 2017 org.apache.commons.lang.text.StrTokenizer,712
+Thu Aug 24 13:17:24 AEST 2017 org.apache.commons.lang.text.StrTokenizer,716
+Thu Aug 24 13:27:49 AEST 2017 org.apache.commons.lang.text.StrTokenizer,717
+Thu Aug 24 13:27:49 AEST 2017 org.apache.commons.lang.text.StrTokenizer,718
+Thu Aug 24 13:27:49 AEST 2017 org.apache.commons.lang.text.StrTokenizer,719
+Thu Aug 24 13:27:49 AEST 2017 org.apache.commons.lang.text.StrTokenizer,723
+Thu Aug 24 13:34:17 AEST 2017 org.apache.commons.lang.text.StrTokenizer,724
+Thu Aug 24 13:34:17 AEST 2017 org.apache.commons.lang.text.StrTokenizer,725
+Failed time : 17/08/24 13:34

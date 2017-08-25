@@ -1,0 +1,78 @@
+=================================================
+Project : math_7	start : 17/08/24 05:02
+Current failed test : org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest::testEventsScheduling | 17/08/24 05:04
+Thu Aug 24 05:06:04 AEST 2017 org.apache.commons.math3.util.FastMath,3367
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x>=x){
+return 1;
+}
+if(y==x){
+return y;
+}
+
+Time : 17/08/24 05:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x>=x){
+return 1;
+}
+if(y==x){
+return y;
+}
+y+=1.0;
+if(y==0){
+return x*y;
+}
+
+Time : 17/08/24 05:49
+----------------------------------------
+Thu Aug 24 06:08:58 AEST 2017 org.apache.commons.math3.util.FastMath,3369
+Thu Aug 24 06:08:59 AEST 2017 org.apache.commons.math3.util.FastMath,3373
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y==0){
+return x*y;
+}
+if(FastMath.abs(x)>=1.0){
+return 0.0;
+}
+return y;
+
+Time : 17/08/24 06:17
+----------------------------------------
+Thu Aug 24 06:28:39 AEST 2017 org.apache.commons.math3.ode.AbstractIntegrator,351
+Thu Aug 24 06:30:33 AEST 2017 Thu Aug 24 06:30:33 AEST 2017 : org.apache.commons.math3.ode.AbstractIntegrator,352=>Find no block
+Thu Aug 24 06:30:35 AEST 2017 Thu Aug 24 06:30:35 AEST 2017 : org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,218=>Find no block
+Thu Aug 24 06:30:36 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,224
+Thu Aug 24 06:32:52 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,239
+Thu Aug 24 06:37:23 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,240
+Thu Aug 24 06:37:27 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,241
+Thu Aug 24 06:42:35 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,242
+Thu Aug 24 06:42:37 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,243
+Thu Aug 24 06:47:03 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,342
+Thu Aug 24 06:55:58 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,343
+Thu Aug 24 06:55:59 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,344
+Thu Aug 24 07:03:28 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,345
+Thu Aug 24 07:08:28 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,346
+Thu Aug 24 07:16:36 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,349
+Thu Aug 24 07:16:37 AEST 2017 org.apache.commons.math3.ode.events.EventState,348
+Thu Aug 24 07:21:16 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,182
+Thu Aug 24 07:23:53 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,183
+Thu Aug 24 07:24:57 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,188
+Thu Aug 24 07:25:19 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,190
+Thu Aug 24 07:25:20 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,191
+Thu Aug 24 07:25:22 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,300
+Thu Aug 24 09:02:26 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,309
+Thu Aug 24 09:02:28 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,326
+Thu Aug 24 09:22:57 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,327
+Thu Aug 24 09:22:58 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,328
+Thu Aug 24 09:47:33 AEST 2017 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,329
+Timeout time : 17/08/24 10:06

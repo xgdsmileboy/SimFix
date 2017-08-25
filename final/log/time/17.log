@@ -1,0 +1,224 @@
+=================================================
+Project : time_17	start : 17/08/24 07:44
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testBug3476684_adjustOffset | 17/08/24 07:44
+Thu Aug 24 07:47:35 AEST 2017 org.joda.time.DateTimeZone,1167
+Thu Aug 24 08:02:57 AEST 2017 org.joda.time.DateTimeZone,1168
+Thu Aug 24 08:02:58 AEST 2017 org.joda.time.DateTimeZone,1169
+Thu Aug 24 08:02:58 AEST 2017 org.joda.time.DateTimeZone,1174
+Thu Aug 24 08:02:58 AEST 2017 org.joda.time.DateTimeZone,1175
+Thu Aug 24 08:02:59 AEST 2017 org.joda.time.DateTime,665
+Thu Aug 24 08:03:41 AEST 2017 org.joda.time.DateTime,666
+Thu Aug 24 08:03:42 AEST 2017 org.joda.time.DateTime,685
+Thu Aug 24 08:04:25 AEST 2017 org.joda.time.DateTime,686
+Thu Aug 24 08:04:26 AEST 2017 org.joda.time.DateTime,331
+Thu Aug 24 08:05:00 AEST 2017 Thu Aug 24 08:05:00 AEST 2017 : org.joda.time.DateTime,333=>Find no block
+Thu Aug 24 08:05:03 AEST 2017 org.joda.time.tz.DateTimeZoneBuilder,1531
+Thu Aug 24 08:06:28 AEST 2017 org.joda.time.DateTime,1098
+Thu Aug 24 08:06:30 AEST 2017 org.joda.time.DateTime,1101
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hours==0){
+return this;
+}
+long instant=getChronology().hours().getDifference(getMillis(),hours);
+return withMillis(instant);
+
+Time : 17/08/24 08:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hours!=0){
+return this;
+}
+long instant=getChronology().hours().add(getMillis(),hours);
+return withMillis(instant);
+
+Time : 17/08/24 08:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hours==0){
+return this;
+}
+int instant=getChronology().hours().getDifference(getMillis(),hours);
+return withMillis(instant);
+
+Time : 17/08/24 08:12
+----------------------------------------
+Thu Aug 24 08:16:34 AEST 2017 org.joda.time.DateTime,1102
+Thu Aug 24 08:16:34 AEST 2017 org.joda.time.base.AbstractInstant,71
+Thu Aug 24 08:16:37 AEST 2017 org.joda.time.tz.CachedDateTimeZone,202
+Thu Aug 24 08:29:39 AEST 2017 org.joda.time.tz.DateTimeZoneBuilder,1535
+Thu Aug 24 08:31:31 AEST 2017 org.joda.time.tz.DateTimeZoneBuilder,1536
+Thu Aug 24 08:31:32 AEST 2017 org.joda.time.tz.DateTimeZoneBuilder,1574
+Thu Aug 24 08:33:33 AEST 2017 org.joda.time.tz.CachedDateTimeZone,162
+Thu Aug 24 08:49:16 AEST 2017 org.joda.time.tz.CachedDateTimeZone,163
+Thu Aug 24 08:49:16 AEST 2017 Thu Aug 24 08:49:16 AEST 2017 : org.joda.time.tz.CachedDateTimeZone,164=>Find no block
+Thu Aug 24 08:49:16 AEST 2017 org.joda.time.DateTime,582
+Thu Aug 24 08:50:03 AEST 2017 org.joda.time.chrono.ZonedChronology,318
+Thu Aug 24 08:54:20 AEST 2017 org.joda.time.chrono.ZonedChronology,319
+Thu Aug 24 08:54:20 AEST 2017 org.joda.time.chrono.ZonedChronology,320
+Thu Aug 24 08:54:21 AEST 2017 org.joda.time.base.AbstractInstant,424
+Thu Aug 24 08:54:38 AEST 2017 Thu Aug 24 08:54:38 AEST 2017 : org.joda.time.tz.ZoneInfoProvider,152=>Find no block
+Thu Aug 24 08:54:38 AEST 2017 org.joda.time.tz.ZoneInfoProvider,153
+Thu Aug 24 08:55:30 AEST 2017 org.joda.time.tz.ZoneInfoProvider,154
+Thu Aug 24 08:55:32 AEST 2017 org.joda.time.tz.ZoneInfoProvider,155
+Thu Aug 24 08:55:32 AEST 2017 org.joda.time.tz.ZoneInfoProvider,150
+Thu Aug 24 08:55:32 AEST 2017 org.joda.time.DateTimeZone,212
+Thu Aug 24 09:00:50 AEST 2017 org.joda.time.DateTimeZone,210
+Thu Aug 24 09:19:58 AEST 2017 org.joda.time.DateTimeZone,211
+Thu Aug 24 09:19:59 AEST 2017 org.joda.time.DateTimeZone,204
+Thu Aug 24 09:23:10 AEST 2017 org.joda.time.DateTimeZone,207
+Thu Aug 24 09:23:10 AEST 2017 org.joda.time.tz.ZoneInfoProvider,145
+Thu Aug 24 09:26:01 AEST 2017 org.joda.time.chrono.ZonedChronology,344
+Thu Aug 24 09:52:08 AEST 2017 org.joda.time.chrono.ZonedChronology,345
+Thu Aug 24 09:52:08 AEST 2017 org.joda.time.chrono.ZonedChronology,347
+Thu Aug 24 09:52:08 AEST 2017 org.joda.time.chrono.ZonedChronology,350
+Thu Aug 24 09:52:09 AEST 2017 org.joda.time.tz.ZoneInfoProvider,136
+Thu Aug 24 09:53:52 AEST 2017 org.joda.time.tz.ZoneInfoProvider,140
+Thu Aug 24 09:59:06 AEST 2017 org.joda.time.tz.ZoneInfoProvider,141
+Thu Aug 24 09:59:06 AEST 2017 org.joda.time.base.AbstractInstant,262
+Thu Aug 24 09:59:45 AEST 2017 org.joda.time.base.AbstractInstant,265
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(this!=readableInstant){
+return true;
+}
+if(readableInstant instanceof ReadableInstant==false){
+return false;
+}
+ReadableInstant otherInstant=(ReadableInstant)readableInstant;
+return getMillis()==otherInstant.getMillis()&&FieldUtils.equals(getChronology(),otherInstant.getChronology());
+
+Time : 17/08/24 10:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(this!=null){
+return true;
+}
+if(readableInstant instanceof ReadableInstant==false){
+return false;
+}
+ReadableInstant otherInstant=(ReadableInstant)readableInstant;
+return getMillis()==otherInstant.getMillis()&&FieldUtils.equals(getChronology(),otherInstant.getChronology());
+
+Time : 17/08/24 10:02
+----------------------------------------
+Thu Aug 24 10:03:29 AEST 2017 org.joda.time.base.AbstractInstant,266
+Thu Aug 24 10:03:29 AEST 2017 Thu Aug 24 10:03:29 AEST 2017 : org.joda.time.base.BaseDateTime,225=>Find no block
+Thu Aug 24 10:03:30 AEST 2017 org.joda.time.base.BaseDateTime,223
+Thu Aug 24 10:03:32 AEST 2017 org.joda.time.base.AbstractInstant,259
+Thu Aug 24 10:03:33 AEST 2017 org.joda.time.tz.CachedDateTimeZone,160
+Thu Aug 24 10:03:33 AEST 2017 org.joda.time.field.PreciseDurationDateTimeField,127
+Thu Aug 24 10:13:47 AEST 2017 org.joda.time.tz.CachedDateTimeZone,145
+Thu Aug 24 10:16:53 AEST 2017 org.joda.time.tz.CachedDateTimeZone,146
+Thu Aug 24 10:16:54 AEST 2017 org.joda.time.tz.CachedDateTimeZone,152
+Thu Aug 24 10:18:15 AEST 2017 org.joda.time.tz.CachedDateTimeZone,153
+Thu Aug 24 10:18:15 AEST 2017 org.joda.time.tz.CachedDateTimeZone,155
+Thu Aug 24 10:18:40 AEST 2017 org.joda.time.tz.CachedDateTimeZone,156
+Thu Aug 24 10:24:52 AEST 2017 org.joda.time.tz.CachedDateTimeZone,158
+Thu Aug 24 10:24:53 AEST 2017 org.joda.time.tz.CachedDateTimeZone,159
+Thu Aug 24 10:24:53 AEST 2017 org.joda.time.tz.CachedDateTimeZone,166
+Thu Aug 24 10:30:43 AEST 2017 Thu Aug 24 10:30:43 AEST 2017 : org.joda.time.tz.CachedDateTimeZone,180=>Find no block
+Thu Aug 24 10:30:43 AEST 2017 Thu Aug 24 10:30:43 AEST 2017 : org.joda.time.tz.CachedDateTimeZone,177=>Find no block
+Thu Aug 24 10:30:43 AEST 2017 Thu Aug 24 10:30:43 AEST 2017 : org.joda.time.tz.CachedDateTimeZone,178=>Find no block
+Thu Aug 24 10:30:44 AEST 2017 org.joda.time.tz.CachedDateTimeZone,181
+Thu Aug 24 10:31:03 AEST 2017 org.joda.time.tz.CachedDateTimeZone,182
+Thu Aug 24 10:31:03 AEST 2017 Thu Aug 24 10:31:03 AEST 2017 : org.joda.time.tz.CachedDateTimeZone,183=>Find no block
+Thu Aug 24 10:31:04 AEST 2017 org.joda.time.field.PreciseDurationDateTimeField,126
+Thu Aug 24 10:31:04 AEST 2017 org.joda.time.tz.DateTimeZoneBuilder,1533
+Thu Aug 24 10:35:50 AEST 2017 org.joda.time.tz.DateTimeZoneBuilder,1534
+Thu Aug 24 10:35:51 AEST 2017 org.joda.time.tz.CachedDateTimeZone,198
+Thu Aug 24 10:35:52 AEST 2017 org.joda.time.tz.DateTimeZoneBuilder,1528
+Thu Aug 24 10:39:54 AEST 2017 org.joda.time.tz.DateTimeZoneBuilder,1529
+Thu Aug 24 10:39:54 AEST 2017 org.joda.time.tz.DateTimeZoneBuilder,1530
+Thu Aug 24 10:39:54 AEST 2017 org.joda.time.tz.DateTimeZoneBuilder,1570
+Thu Aug 24 10:43:15 AEST 2017 org.joda.time.tz.DateTimeZoneBuilder,1571
+Thu Aug 24 10:43:16 AEST 2017 org.joda.time.tz.DateTimeZoneBuilder,1572
+Thu Aug 24 10:49:43 AEST 2017 org.joda.time.tz.DateTimeZoneBuilder,1573
+Thu Aug 24 10:49:44 AEST 2017 org.joda.time.DateTimeFieldType,522
+Thu Aug 24 10:52:01 AEST 2017 org.joda.time.DateTimeZone,955
+Thu Aug 24 10:55:29 AEST 2017 org.joda.time.DateTime,220
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(chronology);
+
+Time : 17/08/24 10:56
+----------------------------------------
+Thu Aug 24 10:57:13 AEST 2017 Thu Aug 24 10:57:13 AEST 2017 : org.joda.time.DateTime,221=>Find no block
+Thu Aug 24 10:57:14 AEST 2017 org.joda.time.DateTimeZone,951
+Thu Aug 24 11:02:07 AEST 2017 org.joda.time.DateTimeZone,952
+Thu Aug 24 11:02:07 AEST 2017 org.joda.time.DateTimeZone,953
+Thu Aug 24 11:02:08 AEST 2017 org.joda.time.DateTimeZone,954
+Thu Aug 24 11:02:08 AEST 2017 org.joda.time.DateTimeUtils,167
+Thu Aug 24 11:09:07 AEST 2017 org.joda.time.DateTimeUtils,168
+Thu Aug 24 11:09:08 AEST 2017 org.joda.time.DateTimeUtils,171
+Thu Aug 24 11:09:08 AEST 2017 org.joda.time.DateTimeUtils,164
+Thu Aug 24 11:09:08 AEST 2017 org.joda.time.DateTimeUtils,149
+Thu Aug 24 11:12:22 AEST 2017 org.joda.time.DateTimeUtils,146
+Thu Aug 24 11:13:03 AEST 2017 org.joda.time.chrono.AssembledChronology,192
+Thu Aug 24 11:13:04 AEST 2017 org.joda.time.chrono.ZonedChronology,147
+Thu Aug 24 11:29:36 AEST 2017 org.joda.time.chrono.ZonedChronology,139
+Thu Aug 24 11:29:36 AEST 2017 org.joda.time.chrono.ZonedChronology,140
+Thu Aug 24 11:29:37 AEST 2017 org.joda.time.chrono.ZonedChronology,141
+Thu Aug 24 11:29:37 AEST 2017 org.joda.time.chrono.ZonedChronology,142
+Thu Aug 24 11:29:37 AEST 2017 org.joda.time.chrono.ZonedChronology,119
+Thu Aug 24 11:30:02 AEST 2017 org.joda.time.DateTimeFieldType,524
+Thu Aug 24 11:32:24 AEST 2017 org.joda.time.chrono.BasicGJChronology,140
+Thu Aug 24 11:33:09 AEST 2017 org.joda.time.chrono.AssembledChronology,176
+Thu Aug 24 11:33:10 AEST 2017 org.joda.time.chrono.BasicGJChronology,121
+Thu Aug 24 11:33:57 AEST 2017 org.joda.time.DateTimeZone,900
+Thu Aug 24 11:37:54 AEST 2017 org.joda.time.DateTimeZone,910
+Thu Aug 24 11:47:07 AEST 2017 org.joda.time.DateTimeFieldType,498
+Thu Aug 24 11:49:26 AEST 2017 org.joda.time.DateTimeZone,882
+Thu Aug 24 11:52:59 AEST 2017 org.joda.time.DateTimeZone,884
+Thu Aug 24 11:52:59 AEST 2017 org.joda.time.DateTimeZone,885
+Thu Aug 24 11:52:59 AEST 2017 org.joda.time.DateTimeZone,887
+Thu Aug 24 11:52:59 AEST 2017 org.joda.time.DateTimeFieldType,520
+Thu Aug 24 11:55:19 AEST 2017 org.joda.time.DateTimeFieldType,496
+Thu Aug 24 11:57:36 AEST 2017 org.joda.time.DateTimeFieldType,516
+Thu Aug 24 11:59:49 AEST 2017 org.joda.time.DateTimeFieldType,492
+Thu Aug 24 12:01:59 AEST 2017 org.joda.time.base.BaseDateTime,124
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super();
+iChronology=checkChronology(chronology);
+iMillis=checkInstant(iMillis,iChronology);
+
+Time : 17/08/24 12:05
+----------------------------------------
+Thu Aug 24 12:05:52 AEST 2017 org.joda.time.base.BaseDateTime,125
+Thu Aug 24 12:05:53 AEST 2017 org.joda.time.base.BaseDateTime,126
+Thu Aug 24 12:05:53 AEST 2017 Thu Aug 24 12:05:53 AEST 2017 : org.joda.time.base.BaseDateTime,127=>Find no block
+Thu Aug 24 12:05:53 AEST 2017 org.joda.time.DateTimeZone,924
+Thu Aug 24 12:21:19 AEST 2017 org.joda.time.DateTimeZone,925
+Thu Aug 24 12:21:19 AEST 2017 org.joda.time.DateTimeZone,927
+Thu Aug 24 12:21:19 AEST 2017 org.joda.time.DateTimeZone,930
+Thu Aug 24 12:21:19 AEST 2017 org.joda.time.field.PreciseDurationField,104
+Thu Aug 24 12:24:25 AEST 2017 org.joda.time.field.PreciseDurationField,105
+Thu Aug 24 12:24:27 AEST 2017 org.joda.time.chrono.BasicChronology,435
+Thu Aug 24 12:26:33 AEST 2017 org.joda.time.chrono.AssembledChronology,133
+Thu Aug 24 12:33:00 AEST 2017 org.joda.time.base.BaseDateTime,256
+Thu Aug 24 12:44:56 AEST 2017 Thu Aug 24 12:44:56 AEST 2017 : org.joda.time.base.BaseDateTime,257=>Find no block
+Thu Aug 24 12:44:56 AEST 2017 org.joda.time.base.BaseDateTime,252
+Thu Aug 24 12:44:56 AEST 2017 org.joda.time.base.BaseDateTime,253
+Thu Aug 24 12:44:56 AEST 2017 org.joda.time.base.BaseDateTime,254
+Thu Aug 24 12:44:57 AEST 2017 org.joda.time.chrono.BasicMonthOfYearDateTimeField,72
+Thu Aug 24 12:46:30 AEST 2017 org.joda.time.chrono.AssembledChronology,131
+Thu Aug 24 12:46:30 AEST 2017 org.joda.time.chrono.BasicChronology,167
+Timeout time : 17/08/24 12:47

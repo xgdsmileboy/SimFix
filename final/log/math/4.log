@@ -1,0 +1,512 @@
+=================================================
+Project : math_4	start : 17/08/24 05:01
+Current failed test : org.apache.commons.math3.geometry.euclidean.twod.SubLineTest::testIntersectionParallel_purify_1 | 17/08/24 05:04
+Thu Aug 24 05:05:58 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.SubLine,113
+Thu Aug 24 05:07:37 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.SubLine,114
+Thu Aug 24 05:07:39 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.SubLine,117
+Thu Aug 24 05:07:42 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.SubLine,120
+Thu Aug 24 05:07:44 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.SubLine,56
+Thu Aug 24 05:07:57 AEST 2017 Thu Aug 24 05:07:57 AEST 2017 : org.apache.commons.math3.geometry.euclidean.twod.SubLine,57=>Find no block
+Thu Aug 24 05:07:58 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.SubLine,139
+Thu Aug 24 05:08:08 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.SubLine,140
+Thu Aug 24 05:08:11 AEST 2017 org.apache.commons.math3.util.FastMath,2664
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+y=x<0?FastMath.floor(x):FastMath.ceil(x);
+if(y<0||x<-E){
+return -Math.PI*F_1_2;
+}
+
+Time : 17/08/24 05:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+y=x<0?FastMath.floor(x):FastMath.ceil(x);
+if(x<0||x<-E){
+return -Math.PI*F_1_2;
+}
+
+Time : 17/08/24 05:14
+----------------------------------------
+Thu Aug 24 05:18:14 AEST 2017 org.apache.commons.math3.util.FastMath,2665
+Thu Aug 24 05:18:16 AEST 2017 org.apache.commons.math3.util.FastMath,2660
+Thu Aug 24 05:22:39 AEST 2017 org.apache.commons.math3.util.FastMath,3587
+Thu Aug 24 05:33:22 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.Line,200
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<0.0){
+return null;
+}
+
+Time : 17/08/24 05:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.rint(d)<0.0){
+return null;
+}
+
+Time : 17/08/24 05:39
+----------------------------------------
+Thu Aug 24 05:43:02 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.Line,198
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double d=sin*other.cos-other.sin*cos;
+if(FastMath.abs(originOffset)<FastMath.abs(d)){
+return null;
+}
+return new Vector2D((cos*other.originOffset-other.cos*originOffset)/d,(sin*other.originOffset-other.sin*originOffset)/d);
+
+Time : 17/08/24 05:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double d=sin*other.cos-other.sin*cos;
+if(FastMath.abs(d)<0.0){
+return null;
+}
+return new Vector2D((cos*other.originOffset-other.cos*originOffset)/d,(sin*other.originOffset-other.sin*originOffset)/d);
+
+Time : 17/08/24 05:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double d=sin*other.cos-other.sin*cos;
+if(FastMath.abs(sin)<1.0E-10){
+return null;
+}
+return new Vector2D((cos*other.originOffset-other.cos*originOffset)/d,(sin*other.originOffset-other.sin*originOffset)/d);
+
+Time : 17/08/24 05:52
+----------------------------------------
+Thu Aug 24 05:58:26 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.Line,199
+Thu Aug 24 05:58:29 AEST 2017 org.apache.commons.math3.geometry.euclidean.oned.IntervalsSet,118
+Thu Aug 24 06:01:15 AEST 2017 org.apache.commons.math3.geometry.euclidean.oned.IntervalsSet,120
+Thu Aug 24 06:01:18 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.Line,181
+Thu Aug 24 06:01:24 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.Line,182
+Thu Aug 24 06:01:25 AEST 2017 org.apache.commons.math3.geometry.euclidean.oned.IntervalsSet,107
+Thu Aug 24 06:06:53 AEST 2017 org.apache.commons.math3.geometry.euclidean.oned.IntervalsSet,109
+Thu Aug 24 06:06:55 AEST 2017 org.apache.commons.math3.util.FastMath,2276
+Thu Aug 24 06:08:55 AEST 2017 org.apache.commons.math3.util.FastMath,2330
+Thu Aug 24 06:10:31 AEST 2017 org.apache.commons.math3.util.FastMath,2582
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x!=x||y!=TWO_POWER_53){
+return Double.NaN;
+}
+
+Time : 17/08/24 06:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x==x||y!=y){
+return Double.NaN;
+}
+
+Time : 17/08/24 06:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x!=x||x==0.0){
+return Double.NaN;
+}
+
+Time : 17/08/24 06:19
+----------------------------------------
+Timeout time : 17/08/24 06:21
+Current failed test : org.apache.commons.math3.geometry.euclidean.twod.SubLineTest::testIntersectionParallel_purify_2 | 17/08/24 06:21
+Thu Aug 24 06:23:45 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.SubLine,113
+Thu Aug 24 06:25:11 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.SubLine,114
+Thu Aug 24 06:25:13 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.SubLine,117
+Thu Aug 24 06:25:15 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.SubLine,120
+Thu Aug 24 06:25:16 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.SubLine,56
+Thu Aug 24 06:25:25 AEST 2017 Thu Aug 24 06:25:25 AEST 2017 : org.apache.commons.math3.geometry.euclidean.twod.SubLine,57=>Find no block
+Thu Aug 24 06:25:26 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.SubLine,139
+Thu Aug 24 06:25:32 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.SubLine,140
+Thu Aug 24 06:25:33 AEST 2017 org.apache.commons.math3.util.FastMath,2664
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+y=x<0?FastMath.floor(x):FastMath.ceil(x);
+if(y<0||x<-E){
+return -Math.PI*F_1_2;
+}
+
+Time : 17/08/24 06:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+y=x<0?FastMath.floor(x):FastMath.ceil(x);
+if(x<0||x<-E){
+return -Math.PI*F_1_2;
+}
+
+Time : 17/08/24 06:31
+----------------------------------------
+Thu Aug 24 06:35:20 AEST 2017 org.apache.commons.math3.util.FastMath,2665
+Thu Aug 24 06:35:22 AEST 2017 org.apache.commons.math3.util.FastMath,2660
+Thu Aug 24 06:39:37 AEST 2017 org.apache.commons.math3.util.FastMath,3587
+Thu Aug 24 06:49:48 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.Line,200
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<0.0){
+return null;
+}
+
+Time : 17/08/24 06:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.rint(d)<0.0){
+return null;
+}
+
+Time : 17/08/24 06:55
+----------------------------------------
+Thu Aug 24 06:59:10 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.Line,198
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double d=sin*other.cos-other.sin*cos;
+if(FastMath.abs(originOffset)<FastMath.abs(d)){
+return null;
+}
+return new Vector2D((cos*other.originOffset-other.cos*originOffset)/d,(sin*other.originOffset-other.sin*originOffset)/d);
+
+Time : 17/08/24 07:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double d=sin*other.cos-other.sin*cos;
+if(FastMath.abs(d)<0.0){
+return null;
+}
+return new Vector2D((cos*other.originOffset-other.cos*originOffset)/d,(sin*other.originOffset-other.sin*originOffset)/d);
+
+Time : 17/08/24 07:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double d=sin*other.cos-other.sin*cos;
+if(FastMath.abs(sin)<1.0E-10){
+return null;
+}
+return new Vector2D((cos*other.originOffset-other.cos*originOffset)/d,(sin*other.originOffset-other.sin*originOffset)/d);
+
+Time : 17/08/24 07:09
+----------------------------------------
+Thu Aug 24 07:15:38 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.Line,199
+Thu Aug 24 07:15:40 AEST 2017 org.apache.commons.math3.geometry.euclidean.oned.IntervalsSet,118
+Thu Aug 24 07:19:13 AEST 2017 org.apache.commons.math3.geometry.euclidean.oned.IntervalsSet,120
+Thu Aug 24 07:19:16 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.Line,181
+Thu Aug 24 07:19:41 AEST 2017 org.apache.commons.math3.geometry.euclidean.twod.Line,182
+Thu Aug 24 07:19:42 AEST 2017 org.apache.commons.math3.geometry.euclidean.oned.IntervalsSet,107
+Thu Aug 24 07:24:29 AEST 2017 org.apache.commons.math3.geometry.euclidean.oned.IntervalsSet,109
+Thu Aug 24 07:24:31 AEST 2017 org.apache.commons.math3.util.FastMath,2276
+Thu Aug 24 07:26:24 AEST 2017 org.apache.commons.math3.util.FastMath,2330
+Thu Aug 24 07:27:51 AEST 2017 org.apache.commons.math3.util.FastMath,2582
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x!=x||y!=TWO_POWER_53){
+return Double.NaN;
+}
+
+Time : 17/08/24 07:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x==x||y!=y){
+return Double.NaN;
+}
+
+Time : 17/08/24 07:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x!=x||x==0.0){
+return Double.NaN;
+}
+
+Time : 17/08/24 07:36
+----------------------------------------
+Timeout time : 17/08/24 07:39
+Current failed test : org.apache.commons.math3.geometry.euclidean.threed.SubLineTest::testIntersectionNotIntersecting_purify_1 | 17/08/24 07:39
+Thu Aug 24 07:40:48 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.SubLine,56
+Thu Aug 24 07:41:13 AEST 2017 Thu Aug 24 07:41:13 AEST 2017 : org.apache.commons.math3.geometry.euclidean.threed.SubLine,57=>Find no block
+Thu Aug 24 07:41:15 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.SubLine,113
+Thu Aug 24 07:43:10 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.SubLine,116
+Thu Aug 24 07:43:12 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,156
+Thu Aug 24 07:43:42 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,164
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Vector3D d=zero.subtract(zero);
+ final Vector3D n=new Vector3D(1.0,d,-d.dotProduct(direction),direction);
+return n.getNorm();
+
+Time : 17/08/24 07:45
+----------------------------------------
+Thu Aug 24 07:49:08 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,165
+Thu Aug 24 07:49:10 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,166
+Thu Aug 24 07:49:12 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,195
+Thu Aug 24 08:04:33 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,196
+Thu Aug 24 08:04:35 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,197
+Thu Aug 24 08:04:37 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,202
+Thu Aug 24 08:04:38 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,203
+Thu Aug 24 08:04:40 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,204
+Thu Aug 24 08:04:42 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,206
+Thu Aug 24 08:04:45 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,216
+Thu Aug 24 08:05:56 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,217
+Thu Aug 24 08:05:58 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.SubLine,137
+Thu Aug 24 08:06:16 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.SubLine,138
+Thu Aug 24 08:06:18 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,114
+Thu Aug 24 08:07:34 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,129
+Thu Aug 24 08:07:40 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Vector3D,243
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return FastMath.sin(x*x+y*y+z*z);
+
+Time : 17/08/24 08:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return FastMath.ulp(x*x+y*y+z*z);
+
+Time : 17/08/24 08:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return FastMath.cos(x*x+y*y+z*z);
+
+Time : 17/08/24 08:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x<=z){
+return 0;
+}
+return FastMath.sqrt(x*x+y*y+z*z);
+
+Time : 17/08/24 08:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x<=0){
+return 0;
+}
+return FastMath.sqrt(x*x+y*y+z*z);
+
+Time : 17/08/24 08:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x<=0){
+return 0;
+}
+return FastMath.exp(x*x+y*y+z*z);
+
+Time : 17/08/24 08:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x<z||x>y){
+return 0.0;
+}
+return FastMath.sqrt(x*x+y*y+z*z);
+
+Time : 17/08/24 08:35
+----------------------------------------
+Thu Aug 24 08:38:32 AEST 2017 Thu Aug 24 08:38:32 AEST 2017 : org.apache.commons.math3.geometry.euclidean.threed.SubLine,44=>Find no block
+Thu Aug 24 08:38:33 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.SubLine,45
+Thu Aug 24 08:38:41 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.SubLine,46
+Thu Aug 24 08:38:43 AEST 2017 Thu Aug 24 08:38:43 AEST 2017 : org.apache.commons.math3.geometry.euclidean.threed.SubLine,47=>Find no block
+Thu Aug 24 08:38:44 AEST 2017 org.apache.commons.math3.util.MathArrays,896
+Thu Aug 24 08:43:55 AEST 2017 org.apache.commons.math3.util.MathArrays,897
+Thu Aug 24 08:43:57 AEST 2017 org.apache.commons.math3.util.MathArrays,898
+Timeout time : 17/08/24 08:55
+Current failed test : org.apache.commons.math3.geometry.euclidean.threed.SubLineTest::testIntersectionNotIntersecting_purify_2 | 17/08/24 08:55
+Thu Aug 24 08:56:48 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.SubLine,56
+Thu Aug 24 08:57:01 AEST 2017 Thu Aug 24 08:57:01 AEST 2017 : org.apache.commons.math3.geometry.euclidean.threed.SubLine,57=>Find no block
+Thu Aug 24 08:57:02 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.SubLine,113
+Thu Aug 24 08:58:49 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.SubLine,116
+Thu Aug 24 08:58:50 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,156
+Thu Aug 24 08:59:10 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,164
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Vector3D d=zero.subtract(zero);
+ final Vector3D n=new Vector3D(1.0,d,-d.dotProduct(direction),direction);
+return n.getNorm();
+
+Time : 17/08/24 09:00
+----------------------------------------
+Thu Aug 24 09:03:28 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,165
+Thu Aug 24 09:03:30 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,166
+Thu Aug 24 09:03:44 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,195
+Thu Aug 24 09:15:09 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,196
+Thu Aug 24 09:15:10 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,197
+Thu Aug 24 09:15:12 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,202
+Thu Aug 24 09:15:14 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,203
+Thu Aug 24 09:15:16 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,204
+Thu Aug 24 09:15:17 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,206
+Thu Aug 24 09:15:20 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,216
+Thu Aug 24 09:15:56 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,217
+Thu Aug 24 09:15:57 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.SubLine,137
+Thu Aug 24 09:16:04 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.SubLine,138
+Thu Aug 24 09:16:05 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,114
+Thu Aug 24 09:16:52 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Line,129
+Thu Aug 24 09:16:57 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.Vector3D,243
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return FastMath.sin(x*x+y*y+z*z);
+
+Time : 17/08/24 09:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return FastMath.ulp(x*x+y*y+z*z);
+
+Time : 17/08/24 09:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return FastMath.cos(x*x+y*y+z*z);
+
+Time : 17/08/24 09:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x<=z){
+return 0;
+}
+return FastMath.sqrt(x*x+y*y+z*z);
+
+Time : 17/08/24 09:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x<=0){
+return 0;
+}
+return FastMath.sqrt(x*x+y*y+z*z);
+
+Time : 17/08/24 09:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x<=0){
+return 0;
+}
+return FastMath.exp(x*x+y*y+z*z);
+
+Time : 17/08/24 09:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x<z||x>y){
+return 0.0;
+}
+return FastMath.sqrt(x*x+y*y+z*z);
+
+Time : 17/08/24 09:35
+----------------------------------------
+Thu Aug 24 09:37:37 AEST 2017 Thu Aug 24 09:37:37 AEST 2017 : org.apache.commons.math3.geometry.euclidean.threed.SubLine,44=>Find no block
+Thu Aug 24 09:37:39 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.SubLine,45
+Thu Aug 24 09:38:18 AEST 2017 org.apache.commons.math3.geometry.euclidean.threed.SubLine,46
+Thu Aug 24 09:38:19 AEST 2017 Thu Aug 24 09:38:19 AEST 2017 : org.apache.commons.math3.geometry.euclidean.threed.SubLine,47=>Find no block
+Thu Aug 24 09:38:20 AEST 2017 org.apache.commons.math3.util.MathArrays,896
+Thu Aug 24 09:41:16 AEST 2017 org.apache.commons.math3.util.MathArrays,897
+Thu Aug 24 09:41:18 AEST 2017 org.apache.commons.math3.util.MathArrays,898
+Thu Aug 24 09:49:38 AEST 2017 org.apache.commons.math3.util.MathArrays,899
+Thu Aug 24 09:53:06 AEST 2017 org.apache.commons.math3.util.MathArrays,900
+Thu Aug 24 09:53:55 AEST 2017 org.apache.commons.math3.util.MathArrays,901
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double b1High=b1-(cb1-b1);
+ final double b1Low=b1-b1High;
+ final double prod1High=b1Low*b1Low;
+
+Time : 17/08/24 10:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double b1High=b1-(cb1-b1);
+ final double b1Low=b1-b1High;
+ final double prod1High=b1Low*b1High;
+
+Time : 17/08/24 10:03
+----------------------------------------
+Thu Aug 24 10:12:00 AEST 2017 org.apache.commons.math3.util.MathArrays,904
+Timeout time : 17/08/24 10:12

@@ -1,0 +1,358 @@
+=================================================
+Project : math_36	start : 17/08/24 06:43
+Current failed test : org.apache.commons.math.fraction.BigFractionTest::testFloatValueForLargeNumeratorAndDenominator | 17/08/24 06:44
+Thu Aug 24 06:45:34 AEST 2017 org.apache.commons.math.fraction.BigFraction,732
+Thu Aug 24 06:45:54 AEST 2017 org.apache.commons.math.fraction.BigFraction,735
+Thu Aug 24 06:45:57 AEST 2017 Thu Aug 24 06:45:57 AEST 2017 : org.apache.commons.math.exception.util.LocalizedFormats,370=>Find no block
+Thu Aug 24 06:45:58 AEST 2017 org.apache.commons.math.exception.util.LocalizedFormats,371
+Thu Aug 24 06:46:03 AEST 2017 Thu Aug 24 06:46:03 AEST 2017 : org.apache.commons.math.exception.util.LocalizedFormats,372=>Find no block
+Thu Aug 24 06:46:04 AEST 2017 org.apache.commons.math.fraction.BigFraction,366
+Thu Aug 24 06:46:16 AEST 2017 Thu Aug 24 06:46:16 AEST 2017 : org.apache.commons.math.fraction.BigFraction,367=>Find no block
+Thu Aug 24 06:46:18 AEST 2017 org.apache.commons.math.fraction.BigFraction,133
+Thu Aug 24 06:46:28 AEST 2017 org.apache.commons.math.fraction.BigFraction,134
+Thu Aug 24 06:46:29 AEST 2017 org.apache.commons.math.fraction.BigFraction,126
+Thu Aug 24 06:46:36 AEST 2017 org.apache.commons.math.fraction.BigFraction,127
+Thu Aug 24 06:46:38 AEST 2017 org.apache.commons.math.fraction.BigFraction,381
+Thu Aug 24 06:46:43 AEST 2017 Thu Aug 24 06:46:43 AEST 2017 : org.apache.commons.math.fraction.BigFraction,382=>Find no block
+Thu Aug 24 06:46:44 AEST 2017 org.apache.commons.math.fraction.BigFraction,131
+Thu Aug 24 06:48:10 AEST 2017 org.apache.commons.math.fraction.BigFraction,132
+Thu Aug 24 06:48:11 AEST 2017 org.apache.commons.math.fraction.BigFraction,138
+Thu Aug 24 06:48:35 AEST 2017 org.apache.commons.math.fraction.BigFraction,144
+Thu Aug 24 06:49:37 AEST 2017 org.apache.commons.math.fraction.BigFraction,145
+Thu Aug 24 06:49:38 AEST 2017 org.apache.commons.math.util.MathUtils,244
+Thu Aug 24 06:49:43 AEST 2017 Thu Aug 24 06:49:43 AEST 2017 : org.apache.commons.math.util.MathUtils,247=>Find no block
+Thu Aug 24 06:49:45 AEST 2017 Thu Aug 24 06:49:45 AEST 2017 : org.apache.commons.math.fraction.BigFraction,119=>Find no block
+Thu Aug 24 06:49:46 AEST 2017 org.apache.commons.math.fraction.BigFraction,120
+Thu Aug 24 06:52:30 AEST 2017 org.apache.commons.math.fraction.BigFraction,121
+Thu Aug 24 06:52:31 AEST 2017 org.apache.commons.math.fraction.BigFraction,122
+Thu Aug 24 06:53:57 AEST 2017 org.apache.commons.math.fraction.BigFraction,125
+Thu Aug 24 06:56:03 AEST 2017 Thu Aug 24 06:56:03 AEST 2017 : org.apache.commons.math.fraction.BigFraction,148=>Find no block
+Thu Aug 24 06:56:04 AEST 2017 Thu Aug 24 06:56:04 AEST 2017 : org.apache.commons.math.exception.MathIllegalStateException,45=>Find no block
+Thu Aug 24 06:56:05 AEST 2017 org.apache.commons.math.exception.MathIllegalStateException,46
+Thu Aug 24 06:56:11 AEST 2017 org.apache.commons.math.exception.MathIllegalStateException,47
+Thu Aug 24 06:56:12 AEST 2017 Thu Aug 24 06:56:12 AEST 2017 : org.apache.commons.math.exception.MathIllegalStateException,48=>Find no block
+Thu Aug 24 06:56:13 AEST 2017 org.apache.commons.math.exception.MathIllegalStateException,60
+Thu Aug 24 06:56:20 AEST 2017 org.apache.commons.math.exception.MathIllegalStateException,61
+Thu Aug 24 06:56:22 AEST 2017 org.apache.commons.math.exception.MathIllegalStateException,62
+Thu Aug 24 06:56:23 AEST 2017 Thu Aug 24 06:56:23 AEST 2017 : org.apache.commons.math.exception.MathIllegalStateException,63=>Find no block
+Thu Aug 24 06:56:25 AEST 2017 org.apache.commons.math.exception.MathIllegalStateException,69
+Thu Aug 24 06:56:29 AEST 2017 Thu Aug 24 06:56:29 AEST 2017 : org.apache.commons.math.exception.MathIllegalStateException,70=>Find no block
+Thu Aug 24 06:56:31 AEST 2017 org.apache.commons.math.exception.MathIllegalStateException,74
+Thu Aug 24 06:56:36 AEST 2017 org.apache.commons.math.exception.MathIllegalStateException,80
+Thu Aug 24 06:56:40 AEST 2017 org.apache.commons.math.exception.MathIllegalStateException,86
+Thu Aug 24 06:56:45 AEST 2017 Thu Aug 24 06:56:45 AEST 2017 : org.apache.commons.math.exception.util.LocalizedFormats,39=>Find no block
+Thu Aug 24 06:56:48 AEST 2017 Thu Aug 24 06:56:48 AEST 2017 : org.apache.commons.math.exception.util.LocalizedFormats,39=>Find no block
+Thu Aug 24 06:56:49 AEST 2017 org.apache.commons.math.exception.util.LocalizedFormats,376
+Thu Aug 24 06:56:54 AEST 2017 org.apache.commons.math.exception.util.LocalizedFormats,382
+Thu Aug 24 07:01:37 AEST 2017 org.apache.commons.math.exception.util.LocalizedFormats,384
+Thu Aug 24 07:01:57 AEST 2017 org.apache.commons.math.exception.util.LocalizedFormats,386
+Thu Aug 24 07:01:58 AEST 2017 Thu Aug 24 07:01:58 AEST 2017 : org.apache.commons.math.exception.util.LocalizedFormats,391=>Find no block
+Thu Aug 24 07:01:59 AEST 2017 Thu Aug 24 07:01:59 AEST 2017 : org.apache.commons.math.exception.util.LocalizedFormats,389=>Find no block
+Thu Aug 24 07:02:01 AEST 2017 org.apache.commons.math.exception.util.LocalizedFormats,395
+Thu Aug 24 07:02:04 AEST 2017 org.apache.commons.math.exception.MathIllegalNumberException,46
+Thu Aug 24 07:03:10 AEST 2017 org.apache.commons.math.exception.MathIllegalNumberException,47
+Thu Aug 24 07:03:11 AEST 2017 Thu Aug 24 07:03:11 AEST 2017 : org.apache.commons.math.exception.MathIllegalNumberException,48=>Find no block
+Thu Aug 24 07:03:12 AEST 2017 org.apache.commons.math.exception.MathIllegalNumberException,54
+Thu Aug 24 07:03:17 AEST 2017 Thu Aug 24 07:03:17 AEST 2017 : org.apache.commons.math.exception.MathIllegalArgumentException,44=>Find no block
+Thu Aug 24 07:03:19 AEST 2017 org.apache.commons.math.exception.MathIllegalArgumentException,45
+Thu Aug 24 07:03:20 AEST 2017 org.apache.commons.math.exception.MathIllegalArgumentException,46
+Thu Aug 24 07:03:21 AEST 2017 Thu Aug 24 07:03:21 AEST 2017 : org.apache.commons.math.exception.MathIllegalArgumentException,47=>Find no block
+Thu Aug 24 07:03:23 AEST 2017 org.apache.commons.math.exception.MathIllegalArgumentException,51
+Thu Aug 24 07:03:24 AEST 2017 org.apache.commons.math.exception.MathIllegalArgumentException,57
+Thu Aug 24 07:03:25 AEST 2017 org.apache.commons.math.exception.MathIllegalArgumentException,63
+Thu Aug 24 07:03:27 AEST 2017 Thu Aug 24 07:03:27 AEST 2017 : org.apache.commons.math.exception.MathArithmeticException,43=>Find no block
+Thu Aug 24 07:03:28 AEST 2017 org.apache.commons.math.exception.MathArithmeticException,44
+Thu Aug 24 07:04:25 AEST 2017 org.apache.commons.math.exception.MathArithmeticException,45
+Thu Aug 24 07:04:26 AEST 2017 Thu Aug 24 07:04:26 AEST 2017 : org.apache.commons.math.exception.MathArithmeticException,46=>Find no block
+Thu Aug 24 07:04:27 AEST 2017 Thu Aug 24 07:04:27 AEST 2017 : org.apache.commons.math.exception.MathArithmeticException,56=>Find no block
+Thu Aug 24 07:04:29 AEST 2017 org.apache.commons.math.exception.MathArithmeticException,57
+Thu Aug 24 07:04:30 AEST 2017 org.apache.commons.math.exception.MathArithmeticException,58
+Thu Aug 24 07:04:33 AEST 2017 Thu Aug 24 07:04:33 AEST 2017 : org.apache.commons.math.exception.MathArithmeticException,59=>Find no block
+Thu Aug 24 07:04:34 AEST 2017 org.apache.commons.math.exception.MathArithmeticException,63
+Thu Aug 24 07:04:35 AEST 2017 org.apache.commons.math.exception.MathArithmeticException,69
+Thu Aug 24 07:04:37 AEST 2017 org.apache.commons.math.exception.MathArithmeticException,75
+Thu Aug 24 07:04:38 AEST 2017 org.apache.commons.math.exception.NullArgumentException,41
+Thu Aug 24 07:04:42 AEST 2017 Thu Aug 24 07:04:42 AEST 2017 : org.apache.commons.math.exception.NullArgumentException,42=>Find no block
+Thu Aug 24 07:04:43 AEST 2017 org.apache.commons.math.exception.NullArgumentException,50
+Thu Aug 24 07:04:48 AEST 2017 Thu Aug 24 07:04:48 AEST 2017 : org.apache.commons.math.exception.NullArgumentException,51=>Find no block
+Thu Aug 24 07:04:50 AEST 2017 org.apache.commons.math.exception.ConvergenceException,37
+Thu Aug 24 07:04:55 AEST 2017 Thu Aug 24 07:04:55 AEST 2017 : org.apache.commons.math.exception.ConvergenceException,38=>Find no block
+Thu Aug 24 07:04:56 AEST 2017 Thu Aug 24 07:04:56 AEST 2017 : org.apache.commons.math.exception.ConvergenceException,48=>Find no block
+Thu Aug 24 07:04:58 AEST 2017 org.apache.commons.math.exception.ConvergenceException,49
+Thu Aug 24 07:05:51 AEST 2017 Thu Aug 24 07:05:51 AEST 2017 : org.apache.commons.math.exception.ConvergenceException,50=>Find no block
+Thu Aug 24 07:05:53 AEST 2017 org.apache.commons.math.exception.NotFiniteNumberException,40
+Thu Aug 24 07:05:57 AEST 2017 Thu Aug 24 07:05:57 AEST 2017 : org.apache.commons.math.exception.NotFiniteNumberException,41=>Find no block
+Thu Aug 24 07:05:58 AEST 2017 org.apache.commons.math.exception.NotFiniteNumberException,53
+Thu Aug 24 07:06:41 AEST 2017 Thu Aug 24 07:06:41 AEST 2017 : org.apache.commons.math.exception.NotFiniteNumberException,54=>Find no block
+Thu Aug 24 07:06:42 AEST 2017 org.apache.commons.math.exception.ZeroException,37
+Thu Aug 24 07:06:48 AEST 2017 Thu Aug 24 07:06:48 AEST 2017 : org.apache.commons.math.exception.ZeroException,38=>Find no block
+Thu Aug 24 07:06:50 AEST 2017 org.apache.commons.math.exception.ZeroException,47
+Thu Aug 24 07:07:21 AEST 2017 Thu Aug 24 07:07:21 AEST 2017 : org.apache.commons.math.exception.ZeroException,48=>Find no block
+Thu Aug 24 07:07:22 AEST 2017 Thu Aug 24 07:07:22 AEST 2017 : org.apache.commons.math.util.MathUtils,47=>Find no block
+Thu Aug 24 07:07:24 AEST 2017 org.apache.commons.math.util.MathUtils,57
+Thu Aug 24 07:07:47 AEST 2017 org.apache.commons.math.util.MathUtils,68
+Thu Aug 24 07:08:37 AEST 2017 org.apache.commons.math.util.MathUtils,91
+Thu Aug 24 07:09:18 AEST 2017 org.apache.commons.math.util.MathUtils,113
+Thu Aug 24 07:14:45 AEST 2017 org.apache.commons.math.util.MathUtils,114
+Thu Aug 24 07:14:47 AEST 2017 org.apache.commons.math.util.MathUtils,128
+Thu Aug 24 07:19:55 AEST 2017 org.apache.commons.math.util.MathUtils,130
+Thu Aug 24 07:19:56 AEST 2017 org.apache.commons.math.util.MathUtils,131
+Thu Aug 24 07:19:57 AEST 2017 org.apache.commons.math.util.MathUtils,133
+Thu Aug 24 07:19:59 AEST 2017 org.apache.commons.math.util.MathUtils,135
+Thu Aug 24 07:20:00 AEST 2017 org.apache.commons.math.util.MathUtils,150
+Thu Aug 24 07:20:08 AEST 2017 org.apache.commons.math.util.MathUtils,152
+Thu Aug 24 07:20:10 AEST 2017 org.apache.commons.math.util.MathUtils,153
+Thu Aug 24 07:20:11 AEST 2017 org.apache.commons.math.util.MathUtils,155
+Thu Aug 24 07:20:12 AEST 2017 org.apache.commons.math.util.MathUtils,157
+Thu Aug 24 07:20:14 AEST 2017 org.apache.commons.math.util.MathUtils,172
+Thu Aug 24 07:20:42 AEST 2017 org.apache.commons.math.util.MathUtils,174
+Thu Aug 24 07:20:43 AEST 2017 org.apache.commons.math.util.MathUtils,175
+Thu Aug 24 07:20:44 AEST 2017 org.apache.commons.math.util.MathUtils,177
+Thu Aug 24 07:20:46 AEST 2017 org.apache.commons.math.util.MathUtils,179
+Thu Aug 24 07:20:47 AEST 2017 org.apache.commons.math.util.MathUtils,194
+Thu Aug 24 07:21:20 AEST 2017 org.apache.commons.math.util.MathUtils,196
+Thu Aug 24 07:21:21 AEST 2017 org.apache.commons.math.util.MathUtils,197
+Thu Aug 24 07:21:22 AEST 2017 org.apache.commons.math.util.MathUtils,199
+Thu Aug 24 07:21:26 AEST 2017 org.apache.commons.math.util.MathUtils,201
+Thu Aug 24 07:21:27 AEST 2017 org.apache.commons.math.util.MathUtils,212
+Thu Aug 24 07:25:15 AEST 2017 org.apache.commons.math.util.MathUtils,213
+Thu Aug 24 07:25:18 AEST 2017 Thu Aug 24 07:25:18 AEST 2017 : org.apache.commons.math.util.MathUtils,215=>Find no block
+Thu Aug 24 07:25:19 AEST 2017 org.apache.commons.math.util.MathUtils,225
+Thu Aug 24 07:39:27 AEST 2017 org.apache.commons.math.util.MathUtils,226
+Thu Aug 24 07:39:29 AEST 2017 org.apache.commons.math.util.MathUtils,227
+Thu Aug 24 07:39:30 AEST 2017 org.apache.commons.math.util.MathUtils,228
+Thu Aug 24 07:39:31 AEST 2017 Thu Aug 24 07:39:31 AEST 2017 : org.apache.commons.math.util.MathUtils,231=>Find no block
+Thu Aug 24 07:39:32 AEST 2017 org.apache.commons.math.util.MathUtils,245
+Thu Aug 24 07:39:34 AEST 2017 org.apache.commons.math.util.MathUtils,257
+Thu Aug 24 07:39:38 AEST 2017 org.apache.commons.math.util.MathUtils,258
+Thu Aug 24 07:39:38 AEST 2017 Thu Aug 24 07:39:38 AEST 2017 : org.apache.commons.math.util.MathUtils,260=>Find no block
+Thu Aug 24 07:39:39 AEST 2017 org.apache.commons.math.fraction.FractionConversionException,42
+Thu Aug 24 07:40:31 AEST 2017 Thu Aug 24 07:40:31 AEST 2017 : org.apache.commons.math.fraction.FractionConversionException,43=>Find no block
+Thu Aug 24 07:40:33 AEST 2017 org.apache.commons.math.fraction.FractionConversionException,53
+Thu Aug 24 07:40:52 AEST 2017 Thu Aug 24 07:40:52 AEST 2017 : org.apache.commons.math.fraction.FractionConversionException,54=>Find no block
+Thu Aug 24 07:40:53 AEST 2017 org.apache.commons.math.fraction.BigFraction,107
+Thu Aug 24 07:40:57 AEST 2017 Thu Aug 24 07:40:57 AEST 2017 : org.apache.commons.math.fraction.BigFraction,108=>Find no block
+Thu Aug 24 07:40:58 AEST 2017 org.apache.commons.math.fraction.BigFraction,123
+Thu Aug 24 07:40:59 AEST 2017 org.apache.commons.math.fraction.BigFraction,139
+Thu Aug 24 07:41:00 AEST 2017 org.apache.commons.math.fraction.BigFraction,140
+Thu Aug 24 07:41:01 AEST 2017 Thu Aug 24 07:41:01 AEST 2017 : org.apache.commons.math.fraction.BigFraction,171=>Find no block
+Thu Aug 24 07:41:02 AEST 2017 org.apache.commons.math.fraction.BigFraction,172
+Thu Aug 24 07:43:12 AEST 2017 org.apache.commons.math.fraction.BigFraction,173
+Thu Aug 24 07:43:13 AEST 2017 org.apache.commons.math.fraction.BigFraction,175
+Thu Aug 24 07:45:00 AEST 2017 org.apache.commons.math.fraction.BigFraction,176
+Thu Aug 24 07:45:01 AEST 2017 org.apache.commons.math.fraction.BigFraction,180
+Thu Aug 24 07:47:40 AEST 2017 org.apache.commons.math.fraction.BigFraction,181
+Thu Aug 24 07:51:20 AEST 2017 org.apache.commons.math.fraction.BigFraction,182
+Thu Aug 24 07:53:03 AEST 2017 org.apache.commons.math.fraction.BigFraction,183
+Thu Aug 24 07:54:29 AEST 2017 org.apache.commons.math.fraction.BigFraction,184
+Thu Aug 24 07:55:20 AEST 2017 org.apache.commons.math.fraction.BigFraction,186
+Thu Aug 24 07:55:22 AEST 2017 org.apache.commons.math.fraction.BigFraction,188
+Thu Aug 24 07:56:28 AEST 2017 org.apache.commons.math.fraction.BigFraction,189
+Thu Aug 24 07:56:32 AEST 2017 org.apache.commons.math.fraction.BigFraction,191
+Thu Aug 24 08:06:02 AEST 2017 org.apache.commons.math.fraction.BigFraction,192
+Thu Aug 24 08:06:03 AEST 2017 org.apache.commons.math.fraction.BigFraction,193
+Thu Aug 24 08:06:04 AEST 2017 org.apache.commons.math.fraction.BigFraction,194
+Thu Aug 24 08:06:05 AEST 2017 org.apache.commons.math.fraction.BigFraction,197
+Thu Aug 24 08:09:28 AEST 2017 org.apache.commons.math.fraction.BigFraction,198
+Thu Aug 24 08:09:30 AEST 2017 org.apache.commons.math.fraction.BigFraction,199
+Thu Aug 24 08:09:31 AEST 2017 org.apache.commons.math.fraction.BigFraction,201
+Thu Aug 24 08:09:32 AEST 2017 org.apache.commons.math.fraction.BigFraction,202
+Thu Aug 24 08:09:33 AEST 2017 Thu Aug 24 08:09:33 AEST 2017 : org.apache.commons.math.fraction.BigFraction,205=>Find no block
+Thu Aug 24 08:09:35 AEST 2017 org.apache.commons.math.fraction.BigFraction,231
+Thu Aug 24 08:10:43 AEST 2017 Thu Aug 24 08:10:43 AEST 2017 : org.apache.commons.math.fraction.BigFraction,232=>Find no block
+Thu Aug 24 08:10:44 AEST 2017 Thu Aug 24 08:10:44 AEST 2017 : org.apache.commons.math.fraction.BigFraction,270=>Find no block
+Thu Aug 24 08:10:45 AEST 2017 org.apache.commons.math.fraction.BigFraction,271
+Thu Aug 24 08:14:33 AEST 2017 org.apache.commons.math.fraction.BigFraction,272
+Thu Aug 24 08:14:34 AEST 2017 org.apache.commons.math.fraction.BigFraction,273
+Thu Aug 24 08:22:10 AEST 2017 org.apache.commons.math.fraction.BigFraction,274
+Thu Aug 24 08:26:50 AEST 2017 org.apache.commons.math.fraction.BigFraction,275
+Thu Aug 24 08:26:51 AEST 2017 org.apache.commons.math.fraction.BigFraction,280
+Thu Aug 24 08:38:23 AEST 2017 org.apache.commons.math.fraction.BigFraction,281
+Thu Aug 24 08:38:25 AEST 2017 org.apache.commons.math.fraction.BigFraction,282
+Thu Aug 24 08:38:26 AEST 2017 org.apache.commons.math.fraction.BigFraction,283
+Thu Aug 24 08:38:28 AEST 2017 org.apache.commons.math.fraction.BigFraction,286
+Thu Aug 24 08:52:07 AEST 2017 org.apache.commons.math.fraction.BigFraction,287
+Thu Aug 24 08:56:20 AEST 2017 org.apache.commons.math.fraction.BigFraction,288
+Thu Aug 24 09:00:15 AEST 2017 org.apache.commons.math.fraction.BigFraction,289
+Thu Aug 24 09:08:02 AEST 2017 org.apache.commons.math.fraction.BigFraction,291
+Thu Aug 24 09:08:06 AEST 2017 org.apache.commons.math.fraction.BigFraction,292
+Thu Aug 24 09:13:51 AEST 2017 org.apache.commons.math.fraction.BigFraction,294
+Timeout time : 17/08/24 09:15
+Current failed test : org.apache.commons.math.fraction.BigFractionTest::testDoubleValueForLargeNumeratorAndDenominator | 17/08/24 09:15
+Thu Aug 24 09:16:33 AEST 2017 org.apache.commons.math.fraction.BigFraction,685
+Thu Aug 24 09:17:40 AEST 2017 org.apache.commons.math.fraction.BigFraction,688
+Thu Aug 24 09:17:41 AEST 2017 org.apache.commons.math.fraction.BigFraction,131
+Thu Aug 24 09:19:02 AEST 2017 org.apache.commons.math.fraction.BigFraction,132
+Thu Aug 24 09:19:11 AEST 2017 org.apache.commons.math.fraction.BigFraction,138
+Thu Aug 24 09:19:33 AEST 2017 org.apache.commons.math.fraction.BigFraction,144
+Thu Aug 24 09:20:34 AEST 2017 org.apache.commons.math.fraction.BigFraction,145
+Thu Aug 24 09:20:35 AEST 2017 org.apache.commons.math.util.MathUtils,244
+Thu Aug 24 09:20:40 AEST 2017 Thu Aug 24 09:20:40 AEST 2017 : org.apache.commons.math.util.MathUtils,247=>Find no block
+Thu Aug 24 09:20:41 AEST 2017 Thu Aug 24 09:20:41 AEST 2017 : org.apache.commons.math.fraction.BigFraction,119=>Find no block
+Thu Aug 24 09:20:42 AEST 2017 org.apache.commons.math.fraction.BigFraction,120
+Thu Aug 24 09:23:20 AEST 2017 org.apache.commons.math.fraction.BigFraction,121
+Thu Aug 24 09:23:21 AEST 2017 org.apache.commons.math.fraction.BigFraction,122
+Thu Aug 24 09:24:42 AEST 2017 org.apache.commons.math.fraction.BigFraction,125
+Thu Aug 24 09:26:40 AEST 2017 Thu Aug 24 09:26:40 AEST 2017 : org.apache.commons.math.fraction.BigFraction,148=>Find no block
+Thu Aug 24 09:26:41 AEST 2017 Thu Aug 24 09:26:41 AEST 2017 : org.apache.commons.math.exception.MathIllegalStateException,45=>Find no block
+Thu Aug 24 09:26:43 AEST 2017 org.apache.commons.math.exception.MathIllegalStateException,46
+Thu Aug 24 09:26:47 AEST 2017 org.apache.commons.math.exception.MathIllegalStateException,47
+Thu Aug 24 09:26:48 AEST 2017 Thu Aug 24 09:26:48 AEST 2017 : org.apache.commons.math.exception.MathIllegalStateException,48=>Find no block
+Thu Aug 24 09:26:50 AEST 2017 org.apache.commons.math.exception.MathIllegalStateException,60
+Thu Aug 24 09:26:55 AEST 2017 org.apache.commons.math.exception.MathIllegalStateException,61
+Thu Aug 24 09:26:56 AEST 2017 org.apache.commons.math.exception.MathIllegalStateException,62
+Thu Aug 24 09:26:57 AEST 2017 Thu Aug 24 09:26:57 AEST 2017 : org.apache.commons.math.exception.MathIllegalStateException,63=>Find no block
+Thu Aug 24 09:26:59 AEST 2017 org.apache.commons.math.exception.MathIllegalStateException,69
+Thu Aug 24 09:27:05 AEST 2017 Thu Aug 24 09:27:05 AEST 2017 : org.apache.commons.math.exception.MathIllegalStateException,70=>Find no block
+Thu Aug 24 09:27:06 AEST 2017 org.apache.commons.math.exception.MathIllegalStateException,74
+Thu Aug 24 09:27:11 AEST 2017 org.apache.commons.math.exception.MathIllegalStateException,80
+Thu Aug 24 09:27:18 AEST 2017 org.apache.commons.math.exception.MathIllegalStateException,86
+Thu Aug 24 09:27:22 AEST 2017 Thu Aug 24 09:27:22 AEST 2017 : org.apache.commons.math.exception.util.LocalizedFormats,370=>Find no block
+Thu Aug 24 09:27:23 AEST 2017 org.apache.commons.math.exception.util.LocalizedFormats,371
+Thu Aug 24 09:27:28 AEST 2017 Thu Aug 24 09:27:28 AEST 2017 : org.apache.commons.math.exception.util.LocalizedFormats,372=>Find no block
+Thu Aug 24 09:27:29 AEST 2017 Thu Aug 24 09:27:29 AEST 2017 : org.apache.commons.math.exception.util.LocalizedFormats,39=>Find no block
+Thu Aug 24 09:27:30 AEST 2017 Thu Aug 24 09:27:30 AEST 2017 : org.apache.commons.math.exception.util.LocalizedFormats,39=>Find no block
+Thu Aug 24 09:27:31 AEST 2017 org.apache.commons.math.exception.util.LocalizedFormats,376
+Thu Aug 24 09:27:35 AEST 2017 org.apache.commons.math.exception.util.LocalizedFormats,382
+Thu Aug 24 09:32:04 AEST 2017 org.apache.commons.math.exception.util.LocalizedFormats,384
+Thu Aug 24 09:32:22 AEST 2017 org.apache.commons.math.exception.util.LocalizedFormats,386
+Thu Aug 24 09:32:23 AEST 2017 Thu Aug 24 09:32:23 AEST 2017 : org.apache.commons.math.exception.util.LocalizedFormats,391=>Find no block
+Thu Aug 24 09:32:24 AEST 2017 Thu Aug 24 09:32:24 AEST 2017 : org.apache.commons.math.exception.util.LocalizedFormats,389=>Find no block
+Thu Aug 24 09:32:26 AEST 2017 org.apache.commons.math.exception.util.LocalizedFormats,395
+Thu Aug 24 09:32:26 AEST 2017 org.apache.commons.math.exception.MathIllegalNumberException,46
+Thu Aug 24 09:33:28 AEST 2017 org.apache.commons.math.exception.MathIllegalNumberException,47
+Thu Aug 24 09:33:29 AEST 2017 Thu Aug 24 09:33:29 AEST 2017 : org.apache.commons.math.exception.MathIllegalNumberException,48=>Find no block
+Thu Aug 24 09:33:30 AEST 2017 org.apache.commons.math.exception.MathIllegalNumberException,54
+Thu Aug 24 09:33:34 AEST 2017 Thu Aug 24 09:33:34 AEST 2017 : org.apache.commons.math.exception.MathIllegalArgumentException,44=>Find no block
+Thu Aug 24 09:33:35 AEST 2017 org.apache.commons.math.exception.MathIllegalArgumentException,45
+Thu Aug 24 09:33:36 AEST 2017 org.apache.commons.math.exception.MathIllegalArgumentException,46
+Thu Aug 24 09:33:38 AEST 2017 Thu Aug 24 09:33:38 AEST 2017 : org.apache.commons.math.exception.MathIllegalArgumentException,47=>Find no block
+Thu Aug 24 09:33:39 AEST 2017 org.apache.commons.math.exception.MathIllegalArgumentException,51
+Thu Aug 24 09:33:40 AEST 2017 org.apache.commons.math.exception.MathIllegalArgumentException,57
+Thu Aug 24 09:33:41 AEST 2017 org.apache.commons.math.exception.MathIllegalArgumentException,63
+Thu Aug 24 09:33:43 AEST 2017 Thu Aug 24 09:33:43 AEST 2017 : org.apache.commons.math.exception.MathArithmeticException,43=>Find no block
+Thu Aug 24 09:33:45 AEST 2017 org.apache.commons.math.exception.MathArithmeticException,44
+Thu Aug 24 09:34:37 AEST 2017 org.apache.commons.math.exception.MathArithmeticException,45
+Thu Aug 24 09:34:38 AEST 2017 Thu Aug 24 09:34:38 AEST 2017 : org.apache.commons.math.exception.MathArithmeticException,46=>Find no block
+Thu Aug 24 09:34:39 AEST 2017 Thu Aug 24 09:34:39 AEST 2017 : org.apache.commons.math.exception.MathArithmeticException,56=>Find no block
+Thu Aug 24 09:34:40 AEST 2017 org.apache.commons.math.exception.MathArithmeticException,57
+Thu Aug 24 09:34:42 AEST 2017 org.apache.commons.math.exception.MathArithmeticException,58
+Thu Aug 24 09:34:43 AEST 2017 Thu Aug 24 09:34:43 AEST 2017 : org.apache.commons.math.exception.MathArithmeticException,59=>Find no block
+Thu Aug 24 09:34:44 AEST 2017 org.apache.commons.math.exception.MathArithmeticException,63
+Thu Aug 24 09:34:45 AEST 2017 org.apache.commons.math.exception.MathArithmeticException,69
+Thu Aug 24 09:34:46 AEST 2017 org.apache.commons.math.exception.MathArithmeticException,75
+Thu Aug 24 09:34:47 AEST 2017 org.apache.commons.math.exception.NullArgumentException,41
+Thu Aug 24 09:34:51 AEST 2017 Thu Aug 24 09:34:51 AEST 2017 : org.apache.commons.math.exception.NullArgumentException,42=>Find no block
+Thu Aug 24 09:34:52 AEST 2017 org.apache.commons.math.exception.NullArgumentException,50
+Thu Aug 24 09:34:56 AEST 2017 Thu Aug 24 09:34:56 AEST 2017 : org.apache.commons.math.exception.NullArgumentException,51=>Find no block
+Thu Aug 24 09:34:57 AEST 2017 org.apache.commons.math.exception.ConvergenceException,37
+Thu Aug 24 09:35:01 AEST 2017 Thu Aug 24 09:35:01 AEST 2017 : org.apache.commons.math.exception.ConvergenceException,38=>Find no block
+Thu Aug 24 09:35:02 AEST 2017 Thu Aug 24 09:35:02 AEST 2017 : org.apache.commons.math.exception.ConvergenceException,48=>Find no block
+Thu Aug 24 09:35:03 AEST 2017 org.apache.commons.math.exception.ConvergenceException,49
+Thu Aug 24 09:35:50 AEST 2017 Thu Aug 24 09:35:50 AEST 2017 : org.apache.commons.math.exception.ConvergenceException,50=>Find no block
+Thu Aug 24 09:35:52 AEST 2017 org.apache.commons.math.exception.NotFiniteNumberException,40
+Thu Aug 24 09:35:55 AEST 2017 Thu Aug 24 09:35:55 AEST 2017 : org.apache.commons.math.exception.NotFiniteNumberException,41=>Find no block
+Thu Aug 24 09:35:56 AEST 2017 org.apache.commons.math.exception.NotFiniteNumberException,53
+Thu Aug 24 09:36:34 AEST 2017 Thu Aug 24 09:36:34 AEST 2017 : org.apache.commons.math.exception.NotFiniteNumberException,54=>Find no block
+Thu Aug 24 09:36:35 AEST 2017 org.apache.commons.math.exception.ZeroException,37
+Thu Aug 24 09:36:39 AEST 2017 Thu Aug 24 09:36:39 AEST 2017 : org.apache.commons.math.exception.ZeroException,38=>Find no block
+Thu Aug 24 09:36:41 AEST 2017 org.apache.commons.math.exception.ZeroException,47
+Thu Aug 24 09:37:09 AEST 2017 Thu Aug 24 09:37:09 AEST 2017 : org.apache.commons.math.exception.ZeroException,48=>Find no block
+Thu Aug 24 09:37:11 AEST 2017 Thu Aug 24 09:37:11 AEST 2017 : org.apache.commons.math.util.MathUtils,47=>Find no block
+Thu Aug 24 09:37:12 AEST 2017 org.apache.commons.math.util.MathUtils,57
+Thu Aug 24 09:37:33 AEST 2017 org.apache.commons.math.util.MathUtils,68
+Thu Aug 24 09:38:16 AEST 2017 org.apache.commons.math.util.MathUtils,91
+Thu Aug 24 09:38:54 AEST 2017 org.apache.commons.math.util.MathUtils,113
+Thu Aug 24 09:44:00 AEST 2017 org.apache.commons.math.util.MathUtils,114
+Thu Aug 24 09:44:02 AEST 2017 org.apache.commons.math.util.MathUtils,128
+Thu Aug 24 09:48:46 AEST 2017 org.apache.commons.math.util.MathUtils,130
+Thu Aug 24 09:48:48 AEST 2017 org.apache.commons.math.util.MathUtils,131
+Thu Aug 24 09:48:49 AEST 2017 org.apache.commons.math.util.MathUtils,133
+Thu Aug 24 09:48:50 AEST 2017 org.apache.commons.math.util.MathUtils,135
+Thu Aug 24 09:48:52 AEST 2017 org.apache.commons.math.util.MathUtils,150
+Thu Aug 24 09:49:00 AEST 2017 org.apache.commons.math.util.MathUtils,152
+Thu Aug 24 09:49:01 AEST 2017 org.apache.commons.math.util.MathUtils,153
+Thu Aug 24 09:49:02 AEST 2017 org.apache.commons.math.util.MathUtils,155
+Thu Aug 24 09:49:03 AEST 2017 org.apache.commons.math.util.MathUtils,157
+Thu Aug 24 09:49:04 AEST 2017 org.apache.commons.math.util.MathUtils,172
+Thu Aug 24 09:49:28 AEST 2017 org.apache.commons.math.util.MathUtils,174
+Thu Aug 24 09:49:29 AEST 2017 org.apache.commons.math.util.MathUtils,175
+Thu Aug 24 09:49:30 AEST 2017 org.apache.commons.math.util.MathUtils,177
+Thu Aug 24 09:49:32 AEST 2017 org.apache.commons.math.util.MathUtils,179
+Thu Aug 24 09:49:33 AEST 2017 org.apache.commons.math.util.MathUtils,194
+Thu Aug 24 09:50:06 AEST 2017 org.apache.commons.math.util.MathUtils,196
+Thu Aug 24 09:50:08 AEST 2017 org.apache.commons.math.util.MathUtils,197
+Thu Aug 24 09:50:08 AEST 2017 org.apache.commons.math.util.MathUtils,199
+Thu Aug 24 09:50:09 AEST 2017 org.apache.commons.math.util.MathUtils,201
+Thu Aug 24 09:50:11 AEST 2017 org.apache.commons.math.util.MathUtils,212
+Thu Aug 24 09:53:40 AEST 2017 org.apache.commons.math.util.MathUtils,213
+Thu Aug 24 09:53:41 AEST 2017 Thu Aug 24 09:53:41 AEST 2017 : org.apache.commons.math.util.MathUtils,215=>Find no block
+Thu Aug 24 09:53:42 AEST 2017 org.apache.commons.math.util.MathUtils,225
+Thu Aug 24 10:06:57 AEST 2017 org.apache.commons.math.util.MathUtils,226
+Thu Aug 24 10:06:59 AEST 2017 org.apache.commons.math.util.MathUtils,227
+Thu Aug 24 10:07:00 AEST 2017 org.apache.commons.math.util.MathUtils,228
+Thu Aug 24 10:07:01 AEST 2017 Thu Aug 24 10:07:01 AEST 2017 : org.apache.commons.math.util.MathUtils,231=>Find no block
+Thu Aug 24 10:07:02 AEST 2017 org.apache.commons.math.util.MathUtils,245
+Thu Aug 24 10:07:03 AEST 2017 org.apache.commons.math.util.MathUtils,257
+Thu Aug 24 10:07:10 AEST 2017 org.apache.commons.math.util.MathUtils,258
+Thu Aug 24 10:07:11 AEST 2017 Thu Aug 24 10:07:11 AEST 2017 : org.apache.commons.math.util.MathUtils,260=>Find no block
+Thu Aug 24 10:07:12 AEST 2017 org.apache.commons.math.fraction.FractionConversionException,42
+Thu Aug 24 10:08:04 AEST 2017 Thu Aug 24 10:08:04 AEST 2017 : org.apache.commons.math.fraction.FractionConversionException,43=>Find no block
+Thu Aug 24 10:08:06 AEST 2017 org.apache.commons.math.fraction.FractionConversionException,53
+Thu Aug 24 10:08:23 AEST 2017 Thu Aug 24 10:08:23 AEST 2017 : org.apache.commons.math.fraction.FractionConversionException,54=>Find no block
+Thu Aug 24 10:08:24 AEST 2017 org.apache.commons.math.fraction.BigFraction,107
+Thu Aug 24 10:08:28 AEST 2017 Thu Aug 24 10:08:28 AEST 2017 : org.apache.commons.math.fraction.BigFraction,108=>Find no block
+Thu Aug 24 10:08:29 AEST 2017 org.apache.commons.math.fraction.BigFraction,123
+Thu Aug 24 10:08:30 AEST 2017 org.apache.commons.math.fraction.BigFraction,126
+Thu Aug 24 10:08:34 AEST 2017 org.apache.commons.math.fraction.BigFraction,127
+Thu Aug 24 10:08:35 AEST 2017 org.apache.commons.math.fraction.BigFraction,133
+Thu Aug 24 10:08:36 AEST 2017 org.apache.commons.math.fraction.BigFraction,134
+Thu Aug 24 10:08:37 AEST 2017 org.apache.commons.math.fraction.BigFraction,139
+Thu Aug 24 10:08:38 AEST 2017 org.apache.commons.math.fraction.BigFraction,140
+Thu Aug 24 10:08:39 AEST 2017 Thu Aug 24 10:08:39 AEST 2017 : org.apache.commons.math.fraction.BigFraction,171=>Find no block
+Thu Aug 24 10:08:40 AEST 2017 org.apache.commons.math.fraction.BigFraction,172
+Thu Aug 24 10:10:45 AEST 2017 org.apache.commons.math.fraction.BigFraction,173
+Thu Aug 24 10:10:47 AEST 2017 org.apache.commons.math.fraction.BigFraction,175
+Thu Aug 24 10:12:30 AEST 2017 org.apache.commons.math.fraction.BigFraction,176
+Thu Aug 24 10:12:30 AEST 2017 org.apache.commons.math.fraction.BigFraction,180
+Thu Aug 24 10:15:01 AEST 2017 org.apache.commons.math.fraction.BigFraction,181
+Thu Aug 24 10:18:34 AEST 2017 org.apache.commons.math.fraction.BigFraction,182
+Thu Aug 24 10:20:13 AEST 2017 org.apache.commons.math.fraction.BigFraction,183
+Thu Aug 24 10:21:34 AEST 2017 org.apache.commons.math.fraction.BigFraction,184
+Thu Aug 24 10:22:23 AEST 2017 org.apache.commons.math.fraction.BigFraction,186
+Thu Aug 24 10:22:24 AEST 2017 org.apache.commons.math.fraction.BigFraction,188
+Thu Aug 24 10:23:31 AEST 2017 org.apache.commons.math.fraction.BigFraction,189
+Thu Aug 24 10:23:32 AEST 2017 org.apache.commons.math.fraction.BigFraction,191
+Thu Aug 24 10:32:46 AEST 2017 org.apache.commons.math.fraction.BigFraction,192
+Thu Aug 24 10:32:47 AEST 2017 org.apache.commons.math.fraction.BigFraction,193
+Thu Aug 24 10:32:48 AEST 2017 org.apache.commons.math.fraction.BigFraction,194
+Thu Aug 24 10:32:49 AEST 2017 org.apache.commons.math.fraction.BigFraction,197
+Thu Aug 24 10:35:59 AEST 2017 org.apache.commons.math.fraction.BigFraction,198
+Thu Aug 24 10:36:01 AEST 2017 org.apache.commons.math.fraction.BigFraction,199
+Thu Aug 24 10:36:01 AEST 2017 org.apache.commons.math.fraction.BigFraction,201
+Thu Aug 24 10:36:02 AEST 2017 org.apache.commons.math.fraction.BigFraction,202
+Thu Aug 24 10:36:03 AEST 2017 Thu Aug 24 10:36:03 AEST 2017 : org.apache.commons.math.fraction.BigFraction,205=>Find no block
+Thu Aug 24 10:36:04 AEST 2017 org.apache.commons.math.fraction.BigFraction,231
+Thu Aug 24 10:37:09 AEST 2017 Thu Aug 24 10:37:09 AEST 2017 : org.apache.commons.math.fraction.BigFraction,232=>Find no block
+Thu Aug 24 10:37:10 AEST 2017 Thu Aug 24 10:37:10 AEST 2017 : org.apache.commons.math.fraction.BigFraction,270=>Find no block
+Thu Aug 24 10:37:11 AEST 2017 org.apache.commons.math.fraction.BigFraction,271
+Thu Aug 24 10:40:39 AEST 2017 org.apache.commons.math.fraction.BigFraction,272
+Thu Aug 24 10:40:40 AEST 2017 org.apache.commons.math.fraction.BigFraction,273
+Thu Aug 24 10:47:43 AEST 2017 org.apache.commons.math.fraction.BigFraction,274
+Thu Aug 24 10:52:04 AEST 2017 org.apache.commons.math.fraction.BigFraction,275
+Thu Aug 24 10:52:05 AEST 2017 org.apache.commons.math.fraction.BigFraction,280
+Thu Aug 24 11:02:57 AEST 2017 org.apache.commons.math.fraction.BigFraction,281
+Thu Aug 24 11:02:58 AEST 2017 org.apache.commons.math.fraction.BigFraction,282
+Thu Aug 24 11:02:59 AEST 2017 org.apache.commons.math.fraction.BigFraction,283
+Thu Aug 24 11:03:00 AEST 2017 org.apache.commons.math.fraction.BigFraction,286
+Thu Aug 24 11:16:44 AEST 2017 org.apache.commons.math.fraction.BigFraction,287
+Thu Aug 24 11:20:51 AEST 2017 org.apache.commons.math.fraction.BigFraction,288
+Thu Aug 24 11:24:52 AEST 2017 org.apache.commons.math.fraction.BigFraction,289
+Thu Aug 24 11:33:09 AEST 2017 org.apache.commons.math.fraction.BigFraction,291
+Thu Aug 24 11:33:14 AEST 2017 org.apache.commons.math.fraction.BigFraction,292
+Thu Aug 24 11:39:27 AEST 2017 org.apache.commons.math.fraction.BigFraction,294
+Thu Aug 24 11:42:36 AEST 2017 org.apache.commons.math.fraction.BigFraction,295
+Thu Aug 24 11:42:37 AEST 2017 org.apache.commons.math.fraction.BigFraction,297
+Thu Aug 24 11:46:28 AEST 2017 org.apache.commons.math.fraction.BigFraction,298
+Thu Aug 24 11:46:29 AEST 2017 org.apache.commons.math.fraction.BigFraction,299
+Timeout time : 17/08/24 11:46

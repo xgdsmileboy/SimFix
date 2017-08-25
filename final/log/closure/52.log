@@ -1,0 +1,57 @@
+=================================================
+Project : closure_52	start : 17/08/24 03:39
+Current failed test : com.google.javascript.jscomp.CodePrinterTest::testNumericKeys | 17/08/24 03:39
+Thu Aug 24 03:48:37 AEST 2017 com.google.javascript.jscomp.CodeGenerator,676
+Thu Aug 24 03:48:41 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,290
+Thu Aug 24 04:05:33 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,291
+Thu Aug 24 04:05:34 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,292
+Thu Aug 24 04:05:35 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,295
+Thu Aug 24 04:05:35 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,296
+Thu Aug 24 04:05:36 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,300
+Thu Aug 24 04:09:29 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,303
+Thu Aug 24 04:12:59 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,304
+Thu Aug 24 04:12:59 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,401
+Thu Aug 24 04:13:03 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,402
+Thu Aug 24 04:13:03 AEST 2017 com.google.javascript.jscomp.CodeGenerator,752
+Thu Aug 24 04:13:07 AEST 2017 com.google.javascript.jscomp.CodeGenerator,753
+Thu Aug 24 04:13:08 AEST 2017 com.google.javascript.jscomp.CodeGenerator,751
+Thu Aug 24 04:13:12 AEST 2017 com.google.javascript.jscomp.CodeGenerator,745
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(c<='0'||c>'9'){
+return false;
+}
+
+Time : 17/08/24 04:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int index=0;index<len;index++){
+char c=s.charAt(index);
+if(c<='0'||c>'9'){
+return false;
+}
+}
+
+Time : 17/08/24 04:19
+----------------------------------------
+Thu Aug 24 04:46:10 AEST 2017 com.google.javascript.jscomp.CodeGenerator,674
+Thu Aug 24 05:38:07 AEST 2017 com.google.javascript.jscomp.CodeGenerator,675
+Thu Aug 24 05:38:08 AEST 2017 com.google.javascript.jscomp.CodeGenerator,740
+Thu Aug 24 05:38:10 AEST 2017 com.google.javascript.jscomp.CodeGenerator,741
+Thu Aug 24 05:38:10 AEST 2017 com.google.javascript.jscomp.CodeGenerator,738
+Thu Aug 24 05:38:11 AEST 2017 com.google.javascript.jscomp.CodeGenerator,739
+Thu Aug 24 05:38:12 AEST 2017 com.google.javascript.jscomp.CodeGenerator,749
+Thu Aug 24 05:38:13 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,404
+Thu Aug 24 05:38:14 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,405
+Thu Aug 24 05:38:14 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,400
+Thu Aug 24 05:38:15 AEST 2017 com.google.javascript.jscomp.Compiler,1331
+Thu Aug 24 05:38:19 AEST 2017 com.google.javascript.jscomp.CodeGenerator,661
+Thu Aug 24 07:51:41 AEST 2017 com.google.javascript.jscomp.CodeGenerator,662
+Thu Aug 24 07:51:42 AEST 2017 com.google.javascript.jscomp.CodeGenerator,665
+Thu Aug 24 07:51:43 AEST 2017 com.google.javascript.jscomp.CodeGenerator,681
+Timeout time : 17/08/24 08:48

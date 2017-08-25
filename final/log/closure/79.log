@@ -1,0 +1,272 @@
+=================================================
+Project : closure_79	start : 17/08/24 03:33
+Current failed test : com.google.javascript.jscomp.VarCheckTest::testCallInExterns | 17/08/24 03:36
+Thu Aug 24 03:59:53 AEST 2017 com.google.javascript.jscomp.VarCheck,247
+Thu Aug 24 04:12:52 AEST 2017 com.google.javascript.jscomp.VarCheck,249
+Thu Aug 24 04:33:26 AEST 2017 com.google.javascript.jscomp.VarCheck,250
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Scope scope=t.getScope();
+Scope.Var var=scope.getVar(n.getString());
+if(var!=null){
+varsToDeclareInExterns.add(n.getString());
+}
+
+Time : 17/08/24 04:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Scope scope=t.getScope();
+if(n.getString().isEmpty()){
+return ;
+}
+Scope.Var var=scope.getVar(n.getString());
+if(var!=null){
+varsToDeclareInExterns.add(n.getString());
+}
+
+Time : 17/08/24 04:44
+----------------------------------------
+Timeout time : 17/08/24 04:59
+Current failed test : com.google.javascript.jscomp.NormalizeTest::testIssue | 17/08/24 04:59
+Thu Aug 24 05:33:46 AEST 2017 Thu Aug 24 05:33:46 AEST 2017 : com.google.javascript.jscomp.NodeTraversal,279=>Find no block
+Thu Aug 24 05:33:47 AEST 2017 com.google.javascript.jscomp.NodeTraversal,280
+Timeout time : 17/08/24 06:33
+Current failed test : com.google.javascript.jscomp.VarCheckTest::testPropReferenceInExterns1 | 17/08/24 06:33
+Thu Aug 24 07:11:40 AEST 2017 com.google.javascript.jscomp.VarCheck,241
+Thu Aug 24 07:37:39 AEST 2017 com.google.javascript.jscomp.VarCheck,242
+Thu Aug 24 07:37:40 AEST 2017 com.google.javascript.rhino.Node,2043
+Thu Aug 24 07:37:43 AEST 2017 com.google.javascript.rhino.Node,2044
+Thu Aug 24 07:37:43 AEST 2017 com.google.javascript.rhino.Node,2046
+Thu Aug 24 07:40:36 AEST 2017 Thu Aug 24 07:40:36 AEST 2017 : com.google.javascript.rhino.Node,2047=>Find no block
+Thu Aug 24 07:40:37 AEST 2017 com.google.javascript.rhino.JSDocInfo,545
+Timeout time : 17/08/24 08:11
+Current failed test : com.google.javascript.jscomp.VarCheckTest::testVarReferenceInExterns | 17/08/24 08:11
+Thu Aug 24 08:47:40 AEST 2017 com.google.javascript.jscomp.VarCheck,247
+Thu Aug 24 09:06:03 AEST 2017 com.google.javascript.jscomp.VarCheck,249
+Thu Aug 24 09:26:07 AEST 2017 com.google.javascript.jscomp.VarCheck,250
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Scope scope=t.getScope();
+Scope.Var var=scope.getVar(n.getString());
+if(var!=null){
+varsToDeclareInExterns.add(n.getString());
+}
+
+Time : 17/08/24 09:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Scope scope=t.getScope();
+if(n.getString().isEmpty()){
+return ;
+}
+Scope.Var var=scope.getVar(n.getString());
+if(var!=null){
+varsToDeclareInExterns.add(n.getString());
+}
+
+Time : 17/08/24 09:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Scope scope=t.getScope();
+Scope.Var var=scope.getVar(n.getString());
+Preconditions.checkState(n.getString().length()!=0);
+if(var!=null){
+varsToDeclareInExterns.add(n.getString());
+}
+
+Time : 17/08/24 09:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Scope scope=t.getScope();
+Scope.Var var=scope.getVar(n.getString());
+if(n.getType()!=Token.CALL){
+return ;
+}
+if(var==null){
+varsToDeclareInExterns.add(n.getString());
+}
+
+Time : 17/08/24 09:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Scope scope=t.getScope();
+Scope.Var var=scope.getVar(n.getString());
+if(n.getType()!=Token.RETURN){
+return ;
+}
+if(var==null){
+varsToDeclareInExterns.add(n.getString());
+}
+
+Time : 17/08/24 09:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Scope scope=t.getScope();
+Scope.Var var=scope.getVar(n.getString());
+if(n.getType()!=Token.RETURN){
+return ;
+}
+if(var!=null){
+varsToDeclareInExterns.add(n.getString());
+}
+
+Time : 17/08/24 09:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Scope scope=t.getScope();
+Scope.Var var=scope.getVar(n.getString());
+if(n.getType()!=Token.FUNCTION){
+return ;
+}
+if(var==null){
+varsToDeclareInExterns.add(n.getString());
+}
+
+Time : 17/08/24 09:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+compiler.reportCodeChange();
+Scope scope=t.getScope();
+Scope.Var var=scope.getVar(n.getString());
+if(var==null){
+varsToDeclareInExterns.add(n.getString());
+}
+
+Time : 17/08/24 09:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.1986727864989266 : [/home/hz985/jiajun/d4j/projects/closure/closure_79_buggy/src/com/google/javascript/jscomp/VarCheck.java=>0,0]
+String googNowQName=googNow.getQualifiedName();
+if(googNowQName==null||!"goog.now".equals(googNowQName)||googNow.getNext()!=null){
+return ;
+}
+n.removeChild(callGoogNow);
+compiler.reportCodeChange();
+
+Time : 17/08/24 09:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/closure/closure_79_buggy/src/com/google/javascript/jscomp/VarCheck.java=>249,253]
+Scope scope=t.getScope();
+Scope.Var var=scope.getVar(n.getString());
+if(var==null){
+varsToDeclareInExterns.add(n.getString());
+}
+
+Time : 17/08/24 09:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/closure/closure_79_buggy/src/com/google/javascript/jscomp/VarCheck.java=>249,253]
+compiler.reportCodeChange();
+Scope scope=t.getScope();
+Scope.Var var=scope.getVar(n.getString());
+if(var==null){
+varsToDeclareInExterns.add(n.getString());
+}
+
+Time : 17/08/24 09:47
+----------------------------------------
+Success time : 17/08/24 09:47
+Current failed test : com.google.javascript.jscomp.VarCheckTest::testPropReferenceInExterns3 | 17/08/24 09:47
+Thu Aug 24 10:00:45 AEST 2017 com.google.javascript.jscomp.VarCheck,241
+Thu Aug 24 10:06:16 AEST 2017 com.google.javascript.jscomp.VarCheck,242
+Thu Aug 24 10:06:17 AEST 2017 com.google.javascript.rhino.Node,2043
+Thu Aug 24 10:06:19 AEST 2017 com.google.javascript.rhino.Node,2044
+Thu Aug 24 10:06:20 AEST 2017 com.google.javascript.rhino.Node,2046
+Thu Aug 24 10:07:05 AEST 2017 Thu Aug 24 10:07:05 AEST 2017 : com.google.javascript.rhino.Node,2047=>Find no block
+Thu Aug 24 10:07:05 AEST 2017 com.google.javascript.rhino.JSDocInfo,545
+Thu Aug 24 10:15:56 AEST 2017 com.google.javascript.rhino.JSDocInfo,547
+Thu Aug 24 10:16:41 AEST 2017 com.google.javascript.rhino.JSDocInfo,548
+Thu Aug 24 10:16:41 AEST 2017 com.google.javascript.rhino.JSDocInfo,550
+Thu Aug 24 10:16:42 AEST 2017 Thu Aug 24 10:16:42 AEST 2017 : com.google.javascript.rhino.JSDocInfo,551=>Find no block
+Thu Aug 24 10:16:42 AEST 2017 com.google.javascript.jscomp.VarCheck,137
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((parent.getType()==Token.VAR||NodeUtil.isFunctionDeclaration(parent))&&varsToDeclareInExterns.contains(varName)){
+compiler.reportCodeChange();
+createSynthesizedExternVar(varName);
+n.addSuppression("duplicate");
+}
+
+Time : 17/08/24 10:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.2405535048490524 : [/home/hz985/jiajun/d4j/projects/closure/closure_79_buggy/src/com/google/javascript/jscomp/VarCheck.java=>0,0]
+if(moduleGraph.dependsOn(deepestCommonModuleRef,prop.getModule())&&value.getType()==Token.FUNCTION){
+Node valueParent=value.getParent();
+if(valueParent.getType()==Token.GET||valueParent.getType()==Token.SET){
+continue;
+}
+Node proto=prop.getPrototype();
+int stubId=idGenerator.newId();
+valueParent.replaceChild(value,new Node(Token.CALL,Node.newString(Token.NAME,STUB_METHOD_NAME),Node.newNumber(stubId)).copyInformationFromForTree(value));
+Node unstubParent=compiler.getNodeForCodeInsertion(deepestCommonModuleRef);
+unstubParent.addChildToFront(new Node(Token.EXPR_RESULT,new Node(Token.ASSIGN,new Node(Token.GETPROP,proto.cloneTree(),Node.newString(Token.STRING,nameInfo.name)),new Node(Token.CALL,Node.newString(Token.NAME,UNSTUB_METHOD_NAME),Node.newNumber(stubId),value))).copyInformationFromForTree(value));
+compiler.reportCodeChange();
+logger.fine("Moved method: "+proto.getQualifiedName());
+}
+
+Time : 17/08/24 10:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/closure/closure_79_buggy/src/com/google/javascript/jscomp/VarCheck.java=>134,140]
+if((parent.getType()==Token.VAR||NodeUtil.isFunctionDeclaration(parent))&&varsToDeclareInExterns.contains(varName)){
+createSynthesizedExternVar(varName);
+n.addSuppression("duplicate");
+}
+
+Time : 17/08/24 10:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/closure/closure_79_buggy/src/com/google/javascript/jscomp/VarCheck.java=>134,140]
+if((parent.getType()==Token.VAR||NodeUtil.isFunctionDeclaration(parent))&&varsToDeclareInExterns.contains(varName)){
+compiler.reportCodeChange();
+createSynthesizedExternVar(varName);
+n.addSuppression("duplicate");
+}
+
+Time : 17/08/24 10:44
+----------------------------------------
+Success time : 17/08/24 10:44
