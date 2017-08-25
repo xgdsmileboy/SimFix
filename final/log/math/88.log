@@ -1,0 +1,157 @@
+=================================================
+Project : math_88	start : 17/08/25 13:18
+Current failed test : org.apache.commons.math.optimization.linear.SimplexSolverTest::testMath272 | 17/08/25 13:18
+Fri Aug 25 13:19:22 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,339
+Fri Aug 25 13:21:04 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,172
+Fri Aug 25 13:21:47 AEST 2017 org.apache.commons.math.optimization.RealPointValuePair,70
+Fri Aug 25 13:22:28 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,279
+Fri Aug 25 13:24:05 AEST 2017 org.apache.commons.math.optimization.linear.LinearObjectiveFunction,92
+Fri Aug 25 13:24:36 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,325
+Fri Aug 25 13:25:05 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,326
+Fri Aug 25 13:25:05 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,328
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(basicRow==null){
+for(int j=getNumObjectiveFunctions();j<getNumObjectiveFunctions()+i;j++){
+if(tableau.getEntry(basicRow,j)==1){
+coefficients[i]=0;
+}
+}
+}
+
+Time : 17/08/25 13:28
+----------------------------------------
+Fri Aug 25 13:45:37 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,329
+Fri Aug 25 13:45:37 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,330
+Fri Aug 25 13:45:37 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,333
+Fri Aug 25 13:45:38 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,336
+Fri Aug 25 13:45:38 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,337
+Fri Aug 25 13:45:38 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,338
+Fri Aug 25 13:45:38 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,344
+Fri Aug 25 13:54:24 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,459
+Fri Aug 25 13:54:25 AEST 2017 Fri Aug 25 13:54:25 AEST 2017 : org.apache.commons.math.optimization.RealPointValuePair,48=>Find no block
+Fri Aug 25 13:54:25 AEST 2017 org.apache.commons.math.optimization.RealPointValuePair,49
+Fri Aug 25 13:56:20 AEST 2017 org.apache.commons.math.optimization.RealPointValuePair,50
+Fri Aug 25 13:56:20 AEST 2017 Fri Aug 25 13:56:20 AEST 2017 : org.apache.commons.math.optimization.RealPointValuePair,51=>Find no block
+Fri Aug 25 13:56:20 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,154
+Fri Aug 25 13:59:47 AEST 2017 Fri Aug 25 13:59:47 AEST 2017 : org.apache.commons.math.optimization.linear.SimplexSolver,179=>Find no block
+Fri Aug 25 13:59:47 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,192
+Fri Aug 25 14:00:30 AEST 2017 org.apache.commons.math.linear.RealVectorImpl,884
+Fri Aug 25 14:17:35 AEST 2017 org.apache.commons.math.linear.RealVectorImpl,885
+Fri Aug 25 14:17:35 AEST 2017 org.apache.commons.math.linear.RealVectorImpl,886
+Fri Aug 25 14:17:35 AEST 2017 org.apache.commons.math.linear.RealVectorImpl,887
+Fri Aug 25 14:17:35 AEST 2017 org.apache.commons.math.linear.RealVectorImpl,889
+Fri Aug 25 14:17:35 AEST 2017 org.apache.commons.math.linear.RealVectorImpl,1287
+Fri Aug 25 14:23:50 AEST 2017 Fri Aug 25 14:23:50 AEST 2017 : org.apache.commons.math.linear.RealVectorImpl,1292=>Find no block
+Fri Aug 25 14:23:50 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,293
+Fri Aug 25 14:24:19 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,294
+Fri Aug 25 14:25:45 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,295
+Fri Aug 25 15:03:02 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,296
+Fri Aug 25 15:03:02 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,297
+Fri Aug 25 15:03:03 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,298
+Fri Aug 25 15:03:03 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,300
+Fri Aug 25 15:03:03 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,302
+Fri Aug 25 15:20:48 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,303
+Fri Aug 25 15:20:48 AEST 2017 Fri Aug 25 15:20:48 AEST 2017 : org.apache.commons.math.optimization.linear.SimplexTableau,304=>Find no block
+Fri Aug 25 15:20:48 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,129
+Fri Aug 25 15:21:07 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,132
+Fri Aug 25 15:21:08 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,133
+Fri Aug 25 15:21:08 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,134
+Fri Aug 25 15:21:08 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,137
+Fri Aug 25 15:22:34 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,146
+Fri Aug 25 15:22:34 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,149
+Fri Aug 25 15:22:34 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,150
+Fri Aug 25 15:22:35 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,171
+Fri Aug 25 15:23:00 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,172
+Fri Aug 25 15:23:00 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,176
+Fri Aug 25 15:23:02 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,188
+Fri Aug 25 15:23:02 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,189
+Fri Aug 25 15:23:02 AEST 2017 Fri Aug 25 15:23:02 AEST 2017 : org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,61=>Find no block
+Fri Aug 25 15:23:02 AEST 2017 org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,62
+Fri Aug 25 15:23:21 AEST 2017 Fri Aug 25 15:23:21 AEST 2017 : org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,63=>Find no block
+Fri Aug 25 15:23:21 AEST 2017 org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,67
+Fri Aug 25 15:23:36 AEST 2017 Fri Aug 25 15:23:36 AEST 2017 : org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,68=>Find no block
+Fri Aug 25 15:23:36 AEST 2017 org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,86
+Fri Aug 25 15:24:57 AEST 2017 Fri Aug 25 15:24:57 AEST 2017 : org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,91=>Find no block
+Fri Aug 25 15:24:57 AEST 2017 org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,100
+Fri Aug 25 15:25:15 AEST 2017 org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,101
+Fri Aug 25 15:25:16 AEST 2017 org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,102
+Fri Aug 25 15:25:16 AEST 2017 org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,103
+Fri Aug 25 15:25:16 AEST 2017 org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,105
+Fri Aug 25 15:25:16 AEST 2017 org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,108
+Fri Aug 25 15:25:16 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,290
+Fri Aug 25 15:25:17 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,357
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<getWidth();j++){
+tableau.setEntry(Math.min(dividendRow,numArtificialVariables)-1,j,tableau.getEntry(dividendRow,j)/divisor);
+}
+
+Time : 17/08/25 15:27
+----------------------------------------
+Fri Aug 25 15:28:51 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,358
+Fri Aug 25 15:28:51 AEST 2017 Fri Aug 25 15:28:51 AEST 2017 : org.apache.commons.math.optimization.linear.SimplexTableau,360=>Find no block
+Fri Aug 25 15:28:51 AEST 2017 org.apache.commons.math.optimization.linear.SimplexTableau,475
+Fri Aug 25 15:29:17 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,42
+Fri Aug 25 15:29:18 AEST 2017 Fri Aug 25 15:29:18 AEST 2017 : org.apache.commons.math.optimization.linear.SimplexSolver,43=>Find no block
+Fri Aug 25 15:29:18 AEST 2017 Fri Aug 25 15:29:18 AEST 2017 : org.apache.commons.math.optimization.linear.SimplexSolver,49=>Find no block
+Fri Aug 25 15:29:18 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,50
+Fri Aug 25 15:29:33 AEST 2017 Fri Aug 25 15:29:33 AEST 2017 : org.apache.commons.math.optimization.linear.SimplexSolver,51=>Find no block
+Fri Aug 25 15:29:33 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,59
+Fri Aug 25 15:34:00 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,60
+Fri Aug 25 15:34:00 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,61
+Fri Aug 25 15:34:00 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,62
+Fri Aug 25 15:34:00 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,63
+Fri Aug 25 15:34:00 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,64
+Fri Aug 25 15:34:00 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,67
+Fri Aug 25 15:34:00 AEST 2017 org.apache.commons.math.optimization.linear.SimplexSolver,77
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ratio<=minRatio){
+minRatio=ratio;
+minRatioPos=i;
+}
+
+Time : 17/08/25 15:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.1327584497459624 : [/home/similarfix/d4j/projects/math/math_88_buggy/src/java/org/apache/commons/math/optimization/linear/SimplexSolver.java=>0,0]
+if(pv.abs()<=functionValueAccuracy){
+resultComputed=true;
+iterationCount=i;
+return z;
+}
+
+Time : 17/08/25 15:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/similarfix/d4j/projects/math/math_88_buggy/src/java/org/apache/commons/math/optimization/linear/SimplexSolver.java=>83,86]
+if(ratio<minRatio){
+minRatio=ratio;
+minRatioPos=i;
+}
+
+Time : 17/08/25 15:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/similarfix/d4j/projects/math/math_88_buggy/src/java/org/apache/commons/math/optimization/linear/SimplexSolver.java=>83,86]
+if(ratio<=minRatio){
+minRatio=ratio;
+minRatioPos=i;
+}
+
+Time : 17/08/25 15:34
+----------------------------------------
+Success time : 17/08/25 15:34
