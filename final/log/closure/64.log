@@ -1,0 +1,18 @@
+=================================================
+Project : closure_64	start : 17/08/25 09:37
+Current failed test : com.google.javascript.jscomp.CommandLineRunnerTest::testES5StrictUseStrictMultipleInputs_purify_2 | 17/08/25 09:38
+Fri Aug 25 09:52:14 AEST 2017 com.google.javascript.jscomp.DefaultPassConfig,271
+Fri Aug 25 10:03:26 AEST 2017 com.google.javascript.jscomp.Compiler,1705
+Fri Aug 25 10:04:06 AEST 2017 com.google.javascript.jscomp.Compiler,1706
+Fri Aug 25 10:04:42 AEST 2017 com.google.javascript.jscomp.AbstractCommandLineRunner,259
+Fri Aug 25 10:12:08 AEST 2017 Fri Aug 25 10:12:08 AEST 2017 : com.google.javascript.jscomp.DefaultPassConfig,1173=>Find no block
+Fri Aug 25 10:12:08 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,140
+Fri Aug 25 10:12:44 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,141
+Fri Aug 25 10:12:47 AEST 2017 com.google.javascript.jscomp.CodeGenerator,71
+Fri Aug 25 10:13:02 AEST 2017 Fri Aug 25 10:13:02 AEST 2017 : com.google.javascript.jscomp.CodeGenerator,72=>Find no block
+Fri Aug 25 10:13:02 AEST 2017 com.google.javascript.jscomp.CodePrinter,631
+Fri Aug 25 10:13:04 AEST 2017 com.google.javascript.jscomp.StrictModeCheck,227
+Fri Aug 25 10:43:23 AEST 2017 com.google.javascript.jscomp.StrictModeCheck,246
+Fri Aug 25 10:58:10 AEST 2017 Fri Aug 25 10:58:10 AEST 2017 : com.google.javascript.jscomp.StrictModeCheck,251=>Find no block
+Fri Aug 25 10:58:10 AEST 2017 com.google.javascript.jscomp.StrictModeCheck,109
+Timeout time : 17/08/25 14:52

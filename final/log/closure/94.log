@@ -1,0 +1,241 @@
+=================================================
+Project : closure_94	start : 17/08/25 20:18
+Current failed test : com.google.javascript.jscomp.NodeUtilTest::testValidDefine_purify_13 | 17/08/25 20:19
+Fri Aug 25 20:29:12 AEST 2017 com.google.javascript.jscomp.NodeUtil,346
+Fri Aug 25 20:33:09 AEST 2017 Fri Aug 25 20:33:09 AEST 2017 : com.google.javascript.jscomp.NodeUtil,321=>Find no block
+Fri Aug 25 20:33:09 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,908
+Fri Aug 25 20:33:15 AEST 2017 com.google.javascript.jscomp.Compiler,1174
+Fri Aug 25 20:36:45 AEST 2017 com.google.javascript.jscomp.Compiler,1189
+Fri Aug 25 20:36:47 AEST 2017 com.google.javascript.jscomp.Compiler,1185
+Fri Aug 25 20:39:47 AEST 2017 com.google.javascript.jscomp.Compiler,1186
+Fri Aug 25 20:39:47 AEST 2017 com.google.javascript.jscomp.Compiler,1188
+Fri Aug 25 20:39:47 AEST 2017 com.google.javascript.jscomp.Compiler,1191
+Fri Aug 25 20:39:47 AEST 2017 com.google.javascript.jscomp.Compiler,1192
+Fri Aug 25 20:39:47 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,144
+Fri Aug 25 20:42:47 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,627
+Fri Aug 25 20:42:49 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,247
+Fri Aug 25 20:47:01 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1200
+Fri Aug 25 20:47:18 AEST 2017 com.google.javascript.rhino.Node,512
+Fri Aug 25 20:47:20 AEST 2017 com.google.javascript.rhino.Node,244
+Fri Aug 25 20:47:31 AEST 2017 com.google.javascript.rhino.Node,245
+Fri Aug 25 20:47:31 AEST 2017 Fri Aug 25 20:47:31 AEST 2017 : com.google.javascript.rhino.Node,246=>Find no block
+Fri Aug 25 20:47:31 AEST 2017 com.google.javascript.jscomp.Compiler,247
+Fri Aug 25 20:51:04 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,806
+Fri Aug 25 20:52:27 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,807
+Fri Aug 25 20:52:27 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,567
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Node n=newNode(transformTokenType(exprNode.getType()),transform(exprNode.getLeft()),transform(exprNode.getRight()));
+n.setLineno(exprNode.getLineno());
+n.setCharno(position2charno(exprNode.getAbsolutePosition()+exprNode.getOperatorPosition()));
+return Node.newString(sourceName);
+
+Time : 17/08/25 20:58
+----------------------------------------
+Fri Aug 25 21:06:07 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,573
+Fri Aug 25 21:06:07 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,577
+Fri Aug 25 21:06:07 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,579
+Fri Aug 25 21:06:07 AEST 2017 com.google.javascript.jscomp.Compiler,1171
+Fri Aug 25 21:06:07 AEST 2017 Fri Aug 25 21:06:07 AEST 2017 : com.google.javascript.jscomp.Compiler,1176=>Find no block
+Fri Aug 25 21:06:07 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,795
+Fri Aug 25 21:21:58 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,796
+Timeout time : 17/08/25 21:29
+Current failed test : com.google.javascript.jscomp.NodeUtilTest::testValidDefine_purify_14 | 17/08/25 21:29
+Fri Aug 25 21:39:00 AEST 2017 com.google.javascript.jscomp.NodeUtil,346
+Fri Aug 25 21:42:55 AEST 2017 Fri Aug 25 21:42:55 AEST 2017 : com.google.javascript.jscomp.NodeUtil,321=>Find no block
+Fri Aug 25 21:42:56 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,908
+Fri Aug 25 21:43:02 AEST 2017 com.google.javascript.jscomp.Compiler,1174
+Fri Aug 25 21:46:31 AEST 2017 com.google.javascript.jscomp.Compiler,1189
+Fri Aug 25 21:46:33 AEST 2017 com.google.javascript.jscomp.Compiler,1185
+Fri Aug 25 21:49:32 AEST 2017 com.google.javascript.jscomp.Compiler,1186
+Fri Aug 25 21:49:32 AEST 2017 com.google.javascript.jscomp.Compiler,1188
+Fri Aug 25 21:49:32 AEST 2017 com.google.javascript.jscomp.Compiler,1191
+Fri Aug 25 21:49:32 AEST 2017 com.google.javascript.jscomp.Compiler,1192
+Fri Aug 25 21:49:32 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,144
+Fri Aug 25 21:52:34 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,702
+Fri Aug 25 21:57:39 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,703
+Fri Aug 25 21:57:39 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,257
+Fri Aug 25 22:01:39 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1192
+Fri Aug 25 22:02:20 AEST 2017 com.google.javascript.rhino.Node,520
+Fri Aug 25 22:02:22 AEST 2017 com.google.javascript.jscomp.Compiler,247
+Fri Aug 25 22:05:54 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,806
+Fri Aug 25 22:07:19 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,807
+Fri Aug 25 22:07:19 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,567
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Node n=newNode(transformTokenType(exprNode.getType()),transform(exprNode.getLeft()),transform(exprNode.getRight()));
+n.setLineno(exprNode.getLineno());
+n.setCharno(position2charno(exprNode.getAbsolutePosition()+exprNode.getOperatorPosition()));
+return Node.newString(sourceName);
+
+Time : 17/08/25 22:13
+----------------------------------------
+Fri Aug 25 22:20:59 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,573
+Fri Aug 25 22:20:59 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,577
+Fri Aug 25 22:21:00 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,579
+Fri Aug 25 22:21:00 AEST 2017 com.google.javascript.jscomp.Compiler,1171
+Fri Aug 25 22:21:00 AEST 2017 Fri Aug 25 22:21:00 AEST 2017 : com.google.javascript.jscomp.Compiler,1176=>Find no block
+Fri Aug 25 22:21:00 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,795
+Fri Aug 25 22:36:51 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,796
+Timeout time : 17/08/25 22:39
+Current failed test : com.google.javascript.jscomp.NodeUtilTest::testValidDefine_purify_15 | 17/08/25 22:39
+Fri Aug 25 22:48:29 AEST 2017 com.google.javascript.jscomp.NodeUtil,337
+Fri Aug 25 22:48:53 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,888
+Fri Aug 25 22:49:00 AEST 2017 com.google.javascript.jscomp.NodeUtil,326
+Fri Aug 25 22:49:09 AEST 2017 Fri Aug 25 22:49:09 AEST 2017 : com.google.javascript.jscomp.NodeUtil,321=>Find no block
+Fri Aug 25 22:49:09 AEST 2017 com.google.javascript.jscomp.Compiler,1174
+Fri Aug 25 22:52:38 AEST 2017 com.google.javascript.jscomp.Compiler,1189
+Fri Aug 25 22:52:40 AEST 2017 com.google.javascript.jscomp.Compiler,1185
+Fri Aug 25 22:55:39 AEST 2017 com.google.javascript.jscomp.Compiler,1186
+Fri Aug 25 22:55:39 AEST 2017 com.google.javascript.jscomp.Compiler,1188
+Fri Aug 25 22:55:39 AEST 2017 com.google.javascript.jscomp.Compiler,1191
+Fri Aug 25 22:55:39 AEST 2017 com.google.javascript.jscomp.Compiler,1192
+Fri Aug 25 22:55:39 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,144
+Fri Aug 25 22:58:40 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,627
+Fri Aug 25 22:58:43 AEST 2017 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,247
+Fri Aug 25 23:02:54 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,1200
+Fri Aug 25 23:03:10 AEST 2017 com.google.javascript.rhino.Node,512
+Fri Aug 25 23:03:13 AEST 2017 com.google.javascript.rhino.Node,244
+Fri Aug 25 23:03:24 AEST 2017 com.google.javascript.rhino.Node,245
+Fri Aug 25 23:03:24 AEST 2017 Fri Aug 25 23:03:24 AEST 2017 : com.google.javascript.rhino.Node,246=>Find no block
+Fri Aug 25 23:03:24 AEST 2017 com.google.javascript.jscomp.Compiler,247
+Fri Aug 25 23:06:56 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,806
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(initializerNode.getInitializer()!=null){
+node.addChildToBack(rootNodeJsDocHolder);
+node.addChildToBack(transform(initializerNode.getInitializer()));
+node.setLineno(node.getLineno());
+}
+
+Time : 17/08/25 23:08
+----------------------------------------
+Fri Aug 25 23:09:35 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,807
+Fri Aug 25 23:09:35 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,567
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Node n=newNode(transformTokenType(exprNode.getType()),transform(exprNode.getLeft()),transform(exprNode.getRight()));
+n.setType(exprNode.getLineno());
+n.setCharno(position2charno(exprNode.getAbsolutePosition()+exprNode.getOperatorPosition()));
+return n;
+
+Time : 17/08/25 23:11
+----------------------------------------
+Fri Aug 25 23:23:17 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,573
+Fri Aug 25 23:23:17 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,577
+Fri Aug 25 23:23:17 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,579
+Fri Aug 25 23:23:17 AEST 2017 com.google.javascript.jscomp.Compiler,1171
+Fri Aug 25 23:23:17 AEST 2017 Fri Aug 25 23:23:17 AEST 2017 : com.google.javascript.jscomp.Compiler,1176=>Find no block
+Fri Aug 25 23:23:17 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,795
+Fri Aug 25 23:39:09 AEST 2017 com.google.javascript.jscomp.parsing.IRFactory,796
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+templateNode.addChildToBack(rootNodeJsDocHolder);
+node.addChildToBack(templateNode);
+for(VariableInitializer child : declarationNode.getVariables()){
+node.addChildToBack(transform(child));
+}
+
+Time : 17/08/25 23:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+node.addChildToBack(templateNode);
+templateNode.addChildToFront(rootNodeJsDocHolder);
+for(VariableInitializer child : declarationNode.getVariables()){
+node.addChildToBack(transform(child));
+}
+
+Time : 17/08/25 23:44
+----------------------------------------
+Timeout time : 17/08/25 23:48
+Current failed test : com.google.javascript.jscomp.ProcessDefinesTest::testOverridingString1 | 17/08/25 23:48
+Fri Aug 25 23:58:06 AEST 2017 com.google.javascript.jscomp.NodeUtil,346
+Sat Aug 26 00:02:02 AEST 2017 com.google.javascript.jscomp.ProcessDefines,407
+Sat Aug 26 00:02:06 AEST 2017 com.google.javascript.jscomp.JSError,189
+Sat Aug 26 00:02:08 AEST 2017 com.google.javascript.jscomp.ProcessDefines,180
+Sat Aug 26 00:16:45 AEST 2017 com.google.javascript.jscomp.ProcessDefines,160
+Sat Aug 26 00:18:03 AEST 2017 com.google.javascript.jscomp.ProcessDefines,161
+Sat Aug 26 00:18:03 AEST 2017 com.google.javascript.jscomp.ProcessDefines,179
+Sat Aug 26 00:18:03 AEST 2017 com.google.javascript.jscomp.ProcessDefines,242
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(name.refs!=null){
+allRefInfo.put(name.declaration.node,new RefInfo(name.declaration,name));
+}
+
+Time : 17/08/26 00:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(name.declaration==null){
+allRefInfo.put(name.declaration.node,new RefInfo(name.declaration,name));
+}
+
+Time : 17/08/26 00:20
+----------------------------------------
+Sat Aug 26 00:24:13 AEST 2017 com.google.javascript.jscomp.ProcessDefines,243
+Sat Aug 26 00:24:13 AEST 2017 com.google.javascript.jscomp.ProcessDefines,246
+Sat Aug 26 00:27:56 AEST 2017 Sat Aug 26 00:27:56 AEST 2017 : com.google.javascript.jscomp.ProcessDefines,254=>Find no block
+Sat Aug 26 00:27:56 AEST 2017 com.google.javascript.jscomp.ProcessDefines,278
+Sat Aug 26 00:28:43 AEST 2017 com.google.javascript.jscomp.ProcessDefines,279
+Sat Aug 26 00:28:43 AEST 2017 com.google.javascript.jscomp.ProcessDefines,280
+Sat Aug 26 00:28:43 AEST 2017 Sat Aug 26 00:28:43 AEST 2017 : com.google.javascript.jscomp.ProcessDefines,281=>Find no block
+Sat Aug 26 00:28:43 AEST 2017 com.google.javascript.jscomp.ProcessDefines,284
+Sat Aug 26 00:29:17 AEST 2017 com.google.javascript.jscomp.ProcessDefines,285
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(val.getType()!=Token.FUNCTION){
+return ;
+}
+if(valParent.getType()==Token.ASSIGN&&name.isSimpleName()&&name.declaration==ref){
+compiler.report(t.makeError(val,INVALID_DEFINE_INIT_ERROR,fullName));
+}else if(processDefineAssignment(t,fullName,val,valParent)){
+refInfo.name.removeRef(ref);
+lvalueToRemoveLater=valParent;
+}
+
+Time : 17/08/26 00:47
+----------------------------------------
+Timeout time : 17/08/26 00:58
+Current failed test : com.google.javascript.jscomp.ProcessDefinesTest::testOverridingString3 | 17/08/26 00:58
+Sat Aug 26 01:07:56 AEST 2017 com.google.javascript.jscomp.ProcessDefines,148
+Sat Aug 26 01:13:32 AEST 2017 Sat Aug 26 01:13:32 AEST 2017 : com.google.javascript.jscomp.ProcessDefines,149=>Find no block
+Sat Aug 26 01:13:32 AEST 2017 com.google.javascript.jscomp.NodeUtil,346
+Sat Aug 26 01:17:28 AEST 2017 com.google.javascript.jscomp.JSError,71
+Sat Aug 26 01:17:30 AEST 2017 com.google.javascript.jscomp.ProcessDefines,407
+Sat Aug 26 01:17:34 AEST 2017 com.google.javascript.jscomp.BasicErrorManager,132
+Sat Aug 26 01:18:06 AEST 2017 com.google.javascript.jscomp.JSError,189
+Sat Aug 26 01:18:08 AEST 2017 com.google.javascript.jscomp.ProcessDefines,180
+Sat Aug 26 01:32:51 AEST 2017 com.google.javascript.jscomp.ProcessDefines,160
+Sat Aug 26 01:34:08 AEST 2017 com.google.javascript.jscomp.ProcessDefines,161
+Sat Aug 26 01:34:08 AEST 2017 com.google.javascript.jscomp.ProcessDefines,179
+Sat Aug 26 01:34:08 AEST 2017 com.google.javascript.jscomp.ProcessDefines,242
+Sat Aug 26 01:37:28 AEST 2017 com.google.javascript.jscomp.ProcessDefines,243
+Sat Aug 26 01:37:28 AEST 2017 com.google.javascript.jscomp.ProcessDefines,246
+Sat Aug 26 01:41:10 AEST 2017 Sat Aug 26 01:41:10 AEST 2017 : com.google.javascript.jscomp.ProcessDefines,254=>Find no block
+Sat Aug 26 01:41:10 AEST 2017 com.google.javascript.jscomp.ProcessDefines,278
+Sat Aug 26 01:41:57 AEST 2017 com.google.javascript.jscomp.ProcessDefines,279
+Sat Aug 26 01:41:57 AEST 2017 com.google.javascript.jscomp.ProcessDefines,280
+Sat Aug 26 01:41:57 AEST 2017 Sat Aug 26 01:41:57 AEST 2017 : com.google.javascript.jscomp.ProcessDefines,281=>Find no block
+Sat Aug 26 01:41:57 AEST 2017 com.google.javascript.jscomp.ProcessDefines,284
+Sat Aug 26 01:42:31 AEST 2017 com.google.javascript.jscomp.ProcessDefines,285
+Timeout time : 17/08/26 02:07
