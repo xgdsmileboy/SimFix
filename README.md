@@ -119,7 +119,7 @@ Totally, *SimFix* successfully repair 40 bugs among 357 bugs in Defects4j v1.0 b
 
   > Chart (4) : [1](./final/patch/chart/1/0/1_AbstractCategoryItemRenderer.java#L1795), [3](./final/patch/chart/3/0/1_TimeSeries.java#L626), [7](./final/patch/chart/7/0/1_TimePeriodValues.java#L299), [20](./final/patch/chart/20/0/1_ValueMarker.java#L95)
   >
-  > Math (14) : [5](./final/patch/math), [33](./final/patch/math), [35](./final/patch/math), [41](./final/patch/math), [50](./final/patch/math), [53](./final/patch/math), [57](./final/patch/math), [59](./final/patch/math), [63](./final/patch/math), [70](./final/patch/math), [71](./final/patch/math), [75](./final/patch/math), [79](./final/patch/math), [98](./final/patch/math)
+  > Math (14) : [5](./final/patch/math/5/0/1_Complex.java#L304), [33](./final/patch/math/33/0/1_SimplexTableau.java#L338), [35-L1](./final/patch/math/35/0/1_ElitisticListPopulation.java#L50), [35-L2](./final/patch/math/35/1/1_ElitisticListPopulation.java#L64), [41](./final/patch/math/41/0/1_Variance.java#L520), [50](./final/patch/math/50/0/1_BaseSecantSolver.java#L187), [53](./final/patch/math/53/0/1_Complex.java#L152), [57](./final/patch/math/57/0/1_KMeansPlusPlusClusterer.java#L175), [59](./final/patch/math/59/0/1_FastMath.java#L3482), [63](./final/patch/math/63/0/1_MathUtils.java#L417), [70](./final/patch/math/70/0/1_BisectionSolver.java#L72), [71-L1](./final/patch/math/71/0/1_RungeKuttaIntegrator.java#L174), [71-L2](./final/patch/math/71/2/1_EmbeddedRungeKuttaIntegrator.java#L294), [75](./final/patch/math/75/0/1_Frequency.java#L303), [79](./final/patch/math/79/0/1_MathUtils.java#L1624), [98-L1](./final/patch/math/98/0/1_BigMatrixImpl.java#L989), [98-L2](./final/patch/math/98/4/1_RealMatrixImpl.java#L776)
   >
   > Lang (10) : [7](./final/patch/lang), [10](./final/patch/lang), [27](./final/patch/lang), [33](./final/patch/lang), [35](./final/patch/lang), [39](./final/patch/lang), [41](./final/patch/lang), [43](./final/patch/lang), [58](./final/patch/lang), [60](./final/patch/lang)
   >
@@ -131,15 +131,15 @@ Totally, *SimFix* successfully repair 40 bugs among 357 bugs in Defects4j v1.0 b
 
   > Chart (2) : [18](./final/patch/chart/18/1/1_DefaultKeyedValues.java#L334), [22](./final/patch/chart/22/0/1_KeyedObjects2D.java#L344)
   >
-  > Math (1) : [72](./final/patch/math)
+  > Math (1) : [72](./final/patch/math/72/0/1_BrentSolver.java#L114)
   >
-  > Closure (2) : [68](./final/patch/closure/68/0/1_JsDocInfoParser.java#L1760), [79 L1](./final/patch/closure/79/3/1_VarCheck/java#L249), [79 L2](./final/patch/closure/79/3/1_VarCheck/java#L134)
+  > Closure (2) : [68](./final/patch/closure/68/0/1_JsDocInfoParser.java#L1760), [79-L1](./final/patch/closure/79/3/1_VarCheck.java#L249), [79-L2](./final/patch/closure/79/3/1_VarCheck.java#L134)
 
 * **Incorrect Patch (20):**
 
   > Chart (3) : [12](./final/patch/chart/12/0/1_MultiplePiePlot.java#L145), [14](./final/patch/chart/14/3/1_CategoryPlot.java#L2440), [25](./final/patch/chart/25/0/1_DatasetUtilities.java#L576)
   >
-  > Math (12) : [1](./final/patch/math), [6](./final/patch/math), [8](./final/patch/math), [20](./final/patch/math), [28](./final/patch/math), [40](./final/patch/math), [73](./final/patch/math), [80](./final/patch/math), [81](./final/patch/math), [82](./final/patch/math), [85](./final/patch/math), [88](./final/patch/math)
+  > Math (12) : [1](./final/patch/math/1/0/1_BigFraction.java#L303), [6](./final/patch/math/6/0/1_BaseOptimizer.java#L93), [8](./final/patch/math/8/0/1_DiscreteDistribution.java#L189), [20](./final/patch/math/20/0/1_CMAESOptimizer.java#L994), [28](./final/patch/math/28/0/1_SimplexSolver.java#L123), [40](./final/patch/math/40/0/1_BracketingNthOrderBrentSolver.java#L326), [73](./final/patch/math/73/0/1_BrentSolver.java#L132), [80](./final/patch/math/80/0/1_EigenDecompositionImpl.java#L1137), [81](./final/patch/math/81/0/1_EigenDecompositionImpl.java#L1535), [82](./final/patch/math/82/0/1_SimplexSolver.java#L62), [85](./final/patch/math/85/0/1_UnivariateRealSolverUtils.java#L198), [88](./final/patch/math/88/0/1_SimplexSolver.java#L83)
   >
   > Lang (3) : [44](./final/patch/lang), [45](./final/patch/lang), [63](./final/patch/lang)
   >
