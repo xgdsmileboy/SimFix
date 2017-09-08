@@ -56,7 +56,7 @@ Our prototype of *SimFix* needs **three** input options for running.
 
 * *-\-bug_id* : the identifier of the buggy program. (`1` for the example)
 
-  * the option of *-\-bugy_id* supports multiple format:
+  * the option of *-\-bugy_id* supports multiple formats:
 
     `single_id` : repair single bug, `e.g., 1`.
 
@@ -64,7 +64,7 @@ Our prototype of *SimFix* needs **three** input options for running.
 
     `single_id,single_id,single_id` : repair any bugs for the specific program, `e.g., 1,5,9`.
 
-    `all` : repair all buggy versions of a specific project, `e.g., all`.
+    `all` : repair all buggy versions of a specific project, `i.e., all`.
 
   ```shell
   Usage: --proj_home=${proj_home} --proj_name=${proj_name} --bug_id=${bug_id}
