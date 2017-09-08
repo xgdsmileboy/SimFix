@@ -76,7 +76,7 @@ Our prototype of *SimFix* needs **three** input options for running.
 
 * From the Main class:
 
-   `Run As`→`Run Configurations…` →`Arguments` : set the above arguments.
+   `Run As`→`Run Configurations…` →`Arguments` : set the above arguments as *Program Arguments*.
 
 **OPTION 2** : run using command line.
 
@@ -113,7 +113,41 @@ After finishing the repair, there will be two additional folders: `log` and `pat
 
 ## IX. Evaluation Result
 
-####  Overview
+Totally, *SimFix* successfully repair 40 bugs among 357 bugs in Defects4j v1.0 benchmark with generating 20 plausible but incorrect patches. The details are listed below.
+
+* **Completely Correct Patch (35):** completely fix the bug.
+
+  > Chart (4) : [1](./final/patch/chart/1/0/1_AbstractCategoryItemRenderer.java#L1795), [3](), [7](), [20]()
+  >
+  > Math (14) : [5](), [33](), [35](), [41](), [50](), [53](), [57](), [59](), [63](), [70](), [71](), [75](), [79](), [98]()
+  >
+  > Lang (10) : [7](), [10](), [27](), [33](), [35](), [39](), [41](), [43](), [58](), [60]()
+  >
+  > Closure (6) : [14](), [57](), [62](), [63](), [73](), [115]()
+  >
+  > Time (1) : [7]()
+
+* **Partially Correct Path (5):** generate at least one correct patch for one location for multiple location bug.
+
+  > Chart (2) : [18](), [22]()
+  >
+  > Math (1) : [72]()
+  >
+  > Closure (2) : [68](), [79]()
+
+* **Incorrect Patch (20):**
+
+  > Chart (3) : [12](), [14](), [25]()
+  >
+  > Math (12) : [1](), [6](), [8](), [20](), [28](), [40](), [73](), [80](), [81](), [82](), [85](), [88]()
+  >
+  > Lang (3) : [44](), [45](), [63]()
+  >
+  > Closure (1) : [106]()
+  >
+  > Time (1) : [9]()
+
+  ​
 
 
 
