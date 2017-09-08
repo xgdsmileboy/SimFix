@@ -1,9 +1,9 @@
 # SimFix
 
-* [I. Introduction of SimFix](#ix-evaluation-result)
-* [II. Environment setup](#ii-environment)
-* [III. Run SimFix Step-by-Step](#iii-how-to-run)
-* [IX. Evaluation Result](#ix-evaluation-result)
+* [I. Introduction of SimFix](#user-content-i-introduction)
+* [II. Environment setup](#user-content-ii-environment)
+* [III. Run SimFix Step-by-Step](#user-content-iii-how-to-run)
+* [IX. Evaluation Result](#user-content-ix-evaluation-result)
 
 ## I. Introduction
 
@@ -22,7 +22,7 @@
 
 ## III. How to run
 
-*SimFix* was traditionally developed as an Eclipse Java project, you can simply import this project to your workspace and run it as a common Java program. The main class is **cofix.main.Main**, and the running option please refer to the [Running Options](#step-2-running-options).
+*SimFix* was traditionally developed as an Eclipse Java project, you can simply import this project to your workspace and run it as a common Java program. The main class is **cofix.main.Main**, and the running option please refer to the [Running Options](#user-content-step-2-running-options).
 
 #### Before running
 
