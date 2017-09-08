@@ -1,7 +1,7 @@
 # SimFix
 
 * [I. Introduction of SimFix](#ix-evaluation-result)
-* [II. Environment for running](#ii-environment)
+* [II. Environment setup](#ii-environment)
 * [III. Run SimFix Step-by-Step](#iii-how-to-run)
 * [IX. Evaluation Result](#ix-evaluation-result)
 
