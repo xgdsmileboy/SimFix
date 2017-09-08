@@ -150,14 +150,23 @@ Totally, *SimFix* successfully repair 40 bugs among 357 bugs in Defects4j v1.0 b
 
   ## X. Structure of the project
   |--- README.md  : user guidance
+
   |--- bin                   : binary code
+
   |--- d4j-info           : defects4j information
+
   |--- doc                  : document
+
   |--- final                 : evaluation result
+
   |--- lib                    : dependent libraries
+
   |--- sbfl                  : fault localization tool
+
   |--- simfix.jar        : runnable jar file
+
   |--- src                   : source code
+
   |--- test                 : test suite
 
   ----
