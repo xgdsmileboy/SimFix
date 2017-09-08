@@ -72,14 +72,48 @@ Our prototype of *SimFix* needs **three** input options for running.
   Another: --proj_home=/home/user --proj_name=chart --bug_id=1,4,8
   ```
 
-**OPTION 1** : running using eclipse.
+**OPTION 1** : run within eclipse.
 
-**OPTION 2** : running using command line.
+* From the Main class:
+
+   `Run As`→`Run Configurations…` →`Arguments` : set the above arguments.
+
+**OPTION 2** : run using command line.
+
+* We also provide runnable jar file of *SimFix* in the home folder of the project `i.e., simfix.jar`.
+
+  set the home directory of the *SimFix* project as your correct path and then run as:
+
+  `java -jar simfix.jar --proj_home=/home/user --proj_name=chart --bug_id=1`
 
 #### Step 3, Result Analysis
 
+After finishing the repair, there will be two additional folders: `log` and `patch`.
 
+* `log` : debug output, including buggy statements already tried, patches and reference code snippet for correct patch generation.
+
+* `patch` : a single source file repaired by *SimFix* that can pass the test suite. In the source file, you can find the patch, which is formatted as (example of Chart_1):
+
+  ```java
+  // start of generated patch
+  int index=this.plot.getIndexOf(this);
+  CategoryDataset dataset=this.plot.getDataset(index);
+  if(dataset==null){
+  return result;
+  }
+  // end of generated patch
+  /* start of original code
+          int index = this.plot.getIndexOf(this);
+          CategoryDataset dataset = this.plot.getDataset(index);
+          if (dataset != null) {
+              return result;
+          }
+   end of original code*/
+  ```
 
 ## IX. Evaluation Result
 
 ####  Overview
+
+
+
