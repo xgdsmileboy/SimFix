@@ -51,13 +51,13 @@ Originally, *SimFix* was developed as an [Eclipse](http://www.eclipse.org/mars/)
 
 Our prototype of *SimFix* needs **three** input options for running.
 
-* *-\-proj_home* : the home of buggy program of benchmark. (`${buggy_program_path}` for the example)
+* `--proj_home ` : the home of buggy program of benchmark. (`${buggy_program_path}` for the example)
 
-* *-\-proj_name* : the project name of buggy program of benchmark. (`chart` for the example)
+* `--proj_name` : the project name of buggy program of benchmark. (`chart` for the example)
 
-* *-\-bug_id* : the identifier of the buggy program. (`1` for the example)
+* `--bug_id` : the identifier of the buggy program. (`1` for the example)
 
-  * the option of *-\-bugy_id* supports multiple formats:
+  * the option of `--bugy_id` supports multiple formats:
 
     `single_id` : repair single bug, `e.g., 1`.
 
