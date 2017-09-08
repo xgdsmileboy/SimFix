@@ -4,7 +4,7 @@
 * [II. Environment setup](#user-content-ii-environment)
 * [III. Run SimFix Step-by-Step](#user-content-iii-how-to-run)
 * [IV. Evaluation Result](#user-content-iv-evaluation-result)
-* [V. Structure of the project](#user-content-V-structure-of-the-project)
+* [V. Structure of the project](#user-content-v-structure-of-the-project)
 
 ## I. Introduction
 
@@ -148,7 +148,7 @@ Totally, *SimFix* successfully repair 40 bugs among 357 bugs in Defects4j v1.0 b
   >
   > Time (1) : [9](./final/patch/time/9/0/1_IllegalFieldValueException.java#L45)
 
-  ## V. Structure of the project
+## V. Structure of the project
   |--- README.md  : user guidance
 
   |--- bin                   : binary code
