@@ -117,7 +117,7 @@ Totally, *SimFix* successfully repair 40 bugs among 357 bugs in Defects4j v1.0 b
 
 * **Completely Correct Patch (35):** completely fix the bug.
 
-  > Chart (4) : [1](./final/patch/chart/1/0/1_AbstractCategoryItemRenderer.java#L1795), [3](./final/patch/3/1_TimeSeries.java#626), [7](./final/patch/chart/7/0/1_TimePeriodValues.java#299), [20](./final/patch/chart/20/0/1_ValueMarker.java#95)
+  > Chart (4) : [1](./final/patch/chart/1/0/1_AbstractCategoryItemRenderer.java#L1795), [3](./final/patch/3/0/1_TimeSeries.java#L626), [7](./final/patch/chart/7/0/1_TimePeriodValues.java#L299), [20](./final/patch/chart/20/0/1_ValueMarker.java#L95)
   >
   > Math (14) : [5](./final/patch/math), [33](./final/patch/math), [35](./final/patch/math), [41](./final/patch/math), [50](./final/patch/math), [53](./final/patch/math), [57](./final/patch/math), [59](./final/patch/math), [63](./final/patch/math), [70](./final/patch/math), [71](./final/patch/math), [75](./final/patch/math), [79](./final/patch/math), [98](./final/patch/math)
   >
@@ -129,7 +129,7 @@ Totally, *SimFix* successfully repair 40 bugs among 357 bugs in Defects4j v1.0 b
 
 * **Partially Correct Path (5):** generate at least one correct patch for one location for multiple location bug.
 
-  > Chart (2) : [18](./final/patch/chart/18/1/1_DefaultKeyedValues.java#334), [22](./final/patch/chart/0/1_KeyedObjects2D.java#344)
+  > Chart (2) : [18](./final/patch/chart/18/1/1_DefaultKeyedValues.java#L334), [22](./final/patch/chart/0/1_KeyedObjects2D.java#L344)
   >
   > Math (1) : [72](./final/patch/math)
   >
@@ -137,7 +137,7 @@ Totally, *SimFix* successfully repair 40 bugs among 357 bugs in Defects4j v1.0 b
 
 * **Incorrect Patch (20):**
 
-  > Chart (3) : [12](./final/patch/chart/12/0/1_MultiplePiePlot.java#145), [14](./final/patch/chart/14/3/1_CategoryPlot.java#2440), [25](./final/patch/chart/25/0/1_DatasetUtilities.java#576)
+  > Chart (3) : [12](./final/patch/chart/12/0/1_MultiplePiePlot.java#L145), [14](./final/patch/chart/14/3/1_CategoryPlot.java#L2440), [25](./final/patch/chart/25/0/1_DatasetUtilities.java#L576)
   >
   > Math (12) : [1](./final/patch/math), [6](./final/patch/math), [8](./final/patch/math), [20](./final/patch/math), [28](./final/patch/math), [40](./final/patch/math), [73](./final/patch/math), [80](./final/patch/math), [81](./final/patch/math), [82](./final/patch/math), [85](./final/patch/math), [88](./final/patch/math)
   >
