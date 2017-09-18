@@ -149,25 +149,25 @@ Totally, *SimFix* successfully repair 40 bugs among 357 bugs in Defects4j v1.0 b
   > Time (1) : [9](./final/patch/time/9/0/1_IllegalFieldValueException.java#L45)
 
 ## V. Structure of the project
-  |--- README.md  : user guidance
+​       |--- README.md  : user guidance
 
-  |--- bin                   : binary code
+​       |--- bin                   : binary code
 
-  |--- d4j-info           : defects4j information
+​       |--- d4j-info           : defects4j information
 
-  |--- doc                  : document
+​       |--- doc                  : document
 
-  |--- final                 : evaluation result
+​       |--- final                 : evaluation result
 
-  |--- lib                    : dependent libraries
+​       |--- lib                    : dependent libraries
 
-  |--- sbfl                  : fault localization tool
+​       |--- sbfl                  : fault localization tool
 
-  |--- simfix.jar        : runnable jar file
+​       |--- simfix.jar        : runnable jar file
 
-  |--- src                   : source code
+​       |--- src                   : source code
 
-  |--- test                 : test suite
+​       |--- test                 : test suite
 
   ----
 
