@@ -42,7 +42,7 @@ import cofix.core.parser.NodeUtils;
 
 /**
  * @author Jiajun
- * @datae Jun 29, 2017
+ * @date Jun 29, 2017
  */
 public class CodeSearch {
 
@@ -255,7 +255,7 @@ public class CodeSearch {
 	/**
 	 * find statement of exact line number
 	 * @author Jiajun
-	 * @datae Jun 14, 2017
+	 * @date Jun 14, 2017
 	 */
 	class FindExactLineVisitor extends ASTVisitor{
 		

@@ -34,7 +34,7 @@ import cofix.core.parser.node.stmt.IfStmt;
 
 /**
  * @author Jiajun
- * @datae Jun 23, 2017
+ * @date Jun 23, 2017
  */
 public class ArrayCreate extends Expr {
 

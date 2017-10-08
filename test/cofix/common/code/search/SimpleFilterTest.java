@@ -8,7 +8,7 @@ package cofix.common.code.search;
 
 /**
  * @author Jiajun
- * @datae Jun 2, 2017
+ * @date Jun 2, 2017
  */
 public class SimpleFilterTest {
 

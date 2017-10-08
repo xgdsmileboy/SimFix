@@ -24,7 +24,7 @@ import cofix.core.parser.search.SimpleFilter;
 
 /**
  * @author Jiajun
- * @datae May 31, 2017
+ * @date May 31, 2017
  */
 public class CodeBlockMatcherTest {
 	

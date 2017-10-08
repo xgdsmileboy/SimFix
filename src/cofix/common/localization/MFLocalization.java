@@ -22,7 +22,7 @@ import cofix.common.util.Subject;
 
 /**
  * @author Jiajun
- * @datae Aug 10, 2017
+ * @date Aug 10, 2017
  */
 public class MFLocalization extends AbstractFaultlocalization {
 

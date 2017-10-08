@@ -10,7 +10,7 @@ import org.eclipse.jdt.core.dom.ASTNode;
 
 /**
  * @author Jiajun
- * @datae Jun 23, 2017
+ * @date Jun 23, 2017
  */
 public abstract class Label extends Expr {
 

@@ -13,7 +13,7 @@ import java.util.Set;
 
 /**
  * @author Jiajun
- * @datae Jun 20, 2017
+ * @date Jun 20, 2017
  */
 public class OutStream extends OutputStream{
 

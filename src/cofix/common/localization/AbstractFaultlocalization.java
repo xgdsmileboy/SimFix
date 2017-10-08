@@ -14,7 +14,7 @@ import cofix.common.util.Subject;
 
 /**
  * @author Jiajun
- * @datae Jul 4, 2017
+ * @date Jul 4, 2017
  */
 public abstract class AbstractFaultlocalization {
 	

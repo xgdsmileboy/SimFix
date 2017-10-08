@@ -8,7 +8,7 @@ package cofix.core.match;
 
 /**
  * @author Jiajun
- * @datae Jun 7, 2017
+ * @date Jun 7, 2017
  */
 public class StructureMetricTest {
 	

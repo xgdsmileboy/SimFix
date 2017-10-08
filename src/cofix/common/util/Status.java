@@ -8,7 +8,7 @@ package cofix.common.util;
 
 /**
  * @author Jiajun
- * @datae Jun 21, 2017
+ * @date Jun 21, 2017
  */
 public enum Status {
 	

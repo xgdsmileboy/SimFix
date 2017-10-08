@@ -15,7 +15,7 @@ import org.eclipse.jdt.core.dom.StringLiteral;
 
 /**
  * @author Jiajun
- * @datae Jun 21, 2017
+ * @date Jun 21, 2017
  */
 public class GenStatement {
 	

@@ -8,7 +8,7 @@ package cofix.core.metric;
 
 /**
  * @author Jiajun
- * @datae Jun 30, 2017
+ * @date Jun 30, 2017
  */
 public class NewFVector {
 	

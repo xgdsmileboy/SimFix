@@ -17,7 +17,7 @@ import cofix.common.util.Subject;
 
 /**
  * @author Jiajun
- * @datae Jul 19, 2017
+ * @date Jul 19, 2017
  */
 public class OchiaiResultTest {
 	

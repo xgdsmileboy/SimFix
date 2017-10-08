@@ -15,7 +15,7 @@ import cofix.common.util.Subject;
 
 /**
  * @author Jiajun
- * @datae Jun 16, 2017
+ * @date Jun 16, 2017
  */
 public class FLocalizationTest {
 	@Test

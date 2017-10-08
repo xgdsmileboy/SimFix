@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * @author Jiajun
- * @datae Jul 11, 2017
+ * @date Jul 11, 2017
  */
 public class Executor {
 	private final static String __name__ = "@Executor ";

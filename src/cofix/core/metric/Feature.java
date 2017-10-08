@@ -10,7 +10,7 @@ import cofix.core.parser.node.Node;
 
 /**
  * @author Jiajun
- * @datae Jun 28, 2017
+ * @date Jun 28, 2017
  */
 public abstract class Feature {
 	

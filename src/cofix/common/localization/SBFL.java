@@ -12,7 +12,7 @@ import cofix.common.localization.alg.Algorithm;
 
 /**
  * @author Jiajun
- * @datae Jun 21, 2017
+ * @date Jun 21, 2017
  */
 public class SBFL {
 	

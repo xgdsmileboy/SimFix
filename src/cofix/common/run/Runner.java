@@ -15,7 +15,7 @@ import cofix.common.util.Subject;
 
 /**
  * @author Jiajun
- * @datae Jul 11, 2017
+ * @date Jul 11, 2017
  */
 public class Runner {
 	

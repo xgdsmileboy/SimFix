@@ -14,7 +14,7 @@ import cofix.common.config.Constant;
 
 /**
  * @author Jiajun
- * @datae Jun 16, 2017
+ * @date Jun 16, 2017
  */
 public class SubjectTest {
 	

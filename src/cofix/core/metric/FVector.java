@@ -10,7 +10,7 @@ import cofix.core.parser.node.CodeBlock;
 
 /**
  * @author Jiajun
- * @datae Jun 30, 2017
+ * @date Jun 30, 2017
  */
 public class FVector {
 	private final int F_LOOP_INDEX = 0;

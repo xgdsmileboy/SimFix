@@ -169,7 +169,7 @@ import cofix.core.parser.node.stmt.WhileStmt;
 
 /**
  * @author Jiajun
- * @datae Jun 24, 2017
+ * @date Jun 24, 2017
  */
 public class CodeBlock extends Node{
 

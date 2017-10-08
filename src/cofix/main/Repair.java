@@ -51,7 +51,7 @@ import cofix.core.parser.search.SimpleFilter;
 
 /**
  * @author Jiajun
- * @datae Jun 20, 2017
+ * @date Jun 20, 2017
  */
 public class Repair {
 

@@ -15,7 +15,7 @@ import cofix.core.parser.search.BuggyCode;
 
 /**
  * @author Jiajun
- * @datae Jun 30, 2017
+ * @date Jun 30, 2017
  */
 public class CodeBlockTest {
 	

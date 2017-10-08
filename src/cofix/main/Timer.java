@@ -14,7 +14,7 @@ import cofix.common.util.JavaFile;
 
 /**
  * @author Jiajun
- * @datae Jun 21, 2017
+ * @date Jun 21, 2017
  */
 public class Timer {
 	private long _start = 0;

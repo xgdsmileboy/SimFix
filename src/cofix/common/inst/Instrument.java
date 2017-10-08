@@ -19,7 +19,7 @@ import cofix.common.util.LevelLogger;
 
 /**
  * @author Jiajun
- * @datae Jun 21, 2017
+ * @date Jun 21, 2017
  */
 public class Instrument {
 	private static String __name__ = "@Instrument ";

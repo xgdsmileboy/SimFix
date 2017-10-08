@@ -73,7 +73,7 @@ import cofix.core.parser.node.stmt.WhileStmt;
 
 /**
  * @author Jiajun
- * @datae Jun 2, 2017
+ * @date Jun 2, 2017
  */
 public class NodeUtils {
 

@@ -45,7 +45,7 @@ import cofix.common.util.Subject;
 
 /**
  * @author Jiajun
- * @datae Jul 26, 2017
+ * @date Jul 26, 2017
  */
 public class Purification {
 	

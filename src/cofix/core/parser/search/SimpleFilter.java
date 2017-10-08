@@ -37,7 +37,7 @@ import cofix.core.parser.node.CodeBlock;
 
 /**
  * @author Jiajun
- * @datae Jun 29, 2017
+ * @date Jun 29, 2017
  */
 public class SimpleFilter {
 	private List<CodeBlock> _candidates = new ArrayList<>();

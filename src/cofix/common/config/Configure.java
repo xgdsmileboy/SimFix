@@ -37,7 +37,7 @@ import cofix.common.util.Subject;
 
 /**
  * @author Jiajun
- * @datae Jun 19, 2017
+ * @date Jun 19, 2017
  */
 public class Configure {
 

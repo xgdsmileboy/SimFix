@@ -25,7 +25,7 @@ import cofix.common.util.Subject;
 
 /**
  * @author Jiajun
- * @datae Jun 20, 2017
+ * @date Jun 20, 2017
  */
 public class JUnitEngineTest {
 	
