@@ -67,7 +67,7 @@ Our prototype of *SimFix* needs **three** input options for running.
 
     `all` : repair all buggy versions of a specific project, `i.e., all`.
 
-  ```shell
+  ```powershell
   Usage: --proj_home=${proj_home} --proj_name=${proj_name} --bug_id=${bug_id}
   Example: --proj_home=/home/user --proj_name=chart --bug_id=1
   Another: --proj_home=/home/user --proj_name=chart --bug_id=1,4,8
