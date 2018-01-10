@@ -9,9 +9,6 @@ package cofix.main;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-import cofix.common.config.Constant;
-import cofix.common.util.JavaFile;
-
 /**
  * @author Jiajun
  * @date Jun 21, 2017
@@ -24,7 +21,6 @@ public class Timer {
 		_timeout += TimeUnit.HOURS.toMillis(hour);
 		_timeout += TimeUnit.MINUTES.toMillis(min);
 		System.out.println("TIMEOUT : " + _timeout);
-		JavaFile.writeStringToFile(Constant.HOME + "/result.log", "TIMEOUT : " + hour + " h " + min + " m (" + _timeout + ")\n", true);
 	}
 	
 	public String start(){
