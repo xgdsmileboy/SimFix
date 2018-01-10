@@ -23,6 +23,7 @@ import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.expr.Expr;
@@ -39,8 +40,10 @@ public class SuperConstructorInv extends Stmt {
 	private List<Expr> _arguments = null;
 	
 	private String _arguments_replace = null;
+	private String _whole_replace = null;
 	
-	private int ARGID = 0; 
+	private final int ARGID = 0; 
+	private final int WHOLE = 1;
 	
 	/**
 	 * SuperConstructorInvocation:
@@ -74,6 +77,16 @@ public class SuperConstructorInv extends Stmt {
 		boolean match = false;
 		if(node instanceof SuperConstructorInv){
 			match = true;
+			Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(node, varTrans, allUsableVariables);
+			if(record != null) {
+				NodeUtils.replaceVariable(record);
+				String target = node.toSrcString().toString();
+				if(!target.equals(toSrcString().toString())) {
+					Revision revision = new Revision(this, 0, target, _nodeType);
+					modifications.add(revision);
+				}
+				NodeUtils.restoreVariables(record);
+			}
 			SuperConstructorInv other = (SuperConstructorInv) node;
 			modifications.addAll(NodeUtils.handleArguments(this, ARGID, _nodeType, _arguments, other._arguments, varTrans, allUsableVariables));
 		} else {
@@ -89,13 +102,35 @@ public class SuperConstructorInv extends Stmt {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		_arguments_replace = modification.getTargetString();
+		if(modification instanceof Revision) {
+			switch (modification.getSourceID()) {
+			case ARGID:
+				_arguments_replace = modification.getTargetString();
+				break;
+			case WHOLE:
+				_whole_replace = modification.getTargetString();
+				break;
+			default:
+				return false;
+			}
+		}
 		return true;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		_arguments_replace = null;
+		if(modification instanceof Revision) {
+			switch (modification.getSourceID()) {
+			case ARGID:
+				_arguments_replace =null;
+				break;
+			case WHOLE:
+				_whole_replace = null;
+				break;
+			default:
+				return false;
+			}
+		}
 		return true;
 	}
 
@@ -108,21 +143,25 @@ public class SuperConstructorInv extends Stmt {
 	@Override
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer();
-		if(_expression != null){
-			stringBuffer.append(_expression.toSrcString());
-			stringBuffer.append(".");
-		}
-		stringBuffer.append("super(");
-		if(_arguments_replace != null){
-			stringBuffer.append(_arguments_replace);
-		}else if(_arguments != null && _arguments.size() > 0){
-			stringBuffer.append(_arguments.get(0).toSrcString());
-			for(int i= 1; i < _arguments.size(); i++){
-				stringBuffer.append(",");
-				stringBuffer.append(_arguments.get(i).toSrcString());
+		if(_whole_replace != null) {
+			stringBuffer.append(_whole_replace);
+		} else {
+			if(_expression != null){
+				stringBuffer.append(_expression.toSrcString());
+				stringBuffer.append(".");
 			}
+			stringBuffer.append("super(");
+			if(_arguments_replace != null){
+				stringBuffer.append(_arguments_replace);
+			}else if(_arguments != null && _arguments.size() > 0){
+				stringBuffer.append(_arguments.get(0).toSrcString());
+				for(int i= 1; i < _arguments.size(); i++){
+					stringBuffer.append(",");
+					stringBuffer.append(_arguments.get(i).toSrcString());
+				}
+			}
+			stringBuffer.append(");");
 		}
-		stringBuffer.append(");");
 		return stringBuffer;
 	}
 

@@ -18,6 +18,7 @@ import cofix.core.metric.Literal;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
@@ -29,6 +30,9 @@ public class NumLiteral extends Expr {
 
 	private String _token = null;
 	
+	private String _replace = null;
+	
+	private final int WHOLE = 0;
 	/**
 	 * Null literal node.
 	 */
@@ -46,10 +50,16 @@ public class NumLiteral extends Expr {
 		boolean match = false;
 		if(node instanceof NumLiteral){
 			match = true;
-			// TODO : to finish
+			Revision revision = new Revision(this, WHOLE, node.toSrcString().toString(), _nodeType);
+			modifications.add(revision);
 		} else {
+			List<Modification> tmp = new LinkedList<>();
+			if(replaceExpr(node, WHOLE, varTrans, allUsableVariables,tmp)) {
+				modifications.addAll(tmp);
+				match = true;
+			}
+			tmp = new ArrayList<>();
 			List<Node> children = node.getChildren();
-			List<Modification> tmp = new ArrayList<>();
 			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
 				match = true;
 				modifications.addAll(tmp);
@@ -60,13 +70,19 @@ public class NumLiteral extends Expr {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification instanceof Revision && modification.getSourceID() == WHOLE) {
+			_replace = modification.getTargetString();
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification instanceof Revision && modification.getSourceID() == WHOLE) {
+			_replace = null;
+			return true;
+		}
 		return false;
 	}
 
@@ -79,6 +95,9 @@ public class NumLiteral extends Expr {
 	
 	@Override
 	public StringBuffer toSrcString() {
+		if(_replace != null) {
+			return new StringBuffer(_replace);
+		}
 		return new StringBuffer(_token);
 	}
 

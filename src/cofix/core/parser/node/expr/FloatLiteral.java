@@ -14,6 +14,7 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
+import cofix.common.util.Pair;
 import cofix.core.metric.Literal;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
@@ -69,7 +70,13 @@ public class FloatLiteral extends NumLiteral {
 				}
 			}
 		} else {
-			List<Modification> tmp = new ArrayList<>();
+			List<Modification> tmp = new LinkedList<>();
+			if(replaceExpr(node, EXPRID, varTrans, allUsableVariables,tmp)) {
+				modifications.addAll(tmp);
+				match = true;
+			}
+			tmp = new ArrayList<>();
+			
 			if(node instanceof ConditionalExpr){
 				ConditionalExpr conditionalExpr = (ConditionalExpr) node;
 				if(NodeUtils.conditionalMatch(this, EXPRID, conditionalExpr, varTrans, allUsableVariables, tmp)){

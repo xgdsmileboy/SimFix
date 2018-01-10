@@ -38,10 +38,11 @@ public class ClassInstanceCreate extends Expr {
 	private List<Expr> _arguments = null;
 	private AnonymousClassDecl _decl = null;
 	
-	private String _expression_replace = null;
+	private String _whole_replace = null;
 	private String _arguments_replace = null;
 	
 	private final int ARGID = 0;
+	private final int WHOLE = 1;
 	
 	/**
 	 * ClassInstanceCreation:
@@ -85,8 +86,14 @@ public class ClassInstanceCreate extends Expr {
 				modifications.addAll(NodeUtils.handleArguments(this, ARGID, _nodeType, _arguments, other._arguments, varTrans, allUsableVariables));
 			}
 		} else {
+			List<Modification> tmp = new LinkedList<>();
+			if(replaceExpr(node, WHOLE, varTrans, allUsableVariables,tmp)) {
+				modifications.addAll(tmp);
+				match = true;
+			}
+			tmp = new ArrayList<>();
+			
 			List<Node> children = node.getChildren();
-			List<Modification> tmp = new ArrayList<>();
 			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
 				match = true;
 				modifications.addAll(tmp);
@@ -97,20 +104,32 @@ public class ClassInstanceCreate extends Expr {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		if(modification.getSourceID() == ARGID){
+		switch(modification.getSourceID()){
+		case ARGID:
 			_arguments_replace = modification.getTargetString();
-			return true;
+			break;
+		case WHOLE:
+			_whole_replace = modification.getTargetString();
+			break;
+		default:
+			return false;
 		}
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		if(modification.getSourceID() == ARGID){
+		switch(modification.getSourceID()){
+		case ARGID:
 			_arguments_replace = null;
-			return true;
+			break;
+		case WHOLE:
+			_whole_replace = null;
+			break;
+		default:
+			return false;
 		}
-		return false;
+		return true;
 	}
 
 	@Override
@@ -122,29 +141,29 @@ public class ClassInstanceCreate extends Expr {
 	@Override
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer();
-		if(_expression != null){
-			if(_expression_replace != null){
-				stringBuffer.append(_expression_replace);
-			} else {
+		if(_whole_replace != null) {
+			stringBuffer.append(_whole_replace);
+		} else {
+			if(_expression != null){
 				stringBuffer.append(_expression);
+				stringBuffer.append(".");
 			}
-			stringBuffer.append(".");
-		}
-		stringBuffer.append("new ");
-		stringBuffer.append(_classType);
-		stringBuffer.append("(");
-		if(_arguments_replace != null){
-			stringBuffer.append(_arguments_replace);
-		}else if(_arguments != null && _arguments.size() > 0){
-			stringBuffer.append(_arguments.get(0).toSrcString());
-			for(int i = 1; i < _arguments.size(); i++){
-				stringBuffer.append(",");
-				stringBuffer.append(_arguments.get(i).toSrcString());
+			stringBuffer.append("new ");
+			stringBuffer.append(_classType);
+			stringBuffer.append("(");
+			if(_arguments_replace != null){
+				stringBuffer.append(_arguments_replace);
+			}else if(_arguments != null && _arguments.size() > 0){
+				stringBuffer.append(_arguments.get(0).toSrcString());
+				for(int i = 1; i < _arguments.size(); i++){
+					stringBuffer.append(",");
+					stringBuffer.append(_arguments.get(i).toSrcString());
+				}
 			}
-		}
-		stringBuffer.append(")");
-		if(_decl != null){
-			stringBuffer.append(_decl.toSrcString());
+			stringBuffer.append(")");
+			if(_decl != null){
+				stringBuffer.append(_decl.toSrcString());
+			}
 		}
 		return stringBuffer;
 	}

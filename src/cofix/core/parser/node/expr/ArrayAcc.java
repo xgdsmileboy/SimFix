@@ -14,7 +14,6 @@ import java.util.Map;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
-import org.eclipse.jdt.core.util.ISignatureAttribute;
 
 import cofix.common.util.Pair;
 import cofix.core.metric.Literal;
@@ -37,11 +36,13 @@ public class ArrayAcc extends Expr {
 	private Expr _index = null;
 	private Expr _array = null;
 	
+	private String _whole = null;
 	private String _index_replace = null;
 	private String _array_replace = null;
 	
 	private final int INDEXID = 0;
 	private final int ARRAYID = 1;
+	private final int WHOLE = 2;
 	
 	/**
 	 * ArrayAccess:
@@ -67,29 +68,29 @@ public class ArrayAcc extends Expr {
 			ArrayAcc other = (ArrayAcc) node;
 			List<Modification> tmp = new ArrayList<>();
 			if(!_index.toSrcString().toString().equals(other._index.toSrcString().toString())){
-				boolean canReplace = false;
-				if(_index instanceof SName && other._index instanceof SName){
-					canReplace = true;
-					String srcName = _index.toSrcString().toString();
-					String tarName = other._index.toSrcString().toString();
-					if(srcName.toUpperCase().equals(srcName)){
-						if(!tarName.toUpperCase().equals(tarName)){
-							canReplace = false;
-						}
-					} else if(tarName.toUpperCase().equals(tarName)){
-						canReplace = false;
-					}
-				}
-				if(canReplace){
+//				boolean canReplace = false;
+//				if(_index instanceof SName && other._index instanceof SName){
+//					canReplace = true;
+//					String srcName = _index.toSrcString().toString();
+//					String tarName = other._index.toSrcString().toString();
+//					if(srcName.toUpperCase().equals(srcName)){
+//						if(!tarName.toUpperCase().equals(tarName)){
+//							canReplace = false;
+//						}
+//					} else if(tarName.toUpperCase().equals(tarName)){
+//						canReplace = false;
+//					}
+//				}
+//				if(canReplace){
 					if(NodeUtils.replaceExpr(INDEXID, _index.toSrcString().toString(), _index, other._index, varTrans, allUsableVariables, tmp)){
 						modifications.addAll(tmp);
 						match = true;
 					}
-				}
+//				}
 			} else {
 				match = true;
 			}
-		} else if(node instanceof Expr && node.getNodeType().toString().equals("int")){
+		} else if(node instanceof Expr && ((Expr)node).getType().toString().equals("int")){
 			Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables((Expr)node, varTrans, allUsableVariables);
 			if(record != null){
 				NodeUtils.replaceVariable(record);
@@ -101,6 +102,15 @@ public class ArrayAcc extends Expr {
 				NodeUtils.restoreVariables(record);
 				match = true;
 				
+			}
+		} else if(node instanceof Expr && ((Expr)node).getType().toString().equals(getType().toString())){
+			Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables((Expr)node, varTrans, allUsableVariables);
+			if(record != null) {
+				NodeUtils.replaceVariable(record);
+				Revision revision = new Revision(this, WHOLE, node.toSrcString().toString(), _nodeType);
+				modifications.add(revision);
+				NodeUtils.restoreVariables(record);
+				match = true;
 			}
 		}
 		return match;
@@ -115,6 +125,8 @@ public class ArrayAcc extends Expr {
 			break;
 		case ARRAYID:
 			_array_replace = modification.getTargetString();
+		case WHOLE:
+			_whole = modification.getTargetString();
 		}
 		return true;
 	}
@@ -128,6 +140,8 @@ public class ArrayAcc extends Expr {
 			break;
 		case ARRAYID:
 			_array_replace = null;
+		case WHOLE:
+			_whole = null;
 		}
 		return true;
 	}
@@ -140,18 +154,22 @@ public class ArrayAcc extends Expr {
 	@Override
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer();
-		if(_array_replace != null){
-			stringBuffer.append(_array_replace);
+		if(_whole != null) {
+			stringBuffer.append(_whole);
 		} else {
-			stringBuffer.append(_array.toSrcString());
+			if(_array_replace != null){
+				stringBuffer.append(_array_replace);
+			} else {
+				stringBuffer.append(_array.toSrcString());
+			}
+			stringBuffer.append("[");
+			if(_index_replace != null){
+				stringBuffer.append(_index_replace);
+			} else {
+				stringBuffer.append(_index.toSrcString());
+			}
+			stringBuffer.append("]");
 		}
-		stringBuffer.append("[");
-		if(_index_replace != null){
-			stringBuffer.append(_index_replace);
-		} else {
-			stringBuffer.append(_index.toSrcString());
-		}
-		stringBuffer.append("]");
 		return stringBuffer;
 	}
 

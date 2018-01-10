@@ -7,14 +7,19 @@
 package cofix.core.parser.node.stmt;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
+import com.sun.org.apache.xpath.internal.operations.Mod;
+
 import cofix.core.metric.NewFVector;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
 /**
@@ -23,6 +28,8 @@ import cofix.core.parser.node.Node;
  */
 public class AssertStmt extends Stmt{
 
+	private String _replace = null;
+	
 	/**
 	 * AssertStatement:
      *	assert Expression [ : Expression ] ;
@@ -38,19 +45,40 @@ public class AssertStmt extends Stmt{
 
 	@Override
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean match = false;
+		if(node instanceof AssertStmt) {
+			match = true;
+			AssertStmt other = (AssertStmt) node;
+			String target = other.toSrcString().toString();
+			if(!target.equals(toSrcString().toString())) {
+				Revision revision = new Revision(this, 0, target, _nodeType);
+				modifications.add(revision);
+			}
+		} else {
+			List<Node> children = node.getChildren();
+			List<Modification> tmp = new LinkedList<>();
+			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)) {
+				modifications.addAll(tmp);
+				match = true;
+			}
+		}
+		return match;
 	}
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification instanceof Revision) {
+			_replace = modification.getTargetString();
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification instanceof Revision) {
+			_replace = null;
+		}
 		return false;
 	}
 
@@ -62,6 +90,9 @@ public class AssertStmt extends Stmt{
 	
 	@Override
 	public StringBuffer toSrcString() {
+		if(_replace != null) {
+			return new StringBuffer(_replace);
+		}
 		return new StringBuffer(_originalNode.toString());
 	}
 	

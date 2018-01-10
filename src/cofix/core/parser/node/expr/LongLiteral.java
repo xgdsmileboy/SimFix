@@ -7,6 +7,7 @@
 package cofix.core.parser.node.expr;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -67,7 +68,12 @@ public class LongLiteral extends NumLiteral {
 				}
 			}
 		} else {
-			List<Modification> tmp = new ArrayList<>();
+			List<Modification> tmp = new LinkedList<>();
+			if(replaceExpr(node, EXPRID, varTrans, allUsableVariables,tmp)) {
+				modifications.addAll(tmp);
+				match = true;
+			}
+			tmp = new ArrayList<>();
 			if(node instanceof ConditionalExpr){
 				ConditionalExpr conditionalExpr = (ConditionalExpr) node;
 				if(NodeUtils.conditionalMatch(this, EXPRID, conditionalExpr, varTrans, allUsableVariables, tmp)){
@@ -112,7 +118,7 @@ public class LongLiteral extends NumLiteral {
 	@Override
 	public StringBuffer toSrcString() {
 		if(_replace != null){
-			return new StringBuffer(String.valueOf(_replace));
+			return new StringBuffer(_replace);
 		}
 		return new StringBuffer(String.valueOf(_value));
 	}

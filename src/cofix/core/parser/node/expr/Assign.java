@@ -15,6 +15,7 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Assignment;
 import org.eclipse.jdt.core.dom.Type;
 
+import cofix.common.util.Pair;
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
@@ -23,6 +24,7 @@ import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
@@ -36,8 +38,14 @@ public class Assign extends Expr {
 	private Assignment.Operator _operator = null;
 	private Expr _rhs = null;
 	
-	private Assignment.Operator _operator_repalce = null;
-	private Expr _rhs_replace = null;
+	
+	private final int OPID = 0;
+	private final int LHS = 1;
+	private final int RHS = 2;
+	
+	private String _operator_repalce = null;
+	private String _rhs_replace = null;
+	private String _lhs_replace = null;
 	
 	/**
 	 * Assignment:
@@ -93,6 +101,31 @@ public class Assign extends Expr {
 					}
 				}
 			}
+			
+			match = true;
+			if(!_rhs.getType().toString().equals(assign._rhs.getType().toString())){
+				Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(assign._rhs, varTrans, allUsableVariables);
+				if(record != null) {
+					NodeUtils.replaceVariable(record);
+					String target = assign.toSrcString().toString();
+					if(!_rhs.toSrcString().toString().equals(target)) {
+						Revision revision = new Revision(this, RHS, target, _nodeType);
+						modifications.add(revision);
+						NodeUtils.restoreVariables(record);
+					}
+					NodeUtils.restoreVariables(record);
+				}
+			}
+			String transName = varTrans.get(assign._lhs.toSrcString().toString());
+			if(transName != null && !_lhs.toSrcString().toString().equals(transName)) {
+				Revision revision = new Revision(this, LHS, transName, _nodeType);
+				modifications.add(revision);
+			}
+			if(!assign._operator.toString().equals(_operator.toString())) {
+				Revision revision = new Revision(this, OPID, assign._operator.toString(), _nodeType);
+				modifications.add(revision);
+			}
+			
 		} else {
 			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();
@@ -106,14 +139,45 @@ public class Assign extends Expr {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		if(modification instanceof Revision) {
+			Revision revision = (Revision) modification;
+			int id = revision.getSourceID();
+			switch(id) {
+			case LHS:
+				_lhs_replace = modification.getTargetString();
+				break;
+			case RHS:
+				_rhs_replace = modification.getTargetString();
+				break;
+			case OPID:
+				_operator_repalce = modification.getTargetString();
+				break;
+			default:
+				return false;
+			}
+		}
+		return true;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		_operator_repalce = null;
-		_rhs_replace = null;
+		if(modification instanceof Revision) {
+			Revision revision = (Revision) modification;
+			int id = revision.getSourceID();
+			switch(id) {
+			case LHS:
+				_lhs_replace = null;
+				break;
+			case RHS:
+				_rhs_replace = null;
+				break;
+			case OPID:
+				_operator_repalce = null;
+				break;
+			default:
+				return false;
+			}
+		}
 		return true;
 	}
 
@@ -125,14 +189,18 @@ public class Assign extends Expr {
 	@Override
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer();
-		stringBuffer.append(_lhs.toSrcString());
+		if(_lhs_replace != null) {
+			stringBuffer.append(_lhs_replace);
+		} else {
+			stringBuffer.append(_lhs.toSrcString());
+		}
 		if(_operator_repalce != null){
-			stringBuffer.append(_operator_repalce.toString());
+			stringBuffer.append(_operator_repalce);
 		} else {
 			stringBuffer.append(_operator.toString());
 		}
 		if(_rhs_replace != null){
-			stringBuffer.append(_rhs_replace.toSrcString());
+			stringBuffer.append(_rhs_replace);
 		} else {
 			stringBuffer.append(_rhs.toSrcString());
 		}

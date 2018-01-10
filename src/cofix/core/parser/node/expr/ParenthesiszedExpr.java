@@ -7,15 +7,13 @@
 package cofix.core.parser.node.expr;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-
-import javax.jws.WebParam.Mode;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
-import cofix.common.util.Pair;
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
@@ -23,7 +21,6 @@ import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
-import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
@@ -59,7 +56,13 @@ public class ParenthesiszedExpr extends Expr {
 			return _expression.match(((ParenthesiszedExpr) node)._expression, varTrans, allUsableVariables, modifications);
 			// TODO : to finish
 		} else {
-			List<Modification> tmp = new ArrayList<>();
+			List<Modification> tmp = new LinkedList<>();
+			if(replaceExpr(node, WHOLE, varTrans, allUsableVariables,tmp)) {
+				modifications.addAll(tmp);
+				match = true;
+			}
+			tmp = new ArrayList<>();
+			
 			List<Node> children = node.getChildren();
 			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
 				match = true;

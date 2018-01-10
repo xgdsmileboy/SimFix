@@ -98,7 +98,7 @@ public class SName extends Label {
 			} else {
 				if(_exprType.toString().equals(((SName) node).getType())){
 					match = true;
-					if(!other.getName().equals(_name) && allUsableVariables.containsKey(_name) && !NodeUtils.isClass(_name) && !NodeUtils.isClass(other._name)){
+					if(!other.getName().equals(_name) && allUsableVariables.containsKey(_name)){
 						Revision revision = new Revision(this, NAMEID, other.getName(), _nodeType);
 						modifications.add(revision);
 					}
@@ -114,8 +114,13 @@ public class SName extends Label {
 				}
 			}
 		} else {
+			List<Modification> tmp = new LinkedList<>();
+			if(replaceExpr(node, NAMEID, varTrans, allUsableVariables,tmp)) {
+				modifications.addAll(tmp);
+				match = true;
+			}
+			tmp = new ArrayList<>();
 			List<Node> children = node.getChildren();
-			List<Modification> tmp = new ArrayList<>();
 			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
 				match = true;
 				modifications.addAll(tmp);

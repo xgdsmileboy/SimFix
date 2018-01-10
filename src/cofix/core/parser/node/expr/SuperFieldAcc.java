@@ -19,6 +19,7 @@ import cofix.core.metric.Literal;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
@@ -30,6 +31,10 @@ public class SuperFieldAcc extends Expr {
 
 	private Label _name = null;
 	private SName _identifier = null;
+	
+	private String _replace = null;
+	
+	private final int WHOLE = 0;
 	
 	/**
 	 * SuperFieldAccess:
@@ -53,10 +58,27 @@ public class SuperFieldAcc extends Expr {
 		boolean match = false;
 		if(node instanceof SuperFieldAcc){
 			match = true;
-			// TODO : to finish
+			SuperFieldAcc other = (SuperFieldAcc) node;
+			if(other.getType().toString().equals(getType().toString())) {
+				Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(node, varTrans, allUsableVariables);
+				if (record != null) {
+					NodeUtils.replaceVariable(record);
+					String target = node.toSrcString().toString();
+					if(!target.equals(toSrcString().toString())) {
+						Revision revision = new Revision(this, WHOLE, target, _nodeType);
+						modifications.add(revision);
+					}
+					NodeUtils.restoreVariables(record);
+				}
+			}
 		} else {
+			List<Modification> tmp = new LinkedList<>();
+			if(replaceExpr(node, WHOLE, varTrans, allUsableVariables,tmp)) {
+				modifications.addAll(tmp);
+				match = true;
+			}
+			tmp = new ArrayList<>();
 			List<Node> children = node.getChildren();
-			List<Modification> tmp = new ArrayList<>();
 			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
 				match = true;
 				modifications.addAll(tmp);
@@ -67,13 +89,19 @@ public class SuperFieldAcc extends Expr {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification instanceof Revision && modification.getSourceID() == WHOLE) {
+			_replace = modification.getTargetString();
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification instanceof Revision && modification.getSourceID() == WHOLE) {
+			_replace = null;
+			return true;
+		}
 		return false;
 	}
 
@@ -86,12 +114,16 @@ public class SuperFieldAcc extends Expr {
 	@Override
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer();
-		if(_name != null){
-			stringBuffer.append(_name);
-			stringBuffer.append(".");
+		if(_replace != null) {
+			stringBuffer.append(_replace);
+		} else {
+			if(_name != null){
+				stringBuffer.append(_name);
+				stringBuffer.append(".");
+			}
+			stringBuffer.append("super.");
+			stringBuffer.append(_identifier.toSrcString());
 		}
-		stringBuffer.append("super.");
-		stringBuffer.append(_identifier.toSrcString());
 		return stringBuffer;
 	}
 

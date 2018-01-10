@@ -24,6 +24,7 @@ import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.node.Node;
 
@@ -33,6 +34,7 @@ import cofix.core.parser.node.Node;
  */
 public class AnonymousClassDecl extends Node {
 
+	private String _replace = null;
 	
 	public AnonymousClassDecl(int startLine, int endLine, ASTNode node) {
 		super(startLine, endLine, node);
@@ -41,13 +43,19 @@ public class AnonymousClassDecl extends Node {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification instanceof Revision) {
+			_replace = modification.getTargetString();
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification instanceof Revision) {
+			_replace = null;
+			return false;
+		}
 		return false;
 	}
 
@@ -59,12 +67,22 @@ public class AnonymousClassDecl extends Node {
 
 	@Override
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
-		// TODO Auto-generated method stub
+		if(node instanceof AnonymousClassDecl) {
+			String target = node.toSrcString().toString();
+			if(!toSrcString().toString().equals(target)) {
+				Revision revision = new Revision(this, 0, target, _nodeType);
+				modifications.add(revision);
+			}
+			return true;
+		}
 		return false;
 	}
 	
 	@Override
 	public StringBuffer toSrcString() {
+		if(_replace != null) {
+			return new StringBuffer(_replace);
+		}
 		return new StringBuffer(_originalNode.toString());
 	}
 

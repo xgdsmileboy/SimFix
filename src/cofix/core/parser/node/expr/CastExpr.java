@@ -7,15 +7,14 @@
 package cofix.core.parser.node.expr;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
+import cofix.common.util.Pair;
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
@@ -23,6 +22,7 @@ import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
@@ -35,7 +35,14 @@ public class CastExpr extends Expr {
 	private Type _castType = null;
 	private Expr _expression = null;
 
-	private Expr _replace = null;
+	private String _replace_expression = null;
+	private String _replace_type = null;
+	private String _replace_whole = null;
+	
+	private final int EXPR = 0;
+	private final int CTYPE = 1;
+	private final int WHOLE = 2;
+	
 	/**
 	 * CastExpression:
      *	( Type ) Expression
@@ -58,10 +65,31 @@ public class CastExpr extends Expr {
 		boolean match = false;
 		if(node instanceof CastExpr){
 			match = true;
-			// TODO : to finish
+			CastExpr other = (CastExpr) node;
+			if(!_castType.toString().equals(other._castType.toString())) {
+				Revision revision = new Revision(this, CTYPE, other._castType.toString(), _nodeType);
+				modifications.add(revision);
+			}
+			String thisType = _expression.getType().toString();
+			if(!this.equals("?") && other._expression.getType().toString().equals(thisType)) {
+				Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(other._expression, varTrans, allUsableVariables);
+				if(record != null) {
+					NodeUtils.replaceVariable(record);
+					String target = other._expression.toSrcString().toString();
+					if(!_expression.toSrcString().toString().equals(target)) {
+						Revision revision = new Revision(this, EXPR, target, _nodeType);
+						modifications.add(revision);
+					}
+				}
+			}
 		} else {
+			List<Modification> tmp = new LinkedList<>();
+			if(replaceExpr(node, WHOLE, varTrans, allUsableVariables,tmp)) {
+				modifications.addAll(tmp);
+				match = true;
+			}
+			tmp = new ArrayList<>();
 			List<Node> children = node.getChildren();
-			List<Modification> tmp = new ArrayList<>();
 			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
 				match = true;
 				modifications.addAll(tmp);
@@ -72,14 +100,44 @@ public class CastExpr extends Expr {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		if(modification instanceof Revision) {
+			Revision revision = (Revision) modification;
+			switch(revision.getSourceID()) {
+			case WHOLE:
+				_replace_whole = revision.getTargetString();
+				break;
+			case EXPR:
+				_replace_expression = revision.getTargetString();
+				break;
+			case CTYPE:
+				_replace_type = revision.getTargetString();
+				break;
+			default:
+				return false;
+			}
+		}
+		return true;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		_replace = null;
-		return false;
+		if(modification instanceof Revision) {
+			Revision revision = (Revision) modification;
+			switch(revision.getSourceID()) {
+			case WHOLE:
+				_replace_whole = null;
+				break;
+			case EXPR:
+				_replace_expression = null;
+				break;
+			case CTYPE:
+				_replace_type = null;
+				break;
+			default:
+				return false;
+			}
+		}
+		return true;
 	}
 
 	@Override
@@ -90,13 +148,21 @@ public class CastExpr extends Expr {
 	@Override
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer();
-		stringBuffer.append("(");
-		stringBuffer.append(_castType);
-		stringBuffer.append(")");
-		if(_replace != null){
-			stringBuffer.append(_replace.toSrcString());
+		if(_replace_whole != null) {
+			stringBuffer.append(_replace_whole);
 		} else {
-			stringBuffer.append(_expression.toSrcString());
+			stringBuffer.append("(");
+			if(_replace_type != null) {
+				stringBuffer.append(_replace_type);
+			} else {
+				stringBuffer.append(_castType);
+			}
+			stringBuffer.append(")");
+			if(_replace_expression != null){
+				stringBuffer.append(_replace_expression);
+			} else {
+				stringBuffer.append(_expression.toSrcString());
+			}
 		}
 		return stringBuffer;
 	}

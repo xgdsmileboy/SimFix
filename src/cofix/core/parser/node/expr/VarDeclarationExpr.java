@@ -38,8 +38,8 @@ public class VarDeclarationExpr extends Expr {
 	private String _declType_replace = null;
 	private String _vdfs_replace = null;
 	
-	private int TYPEID = 0;
-	private int VDFID = 1;
+	private final int TYPEID = 0;
+	private final int VDFID = 1;
 	
 	/**
 	 * VariableDeclarationExpression:
@@ -92,14 +92,36 @@ public class VarDeclarationExpr extends Expr {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		if(modification instanceof Revision) {
+			switch (modification.getSourceID()) {
+			case TYPEID:
+				_declType_replace = modification.getTargetString();
+				break;
+			case VDFID:
+				_vdfs_replace = modification.getTargetString();
+				break;
+			default:
+				return false;
+			}
+		}
+		return true;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		if(modification instanceof Revision) {
+			switch (modification.getSourceID()) {
+			case TYPEID:
+				_declType_replace = null;
+				break;
+			case VDFID:
+				_vdfs_replace = null;
+				break;
+			default:
+				return false;
+			}
+		}
+		return true;
 	}
 
 	@Override

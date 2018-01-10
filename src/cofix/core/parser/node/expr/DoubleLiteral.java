@@ -70,7 +70,12 @@ public class DoubleLiteral extends NumLiteral {
 				}
 			}
 		} else {
-			List<Modification> tmp = new ArrayList<>();
+			List<Modification> tmp = new LinkedList<>();
+			if(replaceExpr(node,EXPRID, varTrans, allUsableVariables,tmp)) {
+				modifications.addAll(tmp);
+				match = true;
+			}
+			tmp = new ArrayList<>();
 			if(node instanceof ConditionalExpr){
 				ConditionalExpr conditionalExpr = (ConditionalExpr) node;
 				if(NodeUtils.conditionalMatch(this, EXPRID, conditionalExpr, varTrans, allUsableVariables, tmp)){

@@ -18,8 +18,10 @@ import cofix.core.metric.Literal;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
+import sun.reflect.generics.visitor.Reifier;
 
 /**
  * @author Jiajun
@@ -27,6 +29,8 @@ import cofix.core.parser.node.Node;
  */
 public class ThisExpr extends Expr {
 
+	private String _replace = null;
+	
 	/**
 	 * ThisExpression:
      *	[ ClassName . ] this
@@ -41,10 +45,14 @@ public class ThisExpr extends Expr {
 		boolean match = false;
 		if(node instanceof ThisExpr){
 			match = true;
-			// TODO : to finish
 		} else {
+			List<Modification> tmp = new LinkedList<>();
+			if(replaceExpr(node, 0, varTrans, allUsableVariables,tmp)) {
+				modifications.addAll(tmp);
+				match = true;
+			}
+			tmp = new ArrayList<>();
 			List<Node> children = node.getChildren();
-			List<Modification> tmp = new ArrayList<>();
 			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
 				match = true;
 				modifications.addAll(tmp);
@@ -55,13 +63,19 @@ public class ThisExpr extends Expr {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification instanceof Revision) {
+			_replace = modification.getTargetString();
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification instanceof Revision) {
+			_replace = null;
+			return true;
+		}
 		return false;
 	}
 
@@ -73,6 +87,9 @@ public class ThisExpr extends Expr {
 	
 	@Override
 	public StringBuffer toSrcString() {
+		if(_replace != null) {
+			return new StringBuffer(_replace);
+		}
 		return new StringBuffer("this");
 	}
 

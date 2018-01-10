@@ -22,6 +22,7 @@ import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
@@ -34,6 +35,10 @@ public class InstanceofExpr extends Expr {
 	private Expr _expression = null;
 	private String _operator = "instanceof";
 	private Type _instanceType = null;
+	
+	private String _whole_replace = null;
+	
+	private final int WHOLE = 0;
 	
 	/**
 	 * InstanceofExpression:
@@ -57,10 +62,23 @@ public class InstanceofExpr extends Expr {
 		boolean match = false;
 		if(node instanceof InstanceofExpr){
 			match = true;
-			// TODO : to finish
+			Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(node, varTrans, allUsableVariables);
+			if(record != null) {
+				NodeUtils.replaceVariable(record);
+				String target = node.toSrcString().toString();
+				if(!target.equals(toSrcString().toString())) {
+					Revision revision = new Revision(this, WHOLE, target, _nodeType);
+					modifications.add(revision);
+				}
+			}
 		} else {
+			List<Modification> tmp = new LinkedList<>();
+			if(replaceExpr(node, WHOLE, varTrans, allUsableVariables,tmp)) {
+				modifications.addAll(tmp);
+				match = true;
+			}
+			tmp = new ArrayList<>();
 			List<Node> children = node.getChildren();
-			List<Modification> tmp = new ArrayList<>();
 			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
 				match = true;
 				modifications.addAll(tmp);
@@ -71,13 +89,19 @@ public class InstanceofExpr extends Expr {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification instanceof Revision && modification.getSourceID() == WHOLE) {
+			_whole_replace = modification.getTargetString();
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification instanceof Revision && modification.getSourceID() == WHOLE) {
+			_whole_replace = null;
+			return true;
+		}
 		return false;
 	}
 
@@ -90,9 +114,13 @@ public class InstanceofExpr extends Expr {
 	@Override
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer();
-		stringBuffer.append(_expression.toSrcString());
-		stringBuffer.append(" instanceof ");
-		stringBuffer.append(_instanceType.toString());
+		if(_whole_replace != null) {
+			stringBuffer.append(_whole_replace);
+		} else {
+			stringBuffer.append(_expression.toSrcString());
+			stringBuffer.append(" instanceof ");
+			stringBuffer.append(_instanceType.toString());
+		}
 		return stringBuffer;
 	}
 

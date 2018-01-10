@@ -10,15 +10,10 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.locks.Condition;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ArrayType;
-import org.eclipse.jdt.core.dom.IfStatement;
 import org.eclipse.jdt.core.dom.Type;
-import org.eclipse.jdt.core.util.ISignatureAttribute;
-
-import com.sun.corba.se.spi.ior.TaggedProfileTemplate;
 
 import cofix.common.util.Pair;
 import cofix.core.metric.Literal;
@@ -28,9 +23,9 @@ import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
-import cofix.core.parser.node.stmt.IfStmt;
 
 /**
  * @author Jiajun
@@ -41,6 +36,10 @@ public class ArrayCreate extends Expr {
 	private Type _type = null;
 	private List<Expr> _dimension = null;
 	private ArrayInitial _initializer = null;
+	
+	private String _replace = null;
+	
+	private final int WHOLE = 0;
 	
 	/**
 	 * ArrayCreation:
@@ -86,12 +85,19 @@ public class ArrayCreate extends Expr {
 				modifications.addAll(NodeUtils.listNodeMatching(this, _nodeType, _dimension, other._dimension, varTrans, allUsableVariables));
 			}
 		} else {
-			
-			List<Modification> tmp = new ArrayList<>();
+			List<Modification> tmp = new LinkedList<>();
+			if(replaceExpr(node, WHOLE, varTrans, allUsableVariables,tmp)) {
+				modifications.addAll(tmp);
+				match = true;
+			}
+			tmp = new ArrayList<>();
 			List<Node> children = node.getChildren();
 			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
 				match = true;
 				modifications.addAll(tmp);
+			}
+			if(!match) {
+				
 			}
 			
 		}
@@ -100,13 +106,20 @@ public class ArrayCreate extends Expr {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification instanceof Revision && modification.getSourceID() == WHOLE) {
+			_replace = modification.getTargetString();
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		return true;
+		if(modification instanceof Revision && modification.getSourceID() == WHOLE) {
+			_replace = null;
+			return true;
+		}
+		return false;
 	}
 
 	@Override
@@ -117,31 +130,35 @@ public class ArrayCreate extends Expr {
 	@Override
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer();
-		stringBuffer.append("new ");
-		if(_dimension != null && _dimension.size() > 0){
-			// new a[4][];
-			if(_type instanceof ArrayType){
-				ArrayType arrayType = (ArrayType) _type;
-				stringBuffer.append(arrayType.getElementType());
-				for(int i = 0; i < arrayType.getDimensions(); i++){
-					stringBuffer.append("[");
-					if(_dimension.size() > i){
-						stringBuffer.append(_dimension.get(i).toSrcString());
+		if(_replace != null) {
+			stringBuffer.append(_replace);
+		} else {
+			stringBuffer.append("new ");
+			if(_dimension != null && _dimension.size() > 0){
+				// new a[4][];
+				if(_type instanceof ArrayType){
+					ArrayType arrayType = (ArrayType) _type;
+					stringBuffer.append(arrayType.getElementType());
+					for(int i = 0; i < arrayType.getDimensions(); i++){
+						stringBuffer.append("[");
+						if(_dimension.size() > i){
+							stringBuffer.append(_dimension.get(i).toSrcString());
+						}
+						stringBuffer.append("]");
 					}
-					stringBuffer.append("]");
+					if(_initializer != null){
+						stringBuffer.append(_initializer.toSrcString());
+					}
+				} else {
+					stringBuffer = new StringBuffer();
+					stringBuffer.append(_originalNode.toString());
 				}
+			} else {
+				// new a[][]{1,2;3,4};
+				stringBuffer.append(_type);
 				if(_initializer != null){
 					stringBuffer.append(_initializer.toSrcString());
 				}
-			} else {
-				stringBuffer = new StringBuffer();
-				stringBuffer.append(_originalNode.toString());
-			}
-		} else {
-			// new a[][]{1,2;3,4};
-			stringBuffer.append(_type);
-			if(_initializer != null){
-				stringBuffer.append(_initializer.toSrcString());
 			}
 		}
 		return stringBuffer;

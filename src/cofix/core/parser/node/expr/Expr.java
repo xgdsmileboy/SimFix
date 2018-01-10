@@ -6,19 +6,29 @@
  */
 package cofix.core.parser.node.expr;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+
+import javax.jws.WebParam.Mode;
 
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
+import com.sun.org.apache.xpath.internal.operations.Mod;
+
+import cofix.common.util.Pair;
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.LoopStruct;
 import cofix.core.metric.MethodCall;
 import cofix.core.metric.Operator;
 import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable.USE_TYPE;
+import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
+import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.node.Node;
 
@@ -79,6 +89,26 @@ public abstract class Expr extends Node {
 	@Override
 	public List<CodeBlock> reduce() {
 		return new LinkedList<>();
+	}
+	
+	public boolean replaceExpr(Node node, int id, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
+		if(node instanceof Expr) {
+			Expr expr = (Expr) node;
+			if(expr.getType().toString().equals(getType().toString())) {
+				Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(expr, varTrans, allUsableVariables);
+				if(record != null) {
+					NodeUtils.replaceVariable(record);
+					String target = expr.toSrcString().toString();
+					if(!target.equals(toSrcString().toString())) {
+						Revision revision = new Revision(this, id, target, _nodeType);
+						modifications.add(revision);
+					}
+					NodeUtils.restoreVariables(record);
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 	
 }

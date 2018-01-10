@@ -18,6 +18,7 @@ import cofix.core.metric.Literal;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
@@ -50,7 +51,10 @@ public class StrLiteral extends Expr {
 		boolean match = false;
 		if(node instanceof StrLiteral){
 			match = true;
-			// TODO : to finish
+			if(!node.toSrcString().toString().equals(toSrcString().toString())) {
+				Revision revision = new Revision(this, 0, node.toSrcString().toString(), _nodeType);
+				modifications.add(revision);
+			}
 		} else {
 			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();
@@ -64,13 +68,19 @@ public class StrLiteral extends Expr {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification instanceof Revision) {
+			_replace = modification.getTargetString();
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification instanceof Revision) {
+			_replace = null;
+			return false;
+		}
 		return false;
 	}
 

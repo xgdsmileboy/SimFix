@@ -7,10 +7,14 @@
 package cofix.core.parser.node.expr;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.locks.Condition;
+import java.util.Set;
+
+import javax.jws.WebParam.Mode;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
@@ -20,6 +24,8 @@ import cofix.core.metric.MethodCall;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
+import cofix.core.modify.Deletion;
+import cofix.core.modify.Insertion;
 import cofix.core.modify.Modification;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
@@ -31,6 +37,13 @@ import cofix.core.parser.node.Node;
 public class ArrayInitial extends Expr {
 
 	private List<Expr> _expressions = null;
+	
+	private Map<Integer, List<String>> _insertions = new HashMap<>();
+	private Set<Integer> _deletions = new HashSet<>();
+
+	private String _replace = null;
+	
+	private final int WHOLE = 0;
 	
 	/**
 	 * ArrayInitializer:
@@ -50,10 +63,16 @@ public class ArrayInitial extends Expr {
 		boolean match = false;
 		if(node instanceof ArrayInitial){
 			match = true;
-			// TODO : to finish
+			ArrayInitial other = (ArrayInitial) node;
+			modifications.addAll(NodeUtils.listNodeMatching(this, _nodeType, _expressions, other._expressions, varTrans, allUsableVariables));
 		} else {
+			List<Modification> tmp = new LinkedList<>();
+			if(replaceExpr(node, WHOLE, varTrans, allUsableVariables,tmp)) {
+				modifications.addAll(tmp);
+				match = true;
+			}
+			tmp = new ArrayList<>();
 			List<Node> children = node.getChildren();
-			List<Modification> tmp = new ArrayList<>();
 			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
 				match = true;
 				modifications.addAll(tmp);
@@ -64,12 +83,42 @@ public class ArrayInitial extends Expr {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		if(modification instanceof Insertion){
+			List<String> list = _insertions.get(modification.getSourceID());
+			if(list == null){
+				list = new ArrayList<>();
+			}
+			list.add(modification.getTargetString());
+			_insertions.put(modification.getSourceID(), list);
+		} else if(modification instanceof Deletion){
+			if(!_deletions.contains(modification.getSourceID())){
+				return false;
+			}
+			_deletions.remove(modification.getSourceID());
+		} else if(modification.getSourceID()==WHOLE){
+			_replace = modification.getTargetString();
+		} else {
+			return false;
+		}
+		return true;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
+		if(modification instanceof Insertion){
+			List<String> list = _insertions.get(modification.getSourceID());
+			if(list != null){
+				list.remove(modification.getTargetString());
+			}
+		} else if(modification instanceof Deletion){
+			if(_deletions.contains(modification.getSourceID())){
+				_deletions.remove(modification.getTargetString());
+			}
+		} else if(modification.getSourceID() == WHOLE) {
+			_replace = null;
+		} else {
+			return false;
+		}
 		return true;
 	}
 
@@ -80,15 +129,30 @@ public class ArrayInitial extends Expr {
 	
 	@Override
 	public StringBuffer toSrcString() {
-		StringBuffer stringBuffer = new StringBuffer("{");
-		if(_expressions.size() > 0){
-			stringBuffer.append(_expressions.get(0).toSrcString());
-			for(int i = 1; i < _expressions.size(); i++){
-				stringBuffer.append(",");
-				stringBuffer.append(_expressions.get(i).toSrcString());
+		StringBuffer stringBuffer = new StringBuffer();
+		if(_replace != null) {
+			stringBuffer.append(_replace);
+		} else {
+			stringBuffer.append("{");
+			if(_expressions.size() > 0){
+				for(int i = 0; i < _expressions.size(); i++){
+					if(_insertions.containsKey(i)){
+						for(String string : _insertions.get(i)){
+							stringBuffer.append(string);
+							stringBuffer.append(",");
+						}
+					} else if(_deletions.contains(i)){
+						continue;
+					}
+					stringBuffer.append(_expressions.get(i).toSrcString());
+					stringBuffer.append(",");
+				}
 			}
+			if(stringBuffer.charAt(stringBuffer.length() - 1) == ',') {
+				stringBuffer.deleteCharAt(stringBuffer.length() - 1);
+			}
+			stringBuffer.append("}");
 		}
-		stringBuffer.append("}");
 		return stringBuffer;
 	}
 

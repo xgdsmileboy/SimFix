@@ -13,6 +13,7 @@ import java.util.Map;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
+import org.eclipse.jdt.internal.compiler.lookup.MostSpecificExceptionMethodBinding;
 
 import cofix.common.util.Pair;
 import cofix.core.metric.Literal;
@@ -22,9 +23,9 @@ import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
-import sun.security.provider.MD2;
 
 /**
  * @author Jiajun
@@ -71,8 +72,24 @@ public class SuperMethodInv extends Expr {
 			match = true;
 			SuperMethodInv other = (SuperMethodInv) node;
 			modifications.addAll(NodeUtils.handleArguments(this, ARGID, _nodeType, _arguments, other._arguments, varTrans, allUsableVariables));
+			if(other.getType().equals(getType().toString())) {
+				Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(other, varTrans, allUsableVariables);
+				if(record != null) {
+					NodeUtils.replaceVariable(record);
+					String target = other.toSrcString().toString();
+					if(!target.equals(toSrcString().toString())) {
+						Revision revision = new Revision(this, WHOLE, target, _nodeType);
+						modifications.add(revision);
+					}
+				}
+			}
 		} else {
-			List<Modification> tmp = new ArrayList<>();
+			List<Modification> tmp = new LinkedList<>();
+			if(replaceExpr(node, WHOLE, varTrans, allUsableVariables,tmp)) {
+				modifications.addAll(tmp);
+				match = true;
+			}
+			tmp = new ArrayList<>();
 			if(node instanceof ConditionalExpr){
 				ConditionalExpr conditionalExpr = (ConditionalExpr) node;
 				if(NodeUtils.conditionalMatch(this, WHOLE, conditionalExpr, varTrans, allUsableVariables, tmp)){

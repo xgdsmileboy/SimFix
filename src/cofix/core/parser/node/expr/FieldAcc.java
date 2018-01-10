@@ -21,6 +21,7 @@ import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
@@ -59,9 +60,27 @@ public class FieldAcc extends Expr {
 		boolean match = false;
 		if(node instanceof FieldAcc){
 			match = true;
-			// TODO : to finish
+			FieldAcc fieldAcc = (FieldAcc) node;
+			if(fieldAcc.getType().toString().equals(getType().toString())) {
+				Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(fieldAcc, varTrans, allUsableVariables);
+				if(record != null) {
+					NodeUtils.replaceVariable(record);
+					String target = fieldAcc.toSrcString().toString();
+					if(!target.equals(toSrcString().toString())) {
+						Revision revision = new Revision(this, WHOLE, target, _nodeType);
+						modifications.add(revision);
+					}
+					NodeUtils.restoreVariables(record);
+				}
+			}
 		} else {
-			List<Modification> tmp = new ArrayList<>();
+			List<Modification> tmp = new LinkedList<>();
+			if(replaceExpr(node, WHOLE, varTrans, allUsableVariables,tmp)) {
+				modifications.addAll(tmp);
+				match = true;
+			}
+			tmp = new ArrayList<>();
+			
 			if(node instanceof ConditionalExpr){
 				ConditionalExpr conditionalExpr = (ConditionalExpr) node;
 				if(NodeUtils.conditionalMatch(this, WHOLE, conditionalExpr, varTrans, allUsableVariables, tmp)){

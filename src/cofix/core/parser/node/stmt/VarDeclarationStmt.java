@@ -101,6 +101,12 @@ public class VarDeclarationStmt extends Stmt {
 						modifications.add(revision);
 					}
 				}
+			} else {
+				if(!_declType.toString().equals(other._declType.toString())) {
+					Revision revision = new Revision(this, TYPEID, other._declType.toString(), _nodeType);
+					modifications.add(revision);
+					match = true;
+				}
 			}
 		} else {
 			List<Node> children = node.getChildren();

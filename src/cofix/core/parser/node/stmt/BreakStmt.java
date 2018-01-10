@@ -29,7 +29,9 @@ public class BreakStmt extends Stmt{
 
 	private String _identifier = null;
 	
-	private int STMTID = 0;
+	private String _replace = null; 
+	
+	private final int STMTID = 0;
 	/**
 	 * BreakStatement:
      *	break [ Identifier ] ;
@@ -69,13 +71,19 @@ public class BreakStmt extends Stmt{
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification instanceof Revision) {
+			_replace = modification.getTargetString();
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification instanceof Revision) {
+			_replace = null;
+			return true;
+		}
 		return false;
 	}
 

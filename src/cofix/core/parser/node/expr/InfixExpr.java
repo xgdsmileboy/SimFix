@@ -15,8 +15,6 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.InfixExpression;
 import org.eclipse.jdt.core.dom.Type;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
-
 import cofix.common.util.Pair;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
@@ -200,8 +198,14 @@ public class InfixExpr extends Expr {
 			}
 			
 		} else {
+			List<Modification> tmp = new LinkedList<>();
+			if(replaceExpr(node, WHOLE, varTrans, allUsableVariables,tmp)) {
+				modifications.addAll(tmp);
+				match = true;
+			}
+			tmp = new ArrayList<>();
+			
 			List<Node> children = node.getChildren();
-			List<Modification> tmp = new ArrayList<>();
 			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
 				match = true;
 				modifications.addAll(tmp);

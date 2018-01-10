@@ -18,6 +18,7 @@ import cofix.core.metric.Literal;
 import cofix.core.metric.NewFVector;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
@@ -28,6 +29,8 @@ import cofix.core.parser.node.Node;
 public class TyLiteral extends Expr {
 
 	private Type _type = null;
+	
+	private String _replace = null;
 	
 	/**
 	 * TypeLiteral:
@@ -47,7 +50,10 @@ public class TyLiteral extends Expr {
 		boolean match = false;
 		if(node instanceof TyLiteral){
 			match = true;
-			// TODO : to finish
+			if(!node.toSrcString().toString().equals(toSrcString().toString())) {
+				Revision revision = new Revision(this, 0, node.toSrcString().toString(), _nodeType);
+				modifications.add(revision);
+			}
 		} else {
 			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();
@@ -61,14 +67,14 @@ public class TyLiteral extends Expr {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		_replace = modification.getTargetString();
+		return true;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		_replace = null;
+		return true;
 	}
 
 	@Override
@@ -80,8 +86,12 @@ public class TyLiteral extends Expr {
 	@Override
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer();
-		stringBuffer.append(_type);
-		stringBuffer.append(".class");
+		if(_replace != null) {
+			stringBuffer.append(_replace);
+		} else {
+			stringBuffer.append(_type);
+			stringBuffer.append(".class");
+		}
 		return stringBuffer;
 	}
 

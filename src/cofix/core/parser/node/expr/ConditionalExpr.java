@@ -7,15 +7,14 @@
 package cofix.core.parser.node.expr;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
+import cofix.common.util.Pair;
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
@@ -24,6 +23,7 @@ import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
@@ -37,13 +37,15 @@ public class ConditionalExpr extends Expr {
 	private Expr _first = null;
 	private Expr _snd = null;
 	
-	private Expr _condition_replace = null;
-	private Expr _first_replace = null;
-	private Expr _snd_replace = null;
+	private String _condition_replace = null;
+	private String _first_replace = null;
+	private String _snd_replace = null;
+	private String _whole_replace = null;
 	
-	private Set<String> _conditionSet = new HashSet<>();
-	private Set<String> _firstSet = new HashSet<>();
-	private Set<String> _sndSet = new HashSet<>();
+	private final int COND = 0;
+	private final int FIRST = 1;
+	private final int SND = 2;
+	private final int WHOLE = 3;
 	
 	/**
 	 * ConditionalExpression:
@@ -84,37 +86,65 @@ public class ConditionalExpr extends Expr {
 		if(node instanceof ConditionalExpr){
 			match = true;
 			ConditionalExpr other = (ConditionalExpr) node;
-			List<Modification> tmp = new ArrayList<>();
-			if(_condition.match(other._condition, varTrans, allUsableVariables, tmp)){
-				for(Modification modification : tmp){
-					if(!_conditionSet.contains(modification.getTargetString())){
-						modifications.add(modification);
-						_conditionSet.add(modification.getTargetString());
-					}
+			
+			Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(other._condition, varTrans, allUsableVariables);
+			if(record != null) {
+				NodeUtils.replaceVariable(record);
+				String target = other._condition.toSrcString().toString();
+				if(!target.equals(_condition.toSrcString().toString())) {
+					Revision revision = new Revision(this, COND, target, _nodeType);
+					modifications.add(revision);
 				}
+				NodeUtils.restoreVariables(record);
 			}
-			tmp = new ArrayList<>();
-			if(_first.match(other._first, varTrans, allUsableVariables, tmp)){
-				for(Modification modification : tmp){
-					if(!_firstSet.contains(modification.getTargetString())){
-						modifications.add(modification);
-						_firstSet.add(modification.getTargetString());
+			
+			if(_first.getType().toString().equals(other._first.getType().toString())) {
+				record = NodeUtils.tryReplaceAllVariables(other._first, varTrans, allUsableVariables);
+				if(record != null) {
+					NodeUtils.replaceVariable(record);
+					String target = other._first.toSrcString().toString();
+					if(!toSrcString().toString().equals(target)) {
+						Revision revision = new Revision(this, FIRST, target, _nodeType);
+						modifications.add(revision);
 					}
-				}
-			}
-			tmp = new ArrayList<>();
-			if(_snd.match(other._snd, varTrans, allUsableVariables, tmp)){
-				for(Modification modification : tmp){
-					if(!_sndSet.contains(modification.getTargetString())){
-						modifications.add(modification);
-						_sndSet.add(modification.getTargetString());
-					}
+					NodeUtils.restoreVariables(record);
 				}
 			}
 			
-		} else {
-			List<Node> children = node.getChildren();
+			if(_snd.getType().toString().equals(other._snd.getType().toString())) {
+				record = NodeUtils.tryReplaceAllVariables(other._snd, varTrans, allUsableVariables);
+				if(record != null) {
+					NodeUtils.replaceVariable(record);
+					String target = other._snd.toSrcString().toString();
+					if(!target.equals(toSrcString().toString())) {
+						Revision revision = new Revision(this, SND, target, _nodeType);
+						modifications.add(revision);
+					}
+					NodeUtils.restoreVariables(record);
+ 				}
+			}
+			
 			List<Modification> tmp = new ArrayList<>();
+			if(_condition.match(other._condition, varTrans, allUsableVariables, tmp)){
+				modifications.addAll(tmp);
+			}
+			tmp = new ArrayList<>();
+			if(_first.match(other._first, varTrans, allUsableVariables, tmp)){
+				modifications.addAll(tmp);
+			}
+			tmp = new ArrayList<>();
+			if(_snd.match(other._snd, varTrans, allUsableVariables, tmp)){
+				modifications.addAll(tmp);
+			}
+			
+		} else {
+			List<Modification> tmp = new LinkedList<>();
+			if(replaceExpr(node, WHOLE, varTrans, allUsableVariables,tmp)) {
+				modifications.addAll(tmp);
+				match = true;
+			}
+			tmp = new ArrayList<>();
+			List<Node> children = node.getChildren();
 			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
 				match = true;
 				modifications.addAll(tmp);
@@ -125,15 +155,49 @@ public class ConditionalExpr extends Expr {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		if(modification instanceof Revision) {
+			Revision revision = (Revision)modification;
+			switch (revision.getSourceID()) {
+			case COND:
+				_condition_replace = revision.getTargetString();
+				break;
+			case FIRST:
+				_first_replace = revision.getTargetString();
+				break;
+			case SND:
+				_snd_replace = revision.getTargetString();
+				break;
+			case WHOLE:
+				_whole_replace = revision.getTargetString();
+				break;
+			default:
+				return false;
+			}
+		}
+		return true;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		_condition_replace = null;
-		_first_replace = null;
-		_snd_replace = null;
+		if(modification instanceof Revision) {
+			Revision revision = (Revision)modification;
+			switch (revision.getSourceID()) {
+			case COND:
+				_condition_replace = null;
+				break;
+			case FIRST:
+				_first_replace = null;
+				break;
+			case SND:
+				_snd_replace = null;
+				break;
+			case WHOLE:
+				_whole_replace = null;
+				break;
+			default:
+				return false;
+			}
+		}
 		return true;
 	}
 
@@ -145,22 +209,26 @@ public class ConditionalExpr extends Expr {
 	@Override
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer();
-		if(_condition_replace != null){
-			stringBuffer.append(_condition_replace.toSrcString());
+		if(_whole_replace != null) {
+			stringBuffer.append(_whole_replace);
 		} else {
-			stringBuffer.append(_condition.toSrcString());
-		}
-		stringBuffer.append("?");
-		if(_first_replace != null){
-			stringBuffer.append(_first_replace.toSrcString());
-		} else {
-			stringBuffer.append(_first.toSrcString());
-		}
-		stringBuffer.append(":");
-		if(_snd_replace != null){
-			stringBuffer.append(_snd_replace.toSrcString());
-		} else {
-			stringBuffer.append(_snd.toSrcString());
+			if(_condition_replace != null){
+				stringBuffer.append(_condition_replace);
+			} else {
+				stringBuffer.append(_condition.toSrcString());
+			}
+			stringBuffer.append("?");
+			if(_first_replace != null){
+				stringBuffer.append(_first_replace);
+			} else {
+				stringBuffer.append(_first.toSrcString());
+			}
+			stringBuffer.append(":");
+			if(_snd_replace != null){
+				stringBuffer.append(_snd_replace);
+			} else {
+				stringBuffer.append(_snd.toSrcString());
+			}
 		}
 		return stringBuffer;
 	}

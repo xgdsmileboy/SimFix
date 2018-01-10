@@ -15,6 +15,7 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.PrefixExpression;
 import org.eclipse.jdt.core.dom.Type;
 
+import cofix.common.util.Pair;
 import cofix.core.metric.Literal;
 import cofix.core.metric.MethodCall;
 import cofix.core.metric.NewFVector;
@@ -22,6 +23,7 @@ import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
@@ -36,9 +38,11 @@ public class PrefixExpr extends Expr {
 	
 	private String _expression_replace = null;
 	private String _operator_replace = null;
+	private String _whole_replace = null;
 	
-	private int EXPRID = 0;
-	private int OPID = 1;
+	private final int EXPRID = 0;
+	private final int OPID = 1;
+	private final int WHOLE = 2;
 	
 	/**
 	 * PrefixExpression:
@@ -62,12 +66,30 @@ public class PrefixExpr extends Expr {
 		boolean match = false;
 		if(node instanceof PrefixExpr){
 			PrefixExpr other = (PrefixExpr) node;
-			if(_expression.match(other, varTrans, allUsableVariables, modifications)){
-				match = true;
+			if(other.getType().toString().equals(getType().toString())) {
+				if(!other._operator.toString().equals(_operator.toString())) {
+					Revision revision = new Revision(this, OPID, other._operator.toString(), _nodeType);
+					modifications.add(revision);
+				}
+				Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(other._expression, varTrans, allUsableVariables);
+				if(record != null) {
+					NodeUtils.replaceVariable(record);
+					String target = other._expression.toSrcString().toString();
+					if(!target.equals(toSrcString().toString())) {
+						Revision revision = new Revision(this, EXPRID, target, _nodeType);
+						modifications.add(revision);
+					}
+					NodeUtils.restoreVariables(record);
+				}
 			}
 		} else {
+			List<Modification> tmp = new LinkedList<>();
+			if(replaceExpr(node, WHOLE, varTrans, allUsableVariables,tmp)) {
+				modifications.addAll(tmp);
+				match = true;
+			}
+			tmp = new ArrayList<>();
 			List<Node> children = node.getChildren();
-			List<Modification> tmp = new ArrayList<>();
 			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
 				match = true;
 				modifications.addAll(tmp);
@@ -78,14 +100,42 @@ public class PrefixExpr extends Expr {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		if(modification instanceof Revision) {
+			switch (modification.getSourceID()) {
+			case EXPRID:
+				_expression_replace = modification.getTargetString();
+				break;
+			case OPID:
+				_operator_replace = modification.getTargetString();
+				break;
+			case WHOLE:
+				_whole_replace = modification.getTargetString();
+				break;
+			default:
+				return false;
+			}
+		}
+		return true;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		if(modification instanceof Revision) {
+			switch (modification.getSourceID()) {
+			case EXPRID:
+				_expression_replace = null;
+				break;
+			case OPID:
+				_operator_replace = null;
+				break;
+			case WHOLE:
+				_whole_replace = null;
+				break;
+			default:
+				return false;
+			}
+		}
+		return true;
 	}
 
 	@Override
@@ -97,15 +147,19 @@ public class PrefixExpr extends Expr {
 	@Override
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer();
-		if(_operator_replace != null){
-			stringBuffer.append(_operator_replace);
+		if(_whole_replace != null) {
+			stringBuffer.append(_whole_replace);
 		} else {
-			stringBuffer.append(_operator.toString());
-		}
-		if(_expression_replace != null){
-			stringBuffer.append(_expression_replace);
-		} else {
-			stringBuffer.append(_expression.toSrcString());
+			if(_operator_replace != null){
+				stringBuffer.append(_operator_replace);
+			} else {
+				stringBuffer.append(_operator.toString());
+			}
+			if(_expression_replace != null){
+				stringBuffer.append(_expression_replace);
+			} else {
+				stringBuffer.append(_expression.toSrcString());
+			}
 		}
 		return stringBuffer;
 	}

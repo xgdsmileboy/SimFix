@@ -22,6 +22,7 @@ import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
 
@@ -35,7 +36,11 @@ public class Svd extends Expr {
 	private SName _name = null;
 	private Expr _initializer = null;
 	
-	private Expr _initializer_replace = null;
+	private String _type_replace = null;
+	private String _initializer_replace = null;
+	
+	private final int TYPEID = 0;
+	private final int INITIAL = 1;
 	
 	/**
 	 * { ExtendedModifier } Type {Annotation} [ ... ] Identifier { Dimension } [ = Expression ]
@@ -64,14 +69,36 @@ public class Svd extends Expr {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		if(modification instanceof Revision) {
+			switch(modification.getSourceID()) {
+			case INITIAL:
+				_initializer_replace = modification.getTargetString();
+				break;
+			case TYPEID:
+				_type_replace = modification.getTargetString();
+				break;
+			default:
+				return false;
+			}
+		}
+		return true;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		if(modification instanceof Revision) {
+			switch(modification.getSourceID()) {
+			case INITIAL:
+				_initializer_replace = null;
+				break;
+			case TYPEID:
+				_type_replace = null;
+				break;
+			default:
+				return false;
+			}
+		}
+		return true;
 	}
 
 	@Override
@@ -85,7 +112,23 @@ public class Svd extends Expr {
 		boolean match = false;
 		if(node instanceof Svd){
 			match = true;
-			// TODO : to finish
+			Svd other = (Svd) node;
+			if(!other._decType.toString().equals(_decType)) {
+				Revision revision = new Revision(this, TYPEID, other._decType.toString(), _nodeType);
+				modifications.add(revision);
+			}
+			if(other._initializer.getType().toString().equals(_initializer._exprType.toString())) {
+				Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(other._initializer, varTrans, allUsableVariables);
+				if(record != null) {
+					NodeUtils.replaceVariable(record);
+					String target = other._initializer.toSrcString().toString();
+					if(!target.equals(toSrcString().toString())) {
+						Revision revision = new Revision(this, INITIAL, target, _nodeType);
+						modifications.add(revision);
+					}
+					NodeUtils.restoreVariables(record);
+				}
+			}
 		} else {
 			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();
@@ -100,12 +143,16 @@ public class Svd extends Expr {
 	@Override
 	public StringBuffer toSrcString() {
 		StringBuffer stringBuffer = new StringBuffer();
-		stringBuffer.append(_decType);
+		if(_type_replace != null) {
+			stringBuffer.append(_type_replace);
+		} else {
+			stringBuffer.append(_decType);
+		}
 		stringBuffer.append(" ");
 		stringBuffer.append(_name.toSrcString());
 		if(_initializer_replace != null){
 			stringBuffer.append("=");
-			stringBuffer.append(_initializer_replace.toSrcString());
+			stringBuffer.append(_initializer_replace);
 		} else if(_initializer != null){
 			stringBuffer.append("=");
 			stringBuffer.append(_initializer.toSrcString());

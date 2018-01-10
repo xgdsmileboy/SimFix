@@ -25,6 +25,7 @@ import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.node.Node;
@@ -39,7 +40,7 @@ public class Vdf extends Node {
 	private int _dimensions = 0; 
 	private Expr _expression = null;
 	
-	private Expr _expression_replace = null;
+	private String _expression_replace = null;
 	
 	/**
 	 * VariableDeclarationFragment:
@@ -83,6 +84,10 @@ public class Vdf extends Node {
 					match = true;
 					modifications.addAll(tmp);
 				}
+				if(!other._expression.toSrcString().toString().equals(_expression.toSrcString().toString())) {
+					Revision revision = new Revision(this, 0, other._expression.toSrcString().toString(), _nodeType);
+					modifications.add(revision);
+				}
 			}
 		} else {
 			List<Node> children = node.getChildren();
@@ -97,14 +102,14 @@ public class Vdf extends Node {
 	
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		_expression_replace = modification.getTargetString();
+		return true;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
-		return false;
+		_expression_replace = null;
+		return true;
 	}
 
 	@Override
@@ -122,7 +127,7 @@ public class Vdf extends Node {
 		}
 		if(_expression_replace != null){
 			stringBuffer.append("=");
-			stringBuffer.append(_expression_replace.toSrcString());
+			stringBuffer.append(_expression_replace);
 		} else if(_expression != null){
 			stringBuffer.append("=");
 			stringBuffer.append(_expression.toSrcString());

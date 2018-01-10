@@ -7,6 +7,7 @@
 package cofix.core.parser.node.stmt;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -60,6 +61,11 @@ public class TryStmt extends Stmt {
 		boolean match = false;
 		if(node instanceof TryStmt){
 			match = true;
+			TryStmt other = (TryStmt) node;
+			List<Modification> tmp = new LinkedList<>();
+			if(_blk.match(other._blk, varTrans, allUsableVariables, tmp)) {
+				modifications.addAll(tmp);
+			}
 		} else {
 			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();

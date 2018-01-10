@@ -14,6 +14,7 @@ import java.util.Map;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 
+import cofix.common.util.Pair;
 import cofix.core.metric.CondStruct;
 import cofix.core.metric.Literal;
 import cofix.core.metric.LoopStruct;
@@ -24,10 +25,12 @@ import cofix.core.metric.OtherStruct;
 import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
 import cofix.core.modify.Modification;
+import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.expr.Expr;
+import cofix.core.parser.node.expr.SName;
 
 /**
  * @author Jiajun
@@ -38,8 +41,11 @@ public class DoStmt extends Stmt {
 	private Stmt _stmt = null;
 	private Expr _expression = null;
 	
-	private Stmt _stmt_replace = null;
-	private Expr _expression_replace = null;
+	private String _stmt_replace = null;
+	private String _expression_replace = null;
+	
+	private final int STMT = 0;
+	private final int EXPR = 1;
 	
 	/**
 	 * DoStatement:
@@ -68,6 +74,7 @@ public class DoStmt extends Stmt {
 		if(node instanceof DoStmt){
 			match = true;
 			DoStmt other = (DoStmt) node;
+			
 			List<Modification> tmp = new ArrayList<>();
 			if(_expression.match(other._expression, varTrans, allUsableVariables, tmp)){
 				modifications.addAll(tmp);
@@ -116,13 +123,13 @@ public class DoStmt extends Stmt {
 		StringBuffer stringBuffer = new StringBuffer();
 		stringBuffer.append("do ");
 		if(_stmt_replace != null){
-			stringBuffer.append(_stmt_replace.toSrcString());
+			stringBuffer.append(_stmt_replace);
 		} else {
 			stringBuffer.append(_stmt.toSrcString());
 		}
 		stringBuffer.append(" while(");
 		if(_expression_replace != null){
-			stringBuffer.append(_expression_replace.toSrcString());
+			stringBuffer.append(_expression_replace);
 		} else {
 			stringBuffer.append(_expression.toSrcString());
 		}
