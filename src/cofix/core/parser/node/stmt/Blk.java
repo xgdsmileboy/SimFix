@@ -84,7 +84,7 @@ public class Blk extends Stmt {
 						Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(otherNode, varTrans, allUsableVariables);
 						if(record != null) {
 							NodeUtils.replaceVariable(record);
-							Insertion insertion = new Insertion(this, 1, other.toSrcString().toString(), _nodeType);
+							Insertion insertion = new Insertion(this, 1, otherNode.toSrcString().toString(), _nodeType);
 							modifications.add(insertion);
 						}
 					}
