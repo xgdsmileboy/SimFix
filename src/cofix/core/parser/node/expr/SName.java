@@ -11,9 +11,13 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import javax.print.attribute.standard.MediaSize.Other;
+
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
 import org.eclipse.jdt.core.dom.WildcardType;
+
+import com.sun.xml.internal.bind.v2.runtime.Name;
 
 import cofix.common.util.Pair;
 import cofix.core.metric.Literal;
@@ -114,6 +118,18 @@ public class SName extends Label {
 				}
 			}
 		} else {
+			if(node instanceof MethodInv) {
+				MethodInv methodInv = (MethodInv) node;
+				if(_exprType.toString().equals(methodInv.getType().toString())) {
+					Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(methodInv, varTrans, allUsableVariables);
+					if(record != null) {
+						NodeUtils.replaceVariable(record);
+						Revision revision = new Revision(this, NAMEID, methodInv.toSrcString().toString(), _nodeType);
+						modifications.add(revision);
+						match = true;
+					}
+				}
+			}
 			List<Node> children = node.getChildren();
 			List<Modification> tmp = new ArrayList<>();
 			if(NodeUtils.nodeMatchList(this, children, varTrans, allUsableVariables, tmp)){
