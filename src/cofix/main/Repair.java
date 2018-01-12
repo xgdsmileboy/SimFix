@@ -264,6 +264,12 @@ public class Repair {
 							}
 							
 							String replace = oneBuggyBlock.toSrcString().toString();
+							if(replace.equals(currentBlockString)) {
+								for(Integer index : modifySet){
+									modifications.get(index).restore();
+								}
+								continue;
+							}
 							if(haveTryPatches.contains(replace)){
 //								System.out.println("already try ...");
 								for(Integer index : modifySet){

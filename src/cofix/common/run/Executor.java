@@ -8,9 +8,12 @@ package cofix.common.run;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Jiajun
@@ -19,26 +22,72 @@ import java.util.List;
 public class Executor {
 	private final static String __name__ = "@Executor ";
 	
-	public static List<String> executeCommand(String[] command) throws IOException, InterruptedException {
-		final Process process = Runtime.getRuntime().exec(command);
-
-		final List<String> message = new ArrayList<>();
+	public static List<String> execute(String[] command) {
+		Process process = null;
+		final List<String> message = new ArrayList<String>();
+		try {
+			ProcessBuilder builder = new ProcessBuilder(command);
+			builder.redirectErrorStream(true);
+			process = builder.start();
+			final InputStream inputStream = process.getInputStream();
+			
+			Thread processReader = new Thread(){
+				public void run() {
+					BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+					String line;
+					try {
+						while((line = reader.readLine()) != null) {
+							message.add(line);
+						}
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+					try {
+						reader.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+			};
+			
+			processReader.start();
+			try {
+				processReader.join();
+				process.waitFor();
+			} catch (InterruptedException e) {
+				return new LinkedList<>();
+			}
+		} catch (IOException e) {
+		} finally {
+			if (process != null) {
+				process.destroy();
+			}
+			process = null;
+		}
 		
-		BufferedReader output = new BufferedReader(new InputStreamReader(process.getInputStream()));
-		BufferedReader error = new BufferedReader(new InputStreamReader(process.getErrorStream()));
-		String ligne = "";
-
-		while ((ligne = output.readLine()) != null) {
-//		    System.out.println(ligne);
-		    message.add(ligne);
-		}
-
-		while ((ligne = error.readLine()) != null) {
-//			System.out.println(ligne);
-			message.add(ligne);
-		}
-
-		process.waitFor();
 		return message;
 	}
+	
+//	public static List<String> executeCommand(String[] command) throws IOException, InterruptedException {
+//		final Process process = Runtime.getRuntime().exec(command);
+//
+//		final List<String> message = new ArrayList<>();
+//		
+//		BufferedReader output = new BufferedReader(new InputStreamReader(process.getInputStream()));
+//		BufferedReader error = new BufferedReader(new InputStreamReader(process.getErrorStream()));
+//		String ligne = "";
+//
+//		while ((ligne = output.readLine()) != null) {
+////		    System.out.println(ligne);
+//		    message.add(ligne);
+//		}
+//
+//		while ((ligne = error.readLine()) != null) {
+////			System.out.println(ligne);
+//			message.add(ligne);
+//		}
+//
+//		process.waitFor();
+//		return message;
+//	}
 }
