@@ -37,7 +37,7 @@ public class SBFLocator extends AbstractFaultlocalization {
 	@Override
 	protected void locateFault(double threshold) {
 		try {
-			Executor.executeCommand(CmdFactory.createSbflCmd(_subject, Constant.SBFL_TIMEOUT));
+			Executor.execute(CmdFactory.createSbflCmd(_subject, Constant.SBFL_TIMEOUT));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -47,7 +47,7 @@ public class SBFLocator extends AbstractFaultlocalization {
 	public List<String> getFailedTestCases() {
 		if(_failedTests == null || _failedTests.size() == 0){
 			try {
-				Executor.executeCommand(CmdFactory.createTestSubjectCmd(_subject, 600));
+				Executor.execute(CmdFactory.createTestSubjectCmd(_subject, 600));
 				parseFailedTestFromFile(_subject.getFailedTestRecFile());
 			} catch (Exception e) {
 				e.printStackTrace();

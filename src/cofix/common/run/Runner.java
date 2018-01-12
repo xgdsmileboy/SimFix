@@ -6,7 +6,6 @@
  */
 package cofix.common.run;
 
-import java.io.File;
 import java.util.List;
 
 import cofix.common.config.Constant;
@@ -27,7 +26,7 @@ public class Runner {
 		List<String> message = null;
 		try {
 			System.out.println("TESTING : " + clazzAndMethod);
-			message = Executor.executeCommand(CmdFactory.createTestSingleTestCaseCmd(subject, 30, clazzAndMethod));
+			message = Executor.execute(CmdFactory.createTestSingleTestCaseCmd(subject, 30, clazzAndMethod));
 		} catch (Exception e) {
 			LevelLogger.fatal(__name__ + "#buildSubject run test single test case failed !", e);
 		}
@@ -52,7 +51,7 @@ public class Runner {
 		List<String> message = null;
 		try {
 			System.out.println("TESTING : " + subject.getName() + "_" + subject.getId());
-			message = Executor.executeCommand(CmdFactory.createTestSubjectCmd(subject, 10*60));
+			message = Executor.execute(CmdFactory.createTestSubjectCmd(subject, 10*60));
 		} catch (Exception e) {
 			LevelLogger.fatal(__name__ + "#buildSubject run test single test case failed !", e);
 		}
@@ -72,7 +71,7 @@ public class Runner {
 	public static boolean compileSubject(Subject subject) {
 		List<String> message = null;
 		try {
-			message = Executor.executeCommand(CmdFactory.createBuildSubjectCmd(subject));
+			message = Executor.execute(CmdFactory.createBuildSubjectCmd(subject));
 		} catch (Exception e) {
 			LevelLogger.fatal(__name__ + "#buildSubject run build subject failed !", e);
 		}
