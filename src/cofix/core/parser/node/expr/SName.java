@@ -126,7 +126,6 @@ public class SName extends Label {
 						NodeUtils.replaceVariable(record);
 						Revision revision = new Revision(this, NAMEID, methodInv.toSrcString().toString(), _nodeType);
 						modifications.add(revision);
-						match = true;
 					}
 				}
 			}
