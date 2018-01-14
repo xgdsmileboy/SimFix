@@ -322,7 +322,7 @@ public class NodeUtils {
 			// but some one in srcArg matched nothing, should be delete 
 			boolean first = true;
 			StringBuffer stringBuffer = new StringBuffer();
-			if(matchRec.size() > 0){
+			if(matchRec.size() > 0 && matchRec.size() > srcArg.size() - 2){
 				for(int i = 0; i < srcArg.size(); i++){
 					// matched argument
 					if(matchRec.contains(i)){

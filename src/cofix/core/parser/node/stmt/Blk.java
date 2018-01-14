@@ -73,53 +73,7 @@ public class Blk extends Stmt {
 		if(node instanceof Blk){
 			match = true;
 			Blk other = (Blk) node;
-			if(_statements.size() == 1 && other._statements.size() == 1){
-				Node thisNode = _statements.get(0);
-				Node otherNode = other._statements.get(0);
-				List<Modification> tmp = new LinkedList<>();
-				if(thisNode.match(otherNode, varTrans, allUsableVariables, tmp)){
-					modifications.addAll(tmp);
-				} else {
-					if(otherNode instanceof ThrowStmt || otherNode instanceof ReturnStmt) {
-						Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(otherNode, varTrans, allUsableVariables);
-						if(record != null) {
-							NodeUtils.replaceVariable(record);
-							Insertion insertion = new Insertion(this, 1, otherNode.toSrcString().toString(), _nodeType);
-							modifications.add(insertion);
-						}
-					}
-				}
-//				if(otherNode instanceof ThrowStmt){
-//					if(thisNode instanceof ThrowStmt){
-//						if(((ThrowStmt)thisNode).getExceptionType().equals(((ThrowStmt)otherNode).getExceptionType())){
-//							return true;
-//						}
-//					} else {
-//						String source = thisNode.toSrcString().toString(); 
-//						if(!source.equals(otherNode.toSrcString().toString())){
-//							Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(otherNode, varTrans, allUsableVariables);
-//							if(record != null){
-//								NodeUtils.replaceVariable(record);
-//								String target = otherNode.toSrcString().toString();
-//								if(!source.equals(target)){
-//									Revision revision = new Revision(this, WHOLE, target, _nodeType);
-//									modifications.add(revision);
-//								}
-//								NodeUtils.restoreVariables(record);
-//							}
-//						}
-//					}
-//				} else if(otherNode instanceof ReturnStmt){
-//					if(thisNode instanceof ReturnStmt){
-//						List<Modification> tmp = new LinkedList<>();
-//						if(thisNode.match(otherNode, varTrans, allUsableVariables, tmp)){
-//							modifications.addAll(tmp);
-//						}
-//					}
-//				}
-			} else {
-				modifications.addAll(NodeUtils.listNodeMatching(this, _nodeType, _statements, other._statements, varTrans, allUsableVariables));
-			}
+			modifications.addAll(NodeUtils.listNodeMatching(this, _nodeType, _statements, other._statements, varTrans, allUsableVariables));
 		}
 		return match;
 	}

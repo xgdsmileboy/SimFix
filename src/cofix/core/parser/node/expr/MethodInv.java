@@ -105,7 +105,7 @@ public class MethodInv extends Expr {
 							break;
 						}
 					}
-					if(compatible && !_name.equals(other._name) && !MethodInv._avoid.contains(_name) && !MethodInv._avoid.contains(other._name) && _arguments.size() > 0){
+					if(compatible && _arguments.size() > 0 && !_name.equals(other._name) && !MethodInv._avoid.contains(_name) && !MethodInv._avoid.contains(other._name) && _arguments.size() > 0){
 						Revision revision = new Revision(this, NAMEID, other._name, _nodeType);
 						modifications.add(revision);
 					}
