@@ -182,14 +182,14 @@ public class CodeBlockMatcher {
 			}
 		}
 		
-//		// delete nodes at buggy code site
-//		if(buggyBlock.getParsedNode().size() > 2){
-//			for(int i = 0; i < bNodes.size(); i++){
-//				if(!match.containsKey(i)){
-//					modifications.add(new Deletion(buggyBlock, i, null, TYPE.UNKNOWN));
-//				}
-//			}
-//		}
+		// delete nodes at buggy code site
+		if(buggyBlock.getParsedNode().size() > 2){
+			for(int i = 0; i < bNodes.size(); i++){
+				if(!match.containsKey(i)){
+					modifications.add(new Deletion(buggyBlock, i, null, TYPE.UNKNOWN));
+				}
+			}
+		}
 		
 //		//remove duplicate modifications
 //		List<Modification> unique = new LinkedList<>();

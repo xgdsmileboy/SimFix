@@ -1645,7 +1645,10 @@ public class CodeBlock extends Node{
 			if(_insertions.containsKey(modification.getSourceID())){
 				_insertions.get(modification.getSourceID()).add(modification.getTargetString());
 			} else {
-				List<String> list = new ArrayList<>();
+				List<String> list = _insertions.get(modification.getSourceID());
+				if(list == null) {
+					list = new ArrayList<>();
+				}
 				list.add(modification.getTargetString());
 				_insertions.put(modification.getSourceID(), list);
 			}
