@@ -7,9 +7,11 @@
 package cofix.core.parser.node.stmt;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
@@ -39,6 +41,7 @@ public class SwCase extends Stmt {
 	private List<Node> _siblings = null;
 	
 	private String _siblings_replace = null;
+	private Set<Integer> _deletion = new HashSet<>();
 	
 	/**
 	 * SwitchCase:
@@ -115,15 +118,7 @@ public class SwCase extends Stmt {
 			return false;
 		}
 		if(modification instanceof Deletion){
-			StringBuffer stringBuffer = new StringBuffer();
-			for(int i = 0; i < _siblings.size(); i++){
-				if (i == index) {
-					continue;
-				}
-				stringBuffer.append(_siblings.get(i).toSrcString());
-				stringBuffer.append("\n");
-			}
-			_siblings_replace = stringBuffer.toString();
+			_deletion.add(modification.getSourceID());
 		} else if(modification instanceof Insertion){
 			StringBuffer stringBuffer = new StringBuffer();
 			for(int i = 0; i < _siblings.size(); i++){
@@ -148,7 +143,7 @@ public class SwCase extends Stmt {
 			return false;
 		}
 		if(modification instanceof Deletion){
-			_siblings_replace = null;
+			_deletion.remove(modification.getSourceID());
 		} else if(modification instanceof Insertion){
 			_siblings_replace = null;
 		} else {
@@ -178,8 +173,9 @@ public class SwCase extends Stmt {
 			stringBuffer.append("\n");
 		} else {
 			if(_siblings != null){
-				for(Node sibling : _siblings){
-					stringBuffer.append(sibling.toSrcString());
+				for(int i = 0; i < _siblings.size(); i++){
+					if(_deletion.contains(i)) continue;
+					stringBuffer.append(_siblings.get(i).toSrcString());
 					stringBuffer.append("\n");
 				}
 			}

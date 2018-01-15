@@ -94,7 +94,7 @@ public class Blk extends Stmt {
 			if(!_deletions.contains(modification.getSourceID())){
 				return false;
 			}
-			_deletions.remove(modification.getSourceID());
+			_deletions.add(modification.getSourceID());
 		} else {
 			return false;
 		}

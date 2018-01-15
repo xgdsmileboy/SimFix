@@ -7,9 +7,11 @@
 package cofix.core.parser.node.expr;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
@@ -21,6 +23,7 @@ import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
+import cofix.core.modify.Deletion;
 import cofix.core.modify.Modification;
 import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
@@ -34,6 +37,8 @@ public class VarDeclarationExpr extends Expr {
 
 	private Type _declType = null;
 	private List<Vdf> _vdfs = null;
+	
+	private Set<Integer> _deletion = new HashSet<>();
 	
 	private String _declType_replace = null;
 	private String _vdfs_replace = null;
@@ -92,13 +97,19 @@ public class VarDeclarationExpr extends Expr {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification instanceof Deletion) {
+			_deletion.add(modification.getSourceID());
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification instanceof Deletion) {
+			_deletion.remove(modification.getSourceID());
+			return true;
+		}
 		return false;
 	}
 
@@ -120,10 +131,17 @@ public class VarDeclarationExpr extends Expr {
 		if(_vdfs_replace != null){
 			stringBuffer.append(_vdfs_replace);
 		} else {
-			stringBuffer.append(_vdfs.get(0).toSrcString());
-			for(int i = 1; i < _vdfs.size(); i++){
-				stringBuffer.append(",");
-				stringBuffer.append(_vdfs.get(i).toSrcString());
+			boolean notFirst = false;
+			for(int i = 0; i < _vdfs.size(); i++){
+				if(_deletion.contains(i)) {
+					continue;
+				} else {
+					if(notFirst) {
+						stringBuffer.append(",");
+					}
+					notFirst = true;
+					stringBuffer.append(_vdfs.get(i).toSrcString());
+				}
 			}
 		}
 		return stringBuffer;

@@ -7,18 +7,15 @@
 package cofix.core.parser.node.expr;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.locks.Condition;
+import java.util.Set;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ArrayType;
-import org.eclipse.jdt.core.dom.IfStatement;
 import org.eclipse.jdt.core.dom.Type;
-import org.eclipse.jdt.core.util.ISignatureAttribute;
-
-import com.sun.corba.se.spi.ior.TaggedProfileTemplate;
 
 import cofix.common.util.Pair;
 import cofix.core.metric.Literal;
@@ -27,10 +24,10 @@ import cofix.core.metric.NewFVector;
 import cofix.core.metric.Operator;
 import cofix.core.metric.Variable;
 import cofix.core.metric.Variable.USE_TYPE;
+import cofix.core.modify.Deletion;
 import cofix.core.modify.Modification;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.Node;
-import cofix.core.parser.node.stmt.IfStmt;
 
 /**
  * @author Jiajun
@@ -42,6 +39,7 @@ public class ArrayCreate extends Expr {
 	private List<Expr> _dimension = null;
 	private ArrayInitial _initializer = null;
 	
+	private Set<Integer> _deletion = new HashSet<>();
 	/**
 	 * ArrayCreation:
      *	new PrimitiveType [ Expression ] { [ Expression ] } { [ ] }
@@ -100,13 +98,19 @@ public class ArrayCreate extends Expr {
 
 	@Override
 	public boolean adapt(Modification modification) {
-		// TODO Auto-generated method stub
+		if(modification instanceof Deletion) {
+			_deletion.add(modification.getSourceID());
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public boolean restore(Modification modification) {
-		return true;
+		if(modification instanceof Deletion) {
+			_deletion.remove(modification.getSourceID());
+		}
+		return false;
 	}
 
 	@Override
@@ -124,6 +128,9 @@ public class ArrayCreate extends Expr {
 				ArrayType arrayType = (ArrayType) _type;
 				stringBuffer.append(arrayType.getElementType());
 				for(int i = 0; i < arrayType.getDimensions(); i++){
+					if(_deletion.contains(i)) {
+						continue;
+					}
 					stringBuffer.append("[");
 					if(_dimension.size() > i){
 						stringBuffer.append(_dimension.get(i).toSrcString());

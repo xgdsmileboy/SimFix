@@ -44,6 +44,7 @@ import org.eclipse.jdt.core.dom.WildcardType;
 import cofix.common.util.JavaFile;
 import cofix.common.util.Pair;
 import cofix.core.metric.Variable;
+import cofix.core.modify.Deletion;
 import cofix.core.modify.Insertion;
 import cofix.core.modify.Modification;
 import cofix.core.modify.Revision;
@@ -65,7 +66,9 @@ import cofix.core.parser.node.expr.SName;
 import cofix.core.parser.node.stmt.BreakStmt;
 import cofix.core.parser.node.stmt.ContinueStmt;
 import cofix.core.parser.node.stmt.DoStmt;
+import cofix.core.parser.node.stmt.ExpressionStmt;
 import cofix.core.parser.node.stmt.ForStmt;
+import cofix.core.parser.node.stmt.IfStmt;
 import cofix.core.parser.node.stmt.ReturnStmt;
 import cofix.core.parser.node.stmt.ThrowStmt;
 import cofix.core.parser.node.stmt.VarDeclarationStmt;
@@ -544,10 +547,20 @@ public class NodeUtils {
 					break;
 				}
 			}
-//			if(!findMatching){
-//				Deletion deletion = new Deletion(currNode, i, "", nodeType);
-//				modifications.add(deletion);
-//			}
+			if(!findMatching){
+				Node node = (Node) srcNodeList.get(i);
+				if(node instanceof IfStmt || node instanceof ReturnStmt) {
+					Deletion deletion = new Deletion(currNode, i, "", nodeType);
+					modifications.add(deletion);
+				} else if(node instanceof ExpressionStmt) {
+					ExpressionStmt expressionStmt = (ExpressionStmt) node;
+					if (expressionStmt.getExpression() instanceof Assign
+							|| expressionStmt.getExpression() instanceof MethodInv) {
+						Deletion deletion = new Deletion(currNode, i, "", nodeType);
+						modifications.add(deletion);
+					}
+				}
+			}
 		}
 		StringBuffer stringBuffer = new StringBuffer();
 		int shouldIns = 1000;

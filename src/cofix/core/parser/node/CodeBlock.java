@@ -324,7 +324,8 @@ public class CodeBlock extends Node{
 					stringBuffer.append(string);
 					stringBuffer.append("\n");
 				}
-			} else if(_deletions.contains(i)){
+			}
+			if(_deletions.contains(i)){
 				continue;
 			}
 			stringBuffer.append(node.toSrcString());

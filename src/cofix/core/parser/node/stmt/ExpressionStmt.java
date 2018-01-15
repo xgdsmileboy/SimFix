@@ -49,6 +49,10 @@ public class ExpressionStmt extends Stmt {
 		_expression = expression;
 	}
 	
+	public Expr getExpression() {
+		return _expression;
+	}
+	
 	@Override
 	public boolean match(Node node, Map<String, String> varTrans, Map<String, Type> allUsableVariables, List<Modification> modifications) {
 		return _expression.match(node, varTrans, allUsableVariables, modifications);

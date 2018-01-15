@@ -7,9 +7,12 @@
 package cofix.core.parser.node.stmt;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Type;
@@ -27,7 +30,6 @@ import cofix.core.modify.Deletion;
 import cofix.core.modify.Insertion;
 import cofix.core.modify.Modification;
 import cofix.core.parser.NodeUtils;
-import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.node.expr.Expr;
 
@@ -40,8 +42,9 @@ public class SwitchStmt extends Stmt {
 	private Expr _expression = null;
 	private List<Stmt> _statements = null;
 	
+	private Set<Integer> _deletion = new HashSet<>();
+	private Map<Integer, List<String>> _insertion = new HashMap<>();
 	private String _expression_replace = null;
-	private String _statements_replace = null;
 	
 	private int EXPID = 1000;
 	
@@ -104,34 +107,16 @@ public class SwitchStmt extends Stmt {
 		if(modification.getSourceID() == EXPID){
 			_expression_replace = modification.getTargetString();
 		} else if(modification instanceof Deletion){
-			int index = modification.getSourceID();
-			if(index > _statements.size()){
-				return false;
-			}
-			StringBuffer stringBuffer = new StringBuffer();
-			for(int i = 0; i < _statements.size(); i++){
-				if(i == index){
-					continue;
-				}
-				stringBuffer.append(_statements.get(i).toSrcString());
-				stringBuffer.append("\n");
-			}
-			_statements_replace = stringBuffer.toString();
+			_deletion.add(modification.getSourceID());
+			return true;
 		} else if(modification instanceof Insertion){
 			int index = modification.getSourceID();
-			if(index > _statements.size()){
-				return false;
+			List<String> strings = _insertion.get(index);
+			if(strings == null) {
+				strings = new LinkedList<>();
 			}
-			StringBuffer stringBuffer = new StringBuffer();
-			for(int i = 0; i < _statements.size(); i++){
-				if(i == index){
-					stringBuffer.append(modification.getTargetString());
-					stringBuffer.append("\n");
-				}
-				stringBuffer.append(_statements.get(i).toSrcString());
-				stringBuffer.append("\n");
-			}
-			_statements_replace = stringBuffer.toString();
+			strings.add(modification.getTargetString());
+			_insertion.put(index, strings);
 		}
 		return false;
 	}
@@ -139,9 +124,18 @@ public class SwitchStmt extends Stmt {
 	@Override
 	public boolean restore(Modification modification) {
 		if(modification.getSourceID() == EXPID){
-			_expression_replace = null;
-		} else {
-			_expression_replace = null;
+			_expression_replace = modification.getTargetString();
+		} else if(modification instanceof Deletion){
+			_deletion.remove(modification.getSourceID());
+			return true;
+		} else if(modification instanceof Insertion){
+			int index = modification.getSourceID();
+			List<String> strings = _insertion.get(index);
+			if(strings != null) {
+				strings.remove(modification.getTargetString());
+			} else {
+				return false;
+			}
 		}
 		return false;
 	}
@@ -161,12 +155,18 @@ public class SwitchStmt extends Stmt {
 			stringBuffer.append(_expression.toSrcString());
 		}
 		stringBuffer.append("){\n");
-		if(_statements_replace != null){
-			stringBuffer.append(_statements_replace);
-			stringBuffer.append("\n");
-		}else{
-			for(Stmt stmt : _statements){
-				stringBuffer.append(stmt.toSrcString());
+		for(int i = 0; i < _statements.size(); i ++) {
+			List<String> strings = _insertion.get(i);
+			if(strings != null) {
+				for(String string : strings) {
+					stringBuffer.append(string);
+					stringBuffer.append("\n");
+				}
+			}
+			if(_deletion.contains(i)) {
+				continue;
+			} else {
+				stringBuffer.append(_statements.get(i).toSrcString().toString());
 				stringBuffer.append("\n");
 			}
 		}
