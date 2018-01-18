@@ -114,39 +114,11 @@ After finishing the repair, there will be two additional folders: `log` and `pat
 
 ## IV. Evaluation Result
 
-Totally, *SimFix* successfully repair 40 bugs among 357 bugs in Defects4j v1.0 benchmark with generating 20 plausible but incorrect patches. The details are listed below.
+Totally, *SimFix* successfully repair 34 bugs among 357 bugs in Defects4j v1.0 benchmark with generating 22 plausible but incorrect patches. The following table and venn diagram are comparison with existing approaches. More details are presented in the sub-folder [final](./final).
 
-* **Completely Correct Patch (35):** completely fix the bug.
-
-  > Chart (4) : [1](./final/patch/chart/1/0/1_AbstractCategoryItemRenderer.java#L1795), [3](./final/patch/chart/3/0/1_TimeSeries.java#L626), [7](./final/patch/chart/7/0/1_TimePeriodValues.java#L299), [20](./final/patch/chart/20/0/1_ValueMarker.java#L95)
-  >
-  > Math (14) : [5](./final/patch/math/5/0/1_Complex.java#L304), [33](./final/patch/math/33/0/1_SimplexTableau.java#L338), [35-L1](./final/patch/math/35/0/1_ElitisticListPopulation.java#L50), [35-L2](./final/patch/math/35/1/1_ElitisticListPopulation.java#L64), [41](./final/patch/math/41/0/1_Variance.java#L520), [50](./final/patch/math/50/0/1_BaseSecantSolver.java#L187), [53](./final/patch/math/53/0/1_Complex.java#L152), [57](./final/patch/math/57/0/1_KMeansPlusPlusClusterer.java#L175), [59](./final/patch/math/59/0/1_FastMath.java#L3482), [63](./final/patch/math/63/0/1_MathUtils.java#L417), [70](./final/patch/math/70/0/1_BisectionSolver.java#L72), [71-L1](./final/patch/math/71/0/1_RungeKuttaIntegrator.java#L174), [71-L2](./final/patch/math/71/2/1_EmbeddedRungeKuttaIntegrator.java#L294), [75](./final/patch/math/75/0/1_Frequency.java#L303), [79](./final/patch/math/79/0/1_MathUtils.java#L1624), [98-L1](./final/patch/math/98/0/1_BigMatrixImpl.java#L989), [98-L2](./final/patch/math/98/4/1_RealMatrixImpl.java#L776)
-  >
-  > Lang (10) : [7](./final/patch/lang/7/0/1_NumberUtils.java#L452), [10](./final/patch/lang/10/0/1_FastDateParser.java#L306), [27](./final/patch/lang/27/0/1_NumberUtils.java#L488), [33](./final/patch/lang/33/0/1_ClassUtils.java#L909), [35-L1](./final/patch/lang/35/0/1_ArrayUtils.java#L3292), [35-L2](./final/patch/lang/35/1/1_ArrayUtils.java#L3571), [39](./final/patch/lang/39/0/1_StringUtils.java#L3675), [41-L1](./final/patch/lang/41/0/1_ClassUtils.java#L169), [41-L2](./final/patch/lang/41/13/1_ClassUtils.java#L229), [43](./final/patch/lang/43/0/1_ExtendedMessageFormat.java#L419), [58](./final/patch/lang/58/0/1_NumberUtils.java#L452), [60-L1](./final/patch/lang/60/0/1_StrBuilder.java#L1673), [60-L2](./final/patch/lang/60/1/1_StrBuilder.java#L1730)
-  >
-  > Closure (6) : [14](./final/patch/closure/14/0/1_ControlFlowAnalysis.java#L766), [57](./final/patch/closure/57/0/1_ClosureCodingConvention.java#L197), [62](./final/patch/closure/62/0/1_LightweightMessageFormatter.java#L97), [63](./final/patch/closure/63/0/1_LightweightMessageFormatter.java#L97), [73](./final/patch/closure/73/0/1_CodeGenerator.java#L1045), [115](./final/patch/closure/115/0/1_FunctionInjector.java#L730)
-  >
-  > Time (1) : [7](./final/patch/time/7/0/1_DateTimeFormatter.java#L708)
-
-* **Partially Correct Path (5):** generate at least one correct patch for one location for multiple location bug.
-
-  > Chart (2) : [18](./final/patch/chart/18/1/1_DefaultKeyedValues.java#L334), [22](./final/patch/chart/22/0/1_KeyedObjects2D.java#L344)
-  >
-  > Math (1) : [72](./final/patch/math/72/0/1_BrentSolver.java#L114)
-  >
-  > Closure (2) : [68](./final/patch/closure/68/0/1_JsDocInfoParser.java#L1760), [79-L1](./final/patch/closure/79/3/1_VarCheck.java#L249), [79-L2](./final/patch/closure/79/4/1_VarCheck.java#L134)
-
-* **Incorrect Patch (20):**
-
-  > Chart (3) : [12](./final/patch/chart/12/0/1_MultiplePiePlot.java#L145), [14](./final/patch/chart/14/3/1_CategoryPlot.java#L2440), [25](./final/patch/chart/25/0/1_DatasetUtilities.java#L576)
-  >
-  > Math (12) : [1](./final/patch/math/1/0/1_BigFraction.java#L303), [6](./final/patch/math/6/0/1_BaseOptimizer.java#L93), [8](./final/patch/math/8/0/1_DiscreteDistribution.java#L189), [20](./final/patch/math/20/0/1_CMAESOptimizer.java#L994), [28](./final/patch/math/28/0/1_SimplexSolver.java#L123), [40](./final/patch/math/40/0/1_BracketingNthOrderBrentSolver.java#L326), [73](./final/patch/math/73/0/1_BrentSolver.java#L132), [80](./final/patch/math/80/0/1_EigenDecompositionImpl.java#L1137), [81](./final/patch/math/81/0/1_EigenDecompositionImpl.java#L1535), [82](./final/patch/math/82/0/1_SimplexSolver.java#L62), [85](./final/patch/math/85/0/1_UnivariateRealSolverUtils.java#L198), [88](./final/patch/math/88/0/1_SimplexSolver.java#L83)
-  >
-  > Lang (3) : [44](./final/patch/lang/44/0/1_NumberUtils.java#L193), [45](./final/patch/lang/45/0/1_WordUtils.java#L622), [63](./final/patch/lang/63/0/1_DurationFormatUtils.java#L436)
-  >
-  > Closure (1) : [106](./final/patch/closure/106/2/1_JsDocInfoParser.java#L1307)
-  >
-  > Time (1) : [9](./final/patch/time/9/0/1_IllegalFieldValueException.java#L45)
+| ![The comparison with existing approaches.\label{compare}](./doc/figure/result.png) | ![Intersection among different approaches.\label{venn}](./doc/figure/venn.png) |
+| :--------------------------------------: | :--------------------------------------: |
+| The comparison with existing approaches. |              Intersections.              |
 
 ## V. Structure of the project
 ```powershell
@@ -157,12 +129,11 @@ Totally, *SimFix* successfully repair 40 bugs among 357 bugs in Defects4j v1.0 b
   |--- final       :  evaluation result
   |--- lib         :  dependent libraries
   |--- sbfl        :  fault localization tool
-  |--- simfix.jar  :  runnable jar file
   |--- src         :  source code
   |--- test        :  test suite
 ```
 
-  ----
+----
 
 
 <u>__ALL__ suggestions are welcomed.</u>
