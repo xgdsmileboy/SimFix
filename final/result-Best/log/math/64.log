@@ -1,0 +1,949 @@
+=================================================
+Project : math_64	start : 18/01/14 03:16
+Current failed test : org.apache.commons.math.optimization.general.MinpackTest::testMinpackFreudensteinRoth | 18/01/14 03:17
+Sun Jan 14 03:18:54 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,402
+Sun Jan 14 03:20:45 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,627
+Sun Jan 14 03:26:29 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,628
+Sun Jan 14 03:26:33 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,605
+Sun Jan 14 03:39:39 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,606
+Sun Jan 14 03:39:44 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,607
+Sun Jan 14 03:39:48 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,609
+Sun Jan 14 04:34:17 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,610
+Sun Jan 14 04:34:19 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,611
+Sun Jan 14 04:34:21 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,612
+Sun Jan 14 04:34:22 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,613
+Sun Jan 14 04:34:23 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,614
+Sun Jan 14 04:34:24 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,617
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+countdown=0;
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[pj];
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+}
+sum2=0;
+for(int j=0;j<solvedCols;++j){
+double s=work1[permutation[j]];
+sum2+=s*s;
+}
+
+Time : 18/01/14 05:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+countdown=0;
+work1=work1.clone();
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[pj];
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+}
+sum2=0;
+for(int j=0;j<solvedCols;++j){
+double s=work1[permutation[j]];
+sum2+=s*s;
+}
+
+Time : 18/01/14 05:11
+----------------------------------------
+Sun Jan 14 05:12:58 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,618
+Sun Jan 14 05:13:02 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,619
+Sun Jan 14 05:13:06 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,620
+Sun Jan 14 05:13:10 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,622
+Sun Jan 14 05:34:44 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,625
+Sun Jan 14 05:34:48 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,632
+Sun Jan 14 05:42:27 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,530
+Timeout time : 18/01/14 05:48
+Current failed test : org.apache.commons.math.optimization.general.MinpackTest::testMinpackJennrichSampson | 18/01/14 05:48
+Sun Jan 14 05:49:59 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,402
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+costRelativeTolerance=0;
+if((0.1*cost>=previousCost)||(tmp<0.1)){
+tmp=0.1;
+}
+
+Time : 18/01/14 05:51
+----------------------------------------
+Sun Jan 14 05:52:33 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,627
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+paru=sPar*Math.min(delta,10.0*gNorm);
+lmPar/=sPar;
+if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/14 05:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+paru=sPar*Math.min(delta,10.0*gNorm);
+lmPar/=sPar;
+if(cost<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/14 05:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(fp<0){
+paru=Math.min(paru,lmPar);
+return ;
+}
+
+Time : 18/01/14 05:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+paru=dxNorm-delta;
+if(fp<0){
+paru=Math.min(paru,lmPar);
+return ;
+}
+
+Time : 18/01/14 05:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(fp<0){
+lmPar*=0.5;
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/14 05:59
+----------------------------------------
+Sun Jan 14 06:02:10 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,628
+Sun Jan 14 06:02:12 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,626
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+parl=lmPar;
+if(fp>0){
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/14 06:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+parl=Math.sqrt(dxNorm);
+if(fp>0){
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/14 06:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(delta>0){
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/14 06:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(fp>0){
+parl=Math.max(parl,lmPar);
+return ;
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/14 06:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(delta>0){
+parl=Math.max(parl,lmPar);
+return ;
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/14 06:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+parl=Math.sqrt(dxNorm);
+if(delta>0){
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/14 06:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+paru=parl-fp;
+if(delta>0){
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/14 06:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+parl=Math.sqrt(dxNorm);
+if(fp>0){
+parl=Math.max(parl,lmPar);
+return ;
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/14 06:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+paru=parl-fp;
+if(fp>0){
+parl=Math.max(parl,lmPar);
+return ;
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/14 06:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+parl=Math.sqrt(dxNorm);
+paru=parl-fp;
+if(fp>0){
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/14 06:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+parl=Math.sqrt(dxNorm);
+if(delta>0){
+parl=Math.max(parl,lmPar);
+return ;
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/14 06:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+paru=parl-fp;
+if(delta>0){
+parl=Math.max(parl,lmPar);
+return ;
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/14 06:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+parl=Math.sqrt(dxNorm);
+paru=parl-fp;
+if(delta>0){
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/14 06:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+parl=Math.sqrt(dxNorm);
+paru=parl-fp;
+if(fp>0){
+parl=Math.max(parl,lmPar);
+return ;
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/14 06:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+parl=Math.sqrt(dxNorm);
+paru=parl-fp;
+if(delta>0){
+parl=Math.max(parl,lmPar);
+return ;
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/14 06:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lmPar>0){
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/14 06:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(fp>0){
+lmPar*=0.5;
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/14 06:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lmPar>0){
+lmPar*=0.5;
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/14 06:19
+----------------------------------------
+Sun Jan 14 06:21:58 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,605
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]=work3[pj]*diag[j]/dxNorm;
+}
+
+Time : 18/01/14 06:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+dxNorm*=sPar;
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]=work3[pj]*diag[pj]/dxNorm;
+}
+
+Time : 18/01/14 06:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+dxNorm*=sPar;
+for(int j=countdown;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]=work3[pj]*diag[pj]/dxNorm;
+}
+
+Time : 18/01/14 06:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols-countdown;++j){
+int pj=permutation[j];
+work1[pj]=work3[pj]*diag[pj]/dxNorm;
+}
+
+Time : 18/01/14 06:34
+----------------------------------------
+Sun Jan 14 06:38:22 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,606
+Sun Jan 14 06:38:26 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,607
+Sun Jan 14 06:38:31 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,609
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=j+1;i<j;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+
+Time : 18/01/14 06:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=j+1;i<=j;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+
+Time : 18/01/14 06:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+tmp++;
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+
+Time : 18/01/14 06:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+j++;
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+
+Time : 18/01/14 06:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+tmp++;
+j++;
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+
+Time : 18/01/14 06:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][i]*tmp;
+}
+
+Time : 18/01/14 06:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=j+1;i<permutation[pj];++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+
+Time : 18/01/14 06:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+return ;
+}
+
+Time : 18/01/14 06:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=j+1;i<tmp-i;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+
+Time : 18/01/14 06:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][j]*tmp;
+}
+
+Time : 18/01/14 07:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=solvedCols;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[pj];
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+}
+
+Time : 18/01/14 07:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[pj];
+for(int i=j+1;i<j;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+}
+
+Time : 18/01/14 07:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[pj];
+for(int i=j+1;i<=j;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+}
+
+Time : 18/01/14 07:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=countdown;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[pj];
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+}
+
+Time : 18/01/14 07:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[j];
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+}
+
+Time : 18/01/14 07:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[pj];
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+}
+
+Time : 18/01/14 07:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<cols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[pj];
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+}
+
+Time : 18/01/14 07:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[pj];
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][j]*tmp;
+}
+}
+
+Time : 18/01/14 07:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[pj];
+for(int i=j+1;i<solvedCols-i;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+}
+
+Time : 18/01/14 07:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=solvedCols;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[j];
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+}
+
+Time : 18/01/14 07:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=countdown;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[countdown];
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+}
+
+Time : 18/01/14 07:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<cols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[j];
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+}
+
+Time : 18/01/14 07:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<(solvedCols>>1);++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[pj];
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+}
+
+Time : 18/01/14 07:47
+----------------------------------------
+Sun Jan 14 07:50:43 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,610
+Sun Jan 14 07:50:47 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,611
+Sun Jan 14 07:50:52 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,612
+Sun Jan 14 07:50:55 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,613
+Sun Jan 14 07:50:57 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,614
+Sun Jan 14 07:51:00 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,617
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+++j;
+double s=work1[permutation[j]];
+sum2+=s*s;
+}
+
+Time : 18/01/14 07:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+work1[j]=0;
+double s=work1[permutation[j]];
+sum2+=s*s;
+}
+
+Time : 18/01/14 07:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+sum2=sPar;
+for(int j=0;j<solvedCols;++j){
+double s=work1[permutation[j]];
+sum2+=s*s;
+}
+
+Time : 18/01/14 08:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+sPar=sPar;
+sum2=sPar;
+for(int j=0;j<solvedCols;++j){
+double s=work1[permutation[j]];
+sum2+=s*s;
+}
+
+Time : 18/01/14 08:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[pj];
+for(int i=j+1;i<j;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+}
+sum2=0;
+for(int j=0;j<solvedCols;++j){
+double s=work1[permutation[j]];
+sum2+=s*s;
+}
+
+Time : 18/01/14 08:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[pj];
+for(int i=j+1;i<=j;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+}
+sum2=0;
+for(int j=0;j<solvedCols;++j){
+double s=work1[permutation[j]];
+sum2+=s*s;
+}
+
+Time : 18/01/14 08:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=countdown;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[pj];
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+}
+sum2=0;
+for(int j=0;j<solvedCols;++j){
+double s=work1[permutation[j]];
+sum2+=s*s;
+}
+
+Time : 18/01/14 08:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[pj];
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+}
+sum2=0;
+for(int j=0;j<solvedCols;++j){
+double s=work1[permutation[j]];
+sum2+=s*s;
+}
+
+Time : 18/01/14 08:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[pj];
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][j]*tmp;
+}
+}
+sum2=0;
+for(int j=0;j<solvedCols;++j){
+double s=work1[permutation[j]];
+sum2+=s*s;
+}
+
+Time : 18/01/14 08:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[j];
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+}
+sum2=0;
+for(int j=0;j<solvedCols;++j){
+double s=work1[permutation[j]];
+sum2+=s*s;
+}
+
+Time : 18/01/14 08:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=solvedCols;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[pj];
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+}
+sum2=0;
+for(int j=0;j<solvedCols;++j){
+double s=work1[permutation[j]];
+sum2+=s*s;
+}
+
+Time : 18/01/14 08:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=countdown;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]/=work2[j];
+double tmp=work1[j];
+for(int i=j+1;i<solvedCols;++i){
+work1[permutation[i]]-=jacobian[i][pj]*tmp;
+}
+}
+sum2=0;
+for(int j=0;j<solvedCols;++j){
+double s=work1[permutation[j]];
+sum2+=s*s;
+}
+
+Time : 18/01/14 08:19
+----------------------------------------
+Timeout time : 18/01/14 08:19

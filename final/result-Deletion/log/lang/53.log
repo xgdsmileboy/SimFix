@@ -1,0 +1,403 @@
+=================================================
+Project : lang_53	start : 18/01/15 22:07
+Current failed test : org.apache.commons.lang.time.DateUtilsTest::testRoundLang346 | 18/01/15 22:08
+Mon Jan 15 22:08:38 AEDT 2018 org.apache.commons.lang.time.DateUtils,676
+Mon Jan 15 22:13:39 AEDT 2018 org.apache.commons.lang.time.DateUtils,689
+Mon Jan 15 22:13:39 AEDT 2018 org.apache.commons.lang.time.DateUtils,437
+Mon Jan 15 22:13:51 AEDT 2018 org.apache.commons.lang.time.DateUtils,440
+Mon Jan 15 22:18:22 AEDT 2018 org.apache.commons.lang.time.DateUtils,441
+Mon Jan 15 22:18:22 AEDT 2018 org.apache.commons.lang.time.DateUtils,442
+Mon Jan 15 22:18:23 AEDT 2018 org.apache.commons.lang.time.DateUtils,443
+Mon Jan 15 22:18:23 AEDT 2018 org.apache.commons.lang.time.DateUtils,621
+Mon Jan 15 22:19:30 AEDT 2018 org.apache.commons.lang.time.DateUtils,625
+Mon Jan 15 22:20:17 AEDT 2018 org.apache.commons.lang.time.DateUtils,635
+Mon Jan 15 22:26:42 AEDT 2018 org.apache.commons.lang.time.DateUtils,636
+Mon Jan 15 22:29:45 AEDT 2018 org.apache.commons.lang.time.DateUtils,637
+Mon Jan 15 22:35:24 AEDT 2018 org.apache.commons.lang.time.DateUtils,640
+Mon Jan 15 22:49:30 AEDT 2018 org.apache.commons.lang.time.DateUtils,641
+Mon Jan 15 22:49:30 AEDT 2018 org.apache.commons.lang.time.DateUtils,649
+Mon Jan 15 23:06:19 AEDT 2018 org.apache.commons.lang.time.DateUtils,650
+Mon Jan 15 23:06:19 AEDT 2018 org.apache.commons.lang.time.DateUtils,658
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int minutes=val.get(Calendar.MINUTE);
+
+Time : 18/01/15 23:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+
+Time : 18/01/15 23:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int minutes=val.get(Calendar.YEAR);
+if(!done&&(!round||minutes<30)){
+time=time-(minutes*60000L);
+}
+
+Time : 18/01/15 23:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int minutes=val.get(Calendar.YEAR);
+
+Time : 18/01/15 23:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int minutes=val.get(field);
+
+Time : 18/01/15 23:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int minutes=val.get(Calendar.DST_OFFSET);
+if(!done&&(!round||minutes<30)){
+time=time-(minutes*60000L);
+}
+
+Time : 18/01/15 23:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int minutes=val.get(Calendar.ZONE_OFFSET);
+
+Time : 18/01/15 23:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int minutes=val.get(Calendar.DST_OFFSET);
+
+Time : 18/01/15 23:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int minutes=val.get(Calendar.HOUR);
+
+Time : 18/01/15 23:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int minutes=val.get(Calendar.HOUR_OF_DAY);
+
+Time : 18/01/15 23:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(val==null){
+throw new IllegalArgumentException("The date must not be null");
+}
+int minutes=val.get(Calendar.MINUTE);
+
+Time : 18/01/15 23:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(date==null){
+throw new IllegalArgumentException("The date must not be null");
+}
+int minutes=val.get(Calendar.MINUTE);
+
+Time : 18/01/15 23:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Calendar.getInstance().setTime(date);
+int minutes=val.get(Calendar.MINUTE);
+
+Time : 18/01/15 23:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Calendar.getInstance().setTime(date);
+if(date==null){
+throw new IllegalArgumentException("The date must not be null");
+}
+int minutes=val.get(Calendar.MINUTE);
+
+Time : 18/01/15 23:23
+----------------------------------------
+Mon Jan 15 23:26:14 AEDT 2018 org.apache.commons.lang.time.DateUtils,659
+Mon Jan 15 23:26:14 AEDT 2018 org.apache.commons.lang.time.DateUtils,660
+Mon Jan 15 23:26:14 AEDT 2018 org.apache.commons.lang.time.DateUtils,664
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(date.getTime()==time){
+date.setTime(time);
+val.setTime(date);
+}
+
+Time : 18/01/15 23:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(date.getTime()==Calendar.MILLISECOND){
+date.setTime(time);
+val.setTime(date);
+}
+
+Time : 18/01/15 23:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Calendar.getInstance().setTime(date);
+if(date.getTime()==time){
+date.setTime(time);
+val.setTime(date);
+}
+
+Time : 18/01/15 23:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+val.setTime(date);
+if(date.getTime()==time){
+date.setTime(time);
+val.setTime(date);
+}
+
+Time : 18/01/15 23:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(date.getTime()==Calendar.SECOND){
+date.setTime(time);
+val.setTime(date);
+}
+
+Time : 18/01/15 23:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(date.getTime()==Calendar.MINUTE){
+date.setTime(time);
+val.setTime(date);
+}
+
+Time : 18/01/15 23:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!done&&(!round||minutes<30)){
+time=time-(minutes*60000L);
+}
+if(date.getTime()==time){
+date.setTime(time);
+val.setTime(date);
+}
+
+Time : 18/01/15 23:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!done&&(!round||minutes<30)){
+time=time-(minutes*60000L);
+}
+if(date.getTime()==Calendar.MINUTE){
+date.setTime(time);
+val.setTime(date);
+}
+
+Time : 18/01/15 23:32
+----------------------------------------
+Mon Jan 15 23:32:37 AEDT 2018 org.apache.commons.lang.time.DateUtils,665
+Mon Jan 15 23:32:37 AEDT 2018 org.apache.commons.lang.time.DateUtils,666
+Mon Jan 15 23:32:38 AEDT 2018 org.apache.commons.lang.time.DateUtils,670
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(date.getTime()==time){
+date.setTime(time);
+val.setTime(date);
+}
+boolean roundUp=false;
+
+Time : 18/01/15 23:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(date.getTime()==Calendar.MILLISECOND){
+date.setTime(time);
+val.setTime(date);
+}
+boolean roundUp=false;
+
+Time : 18/01/15 23:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Calendar.getInstance().setTime(date);
+if(date.getTime()==time){
+date.setTime(time);
+val.setTime(date);
+}
+boolean roundUp=false;
+
+Time : 18/01/15 23:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+val.setTime(date);
+if(date.getTime()==time){
+date.setTime(time);
+val.setTime(date);
+}
+boolean roundUp=false;
+
+Time : 18/01/15 23:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(date.getTime()==Calendar.SECOND){
+date.setTime(time);
+val.setTime(date);
+}
+boolean roundUp=false;
+
+Time : 18/01/15 23:37
+----------------------------------------
+Mon Jan 15 23:37:56 AEDT 2018 org.apache.commons.lang.time.DateUtils,671
+Tue Jan 16 00:34:22 AEDT 2018 org.apache.commons.lang.time.DateUtils,672
+Tue Jan 16 00:34:22 AEDT 2018 org.apache.commons.lang.time.DateUtils,673
+Tue Jan 16 00:34:23 AEDT 2018 org.apache.commons.lang.time.DateUtils,675
+Tue Jan 16 00:34:23 AEDT 2018 org.apache.commons.lang.time.DateUtils,692
+Tue Jan 16 00:46:48 AEDT 2018 org.apache.commons.lang.time.DateUtils,696
+Tue Jan 16 01:02:42 AEDT 2018 org.apache.commons.lang.time.DateUtils,697
+Tue Jan 16 01:02:43 AEDT 2018 Tue Jan 16 01:02:43 AEDT 2018 : org.apache.commons.lang.time.DateUtils,699=>Find no block
+Tue Jan 16 01:02:43 AEDT 2018 org.apache.commons.lang.time.DateUtils,729
+Tue Jan 16 01:02:43 AEDT 2018 org.apache.commons.lang.time.DateUtils,730
+Tue Jan 16 01:02:44 AEDT 2018 org.apache.commons.lang.time.DateUtils,731
+Tue Jan 16 01:02:44 AEDT 2018 org.apache.commons.lang.time.DateUtils,733
+Tue Jan 16 01:02:44 AEDT 2018 org.apache.commons.lang.time.DateUtils,735
+Tue Jan 16 01:02:44 AEDT 2018 org.apache.commons.lang.time.DateUtils,738
+Tue Jan 16 01:02:44 AEDT 2018 org.apache.commons.lang.time.DateUtils,739
+Tue Jan 16 01:02:45 AEDT 2018 org.apache.commons.lang.time.DateUtils,922
+Tue Jan 16 01:06:51 AEDT 2018 org.apache.commons.lang.time.DateUtils,923
+Tue Jan 16 01:06:51 AEDT 2018 org.apache.commons.lang.time.DateUtils,924
+Tue Jan 16 01:06:52 AEDT 2018 org.apache.commons.lang.time.DateUtils,925
+Tue Jan 16 01:06:52 AEDT 2018 Tue Jan 16 01:06:52 AEDT 2018 : org.apache.commons.lang.time.DateUtils,926=>Find no block
+Tue Jan 16 01:06:52 AEDT 2018 org.apache.commons.lang.time.DateUtils,934
+Tue Jan 16 01:06:53 AEDT 2018 org.apache.commons.lang.time.DateUtils,943
+Tue Jan 16 01:07:12 AEDT 2018 org.apache.commons.lang.time.DateUtils,944
+Tue Jan 16 01:07:13 AEDT 2018 org.apache.commons.lang.time.DateUtils,946
+Tue Jan 16 01:09:56 AEDT 2018 org.apache.commons.lang.time.DateUtils,947
+Tue Jan 16 01:09:56 AEDT 2018 org.apache.commons.lang.time.DateUtils,957
+Tue Jan 16 01:09:57 AEDT 2018 org.apache.commons.lang.time.DateUtils,124
+Tue Jan 16 01:09:58 AEDT 2018 Tue Jan 16 01:09:58 AEDT 2018 : org.apache.commons.lang.time.DateUtils,125=>Find no block
+Tue Jan 16 01:09:58 AEDT 2018 org.apache.commons.lang.time.DateUtils,142
+Tue Jan 16 01:09:58 AEDT 2018 org.apache.commons.lang.time.DateUtils,143
+Tue Jan 16 01:09:59 AEDT 2018 org.apache.commons.lang.time.DateUtils,145
+Tue Jan 16 01:17:05 AEDT 2018 org.apache.commons.lang.time.DateUtils,146
+Tue Jan 16 01:17:05 AEDT 2018 org.apache.commons.lang.time.DateUtils,147
+Tue Jan 16 01:17:05 AEDT 2018 org.apache.commons.lang.time.DateUtils,148
+Tue Jan 16 01:17:06 AEDT 2018 org.apache.commons.lang.time.DateUtils,149
+Tue Jan 16 01:17:06 AEDT 2018 org.apache.commons.lang.time.DateUtils,166
+Tue Jan 16 01:17:07 AEDT 2018 org.apache.commons.lang.time.DateUtils,167
+Tue Jan 16 01:17:07 AEDT 2018 org.apache.commons.lang.time.DateUtils,169
+Tue Jan 16 01:49:38 AEDT 2018 org.apache.commons.lang.time.DateUtils,187
+Tue Jan 16 01:49:38 AEDT 2018 org.apache.commons.lang.time.DateUtils,188
+Tue Jan 16 01:49:39 AEDT 2018 org.apache.commons.lang.time.DateUtils,190
+Tue Jan 16 01:51:02 AEDT 2018 org.apache.commons.lang.time.DateUtils,205
+Tue Jan 16 01:51:03 AEDT 2018 org.apache.commons.lang.time.DateUtils,206
+Tue Jan 16 01:51:03 AEDT 2018 org.apache.commons.lang.time.DateUtils,208
+Tue Jan 16 01:51:04 AEDT 2018 org.apache.commons.lang.time.DateUtils,225
+Tue Jan 16 01:51:04 AEDT 2018 org.apache.commons.lang.time.DateUtils,226
+Tue Jan 16 01:51:04 AEDT 2018 org.apache.commons.lang.time.DateUtils,228
+Tue Jan 16 01:52:40 AEDT 2018 org.apache.commons.lang.time.DateUtils,253
+Tue Jan 16 01:59:37 AEDT 2018 org.apache.commons.lang.time.DateUtils,254
+Tue Jan 16 01:59:37 AEDT 2018 org.apache.commons.lang.time.DateUtils,257
+Tue Jan 16 02:15:45 AEDT 2018 org.apache.commons.lang.time.DateUtils,258
+Tue Jan 16 02:15:45 AEDT 2018 org.apache.commons.lang.time.DateUtils,259
+Tue Jan 16 02:33:20 AEDT 2018 org.apache.commons.lang.time.DateUtils,260
+Tue Jan 16 02:33:20 AEDT 2018 org.apache.commons.lang.time.DateUtils,261
+Tue Jan 16 02:33:20 AEDT 2018 org.apache.commons.lang.time.DateUtils,263
+Tue Jan 16 02:33:20 AEDT 2018 org.apache.commons.lang.time.DateUtils,265
+Tue Jan 16 02:33:20 AEDT 2018 org.apache.commons.lang.time.DateUtils,266
+Tue Jan 16 02:33:21 AEDT 2018 org.apache.commons.lang.time.DateUtils,267
+Tue Jan 16 02:33:21 AEDT 2018 org.apache.commons.lang.time.DateUtils,268
+Tue Jan 16 02:33:21 AEDT 2018 org.apache.commons.lang.time.DateUtils,271
+Tue Jan 16 02:45:36 AEDT 2018 org.apache.commons.lang.time.DateUtils,285
+Tue Jan 16 02:46:42 AEDT 2018 org.apache.commons.lang.time.DateUtils,299
+Tue Jan 16 02:47:48 AEDT 2018 org.apache.commons.lang.time.DateUtils,313
+Tue Jan 16 02:48:58 AEDT 2018 org.apache.commons.lang.time.DateUtils,327
+Tue Jan 16 02:50:06 AEDT 2018 org.apache.commons.lang.time.DateUtils,341
+Tue Jan 16 02:51:14 AEDT 2018 org.apache.commons.lang.time.DateUtils,355
+Tue Jan 16 02:52:22 AEDT 2018 org.apache.commons.lang.time.DateUtils,369
+Tue Jan 16 02:53:42 AEDT 2018 org.apache.commons.lang.time.DateUtils,383
+Tue Jan 16 02:54:51 AEDT 2018 org.apache.commons.lang.time.DateUtils,398
+Tue Jan 16 02:54:51 AEDT 2018 org.apache.commons.lang.time.DateUtils,399
+Tue Jan 16 02:54:51 AEDT 2018 org.apache.commons.lang.time.DateUtils,401
+Tue Jan 16 03:03:14 AEDT 2018 org.apache.commons.lang.time.DateUtils,402
+Tue Jan 16 03:03:15 AEDT 2018 org.apache.commons.lang.time.DateUtils,403
+Tue Jan 16 03:03:15 AEDT 2018 org.apache.commons.lang.time.DateUtils,404
+Tue Jan 16 03:03:15 AEDT 2018 org.apache.commons.lang.time.DateUtils,438
+Tue Jan 16 03:03:15 AEDT 2018 org.apache.commons.lang.time.DateUtils,475
+Tue Jan 16 03:03:15 AEDT 2018 org.apache.commons.lang.time.DateUtils,476
+Tue Jan 16 03:03:16 AEDT 2018 org.apache.commons.lang.time.DateUtils,478
+Tue Jan 16 03:05:28 AEDT 2018 org.apache.commons.lang.time.DateUtils,479
+Tue Jan 16 03:05:28 AEDT 2018 org.apache.commons.lang.time.DateUtils,480
+Tue Jan 16 03:05:28 AEDT 2018 org.apache.commons.lang.time.DateUtils,514
+Tue Jan 16 03:05:29 AEDT 2018 org.apache.commons.lang.time.DateUtils,515
+Tue Jan 16 03:05:29 AEDT 2018 org.apache.commons.lang.time.DateUtils,517
+Tue Jan 16 03:06:02 AEDT 2018 org.apache.commons.lang.time.DateUtils,518
+Tue Jan 16 03:06:02 AEDT 2018 org.apache.commons.lang.time.DateUtils,519
+Tue Jan 16 03:06:03 AEDT 2018 org.apache.commons.lang.time.DateUtils,520
+Tue Jan 16 03:06:03 AEDT 2018 org.apache.commons.lang.time.DateUtils,522
+Tue Jan 16 03:06:03 AEDT 2018 org.apache.commons.lang.time.DateUtils,544
+Tue Jan 16 03:06:04 AEDT 2018 org.apache.commons.lang.time.DateUtils,545
+Tue Jan 16 03:06:04 AEDT 2018 org.apache.commons.lang.time.DateUtils,547
+Timeout time : 18/01/16 03:08

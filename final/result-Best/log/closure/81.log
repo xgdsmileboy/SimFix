@@ -1,0 +1,51 @@
+=================================================
+Project : closure_81	start : 18/01/13 21:34
+Current failed test : com.google.javascript.jscomp.parsing.ParserTest::testUnnamedFunctionStatement | 18/01/13 21:34
+Sat Jan 13 21:43:32 AEDT 2018 com.google.javascript.jscomp.parsing.ParserRunner,107
+Sat Jan 13 21:44:12 AEDT 2018 com.google.javascript.jscomp.parsing.ParserRunner,108
+Sat Jan 13 21:44:16 AEDT 2018 com.google.javascript.rhino.jstype.JSTypeRegistry,189
+Sat Jan 13 21:44:26 AEDT 2018 Sat Jan 13 21:44:26 AEDT 2018 : com.google.javascript.rhino.jstype.JSTypeRegistry,190=>Find no block
+Sat Jan 13 21:44:30 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,198
+Sat Jan 13 21:51:33 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,467
+Sat Jan 13 21:59:41 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,468
+Sat Jan 13 21:59:45 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,127
+Sat Jan 13 22:09:23 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,128
+Sat Jan 13 22:09:27 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,129
+Sat Jan 13 22:09:31 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,131
+Sat Jan 13 22:09:35 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,132
+Sat Jan 13 22:09:39 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,133
+Sat Jan 13 22:09:44 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,134
+Sat Jan 13 22:09:48 AEDT 2018 Sat Jan 13 22:09:48 AEDT 2018 : com.google.javascript.rhino.jstype.PrototypeObjectType,136=>Find no block
+Sat Jan 13 22:09:52 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,137
+Sat Jan 13 22:09:56 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,517
+Sat Jan 13 22:10:49 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,518
+Sat Jan 13 22:10:53 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,519
+Sat Jan 13 22:10:56 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,526
+Sat Jan 13 22:13:32 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,530
+Sat Jan 13 22:13:36 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,532
+Sat Jan 13 22:13:40 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,547
+Sat Jan 13 22:16:03 AEDT 2018 com.google.javascript.rhino.Node,1148
+Sat Jan 13 22:23:14 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,149
+Sat Jan 13 22:30:10 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,145
+Sat Jan 13 22:30:13 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,146
+Sat Jan 13 22:30:17 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,142
+Sat Jan 13 22:30:21 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,229
+Sat Jan 13 22:37:07 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,215
+Sat Jan 13 23:47:31 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,216
+Sat Jan 13 23:47:35 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,514
+Sat Jan 13 23:49:19 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,515
+Sat Jan 13 23:49:23 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,516
+Sat Jan 13 23:49:27 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,521
+Sat Jan 13 23:54:25 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,522
+Sun Jan 14 00:03:11 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,523
+Sun Jan 14 00:03:15 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,535
+Sun Jan 14 00:26:30 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,536
+Sun Jan 14 00:50:47 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,543
+Sun Jan 14 00:56:49 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,544
+Sun Jan 14 00:56:53 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,549
+Sun Jan 14 01:02:28 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,552
+Sun Jan 14 01:28:59 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,553
+Sun Jan 14 01:42:54 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,556
+Sun Jan 14 02:22:22 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,558
+Sun Jan 14 02:37:12 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,559
+Timeout time : 18/01/14 02:43

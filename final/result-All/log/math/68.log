@@ -1,0 +1,1193 @@
+=================================================
+Project : math_68	start : 18/01/12 14:05
+Current failed test : org.apache.commons.math.optimization.general.MinpackTest::testMinpackFreudensteinRoth | 18/01/12 14:06
+Fri Jan 12 14:07:15 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,381
+Fri Jan 12 14:09:00 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,607
+Fri Jan 12 14:15:49 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,608
+Fri Jan 12 14:15:50 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,510
+Fri Jan 12 15:42:49 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,511
+Fri Jan 12 15:42:50 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,512
+Fri Jan 12 15:42:51 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,514
+Timeout time : 18/01/12 16:37
+Current failed test : org.apache.commons.math.optimization.general.MinpackTest::testMinpackJennrichSampson | 18/01/12 16:37
+Fri Jan 12 16:38:01 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,381
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+costRelativeTolerance=0;
+if((0.1*cost>=previousCost)||(tmp<0.1)){
+tmp=0.1;
+}
+
+Time : 18/01/12 16:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((0.1*cost>=previousCost)||(tmp<0.1)){
+tmp+=0.1;
+}
+
+Time : 18/01/12 16:39
+----------------------------------------
+Fri Jan 12 16:40:57 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,606
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(fp<0){
+paru=lmPar=0;
+}
+
+Time : 18/01/12 16:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(fp<=0){
+paru=lmPar=0;
+}
+
+Time : 18/01/12 16:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+paru=Math.sqrt(dxNorm);
+if(fp<0){
+paru=lmPar=0;
+}
+
+Time : 18/01/12 16:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+paru=Math.sqrt(dxNorm);
+if(fp<=0){
+paru=lmPar=0;
+}
+
+Time : 18/01/12 16:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(fp<0){
+lmPar*=0.5;
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/12 16:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+parl=lmPar;
+if(fp>0){
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/12 16:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(fp>0){
+parl+=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/12 16:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((Math.max(Math.abs(paru),Math.abs(parl))*orthoTolerance)>0){
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/12 16:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Math.max(Math.abs(paru),Math.abs(parl))*orthoTolerance>0){
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/12 16:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((parl*orthoTolerance)>0){
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/12 16:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(parl*orthoTolerance>0){
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/12 16:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(delta>0){
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/12 16:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+paru=parl-fp;
+if(delta>0){
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/12 16:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lmPar>0){
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/12 17:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(fp>0){
+parl=delta=2*gNorm;
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/12 17:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(fp>0){
+lmPar*=0.5;
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/12 17:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lmPar>0){
+lmPar*=0.5;
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/12 17:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(fp>0){
+lmPar*=0.5;
+parl=delta=2*gNorm;
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/12 17:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(fp>0){
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+parl=Math.min(paru,lmPar);
+}
+
+Time : 18/01/12 17:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!false){
+parl=Math.max(parl,lmPar);
+}else if(fp<0){
+paru=Math.min(paru,lmPar);
+}
+
+Time : 18/01/12 17:07
+----------------------------------------
+Fri Jan 12 17:08:12 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,607
+Fri Jan 12 17:08:13 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,608
+Fri Jan 12 17:08:16 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,510
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]=diag[pj]*lmDir[pj];
+}
+
+Time : 18/01/12 17:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]=diag[pj];
+}
+
+Time : 18/01/12 17:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]+=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]/=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<cols;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]*=lmDir[permutation[j]]=0;
+}
+
+Time : 18/01/12 17:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<cols;++j){
+int pj=permutation[j];
+work1[pj]*=lmDir[permutation[j]]=0;
+}
+
+Time : 18/01/12 17:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<cols;++j){
+int pj=permutation[j];
+work1[pj]=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]=lmDir[permutation[j]]=0;
+}
+
+Time : 18/01/12 17:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<cols;++j){
+int pj=permutation[j];
+work1[pj]=lmDir[permutation[j]]=0;
+}
+
+Time : 18/01/12 17:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]=diag[j];
+}
+
+Time : 18/01/12 17:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<rank;++j){
+int pj=permutation[j];
+work1[pj]=diag[j];
+}
+
+Time : 18/01/12 17:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+dxNorm*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+dxNorm+=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+dxNorm=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]+=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]-=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]-=diag[j];
+}
+
+Time : 18/01/12 17:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank-1;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank-1;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]+=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<cols;++j){
+int pj=permutation[j];
+work1[pj]+=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/diag[j];
+}
+
+Time : 18/01/12 17:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]+=diag[pj]/diag[j];
+}
+
+Time : 18/01/12 17:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]-=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<1;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<1;++j){
+int pj=permutation[j];
+work1[pj]=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank+1;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank+1;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]-=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<rank;++j){
+int pj=permutation[j];
+work1[pj]+=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=solvedCols;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<0;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=solvedCols-2;j<0;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=solvedCols;j<0;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=solvedCols;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<0;++j){
+int pj=permutation[j];
+work1[pj]=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=solvedCols-2;j<0;++j){
+int pj=permutation[j];
+work1[pj]=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=solvedCols;j<0;++j){
+int pj=permutation[j];
+work1[pj]=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank+1;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]+=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<0;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<0;++j){
+int pj=permutation[j];
+work1[pj]=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 17:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+pj*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank+1;j<solvedCols;++j){
+int pj=permutation[j];
+pj*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank+1;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<solvedCols;++j){
+int pj=permutation[j];
+pj*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=solvedCols-rank;j<0;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=solvedCols-rank;j<0;++j){
+int pj=permutation[j];
+work1[pj]=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols-1;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]*=diag[j]/dxNorm;
+}
+
+Time : 18/01/12 18:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]+=diag[j]/dxNorm;
+}
+
+Time : 18/01/12 18:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/work2[pj];
+}
+
+Time : 18/01/12 18:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]-=diag[pj]*work2[j]/dxNorm;
+}
+
+Time : 18/01/12 18:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]-=diag[pj]/diag[j];
+}
+
+Time : 18/01/12 18:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<rank;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[0];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<rank;++j){
+int pj=permutation[0];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=0;
+work1[pj]+=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<rank;++j){
+int pj=0;
+work1[pj]+=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+dxNorm*=orthoTolerance;
+for(int j=rank+1;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+dxNorm*=orthoTolerance;
+for(int j=rank;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+++j;
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<solvedCols;++j){
+int pj=permutation[0];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<solvedCols;++j){
+int pj=0;
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<cols;++j){
+int pj=permutation[0];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<cols;++j){
+int pj=permutation[0];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<cols;++j){
+int pj=0;
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<cols;++j){
+int pj=permutation[j];
+work1[pj]+=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<solvedCols;++j){
+int pj=permutation[0];
+work1[pj]+=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<solvedCols;++j){
+int pj=0;
+work1[pj]+=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<cols;++j){
+int pj=0;
+work1[pj]+=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<cols;++j){
+int pj=permutation[0];
+work1[pj]+=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<cols;++j){
+int pj=0;
+work1[pj]+=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=solvedCols-1;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=solvedCols-1;j<0;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=solvedCols-1;j<0;++j){
+int pj=permutation[j];
+work1[pj]=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 18:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols-rank;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 19:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols-rank;++j){
+int pj=permutation[j];
+work1[pj]=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 19:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rank;j<rank;++j){
+int pj=permutation[j];
+work1[pj]=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 19:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=4;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 19:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=4;j<=solvedCols;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 19:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=4;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 19:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=4;j<=solvedCols;++j){
+int pj=permutation[j];
+work1[pj]=diag[pj]/dxNorm;
+}
+
+Time : 18/01/12 19:06
+----------------------------------------
+Timeout time : 18/01/12 19:07

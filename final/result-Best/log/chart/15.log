@@ -1,0 +1,99 @@
+=================================================
+Project : chart_15	start : 18/01/14 06:27
+Current failed test : org.jfree.chart.plot.junit.PiePlot3DTests::testDrawWithNullDataset | 18/01/14 06:29
+Sun Jan 14 06:31:27 AEDT 2018 org.jfree.chart.plot.PiePlot,2613
+Sun Jan 14 06:33:04 AEDT 2018 org.jfree.data.general.DatasetUtilities,153
+Sun Jan 14 06:34:14 AEDT 2018 org.jfree.chart.plot.PiePlot,670
+Sun Jan 14 06:34:31 AEDT 2018 org.jfree.chart.plot.PiePlot,1398
+Sun Jan 14 06:34:45 AEDT 2018 org.jfree.chart.plot.PiePlot,1423
+Sun Jan 14 06:34:59 AEDT 2018 org.jfree.chart.plot.PiePlot,1448
+Sun Jan 14 06:35:16 AEDT 2018 org.jfree.chart.plot.PiePlot3D,230
+Sun Jan 14 06:42:31 AEDT 2018 org.jfree.chart.plot.PiePlot3D,231
+Sun Jan 14 06:42:38 AEDT 2018 org.jfree.chart.plot.PiePlot3D,233
+Sun Jan 14 06:50:13 AEDT 2018 org.jfree.chart.plot.PiePlot3D,234
+Sun Jan 14 06:52:28 AEDT 2018 org.jfree.chart.plot.PiePlot3D,239
+Sun Jan 14 07:00:51 AEDT 2018 org.jfree.chart.plot.PiePlot3D,241
+Sun Jan 14 07:12:29 AEDT 2018 org.jfree.chart.plot.PiePlot3D,242
+Sun Jan 14 07:25:01 AEDT 2018 org.jfree.chart.plot.PiePlot3D,245
+Sun Jan 14 07:37:15 AEDT 2018 org.jfree.chart.plot.PiePlot3D,246
+Sun Jan 14 07:38:22 AEDT 2018 org.jfree.chart.plot.PiePlot3D,247
+Sun Jan 14 07:38:38 AEDT 2018 org.jfree.chart.plot.PiePlot3D,248
+Sun Jan 14 07:38:44 AEDT 2018 org.jfree.chart.plot.PiePlot3D,250
+Sun Jan 14 07:47:36 AEDT 2018 org.jfree.chart.plot.PiePlot3D,252
+Sun Jan 14 07:47:43 AEDT 2018 org.jfree.chart.plot.PiePlot3D,266
+Sun Jan 14 08:12:49 AEDT 2018 org.jfree.chart.plot.PiePlot3D,267
+Sun Jan 14 08:22:33 AEDT 2018 org.jfree.chart.plot.PiePlot3D,268
+Sun Jan 14 08:35:23 AEDT 2018 org.jfree.chart.plot.PiePlot3D,269
+Sun Jan 14 08:51:46 AEDT 2018 org.jfree.chart.plot.PiePlot3D,272
+Sun Jan 14 08:52:03 AEDT 2018 org.jfree.chart.plot.PiePlot3D,280
+Sun Jan 14 08:54:55 AEDT 2018 org.jfree.chart.plot.Plot,931
+Sun Jan 14 08:57:53 AEDT 2018 org.jfree.chart.plot.Plot,932
+Sun Jan 14 08:58:01 AEDT 2018 Sun Jan 14 08:58:01 AEDT 2018 : org.jfree.chart.plot.Plot,933=>Find no block
+Sun Jan 14 08:58:06 AEDT 2018 org.jfree.chart.plot.Plot,946
+Sun Jan 14 08:59:34 AEDT 2018 Sun Jan 14 08:59:34 AEDT 2018 : org.jfree.chart.plot.Plot,947=>Find no block
+Sun Jan 14 08:59:42 AEDT 2018 org.jfree.chart.plot.PiePlot,706
+Sun Jan 14 08:59:58 AEDT 2018 org.jfree.chart.plot.PiePlot,2049
+Sun Jan 14 09:03:25 AEDT 2018 org.jfree.chart.plot.PiePlot,2050
+Sun Jan 14 09:03:33 AEDT 2018 org.jfree.chart.plot.PiePlot,2051
+Sun Jan 14 09:03:42 AEDT 2018 org.jfree.chart.plot.PiePlotState,89
+Sun Jan 14 09:05:13 AEDT 2018 org.jfree.chart.plot.PiePlotState,90
+Sun Jan 14 09:05:19 AEDT 2018 org.jfree.chart.plot.PiePlotState,91
+Sun Jan 14 09:05:26 AEDT 2018 Sun Jan 14 09:05:26 AEDT 2018 : org.jfree.chart.plot.PiePlotState,92=>Find no block
+Sun Jan 14 09:05:33 AEDT 2018 org.jfree.chart.plot.PiePlotState,109
+Sun Jan 14 09:06:32 AEDT 2018 Sun Jan 14 09:06:32 AEDT 2018 : org.jfree.chart.plot.PiePlotState,110=>Find no block
+Sun Jan 14 09:06:39 AEDT 2018 org.jfree.chart.ChartFactory,694
+Sun Jan 14 09:11:02 AEDT 2018 org.jfree.chart.ChartFactory,695
+Sun Jan 14 09:11:09 AEDT 2018 org.jfree.chart.ChartFactory,696
+Sun Jan 14 09:11:15 AEDT 2018 org.jfree.chart.ChartFactory,699
+Sun Jan 14 09:11:23 AEDT 2018 org.jfree.chart.ChartFactory,702
+Sun Jan 14 09:11:30 AEDT 2018 org.jfree.chart.plot.PiePlot,2611
+Sun Jan 14 09:14:54 AEDT 2018 org.jfree.chart.plot.PiePlot,2612
+Sun Jan 14 09:15:00 AEDT 2018 org.jfree.data.general.DatasetUtilities,152
+Sun Jan 14 09:15:07 AEDT 2018 org.jfree.chart.plot.PiePlot,551
+Sun Jan 14 09:15:23 AEDT 2018 org.jfree.chart.plot.PiePlot3D,151
+Sun Jan 14 09:16:20 AEDT 2018 Sun Jan 14 09:16:20 AEDT 2018 : org.jfree.chart.plot.PiePlot3D,126=>Find no block
+Sun Jan 14 09:16:28 AEDT 2018 Sun Jan 14 09:16:28 AEDT 2018 : org.jfree.chart.plot.PiePlot3D,134=>Find no block
+Sun Jan 14 09:16:35 AEDT 2018 org.jfree.chart.plot.PiePlot3D,152
+Sun Jan 14 09:16:42 AEDT 2018 Sun Jan 14 09:16:42 AEDT 2018 : org.jfree.chart.plot.PiePlot3D,153=>Find no block
+Sun Jan 14 09:16:49 AEDT 2018 org.jfree.chart.plot.PiePlot,731
+Sun Jan 14 09:34:41 AEDT 2018 org.jfree.chart.plot.PiePlot,732
+Sun Jan 14 09:49:45 AEDT 2018 Sun Jan 14 09:49:45 AEDT 2018 : org.jfree.chart.plot.PiePlot,735=>Find no block
+Sun Jan 14 09:49:53 AEDT 2018 org.jfree.chart.block.LineBorder,146
+Sun Jan 14 09:50:48 AEDT 2018 org.jfree.chart.title.LegendTitle,472
+Sun Jan 14 09:51:07 AEDT 2018 org.jfree.chart.plot.Plot,504
+Sun Jan 14 09:52:25 AEDT 2018 Sun Jan 14 09:52:25 AEDT 2018 : org.jfree.chart.plot.Plot,505=>Find no block
+Sun Jan 14 09:52:33 AEDT 2018 org.jfree.chart.plot.Plot,519
+Sun Jan 14 09:52:50 AEDT 2018 org.jfree.chart.plot.Plot,522
+Sun Jan 14 09:56:17 AEDT 2018 org.jfree.chart.plot.Plot,523
+Sun Jan 14 09:56:23 AEDT 2018 org.jfree.chart.plot.Plot,524
+Sun Jan 14 09:56:30 AEDT 2018 org.jfree.chart.plot.Plot,525
+Sun Jan 14 09:56:37 AEDT 2018 Sun Jan 14 09:56:37 AEDT 2018 : org.jfree.chart.plot.Plot,529=>Find no block
+Sun Jan 14 09:56:42 AEDT 2018 org.jfree.chart.util.RectangleInsets,192
+Sun Jan 14 09:57:45 AEDT 2018 Sun Jan 14 09:57:45 AEDT 2018 : org.jfree.chart.renderer.RendererState,62=>Find no block
+Sun Jan 14 09:57:52 AEDT 2018 org.jfree.chart.renderer.RendererState,63
+Sun Jan 14 09:58:06 AEDT 2018 Sun Jan 14 09:58:06 AEDT 2018 : org.jfree.chart.renderer.RendererState,64=>Find no block
+Sun Jan 14 09:58:13 AEDT 2018 org.jfree.chart.util.ObjectUtilities,255
+Sun Jan 14 09:58:30 AEDT 2018 org.jfree.chart.util.ObjectUtilities,258
+Sun Jan 14 10:12:10 AEDT 2018 org.jfree.chart.util.ObjectUtilities,259
+Sun Jan 14 10:12:15 AEDT 2018 org.jfree.chart.util.ObjectUtilities,261
+Sun Jan 14 10:12:21 AEDT 2018 org.jfree.chart.util.ObjectUtilities,262
+Sun Jan 14 10:12:28 AEDT 2018 org.jfree.chart.util.ObjectUtilities,439
+Sun Jan 14 10:13:51 AEDT 2018 org.jfree.chart.util.ObjectUtilities,440
+Sun Jan 14 10:14:09 AEDT 2018 org.jfree.chart.util.ObjectUtilities,442
+Sun Jan 14 10:14:16 AEDT 2018 org.jfree.chart.util.ObjectUtilities,443
+Sun Jan 14 10:14:24 AEDT 2018 org.jfree.chart.util.ObjectUtilities,439
+Sun Jan 14 10:14:31 AEDT 2018 Sun Jan 14 10:14:31 AEDT 2018 : org.jfree.chart.block.LengthConstraintType,74=>Find no block
+Sun Jan 14 10:14:37 AEDT 2018 org.jfree.chart.block.LengthConstraintType,75
+Sun Jan 14 10:15:44 AEDT 2018 Sun Jan 14 10:15:44 AEDT 2018 : org.jfree.chart.block.LengthConstraintType,76=>Find no block
+Sun Jan 14 10:15:52 AEDT 2018 Sun Jan 14 10:15:52 AEDT 2018 : org.jfree.chart.text.TextBlockAnchor,100=>Find no block
+Sun Jan 14 10:15:59 AEDT 2018 org.jfree.chart.text.TextBlockAnchor,101
+Sun Jan 14 10:16:08 AEDT 2018 Sun Jan 14 10:16:08 AEDT 2018 : org.jfree.chart.text.TextBlockAnchor,102=>Find no block
+Sun Jan 14 10:16:15 AEDT 2018 org.jfree.chart.plot.Plot,963
+Sun Jan 14 10:18:33 AEDT 2018 org.jfree.chart.plot.Plot,966
+Sun Jan 14 10:20:34 AEDT 2018 org.jfree.chart.plot.Plot,969
+Sun Jan 14 10:40:52 AEDT 2018 org.jfree.chart.plot.Plot,970
+Sun Jan 14 10:40:59 AEDT 2018 org.jfree.chart.plot.Plot,985
+Sun Jan 14 11:00:06 AEDT 2018 org.jfree.chart.plot.Plot,986
+Sun Jan 14 11:14:59 AEDT 2018 org.jfree.chart.plot.Plot,988
+Sun Jan 14 11:25:32 AEDT 2018 org.jfree.chart.plot.Plot,989
+Timeout time : 18/01/14 11:31

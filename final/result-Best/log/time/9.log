@@ -1,0 +1,621 @@
+=================================================
+Project : time_9	start : 18/01/15 15:13
+Current failed test : org.joda.time.TestDateTimeZone::testForOffsetHoursMinutes_int_int_purify_11 | 18/01/15 15:14
+Mon Jan 15 15:15:16 EST 2018 org.joda.time.DateTimeZone,267
+Mon Jan 15 15:16:29 EST 2018 org.joda.time.DateTimeZone,364
+Mon Jan 15 15:19:46 EST 2018 org.joda.time.DateTimeZone,365
+Mon Jan 15 15:21:56 EST 2018 org.joda.time.DateTimeZone,366
+Mon Jan 15 15:21:56 EST 2018 org.joda.time.DateTimeZone,261
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(minutesOffset<0||minutesOffset>=0){
+throw new IllegalArgumentException("Minutes out of range: "+minutesOffset);
+}
+int offset=0;
+
+Time : 18/01/15 15:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((serialVersionUID^serialVersionUID)<0||minutesOffset>=0){
+throw new IllegalArgumentException("Minutes out of range: "+minutesOffset);
+}
+int offset=0;
+
+Time : 18/01/15 15:27
+----------------------------------------
+Mon Jan 15 15:37:44 EST 2018 org.joda.time.DateTimeZone,263
+Mon Jan 15 15:39:14 EST 2018 org.joda.time.DateTimeZone,264
+Mon Jan 15 15:39:14 EST 2018 org.joda.time.DateTimeZone,269
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hoursInMinutes<0){
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,-minutesOffset);
+}else {
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,minutesOffset);
+}
+if(offset==0){
+throw new IllegalArgumentException("The offset cannot be zero");
+}
+offset=FieldUtils.safeMultiply(minutesOffset,DateTimeConstants.MILLIS_PER_MINUTE);
+
+Time : 18/01/15 15:40
+----------------------------------------
+Mon Jan 15 15:41:37 EST 2018 Mon Jan 15 15:41:37 EST 2018 : org.joda.time.DateTimeZone,272=>Find no block
+Mon Jan 15 15:41:37 EST 2018 org.joda.time.DateTimeZone,273
+Mon Jan 15 15:41:38 EST 2018 org.joda.time.DateTimeZone,258
+Mon Jan 15 15:42:13 EST 2018 org.joda.time.DateTimeZone,255
+Mon Jan 15 15:42:14 EST 2018 org.joda.time.DateTimeZone,283
+Mon Jan 15 15:42:26 EST 2018 org.joda.time.DateTimeZone,284
+Mon Jan 15 15:42:26 EST 2018 org.joda.time.DateTimeZone,634
+Mon Jan 15 16:03:28 EST 2018 org.joda.time.DateTimeZone,350
+Mon Jan 15 16:05:02 EST 2018 org.joda.time.DateTimeZone,353
+Mon Jan 15 16:05:03 EST 2018 org.joda.time.DateTimeZone,357
+Mon Jan 15 16:07:17 EST 2018 org.joda.time.DateTimeZone,358
+Mon Jan 15 16:07:17 EST 2018 org.joda.time.DateTimeZone,632
+Mon Jan 15 16:25:13 EST 2018 org.joda.time.DateTimeZone,633
+Mon Jan 15 16:25:13 EST 2018 org.joda.time.DateTimeZone,640
+Mon Jan 15 16:36:03 EST 2018 org.joda.time.DateTimeZone,641
+Mon Jan 15 16:39:57 EST 2018 org.joda.time.DateTimeZone,642
+Mon Jan 15 16:44:47 EST 2018 org.joda.time.DateTimeZone,644
+Mon Jan 15 16:49:46 EST 2018 org.joda.time.DateTimeZone,645
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int minutes=offset/DateTimeConstants.MILLIS_PER_MINUTE;
+if(offset==0){
+throw new IllegalArgumentException("The offset cannot be zero");
+}
+buf.append(':');
+FormatUtils.appendPaddedInteger(buf,minutes,2);
+
+Time : 18/01/15 16:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int minutes=offset/DateTimeConstants.MILLIS_PER_MINUTE;
+if(offset==0){
+throw new IllegalArgumentException("The offset cannot be zero");
+}
+minutes=offset;
+buf.append(':');
+FormatUtils.appendPaddedInteger(buf,minutes,2);
+
+Time : 18/01/15 16:53
+----------------------------------------
+Mon Jan 15 16:54:25 EST 2018 org.joda.time.DateTimeZone,646
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+buf.append(':');
+FormatUtils.appendPaddedInteger(buf,minutes,2);
+if(offset==0){
+throw new IllegalArgumentException("The offset cannot be zero");
+}
+offset-=minutes*DateTimeConstants.MILLIS_PER_MINUTE;
+
+Time : 18/01/15 16:59
+----------------------------------------
+Mon Jan 15 16:59:37 EST 2018 org.joda.time.DateTimeZone,647
+Mon Jan 15 17:03:47 EST 2018 org.joda.time.DateTimeZone,648
+Mon Jan 15 17:07:58 EST 2018 org.joda.time.DateTimeZone,649
+Mon Jan 15 17:07:58 EST 2018 org.joda.time.field.FieldUtils,119
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long total=(long)val1*(long)val2;
+if(total<Integer.MIN_VALUE||(val2^val1)>=0){
+throw new ArithmeticException("Multiplication overflows an int: "+val1);
+}
+return (int)total;
+
+Time : 18/01/15 17:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long total=(long)val1*(long)val2;
+if((val2^val2+val1)<0||(val2^val1)>=0){
+throw new ArithmeticException("Multiplication overflows an int: "+val1);
+}
+return (int)total;
+
+Time : 18/01/15 17:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long total=(long)val1*(long)val2;
+if(total<Integer.MIN_VALUE||(val2^val1)>=0){
+throw new ArithmeticException("The calculation caused an overflow: "+val2);
+}
+return (int)total;
+
+Time : 18/01/15 17:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long total=(long)val1*(long)val2;
+if((val2^val2+val1)<0||(val2^val1)>=0){
+throw new ArithmeticException("The calculation caused an overflow: "+val2);
+}
+return (int)total;
+
+Time : 18/01/15 17:11
+----------------------------------------
+Mon Jan 15 17:11:47 EST 2018 org.joda.time.field.FieldUtils,120
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(total<Integer.MIN_VALUE||(val1^val1)>=0){
+throw new ArithmeticException("Multiplication overflows an int: "+val1);
+}
+
+Time : 18/01/15 17:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((val1^val2)<0||(val1^val1)>=0){
+throw new ArithmeticException("Multiplication overflows an int: "+val1);
+}
+
+Time : 18/01/15 17:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(total<Integer.MIN_VALUE||(val1^val1)>=0){
+throw new ArithmeticException("The calculation caused an overflow: "+val1);
+}
+
+Time : 18/01/15 17:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((val1^val2)<0||(val1^val1)>=0){
+throw new ArithmeticException("The calculation caused an overflow: "+val1);
+}
+
+Time : 18/01/15 17:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(val1<val2||total>Integer.MAX_VALUE){
+throw new ArithmeticException("Multiplication overflows an int: "+val1);
+}
+
+Time : 18/01/15 17:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(val1<val2||total>Integer.MAX_VALUE){
+throw new ArithmeticException("Multiplication overflows a long: "+val1);
+}
+
+Time : 18/01/15 17:19
+----------------------------------------
+Mon Jan 15 17:19:37 EST 2018 org.joda.time.field.FieldUtils,123
+Mon Jan 15 17:19:38 EST 2018 org.joda.time.tz.FixedDateTimeZone,38
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(id);
+if(nameKey==null){
+throw new IllegalArgumentException("Id must not be null");
+}
+iNameKey=nameKey;
+iWallOffset=wallOffset;
+iStandardOffset=standardOffset;
+
+Time : 18/01/15 17:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(id);
+if(nameKey==null){
+throw new IllegalArgumentException("Id must not be null");
+}
+iNameKey=id;
+iWallOffset=wallOffset;
+iStandardOffset=standardOffset;
+
+Time : 18/01/15 17:20
+----------------------------------------
+Mon Jan 15 17:21:08 EST 2018 org.joda.time.tz.FixedDateTimeZone,39
+Mon Jan 15 17:21:08 EST 2018 org.joda.time.tz.FixedDateTimeZone,40
+Mon Jan 15 17:21:08 EST 2018 org.joda.time.tz.FixedDateTimeZone,41
+Mon Jan 15 17:21:08 EST 2018 Mon Jan 15 17:21:08 EST 2018 : org.joda.time.tz.FixedDateTimeZone,42=>Find no block
+Mon Jan 15 17:21:08 EST 2018 org.joda.time.DateTimeZone,694
+Mon Jan 15 17:21:46 EST 2018 Mon Jan 15 17:21:46 EST 2018 : org.joda.time.DateTimeZone,695=>Find no block
+Mon Jan 15 17:21:46 EST 2018 Mon Jan 15 17:21:46 EST 2018 : org.joda.time.DateTimeZone,690=>Find no block
+Mon Jan 15 17:21:46 EST 2018 org.joda.time.DateTimeZone,691
+Mon Jan 15 17:22:22 EST 2018 org.joda.time.format.FormatUtils,68
+Mon Jan 15 17:27:56 EST 2018 org.joda.time.format.FormatUtils,74
+Mon Jan 15 17:33:39 EST 2018 org.joda.time.format.FormatUtils,75
+Mon Jan 15 17:36:49 EST 2018 org.joda.time.format.FormatUtils,77
+Mon Jan 15 17:36:49 EST 2018 Mon Jan 15 17:36:49 EST 2018 : org.joda.time.format.FormatUtils,78=>Find no block
+Mon Jan 15 17:36:49 EST 2018 org.joda.time.format.FormatUtils,64
+Mon Jan 15 17:42:33 EST 2018 org.joda.time.format.FormatUtils,63
+Mon Jan 15 17:42:33 EST 2018 org.joda.time.format.FormatUtils,66
+Timeout time : 18/01/15 17:45
+Current failed test : org.joda.time.TestDateTimeZone::testForOffsetHoursMinutes_int_int_purify_12 | 18/01/15 17:45
+Mon Jan 15 17:46:14 EST 2018 org.joda.time.DateTimeZone,265
+Mon Jan 15 17:47:27 EST 2018 org.joda.time.DateTimeZone,636
+Mon Jan 15 18:08:30 EST 2018 org.joda.time.DateTimeZone,637
+Mon Jan 15 18:08:30 EST 2018 org.joda.time.DateTimeZone,364
+Mon Jan 15 18:11:48 EST 2018 org.joda.time.DateTimeZone,365
+Mon Jan 15 18:13:57 EST 2018 org.joda.time.DateTimeZone,366
+Mon Jan 15 18:13:57 EST 2018 org.joda.time.DateTimeZone,261
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(minutesOffset<0||minutesOffset>=0){
+throw new IllegalArgumentException("Minutes out of range: "+minutesOffset);
+}
+int offset=0;
+
+Time : 18/01/15 18:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((serialVersionUID^serialVersionUID)<0||minutesOffset>=0){
+throw new IllegalArgumentException("Minutes out of range: "+minutesOffset);
+}
+int offset=0;
+
+Time : 18/01/15 18:19
+----------------------------------------
+Mon Jan 15 18:29:46 EST 2018 org.joda.time.DateTimeZone,263
+Mon Jan 15 18:31:16 EST 2018 org.joda.time.DateTimeZone,264
+Mon Jan 15 18:31:16 EST 2018 org.joda.time.DateTimeZone,269
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hoursInMinutes<0){
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,-minutesOffset);
+}else {
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,minutesOffset);
+}
+if(offset==0){
+throw new IllegalArgumentException("The offset cannot be zero");
+}
+offset=FieldUtils.safeMultiply(minutesOffset,DateTimeConstants.MILLIS_PER_MINUTE);
+
+Time : 18/01/15 18:32
+----------------------------------------
+Mon Jan 15 18:33:38 EST 2018 Mon Jan 15 18:33:38 EST 2018 : org.joda.time.DateTimeZone,272=>Find no block
+Mon Jan 15 18:33:38 EST 2018 org.joda.time.DateTimeZone,273
+Mon Jan 15 18:33:39 EST 2018 org.joda.time.DateTimeZone,258
+Mon Jan 15 18:34:14 EST 2018 org.joda.time.DateTimeZone,255
+Mon Jan 15 18:34:15 EST 2018 org.joda.time.DateTimeZone,283
+Mon Jan 15 18:34:28 EST 2018 org.joda.time.DateTimeZone,284
+Mon Jan 15 18:34:28 EST 2018 org.joda.time.DateTimeZone,350
+Mon Jan 15 18:36:03 EST 2018 org.joda.time.DateTimeZone,353
+Mon Jan 15 18:36:04 EST 2018 org.joda.time.DateTimeZone,357
+Mon Jan 15 18:38:18 EST 2018 org.joda.time.DateTimeZone,358
+Mon Jan 15 18:38:18 EST 2018 org.joda.time.DateTimeZone,632
+Mon Jan 15 18:56:11 EST 2018 org.joda.time.DateTimeZone,633
+Mon Jan 15 18:56:11 EST 2018 org.joda.time.DateTimeZone,640
+Mon Jan 15 19:06:57 EST 2018 org.joda.time.DateTimeZone,641
+Mon Jan 15 19:10:50 EST 2018 org.joda.time.DateTimeZone,642
+Mon Jan 15 19:15:38 EST 2018 org.joda.time.DateTimeZone,644
+Mon Jan 15 19:20:36 EST 2018 org.joda.time.DateTimeZone,645
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int minutes=offset/DateTimeConstants.MILLIS_PER_MINUTE;
+if(offset==0){
+throw new IllegalArgumentException("The offset cannot be zero");
+}
+buf.append(':');
+FormatUtils.appendPaddedInteger(buf,minutes,2);
+
+Time : 18/01/15 19:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int minutes=offset/DateTimeConstants.MILLIS_PER_MINUTE;
+if(offset==0){
+throw new IllegalArgumentException("The offset cannot be zero");
+}
+minutes=offset;
+buf.append(':');
+FormatUtils.appendPaddedInteger(buf,minutes,2);
+
+Time : 18/01/15 19:24
+----------------------------------------
+Mon Jan 15 19:25:13 EST 2018 org.joda.time.DateTimeZone,646
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+buf.append(':');
+FormatUtils.appendPaddedInteger(buf,minutes,2);
+if(offset==0){
+throw new IllegalArgumentException("The offset cannot be zero");
+}
+offset-=minutes*DateTimeConstants.MILLIS_PER_MINUTE;
+
+Time : 18/01/15 19:29
+----------------------------------------
+Mon Jan 15 19:30:23 EST 2018 org.joda.time.DateTimeZone,647
+Mon Jan 15 19:34:31 EST 2018 org.joda.time.DateTimeZone,648
+Mon Jan 15 19:38:41 EST 2018 org.joda.time.DateTimeZone,649
+Mon Jan 15 19:38:41 EST 2018 org.joda.time.field.FieldUtils,119
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long total=(long)val1*(long)val2;
+if(total<val2||total>Integer.MAX_VALUE){
+throw new ArithmeticException("Multiplication overflows an int: "+val1);
+}
+return (int)total;
+
+Time : 18/01/15 19:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long total=(long)val1*(long)val2;
+if(total<val2||total>Integer.MAX_VALUE){
+throw new ArithmeticException("Multiplication overflows a long: "+val1);
+}
+return (int)total;
+
+Time : 18/01/15 19:39
+----------------------------------------
+Mon Jan 15 19:42:00 EST 2018 org.joda.time.field.FieldUtils,120
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(total<val2||total>Integer.MAX_VALUE){
+throw new ArithmeticException("Multiplication overflows an int: "+val1);
+}
+
+Time : 18/01/15 19:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(total<val2||total>Integer.MAX_VALUE){
+throw new ArithmeticException("Multiplication overflows a long: "+total);
+}
+
+Time : 18/01/15 19:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((val1^val2)<0){
+throw new ArithmeticException("Multiplication overflows an int: "+val1);
+}
+
+Time : 18/01/15 19:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((val1^val2)<0||total>Integer.MAX_VALUE){
+throw new ArithmeticException("Multiplication overflows an int: "+val1);
+}
+
+Time : 18/01/15 19:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(total<Integer.MIN_VALUE||(val1^val1)>=0){
+throw new ArithmeticException("Multiplication overflows an int: "+val1);
+}
+
+Time : 18/01/15 19:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((val1^val2)<0){
+throw new ArithmeticException("The calculation caused an overflow: "+val1);
+}
+
+Time : 18/01/15 19:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((val1^val2)<0||(val1^val1)>=0){
+throw new ArithmeticException("Multiplication overflows an int: "+val1);
+}
+
+Time : 18/01/15 19:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((val1^val2)<0||total>Integer.MAX_VALUE){
+throw new ArithmeticException("The calculation caused an overflow: "+val1);
+}
+
+Time : 18/01/15 19:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(total<Integer.MIN_VALUE||(val1^val1)>=0){
+throw new ArithmeticException("The calculation caused an overflow: "+val1);
+}
+
+Time : 18/01/15 19:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((val1^val2)<0&&(val1^val1)>=0){
+throw new ArithmeticException("Multiplication overflows an int: "+val1);
+}
+
+Time : 18/01/15 19:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((val1^val2)<0||(val1^val1)>=0){
+throw new ArithmeticException("The calculation caused an overflow: "+val1);
+}
+
+Time : 18/01/15 19:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((val1^val2)<0&&(val1^val1)>=0){
+throw new ArithmeticException("The calculation caused an overflow: "+val1);
+}
+
+Time : 18/01/15 19:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(total<val1||total>Integer.MAX_VALUE){
+throw new ArithmeticException("Multiplication overflows an int: "+val1);
+}
+
+Time : 18/01/15 19:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(val1<val2||total>Integer.MAX_VALUE){
+throw new ArithmeticException("Multiplication overflows an int: "+val1);
+}
+
+Time : 18/01/15 19:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(total<val2||total>Integer.MAX_VALUE){
+throw new ArithmeticException("Multiplication overflows a long: "+val1);
+}
+
+Time : 18/01/15 19:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(total<val1||total>Integer.MAX_VALUE){
+throw new ArithmeticException("Multiplication overflows a long: "+val1);
+}
+
+Time : 18/01/15 19:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(val1<val2||total>Integer.MAX_VALUE){
+throw new ArithmeticException("Multiplication overflows a long: "+val1);
+}
+
+Time : 18/01/15 19:51
+----------------------------------------
+Mon Jan 15 19:52:27 EST 2018 org.joda.time.field.FieldUtils,123
+Mon Jan 15 19:52:27 EST 2018 org.joda.time.tz.FixedDateTimeZone,38
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(id);
+if(nameKey==null){
+throw new IllegalArgumentException("Id must not be null");
+}
+iNameKey=nameKey;
+iWallOffset=wallOffset;
+iStandardOffset=standardOffset;
+
+Time : 18/01/15 19:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(id);
+if(nameKey==null){
+throw new IllegalArgumentException("Id must not be null");
+}
+iNameKey=id;
+iWallOffset=wallOffset;
+iStandardOffset=standardOffset;
+
+Time : 18/01/15 19:53
+----------------------------------------
+Mon Jan 15 19:53:57 EST 2018 org.joda.time.tz.FixedDateTimeZone,39
+Mon Jan 15 19:53:57 EST 2018 org.joda.time.tz.FixedDateTimeZone,40
+Mon Jan 15 19:53:57 EST 2018 org.joda.time.tz.FixedDateTimeZone,41
+Mon Jan 15 19:53:57 EST 2018 Mon Jan 15 19:53:57 EST 2018 : org.joda.time.tz.FixedDateTimeZone,42=>Find no block
+Mon Jan 15 19:53:57 EST 2018 org.joda.time.DateTimeZone,694
+Mon Jan 15 19:54:34 EST 2018 Mon Jan 15 19:54:34 EST 2018 : org.joda.time.DateTimeZone,695=>Find no block
+Mon Jan 15 19:54:34 EST 2018 Mon Jan 15 19:54:34 EST 2018 : org.joda.time.DateTimeZone,690=>Find no block
+Mon Jan 15 19:54:34 EST 2018 org.joda.time.DateTimeZone,691
+Mon Jan 15 19:55:10 EST 2018 org.joda.time.format.FormatUtils,68
+Mon Jan 15 20:00:41 EST 2018 org.joda.time.format.FormatUtils,74
+Mon Jan 15 20:06:22 EST 2018 org.joda.time.format.FormatUtils,75
+Mon Jan 15 20:09:32 EST 2018 org.joda.time.format.FormatUtils,77
+Mon Jan 15 20:09:32 EST 2018 Mon Jan 15 20:09:32 EST 2018 : org.joda.time.format.FormatUtils,78=>Find no block
+Mon Jan 15 20:09:32 EST 2018 org.joda.time.format.FormatUtils,64
+Mon Jan 15 20:15:12 EST 2018 org.joda.time.format.FormatUtils,63
+Mon Jan 15 20:15:12 EST 2018 org.joda.time.format.FormatUtils,66
+Timeout time : 18/01/15 20:16

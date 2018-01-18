@@ -1,0 +1,50 @@
+=================================================
+Project : math_86	start : 18/01/15 21:31
+Current failed test : org.apache.commons.math.linear.CholeskyDecompositionImplTest::testMath274 | 18/01/15 21:32
+Mon Jan 15 21:33:42 AEDT 2018 Mon Jan 15 21:33:42 AEDT 2018 : org.apache.commons.math.linear.CholeskyDecompositionImpl,76=>Find no block
+Mon Jan 15 21:33:43 AEDT 2018 org.apache.commons.math.linear.CholeskyDecompositionImpl,132
+Mon Jan 15 22:36:04 AEDT 2018 org.apache.commons.math.linear.CholeskyDecompositionImpl,134
+Mon Jan 15 22:36:05 AEDT 2018 org.apache.commons.math.linear.CholeskyDecompositionImpl,138
+Mon Jan 15 22:36:06 AEDT 2018 org.apache.commons.math.linear.CholeskyDecompositionImpl,139
+Mon Jan 15 22:36:07 AEDT 2018 org.apache.commons.math.linear.CholeskyDecompositionImpl,141
+Mon Jan 15 22:36:08 AEDT 2018 org.apache.commons.math.linear.CholeskyDecompositionImpl,142
+Mon Jan 15 22:36:09 AEDT 2018 org.apache.commons.math.linear.CholeskyDecompositionImpl,143
+Mon Jan 15 22:36:10 AEDT 2018 org.apache.commons.math.linear.CholeskyDecompositionImpl,144
+Mon Jan 15 22:36:11 AEDT 2018 org.apache.commons.math.linear.CholeskyDecompositionImpl,145
+Mon Jan 15 22:36:12 AEDT 2018 Mon Jan 15 22:36:12 AEDT 2018 : org.apache.commons.math.linear.CholeskyDecompositionImpl,151=>Find no block
+Mon Jan 15 22:36:13 AEDT 2018 org.apache.commons.math.linear.CholeskyDecompositionImpl,104
+Mon Jan 15 22:41:38 AEDT 2018 org.apache.commons.math.linear.CholeskyDecompositionImpl,105
+Mon Jan 15 22:49:42 AEDT 2018 org.apache.commons.math.linear.CholeskyDecompositionImpl,106
+Mon Jan 15 22:52:05 AEDT 2018 org.apache.commons.math.linear.CholeskyDecompositionImpl,107
+Mon Jan 15 22:52:07 AEDT 2018 org.apache.commons.math.linear.CholeskyDecompositionImpl,110
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(DEFAULT_ABSOLUTE_POSITIVITY_THRESHOLD<=absolutePositivityThreshold){
+throw new NotPositiveDefiniteMatrixException();
+}
+
+Time : 18/01/15 23:01
+----------------------------------------
+Mon Jan 15 23:58:44 AEDT 2018 org.apache.commons.math.linear.CholeskyDecompositionImpl,112
+Timeout time : 18/01/16 00:03
+Current failed test : org.apache.commons.math.linear.CholeskyDecompositionImplTest::testNotPositiveDefinite | 18/01/16 00:03
+Tue Jan 16 00:04:51 AEDT 2018 org.apache.commons.math.linear.AbstractRealMatrix,991
+Tue Jan 16 00:13:55 AEDT 2018 org.apache.commons.math.linear.AbstractRealMatrix,992
+Tue Jan 16 00:13:56 AEDT 2018 org.apache.commons.math.linear.AbstractRealMatrix,993
+Tue Jan 16 00:20:26 AEDT 2018 org.apache.commons.math.linear.AbstractRealMatrix,994
+Tue Jan 16 00:22:48 AEDT 2018 org.apache.commons.math.linear.AbstractRealMatrix,995
+Tue Jan 16 00:34:44 AEDT 2018 org.apache.commons.math.linear.AbstractRealMatrix,996
+Tue Jan 16 00:34:45 AEDT 2018 org.apache.commons.math.linear.AbstractRealMatrix,998
+Tue Jan 16 01:18:12 AEDT 2018 org.apache.commons.math.linear.AbstractRealMatrix,999
+Tue Jan 16 01:18:13 AEDT 2018 org.apache.commons.math.linear.AbstractRealMatrix,1000
+Tue Jan 16 01:18:14 AEDT 2018 org.apache.commons.math.linear.AbstractRealMatrix,1002
+Tue Jan 16 01:18:15 AEDT 2018 org.apache.commons.math.linear.AbstractRealMatrix,1003
+Tue Jan 16 01:18:16 AEDT 2018 org.apache.commons.math.linear.AbstractRealMatrix,1004
+Tue Jan 16 01:18:17 AEDT 2018 org.apache.commons.math.linear.AbstractRealMatrix,1005
+Tue Jan 16 01:18:17 AEDT 2018 org.apache.commons.math.linear.AbstractRealMatrix,1007
+Tue Jan 16 01:18:18 AEDT 2018 org.apache.commons.math.linear.AbstractRealMatrix,1009
+Tue Jan 16 01:18:19 AEDT 2018 org.apache.commons.math.linear.AbstractRealMatrix,1012
+Tue Jan 16 01:51:35 AEDT 2018 org.apache.commons.math.linear.AbstractRealMatrix,1013
+Timeout time : 18/01/16 02:34

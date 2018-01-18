@@ -1,0 +1,41 @@
+=================================================
+Project : closure_53	start : 18/01/15 18:45
+Current failed test : com.google.javascript.jscomp.InlineObjectLiteralsTest::testBug545 | 18/01/15 18:45
+Mon Jan 15 18:45:58 AEDT 2018 com.google.javascript.rhino.Node,1026
+Mon Jan 15 18:46:22 AEDT 2018 com.google.javascript.rhino.Node,1027
+Mon Jan 15 18:46:23 AEDT 2018 com.google.javascript.rhino.Node,1028
+Mon Jan 15 18:46:24 AEDT 2018 com.google.javascript.rhino.Node,1029
+Mon Jan 15 18:46:24 AEDT 2018 com.google.javascript.rhino.Node,1040
+Mon Jan 15 20:58:09 AEDT 2018 com.google.javascript.rhino.Node,1041
+Mon Jan 15 20:58:10 AEDT 2018 com.google.javascript.rhino.Node,1044
+Mon Jan 15 20:58:10 AEDT 2018 com.google.javascript.rhino.Node,1045
+Mon Jan 15 21:35:32 AEDT 2018 com.google.javascript.rhino.Node,1049
+Mon Jan 15 21:35:33 AEDT 2018 com.google.javascript.rhino.Node,1052
+Mon Jan 15 21:35:33 AEDT 2018 com.google.javascript.rhino.Node,1054
+Mon Jan 15 21:35:34 AEDT 2018 com.google.javascript.rhino.Node,1076
+Mon Jan 15 21:35:35 AEDT 2018 com.google.javascript.rhino.Node,1084
+Mon Jan 15 21:35:35 AEDT 2018 com.google.javascript.rhino.Node,1137
+Mon Jan 15 21:36:38 AEDT 2018 Mon Jan 15 21:36:38 AEDT 2018 : com.google.javascript.rhino.Node,1147=>Find no block
+Mon Jan 15 21:36:39 AEDT 2018 com.google.javascript.jscomp.NodeTraversal,226
+Mon Jan 15 21:41:08 AEDT 2018 com.google.javascript.jscomp.NodeTraversal,231
+Mon Jan 15 21:41:20 AEDT 2018 com.google.javascript.jscomp.NodeTraversal,232
+Mon Jan 15 21:41:20 AEDT 2018 com.google.javascript.jscomp.NodeTraversal,239
+Mon Jan 15 21:41:21 AEDT 2018 com.google.javascript.jscomp.NodeTraversal,243
+Mon Jan 15 21:46:04 AEDT 2018 com.google.javascript.jscomp.NodeTraversal,246
+Mon Jan 15 21:51:07 AEDT 2018 Mon Jan 15 21:51:07 AEDT 2018 : com.google.javascript.jscomp.NodeTraversal,290=>Find no block
+Mon Jan 15 21:51:08 AEDT 2018 com.google.javascript.jscomp.NodeTraversal,291
+Mon Jan 15 22:04:38 AEDT 2018 com.google.javascript.jscomp.NodeTraversal,298
+Mon Jan 15 22:09:18 AEDT 2018 com.google.javascript.jscomp.NodeTraversal,302
+Mon Jan 15 23:45:02 AEDT 2018 com.google.javascript.jscomp.NodeTraversal,303
+Mon Jan 15 23:45:03 AEDT 2018 com.google.javascript.jscomp.NodeTraversal,304
+Mon Jan 15 23:45:04 AEDT 2018 com.google.javascript.jscomp.NodeTraversal,305
+Mon Jan 15 23:45:04 AEDT 2018 com.google.javascript.jscomp.NodeTraversal,308
+Mon Jan 15 23:45:05 AEDT 2018 com.google.javascript.jscomp.Compiler,1836
+Mon Jan 15 23:45:15 AEDT 2018 com.google.javascript.jscomp.Compiler,1840
+Mon Jan 15 23:45:16 AEDT 2018 com.google.javascript.jscomp.Compiler,1841
+Mon Jan 15 23:45:16 AEDT 2018 com.google.javascript.jscomp.Compiler,1842
+Mon Jan 15 23:45:17 AEDT 2018 com.google.javascript.jscomp.Compiler,1844
+Mon Jan 15 23:45:18 AEDT 2018 com.google.javascript.jscomp.ReferenceCollectingCallback,381
+Mon Jan 15 23:45:24 AEDT 2018 com.google.javascript.jscomp.ReferenceCollectingCallback,399
+Mon Jan 15 23:45:43 AEDT 2018 com.google.javascript.jscomp.InlineObjectLiterals,386
+Timeout time : 18/01/15 23:45

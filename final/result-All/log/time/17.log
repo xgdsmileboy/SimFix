@@ -1,0 +1,507 @@
+=================================================
+Project : time_17	start : 18/01/12 14:05
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testBug3476684_adjustOffset | 18/01/12 14:05
+Fri Jan 12 14:07:41 AEDT 2018 org.joda.time.DateTimeZone,1167
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long instantBefore=convertUTCToLocal(instant-3*DateTimeConstants.MILLIS_PER_HOUR);
+long instantAfter=instant-getOffset(serialVersionUID);
+if(instantBefore==instantAfter){
+return instant;
+}
+long local=convertUTCToLocal(instant);
+return convertLocalToUTC(local,false,earlierOrLater?instantAfter:instantBefore);
+
+Time : 18/01/12 14:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long instantBefore=convertUTCToLocal(instant-3*DateTimeConstants.MILLIS_PER_HOUR);
+long instantAfter=serialVersionUID;
+if(instantBefore==instantAfter){
+return instant;
+}
+long local=convertUTCToLocal(instant);
+return convertLocalToUTC(local,false,earlierOrLater?instantAfter:instantBefore);
+
+Time : 18/01/12 15:05
+----------------------------------------
+Fri Jan 12 15:08:19 AEDT 2018 org.joda.time.DateTimeZone,1168
+Fri Jan 12 15:08:20 AEDT 2018 org.joda.time.DateTimeZone,1169
+Fri Jan 12 15:08:20 AEDT 2018 org.joda.time.DateTimeZone,1174
+Fri Jan 12 15:08:21 AEDT 2018 org.joda.time.DateTimeZone,1175
+Fri Jan 12 15:08:21 AEDT 2018 org.joda.time.DateTime,665
+Fri Jan 12 15:11:10 AEDT 2018 org.joda.time.DateTime,666
+Fri Jan 12 15:11:11 AEDT 2018 org.joda.time.DateTime,685
+Fri Jan 12 15:14:08 AEDT 2018 org.joda.time.DateTime,686
+Fri Jan 12 15:14:08 AEDT 2018 org.joda.time.DateTime,331
+Fri Jan 12 15:15:05 AEDT 2018 Fri Jan 12 15:15:05 AEDT 2018 : org.joda.time.DateTime,333=>Find no block
+Fri Jan 12 15:15:06 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1531
+Fri Jan 12 15:19:08 AEDT 2018 org.joda.time.DateTime,1098
+Fri Jan 12 15:19:10 AEDT 2018 org.joda.time.DateTime,1101
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hours==0){
+return this;
+}
+long instant=getChronology().hours().getDifference(getMillis(),hours);
+return withMillis(instant);
+
+Time : 18/01/12 15:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hours!=0){
+return this;
+}
+long instant=getChronology().hours().add(getMillis(),hours);
+return withMillis(instant);
+
+Time : 18/01/12 15:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hours==0){
+return this;
+}
+long instant=getChronology().hours().add(getMillis(),hours);
+return this;
+
+Time : 18/01/12 15:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hours==0){
+return this;
+}
+long instant=this.getMillis();
+return withMillis(instant);
+
+Time : 18/01/12 15:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hours==0){
+return this;
+}
+long instant=getChronology().hours().add(getMillis(),hours);
+return new DateTime(getMillis(),DateTimeUtils.getChronology(getChronology()));
+
+Time : 18/01/12 15:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hours==0){
+return this;
+}
+int instant=getChronology().hours().getDifference(getMillis(),hours);
+return withMillis(instant);
+
+Time : 18/01/12 15:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hours==0){
+return this;
+}
+long instant=DateTimeConstants.MILLIS_PER_HOUR;
+return withMillis(instant);
+
+Time : 18/01/12 15:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hours==0){
+return this;
+}
+int instant=DateTimeConstants.MILLIS_PER_HOUR;
+return withMillis(instant);
+
+Time : 18/01/12 15:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hours==0){
+return this;
+}
+long instant=getMillis();
+return withMillis(instant);
+
+Time : 18/01/12 15:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hours==0){
+return this;
+}
+long instant=DateTimeConstants.MILLIS_PER_SECOND;
+return withMillis(instant);
+
+Time : 18/01/12 15:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hours==0){
+return this;
+}
+long instant=getMillis()/DateTimeConstants.MILLIS_PER_SECOND;
+return withMillis(instant);
+
+Time : 18/01/12 15:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hours==0){
+return this;
+}
+long instant=DateTimeConstants.MILLIS_PER_WEEK;
+return withMillis(instant);
+
+Time : 18/01/12 15:45
+----------------------------------------
+Fri Jan 12 15:49:28 AEDT 2018 org.joda.time.DateTime,1102
+Fri Jan 12 15:49:29 AEDT 2018 org.joda.time.base.AbstractInstant,71
+Fri Jan 12 15:53:33 AEDT 2018 org.joda.time.tz.CachedDateTimeZone,202
+Fri Jan 12 16:14:13 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1535
+Fri Jan 12 16:19:28 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1536
+Fri Jan 12 16:19:29 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1574
+Fri Jan 12 16:28:29 AEDT 2018 org.joda.time.tz.CachedDateTimeZone,162
+Fri Jan 12 16:50:22 AEDT 2018 org.joda.time.tz.CachedDateTimeZone,163
+Fri Jan 12 16:50:26 AEDT 2018 Fri Jan 12 16:50:26 AEDT 2018 : org.joda.time.tz.CachedDateTimeZone,164=>Find no block
+Fri Jan 12 16:50:29 AEDT 2018 org.joda.time.DateTime,582
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return this;
+
+Time : 18/01/12 16:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return (this);
+
+Time : 18/01/12 16:57
+----------------------------------------
+Fri Jan 12 17:00:40 AEDT 2018 org.joda.time.chrono.ZonedChronology,318
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant=iField.add(instant+offset,value);
+return subtract(instant,(long)value);
+
+Time : 18/01/12 17:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant=iField.add(instant+offset,value);
+return serialVersionUID-offset;
+
+Time : 18/01/12 17:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant=instant-=offset;
+return instant-(iTimeField?offset:getOffsetFromLocalToSubtract(instant));
+
+Time : 18/01/12 17:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant-=instant-=offset;
+return instant-(iTimeField?offset:getOffsetFromLocalToSubtract(instant));
+
+Time : 18/01/12 17:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant-=instant-=offset;
+return instant;
+
+Time : 18/01/12 17:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant=offset=value+offset;
+return instant-(iTimeField?offset:getOffsetFromLocalToSubtract(instant));
+
+Time : 18/01/12 17:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant=offset=value;
+return instant-(iTimeField?offset:getOffsetFromLocalToSubtract(instant));
+
+Time : 18/01/12 17:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant=offset=0;
+return instant-(iTimeField?offset:getOffsetFromLocalToSubtract(instant));
+
+Time : 18/01/12 17:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant=value=0;
+return instant-(iTimeField?offset:getOffsetFromLocalToSubtract(instant));
+
+Time : 18/01/12 17:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant=iField.add(instant+offset,value);
+return (instant-instant)-(iTimeField?offset:getOffsetFromLocalToSubtract(instant));
+
+Time : 18/01/12 17:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant=iField.add(instant+offset,value);
+return instant-instant-(iTimeField?offset:getOffsetFromLocalToSubtract(instant));
+
+Time : 18/01/12 17:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long offset=getOffsetToAdd(instant);
+instant=iField.add(instant+offset,value);
+return (instant-instant)-(iTimeField?offset:getOffsetFromLocalToSubtract(instant));
+
+Time : 18/01/12 17:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long offset=getOffsetToAdd(instant);
+instant=iField.add(instant+offset,value);
+return instant-instant-(iTimeField?offset:getOffsetFromLocalToSubtract(instant));
+
+Time : 18/01/12 17:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant=iField.add(instant+offset,value);
+return (instant-instant)-(1);
+
+Time : 18/01/12 17:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant=iField.add(instant+offset,value);
+return instant-instant-(1);
+
+Time : 18/01/12 17:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long offset=getOffsetToAdd(instant);
+instant=iField.add(instant+offset,value);
+return (instant-instant)-(1);
+
+Time : 18/01/12 17:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long offset=getOffsetToAdd(instant);
+instant=iField.add(instant+offset,value);
+return instant-instant-(1);
+
+Time : 18/01/12 17:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant=iField.add(instant+offset,value);
+return serialVersionUID;
+
+Time : 18/01/12 18:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long offset=getOffsetToAdd(instant);
+instant=iField.add(instant+offset,value);
+return serialVersionUID;
+
+Time : 18/01/12 18:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant=instant=serialVersionUID;
+return instant-(iTimeField?offset:getOffsetFromLocalToSubtract(instant));
+
+Time : 18/01/12 18:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long offset=getOffsetToAdd(instant);
+instant=instant=serialVersionUID;
+return instant-(iTimeField?offset:getOffsetFromLocalToSubtract(instant));
+
+Time : 18/01/12 18:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant+=instant+=1;
+return instant-(iTimeField?offset:getOffsetFromLocalToSubtract(instant));
+
+Time : 18/01/12 18:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant-=instant-=1;
+return instant-(iTimeField?offset:getOffsetFromLocalToSubtract(instant));
+
+Time : 18/01/12 18:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant=iField.add(instant+offset,value);
+return getUnitMillis()-(iTimeField?offset:getOffsetFromLocalToSubtract(instant));
+
+Time : 18/01/12 18:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant=iField.add(instant+offset,value);
+return (instant/getUnitMillis())-(value);
+
+Time : 18/01/12 18:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant=iField.add(instant+offset,value);
+return instant/getUnitMillis()-(value);
+
+Time : 18/01/12 18:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant=iField.add(instant+offset,value);
+return getUnitMillis()-((int)(((instant+1)/getUnitMillis())%value));
+
+Time : 18/01/12 19:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant=iField.add(instant+offset,value);
+return getUnitMillis()-(((instant+1)/getUnitMillis())%value);
+
+Time : 18/01/12 19:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+instant=iField.add(instant+offset,value);
+return getUnitMillis()-(1);
+
+Time : 18/01/12 19:05
+----------------------------------------
+Timeout time : 18/01/12 19:07

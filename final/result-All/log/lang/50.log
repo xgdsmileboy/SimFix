@@ -1,0 +1,166 @@
+=================================================
+Project : lang_50	start : 18/01/12 19:05
+Current failed test : org.apache.commons.lang.time.FastDateFormatTest::test_changeDefault_Locale_DateTimeInstance | 18/01/12 19:06
+Fri Jan 12 19:07:43 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,408
+Fri Jan 12 19:08:00 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,425
+Fri Jan 12 19:08:57 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,461
+Fri Jan 12 19:11:04 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,462
+Fri Jan 12 19:12:49 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,465
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(locale==null){
+key=locale=Locale.getDefault();
+}
+
+Time : 18/01/12 19:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.6581268006503342 : [/home/hz985/jiajun/d4j/projects/lang/lang_50_buggy/src/java/org/apache/commons/lang/time/FastDateFormat.java=>0,0]
+if(locale==null){
+locale=Locale.getDefault();
+}
+
+Time : 18/01/12 19:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/lang/lang_50_buggy/src/java/org/apache/commons/lang/time/FastDateFormat.java=>465,467]
+if(locale!=null){
+key=new Pair(key,locale);
+}
+
+Time : 18/01/12 19:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/lang/lang_50_buggy/src/java/org/apache/commons/lang/time/FastDateFormat.java=>465,467]
+if(locale==null){
+key=locale=Locale.getDefault();
+}
+
+Time : 18/01/12 19:14
+----------------------------------------
+Success time : 18/01/12 19:14
+Current failed test : org.apache.commons.lang.time.FastDateFormatTest::test_changeDefault_Locale_DateInstance | 18/01/12 19:14
+Fri Jan 12 19:15:21 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,234
+Fri Jan 12 19:16:10 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,293
+Fri Jan 12 19:17:21 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,620
+Fri Jan 12 19:24:08 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,249
+Fri Jan 12 19:25:10 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,280
+Fri Jan 12 19:27:35 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,281
+Fri Jan 12 19:29:17 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,285
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(locale==null){
+key=locale=Locale.getDefault();
+}
+
+Time : 18/01/12 19:30
+----------------------------------------
+Fri Jan 12 19:31:29 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,286
+Fri Jan 12 19:31:31 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,290
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(locale==null){
+key=locale=Locale.getDefault();
+}
+FastDateFormat format=(FastDateFormat)cDateInstanceCache.get(key);
+
+Time : 18/01/12 19:33
+----------------------------------------
+Fri Jan 12 19:36:31 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,291
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(format==null){
+if(locale==null){
+locale=Locale.getDefault();
+}
+try{
+SimpleDateFormat formatter=(SimpleDateFormat)DateFormat.getDateInstance(style,locale);
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+cTimeInstanceCache.put(key,format);
+}catch (ClassCastException ex) {
+  throw new IllegalArgumentException("No date pattern for locale: " + locale);
+}
+
+}
+
+Time : 18/01/12 19:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.7333333333333334 : [/home/hz985/jiajun/d4j/projects/lang/lang_50_buggy/src/java/org/apache/commons/lang/time/FastDateFormat.java=>0,0]
+if(format==null){
+if(locale==null){
+locale=Locale.getDefault();
+}
+try{
+SimpleDateFormat formatter=(SimpleDateFormat)DateFormat.getTimeInstance(style,locale);
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+cTimeInstanceCache.put(key,format);
+}catch (ClassCastException ex) {
+  throw new IllegalArgumentException("No date pattern for locale: " + locale);
+}
+
+}
+
+Time : 18/01/12 19:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/lang/lang_50_buggy/src/java/org/apache/commons/lang/time/FastDateFormat.java=>291,304]
+if(format==null){
+if(locale==null){
+locale=Locale.getDefault();
+}
+try{
+SimpleDateFormat formatter=(SimpleDateFormat)DateFormat.getDateInstance(style,locale);
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+cDateInstanceCache.put(key,format);
+}catch (ClassCastException ex) {
+  throw new IllegalArgumentException("No date pattern for locale: " + locale);
+}
+
+}
+
+Time : 18/01/12 19:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/lang/lang_50_buggy/src/java/org/apache/commons/lang/time/FastDateFormat.java=>291,304]
+if(format==null){
+if(locale==null){
+locale=Locale.getDefault();
+}
+try{
+SimpleDateFormat formatter=(SimpleDateFormat)DateFormat.getDateInstance(style,locale);
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+cTimeInstanceCache.put(key,format);
+}catch (ClassCastException ex) {
+  throw new IllegalArgumentException("No date pattern for locale: " + locale);
+}
+
+}
+
+Time : 18/01/12 19:37
+----------------------------------------
+Success time : 18/01/12 19:37

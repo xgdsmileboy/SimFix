@@ -1,0 +1,80 @@
+=================================================
+Project : chart_23	start : 18/01/15 13:48
+Current failed test : org.jfree.chart.renderer.category.junit.MinMaxCategoryRendererTests::testEquals | 18/01/15 13:49
+Mon Jan 15 13:50:11 AEDT 2018 org.jfree.chart.event.RendererChangeEvent,63
+Mon Jan 15 13:50:18 AEDT 2018 org.jfree.chart.event.RendererChangeEvent,64
+Mon Jan 15 13:50:19 AEDT 2018 Mon Jan 15 13:50:19 AEDT 2018 : org.jfree.chart.event.RendererChangeEvent,65=>Find no block
+Mon Jan 15 13:50:21 AEDT 2018 org.jfree.chart.renderer.category.MinMaxCategoryRenderer,169
+Mon Jan 15 14:01:14 AEDT 2018 org.jfree.chart.renderer.category.MinMaxCategoryRenderer,170
+Mon Jan 15 14:01:21 AEDT 2018 org.jfree.chart.renderer.category.MinMaxCategoryRenderer,171
+Mon Jan 15 14:01:23 AEDT 2018 Mon Jan 15 14:01:23 AEDT 2018 : org.jfree.chart.renderer.category.MinMaxCategoryRenderer,174=>Find no block
+Mon Jan 15 14:01:28 AEDT 2018 org.jfree.chart.renderer.AbstractRenderer,2339
+Mon Jan 15 14:07:00 AEDT 2018 org.jfree.chart.renderer.AbstractRenderer,2340
+Mon Jan 15 14:07:09 AEDT 2018 Mon Jan 15 14:07:09 AEDT 2018 : org.jfree.chart.renderer.AbstractRenderer,2345=>Find no block
+Mon Jan 15 14:07:16 AEDT 2018 org.jfree.chart.event.ChartChangeEvent,71
+Mon Jan 15 14:07:35 AEDT 2018 Mon Jan 15 14:07:35 AEDT 2018 : org.jfree.chart.event.ChartChangeEvent,72=>Find no block
+Mon Jan 15 14:07:43 AEDT 2018 org.jfree.chart.event.ChartChangeEvent,95
+Mon Jan 15 14:09:55 AEDT 2018 org.jfree.chart.event.ChartChangeEvent,96
+Mon Jan 15 14:10:03 AEDT 2018 org.jfree.chart.event.ChartChangeEvent,97
+Mon Jan 15 14:10:11 AEDT 2018 Mon Jan 15 14:10:11 AEDT 2018 : org.jfree.chart.event.ChartChangeEvent,98=>Find no block
+Mon Jan 15 14:10:19 AEDT 2018 org.jfree.chart.labels.ItemLabelPosition,176
+Mon Jan 15 14:12:39 AEDT 2018 org.jfree.chart.labels.ItemLabelPosition,179
+Mon Jan 15 14:13:38 AEDT 2018 org.jfree.chart.labels.ItemLabelPosition,182
+Mon Jan 15 14:29:17 AEDT 2018 org.jfree.chart.labels.ItemLabelPosition,183
+Mon Jan 15 14:29:25 AEDT 2018 org.jfree.chart.labels.ItemLabelPosition,186
+Mon Jan 15 14:34:02 AEDT 2018 org.jfree.chart.labels.ItemLabelPosition,189
+Mon Jan 15 14:39:43 AEDT 2018 org.jfree.chart.labels.ItemLabelPosition,192
+Mon Jan 15 14:42:34 AEDT 2018 org.jfree.chart.labels.ItemLabelPosition,195
+Mon Jan 15 14:45:27 AEDT 2018 org.jfree.chart.labels.ItemLabelAnchor,192
+Mon Jan 15 14:46:25 AEDT 2018 org.jfree.chart.labels.ItemLabelAnchor,193
+Mon Jan 15 14:46:33 AEDT 2018 org.jfree.chart.text.TextAnchor,149
+Mon Jan 15 14:49:23 AEDT 2018 org.jfree.chart.text.TextAnchor,150
+Mon Jan 15 14:49:31 AEDT 2018 org.jfree.chart.util.PaintUtilities,78
+Mon Jan 15 14:49:47 AEDT 2018 org.jfree.chart.util.PaintUtilities,81
+Mon Jan 15 14:50:03 AEDT 2018 org.jfree.chart.util.PaintUtilities,85
+Mon Jan 15 14:55:09 AEDT 2018 org.jfree.chart.util.PaintUtilities,87
+Mon Jan 15 14:55:17 AEDT 2018 org.jfree.chart.util.PaintUtilities,98
+Mon Jan 15 14:55:25 AEDT 2018 org.jfree.chart.util.PaintUtilities,100
+Mon Jan 15 14:57:07 AEDT 2018 org.jfree.chart.util.ObjectUtilities,127
+Mon Jan 15 14:59:21 AEDT 2018 org.jfree.chart.util.ObjectUtilities,128
+Mon Jan 15 14:59:29 AEDT 2018 org.jfree.chart.util.ObjectUtilities,130
+Mon Jan 15 15:01:03 AEDT 2018 org.jfree.chart.util.ObjectUtilities,131
+Mon Jan 15 15:01:11 AEDT 2018 org.jfree.chart.util.PaintList,94
+Mon Jan 15 15:02:54 AEDT 2018 org.jfree.chart.util.PaintList,97
+Mon Jan 15 15:03:02 AEDT 2018 org.jfree.chart.util.PaintList,100
+Mon Jan 15 15:08:56 AEDT 2018 org.jfree.chart.util.PaintList,101
+Mon Jan 15 15:09:04 AEDT 2018 org.jfree.chart.util.PaintList,102
+Mon Jan 15 15:09:12 AEDT 2018 org.jfree.chart.util.PaintList,103
+Mon Jan 15 15:09:20 AEDT 2018 org.jfree.chart.util.PaintList,109
+Mon Jan 15 15:13:06 AEDT 2018 org.jfree.chart.util.AbstractObjectList,178
+Mon Jan 15 15:13:15 AEDT 2018 org.jfree.chart.util.AbstractObjectList,182
+Mon Jan 15 15:13:24 AEDT 2018 org.jfree.chart.util.AbstractObjectList,186
+Mon Jan 15 15:14:19 AEDT 2018 org.jfree.chart.util.AbstractObjectList,190
+Mon Jan 15 15:19:26 AEDT 2018 org.jfree.chart.util.AbstractObjectList,191
+Mon Jan 15 15:29:40 AEDT 2018 org.jfree.chart.util.AbstractObjectList,192
+Mon Jan 15 15:29:41 AEDT 2018 org.jfree.chart.util.AbstractObjectList,197
+Mon Jan 15 15:32:10 AEDT 2018 org.jfree.chart.util.StrokeList,105
+Mon Jan 15 15:32:11 AEDT 2018 org.jfree.chart.util.StrokeList,109
+Mon Jan 15 15:32:13 AEDT 2018 org.jfree.chart.util.StrokeList,113
+Mon Jan 15 15:33:07 AEDT 2018 org.jfree.chart.util.StrokeList,114
+Mon Jan 15 15:33:08 AEDT 2018 org.jfree.chart.util.ShapeList,104
+Mon Jan 15 15:33:09 AEDT 2018 org.jfree.chart.util.ShapeList,108
+Mon Jan 15 15:33:10 AEDT 2018 org.jfree.chart.util.ShapeList,112
+Mon Jan 15 15:34:04 AEDT 2018 org.jfree.chart.util.ShapeList,113
+Mon Jan 15 15:34:05 AEDT 2018 org.jfree.chart.util.BooleanList,95
+Mon Jan 15 15:34:59 AEDT 2018 org.jfree.chart.util.BooleanList,96
+Mon Jan 15 15:35:00 AEDT 2018 org.jfree.chart.labels.StandardCategorySeriesLabelGenerator,141
+Mon Jan 15 15:35:01 AEDT 2018 org.jfree.chart.labels.StandardCategorySeriesLabelGenerator,144
+Mon Jan 15 15:35:36 AEDT 2018 org.jfree.chart.labels.StandardCategorySeriesLabelGenerator,147
+Mon Jan 15 16:22:00 AEDT 2018 org.jfree.chart.labels.StandardCategorySeriesLabelGenerator,149
+Mon Jan 15 16:22:01 AEDT 2018 org.jfree.chart.labels.StandardCategorySeriesLabelGenerator,152
+Mon Jan 15 16:22:03 AEDT 2018 org.jfree.chart.renderer.category.AbstractCategoryItemRenderer,1291
+Mon Jan 15 16:22:04 AEDT 2018 org.jfree.chart.renderer.category.AbstractCategoryItemRenderer,1294
+Mon Jan 15 16:22:47 AEDT 2018 org.jfree.chart.renderer.category.AbstractCategoryItemRenderer,1297
+Mon Jan 15 17:17:31 AEDT 2018 org.jfree.chart.renderer.category.AbstractCategoryItemRenderer,1299
+Mon Jan 15 17:17:39 AEDT 2018 org.jfree.chart.renderer.category.AbstractCategoryItemRenderer,1303
+Mon Jan 15 17:36:46 AEDT 2018 org.jfree.chart.renderer.category.AbstractCategoryItemRenderer,1307
+Mon Jan 15 17:57:09 AEDT 2018 org.jfree.chart.renderer.category.AbstractCategoryItemRenderer,1311
+Mon Jan 15 18:20:22 AEDT 2018 org.jfree.chart.renderer.category.AbstractCategoryItemRenderer,1315
+Mon Jan 15 18:37:57 AEDT 2018 org.jfree.chart.renderer.category.AbstractCategoryItemRenderer,1319
+Timeout time : 18/01/15 18:50

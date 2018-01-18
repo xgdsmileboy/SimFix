@@ -1,0 +1,163 @@
+=================================================
+Project : math_77	start : 18/01/15 21:21
+Current failed test : org.apache.commons.math.linear.ArrayRealVectorTest::testBasicFunctions_purify_8 | 18/01/15 21:25
+Mon Jan 15 21:25:59 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,719
+Mon Jan 15 21:31:33 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,720
+Mon Jan 15 21:43:32 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,721
+Mon Jan 15 21:43:33 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,723
+Mon Jan 15 21:43:34 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,709
+Mon Jan 15 21:49:22 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,710
+Mon Jan 15 21:56:11 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,711
+Mon Jan 15 21:56:11 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,713
+Mon Jan 15 21:56:12 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,699
+Mon Jan 15 22:01:54 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,700
+Mon Jan 15 22:03:57 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,701
+Mon Jan 15 22:03:58 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,703
+Mon Jan 15 22:03:58 AEDT 2018 Mon Jan 15 22:03:58 AEDT 2018 : org.apache.commons.math.linear.ArrayRealVector,82=>Find no block
+Mon Jan 15 22:03:59 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,83
+Mon Jan 15 22:05:44 AEDT 2018 Mon Jan 15 22:05:44 AEDT 2018 : org.apache.commons.math.linear.ArrayRealVector,84=>Find no block
+Mon Jan 15 22:05:45 AEDT 2018 Mon Jan 15 22:05:45 AEDT 2018 : org.apache.commons.math.linear.AbstractRealVector,34=>Find no block
+Mon Jan 15 22:05:46 AEDT 2018 Mon Jan 15 22:05:46 AEDT 2018 : org.apache.commons.math.linear.AbstractRealVector,819=>Find no block
+Mon Jan 15 22:05:46 AEDT 2018 org.apache.commons.math.MathRuntimeException,495
+Mon Jan 15 22:06:14 AEDT 2018 org.apache.commons.math.MathRuntimeException,503
+Mon Jan 15 22:06:26 AEDT 2018 org.apache.commons.math.MathRuntimeException,509
+Mon Jan 15 22:06:38 AEDT 2018 Mon Jan 15 22:06:38 AEDT 2018 : org.apache.commons.math.MathRuntimeException,59=>Find no block
+Mon Jan 15 22:06:39 AEDT 2018 org.apache.commons.math.MathRuntimeException,60
+Mon Jan 15 22:07:01 AEDT 2018 org.apache.commons.math.MathRuntimeException,61
+Mon Jan 15 22:07:02 AEDT 2018 Mon Jan 15 22:07:02 AEDT 2018 : org.apache.commons.math.MathRuntimeException,62=>Find no block
+Mon Jan 15 22:07:02 AEDT 2018 org.apache.commons.math.MathRuntimeException,72
+Mon Jan 15 22:08:12 AEDT 2018 org.apache.commons.math.MathRuntimeException,73
+Mon Jan 15 22:08:13 AEDT 2018 org.apache.commons.math.MathRuntimeException,74
+Mon Jan 15 22:08:13 AEDT 2018 Mon Jan 15 22:08:13 AEDT 2018 : org.apache.commons.math.MathRuntimeException,75=>Find no block
+Mon Jan 15 22:08:14 AEDT 2018 org.apache.commons.math.MathRuntimeException,88
+Mon Jan 15 22:09:04 AEDT 2018 org.apache.commons.math.MathRuntimeException,89
+Mon Jan 15 22:09:04 AEDT 2018 org.apache.commons.math.MathRuntimeException,90
+Mon Jan 15 22:09:05 AEDT 2018 Mon Jan 15 22:09:05 AEDT 2018 : org.apache.commons.math.MathRuntimeException,91=>Find no block
+Mon Jan 15 22:09:06 AEDT 2018 org.apache.commons.math.MathRuntimeException,102
+Mon Jan 15 22:09:08 AEDT 2018 org.apache.commons.math.MathRuntimeException,104
+Mon Jan 15 22:09:10 AEDT 2018 org.apache.commons.math.MathRuntimeException,106
+Mon Jan 15 22:09:11 AEDT 2018 Mon Jan 15 22:09:11 AEDT 2018 : org.apache.commons.math.MathRuntimeException,111=>Find no block
+Mon Jan 15 22:09:12 AEDT 2018 Mon Jan 15 22:09:12 AEDT 2018 : org.apache.commons.math.MathRuntimeException,109=>Find no block
+Mon Jan 15 22:09:12 AEDT 2018 org.apache.commons.math.MathRuntimeException,115
+Mon Jan 15 22:09:13 AEDT 2018 org.apache.commons.math.MathRuntimeException,128
+Mon Jan 15 22:09:15 AEDT 2018 org.apache.commons.math.MathRuntimeException,136
+Mon Jan 15 22:09:17 AEDT 2018 org.apache.commons.math.MathRuntimeException,144
+Mon Jan 15 22:09:50 AEDT 2018 org.apache.commons.math.MathRuntimeException,154
+Mon Jan 15 22:09:52 AEDT 2018 org.apache.commons.math.MathRuntimeException,160
+Mon Jan 15 22:09:55 AEDT 2018 org.apache.commons.math.MathRuntimeException,166
+Mon Jan 15 22:09:57 AEDT 2018 org.apache.commons.math.MathRuntimeException,174
+Mon Jan 15 22:10:00 AEDT 2018 Mon Jan 15 22:10:00 AEDT 2018 : org.apache.commons.math.MathRuntimeException,175=>Find no block
+Mon Jan 15 22:10:01 AEDT 2018 Mon Jan 15 22:10:01 AEDT 2018 : org.apache.commons.math.MathRuntimeException,184=>Find no block
+Mon Jan 15 22:10:01 AEDT 2018 org.apache.commons.math.MathRuntimeException,185
+Mon Jan 15 22:10:04 AEDT 2018 org.apache.commons.math.MathRuntimeException,186
+Mon Jan 15 22:10:04 AEDT 2018 org.apache.commons.math.MathRuntimeException,188
+Mon Jan 15 22:10:05 AEDT 2018 Mon Jan 15 22:10:05 AEDT 2018 : org.apache.commons.math.MathRuntimeException,189=>Find no block
+Mon Jan 15 22:10:05 AEDT 2018 Mon Jan 15 22:10:05 AEDT 2018 : org.apache.commons.math.MathRuntimeException,190=>Find no block
+Mon Jan 15 22:10:06 AEDT 2018 org.apache.commons.math.MathRuntimeException,201
+Mon Jan 15 22:10:08 AEDT 2018 org.apache.commons.math.MathRuntimeException,230
+Mon Jan 15 22:10:11 AEDT 2018 org.apache.commons.math.MathRuntimeException,259
+Mon Jan 15 22:10:13 AEDT 2018 org.apache.commons.math.MathRuntimeException,291
+Mon Jan 15 22:13:37 AEDT 2018 org.apache.commons.math.MathRuntimeException,292
+Mon Jan 15 22:13:38 AEDT 2018 org.apache.commons.math.MathRuntimeException,293
+Mon Jan 15 22:13:38 AEDT 2018 org.apache.commons.math.MathRuntimeException,305
+Mon Jan 15 22:13:41 AEDT 2018 org.apache.commons.math.MathRuntimeException,333
+Mon Jan 15 22:17:04 AEDT 2018 org.apache.commons.math.MathRuntimeException,334
+Mon Jan 15 22:17:05 AEDT 2018 org.apache.commons.math.MathRuntimeException,335
+Mon Jan 15 22:17:06 AEDT 2018 org.apache.commons.math.MathRuntimeException,347
+Mon Jan 15 22:17:08 AEDT 2018 org.apache.commons.math.MathRuntimeException,376
+Mon Jan 15 22:17:10 AEDT 2018 org.apache.commons.math.MathRuntimeException,405
+Mon Jan 15 22:17:12 AEDT 2018 org.apache.commons.math.MathRuntimeException,434
+Mon Jan 15 22:17:15 AEDT 2018 org.apache.commons.math.MathRuntimeException,466
+Mon Jan 15 22:17:17 AEDT 2018 org.apache.commons.math.MathRuntimeException,492
+Mon Jan 15 22:17:18 AEDT 2018 org.apache.commons.math.MathRuntimeException,493
+Mon Jan 15 22:17:18 AEDT 2018 org.apache.commons.math.MathRuntimeException,495
+Mon Jan 15 22:17:19 AEDT 2018 org.apache.commons.math.MathRuntimeException,201
+Mon Jan 15 22:17:20 AEDT 2018 org.apache.commons.math.MathRuntimeException,209
+Mon Jan 15 22:17:23 AEDT 2018 org.apache.commons.math.MathRuntimeException,215
+Mon Jan 15 22:17:25 AEDT 2018 org.apache.commons.math.MathRuntimeException,466
+Mon Jan 15 22:17:25 AEDT 2018 org.apache.commons.math.MathRuntimeException,474
+Mon Jan 15 22:17:26 AEDT 2018 org.apache.commons.math.MathRuntimeException,480
+Mon Jan 15 22:17:27 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,102
+Mon Jan 15 22:17:29 AEDT 2018 Mon Jan 15 22:17:29 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,103=>Find no block
+Mon Jan 15 22:17:29 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,110
+Mon Jan 15 22:17:32 AEDT 2018 Mon Jan 15 22:17:32 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,111=>Find no block
+Mon Jan 15 22:17:32 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,118
+Mon Jan 15 22:17:35 AEDT 2018 Mon Jan 15 22:17:35 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,119=>Find no block
+Mon Jan 15 22:17:35 AEDT 2018 Mon Jan 15 22:17:35 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,127=>Find no block
+Mon Jan 15 22:17:36 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,128
+Mon Jan 15 22:47:33 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,129
+Mon Jan 15 22:47:34 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,130
+Mon Jan 15 22:47:34 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,131
+Mon Jan 15 22:47:35 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,132
+Mon Jan 15 22:47:36 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,133
+Mon Jan 15 22:47:37 AEDT 2018 Mon Jan 15 22:47:37 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,134=>Find no block
+Mon Jan 15 22:47:37 AEDT 2018 Mon Jan 15 22:47:37 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,140=>Find no block
+Mon Jan 15 22:47:38 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,141
+Mon Jan 15 23:10:34 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,142
+Mon Jan 15 23:10:38 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,143
+Mon Jan 15 23:32:18 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,144
+Mon Jan 15 23:56:00 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,145
+Timeout time : 18/01/15 23:56
+Current failed test : org.apache.commons.math.linear.SparseRealVectorTest::testBasicFunctions_purify_5 | 18/01/15 23:56
+Mon Jan 15 23:57:18 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,499
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double max=virtualSize;
+Iterator iter=entries.iterator();
+return max;
+
+Time : 18/01/16 00:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.494979756631315 : [/home/hz985/jiajun/d4j/projects/math/math_77_buggy/src/main/java/org/apache/commons/math/linear/OpenMapRealVector.java=>0,0]
+for(OpenIntToDoubleHashMap.Iterator iterator=entries.iterator();iterator.hasNext();){
+iterator.advance();
+ final double value=iterator.value();
+ final int key=iterator.key();
+ final int i=key/columns;
+ final int k=key%columns;
+for(int j=0;j<outCols;++j){
+ final int rightKey=m.computeKey(k,j);
+if(m.entries.containsKey(rightKey)){
+ final int outKey=out.computeKey(i,j);
+ final double outValue=out.entries.get(outKey)+value*m.entries.get(rightKey);
+if(outValue==0.0){
+out.entries.remove(outKey);
+}else {
+out.entries.put(outKey,outValue);
+}
+}
+}
+}
+
+Time : 18/01/16 00:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_77_buggy/src/main/java/org/apache/commons/math/linear/OpenMapRealVector.java=>499,505]
+double max=0;
+Iterator iter=entries.iterator();
+while(iter.hasNext()){
+iter.advance();
+max+=iter.value();
+}
+return max;
+
+Time : 18/01/16 00:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_77_buggy/src/main/java/org/apache/commons/math/linear/OpenMapRealVector.java=>499,505]
+double max=virtualSize;
+Iterator iter=entries.iterator();
+return max;
+
+Time : 18/01/16 00:04
+----------------------------------------
+Success time : 18/01/16 00:04

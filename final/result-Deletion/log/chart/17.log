@@ -1,0 +1,138 @@
+=================================================
+Project : chart_17	start : 18/01/15 13:48
+Current failed test : org.jfree.data.time.junit.TimeSeriesTests::testBug1832432 | 18/01/15 13:49
+Mon Jan 15 13:50:59 AEDT 2018 Mon Jan 15 13:50:59 AEDT 2018 : org.jfree.chart.util.ObjectUtilities,89=>Find no block
+Mon Jan 15 13:51:04 AEDT 2018 Mon Jan 15 13:51:04 AEDT 2018 : org.jfree.chart.util.ObjectUtilities,90=>Find no block
+Mon Jan 15 13:51:08 AEDT 2018 org.jfree.chart.util.ObjectUtilities,99
+Mon Jan 15 13:51:21 AEDT 2018 org.jfree.chart.util.ObjectUtilities,113
+Mon Jan 15 13:51:31 AEDT 2018 Mon Jan 15 13:51:31 AEDT 2018 : org.jfree.chart.util.ObjectUtilities,114=>Find no block
+Mon Jan 15 13:51:33 AEDT 2018 org.jfree.chart.util.ObjectUtilities,125
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1==null){
+return true;
+}
+
+Time : 18/01/15 13:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o2==null){
+return true;
+}
+
+Time : 18/01/15 13:54
+----------------------------------------
+Mon Jan 15 13:55:13 AEDT 2018 org.jfree.chart.util.ObjectUtilities,126
+Mon Jan 15 13:55:16 AEDT 2018 org.jfree.chart.util.ObjectUtilities,128
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1==null){
+return o1.equals(o2);
+}else {
+return false;
+}
+
+Time : 18/01/15 13:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1!=null){
+return o1.equals(o2);
+}else {
+return true;
+}
+
+Time : 18/01/15 13:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1==null){
+return o1.equals(o2);
+}else {
+return true;
+}
+
+Time : 18/01/15 13:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o2!=null){
+return o1.equals(o2);
+}else {
+return false;
+}
+
+Time : 18/01/15 13:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o2==null){
+return o1.equals(o2);
+}else {
+return false;
+}
+
+Time : 18/01/15 13:59
+----------------------------------------
+Mon Jan 15 14:00:38 AEDT 2018 org.jfree.chart.util.ObjectUtilities,129
+Mon Jan 15 14:00:41 AEDT 2018 org.jfree.chart.util.ObjectUtilities,132
+Mon Jan 15 14:00:46 AEDT 2018 org.jfree.chart.util.ObjectUtilities,145
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result=0;
+return result;
+
+Time : 18/01/15 14:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.8471345336940956 : [/home/hz985/jiajun/d4j/projects/chart/chart_17_buggy/source/org/jfree/chart/util/ObjectUtilities.java=>0,0]
+int result=super.hashCode();
+result=29*result+(this.text!=null?this.text.hashCode():0);
+result=29*result+(this.font!=null?this.font.hashCode():0);
+result=29*result+(this.paint!=null?this.paint.hashCode():0);
+result=29*result+(this.backgroundPaint!=null?this.backgroundPaint.hashCode():0);
+return result;
+
+Time : 18/01/15 14:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/chart/chart_17_buggy/source/org/jfree/chart/util/ObjectUtilities.java=>145,149]
+int result=0;
+if(object!=null){
+result=object.hashCode();
+}
+return result;
+
+Time : 18/01/15 14:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/chart/chart_17_buggy/source/org/jfree/chart/util/ObjectUtilities.java=>145,149]
+int result=0;
+return result;
+
+Time : 18/01/15 14:02
+----------------------------------------
+Success time : 18/01/15 14:02

@@ -1,0 +1,366 @@
+=================================================
+Project : chart_6	start : 18/01/14 07:25
+Current failed test : org.jfree.chart.util.junit.ShapeListTests::testSerialization | 18/01/14 07:26
+Sun Jan 14 07:27:42 AEDT 2018 org.jfree.chart.util.ShapeList,121
+Sun Jan 14 07:27:52 AEDT 2018 org.jfree.chart.util.ShapeList,137
+Sun Jan 14 07:32:24 AEDT 2018 org.jfree.chart.util.ShapeList,138
+Sun Jan 14 07:32:30 AEDT 2018 org.jfree.chart.util.ShapeList,139
+Sun Jan 14 07:32:33 AEDT 2018 org.jfree.chart.util.ShapeList,140
+Sun Jan 14 07:32:34 AEDT 2018 org.jfree.chart.util.ShapeList,143
+Sun Jan 14 07:32:38 AEDT 2018 org.jfree.chart.util.ShapeList,163
+Sun Jan 14 07:39:59 AEDT 2018 org.jfree.chart.util.ShapeList,164
+Sun Jan 14 07:40:03 AEDT 2018 org.jfree.chart.util.ShapeList,165
+Sun Jan 14 07:40:07 AEDT 2018 org.jfree.chart.util.AbstractObjectList,212
+Sun Jan 14 07:43:41 AEDT 2018 org.jfree.chart.util.AbstractObjectList,213
+Sun Jan 14 07:43:44 AEDT 2018 org.jfree.chart.util.AbstractObjectList,214
+Sun Jan 14 07:43:45 AEDT 2018 org.jfree.chart.util.AbstractObjectList,215
+Sun Jan 14 07:43:46 AEDT 2018 org.jfree.chart.util.AbstractObjectList,216
+Sun Jan 14 07:43:48 AEDT 2018 org.jfree.chart.util.AbstractObjectList,194
+Sun Jan 14 07:43:58 AEDT 2018 org.jfree.chart.util.ShapeList,81
+Sun Jan 14 07:45:51 AEDT 2018 Sun Jan 14 07:45:51 AEDT 2018 : org.jfree.chart.util.ShapeList,82=>Find no block
+Sun Jan 14 07:45:55 AEDT 2018 org.jfree.chart.util.AbstractObjectList,265
+Sun Jan 14 07:50:10 AEDT 2018 org.jfree.chart.util.AbstractObjectList,193
+Sun Jan 14 07:50:12 AEDT 2018 org.jfree.chart.util.SerialUtilities,271
+Sun Jan 14 07:52:51 AEDT 2018 org.jfree.chart.util.SerialUtilities,272
+Sun Jan 14 07:52:55 AEDT 2018 org.jfree.chart.util.SerialUtilities,273
+Sun Jan 14 07:55:45 AEDT 2018 org.jfree.chart.util.SerialUtilities,274
+Sun Jan 14 07:57:41 AEDT 2018 org.jfree.chart.util.SerialUtilities,275
+Sun Jan 14 07:57:44 AEDT 2018 Sun Jan 14 07:57:44 AEDT 2018 : org.jfree.chart.util.SerialUtilities,276=>Find no block
+Sun Jan 14 07:57:47 AEDT 2018 org.jfree.chart.util.SerialUtilities,361
+Sun Jan 14 07:59:46 AEDT 2018 org.jfree.chart.util.SerialUtilities,362
+Sun Jan 14 07:59:50 AEDT 2018 org.jfree.chart.util.SerialUtilities,363
+Sun Jan 14 08:01:19 AEDT 2018 org.jfree.chart.util.SerialUtilities,364
+Sun Jan 14 08:02:48 AEDT 2018 org.jfree.chart.util.SerialUtilities,365
+Sun Jan 14 08:04:16 AEDT 2018 org.jfree.chart.util.SerialUtilities,366
+Sun Jan 14 08:04:20 AEDT 2018 Sun Jan 14 08:04:20 AEDT 2018 : org.jfree.chart.util.SerialUtilities,367=>Find no block
+Sun Jan 14 08:04:24 AEDT 2018 org.jfree.chart.util.AbstractObjectList,261
+Sun Jan 14 08:04:28 AEDT 2018 org.jfree.chart.util.AbstractObjectList,262
+Sun Jan 14 08:04:30 AEDT 2018 org.jfree.chart.util.AbstractObjectList,288
+Sun Jan 14 08:08:00 AEDT 2018 org.jfree.chart.util.AbstractObjectList,259
+Sun Jan 14 08:13:05 AEDT 2018 org.jfree.chart.util.AbstractObjectList,260
+Sun Jan 14 08:13:10 AEDT 2018 org.jfree.chart.util.AbstractObjectList,286
+Sun Jan 14 08:21:10 AEDT 2018 org.jfree.chart.util.AbstractObjectList,287
+Sun Jan 14 08:21:14 AEDT 2018 org.jfree.chart.util.ShapeList,70
+Sun Jan 14 08:22:21 AEDT 2018 org.jfree.chart.util.AbstractObjectList,206
+Sun Jan 14 08:24:33 AEDT 2018 org.jfree.chart.util.AbstractObjectList,207
+Sun Jan 14 08:24:35 AEDT 2018 org.jfree.chart.util.AbstractObjectList,208
+Sun Jan 14 08:27:45 AEDT 2018 org.jfree.chart.util.AbstractObjectList,211
+Sun Jan 14 08:27:47 AEDT 2018 org.jfree.chart.util.AbstractObjectList,221
+Sun Jan 14 08:30:34 AEDT 2018 org.jfree.chart.util.AbstractObjectList,109
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Object result=null;
+if(index>=0&&index<this.size){
+result=this.objects[index];
+return null;
+}
+return result;
+
+Time : 18/01/14 08:33
+----------------------------------------
+Sun Jan 14 08:40:58 AEDT 2018 org.jfree.chart.util.AbstractObjectList,110
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index>=0&&index<this.size){
+result=this.objects[index];
+return null;
+}
+
+Time : 18/01/14 08:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.objects[index]=result;
+if(index>=0&&index<this.size){
+result=this.objects[index];
+}
+
+Time : 18/01/14 08:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.objects[index]=result;
+this.size=Math.max(this.size,index+1);
+if(index>=0&&index<this.size){
+result=this.objects[index];
+}
+
+Time : 18/01/14 08:44
+----------------------------------------
+Sun Jan 14 08:50:25 AEDT 2018 org.jfree.chart.util.AbstractObjectList,111
+Sun Jan 14 08:50:26 AEDT 2018 org.jfree.chart.util.AbstractObjectList,113
+Sun Jan 14 08:50:28 AEDT 2018 org.jfree.chart.util.AbstractObjectList,123
+Sun Jan 14 08:52:38 AEDT 2018 org.jfree.chart.util.AbstractObjectList,126
+Sun Jan 14 08:59:34 AEDT 2018 org.jfree.chart.util.AbstractObjectList,131
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+this.size=Math.min(this.size,index+1);
+
+Time : 18/01/14 09:04
+----------------------------------------
+Sun Jan 14 09:06:35 AEDT 2018 org.jfree.chart.util.AbstractObjectList,132
+Sun Jan 14 09:06:39 AEDT 2018 Sun Jan 14 09:06:39 AEDT 2018 : org.jfree.chart.util.AbstractObjectList,133=>Find no block
+Sun Jan 14 09:06:43 AEDT 2018 org.jfree.chart.util.ShapeList,105
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(obj!=this){
+return true;
+}
+
+Time : 18/01/14 09:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(obj!=null){
+return true;
+}
+
+Time : 18/01/14 09:09
+----------------------------------------
+Sun Jan 14 09:10:19 AEDT 2018 org.jfree.chart.util.ShapeList,108
+Sun Jan 14 09:11:22 AEDT 2018 org.jfree.chart.util.ShapeList,111
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(obj!=this){
+return true;
+}
+if(!(obj instanceof ShapeList)){
+return false;
+}
+return super.equals(obj);
+
+Time : 18/01/14 09:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(obj!=null){
+return true;
+}
+if(!(obj instanceof ShapeList)){
+return false;
+}
+return super.equals(obj);
+
+Time : 18/01/14 09:14
+----------------------------------------
+Sun Jan 14 09:15:26 AEDT 2018 org.jfree.chart.util.AbstractObjectList,178
+Sun Jan 14 09:16:55 AEDT 2018 org.jfree.chart.util.AbstractObjectList,182
+Sun Jan 14 09:16:56 AEDT 2018 org.jfree.chart.util.AbstractObjectList,186
+Sun Jan 14 09:18:01 AEDT 2018 org.jfree.chart.util.AbstractObjectList,190
+Sun Jan 14 09:21:18 AEDT 2018 org.jfree.chart.util.AbstractObjectList,191
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=listSize;i<listSize;i++){
+if(!ObjectUtilities.equal(get(i),other.get(i))){
+return false;
+}
+}
+
+Time : 18/01/14 09:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=DEFAULT_INITIAL_CAPACITY;i<listSize;i++){
+if(!ObjectUtilities.equal(get(i),other.get(i))){
+return false;
+}
+}
+
+Time : 18/01/14 09:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<listSize;i++){
+if(!ObjectUtilities.equal(get(i),other.get(i))){
+return false;
+}
+return true;
+}
+
+Time : 18/01/14 09:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+AbstractObjectList other=(AbstractObjectList)obj;
+int listSize=size();
+for(int i=0;i<listSize;i++){
+if(!ObjectUtilities.equal(get(i),other.get(i))){
+return false;
+}
+return true;
+}
+
+Time : 18/01/14 09:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+AbstractObjectList other=(AbstractObjectList)obj;
+int listSize=size();
+for(int i=listSize;i<listSize;i++){
+if(!ObjectUtilities.equal(get(i),other.get(i))){
+return false;
+}
+}
+
+Time : 18/01/14 09:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+AbstractObjectList other=(AbstractObjectList)obj;
+int listSize=size();
+for(int i=DEFAULT_INITIAL_CAPACITY;i<listSize;i++){
+if(!ObjectUtilities.equal(get(i),other.get(i))){
+return false;
+}
+}
+
+Time : 18/01/14 09:32
+----------------------------------------
+Sun Jan 14 09:37:15 AEDT 2018 org.jfree.chart.util.AbstractObjectList,192
+Sun Jan 14 09:37:19 AEDT 2018 org.jfree.chart.util.SerialUtilities,92
+Sun Jan 14 09:37:52 AEDT 2018 org.jfree.chart.util.ObjectUtilities,128
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1==null){
+return o1.equals(o2);
+}else {
+return true;
+}
+
+Time : 18/01/14 09:38
+----------------------------------------
+Sun Jan 14 09:40:22 AEDT 2018 org.jfree.chart.util.ObjectUtilities,129
+Sun Jan 14 09:40:23 AEDT 2018 org.jfree.chart.util.ObjectUtilities,125
+Sun Jan 14 09:42:35 AEDT 2018 org.jfree.chart.util.ShapeList,133
+Sun Jan 14 09:44:13 AEDT 2018 org.jfree.chart.util.ShapeList,134
+Sun Jan 14 09:44:18 AEDT 2018 org.jfree.chart.util.ShapeList,135
+Sun Jan 14 09:48:18 AEDT 2018 org.jfree.chart.util.ShapeList,136
+Sun Jan 14 09:48:22 AEDT 2018 Sun Jan 14 09:48:22 AEDT 2018 : org.jfree.chart.util.ShapeList,147=>Find no block
+Sun Jan 14 09:48:24 AEDT 2018 org.jfree.chart.util.ShapeList,160
+Sun Jan 14 09:50:59 AEDT 2018 org.jfree.chart.util.ShapeList,161
+Sun Jan 14 09:51:01 AEDT 2018 org.jfree.chart.util.ShapeList,162
+Sun Jan 14 09:51:05 AEDT 2018 Sun Jan 14 09:51:05 AEDT 2018 : org.jfree.chart.util.ShapeList,169=>Find no block
+Sun Jan 14 09:51:09 AEDT 2018 org.jfree.chart.util.AbstractObjectList,255
+Sun Jan 14 09:51:13 AEDT 2018 org.jfree.chart.util.AbstractObjectList,256
+Sun Jan 14 09:51:17 AEDT 2018 org.jfree.chart.util.AbstractObjectList,257
+Sun Jan 14 09:57:58 AEDT 2018 org.jfree.chart.util.AbstractObjectList,258
+Sun Jan 14 09:58:02 AEDT 2018 Sun Jan 14 09:58:02 AEDT 2018 : org.jfree.chart.util.AbstractObjectList,269=>Find no block
+Sun Jan 14 09:58:05 AEDT 2018 org.jfree.chart.util.AbstractObjectList,282
+Sun Jan 14 10:01:52 AEDT 2018 org.jfree.chart.util.AbstractObjectList,283
+Sun Jan 14 10:01:55 AEDT 2018 org.jfree.chart.util.AbstractObjectList,284
+Sun Jan 14 10:01:58 AEDT 2018 org.jfree.chart.util.AbstractObjectList,285
+Sun Jan 14 10:02:01 AEDT 2018 Sun Jan 14 10:02:01 AEDT 2018 : org.jfree.chart.util.AbstractObjectList,292=>Find no block
+Sun Jan 14 10:02:05 AEDT 2018 org.jfree.chart.util.SerialUtilities,278
+Sun Jan 14 10:04:47 AEDT 2018 org.jfree.chart.util.SerialUtilities,279
+Sun Jan 14 10:04:50 AEDT 2018 org.jfree.chart.util.SerialUtilities,280
+Sun Jan 14 10:07:48 AEDT 2018 org.jfree.chart.util.SerialUtilities,281
+Sun Jan 14 10:11:41 AEDT 2018 org.jfree.chart.util.SerialUtilities,282
+Sun Jan 14 10:11:46 AEDT 2018 Sun Jan 14 10:11:46 AEDT 2018 : org.jfree.chart.util.SerialUtilities,283=>Find no block
+Sun Jan 14 10:11:50 AEDT 2018 org.jfree.chart.util.SerialUtilities,369
+Sun Jan 14 10:14:21 AEDT 2018 org.jfree.chart.util.SerialUtilities,370
+Sun Jan 14 10:14:25 AEDT 2018 org.jfree.chart.util.SerialUtilities,371
+Sun Jan 14 10:16:01 AEDT 2018 org.jfree.chart.util.SerialUtilities,372
+Sun Jan 14 10:17:48 AEDT 2018 org.jfree.chart.util.SerialUtilities,373
+Sun Jan 14 10:19:42 AEDT 2018 org.jfree.chart.util.SerialUtilities,374
+Sun Jan 14 10:19:45 AEDT 2018 Sun Jan 14 10:19:45 AEDT 2018 : org.jfree.chart.util.SerialUtilities,375=>Find no block
+Sun Jan 14 10:19:49 AEDT 2018 org.jfree.chart.util.SerialUtilities,263
+Sun Jan 14 10:19:57 AEDT 2018 org.jfree.chart.util.SerialUtilities,266
+Sun Jan 14 10:21:33 AEDT 2018 org.jfree.chart.util.SerialUtilities,267
+Sun Jan 14 10:21:35 AEDT 2018 org.jfree.chart.util.SerialUtilities,268
+Sun Jan 14 10:40:32 AEDT 2018 org.jfree.chart.util.SerialUtilities,269
+Sun Jan 14 10:40:59 AEDT 2018 org.jfree.chart.util.SerialUtilities,270
+Sun Jan 14 10:41:04 AEDT 2018 org.jfree.chart.util.SerialUtilities,277
+Sun Jan 14 10:41:09 AEDT 2018 org.jfree.chart.util.SerialUtilities,340
+Sun Jan 14 11:00:15 AEDT 2018 org.jfree.chart.util.SerialUtilities,355
+Sun Jan 14 11:00:18 AEDT 2018 org.jfree.chart.util.SerialUtilities,358
+Sun Jan 14 11:16:56 AEDT 2018 org.jfree.chart.util.SerialUtilities,359
+Sun Jan 14 11:17:15 AEDT 2018 org.jfree.chart.util.SerialUtilities,360
+Sun Jan 14 11:17:20 AEDT 2018 org.jfree.chart.util.SerialUtilities,368
+Sun Jan 14 11:17:23 AEDT 2018 Sun Jan 14 11:17:23 AEDT 2018 : org.jfree.chart.util.SerialUtilities,421=>Find no block
+Sun Jan 14 11:17:25 AEDT 2018 org.jfree.chart.util.AbstractObjectList,149
+Sun Jan 14 11:17:31 AEDT 2018 org.jfree.chart.util.ShapeList,59
+Sun Jan 14 11:17:39 AEDT 2018 Sun Jan 14 11:17:39 AEDT 2018 : org.jfree.chart.util.ShapeList,60=>Find no block
+Sun Jan 14 11:17:42 AEDT 2018 org.jfree.chart.util.AbstractObjectList,77
+Sun Jan 14 11:17:48 AEDT 2018 Sun Jan 14 11:17:48 AEDT 2018 : org.jfree.chart.util.AbstractObjectList,78=>Find no block
+Sun Jan 14 11:17:49 AEDT 2018 org.jfree.chart.util.AbstractObjectList,86
+Sun Jan 14 11:17:58 AEDT 2018 Sun Jan 14 11:17:58 AEDT 2018 : org.jfree.chart.util.AbstractObjectList,87=>Find no block
+Sun Jan 14 11:18:01 AEDT 2018 Sun Jan 14 11:18:01 AEDT 2018 : org.jfree.chart.util.AbstractObjectList,95=>Find no block
+Sun Jan 14 11:18:04 AEDT 2018 Sun Jan 14 11:18:04 AEDT 2018 : org.jfree.chart.util.AbstractObjectList,68=>Find no block
+Sun Jan 14 11:18:07 AEDT 2018 Sun Jan 14 11:18:07 AEDT 2018 : org.jfree.chart.util.AbstractObjectList,71=>Find no block
+Sun Jan 14 11:18:09 AEDT 2018 org.jfree.chart.util.AbstractObjectList,96
+Sun Jan 14 11:18:59 AEDT 2018 org.jfree.chart.util.AbstractObjectList,97
+Sun Jan 14 11:19:03 AEDT 2018 Sun Jan 14 11:19:03 AEDT 2018 : org.jfree.chart.util.AbstractObjectList,98=>Find no block
+Sun Jan 14 11:19:07 AEDT 2018 Sun Jan 14 11:19:07 AEDT 2018 : org.jfree.chart.util.ObjectUtilities,89=>Find no block
+Sun Jan 14 11:19:10 AEDT 2018 Sun Jan 14 11:19:10 AEDT 2018 : org.jfree.chart.util.ObjectUtilities,90=>Find no block
+Sun Jan 14 11:19:13 AEDT 2018 org.jfree.chart.util.ObjectUtilities,99
+Sun Jan 14 11:19:20 AEDT 2018 org.jfree.chart.util.ObjectUtilities,113
+Sun Jan 14 11:19:30 AEDT 2018 Sun Jan 14 11:19:30 AEDT 2018 : org.jfree.chart.util.ObjectUtilities,114=>Find no block
+Sun Jan 14 11:19:33 AEDT 2018 org.jfree.chart.util.ObjectUtilities,126
+Sun Jan 14 11:19:37 AEDT 2018 org.jfree.chart.util.ObjectUtilities,132
+Sun Jan 14 11:19:38 AEDT 2018 org.jfree.chart.util.ObjectUtilities,145
+Sun Jan 14 11:24:39 AEDT 2018 org.jfree.chart.util.ObjectUtilities,146
+Sun Jan 14 11:27:03 AEDT 2018 org.jfree.chart.util.ObjectUtilities,147
+Sun Jan 14 11:27:07 AEDT 2018 org.jfree.chart.util.ObjectUtilities,149
+Sun Jan 14 11:27:11 AEDT 2018 org.jfree.chart.util.ObjectUtilities,162
+Sun Jan 14 11:28:27 AEDT 2018 org.jfree.chart.util.ObjectUtilities,163
+Sun Jan 14 11:28:30 AEDT 2018 org.jfree.chart.util.ObjectUtilities,165
+Sun Jan 14 11:30:42 AEDT 2018 org.jfree.chart.util.ObjectUtilities,166
+Sun Jan 14 11:31:05 AEDT 2018 org.jfree.chart.util.ObjectUtilities,167
+Sun Jan 14 11:31:08 AEDT 2018 org.jfree.chart.util.ObjectUtilities,171
+Sun Jan 14 11:32:21 AEDT 2018 org.jfree.chart.util.ObjectUtilities,173
+Sun Jan 14 11:32:23 AEDT 2018 org.jfree.chart.util.ObjectUtilities,174
+Sun Jan 14 11:32:24 AEDT 2018 Sun Jan 14 11:32:24 AEDT 2018 : org.jfree.chart.util.ObjectUtilities,185=>Find no block
+Sun Jan 14 11:32:25 AEDT 2018 Sun Jan 14 11:32:25 AEDT 2018 : org.jfree.chart.util.ObjectUtilities,177=>Find no block
+Sun Jan 14 11:32:28 AEDT 2018 org.jfree.chart.util.ObjectUtilities,178
+Sun Jan 14 11:32:31 AEDT 2018 Sun Jan 14 11:32:31 AEDT 2018 : org.jfree.chart.util.ObjectUtilities,180=>Find no block
+Sun Jan 14 11:32:34 AEDT 2018 org.jfree.chart.util.ObjectUtilities,181
+Sun Jan 14 11:32:37 AEDT 2018 Sun Jan 14 11:32:37 AEDT 2018 : org.jfree.chart.util.ObjectUtilities,183=>Find no block
+Sun Jan 14 11:32:42 AEDT 2018 org.jfree.chart.util.ObjectUtilities,184
+Sun Jan 14 11:32:43 AEDT 2018 org.jfree.chart.util.ObjectUtilities,187
+Sun Jan 14 11:41:59 AEDT 2018 org.jfree.chart.util.ObjectUtilities,203
+Sun Jan 14 11:42:08 AEDT 2018 org.jfree.chart.util.ObjectUtilities,204
+Sun Jan 14 11:42:12 AEDT 2018 org.jfree.chart.util.ObjectUtilities,209
+Sun Jan 14 11:46:21 AEDT 2018 org.jfree.chart.util.ObjectUtilities,211
+Sun Jan 14 11:54:05 AEDT 2018 org.jfree.chart.util.ObjectUtilities,212
+Timeout time : 18/01/14 12:27

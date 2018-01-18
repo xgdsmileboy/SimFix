@@ -1,0 +1,29 @@
+=================================================
+Project : math_69	start : 18/01/12 19:08
+Current failed test : org.apache.commons.math.stat.correlation.PearsonsCorrelationTest::testPValueNearZero | 18/01/12 19:08
+Fri Jan 12 19:09:27 AEDT 2018 org.apache.commons.math.stat.correlation.PearsonsCorrelation,68
+Fri Jan 12 19:09:31 AEDT 2018 Fri Jan 12 19:09:31 AEDT 2018 : org.apache.commons.math.stat.correlation.PearsonsCorrelation,69=>Find no block
+Fri Jan 12 19:09:32 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,46
+Fri Jan 12 19:09:37 AEDT 2018 Fri Jan 12 19:09:37 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,47=>Find no block
+Fri Jan 12 19:09:38 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,128
+Fri Jan 12 19:14:05 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,129
+Fri Jan 12 19:14:06 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,130
+Fri Jan 12 19:19:08 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,131
+Fri Jan 12 19:24:59 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,132
+Fri Jan 12 19:40:17 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,133
+Fri Jan 12 20:01:57 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,134
+Fri Jan 12 20:01:58 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,135
+Fri Jan 12 23:04:18 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,136
+Fri Jan 12 23:29:00 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,137
+Fri Jan 12 23:29:00 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,138
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double a=getA(n,x);
+double b=getB(n,x);
+double p2=p0+b*p1-p0;
+
+Time : 18/01/12 23:34
+----------------------------------------
+Timeout time : 18/01/13 00:09

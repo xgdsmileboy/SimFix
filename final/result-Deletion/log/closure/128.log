@@ -1,0 +1,244 @@
+=================================================
+Project : closure_128	start : 18/01/16 00:25
+Current failed test : com.google.javascript.jscomp.CodePrinterTest::testIssue942 | 18/01/16 00:25
+Tue Jan 16 00:38:41 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,409
+Tue Jan 16 01:19:35 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,410
+Tue Jan 16 01:19:37 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,411
+Tue Jan 16 01:19:40 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,414
+Tue Jan 16 01:19:42 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,415
+Tue Jan 16 01:19:45 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,419
+Tue Jan 16 01:23:36 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,422
+Tue Jan 16 01:27:06 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,423
+Tue Jan 16 01:27:07 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,542
+Tue Jan 16 01:27:13 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,543
+Tue Jan 16 01:27:15 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,791
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int index=0;index<len;index++){
+if(Character.isUpperCase(s.charAt(index))||!Character.isLetter(s.charAt(index))){
+return true;
+}
+char c=s.charAt(index);
+if(c<'0'||c>'9'){
+return false;
+}
+}
+
+Time : 18/01/16 01:31
+----------------------------------------
+Tue Jan 16 01:56:27 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,650
+Tue Jan 16 02:35:49 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,652
+Tue Jan 16 03:24:15 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,653
+Tue Jan 16 04:17:04 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,698
+Tue Jan 16 04:17:08 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,805
+Tue Jan 16 04:19:41 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,694
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!n.isQuotedString()&&!TokenStream.isKeyword(key)){
+add(key);
+}else {
+double d=getSimpleNumber(key);
+if(!Double.isNaN(d)){
+cc.addNumber(d);
+}else {
+addExpr(c,1,Context.OTHER);
+}
+}
+
+Time : 18/01/16 04:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!GT_ESCAPED.equals(key)){
+add(key);
+}else {
+double d=getSimpleNumber(key);
+if(!Double.isNaN(d)){
+cc.addNumber(d);
+}else {
+addExpr(c,1,Context.OTHER);
+}
+}
+
+Time : 18/01/16 04:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!GT_ESCAPED.equals(key)||(childCount-childCount)>Byte.MAX_VALUE&&!TokenStream.isKeyword(key)){
+add(key);
+}else {
+double d=getSimpleNumber(key);
+if(!Double.isNaN(d)){
+cc.addNumber(d);
+}else {
+addExpr(c,1,Context.OTHER);
+}
+}
+
+Time : 18/01/16 04:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+childCount=childCount;
+if(!GT_ESCAPED.equals(key)){
+add(key);
+}else {
+double d=getSimpleNumber(key);
+if(!Double.isNaN(d)){
+cc.addNumber(d);
+}else {
+addExpr(c,1,Context.OTHER);
+}
+}
+
+Time : 18/01/16 05:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!GT_ESCAPED.equals(key)||(childCount-childCount)>Byte.MAX_VALUE&&(childCount-childCount)<Byte.MIN_VALUE){
+add(key);
+}else {
+double d=getSimpleNumber(key);
+if(!Double.isNaN(d)){
+cc.addNumber(d);
+}else {
+addExpr(c,1,Context.OTHER);
+}
+}
+
+Time : 18/01/16 05:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+childCount=childCount;
+if(!GT_ESCAPED.equals(key)||(childCount-childCount)>Byte.MAX_VALUE&&!TokenStream.isKeyword(key)){
+add(key);
+}else {
+double d=getSimpleNumber(key);
+if(!Double.isNaN(d)){
+cc.addNumber(d);
+}else {
+addExpr(c,1,Context.OTHER);
+}
+}
+
+Time : 18/01/16 05:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+childCount=childCount;
+if(!GT_ESCAPED.equals(key)||(childCount-childCount)>Byte.MAX_VALUE&&(childCount-childCount)<Byte.MIN_VALUE){
+add(key);
+}else {
+double d=getSimpleNumber(key);
+if(!Double.isNaN(d)){
+cc.addNumber(d);
+}else {
+addExpr(c,1,Context.OTHER);
+}
+}
+
+Time : 18/01/16 05:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!ControlFlowGraph.isEnteringNewCfgNode(c)&&!TokenStream.isKeyword(key)){
+add(key);
+}else {
+double d=getSimpleNumber(key);
+if(!Double.isNaN(d)){
+cc.addNumber(d);
+}else {
+addExpr(c,1,Context.OTHER);
+}
+}
+
+Time : 18/01/16 05:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!c.isExprResult()&&!TokenStream.isKeyword(key)){
+add(key);
+}else {
+double d=getSimpleNumber(key);
+if(!Double.isNaN(d)){
+cc.addNumber(d);
+}else {
+addExpr(c,1,Context.OTHER);
+}
+}
+
+Time : 18/01/16 05:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((!c.isNumber()||c.getDouble()!=0)){
+add(key);
+}else {
+double d=getSimpleNumber(key);
+if(!Double.isNaN(d)){
+cc.addNumber(d);
+}else {
+addExpr(c,1,Context.OTHER);
+}
+}
+
+Time : 18/01/16 05:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((c!=null)&&!TokenStream.isKeyword(key)){
+add(key);
+}else {
+double d=getSimpleNumber(key);
+if(!Double.isNaN(d)){
+cc.addNumber(d);
+}else {
+addExpr(c,1,Context.OTHER);
+}
+}
+
+Time : 18/01/16 05:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!c.isThis()&&!TokenStream.isKeyword(key)){
+add(key);
+}else {
+double d=getSimpleNumber(key);
+if(!Double.isNaN(d)){
+cc.addNumber(d);
+}else {
+addExpr(c,1,Context.OTHER);
+}
+}
+
+Time : 18/01/16 05:38
+----------------------------------------
+Timeout time : 18/01/16 05:41

@@ -1,0 +1,140 @@
+=================================================
+Project : lang_32	start : 18/01/12 14:05
+Current failed test : org.apache.commons.lang3.builder.HashCodeBuilderTest::testReflectionObjectCycle_purify_1 | 18/01/12 14:05
+Fri Jan 12 14:06:19 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,174
+Fri Jan 12 14:07:47 AEDT 2018 Fri Jan 12 14:07:47 AEDT 2018 : org.apache.commons.lang3.builder.HashCodeBuilder,107=>Find no block
+Fri Jan 12 14:07:48 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,400
+Fri Jan 12 14:07:59 AEDT 2018 org.apache.commons.lang3.ArrayUtils,1627
+Fri Jan 12 14:09:07 AEDT 2018 org.apache.commons.lang3.ArrayUtils,1645
+Fri Jan 12 14:09:49 AEDT 2018 org.apache.commons.lang3.ArrayUtils,1646
+Fri Jan 12 14:09:49 AEDT 2018 org.apache.commons.lang3.ArrayUtils,1730
+Fri Jan 12 14:10:23 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,137
+Fri Jan 12 14:10:56 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,152
+Fri Jan 12 14:12:13 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,173
+Fri Jan 12 14:12:13 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,177
+Fri Jan 12 14:14:08 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,178
+Fri Jan 12 14:14:08 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,179
+Fri Jan 12 14:24:41 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,180
+Fri Jan 12 14:24:41 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,181
+Fri Jan 12 14:24:41 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,186
+Fri Jan 12 14:24:41 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,187
+Fri Jan 12 14:24:42 AEDT 2018 Fri Jan 12 14:24:42 AEDT 2018 : org.apache.commons.lang3.builder.HashCodeBuilder,192=>Find no block
+Fri Jan 12 14:24:42 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,196
+Fri Jan 12 14:24:43 AEDT 2018 Fri Jan 12 14:24:43 AEDT 2018 : org.apache.commons.lang3.builder.HashCodeBuilder,197=>Find no block
+Fri Jan 12 14:24:44 AEDT 2018 Fri Jan 12 14:24:44 AEDT 2018 : org.apache.commons.lang3.builder.HashCodeBuilder,198=>Find no block
+Fri Jan 12 14:24:45 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,360
+Fri Jan 12 14:32:01 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,361
+Fri Jan 12 14:32:02 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,362
+Fri Jan 12 14:32:02 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,363
+Fri Jan 12 14:32:03 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,364
+Fri Jan 12 14:32:03 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,366
+Fri Jan 12 14:32:03 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,522
+Fri Jan 12 14:33:39 AEDT 2018 Fri Jan 12 14:33:39 AEDT 2018 : org.apache.commons.lang3.builder.HashCodeBuilder,523=>Find no block
+Fri Jan 12 14:33:39 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,538
+Fri Jan 12 14:35:15 AEDT 2018 Fri Jan 12 14:35:15 AEDT 2018 : org.apache.commons.lang3.builder.HashCodeBuilder,539=>Find no block
+Fri Jan 12 14:35:15 AEDT 2018 Fri Jan 12 14:35:15 AEDT 2018 : org.apache.commons.lang3.builder.IDKey,40=>Find no block
+Fri Jan 12 14:35:15 AEDT 2018 org.apache.commons.lang3.builder.IDKey,42
+Fri Jan 12 14:36:38 AEDT 2018 org.apache.commons.lang3.builder.IDKey,46
+Fri Jan 12 14:36:38 AEDT 2018 Fri Jan 12 14:36:38 AEDT 2018 : org.apache.commons.lang3.builder.IDKey,47=>Find no block
+Fri Jan 12 14:36:38 AEDT 2018 org.apache.commons.lang3.builder.IDKey,55
+Fri Jan 12 14:36:39 AEDT 2018 org.apache.commons.lang3.builder.IDKey,65
+Fri Jan 12 14:37:53 AEDT 2018 org.apache.commons.lang3.builder.IDKey,68
+Fri Jan 12 14:44:58 AEDT 2018 org.apache.commons.lang3.builder.IDKey,69
+Fri Jan 12 14:44:58 AEDT 2018 org.apache.commons.lang3.builder.IDKey,73
+Fri Jan 12 14:44:58 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,359
+Fri Jan 12 14:44:59 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,356
+Fri Jan 12 14:44:59 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,883
+Fri Jan 12 14:45:00 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,855
+Fri Jan 12 15:41:42 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,859
+Fri Jan 12 15:41:42 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,886
+Fri Jan 12 15:43:15 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,585
+Fri Jan 12 15:44:05 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,588
+Fri Jan 12 15:44:44 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,591
+Fri Jan 12 15:46:19 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,592
+Fri Jan 12 15:46:19 AEDT 2018 Fri Jan 12 15:46:19 AEDT 2018 : org.apache.commons.lang3.builder.HashCodeBuilder,593=>Find no block
+Fri Jan 12 15:46:20 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,966
+Fri Jan 12 15:46:21 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,582
+Fri Jan 12 15:47:45 AEDT 2018 Fri Jan 12 15:47:45 AEDT 2018 : org.apache.commons.lang3.builder.HashCodeBuilder,549=>Find no block
+Fri Jan 12 15:47:45 AEDT 2018 Fri Jan 12 15:47:45 AEDT 2018 : org.apache.commons.lang3.builder.HashCodeBuilder,578=>Find no block
+Fri Jan 12 15:47:45 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,579
+Fri Jan 12 15:49:56 AEDT 2018 org.apache.commons.lang3.ArrayUtils,144
+Fri Jan 12 15:49:58 AEDT 2018 Fri Jan 12 15:49:58 AEDT 2018 : org.apache.commons.lang3.ArrayUtils,145=>Find no block
+Fri Jan 12 15:49:58 AEDT 2018 org.apache.commons.lang3.ArrayUtils,161
+Fri Jan 12 15:51:49 AEDT 2018 org.apache.commons.lang3.ArrayUtils,177
+Fri Jan 12 15:53:17 AEDT 2018 org.apache.commons.lang3.ArrayUtils,178
+Fri Jan 12 15:53:17 AEDT 2018 org.apache.commons.lang3.ArrayUtils,180
+Fri Jan 12 15:56:51 AEDT 2018 org.apache.commons.lang3.ArrayUtils,194
+Fri Jan 12 15:56:53 AEDT 2018 org.apache.commons.lang3.ArrayUtils,225
+Fri Jan 12 15:56:54 AEDT 2018 org.apache.commons.lang3.ArrayUtils,226
+Fri Jan 12 15:56:54 AEDT 2018 org.apache.commons.lang3.ArrayUtils,228
+Fri Jan 12 16:02:13 AEDT 2018 org.apache.commons.lang3.ArrayUtils,229
+Timeout time : 18/01/12 16:36
+Current failed test : org.apache.commons.lang3.builder.HashCodeBuilderTest::testReflectionObjectCycle_purify_2 | 18/01/12 16:36
+Fri Jan 12 16:37:00 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,174
+Fri Jan 12 16:38:34 AEDT 2018 Fri Jan 12 16:38:34 AEDT 2018 : org.apache.commons.lang3.builder.HashCodeBuilder,107=>Find no block
+Fri Jan 12 16:38:35 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,400
+Fri Jan 12 16:38:45 AEDT 2018 org.apache.commons.lang3.ArrayUtils,1627
+Fri Jan 12 16:40:00 AEDT 2018 org.apache.commons.lang3.ArrayUtils,1645
+Fri Jan 12 16:40:48 AEDT 2018 org.apache.commons.lang3.ArrayUtils,1646
+Fri Jan 12 16:40:49 AEDT 2018 org.apache.commons.lang3.ArrayUtils,1730
+Fri Jan 12 16:41:28 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,137
+Fri Jan 12 16:42:06 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,152
+Fri Jan 12 16:43:28 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,173
+Fri Jan 12 16:43:28 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,177
+Fri Jan 12 16:45:31 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,178
+Fri Jan 12 16:45:32 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,179
+Fri Jan 12 16:56:56 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,180
+Fri Jan 12 16:56:56 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,181
+Fri Jan 12 16:56:57 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,186
+Fri Jan 12 16:56:57 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,187
+Fri Jan 12 16:56:57 AEDT 2018 Fri Jan 12 16:56:57 AEDT 2018 : org.apache.commons.lang3.builder.HashCodeBuilder,192=>Find no block
+Fri Jan 12 16:56:58 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,196
+Fri Jan 12 16:56:59 AEDT 2018 Fri Jan 12 16:56:59 AEDT 2018 : org.apache.commons.lang3.builder.HashCodeBuilder,197=>Find no block
+Fri Jan 12 16:56:59 AEDT 2018 Fri Jan 12 16:56:59 AEDT 2018 : org.apache.commons.lang3.builder.HashCodeBuilder,198=>Find no block
+Fri Jan 12 16:57:00 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,360
+Fri Jan 12 17:05:02 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,361
+Fri Jan 12 17:05:02 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,362
+Fri Jan 12 17:05:03 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,363
+Fri Jan 12 17:05:03 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,364
+Fri Jan 12 17:05:03 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,366
+Fri Jan 12 17:05:03 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,522
+Fri Jan 12 17:06:43 AEDT 2018 Fri Jan 12 17:06:43 AEDT 2018 : org.apache.commons.lang3.builder.HashCodeBuilder,523=>Find no block
+Fri Jan 12 17:06:43 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,538
+Fri Jan 12 17:08:25 AEDT 2018 Fri Jan 12 17:08:25 AEDT 2018 : org.apache.commons.lang3.builder.HashCodeBuilder,539=>Find no block
+Fri Jan 12 17:08:26 AEDT 2018 Fri Jan 12 17:08:26 AEDT 2018 : org.apache.commons.lang3.builder.IDKey,40=>Find no block
+Fri Jan 12 17:08:28 AEDT 2018 org.apache.commons.lang3.builder.IDKey,42
+Fri Jan 12 17:10:00 AEDT 2018 org.apache.commons.lang3.builder.IDKey,46
+Fri Jan 12 17:10:00 AEDT 2018 Fri Jan 12 17:10:00 AEDT 2018 : org.apache.commons.lang3.builder.IDKey,47=>Find no block
+Fri Jan 12 17:10:00 AEDT 2018 org.apache.commons.lang3.builder.IDKey,55
+Fri Jan 12 17:10:02 AEDT 2018 org.apache.commons.lang3.builder.IDKey,65
+Fri Jan 12 17:11:22 AEDT 2018 org.apache.commons.lang3.builder.IDKey,68
+Fri Jan 12 17:18:43 AEDT 2018 org.apache.commons.lang3.builder.IDKey,69
+Fri Jan 12 17:18:44 AEDT 2018 org.apache.commons.lang3.builder.IDKey,73
+Fri Jan 12 17:18:44 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,359
+Fri Jan 12 17:18:45 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,356
+Fri Jan 12 17:18:46 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,883
+Fri Jan 12 17:18:48 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,855
+Fri Jan 12 18:17:02 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,859
+Fri Jan 12 18:17:02 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,886
+Fri Jan 12 18:18:36 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,585
+Fri Jan 12 18:19:30 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,588
+Fri Jan 12 18:20:10 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,591
+Fri Jan 12 18:21:50 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,592
+Fri Jan 12 18:21:51 AEDT 2018 Fri Jan 12 18:21:51 AEDT 2018 : org.apache.commons.lang3.builder.HashCodeBuilder,593=>Find no block
+Fri Jan 12 18:21:51 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,966
+Fri Jan 12 18:21:52 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,582
+Fri Jan 12 18:23:17 AEDT 2018 Fri Jan 12 18:23:17 AEDT 2018 : org.apache.commons.lang3.builder.HashCodeBuilder,549=>Find no block
+Fri Jan 12 18:23:17 AEDT 2018 Fri Jan 12 18:23:17 AEDT 2018 : org.apache.commons.lang3.builder.HashCodeBuilder,578=>Find no block
+Fri Jan 12 18:23:18 AEDT 2018 org.apache.commons.lang3.builder.HashCodeBuilder,579
+Fri Jan 12 18:25:33 AEDT 2018 org.apache.commons.lang3.ArrayUtils,144
+Fri Jan 12 18:25:34 AEDT 2018 Fri Jan 12 18:25:34 AEDT 2018 : org.apache.commons.lang3.ArrayUtils,145=>Find no block
+Fri Jan 12 18:25:34 AEDT 2018 org.apache.commons.lang3.ArrayUtils,161
+Fri Jan 12 18:27:28 AEDT 2018 org.apache.commons.lang3.ArrayUtils,177
+Fri Jan 12 18:29:00 AEDT 2018 org.apache.commons.lang3.ArrayUtils,178
+Fri Jan 12 18:29:01 AEDT 2018 org.apache.commons.lang3.ArrayUtils,180
+Fri Jan 12 18:32:45 AEDT 2018 org.apache.commons.lang3.ArrayUtils,194
+Fri Jan 12 18:32:47 AEDT 2018 org.apache.commons.lang3.ArrayUtils,225
+Fri Jan 12 18:32:51 AEDT 2018 org.apache.commons.lang3.ArrayUtils,226
+Fri Jan 12 18:32:51 AEDT 2018 org.apache.commons.lang3.ArrayUtils,228
+Fri Jan 12 18:38:20 AEDT 2018 org.apache.commons.lang3.ArrayUtils,229
+Timeout time : 18/01/12 19:07

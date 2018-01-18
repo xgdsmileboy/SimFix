@@ -1,0 +1,106 @@
+=================================================
+Project : math_45	start : 18/01/14 12:33
+Current failed test : org.apache.commons.math.linear.OpenMapRealMatrixTest::testMath679 | 18/01/14 12:34
+Sun Jan 14 12:37:47 AEDT 2018 org.apache.commons.math.linear.OpenMapRealMatrix,49
+Sun Jan 14 12:43:56 AEDT 2018 org.apache.commons.math.linear.OpenMapRealMatrix,50
+Sun Jan 14 12:44:01 AEDT 2018 org.apache.commons.math.linear.OpenMapRealMatrix,51
+Sun Jan 14 12:44:07 AEDT 2018 org.apache.commons.math.linear.OpenMapRealMatrix,52
+Sun Jan 14 12:44:13 AEDT 2018 Sun Jan 14 12:44:13 AEDT 2018 : org.apache.commons.math.linear.OpenMapRealMatrix,53=>Find no block
+Sun Jan 14 12:44:19 AEDT 2018 org.apache.commons.math.linear.AbstractRealMatrix,57
+Sun Jan 14 12:45:37 AEDT 2018 Sun Jan 14 12:45:37 AEDT 2018 : org.apache.commons.math.linear.AbstractRealMatrix,60=>Find no block
+Sun Jan 14 12:45:43 AEDT 2018 Sun Jan 14 12:45:43 AEDT 2018 : org.apache.commons.math.linear.AbstractRealMatrix,53=>Find no block
+Sun Jan 14 12:45:51 AEDT 2018 org.apache.commons.math.linear.AbstractRealMatrix,54
+Sun Jan 14 12:47:49 AEDT 2018 Sun Jan 14 12:47:49 AEDT 2018 : org.apache.commons.math.linear.RealLinearOperator,52=>Find no block
+Sun Jan 14 12:47:57 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,50
+Sun Jan 14 12:48:16 AEDT 2018 Sun Jan 14 12:48:16 AEDT 2018 : org.apache.commons.math.exception.NumberIsTooSmallException,54=>Find no block
+Sun Jan 14 12:48:24 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,68
+Sun Jan 14 12:50:59 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,70
+Sun Jan 14 12:51:05 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,71
+Sun Jan 14 12:51:13 AEDT 2018 Sun Jan 14 12:51:13 AEDT 2018 : org.apache.commons.math.exception.NumberIsTooSmallException,72=>Find no block
+Sun Jan 14 12:51:20 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,78
+Sun Jan 14 12:51:38 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,85
+Sun Jan 14 12:51:54 AEDT 2018 org.apache.commons.math.exception.MathIllegalNumberException,46
+Sun Jan 14 12:54:09 AEDT 2018 org.apache.commons.math.exception.MathIllegalNumberException,47
+Sun Jan 14 12:54:16 AEDT 2018 Sun Jan 14 12:54:16 AEDT 2018 : org.apache.commons.math.exception.MathIllegalNumberException,48=>Find no block
+Sun Jan 14 12:54:24 AEDT 2018 org.apache.commons.math.exception.MathIllegalNumberException,54
+Sun Jan 14 12:54:43 AEDT 2018 Sun Jan 14 12:54:43 AEDT 2018 : org.apache.commons.math.exception.MathIllegalArgumentException,44=>Find no block
+Sun Jan 14 12:54:49 AEDT 2018 org.apache.commons.math.exception.MathIllegalArgumentException,45
+Sun Jan 14 12:55:29 AEDT 2018 org.apache.commons.math.exception.MathIllegalArgumentException,46
+Sun Jan 14 12:55:36 AEDT 2018 Sun Jan 14 12:55:36 AEDT 2018 : org.apache.commons.math.exception.MathIllegalArgumentException,47=>Find no block
+Sun Jan 14 12:55:43 AEDT 2018 org.apache.commons.math.exception.MathIllegalArgumentException,51
+Sun Jan 14 12:56:00 AEDT 2018 org.apache.commons.math.exception.MathIllegalArgumentException,57
+Sun Jan 14 12:57:11 AEDT 2018 org.apache.commons.math.exception.MathIllegalArgumentException,63
+Sun Jan 14 12:58:17 AEDT 2018 Sun Jan 14 12:58:17 AEDT 2018 : org.apache.commons.math.exception.util.ExceptionContext,64=>Find no block
+Sun Jan 14 12:58:24 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,65
+Sun Jan 14 12:58:39 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,66
+Sun Jan 14 12:58:45 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,67
+Sun Jan 14 12:58:50 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,68
+Sun Jan 14 12:58:56 AEDT 2018 Sun Jan 14 12:58:56 AEDT 2018 : org.apache.commons.math.exception.util.ExceptionContext,69=>Find no block
+Sun Jan 14 12:59:01 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,75
+Sun Jan 14 12:59:20 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,87
+Sun Jan 14 13:03:25 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,88
+Sun Jan 14 13:03:31 AEDT 2018 Sun Jan 14 13:03:31 AEDT 2018 : org.apache.commons.math.exception.util.ExceptionContext,89=>Find no block
+Sun Jan 14 13:03:37 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,100
+Sun Jan 14 13:06:15 AEDT 2018 Sun Jan 14 13:06:15 AEDT 2018 : org.apache.commons.math.exception.util.ExceptionContext,101=>Find no block
+Sun Jan 14 13:06:22 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,110
+Sun Jan 14 13:08:01 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,119
+Sun Jan 14 13:08:18 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,128
+Sun Jan 14 13:09:44 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,137
+Sun Jan 14 13:11:31 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,147
+Sun Jan 14 13:11:48 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,159
+Sun Jan 14 13:12:53 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,171
+Sun Jan 14 13:14:59 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,172
+Sun Jan 14 13:15:06 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,173
+Sun Jan 14 13:55:14 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,174
+Sun Jan 14 13:55:21 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,175
+Sun Jan 14 13:55:30 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,176
+Sun Jan 14 13:55:38 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,177
+Sun Jan 14 13:55:46 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,179
+Sun Jan 14 13:55:55 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,180
+Sun Jan 14 13:56:04 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,182
+Sun Jan 14 13:56:12 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,186
+Sun Jan 14 14:19:14 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,197
+Sun Jan 14 14:19:55 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,198
+Sun Jan 14 14:20:03 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,199
+Sun Jan 14 14:20:09 AEDT 2018 Sun Jan 14 14:20:09 AEDT 2018 : org.apache.commons.math.exception.util.ExceptionContext,200=>Find no block
+Sun Jan 14 14:20:15 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,211
+Sun Jan 14 14:24:06 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,212
+Sun Jan 14 14:24:14 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,213
+Sun Jan 14 14:24:20 AEDT 2018 Sun Jan 14 14:24:20 AEDT 2018 : org.apache.commons.math.exception.util.ExceptionContext,214=>Find no block
+Sun Jan 14 14:24:27 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,225
+Sun Jan 14 14:30:47 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,226
+Sun Jan 14 14:30:54 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,228
+Sun Jan 14 15:14:25 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,229
+Sun Jan 14 15:22:33 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,231
+Sun Jan 14 15:22:38 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,232
+Sun Jan 14 15:39:23 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,233
+Sun Jan 14 15:57:21 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,235
+Sun Jan 14 16:28:24 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,236
+Sun Jan 14 16:28:32 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,237
+Sun Jan 14 16:28:39 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,239
+Sun Jan 14 16:28:46 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,242
+Sun Jan 14 16:28:53 AEDT 2018 Sun Jan 14 16:28:53 AEDT 2018 : org.apache.commons.math.exception.util.ExceptionContext,246=>Find no block
+Sun Jan 14 16:28:59 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,259
+Sun Jan 14 16:31:36 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,260
+Sun Jan 14 16:31:43 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,261
+Sun Jan 14 17:24:21 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,263
+Sun Jan 14 17:24:27 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,265
+Sun Jan 14 17:24:35 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,266
+Sun Jan 14 17:24:41 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,268
+Sun Jan 14 17:24:49 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,269
+Sun Jan 14 17:24:56 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,270
+Sun Jan 14 17:25:02 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,272
+Sun Jan 14 17:25:09 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,274
+Sun Jan 14 17:25:15 AEDT 2018 Sun Jan 14 17:25:15 AEDT 2018 : org.apache.commons.math.exception.util.ExceptionContext,276=>Find no block
+Sun Jan 14 17:25:21 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,287
+Sun Jan 14 17:33:40 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,288
+Sun Jan 14 17:33:46 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,289
+Sun Jan 14 17:33:52 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,291
+Sun Jan 14 17:33:59 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,292
+Sun Jan 14 17:34:06 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,293
+Sun Jan 14 17:34:12 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,295
+Sun Jan 14 17:34:19 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,298
+Sun Jan 14 17:34:25 AEDT 2018 Sun Jan 14 17:34:25 AEDT 2018 : org.apache.commons.math.exception.util.ExceptionContext,300=>Find no block
+Sun Jan 14 17:34:31 AEDT 2018 Sun Jan 14 17:34:31 AEDT 2018 : org.apache.commons.math.exception.util.ExceptionContext,301=>Find no block
+Sun Jan 14 17:34:37 AEDT 2018 org.apache.commons.math.exception.util.ExceptionContext,314
+Timeout time : 18/01/14 17:37

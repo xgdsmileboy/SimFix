@@ -1,0 +1,72 @@
+=================================================
+Project : math_65	start : 18/01/15 06:53
+Current failed test : org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerTest::testCircleFitting_purify_5 | 18/01/15 06:54
+Mon Jan 15 06:54:36 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,255
+Mon Jan 15 07:00:41 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,256
+Mon Jan 15 07:13:26 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,257
+Mon Jan 15 07:13:26 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,258
+Mon Jan 15 07:13:26 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,260
+Mon Jan 15 07:13:26 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,317
+Mon Jan 15 07:42:36 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,318
+Mon Jan 15 07:42:36 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,319
+Mon Jan 15 07:42:36 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,320
+Mon Jan 15 07:42:36 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,321
+Mon Jan 15 07:42:36 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,323
+Mon Jan 15 07:42:36 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,312
+Mon Jan 15 07:42:36 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,294
+Mon Jan 15 07:42:38 EST 2018 Mon Jan 15 07:42:38 EST 2018 : org.apache.commons.math.linear.Array2DRowRealMatrix,115=>Find no block
+Mon Jan 15 07:42:38 EST 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,116
+Mon Jan 15 08:11:29 EST 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,119
+Mon Jan 15 08:11:29 EST 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,122
+Mon Jan 15 08:21:53 EST 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,123
+Mon Jan 15 08:21:53 EST 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,127
+Mon Jan 15 08:34:07 EST 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,128
+Mon Jan 15 08:34:07 EST 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,132
+Mon Jan 15 08:34:07 EST 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,133
+Mon Jan 15 08:34:07 EST 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,138
+Mon Jan 15 08:38:30 EST 2018 Mon Jan 15 08:38:30 EST 2018 : org.apache.commons.math.linear.Array2DRowRealMatrix,140=>Find no block
+Mon Jan 15 08:38:30 EST 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,355
+Mon Jan 15 08:38:32 EST 2018 org.apache.commons.math.linear.LUDecompositionImpl,371
+Mon Jan 15 08:42:23 EST 2018 org.apache.commons.math.linear.LUDecompositionImpl,374
+Mon Jan 15 09:14:06 EST 2018 org.apache.commons.math.linear.LUDecompositionImpl,375
+Mon Jan 15 09:14:06 EST 2018 org.apache.commons.math.linear.LUDecompositionImpl,376
+Mon Jan 15 09:14:07 EST 2018 org.apache.commons.math.linear.LUDecompositionImpl,377
+Mon Jan 15 09:14:07 EST 2018 org.apache.commons.math.linear.LUDecompositionImpl,378
+Mon Jan 15 09:14:07 EST 2018 org.apache.commons.math.linear.LUDecompositionImpl,379
+Mon Jan 15 09:14:07 EST 2018 org.apache.commons.math.linear.LUDecompositionImpl,384
+Timeout time : 18/01/15 09:24
+Current failed test : org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerTest::testCircleFitting_purify_6 | 18/01/15 09:24
+Mon Jan 15 09:24:59 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,255
+Mon Jan 15 09:31:08 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,256
+Mon Jan 15 09:44:00 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,257
+Mon Jan 15 09:44:00 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,258
+Mon Jan 15 09:44:00 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,260
+Mon Jan 15 09:44:00 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,317
+Mon Jan 15 10:13:11 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,318
+Mon Jan 15 10:13:11 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,319
+Mon Jan 15 10:13:11 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,320
+Mon Jan 15 10:13:11 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,321
+Mon Jan 15 10:13:11 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,323
+Mon Jan 15 10:13:12 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,312
+Mon Jan 15 10:13:12 EST 2018 org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer,294
+Mon Jan 15 10:13:13 EST 2018 Mon Jan 15 10:13:13 EST 2018 : org.apache.commons.math.linear.Array2DRowRealMatrix,115=>Find no block
+Mon Jan 15 10:13:13 EST 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,116
+Mon Jan 15 10:42:02 EST 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,119
+Mon Jan 15 10:42:02 EST 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,122
+Mon Jan 15 10:52:26 EST 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,123
+Mon Jan 15 10:52:26 EST 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,127
+Mon Jan 15 11:04:39 EST 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,128
+Mon Jan 15 11:04:39 EST 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,132
+Mon Jan 15 11:04:39 EST 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,133
+Mon Jan 15 11:04:39 EST 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,138
+Mon Jan 15 11:09:02 EST 2018 Mon Jan 15 11:09:02 EST 2018 : org.apache.commons.math.linear.Array2DRowRealMatrix,140=>Find no block
+Mon Jan 15 11:09:02 EST 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,355
+Mon Jan 15 11:09:04 EST 2018 org.apache.commons.math.linear.LUDecompositionImpl,371
+Mon Jan 15 11:12:54 EST 2018 org.apache.commons.math.linear.LUDecompositionImpl,374
+Mon Jan 15 11:44:37 EST 2018 org.apache.commons.math.linear.LUDecompositionImpl,375
+Mon Jan 15 11:44:37 EST 2018 org.apache.commons.math.linear.LUDecompositionImpl,376
+Mon Jan 15 11:44:37 EST 2018 org.apache.commons.math.linear.LUDecompositionImpl,377
+Mon Jan 15 11:44:37 EST 2018 org.apache.commons.math.linear.LUDecompositionImpl,378
+Mon Jan 15 11:44:37 EST 2018 org.apache.commons.math.linear.LUDecompositionImpl,379
+Mon Jan 15 11:44:37 EST 2018 org.apache.commons.math.linear.LUDecompositionImpl,384
+Timeout time : 18/01/15 11:55

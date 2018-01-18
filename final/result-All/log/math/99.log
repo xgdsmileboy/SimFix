@@ -1,0 +1,439 @@
+=================================================
+Project : math_99	start : 18/01/12 17:24
+Current failed test : org.apache.commons.math.util.MathUtilsTest::testGcd_purify_18 | 18/01/12 17:25
+Fri Jan 12 17:26:29 AEDT 2018 org.apache.commons.math.util.MathUtils,543
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((u==0)&&(v==0)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/12 17:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((v+1>=q)&&(v==0)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/12 17:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(v<u&&Math.abs(SAFE_MIN-SAFE_MIN)>SAFE_MIN){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/12 17:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(v<u&&Math.abs(SAFE_MIN-SAFE_MIN)>SAFE_MIN||(v==0)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/12 17:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((v<u&&Math.abs(SAFE_MIN-SAFE_MIN)>SAFE_MIN)||(v==0)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/12 18:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((Math.abs(SAFE_MIN-SAFE_MIN)>SAFE_MIN)||(v==0)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/12 18:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(v<u&&Math.abs(SAFE_MIN-SAFE_MIN)>SAFE_MIN&&(v==0)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/12 18:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((v<u&&Math.abs(SAFE_MIN-SAFE_MIN)>SAFE_MIN)&&(v==0)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/12 18:39
+----------------------------------------
+Timeout time : 18/01/12 18:49
+Current failed test : org.apache.commons.math.util.MathUtilsTest::testGcd_purify_19 | 18/01/12 18:49
+Fri Jan 12 18:50:16 AEDT 2018 org.apache.commons.math.util.MathUtils,543
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((u==0)||((SAFE_MIN-u)<SAFE_MIN)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/12 18:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((u==0)&&(v==0)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/12 19:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((u==0)&&(Math.abs(SAFE_MIN-SAFE_MIN)<=Math.max(SAFE_MIN,SAFE_MIN*(Math.abs(SAFE_MIN)+Math.abs(SAFE_MIN))))){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/12 19:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((u==0)&&(Math.abs(SAFE_MIN-SAFE_MIN)<=SAFE_MIN)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/12 19:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(v<u&&Math.abs(SAFE_MIN-SAFE_MIN)>SAFE_MIN){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/12 19:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(v<u&&Math.abs(SAFE_MIN-SAFE_MIN)>SAFE_MIN&&(v==0)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/12 19:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((v<u&&Math.abs(SAFE_MIN-SAFE_MIN)>SAFE_MIN)&&(v==0)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/12 19:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((v<u)&&(v==0)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/12 20:03
+----------------------------------------
+Timeout time : 18/01/12 20:13
+Current failed test : org.apache.commons.math.util.MathUtilsTest::testLcm_purify_13 | 18/01/12 20:13
+Fri Jan 12 20:14:56 AEDT 2018 org.apache.commons.math.util.MathUtils,714
+Fri Jan 12 20:23:55 AEDT 2018 org.apache.commons.math.util.MathUtils,713
+Fri Jan 12 20:23:59 AEDT 2018 org.apache.commons.math.util.MathUtils,710
+Fri Jan 12 20:24:09 AEDT 2018 org.apache.commons.math.util.MathUtils,752
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=(long)x-(long)y;
+if(m<Integer.MIN_VALUE||m>Integer.MAX_VALUE){
+throw new ArithmeticException("overflow: mul");
+}
+return (int)m;
+
+Time : 18/01/12 20:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=(long)x-(long)y;
+if(m<Integer.MIN_VALUE||m>Integer.MAX_VALUE){
+throw new ArithmeticException("overflow: subtract");
+}
+return (int)m;
+
+Time : 18/01/12 20:27
+----------------------------------------
+Fri Jan 12 20:28:13 AEDT 2018 org.apache.commons.math.util.MathUtils,748
+Fri Jan 12 20:28:16 AEDT 2018 org.apache.commons.math.util.MathUtils,749
+Fri Jan 12 20:28:25 AEDT 2018 org.apache.commons.math.util.MathUtils,578
+Fri Jan 12 20:29:45 AEDT 2018 org.apache.commons.math.util.MathUtils,582
+Fri Jan 12 20:43:48 AEDT 2018 org.apache.commons.math.util.MathUtils,554
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(v>0){
+v+=-v;
+}
+
+Time : 18/01/12 20:45
+----------------------------------------
+Fri Jan 12 20:56:03 AEDT 2018 org.apache.commons.math.util.MathUtils,571
+Fri Jan 12 21:06:56 AEDT 2018 org.apache.commons.math.util.MathUtils,577
+Fri Jan 12 21:06:58 AEDT 2018 org.apache.commons.math.util.MathUtils,581
+Fri Jan 12 21:07:02 AEDT 2018 org.apache.commons.math.util.MathUtils,587
+Fri Jan 12 21:07:37 AEDT 2018 org.apache.commons.math.util.MathUtils,590
+Fri Jan 12 21:07:40 AEDT 2018 org.apache.commons.math.util.MathUtils,591
+Fri Jan 12 21:10:58 AEDT 2018 org.apache.commons.math.util.MathUtils,550
+Fri Jan 12 21:11:26 AEDT 2018 org.apache.commons.math.util.MathUtils,553
+Fri Jan 12 21:11:29 AEDT 2018 org.apache.commons.math.util.MathUtils,557
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(v>0){
+v+=-v;
+}
+int k=0;
+while((u&1)==0&&(v&1)==0&&k<31){
+u/=2;
+v/=2;
+k++;
+}
+
+Time : 18/01/12 21:27
+----------------------------------------
+Timeout time : 18/01/12 21:37
+Current failed test : org.apache.commons.math.util.MathUtilsTest::testLcm_purify_14 | 18/01/12 21:37
+Fri Jan 12 21:38:46 AEDT 2018 org.apache.commons.math.util.MathUtils,714
+Fri Jan 12 21:47:46 AEDT 2018 org.apache.commons.math.util.MathUtils,713
+Fri Jan 12 21:47:50 AEDT 2018 org.apache.commons.math.util.MathUtils,710
+Fri Jan 12 21:47:57 AEDT 2018 org.apache.commons.math.util.MathUtils,752
+Fri Jan 12 21:50:36 AEDT 2018 org.apache.commons.math.util.MathUtils,748
+Fri Jan 12 21:50:39 AEDT 2018 org.apache.commons.math.util.MathUtils,749
+Fri Jan 12 21:50:47 AEDT 2018 org.apache.commons.math.util.MathUtils,560
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+while((u&1)==0&&(v&1)==0&&k<31){
+v/=2;
+v/=2;
+k++;
+}
+
+Time : 18/01/12 21:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+while((u&1)==0&&(v&1)==0&&k<31){
+v/=-q;
+v/=2;
+k++;
+}
+
+Time : 18/01/12 21:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+while((u&1)==0&&(v&1)==0&&k<31){
+v=-q;
+v/=2;
+k++;
+}
+
+Time : 18/01/12 21:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+while((u&1)==0&&(v&1)==0&&k<31){
+u/=2;
+u/=2;
+k++;
+}
+
+Time : 18/01/12 22:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+while((u&1)==0&&(v&1)==0&&k<31){
+u/=2;
+v>>=2;
+k++;
+}
+
+Time : 18/01/12 22:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+while((u&1)==0&&(v&1)==0&&k<31){
+v-=2;
+v/=2;
+k++;
+}
+
+Time : 18/01/12 22:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+while((u&1)==0&&(v&1)==0&&k<31){
+v/=2;
+v>>=2;
+k++;
+}
+
+Time : 18/01/12 22:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+while((u&1)==0&&(v&1)==0&&k<31){
+u-=2;
+v>>=2;
+k++;
+}
+
+Time : 18/01/12 22:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+while((u&1)==0&&(v&1)==0&&k<31){
+u/=2;
+u>>=2;
+k++;
+}
+
+Time : 18/01/12 22:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+while((u&1)==0&&(v&1)==0&&k<31){
+v-=2;
+u/=2;
+k++;
+}
+
+Time : 18/01/12 22:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+while((u&1)==0&&(v&1)==0&&k<31){
+v-=2;
+v>>=2;
+k++;
+}
+
+Time : 18/01/12 22:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+while((u&1)==0&&(v&1)==0&&k<31){
+v/=2;
+u>>=2;
+k++;
+}
+
+Time : 18/01/12 22:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+while((u&1)==0&&(v&1)==0&&k<31){
+v-=2;
+u>>=2;
+k++;
+}
+
+Time : 18/01/12 22:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+while((u&1)==0&&(v&1)==0&&k<31){
+u/=2;
+v=2;
+k++;
+}
+
+Time : 18/01/12 22:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+while((u&1)==0&&(v&1)==0&&k<31){
+u=2;
+v=2;
+k++;
+}
+
+Time : 18/01/12 22:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+while((u&1)==0&&(v&1)==0&&k<31){
+u/=2;
+v+=2;
+k++;
+}
+
+Time : 18/01/12 22:46
+----------------------------------------
+Timeout time : 18/01/12 22:56

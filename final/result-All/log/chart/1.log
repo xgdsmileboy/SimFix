@@ -1,0 +1,95 @@
+=================================================
+Project : chart_1	start : 18/01/12 19:28
+Current failed test : org.jfree.chart.renderer.category.junit.AbstractCategoryItemRendererTests::test2947660 | 18/01/12 19:29
+Fri Jan 12 19:31:13 AEDT 2018 org.jfree.chart.renderer.category.AbstractCategoryItemRenderer,1793
+Fri Jan 12 19:33:29 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1613
+Fri Jan 12 19:34:11 AEDT 2018 Fri Jan 12 19:34:11 AEDT 2018 : org.jfree.chart.plot.CategoryPlot,1614=>Find no block
+Fri Jan 12 19:34:13 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1665
+Fri Jan 12 20:10:59 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1667
+Fri Jan 12 20:12:21 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1672
+Fri Jan 12 20:27:35 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1673
+Fri Jan 12 20:27:36 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1674
+Fri Jan 12 20:27:38 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1675
+Fri Jan 12 20:27:40 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1678
+Fri Jan 12 20:32:18 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1679
+Fri Jan 12 20:38:22 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1681
+Fri Jan 12 20:54:49 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1682
+Fri Jan 12 20:54:50 AEDT 2018 Fri Jan 12 20:54:50 AEDT 2018 : org.jfree.chart.plot.CategoryPlot,1684=>Find no block
+Fri Jan 12 20:54:51 AEDT 2018 org.jfree.chart.plot.CategoryPlot,567
+Fri Jan 12 20:54:57 AEDT 2018 Fri Jan 12 20:54:57 AEDT 2018 : org.jfree.chart.plot.CategoryPlot,568=>Find no block
+Fri Jan 12 20:54:58 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1339
+Fri Jan 12 20:55:37 AEDT 2018 Fri Jan 12 20:55:37 AEDT 2018 : org.jfree.chart.plot.CategoryPlot,1340=>Find no block
+Fri Jan 12 20:55:39 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1358
+Fri Jan 12 21:01:12 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1045
+Fri Jan 12 21:41:54 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1046
+Fri Jan 12 21:41:55 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1352
+Fri Jan 12 22:44:14 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1353
+Fri Jan 12 22:44:15 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1356
+Fri Jan 12 22:44:17 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1357
+Fri Jan 12 22:44:18 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1362
+Fri Jan 12 22:44:20 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1365
+Fri Jan 12 22:44:22 AEDT 2018 Fri Jan 12 22:44:22 AEDT 2018 : org.jfree.chart.plot.CategoryPlot,1367=>Find no block
+Fri Jan 12 22:44:24 AEDT 2018 org.jfree.chart.renderer.category.LineAndShapeRenderer,201
+Fri Jan 12 22:44:29 AEDT 2018 Fri Jan 12 22:44:29 AEDT 2018 : org.jfree.chart.renderer.category.LineAndShapeRenderer,202=>Find no block
+Fri Jan 12 22:44:31 AEDT 2018 Fri Jan 12 22:44:31 AEDT 2018 : org.jfree.chart.util.SortOrder,74=>Find no block
+Fri Jan 12 22:44:32 AEDT 2018 org.jfree.chart.util.SortOrder,75
+Fri Jan 12 22:45:44 AEDT 2018 Fri Jan 12 22:45:44 AEDT 2018 : org.jfree.chart.util.SortOrder,76=>Find no block
+Fri Jan 12 22:45:46 AEDT 2018 Fri Jan 12 22:45:46 AEDT 2018 : org.jfree.chart.axis.CategoryAnchor,75=>Find no block
+Fri Jan 12 22:45:48 AEDT 2018 org.jfree.chart.axis.CategoryAnchor,76
+Fri Jan 12 22:45:49 AEDT 2018 Fri Jan 12 22:45:49 AEDT 2018 : org.jfree.chart.axis.CategoryAnchor,77=>Find no block
+Fri Jan 12 22:45:51 AEDT 2018 org.jfree.chart.plot.CategoryPlot,1727
+Fri Jan 12 22:46:27 AEDT 2018 org.jfree.chart.renderer.category.AbstractCategoryItemRenderer,1791
+Fri Jan 12 22:50:57 AEDT 2018 org.jfree.chart.renderer.category.AbstractCategoryItemRenderer,1792
+Fri Jan 12 22:50:58 AEDT 2018 org.jfree.chart.renderer.category.AbstractCategoryItemRenderer,1795
+Fri Jan 12 23:11:20 AEDT 2018 org.jfree.chart.renderer.category.AbstractCategoryItemRenderer,1796
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int index=this.plot.getIndexOf(this);
+CategoryDataset dataset=this.plot.getDataset(index);
+if(dataset==null){
+return result;
+}
+
+Time : 18/01/12 23:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.5946799084892447 : [/home/hz985/jiajun/d4j/projects/chart/chart_1_buggy/source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java=>0,0]
+CategoryAnchor anchor=getDomainGridlinePosition();
+RectangleEdge domainAxisEdge=getDomainAxisEdge();
+CategoryDataset dataset=getDataset();
+if(dataset==null){
+return ;
+}
+CategoryAxis axis=getDomainAxis();
+
+Time : 18/01/12 23:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/chart/chart_1_buggy/source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java=>1795,1799]
+int index=this.plot.getIndexOf(this);
+CategoryDataset dataset=this.plot.getDataset(index);
+if(dataset!=null){
+return result;
+}
+
+Time : 18/01/12 23:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/chart/chart_1_buggy/source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java=>1795,1799]
+int index=this.plot.getIndexOf(this);
+CategoryDataset dataset=this.plot.getDataset(index);
+if(dataset==null){
+return result;
+}
+
+Time : 18/01/12 23:13
+----------------------------------------
+Success time : 18/01/12 23:13

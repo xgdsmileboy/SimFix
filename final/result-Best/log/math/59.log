@@ -1,0 +1,38 @@
+=================================================
+Project : math_59	start : 18/01/14 03:02
+Current failed test : org.apache.commons.math.util.FastMathTest::testMinMaxFloat | 18/01/14 03:03
+Sun Jan 14 03:15:58 AEDT 2018 org.apache.commons.math.util.FastMath,3446
+Sun Jan 14 03:17:10 AEDT 2018 org.apache.commons.math.util.FastMath,3482
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return (a<=b)?b:(Float.isNaN(a+b)?Float.NaN:a);
+
+Time : 18/01/14 03:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.9943661523522511 : [/home/hz985/jiajun/d4j/projects/math/math_59_buggy/src/main/java/org/apache/commons/math/util/FastMath.java=>0,0]
+return (a<=b)?b:(Double.isNaN(a+b)?Double.NaN:a);
+
+Time : 18/01/14 03:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_59_buggy/src/main/java/org/apache/commons/math/util/FastMath.java=>3482,3482]
+return (a<=b)?b:(Float.isNaN(a+b)?Float.NaN:b);
+
+Time : 18/01/14 03:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_59_buggy/src/main/java/org/apache/commons/math/util/FastMath.java=>3482,3482]
+return (a<=b)?b:(Float.isNaN(a+b)?Float.NaN:a);
+
+Time : 18/01/14 03:19
+----------------------------------------
+Success time : 18/01/14 03:19

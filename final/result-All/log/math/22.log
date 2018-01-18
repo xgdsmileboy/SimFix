@@ -1,0 +1,745 @@
+=================================================
+Project : math_22	start : 18/01/12 19:07
+Current failed test : org.apache.commons.math3.distribution.FDistributionTest::testIsSupportLowerBoundInclusive | 18/01/12 19:08
+Fri Jan 12 19:09:41 AEDT 2018 org.apache.commons.math3.distribution.FDistribution,275
+Fri Jan 12 19:09:49 AEDT 2018 org.apache.commons.math3.distribution.UniformRealDistribution,184
+Fri Jan 12 19:09:57 AEDT 2018 org.apache.commons.math3.util.FastMath,1107
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x==0){
+return F_1_4;
+}
+
+Time : 18/01/12 19:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x==0){
+return F_3_4;
+}
+
+Time : 18/01/12 19:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x==0){
+return F_1_2;
+}
+
+Time : 18/01/12 19:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x==0){
+if(E<0||1/E<0){
+return -Math.PI*F_1_2;
+}
+return F_1_2;
+}
+
+Time : 18/01/12 19:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x==0){
+return x;
+}
+
+Time : 18/01/12 19:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x==0){
+return FastMath.sqrt(2.0*E);
+}
+
+Time : 18/01/12 19:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x==0){
+return FastMath.sin(E);
+}
+
+Time : 18/01/12 19:24
+----------------------------------------
+Fri Jan 12 19:27:19 AEDT 2018 org.apache.commons.math3.distribution.FDistribution,129
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log(x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return super.probability(numeratorDegreesOfFreedom,denominatorDegreesOfFreedom);
+
+Time : 18/01/12 19:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log(numeratorDegreesOfFreedom);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 19:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log(numeratorDegreesOfFreedom);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.sqrt(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 19:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log(numeratorDegreesOfFreedom);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.sqrt(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 19:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log(numeratorDegreesOfFreedom);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.exp(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 19:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log(numeratorDegreesOfFreedom);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.sqrt(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.sqrt(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 19:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log(numeratorDegreesOfFreedom);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.sqrt(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.exp(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 19:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log(denominatorDegreesOfFreedom);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 19:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log1p(x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 19:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log1p(-x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 19:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log1p(denominatorDegreesOfFreedom);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 19:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.sqrt(x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 19:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.PI;
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 19:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.exp(x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 19:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=1/(1+FastMath.exp(-x));
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 20:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=random.nextGaussian();
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 20:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log(x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(logm+x*logn);
+
+Time : 18/01/12 20:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=random.nextGaussian();
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(logm+x*logn);
+
+Time : 18/01/12 20:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log(x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(-0.5*logn);
+
+Time : 18/01/12 20:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.abs(x);
+ final double logn=FastMath.abs(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 20:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.abs(x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 20:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.abs(x);
+ final double logn=FastMath.abs(numeratorDegreesOfFreedom);
+ final double logm=FastMath.abs(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 20:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.abs(x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.abs(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 20:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Double.isInfinite(numeratorDegreesOfFreedom)||x==0.0){
+return x;
+}
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log(x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 20:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log(x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.abs(mhalf);
+
+Time : 18/01/12 20:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log(x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.max(mhalf,nhalf);
+
+Time : 18/01/12 20:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.abs(x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.max(mhalf,nhalf);
+
+Time : 18/01/12 20:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log(x);
+ final double logn=FastMath.abs(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.max(mhalf,nhalf);
+
+Time : 18/01/12 20:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.abs(x);
+ final double logn=FastMath.abs(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.max(mhalf,nhalf);
+
+Time : 18/01/12 20:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.sqrt(x);
+ final double logn=FastMath.sqrt(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 20:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/4;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.sqrt(x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 20:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/4;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.sqrt(x);
+ final double logn=FastMath.sqrt(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 20:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.signum(x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 20:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log(x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.max(FastMath.max(mhalf,nhalf),logn);
+
+Time : 18/01/12 20:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.abs(x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.max(FastMath.max(mhalf,nhalf),logn);
+
+Time : 18/01/12 20:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log(x);
+ final double logn=FastMath.abs(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.max(FastMath.max(mhalf,nhalf),logn);
+
+Time : 18/01/12 20:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log(x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.abs(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.max(FastMath.max(mhalf,nhalf),logn);
+
+Time : 18/01/12 20:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.abs(x);
+ final double logn=FastMath.abs(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.max(FastMath.max(mhalf,nhalf),logn);
+
+Time : 18/01/12 20:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.abs(x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.abs(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.max(FastMath.max(mhalf,nhalf),logn);
+
+Time : 18/01/12 20:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log(x);
+ final double logn=FastMath.abs(numeratorDegreesOfFreedom);
+ final double logm=FastMath.abs(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.max(FastMath.max(mhalf,nhalf),logn);
+
+Time : 18/01/12 20:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.abs(x);
+ final double logn=FastMath.abs(numeratorDegreesOfFreedom);
+ final double logm=FastMath.abs(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.max(FastMath.max(mhalf,nhalf),logn);
+
+Time : 18/01/12 21:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log(x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.PI;
+
+Time : 18/01/12 21:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+x=numeratorDegreesOfFreedom;
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=FastMath.log(x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 21:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double nhalf=numeratorDegreesOfFreedom/2;
+ final double mhalf=denominatorDegreesOfFreedom/2;
+ final double logx=Double.doubleToLongBits(x);
+ final double logn=FastMath.log(numeratorDegreesOfFreedom);
+ final double logm=FastMath.log(denominatorDegreesOfFreedom);
+ final double lognxm=FastMath.log(numeratorDegreesOfFreedom*x+denominatorDegreesOfFreedom);
+return FastMath.exp(nhalf*logn+nhalf*logx-logx+mhalf*logm-nhalf*lognxm-mhalf*lognxm-Beta.logBeta(nhalf,mhalf));
+
+Time : 18/01/12 21:14
+----------------------------------------
+Fri Jan 12 21:18:37 AEDT 2018 org.apache.commons.math3.distribution.FDistribution,130
+Fri Jan 12 21:18:38 AEDT 2018 org.apache.commons.math3.distribution.FDistribution,131
+Fri Jan 12 21:18:39 AEDT 2018 org.apache.commons.math3.distribution.FDistribution,132
+Fri Jan 12 21:18:41 AEDT 2018 org.apache.commons.math3.distribution.FDistribution,133
+Fri Jan 12 21:18:43 AEDT 2018 org.apache.commons.math3.distribution.FDistribution,134
+Fri Jan 12 21:18:44 AEDT 2018 org.apache.commons.math3.distribution.FDistribution,136
+Fri Jan 12 21:18:45 AEDT 2018 org.apache.commons.math3.distribution.UniformRealDistribution,109
+Fri Jan 12 21:28:49 AEDT 2018 org.apache.commons.math3.distribution.UniformRealDistribution,112
+Timeout time : 18/01/12 21:39
+Current failed test : org.apache.commons.math3.distribution.UniformRealDistributionTest::testIsSupportUpperBoundInclusive | 18/01/12 21:39
+Fri Jan 12 21:40:41 AEDT 2018 org.apache.commons.math3.distribution.FDistribution,275
+Fri Jan 12 21:40:46 AEDT 2018 org.apache.commons.math3.distribution.UniformRealDistribution,184
+Fri Jan 12 21:40:51 AEDT 2018 org.apache.commons.math3.util.FastMath,1107
+Fri Jan 12 21:45:37 AEDT 2018 org.apache.commons.math3.distribution.FDistribution,129
+Fri Jan 12 22:19:00 AEDT 2018 org.apache.commons.math3.distribution.FDistribution,130
+Fri Jan 12 22:19:02 AEDT 2018 org.apache.commons.math3.distribution.FDistribution,131
+Fri Jan 12 22:19:04 AEDT 2018 org.apache.commons.math3.distribution.FDistribution,132
+Fri Jan 12 22:19:06 AEDT 2018 org.apache.commons.math3.distribution.FDistribution,133
+Fri Jan 12 22:19:07 AEDT 2018 org.apache.commons.math3.distribution.FDistribution,134
+Fri Jan 12 22:19:09 AEDT 2018 org.apache.commons.math3.distribution.FDistribution,136
+Fri Jan 12 22:19:11 AEDT 2018 org.apache.commons.math3.distribution.UniformRealDistribution,109
+Fri Jan 12 22:29:48 AEDT 2018 org.apache.commons.math3.distribution.UniformRealDistribution,112
+Fri Jan 12 22:44:39 AEDT 2018 org.apache.commons.math3.distribution.UniformRealDistribution,174
+Fri Jan 12 22:49:57 AEDT 2018 org.apache.commons.math3.special.Beta,170
+Fri Jan 12 22:55:18 AEDT 2018 org.apache.commons.math3.distribution.FDistribution,258
+Fri Jan 12 22:55:23 AEDT 2018 org.apache.commons.math3.util.FastMath,864
+Fri Jan 12 23:10:17 AEDT 2018 org.apache.commons.math3.util.FastMath,866
+Fri Jan 12 23:10:19 AEDT 2018 org.apache.commons.math3.util.FastMath,874
+Fri Jan 12 23:17:18 AEDT 2018 org.apache.commons.math3.util.FastMath,875
+Fri Jan 12 23:17:20 AEDT 2018 org.apache.commons.math3.random.Well19937c,57
+Fri Jan 12 23:17:24 AEDT 2018 Fri Jan 12 23:17:24 AEDT 2018 : org.apache.commons.math3.random.Well19937c,58=>Find no block
+Fri Jan 12 23:17:26 AEDT 2018 org.apache.commons.math3.random.AbstractWell,72
+Fri Jan 12 23:17:32 AEDT 2018 Fri Jan 12 23:17:32 AEDT 2018 : org.apache.commons.math3.random.AbstractWell,73=>Find no block
+Fri Jan 12 23:17:33 AEDT 2018 org.apache.commons.math3.random.AbstractWell,155
+Fri Jan 12 23:17:38 AEDT 2018 org.apache.commons.math3.random.AbstractWell,156
+Fri Jan 12 23:17:39 AEDT 2018 org.apache.commons.math3.random.AbstractWell,179
+Fri Jan 12 23:18:00 AEDT 2018 Fri Jan 12 23:18:00 AEDT 2018 : org.apache.commons.math3.random.AbstractWell,180=>Find no block
+Fri Jan 12 23:18:01 AEDT 2018 Fri Jan 12 23:18:01 AEDT 2018 : org.apache.commons.math3.distribution.AbstractRealDistribution,50=>Find no block
+Fri Jan 12 23:18:02 AEDT 2018 Fri Jan 12 23:18:02 AEDT 2018 : org.apache.commons.math3.distribution.AbstractRealDistribution,55=>Find no block
+Fri Jan 12 23:18:04 AEDT 2018 Fri Jan 12 23:18:04 AEDT 2018 : org.apache.commons.math3.distribution.AbstractRealDistribution,70=>Find no block
+Fri Jan 12 23:18:05 AEDT 2018 org.apache.commons.math3.distribution.AbstractRealDistribution,71
+Fri Jan 12 23:21:04 AEDT 2018 Fri Jan 12 23:21:04 AEDT 2018 : org.apache.commons.math3.distribution.AbstractRealDistribution,72=>Find no block
+Fri Jan 12 23:21:05 AEDT 2018 Fri Jan 12 23:21:05 AEDT 2018 : org.apache.commons.math3.random.AbstractWell,94=>Find no block
+Fri Jan 12 23:21:06 AEDT 2018 org.apache.commons.math3.random.AbstractWell,99
+Timeout time : 18/01/13 00:10

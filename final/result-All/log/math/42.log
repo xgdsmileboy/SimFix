@@ -1,0 +1,1715 @@
+=================================================
+Project : math_42	start : 18/01/12 14:05
+Current failed test : org.apache.commons.math.optimization.linear.SimplexSolverTest::testMath713NegativeVariable | 18/01/12 14:06
+Fri Jan 12 14:07:43 AEDT 2018 org.apache.commons.math.optimization.RealPointValuePair,68
+Fri Jan 12 14:09:45 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,347
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!restrictToNonNegative){
+columnsToDrop.add(col);
+}
+
+Time : 18/01/12 14:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(getBasicRow(col)!=null){
+columnsToDrop.add(col);
+}
+
+Time : 18/01/12 14:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(getBasicRow(col)==null){
+col=col-1;
+}
+
+Time : 18/01/12 14:15
+----------------------------------------
+Fri Jan 12 14:17:18 AEDT 2018 Fri Jan 12 14:17:18 AEDT 2018 : org.apache.commons.math.optimization.linear.SimplexSolver,181=>Find no block
+Fri Jan 12 14:17:25 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,332
+Fri Jan 12 14:22:05 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,333
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(restrictToNonNegative){
+columnsToDrop.add(i);
+}
+
+Time : 18/01/12 14:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!columnsToDrop.contains(numArtificialVariables)){
+columnsToDrop.add(i);
+}
+
+Time : 18/01/12 14:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=getNumObjectiveFunctions();i<getArtificialVariableOffset();i++){
+ final double entry=tableau.getEntry(0,i+1);
+if(Precision.compareTo(entry,0.0,maxUlps)>0){
+columnsToDrop.add(i);
+}
+}
+
+Time : 18/01/12 14:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<getArtificialVariableOffset();i++){
+ final double entry=tableau.getEntry(0,i+1);
+if(Precision.compareTo(entry,0.0,maxUlps)>0){
+columnsToDrop.add(i);
+}
+}
+
+Time : 18/01/12 14:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=getNumObjectiveFunctions();i<getArtificialVariableOffset();i++){
+ final double entry=tableau.getEntry(0,i);
+if(!columnsToDrop.contains(i)){
+columnsToDrop.add(i);
+}
+}
+
+Time : 18/01/12 14:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=1;i<getArtificialVariableOffset();i++){
+ final double entry=tableau.getEntry(0,i);
+if(!columnsToDrop.contains(i)){
+columnsToDrop.add(i);
+}
+}
+
+Time : 18/01/12 14:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+numArtificialVariables++;
+for(int i=getNumObjectiveFunctions();i<getArtificialVariableOffset();i++){
+ final double entry=tableau.getEntry(0,i);
+if(Precision.compareTo(entry,0.0,maxUlps)>0){
+columnsToDrop.add(i);
+}
+}
+
+Time : 18/01/12 14:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=getNumObjectiveFunctions();i<getArtificialVariableOffset();i++){
+ final double entry=tableau.getEntry(0,i);
+if(Precision.compareTo(entry,0.0,maxUlps)>-1){
+columnsToDrop.add(i);
+}
+}
+
+Time : 18/01/12 14:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<getArtificialVariableOffset();i++){
+ final double entry=tableau.getEntry(0,i);
+if(Precision.compareTo(entry,0.0,maxUlps)>-1){
+columnsToDrop.add(i);
+}
+}
+
+Time : 18/01/12 14:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=getNumObjectiveFunctions();i<getArtificialVariableOffset();i++){
+ final double entry=tableau.getEntry(0,i);
+if(restrictToNonNegative){
+columnsToDrop.add(i);
+}
+}
+
+Time : 18/01/12 14:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+List<Integer> columnsToDrop=new ArrayList<Integer>();
+numArtificialVariables++;
+columnsToDrop.add(0);
+for(int i=getNumObjectiveFunctions();i<getArtificialVariableOffset();i++){
+ final double entry=tableau.getEntry(0,i);
+if(Precision.compareTo(entry,0.0,maxUlps)>0){
+columnsToDrop.add(i);
+}
+}
+
+Time : 18/01/12 15:11
+----------------------------------------
+Fri Jan 12 15:16:09 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,336
+Fri Jan 12 15:16:10 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,337
+Fri Jan 12 15:16:11 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,338
+Fri Jan 12 15:16:12 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,344
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=getNumObjectiveFunctions();i<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<getNumArtificialVariables();i++){
+int col=0;
+if(!columnsToDrop.contains(col)){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<getHeight();i++){
+int col=0;
+if(!columnsToDrop.contains(col)){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<numArtificialVariables+1;i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=getNumObjectiveFunctions();i<1;i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=3;i<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=2;i<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<0;i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=numArtificialVariables;i<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=numArtificialVariables-1;i<0;i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=numArtificialVariables;i<0;i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)!=null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<NEGATIVE_VAR_COLUMN_LABEL.length();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<=getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<=numArtificialVariables;i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=numArtificialVariables;i<numArtificialVariables;i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<numArtificialVariables+numArtificialVariables;i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<-1;i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=numArtificialVariables-1;i<-1;i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=numArtificialVariables;i<-1;i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=numArtificialVariables;i<1;i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+numArtificialVariables++;
+for(int i=0;i<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i+numArtificialVariables<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=numArtificialVariables;i+numArtificialVariables<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i+numArtificialVariables<0;i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=numArtificialVariables;i+numArtificialVariables<0;i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<numArtificialVariables-1;i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=numArtificialVariables;i<getNumArtificialVariables();i++){
+int col=0;
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 15:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=numArtificialVariables;i<numArtificialVariables;i++){
+int col=0;
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 16:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=numArtificialVariables+1;i<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 16:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=numArtificialVariables+1;i<numArtificialVariables;i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 16:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(!restrictToNonNegative){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 16:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<maxUlps;i++){
+int col=i+getArtificialVariableOffset();
+if(!restrictToNonNegative){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 16:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+numArtificialVariables=numArtificialVariables-1;
+}
+}
+
+Time : 18/01/12 16:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=4;i<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/12 16:11
+----------------------------------------
+Fri Jan 12 16:12:40 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,345
+Fri Jan 12 16:12:41 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,346
+Fri Jan 12 16:12:42 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,351
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]*=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(epsilon<epsilon){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<numArtificialVariables){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Math.abs(epsilon)>epsilon){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Precision.compareTo(tableau.getEntry(0,j),0.0,i)>0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(tableau.getEntry(i,0)<0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(numArtificialVariables==-1){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(epsilon*epsilon>epsilon){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Precision.compareTo(tableau.getEntry(0,i),0.0,epsilon)<0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<j){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i==j){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Precision.compareTo(tableau.getEntry(i,numArtificialVariables),0.0,j)>0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(epsilon<tableau.getEntry(i,j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(j<0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(epsilon==0.0&&i>=numArtificialVariables){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(epsilon==0.0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<col){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i==-1){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(numArtificialVariables==numArtificialVariables&&i<i){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(numArtificialVariables-numArtificialVariables+1<0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(numArtificialVariables<0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(((numArtificialVariables>>numArtificialVariables)&1)==1){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(((numArtificialVariables>>numArtificialVariables)&1)==1){
+matrix[i-1][col++]+=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(matrix[numArtificialVariables]==null){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 16:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(numArtificialVariables<i-1){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(numArtificialVariables<0.5*(numArtificialVariables-i+1)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(numArtificialVariables<0.5*(numArtificialVariables-i+1)){
+matrix[i-1][col++]+=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(numArtificialVariables<0.5*(numArtificialVariables-i+1)){
+numArtificialVariables--;
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(numArtificialVariables<0.5*(numArtificialVariables-i+1)){
+numArtificialVariables--;
+matrix[i-1][col++]+=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(epsilon>epsilon){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(numArtificialVariables!=numArtificialVariables){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+numArtificialVariables=i;
+if(i<0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(numArtificialVariables>numArtificialVariables){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(epsilon==0.0){
+matrix[i-1][col++]+=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(numArtificialVariables==(i/2)*4){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(NEGATIVE_VAR_COLUMN_LABEL.length()==1){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(col==0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(col==0){
+matrix[i-1][col++]-=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<0){
+matrix[i-1][col++]=i=-i-2;
+}
+
+Time : 18/01/12 17:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!columnsToDrop.contains(j)){
+i=i=-i-2;
+}
+
+Time : 18/01/12 17:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<0){
+i=i=-i-2;
+}
+
+Time : 18/01/12 17:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(j>i){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(numArtificialVariables==0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(numArtificialVariables<numArtificialVariables){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(epsilon>=1){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(++numArtificialVariables<numArtificialVariables){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(epsilon<0.0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((epsilon-epsilon)>epsilon){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(numArtificialVariables<=0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i>2){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((numArtificialVariables>i)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(numArtificialVariables>i){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(--numArtificialVariables==0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+
+Time : 18/01/12 17:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<numArtificialVariables;j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<getWidth();j++){
+if(i==j){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<getWidth();j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]*=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<numArtificialVariables;j++){
+if(i==j){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<numArtificialVariables;j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]*=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<getWidth();j++){
+if(i==j){
+matrix[i-1][col++]*=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<numArtificialVariables;j++){
+if(i==j){
+matrix[i-1][col++]*=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<getWidth();j++){
+if(epsilon<epsilon){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<getWidth();j++){
+if(i<j){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<numArtificialVariables;j++){
+if(i<j){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<i;j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<-1;j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<1;j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=numArtificialVariables-1;j<-1;j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=numArtificialVariables-1;j<1;j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=numArtificialVariables;j<-1;j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=numArtificialVariables;j<1;j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<numArtificialVariables;j++){
+if(j>0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=getNumObjectiveFunctions();j<getWidth();j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<getWidth()-1;j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<getWidth();j++){
+if(Precision.compareTo(tableau.getEntry(0,j),0.0,epsilon)<0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=getNumObjectiveFunctions();j<getWidth()-1;j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=getNumObjectiveFunctions();j<1;j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=getNumObjectiveFunctions();j<getWidth();j++){
+if(Precision.compareTo(tableau.getEntry(0,j),0.0,epsilon)<0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<getWidth()-1;j++){
+if(Precision.compareTo(tableau.getEntry(0,j),0.0,epsilon)<0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<1;j++){
+if(Precision.compareTo(tableau.getEntry(0,j),0.0,epsilon)<0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=getNumObjectiveFunctions();j<getWidth()-1;j++){
+if(Precision.compareTo(tableau.getEntry(0,j),0.0,epsilon)<0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=getNumObjectiveFunctions();j<1;j++){
+if(Precision.compareTo(tableau.getEntry(0,j),0.0,epsilon)<0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+i++;
+for(int j=0;j<getWidth();j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<1;j++){
+if(Precision.compareTo(tableau.getEntry(0,j),epsilon,i)<0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=restrictToNonNegative?0:1;j<i;j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<i;j++){
+if(numArtificialVariables!=j){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<i;j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]*=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<i;j++){
+if(numArtificialVariables!=j){
+matrix[i-1][col++]*=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<getArtificialVariableOffset();j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<getWidth();j++){
+if(Precision.compareTo(tableau.getEntry(0,j),0.0,i)>0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=getNumObjectiveFunctions();j<getArtificialVariableOffset();j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=getNumObjectiveFunctions();j<getWidth();j++){
+if(Precision.compareTo(tableau.getEntry(0,j),0.0,i)>0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<getArtificialVariableOffset();j++){
+if(Precision.compareTo(tableau.getEntry(0,j),0.0,i)>0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=getNumObjectiveFunctions();j<getArtificialVariableOffset();j++){
+if(Precision.compareTo(tableau.getEntry(0,j),0.0,i)>0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 18:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<getWidth();j++){
+if(Precision.compareTo(tableau.getEntry(i,numArtificialVariables),0.0,j)>0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 19:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=i+1;j<numArtificialVariables;j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 19:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<getWidth();j++){
+if(i<0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 19:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<i;j++){
+if(tableau.getEntry(j,0)<0){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/12 19:06
+----------------------------------------
+Timeout time : 18/01/12 19:08

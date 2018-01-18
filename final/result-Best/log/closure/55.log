@@ -1,0 +1,108 @@
+=================================================
+Project : closure_55	start : 18/01/13 21:20
+Current failed test : com.google.javascript.jscomp.FunctionRewriterTest::testIssue538 | 18/01/13 21:21
+Sat Jan 13 21:21:32 AEDT 2018 Sat Jan 13 21:21:32 AEDT 2018 : com.google.javascript.rhino.Node,184=>Find no block
+Sat Jan 13 21:21:37 AEDT 2018 com.google.javascript.rhino.Node,244
+Sat Jan 13 21:22:13 AEDT 2018 com.google.javascript.rhino.Node,245
+Sat Jan 13 21:22:43 AEDT 2018 com.google.javascript.rhino.Node,628
+Sat Jan 13 21:25:06 AEDT 2018 Sat Jan 13 21:25:06 AEDT 2018 : com.google.javascript.rhino.Node,629=>Find no block
+Sat Jan 13 21:25:11 AEDT 2018 Sat Jan 13 21:25:11 AEDT 2018 : com.google.javascript.rhino.Node,962=>Find no block
+Sat Jan 13 21:25:16 AEDT 2018 Sat Jan 13 21:25:16 AEDT 2018 : com.google.javascript.rhino.Node,963=>Find no block
+Sat Jan 13 21:25:21 AEDT 2018 Sat Jan 13 21:25:21 AEDT 2018 : com.google.javascript.rhino.Node,964=>Find no block
+Sat Jan 13 21:25:26 AEDT 2018 Sat Jan 13 21:25:26 AEDT 2018 : com.google.javascript.rhino.Node,967=>Find no block
+Sat Jan 13 21:25:30 AEDT 2018 Sat Jan 13 21:25:30 AEDT 2018 : com.google.javascript.rhino.Node,968=>Find no block
+Sat Jan 13 21:25:36 AEDT 2018 Sat Jan 13 21:25:36 AEDT 2018 : com.google.javascript.rhino.Node,969=>Find no block
+Sat Jan 13 21:25:41 AEDT 2018 Sat Jan 13 21:25:41 AEDT 2018 : com.google.javascript.rhino.Node,970=>Find no block
+Sat Jan 13 21:25:46 AEDT 2018 Sat Jan 13 21:25:46 AEDT 2018 : com.google.javascript.rhino.Node,973=>Find no block
+Sat Jan 13 21:25:51 AEDT 2018 Sat Jan 13 21:25:51 AEDT 2018 : com.google.javascript.rhino.Node,974=>Find no block
+Sat Jan 13 21:25:56 AEDT 2018 Sat Jan 13 21:25:56 AEDT 2018 : com.google.javascript.rhino.Node,1019=>Find no block
+Sat Jan 13 21:26:01 AEDT 2018 Sat Jan 13 21:26:01 AEDT 2018 : com.google.javascript.rhino.Node,1026=>Find no block
+Sat Jan 13 21:26:05 AEDT 2018 Sat Jan 13 21:26:05 AEDT 2018 : com.google.javascript.rhino.Node,1027=>Find no block
+Sat Jan 13 21:26:11 AEDT 2018 Sat Jan 13 21:26:11 AEDT 2018 : com.google.javascript.rhino.Node,1028=>Find no block
+Sat Jan 13 21:26:16 AEDT 2018 Sat Jan 13 21:26:16 AEDT 2018 : com.google.javascript.rhino.Node,1029=>Find no block
+Sat Jan 13 21:26:21 AEDT 2018 Sat Jan 13 21:26:21 AEDT 2018 : com.google.javascript.rhino.Node,1040=>Find no block
+Sat Jan 13 21:26:26 AEDT 2018 Sat Jan 13 21:26:26 AEDT 2018 : com.google.javascript.rhino.Node,1041=>Find no block
+Sat Jan 13 21:26:31 AEDT 2018 Sat Jan 13 21:26:31 AEDT 2018 : com.google.javascript.rhino.Node,1044=>Find no block
+Sat Jan 13 21:26:36 AEDT 2018 Sat Jan 13 21:26:36 AEDT 2018 : com.google.javascript.rhino.Node,1054=>Find no block
+Sat Jan 13 21:26:41 AEDT 2018 Sat Jan 13 21:26:41 AEDT 2018 : com.google.javascript.rhino.Node,1076=>Find no block
+Sat Jan 13 21:26:46 AEDT 2018 Sat Jan 13 21:26:46 AEDT 2018 : com.google.javascript.rhino.Node,1077=>Find no block
+Sat Jan 13 21:26:51 AEDT 2018 Sat Jan 13 21:26:51 AEDT 2018 : com.google.javascript.rhino.Node,1078=>Find no block
+Sat Jan 13 21:26:55 AEDT 2018 Sat Jan 13 21:26:55 AEDT 2018 : com.google.javascript.rhino.Node,1079=>Find no block
+Sat Jan 13 21:27:00 AEDT 2018 Sat Jan 13 21:27:00 AEDT 2018 : com.google.javascript.rhino.Node,1080=>Find no block
+Sat Jan 13 21:27:05 AEDT 2018 Sat Jan 13 21:27:05 AEDT 2018 : com.google.javascript.rhino.Node,1084=>Find no block
+Sat Jan 13 21:27:10 AEDT 2018 Sat Jan 13 21:27:10 AEDT 2018 : com.google.javascript.rhino.Node,1085=>Find no block
+Sat Jan 13 21:27:15 AEDT 2018 Sat Jan 13 21:27:15 AEDT 2018 : com.google.javascript.rhino.Node,1086=>Find no block
+Sat Jan 13 21:27:20 AEDT 2018 Sat Jan 13 21:27:20 AEDT 2018 : com.google.javascript.rhino.Node,1087=>Find no block
+Sat Jan 13 21:27:25 AEDT 2018 Sat Jan 13 21:27:25 AEDT 2018 : com.google.javascript.rhino.Node,1088=>Find no block
+Sat Jan 13 21:27:30 AEDT 2018 Sat Jan 13 21:27:30 AEDT 2018 : com.google.javascript.rhino.Node,1089=>Find no block
+Sat Jan 13 21:27:35 AEDT 2018 Sat Jan 13 21:27:35 AEDT 2018 : com.google.javascript.rhino.Node,1090=>Find no block
+Sat Jan 13 21:27:40 AEDT 2018 Sat Jan 13 21:27:40 AEDT 2018 : com.google.javascript.rhino.Node,1091=>Find no block
+Sat Jan 13 21:27:45 AEDT 2018 Sat Jan 13 21:27:45 AEDT 2018 : com.google.javascript.rhino.Node,1093=>Find no block
+Sat Jan 13 21:27:50 AEDT 2018 Sat Jan 13 21:27:50 AEDT 2018 : com.google.javascript.rhino.Node,1129=>Find no block
+Sat Jan 13 21:27:55 AEDT 2018 Sat Jan 13 21:27:55 AEDT 2018 : com.google.javascript.rhino.Node,1132=>Find no block
+Sat Jan 13 21:28:00 AEDT 2018 Sat Jan 13 21:28:00 AEDT 2018 : com.google.javascript.rhino.Node,1133=>Find no block
+Sat Jan 13 21:28:05 AEDT 2018 Sat Jan 13 21:28:05 AEDT 2018 : com.google.javascript.rhino.Node,1137=>Find no block
+Sat Jan 13 21:28:10 AEDT 2018 Sat Jan 13 21:28:10 AEDT 2018 : com.google.javascript.rhino.Node,1138=>Find no block
+Sat Jan 13 21:28:14 AEDT 2018 Sat Jan 13 21:28:14 AEDT 2018 : com.google.javascript.rhino.Node,1147=>Find no block
+Sat Jan 13 21:28:19 AEDT 2018 Sat Jan 13 21:28:19 AEDT 2018 : com.google.javascript.rhino.Node,1677=>Find no block
+Sat Jan 13 21:28:24 AEDT 2018 com.google.javascript.rhino.Node,1725
+Sat Jan 13 21:28:38 AEDT 2018 com.google.javascript.rhino.Node,415
+Sat Jan 13 21:28:56 AEDT 2018 com.google.javascript.rhino.Node,447
+Sat Jan 13 21:29:28 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,782
+Sat Jan 13 21:38:19 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,783
+Sat Jan 13 21:38:23 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,784
+Sat Jan 13 21:41:21 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,806
+Sat Jan 13 21:45:56 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,807
+Sat Jan 13 21:46:01 AEDT 2018 Sat Jan 13 21:46:01 AEDT 2018 : com.google.javascript.jscomp.SourceFile,305=>Find no block
+Sat Jan 13 21:46:06 AEDT 2018 com.google.javascript.jscomp.AstValidator,51
+Sat Jan 13 21:46:18 AEDT 2018 Sat Jan 13 21:46:18 AEDT 2018 : com.google.javascript.jscomp.AstValidator,677=>Find no block
+Sat Jan 13 21:46:23 AEDT 2018 Sat Jan 13 21:46:23 AEDT 2018 : com.google.javascript.jscomp.AstValidator,678=>Find no block
+Sat Jan 13 21:46:27 AEDT 2018 Sat Jan 13 21:46:27 AEDT 2018 : com.google.javascript.jscomp.AstValidator,692=>Find no block
+Sat Jan 13 21:46:33 AEDT 2018 Sat Jan 13 21:46:33 AEDT 2018 : com.google.javascript.jscomp.AstValidator,693=>Find no block
+Sat Jan 13 21:46:38 AEDT 2018 Sat Jan 13 21:46:38 AEDT 2018 : com.google.javascript.jscomp.AstValidator,694=>Find no block
+Sat Jan 13 21:46:42 AEDT 2018 Sat Jan 13 21:46:42 AEDT 2018 : com.google.javascript.jscomp.AstValidator,695=>Find no block
+Sat Jan 13 21:46:47 AEDT 2018 Sat Jan 13 21:46:47 AEDT 2018 : com.google.javascript.jscomp.AstValidator,696=>Find no block
+Sat Jan 13 21:46:52 AEDT 2018 Sat Jan 13 21:46:52 AEDT 2018 : com.google.javascript.jscomp.AstValidator,698=>Find no block
+Sat Jan 13 21:46:57 AEDT 2018 Sat Jan 13 21:46:57 AEDT 2018 : com.google.javascript.jscomp.AstValidator,701=>Find no block
+Sat Jan 13 21:47:02 AEDT 2018 Sat Jan 13 21:47:02 AEDT 2018 : com.google.javascript.jscomp.AstValidator,702=>Find no block
+Sat Jan 13 21:47:07 AEDT 2018 Sat Jan 13 21:47:07 AEDT 2018 : com.google.javascript.jscomp.AstValidator,705=>Find no block
+Sat Jan 13 21:47:12 AEDT 2018 com.google.javascript.jscomp.AstValidator,763
+Sat Jan 13 21:57:19 AEDT 2018 Sat Jan 13 21:57:19 AEDT 2018 : com.google.javascript.jscomp.AstValidator,768=>Find no block
+Sat Jan 13 21:57:24 AEDT 2018 com.google.javascript.jscomp.FunctionRewriter,416
+Sat Jan 13 21:57:36 AEDT 2018 com.google.javascript.jscomp.FunctionRewriter,427
+Sat Jan 13 22:25:21 AEDT 2018 com.google.javascript.jscomp.FunctionRewriter,432
+Sat Jan 13 22:45:34 AEDT 2018 com.google.javascript.jscomp.FunctionRewriter,451
+Sat Jan 13 22:51:34 AEDT 2018 com.google.javascript.rhino.Node,342
+Sat Jan 13 22:52:05 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,769
+Sat Jan 13 22:53:07 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,779
+Sat Jan 13 22:55:33 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,780
+Sat Jan 13 22:55:38 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,781
+Sat Jan 13 23:15:10 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,794
+Sat Jan 13 23:36:52 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,795
+Sat Jan 13 23:36:56 AEDT 2018 Sat Jan 13 23:36:56 AEDT 2018 : com.google.javascript.jscomp.parsing.IRFactory,796=>Find no block
+Sat Jan 13 23:37:01 AEDT 2018 com.google.javascript.jscomp.PrepareAst,166
+Sat Jan 13 23:49:39 AEDT 2018 com.google.javascript.jscomp.PrepareAst,167
+Sat Jan 13 23:49:44 AEDT 2018 com.google.javascript.jscomp.PrepareAst,224
+Sun Jan 14 00:15:54 AEDT 2018 com.google.javascript.jscomp.PrepareAst,225
+Sun Jan 14 00:47:22 AEDT 2018 Sun Jan 14 00:47:22 AEDT 2018 : com.google.javascript.jscomp.PrepareAst,229=>Find no block
+Sun Jan 14 00:47:26 AEDT 2018 Sun Jan 14 00:47:26 AEDT 2018 : com.google.javascript.jscomp.AstValidator,670=>Find no block
+Sun Jan 14 00:47:31 AEDT 2018 Sun Jan 14 00:47:31 AEDT 2018 : com.google.javascript.jscomp.AstValidator,675=>Find no block
+Sun Jan 14 00:47:36 AEDT 2018 Sun Jan 14 00:47:36 AEDT 2018 : com.google.javascript.jscomp.AstValidator,731=>Find no block
+Sun Jan 14 00:47:40 AEDT 2018 Sun Jan 14 00:47:40 AEDT 2018 : com.google.javascript.jscomp.AstValidator,739=>Find no block
+Sun Jan 14 00:47:45 AEDT 2018 Sun Jan 14 00:47:45 AEDT 2018 : com.google.javascript.jscomp.AstValidator,741=>Find no block
+Sun Jan 14 00:47:50 AEDT 2018 com.google.javascript.jscomp.NodeUtil,690
+Sun Jan 14 02:14:13 AEDT 2018 com.google.javascript.jscomp.FunctionRewriter,511
+Sun Jan 14 02:14:48 AEDT 2018 com.google.javascript.jscomp.FunctionRewriter,272
+Sun Jan 14 02:14:53 AEDT 2018 com.google.javascript.jscomp.FunctionRewriter,245
+Sun Jan 14 02:14:58 AEDT 2018 com.google.javascript.jscomp.FunctionRewriter,251
+Sun Jan 14 02:17:00 AEDT 2018 Sun Jan 14 02:17:00 AEDT 2018 : com.google.javascript.jscomp.CodeGenerator,475=>Find no block
+Sun Jan 14 02:17:05 AEDT 2018 Sun Jan 14 02:17:05 AEDT 2018 : com.google.javascript.jscomp.CodeGenerator,478=>Find no block
+Sun Jan 14 02:17:09 AEDT 2018 Sun Jan 14 02:17:09 AEDT 2018 : com.google.javascript.jscomp.CodeGenerator,479=>Find no block
+Sun Jan 14 02:17:14 AEDT 2018 Sun Jan 14 02:17:14 AEDT 2018 : com.google.javascript.jscomp.CodeGenerator,480=>Find no block
+Sun Jan 14 02:17:19 AEDT 2018 Sun Jan 14 02:17:19 AEDT 2018 : com.google.javascript.jscomp.CodeGenerator,481=>Find no block
+Sun Jan 14 02:17:24 AEDT 2018 Sun Jan 14 02:17:24 AEDT 2018 : com.google.javascript.jscomp.CodeGenerator,482=>Find no block
+Sun Jan 14 02:17:29 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,547
+Sun Jan 14 02:17:56 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,231
+Sun Jan 14 02:20:36 AEDT 2018 Sun Jan 14 02:20:36 AEDT 2018 : com.google.javascript.jscomp.NodeUtil,1927=>Find no block
+Sun Jan 14 02:20:40 AEDT 2018 com.google.javascript.jscomp.FunctionRewriter,221
+Timeout time : 18/01/14 02:21

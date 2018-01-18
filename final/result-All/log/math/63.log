@@ -1,0 +1,37 @@
+=================================================
+Project : math_63	start : 18/01/12 14:05
+Current failed test : org.apache.commons.math.util.MathUtilsTest::testArrayEquals | 18/01/12 14:05
+Fri Jan 12 14:07:26 AEDT 2018 org.apache.commons.math.util.MathUtils,417
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return equals(x,y,1)||FastMath.abs(y-x)<=SAFE_MIN;
+
+Time : 18/01/12 14:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.808976301345361 : [/home/hz985/jiajun/d4j/projects/math/math_63_buggy/src/main/java/org/apache/commons/math/util/MathUtils.java=>0,0]
+return equals(x,y,1)||FastMath.abs(y-x)<=eps;
+
+Time : 18/01/12 14:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_63_buggy/src/main/java/org/apache/commons/math/util/MathUtils.java=>417,417]
+return (Double.isNaN(x)&&Double.isNaN(y))||x==y;
+
+Time : 18/01/12 14:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_63_buggy/src/main/java/org/apache/commons/math/util/MathUtils.java=>417,417]
+return equals(x,y,1)||FastMath.abs(y-x)<=SAFE_MIN;
+
+Time : 18/01/12 14:11
+----------------------------------------
+Success time : 18/01/12 14:11

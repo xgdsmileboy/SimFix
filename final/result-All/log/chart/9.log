@@ -1,0 +1,1186 @@
+=================================================
+Project : chart_9	start : 18/01/13 03:09
+Current failed test : org.jfree.data.time.junit.TimeSeriesTests::testBug1864222 | 18/01/13 03:09
+Sat Jan 13 03:10:17 AEDT 2018 org.jfree.data.time.TimeSeries,883
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(end<0){
+throw new IllegalArgumentException("Requires start <= end.");
+}
+
+Time : 18/01/13 03:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(end<0){
+throw new IllegalArgumentException("Requires start >= 0.");
+}
+
+Time : 18/01/13 03:11
+----------------------------------------
+Sat Jan 13 03:12:57 AEDT 2018 org.jfree.data.time.TimeSeries,921
+Sat Jan 13 03:13:29 AEDT 2018 org.jfree.data.time.TimeSeries,924
+Sat Jan 13 03:14:16 AEDT 2018 org.jfree.data.time.TimeSeries,927
+Sat Jan 13 03:14:55 AEDT 2018 org.jfree.data.time.TimeSeries,931
+Sat Jan 13 03:16:53 AEDT 2018 org.jfree.data.time.TimeSeries,932
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(getItemCount()==this.data.size()){
+emptyRange=true;
+}
+
+Time : 18/01/13 03:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(startIndex!=this.data.size()){
+emptyRange=true;
+}
+
+Time : 18/01/13 03:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+boolean emptyRange=false;
+int startIndex=0;
+if(startIndex<0){
+startIndex=-(startIndex+1);
+if(startIndex==this.data.size()){
+emptyRange=true;
+}
+}
+
+Time : 18/01/13 03:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+boolean emptyRange=false;
+int startIndex=0;
+if(startIndex<0){
+startIndex=this.maximumItemCount;
+if(startIndex==this.data.size()){
+emptyRange=true;
+}
+}
+
+Time : 18/01/13 03:34
+----------------------------------------
+Sat Jan 13 03:42:18 AEDT 2018 org.jfree.data.time.TimeSeries,933
+Sat Jan 13 03:42:20 AEDT 2018 org.jfree.data.time.TimeSeries,934
+Sat Jan 13 03:42:21 AEDT 2018 org.jfree.data.time.TimeSeries,935
+Sat Jan 13 03:42:22 AEDT 2018 org.jfree.data.time.TimeSeries,939
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(startIndex<0){
+startIndex=-(startIndex+1);
+if(startIndex==this.data.size()){
+emptyRange=true;
+}
+}
+int endIndex=1;
+if(endIndex<0){
+endIndex=-(endIndex+1);
+endIndex=endIndex-1;
+}
+
+Time : 18/01/13 03:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(startIndex<0){
+startIndex=-(startIndex+1);
+if(startIndex==this.data.size()){
+emptyRange=true;
+}
+}
+int endIndex=-1;
+if(endIndex<0){
+endIndex=-(endIndex+1);
+endIndex=endIndex-1;
+}
+
+Time : 18/01/13 03:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(startIndex<0){
+startIndex=-(startIndex+1);
+if(startIndex==this.data.size()){
+emptyRange=true;
+}
+}
+int endIndex=getIndex(end);
+if(endIndex<0){
+endIndex=endIndex+1;
+endIndex=endIndex-1;
+}
+
+Time : 18/01/13 03:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(startIndex<0){
+startIndex=-(startIndex+1);
+if(startIndex==this.data.size()){
+emptyRange=true;
+}
+}
+int endIndex=getIndex(end);
+if(endIndex<0){
+endIndex=endIndex;
+endIndex=endIndex-1;
+}
+
+Time : 18/01/13 03:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(startIndex<0){
+startIndex=-(startIndex+1);
+if(startIndex==this.data.size()){
+emptyRange=true;
+}
+}
+int endIndex=startIndex;
+if(endIndex<0){
+endIndex=-(endIndex+1);
+endIndex=endIndex-1;
+}
+
+Time : 18/01/13 03:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+data.clear();
+if(startIndex<0){
+startIndex=-(startIndex+1);
+if(startIndex==this.data.size()){
+emptyRange=true;
+}
+}
+int endIndex=getIndex(end);
+if(endIndex<0){
+endIndex=-(endIndex+1);
+endIndex=endIndex-1;
+}
+
+Time : 18/01/13 03:56
+----------------------------------------
+Sat Jan 13 03:57:29 AEDT 2018 org.jfree.data.time.TimeSeries,940
+Sat Jan 13 03:57:30 AEDT 2018 org.jfree.data.time.TimeSeries,941
+Sat Jan 13 03:57:32 AEDT 2018 org.jfree.data.time.TimeSeries,942
+Sat Jan 13 03:57:33 AEDT 2018 org.jfree.data.time.TimeSeries,944
+Sat Jan 13 03:58:16 AEDT 2018 org.jfree.data.time.TimeSeries,947
+Sat Jan 13 04:03:11 AEDT 2018 org.jfree.data.time.TimeSeries,953
+Sat Jan 13 04:03:12 AEDT 2018 org.jfree.data.time.TimeSeries,879
+Sat Jan 13 04:04:14 AEDT 2018 org.jfree.data.time.TimeSeries,882
+Sat Jan 13 04:04:14 AEDT 2018 org.jfree.data.time.SpreadsheetDate,452
+Sat Jan 13 04:04:42 AEDT 2018 Sat Jan 13 04:04:42 AEDT 2018 : org.jfree.data.time.Day,122=>Find no block
+Sat Jan 13 04:04:43 AEDT 2018 org.jfree.data.time.Day,123
+Sat Jan 13 04:07:30 AEDT 2018 org.jfree.data.time.Day,124
+Sat Jan 13 04:07:31 AEDT 2018 Sat Jan 13 04:07:31 AEDT 2018 : org.jfree.data.time.Day,125=>Find no block
+Sat Jan 13 04:07:32 AEDT 2018 org.jfree.data.time.Day,302
+Sat Jan 13 04:08:30 AEDT 2018 org.jfree.data.time.TimeSeries,430
+Sat Jan 13 04:09:20 AEDT 2018 org.jfree.data.time.TimeSeries,433
+Sat Jan 13 04:15:21 AEDT 2018 org.jfree.data.time.TimeSeries,435
+Sat Jan 13 04:15:22 AEDT 2018 org.jfree.data.time.Day,183
+Sat Jan 13 04:15:26 AEDT 2018 org.jfree.data.time.Day,404
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1 instanceof RegularTimePeriod){
+result=-1;
+}else {
+result=1;
+}
+
+Time : 18/01/13 04:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1 instanceof Day){
+Day d=(Day)o1;
+result=result=-1;
+}else if(o1 instanceof RegularTimePeriod){
+result=0;
+}else {
+result=1;
+}
+
+Time : 18/01/13 04:21
+----------------------------------------
+Sat Jan 13 04:27:52 AEDT 2018 org.jfree.data.time.Day,405
+Sat Jan 13 04:27:53 AEDT 2018 org.jfree.data.time.Day,406
+Sat Jan 13 04:27:54 AEDT 2018 Sat Jan 13 04:27:54 AEDT 2018 : org.jfree.data.time.Day,407=>Find no block
+Sat Jan 13 04:27:55 AEDT 2018 org.jfree.data.time.Day,423
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(o1 instanceof Day){
+Day d=(Day)o1;
+result=result=-1;
+}else if(o1 instanceof RegularTimePeriod){
+result=0;
+}else {
+result=1;
+}
+return result;
+
+Time : 18/01/13 04:31
+----------------------------------------
+Sat Jan 13 04:35:36 AEDT 2018 org.jfree.data.time.SpreadsheetDate,211
+Sat Jan 13 04:35:40 AEDT 2018 org.jfree.data.time.SpreadsheetDate,308
+Sat Jan 13 04:35:46 AEDT 2018 org.jfree.data.time.Day,250
+Sat Jan 13 04:38:35 AEDT 2018 org.jfree.data.time.Day,251
+Sat Jan 13 04:38:36 AEDT 2018 Sat Jan 13 04:38:36 AEDT 2018 : org.jfree.data.time.Day,252=>Find no block
+Sat Jan 13 04:38:37 AEDT 2018 org.jfree.data.time.Day,317
+Sat Jan 13 05:05:41 AEDT 2018 org.jfree.data.time.Day,318
+Sat Jan 13 05:05:42 AEDT 2018 org.jfree.data.time.Day,319
+Sat Jan 13 05:05:43 AEDT 2018 org.jfree.data.time.Day,320
+Sat Jan 13 05:05:44 AEDT 2018 org.jfree.data.time.Day,321
+Sat Jan 13 05:05:45 AEDT 2018 org.jfree.data.time.Day,322
+Sat Jan 13 05:05:46 AEDT 2018 org.jfree.data.time.Day,324
+Sat Jan 13 05:05:48 AEDT 2018 org.jfree.data.time.Day,339
+Sat Jan 13 05:32:37 AEDT 2018 org.jfree.data.time.Day,340
+Sat Jan 13 05:32:38 AEDT 2018 org.jfree.data.time.Day,341
+Sat Jan 13 05:32:39 AEDT 2018 org.jfree.data.time.Day,342
+Sat Jan 13 05:32:40 AEDT 2018 org.jfree.data.time.Day,343
+Sat Jan 13 05:32:41 AEDT 2018 org.jfree.data.time.Day,344
+Sat Jan 13 05:32:42 AEDT 2018 org.jfree.data.time.Day,346
+Sat Jan 13 05:32:43 AEDT 2018 Sat Jan 13 05:32:43 AEDT 2018 : org.jfree.data.time.SerialDate,210=>Find no block
+Sat Jan 13 05:32:44 AEDT 2018 Sat Jan 13 05:32:44 AEDT 2018 : org.jfree.data.time.SerialDate,211=>Find no block
+Sat Jan 13 05:32:45 AEDT 2018 org.jfree.data.time.SerialDate,499
+Sat Jan 13 05:33:36 AEDT 2018 org.jfree.data.time.SerialDate,500
+Sat Jan 13 05:33:37 AEDT 2018 org.jfree.data.time.SerialDate,526
+Sat Jan 13 05:34:21 AEDT 2018 org.jfree.data.time.SerialDate,527
+Sat Jan 13 05:34:22 AEDT 2018 org.jfree.data.time.SerialDate,528
+Sat Jan 13 05:34:23 AEDT 2018 org.jfree.data.time.SerialDate,529
+Sat Jan 13 05:34:24 AEDT 2018 org.jfree.data.time.SerialDate,792
+Sat Jan 13 05:34:28 AEDT 2018 Sat Jan 13 05:34:28 AEDT 2018 : org.jfree.data.time.SpreadsheetDate,107=>Find no block
+Sat Jan 13 05:34:30 AEDT 2018 org.jfree.data.time.SpreadsheetDate,109
+Sat Jan 13 05:45:59 AEDT 2018 org.jfree.data.time.SpreadsheetDate,110
+Sat Jan 13 05:45:59 AEDT 2018 org.jfree.data.time.SpreadsheetDate,118
+Sat Jan 13 05:52:06 AEDT 2018 org.jfree.data.time.SpreadsheetDate,120
+Sat Jan 13 05:52:07 AEDT 2018 org.jfree.data.time.SpreadsheetDate,128
+Sat Jan 13 06:11:51 AEDT 2018 org.jfree.data.time.SpreadsheetDate,129
+Sat Jan 13 06:11:52 AEDT 2018 org.jfree.data.time.SpreadsheetDate,136
+Sat Jan 13 06:27:33 AEDT 2018 Sat Jan 13 06:27:33 AEDT 2018 : org.jfree.data.time.SpreadsheetDate,138=>Find no block
+Sat Jan 13 06:27:34 AEDT 2018 org.jfree.data.time.SpreadsheetDate,231
+Sat Jan 13 06:28:11 AEDT 2018 org.jfree.data.time.SpreadsheetDate,240
+Sat Jan 13 06:29:03 AEDT 2018 org.jfree.data.time.SpreadsheetDate,249
+Sat Jan 13 06:29:06 AEDT 2018 org.jfree.data.time.SpreadsheetDate,449
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int yy=((y-1900)*365)+SerialDate.leapYearCount(y-1);
+int mm=SerialDate.AGGREGATE_DAYS_TO_END_OF_PRECEDING_MONTH[1];
+if(m>MonthConstants.FEBRUARY){
+if(SerialDate.isLeapYear(y)){
+mm=mm+1;
+}
+}
+ final int dd=d;
+return yy+mm;
+
+Time : 18/01/13 06:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int yy=((y-1900)*365)+SerialDate.leapYearCount(y-1);
+int mm=1;
+if(m>MonthConstants.FEBRUARY){
+if(SerialDate.isLeapYear(y)){
+mm=mm+1;
+}
+}
+ final int dd=d;
+return yy+mm;
+
+Time : 18/01/13 06:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int yy=((y-1900)*365)+SerialDate.leapYearCount(y-1);
+int mm=SerialDate.AGGREGATE_DAYS_TO_END_OF_PRECEDING_MONTH[m];
+if(isLeapYear(this.year)){
+if(SerialDate.isLeapYear(y)){
+mm=mm+1;
+}
+}
+ final int dd=d;
+return yy+mm;
+
+Time : 18/01/13 06:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int yy=(y)+SerialDate.leapYearCount(y-1);
+int mm=SerialDate.AGGREGATE_DAYS_TO_END_OF_PRECEDING_MONTH[1];
+if(m>MonthConstants.FEBRUARY){
+if(SerialDate.isLeapYear(y)){
+mm=mm+1;
+}
+}
+ final int dd=d;
+return yy+mm;
+
+Time : 18/01/13 06:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int yy=(y)+SerialDate.leapYearCount(y-1);
+int mm=1;
+if(m>MonthConstants.FEBRUARY){
+if(SerialDate.isLeapYear(y)){
+mm=mm+1;
+}
+}
+ final int dd=d;
+return yy+mm;
+
+Time : 18/01/13 06:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int yy=((y-1900)*365)+SerialDate.leapYearCount(y-1);
+int mm=SerialDate.AGGREGATE_DAYS_TO_END_OF_PRECEDING_MONTH[1];
+if(isLeapYear(this.year)){
+if(SerialDate.isLeapYear(y)){
+mm=mm+1;
+}
+}
+ final int dd=d;
+return yy+mm;
+
+Time : 18/01/13 06:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int yy=((y-1900)*365)+SerialDate.leapYearCount(y-1);
+int mm=1;
+if(isLeapYear(this.year)){
+if(SerialDate.isLeapYear(y)){
+mm=mm+1;
+}
+}
+ final int dd=d;
+return yy+mm;
+
+Time : 18/01/13 06:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int yy=(y)+SerialDate.leapYearCount(y-1);
+int mm=SerialDate.AGGREGATE_DAYS_TO_END_OF_PRECEDING_MONTH[1];
+if(isLeapYear(this.year)){
+if(SerialDate.isLeapYear(y)){
+mm=mm+1;
+}
+}
+ final int dd=d;
+return yy+mm;
+
+Time : 18/01/13 06:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int yy=(y)+SerialDate.leapYearCount(y-1);
+int mm=1;
+if(isLeapYear(this.year)){
+if(SerialDate.isLeapYear(y)){
+mm=mm+1;
+}
+}
+ final int dd=d;
+return yy+mm;
+
+Time : 18/01/13 06:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int yy=((y-1900)*365)+SerialDate.leapYearCount(y-1);
+int mm=SerialDate.AGGREGATE_DAYS_TO_END_OF_PRECEDING_MONTH[m];
+if(isLeapYear(y)){
+if(SerialDate.isLeapYear(y)){
+mm=mm+1;
+}
+}
+ final int dd=d;
+return yy+mm;
+
+Time : 18/01/13 06:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int yy=((y)*365)+SerialDate.leapYearCount(y-1);
+int mm=SerialDate.AGGREGATE_DAYS_TO_END_OF_PRECEDING_MONTH[m];
+if(m>MonthConstants.FEBRUARY){
+if(SerialDate.isLeapYear(y)){
+mm=mm+1;
+}
+}
+ final int dd=d;
+return yy+mm;
+
+Time : 18/01/13 06:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int yy=((y-1900)*365)+SerialDate.leapYearCount(y-1);
+int mm=SerialDate.AGGREGATE_DAYS_TO_END_OF_PRECEDING_MONTH[m];
+if(m>MonthConstants.FEBRUARY){
+if(SerialDate.isLeapYear(y)){
+mm=mm+1;
+}
+}
+ final int dd=12;
+return yy+mm;
+
+Time : 18/01/13 06:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int yy=((y-1900)*365)+SerialDate.leapYearCount(y-1);
+int mm=SerialDate.AGGREGATE_DAYS_TO_END_OF_PRECEDING_MONTH[m];
+if(m>MonthConstants.FEBRUARY){
+if(SerialDate.isLeapYear(y)){
+mm=mm+1;
+}
+}
+ final int dd=1;
+return yy+mm;
+
+Time : 18/01/13 06:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int yy=((y)*365)+SerialDate.leapYearCount(y-1);
+int mm=SerialDate.AGGREGATE_DAYS_TO_END_OF_PRECEDING_MONTH[m];
+if(m>MonthConstants.FEBRUARY){
+if(SerialDate.isLeapYear(y)){
+mm=mm+1;
+}
+}
+ final int dd=12;
+return yy+mm;
+
+Time : 18/01/13 06:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int yy=((y)*365)+SerialDate.leapYearCount(y-1);
+int mm=SerialDate.AGGREGATE_DAYS_TO_END_OF_PRECEDING_MONTH[m];
+if(m>MonthConstants.FEBRUARY){
+if(SerialDate.isLeapYear(y)){
+mm=mm+1;
+}
+}
+ final int dd=1;
+return yy+mm;
+
+Time : 18/01/13 06:37
+----------------------------------------
+Sat Jan 13 06:39:48 AEDT 2018 org.jfree.data.time.SpreadsheetDate,450
+Sat Jan 13 06:39:49 AEDT 2018 org.jfree.data.time.SpreadsheetDate,451
+Sat Jan 13 06:39:50 AEDT 2018 org.jfree.data.time.SpreadsheetDate,456
+Sat Jan 13 06:39:50 AEDT 2018 org.jfree.data.time.SpreadsheetDate,457
+Sat Jan 13 06:39:51 AEDT 2018 org.jfree.data.time.TimeSeries,142
+Sat Jan 13 06:40:06 AEDT 2018 Sat Jan 13 06:40:06 AEDT 2018 : org.jfree.data.time.TimeSeries,144=>Find no block
+Sat Jan 13 06:40:07 AEDT 2018 org.jfree.data.time.SerialDate,544
+Sat Jan 13 06:52:37 AEDT 2018 org.jfree.data.time.SerialDate,545
+Sat Jan 13 06:52:38 AEDT 2018 org.jfree.data.time.SerialDate,546
+Sat Jan 13 06:52:39 AEDT 2018 org.jfree.data.time.TimeSeriesDataItem,203
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1 instanceof RegularTimePeriod){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+
+Time : 18/01/13 06:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1 instanceof TimeSeriesDataItem){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=result=0;
+}else {
+result=1;
+}
+
+Time : 18/01/13 06:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1 instanceof RegularTimePeriod){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=result=0;
+}else {
+result=1;
+}
+
+Time : 18/01/13 06:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1 instanceof Minute){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+
+Time : 18/01/13 06:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1 instanceof Hour){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+
+Time : 18/01/13 06:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1 instanceof Day){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+
+Time : 18/01/13 06:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1 instanceof Year){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+
+Time : 18/01/13 06:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1==null){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+
+Time : 18/01/13 06:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1==null){
+return 1;
+}
+if(o1==null){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+
+Time : 18/01/13 06:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1 instanceof Week){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+
+Time : 18/01/13 06:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(serialVersionUID>0){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+
+Time : 18/01/13 06:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1 instanceof TimeSeriesDataItem){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=result=1;
+}else {
+result=1;
+}
+
+Time : 18/01/13 06:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(serialVersionUID>0){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=result=1;
+}else {
+result=1;
+}
+
+Time : 18/01/13 06:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(serialVersionUID>0){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=-1;
+}
+
+Time : 18/01/13 07:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1 instanceof TimeSeriesDataItem){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=result=1;
+}else {
+result=-1;
+}
+
+Time : 18/01/13 07:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(serialVersionUID>0){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=result=1;
+}else {
+result=-1;
+}
+
+Time : 18/01/13 07:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1 instanceof TimeSeriesDataItem){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=result=-1;
+}else {
+result=1;
+}
+
+Time : 18/01/13 07:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1 instanceof Second){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+
+Time : 18/01/13 07:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!o1.equals(o1)){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+
+Time : 18/01/13 07:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(period.compareTo(period)>0){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+
+Time : 18/01/13 07:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1 instanceof TimeSeriesDataItem){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=result=-1;
+}else {
+result=-1;
+}
+
+Time : 18/01/13 07:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1 instanceof TimeSeriesDataItem){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=result=193;
+}else {
+result=1;
+}
+
+Time : 18/01/13 07:05
+----------------------------------------
+Sat Jan 13 07:06:14 AEDT 2018 org.jfree.data.time.TimeSeriesDataItem,204
+Sat Jan 13 07:06:15 AEDT 2018 org.jfree.data.time.TimeSeriesDataItem,205
+Sat Jan 13 07:06:15 AEDT 2018 Sat Jan 13 07:06:15 AEDT 2018 : org.jfree.data.time.TimeSeriesDataItem,206=>Find no block
+Sat Jan 13 07:06:16 AEDT 2018 org.jfree.data.time.TimeSeriesDataItem,215
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(o1 instanceof RegularTimePeriod){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+return result;
+
+Time : 18/01/13 07:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(o1 instanceof TimeSeriesDataItem){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=result=0;
+}else {
+result=1;
+}
+return result;
+
+Time : 18/01/13 07:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(o1 instanceof RegularTimePeriod){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=result=0;
+}else {
+result=1;
+}
+return result;
+
+Time : 18/01/13 07:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(serialVersionUID>0){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+return result;
+
+Time : 18/01/13 07:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(o1 instanceof TimeSeriesDataItem){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=result=1;
+}else {
+result=1;
+}
+return result;
+
+Time : 18/01/13 07:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(serialVersionUID>0){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=result=1;
+}else {
+result=1;
+}
+return result;
+
+Time : 18/01/13 07:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(serialVersionUID>0){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=-1;
+}
+return result;
+
+Time : 18/01/13 07:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(o1 instanceof TimeSeriesDataItem){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=result=1;
+}else {
+result=-1;
+}
+return result;
+
+Time : 18/01/13 07:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(serialVersionUID>0){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=result=1;
+}else {
+result=-1;
+}
+return result;
+
+Time : 18/01/13 07:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(o1 instanceof TimeSeriesDataItem){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+return 1;
+
+Time : 18/01/13 07:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(o1 instanceof TimeSeriesDataItem){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+result=this.value.hashCode();
+return result;
+
+Time : 18/01/13 07:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(o1 instanceof TimeSeriesDataItem){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+result=(this.period!=null?this.period.hashCode():0);
+return result;
+
+Time : 18/01/13 07:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(o1 instanceof TimeSeriesDataItem){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+result=29*result+(this.value!=null?this.value.hashCode():0);
+return result;
+
+Time : 18/01/13 07:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(o1 instanceof TimeSeriesDataItem){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+result=(this.period!=null?this.period.hashCode():0);
+result=29*result+(this.value!=null?this.value.hashCode():0);
+return result;
+
+Time : 18/01/13 07:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(o1 instanceof TimeSeriesDataItem){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=result=-1;
+}else {
+result=1;
+}
+return result;
+
+Time : 18/01/13 07:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(o1 instanceof TimeSeriesDataItem){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=result=-1;
+}else {
+result=-1;
+}
+return result;
+
+Time : 18/01/13 07:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(period.compareTo(period)>0){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+return result;
+
+Time : 18/01/13 07:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(o1 instanceof TimeSeriesDataItem){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+return super.hashCode();
+
+Time : 18/01/13 07:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result;
+if(o1==null){
+TimeSeriesDataItem datapair=(TimeSeriesDataItem)o1;
+result=getPeriod().compareTo(datapair.getPeriod());
+}else {
+result=1;
+}
+return result;
+
+Time : 18/01/13 07:22
+----------------------------------------
+Sat Jan 13 07:23:04 AEDT 2018 org.jfree.data.time.TimeSeries,561
+Sat Jan 13 07:24:13 AEDT 2018 Sat Jan 13 07:24:13 AEDT 2018 : org.jfree.data.time.TimeSeries,562=>Find no block
+Sat Jan 13 07:24:14 AEDT 2018 org.jfree.data.time.TimeSeries,574
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.maximumItemCount+=maximumItemCount;
+TimeSeriesDataItem item=new TimeSeriesDataItem(period,value);
+add(item,notify);
+
+Time : 18/01/13 07:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.data=new java.util.ArrayList();
+TimeSeriesDataItem item=new TimeSeriesDataItem(period,value);
+add(item,notify);
+
+Time : 18/01/13 07:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+maximumItemCount++;
+TimeSeriesDataItem item=new TimeSeriesDataItem(period,value);
+add(item,notify);
+
+Time : 18/01/13 07:27
+----------------------------------------
+Sat Jan 13 07:32:07 AEDT 2018 org.jfree.data.time.TimeSeries,575
+Sat Jan 13 07:32:07 AEDT 2018 Sat Jan 13 07:32:07 AEDT 2018 : org.jfree.data.time.TimeSeries,576=>Find no block
+Sat Jan 13 07:32:08 AEDT 2018 Sat Jan 13 07:32:08 AEDT 2018 : org.jfree.data.time.Year,96=>Find no block
+Sat Jan 13 07:32:09 AEDT 2018 org.jfree.data.time.Year,97
+Sat Jan 13 07:39:23 AEDT 2018 org.jfree.data.time.Year,103
+Sat Jan 13 07:50:28 AEDT 2018 org.jfree.data.time.Year,104
+Sat Jan 13 07:50:29 AEDT 2018 Sat Jan 13 07:50:29 AEDT 2018 : org.jfree.data.time.Year,105=>Find no block
+Sat Jan 13 07:50:30 AEDT 2018 org.jfree.data.time.Year,136
+Sat Jan 13 07:50:31 AEDT 2018 org.jfree.data.time.Year,176
+Sat Jan 13 07:50:31 AEDT 2018 org.jfree.data.time.Year,177
+Sat Jan 13 07:50:32 AEDT 2018 Sat Jan 13 07:50:32 AEDT 2018 : org.jfree.data.time.Year,178=>Find no block
+Sat Jan 13 07:50:33 AEDT 2018 org.jfree.data.time.Year,218
+Sat Jan 13 07:50:34 AEDT 2018 org.jfree.data.time.Year,233
+Sat Jan 13 07:54:10 AEDT 2018 org.jfree.data.time.Year,234
+Sat Jan 13 07:54:11 AEDT 2018 org.jfree.data.time.Year,237
+Sat Jan 13 07:54:12 AEDT 2018 org.jfree.data.time.Year,252
+Sat Jan 13 07:58:48 AEDT 2018 org.jfree.data.time.Year,253
+Sat Jan 13 07:58:54 AEDT 2018 org.jfree.data.time.Year,256
+Sat Jan 13 07:59:00 AEDT 2018 org.jfree.data.time.Year,317
+Timeout time : 18/01/13 08:10

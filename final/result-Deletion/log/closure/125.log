@@ -1,0 +1,75 @@
+=================================================
+Project : closure_125	start : 18/01/15 19:20
+Current failed test : com.google.javascript.jscomp.TypeCheckTest::testIssue1002 | 18/01/15 19:20
+Mon Jan 15 19:21:17 AEDT 2018 com.google.javascript.rhino.jstype.JSType,958
+Mon Jan 15 19:21:29 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,202
+Mon Jan 15 19:22:05 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,203
+Mon Jan 15 19:22:10 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,205
+Mon Jan 15 19:22:16 AEDT 2018 com.google.javascript.jscomp.TypeCheck,678
+Mon Jan 15 19:23:20 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,423
+Mon Jan 15 19:23:45 AEDT 2018 com.google.javascript.rhino.jstype.JSType,877
+Mon Jan 15 19:32:07 AEDT 2018 com.google.javascript.rhino.jstype.JSType,878
+Mon Jan 15 19:32:12 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,901
+Mon Jan 15 19:33:28 AEDT 2018 com.google.javascript.rhino.jstype.JSType,873
+Mon Jan 15 19:35:59 AEDT 2018 com.google.javascript.rhino.jstype.JSType,1164
+Mon Jan 15 19:36:32 AEDT 2018 com.google.javascript.rhino.jstype.JSType,1165
+Mon Jan 15 19:36:37 AEDT 2018 Mon Jan 15 19:36:37 AEDT 2018 : com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,83=>Find no block
+Mon Jan 15 19:36:42 AEDT 2018 com.google.javascript.rhino.jstype.JSType,1179
+Mon Jan 15 19:37:45 AEDT 2018 com.google.javascript.rhino.jstype.JSType,1187
+Mon Jan 15 19:38:03 AEDT 2018 com.google.javascript.rhino.jstype.JSType,1191
+Mon Jan 15 19:38:07 AEDT 2018 Mon Jan 15 19:38:07 AEDT 2018 : com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,98=>Find no block
+Mon Jan 15 19:38:13 AEDT 2018 Mon Jan 15 19:38:13 AEDT 2018 : com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,80=>Find no block
+Mon Jan 15 19:38:18 AEDT 2018 Mon Jan 15 19:38:18 AEDT 2018 : com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,95=>Find no block
+Mon Jan 15 19:38:23 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,287
+Mon Jan 15 19:40:37 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1360
+Mon Jan 15 19:41:06 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,420
+Mon Jan 15 19:41:46 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,418
+Mon Jan 15 19:42:24 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,419
+Mon Jan 15 19:42:31 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,422
+Mon Jan 15 19:42:36 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,425
+Mon Jan 15 19:42:41 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,790
+Mon Jan 15 19:47:36 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,792
+Mon Jan 15 19:48:33 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,794
+Mon Jan 15 19:48:38 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,780
+Mon Jan 15 19:48:43 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,427
+Mon Jan 15 19:50:08 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,776
+Mon Jan 15 19:52:47 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,778
+Mon Jan 15 19:52:51 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,320
+Mon Jan 15 20:04:49 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,753
+Mon Jan 15 20:06:07 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,149
+Mon Jan 15 20:08:02 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,277
+Mon Jan 15 20:10:05 AEDT 2018 com.google.javascript.rhino.jstype.UnionTypeBuilder,151
+Mon Jan 15 20:12:03 AEDT 2018 com.google.javascript.rhino.jstype.UnionTypeBuilder,153
+Mon Jan 15 20:12:09 AEDT 2018 com.google.javascript.rhino.jstype.UnionTypeBuilder,155
+Mon Jan 15 20:12:13 AEDT 2018 com.google.javascript.rhino.jstype.UnionTypeBuilder,156
+Mon Jan 15 20:12:18 AEDT 2018 com.google.javascript.rhino.jstype.UnionTypeBuilder,157
+Mon Jan 15 20:12:23 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,743
+Mon Jan 15 20:14:18 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,745
+Mon Jan 15 20:14:42 AEDT 2018 com.google.javascript.jscomp.TypeCheck,651
+Mon Jan 15 20:26:35 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,267
+Mon Jan 15 20:26:53 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,140
+Mon Jan 15 20:30:50 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,141
+Mon Jan 15 20:30:55 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,298
+Mon Jan 15 20:31:26 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,274
+Mon Jan 15 20:36:02 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,276
+Mon Jan 15 20:36:07 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,284
+Mon Jan 15 20:40:56 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,286
+Mon Jan 15 20:41:01 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,294
+Mon Jan 15 20:46:20 AEDT 2018 com.google.javascript.jscomp.type.SemanticReverseAbstractInterpreter,297
+Mon Jan 15 20:46:25 AEDT 2018 Mon Jan 15 20:46:25 AEDT 2018 : com.google.javascript.rhino.jstype.JSType,1410=>Find no block
+Mon Jan 15 20:46:31 AEDT 2018 com.google.javascript.rhino.jstype.JSType,1411
+Mon Jan 15 20:46:49 AEDT 2018 com.google.javascript.rhino.jstype.JSType,1412
+Mon Jan 15 20:46:54 AEDT 2018 Mon Jan 15 20:46:54 AEDT 2018 : com.google.javascript.rhino.jstype.JSType,1413=>Find no block
+Mon Jan 15 20:46:59 AEDT 2018 com.google.javascript.jscomp.LinkedFlowScope,464
+Mon Jan 15 20:47:59 AEDT 2018 com.google.javascript.jscomp.TypeCheck,644
+Mon Jan 15 22:08:35 AEDT 2018 com.google.javascript.jscomp.TypeCheck,645
+Mon Jan 15 22:08:40 AEDT 2018 com.google.javascript.jscomp.TypeCheck,647
+Mon Jan 15 22:08:45 AEDT 2018 com.google.javascript.jscomp.TypeCheck,655
+Mon Jan 15 22:37:12 AEDT 2018 com.google.javascript.jscomp.TypeCheck,656
+Mon Jan 15 22:43:46 AEDT 2018 com.google.javascript.jscomp.TypeCheck,667
+Mon Jan 15 22:47:26 AEDT 2018 com.google.javascript.jscomp.TypeCheck,668
+Mon Jan 15 22:49:31 AEDT 2018 com.google.javascript.jscomp.TypeCheck,670
+Tue Jan 16 00:06:32 AEDT 2018 com.google.javascript.jscomp.TypeCheck,671
+Tue Jan 16 00:06:37 AEDT 2018 com.google.javascript.jscomp.TypeCheck,685
+Tue Jan 16 00:09:59 AEDT 2018 com.google.javascript.jscomp.TypeCheck,689
+Timeout time : 18/01/16 00:21

@@ -1,0 +1,156 @@
+=================================================
+Project : math_7	start : 18/01/14 01:43
+Current failed test : org.apache.commons.math3.ode.nonstiff.DormandPrince853IntegratorTest::testEventsScheduling | 18/01/14 01:45
+Sun Jan 14 01:53:04 AEDT 2018 org.apache.commons.math3.util.FastMath,3367
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x>=x){
+return 1;
+}
+if(y==x){
+return y;
+}
+
+Time : 18/01/14 02:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x>=x){
+return 1;
+}
+if(y==x){
+return y;
+}
+y+=1.0;
+if(y==0){
+return x*y;
+}
+
+Time : 18/01/14 03:44
+----------------------------------------
+Sun Jan 14 04:25:35 AEDT 2018 org.apache.commons.math3.util.FastMath,3369
+Sun Jan 14 04:25:45 AEDT 2018 org.apache.commons.math3.util.FastMath,3373
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y==0){
+return x*y;
+}
+return Math.PI/2;
+
+Time : 18/01/14 04:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y==0){
+return x*y;
+}
+return atan(E,E,x<0);
+
+Time : 18/01/14 04:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y==0){
+return x*y;
+}
+return 2/(y-E);
+
+Time : 18/01/14 04:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y==0){
+return x*y;
+}
+if(FastMath.abs(x)>=1.0){
+return 0.0;
+}
+return y;
+
+Time : 18/01/14 05:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y==0){
+return x*y;
+}
+return Math.PI/2.0;
+
+Time : 18/01/14 05:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y==0){
+return x*y;
+}
+return (E/y)*FastMath.pow(x/y,E-1);
+
+Time : 18/01/14 05:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y==0){
+return x*y;
+}
+if(x<0){
+return 0;
+}
+return (E/y)*FastMath.pow(x/y,E-1);
+
+Time : 18/01/14 05:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y==0){
+return x*y;
+}
+return -Math.PI/2.0;
+
+Time : 18/01/14 05:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y==0){
+return x*y;
+}
+return E;
+
+Time : 18/01/14 05:39
+----------------------------------------
+Sun Jan 14 05:48:16 AEDT 2018 org.apache.commons.math3.ode.AbstractIntegrator,351
+Sun Jan 14 05:51:19 AEDT 2018 Sun Jan 14 05:51:19 AEDT 2018 : org.apache.commons.math3.ode.AbstractIntegrator,352=>Find no block
+Sun Jan 14 05:51:31 AEDT 2018 Sun Jan 14 05:51:31 AEDT 2018 : org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,218=>Find no block
+Sun Jan 14 05:51:43 AEDT 2018 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,224
+Sun Jan 14 05:56:43 AEDT 2018 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,239
+Sun Jan 14 06:02:08 AEDT 2018 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,240
+Sun Jan 14 06:02:20 AEDT 2018 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,241
+Sun Jan 14 06:08:35 AEDT 2018 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,242
+Sun Jan 14 06:08:44 AEDT 2018 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,243
+Sun Jan 14 06:17:27 AEDT 2018 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,342
+Sun Jan 14 06:30:30 AEDT 2018 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,343
+Sun Jan 14 06:30:37 AEDT 2018 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,344
+Sun Jan 14 06:41:26 AEDT 2018 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,345
+Sun Jan 14 06:49:03 AEDT 2018 org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver,346
+Timeout time : 18/01/14 06:53

@@ -1,0 +1,88 @@
+=================================================
+Project : closure_79	start : 18/01/16 00:39
+Current failed test : com.google.javascript.jscomp.VarCheckTest::testCallInExterns | 18/01/16 00:41
+Tue Jan 16 00:56:39 AEDT 2018 com.google.javascript.jscomp.VarCheck,247
+Tue Jan 16 01:17:31 AEDT 2018 com.google.javascript.jscomp.VarCheck,249
+Tue Jan 16 01:46:02 AEDT 2018 com.google.javascript.jscomp.VarCheck,250
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Scope scope=t.getScope();
+Scope.Var var=scope.getVar(n.getString());
+
+Time : 18/01/16 01:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Scope scope=t.getScope();
+if(n.getString().length()==0){
+return ;
+}
+Scope.Var var=scope.getVar(n.getString());
+
+Time : 18/01/16 01:54
+----------------------------------------
+Timeout time : 18/01/16 01:58
+Current failed test : com.google.javascript.jscomp.NormalizeTest::testIssue | 18/01/16 01:58
+Tue Jan 16 02:15:26 AEDT 2018 Tue Jan 16 02:15:26 AEDT 2018 : com.google.javascript.jscomp.NodeTraversal,279=>Find no block
+Tue Jan 16 02:15:29 AEDT 2018 com.google.javascript.jscomp.NodeTraversal,280
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+curNode.setType(Token.GET);
+for(Node root : roots){
+Preconditions.checkState(root.getParent()==scopeRoot);
+traverseBranch(root,scopeRoot);
+}
+
+Time : 18/01/16 03:15
+----------------------------------------
+Timeout time : 18/01/16 03:20
+Current failed test : com.google.javascript.jscomp.VarCheckTest::testPropReferenceInExterns1 | 18/01/16 03:20
+Tue Jan 16 03:39:16 AEDT 2018 com.google.javascript.jscomp.VarCheck,241
+Tue Jan 16 03:56:51 AEDT 2018 com.google.javascript.jscomp.VarCheck,242
+Tue Jan 16 03:56:54 AEDT 2018 com.google.javascript.rhino.Node,2043
+Tue Jan 16 03:57:02 AEDT 2018 com.google.javascript.rhino.Node,2044
+Tue Jan 16 03:57:06 AEDT 2018 com.google.javascript.rhino.Node,2046
+Tue Jan 16 03:59:20 AEDT 2018 Tue Jan 16 03:59:20 AEDT 2018 : com.google.javascript.rhino.Node,2047=>Find no block
+Tue Jan 16 03:59:25 AEDT 2018 com.google.javascript.rhino.JSDocInfo,545
+Timeout time : 18/01/16 04:39
+Current failed test : com.google.javascript.jscomp.VarCheckTest::testVarReferenceInExterns | 18/01/16 04:39
+Tue Jan 16 04:59:06 AEDT 2018 com.google.javascript.jscomp.VarCheck,247
+Tue Jan 16 05:20:39 AEDT 2018 com.google.javascript.jscomp.VarCheck,249
+Tue Jan 16 05:48:05 AEDT 2018 com.google.javascript.jscomp.VarCheck,250
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Scope scope=t.getScope();
+Scope.Var var=scope.getVar(n.getString());
+
+Time : 18/01/16 05:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Scope scope=t.getScope();
+if(n.getString().length()==0){
+return ;
+}
+Scope.Var var=scope.getVar(n.getString());
+
+Time : 18/01/16 05:58
+----------------------------------------
+Timeout time : 18/01/16 06:04
+Current failed test : com.google.javascript.jscomp.VarCheckTest::testPropReferenceInExterns3 | 18/01/16 06:04
+Tue Jan 16 06:24:10 AEDT 2018 com.google.javascript.jscomp.VarCheck,241
+Tue Jan 16 06:39:20 AEDT 2018 com.google.javascript.jscomp.VarCheck,242
+Tue Jan 16 06:39:24 AEDT 2018 com.google.javascript.rhino.Node,2043
+Tue Jan 16 06:39:32 AEDT 2018 com.google.javascript.rhino.Node,2044
+Tue Jan 16 06:39:34 AEDT 2018 com.google.javascript.rhino.Node,2046
+Tue Jan 16 06:41:55 AEDT 2018 Tue Jan 16 06:41:55 AEDT 2018 : com.google.javascript.rhino.Node,2047=>Find no block
+Tue Jan 16 06:41:59 AEDT 2018 com.google.javascript.rhino.JSDocInfo,545
+Timeout time : 18/01/16 07:24

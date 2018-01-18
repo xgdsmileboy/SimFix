@@ -1,0 +1,359 @@
+=================================================
+Project : chart_16	start : 18/01/15 14:02
+Current failed test : org.jfree.data.category.junit.DefaultIntervalCategoryDatasetTests::testGetColumnIndex | 18/01/15 14:04
+Mon Jan 15 14:05:54 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,625
+Mon Jan 15 14:06:45 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,628
+Mon Jan 15 14:07:35 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,573
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<result;i++){
+if(category.equals(this.categoryKeys[i])){
+result=i;
+break;
+}
+}
+
+Time : 18/01/15 14:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result=-1;
+return result;
+
+Time : 18/01/15 14:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result=-1;
+for(int i=0;i<result;i++){
+if(category.equals(this.categoryKeys[i])){
+result=i;
+break;
+}
+}
+return result;
+
+Time : 18/01/15 14:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result=-1;
+new StringBuffer(7).append("#");
+for(int i=0;i<result;i++){
+if(category.equals(this.categoryKeys[i])){
+result=i;
+break;
+}
+}
+return result;
+
+Time : 18/01/15 14:20
+----------------------------------------
+Mon Jan 15 14:24:57 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,574
+Mon Jan 15 14:25:02 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,207
+Mon Jan 15 14:25:13 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,208
+Mon Jan 15 14:25:18 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,91
+Mon Jan 15 14:25:27 AEDT 2018 Mon Jan 15 14:25:27 AEDT 2018 : org.jfree.data.category.DefaultIntervalCategoryDataset,93=>Find no block
+Mon Jan 15 14:25:31 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,107
+Mon Jan 15 14:25:43 AEDT 2018 Mon Jan 15 14:25:43 AEDT 2018 : org.jfree.data.category.DefaultIntervalCategoryDataset,108=>Find no block
+Mon Jan 15 14:25:48 AEDT 2018 Mon Jan 15 14:25:48 AEDT 2018 : org.jfree.data.category.DefaultIntervalCategoryDataset,145=>Find no block
+Mon Jan 15 14:25:51 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,147
+Timeout time : 18/01/15 14:35
+Current failed test : org.jfree.data.category.junit.DefaultIntervalCategoryDatasetTests::testGetColumnCount | 18/01/15 14:35
+Mon Jan 15 14:36:52 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,690
+Mon Jan 15 14:37:02 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,207
+Mon Jan 15 14:37:10 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,208
+Mon Jan 15 14:37:13 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,91
+Mon Jan 15 14:37:23 AEDT 2018 Mon Jan 15 14:37:23 AEDT 2018 : org.jfree.data.category.DefaultIntervalCategoryDataset,93=>Find no block
+Mon Jan 15 14:37:26 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,107
+Mon Jan 15 14:37:37 AEDT 2018 Mon Jan 15 14:37:37 AEDT 2018 : org.jfree.data.category.DefaultIntervalCategoryDataset,108=>Find no block
+Mon Jan 15 14:37:41 AEDT 2018 Mon Jan 15 14:37:41 AEDT 2018 : org.jfree.data.category.DefaultIntervalCategoryDataset,145=>Find no block
+Mon Jan 15 14:37:45 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,147
+Timeout time : 18/01/15 15:07
+Current failed test : org.jfree.data.category.junit.DefaultIntervalCategoryDatasetTests::testGetRowCount | 18/01/15 15:07
+Mon Jan 15 15:08:27 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,690
+Mon Jan 15 15:08:39 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,207
+Mon Jan 15 15:08:49 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,208
+Mon Jan 15 15:08:51 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,91
+Mon Jan 15 15:09:00 AEDT 2018 Mon Jan 15 15:09:00 AEDT 2018 : org.jfree.data.category.DefaultIntervalCategoryDataset,93=>Find no block
+Mon Jan 15 15:09:02 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,107
+Mon Jan 15 15:09:14 AEDT 2018 Mon Jan 15 15:09:14 AEDT 2018 : org.jfree.data.category.DefaultIntervalCategoryDataset,108=>Find no block
+Mon Jan 15 15:09:17 AEDT 2018 Mon Jan 15 15:09:17 AEDT 2018 : org.jfree.data.category.DefaultIntervalCategoryDataset,145=>Find no block
+Mon Jan 15 15:09:20 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,147
+Timeout time : 18/01/15 15:38
+Current failed test : org.jfree.data.category.junit.DefaultIntervalCategoryDatasetTests::testCloning2_purify_1 | 18/01/15 15:38
+Mon Jan 15 15:39:27 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,746
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+DefaultIntervalCategoryDataset clone=(DefaultIntervalCategoryDataset)super.clone();
+clone.startData=clone(this.startData);
+clone.endData=clone(this.endData);
+return clone;
+
+Time : 18/01/15 15:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 5.985140027415785 : [/home/hz985/jiajun/d4j/projects/chart/chart_16_buggy/source/org/jfree/data/category/DefaultIntervalCategoryDataset.java=>0,0]
+clone.foregroundDomainMarkers=(Map)ObjectUtilities.clone(this.foregroundDomainMarkers);
+clone.backgroundDomainMarkers=(Map)ObjectUtilities.clone(this.backgroundDomainMarkers);
+clone.foregroundRangeMarkers=(Map)ObjectUtilities.clone(this.foregroundRangeMarkers);
+clone.backgroundRangeMarkers=(Map)ObjectUtilities.clone(this.backgroundRangeMarkers);
+clone.annotations=(List)ObjectUtilities.deepClone(this.annotations);
+if(this.fixedDomainAxisSpace!=null){
+clone.fixedDomainAxisSpace=(AxisSpace)ObjectUtilities.clone(this.fixedDomainAxisSpace);
+}
+if(this.fixedRangeAxisSpace!=null){
+clone.fixedRangeAxisSpace=(AxisSpace)ObjectUtilities.clone(this.fixedRangeAxisSpace);
+}
+
+Time : 18/01/15 15:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/chart/chart_16_buggy/source/org/jfree/data/category/DefaultIntervalCategoryDataset.java=>746,752]
+DefaultIntervalCategoryDataset clone=(DefaultIntervalCategoryDataset)super.clone();
+clone.categoryKeys=(Comparable[])this.categoryKeys.clone();
+clone.seriesKeys=(Comparable[])this.seriesKeys.clone();
+clone.startData=clone(this.startData);
+clone.endData=clone(this.endData);
+return clone;
+
+Time : 18/01/15 15:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/chart/chart_16_buggy/source/org/jfree/data/category/DefaultIntervalCategoryDataset.java=>746,752]
+DefaultIntervalCategoryDataset clone=(DefaultIntervalCategoryDataset)super.clone();
+clone.startData=clone(this.startData);
+clone.endData=clone(this.endData);
+return clone;
+
+Time : 18/01/15 15:41
+----------------------------------------
+Success time : 18/01/15 15:41
+Current failed test : org.jfree.data.category.junit.DefaultIntervalCategoryDatasetTests::testCloning2_purify_2 | 18/01/15 15:41
+Already fixed : org.jfree.data.category.junit.DefaultIntervalCategoryDatasetTests::testCloning2_purify_2
+Current failed test : org.jfree.data.category.junit.DefaultIntervalCategoryDatasetTests::testCloning2_purify_3 | 18/01/15 15:42
+Already fixed : org.jfree.data.category.junit.DefaultIntervalCategoryDatasetTests::testCloning2_purify_3
+Current failed test : org.jfree.data.category.junit.DefaultIntervalCategoryDatasetTests::testGetSeriesIndex | 18/01/15 15:42
+Mon Jan 15 15:43:33 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,241
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<result;i++){
+if(seriesKey.equals(this.seriesKeys[i])){
+result=i;
+break;
+}
+}
+
+Time : 18/01/15 15:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result=-1;
+return result;
+
+Time : 18/01/15 15:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result=-1;
+for(int i=0;i<result;i++){
+if(seriesKey.equals(this.seriesKeys[i])){
+result=i;
+break;
+}
+}
+return result;
+
+Time : 18/01/15 15:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result=-1;
+new StringBuffer(7).append("#");
+for(int i=0;i<result;i++){
+if(seriesKey.equals(this.seriesKeys[i])){
+result=i;
+break;
+}
+}
+return result;
+
+Time : 18/01/15 15:54
+----------------------------------------
+Mon Jan 15 15:59:35 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,242
+Mon Jan 15 15:59:39 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,207
+Mon Jan 15 15:59:50 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,208
+Mon Jan 15 15:59:54 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,91
+Mon Jan 15 16:00:05 AEDT 2018 Mon Jan 15 16:00:05 AEDT 2018 : org.jfree.data.category.DefaultIntervalCategoryDataset,93=>Find no block
+Mon Jan 15 16:00:10 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,107
+Mon Jan 15 16:00:22 AEDT 2018 Mon Jan 15 16:00:22 AEDT 2018 : org.jfree.data.category.DefaultIntervalCategoryDataset,108=>Find no block
+Mon Jan 15 16:00:26 AEDT 2018 Mon Jan 15 16:00:26 AEDT 2018 : org.jfree.data.category.DefaultIntervalCategoryDataset,145=>Find no block
+Mon Jan 15 16:00:30 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,147
+Timeout time : 18/01/15 16:14
+Current failed test : org.jfree.data.category.junit.DefaultIntervalCategoryDatasetTests::testGetRowIndex | 18/01/15 16:14
+Mon Jan 15 16:15:21 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,641
+Mon Jan 15 16:15:32 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,241
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<result;i++){
+if(seriesKey.equals(this.seriesKeys[i])){
+result=i;
+break;
+}
+}
+
+Time : 18/01/15 16:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result=-1;
+return result;
+
+Time : 18/01/15 16:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result=-1;
+for(int i=0;i<result;i++){
+if(seriesKey.equals(this.seriesKeys[i])){
+result=i;
+break;
+}
+}
+return result;
+
+Time : 18/01/15 16:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result=-1;
+new StringBuffer(7).append("#");
+for(int i=0;i<result;i++){
+if(seriesKey.equals(this.seriesKeys[i])){
+result=i;
+break;
+}
+}
+return result;
+
+Time : 18/01/15 16:27
+----------------------------------------
+Mon Jan 15 16:31:55 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,242
+Mon Jan 15 16:31:58 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,207
+Mon Jan 15 16:32:11 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,208
+Mon Jan 15 16:32:16 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,91
+Mon Jan 15 16:32:31 AEDT 2018 Mon Jan 15 16:32:31 AEDT 2018 : org.jfree.data.category.DefaultIntervalCategoryDataset,93=>Find no block
+Mon Jan 15 16:32:39 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,107
+Mon Jan 15 16:32:52 AEDT 2018 Mon Jan 15 16:32:52 AEDT 2018 : org.jfree.data.category.DefaultIntervalCategoryDataset,108=>Find no block
+Mon Jan 15 16:32:59 AEDT 2018 Mon Jan 15 16:32:59 AEDT 2018 : org.jfree.data.category.DefaultIntervalCategoryDataset,145=>Find no block
+Mon Jan 15 16:33:04 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,147
+Timeout time : 18/01/15 16:45
+Current failed test : org.jfree.data.category.junit.DefaultIntervalCategoryDatasetTests::testSetCategoryKeys | 18/01/15 16:45
+Mon Jan 15 16:46:24 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,335
+Mon Jan 15 16:48:03 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,338
+Mon Jan 15 16:55:46 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,207
+Mon Jan 15 16:56:01 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,208
+Mon Jan 15 16:56:06 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,91
+Mon Jan 15 16:56:18 AEDT 2018 Mon Jan 15 16:56:18 AEDT 2018 : org.jfree.data.category.DefaultIntervalCategoryDataset,93=>Find no block
+Mon Jan 15 16:56:26 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,107
+Mon Jan 15 16:56:40 AEDT 2018 Mon Jan 15 16:56:40 AEDT 2018 : org.jfree.data.category.DefaultIntervalCategoryDataset,108=>Find no block
+Mon Jan 15 16:56:45 AEDT 2018 Mon Jan 15 16:56:45 AEDT 2018 : org.jfree.data.category.DefaultIntervalCategoryDataset,145=>Find no block
+Mon Jan 15 16:56:51 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,147
+Timeout time : 18/01/15 17:16
+Current failed test : org.jfree.data.category.junit.DefaultIntervalCategoryDatasetTests::testGetCategoryIndex | 18/01/15 17:16
+Mon Jan 15 17:17:26 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,573
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<result;i++){
+if(category.equals(this.categoryKeys[i])){
+result=i;
+break;
+}
+}
+
+Time : 18/01/15 17:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result=-1;
+return result;
+
+Time : 18/01/15 17:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result=-1;
+for(int i=0;i<result;i++){
+if(category.equals(this.categoryKeys[i])){
+result=i;
+break;
+}
+}
+return result;
+
+Time : 18/01/15 17:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result=-1;
+new StringBuffer(7).append("#");
+for(int i=0;i<result;i++){
+if(category.equals(this.categoryKeys[i])){
+result=i;
+break;
+}
+}
+return result;
+
+Time : 18/01/15 17:31
+----------------------------------------
+Mon Jan 15 17:35:18 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,574
+Mon Jan 15 17:35:20 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,207
+Mon Jan 15 17:35:36 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,208
+Mon Jan 15 17:35:42 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,91
+Mon Jan 15 17:35:58 AEDT 2018 Mon Jan 15 17:35:58 AEDT 2018 : org.jfree.data.category.DefaultIntervalCategoryDataset,93=>Find no block
+Mon Jan 15 17:36:04 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,107
+Mon Jan 15 17:36:18 AEDT 2018 Mon Jan 15 17:36:18 AEDT 2018 : org.jfree.data.category.DefaultIntervalCategoryDataset,108=>Find no block
+Mon Jan 15 17:36:22 AEDT 2018 Mon Jan 15 17:36:22 AEDT 2018 : org.jfree.data.category.DefaultIntervalCategoryDataset,145=>Find no block
+Mon Jan 15 17:36:26 AEDT 2018 org.jfree.data.category.DefaultIntervalCategoryDataset,147
+Timeout time : 18/01/15 17:47

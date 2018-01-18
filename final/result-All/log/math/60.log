@@ -1,0 +1,107 @@
+=================================================
+Project : math_60	start : 18/01/12 19:23
+Current failed test : org.apache.commons.math.distribution.NormalDistributionTest::testExtremeValues | 18/01/12 19:23
+Fri Jan 12 19:24:03 AEDT 2018 Fri Jan 12 19:24:03 AEDT 2018 : org.apache.commons.math.MathException,84=>Find no block
+Fri Jan 12 19:24:06 AEDT 2018 org.apache.commons.math.MathException,85
+Fri Jan 12 19:24:59 AEDT 2018 org.apache.commons.math.MathException,86
+Fri Jan 12 19:25:00 AEDT 2018 Fri Jan 12 19:25:00 AEDT 2018 : org.apache.commons.math.MathException,87=>Find no block
+Fri Jan 12 19:25:02 AEDT 2018 org.apache.commons.math.MathException,168
+Fri Jan 12 19:25:14 AEDT 2018 org.apache.commons.math.MathException,169
+Fri Jan 12 19:25:16 AEDT 2018 org.apache.commons.math.MathException,177
+Fri Jan 12 19:25:24 AEDT 2018 org.apache.commons.math.MathException,183
+Fri Jan 12 19:25:32 AEDT 2018 org.apache.commons.math.ConvergenceException,62
+Fri Jan 12 19:25:54 AEDT 2018 Fri Jan 12 19:25:54 AEDT 2018 : org.apache.commons.math.ConvergenceException,63=>Find no block
+Fri Jan 12 19:25:56 AEDT 2018 Fri Jan 12 19:25:56 AEDT 2018 : org.apache.commons.math.util.FastMath,653=>Find no block
+Fri Jan 12 19:25:57 AEDT 2018 Fri Jan 12 19:25:57 AEDT 2018 : org.apache.commons.math.util.FastMath,654=>Find no block
+Fri Jan 12 19:25:59 AEDT 2018 Fri Jan 12 19:25:59 AEDT 2018 : org.apache.commons.math.util.FastMath,658=>Find no block
+Fri Jan 12 19:26:00 AEDT 2018 Fri Jan 12 19:26:00 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,163=>Find no block
+Fri Jan 12 19:26:02 AEDT 2018 Fri Jan 12 19:26:02 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,164=>Find no block
+Fri Jan 12 19:26:03 AEDT 2018 Fri Jan 12 19:26:03 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,186=>Find no block
+Fri Jan 12 19:26:05 AEDT 2018 Fri Jan 12 19:26:05 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,149=>Find no block
+Fri Jan 12 19:26:06 AEDT 2018 Fri Jan 12 19:26:06 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,150=>Find no block
+Fri Jan 12 19:26:08 AEDT 2018 Fri Jan 12 19:26:08 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,151=>Find no block
+Fri Jan 12 19:26:09 AEDT 2018 Fri Jan 12 19:26:09 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,152=>Find no block
+Fri Jan 12 19:26:11 AEDT 2018 Fri Jan 12 19:26:11 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,153=>Find no block
+Fri Jan 12 19:26:12 AEDT 2018 Fri Jan 12 19:26:12 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,158=>Find no block
+Fri Jan 12 19:26:13 AEDT 2018 Fri Jan 12 19:26:13 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,159=>Find no block
+Fri Jan 12 19:26:14 AEDT 2018 Fri Jan 12 19:26:14 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,160=>Find no block
+Fri Jan 12 19:26:16 AEDT 2018 Fri Jan 12 19:26:16 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,161=>Find no block
+Fri Jan 12 19:26:17 AEDT 2018 Fri Jan 12 19:26:17 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,162=>Find no block
+Fri Jan 12 19:26:18 AEDT 2018 Fri Jan 12 19:26:18 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,169=>Find no block
+Fri Jan 12 19:26:20 AEDT 2018 Fri Jan 12 19:26:20 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,170=>Find no block
+Fri Jan 12 19:26:22 AEDT 2018 Fri Jan 12 19:26:22 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,171=>Find no block
+Fri Jan 12 19:26:24 AEDT 2018 org.apache.commons.math.util.FastMath,644
+Fri Jan 12 19:29:51 AEDT 2018 Fri Jan 12 19:29:51 AEDT 2018 : org.apache.commons.math.util.FastMath,648=>Find no block
+Fri Jan 12 19:29:53 AEDT 2018 Fri Jan 12 19:29:53 AEDT 2018 : org.apache.commons.math.special.Gamma,169=>Find no block
+Fri Jan 12 19:29:54 AEDT 2018 Fri Jan 12 19:29:54 AEDT 2018 : org.apache.commons.math.util.FastMath,3491=>Find no block
+Fri Jan 12 19:29:56 AEDT 2018 org.apache.commons.math.special.Gamma,173
+Fri Jan 12 19:50:21 AEDT 2018 org.apache.commons.math.special.Erf,53
+Fri Jan 12 19:53:21 AEDT 2018 org.apache.commons.math.distribution.NormalDistributionImpl,125
+Fri Jan 12 20:14:27 AEDT 2018 org.apache.commons.math.distribution.NormalDistributionImpl,127
+Fri Jan 12 20:14:35 AEDT 2018 org.apache.commons.math.special.Erf,51
+Fri Jan 12 20:28:24 AEDT 2018 Fri Jan 12 20:28:24 AEDT 2018 : org.apache.commons.math.special.Erf,52=>Find no block
+Fri Jan 12 20:28:25 AEDT 2018 Fri Jan 12 20:28:25 AEDT 2018 : org.apache.commons.math.special.Erf,55=>Find no block
+Fri Jan 12 20:28:27 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,47
+Fri Jan 12 20:28:31 AEDT 2018 Fri Jan 12 20:28:31 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,48=>Find no block
+Fri Jan 12 20:28:34 AEDT 2018 Fri Jan 12 20:28:34 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,129=>Find no block
+Fri Jan 12 20:28:35 AEDT 2018 Fri Jan 12 20:28:35 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,130=>Find no block
+Fri Jan 12 20:28:37 AEDT 2018 Fri Jan 12 20:28:37 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,131=>Find no block
+Fri Jan 12 20:28:38 AEDT 2018 Fri Jan 12 20:28:38 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,132=>Find no block
+Fri Jan 12 20:28:40 AEDT 2018 Fri Jan 12 20:28:40 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,133=>Find no block
+Fri Jan 12 20:28:41 AEDT 2018 Fri Jan 12 20:28:41 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,134=>Find no block
+Fri Jan 12 20:28:43 AEDT 2018 Fri Jan 12 20:28:43 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,135=>Find no block
+Fri Jan 12 20:28:45 AEDT 2018 Fri Jan 12 20:28:45 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,136=>Find no block
+Fri Jan 12 20:28:46 AEDT 2018 Fri Jan 12 20:28:46 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,137=>Find no block
+Fri Jan 12 20:28:48 AEDT 2018 Fri Jan 12 20:28:48 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,138=>Find no block
+Fri Jan 12 20:28:49 AEDT 2018 Fri Jan 12 20:28:49 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,139=>Find no block
+Fri Jan 12 20:28:51 AEDT 2018 Fri Jan 12 20:28:51 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,140=>Find no block
+Fri Jan 12 20:28:53 AEDT 2018 Fri Jan 12 20:28:53 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,141=>Find no block
+Fri Jan 12 20:28:54 AEDT 2018 Fri Jan 12 20:28:54 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,142=>Find no block
+Fri Jan 12 20:28:56 AEDT 2018 Fri Jan 12 20:28:56 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,143=>Find no block
+Fri Jan 12 20:28:57 AEDT 2018 Fri Jan 12 20:28:57 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,176=>Find no block
+Fri Jan 12 20:28:59 AEDT 2018 Fri Jan 12 20:28:59 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,183=>Find no block
+Fri Jan 12 20:29:01 AEDT 2018 Fri Jan 12 20:29:01 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,185=>Find no block
+Fri Jan 12 20:29:03 AEDT 2018 Fri Jan 12 20:29:03 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,190=>Find no block
+Fri Jan 12 20:29:05 AEDT 2018 Fri Jan 12 20:29:05 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,193=>Find no block
+Fri Jan 12 20:29:06 AEDT 2018 Fri Jan 12 20:29:06 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,194=>Find no block
+Fri Jan 12 20:29:08 AEDT 2018 Fri Jan 12 20:29:08 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,195=>Find no block
+Fri Jan 12 20:29:11 AEDT 2018 Fri Jan 12 20:29:11 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,196=>Find no block
+Fri Jan 12 20:29:13 AEDT 2018 Fri Jan 12 20:29:13 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,197=>Find no block
+Fri Jan 12 20:29:14 AEDT 2018 Fri Jan 12 20:29:14 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,198=>Find no block
+Fri Jan 12 20:29:16 AEDT 2018 Fri Jan 12 20:29:16 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,200=>Find no block
+Fri Jan 12 20:29:17 AEDT 2018 Fri Jan 12 20:29:17 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,206=>Find no block
+Fri Jan 12 20:29:19 AEDT 2018 Fri Jan 12 20:29:19 AEDT 2018 : org.apache.commons.math.special.Gamma,253=>Find no block
+Fri Jan 12 20:29:21 AEDT 2018 Fri Jan 12 20:29:21 AEDT 2018 : org.apache.commons.math.special.Gamma,257=>Find no block
+Fri Jan 12 20:29:22 AEDT 2018 Fri Jan 12 20:29:22 AEDT 2018 : org.apache.commons.math.special.Gamma,262=>Find no block
+Fri Jan 12 20:29:24 AEDT 2018 Fri Jan 12 20:29:24 AEDT 2018 : org.apache.commons.math.special.Gamma,243=>Find no block
+Fri Jan 12 20:29:25 AEDT 2018 Fri Jan 12 20:29:25 AEDT 2018 : org.apache.commons.math.special.Gamma,245=>Find no block
+Fri Jan 12 20:29:26 AEDT 2018 Fri Jan 12 20:29:26 AEDT 2018 : org.apache.commons.math.special.Gamma,247=>Find no block
+Fri Jan 12 20:29:28 AEDT 2018 Fri Jan 12 20:29:28 AEDT 2018 : org.apache.commons.math.special.Gamma,253=>Find no block
+Fri Jan 12 20:29:29 AEDT 2018 org.apache.commons.math.special.Gamma,266
+Fri Jan 12 21:28:39 AEDT 2018 Fri Jan 12 21:28:39 AEDT 2018 : org.apache.commons.math.special.Gamma,267=>Find no block
+Fri Jan 12 21:28:40 AEDT 2018 org.apache.commons.math.special.Gamma,270
+Fri Jan 12 21:28:41 AEDT 2018 Fri Jan 12 21:28:41 AEDT 2018 : org.apache.commons.math.special.Gamma,166=>Find no block
+Fri Jan 12 21:28:42 AEDT 2018 org.apache.commons.math.special.Gamma,168
+Fri Jan 12 21:28:44 AEDT 2018 org.apache.commons.math.special.Gamma,170
+Fri Jan 12 21:28:45 AEDT 2018 Fri Jan 12 21:28:45 AEDT 2018 : org.apache.commons.math.special.Gamma,176=>Find no block
+Fri Jan 12 21:28:47 AEDT 2018 Fri Jan 12 21:28:47 AEDT 2018 : org.apache.commons.math.special.Gamma,177=>Find no block
+Fri Jan 12 21:28:48 AEDT 2018 Fri Jan 12 21:28:48 AEDT 2018 : org.apache.commons.math.special.Gamma,178=>Find no block
+Fri Jan 12 21:28:51 AEDT 2018 Fri Jan 12 21:28:51 AEDT 2018 : org.apache.commons.math.special.Gamma,179=>Find no block
+Fri Jan 12 21:28:52 AEDT 2018 Fri Jan 12 21:28:52 AEDT 2018 : org.apache.commons.math.special.Gamma,181=>Find no block
+Fri Jan 12 21:28:53 AEDT 2018 Fri Jan 12 21:28:53 AEDT 2018 : org.apache.commons.math.special.Gamma,182=>Find no block
+Fri Jan 12 21:28:54 AEDT 2018 Fri Jan 12 21:28:54 AEDT 2018 : org.apache.commons.math.special.Gamma,185=>Find no block
+Fri Jan 12 21:28:56 AEDT 2018 Fri Jan 12 21:28:56 AEDT 2018 : org.apache.commons.math.special.Gamma,187=>Find no block
+Fri Jan 12 21:28:57 AEDT 2018 Fri Jan 12 21:28:57 AEDT 2018 : org.apache.commons.math.special.Gamma,189=>Find no block
+Fri Jan 12 21:28:58 AEDT 2018 Fri Jan 12 21:28:58 AEDT 2018 : org.apache.commons.math.special.Gamma,192=>Find no block
+Fri Jan 12 21:28:59 AEDT 2018 Fri Jan 12 21:28:59 AEDT 2018 : org.apache.commons.math.special.Gamma,196=>Find no block
+Fri Jan 12 21:29:00 AEDT 2018 Fri Jan 12 21:29:00 AEDT 2018 : org.apache.commons.math.util.FastMath,1211=>Find no block
+Fri Jan 12 21:29:01 AEDT 2018 Fri Jan 12 21:29:01 AEDT 2018 : org.apache.commons.math.special.Gamma,42=>Find no block
+Fri Jan 12 21:29:02 AEDT 2018 Fri Jan 12 21:29:02 AEDT 2018 : org.apache.commons.math.special.Gamma,62=>Find no block
+Fri Jan 12 21:29:03 AEDT 2018 org.apache.commons.math.special.Gamma,98
+Fri Jan 12 22:15:56 AEDT 2018 org.apache.commons.math.special.Gamma,101
+Fri Jan 12 22:58:12 AEDT 2018 org.apache.commons.math.special.Gamma,103
+Fri Jan 12 22:58:13 AEDT 2018 org.apache.commons.math.special.Gamma,104
+Fri Jan 12 22:58:14 AEDT 2018 org.apache.commons.math.special.Gamma,105
+Fri Jan 12 22:58:15 AEDT 2018 org.apache.commons.math.special.Gamma,107
+Sat Jan 13 00:03:17 AEDT 2018 org.apache.commons.math.special.Gamma,109
+Timeout time : 18/01/13 00:24

@@ -1,0 +1,117 @@
+=================================================
+Project : math_40	start : 18/01/12 19:08
+Current failed test : org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolverTest::testIssue716 | 18/01/12 19:10
+Fri Jan 12 19:11:56 AEDT 2018 org.apache.commons.math.exception.MathIllegalStateException,80
+Fri Jan 12 19:13:11 AEDT 2018 org.apache.commons.math.exception.MathIllegalStateException,86
+Fri Jan 12 19:14:26 AEDT 2018 Fri Jan 12 19:14:26 AEDT 2018 : org.apache.commons.math.exception.MathIllegalStateException,45=>Find no block
+Fri Jan 12 19:14:34 AEDT 2018 org.apache.commons.math.exception.MathIllegalStateException,46
+Fri Jan 12 19:15:58 AEDT 2018 org.apache.commons.math.exception.MathIllegalStateException,47
+Fri Jan 12 19:16:07 AEDT 2018 Fri Jan 12 19:16:07 AEDT 2018 : org.apache.commons.math.exception.MathIllegalStateException,48=>Find no block
+Fri Jan 12 19:16:15 AEDT 2018 org.apache.commons.math.exception.MathIllegalStateException,69
+Fri Jan 12 19:16:35 AEDT 2018 Fri Jan 12 19:16:35 AEDT 2018 : org.apache.commons.math.exception.MathIllegalStateException,70=>Find no block
+Fri Jan 12 19:16:43 AEDT 2018 org.apache.commons.math.exception.MathIllegalStateException,74
+Fri Jan 12 19:17:02 AEDT 2018 org.apache.commons.math.exception.MaxCountExceededException,42
+Fri Jan 12 19:17:19 AEDT 2018 Fri Jan 12 19:17:19 AEDT 2018 : org.apache.commons.math.exception.MaxCountExceededException,43=>Find no block
+Fri Jan 12 19:17:27 AEDT 2018 Fri Jan 12 19:17:27 AEDT 2018 : org.apache.commons.math.exception.MaxCountExceededException,53=>Find no block
+Fri Jan 12 19:17:34 AEDT 2018 org.apache.commons.math.exception.MaxCountExceededException,54
+Fri Jan 12 19:18:59 AEDT 2018 org.apache.commons.math.exception.MaxCountExceededException,55
+Fri Jan 12 19:19:06 AEDT 2018 Fri Jan 12 19:19:06 AEDT 2018 : org.apache.commons.math.exception.MaxCountExceededException,56=>Find no block
+Fri Jan 12 19:19:14 AEDT 2018 org.apache.commons.math.exception.MaxCountExceededException,62
+Fri Jan 12 19:19:33 AEDT 2018 org.apache.commons.math.exception.TooManyEvaluationsException,37
+Fri Jan 12 19:20:56 AEDT 2018 org.apache.commons.math.exception.TooManyEvaluationsException,38
+Fri Jan 12 19:21:03 AEDT 2018 Fri Jan 12 19:21:03 AEDT 2018 : org.apache.commons.math.exception.TooManyEvaluationsException,39=>Find no block
+Fri Jan 12 19:21:06 AEDT 2018 org.apache.commons.math.util.Incrementor,65
+Fri Jan 12 19:21:40 AEDT 2018 org.apache.commons.math.util.Incrementor,151
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(count>maximalCount){
+maxCountCallback.trigger(maximalCount);
+}
+
+Time : 18/01/12 19:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(0>maximalCount){
+maxCountCallback.trigger(maximalCount);
+}
+
+Time : 18/01/12 19:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(count>0){
+maxCountCallback.trigger(maximalCount);
+}
+
+Time : 18/01/12 19:43
+----------------------------------------
+Fri Jan 12 19:55:07 AEDT 2018 Fri Jan 12 19:55:07 AEDT 2018 : org.apache.commons.math.analysis.solvers.BaseAbstractUnivariateRealSolver,295=>Find no block
+Fri Jan 12 19:55:15 AEDT 2018 org.apache.commons.math.analysis.solvers.BaseAbstractUnivariateRealSolver,296
+Fri Jan 12 19:55:33 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,393
+Fri Jan 12 20:00:34 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,394
+Fri Jan 12 20:00:35 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,128
+Fri Jan 12 20:05:14 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,129
+Fri Jan 12 20:05:16 AEDT 2018 Fri Jan 12 20:05:16 AEDT 2018 : org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,130=>Find no block
+Fri Jan 12 20:05:17 AEDT 2018 org.apache.commons.math.analysis.solvers.AbstractUnivariateRealSolver,59
+Fri Jan 12 20:06:34 AEDT 2018 Fri Jan 12 20:06:34 AEDT 2018 : org.apache.commons.math.analysis.solvers.AbstractUnivariateRealSolver,60=>Find no block
+Fri Jan 12 20:06:36 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,124
+Fri Jan 12 20:06:36 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,125
+Fri Jan 12 20:06:37 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,265
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(signChangeIndex-start>=end-signChangeIndex){
+++start;
+}else {
+end=signChangeIndex;
+--end;
+}
+
+Time : 18/01/12 20:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.5941214529198777 : [/home/hz985/jiajun/d4j/projects/math/math_40_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BracketingNthOrderBrentSolver.java=>0,0]
+if(nextX.isNaN()){
+nextX=xA.add(xB.subtract(xA).divide(2));
+start=signChangeIndex-1;
+end=signChangeIndex;
+}
+
+Time : 18/01/12 20:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_40_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BracketingNthOrderBrentSolver.java=>260,266]
+if(signChangeIndex-start>=end-signChangeIndex){
+++start;
+}else {
+--end;
+}
+
+Time : 18/01/12 20:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_40_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BracketingNthOrderBrentSolver.java=>260,266]
+if(signChangeIndex-start>=end-signChangeIndex){
+++start;
+}else {
+end=signChangeIndex;
+--end;
+}
+
+Time : 18/01/12 20:09
+----------------------------------------
+Success time : 18/01/12 20:09

@@ -1,0 +1,129 @@
+=================================================
+Project : lang_50	start : 18/01/14 05:48
+Current failed test : org.apache.commons.lang.time.FastDateFormatTest::test_changeDefault_Locale_DateTimeInstance | 18/01/14 05:48
+Sun Jan 14 05:49:34 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,408
+Sun Jan 14 05:49:47 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,425
+Sun Jan 14 05:50:35 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,461
+Sun Jan 14 05:51:12 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,462
+Sun Jan 14 05:51:38 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,465
+Sun Jan 14 05:52:05 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,466
+Sun Jan 14 05:52:06 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,469
+Sun Jan 14 05:53:13 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,470
+Sun Jan 14 05:54:15 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,471
+Sun Jan 14 05:54:16 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,472
+Sun Jan 14 05:54:16 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,475
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(locale!=null){
+key=new Pair(key,locale);
+}
+SimpleDateFormat formatter=(SimpleDateFormat)DateFormat.getDateTimeInstance(dateStyle,timeStyle,locale);
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+
+Time : 18/01/14 05:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.3354214422411372 : [/home/hz985/jiajun/d4j/projects/lang/lang_50_buggy/src/java/org/apache/commons/lang/time/FastDateFormat.java=>0,0]
+if(timeZone!=null){
+key=new Pair(key,timeZone);
+}
+if(locale!=null){
+key=new Pair(key,locale);
+}
+FastDateFormat format=(FastDateFormat)cDateInstanceCache.get(key);
+
+Time : 18/01/14 05:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/lang/lang_50_buggy/src/java/org/apache/commons/lang/time/FastDateFormat.java=>475,478]
+SimpleDateFormat formatter=(SimpleDateFormat)DateFormat.getDateTimeInstance(dateStyle,timeStyle,locale);
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+
+Time : 18/01/14 05:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/lang/lang_50_buggy/src/java/org/apache/commons/lang/time/FastDateFormat.java=>475,478]
+if(locale!=null){
+key=new Pair(key,locale);
+}
+SimpleDateFormat formatter=(SimpleDateFormat)DateFormat.getDateTimeInstance(dateStyle,timeStyle,locale);
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+
+Time : 18/01/14 05:55
+----------------------------------------
+Success time : 18/01/14 05:55
+Current failed test : org.apache.commons.lang.time.FastDateFormatTest::test_changeDefault_Locale_DateInstance | 18/01/14 05:55
+Sun Jan 14 05:56:36 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,234
+Sun Jan 14 05:57:21 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,293
+Sun Jan 14 05:57:59 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,620
+Sun Jan 14 06:01:43 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,249
+Sun Jan 14 06:02:43 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,280
+Sun Jan 14 06:03:19 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,281
+Sun Jan 14 06:03:52 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,285
+Sun Jan 14 06:04:23 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,286
+Sun Jan 14 06:04:23 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,290
+Sun Jan 14 06:05:34 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,291
+Sun Jan 14 06:06:25 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,292
+Sun Jan 14 06:06:26 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,296
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(locale!=null){
+key=new Pair(key,locale);
+}
+SimpleDateFormat formatter=(SimpleDateFormat)DateFormat.getDateInstance(style,locale);
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+
+Time : 18/01/14 06:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.3548004166402725 : [/home/hz985/jiajun/d4j/projects/lang/lang_50_buggy/src/java/org/apache/commons/lang/time/FastDateFormat.java=>0,0]
+if(timeZone!=null){
+key=new Pair(key,timeZone);
+}
+if(locale!=null){
+key=new Pair(key,locale);
+}
+FastDateFormat format=(FastDateFormat)cDateInstanceCache.get(key);
+
+Time : 18/01/14 06:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/lang/lang_50_buggy/src/java/org/apache/commons/lang/time/FastDateFormat.java=>296,298]
+SimpleDateFormat formatter=(SimpleDateFormat)DateFormat.getDateInstance(style,locale);
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+
+Time : 18/01/14 06:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/lang/lang_50_buggy/src/java/org/apache/commons/lang/time/FastDateFormat.java=>296,298]
+if(locale!=null){
+key=new Pair(key,locale);
+}
+SimpleDateFormat formatter=(SimpleDateFormat)DateFormat.getDateInstance(style,locale);
+String pattern=formatter.toPattern();
+format=getInstance(pattern,timeZone,locale);
+
+Time : 18/01/14 06:08
+----------------------------------------
+Success time : 18/01/14 06:08

@@ -1,0 +1,74 @@
+=================================================
+Project : closure_41	start : 18/01/15 23:50
+Current failed test : com.google.javascript.jscomp.TypeCheckTest::testMethodInference6 | 18/01/15 23:51
+Mon Jan 15 23:51:22 AEDT 2018 com.google.javascript.jscomp.TypeValidator,700
+Mon Jan 15 23:52:26 AEDT 2018 com.google.javascript.jscomp.TypeValidator,709
+Mon Jan 15 23:54:02 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1630
+Mon Jan 15 23:56:01 AEDT 2018 com.google.javascript.jscomp.TypeValidator,690
+Tue Jan 16 00:01:50 AEDT 2018 com.google.javascript.jscomp.TypeValidator,691
+Tue Jan 16 00:01:51 AEDT 2018 com.google.javascript.jscomp.TypeValidator,692
+Tue Jan 16 00:01:52 AEDT 2018 com.google.javascript.jscomp.TypeValidator,693
+Tue Jan 16 00:01:53 AEDT 2018 com.google.javascript.jscomp.TypeValidator,699
+Tue Jan 16 00:01:54 AEDT 2018 com.google.javascript.jscomp.TypeValidator,706
+Tue Jan 16 00:01:55 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1089
+Tue Jan 16 00:10:23 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1091
+Tue Jan 16 00:13:32 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1097
+Tue Jan 16 00:51:57 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,801
+Tue Jan 16 00:52:51 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,355
+Tue Jan 16 00:52:54 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,796
+Tue Jan 16 00:56:11 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,798
+Tue Jan 16 00:56:12 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,799
+Tue Jan 16 00:56:14 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,800
+Tue Jan 16 00:56:16 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,804
+Tue Jan 16 00:57:07 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1087
+Tue Jan 16 01:11:57 AEDT 2018 Tue Jan 16 01:11:57 AEDT 2018 : com.google.javascript.jscomp.TypeCheck,1120=>Find no block
+Tue Jan 16 01:11:58 AEDT 2018 com.google.javascript.rhino.jstype.ArrowType,139
+Timeout time : 18/01/16 01:31
+Current failed test : com.google.javascript.jscomp.TypeCheckTest::testIssue368 | 18/01/16 01:31
+Tue Jan 16 01:31:35 AEDT 2018 com.google.javascript.jscomp.TypeValidator,700
+Tue Jan 16 01:32:56 AEDT 2018 com.google.javascript.jscomp.TypeValidator,709
+Tue Jan 16 01:34:42 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1630
+Tue Jan 16 01:36:39 AEDT 2018 com.google.javascript.jscomp.TypeValidator,690
+Tue Jan 16 01:43:11 AEDT 2018 com.google.javascript.jscomp.TypeValidator,691
+Tue Jan 16 01:43:13 AEDT 2018 com.google.javascript.jscomp.TypeValidator,692
+Tue Jan 16 01:43:14 AEDT 2018 com.google.javascript.jscomp.TypeValidator,693
+Tue Jan 16 01:43:15 AEDT 2018 com.google.javascript.jscomp.TypeValidator,699
+Tue Jan 16 01:43:16 AEDT 2018 com.google.javascript.jscomp.TypeValidator,706
+Tue Jan 16 01:43:17 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1089
+Tue Jan 16 01:52:21 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1091
+Tue Jan 16 01:56:09 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1097
+Tue Jan 16 02:41:06 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,801
+Tue Jan 16 02:42:25 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,355
+Tue Jan 16 02:42:29 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,796
+Tue Jan 16 02:46:56 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,798
+Tue Jan 16 02:46:57 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,799
+Tue Jan 16 02:46:58 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,800
+Tue Jan 16 02:46:59 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,804
+Tue Jan 16 02:47:56 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1087
+Tue Jan 16 03:05:22 AEDT 2018 Tue Jan 16 03:05:22 AEDT 2018 : com.google.javascript.jscomp.TypeCheck,1120=>Find no block
+Tue Jan 16 03:05:22 AEDT 2018 com.google.javascript.rhino.jstype.ArrowType,139
+Timeout time : 18/01/16 03:11
+Current failed test : com.google.javascript.jscomp.LooseTypeCheckTest::testMethodInference6 | 18/01/16 03:11
+Tue Jan 16 03:11:50 AEDT 2018 com.google.javascript.jscomp.TypeValidator,700
+Tue Jan 16 03:13:05 AEDT 2018 com.google.javascript.jscomp.TypeValidator,709
+Tue Jan 16 03:14:53 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1630
+Tue Jan 16 03:17:08 AEDT 2018 com.google.javascript.jscomp.TypeValidator,690
+Tue Jan 16 03:24:34 AEDT 2018 com.google.javascript.jscomp.TypeValidator,691
+Tue Jan 16 03:24:35 AEDT 2018 com.google.javascript.jscomp.TypeValidator,692
+Tue Jan 16 03:24:36 AEDT 2018 com.google.javascript.jscomp.TypeValidator,693
+Tue Jan 16 03:24:37 AEDT 2018 com.google.javascript.jscomp.TypeValidator,699
+Tue Jan 16 03:24:39 AEDT 2018 com.google.javascript.jscomp.TypeValidator,706
+Tue Jan 16 03:24:40 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1089
+Tue Jan 16 03:36:57 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1091
+Tue Jan 16 03:42:44 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1097
+Tue Jan 16 04:21:56 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,801
+Tue Jan 16 04:22:25 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,355
+Tue Jan 16 04:22:28 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,796
+Tue Jan 16 04:24:14 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,798
+Tue Jan 16 04:24:15 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,799
+Tue Jan 16 04:24:16 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,800
+Tue Jan 16 04:24:17 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,804
+Tue Jan 16 04:24:46 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1087
+Tue Jan 16 04:33:12 AEDT 2018 Tue Jan 16 04:33:12 AEDT 2018 : com.google.javascript.jscomp.TypeCheck,1120=>Find no block
+Tue Jan 16 04:33:13 AEDT 2018 com.google.javascript.rhino.jstype.ArrowType,139
+Timeout time : 18/01/16 04:51

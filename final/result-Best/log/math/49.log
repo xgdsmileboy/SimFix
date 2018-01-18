@@ -1,0 +1,873 @@
+=================================================
+Project : math_49	start : 18/01/14 07:30
+Current failed test : org.apache.commons.math.linear.SparseRealVectorTest::testConcurrentModification | 18/01/14 07:31
+Sun Jan 14 07:32:39 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,216
+Sun Jan 14 07:35:19 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,217
+Sun Jan 14 07:35:21 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,564
+Sun Jan 14 07:35:29 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,368
+Sun Jan 14 07:44:57 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,369
+Sun Jan 14 07:44:59 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,370
+Sun Jan 14 07:45:00 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,371
+Sun Jan 14 07:45:01 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,372
+Sun Jan 14 07:45:05 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,373
+Sun Jan 14 07:45:08 AEDT 2018 Sun Jan 14 07:45:08 AEDT 2018 : org.apache.commons.math.linear.AbstractRealVector,67=>Find no block
+Sun Jan 14 07:45:12 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,186
+Sun Jan 14 07:48:06 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,187
+Sun Jan 14 07:48:10 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,354
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=findInsertionIndex(key);
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/14 07:49
+----------------------------------------
+Sun Jan 14 07:54:38 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,355
+Sun Jan 14 07:54:42 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,356
+Sun Jan 14 07:56:20 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,357
+Sun Jan 14 07:56:25 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,394
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[index]=0;
+states[index]=REMOVED;
+ final double previous=values[index];
+values[index]=missingEntries;
+--count;
+++count;
+return previous;
+
+Time : 18/01/14 07:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[index]=PERTURB_SHIFT;
+states[index]=REMOVED;
+ final double previous=values[index];
+values[index]=missingEntries;
+--count;
+++count;
+return previous;
+
+Time : 18/01/14 07:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[index]=0;
+states[index]=FULL;
+ final double previous=values[index];
+values[index]=missingEntries;
+--count;
+++count;
+return previous;
+
+Time : 18/01/14 08:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[index]=PERTURB_SHIFT;
+states[index]=FULL;
+ final double previous=values[index];
+values[index]=missingEntries;
+--count;
+++count;
+return previous;
+
+Time : 18/01/14 08:02
+----------------------------------------
+Sun Jan 14 08:05:34 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,395
+Sun Jan 14 08:05:37 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,396
+Sun Jan 14 08:05:41 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,397
+Sun Jan 14 08:05:44 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,398
+Sun Jan 14 08:05:48 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,399
+Sun Jan 14 08:05:50 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,400
+Sun Jan 14 08:05:51 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,666
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(entries.containsKey(index)){
+entries.remove(virtualSize);
+}
+
+Time : 18/01/14 08:06
+----------------------------------------
+Sun Jan 14 08:08:45 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,667
+Sun Jan 14 08:08:46 AEDT 2018 org.apache.commons.math.linear.AbstractRealVector,63
+Sun Jan 14 08:15:20 AEDT 2018 org.apache.commons.math.linear.AbstractRealVector,64
+Sun Jan 14 08:21:22 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,210
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=findInsertionIndex(key);
+int index=hash&mask;
+if(containsKey(key,index)){
+return true;
+}
+
+Time : 18/01/14 08:23
+----------------------------------------
+Sun Jan 14 08:28:05 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,211
+Sun Jan 14 08:28:08 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,212
+Sun Jan 14 08:29:41 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,213
+Sun Jan 14 08:29:42 AEDT 2018 Sun Jan 14 08:29:42 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,133=>Find no block
+Sun Jan 14 08:29:46 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,134
+Sun Jan 14 08:43:16 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,135
+Sun Jan 14 08:43:17 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,136
+Sun Jan 14 08:55:14 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,137
+Sun Jan 14 09:07:37 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,138
+Sun Jan 14 09:18:15 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,139
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(source.values,0,values,0,length);
+states=new byte[length];
+System.arraycopy(source.values,0,values,0,length);
+
+Time : 18/01/14 09:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(source.keys,0,keys,0,length);
+states=new byte[length];
+System.arraycopy(source.values,0,values,0,length);
+
+Time : 18/01/14 09:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(source.values,0,values,0,length);
+states=new byte[length];
+values=new double[length];
+System.arraycopy(source.values,0,values,0,length);
+
+Time : 18/01/14 09:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(source.keys,0,keys,0,length);
+states=new byte[length];
+values=new double[length];
+System.arraycopy(source.values,0,values,0,length);
+
+Time : 18/01/14 09:30
+----------------------------------------
+Sun Jan 14 09:47:12 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,140
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+states=new byte[length];
+System.arraycopy(source.values,0,values,0,length);
+missingEntries=source.missingEntries;
+
+Time : 18/01/14 09:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+size=source.size;
+states=new byte[length];
+System.arraycopy(source.values,0,values,0,length);
+missingEntries=source.missingEntries;
+
+Time : 18/01/14 09:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+states=new byte[length];
+System.arraycopy(values,0,values,0,length);
+missingEntries=source.missingEntries;
+
+Time : 18/01/14 09:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(values,0,values,0,length);
+states=new byte[length];
+System.arraycopy(values,0,values,0,length);
+missingEntries=source.missingEntries;
+
+Time : 18/01/14 09:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+states=new byte[length];
+System.arraycopy(values,0,new double[length],0,length);
+missingEntries=source.missingEntries;
+
+Time : 18/01/14 10:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+states=new byte[length];
+System.arraycopy(values,0,this.values,0,length);
+missingEntries=source.missingEntries;
+
+Time : 18/01/14 10:05
+----------------------------------------
+Sun Jan 14 10:14:03 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,141
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(source.values,0,values,0,length);
+missingEntries=source.missingEntries;
+size=source.size;
+
+Time : 18/01/14 10:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(source.states,0,states,0,length);
+states=new byte[length];
+missingEntries=source.missingEntries;
+size=source.size;
+
+Time : 18/01/14 10:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(source.values,0,values,0,length);
+states=new byte[length];
+missingEntries=source.missingEntries;
+size=source.size;
+
+Time : 18/01/14 10:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(values,0,values,0,length);
+missingEntries=source.missingEntries;
+size=source.size;
+
+Time : 18/01/14 10:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(values,0,values,0,length);
+System.arraycopy(values,0,values,0,length);
+missingEntries=source.missingEntries;
+size=source.size;
+
+Time : 18/01/14 10:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(source.keys,0,keys,0,length);
+missingEntries=source.missingEntries;
+size=source.size;
+
+Time : 18/01/14 10:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys=new int[length];
+System.arraycopy(source.keys,0,keys,0,length);
+missingEntries=source.missingEntries;
+size=source.size;
+
+Time : 18/01/14 10:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+values=new double[length];
+System.arraycopy(source.keys,0,keys,0,length);
+missingEntries=source.missingEntries;
+size=source.size;
+
+Time : 18/01/14 10:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys=new int[length];
+values=new double[length];
+System.arraycopy(source.keys,0,keys,0,length);
+missingEntries=source.missingEntries;
+size=source.size;
+
+Time : 18/01/14 10:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(values,0,new double[length],0,length);
+missingEntries=source.missingEntries;
+size=source.size;
+
+Time : 18/01/14 10:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(values,0,this.values,0,length);
+missingEntries=source.missingEntries;
+size=source.size;
+
+Time : 18/01/14 10:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.values=new double[length];
+System.arraycopy(values,0,this.values,0,length);
+missingEntries=source.missingEntries;
+size=source.size;
+
+Time : 18/01/14 10:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(source.states,0,states,0,size);
+missingEntries=source.missingEntries;
+size=source.size;
+
+Time : 18/01/14 10:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+values=new double[size];
+System.arraycopy(source.states,0,states,0,size);
+missingEntries=source.missingEntries;
+size=source.size;
+
+Time : 18/01/14 10:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(source.states,0,states,0,length);
+states=new byte[computeCapacity(length)];
+missingEntries=source.missingEntries;
+size=source.size;
+
+Time : 18/01/14 10:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(source.states,0,states,0,length);
+keys=new int[computeCapacity(length)];
+states=new byte[computeCapacity(length)];
+missingEntries=source.missingEntries;
+size=source.size;
+
+Time : 18/01/14 10:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(source.states,0,states,0,length);
+values=new double[computeCapacity(length)];
+states=new byte[computeCapacity(length)];
+missingEntries=source.missingEntries;
+size=source.size;
+
+Time : 18/01/14 10:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(source.states,0,states,0,length);
+keys=new int[computeCapacity(length)];
+values=new double[computeCapacity(length)];
+states=new byte[computeCapacity(length)];
+missingEntries=source.missingEntries;
+size=source.size;
+
+Time : 18/01/14 10:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(source.states,0,states,0,length);
+states=new byte[computeCapacity(length)];
+missingEntries=source.missingEntries;
+size=size;
+
+Time : 18/01/14 11:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+mask=computeCapacity(length)-1;
+System.arraycopy(source.states,0,states,0,length);
+states=new byte[computeCapacity(length)];
+missingEntries=source.missingEntries;
+size=source.size;
+
+Time : 18/01/14 11:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(source.states,0,states,0,length);
+keys=new int[computeCapacity(length)];
+states=new byte[computeCapacity(length)];
+missingEntries=source.missingEntries;
+size=size;
+
+Time : 18/01/14 11:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+mask=computeCapacity(length)-1;
+System.arraycopy(source.states,0,states,0,length);
+states=new byte[computeCapacity(length)];
+missingEntries=source.missingEntries;
+size=size;
+
+Time : 18/01/14 11:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+mask=computeCapacity(length)-1;
+System.arraycopy(source.states,0,states,0,length);
+keys=new int[computeCapacity(length)];
+states=new byte[computeCapacity(length)];
+missingEntries=source.missingEntries;
+size=source.size;
+
+Time : 18/01/14 11:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+mask=computeCapacity(length)-1;
+System.arraycopy(source.states,0,states,0,length);
+keys=new int[computeCapacity(length)];
+states=new byte[computeCapacity(length)];
+missingEntries=source.missingEntries;
+size=size;
+
+Time : 18/01/14 11:12
+----------------------------------------
+Sun Jan 14 11:14:27 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,142
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+states=new byte[computeCapacity(PERTURB_SHIFT)];
+missingEntries=source.missingEntries;
+size=source.size;
+mask=source.mask;
+
+Time : 18/01/14 11:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys=new int[computeCapacity(PERTURB_SHIFT)];
+states=new byte[computeCapacity(PERTURB_SHIFT)];
+missingEntries=source.missingEntries;
+size=source.size;
+mask=source.mask;
+
+Time : 18/01/14 11:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+values=new double[computeCapacity(PERTURB_SHIFT)];
+states=new byte[computeCapacity(PERTURB_SHIFT)];
+missingEntries=source.missingEntries;
+size=source.size;
+mask=source.mask;
+
+Time : 18/01/14 11:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys=new int[computeCapacity(PERTURB_SHIFT)];
+values=new double[computeCapacity(PERTURB_SHIFT)];
+states=new byte[computeCapacity(PERTURB_SHIFT)];
+missingEntries=source.missingEntries;
+size=source.size;
+mask=source.mask;
+
+Time : 18/01/14 11:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+states=new byte[computeCapacity(PERTURB_SHIFT)];
+missingEntries=source.missingEntries;
+size=size;
+mask=source.mask;
+
+Time : 18/01/14 11:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys=new int[computeCapacity(PERTURB_SHIFT)];
+states=new byte[computeCapacity(PERTURB_SHIFT)];
+missingEntries=source.missingEntries;
+size=size;
+mask=source.mask;
+
+Time : 18/01/14 11:24
+----------------------------------------
+Sun Jan 14 11:26:29 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,143
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+size=source.size;
+mask=source.mask;
+states=new byte[computeCapacity(PERTURB_SHIFT)];
+count=source.count;
+
+Time : 18/01/14 11:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+size=source.size;
+mask=source.mask;
+keys=new int[computeCapacity(PERTURB_SHIFT)];
+states=new byte[computeCapacity(PERTURB_SHIFT)];
+count=source.count;
+
+Time : 18/01/14 11:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+size=source.size;
+mask=source.mask;
+values=new double[computeCapacity(PERTURB_SHIFT)];
+states=new byte[computeCapacity(PERTURB_SHIFT)];
+count=source.count;
+
+Time : 18/01/14 11:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+size=source.size;
+mask=source.mask;
+keys=new int[computeCapacity(PERTURB_SHIFT)];
+values=new double[computeCapacity(PERTURB_SHIFT)];
+states=new byte[computeCapacity(PERTURB_SHIFT)];
+count=source.count;
+
+Time : 18/01/14 11:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+states=new byte[computeCapacity(PERTURB_SHIFT)];
+size=source.size;
+mask=source.mask;
+count=source.count;
+
+Time : 18/01/14 11:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+states=new byte[computeCapacity(PERTURB_SHIFT)];
+size=size;
+mask=source.mask;
+count=source.count;
+
+Time : 18/01/14 11:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+states=new byte[computeCapacity(PERTURB_SHIFT)];
+size=source.size;
+mask=source.mask;
+count=count;
+
+Time : 18/01/14 11:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys=new int[computeCapacity(PERTURB_SHIFT)];
+states=new byte[computeCapacity(PERTURB_SHIFT)];
+size=source.size;
+mask=source.mask;
+count=source.count;
+
+Time : 18/01/14 11:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+states=new byte[computeCapacity(PERTURB_SHIFT)];
+size=size;
+mask=source.mask;
+count=count;
+
+Time : 18/01/14 11:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys=new int[computeCapacity(PERTURB_SHIFT)];
+states=new byte[computeCapacity(PERTURB_SHIFT)];
+size=size;
+mask=source.mask;
+count=source.count;
+
+Time : 18/01/14 11:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys=new int[computeCapacity(PERTURB_SHIFT)];
+states=new byte[computeCapacity(PERTURB_SHIFT)];
+size=source.size;
+mask=source.mask;
+count=count;
+
+Time : 18/01/14 11:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys=new int[computeCapacity(PERTURB_SHIFT)];
+states=new byte[computeCapacity(PERTURB_SHIFT)];
+size=size;
+mask=source.mask;
+count=count;
+
+Time : 18/01/14 11:48
+----------------------------------------
+Sun Jan 14 11:49:43 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,144
+Sun Jan 14 11:49:45 AEDT 2018 Sun Jan 14 11:49:45 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,145=>Find no block
+Sun Jan 14 11:49:48 AEDT 2018 Sun Jan 14 11:49:48 AEDT 2018 : org.apache.commons.math.linear.OpenMapRealVector,74=>Find no block
+Sun Jan 14 11:49:52 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,75
+Sun Jan 14 11:52:05 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,76
+Sun Jan 14 11:52:08 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,77
+Sun Jan 14 11:52:09 AEDT 2018 Sun Jan 14 11:52:09 AEDT 2018 : org.apache.commons.math.linear.OpenMapRealVector,78=>Find no block
+Sun Jan 14 11:52:10 AEDT 2018 Sun Jan 14 11:52:10 AEDT 2018 : org.apache.commons.math.linear.OpenMapRealVector,179=>Find no block
+Sun Jan 14 11:52:11 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,180
+Sun Jan 14 11:53:16 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,181
+Sun Jan 14 11:53:17 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,182
+Sun Jan 14 11:53:19 AEDT 2018 Sun Jan 14 11:53:19 AEDT 2018 : org.apache.commons.math.linear.OpenMapRealVector,183=>Find no block
+Sun Jan 14 11:53:20 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,529
+Sun Jan 14 11:53:23 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,532
+Sun Jan 14 11:54:53 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,535
+Sun Jan 14 11:56:08 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,208
+Sun Jan 14 11:56:59 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,663
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+index=0;
+checkIndex(index);
+if(!isDefaultValue(value)){
+entries.put(index,value);
+}else if(entries.containsKey(index)){
+entries.remove(index);
+}
+
+Time : 18/01/14 11:58
+----------------------------------------
+Sun Jan 14 12:00:44 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,664
+Sun Jan 14 12:00:47 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,665
+Sun Jan 14 12:00:50 AEDT 2018 Sun Jan 14 12:00:50 AEDT 2018 : org.apache.commons.math.linear.OpenMapRealVector,669=>Find no block
+Sun Jan 14 12:00:51 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,241
+Sun Jan 14 12:00:56 AEDT 2018 Sun Jan 14 12:00:56 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,498=>Find no block
+Sun Jan 14 12:00:59 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,501
+Sun Jan 14 12:01:50 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,504
+Sun Jan 14 12:01:53 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,506
+Sun Jan 14 12:01:58 AEDT 2018 Sun Jan 14 12:01:58 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,509=>Find no block
+Sun Jan 14 12:02:01 AEDT 2018 Sun Jan 14 12:02:01 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,511=>Find no block
+Sun Jan 14 12:02:05 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,518
+Sun Jan 14 12:02:09 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,546
+Sun Jan 14 12:02:10 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,549
+Sun Jan 14 12:02:11 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,552
+Sun Jan 14 12:03:27 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,563
+Sun Jan 14 12:03:28 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,568
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(current!=count){
+throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+}
+current=next;
+try{
+while(states[++next]!=FULL){
+}
+}catch (ArrayIndexOutOfBoundsException e) {
+  next=-2;
+  if (current < 0) {
+    throw MathRuntimeException.createNoSuchElementException(LocalizedFormats.ITERATOR_EXHAUSTED);
+  }
+}
+
+
+Time : 18/01/14 12:04
+----------------------------------------
+Sun Jan 14 12:06:26 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,572
+Sun Jan 14 12:06:30 AEDT 2018 Sun Jan 14 12:06:30 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,580=>Find no block
+Sun Jan 14 12:06:33 AEDT 2018 Sun Jan 14 12:06:33 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,582=>Find no block
+Sun Jan 14 12:06:37 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,479
+Sun Jan 14 12:08:28 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,480
+Sun Jan 14 12:08:30 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,180
+Sun Jan 14 12:12:14 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,181
+Sun Jan 14 12:12:15 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,182
+Sun Jan 14 12:13:40 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,385
+Sun Jan 14 12:13:48 AEDT 2018 org.apache.commons.math.linear.AbstractRealVector,76
+Sun Jan 14 12:15:28 AEDT 2018 Sun Jan 14 12:15:28 AEDT 2018 : org.apache.commons.math.linear.AbstractRealVector,81=>Find no block
+Sun Jan 14 12:15:31 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,103
+Sun Jan 14 12:15:37 AEDT 2018 Sun Jan 14 12:15:37 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,104=>Find no block
+Sun Jan 14 12:15:39 AEDT 2018 Sun Jan 14 12:15:39 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,120=>Find no block
+Sun Jan 14 12:15:40 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,121
+Sun Jan 14 12:19:28 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,122
+Sun Jan 14 12:19:29 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,123
+Sun Jan 14 12:19:30 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,124
+Sun Jan 14 12:19:31 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,125
+Sun Jan 14 12:19:32 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,126
+Sun Jan 14 12:19:34 AEDT 2018 Sun Jan 14 12:19:34 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,127=>Find no block
+Sun Jan 14 12:19:37 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,153
+Sun Jan 14 12:19:44 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,156
+Sun Jan 14 12:20:33 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,157
+Sun Jan 14 12:20:36 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,158
+Sun Jan 14 12:20:37 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,159
+Sun Jan 14 12:20:38 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,259
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return changeIndexSign(PERTURB_SHIFT);
+
+Time : 18/01/14 12:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return changeIndexSign(mask);
+
+Time : 18/01/14 12:22
+----------------------------------------
+Sun Jan 14 12:24:33 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,272
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(states[index]==FREE){
+return PERTURB_SHIFT;
+}else if(states[index]==FULL&&keys[index]==key){
+return changeIndexSign(index);
+}
+
+Time : 18/01/14 12:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=hashOf(key);
+int index=hash&mask;
+if(states[index]==FREE){
+return PERTURB_SHIFT;
+}else if(states[index]==FULL&&keys[index]==key){
+return changeIndexSign(index);
+}
+
+Time : 18/01/14 12:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=hashOf(key);
+int index=hash&mask;
+if(states[index]==FREE){
+return PERTURB_SHIFT;
+}else if(states[index]==FULL&&keys[index]==mask){
+return changeIndexSign(index);
+}
+
+Time : 18/01/14 12:31
+----------------------------------------
+Timeout time : 18/01/14 12:33

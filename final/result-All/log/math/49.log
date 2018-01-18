@@ -1,0 +1,1228 @@
+=================================================
+Project : math_49	start : 18/01/12 19:14
+Current failed test : org.apache.commons.math.linear.SparseRealVectorTest::testConcurrentModification | 18/01/12 19:15
+Fri Jan 12 19:16:32 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,216
+Fri Jan 12 19:20:10 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,217
+Fri Jan 12 19:20:11 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,564
+Fri Jan 12 19:20:15 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,368
+Fri Jan 12 19:53:02 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,369
+Fri Jan 12 19:53:04 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,370
+Fri Jan 12 19:53:05 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,371
+Fri Jan 12 19:53:08 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,372
+Fri Jan 12 19:53:10 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,373
+Fri Jan 12 19:53:12 AEDT 2018 Fri Jan 12 19:53:12 AEDT 2018 : org.apache.commons.math.linear.AbstractRealVector,67=>Find no block
+Fri Jan 12 19:53:15 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,186
+Fri Jan 12 19:57:53 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,187
+Fri Jan 12 19:57:55 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,354
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=hashOf(key);
+int index=hash&mask;
+if(containsKey(key,index)){
+return values[index];
+}
+
+Time : 18/01/12 19:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=hashOf(key);
+int index=hash&mask;
+if(states[index]==FREE){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=hashOf(key);
+int index=PERTURB_SHIFT;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=hashOf(key);
+int index=hash&mask;
+if(states[PERTURB_SHIFT]==FULL){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=perturb(key);
+int index=PERTURB_SHIFT;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=perturb(key);
+int index=hash&mask;
+if(states[PERTURB_SHIFT]==FULL){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=hashOf(key);
+int index=PERTURB_SHIFT;
+if(states[PERTURB_SHIFT]==FULL){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=perturb(key);
+int index=PERTURB_SHIFT;
+if(states[PERTURB_SHIFT]==FULL){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=hashOf(key);
+int index=hash&mask;
+if(hash>=PERTURB_SHIFT&&key<mask){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=hashOf(key);
+int index=hash&mask;
+if(hash>=PERTURB_SHIFT){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=findInsertionIndex(key);
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=hashOf(key);
+int index=hash&mask;
+if(index<0){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=findInsertionIndex(key);
+int index=hash&mask;
+if(index<0){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=hashOf(key);
+int index=hash&mask;
+if(index<0||index>=mask){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=hashOf(key);
+int index=hash&mask;
+if(index>=mask){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=hashOf(key);
+int index=hash&mask;
+if(PERTURB_SHIFT<0){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=PERTURB_SHIFT+1;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=PERTURB_SHIFT;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=1;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=hashOf(key);
+int index=hash&mask;
+if(values==null){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=mask-1;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=mask;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=hashOf(key);
+int index=hash&mask;
+if(mask<0){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=hashOf(key);
+int index=hash&mask;
+if(index==-1){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=(PERTURB_SHIFT<<2);
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=PERTURB_SHIFT<<2;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=2;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 20:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=18;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=11;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=7;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+values[PERTURB_SHIFT+PERTURB_SHIFT]=missingEntries;
+ final int hash=hashOf(key);
+int index=hash&mask;
+if(PERTURB_SHIFT<0){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=hashOf(key);
+int index=hash&mask;
+if(hash<-1){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=0;
+int index=hash&mask;
+if(hash<-1){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=(PERTURB_SHIFT^0xb729fcec);
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=PERTURB_SHIFT^0xb729fcec;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=0xb729fcec;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=((PERTURB_SHIFT&0x00020000)!=0)?hashOf(key):PERTURB_SHIFT;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+ final int hash=(PERTURB_SHIFT^0xb729fcec);
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]&=0xffff8000;
+ final int hash=(PERTURB_SHIFT^0xb729fcec);
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+ final int hash=PERTURB_SHIFT^0xb729fcec;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]&=0xffff8000;
+ final int hash=PERTURB_SHIFT^0xb729fcec;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=PERTURB_SHIFT;
+int index=hash&20;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+ final int hash=PERTURB_SHIFT;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]&=0xffff8000;
+ final int hash=PERTURB_SHIFT;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=0xb729fcec;
+int index=hash&20;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+ final int hash=0xb729fcec;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]&=0xffff8000;
+ final int hash=0xb729fcec;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=((PERTURB_SHIFT&0x00020000)!=0)?hashOf(key):PERTURB_SHIFT;
+int index=hash&20;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+ final int hash=((PERTURB_SHIFT&0x00020000)!=0)?hashOf(key):PERTURB_SHIFT;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]&=0xffff8000;
+ final int hash=((PERTURB_SHIFT&0x00020000)!=0)?hashOf(key):PERTURB_SHIFT;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+keys[PERTURB_SHIFT]&=0xffff8000;
+ final int hash=(PERTURB_SHIFT^0xb729fcec);
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+keys[PERTURB_SHIFT]&=0xffff8000;
+ final int hash=PERTURB_SHIFT^0xb729fcec;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+ final int hash=PERTURB_SHIFT;
+int index=hash&20;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]&=0xffff8000;
+ final int hash=PERTURB_SHIFT;
+int index=hash&20;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+keys[PERTURB_SHIFT]&=0xffff8000;
+ final int hash=PERTURB_SHIFT;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 21:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+ final int hash=0xb729fcec;
+int index=hash&20;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 22:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]&=0xffff8000;
+ final int hash=0xb729fcec;
+int index=hash&20;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 22:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+keys[PERTURB_SHIFT]&=0xffff8000;
+ final int hash=0xb729fcec;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 22:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+ final int hash=((PERTURB_SHIFT&0x00020000)!=0)?hashOf(key):PERTURB_SHIFT;
+int index=hash&20;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 22:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]&=0xffff8000;
+ final int hash=((PERTURB_SHIFT&0x00020000)!=0)?hashOf(key):PERTURB_SHIFT;
+int index=hash&20;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 22:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+keys[PERTURB_SHIFT]&=0xffff8000;
+ final int hash=((PERTURB_SHIFT&0x00020000)!=0)?hashOf(key):PERTURB_SHIFT;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 22:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+keys[PERTURB_SHIFT]&=0xffff8000;
+ final int hash=PERTURB_SHIFT;
+int index=hash&20;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 22:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+keys[PERTURB_SHIFT]&=0xffff8000;
+ final int hash=0xb729fcec;
+int index=hash&20;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 22:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+keys[PERTURB_SHIFT]&=0xffff8000;
+ final int hash=((PERTURB_SHIFT&0x00020000)!=0)?hashOf(key):PERTURB_SHIFT;
+int index=hash&20;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 22:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]&=0xffff8000;
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+ final int hash=(PERTURB_SHIFT^0xb729fcec);
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 22:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]&=0xffff8000;
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+ final int hash=PERTURB_SHIFT^0xb729fcec;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 22:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]&=0xffff8000;
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+ final int hash=PERTURB_SHIFT;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 22:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]&=0xffff8000;
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+ final int hash=0xb729fcec;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 22:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]&=0xffff8000;
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+ final int hash=((PERTURB_SHIFT&0x00020000)!=0)?hashOf(key):PERTURB_SHIFT;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 22:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]&=0xffff8000;
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+ final int hash=PERTURB_SHIFT;
+int index=hash&20;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 22:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]&=0xffff8000;
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+ final int hash=0xb729fcec;
+int index=hash&20;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 22:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]&=0xffff8000;
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+ final int hash=((PERTURB_SHIFT&0x00020000)!=0)?hashOf(key):PERTURB_SHIFT;
+int index=hash&20;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 22:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=mask^((key>>>20)^(key>>>12));
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 22:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=20;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 23:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=12;
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 23:03
+----------------------------------------
+Fri Jan 12 23:05:46 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,355
+Fri Jan 12 23:05:47 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,356
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(containsKey(key,index)){
+return values[index];
+}
+
+Time : 18/01/12 23:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(key<0){
+return doRemove(index);
+}
+
+Time : 18/01/12 23:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+return doRemove(index);
+}
+
+Time : 18/01/12 23:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(states[index]==FREE){
+return doRemove(index);
+}
+
+Time : 18/01/12 23:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(containsKey(key,index)){
+return missingEntries;
+}
+
+Time : 18/01/12 23:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(states[index]==FREE){
+return missingEntries;
+}
+
+Time : 18/01/12 23:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index+1>PERTURB_SHIFT){
+return doRemove(index);
+}
+
+Time : 18/01/12 23:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index>=PERTURB_SHIFT){
+return doRemove(index);
+}
+
+Time : 18/01/12 23:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+index=PERTURB_SHIFT&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/12 23:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index==-1){
+return doRemove(index);
+}
+
+Time : 18/01/12 23:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(states[PERTURB_SHIFT]==FULL){
+return doRemove(index);
+}
+
+Time : 18/01/12 23:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<-1){
+return doRemove(index);
+}
+
+Time : 18/01/12 23:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(missingEntries>missingEntries){
+return doRemove(index);
+}
+
+Time : 18/01/12 23:32
+----------------------------------------
+Fri Jan 12 23:34:38 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,357
+Fri Jan 12 23:34:41 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,394
+Fri Jan 12 23:51:40 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,395
+Fri Jan 12 23:51:42 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,396
+Fri Jan 12 23:51:44 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,397
+Fri Jan 12 23:51:46 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,398
+Fri Jan 12 23:51:49 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,399
+Fri Jan 12 23:51:51 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,400
+Fri Jan 12 23:51:52 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,666
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!entries.containsKey(index)){
+entries.remove(index);
+}
+
+Time : 18/01/12 23:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(entries.containsKey(index)){
+entries.remove(virtualSize);
+}
+
+Time : 18/01/12 23:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!isDefaultValue(value)){
+entries.remove(index);
+}
+
+Time : 18/01/12 23:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+entries.remove(index);
+}
+
+Time : 18/01/12 23:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0||index>=getDimension()){
+entries.remove(index);
+}
+
+Time : 18/01/13 00:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index>=getDimension()){
+entries.remove(index);
+}
+
+Time : 18/01/13 00:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0||index>=virtualSize){
+entries.remove(index);
+}
+
+Time : 18/01/13 00:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index>=virtualSize){
+entries.remove(index);
+}
+
+Time : 18/01/13 00:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<index){
+entries.remove(index);
+}
+
+Time : 18/01/13 00:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index>0){
+entries.remove(index);
+}
+
+Time : 18/01/13 00:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(DEFAULT_ZERO_TOLERANCE>DEFAULT_ZERO_TOLERANCE){
+entries.remove(index);
+}
+
+Time : 18/01/13 00:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index==-1){
+entries.remove(index);
+}
+
+Time : 18/01/13 00:15
+----------------------------------------
+Timeout time : 18/01/13 00:17

@@ -1,0 +1,21 @@
+=================================================
+Project : math_3	start : 18/01/12 21:14
+Current failed test : org.apache.commons.math3.util.MathArraysTest::testLinearCombinationWithSingleElementArray | 18/01/12 21:14
+Fri Jan 12 21:17:17 AEDT 2018 org.apache.commons.math3.util.MathArrays,816
+Fri Jan 12 22:19:20 AEDT 2018 org.apache.commons.math3.util.MathArrays,817
+Fri Jan 12 23:02:55 AEDT 2018 org.apache.commons.math3.util.MathArrays,823
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(len!=b.length){
+throw new DimensionMismatchException(len,b.length);
+}
+ final double[] prodHigh=new double[2];
+double prodLowSum=0;
+
+Time : 18/01/13 00:04
+----------------------------------------
+Sat Jan 13 00:27:34 AEDT 2018 org.apache.commons.math3.util.MathArrays,824
+Sat Jan 13 00:27:35 AEDT 2018 org.apache.commons.math3.util.MathArrays,826
+Timeout time : 18/01/13 02:17

@@ -1,0 +1,72 @@
+=================================================
+Project : closure_74	start : 18/01/15 14:09
+Current failed test : com.google.javascript.jscomp.PeepholeFoldConstantsTest::testFoldComparison3 | 18/01/15 14:10
+Mon Jan 15 14:12:40 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,1061
+Mon Jan 15 14:19:58 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,930
+Mon Jan 15 14:39:58 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,940
+Mon Jan 15 14:42:29 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,941
+Mon Jan 15 14:43:18 AEDT 2018 com.google.javascript.jscomp.NodeUtil,2128
+Mon Jan 15 14:43:38 AEDT 2018 com.google.javascript.jscomp.NodeUtil,2127
+Mon Jan 15 14:44:01 AEDT 2018 com.google.javascript.jscomp.NodeUtil,2131
+Mon Jan 15 14:44:23 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,1133
+Mon Jan 15 14:45:11 AEDT 2018 com.google.javascript.jscomp.NodeUtil,1124
+Mon Jan 15 14:45:36 AEDT 2018 com.google.javascript.rhino.Node,219
+Mon Jan 15 14:45:58 AEDT 2018 com.google.javascript.rhino.Node,934
+Mon Jan 15 14:46:36 AEDT 2018 com.google.javascript.rhino.Node,935
+Mon Jan 15 14:46:37 AEDT 2018 com.google.javascript.rhino.Node,1025
+Mon Jan 15 14:49:32 AEDT 2018 com.google.javascript.rhino.Node,1048
+Mon Jan 15 14:49:43 AEDT 2018 com.google.javascript.rhino.Node,1053
+Mon Jan 15 14:50:09 AEDT 2018 com.google.javascript.rhino.Node,1054
+Mon Jan 15 14:50:13 AEDT 2018 com.google.javascript.rhino.Node,1055
+Mon Jan 15 14:50:17 AEDT 2018 com.google.javascript.rhino.Node,1062
+Mon Jan 15 14:50:27 AEDT 2018 Mon Jan 15 14:50:27 AEDT 2018 : com.google.javascript.rhino.Node,1063=>Find no block
+Mon Jan 15 14:50:32 AEDT 2018 com.google.javascript.rhino.Node,1068
+Mon Jan 15 15:04:29 AEDT 2018 com.google.javascript.rhino.Node,1069
+Mon Jan 15 15:04:33 AEDT 2018 com.google.javascript.rhino.Node,1071
+Mon Jan 15 16:11:41 AEDT 2018 com.google.javascript.rhino.Node,1072
+Mon Jan 15 16:11:41 AEDT 2018 Mon Jan 15 16:11:41 AEDT 2018 : com.google.javascript.rhino.Node,1073=>Find no block
+Mon Jan 15 16:11:44 AEDT 2018 com.google.javascript.rhino.Node,1074
+Mon Jan 15 16:11:45 AEDT 2018 com.google.javascript.rhino.Node,1076
+Mon Jan 15 16:11:46 AEDT 2018 Mon Jan 15 16:11:46 AEDT 2018 : com.google.javascript.rhino.Node,1075=>Find no block
+Mon Jan 15 16:11:47 AEDT 2018 Mon Jan 15 16:11:47 AEDT 2018 : com.google.javascript.rhino.Node,1079=>Find no block
+Mon Jan 15 16:11:48 AEDT 2018 com.google.javascript.rhino.Node,1383
+Mon Jan 15 16:12:04 AEDT 2018 com.google.javascript.rhino.Node,1412
+Mon Jan 15 16:12:08 AEDT 2018 com.google.javascript.rhino.Node,1425
+Mon Jan 15 16:12:11 AEDT 2018 Mon Jan 15 16:12:11 AEDT 2018 : com.google.javascript.rhino.Node,2259=>Find no block
+Mon Jan 15 16:12:12 AEDT 2018 com.google.javascript.rhino.Node,2260
+Mon Jan 15 16:12:15 AEDT 2018 com.google.javascript.rhino.Node,2261
+Mon Jan 15 16:12:16 AEDT 2018 Mon Jan 15 16:12:16 AEDT 2018 : com.google.javascript.rhino.Node,2262=>Find no block
+Mon Jan 15 16:12:17 AEDT 2018 com.google.javascript.jscomp.NodeUtil,270
+Mon Jan 15 16:18:07 AEDT 2018 com.google.javascript.jscomp.NodeUtil,273
+Mon Jan 15 16:18:07 AEDT 2018 com.google.javascript.jscomp.NodeUtil,325
+Mon Jan 15 16:20:36 AEDT 2018 Mon Jan 15 16:20:36 AEDT 2018 : com.google.javascript.jscomp.NodeUtil,357=>Find no block
+Mon Jan 15 16:20:36 AEDT 2018 com.google.javascript.jscomp.NodeUtil,358
+Mon Jan 15 16:27:05 AEDT 2018 com.google.javascript.jscomp.NodeUtil,2130
+Mon Jan 15 16:27:11 AEDT 2018 com.google.javascript.jscomp.NodeUtil,2134
+Mon Jan 15 16:27:16 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,911
+Mon Jan 15 16:35:52 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,913
+Mon Jan 15 16:35:52 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,916
+Mon Jan 15 16:35:53 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,918
+Mon Jan 15 17:09:48 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,924
+Mon Jan 15 17:11:41 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,925
+Mon Jan 15 17:11:42 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,990
+Mon Jan 15 17:27:47 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,1026
+Mon Jan 15 17:27:52 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,1027
+Mon Jan 15 17:27:56 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,1131
+Mon Jan 15 17:28:49 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1048
+Mon Jan 15 17:29:13 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,927
+Mon Jan 15 17:29:17 AEDT 2018 Mon Jan 15 17:29:17 AEDT 2018 : com.google.javascript.jscomp.PeepholeFoldConstants,932=>Find no block
+Mon Jan 15 17:29:22 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,935
+Mon Jan 15 17:31:13 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,936
+Mon Jan 15 17:32:02 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,958
+Mon Jan 15 18:33:04 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,1033
+Mon Jan 15 18:36:07 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,1034
+Mon Jan 15 18:36:11 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1050
+Mon Jan 15 18:36:36 AEDT 2018 com.google.javascript.jscomp.NodeUtil,483
+Mon Jan 15 18:50:03 AEDT 2018 com.google.javascript.rhino.Node,1497
+Mon Jan 15 18:50:22 AEDT 2018 com.google.javascript.jscomp.NodeUtil,486
+Mon Jan 15 19:03:31 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,1135
+Mon Jan 15 19:04:17 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,1137
+Mon Jan 15 19:05:01 AEDT 2018 com.google.javascript.jscomp.NodeUtil,2129
+Mon Jan 15 19:05:19 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,897
+Timeout time : 18/01/15 19:12

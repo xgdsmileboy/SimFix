@@ -1,0 +1,229 @@
+=================================================
+Project : closure_94	start : 18/01/14 08:23
+Current failed test : com.google.javascript.jscomp.NodeUtilTest::testValidDefine_purify_13 | 18/01/14 08:25
+Sun Jan 14 08:34:47 AEDT 2018 com.google.javascript.jscomp.NodeUtil,346
+Sun Jan 14 08:39:58 AEDT 2018 Sun Jan 14 08:39:58 AEDT 2018 : com.google.javascript.jscomp.NodeUtil,321=>Find no block
+Sun Jan 14 08:39:59 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,908
+Sun Jan 14 08:40:07 AEDT 2018 com.google.javascript.jscomp.Compiler,1174
+Sun Jan 14 08:44:25 AEDT 2018 com.google.javascript.jscomp.Compiler,1189
+Sun Jan 14 08:44:28 AEDT 2018 com.google.javascript.jscomp.Compiler,1185
+Sun Jan 14 08:48:29 AEDT 2018 com.google.javascript.jscomp.Compiler,1186
+Sun Jan 14 08:48:29 AEDT 2018 com.google.javascript.jscomp.Compiler,1188
+Sun Jan 14 08:48:30 AEDT 2018 com.google.javascript.jscomp.Compiler,1191
+Sun Jan 14 08:48:30 AEDT 2018 com.google.javascript.jscomp.Compiler,1192
+Sun Jan 14 08:48:31 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,144
+Sun Jan 14 08:52:09 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,247
+Sun Jan 14 08:57:09 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1200
+Sun Jan 14 08:57:37 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,627
+Sun Jan 14 08:57:40 AEDT 2018 com.google.javascript.rhino.Node,512
+Sun Jan 14 08:57:43 AEDT 2018 com.google.javascript.rhino.Node,244
+Sun Jan 14 08:58:01 AEDT 2018 com.google.javascript.rhino.Node,245
+Sun Jan 14 08:58:02 AEDT 2018 Sun Jan 14 08:58:02 AEDT 2018 : com.google.javascript.rhino.Node,246=>Find no block
+Sun Jan 14 08:58:03 AEDT 2018 com.google.javascript.jscomp.Compiler,247
+Sun Jan 14 09:02:52 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,806
+Sun Jan 14 09:04:47 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,807
+Sun Jan 14 09:04:48 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,567
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Node n=newNode(transformTokenType(exprNode.getType()),transform(exprNode.getLeft()),transform(exprNode.getRight()));
+n.setLineno(exprNode.getLineno());
+n.setCharno(position2charno(exprNode.getAbsolutePosition()+exprNode.getOperatorPosition()));
+return Node.newString(sourceName);
+
+Time : 18/01/14 09:12
+----------------------------------------
+Sun Jan 14 09:21:51 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,573
+Sun Jan 14 09:21:52 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,577
+Sun Jan 14 09:21:53 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,579
+Sun Jan 14 09:21:53 AEDT 2018 com.google.javascript.jscomp.Compiler,1171
+Sun Jan 14 09:21:54 AEDT 2018 Sun Jan 14 09:21:54 AEDT 2018 : com.google.javascript.jscomp.Compiler,1176=>Find no block
+Sun Jan 14 09:21:55 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,265
+Sun Jan 14 09:23:53 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,266
+Sun Jan 14 09:23:54 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,267
+Sun Jan 14 09:23:55 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,268
+Sun Jan 14 09:23:55 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,795
+Timeout time : 18/01/14 09:34
+Current failed test : com.google.javascript.jscomp.NodeUtilTest::testValidDefine_purify_14 | 18/01/14 09:34
+Sun Jan 14 09:44:43 AEDT 2018 com.google.javascript.jscomp.NodeUtil,346
+Sun Jan 14 09:49:55 AEDT 2018 Sun Jan 14 09:49:55 AEDT 2018 : com.google.javascript.jscomp.NodeUtil,321=>Find no block
+Sun Jan 14 09:49:56 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,908
+Sun Jan 14 09:50:04 AEDT 2018 com.google.javascript.jscomp.Compiler,1174
+Sun Jan 14 09:54:23 AEDT 2018 com.google.javascript.jscomp.Compiler,1189
+Sun Jan 14 09:54:26 AEDT 2018 com.google.javascript.jscomp.Compiler,1185
+Sun Jan 14 09:58:26 AEDT 2018 com.google.javascript.jscomp.Compiler,1186
+Sun Jan 14 09:58:28 AEDT 2018 com.google.javascript.jscomp.Compiler,1188
+Sun Jan 14 09:58:29 AEDT 2018 com.google.javascript.jscomp.Compiler,1191
+Sun Jan 14 09:58:30 AEDT 2018 com.google.javascript.jscomp.Compiler,1192
+Sun Jan 14 09:58:31 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,144
+Sun Jan 14 10:02:11 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,257
+Sun Jan 14 10:06:59 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,702
+Sun Jan 14 10:13:35 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,703
+Sun Jan 14 10:13:36 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1192
+Sun Jan 14 10:14:39 AEDT 2018 com.google.javascript.rhino.Node,520
+Sun Jan 14 10:14:42 AEDT 2018 com.google.javascript.jscomp.Compiler,247
+Sun Jan 14 10:19:35 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,806
+Sun Jan 14 10:21:30 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,807
+Sun Jan 14 10:21:30 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,567
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Node n=newNode(transformTokenType(exprNode.getType()),transform(exprNode.getLeft()),transform(exprNode.getRight()));
+n.setLineno(exprNode.getLineno());
+n.setCharno(position2charno(exprNode.getAbsolutePosition()+exprNode.getOperatorPosition()));
+return Node.newString(sourceName);
+
+Time : 18/01/14 10:29
+----------------------------------------
+Sun Jan 14 10:38:28 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,573
+Sun Jan 14 10:38:29 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,577
+Sun Jan 14 10:38:30 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,579
+Sun Jan 14 10:38:31 AEDT 2018 com.google.javascript.jscomp.Compiler,1171
+Sun Jan 14 10:38:32 AEDT 2018 Sun Jan 14 10:38:32 AEDT 2018 : com.google.javascript.jscomp.Compiler,1176=>Find no block
+Sun Jan 14 10:38:33 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,265
+Sun Jan 14 10:40:30 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,266
+Sun Jan 14 10:40:31 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,267
+Sun Jan 14 10:40:32 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,268
+Sun Jan 14 10:40:33 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,795
+Timeout time : 18/01/14 10:44
+Current failed test : com.google.javascript.jscomp.NodeUtilTest::testValidDefine_purify_15 | 18/01/14 10:44
+Sun Jan 14 10:54:39 AEDT 2018 com.google.javascript.jscomp.NodeUtil,337
+Sun Jan 14 10:55:16 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,888
+Sun Jan 14 10:55:23 AEDT 2018 com.google.javascript.jscomp.NodeUtil,326
+Sun Jan 14 10:55:33 AEDT 2018 Sun Jan 14 10:55:33 AEDT 2018 : com.google.javascript.jscomp.NodeUtil,321=>Find no block
+Sun Jan 14 10:55:34 AEDT 2018 com.google.javascript.jscomp.Compiler,1174
+Sun Jan 14 10:59:51 AEDT 2018 com.google.javascript.jscomp.Compiler,1189
+Sun Jan 14 10:59:54 AEDT 2018 com.google.javascript.jscomp.Compiler,1185
+Sun Jan 14 11:03:54 AEDT 2018 com.google.javascript.jscomp.Compiler,1186
+Sun Jan 14 11:03:54 AEDT 2018 com.google.javascript.jscomp.Compiler,1188
+Sun Jan 14 11:03:55 AEDT 2018 com.google.javascript.jscomp.Compiler,1191
+Sun Jan 14 11:03:56 AEDT 2018 com.google.javascript.jscomp.Compiler,1192
+Sun Jan 14 11:03:57 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,144
+Sun Jan 14 11:07:37 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,247
+Sun Jan 14 11:12:35 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1200
+Sun Jan 14 11:13:01 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,627
+Sun Jan 14 11:13:05 AEDT 2018 com.google.javascript.rhino.Node,512
+Sun Jan 14 11:13:08 AEDT 2018 com.google.javascript.rhino.Node,244
+Sun Jan 14 11:13:26 AEDT 2018 com.google.javascript.rhino.Node,245
+Sun Jan 14 11:13:27 AEDT 2018 Sun Jan 14 11:13:27 AEDT 2018 : com.google.javascript.rhino.Node,246=>Find no block
+Sun Jan 14 11:13:27 AEDT 2018 com.google.javascript.jscomp.Compiler,247
+Sun Jan 14 11:18:20 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,806
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(initializerNode.getInitializer()!=null){
+node.addChildToBack(rootNodeJsDocHolder);
+node.addChildToBack(transform(initializerNode.getInitializer()));
+node.setLineno(node.getLineno());
+}
+
+Time : 18/01/14 11:20
+----------------------------------------
+Sun Jan 14 11:21:45 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,807
+Sun Jan 14 11:21:46 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,567
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Node n=newNode(transformTokenType(exprNode.getType()),transform(exprNode.getLeft()),transform(exprNode.getRight()));
+n.setType(exprNode.getLineno());
+n.setCharno(position2charno(exprNode.getAbsolutePosition()+exprNode.getOperatorPosition()));
+return n;
+
+Time : 18/01/14 11:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Node n=newNode(transformTokenType(exprNode.getType()),transform(exprNode.getLeft()),transform(exprNode.getRight()));
+n.setLineno(exprNode.getLineno());
+n.setCharno(position2charno(exprNode.getAbsolutePosition()+exprNode.getOperatorPosition()));
+return templateNode;
+
+Time : 18/01/14 11:36
+----------------------------------------
+Sun Jan 14 11:40:18 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,573
+Sun Jan 14 11:40:19 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,577
+Sun Jan 14 11:40:19 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,579
+Sun Jan 14 11:40:20 AEDT 2018 com.google.javascript.jscomp.Compiler,1171
+Sun Jan 14 11:40:21 AEDT 2018 Sun Jan 14 11:40:21 AEDT 2018 : com.google.javascript.jscomp.Compiler,1176=>Find no block
+Sun Jan 14 11:40:22 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,265
+Sun Jan 14 11:42:20 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,266
+Sun Jan 14 11:42:20 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,267
+Sun Jan 14 11:42:21 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,268
+Sun Jan 14 11:42:22 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,795
+Timeout time : 18/01/14 11:54
+Current failed test : com.google.javascript.jscomp.ProcessDefinesTest::testOverridingString1 | 18/01/14 11:54
+Sun Jan 14 12:04:28 AEDT 2018 com.google.javascript.jscomp.NodeUtil,346
+Sun Jan 14 12:09:39 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,407
+Sun Jan 14 12:09:44 AEDT 2018 com.google.javascript.jscomp.JSError,189
+Sun Jan 14 12:09:47 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,180
+Sun Jan 14 12:29:16 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,160
+Sun Jan 14 12:31:16 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,161
+Sun Jan 14 12:31:16 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,179
+Sun Jan 14 12:31:17 AEDT 2018 Sun Jan 14 12:31:17 AEDT 2018 : com.google.javascript.jscomp.ProcessDefines,468=>Find no block
+Sun Jan 14 12:31:17 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,469
+Sun Jan 14 12:31:21 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,470
+Sun Jan 14 12:31:22 AEDT 2018 Sun Jan 14 12:31:22 AEDT 2018 : com.google.javascript.jscomp.ProcessDefines,471=>Find no block
+Sun Jan 14 12:31:23 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,242
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(name.refs!=null){
+allRefInfo.put(name.declaration.node,new RefInfo(name.declaration,name));
+}
+
+Time : 18/01/14 12:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(name.declaration==null){
+allRefInfo.put(name.declaration.node,new RefInfo(name.declaration,name));
+}
+
+Time : 18/01/14 12:34
+----------------------------------------
+Sun Jan 14 12:40:07 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,243
+Sun Jan 14 12:40:07 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,246
+Sun Jan 14 12:45:19 AEDT 2018 Sun Jan 14 12:45:19 AEDT 2018 : com.google.javascript.jscomp.ProcessDefines,254=>Find no block
+Sun Jan 14 12:45:20 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,278
+Sun Jan 14 12:46:39 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,279
+Sun Jan 14 12:46:40 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,280
+Sun Jan 14 12:46:40 AEDT 2018 Sun Jan 14 12:46:40 AEDT 2018 : com.google.javascript.jscomp.ProcessDefines,281=>Find no block
+Sun Jan 14 12:46:41 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,284
+Sun Jan 14 12:47:35 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,285
+Timeout time : 18/01/14 13:04
+Current failed test : com.google.javascript.jscomp.ProcessDefinesTest::testOverridingString3 | 18/01/14 13:04
+Sun Jan 14 13:14:27 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,148
+Sun Jan 14 13:22:03 AEDT 2018 Sun Jan 14 13:22:03 AEDT 2018 : com.google.javascript.jscomp.ProcessDefines,149=>Find no block
+Sun Jan 14 13:22:04 AEDT 2018 com.google.javascript.jscomp.NodeUtil,346
+Sun Jan 14 13:27:09 AEDT 2018 com.google.javascript.jscomp.JSError,71
+Sun Jan 14 13:27:13 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,407
+Sun Jan 14 13:27:17 AEDT 2018 com.google.javascript.jscomp.BasicErrorManager,132
+Sun Jan 14 13:28:07 AEDT 2018 com.google.javascript.jscomp.JSError,189
+Sun Jan 14 13:28:11 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,180
+Sun Jan 14 13:47:30 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,160
+Sun Jan 14 13:49:28 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,161
+Sun Jan 14 13:49:29 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,179
+Sun Jan 14 13:49:29 AEDT 2018 Sun Jan 14 13:49:29 AEDT 2018 : com.google.javascript.jscomp.ProcessDefines,468=>Find no block
+Sun Jan 14 13:49:30 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,469
+Sun Jan 14 13:49:32 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,470
+Sun Jan 14 13:49:32 AEDT 2018 Sun Jan 14 13:49:32 AEDT 2018 : com.google.javascript.jscomp.ProcessDefines,471=>Find no block
+Sun Jan 14 13:49:33 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,242
+Sun Jan 14 13:54:38 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,243
+Sun Jan 14 13:54:38 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,246
+Sun Jan 14 13:59:45 AEDT 2018 Sun Jan 14 13:59:45 AEDT 2018 : com.google.javascript.jscomp.ProcessDefines,254=>Find no block
+Sun Jan 14 13:59:45 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,278
+Sun Jan 14 14:01:03 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,279
+Sun Jan 14 14:01:04 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,280
+Sun Jan 14 14:01:04 AEDT 2018 Sun Jan 14 14:01:04 AEDT 2018 : com.google.javascript.jscomp.ProcessDefines,281=>Find no block
+Sun Jan 14 14:01:05 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,284
+Sun Jan 14 14:01:57 AEDT 2018 com.google.javascript.jscomp.ProcessDefines,285
+Timeout time : 18/01/14 14:14

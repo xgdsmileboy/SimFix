@@ -1,0 +1,113 @@
+=================================================
+Project : math_20	start : 18/01/13 00:13
+Current failed test : org.apache.commons.math3.optimization.direct.CMAESOptimizerTest::testMath864 | 18/01/13 00:13
+Sat Jan 13 00:21:20 AEDT 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,240
+Sat Jan 13 00:21:29 AEDT 2018 Sat Jan 13 00:21:29 AEDT 2018 : org.apache.commons.math3.optimization.direct.CMAESOptimizer,241=>Find no block
+Sat Jan 13 00:21:31 AEDT 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,247
+Sat Jan 13 00:21:37 AEDT 2018 Sat Jan 13 00:21:37 AEDT 2018 : org.apache.commons.math3.optimization.direct.CMAESOptimizer,250=>Find no block
+Sat Jan 13 00:21:39 AEDT 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,470
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(getConvergenceChecker()!=null&&lastResult!=null){
+break;
+}
+
+Time : 18/01/13 00:22
+----------------------------------------
+Sat Jan 13 00:24:33 AEDT 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,476
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.sigma=1/bestValue;
+if(sigma==fitness[arindex[(int)(0.1+lambda/4.0)]]){
+sigma=sigma*Math.exp(0.2+cs/damps);
+}
+
+Time : 18/01/13 00:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.sigma=1/bestValue;
+if(bestValue==fitness[0]){
+sigma=sigma*Math.exp(0.2+cs/damps);
+}
+
+Time : 18/01/13 00:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.sigma=1/bestValue;
+this.chiN=0.5*sigma;
+if(bestValue==fitness[arindex[(int)(0.1+lambda/4.0)]]){
+sigma=sigma*Math.exp(0.2+cs/damps);
+}
+
+Time : 18/01/13 00:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.sigma=1/bestValue;
+this.chiN=0.5*sigma;
+if(bestValue==fitness[0]){
+sigma=sigma*Math.exp(0.2+cs/damps);
+}
+
+Time : 18/01/13 00:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(bestValue==bestFitness){
+bestValue=sigma*Math.exp(0.2+cs/damps);
+}
+
+Time : 18/01/13 00:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 0.93670524158734 : [/home/hz985/jiajun/d4j/projects/math/math_20_buggy/src/main/java/org/apache/commons/math3/optimization/direct/CMAESOptimizer.java=>0,0]
+if(bestValue>bestFitness){
+bestValue=bestFitness;
+lastResult=optimum;
+optimum=new PointValuePair(fitfun.repairAndDecode(bestArx.getColumn(0)),isMinimize?bestFitness:-bestFitness);
+if(getConvergenceChecker()!=null&&lastResult!=null){
+if(getConvergenceChecker().converged(iterations,optimum,lastResult)){
+break;
+}
+}
+}
+
+Time : 18/01/13 00:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_20_buggy/src/main/java/org/apache/commons/math3/optimization/direct/CMAESOptimizer.java=>475,477]
+if(bestValue==fitness[arindex[(int)(0.1+lambda/4.0)]]){
+sigma=sigma*Math.exp(0.2+cs/damps);
+}
+
+Time : 18/01/13 00:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_20_buggy/src/main/java/org/apache/commons/math3/optimization/direct/CMAESOptimizer.java=>475,477]
+if(bestValue==bestFitness){
+bestValue=sigma*Math.exp(0.2+cs/damps);
+}
+
+Time : 18/01/13 00:41
+----------------------------------------
+Success time : 18/01/13 00:41

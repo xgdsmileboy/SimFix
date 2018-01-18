@@ -1,0 +1,70 @@
+=================================================
+Project : math_57	start : 18/01/15 21:04
+Current failed test : org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererTest::testSmallDistances | 18/01/15 21:05
+Mon Jan 15 21:06:26 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,69
+Mon Jan 15 21:06:40 AEDT 2018 Mon Jan 15 21:06:40 AEDT 2018 : org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,70=>Find no block
+Mon Jan 15 21:06:48 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,134
+Mon Jan 15 21:13:16 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,175
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double sum=0;
+for(int i=0;i<pointSet.size();i++){
+ final T p=pointSet.get(i);
+ final Cluster<T> nearest=getNearestCluster(resultSet,p);
+ final double d=p.distanceFrom(nearest.getCenter());
+sum+=d*d;
+dx2[i]=sum;
+}
+
+Time : 18/01/15 21:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.494010984788007 : [/home/hz985/jiajun/d4j/projects/math/math_57_buggy/src/main/java/org/apache/commons/math/stat/clustering/KMeansPlusPlusClusterer.java=>0,0]
+checkVectorDimensions(v.getDimension());
+boolean thisIsSmaller=entries.size()<v.entries.size();
+Iterator iter=thisIsSmaller?entries.iterator():v.entries.iterator();
+OpenIntToDoubleHashMap larger=thisIsSmaller?v.entries:entries;
+double d=0;
+while(iter.hasNext()){
+iter.advance();
+d+=iter.value()*larger.get(iter.key());
+}
+return d;
+
+Time : 18/01/15 21:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_57_buggy/src/main/java/org/apache/commons/math/stat/clustering/KMeansPlusPlusClusterer.java=>175,182]
+int sum=0;
+for(int i=0;i<pointSet.size();i++){
+ final T p=pointSet.get(i);
+ final Cluster<T> nearest=getNearestCluster(resultSet,p);
+ final double d=p.distanceFrom(nearest.getCenter());
+sum+=d*d;
+dx2[i]=sum;
+}
+
+Time : 18/01/15 21:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_57_buggy/src/main/java/org/apache/commons/math/stat/clustering/KMeansPlusPlusClusterer.java=>175,182]
+double sum=0;
+for(int i=0;i<pointSet.size();i++){
+ final T p=pointSet.get(i);
+ final Cluster<T> nearest=getNearestCluster(resultSet,p);
+ final double d=p.distanceFrom(nearest.getCenter());
+sum+=d*d;
+dx2[i]=sum;
+}
+
+Time : 18/01/15 21:16
+----------------------------------------
+Success time : 18/01/15 21:16

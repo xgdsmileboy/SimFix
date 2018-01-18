@@ -1,0 +1,67 @@
+=================================================
+Project : chart_12	start : 18/01/15 19:50
+Current failed test : org.jfree.chart.plot.junit.MultiplePiePlotTests::testConstructor | 18/01/15 19:51
+Mon Jan 15 19:53:00 AEDT 2018 org.jfree.chart.plot.MultiplePiePlot,166
+Mon Jan 15 19:53:15 AEDT 2018 org.jfree.chart.plot.MultiplePiePlot,135
+Mon Jan 15 19:53:28 AEDT 2018 Mon Jan 15 19:53:28 AEDT 2018 : org.jfree.chart.plot.MultiplePiePlot,136=>Find no block
+Mon Jan 15 19:53:34 AEDT 2018 org.jfree.data.general.AbstractDataset,160
+Mon Jan 15 19:54:03 AEDT 2018 org.jfree.data.general.AbstractDataset,161
+Mon Jan 15 19:54:09 AEDT 2018 org.jfree.chart.JFreeChart,664
+Mon Jan 15 19:54:25 AEDT 2018 Mon Jan 15 19:54:25 AEDT 2018 : org.jfree.chart.JFreeChart,665=>Find no block
+Mon Jan 15 19:54:29 AEDT 2018 org.jfree.chart.JFreeChart,795
+Mon Jan 15 19:58:18 AEDT 2018 org.jfree.chart.JFreeChart,796
+Mon Jan 15 19:58:25 AEDT 2018 Mon Jan 15 19:58:25 AEDT 2018 : org.jfree.chart.JFreeChart,797=>Find no block
+Mon Jan 15 19:58:31 AEDT 2018 org.jfree.chart.plot.MultiplePiePlot,144
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(dataset!=null){
+setDatasetGroup(dataset.getGroup());
+dataset.addChangeListener(this);
+}
+this.dataset=dataset;
+PiePlot piePlot=new PiePlot(null);
+
+Time : 18/01/15 20:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 0.9472830267366573 : [/home/hz985/jiajun/d4j/projects/chart/chart_12_buggy/source/org/jfree/chart/plot/MultiplePiePlot.java=>0,0]
+if(this.dataset!=null){
+this.dataset.removeChangeListener(this);
+}
+this.dataset=dataset;
+if(dataset!=null){
+setDatasetGroup(dataset.getGroup());
+dataset.addChangeListener(this);
+}
+datasetChanged(new DatasetChangeEvent(this,dataset));
+
+Time : 18/01/15 20:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/chart/chart_12_buggy/source/org/jfree/chart/plot/MultiplePiePlot.java=>144,146]
+super();
+this.dataset=dataset;
+PiePlot piePlot=new PiePlot(null);
+
+Time : 18/01/15 20:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/chart/chart_12_buggy/source/org/jfree/chart/plot/MultiplePiePlot.java=>144,146]
+if(dataset!=null){
+setDatasetGroup(dataset.getGroup());
+dataset.addChangeListener(this);
+}
+this.dataset=dataset;
+PiePlot piePlot=new PiePlot(null);
+
+Time : 18/01/15 20:02
+----------------------------------------
+Success time : 18/01/15 20:02

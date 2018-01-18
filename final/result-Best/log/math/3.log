@@ -1,0 +1,115 @@
+=================================================
+Project : math_3	start : 18/01/14 08:31
+Current failed test : org.apache.commons.math3.util.MathArraysTest::testLinearCombinationWithSingleElementArray | 18/01/14 08:32
+Sun Jan 14 08:34:46 AEDT 2018 org.apache.commons.math3.util.MathArrays,816
+Sun Jan 14 09:16:56 AEDT 2018 org.apache.commons.math3.util.MathArrays,817
+Sun Jan 14 09:52:15 AEDT 2018 org.apache.commons.math3.util.MathArrays,823
+Sun Jan 14 10:35:58 AEDT 2018 org.apache.commons.math3.util.MathArrays,824
+Sun Jan 14 10:36:02 AEDT 2018 org.apache.commons.math3.util.MathArrays,826
+Sun Jan 14 11:20:38 AEDT 2018 org.apache.commons.math3.util.MathArrays,827
+Sun Jan 14 11:27:01 AEDT 2018 org.apache.commons.math3.util.MathArrays,828
+Sun Jan 14 11:27:05 AEDT 2018 org.apache.commons.math3.util.MathArrays,829
+Sun Jan 14 11:29:31 AEDT 2018 org.apache.commons.math3.util.MathArrays,830
+Sun Jan 14 11:34:59 AEDT 2018 org.apache.commons.math3.util.MathArrays,832
+Sun Jan 14 11:42:18 AEDT 2018 org.apache.commons.math3.util.MathArrays,833
+Sun Jan 14 11:50:58 AEDT 2018 org.apache.commons.math3.util.MathArrays,834
+Sun Jan 14 11:54:00 AEDT 2018 org.apache.commons.math3.util.MathArrays,835
+Sun Jan 14 12:07:05 AEDT 2018 org.apache.commons.math3.util.MathArrays,836
+Sun Jan 14 12:17:13 AEDT 2018 org.apache.commons.math3.util.MathArrays,837
+Sun Jan 14 12:29:38 AEDT 2018 org.apache.commons.math3.util.MathArrays,841
+Sun Jan 14 12:29:42 AEDT 2018 org.apache.commons.math3.util.MathArrays,845
+Sun Jan 14 12:31:07 AEDT 2018 org.apache.commons.math3.util.MathArrays,846
+Sun Jan 14 12:31:10 AEDT 2018 Sun Jan 14 12:31:10 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalStateException,45=>Find no block
+Sun Jan 14 12:31:13 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,46
+Sun Jan 14 12:32:15 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,47
+Sun Jan 14 12:32:18 AEDT 2018 Sun Jan 14 12:32:18 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalStateException,48=>Find no block
+Sun Jan 14 12:32:21 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,60
+Sun Jan 14 12:33:23 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,61
+Sun Jan 14 12:33:26 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,62
+Sun Jan 14 12:33:30 AEDT 2018 Sun Jan 14 12:33:30 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalStateException,63=>Find no block
+Sun Jan 14 12:33:33 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,69
+Sun Jan 14 12:33:41 AEDT 2018 Sun Jan 14 12:33:41 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalStateException,70=>Find no block
+Sun Jan 14 12:33:45 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,74
+Sun Jan 14 12:33:52 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,80
+Sun Jan 14 12:34:52 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,86
+Sun Jan 14 12:35:47 AEDT 2018 Sun Jan 14 12:35:47 AEDT 2018 : org.apache.commons.math3.exception.MathInternalError,37=>Find no block
+Sun Jan 14 12:35:50 AEDT 2018 org.apache.commons.math3.exception.MathInternalError,38
+Sun Jan 14 12:37:00 AEDT 2018 Sun Jan 14 12:37:00 AEDT 2018 : org.apache.commons.math3.exception.MathInternalError,39=>Find no block
+Sun Jan 14 12:37:03 AEDT 2018 org.apache.commons.math3.exception.MathInternalError,46
+Sun Jan 14 12:37:26 AEDT 2018 Sun Jan 14 12:37:26 AEDT 2018 : org.apache.commons.math3.exception.MathInternalError,47=>Find no block
+Sun Jan 14 12:37:29 AEDT 2018 org.apache.commons.math3.exception.MathInternalError,56
+Sun Jan 14 12:37:37 AEDT 2018 Sun Jan 14 12:37:37 AEDT 2018 : org.apache.commons.math3.exception.MathInternalError,57=>Find no block
+Sun Jan 14 12:37:40 AEDT 2018 org.apache.commons.math3.exception.NumberIsTooSmallException,50
+Sun Jan 14 12:37:48 AEDT 2018 Sun Jan 14 12:37:48 AEDT 2018 : org.apache.commons.math3.exception.NumberIsTooSmallException,54=>Find no block
+Sun Jan 14 12:37:51 AEDT 2018 org.apache.commons.math3.exception.NumberIsTooSmallException,68
+Sun Jan 14 12:39:19 AEDT 2018 org.apache.commons.math3.exception.NumberIsTooSmallException,70
+Sun Jan 14 12:39:22 AEDT 2018 org.apache.commons.math3.exception.NumberIsTooSmallException,71
+Sun Jan 14 12:39:25 AEDT 2018 Sun Jan 14 12:39:25 AEDT 2018 : org.apache.commons.math3.exception.NumberIsTooSmallException,72=>Find no block
+Sun Jan 14 12:39:28 AEDT 2018 org.apache.commons.math3.exception.NumberIsTooSmallException,78
+Sun Jan 14 12:39:37 AEDT 2018 org.apache.commons.math3.exception.NumberIsTooSmallException,85
+Sun Jan 14 12:39:44 AEDT 2018 org.apache.commons.math3.exception.MathIllegalNumberException,46
+Sun Jan 14 12:40:54 AEDT 2018 org.apache.commons.math3.exception.MathIllegalNumberException,47
+Sun Jan 14 12:40:57 AEDT 2018 Sun Jan 14 12:40:57 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalNumberException,48=>Find no block
+Sun Jan 14 12:41:00 AEDT 2018 org.apache.commons.math3.exception.MathIllegalNumberException,54
+Sun Jan 14 12:41:08 AEDT 2018 Sun Jan 14 12:41:08 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalArgumentException,44=>Find no block
+Sun Jan 14 12:41:11 AEDT 2018 org.apache.commons.math3.exception.MathIllegalArgumentException,45
+Sun Jan 14 12:41:13 AEDT 2018 org.apache.commons.math3.exception.MathIllegalArgumentException,46
+Sun Jan 14 12:41:16 AEDT 2018 Sun Jan 14 12:41:16 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalArgumentException,47=>Find no block
+Sun Jan 14 12:41:19 AEDT 2018 org.apache.commons.math3.exception.MathIllegalArgumentException,51
+Sun Jan 14 12:41:22 AEDT 2018 org.apache.commons.math3.exception.MathIllegalArgumentException,57
+Sun Jan 14 12:41:24 AEDT 2018 org.apache.commons.math3.exception.MathIllegalArgumentException,63
+Sun Jan 14 12:41:28 AEDT 2018 org.apache.commons.math3.exception.NotPositiveException,37
+Sun Jan 14 12:41:36 AEDT 2018 Sun Jan 14 12:41:36 AEDT 2018 : org.apache.commons.math3.exception.NotPositiveException,38=>Find no block
+Sun Jan 14 12:41:38 AEDT 2018 org.apache.commons.math3.exception.NotPositiveException,47
+Sun Jan 14 12:42:00 AEDT 2018 Sun Jan 14 12:42:00 AEDT 2018 : org.apache.commons.math3.exception.NotPositiveException,48=>Find no block
+Sun Jan 14 12:42:03 AEDT 2018 Sun Jan 14 12:42:03 AEDT 2018 : org.apache.commons.math3.exception.MathArithmeticException,43=>Find no block
+Sun Jan 14 12:42:06 AEDT 2018 org.apache.commons.math3.exception.MathArithmeticException,44
+Sun Jan 14 12:43:17 AEDT 2018 org.apache.commons.math3.exception.MathArithmeticException,45
+Sun Jan 14 12:43:19 AEDT 2018 Sun Jan 14 12:43:19 AEDT 2018 : org.apache.commons.math3.exception.MathArithmeticException,46=>Find no block
+Sun Jan 14 12:43:22 AEDT 2018 Sun Jan 14 12:43:22 AEDT 2018 : org.apache.commons.math3.exception.MathArithmeticException,56=>Find no block
+Sun Jan 14 12:43:25 AEDT 2018 org.apache.commons.math3.exception.MathArithmeticException,57
+Sun Jan 14 12:43:27 AEDT 2018 org.apache.commons.math3.exception.MathArithmeticException,58
+Sun Jan 14 12:43:30 AEDT 2018 Sun Jan 14 12:43:30 AEDT 2018 : org.apache.commons.math3.exception.MathArithmeticException,59=>Find no block
+Sun Jan 14 12:43:33 AEDT 2018 org.apache.commons.math3.exception.MathArithmeticException,63
+Sun Jan 14 12:43:35 AEDT 2018 org.apache.commons.math3.exception.MathArithmeticException,69
+Sun Jan 14 12:43:38 AEDT 2018 org.apache.commons.math3.exception.MathArithmeticException,75
+Sun Jan 14 12:43:41 AEDT 2018 org.apache.commons.math3.exception.NullArgumentException,41
+Sun Jan 14 12:43:49 AEDT 2018 Sun Jan 14 12:43:49 AEDT 2018 : org.apache.commons.math3.exception.NullArgumentException,42=>Find no block
+Sun Jan 14 12:43:51 AEDT 2018 org.apache.commons.math3.exception.NullArgumentException,50
+Sun Jan 14 12:43:59 AEDT 2018 Sun Jan 14 12:43:59 AEDT 2018 : org.apache.commons.math3.exception.NullArgumentException,51=>Find no block
+Sun Jan 14 12:44:02 AEDT 2018 org.apache.commons.math3.exception.NoDataException,37
+Sun Jan 14 12:44:12 AEDT 2018 Sun Jan 14 12:44:12 AEDT 2018 : org.apache.commons.math3.exception.NoDataException,38=>Find no block
+Sun Jan 14 12:44:15 AEDT 2018 org.apache.commons.math3.exception.NoDataException,45
+Sun Jan 14 12:44:23 AEDT 2018 Sun Jan 14 12:44:23 AEDT 2018 : org.apache.commons.math3.exception.NoDataException,46=>Find no block
+Sun Jan 14 12:44:26 AEDT 2018 org.apache.commons.math3.exception.NonMonotonicSequenceException,61
+Sun Jan 14 12:44:34 AEDT 2018 Sun Jan 14 12:44:34 AEDT 2018 : org.apache.commons.math3.exception.NonMonotonicSequenceException,62=>Find no block
+Sun Jan 14 12:44:37 AEDT 2018 org.apache.commons.math3.exception.NonMonotonicSequenceException,80
+Sun Jan 14 12:47:20 AEDT 2018 org.apache.commons.math3.exception.NonMonotonicSequenceException,89
+Sun Jan 14 12:47:23 AEDT 2018 org.apache.commons.math3.exception.NonMonotonicSequenceException,90
+Sun Jan 14 12:47:26 AEDT 2018 org.apache.commons.math3.exception.NonMonotonicSequenceException,91
+Sun Jan 14 12:47:29 AEDT 2018 org.apache.commons.math3.exception.NonMonotonicSequenceException,92
+Sun Jan 14 12:47:32 AEDT 2018 Sun Jan 14 12:47:32 AEDT 2018 : org.apache.commons.math3.exception.NonMonotonicSequenceException,93=>Find no block
+Sun Jan 14 12:47:35 AEDT 2018 org.apache.commons.math3.exception.NonMonotonicSequenceException,99
+Sun Jan 14 12:47:43 AEDT 2018 org.apache.commons.math3.exception.NonMonotonicSequenceException,105
+Sun Jan 14 12:47:51 AEDT 2018 org.apache.commons.math3.exception.NonMonotonicSequenceException,113
+Sun Jan 14 12:49:01 AEDT 2018 org.apache.commons.math3.exception.NonMonotonicSequenceException,119
+Sun Jan 14 12:49:10 AEDT 2018 Sun Jan 14 12:49:10 AEDT 2018 : org.apache.commons.math3.util.MathArrays,292=>Find no block
+Sun Jan 14 12:49:12 AEDT 2018 Sun Jan 14 12:49:12 AEDT 2018 : org.apache.commons.math3.util.MathArrays,292=>Find no block
+Sun Jan 14 12:49:15 AEDT 2018 Sun Jan 14 12:49:15 AEDT 2018 : org.apache.commons.math3.util.MathArrays,292=>Find no block
+Sun Jan 14 12:49:17 AEDT 2018 org.apache.commons.math3.exception.DimensionMismatchException,44
+Sun Jan 14 12:54:22 AEDT 2018 org.apache.commons.math3.exception.DimensionMismatchException,45
+Sun Jan 14 12:54:25 AEDT 2018 Sun Jan 14 12:54:25 AEDT 2018 : org.apache.commons.math3.exception.DimensionMismatchException,46=>Find no block
+Sun Jan 14 12:54:28 AEDT 2018 org.apache.commons.math3.exception.DimensionMismatchException,56
+Sun Jan 14 12:54:37 AEDT 2018 Sun Jan 14 12:54:37 AEDT 2018 : org.apache.commons.math3.exception.DimensionMismatchException,57=>Find no block
+Sun Jan 14 12:54:39 AEDT 2018 org.apache.commons.math3.exception.DimensionMismatchException,63
+Sun Jan 14 12:55:36 AEDT 2018 org.apache.commons.math3.exception.NotStrictlyPositiveException,38
+Sun Jan 14 12:55:44 AEDT 2018 Sun Jan 14 12:55:44 AEDT 2018 : org.apache.commons.math3.exception.NotStrictlyPositiveException,39=>Find no block
+Sun Jan 14 12:55:47 AEDT 2018 org.apache.commons.math3.exception.NotStrictlyPositiveException,48
+Sun Jan 14 12:56:06 AEDT 2018 Sun Jan 14 12:56:06 AEDT 2018 : org.apache.commons.math3.exception.NotStrictlyPositiveException,49=>Find no block
+Sun Jan 14 12:56:10 AEDT 2018 Sun Jan 14 12:56:10 AEDT 2018 : org.apache.commons.math3.util.MathArrays,52=>Find no block
+Sun Jan 14 12:56:13 AEDT 2018 org.apache.commons.math3.util.MathArrays,86
+Sun Jan 14 13:20:59 AEDT 2018 org.apache.commons.math3.util.MathArrays,87
+Sun Jan 14 13:34:23 AEDT 2018 org.apache.commons.math3.util.MathArrays,88
+Sun Jan 14 13:34:26 AEDT 2018 org.apache.commons.math3.util.MathArrays,90
+Sun Jan 14 13:34:30 AEDT 2018 org.apache.commons.math3.util.MathArrays,103
+Timeout time : 18/01/14 13:34

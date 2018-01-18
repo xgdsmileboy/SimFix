@@ -1,0 +1,169 @@
+=================================================
+Project : chart_9	start : 18/01/15 20:42
+Current failed test : org.jfree.data.time.junit.TimeSeriesTests::testBug1864222 | 18/01/15 20:43
+Mon Jan 15 20:45:07 AEDT 2018 org.jfree.data.time.TimeSeries,883
+Mon Jan 15 20:46:57 AEDT 2018 org.jfree.data.time.TimeSeries,921
+Mon Jan 15 20:48:11 AEDT 2018 org.jfree.data.time.TimeSeries,924
+Mon Jan 15 20:50:12 AEDT 2018 org.jfree.data.time.TimeSeries,927
+Mon Jan 15 20:51:55 AEDT 2018 org.jfree.data.time.TimeSeries,931
+Mon Jan 15 20:57:07 AEDT 2018 org.jfree.data.time.TimeSeries,932
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(startIndex!=this.data.size()){
+emptyRange=true;
+}
+
+Time : 18/01/15 21:06
+----------------------------------------
+Mon Jan 15 21:33:51 AEDT 2018 org.jfree.data.time.TimeSeries,933
+Mon Jan 15 21:33:53 AEDT 2018 org.jfree.data.time.TimeSeries,934
+Mon Jan 15 21:33:55 AEDT 2018 org.jfree.data.time.TimeSeries,935
+Mon Jan 15 21:33:57 AEDT 2018 org.jfree.data.time.TimeSeries,939
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(startIndex<0){
+startIndex=-(startIndex+1);
+if(startIndex==this.data.size()){
+emptyRange=true;
+}
+}
+int endIndex=getIndex(end);
+
+Time : 18/01/15 21:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int endIndex=getIndex(end);
+
+Time : 18/01/15 21:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(startIndex<maximumItemCount){
+startIndex=-(startIndex+1);
+if(startIndex==this.data.size()){
+emptyRange=true;
+}
+}
+int endIndex=getIndex(end);
+
+Time : 18/01/15 21:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(startIndex<0){
+startIndex=-(startIndex+1);
+if(startIndex==this.data.size()){
+emptyRange=true;
+}
+}
+data.clear();
+int endIndex=getIndex(end);
+if(endIndex<0){
+endIndex=-(endIndex+1);
+endIndex=endIndex-1;
+}
+
+Time : 18/01/15 21:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+data.clear();
+int endIndex=getIndex(end);
+if(endIndex<0){
+endIndex=-(endIndex+1);
+endIndex=endIndex-1;
+}
+
+Time : 18/01/15 21:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(startIndex<0){
+startIndex=-(startIndex+1);
+if(startIndex==this.data.size()){
+emptyRange=true;
+}
+}
+data.clear();
+int endIndex=getIndex(end);
+
+Time : 18/01/15 21:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+data.clear();
+int endIndex=getIndex(end);
+
+Time : 18/01/15 21:57
+----------------------------------------
+Mon Jan 15 21:57:55 AEDT 2018 org.jfree.data.time.TimeSeries,940
+Mon Jan 15 21:57:56 AEDT 2018 org.jfree.data.time.TimeSeries,941
+Mon Jan 15 21:57:58 AEDT 2018 org.jfree.data.time.TimeSeries,942
+Mon Jan 15 21:58:01 AEDT 2018 org.jfree.data.time.TimeSeries,944
+Mon Jan 15 21:59:13 AEDT 2018 org.jfree.data.time.TimeSeries,947
+Mon Jan 15 22:01:36 AEDT 2018 org.jfree.data.time.TimeSeries,953
+Mon Jan 15 22:01:40 AEDT 2018 org.jfree.data.time.TimeSeries,879
+Mon Jan 15 22:03:59 AEDT 2018 org.jfree.data.time.TimeSeries,882
+Mon Jan 15 22:04:01 AEDT 2018 org.jfree.data.time.SpreadsheetDate,452
+Mon Jan 15 22:04:07 AEDT 2018 Mon Jan 15 22:04:07 AEDT 2018 : org.jfree.data.time.Day,122=>Find no block
+Mon Jan 15 22:04:10 AEDT 2018 org.jfree.data.time.Day,123
+Mon Jan 15 22:07:50 AEDT 2018 org.jfree.data.time.Day,124
+Mon Jan 15 22:07:52 AEDT 2018 Mon Jan 15 22:07:52 AEDT 2018 : org.jfree.data.time.Day,125=>Find no block
+Mon Jan 15 22:07:54 AEDT 2018 org.jfree.data.time.Day,302
+Mon Jan 15 22:08:01 AEDT 2018 org.jfree.data.time.TimeSeries,430
+Mon Jan 15 22:09:29 AEDT 2018 org.jfree.data.time.TimeSeries,433
+Mon Jan 15 22:17:11 AEDT 2018 org.jfree.data.time.TimeSeries,435
+Mon Jan 15 22:17:14 AEDT 2018 org.jfree.data.time.Day,183
+Mon Jan 15 22:17:21 AEDT 2018 org.jfree.data.time.Day,404
+Mon Jan 15 22:18:06 AEDT 2018 org.jfree.data.time.Day,405
+Mon Jan 15 22:18:08 AEDT 2018 org.jfree.data.time.Day,406
+Mon Jan 15 22:18:10 AEDT 2018 Mon Jan 15 22:18:10 AEDT 2018 : org.jfree.data.time.Day,407=>Find no block
+Mon Jan 15 22:18:11 AEDT 2018 org.jfree.data.time.Day,423
+Mon Jan 15 22:25:33 AEDT 2018 org.jfree.data.time.SpreadsheetDate,211
+Mon Jan 15 22:25:40 AEDT 2018 org.jfree.data.time.SpreadsheetDate,308
+Mon Jan 15 22:25:46 AEDT 2018 org.jfree.data.time.Day,250
+Mon Jan 15 22:26:44 AEDT 2018 org.jfree.data.time.Day,251
+Mon Jan 15 22:26:47 AEDT 2018 Mon Jan 15 22:26:47 AEDT 2018 : org.jfree.data.time.Day,252=>Find no block
+Mon Jan 15 22:26:49 AEDT 2018 org.jfree.data.time.Day,317
+Tue Jan 16 00:13:35 AEDT 2018 org.jfree.data.time.Day,318
+Tue Jan 16 00:13:37 AEDT 2018 org.jfree.data.time.Day,319
+Tue Jan 16 00:13:38 AEDT 2018 org.jfree.data.time.Day,320
+Tue Jan 16 00:13:41 AEDT 2018 org.jfree.data.time.Day,321
+Tue Jan 16 00:13:43 AEDT 2018 org.jfree.data.time.Day,322
+Tue Jan 16 00:13:45 AEDT 2018 org.jfree.data.time.Day,324
+Tue Jan 16 00:13:48 AEDT 2018 org.jfree.data.time.Day,339
+Tue Jan 16 01:33:54 AEDT 2018 org.jfree.data.time.Day,340
+Tue Jan 16 01:33:57 AEDT 2018 org.jfree.data.time.Day,341
+Tue Jan 16 01:33:58 AEDT 2018 org.jfree.data.time.Day,342
+Tue Jan 16 01:34:00 AEDT 2018 org.jfree.data.time.Day,343
+Tue Jan 16 01:34:01 AEDT 2018 org.jfree.data.time.Day,344
+Tue Jan 16 01:34:03 AEDT 2018 org.jfree.data.time.Day,346
+Tue Jan 16 01:34:05 AEDT 2018 Tue Jan 16 01:34:05 AEDT 2018 : org.jfree.data.time.SerialDate,210=>Find no block
+Tue Jan 16 01:34:07 AEDT 2018 Tue Jan 16 01:34:07 AEDT 2018 : org.jfree.data.time.SerialDate,211=>Find no block
+Tue Jan 16 01:34:08 AEDT 2018 org.jfree.data.time.SerialDate,499
+Tue Jan 16 01:34:25 AEDT 2018 org.jfree.data.time.SerialDate,500
+Tue Jan 16 01:34:27 AEDT 2018 org.jfree.data.time.SerialDate,526
+Tue Jan 16 01:36:18 AEDT 2018 org.jfree.data.time.SerialDate,527
+Tue Jan 16 01:36:21 AEDT 2018 org.jfree.data.time.SerialDate,528
+Tue Jan 16 01:36:23 AEDT 2018 org.jfree.data.time.SerialDate,529
+Tue Jan 16 01:36:26 AEDT 2018 org.jfree.data.time.SerialDate,792
+Tue Jan 16 01:36:34 AEDT 2018 Tue Jan 16 01:36:34 AEDT 2018 : org.jfree.data.time.SpreadsheetDate,107=>Find no block
+Tue Jan 16 01:36:36 AEDT 2018 org.jfree.data.time.SpreadsheetDate,109
+Timeout time : 18/01/16 01:45

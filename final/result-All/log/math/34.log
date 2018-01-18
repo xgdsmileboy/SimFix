@@ -1,0 +1,191 @@
+=================================================
+Project : math_34	start : 18/01/12 14:05
+Current failed test : org.apache.commons.math3.genetics.ListPopulationTest::testIterator | 18/01/12 14:05
+Fri Jan 12 14:07:30 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,112
+Fri Jan 12 14:12:49 AEDT 2018 Fri Jan 12 14:12:49 AEDT 2018 : org.apache.commons.math3.genetics.ListPopulation,113=>Find no block
+Fri Jan 12 14:12:56 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,209
+Fri Jan 12 14:14:31 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,108
+Fri Jan 12 14:20:38 AEDT 2018 org.apache.commons.math3.genetics.BinaryChromosome,39
+Fri Jan 12 14:20:59 AEDT 2018 Fri Jan 12 14:20:59 AEDT 2018 : org.apache.commons.math3.genetics.BinaryChromosome,40=>Find no block
+Fri Jan 12 14:21:06 AEDT 2018 org.apache.commons.math3.genetics.BinaryChromosome,58
+Fri Jan 12 14:25:17 AEDT 2018 org.apache.commons.math3.genetics.BinaryChromosome,59
+Fri Jan 12 14:25:18 AEDT 2018 Fri Jan 12 14:25:18 AEDT 2018 : org.apache.commons.math3.genetics.BinaryChromosome,63=>Find no block
+Fri Jan 12 14:25:19 AEDT 2018 Fri Jan 12 14:25:19 AEDT 2018 : org.apache.commons.math3.genetics.BinaryChromosome,64=>Find no block
+Fri Jan 12 14:25:20 AEDT 2018 org.apache.commons.math3.genetics.BinaryChromosome,73
+Fri Jan 12 14:31:40 AEDT 2018 org.apache.commons.math3.genetics.BinaryChromosome,74
+Fri Jan 12 14:44:52 AEDT 2018 org.apache.commons.math3.genetics.BinaryChromosome,75
+Fri Jan 12 14:44:53 AEDT 2018 org.apache.commons.math3.genetics.BinaryChromosome,77
+Fri Jan 12 14:44:54 AEDT 2018 Fri Jan 12 14:44:54 AEDT 2018 : org.apache.commons.math3.genetics.AbstractListChromosome,42=>Find no block
+Fri Jan 12 14:44:55 AEDT 2018 org.apache.commons.math3.genetics.AbstractListChromosome,43
+Fri Jan 12 14:45:21 AEDT 2018 org.apache.commons.math3.genetics.AbstractListChromosome,44
+Fri Jan 12 14:45:23 AEDT 2018 Fri Jan 12 14:45:23 AEDT 2018 : org.apache.commons.math3.genetics.AbstractListChromosome,45=>Find no block
+Fri Jan 12 14:45:24 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,104
+Fri Jan 12 14:45:28 AEDT 2018 Fri Jan 12 14:45:28 AEDT 2018 : org.apache.commons.math3.genetics.Chromosome,28=>Find no block
+Fri Jan 12 14:45:29 AEDT 2018 Fri Jan 12 14:45:29 AEDT 2018 : org.apache.commons.math3.genetics.Chromosome,33=>Find no block
+Fri Jan 12 14:45:30 AEDT 2018 Fri Jan 12 14:45:30 AEDT 2018 : org.apache.commons.math3.genetics.ListPopulation,53=>Find no block
+Fri Jan 12 14:45:31 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,52
+Fri Jan 12 14:45:35 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,75
+Fri Jan 12 14:53:51 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,76
+Fri Jan 12 14:53:52 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,77
+Fri Jan 12 14:53:54 AEDT 2018 Fri Jan 12 14:53:54 AEDT 2018 : org.apache.commons.math3.genetics.ListPopulation,78=>Find no block
+Fri Jan 12 14:53:55 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,71
+Fri Jan 12 14:53:56 AEDT 2018 Fri Jan 12 14:53:56 AEDT 2018 : org.apache.commons.math3.genetics.ListPopulation,64=>Find no block
+Fri Jan 12 14:53:58 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,65
+Fri Jan 12 14:53:59 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,68
+Fri Jan 12 14:54:00 AEDT 2018 org.apache.commons.math3.exception.NumberIsTooSmallException,50
+Fri Jan 12 14:54:04 AEDT 2018 Fri Jan 12 14:54:04 AEDT 2018 : org.apache.commons.math3.exception.NumberIsTooSmallException,54=>Find no block
+Fri Jan 12 14:54:05 AEDT 2018 org.apache.commons.math3.exception.NumberIsTooSmallException,68
+Fri Jan 12 14:55:11 AEDT 2018 org.apache.commons.math3.exception.NumberIsTooSmallException,70
+Fri Jan 12 14:55:14 AEDT 2018 org.apache.commons.math3.exception.NumberIsTooSmallException,71
+Fri Jan 12 14:55:15 AEDT 2018 Fri Jan 12 14:55:15 AEDT 2018 : org.apache.commons.math3.exception.NumberIsTooSmallException,72=>Find no block
+Fri Jan 12 14:55:16 AEDT 2018 org.apache.commons.math3.exception.NumberIsTooSmallException,78
+Fri Jan 12 14:55:21 AEDT 2018 org.apache.commons.math3.exception.NumberIsTooSmallException,85
+Fri Jan 12 14:55:26 AEDT 2018 org.apache.commons.math3.exception.MathIllegalNumberException,46
+Fri Jan 12 14:56:47 AEDT 2018 org.apache.commons.math3.exception.MathIllegalNumberException,47
+Fri Jan 12 14:56:48 AEDT 2018 Fri Jan 12 14:56:48 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalNumberException,48=>Find no block
+Fri Jan 12 14:56:49 AEDT 2018 org.apache.commons.math3.exception.MathIllegalNumberException,54
+Fri Jan 12 14:56:53 AEDT 2018 Fri Jan 12 14:56:53 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalArgumentException,44=>Find no block
+Fri Jan 12 14:56:54 AEDT 2018 org.apache.commons.math3.exception.MathIllegalArgumentException,45
+Fri Jan 12 14:57:38 AEDT 2018 org.apache.commons.math3.exception.MathIllegalArgumentException,46
+Fri Jan 12 14:57:39 AEDT 2018 Fri Jan 12 14:57:39 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalArgumentException,47=>Find no block
+Fri Jan 12 14:57:40 AEDT 2018 org.apache.commons.math3.exception.MathIllegalArgumentException,51
+Fri Jan 12 14:57:44 AEDT 2018 org.apache.commons.math3.exception.MathIllegalArgumentException,57
+Fri Jan 12 14:58:27 AEDT 2018 org.apache.commons.math3.exception.MathIllegalArgumentException,63
+Fri Jan 12 14:59:07 AEDT 2018 org.apache.commons.math3.exception.NotPositiveException,37
+Fri Jan 12 14:59:15 AEDT 2018 Fri Jan 12 14:59:15 AEDT 2018 : org.apache.commons.math3.exception.NotPositiveException,38=>Find no block
+Fri Jan 12 14:59:16 AEDT 2018 org.apache.commons.math3.exception.NotPositiveException,47
+Fri Jan 12 14:59:49 AEDT 2018 Fri Jan 12 14:59:49 AEDT 2018 : org.apache.commons.math3.exception.NotPositiveException,48=>Find no block
+Fri Jan 12 14:59:51 AEDT 2018 org.apache.commons.math3.exception.NumberIsTooLargeException,50
+Fri Jan 12 14:59:55 AEDT 2018 Fri Jan 12 14:59:55 AEDT 2018 : org.apache.commons.math3.exception.NumberIsTooLargeException,54=>Find no block
+Fri Jan 12 14:59:56 AEDT 2018 org.apache.commons.math3.exception.NumberIsTooLargeException,67
+Fri Jan 12 15:01:00 AEDT 2018 org.apache.commons.math3.exception.NumberIsTooLargeException,69
+Fri Jan 12 15:01:02 AEDT 2018 org.apache.commons.math3.exception.NumberIsTooLargeException,70
+Fri Jan 12 15:01:03 AEDT 2018 Fri Jan 12 15:01:03 AEDT 2018 : org.apache.commons.math3.exception.NumberIsTooLargeException,71=>Find no block
+Fri Jan 12 15:01:04 AEDT 2018 org.apache.commons.math3.exception.NumberIsTooLargeException,77
+Fri Jan 12 15:01:05 AEDT 2018 org.apache.commons.math3.exception.NumberIsTooLargeException,84
+Fri Jan 12 15:01:09 AEDT 2018 org.apache.commons.math3.exception.NullArgumentException,41
+Fri Jan 12 15:01:13 AEDT 2018 Fri Jan 12 15:01:13 AEDT 2018 : org.apache.commons.math3.exception.NullArgumentException,42=>Find no block
+Fri Jan 12 15:01:14 AEDT 2018 org.apache.commons.math3.exception.NullArgumentException,50
+Fri Jan 12 15:01:22 AEDT 2018 Fri Jan 12 15:01:22 AEDT 2018 : org.apache.commons.math3.exception.NullArgumentException,51=>Find no block
+Fri Jan 12 15:01:23 AEDT 2018 org.apache.commons.math3.exception.OutOfRangeException,46
+Fri Jan 12 15:01:27 AEDT 2018 Fri Jan 12 15:01:27 AEDT 2018 : org.apache.commons.math3.exception.OutOfRangeException,47=>Find no block
+Fri Jan 12 15:01:28 AEDT 2018 org.apache.commons.math3.exception.OutOfRangeException,62
+Fri Jan 12 15:02:30 AEDT 2018 org.apache.commons.math3.exception.OutOfRangeException,63
+Fri Jan 12 15:02:31 AEDT 2018 org.apache.commons.math3.exception.OutOfRangeException,64
+Fri Jan 12 15:02:32 AEDT 2018 Fri Jan 12 15:02:32 AEDT 2018 : org.apache.commons.math3.exception.OutOfRangeException,65=>Find no block
+Fri Jan 12 15:02:34 AEDT 2018 org.apache.commons.math3.exception.OutOfRangeException,71
+Fri Jan 12 15:02:37 AEDT 2018 org.apache.commons.math3.exception.OutOfRangeException,77
+Fri Jan 12 15:02:41 AEDT 2018 org.apache.commons.math3.genetics.BinaryChromosome,49
+Fri Jan 12 15:02:42 AEDT 2018 Fri Jan 12 15:02:42 AEDT 2018 : org.apache.commons.math3.genetics.BinaryChromosome,50=>Find no block
+Fri Jan 12 15:02:43 AEDT 2018 org.apache.commons.math3.genetics.BinaryChromosome,60
+Fri Jan 12 15:02:45 AEDT 2018 org.apache.commons.math3.genetics.BinaryChromosome,86
+Fri Jan 12 15:02:49 AEDT 2018 org.apache.commons.math3.genetics.BinaryChromosome,87
+Fri Jan 12 15:02:50 AEDT 2018 org.apache.commons.math3.genetics.BinaryChromosome,89
+Fri Jan 12 15:13:10 AEDT 2018 org.apache.commons.math3.genetics.BinaryChromosome,91
+Fri Jan 12 15:13:11 AEDT 2018 org.apache.commons.math3.genetics.BinaryChromosome,92
+Fri Jan 12 15:13:12 AEDT 2018 org.apache.commons.math3.genetics.BinaryChromosome,95
+Fri Jan 12 15:13:13 AEDT 2018 org.apache.commons.math3.genetics.BinaryChromosome,96
+Fri Jan 12 15:13:14 AEDT 2018 org.apache.commons.math3.genetics.BinaryChromosome,97
+Fri Jan 12 15:13:15 AEDT 2018 org.apache.commons.math3.genetics.BinaryChromosome,101
+Fri Jan 12 15:13:16 AEDT 2018 org.apache.commons.math3.genetics.AbstractListChromosome,52
+Fri Jan 12 15:13:22 AEDT 2018 Fri Jan 12 15:13:22 AEDT 2018 : org.apache.commons.math3.genetics.AbstractListChromosome,53=>Find no block
+Fri Jan 12 15:13:23 AEDT 2018 org.apache.commons.math3.genetics.AbstractListChromosome,69
+Fri Jan 12 15:13:27 AEDT 2018 org.apache.commons.math3.genetics.AbstractListChromosome,77
+Fri Jan 12 15:14:15 AEDT 2018 org.apache.commons.math3.genetics.AbstractListChromosome,100
+Fri Jan 12 15:15:39 AEDT 2018 org.apache.commons.math3.genetics.Chromosome,45
+Fri Jan 12 15:16:07 AEDT 2018 org.apache.commons.math3.genetics.Chromosome,47
+Fri Jan 12 15:16:08 AEDT 2018 org.apache.commons.math3.genetics.Chromosome,49
+Fri Jan 12 15:16:35 AEDT 2018 org.apache.commons.math3.genetics.Chromosome,65
+Fri Jan 12 15:16:51 AEDT 2018 org.apache.commons.math3.genetics.Chromosome,76
+Fri Jan 12 15:16:55 AEDT 2018 org.apache.commons.math3.genetics.Chromosome,89
+Fri Jan 12 15:17:01 AEDT 2018 org.apache.commons.math3.genetics.Chromosome,90
+Fri Jan 12 15:17:02 AEDT 2018 org.apache.commons.math3.genetics.Chromosome,91
+Fri Jan 12 15:17:04 AEDT 2018 Fri Jan 12 15:17:04 AEDT 2018 : org.apache.commons.math3.genetics.Chromosome,93=>Find no block
+Fri Jan 12 15:17:05 AEDT 2018 org.apache.commons.math3.genetics.Chromosome,94
+Fri Jan 12 15:17:09 AEDT 2018 org.apache.commons.math3.genetics.Chromosome,104
+Fri Jan 12 15:17:48 AEDT 2018 org.apache.commons.math3.genetics.Chromosome,105
+Fri Jan 12 15:17:52 AEDT 2018 org.apache.commons.math3.genetics.Chromosome,106
+Fri Jan 12 15:17:53 AEDT 2018 Fri Jan 12 15:17:53 AEDT 2018 : org.apache.commons.math3.genetics.Chromosome,108=>Find no block
+Fri Jan 12 15:17:54 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,66
+Fri Jan 12 15:17:55 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,69
+Fri Jan 12 15:17:57 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,72
+Fri Jan 12 15:17:58 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,90
+Fri Jan 12 15:17:59 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,91
+Fri Jan 12 15:18:00 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,93
+Fri Jan 12 15:18:01 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,94
+Fri Jan 12 15:18:02 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,97
+Fri Jan 12 15:26:59 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,98
+Fri Jan 12 15:27:00 AEDT 2018 Fri Jan 12 15:27:00 AEDT 2018 : org.apache.commons.math3.genetics.ListPopulation,99=>Find no block
+Fri Jan 12 15:27:01 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,109
+Fri Jan 12 15:27:02 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,120
+Fri Jan 12 15:27:39 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,128
+Fri Jan 12 15:28:18 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,138
+Fri Jan 12 15:33:08 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,139
+Fri Jan 12 15:33:09 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,142
+Fri Jan 12 15:38:01 AEDT 2018 Fri Jan 12 15:38:01 AEDT 2018 : org.apache.commons.math3.genetics.ListPopulation,143=>Find no block
+Fri Jan 12 15:38:02 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,151
+Fri Jan 12 15:45:42 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,152
+Fri Jan 12 15:45:43 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,153
+Fri Jan 12 15:45:44 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,155
+Fri Jan 12 15:45:45 AEDT 2018 Fri Jan 12 15:45:45 AEDT 2018 : org.apache.commons.math3.genetics.ListPopulation,157=>Find no block
+Fri Jan 12 15:45:46 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,158
+Fri Jan 12 15:45:47 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,166
+Fri Jan 12 15:45:51 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,177
+Fri Jan 12 15:45:52 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,178
+Fri Jan 12 15:45:53 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,180
+Fri Jan 12 15:50:49 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,181
+Fri Jan 12 15:50:50 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,183
+Fri Jan 12 15:56:17 AEDT 2018 Fri Jan 12 15:56:17 AEDT 2018 : org.apache.commons.math3.genetics.ListPopulation,184=>Find no block
+Fri Jan 12 15:56:18 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,191
+Fri Jan 12 15:57:21 AEDT 2018 org.apache.commons.math3.genetics.ListPopulation,199
+Fri Jan 12 15:58:28 AEDT 2018 Fri Jan 12 15:58:28 AEDT 2018 : org.apache.commons.math3.genetics.GeneticAlgorithm,72=>Find no block
+Fri Jan 12 15:58:30 AEDT 2018 Fri Jan 12 15:58:30 AEDT 2018 : org.apache.commons.math3.genetics.GeneticAlgorithm,58=>Find no block
+Fri Jan 12 15:58:31 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,74
+Fri Jan 12 15:58:35 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,75
+Fri Jan 12 15:58:36 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,78
+Fri Jan 12 15:58:41 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,79
+Fri Jan 12 15:58:42 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,82
+Fri Jan 12 15:58:46 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,83
+Fri Jan 12 15:58:47 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,84
+Fri Jan 12 15:58:48 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,85
+Fri Jan 12 15:58:49 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,86
+Fri Jan 12 15:58:50 AEDT 2018 Fri Jan 12 15:58:50 AEDT 2018 : org.apache.commons.math3.genetics.GeneticAlgorithm,87=>Find no block
+Fri Jan 12 15:58:51 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,95
+Fri Jan 12 15:59:44 AEDT 2018 Fri Jan 12 15:59:44 AEDT 2018 : org.apache.commons.math3.genetics.GeneticAlgorithm,96=>Find no block
+Fri Jan 12 15:59:45 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,118
+Fri Jan 12 16:00:15 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,119
+Fri Jan 12 16:00:17 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,120
+Fri Jan 12 16:00:18 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,121
+Fri Jan 12 16:00:20 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,122
+Fri Jan 12 16:00:22 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,124
+Fri Jan 12 16:00:23 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,150
+Fri Jan 12 16:03:10 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,152
+Fri Jan 12 16:03:11 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,154
+Fri Jan 12 16:06:08 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,156
+Fri Jan 12 16:06:09 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,159
+Fri Jan 12 16:06:10 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,161
+Fri Jan 12 16:06:11 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,165
+Fri Jan 12 16:06:12 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,167
+Fri Jan 12 16:06:13 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,173
+Fri Jan 12 16:06:14 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,175
+Fri Jan 12 16:06:16 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,177
+Fri Jan 12 16:06:17 AEDT 2018 Fri Jan 12 16:06:17 AEDT 2018 : org.apache.commons.math3.genetics.GeneticAlgorithm,179=>Find no block
+Fri Jan 12 16:06:19 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,181
+Fri Jan 12 16:09:44 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,189
+Fri Jan 12 16:09:48 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,197
+Fri Jan 12 16:09:52 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,205
+Fri Jan 12 16:09:56 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,213
+Fri Jan 12 16:10:00 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,221
+Fri Jan 12 16:10:04 AEDT 2018 org.apache.commons.math3.genetics.GeneticAlgorithm,232
+Fri Jan 12 16:10:08 AEDT 2018 org.apache.commons.math3.genetics.InvalidRepresentationException,40
+Fri Jan 12 16:10:14 AEDT 2018 Fri Jan 12 16:10:14 AEDT 2018 : org.apache.commons.math3.genetics.InvalidRepresentationException,41=>Find no block
+Fri Jan 12 16:10:16 AEDT 2018 Fri Jan 12 16:10:16 AEDT 2018 : org.apache.commons.math3.random.JDKRandomGenerator,28=>Find no block
+Fri Jan 12 16:10:17 AEDT 2018 org.apache.commons.math3.random.JDKRandomGenerator,35
+Fri Jan 12 16:10:36 AEDT 2018 Fri Jan 12 16:10:36 AEDT 2018 : org.apache.commons.math3.random.JDKRandomGenerator,36=>Find no block
+Fri Jan 12 16:10:38 AEDT 2018 org.apache.commons.math3.random.JDKRandomGenerator,41
+Fri Jan 12 16:13:25 AEDT 2018 org.apache.commons.math3.random.JDKRandomGenerator,43
+Fri Jan 12 16:13:26 AEDT 2018 org.apache.commons.math3.random.JDKRandomGenerator,44
+Fri Jan 12 16:13:27 AEDT 2018 org.apache.commons.math3.random.JDKRandomGenerator,45
+Fri Jan 12 16:13:29 AEDT 2018 org.apache.commons.math3.random.JDKRandomGenerator,47
+Fri Jan 12 16:13:30 AEDT 2018 Fri Jan 12 16:13:30 AEDT 2018 : org.apache.commons.math3.random.JDKRandomGenerator,48=>Find no block
+Failed time : 18/01/12 16:13

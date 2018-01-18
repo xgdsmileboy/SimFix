@@ -1,0 +1,184 @@
+=================================================
+Project : closure_2	start : 18/01/15 18:49
+Current failed test : com.google.javascript.jscomp.TypeCheckTest::testBadInterfaceExtendsNonExistentInterfaces | 18/01/15 18:50
+Mon Jan 15 18:50:50 AEDT 2018 com.google.javascript.rhino.jstype.ObjectType,575
+Mon Jan 15 18:51:24 AEDT 2018 com.google.javascript.rhino.jstype.ObjectType,576
+Mon Jan 15 18:51:29 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1570
+Mon Jan 15 18:53:04 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1574
+Mon Jan 15 19:43:59 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1658
+Mon Jan 15 19:54:02 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1660
+Mon Jan 15 19:54:08 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1662
+Mon Jan 15 19:54:12 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1663
+Mon Jan 15 19:54:18 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1664
+Mon Jan 15 19:54:23 AEDT 2018 com.google.javascript.rhino.JSTypeExpression,107
+Mon Jan 15 19:55:02 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1647
+Mon Jan 15 19:57:36 AEDT 2018 Mon Jan 15 19:57:36 AEDT 2018 : com.google.javascript.jscomp.TypeCheck,1653=>Find no block
+Mon Jan 15 19:57:40 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,274
+Mon Jan 15 19:57:50 AEDT 2018 com.google.javascript.rhino.JSDocInfo,1306
+Mon Jan 15 20:26:44 AEDT 2018 com.google.javascript.rhino.JSDocInfo,1307
+Mon Jan 15 20:26:48 AEDT 2018 com.google.javascript.rhino.JSDocInfo,1308
+Mon Jan 15 20:26:51 AEDT 2018 com.google.javascript.rhino.JSDocInfo,1310
+Mon Jan 15 20:26:54 AEDT 2018 com.google.javascript.rhino.JSDocInfo,1313
+Mon Jan 15 20:26:58 AEDT 2018 com.google.javascript.rhino.JSDocInfo,1314
+Mon Jan 15 20:27:00 AEDT 2018 com.google.javascript.rhino.JSDocInfo,1327
+Mon Jan 15 20:28:16 AEDT 2018 com.google.javascript.rhino.jstype.ObjectType,574
+Mon Jan 15 20:28:20 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,463
+Mon Jan 15 20:29:19 AEDT 2018 Mon Jan 15 20:29:19 AEDT 2018 : com.google.javascript.rhino.jstype.FunctionType,466=>Find no block
+Mon Jan 15 20:29:22 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,345
+Mon Jan 15 20:30:29 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,377
+Mon Jan 15 20:30:36 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,380
+Mon Jan 15 20:30:39 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,381
+Mon Jan 15 20:30:42 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,987
+Mon Jan 15 20:32:26 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,988
+Mon Jan 15 20:32:29 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,989
+Mon Jan 15 20:32:33 AEDT 2018 com.google.javascript.jscomp.FunctionTypeBuilder,360
+Mon Jan 15 20:39:02 AEDT 2018 com.google.javascript.jscomp.FunctionTypeBuilder,361
+Mon Jan 15 20:39:06 AEDT 2018 com.google.javascript.jscomp.FunctionTypeBuilder,363
+Mon Jan 15 20:39:09 AEDT 2018 Mon Jan 15 20:39:09 AEDT 2018 : com.google.javascript.jscomp.FunctionTypeBuilder,365=>Find no block
+Mon Jan 15 20:39:12 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,997
+Mon Jan 15 20:39:46 AEDT 2018 com.google.javascript.jscomp.RhinoErrorReporter,156
+Mon Jan 15 20:39:56 AEDT 2018 Mon Jan 15 20:39:56 AEDT 2018 : com.google.javascript.jscomp.RhinoErrorReporter,157=>Find no block
+Mon Jan 15 20:39:59 AEDT 2018 com.google.javascript.rhino.jstype.JSTypeRegistry,866
+Mon Jan 15 20:41:29 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,300
+Mon Jan 15 20:41:46 AEDT 2018 com.google.javascript.jscomp.BasicErrorManager,161
+Mon Jan 15 20:42:22 AEDT 2018 com.google.javascript.jscomp.RhinoErrorReporter,131
+Mon Jan 15 20:42:37 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,246
+Mon Jan 15 20:42:49 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,256
+Mon Jan 15 20:42:54 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,340
+Mon Jan 15 20:44:10 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,341
+Mon Jan 15 20:45:02 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,344
+Mon Jan 15 20:45:05 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,357
+Mon Jan 15 20:46:29 AEDT 2018 Mon Jan 15 20:46:29 AEDT 2018 : com.google.javascript.rhino.jstype.NamedType,358=>Find no block
+Mon Jan 15 20:46:32 AEDT 2018 Mon Jan 15 20:46:32 AEDT 2018 : com.google.javascript.rhino.jstype.NamedType,361=>Find no block
+Mon Jan 15 20:46:35 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,201
+Mon Jan 15 20:48:03 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,202
+Mon Jan 15 20:48:06 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,206
+Mon Jan 15 20:48:43 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,207
+Mon Jan 15 20:48:47 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,208
+Mon Jan 15 20:48:50 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,210
+Mon Jan 15 20:49:05 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,225
+Mon Jan 15 20:56:33 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,235
+Mon Jan 15 21:02:04 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,237
+Mon Jan 15 21:02:07 AEDT 2018 Mon Jan 15 21:02:07 AEDT 2018 : com.google.javascript.rhino.jstype.NamedType,258=>Find no block
+Mon Jan 15 21:02:10 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,268
+Mon Jan 15 21:04:09 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,269
+Mon Jan 15 21:04:20 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,272
+Mon Jan 15 21:06:22 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,273
+Mon Jan 15 21:06:26 AEDT 2018 com.google.javascript.jscomp.RhinoErrorReporter,114
+Mon Jan 15 21:08:02 AEDT 2018 Mon Jan 15 21:08:02 AEDT 2018 : com.google.javascript.jscomp.RhinoErrorReporter,116=>Find no block
+Mon Jan 15 21:08:04 AEDT 2018 com.google.javascript.rhino.jstype.JSType,1446
+Mon Jan 15 21:08:16 AEDT 2018 Mon Jan 15 21:08:16 AEDT 2018 : com.google.javascript.jscomp.RhinoErrorReporter,134=>Find no block
+Mon Jan 15 21:08:19 AEDT 2018 com.google.javascript.jscomp.RhinoErrorReporter,129
+Mon Jan 15 21:08:57 AEDT 2018 com.google.javascript.jscomp.RhinoErrorReporter,130
+Mon Jan 15 21:09:01 AEDT 2018 Mon Jan 15 21:09:01 AEDT 2018 : com.google.javascript.jscomp.Scope,54=>Find no block
+Mon Jan 15 21:09:04 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,177
+Mon Jan 15 21:09:28 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,572
+Mon Jan 15 21:09:45 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1646
+Mon Jan 15 21:14:24 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1656
+Mon Jan 15 21:14:29 AEDT 2018 com.google.javascript.jscomp.FunctionTypeBuilder,618
+Mon Jan 15 21:15:11 AEDT 2018 com.google.javascript.rhino.JSDocInfo,1324
+Mon Jan 15 21:15:47 AEDT 2018 com.google.javascript.rhino.jstype.JSTypeRegistry,1436
+Mon Jan 15 21:16:20 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,163
+Mon Jan 15 22:36:05 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,165
+Mon Jan 15 22:36:10 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,167
+Mon Jan 15 22:36:14 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,169
+Mon Jan 15 22:36:18 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,170
+Mon Jan 15 22:36:21 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,171
+Mon Jan 15 22:36:25 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,172
+Mon Jan 15 22:36:29 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,173
+Mon Jan 15 22:36:33 AEDT 2018 Mon Jan 15 22:36:33 AEDT 2018 : com.google.javascript.rhino.jstype.FunctionType,174=>Find no block
+Mon Jan 15 22:36:37 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,179
+Mon Jan 15 22:36:50 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,462
+Mon Jan 15 22:37:22 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,577
+Mon Jan 15 22:37:53 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,578
+Mon Jan 15 22:37:57 AEDT 2018 Mon Jan 15 22:37:57 AEDT 2018 : com.google.javascript.rhino.jstype.FunctionType,582=>Find no block
+Mon Jan 15 22:38:02 AEDT 2018 com.google.javascript.rhino.jstype.InstanceObjectType,57
+Mon Jan 15 22:38:11 AEDT 2018 Mon Jan 15 22:38:11 AEDT 2018 : com.google.javascript.rhino.jstype.InstanceObjectType,58=>Find no block
+Mon Jan 15 22:38:14 AEDT 2018 com.google.javascript.jscomp.FunctionTypeBuilder,358
+Mon Jan 15 22:41:35 AEDT 2018 com.google.javascript.jscomp.FunctionTypeBuilder,359
+Mon Jan 15 22:41:38 AEDT 2018 com.google.javascript.jscomp.FunctionTypeBuilder,615
+Mon Jan 15 22:43:17 AEDT 2018 com.google.javascript.jscomp.FunctionTypeBuilder,617
+Mon Jan 15 22:43:21 AEDT 2018 com.google.javascript.jscomp.FunctionTypeBuilder,620
+Mon Jan 15 22:43:24 AEDT 2018 com.google.javascript.jscomp.FunctionTypeBuilder,638
+Mon Jan 15 22:43:37 AEDT 2018 com.google.javascript.rhino.jstype.ObjectType,190
+Mon Jan 15 22:44:57 AEDT 2018 com.google.javascript.rhino.jstype.ObjectType,192
+Mon Jan 15 22:45:20 AEDT 2018 com.google.javascript.rhino.jstype.ObjectType,193
+Mon Jan 15 22:45:24 AEDT 2018 com.google.javascript.rhino.jstype.ObjectType,194
+Mon Jan 15 22:45:26 AEDT 2018 com.google.javascript.rhino.jstype.ObjectType,195
+Mon Jan 15 22:45:55 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,240
+Mon Jan 15 22:46:04 AEDT 2018 com.google.javascript.rhino.jstype.JSTypeRegistry,796
+Mon Jan 15 22:46:14 AEDT 2018 com.google.javascript.rhino.jstype.JSTypeRegistry,920
+Mon Jan 15 22:48:41 AEDT 2018 com.google.javascript.rhino.jstype.JSTypeRegistry,922
+Mon Jan 15 22:48:46 AEDT 2018 com.google.javascript.rhino.jstype.JSTypeRegistry,923
+Mon Jan 15 22:48:49 AEDT 2018 com.google.javascript.rhino.jstype.JSTypeRegistry,943
+Mon Jan 15 22:49:17 AEDT 2018 Mon Jan 15 22:49:17 AEDT 2018 : com.google.javascript.rhino.jstype.JSTypeRegistry,944=>Find no block
+Mon Jan 15 22:49:20 AEDT 2018 com.google.javascript.rhino.jstype.ObjectType,178
+Mon Jan 15 22:49:58 AEDT 2018 com.google.javascript.rhino.jstype.ObjectType,179
+Mon Jan 15 22:50:03 AEDT 2018 com.google.javascript.rhino.jstype.ObjectType,180
+Mon Jan 15 22:50:07 AEDT 2018 com.google.javascript.rhino.jstype.ObjectType,209
+Mon Jan 15 22:50:18 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,77
+Mon Jan 15 22:50:27 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,256
+Mon Jan 15 22:50:39 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,105
+Mon Jan 15 23:15:23 AEDT 2018 Mon Jan 15 23:15:23 AEDT 2018 : com.google.javascript.rhino.jstype.NamedType,98=>Find no block
+Mon Jan 15 23:15:28 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,107
+Mon Jan 15 23:15:31 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,108
+Mon Jan 15 23:15:35 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,109
+Mon Jan 15 23:15:38 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,110
+Mon Jan 15 23:15:41 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,111
+Mon Jan 15 23:15:44 AEDT 2018 Mon Jan 15 23:15:44 AEDT 2018 : com.google.javascript.rhino.jstype.NamedType,112=>Find no block
+Mon Jan 15 23:15:47 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,134
+Mon Jan 15 23:17:57 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,135
+Mon Jan 15 23:18:01 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,142
+Mon Jan 15 23:18:04 AEDT 2018 Mon Jan 15 23:18:04 AEDT 2018 : com.google.javascript.rhino.jstype.NamedType,143=>Find no block
+Mon Jan 15 23:18:07 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,147
+Mon Jan 15 23:18:15 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,189
+Mon Jan 15 23:18:33 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,190
+Mon Jan 15 23:18:36 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,194
+Mon Jan 15 23:18:40 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,220
+Mon Jan 15 23:18:44 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,221
+Mon Jan 15 23:19:38 AEDT 2018 com.google.javascript.rhino.JSDocInfo,395
+Mon Jan 15 23:20:43 AEDT 2018 Mon Jan 15 23:20:43 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,396=>Find no block
+Mon Jan 15 23:20:46 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,861
+Mon Jan 15 23:21:30 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,866
+Mon Jan 15 23:25:03 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,867
+Mon Jan 15 23:25:06 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,868
+Mon Jan 15 23:25:10 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,307
+Mon Jan 15 23:26:06 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,316
+Mon Jan 15 23:27:28 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,317
+Mon Jan 15 23:29:09 AEDT 2018 com.google.javascript.rhino.jstype.UnionTypeBuilder,178
+Mon Jan 15 23:29:55 AEDT 2018 com.google.javascript.rhino.jstype.JSType,732
+Mon Jan 15 23:30:04 AEDT 2018 com.google.javascript.rhino.jstype.ObjectType,638
+Mon Jan 15 23:30:16 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,359
+Mon Jan 15 23:30:28 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,364
+Mon Jan 15 23:30:38 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,183
+Mon Jan 15 23:30:46 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,209
+Mon Jan 15 23:30:54 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,123
+Mon Jan 15 23:31:08 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,214
+Mon Jan 15 23:31:25 AEDT 2018 com.google.javascript.rhino.jstype.ObjectType,646
+Mon Jan 15 23:31:28 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,138
+Mon Jan 15 23:31:41 AEDT 2018 Mon Jan 15 23:31:41 AEDT 2018 : com.google.javascript.jscomp.FunctionTypeBuilder,146=>Find no block
+Mon Jan 15 23:31:44 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,961
+Mon Jan 15 23:31:57 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,451
+Mon Jan 15 23:34:52 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,996
+Mon Jan 15 23:35:24 AEDT 2018 Mon Jan 15 23:35:24 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,1007=>Find no block
+Mon Jan 15 23:35:29 AEDT 2018 Mon Jan 15 23:35:29 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,1303=>Find no block
+Mon Jan 15 23:35:32 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1304
+Mon Jan 15 23:37:08 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1305
+Mon Jan 15 23:37:12 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1306
+Mon Jan 15 23:37:14 AEDT 2018 Mon Jan 15 23:37:14 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,1307=>Find no block
+Mon Jan 15 23:37:18 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,73
+Mon Jan 15 23:37:27 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,327
+Mon Jan 15 23:37:55 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,328
+Mon Jan 15 23:37:58 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,62
+Mon Jan 15 23:40:12 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,63
+Mon Jan 15 23:40:16 AEDT 2018 Mon Jan 15 23:40:16 AEDT 2018 : com.google.javascript.rhino.jstype.ProxyObjectType,64=>Find no block
+Mon Jan 15 23:40:20 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,81
+Mon Jan 15 23:40:30 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,82
+Mon Jan 15 23:40:40 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,83
+Mon Jan 15 23:40:46 AEDT 2018 Mon Jan 15 23:40:46 AEDT 2018 : com.google.javascript.rhino.jstype.ProxyObjectType,87=>Find no block
+Mon Jan 15 23:40:49 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,435
+Mon Jan 15 23:43:26 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,436
+Mon Jan 15 23:43:30 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,463
+Mon Jan 15 23:45:41 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,428
+Mon Jan 15 23:49:35 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,429
+Timeout time : 18/01/15 23:50

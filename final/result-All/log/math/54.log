@@ -1,0 +1,766 @@
+=================================================
+Project : math_54	start : 18/01/12 14:05
+Current failed test : org.apache.commons.math.dfp.DfpTest::testIssue567_purify_1 | 18/01/12 14:06
+Fri Jan 12 14:11:53 AEDT 2018 org.apache.commons.math.dfp.DfpField,226
+Fri Jan 12 14:13:44 AEDT 2018 org.apache.commons.math.dfp.DfpField,227
+Fri Jan 12 14:13:45 AEDT 2018 org.apache.commons.math.dfp.DfpField,228
+Fri Jan 12 14:16:03 AEDT 2018 org.apache.commons.math.dfp.DfpField,229
+Fri Jan 12 14:17:26 AEDT 2018 org.apache.commons.math.dfp.DfpField,230
+Fri Jan 12 14:21:21 AEDT 2018 org.apache.commons.math.dfp.DfpField,231
+Fri Jan 12 14:24:39 AEDT 2018 org.apache.commons.math.dfp.DfpField,232
+Fri Jan 12 14:28:55 AEDT 2018 org.apache.commons.math.dfp.DfpField,233
+Fri Jan 12 14:31:56 AEDT 2018 org.apache.commons.math.dfp.DfpField,234
+Fri Jan 12 14:33:13 AEDT 2018 org.apache.commons.math.dfp.DfpField,235
+Fri Jan 12 14:34:29 AEDT 2018 org.apache.commons.math.dfp.DfpField,236
+Fri Jan 12 14:35:46 AEDT 2018 org.apache.commons.math.dfp.DfpField,237
+Fri Jan 12 14:36:36 AEDT 2018 org.apache.commons.math.dfp.DfpField,238
+Fri Jan 12 14:37:53 AEDT 2018 org.apache.commons.math.dfp.DfpField,239
+Fri Jan 12 14:37:54 AEDT 2018 org.apache.commons.math.dfp.DfpField,573
+Fri Jan 12 14:39:11 AEDT 2018 org.apache.commons.math.dfp.DfpField,574
+Fri Jan 12 14:39:13 AEDT 2018 org.apache.commons.math.dfp.DfpField,575
+Fri Jan 12 14:40:35 AEDT 2018 org.apache.commons.math.dfp.DfpField,576
+Fri Jan 12 14:43:30 AEDT 2018 org.apache.commons.math.dfp.DfpField,578
+Fri Jan 12 14:49:48 AEDT 2018 org.apache.commons.math.dfp.DfpField,579
+Fri Jan 12 14:57:19 AEDT 2018 org.apache.commons.math.dfp.DfpField,580
+Fri Jan 12 15:04:50 AEDT 2018 org.apache.commons.math.dfp.DfpField,582
+Fri Jan 12 15:12:36 AEDT 2018 org.apache.commons.math.dfp.DfpField,583
+Fri Jan 12 15:19:42 AEDT 2018 org.apache.commons.math.dfp.DfpField,584
+Fri Jan 12 15:24:39 AEDT 2018 org.apache.commons.math.dfp.DfpField,586
+Fri Jan 12 15:31:18 AEDT 2018 org.apache.commons.math.dfp.DfpField,587
+Fri Jan 12 15:35:12 AEDT 2018 org.apache.commons.math.dfp.DfpField,588
+Fri Jan 12 15:38:41 AEDT 2018 org.apache.commons.math.dfp.DfpField,589
+Fri Jan 12 15:41:03 AEDT 2018 org.apache.commons.math.dfp.DfpField,590
+Fri Jan 12 15:41:04 AEDT 2018 org.apache.commons.math.dfp.DfpField,603
+Fri Jan 12 15:50:28 AEDT 2018 org.apache.commons.math.dfp.DfpField,604
+Fri Jan 12 15:50:30 AEDT 2018 org.apache.commons.math.dfp.DfpField,605
+Timeout time : 18/01/12 15:51
+Current failed test : org.apache.commons.math.dfp.DfpTest::testIssue567_purify_2 | 18/01/12 15:51
+Fri Jan 12 15:57:24 AEDT 2018 org.apache.commons.math.dfp.Dfp,273
+Fri Jan 12 16:01:38 AEDT 2018 org.apache.commons.math.dfp.Dfp,271
+Fri Jan 12 16:01:39 AEDT 2018 org.apache.commons.math.dfp.DfpField,226
+Fri Jan 12 16:03:43 AEDT 2018 org.apache.commons.math.dfp.DfpField,227
+Fri Jan 12 16:03:45 AEDT 2018 org.apache.commons.math.dfp.DfpField,228
+Fri Jan 12 16:06:19 AEDT 2018 org.apache.commons.math.dfp.DfpField,229
+Fri Jan 12 16:07:44 AEDT 2018 org.apache.commons.math.dfp.DfpField,230
+Fri Jan 12 16:11:53 AEDT 2018 org.apache.commons.math.dfp.DfpField,231
+Fri Jan 12 16:15:25 AEDT 2018 org.apache.commons.math.dfp.DfpField,232
+Fri Jan 12 16:20:00 AEDT 2018 org.apache.commons.math.dfp.DfpField,233
+Fri Jan 12 16:23:20 AEDT 2018 org.apache.commons.math.dfp.DfpField,234
+Fri Jan 12 16:24:48 AEDT 2018 org.apache.commons.math.dfp.DfpField,235
+Fri Jan 12 16:26:14 AEDT 2018 org.apache.commons.math.dfp.DfpField,236
+Fri Jan 12 16:27:42 AEDT 2018 org.apache.commons.math.dfp.DfpField,237
+Fri Jan 12 16:28:40 AEDT 2018 org.apache.commons.math.dfp.DfpField,238
+Fri Jan 12 16:30:06 AEDT 2018 org.apache.commons.math.dfp.DfpField,239
+Fri Jan 12 16:30:09 AEDT 2018 org.apache.commons.math.dfp.DfpField,573
+Fri Jan 12 16:31:32 AEDT 2018 org.apache.commons.math.dfp.DfpField,574
+Fri Jan 12 16:31:35 AEDT 2018 org.apache.commons.math.dfp.DfpField,575
+Fri Jan 12 16:33:13 AEDT 2018 org.apache.commons.math.dfp.DfpField,576
+Fri Jan 12 16:36:30 AEDT 2018 org.apache.commons.math.dfp.DfpField,578
+Fri Jan 12 16:43:19 AEDT 2018 org.apache.commons.math.dfp.DfpField,579
+Fri Jan 12 16:51:23 AEDT 2018 org.apache.commons.math.dfp.DfpField,580
+Fri Jan 12 16:59:20 AEDT 2018 org.apache.commons.math.dfp.DfpField,582
+Fri Jan 12 17:07:11 AEDT 2018 org.apache.commons.math.dfp.DfpField,583
+Fri Jan 12 17:14:26 AEDT 2018 org.apache.commons.math.dfp.DfpField,584
+Fri Jan 12 17:19:20 AEDT 2018 org.apache.commons.math.dfp.DfpField,586
+Fri Jan 12 17:25:51 AEDT 2018 org.apache.commons.math.dfp.DfpField,587
+Fri Jan 12 17:29:43 AEDT 2018 org.apache.commons.math.dfp.DfpField,588
+Fri Jan 12 17:33:11 AEDT 2018 org.apache.commons.math.dfp.DfpField,589
+Fri Jan 12 17:35:32 AEDT 2018 org.apache.commons.math.dfp.DfpField,590
+Fri Jan 12 17:35:34 AEDT 2018 org.apache.commons.math.dfp.DfpField,603
+Timeout time : 18/01/12 17:37
+Current failed test : org.apache.commons.math.dfp.DfpTest::testIssue567_purify_4 | 18/01/12 17:37
+Fri Jan 12 17:42:50 AEDT 2018 org.apache.commons.math.util.FastMath,3996
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(m<Integer.MIN_VALUE||m>Integer.MAX_VALUE){
+return magnitude;
+}
+
+Time : 18/01/12 17:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((m>=0&&s>=0)||m>Integer.MAX_VALUE){
+return magnitude;
+}
+
+Time : 18/01/12 17:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((m>=0&&s>=0)||(m>Integer.MAX_VALUE)){
+return magnitude;
+}
+
+Time : 18/01/12 17:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(m<Integer.MIN_VALUE||(m>Integer.MAX_VALUE)){
+return magnitude;
+}
+
+Time : 18/01/12 17:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((m<Integer.MIN_VALUE)||m>Integer.MAX_VALUE){
+return magnitude;
+}
+
+Time : 18/01/12 17:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((m<Integer.MIN_VALUE)||(m>Integer.MAX_VALUE)){
+return magnitude;
+}
+
+Time : 18/01/12 17:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(s<Integer.MIN_VALUE||s>Integer.MAX_VALUE){
+return magnitude;
+}
+
+Time : 18/01/12 17:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(s<Integer.MIN_VALUE||(m<0&&s<0)){
+return magnitude;
+}
+
+Time : 18/01/12 17:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((s<Integer.MIN_VALUE)||(m<0&&s<0)){
+return magnitude;
+}
+
+Time : 18/01/12 17:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(s<Integer.MIN_VALUE||(s>Integer.MAX_VALUE)){
+return magnitude;
+}
+
+Time : 18/01/12 17:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((s<Integer.MIN_VALUE)||s>Integer.MAX_VALUE){
+return magnitude;
+}
+
+Time : 18/01/12 17:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((s<Integer.MIN_VALUE)||(s>Integer.MAX_VALUE)){
+return magnitude;
+}
+
+Time : 18/01/12 17:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(sign);
+long s=Double.doubleToLongBits(sign);
+if((m>=0&&s>=0)||(m<0&&s<0)){
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 17:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(magnitude);
+long s=Double.doubleToLongBits(sign);
+if(((s&0x8000000000000000L)!=0)||(m<0&&s<0)){
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 17:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(sign);
+long s=Double.doubleToLongBits(sign);
+if(((s&0x8000000000000000L)!=0)||(m<0&&s<0)){
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sign==0){
+return Double.NEGATIVE_INFINITY;
+}
+long m=Double.doubleToLongBits(sign);
+long s=Double.doubleToLongBits(sign);
+if((m>=0&&s>=0)||(m<0&&s<0)){
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sign==0){
+return Double.NEGATIVE_INFINITY;
+}
+long m=Double.doubleToLongBits(magnitude);
+long s=Double.doubleToLongBits(sign);
+if(((s&0x8000000000000000L)!=0)||(m<0&&s<0)){
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sign==0){
+return Double.NEGATIVE_INFINITY;
+}
+long m=Double.doubleToLongBits(sign);
+long s=Double.doubleToLongBits(sign);
+if(((s&0x8000000000000000L)!=0)||(m<0&&s<0)){
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(sign);
+long s=Double.doubleToLongBits(sign);
+if((m>=0&&s>=0)||(m<0&&s<0)){
+if(E<0&&E==m&&(m&1)==1){
+return -0.0;
+}
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(sign);
+long s=Double.doubleToLongBits(sign);
+if((m>=0&&s>=0)||(m<0&&s<0)){
+if(E>0&&E==m&&(m&1)==1){
+return -0.0;
+}
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(sign);
+long s=Double.doubleToLongBits(sign);
+if((m>=0&&s>=0)||(m<0&&s<0)){
+if(E<0&&E==m&&(m&1)==1){
+return -0.0;
+}
+if(E>0&&E==m&&(m&1)==1){
+return -0.0;
+}
+
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(sign);
+long s=Double.doubleToLongBits(sign);
+if((m>=0&&s>=0)||(m<0&&s<0)){
+if(E<0&&E==m&&(m&1)==1){
+return -0.0;
+}
+if(E>0&&E==m&&(m&1)==1){
+return -0.0;
+}
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(sign);
+long s=Double.doubleToLongBits(sign);
+if((m>=0&&s>=0)||(m<0&&s<0)){
+if(E<0&&E==m&&(m&1)==1){
+return -0.0;
+}
+if(E<0&&E==m&&(m&1)==1){
+return -0.0;
+}
+if(E>0&&E==m&&(m&1)==1){
+return -0.0;
+}
+
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(sign);
+long s=Double.doubleToLongBits(sign);
+if((m>=0&&s>=0)||(m<0&&s<0)){
+if(E>0&&E==m&&(m&1)==1){
+return -0.0;
+}
+if(E<0&&E==m&&(m&1)==1){
+return -0.0;
+}
+if(E>0&&E==m&&(m&1)==1){
+return -0.0;
+}
+
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(sign);
+long s=Double.doubleToLongBits(sign);
+if((m>=0&&s>=0)||(m<0&&s<0)){
+if(E<0&&E==m&&(m&1)==1){
+return -0.0;
+}
+if(E>0&&E==m&&(m&1)==1){
+return -0.0;
+}
+if(E<0&&E==m&&(m&1)==1){
+return -0.0;
+}
+if(E>0&&E==m&&(m&1)==1){
+return -0.0;
+}
+
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(magnitude);
+long s=Double.doubleToLongBits(sign);
+if((m>=0&&s>=0)||(m<0&&s<0)){
+return magnitude;
+}
+return magnitude;
+
+Time : 18/01/12 18:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(sign);
+long s=Double.doubleToLongBits(sign);
+if((m>=0&&s>=0)||(m<0&&s<0)){
+return magnitude;
+}
+return magnitude;
+
+Time : 18/01/12 18:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(magnitude);
+long s=Double.doubleToLongBits(sign);
+if(m<Integer.MIN_VALUE||m>Integer.MAX_VALUE){
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(magnitude);
+long s=Double.doubleToLongBits(sign);
+if((m>=0&&s>=0)||m>Integer.MAX_VALUE){
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(magnitude);
+long s=Double.doubleToLongBits(sign);
+if((m>=0&&s>=0)||(m>Integer.MAX_VALUE)){
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(magnitude);
+long s=Double.doubleToLongBits(sign);
+if(m<Integer.MIN_VALUE||(m>Integer.MAX_VALUE)){
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(magnitude);
+long s=Double.doubleToLongBits(sign);
+if((m<Integer.MIN_VALUE)||m>Integer.MAX_VALUE){
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(magnitude);
+long s=Double.doubleToLongBits(sign);
+if((m<Integer.MIN_VALUE)||(m>Integer.MAX_VALUE)){
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(magnitude);
+long s=Double.doubleToLongBits(sign);
+if(s<Integer.MIN_VALUE||s>Integer.MAX_VALUE){
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(magnitude);
+long s=Double.doubleToLongBits(sign);
+if(s<Integer.MIN_VALUE||(m<0&&s<0)){
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(magnitude);
+long s=Double.doubleToLongBits(sign);
+if((s<Integer.MIN_VALUE)||(m<0&&s<0)){
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(magnitude);
+long s=Double.doubleToLongBits(sign);
+if(s<Integer.MIN_VALUE||(s>Integer.MAX_VALUE)){
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(magnitude);
+long s=Double.doubleToLongBits(sign);
+if((s<Integer.MIN_VALUE)||s>Integer.MAX_VALUE){
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long m=Double.doubleToLongBits(magnitude);
+long s=Double.doubleToLongBits(sign);
+if((s<Integer.MIN_VALUE)||(s>Integer.MAX_VALUE)){
+return magnitude;
+}
+return -magnitude;
+
+Time : 18/01/12 18:33
+----------------------------------------
+Fri Jan 12 18:35:09 AEDT 2018 org.apache.commons.math.util.FastMath,3997
+Fri Jan 12 18:35:11 AEDT 2018 org.apache.commons.math.util.FastMath,3998
+Fri Jan 12 18:35:13 AEDT 2018 org.apache.commons.math.util.FastMath,4001
+Fri Jan 12 18:35:15 AEDT 2018 org.apache.commons.math.dfp.Dfp,273
+Fri Jan 12 18:39:27 AEDT 2018 org.apache.commons.math.dfp.Dfp,271
+Fri Jan 12 18:39:28 AEDT 2018 org.apache.commons.math.dfp.Dfp,2119
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sign<-1){
+buffer[--q]='-';
+}
+
+Time : 18/01/12 18:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!pointInserted){
+buffer[--q]='-';
+}
+
+Time : 18/01/12 18:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+q=1;
+if(!pointInserted){
+buffer[--q]='-';
+}
+
+Time : 18/01/12 18:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(nans<0){
+buffer[--q]='-';
+}
+
+Time : 18/01/12 18:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(INFINITE<0){
+buffer[--q]='-';
+}
+
+Time : 18/01/12 18:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sign<-1){
+q='-';
+}
+
+Time : 18/01/12 18:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(q<0){
+buffer[--q]='-';
+}
+
+Time : 18/01/12 18:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FINITE<0){
+buffer[--q]='-';
+}
+
+Time : 18/01/12 18:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sign<-1){
+field.setIEEEFlagsBits(DfpField.FLAG_INVALID);
+buffer[--q]='-';
+}
+
+Time : 18/01/12 18:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(this.equals(getZero())){
+buffer[--q]='-';
+}
+
+Time : 18/01/12 18:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(exp<0){
+buffer[--q]='-';
+}
+
+Time : 18/01/12 19:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sign<MIN_EXP){
+buffer[--q]='-';
+}
+
+Time : 18/01/12 19:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(exp<MIN_EXP){
+buffer[--q]='-';
+}
+
+Time : 18/01/12 19:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(nans<0){
+field.setIEEEFlagsBits(DfpField.FLAG_INVALID);
+buffer[--q]='-';
+}
+
+Time : 18/01/12 19:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(INFINITE<0){
+field.setIEEEFlagsBits(DfpField.FLAG_INVALID);
+buffer[--q]='-';
+}
+
+Time : 18/01/12 19:06
+----------------------------------------
+Fri Jan 12 19:07:18 AEDT 2018 org.apache.commons.math.dfp.Dfp,1773
+Timeout time : 18/01/12 19:22

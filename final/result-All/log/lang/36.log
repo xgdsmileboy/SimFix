@@ -1,0 +1,979 @@
+=================================================
+Project : lang_36	start : 18/01/12 21:44
+Current failed test : org.apache.commons.lang3.math.NumberUtilsTest::testCreateNumber_purify_23 | 18/01/12 21:48
+Fri Jan 12 21:49:29 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,546
+Fri Jan 12 21:50:19 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,480
+Fri Jan 12 21:53:59 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,495
+Fri Jan 12 22:08:48 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,482
+Fri Jan 12 22:13:52 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,474
+Fri Jan 12 22:13:52 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,492
+Fri Jan 12 22:13:52 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,498
+Fri Jan 12 22:43:22 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,499
+Fri Jan 12 22:43:22 AEDT 2018 Fri Jan 12 22:43:22 AEDT 2018 : org.apache.commons.lang3.math.NumberUtils,500=>Find no block
+Fri Jan 12 22:43:22 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,610
+Fri Jan 12 22:46:54 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,611
+Fri Jan 12 22:46:54 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,606
+Fri Jan 12 22:47:35 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,609
+Fri Jan 12 22:50:37 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,491
+Sat Jan 13 00:04:51 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,465
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(str.startsWith("0x")||str.startsWith("-0x")){
+return createInteger(str);
+}
+char lastChar=str.charAt(0);
+String mant;
+
+Time : 18/01/13 00:05
+----------------------------------------
+Timeout time : 18/01/13 00:19
+Current failed test : org.apache.commons.lang3.math.NumberUtilsTest::testIsNumber_purify_12 | 18/01/13 00:19
+Sat Jan 13 00:19:57 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1401
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return !allowSigns&&foundDigit;
+
+Time : 18/01/13 00:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return !allowSigns;
+
+Time : 18/01/13 00:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+return true;
+}
+return !allowSigns&&foundDigit;
+
+Time : 18/01/13 00:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+return true;
+}
+return !allowSigns;
+
+Time : 18/01/13 00:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+return foundDigit&&!hasExp;
+}
+return !allowSigns&&foundDigit;
+
+Time : 18/01/13 00:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+return foundDigit&&!hasExp;
+}
+return !allowSigns&&foundDigit;
+
+Time : 18/01/13 00:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return foundDigit&&!hasExp;
+}
+return !allowSigns&&foundDigit;
+
+Time : 18/01/13 00:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+return foundDigit&&!hasExp;
+}
+return !allowSigns;
+
+Time : 18/01/13 00:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+return foundDigit&&!hasExp;
+}
+return !allowSigns;
+
+Time : 18/01/13 00:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return foundDigit&&!hasExp;
+}
+return !allowSigns;
+
+Time : 18/01/13 00:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+return true;
+}
+return !allowSigns&&foundDigit;
+
+Time : 18/01/13 00:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+return true;
+}
+return !allowSigns&&foundDigit;
+
+Time : 18/01/13 00:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return true;
+}
+return !allowSigns&&foundDigit;
+
+Time : 18/01/13 00:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+return true;
+}
+return !allowSigns;
+
+Time : 18/01/13 00:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+return true;
+}
+return !allowSigns;
+
+Time : 18/01/13 00:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return true;
+}
+return !allowSigns;
+
+Time : 18/01/13 00:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+return foundDigit&&!hasExp;
+}
+return !allowSigns&&foundDigit;
+
+Time : 18/01/13 00:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return foundDigit&&!hasExp;
+}
+return !allowSigns&&foundDigit;
+
+Time : 18/01/13 00:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return foundDigit&&!hasExp;
+}
+return !allowSigns&&foundDigit;
+
+Time : 18/01/13 00:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+return foundDigit&&!hasExp;
+}
+return !allowSigns;
+
+Time : 18/01/13 00:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return foundDigit&&!hasExp;
+}
+return !allowSigns;
+
+Time : 18/01/13 00:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return foundDigit&&!hasExp;
+}
+return !allowSigns;
+
+Time : 18/01/13 00:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+return true;
+}
+return !allowSigns&&foundDigit;
+
+Time : 18/01/13 00:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return true;
+}
+return !allowSigns&&foundDigit;
+
+Time : 18/01/13 00:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return true;
+}
+return !allowSigns&&foundDigit;
+
+Time : 18/01/13 00:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+return true;
+}
+return !allowSigns;
+
+Time : 18/01/13 00:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return true;
+}
+return !allowSigns;
+
+Time : 18/01/13 00:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return true;
+}
+return !allowSigns;
+
+Time : 18/01/13 00:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return foundDigit&&!hasExp;
+}
+return !allowSigns&&foundDigit;
+
+Time : 18/01/13 00:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return foundDigit&&!hasExp;
+}
+return !allowSigns;
+
+Time : 18/01/13 00:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!hasExp){
+return foundDigit&&!hasExp;
+}
+return false;
+
+Time : 18/01/13 00:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+allowSigns=true;
+if(!hasExp){
+return foundDigit&&!hasExp;
+}
+return false;
+
+Time : 18/01/13 00:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!Character.isDigit(str.charAt(i))){
+return foundDigit&&!hasExp;
+}
+return false;
+
+Time : 18/01/13 00:45
+----------------------------------------
+Sat Jan 13 00:45:32 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1395
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((chars[i]<'0'||chars[i]>'9')||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+
+Time : 18/01/13 00:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||(chars[i]<'a'||chars[i]>'f')){
+return foundDigit&&!hasExp;
+}
+
+Time : 18/01/13 00:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((chars[i]<'0'||chars[i]>'9')||(chars[i]<'a'||chars[i]>'f')){
+return foundDigit&&!hasExp;
+}
+
+Time : 18/01/13 00:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!hasExp){
+return foundDigit&&!hasExp;
+}
+
+Time : 18/01/13 00:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+allowSigns=true;
+if(!hasExp){
+return foundDigit&&!hasExp;
+}
+
+Time : 18/01/13 00:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!Character.isDigit(str.charAt(i))){
+return foundDigit&&!hasExp;
+}
+
+Time : 18/01/13 00:56
+----------------------------------------
+Sat Jan 13 00:56:26 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1388
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return foundDigit;
+}
+
+Time : 18/01/13 00:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!allowSigns&&(chars[i]<'a'||chars[i]>'f')){
+return foundDigit;
+}
+
+Time : 18/01/13 00:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]<'0'||chars[i]>'9'&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+
+Time : 18/01/13 00:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]<'0'||chars[i]>'9'&&(chars[i]<'a'||chars[i]>'f')){
+return foundDigit;
+}
+
+Time : 18/01/13 00:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]<'0'&&(chars[i]<'a'||chars[i]>'f')){
+return foundDigit;
+}
+
+Time : 18/01/13 01:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!Character.isDigit(str.charAt(i))){
+return foundDigit;
+}
+
+Time : 18/01/13 01:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!allowSigns){
+return foundDigit;
+}
+
+Time : 18/01/13 01:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+hasExp=true;
+if(!allowSigns){
+return foundDigit;
+}
+
+Time : 18/01/13 01:01
+----------------------------------------
+Sat Jan 13 01:02:07 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1384
+Sat Jan 13 01:07:12 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1379
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((chars[i]<'0'||chars[i]>'9')&&chars[i]<='9'){
+return true;
+}
+
+Time : 18/01/13 01:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return true;
+}
+
+Time : 18/01/13 01:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!allowSigns&&chars[i]<='9'){
+return true;
+}
+
+Time : 18/01/13 01:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!Character.isDigit(str.charAt(i))){
+return true;
+}
+
+Time : 18/01/13 01:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]<chars.length){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return false;
+}
+
+Time : 18/01/13 01:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]<chars[i]){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return false;
+}
+
+Time : 18/01/13 01:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]<chars.length){
+hasDecPoint=true;
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return false;
+}
+
+Time : 18/01/13 01:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(str.charAt(i)<chars.length){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return false;
+}
+
+Time : 18/01/13 01:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<chars.length){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return true;
+}
+
+Time : 18/01/13 01:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(str.length()<chars.length){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return false;
+}
+
+Time : 18/01/13 01:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<chars.length){
+if((' '==' ')&&chars[i]<='9'){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return false;
+}
+
+Time : 18/01/13 01:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<chars.length){
+if((' '==' ')&&(i!=0)){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return false;
+}
+
+Time : 18/01/13 01:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<sz-2){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return false;
+}
+
+Time : 18/01/13 01:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<sz){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return false;
+}
+
+Time : 18/01/13 01:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(str.charAt(i)<str.charAt(i)){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return false;
+}
+
+Time : 18/01/13 01:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(str.length()<str.length()){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return false;
+}
+
+Time : 18/01/13 01:21
+----------------------------------------
+Sat Jan 13 01:23:12 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1380
+Sat Jan 13 01:23:12 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1348
+Sat Jan 13 01:23:12 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1349
+Sat Jan 13 01:23:13 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1377
+Timeout time : 18/01/13 02:50

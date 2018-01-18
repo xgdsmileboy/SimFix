@@ -1,0 +1,379 @@
+=================================================
+Project : time_3	start : 18/01/12 22:47
+Current failed test : org.joda.time.TestMutableDateTime_Adds::testAddWeeks_int_dstOverlapWinter_addZero_purify_2 | 18/01/12 22:50
+Fri Jan 12 22:51:07 AEDT 2018 org.joda.time.MutableDateTime,723
+Fri Jan 12 22:52:13 AEDT 2018 Fri Jan 12 22:52:13 AEDT 2018 : org.joda.time.MutableDateTime,724=>Find no block
+Fri Jan 12 22:52:13 AEDT 2018 org.joda.time.MutableDateTime,785
+Fri Jan 12 22:53:18 AEDT 2018 Fri Jan 12 22:53:18 AEDT 2018 : org.joda.time.MutableDateTime,786=>Find no block
+Fri Jan 12 22:53:18 AEDT 2018 org.joda.time.DateTimeZone,931
+Fri Jan 12 22:56:50 AEDT 2018 org.joda.time.chrono.ZonedChronology,351
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/12 23:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant+offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/12 23:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Adding time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/12 23:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant+offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Adding time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/12 23:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/12 23:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+instant=iField.add(instant+diff,offset);
+return offset;
+
+Time : 18/01/12 23:31
+----------------------------------------
+Timeout time : 18/01/12 23:51
+Current failed test : org.joda.time.TestMutableDateTime_Adds::testAdd_DurationFieldType_int_dstOverlapWinter_addZero_purify_2 | 18/01/12 23:51
+Fri Jan 12 23:52:19 AEDT 2018 org.joda.time.MutableDateTime,639
+Sat Jan 13 00:00:50 AEDT 2018 Sat Jan 13 00:00:50 AEDT 2018 : org.joda.time.MutableDateTime,640=>Find no block
+Sat Jan 13 00:00:50 AEDT 2018 org.joda.time.MutableDateTime,636
+Sat Jan 13 00:02:02 AEDT 2018 org.joda.time.chrono.BasicYearDateTimeField,60
+Sat Jan 13 00:12:41 AEDT 2018 org.joda.time.MutableDateTime,785
+Sat Jan 13 00:13:48 AEDT 2018 Sat Jan 13 00:13:48 AEDT 2018 : org.joda.time.MutableDateTime,786=>Find no block
+Sat Jan 13 00:13:48 AEDT 2018 org.joda.time.field.ImpreciseDateTimeField,183
+Sat Jan 13 00:19:19 AEDT 2018 org.joda.time.DateTimeZone,931
+Sat Jan 13 00:23:06 AEDT 2018 org.joda.time.DurationFieldType,292
+Sat Jan 13 00:28:06 AEDT 2018 org.joda.time.chrono.ZonedChronology,351
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/13 00:52
+----------------------------------------
+Timeout time : 18/01/13 00:53
+Current failed test : org.joda.time.TestMutableDateTime_Adds::testAddMonths_int_dstOverlapWinter_addZero_purify_2 | 18/01/13 00:53
+Sat Jan 13 00:54:02 AEDT 2018 org.joda.time.MutableDateTime,702
+Sat Jan 13 00:54:57 AEDT 2018 Sat Jan 13 00:54:57 AEDT 2018 : org.joda.time.MutableDateTime,703=>Find no block
+Sat Jan 13 00:54:57 AEDT 2018 org.joda.time.chrono.BasicMonthOfYearDateTimeField,94
+Sat Jan 13 01:03:25 AEDT 2018 org.joda.time.MutableDateTime,785
+Sat Jan 13 01:04:21 AEDT 2018 Sat Jan 13 01:04:21 AEDT 2018 : org.joda.time.MutableDateTime,786=>Find no block
+Sat Jan 13 01:04:21 AEDT 2018 org.joda.time.field.ImpreciseDateTimeField,183
+Sat Jan 13 01:08:40 AEDT 2018 org.joda.time.DateTimeZone,931
+Sat Jan 13 01:11:48 AEDT 2018 org.joda.time.chrono.ZonedChronology,351
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/13 01:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant+offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/13 01:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Adding time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/13 01:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant+offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Adding time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/13 01:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/13 01:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+instant=iField.add(instant+diff,offset);
+return offset;
+
+Time : 18/01/13 01:40
+----------------------------------------
+Timeout time : 18/01/13 01:54
+Current failed test : org.joda.time.TestMutableDateTime_Adds::testAddYears_int_dstOverlapWinter_addZero_purify_2 | 18/01/13 01:54
+Sat Jan 13 01:55:03 AEDT 2018 org.joda.time.MutableDateTime,660
+Sat Jan 13 01:55:58 AEDT 2018 Sat Jan 13 01:55:58 AEDT 2018 : org.joda.time.MutableDateTime,661=>Find no block
+Sat Jan 13 01:55:58 AEDT 2018 org.joda.time.chrono.BasicYearDateTimeField,60
+Sat Jan 13 02:05:49 AEDT 2018 org.joda.time.MutableDateTime,785
+Sat Jan 13 02:06:44 AEDT 2018 Sat Jan 13 02:06:44 AEDT 2018 : org.joda.time.MutableDateTime,786=>Find no block
+Sat Jan 13 02:06:44 AEDT 2018 org.joda.time.field.ImpreciseDateTimeField,183
+Sat Jan 13 02:11:05 AEDT 2018 org.joda.time.DateTimeZone,931
+Sat Jan 13 02:14:10 AEDT 2018 org.joda.time.chrono.ZonedChronology,351
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/13 02:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant+offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/13 02:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Adding time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/13 02:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant+offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Adding time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/13 02:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/13 02:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+instant=iField.add(instant+diff,offset);
+return offset;
+
+Time : 18/01/13 02:42
+----------------------------------------
+Timeout time : 18/01/13 02:55
+Current failed test : org.joda.time.TestMutableDateTime_Adds::testAddDays_int_dstOverlapWinter_addZero_purify_2 | 18/01/13 02:55
+Sat Jan 13 02:55:54 AEDT 2018 org.joda.time.MutableDateTime,764
+Sat Jan 13 02:56:50 AEDT 2018 Sat Jan 13 02:56:50 AEDT 2018 : org.joda.time.MutableDateTime,765=>Find no block
+Sat Jan 13 02:56:50 AEDT 2018 org.joda.time.MutableDateTime,785
+Sat Jan 13 02:57:45 AEDT 2018 Sat Jan 13 02:57:45 AEDT 2018 : org.joda.time.MutableDateTime,786=>Find no block
+Sat Jan 13 02:57:45 AEDT 2018 org.joda.time.DateTimeZone,931
+Sat Jan 13 03:00:50 AEDT 2018 org.joda.time.chrono.ZonedChronology,351
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/13 03:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant+offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/13 03:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Adding time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/13 03:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant+offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Adding time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/13 03:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/13 03:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=getOffsetToAdd(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+instant=iField.add(instant+diff,offset);
+return offset;
+
+Time : 18/01/13 03:29
+----------------------------------------
+Timeout time : 18/01/13 03:56

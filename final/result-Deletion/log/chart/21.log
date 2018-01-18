@@ -1,0 +1,1330 @@
+=================================================
+Project : chart_21	start : 18/01/15 21:28
+Current failed test : org.jfree.data.statistics.junit.DefaultBoxAndWhiskerCategoryDatasetTests::testGetRangeBounds_purify_7 | 18/01/15 21:28
+Mon Jan 15 21:29:04 EST 2018 org.jfree.data.Range,335
+Mon Jan 15 21:29:07 EST 2018 org.jfree.data.Range,365
+Mon Jan 15 21:29:09 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,173
+Mon Jan 15 21:30:08 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,174
+Mon Jan 15 21:30:08 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,175
+Mon Jan 15 21:30:08 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,183
+Mon Jan 15 21:31:12 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,172
+Mon Jan 15 21:31:12 EST 2018 org.jfree.data.KeyedObject,103
+Mon Jan 15 21:31:32 EST 2018 Mon Jan 15 21:31:32 EST 2018 : org.jfree.data.KeyedObject,104=>Find no block
+Mon Jan 15 21:31:32 EST 2018 org.jfree.data.KeyedObjects,203
+Mon Jan 15 21:33:59 EST 2018 org.jfree.data.KeyedObjects,204
+Mon Jan 15 21:33:59 EST 2018 Mon Jan 15 21:33:59 EST 2018 : org.jfree.data.KeyedObjects,205=>Find no block
+Mon Jan 15 21:33:59 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,155
+Mon Jan 15 21:34:21 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,740
+Mon Jan 15 21:34:43 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,741
+Mon Jan 15 21:34:44 EST 2018 Mon Jan 15 21:34:44 EST 2018 : org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,742=>Find no block
+Mon Jan 15 21:34:44 EST 2018 org.jfree.data.KeyedObjects2D,272
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.rowKeys.remove(rowKey);
+if(rowIndex>=0){
+row=(KeyedObjects)this.rows.get(rowIndex);
+}else {
+this.rowKeys.add(rowKey);
+row=new KeyedObjects();
+this.rows.add(row);
+}
+
+Time : 18/01/15 21:36
+----------------------------------------
+Mon Jan 15 21:37:26 EST 2018 org.jfree.data.Range,330
+Mon Jan 15 21:37:44 EST 2018 org.jfree.data.Range,333
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!(obj instanceof Range)){
+return false;
+}
+Range range=(Range)obj;
+if(!(this.upper==range.upper)){
+return false;
+}
+return true;
+
+Time : 18/01/15 21:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Range range=(Range)obj;
+if(!(this.upper==range.upper)){
+return false;
+}
+return true;
+
+Time : 18/01/15 21:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!(obj instanceof Range)){
+return false;
+}
+Range range=(Range)obj;
+return true;
+
+Time : 18/01/15 21:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Range range=(Range)obj;
+return true;
+
+Time : 18/01/15 21:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!(obj instanceof Range)){
+return false;
+}
+return true;
+
+Time : 18/01/15 21:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return true;
+
+Time : 18/01/15 21:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(obj==this){
+return true;
+}
+if(!(obj instanceof Range)){
+return false;
+}
+Range range=(Range)obj;
+if(!(this.upper==range.upper)){
+return false;
+}
+return true;
+
+Time : 18/01/15 21:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(obj==this){
+return true;
+}
+if(!(obj instanceof Range)){
+return false;
+}
+Range range=(Range)obj;
+return true;
+
+Time : 18/01/15 21:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!(obj instanceof Range)){
+return false;
+}
+if(obj==null||getClass()!=obj.getClass()){
+return false;
+}
+Range range=(Range)obj;
+if(!(this.upper==range.upper)){
+return false;
+}
+return true;
+
+Time : 18/01/15 21:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(obj==null||getClass()!=obj.getClass()){
+return false;
+}
+Range range=(Range)obj;
+if(!(this.upper==range.upper)){
+return false;
+}
+return true;
+
+Time : 18/01/15 21:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!(obj instanceof Range)){
+return false;
+}
+if(obj==null||getClass()!=obj.getClass()){
+return false;
+}
+Range range=(Range)obj;
+return true;
+
+Time : 18/01/15 21:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(obj==null||getClass()!=obj.getClass()){
+return false;
+}
+Range range=(Range)obj;
+return true;
+
+Time : 18/01/15 21:48
+----------------------------------------
+Mon Jan 15 21:49:30 EST 2018 org.jfree.data.Range,334
+Mon Jan 15 21:49:30 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,147
+Mon Jan 15 21:49:32 EST 2018 Mon Jan 15 21:49:32 EST 2018 : org.jfree.data.statistics.BoxAndWhiskerItem,152=>Find no block
+Mon Jan 15 21:49:32 EST 2018 org.jfree.data.KeyedObjects,136
+Mon Jan 15 21:55:50 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,532
+Mon Jan 15 21:55:52 EST 2018 org.jfree.data.KeyedObject,85
+Mon Jan 15 21:56:09 EST 2018 org.jfree.data.KeyedObjects,134
+Mon Jan 15 21:57:53 EST 2018 org.jfree.data.KeyedObjects,135
+Mon Jan 15 21:57:53 EST 2018 Mon Jan 15 21:57:53 EST 2018 : org.jfree.data.KeyedObject,74=>Find no block
+Mon Jan 15 21:57:54 EST 2018 org.jfree.data.KeyedObject,75
+Mon Jan 15 21:58:17 EST 2018 org.jfree.data.KeyedObject,76
+Mon Jan 15 21:58:17 EST 2018 Mon Jan 15 21:58:17 EST 2018 : org.jfree.data.KeyedObject,77=>Find no block
+Mon Jan 15 21:58:17 EST 2018 Mon Jan 15 21:58:17 EST 2018 : org.jfree.data.KeyedObjects,67=>Find no block
+Mon Jan 15 21:58:18 EST 2018 org.jfree.data.KeyedObjects,68
+Mon Jan 15 21:58:28 EST 2018 Mon Jan 15 21:58:28 EST 2018 : org.jfree.data.KeyedObjects,69=>Find no block
+Mon Jan 15 21:58:28 EST 2018 org.jfree.data.KeyedObjects,128
+Mon Jan 15 21:58:58 EST 2018 org.jfree.data.KeyedObjects,131
+Mon Jan 15 22:01:52 EST 2018 org.jfree.data.KeyedObjects,132
+Mon Jan 15 22:05:16 EST 2018 org.jfree.data.KeyedObjects,133
+Mon Jan 15 22:05:16 EST 2018 org.jfree.data.KeyedObjects,140
+Mon Jan 15 22:07:00 EST 2018 org.jfree.data.KeyedObjects,201
+Mon Jan 15 22:12:31 EST 2018 org.jfree.data.KeyedObjects,202
+Mon Jan 15 22:12:31 EST 2018 org.jfree.data.KeyedObjects,207
+Mon Jan 15 22:12:31 EST 2018 org.jfree.data.KeyedObjects,208
+Mon Jan 15 22:12:31 EST 2018 Mon Jan 15 22:12:31 EST 2018 : org.jfree.data.KeyedObjects,210=>Find no block
+Mon Jan 15 22:12:31 EST 2018 org.jfree.data.KeyedObjects2D,150
+Mon Jan 15 22:12:49 EST 2018 org.jfree.data.KeyedObjects2D,187
+Mon Jan 15 22:13:06 EST 2018 org.jfree.data.KeyedObjects2D,250
+Mon Jan 15 22:13:43 EST 2018 Mon Jan 15 22:13:43 EST 2018 : org.jfree.data.KeyedObjects2D,251=>Find no block
+Mon Jan 15 22:13:43 EST 2018 org.jfree.data.KeyedObjects2D,263
+Mon Jan 15 22:14:10 EST 2018 org.jfree.data.KeyedObjects2D,266
+Mon Jan 15 22:14:28 EST 2018 org.jfree.data.KeyedObjects2D,270
+Mon Jan 15 22:19:43 EST 2018 org.jfree.data.KeyedObjects2D,271
+Mon Jan 15 22:19:43 EST 2018 org.jfree.data.KeyedObjects2D,275
+Mon Jan 15 22:19:43 EST 2018 org.jfree.data.KeyedObjects2D,276
+Mon Jan 15 22:19:43 EST 2018 org.jfree.data.KeyedObjects2D,277
+Mon Jan 15 22:19:43 EST 2018 org.jfree.data.KeyedObjects2D,279
+Mon Jan 15 22:30:21 EST 2018 org.jfree.data.KeyedObjects2D,280
+Mon Jan 15 22:34:27 EST 2018 org.jfree.data.KeyedObjects2D,281
+Mon Jan 15 22:37:31 EST 2018 org.jfree.data.KeyedObjects2D,282
+Mon Jan 15 22:37:31 EST 2018 Mon Jan 15 22:37:31 EST 2018 : org.jfree.data.KeyedObjects2D,285=>Find no block
+Mon Jan 15 22:37:31 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,147
+Mon Jan 15 22:38:45 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,150
+Mon Jan 15 22:38:45 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,151
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int r=this.data.getRowIndex(rowKey);
+int c=this.data.getColumnIndex(columnKey);
+if((this.maximumRangeValueRow==r&&this.maximumRangeValueColumn==c)||(this.minimumRangeValueRow==r&&this.minimumRangeValueColumn==c)){
+r++;
+updateBounds();
+}
+
+Time : 18/01/15 22:39
+----------------------------------------
+Mon Jan 15 22:40:16 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,152
+Mon Jan 15 22:40:16 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,158
+Mon Jan 15 22:43:45 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,159
+Mon Jan 15 22:43:45 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,160
+Mon Jan 15 22:43:45 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,162
+Mon Jan 15 22:44:39 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,163
+Mon Jan 15 22:44:39 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,164
+Mon Jan 15 22:44:39 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,167
+Mon Jan 15 22:46:59 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,168
+Mon Jan 15 22:46:59 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,169
+Mon Jan 15 22:46:59 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,170
+Mon Jan 15 22:46:59 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,178
+Mon Jan 15 22:49:13 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,179
+Mon Jan 15 22:49:13 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,180
+Mon Jan 15 22:49:13 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,181
+Mon Jan 15 22:49:14 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,189
+Mon Jan 15 22:59:10 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,191
+Mon Jan 15 22:59:11 EST 2018 Mon Jan 15 22:59:11 EST 2018 : org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,193=>Find no block
+Mon Jan 15 22:59:11 EST 2018 Mon Jan 15 22:59:11 EST 2018 : org.jfree.data.statistics.BoxAndWhiskerItem,113=>Find no block
+Mon Jan 15 22:59:11 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,115
+Mon Jan 15 23:17:00 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,116
+Mon Jan 15 23:17:00 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,117
+Mon Jan 15 23:17:01 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,118
+Mon Jan 15 23:17:01 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,119
+Mon Jan 15 23:17:01 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,120
+Mon Jan 15 23:17:01 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,121
+Mon Jan 15 23:17:01 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,122
+Mon Jan 15 23:17:01 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,123
+Mon Jan 15 23:17:01 EST 2018 Mon Jan 15 23:17:01 EST 2018 : org.jfree.data.statistics.BoxAndWhiskerItem,125=>Find no block
+Mon Jan 15 23:17:01 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,214
+Mon Jan 15 23:17:03 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,223
+Mon Jan 15 23:17:05 EST 2018 Mon Jan 15 23:17:05 EST 2018 : org.jfree.data.KeyedObjects2D,74=>Find no block
+Mon Jan 15 23:17:05 EST 2018 org.jfree.data.KeyedObjects2D,75
+Mon Jan 15 23:17:48 EST 2018 org.jfree.data.KeyedObjects2D,76
+Mon Jan 15 23:17:48 EST 2018 org.jfree.data.KeyedObjects2D,77
+Mon Jan 15 23:17:48 EST 2018 Mon Jan 15 23:17:48 EST 2018 : org.jfree.data.KeyedObjects2D,78=>Find no block
+Mon Jan 15 23:17:48 EST 2018 org.jfree.data.general.DatasetChangeEvent,73
+Mon Jan 15 23:17:50 EST 2018 org.jfree.data.general.DatasetChangeEvent,74
+Mon Jan 15 23:17:50 EST 2018 Mon Jan 15 23:17:50 EST 2018 : org.jfree.data.general.DatasetChangeEvent,75=>Find no block
+Mon Jan 15 23:17:50 EST 2018 org.jfree.data.general.AbstractDataset,172
+Mon Jan 15 23:18:16 EST 2018 Mon Jan 15 23:18:16 EST 2018 : org.jfree.data.general.AbstractDataset,173=>Find no block
+Mon Jan 15 23:18:16 EST 2018 org.jfree.data.general.AbstractDataset,186
+Mon Jan 15 23:20:44 EST 2018 org.jfree.data.general.AbstractDataset,187
+Mon Jan 15 23:20:45 EST 2018 Mon Jan 15 23:20:45 EST 2018 : org.jfree.data.general.AbstractDataset,194=>Find no block
+Mon Jan 15 23:20:45 EST 2018 Mon Jan 15 23:20:45 EST 2018 : org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,106=>Find no block
+Mon Jan 15 23:20:45 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,107
+Mon Jan 15 23:35:12 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,108
+Mon Jan 15 23:35:12 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,109
+Mon Jan 15 23:35:12 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,110
+Mon Jan 15 23:35:12 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,111
+Mon Jan 15 23:35:12 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,112
+Mon Jan 15 23:35:12 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,113
+Mon Jan 15 23:35:12 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,114
+Mon Jan 15 23:35:12 EST 2018 Mon Jan 15 23:35:12 EST 2018 : org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,115=>Find no block
+Mon Jan 15 23:35:13 EST 2018 Mon Jan 15 23:35:13 EST 2018 : org.jfree.data.Range,85=>Find no block
+Mon Jan 15 23:35:13 EST 2018 org.jfree.data.Range,86
+Mon Jan 15 23:36:46 EST 2018 org.jfree.data.Range,91
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.upper=upper;
+
+Time : 18/01/15 23:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException("The \'bins\' value must be at least 1.");
+}
+this.upper=upper;
+
+Time : 18/01/15 23:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+
+Time : 18/01/15 23:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException("The \'bins\' value must be at least 1.");
+}
+
+Time : 18/01/15 23:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException("Requires \'lower\' < \'upper\'.");
+}
+this.upper=upper;
+
+Time : 18/01/15 23:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException("Requires \'lower\' < \'upper\'.");
+}
+
+Time : 18/01/15 23:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.upper=upper;
+
+Time : 18/01/15 23:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+
+Time : 18/01/15 23:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+lower=lower-Math.abs(lower)/10.0;
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.upper=upper;
+
+Time : 18/01/15 23:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+upper=upper+Math.abs(lower)/10.0;
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.upper=upper;
+
+Time : 18/01/15 23:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+lower=lower-Math.abs(lower)/10.0;
+upper=upper+Math.abs(lower)/10.0;
+
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.upper=upper;
+
+Time : 18/01/15 23:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+lower=lower-Math.abs(lower)/10.0;
+upper=upper+Math.abs(lower)/10.0;
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.upper=upper;
+
+Time : 18/01/15 23:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+lower=lower-Math.abs(lower)/10.0;
+lower=lower-Math.abs(lower)/10.0;
+upper=upper+Math.abs(lower)/10.0;
+
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.upper=upper;
+
+Time : 18/01/15 23:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+lower=lower-Math.abs(lower)/10.0;
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+
+Time : 18/01/15 23:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+upper=upper+Math.abs(lower)/10.0;
+lower=lower-Math.abs(lower)/10.0;
+upper=upper+Math.abs(lower)/10.0;
+
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.upper=upper;
+
+Time : 18/01/15 23:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+upper=upper+Math.abs(lower)/10.0;
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+
+Time : 18/01/15 23:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+lower=lower-Math.abs(lower)/10.0;
+upper=upper+Math.abs(lower)/10.0;
+
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+
+Time : 18/01/15 23:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+lower=lower-Math.abs(lower)/10.0;
+upper=upper+Math.abs(lower)/10.0;
+lower=lower-Math.abs(lower)/10.0;
+upper=upper+Math.abs(lower)/10.0;
+
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.upper=upper;
+
+Time : 18/01/15 23:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+lower=lower-Math.abs(lower)/10.0;
+upper=upper+Math.abs(lower)/10.0;
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+
+Time : 18/01/15 23:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+lower=lower-Math.abs(lower)/10.0;
+lower=lower-Math.abs(lower)/10.0;
+upper=upper+Math.abs(lower)/10.0;
+
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+
+Time : 18/01/15 23:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+upper=upper+Math.abs(lower)/10.0;
+lower=lower-Math.abs(lower)/10.0;
+upper=upper+Math.abs(lower)/10.0;
+
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+
+Time : 18/01/15 23:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.lower=upper;
+this.upper=upper;
+
+Time : 18/01/15 23:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.lower=upper;
+this.upper=upper;
+
+Time : 18/01/15 23:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.lower=upper;
+
+Time : 18/01/15 23:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.lower=upper;
+
+Time : 18/01/15 23:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new RuntimeException("Values less than or equal to "+"zero not allowed with logarithmic axis");
+}
+this.upper=upper;
+
+Time : 18/01/15 23:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new RuntimeException("Values less than or equal to "+"zero not allowed with logarithmic axis");
+}
+
+Time : 18/01/15 23:48
+----------------------------------------
+Mon Jan 15 23:48:22 EST 2018 org.jfree.data.Range,92
+Mon Jan 15 23:48:22 EST 2018 Mon Jan 15 23:48:22 EST 2018 : org.jfree.data.Range,93=>Find no block
+Mon Jan 15 23:48:22 EST 2018 org.jfree.data.general.DatasetGroup,65
+Mon Jan 15 23:48:42 EST 2018 org.jfree.data.general.DatasetGroup,66
+Mon Jan 15 23:48:42 EST 2018 Mon Jan 15 23:48:42 EST 2018 : org.jfree.data.general.DatasetGroup,67=>Find no block
+Mon Jan 15 23:48:42 EST 2018 Mon Jan 15 23:48:42 EST 2018 : org.jfree.data.general.AbstractDataset,96=>Find no block
+Mon Jan 15 23:48:42 EST 2018 org.jfree.data.general.AbstractDataset,97
+Mon Jan 15 23:49:07 EST 2018 org.jfree.data.general.AbstractDataset,98
+Mon Jan 15 23:49:07 EST 2018 Mon Jan 15 23:49:07 EST 2018 : org.jfree.data.general.AbstractDataset,99=>Find no block
+Mon Jan 15 23:49:07 EST 2018 org.jfree.data.KeyedObject,94
+Mon Jan 15 23:49:09 EST 2018 org.jfree.data.KeyedObject,117
+Mon Jan 15 23:54:06 EST 2018 org.jfree.data.KeyedObject,118
+Mon Jan 15 23:54:23 EST 2018 org.jfree.data.KeyedObject,119
+Mon Jan 15 23:54:23 EST 2018 org.jfree.data.KeyedObject,120
+Mon Jan 15 23:54:23 EST 2018 org.jfree.data.KeyedObject,122
+Mon Jan 15 23:54:23 EST 2018 org.jfree.data.KeyedObject,134
+Mon Jan 15 23:55:25 EST 2018 org.jfree.data.KeyedObject,135
+Mon Jan 15 23:55:25 EST 2018 org.jfree.data.KeyedObject,138
+Mon Jan 15 23:55:42 EST 2018 org.jfree.data.KeyedObject,139
+Mon Jan 15 23:55:42 EST 2018 org.jfree.data.KeyedObject,141
+Timeout time : 18/01/15 23:59
+Current failed test : org.jfree.data.statistics.junit.DefaultBoxAndWhiskerCategoryDatasetTests::testGetRangeBounds_purify_8 | 18/01/15 23:59
+Mon Jan 15 23:59:26 EST 2018 org.jfree.data.Range,335
+Mon Jan 15 23:59:28 EST 2018 org.jfree.data.Range,365
+Mon Jan 15 23:59:30 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,173
+Tue Jan 16 00:00:29 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,174
+Tue Jan 16 00:00:29 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,175
+Tue Jan 16 00:00:29 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,183
+Tue Jan 16 00:01:33 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,172
+Tue Jan 16 00:01:33 EST 2018 org.jfree.data.KeyedObject,103
+Tue Jan 16 00:01:51 EST 2018 Tue Jan 16 00:01:51 EST 2018 : org.jfree.data.KeyedObject,104=>Find no block
+Tue Jan 16 00:01:51 EST 2018 org.jfree.data.KeyedObjects,203
+Tue Jan 16 00:04:16 EST 2018 org.jfree.data.KeyedObjects,204
+Tue Jan 16 00:04:16 EST 2018 Tue Jan 16 00:04:16 EST 2018 : org.jfree.data.KeyedObjects,205=>Find no block
+Tue Jan 16 00:04:16 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,155
+Tue Jan 16 00:04:38 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,740
+Tue Jan 16 00:04:59 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,741
+Tue Jan 16 00:04:59 EST 2018 Tue Jan 16 00:04:59 EST 2018 : org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,742=>Find no block
+Tue Jan 16 00:05:00 EST 2018 org.jfree.data.KeyedObjects2D,272
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.rowKeys.remove(rowKey);
+if(rowIndex>=0){
+row=(KeyedObjects)this.rows.get(rowIndex);
+}else {
+this.rowKeys.add(rowKey);
+row=new KeyedObjects();
+this.rows.add(row);
+}
+
+Time : 18/01/16 00:07
+----------------------------------------
+Tue Jan 16 00:07:41 EST 2018 org.jfree.data.Range,330
+Tue Jan 16 00:07:59 EST 2018 org.jfree.data.Range,333
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!(obj instanceof Range)){
+return false;
+}
+Range range=(Range)obj;
+if(!(this.upper==range.upper)){
+return false;
+}
+return true;
+
+Time : 18/01/16 00:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Range range=(Range)obj;
+if(!(this.upper==range.upper)){
+return false;
+}
+return true;
+
+Time : 18/01/16 00:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!(obj instanceof Range)){
+return false;
+}
+Range range=(Range)obj;
+return true;
+
+Time : 18/01/16 00:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Range range=(Range)obj;
+return true;
+
+Time : 18/01/16 00:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!(obj instanceof Range)){
+return false;
+}
+return true;
+
+Time : 18/01/16 00:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return true;
+
+Time : 18/01/16 00:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(obj==this){
+return true;
+}
+if(!(obj instanceof Range)){
+return false;
+}
+Range range=(Range)obj;
+if(!(this.upper==range.upper)){
+return false;
+}
+return true;
+
+Time : 18/01/16 00:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(obj==this){
+return true;
+}
+if(!(obj instanceof Range)){
+return false;
+}
+Range range=(Range)obj;
+return true;
+
+Time : 18/01/16 00:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!(obj instanceof Range)){
+return false;
+}
+if(obj==null||getClass()!=obj.getClass()){
+return false;
+}
+Range range=(Range)obj;
+if(!(this.upper==range.upper)){
+return false;
+}
+return true;
+
+Time : 18/01/16 00:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(obj==null||getClass()!=obj.getClass()){
+return false;
+}
+Range range=(Range)obj;
+if(!(this.upper==range.upper)){
+return false;
+}
+return true;
+
+Time : 18/01/16 00:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!(obj instanceof Range)){
+return false;
+}
+if(obj==null||getClass()!=obj.getClass()){
+return false;
+}
+Range range=(Range)obj;
+return true;
+
+Time : 18/01/16 00:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(obj==null||getClass()!=obj.getClass()){
+return false;
+}
+Range range=(Range)obj;
+return true;
+
+Time : 18/01/16 00:18
+----------------------------------------
+Tue Jan 16 00:19:48 EST 2018 org.jfree.data.Range,334
+Tue Jan 16 00:19:48 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,147
+Tue Jan 16 00:19:50 EST 2018 Tue Jan 16 00:19:50 EST 2018 : org.jfree.data.statistics.BoxAndWhiskerItem,152=>Find no block
+Tue Jan 16 00:19:50 EST 2018 org.jfree.data.KeyedObjects,136
+Tue Jan 16 00:26:10 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,532
+Tue Jan 16 00:26:11 EST 2018 org.jfree.data.KeyedObject,85
+Tue Jan 16 00:26:29 EST 2018 org.jfree.data.KeyedObjects,134
+Tue Jan 16 00:28:13 EST 2018 org.jfree.data.KeyedObjects,135
+Tue Jan 16 00:28:13 EST 2018 Tue Jan 16 00:28:13 EST 2018 : org.jfree.data.KeyedObject,74=>Find no block
+Tue Jan 16 00:28:13 EST 2018 org.jfree.data.KeyedObject,75
+Tue Jan 16 00:28:37 EST 2018 org.jfree.data.KeyedObject,76
+Tue Jan 16 00:28:37 EST 2018 Tue Jan 16 00:28:37 EST 2018 : org.jfree.data.KeyedObject,77=>Find no block
+Tue Jan 16 00:28:37 EST 2018 Tue Jan 16 00:28:37 EST 2018 : org.jfree.data.KeyedObjects,67=>Find no block
+Tue Jan 16 00:28:37 EST 2018 org.jfree.data.KeyedObjects,68
+Tue Jan 16 00:28:47 EST 2018 Tue Jan 16 00:28:47 EST 2018 : org.jfree.data.KeyedObjects,69=>Find no block
+Tue Jan 16 00:28:47 EST 2018 org.jfree.data.KeyedObjects,128
+Tue Jan 16 00:29:17 EST 2018 org.jfree.data.KeyedObjects,131
+Tue Jan 16 00:32:11 EST 2018 org.jfree.data.KeyedObjects,132
+Tue Jan 16 00:35:36 EST 2018 org.jfree.data.KeyedObjects,133
+Tue Jan 16 00:35:36 EST 2018 org.jfree.data.KeyedObjects,140
+Tue Jan 16 00:37:19 EST 2018 org.jfree.data.KeyedObjects,201
+Tue Jan 16 00:42:51 EST 2018 org.jfree.data.KeyedObjects,202
+Tue Jan 16 00:42:51 EST 2018 org.jfree.data.KeyedObjects,207
+Tue Jan 16 00:42:51 EST 2018 org.jfree.data.KeyedObjects,208
+Tue Jan 16 00:42:51 EST 2018 Tue Jan 16 00:42:51 EST 2018 : org.jfree.data.KeyedObjects,210=>Find no block
+Tue Jan 16 00:42:51 EST 2018 org.jfree.data.KeyedObjects2D,150
+Tue Jan 16 00:43:09 EST 2018 org.jfree.data.KeyedObjects2D,187
+Tue Jan 16 00:43:26 EST 2018 org.jfree.data.KeyedObjects2D,250
+Tue Jan 16 00:44:01 EST 2018 Tue Jan 16 00:44:01 EST 2018 : org.jfree.data.KeyedObjects2D,251=>Find no block
+Tue Jan 16 00:44:01 EST 2018 org.jfree.data.KeyedObjects2D,263
+Tue Jan 16 00:44:26 EST 2018 org.jfree.data.KeyedObjects2D,266
+Tue Jan 16 00:44:43 EST 2018 org.jfree.data.KeyedObjects2D,270
+Tue Jan 16 00:49:58 EST 2018 org.jfree.data.KeyedObjects2D,271
+Tue Jan 16 00:49:58 EST 2018 org.jfree.data.KeyedObjects2D,275
+Tue Jan 16 00:49:58 EST 2018 org.jfree.data.KeyedObjects2D,276
+Tue Jan 16 00:49:58 EST 2018 org.jfree.data.KeyedObjects2D,277
+Tue Jan 16 00:49:58 EST 2018 org.jfree.data.KeyedObjects2D,279
+Tue Jan 16 01:00:41 EST 2018 org.jfree.data.KeyedObjects2D,280
+Tue Jan 16 01:04:48 EST 2018 org.jfree.data.KeyedObjects2D,281
+Tue Jan 16 01:07:55 EST 2018 org.jfree.data.KeyedObjects2D,282
+Tue Jan 16 01:07:55 EST 2018 Tue Jan 16 01:07:55 EST 2018 : org.jfree.data.KeyedObjects2D,285=>Find no block
+Tue Jan 16 01:07:55 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,147
+Tue Jan 16 01:09:10 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,150
+Tue Jan 16 01:09:10 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,151
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int r=this.data.getRowIndex(rowKey);
+int c=this.data.getColumnIndex(columnKey);
+if((this.maximumRangeValueRow==r&&this.maximumRangeValueColumn==c)||(this.minimumRangeValueRow==r&&this.minimumRangeValueColumn==c)){
+r++;
+updateBounds();
+}
+
+Time : 18/01/16 01:10
+----------------------------------------
+Tue Jan 16 01:10:44 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,152
+Tue Jan 16 01:10:44 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,158
+Tue Jan 16 01:14:14 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,159
+Tue Jan 16 01:14:14 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,160
+Tue Jan 16 01:14:15 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,162
+Tue Jan 16 01:15:11 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,163
+Tue Jan 16 01:15:11 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,164
+Tue Jan 16 01:15:11 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,167
+Tue Jan 16 01:17:29 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,168
+Tue Jan 16 01:17:29 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,169
+Tue Jan 16 01:17:29 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,170
+Tue Jan 16 01:17:29 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,178
+Tue Jan 16 01:19:44 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,179
+Tue Jan 16 01:19:44 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,180
+Tue Jan 16 01:19:44 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,181
+Tue Jan 16 01:19:44 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,189
+Tue Jan 16 01:29:43 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,191
+Tue Jan 16 01:29:44 EST 2018 Tue Jan 16 01:29:44 EST 2018 : org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,193=>Find no block
+Tue Jan 16 01:29:44 EST 2018 Tue Jan 16 01:29:44 EST 2018 : org.jfree.data.statistics.BoxAndWhiskerItem,113=>Find no block
+Tue Jan 16 01:29:44 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,115
+Tue Jan 16 01:47:39 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,116
+Tue Jan 16 01:47:39 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,117
+Tue Jan 16 01:47:39 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,118
+Tue Jan 16 01:47:39 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,119
+Tue Jan 16 01:47:39 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,120
+Tue Jan 16 01:47:39 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,121
+Tue Jan 16 01:47:40 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,122
+Tue Jan 16 01:47:40 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,123
+Tue Jan 16 01:47:40 EST 2018 Tue Jan 16 01:47:40 EST 2018 : org.jfree.data.statistics.BoxAndWhiskerItem,125=>Find no block
+Tue Jan 16 01:47:40 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,214
+Tue Jan 16 01:47:42 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,223
+Tue Jan 16 01:47:44 EST 2018 Tue Jan 16 01:47:44 EST 2018 : org.jfree.data.KeyedObjects2D,74=>Find no block
+Tue Jan 16 01:47:44 EST 2018 org.jfree.data.KeyedObjects2D,75
+Tue Jan 16 01:48:26 EST 2018 org.jfree.data.KeyedObjects2D,76
+Tue Jan 16 01:48:26 EST 2018 org.jfree.data.KeyedObjects2D,77
+Tue Jan 16 01:48:26 EST 2018 Tue Jan 16 01:48:26 EST 2018 : org.jfree.data.KeyedObjects2D,78=>Find no block
+Tue Jan 16 01:48:26 EST 2018 org.jfree.data.general.DatasetChangeEvent,73
+Tue Jan 16 01:48:28 EST 2018 org.jfree.data.general.DatasetChangeEvent,74
+Tue Jan 16 01:48:28 EST 2018 Tue Jan 16 01:48:28 EST 2018 : org.jfree.data.general.DatasetChangeEvent,75=>Find no block
+Tue Jan 16 01:48:28 EST 2018 org.jfree.data.general.AbstractDataset,172
+Tue Jan 16 01:48:54 EST 2018 Tue Jan 16 01:48:54 EST 2018 : org.jfree.data.general.AbstractDataset,173=>Find no block
+Tue Jan 16 01:48:54 EST 2018 org.jfree.data.general.AbstractDataset,186
+Tue Jan 16 01:51:22 EST 2018 org.jfree.data.general.AbstractDataset,187
+Tue Jan 16 01:51:22 EST 2018 Tue Jan 16 01:51:22 EST 2018 : org.jfree.data.general.AbstractDataset,194=>Find no block
+Tue Jan 16 01:51:23 EST 2018 Tue Jan 16 01:51:23 EST 2018 : org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,106=>Find no block
+Tue Jan 16 01:51:23 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,107
+Tue Jan 16 02:05:52 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,108
+Tue Jan 16 02:05:52 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,109
+Tue Jan 16 02:05:52 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,110
+Tue Jan 16 02:05:52 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,111
+Tue Jan 16 02:05:52 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,112
+Tue Jan 16 02:05:52 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,113
+Tue Jan 16 02:05:53 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,114
+Tue Jan 16 02:05:53 EST 2018 Tue Jan 16 02:05:53 EST 2018 : org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,115=>Find no block
+Tue Jan 16 02:05:53 EST 2018 Tue Jan 16 02:05:53 EST 2018 : org.jfree.data.Range,85=>Find no block
+Tue Jan 16 02:05:53 EST 2018 org.jfree.data.Range,86
+Tue Jan 16 02:07:27 EST 2018 org.jfree.data.Range,91
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.upper=upper;
+
+Time : 18/01/16 02:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException("The \'bins\' value must be at least 1.");
+}
+this.upper=upper;
+
+Time : 18/01/16 02:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+
+Time : 18/01/16 02:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException("The \'bins\' value must be at least 1.");
+}
+
+Time : 18/01/16 02:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException("Requires \'lower\' < \'upper\'.");
+}
+this.upper=upper;
+
+Time : 18/01/16 02:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException("Requires \'lower\' < \'upper\'.");
+}
+
+Time : 18/01/16 02:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.upper=upper;
+
+Time : 18/01/16 02:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+
+Time : 18/01/16 02:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+lower=lower-Math.abs(lower)/10.0;
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.upper=upper;
+
+Time : 18/01/16 02:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+upper=upper+Math.abs(lower)/10.0;
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.upper=upper;
+
+Time : 18/01/16 02:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+lower=lower-Math.abs(lower)/10.0;
+upper=upper+Math.abs(lower)/10.0;
+
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.upper=upper;
+
+Time : 18/01/16 02:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+lower=lower-Math.abs(lower)/10.0;
+upper=upper+Math.abs(lower)/10.0;
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.upper=upper;
+
+Time : 18/01/16 02:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+lower=lower-Math.abs(lower)/10.0;
+lower=lower-Math.abs(lower)/10.0;
+upper=upper+Math.abs(lower)/10.0;
+
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.upper=upper;
+
+Time : 18/01/16 02:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+lower=lower-Math.abs(lower)/10.0;
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+
+Time : 18/01/16 02:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+upper=upper+Math.abs(lower)/10.0;
+lower=lower-Math.abs(lower)/10.0;
+upper=upper+Math.abs(lower)/10.0;
+
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.upper=upper;
+
+Time : 18/01/16 02:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+upper=upper+Math.abs(lower)/10.0;
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+
+Time : 18/01/16 02:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+lower=lower-Math.abs(lower)/10.0;
+upper=upper+Math.abs(lower)/10.0;
+
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+
+Time : 18/01/16 02:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+lower=lower-Math.abs(lower)/10.0;
+upper=upper+Math.abs(lower)/10.0;
+lower=lower-Math.abs(lower)/10.0;
+upper=upper+Math.abs(lower)/10.0;
+
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.upper=upper;
+
+Time : 18/01/16 02:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+lower=lower-Math.abs(lower)/10.0;
+upper=upper+Math.abs(lower)/10.0;
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+
+Time : 18/01/16 02:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+lower=lower-Math.abs(lower)/10.0;
+lower=lower-Math.abs(lower)/10.0;
+upper=upper+Math.abs(lower)/10.0;
+
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+
+Time : 18/01/16 02:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+upper=upper+Math.abs(lower)/10.0;
+lower=lower-Math.abs(lower)/10.0;
+upper=upper+Math.abs(lower)/10.0;
+
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+
+Time : 18/01/16 02:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.lower=upper;
+this.upper=upper;
+
+Time : 18/01/16 02:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.lower=upper;
+this.upper=upper;
+
+Time : 18/01/16 02:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.lower=upper;
+
+Time : 18/01/16 02:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.lower=upper;
+
+Time : 18/01/16 02:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new RuntimeException("Values less than or equal to "+"zero not allowed with logarithmic axis");
+}
+this.upper=upper;
+
+Time : 18/01/16 02:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new RuntimeException("Values less than or equal to "+"zero not allowed with logarithmic axis");
+}
+
+Time : 18/01/16 02:18
+----------------------------------------
+Tue Jan 16 02:19:04 EST 2018 org.jfree.data.Range,92
+Tue Jan 16 02:19:04 EST 2018 Tue Jan 16 02:19:04 EST 2018 : org.jfree.data.Range,93=>Find no block
+Tue Jan 16 02:19:04 EST 2018 org.jfree.data.general.DatasetGroup,65
+Tue Jan 16 02:19:22 EST 2018 org.jfree.data.general.DatasetGroup,66
+Tue Jan 16 02:19:22 EST 2018 Tue Jan 16 02:19:22 EST 2018 : org.jfree.data.general.DatasetGroup,67=>Find no block
+Tue Jan 16 02:19:22 EST 2018 Tue Jan 16 02:19:22 EST 2018 : org.jfree.data.general.AbstractDataset,96=>Find no block
+Tue Jan 16 02:19:22 EST 2018 org.jfree.data.general.AbstractDataset,97
+Tue Jan 16 02:19:48 EST 2018 org.jfree.data.general.AbstractDataset,98
+Tue Jan 16 02:19:48 EST 2018 Tue Jan 16 02:19:48 EST 2018 : org.jfree.data.general.AbstractDataset,99=>Find no block
+Tue Jan 16 02:19:48 EST 2018 org.jfree.data.KeyedObject,94
+Tue Jan 16 02:19:50 EST 2018 org.jfree.data.KeyedObject,117
+Tue Jan 16 02:24:47 EST 2018 org.jfree.data.KeyedObject,118
+Tue Jan 16 02:25:03 EST 2018 org.jfree.data.KeyedObject,119
+Tue Jan 16 02:25:03 EST 2018 org.jfree.data.KeyedObject,120
+Tue Jan 16 02:25:03 EST 2018 org.jfree.data.KeyedObject,122
+Tue Jan 16 02:25:03 EST 2018 org.jfree.data.KeyedObject,134
+Tue Jan 16 02:26:05 EST 2018 org.jfree.data.KeyedObject,135
+Tue Jan 16 02:26:05 EST 2018 org.jfree.data.KeyedObject,138
+Tue Jan 16 02:26:22 EST 2018 org.jfree.data.KeyedObject,139
+Tue Jan 16 02:26:22 EST 2018 org.jfree.data.KeyedObject,141
+Timeout time : 18/01/16 02:29

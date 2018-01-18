@@ -1,0 +1,50 @@
+=================================================
+Project : closure_14	start : 18/01/14 01:54
+Current failed test : com.google.javascript.jscomp.CheckMissingReturnTest::testIssue779 | 18/01/14 01:54
+Sun Jan 14 01:59:33 EST 2018 com.google.javascript.jscomp.ControlFlowAnalysis,579
+Sun Jan 14 02:48:01 EST 2018 Sun Jan 14 02:48:01 EST 2018 : com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter,250=>Find no block
+Sun Jan 14 02:48:01 EST 2018 com.google.javascript.jscomp.ControlFlowAnalysis,767
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(Node finallyNode : cfa.finallyMap.get(parent)){
+cfa.createEdge(fromNode,Branch.ON_EX,finallyNode);
+}
+
+Time : 18/01/14 02:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.6182856494444295 : [/home/jiajun/d4j/projects/closure/closure_14_buggy/src/com/google/javascript/jscomp/ControlFlowAnalysis.java=>0,0]
+if(lastJump==cfgNode){
+createEdge(cfgNode,Branch.ON_EX,catchBlock);
+return ;
+}else {
+finallyMap.put(lastJump,catchBlock);
+}
+
+Time : 18/01/14 02:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/jiajun/d4j/projects/closure/closure_14_buggy/src/com/google/javascript/jscomp/ControlFlowAnalysis.java=>766,768]
+for(Node finallyNode : cfa.finallyMap.get(parent)){
+cfa.createEdge(fromNode,Branch.UNCOND,finallyNode);
+}
+
+Time : 18/01/14 02:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/jiajun/d4j/projects/closure/closure_14_buggy/src/com/google/javascript/jscomp/ControlFlowAnalysis.java=>766,768]
+for(Node finallyNode : cfa.finallyMap.get(parent)){
+cfa.createEdge(fromNode,Branch.ON_EX,finallyNode);
+}
+
+Time : 18/01/14 02:50
+----------------------------------------
+Success time : 18/01/14 02:50

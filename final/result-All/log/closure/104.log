@@ -1,0 +1,1402 @@
+=================================================
+Project : closure_104	start : 18/01/12 19:17
+Current failed test : com.google.javascript.rhino.jstype.UnionTypeTest::testGreatestSubtypeUnionTypes5 | 18/01/12 19:17
+Fri Jan 12 19:25:44 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,287
+Fri Jan 12 19:32:20 AEDT 2018 com.google.javascript.rhino.jstype.JSType,592
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thatType.isEmptyType()||thatType.isAllType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 19:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thatType.isUnionType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 19:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thatType.isEmptyType()||thatType.isAllType()){
+return thatType.getLeastSupertype(thisType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 19:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thatType.isUnionType()){
+return thatType.getLeastSupertype(thisType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 19:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thatType instanceof NamedType){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 19:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!thisType.isObject()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 19:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType instanceof UnknownType){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 20:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType instanceof UnknownType){
+return thisType;
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 20:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType==null){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 20:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(EMPTY_TYPE_COMPONENT!=null&&thisType.restrictByNotNullOrUndefined().isTemplateType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 20:08
+----------------------------------------
+Fri Jan 12 20:12:02 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,274
+Fri Jan 12 20:23:14 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,275
+Fri Jan 12 20:23:15 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,276
+Fri Jan 12 20:23:16 AEDT 2018 Fri Jan 12 20:23:16 AEDT 2018 : com.google.javascript.rhino.jstype.UnionType,279=>Find no block
+Fri Jan 12 20:23:17 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,281
+Fri Jan 12 20:41:32 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,290
+Fri Jan 12 20:54:58 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,291
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(that.isUnknownType()){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isStringObjectType()){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isStringObjectType()){
+return getNativeType(JSTypeNative.STRING_TYPE);
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(that instanceof UnionType){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(equals(that)){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(equals(that)){
+return that;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(equals(that)){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return that;
+}
+
+Time : 18/01/12 21:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(result==null){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!that.isObject()){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(that.isSubtype(result)){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(this.isSubtype(that)){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(this.equals(that)){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(that.isRecordType()){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(result.isUnionType()){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(result!=null&&that.isSubtype(result)){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(that.isEnumElementType()){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(that.isEnumElementType()){
+return that;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!that.isSubtype(that)){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(that.isUnionType()){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(that.isUnionType()){
+return that.getLeastSupertype(this);
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(that.isUnionType()){
+return that;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(that.isRecordType()){
+return that.getGreatestSubtype(this);
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(that.isRecordType()){
+return that;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(result instanceof RecordType){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(that.isSubtype(this)){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+result=null;
+if(result!=null){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(that.isUnknownType()){
+return result;
+}else if(!alternates.iterator().next().isUnknownType()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+result=null;
+if(that.isUnknownType()){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+result=null;
+if(result!=null){
+return result;
+}else if(!alternates.iterator().next().isUnknownType()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 21:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+result=null;
+if(that.isUnknownType()){
+return result;
+}else if(!alternates.iterator().next().isUnknownType()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 22:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(result!=null&&(that.isUnknownType()||result.isUnknownType())){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 22:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(result instanceof UnionType){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 22:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(that.isRecordType()){
+return builder.build();
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 22:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(result==null){
+return result;
+}else if(!result.equals(that.testForEquality(that))){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 22:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(result instanceof UnionType){
+return result;
+}else if(!result.equals(this.testForEquality(that))){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/12 22:10
+----------------------------------------
+Fri Jan 12 22:12:04 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,292
+Fri Jan 12 22:12:05 AEDT 2018 com.google.javascript.rhino.jstype.UnionTypeBuilder,157
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+result=null;
+if(!alternates.iterator().next().isUnknownType()){
+result=alternates.iterator().next();
+}else {
+result=registry.getNativeType(NO_TYPE);
+}
+
+Time : 18/01/12 22:13
+----------------------------------------
+Fri Jan 12 22:26:56 AEDT 2018 com.google.javascript.rhino.jstype.NoObjectType,342
+Fri Jan 12 22:26:59 AEDT 2018 com.google.javascript.rhino.jstype.NoType,129
+Fri Jan 12 22:27:03 AEDT 2018 com.google.javascript.rhino.jstype.JSType,591
+Fri Jan 12 22:27:04 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,370
+Fri Jan 12 22:30:08 AEDT 2018 com.google.javascript.rhino.jstype.JSType,589
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thatType.isSubtype(thisType)){
+return thatType;
+}else if(thisType.toObjectType()!=null){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 22:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thatType.isSubtype(thisType)){
+return thatType;
+}else if(thisType instanceof FunctionType){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 22:40
+----------------------------------------
+Fri Jan 12 22:46:12 AEDT 2018 com.google.javascript.rhino.jstype.JSType,587
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thatType.isSubtype(thisType)){
+return thatType;
+}else if((!thisType.isUnknownType()&&thisType.isString())){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 22:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thatType.isSubtype(thisType)){
+return thatType;
+}else if(!thisType.isUnknownType()&&thisType.isString()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 22:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thatType.isSubtype(thisType)){
+return thatType;
+}else if(thisType.isUnknownType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 22:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thatType.isSubtype(thisType)){
+return thatType;
+}else if(thatType.isUnknownType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 22:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thisType.isUnknownType()&&thatType.isUnknownType()){
+return thatType;
+}else if((!thisType.isUnknownType()&&thisType.isString())){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thisType.isUnknownType()&&thatType.isUnknownType()){
+return thatType;
+}else if(!thisType.isUnknownType()&&thisType.isString()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thisType.isUnknownType()&&thatType.isUnknownType()){
+return thatType;
+}else if(thisType.isUnknownType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thisType.isUnknownType()&&thatType.isUnknownType()){
+return thatType;
+}else if(thatType.isUnknownType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thisType.isUnknownType()){
+return thatType;
+}else if((!thisType.isUnknownType()&&thisType.isString())){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thisType.isUnknownType()){
+return thatType;
+}else if(!thisType.isUnknownType()&&thisType.isString()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thisType.isUnknownType()){
+return thatType;
+}else if(thisType.isUnknownType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thisType.isUnknownType()){
+return thatType;
+}else if(thatType.isUnknownType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thatType.isUnknownType()){
+return thatType;
+}else if((!thisType.isUnknownType()&&thisType.isString())){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thatType.isUnknownType()){
+return thatType;
+}else if(!thisType.isUnknownType()&&thisType.isString()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thatType.isUnknownType()){
+return thatType;
+}else if(thisType.isUnknownType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thatType.isUnknownType()){
+return thatType;
+}else if(thatType.isUnknownType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thatType.isSubtype(thisType)){
+return thatType;
+}else if((!thisType.isUnknownType()&&thisType.isString())){
+return ((UnionType)thisType).meet(thatType);
+}else if(thisType.isUnknownType()||thatType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thatType.isSubtype(thisType)){
+return thatType;
+}else if((!thisType.isUnknownType()&&thisType.isString())){
+return ((UnionType)thisType).meet(thatType);
+}else if(thisType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thatType.isSubtype(thisType)){
+return thatType;
+}else if((!thisType.isUnknownType()&&thisType.isString())){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thatType.isSubtype(thisType)){
+return thatType;
+}else if(!thisType.isUnknownType()&&thisType.isString()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thisType.isUnknownType()||thatType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thatType.isSubtype(thisType)){
+return thatType;
+}else if(!thisType.isUnknownType()&&thisType.isString()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thisType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thatType.isSubtype(thisType)){
+return thatType;
+}else if(!thisType.isUnknownType()&&thisType.isString()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thatType.isSubtype(thisType)){
+return thatType;
+}else if(thisType.isUnknownType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thisType.isUnknownType()||thatType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thatType.isSubtype(thisType)){
+return thatType;
+}else if(thisType.isUnknownType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thisType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thatType.isSubtype(thisType)){
+return thatType;
+}else if(thisType.isUnknownType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thatType.isSubtype(thisType)){
+return thatType;
+}else if(thatType.isUnknownType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thisType.isUnknownType()||thatType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thatType.isSubtype(thisType)){
+return thatType;
+}else if(thatType.isUnknownType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thisType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thatType.isSubtype(thisType)){
+return thatType;
+}else if(thatType.isUnknownType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/12 23:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thisType.isUnknownType()&&thatType.isUnknownType()){
+return thatType;
+}else if((!thisType.isUnknownType()&&thisType.isString())){
+return ((UnionType)thisType).meet(thatType);
+}else if(thisType.isUnknownType()||thatType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/13 00:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thisType.isUnknownType()&&thatType.isUnknownType()){
+return thatType;
+}else if((!thisType.isUnknownType()&&thisType.isString())){
+return ((UnionType)thisType).meet(thatType);
+}else if(thisType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/13 00:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thisType.isUnknownType()&&thatType.isUnknownType()){
+return thatType;
+}else if((!thisType.isUnknownType()&&thisType.isString())){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/13 00:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thisType.isUnknownType()&&thatType.isUnknownType()){
+return thatType;
+}else if(!thisType.isUnknownType()&&thisType.isString()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thisType.isUnknownType()||thatType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/13 00:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thisType.isUnknownType()&&thatType.isUnknownType()){
+return thatType;
+}else if(!thisType.isUnknownType()&&thisType.isString()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thisType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/13 00:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thisType.isUnknownType()&&thatType.isUnknownType()){
+return thatType;
+}else if(!thisType.isUnknownType()&&thisType.isString()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/13 00:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thisType.isUnknownType()&&thatType.isUnknownType()){
+return thatType;
+}else if(thisType.isUnknownType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thisType.isUnknownType()||thatType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/13 00:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thisType.isUnknownType()&&thatType.isUnknownType()){
+return thatType;
+}else if(thisType.isUnknownType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thisType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/13 00:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thisType.isUnknownType()&&thatType.isUnknownType()){
+return thatType;
+}else if(thisType.isUnknownType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/13 00:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thisType.isUnknownType()&&thatType.isUnknownType()){
+return thatType;
+}else if(thatType.isUnknownType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thisType.isUnknownType()||thatType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/13 00:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thisType.isSubtype(thatType)){
+return thisType;
+}else if(thisType.isUnknownType()&&thatType.isUnknownType()){
+return thatType;
+}else if(thatType.isUnknownType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thisType.isUnknownType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/13 00:25
+----------------------------------------
+Timeout time : 18/01/13 00:27

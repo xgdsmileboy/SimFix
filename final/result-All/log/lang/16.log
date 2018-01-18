@@ -1,0 +1,74 @@
+=================================================
+Project : lang_16	start : 18/01/12 19:06
+Current failed test : org.apache.commons.lang3.math.NumberUtilsTest::testCreateNumber | 18/01/12 19:06
+Fri Jan 12 19:07:04 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,459
+Fri Jan 12 19:09:07 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,470
+Fri Jan 12 20:36:14 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,476
+Fri Jan 12 20:36:14 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,478
+Fri Jan 12 21:53:06 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,481
+Fri Jan 12 22:09:04 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,484
+Fri Jan 12 22:54:12 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,517
+Fri Jan 12 22:56:16 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,518
+Fri Jan 12 22:57:05 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,521
+Fri Jan 12 22:57:05 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,531
+Fri Jan 12 22:59:23 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,532
+Fri Jan 12 23:00:13 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,533
+Fri Jan 12 23:00:13 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,545
+Fri Jan 12 23:02:43 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,551
+Fri Jan 12 23:32:38 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,554
+Fri Jan 12 23:32:39 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,556
+Fri Jan 12 23:37:14 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,559
+Fri Jan 12 23:37:45 AEDT 2018 Fri Jan 12 23:37:45 AEDT 2018 : org.apache.commons.lang3.math.NumberUtils,560=>Find no block
+Fri Jan 12 23:37:46 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,564
+Fri Jan 12 23:38:36 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,572
+Fri Jan 12 23:43:46 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,574
+Sat Jan 13 00:01:05 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,575
+Sat Jan 13 00:01:05 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,576
+Sat Jan 13 00:01:05 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,445
+Sat Jan 13 00:02:15 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,448
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+str=str.toLowerCase();
+if(StringUtils.isBlank(str)){
+throw new NumberFormatException("A blank string is not a valid number");
+}
+
+Time : 18/01/13 00:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.0203484586519547 : [/home/hz985/jiajun/d4j/projects/lang/lang_16_buggy/src/main/java/org/apache/commons/lang3/math/NumberUtils.java=>0,0]
+int delimLen=(delimiters==null?-1:delimiters.length);
+if(StringUtils.isEmpty(str)||delimLen==0){
+return str;
+}
+str=str.toLowerCase();
+return capitalize(str,delimiters);
+
+Time : 18/01/13 00:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/lang/lang_16_buggy/src/main/java/org/apache/commons/lang3/math/NumberUtils.java=>448,450]
+if(StringUtils.isBlank(str)){
+throw new NumberFormatException("A blank string is not a valid number");
+}
+
+Time : 18/01/13 00:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/lang/lang_16_buggy/src/main/java/org/apache/commons/lang3/math/NumberUtils.java=>448,450]
+str=str.toLowerCase();
+if(StringUtils.isBlank(str)){
+throw new NumberFormatException("A blank string is not a valid number");
+}
+
+Time : 18/01/13 00:06
+----------------------------------------
+Success time : 18/01/13 00:06

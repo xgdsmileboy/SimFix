@@ -1,0 +1,133 @@
+=================================================
+Project : math_18	start : 18/01/14 20:42
+Current failed test : org.apache.commons.math3.optimization.direct.CMAESOptimizerTest::testFitAccuracyDependsOnBoundary_purify_2 | 18/01/14 20:43
+Sun Jan 14 20:50:00 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,482
+Sun Jan 14 20:53:15 EST 2018 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateSimpleBoundsOptimizer,87
+Sun Jan 14 20:53:17 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,476
+Sun Jan 14 20:53:50 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,583
+Sun Jan 14 20:59:23 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,751
+Sun Jan 14 20:59:25 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,246
+Sun Jan 14 20:59:27 EST 2018 Sun Jan 14 20:59:27 EST 2018 : org.apache.commons.math3.optimization.direct.CMAESOptimizer,247=>Find no block
+Sun Jan 14 20:59:27 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,253
+Sun Jan 14 20:59:29 EST 2018 Sun Jan 14 20:59:29 EST 2018 : org.apache.commons.math3.optimization.direct.CMAESOptimizer,256=>Find no block
+Sun Jan 14 20:59:29 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,929
+Sun Jan 14 21:30:06 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,930
+Sun Jan 14 21:30:06 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,931
+Sun Jan 14 21:30:06 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,932
+Sun Jan 14 21:30:07 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,934
+Sun Jan 14 21:30:07 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,955
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+x[0]=0.0;
+if(boundaries==null){
+return x;
+}
+double[] res=new double[x.length];
+for(int i=0;i<x.length;i++){
+double diff=boundaries[1][i]-boundaries[0][i];
+res[i]=diff*x[i]+boundaries[0][i];
+}
+return res;
+
+Time : 18/01/14 21:51
+----------------------------------------
+Sun Jan 14 22:01:38 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,956
+Sun Jan 14 22:01:38 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,957
+Sun Jan 14 22:01:38 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,958
+Sun Jan 14 22:01:38 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,960
+Sun Jan 14 22:01:38 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,970
+Sun Jan 14 22:04:35 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,971
+Sun Jan 14 22:04:35 EST 2018 Sun Jan 14 22:04:35 EST 2018 : org.apache.commons.math3.optimization.direct.CMAESOptimizer,974=>Find no block
+Sun Jan 14 22:04:35 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,1014
+Sun Jan 14 23:00:20 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,1015
+Sun Jan 14 23:00:21 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,1016
+Sun Jan 14 23:00:21 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,1018
+Sun Jan 14 23:00:21 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,1021
+Sun Jan 14 23:00:21 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,1024
+Sun Jan 14 23:00:21 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,1033
+Sun Jan 14 23:22:20 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,1034
+Sun Jan 14 23:40:20 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,1035
+Sun Jan 14 23:40:20 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,1036
+Sun Jan 14 23:40:20 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,1038
+Sun Jan 14 23:40:20 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,459
+Sun Jan 14 23:43:59 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,535
+Sun Jan 14 23:44:01 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,536
+Sun Jan 14 23:44:01 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,537
+Mon Jan 15 00:08:20 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,540
+Mon Jan 15 00:08:20 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,541
+Mon Jan 15 00:08:21 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,514
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!Double.isInfinite(lB[i])||!Double.isInfinite(uB[i])){
+hasFiniteBounds=false;
+break;
+}
+
+Time : 18/01/15 00:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i==lambda&&i<lambda){
+hasFiniteBounds=true;
+break;
+}
+
+Time : 18/01/15 00:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i==lambda&&!Double.isInfinite(uB[i])){
+hasFiniteBounds=true;
+break;
+}
+
+Time : 18/01/15 00:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!Double.isInfinite(lB[i])&&i>lambda){
+hasFiniteBounds=true;
+break;
+}
+
+Time : 18/01/15 00:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!Double.isInfinite(lB[i])&&i>lambda){
+++lambda;
+hasFiniteBounds=true;
+break;
+}
+
+Time : 18/01/15 00:16
+----------------------------------------
+Mon Jan 15 00:18:07 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,515
+Mon Jan 15 00:18:07 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,521
+Mon Jan 15 00:32:26 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,522
+Mon Jan 15 00:32:26 EST 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,529
+Mon Jan 15 00:49:02 EST 2018 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateSimpleBoundsOptimizer,128
+Mon Jan 15 00:59:39 EST 2018 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateSimpleBoundsOptimizer,136
+Mon Jan 15 01:10:21 EST 2018 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateSimpleBoundsOptimizer,109
+Mon Jan 15 01:25:42 EST 2018 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateSimpleBoundsOptimizer,112
+Mon Jan 15 01:33:27 EST 2018 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateSimpleBoundsOptimizer,113
+Mon Jan 15 01:33:27 EST 2018 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateSimpleBoundsOptimizer,114
+Mon Jan 15 01:33:27 EST 2018 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateSimpleBoundsOptimizer,115
+Mon Jan 15 01:33:28 EST 2018 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateSimpleBoundsOptimizer,100
+Mon Jan 15 01:41:58 EST 2018 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateSimpleBoundsOptimizer,101
+Mon Jan 15 01:41:59 EST 2018 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateSimpleBoundsOptimizer,102
+Mon Jan 15 01:41:59 EST 2018 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateSimpleBoundsOptimizer,103
+Mon Jan 15 01:41:59 EST 2018 org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateSimpleBoundsOptimizer,97
+Timeout time : 18/01/15 01:50

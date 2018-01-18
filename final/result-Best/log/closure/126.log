@@ -1,0 +1,135 @@
+=================================================
+Project : closure_126	start : 18/01/13 23:14
+Current failed test : com.google.javascript.jscomp.MinimizeExitPointsTest::testDontRemoveBreakInTryFinally | 18/01/13 23:15
+Sat Jan 13 23:15:50 AEDT 2018 Sat Jan 13 23:15:50 AEDT 2018 : com.google.javascript.rhino.Node,113=>Find no block
+Sat Jan 13 23:15:55 AEDT 2018 com.google.javascript.rhino.Node,122
+Sat Jan 13 23:16:24 AEDT 2018 com.google.javascript.rhino.Node,133
+Sat Jan 13 23:16:47 AEDT 2018 com.google.javascript.rhino.Node,134
+Sat Jan 13 23:17:10 AEDT 2018 com.google.javascript.rhino.Node,869
+Sat Jan 13 23:29:00 AEDT 2018 com.google.javascript.rhino.Node,870
+Sat Jan 13 23:29:02 AEDT 2018 com.google.javascript.rhino.Node,871
+Sat Jan 13 23:29:05 AEDT 2018 com.google.javascript.rhino.Node,874
+Sat Jan 13 23:29:08 AEDT 2018 com.google.javascript.rhino.Node,875
+Sat Jan 13 23:29:11 AEDT 2018 com.google.javascript.rhino.Node,876
+Sat Jan 13 23:29:15 AEDT 2018 com.google.javascript.rhino.Node,877
+Sat Jan 13 23:29:18 AEDT 2018 com.google.javascript.rhino.Node,880
+Sat Jan 13 23:29:22 AEDT 2018 com.google.javascript.rhino.Node,881
+Sat Jan 13 23:29:25 AEDT 2018 com.google.javascript.rhino.Node,932
+Sat Jan 13 23:29:33 AEDT 2018 com.google.javascript.rhino.Node,954
+Sat Jan 13 23:55:20 AEDT 2018 com.google.javascript.rhino.Node,958
+Sat Jan 13 23:55:24 AEDT 2018 com.google.javascript.rhino.Node,961
+Sat Jan 13 23:55:27 AEDT 2018 com.google.javascript.rhino.Node,964
+Sat Jan 13 23:55:31 AEDT 2018 com.google.javascript.rhino.Node,965
+Sat Jan 13 23:55:34 AEDT 2018 com.google.javascript.rhino.Node,968
+Sun Jan 14 00:00:50 AEDT 2018 com.google.javascript.rhino.Node,969
+Sun Jan 14 00:00:53 AEDT 2018 com.google.javascript.rhino.Node,970
+Sun Jan 14 00:00:56 AEDT 2018 com.google.javascript.rhino.Node,971
+Sun Jan 14 00:00:59 AEDT 2018 com.google.javascript.rhino.Node,976
+Sun Jan 14 00:01:53 AEDT 2018 com.google.javascript.rhino.Node,977
+Sun Jan 14 00:14:28 AEDT 2018 com.google.javascript.rhino.Node,978
+Sun Jan 14 00:19:43 AEDT 2018 com.google.javascript.rhino.Node,979
+Sun Jan 14 00:19:46 AEDT 2018 com.google.javascript.rhino.Node,980
+Sun Jan 14 00:24:09 AEDT 2018 com.google.javascript.rhino.Node,981
+Sun Jan 14 00:28:15 AEDT 2018 com.google.javascript.rhino.Node,982
+Sun Jan 14 00:32:38 AEDT 2018 Sun Jan 14 00:32:38 AEDT 2018 : com.google.javascript.rhino.Node,984=>Find no block
+Sun Jan 14 00:32:41 AEDT 2018 com.google.javascript.rhino.Node,986
+Sun Jan 14 00:32:45 AEDT 2018 com.google.javascript.rhino.Node,989
+Sun Jan 14 00:38:45 AEDT 2018 com.google.javascript.rhino.Node,990
+Sun Jan 14 00:38:48 AEDT 2018 com.google.javascript.rhino.Node,995
+Sun Jan 14 00:40:48 AEDT 2018 com.google.javascript.rhino.Node,1007
+Sun Jan 14 00:40:58 AEDT 2018 com.google.javascript.rhino.Node,1012
+Sun Jan 14 00:41:08 AEDT 2018 com.google.javascript.rhino.Node,1013
+Sun Jan 14 00:41:10 AEDT 2018 com.google.javascript.rhino.Node,1014
+Sun Jan 14 00:41:13 AEDT 2018 com.google.javascript.rhino.Node,1021
+Sun Jan 14 00:41:23 AEDT 2018 Sun Jan 14 00:41:23 AEDT 2018 : com.google.javascript.rhino.Node,1022=>Find no block
+Sun Jan 14 00:41:26 AEDT 2018 com.google.javascript.rhino.Node,1026
+Sun Jan 14 00:47:27 AEDT 2018 com.google.javascript.rhino.Node,1027
+Sun Jan 14 00:47:31 AEDT 2018 com.google.javascript.rhino.Node,1029
+Sun Jan 14 01:23:01 AEDT 2018 com.google.javascript.rhino.Node,1030
+Sun Jan 14 01:23:03 AEDT 2018 Sun Jan 14 01:23:03 AEDT 2018 : com.google.javascript.rhino.Node,1031=>Find no block
+Sun Jan 14 01:23:07 AEDT 2018 com.google.javascript.rhino.Node,1032
+Sun Jan 14 01:23:10 AEDT 2018 com.google.javascript.rhino.Node,1034
+Sun Jan 14 01:23:12 AEDT 2018 Sun Jan 14 01:23:12 AEDT 2018 : com.google.javascript.rhino.Node,1033=>Find no block
+Sun Jan 14 01:23:16 AEDT 2018 Sun Jan 14 01:23:16 AEDT 2018 : com.google.javascript.rhino.Node,1036=>Find no block
+Sun Jan 14 01:23:19 AEDT 2018 com.google.javascript.rhino.Node,1428
+Sun Jan 14 01:23:32 AEDT 2018 com.google.javascript.rhino.Node,1444
+Sun Jan 14 01:23:46 AEDT 2018 com.google.javascript.rhino.Node,1457
+Sun Jan 14 01:23:54 AEDT 2018 com.google.javascript.rhino.InputId,74
+Sun Jan 14 01:24:03 AEDT 2018 com.google.javascript.rhino.Node,315
+Sun Jan 14 01:24:19 AEDT 2018 Sun Jan 14 01:24:19 AEDT 2018 : com.google.javascript.rhino.Node,2163=>Find no block
+Sun Jan 14 01:24:23 AEDT 2018 com.google.javascript.rhino.Node,2164
+Sun Jan 14 01:24:32 AEDT 2018 com.google.javascript.rhino.Node,2165
+Sun Jan 14 01:24:35 AEDT 2018 Sun Jan 14 01:24:35 AEDT 2018 : com.google.javascript.rhino.Node,2166=>Find no block
+Sun Jan 14 01:24:39 AEDT 2018 com.google.javascript.rhino.Node,347
+Sun Jan 14 01:25:01 AEDT 2018 com.google.javascript.jscomp.SourceFile,303
+Sun Jan 14 01:25:15 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1136
+Sun Jan 14 01:27:43 AEDT 2018 com.google.javascript.jscomp.MinimizeExitPoints,142
+Sun Jan 14 01:32:08 AEDT 2018 com.google.javascript.jscomp.MinimizeExitPoints,143
+Sun Jan 14 01:32:12 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,164
+Sun Jan 14 01:34:58 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,165
+Sun Jan 14 01:35:02 AEDT 2018 com.google.javascript.jscomp.AstValidator,529
+Sun Jan 14 01:37:51 AEDT 2018 com.google.javascript.jscomp.AstValidator,530
+Sun Jan 14 01:37:55 AEDT 2018 com.google.javascript.rhino.Node,939
+Sun Jan 14 01:39:49 AEDT 2018 com.google.javascript.rhino.Node,940
+Sun Jan 14 01:39:52 AEDT 2018 com.google.javascript.rhino.Node,941
+Sun Jan 14 01:39:54 AEDT 2018 com.google.javascript.rhino.Node,949
+Sun Jan 14 01:46:51 AEDT 2018 com.google.javascript.rhino.Node,950
+Sun Jan 14 01:46:54 AEDT 2018 com.google.javascript.rhino.Node,951
+Sun Jan 14 01:47:17 AEDT 2018 com.google.javascript.rhino.Node,952
+Sun Jan 14 01:47:21 AEDT 2018 com.google.javascript.rhino.Node,953
+Sun Jan 14 01:47:24 AEDT 2018 com.google.javascript.rhino.Node,963
+Sun Jan 14 01:47:28 AEDT 2018 com.google.javascript.rhino.Node,967
+Sun Jan 14 01:47:31 AEDT 2018 com.google.javascript.rhino.Node,975
+Sun Jan 14 01:47:34 AEDT 2018 com.google.javascript.rhino.Node,994
+Sun Jan 14 01:48:50 AEDT 2018 Sun Jan 14 01:48:50 AEDT 2018 : com.google.javascript.rhino.Node,1003=>Find no block
+Sun Jan 14 01:48:54 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1111
+Sun Jan 14 01:49:15 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1143
+Sun Jan 14 01:50:38 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1144
+Sun Jan 14 01:50:42 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,264
+Sun Jan 14 01:53:20 AEDT 2018 com.google.javascript.jscomp.AstValidator,132
+Sun Jan 14 01:56:57 AEDT 2018 com.google.javascript.jscomp.AstValidator,133
+Sun Jan 14 01:58:40 AEDT 2018 com.google.javascript.jscomp.AstValidator,489
+Sun Jan 14 02:01:59 AEDT 2018 com.google.javascript.jscomp.AstValidator,490
+Sun Jan 14 02:02:02 AEDT 2018 com.google.javascript.jscomp.AstValidator,491
+Sun Jan 14 02:02:05 AEDT 2018 Sun Jan 14 02:02:05 AEDT 2018 : com.google.javascript.jscomp.AstValidator,492=>Find no block
+Sun Jan 14 02:02:07 AEDT 2018 com.google.javascript.jscomp.MinimizeExitPoints,128
+Sun Jan 14 02:15:05 AEDT 2018 com.google.javascript.jscomp.MinimizeExitPoints,129
+Sun Jan 14 02:15:09 AEDT 2018 com.google.javascript.jscomp.MinimizeExitPoints,130
+Sun Jan 14 02:28:26 AEDT 2018 com.google.javascript.jscomp.MinimizeExitPoints,131
+Sun Jan 14 02:35:47 AEDT 2018 com.google.javascript.jscomp.MinimizeExitPoints,141
+Sun Jan 14 02:35:50 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,609
+Sun Jan 14 02:36:44 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,610
+Sun Jan 14 02:42:18 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,611
+Sun Jan 14 02:42:22 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,618
+Sun Jan 14 02:47:16 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,619
+Sun Jan 14 02:48:10 AEDT 2018 Sun Jan 14 02:48:10 AEDT 2018 : com.google.javascript.jscomp.LineNumberCheck,40=>Find no block
+Sun Jan 14 02:48:13 AEDT 2018 Sun Jan 14 02:48:13 AEDT 2018 : com.google.javascript.jscomp.LineNumberCheck,38=>Find no block
+Sun Jan 14 02:48:16 AEDT 2018 com.google.javascript.jscomp.LineNumberCheck,41
+Sun Jan 14 02:49:53 AEDT 2018 Sun Jan 14 02:49:53 AEDT 2018 : com.google.javascript.jscomp.LineNumberCheck,42=>Find no block
+Sun Jan 14 02:49:57 AEDT 2018 Sun Jan 14 02:49:57 AEDT 2018 : com.google.javascript.jscomp.LineNumberCheck,30=>Find no block
+Sun Jan 14 02:50:02 AEDT 2018 com.google.javascript.jscomp.LineNumberCheck,52
+Sun Jan 14 02:56:31 AEDT 2018 com.google.javascript.jscomp.LineNumberCheck,54
+Sun Jan 14 02:56:34 AEDT 2018 Sun Jan 14 02:56:34 AEDT 2018 : com.google.javascript.jscomp.LineNumberCheck,55=>Find no block
+Sun Jan 14 02:56:38 AEDT 2018 com.google.javascript.jscomp.LineNumberCheck,61
+Sun Jan 14 03:02:20 AEDT 2018 com.google.javascript.jscomp.LineNumberCheck,62
+Sun Jan 14 03:02:24 AEDT 2018 com.google.javascript.jscomp.LineNumberCheck,64
+Sun Jan 14 03:10:09 AEDT 2018 com.google.javascript.jscomp.LineNumberCheck,69
+Sun Jan 14 03:27:02 AEDT 2018 com.google.javascript.jscomp.LineNumberCheck,70
+Sun Jan 14 03:27:06 AEDT 2018 com.google.javascript.jscomp.LineNumberCheck,71
+Sun Jan 14 03:27:10 AEDT 2018 com.google.javascript.jscomp.LineNumberCheck,72
+Sun Jan 14 03:27:14 AEDT 2018 Sun Jan 14 03:27:14 AEDT 2018 : com.google.javascript.jscomp.LineNumberCheck,80=>Find no block
+Sun Jan 14 03:27:18 AEDT 2018 com.google.javascript.jscomp.AstValidator,138
+Sun Jan 14 03:31:05 AEDT 2018 com.google.javascript.jscomp.AstValidator,139
+Sun Jan 14 03:32:56 AEDT 2018 com.google.javascript.jscomp.AstValidator,495
+Sun Jan 14 03:42:35 AEDT 2018 com.google.javascript.jscomp.AstValidator,496
+Sun Jan 14 03:42:39 AEDT 2018 com.google.javascript.jscomp.AstValidator,497
+Sun Jan 14 03:53:12 AEDT 2018 Sun Jan 14 03:53:12 AEDT 2018 : com.google.javascript.jscomp.AstValidator,500=>Find no block
+Sun Jan 14 03:53:17 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,632
+Sun Jan 14 03:58:19 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,633
+Sun Jan 14 03:59:04 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,639
+Sun Jan 14 03:59:08 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,184
+Sun Jan 14 04:01:49 AEDT 2018 com.google.javascript.jscomp.MinimizeExitPoints,285
+Sun Jan 14 04:05:10 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,149
+Sun Jan 14 04:13:00 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,151
+Sun Jan 14 04:13:03 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,153
+Timeout time : 18/01/14 04:15

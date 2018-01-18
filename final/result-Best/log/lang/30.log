@@ -1,0 +1,2359 @@
+=================================================
+Project : lang_30	start : 18/01/14 06:50
+Current failed test : org.apache.commons.lang3.StringUtilsEqualsIndexOfTest::testContainsNone_CharArrayWithSupplementaryChars_purify_7 | 18/01/14 06:53
+Sun Jan 14 06:54:28 AEDT 2018 org.apache.commons.lang3.StringUtils,1685
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]==ch){
+return true;
+}
+
+Time : 18/01/14 06:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]==i){
+return false;
+}
+
+Time : 18/01/14 06:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ch=searchChars[j];
+if(searchChars[j]==i){
+return false;
+}
+
+Time : 18/01/14 06:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='Y'){
+return false;
+}
+
+Time : 18/01/14 06:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='Y'){
+return false;
+}
+
+Time : 18/01/14 06:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='T'){
+return false;
+}
+
+Time : 18/01/14 06:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='T'){
+return false;
+}
+
+Time : 18/01/14 06:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='y'){
+return false;
+}
+
+Time : 18/01/14 06:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='y'){
+return false;
+}
+
+Time : 18/01/14 06:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='t'){
+return false;
+}
+
+Time : 18/01/14 07:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='t'){
+return false;
+}
+
+Time : 18/01/14 07:00
+----------------------------------------
+Sun Jan 14 07:00:51 AEDT 2018 org.apache.commons.lang3.StringUtils,1674
+Sun Jan 14 07:02:01 AEDT 2018 org.apache.commons.lang3.StringUtils,1677
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars!=null||searchChars==null){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 07:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(EMPTY==null||EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 07:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null||EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 07:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(EMPTY!=null&&EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 07:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs!=null||searchChars==null){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 07:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(EMPTY!=null||searchChars==null){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 07:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs!=null||EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 07:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(EMPTY!=null||EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 07:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs!=null&&EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 07:09
+----------------------------------------
+Timeout time : 18/01/14 07:10
+Current failed test : org.apache.commons.lang3.StringUtilsEqualsIndexOfTest::testContainsNone_CharArrayWithSupplementaryChars_purify_8 | 18/01/14 07:10
+Sun Jan 14 07:11:15 AEDT 2018 org.apache.commons.lang3.StringUtils,1685
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]==ch){
+return true;
+}
+
+Time : 18/01/14 07:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]==i){
+return false;
+}
+
+Time : 18/01/14 07:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ch=searchChars[j];
+if(searchChars[j]==i){
+return false;
+}
+
+Time : 18/01/14 07:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='Y'){
+return false;
+}
+
+Time : 18/01/14 07:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='Y'){
+return false;
+}
+
+Time : 18/01/14 07:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='T'){
+return false;
+}
+
+Time : 18/01/14 07:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='T'){
+return false;
+}
+
+Time : 18/01/14 07:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='y'){
+return false;
+}
+
+Time : 18/01/14 07:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='y'){
+return false;
+}
+
+Time : 18/01/14 07:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='t'){
+return false;
+}
+
+Time : 18/01/14 07:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='t'){
+return false;
+}
+
+Time : 18/01/14 07:17
+----------------------------------------
+Sun Jan 14 07:17:38 AEDT 2018 org.apache.commons.lang3.StringUtils,1674
+Sun Jan 14 07:18:51 AEDT 2018 org.apache.commons.lang3.StringUtils,1677
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars!=null||searchChars==null){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 07:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(EMPTY==null||EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 07:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null||EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 07:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(EMPTY!=null&&EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 07:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs!=null||searchChars==null){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 07:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(EMPTY!=null||searchChars==null){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 07:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs!=null||EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 07:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(EMPTY!=null||EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 07:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs!=null&&EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 07:26
+----------------------------------------
+Timeout time : 18/01/14 07:27
+Current failed test : org.apache.commons.lang3.StringUtilsEqualsIndexOfTest::testIndexOfAnyBut_StringCharArrayWithSupplementaryChars_purify_1 | 18/01/14 07:27
+Sun Jan 14 07:27:59 AEDT 2018 org.apache.commons.lang3.StringUtils,1542
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<searchLen;j++){
+if(searchChars[j]==ch){
+continue outer;
+}
+return searchLen;
+}
+
+Time : 18/01/14 07:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<csLen;i++){
+char ch=cs.charAt(i);
+for(int j=0;j<searchLen;j++){
+if(searchChars[j]==ch){
+continue outer;
+}
+}
+return searchLen;
+}
+
+Time : 18/01/14 07:41
+----------------------------------------
+Sun Jan 14 07:42:33 AEDT 2018 org.apache.commons.lang3.StringUtils,1529
+Timeout time : 18/01/14 07:44
+Current failed test : org.apache.commons.lang3.StringUtilsEqualsIndexOfTest::testIndexOfAnyBut_StringCharArrayWithSupplementaryChars_purify_2 | 18/01/14 07:44
+Sun Jan 14 07:44:46 AEDT 2018 org.apache.commons.lang3.StringUtils,1542
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]==i){
+continue outer;
+}
+
+Time : 18/01/14 07:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ch=searchChars[j];
+if(searchChars[j]==i){
+continue outer;
+}
+
+Time : 18/01/14 07:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<searchLen;j++){
+if(searchChars[j]!=searchChars[i+j]){
+continue outer;
+}
+}
+
+Time : 18/01/14 07:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<searchLen;j++){
+if(searchChars[j]==i){
+continue outer;
+}
+}
+
+Time : 18/01/14 07:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=searchLen;j<searchLen;j++){
+if(searchChars[j]==ch){
+continue outer;
+}
+}
+
+Time : 18/01/14 07:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<csLen;i++){
+char ch=cs.charAt(i);
+for(int j=0;j<searchLen;j++){
+if(searchChars[j]!=searchChars[j+i]){
+continue outer;
+}
+}
+return i;
+}
+
+Time : 18/01/14 07:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<csLen;i++){
+char ch=cs.charAt(i);
+for(int j=0;j<searchLen;j++){
+if(searchChars[j]==ch){
+continue outer;
+}
+return 0;
+}
+return i;
+}
+
+Time : 18/01/14 07:57
+----------------------------------------
+Sun Jan 14 08:00:39 AEDT 2018 org.apache.commons.lang3.StringUtils,1529
+Timeout time : 18/01/14 08:00
+Current failed test : org.apache.commons.lang3.StringUtilsEqualsIndexOfTest::testIndexOfAnyBut_StringCharArrayWithSupplementaryChars_purify_4 | 18/01/14 08:00
+Sun Jan 14 08:01:31 AEDT 2018 org.apache.commons.lang3.StringUtils,1542
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]==i){
+continue outer;
+}
+
+Time : 18/01/14 08:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ch=searchChars[j];
+if(searchChars[j]==i){
+continue outer;
+}
+
+Time : 18/01/14 08:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<searchLen;j++){
+if(searchChars[j]!=searchChars[i+j]){
+continue outer;
+}
+}
+
+Time : 18/01/14 08:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<searchLen;j++){
+if(searchChars[j]==i){
+continue outer;
+}
+}
+
+Time : 18/01/14 08:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=searchLen;j<searchLen;j++){
+if(searchChars[j]==ch){
+continue outer;
+}
+}
+
+Time : 18/01/14 08:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<csLen;i++){
+char ch=cs.charAt(i);
+for(int j=0;j<searchLen;j++){
+if(searchChars[j]!=searchChars[j+i]){
+continue outer;
+}
+}
+return i;
+}
+
+Time : 18/01/14 08:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<csLen;i++){
+char ch=cs.charAt(i);
+for(int j=0;j<searchLen;j++){
+if(searchChars[j]==ch){
+continue outer;
+}
+return 0;
+}
+return i;
+}
+
+Time : 18/01/14 08:13
+----------------------------------------
+Sun Jan 14 08:17:30 AEDT 2018 org.apache.commons.lang3.StringUtils,1529
+Timeout time : 18/01/14 08:17
+Current failed test : org.apache.commons.lang3.StringUtilsEqualsIndexOfTest::testContainsAny_StringWithBadSupplementaryChars_purify_3 | 18/01/14 08:17
+Sun Jan 14 08:18:14 AEDT 2018 org.apache.commons.lang3.StringUtils,1498
+Sun Jan 14 08:18:24 AEDT 2018 org.apache.commons.lang3.StringUtils,1501
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars==null){
+return false;
+}
+return containsNone(cs,searchChars.toCharArray());
+
+Time : 18/01/14 08:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars==null){
+return true;
+}
+return containsNone(cs,searchChars.toCharArray());
+
+Time : 18/01/14 08:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null||searchChars==null){
+return false;
+}
+return containsNone(cs,searchChars.toCharArray());
+
+Time : 18/01/14 08:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null||searchChars==null){
+return true;
+}
+return containsNone(cs,searchChars.toCharArray());
+
+Time : 18/01/14 08:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars!=null){
+return false;
+}
+return containsAny(cs,searchChars.toCharArray());
+
+Time : 18/01/14 08:21
+----------------------------------------
+Sun Jan 14 08:21:57 AEDT 2018 org.apache.commons.lang3.StringUtils,1462
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return true;
+}
+}else {
+return false;
+}
+
+Time : 18/01/14 08:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return true;
+}
+return false;
+}else {
+return false;
+}
+
+Time : 18/01/14 08:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null||searchChars==null){
+return true;
+}
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return true;
+}
+}else {
+return false;
+}
+
+Time : 18/01/14 08:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null||searchChars==null){
+return true;
+}
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return true;
+}
+return false;
+}else {
+return false;
+}
+
+Time : 18/01/14 08:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null){
+return false;
+}
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return true;
+}
+}else {
+return false;
+}
+
+Time : 18/01/14 08:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null){
+return false;
+}
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return true;
+}
+return false;
+}else {
+return false;
+}
+
+Time : 18/01/14 08:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null||isEmpty(cs)){
+return false;
+}
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return true;
+}
+}else {
+return false;
+}
+
+Time : 18/01/14 08:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null||isEmpty(cs)){
+return false;
+}
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return true;
+}
+return false;
+}else {
+return false;
+}
+
+Time : 18/01/14 08:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return false;
+}
+}else {
+return false;
+}
+
+Time : 18/01/14 08:33
+----------------------------------------
+Timeout time : 18/01/14 08:34
+Current failed test : org.apache.commons.lang3.StringUtilsEqualsIndexOfTest::testContainsAny_StringCharArrayWithBadSupplementaryChars_purify_4 | 18/01/14 08:34
+Sun Jan 14 08:34:59 AEDT 2018 org.apache.commons.lang3.StringUtils,1462
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return true;
+}
+}else {
+return false;
+}
+
+Time : 18/01/14 08:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return true;
+}
+return false;
+}else {
+return false;
+}
+
+Time : 18/01/14 08:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null||searchChars==null){
+return true;
+}
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return true;
+}
+}else {
+return false;
+}
+
+Time : 18/01/14 08:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null||searchChars==null){
+return true;
+}
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return true;
+}
+return false;
+}else {
+return false;
+}
+
+Time : 18/01/14 08:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null){
+return false;
+}
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return true;
+}
+}else {
+return false;
+}
+
+Time : 18/01/14 08:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null){
+return false;
+}
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return true;
+}
+return false;
+}else {
+return false;
+}
+
+Time : 18/01/14 08:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null||isEmpty(cs)){
+return false;
+}
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return true;
+}
+}else {
+return false;
+}
+
+Time : 18/01/14 08:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null||isEmpty(cs)){
+return false;
+}
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return true;
+}
+return false;
+}else {
+return false;
+}
+
+Time : 18/01/14 08:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return false;
+}
+}else {
+return false;
+}
+
+Time : 18/01/14 08:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars==null||cs==null){
+return false;
+}
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return true;
+}
+}else {
+return false;
+}
+
+Time : 18/01/14 08:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs.length()==0){
+return true;
+}
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return true;
+}
+}else {
+return false;
+}
+
+Time : 18/01/14 08:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars==null||cs==null){
+return false;
+}
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return true;
+}
+return false;
+}else {
+return false;
+}
+
+Time : 18/01/14 08:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs.length()==0){
+return true;
+}
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return true;
+}
+return false;
+}else {
+return false;
+}
+
+Time : 18/01/14 08:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars==null||cs==null){
+return false;
+}
+if(cs.length()==0){
+return true;
+}
+if(i<csLast&&j<searchLast&&ch>=Character.MIN_HIGH_SURROGATE&&ch<=Character.MAX_HIGH_SURROGATE){
+if(searchChars[j+1]==cs.charAt(i+1)){
+return true;
+}
+}else {
+return false;
+}
+
+Time : 18/01/14 08:50
+----------------------------------------
+Timeout time : 18/01/14 08:51
+Current failed test : org.apache.commons.lang3.StringUtilsEqualsIndexOfTest::testContainsNone_CharArrayWithBadSupplementaryChars_purify_3 | 18/01/14 08:51
+Sun Jan 14 08:51:48 AEDT 2018 org.apache.commons.lang3.StringUtils,1685
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]==ch){
+return true;
+}
+
+Time : 18/01/14 08:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]==i){
+return false;
+}
+
+Time : 18/01/14 08:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ch=searchChars[j];
+if(searchChars[j]==i){
+return false;
+}
+
+Time : 18/01/14 08:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]!=searchChars[i+j]){
+return false;
+}
+
+Time : 18/01/14 08:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='Y'){
+return false;
+}
+
+Time : 18/01/14 08:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='Y'){
+return false;
+}
+
+Time : 18/01/14 08:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='T'){
+return false;
+}
+
+Time : 18/01/14 08:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='T'){
+return false;
+}
+
+Time : 18/01/14 08:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='y'){
+return false;
+}
+
+Time : 18/01/14 08:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='y'){
+return false;
+}
+
+Time : 18/01/14 08:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='t'){
+return false;
+}
+
+Time : 18/01/14 08:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='t'){
+return false;
+}
+
+Time : 18/01/14 08:58
+----------------------------------------
+Sun Jan 14 08:58:29 AEDT 2018 org.apache.commons.lang3.StringUtils,1674
+Sun Jan 14 08:59:40 AEDT 2018 org.apache.commons.lang3.StringUtils,1677
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars!=null||searchChars==null){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 09:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(EMPTY==null||EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 09:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null||EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 09:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(EMPTY!=null&&EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 09:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs!=null||searchChars==null){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 09:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(EMPTY!=null||searchChars==null){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 09:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs!=null||EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 09:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(EMPTY!=null||EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 09:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs!=null&&EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 09:07
+----------------------------------------
+Timeout time : 18/01/14 09:07
+Current failed test : org.apache.commons.lang3.StringUtilsEqualsIndexOfTest::testIndexOfAny_StringCharArrayWithSupplementaryChars_purify_2 | 18/01/14 09:07
+Sun Jan 14 09:08:33 AEDT 2018 org.apache.commons.lang3.StringUtils,1372
+Sun Jan 14 09:11:13 AEDT 2018 org.apache.commons.lang3.StringUtils,1375
+Sun Jan 14 09:18:25 AEDT 2018 org.apache.commons.lang3.StringUtils,1376
+Timeout time : 18/01/14 09:24
+Current failed test : org.apache.commons.lang3.StringUtilsEqualsIndexOfTest::testIndexOfAny_StringCharArrayWithSupplementaryChars_purify_4 | 18/01/14 09:24
+Sun Jan 14 09:25:22 AEDT 2018 org.apache.commons.lang3.StringUtils,1372
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(StringUtils.isEmpty(EMPTY)||ArrayUtils.isEmpty(searchChars)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 09:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(cs)||StringUtils.isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 09:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(StringUtils.isEmpty(EMPTY)||StringUtils.isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 09:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(StringUtils.isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 09:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(EMPTY)||ArrayUtils.isEmpty(searchChars)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 09:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(cs)||isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 09:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(EMPTY)||isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 09:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 09:29
+----------------------------------------
+Sun Jan 14 09:30:28 AEDT 2018 org.apache.commons.lang3.StringUtils,1375
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(StringUtils.isEmpty(EMPTY)||ArrayUtils.isEmpty(searchChars)){
+return INDEX_NOT_FOUND;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 09:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(cs)||StringUtils.isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 09:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(StringUtils.isEmpty(EMPTY)||StringUtils.isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 09:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(StringUtils.isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 09:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(EMPTY)||ArrayUtils.isEmpty(searchChars)){
+return INDEX_NOT_FOUND;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 09:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(cs)||isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 09:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(EMPTY)||isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 09:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 09:34
+----------------------------------------
+Sun Jan 14 09:40:01 AEDT 2018 org.apache.commons.lang3.StringUtils,1376
+Timeout time : 18/01/14 09:41
+Current failed test : org.apache.commons.lang3.StringUtilsEqualsIndexOfTest::testIndexOfAny_StringStringWithSupplementaryChars_purify_2 | 18/01/14 09:41
+Sun Jan 14 09:42:11 AEDT 2018 org.apache.commons.lang3.StringUtils,1412
+Sun Jan 14 09:45:02 AEDT 2018 org.apache.commons.lang3.StringUtils,1415
+Sun Jan 14 09:47:57 AEDT 2018 org.apache.commons.lang3.StringUtils,1372
+Sun Jan 14 09:50:34 AEDT 2018 org.apache.commons.lang3.StringUtils,1375
+Sun Jan 14 09:57:45 AEDT 2018 org.apache.commons.lang3.StringUtils,1376
+Timeout time : 18/01/14 09:58
+Current failed test : org.apache.commons.lang3.StringUtilsEqualsIndexOfTest::testIndexOfAny_StringStringWithSupplementaryChars_purify_4 | 18/01/14 09:58
+Sun Jan 14 09:59:02 AEDT 2018 org.apache.commons.lang3.StringUtils,1412
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(EMPTY)||isEmpty(searchChars)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 09:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(StringUtils.isEmpty(EMPTY)||StringUtils.isEmpty(searchChars)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 10:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(StringUtils.isEmpty(EMPTY)||isEmpty(searchChars)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 10:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(StringUtils.isEmpty(searchChars)||StringUtils.isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 10:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(cs)||StringUtils.isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 10:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(cs)||isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 10:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(searchChars)||isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 10:03
+----------------------------------------
+Sun Jan 14 10:03:54 AEDT 2018 org.apache.commons.lang3.StringUtils,1415
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(EMPTY)||isEmpty(searchChars)){
+return INDEX_NOT_FOUND;
+}
+return indexOfAny(cs,searchChars.toCharArray());
+
+Time : 18/01/14 10:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(StringUtils.isEmpty(EMPTY)||StringUtils.isEmpty(searchChars)){
+return INDEX_NOT_FOUND;
+}
+return indexOfAny(cs,searchChars.toCharArray());
+
+Time : 18/01/14 10:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(StringUtils.isEmpty(EMPTY)||isEmpty(searchChars)){
+return INDEX_NOT_FOUND;
+}
+return indexOfAny(cs,searchChars.toCharArray());
+
+Time : 18/01/14 10:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(StringUtils.isEmpty(searchChars)||StringUtils.isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+return indexOfAny(cs,searchChars.toCharArray());
+
+Time : 18/01/14 10:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(cs)||StringUtils.isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+return indexOfAny(cs,searchChars.toCharArray());
+
+Time : 18/01/14 10:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(cs)||isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+return indexOfAny(cs,searchChars.toCharArray());
+
+Time : 18/01/14 10:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(searchChars)||isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+return indexOfAny(cs,searchChars.toCharArray());
+
+Time : 18/01/14 10:07
+----------------------------------------
+Sun Jan 14 10:08:47 AEDT 2018 org.apache.commons.lang3.StringUtils,1372
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(StringUtils.isEmpty(EMPTY)||ArrayUtils.isEmpty(searchChars)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 10:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(cs)||StringUtils.isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 10:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(StringUtils.isEmpty(EMPTY)||StringUtils.isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 10:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(StringUtils.isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 10:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(EMPTY)||ArrayUtils.isEmpty(searchChars)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 10:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(cs)||isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 10:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(EMPTY)||isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 10:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+
+Time : 18/01/14 10:12
+----------------------------------------
+Sun Jan 14 10:13:48 AEDT 2018 org.apache.commons.lang3.StringUtils,1375
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(StringUtils.isEmpty(EMPTY)||ArrayUtils.isEmpty(searchChars)){
+return INDEX_NOT_FOUND;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 10:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isEmpty(cs)||StringUtils.isEmpty(EMPTY)){
+return INDEX_NOT_FOUND;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 10:14
+----------------------------------------
+Timeout time : 18/01/14 10:15
+Current failed test : org.apache.commons.lang3.StringUtilsEqualsIndexOfTest::testIndexOfAnyBut_StringStringWithSupplementaryChars_purify_1 | 18/01/14 10:15
+Sun Jan 14 10:15:50 AEDT 2018 org.apache.commons.lang3.StringUtils,1577
+Sun Jan 14 10:18:12 AEDT 2018 org.apache.commons.lang3.StringUtils,1570
+Sun Jan 14 10:23:24 AEDT 2018 org.apache.commons.lang3.StringUtils,1573
+Timeout time : 18/01/14 10:31
+Current failed test : org.apache.commons.lang3.StringUtilsEqualsIndexOfTest::testIndexOfAnyBut_StringStringWithSupplementaryChars_purify_2 | 18/01/14 10:31
+Sun Jan 14 10:32:34 AEDT 2018 org.apache.commons.lang3.StringUtils,1577
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars.indexOf(ClassUtils.INNER_CLASS_SEPARATOR_CHAR)<0){
+return i;
+}
+
+Time : 18/01/14 10:33
+----------------------------------------
+Sun Jan 14 10:35:14 AEDT 2018 org.apache.commons.lang3.StringUtils,1570
+Sun Jan 14 10:40:27 AEDT 2018 org.apache.commons.lang3.StringUtils,1573
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+str=stripStart(str,searchChars);
+for(int i=0;i<strLen;i++){
+char ch=str.charAt(i);
+if(searchChars.indexOf(ch)<0){
+return i;
+}
+}
+
+Time : 18/01/14 10:47
+----------------------------------------
+Timeout time : 18/01/14 10:48
+Current failed test : org.apache.commons.lang3.StringUtilsEqualsIndexOfTest::testIndexOfAnyBut_StringStringWithSupplementaryChars_purify_4 | 18/01/14 10:48
+Sun Jan 14 10:49:25 AEDT 2018 org.apache.commons.lang3.StringUtils,1577
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars.indexOf(ClassUtils.INNER_CLASS_SEPARATOR_CHAR)<0){
+return i;
+}
+
+Time : 18/01/14 10:50
+----------------------------------------
+Sun Jan 14 10:52:03 AEDT 2018 org.apache.commons.lang3.StringUtils,1570
+Sun Jan 14 10:57:14 AEDT 2018 org.apache.commons.lang3.StringUtils,1573
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+str=stripStart(str,searchChars);
+for(int i=0;i<strLen;i++){
+char ch=str.charAt(i);
+if(searchChars.indexOf(ch)<0){
+return i;
+}
+}
+
+Time : 18/01/14 11:04
+----------------------------------------
+Timeout time : 18/01/14 11:05
+Current failed test : org.apache.commons.lang3.StringUtilsEqualsIndexOfTest::testContainsNone_StringWithBadSupplementaryChars_purify_3 | 18/01/14 11:05
+Sun Jan 14 11:06:09 AEDT 2018 org.apache.commons.lang3.StringUtils,1715
+Sun Jan 14 11:07:09 AEDT 2018 org.apache.commons.lang3.StringUtils,1718
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null||invalidChars==null){
+return true;
+}
+return containsAny(cs,invalidChars.toCharArray());
+
+Time : 18/01/14 11:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null||invalidChars==null){
+return false;
+}
+return containsAny(cs,invalidChars.toCharArray());
+
+Time : 18/01/14 11:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null||invalidChars==null){
+return true;
+}
+return containsOnly(cs,invalidChars.toCharArray());
+
+Time : 18/01/14 11:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null||invalidChars==null){
+return false;
+}
+return containsOnly(cs,invalidChars.toCharArray());
+
+Time : 18/01/14 11:08
+----------------------------------------
+Sun Jan 14 11:10:45 AEDT 2018 org.apache.commons.lang3.StringUtils,1685
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]==ch){
+return true;
+}
+
+Time : 18/01/14 11:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]==i){
+return false;
+}
+
+Time : 18/01/14 11:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ch=searchChars[j];
+if(searchChars[j]==i){
+return false;
+}
+
+Time : 18/01/14 11:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]!=searchChars[i+j]){
+return false;
+}
+
+Time : 18/01/14 11:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='Y'){
+return false;
+}
+
+Time : 18/01/14 11:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='Y'){
+return false;
+}
+
+Time : 18/01/14 11:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='T'){
+return false;
+}
+
+Time : 18/01/14 11:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='T'){
+return false;
+}
+
+Time : 18/01/14 11:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='y'){
+return false;
+}
+
+Time : 18/01/14 11:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='y'){
+return false;
+}
+
+Time : 18/01/14 11:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='t'){
+return false;
+}
+
+Time : 18/01/14 11:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='t'){
+return false;
+}
+
+Time : 18/01/14 11:17
+----------------------------------------
+Sun Jan 14 11:17:24 AEDT 2018 org.apache.commons.lang3.StringUtils,1674
+Sun Jan 14 11:18:35 AEDT 2018 org.apache.commons.lang3.StringUtils,1677
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars!=null||searchChars==null){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 11:19
+----------------------------------------
+Timeout time : 18/01/14 11:22
+Current failed test : org.apache.commons.lang3.StringUtilsEqualsIndexOfTest::testContainsNone_StringWithSupplementaryChars_purify_7 | 18/01/14 11:22
+Sun Jan 14 11:22:52 AEDT 2018 org.apache.commons.lang3.StringUtils,1715
+Sun Jan 14 11:23:52 AEDT 2018 org.apache.commons.lang3.StringUtils,1718
+Sun Jan 14 11:26:19 AEDT 2018 org.apache.commons.lang3.StringUtils,1685
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]==ch){
+return true;
+}
+
+Time : 18/01/14 11:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]==i){
+return false;
+}
+
+Time : 18/01/14 11:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ch=searchChars[j];
+if(searchChars[j]==i){
+return false;
+}
+
+Time : 18/01/14 11:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='Y'){
+return false;
+}
+
+Time : 18/01/14 11:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='Y'){
+return false;
+}
+
+Time : 18/01/14 11:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='T'){
+return false;
+}
+
+Time : 18/01/14 11:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='T'){
+return false;
+}
+
+Time : 18/01/14 11:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='y'){
+return false;
+}
+
+Time : 18/01/14 11:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='y'){
+return false;
+}
+
+Time : 18/01/14 11:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='t'){
+return false;
+}
+
+Time : 18/01/14 11:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='t'){
+return false;
+}
+
+Time : 18/01/14 11:32
+----------------------------------------
+Sun Jan 14 11:32:42 AEDT 2018 org.apache.commons.lang3.StringUtils,1674
+Sun Jan 14 11:33:51 AEDT 2018 org.apache.commons.lang3.StringUtils,1677
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars!=null||searchChars==null){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 11:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(EMPTY==null||EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 11:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null||EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 11:38
+----------------------------------------
+Timeout time : 18/01/14 11:38
+Current failed test : org.apache.commons.lang3.StringUtilsEqualsIndexOfTest::testContainsNone_StringWithSupplementaryChars_purify_8 | 18/01/14 11:38
+Sun Jan 14 11:39:40 AEDT 2018 org.apache.commons.lang3.StringUtils,1715
+Sun Jan 14 11:40:42 AEDT 2018 org.apache.commons.lang3.StringUtils,1718
+Sun Jan 14 11:43:09 AEDT 2018 org.apache.commons.lang3.StringUtils,1685
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]==ch){
+return true;
+}
+
+Time : 18/01/14 11:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]==i){
+return false;
+}
+
+Time : 18/01/14 11:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ch=searchChars[j];
+if(searchChars[j]==i){
+return false;
+}
+
+Time : 18/01/14 11:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='Y'){
+return false;
+}
+
+Time : 18/01/14 11:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='Y'){
+return false;
+}
+
+Time : 18/01/14 11:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='T'){
+return false;
+}
+
+Time : 18/01/14 11:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='T'){
+return false;
+}
+
+Time : 18/01/14 11:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='y'){
+return false;
+}
+
+Time : 18/01/14 11:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='y'){
+return false;
+}
+
+Time : 18/01/14 11:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ch=='t'){
+return false;
+}
+
+Time : 18/01/14 11:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars[j]=='t'){
+return false;
+}
+
+Time : 18/01/14 11:49
+----------------------------------------
+Sun Jan 14 11:49:32 AEDT 2018 org.apache.commons.lang3.StringUtils,1674
+Sun Jan 14 11:50:43 AEDT 2018 org.apache.commons.lang3.StringUtils,1677
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(searchChars!=null||searchChars==null){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 11:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(EMPTY==null||EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 11:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cs==null||EMPTY.length()==0){
+return true;
+}
+int csLen=cs.length();
+int searchLen=searchChars.length;
+
+Time : 18/01/14 11:55
+----------------------------------------
+Timeout time : 18/01/14 11:55

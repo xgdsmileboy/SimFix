@@ -1,0 +1,321 @@
+=================================================
+Project : lang_6	start : 18/01/12 22:17
+Current failed test : org.apache.commons.lang3.StringUtilsTest::testEscapeSurrogatePairs | 18/01/12 22:17
+Fri Jan 12 22:18:24 AEDT 2018 org.apache.commons.lang3.StringEscapeUtils,556
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return UNESCAPE_JAVA.translate(input);
+
+Time : 18/01/12 22:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return UNESCAPE_ECMASCRIPT.translate(input);
+
+Time : 18/01/12 22:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return ESCAPE_HTML4.translate(input);
+
+Time : 18/01/12 22:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return ESCAPE_HTML3.translate(input);
+
+Time : 18/01/12 22:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return UNESCAPE_HTML4.translate(input);
+
+Time : 18/01/12 22:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return UNESCAPE_HTML3.translate(input);
+
+Time : 18/01/12 22:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return ESCAPE_XML.translate(input);
+
+Time : 18/01/12 22:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return UNESCAPE_XML.translate(input);
+
+Time : 18/01/12 22:23
+----------------------------------------
+Fri Jan 12 22:23:52 AEDT 2018 Fri Jan 12 22:23:52 AEDT 2018 : org.apache.commons.lang3.StringEscapeUtils,145=>Find no block
+Fri Jan 12 22:23:52 AEDT 2018 org.apache.commons.lang3.StringEscapeUtils,156
+Fri Jan 12 22:24:16 AEDT 2018 org.apache.commons.lang3.StringEscapeUtils,160
+Fri Jan 12 22:30:58 AEDT 2018 org.apache.commons.lang3.StringEscapeUtils,161
+Fri Jan 12 22:30:58 AEDT 2018 org.apache.commons.lang3.StringEscapeUtils,167
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index!=0){
+throw new IllegalStateException("CsvEscaper should never reach the [1] index");
+}
+if(StringUtils.containsNone(input.toString(),CSV_SEARCH_CHARS)){
+out.write(input.toString());
+}else {
+out.write(CSV_QUOTE);
+out.write(StringUtils.replace(input.toString(),CSV_QUOTE_STR,CSV_QUOTE_STR+CSV_QUOTE_STR));
+out.write(CSV_QUOTE);
+}
+return new StringBuilder(index).append(Character.toTitleCase(CSV_QUOTE_STR.charAt(0))).length();
+
+Time : 18/01/12 22:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index!=0){
+throw new IllegalStateException("CsvEscaper should never reach the [1] index");
+}
+if(StringUtils.containsNone(input.toString(),CSV_SEARCH_CHARS)){
+out.write(input.toString());
+}else {
+out.write(CSV_QUOTE);
+out.write(StringUtils.replace(input.toString(),CSV_QUOTE_STR,CSV_QUOTE_STR+CSV_QUOTE_STR));
+out.write(CSV_QUOTE);
+}
+return new StringBuilder(index).append(Character.toLowerCase(CSV_QUOTE_STR.charAt(0))).length();
+
+Time : 18/01/12 22:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index!=0){
+throw new IllegalStateException("CsvEscaper should never reach the [1] index");
+}
+if(StringUtils.containsNone(input.toString(),CSV_SEARCH_CHARS)){
+out.write(input.toString());
+}else {
+out.write(CSV_QUOTE);
+out.write(StringUtils.replace(input.toString(),CSV_QUOTE_STR,CSV_QUOTE_STR+CSV_QUOTE_STR));
+out.write(CSV_QUOTE);
+}
+return new StringBuilder(CSV_QUOTE_STR).reverse().length();
+
+Time : 18/01/12 22:42
+----------------------------------------
+Fri Jan 12 23:02:05 AEDT 2018 Fri Jan 12 23:02:05 AEDT 2018 : org.apache.commons.lang3.StringEscapeUtils,268=>Find no block
+Fri Jan 12 23:02:05 AEDT 2018 org.apache.commons.lang3.text.translate.EntityArrays,34
+Fri Jan 12 23:02:35 AEDT 2018 org.apache.commons.lang3.text.translate.EntityArrays,138
+Fri Jan 12 23:03:03 AEDT 2018 org.apache.commons.lang3.text.translate.EntityArrays,147
+Fri Jan 12 23:03:31 AEDT 2018 org.apache.commons.lang3.text.translate.EntityArrays,349
+Fri Jan 12 23:03:59 AEDT 2018 org.apache.commons.lang3.text.translate.EntityArrays,358
+Fri Jan 12 23:04:28 AEDT 2018 org.apache.commons.lang3.text.translate.EntityArrays,370
+Fri Jan 12 23:04:56 AEDT 2018 org.apache.commons.lang3.text.translate.EntityArrays,377
+Fri Jan 12 23:05:24 AEDT 2018 org.apache.commons.lang3.text.translate.EntityArrays,386
+Fri Jan 12 23:05:53 AEDT 2018 org.apache.commons.lang3.text.translate.EntityArrays,395
+Fri Jan 12 23:06:21 AEDT 2018 org.apache.commons.lang3.text.translate.EntityArrays,408
+Fri Jan 12 23:06:49 AEDT 2018 org.apache.commons.lang3.text.translate.EntityArrays,417
+Fri Jan 12 23:12:49 AEDT 2018 org.apache.commons.lang3.text.translate.EntityArrays,418
+Fri Jan 12 23:17:44 AEDT 2018 org.apache.commons.lang3.text.translate.EntityArrays,419
+Fri Jan 12 23:17:44 AEDT 2018 org.apache.commons.lang3.text.translate.EntityArrays,420
+Fri Jan 12 23:17:44 AEDT 2018 org.apache.commons.lang3.text.translate.EntityArrays,422
+Fri Jan 12 23:17:45 AEDT 2018 org.apache.commons.lang3.StringUtils,1737
+Fri Jan 12 23:23:00 AEDT 2018 org.apache.commons.lang3.StringUtils,1740
+Fri Jan 12 23:42:15 AEDT 2018 org.apache.commons.lang3.StringUtils,1741
+Sat Jan 13 00:00:58 AEDT 2018 org.apache.commons.lang3.StringUtils,1742
+Sat Jan 13 00:22:09 AEDT 2018 org.apache.commons.lang3.StringUtils,1743
+Sat Jan 13 00:22:10 AEDT 2018 org.apache.commons.lang3.StringUtils,1744
+Sat Jan 13 01:08:15 AEDT 2018 org.apache.commons.lang3.StringUtils,1745
+Sat Jan 13 01:24:14 AEDT 2018 org.apache.commons.lang3.StringUtils,1746
+Sat Jan 13 01:24:16 AEDT 2018 org.apache.commons.lang3.StringUtils,1747
+Sat Jan 13 01:24:18 AEDT 2018 org.apache.commons.lang3.StringUtils,1763
+Sat Jan 13 01:35:39 AEDT 2018 org.apache.commons.lang3.ArrayUtils,320
+Sat Jan 13 01:36:16 AEDT 2018 org.apache.commons.lang3.ArrayUtils,323
+Sat Jan 13 01:37:18 AEDT 2018 org.apache.commons.lang3.text.translate.CharSequenceTranslator,108
+Sat Jan 13 01:55:23 AEDT 2018 org.apache.commons.lang3.text.translate.CharSequenceTranslator,109
+Sat Jan 13 01:55:25 AEDT 2018 org.apache.commons.lang3.text.translate.CharSequenceTranslator,110
+Sat Jan 13 01:55:26 AEDT 2018 org.apache.commons.lang3.text.translate.CharSequenceTranslator,111
+Sat Jan 13 01:55:28 AEDT 2018 Sat Jan 13 01:55:28 AEDT 2018 : org.apache.commons.lang3.text.translate.AggregateTranslator,40=>Find no block
+Sat Jan 13 01:55:30 AEDT 2018 org.apache.commons.lang3.text.translate.AggregateTranslator,41
+Sat Jan 13 01:56:20 AEDT 2018 Sat Jan 13 01:56:20 AEDT 2018 : org.apache.commons.lang3.text.translate.AggregateTranslator,42=>Find no block
+Sat Jan 13 01:56:22 AEDT 2018 Sat Jan 13 01:56:22 AEDT 2018 : org.apache.commons.lang3.text.translate.NumericEntityUnescaper,35=>Find no block
+Sat Jan 13 01:56:23 AEDT 2018 Sat Jan 13 01:56:23 AEDT 2018 : org.apache.commons.lang3.text.translate.NumericEntityUnescaper,35=>Find no block
+Sat Jan 13 01:56:25 AEDT 2018 Sat Jan 13 01:56:25 AEDT 2018 : org.apache.commons.lang3.text.translate.OctalUnescaper,34=>Find no block
+Sat Jan 13 01:56:27 AEDT 2018 Sat Jan 13 01:56:27 AEDT 2018 : org.apache.commons.lang3.text.translate.LookupTranslator,40=>Find no block
+Sat Jan 13 01:56:29 AEDT 2018 org.apache.commons.lang3.text.translate.LookupTranslator,41
+Sat Jan 13 01:57:01 AEDT 2018 org.apache.commons.lang3.text.translate.LookupTranslator,42
+Sat Jan 13 01:57:03 AEDT 2018 org.apache.commons.lang3.text.translate.LookupTranslator,43
+Sat Jan 13 02:12:29 AEDT 2018 org.apache.commons.lang3.text.translate.LookupTranslator,44
+Sat Jan 13 02:12:31 AEDT 2018 org.apache.commons.lang3.text.translate.LookupTranslator,45
+Sat Jan 13 02:12:33 AEDT 2018 org.apache.commons.lang3.text.translate.LookupTranslator,46
+Sat Jan 13 02:12:35 AEDT 2018 org.apache.commons.lang3.text.translate.LookupTranslator,47
+Sat Jan 13 02:12:36 AEDT 2018 org.apache.commons.lang3.text.translate.LookupTranslator,48
+Sat Jan 13 02:12:38 AEDT 2018 org.apache.commons.lang3.text.translate.LookupTranslator,49
+Sat Jan 13 02:12:39 AEDT 2018 org.apache.commons.lang3.text.translate.LookupTranslator,51
+Sat Jan 13 02:12:41 AEDT 2018 org.apache.commons.lang3.text.translate.LookupTranslator,52
+Sat Jan 13 02:12:44 AEDT 2018 org.apache.commons.lang3.text.translate.LookupTranslator,56
+Sat Jan 13 02:17:09 AEDT 2018 org.apache.commons.lang3.text.translate.LookupTranslator,57
+Sat Jan 13 02:17:11 AEDT 2018 Sat Jan 13 02:17:11 AEDT 2018 : org.apache.commons.lang3.text.translate.LookupTranslator,58=>Find no block
+Sat Jan 13 02:17:12 AEDT 2018 org.apache.commons.lang3.text.translate.UnicodeEscaper,85
+Sat Jan 13 02:17:17 AEDT 2018 Sat Jan 13 02:17:17 AEDT 2018 : org.apache.commons.lang3.text.translate.UnicodeEscaper,51=>Find no block
+Sat Jan 13 02:17:19 AEDT 2018 org.apache.commons.lang3.text.translate.UnicodeEscaper,52
+Sat Jan 13 02:17:24 AEDT 2018 org.apache.commons.lang3.text.translate.UnicodeEscaper,53
+Sat Jan 13 02:17:25 AEDT 2018 org.apache.commons.lang3.text.translate.UnicodeEscaper,54
+Sat Jan 13 02:17:27 AEDT 2018 Sat Jan 13 02:17:27 AEDT 2018 : org.apache.commons.lang3.text.translate.UnicodeEscaper,55=>Find no block
+Sat Jan 13 02:17:29 AEDT 2018 Sat Jan 13 02:17:29 AEDT 2018 : org.apache.commons.lang3.text.translate.NumericEntityUnescaper,56=>Find no block
+Sat Jan 13 02:17:30 AEDT 2018 org.apache.commons.lang3.text.translate.NumericEntityUnescaper,57
+Sat Jan 13 02:20:48 AEDT 2018 org.apache.commons.lang3.text.translate.NumericEntityUnescaper,60
+Sat Jan 13 02:20:49 AEDT 2018 Sat Jan 13 02:20:49 AEDT 2018 : org.apache.commons.lang3.text.translate.NumericEntityUnescaper,62=>Find no block
+Sat Jan 13 02:20:51 AEDT 2018 Sat Jan 13 02:20:51 AEDT 2018 : org.apache.commons.lang3.text.translate.UnicodeUnescaper,30=>Find no block
+Sat Jan 13 02:20:52 AEDT 2018 Sat Jan 13 02:20:52 AEDT 2018 : org.apache.commons.lang3.text.translate.CodePointTranslator,29=>Find no block
+Sat Jan 13 02:20:54 AEDT 2018 Sat Jan 13 02:20:54 AEDT 2018 : org.apache.commons.lang3.text.translate.CharSequenceTranslator,32=>Find no block
+Sat Jan 13 02:20:56 AEDT 2018 org.apache.commons.lang3.text.translate.CharSequenceTranslator,94
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int pt=0;pt<consumed;pt++){
+pos+=pos+=consumed;
+}
+
+Time : 18/01/13 02:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int pt=0;pt<consumed;pt++){
+pt+=pos+=consumed;
+}
+
+Time : 18/01/13 02:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int pt=0;pt<consumed;pt++){
+pt++;
+pos+=Character.charCount(Character.codePointAt(input,pos));
+}
+
+Time : 18/01/13 02:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int pt=0;pt<consumed;pt++){
+pt++;
+pos+=pos+=consumed;
+}
+
+Time : 18/01/13 02:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int pt=0;pt<consumed;pt++){
+pos+=pos+=2;
+}
+
+Time : 18/01/13 02:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int pt=0;pt<consumed;pt++){
+pos+=pos+=1;
+}
+
+Time : 18/01/13 02:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int pt=0;pt<consumed;pt++){
+pos=1;
+pos+=Character.charCount(Character.codePointAt(input,pos));
+}
+
+Time : 18/01/13 02:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int pt=0;pt<consumed;pt++){
+pos+=pos+=consumed*2;
+}
+
+Time : 18/01/13 02:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int pt=0;pt<consumed;pt++){
+pt+=pos+=consumed*2;
+}
+
+Time : 18/01/13 02:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int pt=0;pt<consumed;pt++){
+pt++;
+pos=Character.charCount(Character.codePointAt(input,pos));
+}
+
+Time : 18/01/13 02:43
+----------------------------------------
+Sat Jan 13 02:54:11 AEDT 2018 org.apache.commons.lang3.text.translate.CharSequenceTranslator,95
+Sat Jan 13 02:54:12 AEDT 2018 org.apache.commons.lang3.text.translate.CharSequenceTranslator,54
+Sat Jan 13 02:54:16 AEDT 2018 org.apache.commons.lang3.text.translate.CharSequenceTranslator,58
+Sat Jan 13 02:55:09 AEDT 2018 org.apache.commons.lang3.text.translate.CharSequenceTranslator,59
+Sat Jan 13 02:55:12 AEDT 2018 org.apache.commons.lang3.text.translate.CharSequenceTranslator,76
+Sat Jan 13 02:55:16 AEDT 2018 org.apache.commons.lang3.text.translate.CharSequenceTranslator,79
+Sat Jan 13 02:55:30 AEDT 2018 org.apache.commons.lang3.text.translate.CharSequenceTranslator,82
+Sat Jan 13 03:03:28 AEDT 2018 org.apache.commons.lang3.text.translate.CharSequenceTranslator,83
+Sat Jan 13 03:03:30 AEDT 2018 org.apache.commons.lang3.text.translate.CharSequenceTranslator,84
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(consumed==len){
+char[] c=Character.toChars(Character.codePointAt(input,pos));
+pos=pos-1;
+pos=c.length;
+continue;
+}
+
+Time : 18/01/13 03:07
+----------------------------------------
+Timeout time : 18/01/13 03:18

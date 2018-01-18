@@ -1,0 +1,212 @@
+=================================================
+Project : lang_38	start : 18/01/14 00:40
+Current failed test : org.apache.commons.lang3.time.FastDateFormatTest::testLang538 | 18/01/14 00:40
+Sun Jan 14 00:41:20 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,642
+Sun Jan 14 00:42:36 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,643
+Sun Jan 14 00:43:34 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,872
+Sun Jan 14 00:44:06 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,873
+Sun Jan 14 00:44:07 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,182
+Sun Jan 14 00:44:42 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1300
+Sun Jan 14 00:52:16 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1301
+Sun Jan 14 00:52:17 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1303
+Sun Jan 14 01:02:53 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1304
+Sun Jan 14 01:02:54 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,738
+Sun Jan 14 01:13:05 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,743
+Sun Jan 14 01:13:06 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,639
+Sun Jan 14 01:14:13 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,640
+Sun Jan 14 01:15:04 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,633
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case 'H' :
+rule=selectNumberRule(Calendar.DAY_OF_MONTH,tokenLen);
+break;
+
+
+Time : 18/01/14 01:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case 'H' :
+rule=selectNumberRule(Calendar.SECOND,tokenLen);
+break;
+
+
+Time : 18/01/14 01:16
+----------------------------------------
+Sun Jan 14 01:16:50 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,634
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case 'H' :
+rule=selectNumberRule(Calendar.DAY_OF_MONTH,tokenLen);
+break;
+
+case 'm' :
+
+
+Time : 18/01/14 01:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case 'H' :
+rule=selectNumberRule(Calendar.SECOND,tokenLen);
+break;
+
+case 'm' :
+
+
+Time : 18/01/14 01:17
+----------------------------------------
+Sun Jan 14 01:18:19 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,636
+Sun Jan 14 01:19:33 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,637
+Sun Jan 14 01:20:31 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,621
+Sun Jan 14 01:22:07 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,627
+Sun Jan 14 01:23:15 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,628
+Sun Jan 14 01:24:06 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1416
+Sun Jan 14 01:24:09 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,620
+Sun Jan 14 01:24:09 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,549
+Sun Jan 14 01:24:38 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,618
+Sun Jan 14 01:25:53 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,610
+Sun Jan 14 01:26:37 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,773
+Sun Jan 14 01:26:55 AEDT 2018 Sun Jan 14 01:26:55 AEDT 2018 : org.apache.commons.lang3.time.FastDateFormat,1272=>Find no block
+Sun Jan 14 01:26:56 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1273
+Sun Jan 14 01:29:10 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1277
+Sun Jan 14 01:31:42 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1278
+Sun Jan 14 01:31:43 AEDT 2018 Sun Jan 14 01:31:43 AEDT 2018 : org.apache.commons.lang3.time.FastDateFormat,1279=>Find no block
+Sun Jan 14 01:31:44 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1285
+Sun Jan 14 01:31:47 AEDT 2018 Sun Jan 14 01:31:47 AEDT 2018 : org.apache.commons.lang3.time.FastDateFormat,1332=>Find no block
+Sun Jan 14 01:31:48 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1333
+Sun Jan 14 01:32:05 AEDT 2018 Sun Jan 14 01:32:05 AEDT 2018 : org.apache.commons.lang3.time.FastDateFormat,1334=>Find no block
+Sun Jan 14 01:32:06 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1340
+Sun Jan 14 01:32:07 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,609
+Sun Jan 14 01:32:08 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,616
+Sun Jan 14 01:32:40 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,771
+Sun Jan 14 01:32:41 AEDT 2018 Sun Jan 14 01:32:41 AEDT 2018 : org.apache.commons.lang3.time.FastDateFormat,1083=>Find no block
+Sun Jan 14 01:32:42 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1084
+Sun Jan 14 01:32:56 AEDT 2018 Sun Jan 14 01:32:56 AEDT 2018 : org.apache.commons.lang3.time.FastDateFormat,1085=>Find no block
+Sun Jan 14 01:32:58 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1091
+Sun Jan 14 01:33:00 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,216
+Sun Jan 14 01:33:38 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,217
+Sun Jan 14 01:33:39 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,218
+Sun Jan 14 01:33:40 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,683
+Sun Jan 14 01:40:41 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,684
+Sun Jan 14 01:40:42 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,685
+Sun Jan 14 01:40:43 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,730
+Sun Jan 14 01:48:49 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,732
+Sun Jan 14 01:48:50 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,734
+Sun Jan 14 01:53:38 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,735
+Sun Jan 14 01:53:43 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,737
+Sun Jan 14 01:53:44 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,745
+Sun Jan 14 01:53:45 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,747
+Sun Jan 14 01:53:46 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,748
+Sun Jan 14 01:53:47 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,750
+Sun Jan 14 01:53:48 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,558
+Sun Jan 14 02:07:23 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,559
+Sun Jan 14 02:07:24 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,561
+Sun Jan 14 02:07:25 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,562
+Sun Jan 14 02:07:26 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,563
+Sun Jan 14 02:07:26 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,566
+Sun Jan 14 02:07:26 AEDT 2018 Sun Jan 14 02:07:26 AEDT 2018 : org.apache.commons.lang3.time.FastDateFormat,567=>Find no block
+Sun Jan 14 02:07:26 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,578
+Sun Jan 14 02:07:27 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,579
+Sun Jan 14 02:07:28 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,581
+Sun Jan 14 02:07:29 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,582
+Sun Jan 14 02:07:31 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,583
+Sun Jan 14 02:07:32 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,584
+Sun Jan 14 02:07:34 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,585
+Sun Jan 14 02:07:35 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,586
+Sun Jan 14 02:10:21 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,588
+Sun Jan 14 02:13:41 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,589
+Sun Jan 14 02:13:42 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,591
+Sun Jan 14 02:37:42 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,592
+Sun Jan 14 02:38:23 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,593
+Sun Jan 14 02:38:24 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,594
+Sun Jan 14 02:43:13 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,596
+Sun Jan 14 02:53:23 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,597
+Sun Jan 14 02:53:24 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,602
+Sun Jan 14 02:55:26 AEDT 2018 Sun Jan 14 02:55:26 AEDT 2018 : org.apache.commons.lang3.time.FastDateFormat,604=>Find no block
+Sun Jan 14 02:55:27 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,694
+Sun Jan 14 03:01:20 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,697
+Sun Jan 14 03:26:30 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,708
+Sun Jan 14 03:30:50 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,710
+Sun Jan 14 03:30:51 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,711
+Sun Jan 14 03:37:26 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,713
+Sun Jan 14 03:37:27 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,714
+Sun Jan 14 03:44:23 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,717
+Sun Jan 14 03:48:40 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,719
+Sun Jan 14 03:48:41 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,720
+Sun Jan 14 03:48:42 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,721
+Sun Jan 14 03:48:43 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,722
+Sun Jan 14 03:48:44 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,723
+Sun Jan 14 03:48:45 AEDT 2018 Sun Jan 14 03:48:45 AEDT 2018 : org.apache.commons.lang3.time.FastDateFormat,727=>Find no block
+Sun Jan 14 03:48:47 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,755
+Sun Jan 14 03:53:21 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,756
+Sun Jan 14 03:53:22 AEDT 2018 Sun Jan 14 03:53:22 AEDT 2018 : org.apache.commons.lang3.time.FastDateFormat,767=>Find no block
+Sun Jan 14 03:53:23 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,535
+Sun Jan 14 03:53:39 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,536
+Sun Jan 14 03:53:56 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,539
+Sun Jan 14 03:54:29 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,541
+Sun Jan 14 03:55:11 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,542
+Sun Jan 14 03:55:37 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,545
+Sun Jan 14 03:56:15 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,547
+Sun Jan 14 03:56:53 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,548
+Sun Jan 14 03:56:55 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,551
+Sun Jan 14 03:57:28 AEDT 2018 Sun Jan 14 03:57:28 AEDT 2018 : org.apache.commons.lang3.time.FastDateFormat,552=>Find no block
+Sun Jan 14 03:57:29 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,213
+Sun Jan 14 03:59:13 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,214
+Sun Jan 14 03:59:14 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,215
+Sun Jan 14 03:59:15 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,220
+Sun Jan 14 03:59:17 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1002
+Sun Jan 14 03:59:38 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1003
+Sun Jan 14 03:59:39 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1004
+Sun Jan 14 03:59:40 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1005
+Sun Jan 14 03:59:41 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1006
+Sun Jan 14 03:59:42 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1007
+Sun Jan 14 03:59:43 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1008
+Sun Jan 14 03:59:44 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1423
+Sun Jan 14 04:00:14 AEDT 2018 Sun Jan 14 04:00:14 AEDT 2018 : org.apache.commons.lang3.time.FastDateFormat,1424=>Find no block
+Sun Jan 14 04:00:15 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1430
+Sun Jan 14 04:01:30 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1431
+Sun Jan 14 04:01:31 AEDT 2018 Sun Jan 14 04:01:31 AEDT 2018 : org.apache.commons.lang3.time.FastDateFormat,1432=>Find no block
+Sun Jan 14 04:01:32 AEDT 2018 org.apache.commons.lang3.Validate,121
+Sun Jan 14 04:02:21 AEDT 2018 Sun Jan 14 04:02:21 AEDT 2018 : org.apache.commons.lang3.Validate,124=>Find no block
+Sun Jan 14 04:02:22 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1310
+Sun Jan 14 04:16:58 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1311
+Sun Jan 14 04:16:59 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1098
+Sun Jan 14 04:18:17 AEDT 2018 Sun Jan 14 04:18:17 AEDT 2018 : org.apache.commons.lang3.time.FastDateFormat,1099=>Find no block
+Sun Jan 14 04:18:18 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1347
+Sun Jan 14 04:18:49 AEDT 2018 Sun Jan 14 04:18:49 AEDT 2018 : org.apache.commons.lang3.time.FastDateFormat,1348=>Find no block
+Sun Jan 14 04:18:50 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1354
+Sun Jan 14 04:22:13 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1355
+Sun Jan 14 04:22:14 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1356
+Sun Jan 14 04:22:15 AEDT 2018 Sun Jan 14 04:22:15 AEDT 2018 : org.apache.commons.lang3.time.FastDateFormat,1360=>Find no block
+Sun Jan 14 04:22:16 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,832
+Sun Jan 14 04:23:25 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,871
+Sun Jan 14 04:23:26 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,875
+Sun Jan 14 04:24:03 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1292
+Sun Jan 14 04:24:04 AEDT 2018 Sun Jan 14 04:24:04 AEDT 2018 : org.apache.commons.lang3.time.FastDateFormat,1293=>Find no block
+Sun Jan 14 04:24:05 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1299
+Sun Jan 14 05:16:59 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1307
+Sun Jan 14 05:17:00 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1313
+Sun Jan 14 05:17:01 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,1316
+Sun Jan 14 05:27:28 AEDT 2018 Sun Jan 14 05:27:28 AEDT 2018 : org.apache.commons.lang3.time.FastDateFormat,1318=>Find no block
+Sun Jan 14 05:27:29 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,887
+Sun Jan 14 05:40:13 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,888
+Sun Jan 14 05:40:14 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,889
+Sun Jan 14 05:40:15 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,890
+Sun Jan 14 05:40:16 AEDT 2018 org.apache.commons.lang3.time.FastDateFormat,892
+Sun Jan 14 05:40:17 AEDT 2018 org.apache.commons.lang3.Validate,68
+Sun Jan 14 05:40:19 AEDT 2018 Sun Jan 14 05:40:19 AEDT 2018 : org.apache.commons.lang3.Validate,69=>Find no block
+Sun Jan 14 05:40:20 AEDT 2018 org.apache.commons.lang3.Validate,95
+Sun Jan 14 05:41:14 AEDT 2018 org.apache.commons.lang3.Validate,96
+Sun Jan 14 05:41:15 AEDT 2018 Sun Jan 14 05:41:15 AEDT 2018 : org.apache.commons.lang3.Validate,98=>Find no block
+Sun Jan 14 05:41:16 AEDT 2018 org.apache.commons.lang3.Validate,122
+Sun Jan 14 05:41:17 AEDT 2018 org.apache.commons.lang3.Validate,147
+Timeout time : 18/01/14 05:41

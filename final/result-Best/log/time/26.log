@@ -1,0 +1,911 @@
+=================================================
+Project : time_26	start : 18/01/15 20:16
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testWithSecondOfMinuteInDstChange_purify_2 | 18/01/15 20:18
+Mon Jan 15 20:20:11 EST 2018 org.joda.time.DateTime,1678
+Mon Jan 15 20:20:37 EST 2018 Mon Jan 15 20:20:37 EST 2018 : org.joda.time.DateTime,220=>Find no block
+Mon Jan 15 20:20:37 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2686
+Mon Jan 15 20:23:43 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2687
+Mon Jan 15 20:23:43 EST 2018 org.joda.time.DateTime,219
+Mon Jan 15 20:24:09 EST 2018 org.joda.time.format.DateTimeParserBucket,335
+Mon Jan 15 20:24:46 EST 2018 org.joda.time.format.DateTimeParserBucket,336
+Mon Jan 15 20:24:46 EST 2018 Mon Jan 15 20:24:46 EST 2018 : org.joda.time.base.BaseDateTime,151=>Find no block
+Mon Jan 15 20:24:46 EST 2018 org.joda.time.base.BaseDateTime,148
+Mon Jan 15 20:27:53 EST 2018 org.joda.time.base.BaseDateTime,149
+Mon Jan 15 20:27:53 EST 2018 org.joda.time.base.BaseDateTime,150
+Mon Jan 15 20:27:53 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2243
+Mon Jan 15 20:36:00 EST 2018 org.joda.time.base.BaseDateTime,146
+Mon Jan 15 20:36:00 EST 2018 org.joda.time.base.BaseDateTime,147
+Mon Jan 15 20:36:01 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2242
+Mon Jan 15 20:36:01 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2289
+Mon Jan 15 20:38:44 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2290
+Mon Jan 15 20:38:44 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2291
+Mon Jan 15 20:38:44 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2248
+Timeout time : 18/01/15 20:50
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testBug2182444_ausNSW_purify_8 | 18/01/15 20:50
+Mon Jan 15 20:51:45 EST 2018 org.joda.time.DateTime,1646
+Mon Jan 15 20:52:11 EST 2018 org.joda.time.DateTime,518
+Mon Jan 15 20:53:08 EST 2018 org.joda.time.DateTime,519
+Mon Jan 15 20:53:57 EST 2018 org.joda.time.DateTime,522
+Mon Jan 15 20:53:57 EST 2018 org.joda.time.base.AbstractInstant,177
+Mon Jan 15 20:53:58 EST 2018 org.joda.time.tz.ZoneInfoProvider,162
+Mon Jan 15 20:54:31 EST 2018 org.joda.time.chrono.GregorianChronology,171
+Mon Jan 15 20:54:31 EST 2018 org.joda.time.tz.CachedDateTimeZone,210
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(iNextInfo==null||iPeriodStart<iNextInfo.iPeriodStart){
+if(iOffset==Integer.MIN_VALUE){
+iOffset=iZoneRef.getOffset(iPeriodStart);
+}
+return iOffset;
+}
+
+Time : 18/01/15 20:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(iNextInfo==null||iPeriodStart<iNextInfo.iPeriodStart){
+if(iOffset==Integer.MIN_VALUE){
+iOffset=iZoneRef.getOffset(iPeriodStart);
+}
+return iOffset;
+}
+return iNextInfo.getOffset(millis);
+
+Time : 18/01/15 20:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(iNameKey==null||millis<iNextInfo.iPeriodStart){
+if(iOffset==Integer.MIN_VALUE){
+iOffset=iZoneRef.getOffset(iPeriodStart);
+}
+return iOffset;
+}
+return iNextInfo.getOffset(millis);
+
+Time : 18/01/15 20:59
+----------------------------------------
+Mon Jan 15 21:00:08 EST 2018 org.joda.time.chrono.BasicChronology,144
+Mon Jan 15 21:00:24 EST 2018 org.joda.time.chrono.GregorianChronology,100
+Mon Jan 15 21:00:57 EST 2018 Mon Jan 15 21:00:57 EST 2018 : org.joda.time.DateTime,472=>Find no block
+Mon Jan 15 21:00:57 EST 2018 org.joda.time.chrono.ZonedChronology,474
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long localInstant=iZone.convertUTCToLocal(instant);
+localInstant=iField.set(localInstant,value);
+long result=iZone.convertLocalToUTC(localInstant,false);
+if(get(result)!=value){
+throw new IllegalFieldValueException(iField.getType(),new Integer(value),"Illegal instant due to time zone offset transition: "+DateTimeFormat.forPattern("yyyy-MM-dd\'T\'HH:mm:ss.SSS").print(new Instant(localInstant)));
+}
+return instant;
+
+Time : 18/01/15 21:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long localInstant=iZone.convertUTCToLocal(instant);
+localInstant=iField.set(localInstant,value);
+long result=iZone.convertLocalToUTC(localInstant,false);
+if(get(result)!=value){
+throw new IllegalFieldValueException(iField.getType(),new Integer(value),"Illegal instant due to time zone offset transition: "+DateTimeFormat.forPattern("yyyy-MM-dd\'T\'HH:mm:ss.SSS").print(new Instant(localInstant)));
+}
+result=iField.add(instant+getOffsetToAdd(result),value);
+return instant;
+
+Time : 18/01/15 21:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long localInstant=iZone.convertUTCToLocal(instant);
+localInstant=iField.set(localInstant,value);
+long result=iZone.convertLocalToUTC(localInstant,false);
+if(get(result)!=value){
+throw new IllegalArgumentException("Illegal instant due to time zone offset transition: "+DateTimeFormat.forPattern("yyyy-MM-dd\'T\'HH:mm:ss.SSS").print(new Instant(result)));
+}
+return instant;
+
+Time : 18/01/15 21:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long localInstant=iZone.convertUTCToLocal(instant);
+localInstant=iField.set(localInstant,value);
+long result=iZone.convertLocalToUTC(localInstant,false);
+if(get(result)!=value){
+throw new IllegalArgumentException("Specified date does not exist");
+}
+return instant;
+
+Time : 18/01/15 21:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long localInstant=iZone.convertUTCToLocal(instant);
+localInstant=iField.set(localInstant,value);
+long result=iZone.convertLocalToUTC(localInstant,false);
+if(get(result)!=value){
+throw new IllegalFieldValueException(iField.getType(),new Integer(value),"Illegal instant due to time zone offset transition: "+DateTimeFormat.forPattern("yyyy-MM-dd\'T\'HH:mm:ss.SSS").print(new Instant(localInstant)));
+}
+result=super.add(instant,instant);
+return instant;
+
+Time : 18/01/15 21:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long localInstant=iZone.convertUTCToLocal(instant);
+localInstant=iField.set(localInstant,value);
+long result=iZone.convertLocalToUTC(localInstant,false);
+if(get(result)!=value){
+throw new IllegalFieldValueException(iField.getType(),new Integer(value),"Illegal instant due to time zone offset transition: "+DateTimeFormat.forPattern("yyyy-MM-dd\'T\'HH:mm:ss.SSS").print(new Instant(localInstant)));
+}
+result=iField.add(instant+getOffsetToAdd(result),instant);
+return instant;
+
+Time : 18/01/15 21:19
+----------------------------------------
+Mon Jan 15 21:20:04 EST 2018 org.joda.time.DateTime,470
+Mon Jan 15 21:20:28 EST 2018 org.joda.time.chrono.ZonedChronology,467
+Mon Jan 15 21:20:28 EST 2018 org.joda.time.chrono.ZonedChronology,468
+Mon Jan 15 21:20:28 EST 2018 org.joda.time.DateTime,536
+Mon Jan 15 21:20:47 EST 2018 org.joda.time.chrono.ZonedChronology,465
+Mon Jan 15 21:20:47 EST 2018 org.joda.time.chrono.ZonedChronology,466
+Mon Jan 15 21:20:47 EST 2018 org.joda.time.chrono.GregorianChronology,111
+Mon Jan 15 21:21:19 EST 2018 Mon Jan 15 21:21:19 EST 2018 : org.joda.time.chrono.GregorianChronology,115=>Find no block
+Mon Jan 15 21:21:19 EST 2018 org.joda.time.chrono.GregorianChronology,116
+Timeout time : 18/01/15 21:21
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testBug2182444_ausNSW_purify_9 | 18/01/15 21:21
+Mon Jan 15 21:23:19 EST 2018 org.joda.time.DateTime,1694
+Mon Jan 15 21:23:45 EST 2018 org.joda.time.DateTime,518
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+chronology=DateTimeUtils.getChronology(chronology);
+if(getChronology()!=chronology){
+return this;
+}
+return super.toDateTime(chronology);
+
+Time : 18/01/15 21:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+chronology=DateTimeUtils.getChronology(chronology);
+if(getChronology()!=null){
+return this;
+}
+return super.toDateTime(chronology);
+
+Time : 18/01/15 21:24
+----------------------------------------
+Mon Jan 15 21:25:09 EST 2018 org.joda.time.DateTime,519
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+chronology=DateTimeUtils.getChronology(chronology).withUTC();
+if(getChronology()==chronology){
+return this;
+}
+
+Time : 18/01/15 21:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+chronology=DateTimeUtils.getChronology(chronology).withUTC();
+if(getChronology()==null){
+return this;
+}
+
+Time : 18/01/15 21:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(getChronology()!=chronology){
+return this;
+}
+
+Time : 18/01/15 21:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(getChronology()!=null){
+return this;
+}
+
+Time : 18/01/15 21:26
+----------------------------------------
+Mon Jan 15 21:26:54 EST 2018 org.joda.time.DateTime,522
+Mon Jan 15 21:26:54 EST 2018 org.joda.time.base.AbstractInstant,177
+Mon Jan 15 21:26:55 EST 2018 org.joda.time.tz.ZoneInfoProvider,162
+Mon Jan 15 21:27:28 EST 2018 org.joda.time.tz.CachedDateTimeZone,210
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(iNextInfo==null||iPeriodStart<iNextInfo.iPeriodStart){
+if(iOffset==Integer.MIN_VALUE){
+iOffset=iZoneRef.getOffset(iPeriodStart);
+}
+return iOffset;
+}
+
+Time : 18/01/15 21:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+millis=serialVersionUID;
+if(iNextInfo==null||millis<iNextInfo.iPeriodStart){
+if(iOffset==Integer.MIN_VALUE){
+iOffset=iZoneRef.getOffset(iPeriodStart);
+}
+return iOffset;
+}
+return iNextInfo.getOffset(millis);
+
+Time : 18/01/15 21:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(iNextInfo==null||iPeriodStart<iPeriodStart){
+if(iOffset==Integer.MIN_VALUE){
+iOffset=iZoneRef.getOffset(iPeriodStart);
+}
+return iOffset;
+}
+return iNextInfo.getOffset(millis);
+
+Time : 18/01/15 21:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(iNextInfo==null||iPeriodStart<iNextInfo.iPeriodStart){
+if(iOffset==Integer.MIN_VALUE){
+iOffset=iZoneRef.getOffset(iPeriodStart);
+}
+return iOffset;
+}
+return iNextInfo.getOffset(millis);
+
+Time : 18/01/15 21:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(iNextInfo==null||millis<iPeriodStart){
+if(iOffset==Integer.MIN_VALUE){
+iOffset=iZoneRef.getOffset(iPeriodStart);
+}
+return iOffset;
+}
+return iNextInfo.getOffset(millis);
+
+Time : 18/01/15 21:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(iNameKey==null||millis<iNextInfo.iPeriodStart){
+if(iOffset==Integer.MIN_VALUE){
+iOffset=iZoneRef.getOffset(iPeriodStart);
+}
+return iOffset;
+}
+return iNextInfo.getOffset(millis);
+
+Time : 18/01/15 21:33
+----------------------------------------
+Mon Jan 15 21:33:44 EST 2018 org.joda.time.chrono.GregorianChronology,100
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return getInstance(DateTimeZone.UTC,4);
+
+Time : 18/01/15 21:34
+----------------------------------------
+Mon Jan 15 21:34:32 EST 2018 Mon Jan 15 21:34:32 EST 2018 : org.joda.time.DateTime,472=>Find no block
+Mon Jan 15 21:34:32 EST 2018 org.joda.time.chrono.ZonedChronology,474
+Mon Jan 15 21:52:18 EST 2018 org.joda.time.DateTime,470
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(year,monthOfYear,dayOfMonth,hourOfDay,minuteOfHour,secondOfMinute,millisOfSecond);
+
+Time : 18/01/15 21:52
+----------------------------------------
+Mon Jan 15 21:52:54 EST 2018 org.joda.time.chrono.ZonedChronology,467
+Mon Jan 15 21:52:54 EST 2018 org.joda.time.chrono.ZonedChronology,468
+Mon Jan 15 21:52:54 EST 2018 org.joda.time.DateTime,536
+Mon Jan 15 21:53:13 EST 2018 org.joda.time.chrono.ZonedChronology,465
+Mon Jan 15 21:53:13 EST 2018 org.joda.time.chrono.ZonedChronology,466
+Mon Jan 15 21:53:13 EST 2018 org.joda.time.chrono.GregorianChronology,111
+Timeout time : 18/01/15 21:53
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testBug2182444_usCentral_purify_6 | 18/01/15 21:53
+Mon Jan 15 21:55:02 EST 2018 org.joda.time.DateTime,1646
+Mon Jan 15 21:55:28 EST 2018 org.joda.time.DateTime,518
+Mon Jan 15 21:56:24 EST 2018 org.joda.time.DateTime,519
+Mon Jan 15 21:57:14 EST 2018 org.joda.time.DateTime,522
+Mon Jan 15 21:57:14 EST 2018 org.joda.time.base.AbstractInstant,177
+Mon Jan 15 21:57:14 EST 2018 org.joda.time.tz.ZoneInfoProvider,162
+Mon Jan 15 21:57:47 EST 2018 org.joda.time.chrono.GregorianChronology,171
+Mon Jan 15 21:57:48 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2093
+Mon Jan 15 22:02:19 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2094
+Mon Jan 15 22:02:19 EST 2018 org.joda.time.tz.CachedDateTimeZone,210
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+millis=serialVersionUID;
+if(iNextInfo==null||millis<iNextInfo.iPeriodStart){
+if(iOffset==Integer.MIN_VALUE){
+iOffset=iZoneRef.getOffset(iPeriodStart);
+}
+return iOffset;
+}
+return iNextInfo.getOffset(millis);
+
+Time : 18/01/15 22:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(iNextInfo==null||iPeriodStart<iPeriodStart){
+if(iOffset==Integer.MIN_VALUE){
+iOffset=iZoneRef.getOffset(iPeriodStart);
+}
+return iOffset;
+}
+return iNextInfo.getOffset(millis);
+
+Time : 18/01/15 22:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(iNextInfo==null||millis<iPeriodStart){
+if(iOffset==Integer.MIN_VALUE){
+iOffset=iZoneRef.getOffset(iPeriodStart);
+}
+return iOffset;
+}
+return iNextInfo.getOffset(millis);
+
+Time : 18/01/15 22:06
+----------------------------------------
+Mon Jan 15 22:07:55 EST 2018 org.joda.time.chrono.BasicChronology,144
+Mon Jan 15 22:08:11 EST 2018 org.joda.time.chrono.GregorianChronology,100
+Mon Jan 15 22:08:45 EST 2018 Mon Jan 15 22:08:45 EST 2018 : org.joda.time.DateTime,472=>Find no block
+Mon Jan 15 22:08:45 EST 2018 org.joda.time.chrono.ZonedChronology,474
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long localInstant=iZone.convertUTCToLocal(instant);
+localInstant=iField.set(localInstant,value);
+long result=iZone.convertLocalToUTC(localInstant,false);
+if(get(result)!=value){
+throw new IllegalFieldValueException(iField.getType(),new Integer(value),"Illegal instant due to time zone offset transition: "+DateTimeFormat.forPattern("yyyy-MM-dd\'T\'HH:mm:ss.SSS").print(new Instant(localInstant)));
+}
+return instant;
+
+Time : 18/01/15 22:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long localInstant=iZone.convertUTCToLocal(instant);
+localInstant=iField.set(localInstant,value);
+long result=iZone.convertLocalToUTC(localInstant,false);
+if(get(result)!=value){
+throw new IllegalFieldValueException(iField.getType(),new Integer(value),"Illegal instant due to time zone offset transition: "+DateTimeFormat.forPattern("yyyy-MM-dd\'T\'HH:mm:ss.SSS").print(new Instant(localInstant)));
+}
+result=iField.add(instant+getOffsetToAdd(result),value);
+return instant;
+
+Time : 18/01/15 22:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long localInstant=iZone.convertUTCToLocal(instant);
+localInstant=iField.set(localInstant,value);
+long result=iZone.convertLocalToUTC(localInstant,false);
+if(get(result)!=value){
+throw new IllegalArgumentException("Illegal instant due to time zone offset transition: "+DateTimeFormat.forPattern("yyyy-MM-dd\'T\'HH:mm:ss.SSS").print(new Instant(result)));
+}
+return instant;
+
+Time : 18/01/15 22:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long localInstant=iZone.convertUTCToLocal(instant);
+localInstant=iField.set(localInstant,value);
+long result=iZone.convertLocalToUTC(localInstant,false);
+if(get(result)!=value){
+throw new IllegalArgumentException("Specified date does not exist");
+}
+return instant;
+
+Time : 18/01/15 22:24
+----------------------------------------
+Timeout time : 18/01/15 22:25
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testBug2182444_usCentral_purify_7 | 18/01/15 22:25
+Mon Jan 15 22:26:43 EST 2018 org.joda.time.DateTime,1694
+Mon Jan 15 22:27:09 EST 2018 org.joda.time.DateTime,518
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+chronology=DateTimeUtils.getChronology(chronology);
+if(getChronology()!=chronology){
+return this;
+}
+return super.toDateTime(chronology);
+
+Time : 18/01/15 22:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+chronology=DateTimeUtils.getChronology(chronology);
+if(getChronology()!=null){
+return this;
+}
+return super.toDateTime(chronology);
+
+Time : 18/01/15 22:28
+----------------------------------------
+Mon Jan 15 22:28:33 EST 2018 org.joda.time.DateTime,519
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+chronology=DateTimeUtils.getChronology(chronology).withUTC();
+if(getChronology()==chronology){
+return this;
+}
+
+Time : 18/01/15 22:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+chronology=DateTimeUtils.getChronology(chronology).withUTC();
+if(getChronology()==null){
+return this;
+}
+
+Time : 18/01/15 22:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(getChronology()!=chronology){
+return this;
+}
+
+Time : 18/01/15 22:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(getChronology()!=null){
+return this;
+}
+
+Time : 18/01/15 22:30
+----------------------------------------
+Mon Jan 15 22:30:19 EST 2018 org.joda.time.DateTime,522
+Mon Jan 15 22:30:19 EST 2018 org.joda.time.base.AbstractInstant,177
+Mon Jan 15 22:30:20 EST 2018 org.joda.time.tz.ZoneInfoProvider,162
+Mon Jan 15 22:30:53 EST 2018 org.joda.time.tz.CachedDateTimeZone,210
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(iNextInfo==null||iPeriodStart<iNextInfo.iPeriodStart){
+if(iOffset==Integer.MIN_VALUE){
+iOffset=iZoneRef.getOffset(iPeriodStart);
+}
+return iOffset;
+}
+
+Time : 18/01/15 22:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+millis=serialVersionUID;
+if(iNextInfo==null||millis<iNextInfo.iPeriodStart){
+if(iOffset==Integer.MIN_VALUE){
+iOffset=iZoneRef.getOffset(iPeriodStart);
+}
+return iOffset;
+}
+return iNextInfo.getOffset(millis);
+
+Time : 18/01/15 22:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(iNextInfo==null||iPeriodStart<iPeriodStart){
+if(iOffset==Integer.MIN_VALUE){
+iOffset=iZoneRef.getOffset(iPeriodStart);
+}
+return iOffset;
+}
+return iNextInfo.getOffset(millis);
+
+Time : 18/01/15 22:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(iNextInfo==null||iPeriodStart<iNextInfo.iPeriodStart){
+if(iOffset==Integer.MIN_VALUE){
+iOffset=iZoneRef.getOffset(iPeriodStart);
+}
+return iOffset;
+}
+return iNextInfo.getOffset(millis);
+
+Time : 18/01/15 22:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(iNextInfo==null||millis<iPeriodStart){
+if(iOffset==Integer.MIN_VALUE){
+iOffset=iZoneRef.getOffset(iPeriodStart);
+}
+return iOffset;
+}
+return iNextInfo.getOffset(millis);
+
+Time : 18/01/15 22:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(iNameKey==null||millis<iNextInfo.iPeriodStart){
+if(iOffset==Integer.MIN_VALUE){
+iOffset=iZoneRef.getOffset(iPeriodStart);
+}
+return iOffset;
+}
+return iNextInfo.getOffset(millis);
+
+Time : 18/01/15 22:36
+----------------------------------------
+Mon Jan 15 22:37:11 EST 2018 org.joda.time.chrono.GregorianChronology,100
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return getInstance(DateTimeZone.UTC,4);
+
+Time : 18/01/15 22:37
+----------------------------------------
+Mon Jan 15 22:37:58 EST 2018 Mon Jan 15 22:37:58 EST 2018 : org.joda.time.DateTime,472=>Find no block
+Mon Jan 15 22:37:59 EST 2018 org.joda.time.chrono.ZonedChronology,474
+Mon Jan 15 22:55:46 EST 2018 org.joda.time.DateTime,470
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(year,monthOfYear,dayOfMonth,hourOfDay,minuteOfHour,secondOfMinute,millisOfSecond);
+
+Time : 18/01/15 22:56
+----------------------------------------
+Mon Jan 15 22:56:22 EST 2018 org.joda.time.chrono.ZonedChronology,467
+Mon Jan 15 22:56:22 EST 2018 org.joda.time.chrono.ZonedChronology,468
+Mon Jan 15 22:56:22 EST 2018 org.joda.time.DateTime,536
+Mon Jan 15 22:56:41 EST 2018 org.joda.time.chrono.ZonedChronology,465
+Mon Jan 15 22:56:41 EST 2018 org.joda.time.chrono.ZonedChronology,466
+Mon Jan 15 22:56:41 EST 2018 org.joda.time.chrono.GregorianChronology,111
+Timeout time : 18/01/15 22:56
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testWithHourOfDayInDstChange_purify_2 | 18/01/15 22:56
+Mon Jan 15 22:58:29 EST 2018 org.joda.time.DateTime,1646
+Mon Jan 15 22:58:55 EST 2018 Mon Jan 15 22:58:55 EST 2018 : org.joda.time.DateTime,220=>Find no block
+Mon Jan 15 22:58:55 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2686
+Mon Jan 15 23:02:02 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2687
+Mon Jan 15 23:02:02 EST 2018 org.joda.time.DateTime,219
+Mon Jan 15 23:02:29 EST 2018 org.joda.time.format.DateTimeParserBucket,335
+Mon Jan 15 23:03:06 EST 2018 org.joda.time.format.DateTimeParserBucket,336
+Mon Jan 15 23:03:06 EST 2018 Mon Jan 15 23:03:06 EST 2018 : org.joda.time.base.BaseDateTime,151=>Find no block
+Mon Jan 15 23:03:06 EST 2018 org.joda.time.base.BaseDateTime,148
+Mon Jan 15 23:06:13 EST 2018 org.joda.time.base.BaseDateTime,149
+Mon Jan 15 23:06:13 EST 2018 org.joda.time.base.BaseDateTime,150
+Mon Jan 15 23:06:13 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2243
+Mon Jan 15 23:14:21 EST 2018 org.joda.time.base.BaseDateTime,146
+Mon Jan 15 23:14:21 EST 2018 org.joda.time.base.BaseDateTime,147
+Mon Jan 15 23:14:21 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2242
+Mon Jan 15 23:14:21 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2289
+Mon Jan 15 23:17:04 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2290
+Mon Jan 15 23:17:04 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2291
+Mon Jan 15 23:17:04 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2248
+Timeout time : 18/01/15 23:28
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testWithMillisOfSecondInDstChange_NewYork_winter_purify_2 | 18/01/15 23:28
+Mon Jan 15 23:30:04 EST 2018 org.joda.time.DateTime,1694
+Mon Jan 15 23:30:29 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2241
+Mon Jan 15 23:45:49 EST 2018 Mon Jan 15 23:45:49 EST 2018 : org.joda.time.DateTime,220=>Find no block
+Mon Jan 15 23:45:50 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2686
+Mon Jan 15 23:48:56 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2687
+Mon Jan 15 23:48:57 EST 2018 org.joda.time.DateTime,219
+Mon Jan 15 23:49:23 EST 2018 org.joda.time.format.DateTimeParserBucket,335
+Mon Jan 15 23:50:00 EST 2018 org.joda.time.format.DateTimeParserBucket,336
+Mon Jan 15 23:50:00 EST 2018 Mon Jan 15 23:50:00 EST 2018 : org.joda.time.base.BaseDateTime,151=>Find no block
+Mon Jan 15 23:50:00 EST 2018 org.joda.time.base.BaseDateTime,148
+Mon Jan 15 23:53:07 EST 2018 org.joda.time.base.BaseDateTime,149
+Mon Jan 15 23:53:07 EST 2018 org.joda.time.base.BaseDateTime,150
+Mon Jan 15 23:53:07 EST 2018 org.joda.time.base.BaseDateTime,146
+Mon Jan 15 23:53:07 EST 2018 org.joda.time.base.BaseDateTime,147
+Mon Jan 15 23:53:07 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2289
+Mon Jan 15 23:55:50 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2290
+Mon Jan 15 23:55:50 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2291
+Mon Jan 15 23:55:50 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2248
+Timeout time : 18/01/16 00:00
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testWithMinuteOfHourInDstChange_mockZone_purify_4 | 18/01/16 00:00
+Tue Jan 16 00:01:38 EST 2018 org.joda.time.DateTime,1662
+Tue Jan 16 00:02:04 EST 2018 org.joda.time.DateTime,285
+Tue Jan 16 00:02:12 EST 2018 Tue Jan 16 00:02:12 EST 2018 : org.joda.time.DateTime,287=>Find no block
+Tue Jan 16 00:02:12 EST 2018 org.joda.time.DateTimeZone,266
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hoursInMinutes<minutesOffset){
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,-minutesOffset);
+}else {
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,minutesOffset);
+}
+
+Time : 18/01/16 00:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hoursOffset<minutesOffset){
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,-minutesOffset);
+}else {
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,minutesOffset);
+}
+
+Time : 18/01/16 00:03
+----------------------------------------
+Tue Jan 16 00:03:44 EST 2018 org.joda.time.DateTimeZone,254
+Tue Jan 16 00:03:44 EST 2018 org.joda.time.DateTimeZone,257
+Tue Jan 16 00:04:16 EST 2018 org.joda.time.DateTimeZone,260
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+hoursOffset-=2;
+if(minutesOffset<0||minutesOffset>59){
+throw new IllegalArgumentException("Minutes out of range: "+minutesOffset);
+}
+int offset=0;
+
+Time : 18/01/16 00:14
+----------------------------------------
+Tue Jan 16 00:17:00 EST 2018 org.joda.time.DateTimeZone,262
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int hoursInMinutes=FieldUtils.safeMultiply(hoursOffset,60);
+if(hoursInMinutes<minutesOffset){
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,-minutesOffset);
+}else {
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,minutesOffset);
+}
+
+Time : 18/01/16 00:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int hoursInMinutes=FieldUtils.safeMultiply(hoursOffset,60);
+if(hoursOffset<minutesOffset){
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,-minutesOffset);
+}else {
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,minutesOffset);
+}
+
+Time : 18/01/16 00:18
+----------------------------------------
+Tue Jan 16 00:18:45 EST 2018 org.joda.time.DateTimeZone,263
+Tue Jan 16 00:18:45 EST 2018 org.joda.time.DateTimeZone,268
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hoursInMinutes<minutesOffset){
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,-minutesOffset);
+}else {
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,minutesOffset);
+}
+offset=FieldUtils.safeMultiply(minutesOffset,DateTimeConstants.MILLIS_PER_MINUTE);
+
+Time : 18/01/16 00:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hoursOffset<minutesOffset){
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,-minutesOffset);
+}else {
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,minutesOffset);
+}
+offset=FieldUtils.safeMultiply(minutesOffset,DateTimeConstants.MILLIS_PER_MINUTE);
+
+Time : 18/01/16 00:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+hoursInMinutes-=2;
+if(hoursInMinutes<0){
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,-minutesOffset);
+}else {
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,minutesOffset);
+}
+offset=FieldUtils.safeMultiply(minutesOffset,DateTimeConstants.MILLIS_PER_MINUTE);
+
+Time : 18/01/16 00:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+hoursInMinutes-=2;
+minutesOffset+=2;
+if(hoursInMinutes<0){
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,-minutesOffset);
+}else {
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,minutesOffset);
+}
+offset=FieldUtils.safeMultiply(minutesOffset,DateTimeConstants.MILLIS_PER_MINUTE);
+
+Time : 18/01/16 00:21
+----------------------------------------
+Tue Jan 16 00:21:44 EST 2018 Tue Jan 16 00:21:44 EST 2018 : org.joda.time.DateTimeZone,271=>Find no block
+Tue Jan 16 00:21:44 EST 2018 org.joda.time.DateTimeZone,272
+Tue Jan 16 00:21:44 EST 2018 org.joda.time.DateTimeZone,889
+Tue Jan 16 00:22:53 EST 2018 org.joda.time.DateTimeZone,890
+Tue Jan 16 00:22:53 EST 2018 org.joda.time.DateTimeZone,891
+Tue Jan 16 00:22:54 EST 2018 org.joda.time.DateTimeZone,358
+Tue Jan 16 00:24:24 EST 2018 org.joda.time.DateTimeZone,359
+Tue Jan 16 00:24:24 EST 2018 org.joda.time.DateTimeZone,360
+Tue Jan 16 00:24:24 EST 2018 org.joda.time.DateTimeZone,352
+Tue Jan 16 00:24:25 EST 2018 org.joda.time.DateTimeZone,356
+Tue Jan 16 00:26:15 EST 2018 org.joda.time.DateTimeZone,357
+Tue Jan 16 00:26:15 EST 2018 org.joda.time.DateTimeZone,885
+Tue Jan 16 00:26:15 EST 2018 org.joda.time.DateTimeZone,282
+Tue Jan 16 00:26:25 EST 2018 org.joda.time.DateTimeZone,283
+Tue Jan 16 00:26:25 EST 2018 org.joda.time.field.FieldUtils,119
+Tue Jan 16 00:28:29 EST 2018 org.joda.time.field.FieldUtils,120
+Tue Jan 16 00:30:07 EST 2018 org.joda.time.field.FieldUtils,124
+Tue Jan 16 00:30:07 EST 2018 org.joda.time.DateTimeZone,349
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+offset=offset*DateTimeConstants.MILLIS_PER_HOUR;
+if(offset==0){
+return DateTimeZone.UTC;
+}
+
+Time : 18/01/16 00:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(offset!=0){
+return DateTimeZone.UTC;
+}
+
+Time : 18/01/16 00:31
+----------------------------------------
+Timeout time : 18/01/16 00:31
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testWithMinuteOfHourInDstChange_purify_2 | 18/01/16 00:31
+Tue Jan 16 00:33:25 EST 2018 org.joda.time.DateTime,1662
+Tue Jan 16 00:33:51 EST 2018 Tue Jan 16 00:33:51 EST 2018 : org.joda.time.DateTime,220=>Find no block
+Tue Jan 16 00:33:51 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2686
+Tue Jan 16 00:36:58 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2687
+Tue Jan 16 00:36:58 EST 2018 org.joda.time.DateTime,219
+Tue Jan 16 00:37:25 EST 2018 org.joda.time.format.DateTimeParserBucket,335
+Tue Jan 16 00:38:02 EST 2018 org.joda.time.format.DateTimeParserBucket,336
+Tue Jan 16 00:38:02 EST 2018 Tue Jan 16 00:38:02 EST 2018 : org.joda.time.base.BaseDateTime,151=>Find no block
+Tue Jan 16 00:38:02 EST 2018 org.joda.time.base.BaseDateTime,148
+Tue Jan 16 00:41:09 EST 2018 org.joda.time.base.BaseDateTime,149
+Tue Jan 16 00:41:09 EST 2018 org.joda.time.base.BaseDateTime,150
+Tue Jan 16 00:41:09 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2243
+Tue Jan 16 00:49:17 EST 2018 org.joda.time.base.BaseDateTime,146
+Tue Jan 16 00:49:17 EST 2018 org.joda.time.base.BaseDateTime,147
+Tue Jan 16 00:49:17 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2242
+Tue Jan 16 00:49:17 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2289
+Tue Jan 16 00:52:00 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2290
+Tue Jan 16 00:52:00 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2291
+Tue Jan 16 00:52:01 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2248
+Timeout time : 18/01/16 01:03
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testWithMillisOfSecondInDstChange_Paris_summer_purify_2 | 18/01/16 01:03
+Tue Jan 16 01:05:01 EST 2018 org.joda.time.DateTime,1694
+Tue Jan 16 01:05:27 EST 2018 Tue Jan 16 01:05:27 EST 2018 : org.joda.time.DateTime,220=>Find no block
+Tue Jan 16 01:05:27 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2686
+Tue Jan 16 01:08:36 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2687
+Tue Jan 16 01:08:36 EST 2018 org.joda.time.DateTime,219
+Tue Jan 16 01:09:02 EST 2018 org.joda.time.format.DateTimeParserBucket,335
+Tue Jan 16 01:09:40 EST 2018 org.joda.time.format.DateTimeParserBucket,336
+Tue Jan 16 01:09:40 EST 2018 Tue Jan 16 01:09:40 EST 2018 : org.joda.time.base.BaseDateTime,151=>Find no block
+Tue Jan 16 01:09:40 EST 2018 org.joda.time.base.BaseDateTime,148
+Tue Jan 16 01:12:48 EST 2018 org.joda.time.base.BaseDateTime,149
+Tue Jan 16 01:12:48 EST 2018 org.joda.time.base.BaseDateTime,150
+Tue Jan 16 01:12:48 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2243
+Tue Jan 16 01:20:56 EST 2018 org.joda.time.base.BaseDateTime,146
+Tue Jan 16 01:20:56 EST 2018 org.joda.time.base.BaseDateTime,147
+Tue Jan 16 01:20:56 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2242
+Tue Jan 16 01:20:56 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2289
+Tue Jan 16 01:23:40 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2290
+Tue Jan 16 01:23:40 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2291
+Tue Jan 16 01:23:40 EST 2018 org.joda.time.format.DateTimeFormatterBuilder,2248
+Timeout time : 18/01/16 01:35

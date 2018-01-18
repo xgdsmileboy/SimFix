@@ -1,0 +1,72 @@
+=================================================
+Project : math_81	start : 18/01/15 16:21
+Current failed test : org.apache.commons.math.linear.EigenDecompositionImplTest::testMath308 | 18/01/15 16:23
+Mon Jan 15 16:24:27 AEDT 2018 org.apache.commons.math.linear.EigenDecompositionImpl,1509
+Mon Jan 15 16:27:34 AEDT 2018 org.apache.commons.math.linear.EigenDecompositionImpl,1529
+Mon Jan 15 16:41:47 AEDT 2018 org.apache.commons.math.linear.EigenDecompositionImpl,1530
+Mon Jan 15 16:41:53 AEDT 2018 org.apache.commons.math.linear.EigenDecompositionImpl,1533
+Mon Jan 15 16:52:59 AEDT 2018 org.apache.commons.math.linear.EigenDecompositionImpl,1534
+Mon Jan 15 16:57:50 AEDT 2018 org.apache.commons.math.linear.EigenDecompositionImpl,1535
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+work[4]=TOLERANCE;
+double b1=work[np-2];
+double b2=work[np-6];
+ final double gam=dN2;
+
+Time : 18/01/15 17:06
+----------------------------------------
+Mon Jan 15 17:11:31 AEDT 2018 org.apache.commons.math.linear.EigenDecompositionImpl,1536
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double b2=work[np-6];
+ final double gam=dN2;
+if(b2>0.0&&b2>b2*b1/(1+b2*b2)){
+return ;
+}
+
+Time : 18/01/15 17:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.2053370772744245 : [/home/hz985/jiajun/d4j/projects/math/math_81_buggy/src/main/java/org/apache/commons/math/linear/EigenDecompositionImpl.java=>0,0]
+ final double a2=dMin2/(1+b2*b2);
+ final double gap2=work[nn-7]+work[nn-9]-Math.sqrt(work[nn-11])*Math.sqrt(work[nn-9])-a2;
+if(gap2>0.0&&gap2>b2*a2){
+tau=Math.max(s,a2*(1-cnst2*a2));
+}else {
+tau=Math.max(s,a2*(1-cnst2*b2));
+}
+
+Time : 18/01/15 17:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_81_buggy/src/main/java/org/apache/commons/math/linear/EigenDecompositionImpl.java=>1535,1539]
+double b2=work[np-6];
+ final double gam=dN2;
+if(work[np-8]>b2||work[np-4]>b1){
+return ;
+}
+
+Time : 18/01/15 17:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_81_buggy/src/main/java/org/apache/commons/math/linear/EigenDecompositionImpl.java=>1535,1539]
+double b2=work[np-6];
+ final double gam=dN2;
+if(b2>0.0&&b2>b2*b1/(1+b2*b2)){
+return ;
+}
+
+Time : 18/01/15 17:15
+----------------------------------------
+Success time : 18/01/15 17:15

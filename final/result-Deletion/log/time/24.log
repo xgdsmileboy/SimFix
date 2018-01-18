@@ -1,0 +1,71 @@
+=================================================
+Project : time_24	start : 18/01/16 05:36
+Current failed test : org.joda.time.format.TestDateTimeFormatter::testParseLocalDate_weekyear_month_week_2010 | 18/01/16 05:37
+Tue Jan 16 05:38:03 AEDT 2018 org.joda.time.LocalDate,1735
+Tue Jan 16 05:38:19 AEDT 2018 org.joda.time.LocalDate,496
+Tue Jan 16 05:55:39 AEDT 2018 org.joda.time.LocalDate,515
+Tue Jan 16 05:56:27 AEDT 2018 org.joda.time.chrono.GJChronology,331
+Tue Jan 16 05:57:11 AEDT 2018 org.joda.time.chrono.GJChronology,336
+Tue Jan 16 07:20:51 AEDT 2018 org.joda.time.chrono.GJChronology,338
+Tue Jan 16 07:20:51 AEDT 2018 org.joda.time.chrono.GJChronology,347
+Tue Jan 16 07:20:52 AEDT 2018 org.joda.time.LocalDate,490
+Tue Jan 16 07:20:52 AEDT 2018 org.joda.time.LocalDate,493
+Tue Jan 16 07:20:52 AEDT 2018 org.joda.time.LocalDate,508
+Tue Jan 16 07:21:00 AEDT 2018 org.joda.time.LocalDate,511
+Tue Jan 16 07:38:07 AEDT 2018 org.joda.time.LocalDate,512
+Tue Jan 16 07:38:07 AEDT 2018 org.joda.time.format.DateTimeParserBucket,488
+Tue Jan 16 07:41:49 AEDT 2018 org.joda.time.format.DateTimeFormatter,610
+Tue Jan 16 07:47:49 AEDT 2018 org.joda.time.format.DateTimeFormatter,611
+Tue Jan 16 07:47:50 AEDT 2018 org.joda.time.format.DateTimeFormatter,612
+Tue Jan 16 07:47:50 AEDT 2018 org.joda.time.format.DateTimeFormatter,531
+Tue Jan 16 08:04:12 AEDT 2018 org.joda.time.format.DateTimeFormatter,532
+Tue Jan 16 08:05:33 AEDT 2018 org.joda.time.format.DateTimeFormatter,535
+Tue Jan 16 08:05:33 AEDT 2018 Tue Jan 16 08:05:33 AEDT 2018 : org.joda.time.format.DateTimeFormatter,536=>Find no block
+Tue Jan 16 08:05:33 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,2546
+Tue Jan 16 08:55:40 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,2547
+Tue Jan 16 08:55:40 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,2551
+Tue Jan 16 08:55:40 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,2553
+Tue Jan 16 08:55:41 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,2556
+Tue Jan 16 08:55:41 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,2557
+Tue Jan 16 08:55:41 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,2558
+Tue Jan 16 08:55:42 AEDT 2018 Tue Jan 16 08:55:42 AEDT 2018 : org.joda.time.format.DateTimeFormatterBuilder,2560=>Find no block
+Tue Jan 16 08:55:42 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,1427
+Tue Jan 16 08:56:39 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,1429
+Tue Jan 16 08:56:39 AEDT 2018 Tue Jan 16 08:56:39 AEDT 2018 : org.joda.time.format.DateTimeFormatterBuilder,1432=>Find no block
+Tue Jan 16 08:56:39 AEDT 2018 Tue Jan 16 08:56:39 AEDT 2018 : org.joda.time.format.DateTimeFormatterBuilder,1436=>Find no block
+Tue Jan 16 08:56:40 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,1161
+Tue Jan 16 08:57:49 AEDT 2018 Tue Jan 16 08:57:49 AEDT 2018 : org.joda.time.format.DateTimeFormatterBuilder,1162=>Find no block
+Tue Jan 16 08:57:49 AEDT 2018 org.joda.time.LocalDate,570
+Tue Jan 16 08:59:01 AEDT 2018 org.joda.time.LocalDate,573
+Tue Jan 16 09:00:28 AEDT 2018 org.joda.time.LocalDate,574
+Tue Jan 16 09:00:29 AEDT 2018 org.joda.time.LocalDate,575
+Tue Jan 16 09:00:29 AEDT 2018 org.joda.time.LocalDate,576
+Tue Jan 16 09:00:29 AEDT 2018 org.joda.time.field.BaseDurationField,150
+Tue Jan 16 09:00:31 AEDT 2018 org.joda.time.chrono.BasicChronology,518
+Tue Jan 16 09:03:29 AEDT 2018 org.joda.time.chrono.GJChronology,404
+Tue Jan 16 09:03:30 AEDT 2018 org.joda.time.LocalDateTime,698
+Tue Jan 16 09:03:32 AEDT 2018 org.joda.time.format.DateTimeFormatter,759
+Tue Jan 16 09:03:33 AEDT 2018 org.joda.time.chrono.BasicWeekOfWeekyearDateTimeField,79
+Tue Jan 16 09:03:34 AEDT 2018 org.joda.time.chrono.BasicWeekOfWeekyearDateTimeField,111
+Tue Jan 16 09:06:19 AEDT 2018 org.joda.time.chrono.BasicWeekOfWeekyearDateTimeField,54
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return iChronology.getMillisOfDay(instant);
+
+Time : 18/01/16 09:09
+----------------------------------------
+Tue Jan 16 09:10:27 AEDT 2018 org.joda.time.format.ISODateTimeFormat,854
+Tue Jan 16 09:10:29 AEDT 2018 org.joda.time.chrono.GJChronology,123
+Tue Jan 16 09:10:30 AEDT 2018 org.joda.time.LocalDate,396
+Tue Jan 16 09:38:16 AEDT 2018 org.joda.time.LocalDate,397
+Tue Jan 16 09:38:16 AEDT 2018 org.joda.time.LocalDate,398
+Tue Jan 16 09:38:17 AEDT 2018 org.joda.time.LocalDate,399
+Tue Jan 16 09:38:17 AEDT 2018 org.joda.time.LocalDate,400
+Tue Jan 16 09:38:17 AEDT 2018 Tue Jan 16 09:38:17 AEDT 2018 : org.joda.time.LocalDate,401=>Find no block
+Tue Jan 16 09:38:18 AEDT 2018 org.joda.time.format.ISODateTimeFormat,1326
+Tue Jan 16 09:55:59 AEDT 2018 org.joda.time.format.ISODateTimeFormat,1333
+Tue Jan 16 10:13:40 AEDT 2018 org.joda.time.chrono.GJChronology,632
+Tue Jan 16 10:20:08 AEDT 2018 org.joda.time.chrono.GJChronology,852
+Timeout time : 18/01/16 10:38

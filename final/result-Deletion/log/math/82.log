@@ -1,0 +1,122 @@
+=================================================
+Project : math_82	start : 18/01/16 02:33
+Current failed test : org.apache.commons.math.optimization.linear.SimplexSolverTest::testMath288 | 18/01/16 02:34
+Tue Jan 16 02:35:32 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,308
+Tue Jan 16 02:35:42 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,169
+Tue Jan 16 02:35:50 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,170
+Tue Jan 16 02:38:04 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,152
+Tue Jan 16 02:40:08 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,191
+Tue Jan 16 02:40:16 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,297
+Tue Jan 16 02:40:30 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,338
+Tue Jan 16 02:58:44 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,339
+Tue Jan 16 03:12:11 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,340
+Tue Jan 16 03:12:15 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,342
+Tue Jan 16 03:12:19 AEDT 2018 Tue Jan 16 03:12:19 AEDT 2018 : org.apache.commons.math.optimization.RealPointValuePair,48=>Find no block
+Tue Jan 16 03:12:23 AEDT 2018 org.apache.commons.math.optimization.RealPointValuePair,49
+Tue Jan 16 03:16:10 AEDT 2018 org.apache.commons.math.optimization.RealPointValuePair,50
+Tue Jan 16 03:16:15 AEDT 2018 Tue Jan 16 03:16:15 AEDT 2018 : org.apache.commons.math.optimization.RealPointValuePair,51=>Find no block
+Tue Jan 16 03:16:18 AEDT 2018 org.apache.commons.math.optimization.RealPointValuePair,86
+Tue Jan 16 03:16:49 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,282
+Tue Jan 16 03:16:57 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,340
+Tue Jan 16 03:19:16 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,341
+Tue Jan 16 03:19:20 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,342
+Tue Jan 16 03:20:20 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,343
+Tue Jan 16 04:00:47 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,344
+Tue Jan 16 04:00:51 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,345
+Tue Jan 16 04:00:54 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,346
+Tue Jan 16 04:00:58 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,351
+Tue Jan 16 04:01:00 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,352
+Tue Jan 16 04:01:02 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,357
+Tue Jan 16 04:12:44 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,433
+Tue Jan 16 04:12:53 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,458
+Tue Jan 16 04:13:01 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,481
+Tue Jan 16 04:13:10 AEDT 2018 org.apache.commons.math.optimization.linear.LinearObjectiveFunction,92
+Tue Jan 16 04:14:06 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,155
+Tue Jan 16 04:19:11 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,193
+Tue Jan 16 04:22:22 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,884
+Tue Jan 16 05:01:35 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,885
+Tue Jan 16 05:01:39 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,886
+Tue Jan 16 05:01:42 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,887
+Tue Jan 16 05:01:44 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,889
+Tue Jan 16 05:01:49 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,1287
+Tue Jan 16 05:23:12 AEDT 2018 Tue Jan 16 05:23:12 AEDT 2018 : org.apache.commons.math.linear.ArrayRealVector,1292=>Find no block
+Tue Jan 16 05:23:16 AEDT 2018 org.apache.commons.math.optimization.linear.LinearConstraint,81
+Tue Jan 16 05:23:25 AEDT 2018 Tue Jan 16 05:23:25 AEDT 2018 : org.apache.commons.math.optimization.linear.LinearConstraint,82=>Find no block
+Tue Jan 16 05:23:29 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,296
+Tue Jan 16 05:23:30 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,307
+Tue Jan 16 05:23:33 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,147
+Tue Jan 16 05:23:36 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,150
+Tue Jan 16 05:23:39 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,151
+Tue Jan 16 05:23:44 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,189
+Tue Jan 16 05:23:48 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,190
+Tue Jan 16 05:23:52 AEDT 2018 Tue Jan 16 05:23:52 AEDT 2018 : org.apache.commons.math.optimization.linear.LinearConstraint,99=>Find no block
+Tue Jan 16 05:23:53 AEDT 2018 org.apache.commons.math.optimization.linear.LinearConstraint,100
+Tue Jan 16 05:26:30 AEDT 2018 org.apache.commons.math.optimization.linear.LinearConstraint,101
+Tue Jan 16 05:26:34 AEDT 2018 org.apache.commons.math.optimization.linear.LinearConstraint,102
+Tue Jan 16 05:26:38 AEDT 2018 Tue Jan 16 05:26:38 AEDT 2018 : org.apache.commons.math.optimization.linear.LinearConstraint,103=>Find no block
+Tue Jan 16 05:26:41 AEDT 2018 org.apache.commons.math.optimization.linear.LinearConstraint,168
+Tue Jan 16 05:26:50 AEDT 2018 org.apache.commons.math.optimization.linear.LinearConstraint,176
+Tue Jan 16 05:27:01 AEDT 2018 org.apache.commons.math.optimization.linear.LinearConstraint,184
+Tue Jan 16 05:27:05 AEDT 2018 Tue Jan 16 05:27:05 AEDT 2018 : org.apache.commons.math.optimization.linear.SimplexTableau,104=>Find no block
+Tue Jan 16 05:27:10 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,105
+Tue Jan 16 05:42:24 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,106
+Tue Jan 16 05:42:28 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,107
+Tue Jan 16 05:42:33 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,108
+Tue Jan 16 05:42:36 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,109
+Tue Jan 16 05:42:39 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,110
+Tue Jan 16 05:42:43 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,112
+Tue Jan 16 05:42:47 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,114
+Tue Jan 16 05:42:51 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,115
+Tue Jan 16 05:42:53 AEDT 2018 Tue Jan 16 05:42:53 AEDT 2018 : org.apache.commons.math.optimization.linear.SimplexTableau,116=>Find no block
+Tue Jan 16 05:42:56 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,126
+Tue Jan 16 05:45:49 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,127
+Tue Jan 16 05:45:53 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,129
+Tue Jan 16 05:50:25 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,130
+Tue Jan 16 05:53:56 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,133
+Tue Jan 16 05:54:08 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,136
+Tue Jan 16 05:55:49 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,137
+Tue Jan 16 05:57:05 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,138
+Tue Jan 16 05:58:52 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,140
+Tue Jan 16 06:00:38 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,141
+Tue Jan 16 06:03:29 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,144
+Tue Jan 16 06:03:37 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,150
+Tue Jan 16 06:04:49 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,151
+Tue Jan 16 06:04:51 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,152
+Tue Jan 16 06:15:34 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,153
+Tue Jan 16 06:28:04 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,154
+Tue Jan 16 06:28:10 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,157
+Tue Jan 16 06:38:26 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,160
+Tue Jan 16 06:38:30 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,166
+Tue Jan 16 06:44:04 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,169
+Tue Jan 16 06:44:08 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,176
+Tue Jan 16 06:44:12 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,183
+Tue Jan 16 06:50:46 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,190
+Tue Jan 16 06:50:54 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,198
+Tue Jan 16 06:52:43 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,199
+Tue Jan 16 06:54:41 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,200
+Tue Jan 16 06:54:45 AEDT 2018 Tue Jan 16 06:54:45 AEDT 2018 : org.apache.commons.math.optimization.linear.SimplexTableau,201=>Find no block
+Tue Jan 16 06:54:50 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,202
+Tue Jan 16 06:54:54 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,211
+Tue Jan 16 06:55:04 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,216
+Tue Jan 16 06:55:13 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,225
+Tue Jan 16 06:55:23 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,234
+Tue Jan 16 06:58:43 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,235
+Tue Jan 16 06:58:47 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,236
+Tue Jan 16 06:58:50 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,237
+Tue Jan 16 06:58:53 AEDT 2018 Tue Jan 16 06:58:53 AEDT 2018 : org.apache.commons.math.optimization.linear.SimplexTableau,239=>Find no block
+Tue Jan 16 06:58:56 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,240
+Tue Jan 16 06:58:59 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,248
+Tue Jan 16 07:05:39 AEDT 2018 Tue Jan 16 07:05:39 AEDT 2018 : org.apache.commons.math.optimization.linear.SimplexTableau,252=>Find no block
+Tue Jan 16 07:05:43 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,291
+Tue Jan 16 07:19:03 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,292
+Tue Jan 16 07:19:07 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,293
+Tue Jan 16 07:19:10 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,294
+Tue Jan 16 07:19:14 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,295
+Tue Jan 16 07:19:17 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,300
+Tue Jan 16 07:19:21 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,331
+Tue Jan 16 07:23:54 AEDT 2018 Tue Jan 16 07:23:54 AEDT 2018 : org.apache.commons.math.optimization.linear.SimplexTableau,332=>Find no block
+Tue Jan 16 07:23:58 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,370
+Tue Jan 16 07:32:27 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,371
+Tue Jan 16 07:32:30 AEDT 2018 Tue Jan 16 07:32:30 AEDT 2018 : org.apache.commons.math.optimization.linear.SimplexTableau,373=>Find no block
+Tue Jan 16 07:32:34 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,387
+Timeout time : 18/01/16 07:35

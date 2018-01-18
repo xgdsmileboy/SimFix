@@ -1,0 +1,571 @@
+=================================================
+Project : math_67	start : 18/01/13 00:09
+Current failed test : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_1 | 18/01/13 00:15
+Sat Jan 13 00:17:21 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,78
+Sat Jan 13 00:20:54 AEDT 2018 Sat Jan 13 00:20:54 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,79=>Find no block
+Sat Jan 13 00:20:55 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,83
+Sat Jan 13 00:21:32 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,108
+Sat Jan 13 00:22:42 AEDT 2018 Sat Jan 13 00:22:42 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,109=>Find no block
+Sat Jan 13 00:22:43 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,113
+Sat Jan 13 00:23:12 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,102
+Sat Jan 13 00:23:56 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,127
+Sat Jan 13 00:24:41 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,147
+Sat Jan 13 00:26:00 AEDT 2018 Sat Jan 13 00:26:00 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,148=>Find no block
+Sat Jan 13 00:26:01 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,162
+Sat Jan 13 00:28:10 AEDT 2018 Sat Jan 13 00:28:10 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,163=>Find no block
+Sat Jan 13 00:28:10 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,194
+Sat Jan 13 00:28:49 AEDT 2018 org.apache.commons.math.MathRuntimeException,136
+Sat Jan 13 00:29:36 AEDT 2018 org.apache.commons.math.MathRuntimeException,444
+Sat Jan 13 00:29:40 AEDT 2018 Sat Jan 13 00:29:40 AEDT 2018 : org.apache.commons.math.util.LocalizedFormats,305=>Find no block
+Sat Jan 13 00:29:41 AEDT 2018 org.apache.commons.math.util.LocalizedFormats,306
+Sat Jan 13 00:29:44 AEDT 2018 Sat Jan 13 00:29:44 AEDT 2018 : org.apache.commons.math.util.LocalizedFormats,307=>Find no block
+Sat Jan 13 00:29:44 AEDT 2018 org.apache.commons.math.util.LocalizedFormats,317
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+try{
+ResourceBundle bundle=ResourceBundle.getBundle("META-INF/localization/LocalizedFormats",locale);
+if(bundle.getLocale().getLanguage().equals(locale.getLanguage())){
+return bundle.getString(toString());
+}
+}catch (MissingResourceException mre) {
+}
+
+return null;
+
+Time : 18/01/13 00:30
+----------------------------------------
+Sat Jan 13 00:31:52 AEDT 2018 Sat Jan 13 00:31:52 AEDT 2018 : org.apache.commons.math.util.LocalizedFormats,324=>Find no block
+Sat Jan 13 00:31:52 AEDT 2018 org.apache.commons.math.util.LocalizedFormats,330
+Sat Jan 13 00:31:53 AEDT 2018 org.apache.commons.math.MathRuntimeException,444
+Sat Jan 13 00:31:54 AEDT 2018 org.apache.commons.math.MathRuntimeException,452
+Sat Jan 13 00:31:57 AEDT 2018 org.apache.commons.math.MathRuntimeException,458
+Sat Jan 13 00:32:09 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,43
+Sat Jan 13 00:32:11 AEDT 2018 Sat Jan 13 00:32:11 AEDT 2018 : org.apache.commons.math.optimization.univariate.BrentOptimizer,44=>Find no block
+Sat Jan 13 00:32:12 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,63
+Sat Jan 13 00:34:53 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,64
+Sat Jan 13 00:34:54 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,65
+Sat Jan 13 00:34:55 AEDT 2018 Sat Jan 13 00:34:55 AEDT 2018 : org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,66=>Find no block
+Sat Jan 13 00:34:55 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,113
+Sat Jan 13 00:35:46 AEDT 2018 Sat Jan 13 00:35:46 AEDT 2018 : org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,114=>Find no block
+Sat Jan 13 00:35:47 AEDT 2018 Sat Jan 13 00:35:47 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,61=>Find no block
+Sat Jan 13 00:35:47 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,62
+Sat Jan 13 00:40:41 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,63
+Sat Jan 13 00:40:42 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,64
+Sat Jan 13 00:40:42 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,65
+Sat Jan 13 00:40:43 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,66
+Sat Jan 13 00:40:44 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,67
+Sat Jan 13 00:40:45 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,68
+Sat Jan 13 00:40:45 AEDT 2018 Sat Jan 13 00:40:45 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,69=>Find no block
+Sat Jan 13 00:40:47 AEDT 2018 Sat Jan 13 00:40:47 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,80=>Find no block
+Sat Jan 13 00:40:47 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,81
+Sat Jan 13 00:44:21 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,82
+Sat Jan 13 00:44:22 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,83
+Sat Jan 13 00:44:22 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,84
+Sat Jan 13 00:44:24 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,85
+Sat Jan 13 00:44:24 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,86
+Sat Jan 13 00:44:25 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,87
+Sat Jan 13 00:44:26 AEDT 2018 Sat Jan 13 00:44:26 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,88=>Find no block
+Sat Jan 13 00:44:27 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,152
+Sat Jan 13 00:46:48 AEDT 2018 Sat Jan 13 00:46:48 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,153=>Find no block
+Sat Jan 13 00:46:51 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,157
+Sat Jan 13 00:46:52 AEDT 2018 Sat Jan 13 00:46:52 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,158=>Find no block
+Sat Jan 13 00:46:53 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,193
+Sat Jan 13 00:46:54 AEDT 2018 Sat Jan 13 00:46:54 AEDT 2018 : org.apache.commons.math.random.JDKRandomGenerator,28=>Find no block
+Sat Jan 13 00:46:55 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,50
+Timeout time : 18/01/13 00:47
+Current failed test : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_2 | 18/01/13 00:47
+Sat Jan 13 00:48:18 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,78
+Sat Jan 13 00:49:51 AEDT 2018 Sat Jan 13 00:49:51 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,79=>Find no block
+Sat Jan 13 00:49:52 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,83
+Sat Jan 13 00:50:29 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,108
+Sat Jan 13 00:51:39 AEDT 2018 Sat Jan 13 00:51:39 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,109=>Find no block
+Sat Jan 13 00:51:40 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,113
+Sat Jan 13 00:52:07 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,102
+Sat Jan 13 00:52:51 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,127
+Sat Jan 13 00:53:35 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,147
+Sat Jan 13 00:54:54 AEDT 2018 Sat Jan 13 00:54:54 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,148=>Find no block
+Sat Jan 13 00:54:55 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,162
+Sat Jan 13 00:57:02 AEDT 2018 Sat Jan 13 00:57:02 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,163=>Find no block
+Sat Jan 13 00:57:03 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,194
+Sat Jan 13 00:57:42 AEDT 2018 org.apache.commons.math.MathRuntimeException,136
+Sat Jan 13 00:58:28 AEDT 2018 org.apache.commons.math.MathRuntimeException,444
+Sat Jan 13 00:58:30 AEDT 2018 Sat Jan 13 00:58:30 AEDT 2018 : org.apache.commons.math.util.LocalizedFormats,305=>Find no block
+Sat Jan 13 00:58:31 AEDT 2018 org.apache.commons.math.util.LocalizedFormats,306
+Sat Jan 13 00:58:34 AEDT 2018 Sat Jan 13 00:58:34 AEDT 2018 : org.apache.commons.math.util.LocalizedFormats,307=>Find no block
+Sat Jan 13 00:58:35 AEDT 2018 org.apache.commons.math.util.LocalizedFormats,317
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+try{
+ResourceBundle bundle=ResourceBundle.getBundle("META-INF/localization/LocalizedFormats",locale);
+if(bundle.getLocale().getLanguage().equals(locale.getLanguage())){
+return bundle.getString(toString());
+}
+}catch (MissingResourceException mre) {
+}
+
+return null;
+
+Time : 18/01/13 00:59
+----------------------------------------
+Sat Jan 13 01:00:43 AEDT 2018 Sat Jan 13 01:00:43 AEDT 2018 : org.apache.commons.math.util.LocalizedFormats,324=>Find no block
+Sat Jan 13 01:00:44 AEDT 2018 org.apache.commons.math.util.LocalizedFormats,330
+Sat Jan 13 01:00:45 AEDT 2018 org.apache.commons.math.MathRuntimeException,444
+Sat Jan 13 01:00:46 AEDT 2018 org.apache.commons.math.MathRuntimeException,452
+Sat Jan 13 01:00:49 AEDT 2018 org.apache.commons.math.MathRuntimeException,458
+Sat Jan 13 01:01:01 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,43
+Sat Jan 13 01:01:03 AEDT 2018 Sat Jan 13 01:01:03 AEDT 2018 : org.apache.commons.math.optimization.univariate.BrentOptimizer,44=>Find no block
+Sat Jan 13 01:01:04 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,63
+Sat Jan 13 01:03:44 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,64
+Sat Jan 13 01:03:45 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,65
+Sat Jan 13 01:03:46 AEDT 2018 Sat Jan 13 01:03:46 AEDT 2018 : org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,66=>Find no block
+Sat Jan 13 01:03:47 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,113
+Sat Jan 13 01:04:38 AEDT 2018 Sat Jan 13 01:04:38 AEDT 2018 : org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,114=>Find no block
+Sat Jan 13 01:04:39 AEDT 2018 Sat Jan 13 01:04:39 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,61=>Find no block
+Sat Jan 13 01:04:40 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,62
+Sat Jan 13 01:09:34 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,63
+Sat Jan 13 01:09:36 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,64
+Sat Jan 13 01:09:37 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,65
+Sat Jan 13 01:09:38 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,66
+Sat Jan 13 01:09:39 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,67
+Sat Jan 13 01:09:39 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,68
+Sat Jan 13 01:09:41 AEDT 2018 Sat Jan 13 01:09:41 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,69=>Find no block
+Sat Jan 13 01:09:42 AEDT 2018 Sat Jan 13 01:09:42 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,80=>Find no block
+Sat Jan 13 01:09:43 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,81
+Sat Jan 13 01:13:17 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,82
+Sat Jan 13 01:13:18 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,83
+Sat Jan 13 01:13:19 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,84
+Sat Jan 13 01:13:19 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,85
+Sat Jan 13 01:13:21 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,86
+Sat Jan 13 01:13:22 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,87
+Sat Jan 13 01:13:22 AEDT 2018 Sat Jan 13 01:13:22 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,88=>Find no block
+Sat Jan 13 01:13:23 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,152
+Sat Jan 13 01:15:48 AEDT 2018 Sat Jan 13 01:15:48 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,153=>Find no block
+Sat Jan 13 01:15:49 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,157
+Sat Jan 13 01:15:50 AEDT 2018 Sat Jan 13 01:15:50 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,158=>Find no block
+Sat Jan 13 01:15:51 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,193
+Sat Jan 13 01:15:52 AEDT 2018 Sat Jan 13 01:15:52 AEDT 2018 : org.apache.commons.math.random.JDKRandomGenerator,28=>Find no block
+Sat Jan 13 01:15:52 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,50
+Sat Jan 13 01:17:25 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,57
+Timeout time : 18/01/13 01:18
+Current failed test : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_3 | 18/01/13 01:18
+Sat Jan 13 01:18:54 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,78
+Sat Jan 13 01:20:26 AEDT 2018 Sat Jan 13 01:20:26 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,79=>Find no block
+Sat Jan 13 01:20:27 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,83
+Sat Jan 13 01:21:04 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,108
+Sat Jan 13 01:22:19 AEDT 2018 Sat Jan 13 01:22:19 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,109=>Find no block
+Sat Jan 13 01:22:20 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,113
+Sat Jan 13 01:22:51 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,102
+Sat Jan 13 01:23:37 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,127
+Sat Jan 13 01:24:22 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,147
+Sat Jan 13 01:25:43 AEDT 2018 Sat Jan 13 01:25:43 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,148=>Find no block
+Sat Jan 13 01:25:43 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,162
+Sat Jan 13 01:27:50 AEDT 2018 Sat Jan 13 01:27:50 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,163=>Find no block
+Sat Jan 13 01:27:51 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,194
+Sat Jan 13 01:28:30 AEDT 2018 org.apache.commons.math.MathRuntimeException,136
+Sat Jan 13 01:29:16 AEDT 2018 org.apache.commons.math.MathRuntimeException,444
+Sat Jan 13 01:29:19 AEDT 2018 Sat Jan 13 01:29:19 AEDT 2018 : org.apache.commons.math.util.LocalizedFormats,305=>Find no block
+Sat Jan 13 01:29:19 AEDT 2018 org.apache.commons.math.util.LocalizedFormats,306
+Sat Jan 13 01:29:22 AEDT 2018 Sat Jan 13 01:29:22 AEDT 2018 : org.apache.commons.math.util.LocalizedFormats,307=>Find no block
+Sat Jan 13 01:29:23 AEDT 2018 org.apache.commons.math.util.LocalizedFormats,317
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+try{
+ResourceBundle bundle=ResourceBundle.getBundle("META-INF/localization/LocalizedFormats",locale);
+if(bundle.getLocale().getLanguage().equals(locale.getLanguage())){
+return bundle.getString(toString());
+}
+}catch (MissingResourceException mre) {
+}
+
+return null;
+
+Time : 18/01/13 01:30
+----------------------------------------
+Sat Jan 13 01:31:33 AEDT 2018 Sat Jan 13 01:31:33 AEDT 2018 : org.apache.commons.math.util.LocalizedFormats,324=>Find no block
+Sat Jan 13 01:31:34 AEDT 2018 org.apache.commons.math.util.LocalizedFormats,330
+Sat Jan 13 01:31:35 AEDT 2018 org.apache.commons.math.MathRuntimeException,444
+Sat Jan 13 01:31:36 AEDT 2018 org.apache.commons.math.MathRuntimeException,452
+Sat Jan 13 01:31:40 AEDT 2018 org.apache.commons.math.MathRuntimeException,458
+Sat Jan 13 01:31:52 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,43
+Sat Jan 13 01:31:55 AEDT 2018 Sat Jan 13 01:31:55 AEDT 2018 : org.apache.commons.math.optimization.univariate.BrentOptimizer,44=>Find no block
+Sat Jan 13 01:31:56 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,63
+Sat Jan 13 01:34:37 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,64
+Sat Jan 13 01:34:38 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,65
+Sat Jan 13 01:34:39 AEDT 2018 Sat Jan 13 01:34:39 AEDT 2018 : org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,66=>Find no block
+Sat Jan 13 01:34:40 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,113
+Sat Jan 13 01:35:30 AEDT 2018 Sat Jan 13 01:35:30 AEDT 2018 : org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,114=>Find no block
+Sat Jan 13 01:35:30 AEDT 2018 Sat Jan 13 01:35:30 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,61=>Find no block
+Sat Jan 13 01:35:32 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,62
+Sat Jan 13 01:40:30 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,63
+Sat Jan 13 01:40:31 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,64
+Sat Jan 13 01:40:32 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,65
+Sat Jan 13 01:40:33 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,66
+Sat Jan 13 01:40:33 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,67
+Sat Jan 13 01:40:34 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,68
+Sat Jan 13 01:40:35 AEDT 2018 Sat Jan 13 01:40:35 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,69=>Find no block
+Sat Jan 13 01:40:36 AEDT 2018 Sat Jan 13 01:40:36 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,80=>Find no block
+Sat Jan 13 01:40:37 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,81
+Sat Jan 13 01:44:09 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,82
+Sat Jan 13 01:44:10 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,83
+Sat Jan 13 01:44:11 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,84
+Sat Jan 13 01:44:11 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,85
+Sat Jan 13 01:44:12 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,86
+Sat Jan 13 01:44:13 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,87
+Sat Jan 13 01:44:14 AEDT 2018 Sat Jan 13 01:44:14 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,88=>Find no block
+Sat Jan 13 01:44:15 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,152
+Sat Jan 13 01:46:35 AEDT 2018 Sat Jan 13 01:46:35 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,153=>Find no block
+Sat Jan 13 01:46:36 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,157
+Sat Jan 13 01:46:36 AEDT 2018 Sat Jan 13 01:46:36 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,158=>Find no block
+Sat Jan 13 01:46:37 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,193
+Sat Jan 13 01:46:38 AEDT 2018 Sat Jan 13 01:46:38 AEDT 2018 : org.apache.commons.math.random.JDKRandomGenerator,28=>Find no block
+Sat Jan 13 01:46:39 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,50
+Sat Jan 13 01:48:07 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,57
+Timeout time : 18/01/13 01:48
+Current failed test : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_4 | 18/01/13 01:48
+Sat Jan 13 01:49:28 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,43
+Sat Jan 13 01:49:31 AEDT 2018 Sat Jan 13 01:49:31 AEDT 2018 : org.apache.commons.math.optimization.univariate.BrentOptimizer,44=>Find no block
+Sat Jan 13 01:49:32 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,50
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return localMin(f,goalType,min,max,startValue,startValue);
+
+Time : 18/01/13 01:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.793883734673619 : [/home/hz985/jiajun/d4j/projects/math/math_67_buggy/src/main/java/org/apache/commons/math/optimization/univariate/BrentOptimizer.java=>0,0]
+clearResult();
+return localMin(f,goalType,min,max,relativeAccuracy,absoluteAccuracy);
+
+Time : 18/01/13 01:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_67_buggy/src/main/java/org/apache/commons/math/optimization/univariate/BrentOptimizer.java=>50,50]
+return optimize(f,goalType,min,max);
+
+Time : 18/01/13 01:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_67_buggy/src/main/java/org/apache/commons/math/optimization/univariate/BrentOptimizer.java=>50,50]
+return localMin(f,goalType,min,max,startValue,startValue);
+
+Time : 18/01/13 01:50
+----------------------------------------
+Success time : 18/01/13 01:50
+Current failed test : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_5 | 18/01/13 01:50
+Already fixed : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_5
+Current failed test : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_6 | 18/01/13 01:51
+Already fixed : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_6
+Current failed test : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_7 | 18/01/13 01:51
+Sat Jan 13 01:51:53 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,73
+Sat Jan 13 01:53:32 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,79
+Sat Jan 13 01:54:06 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,78
+Sat Jan 13 01:55:38 AEDT 2018 Sat Jan 13 01:55:38 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,79=>Find no block
+Sat Jan 13 01:55:38 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,83
+Sat Jan 13 01:56:17 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,108
+Sat Jan 13 01:57:28 AEDT 2018 Sat Jan 13 01:57:28 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,109=>Find no block
+Sat Jan 13 01:57:29 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,113
+Sat Jan 13 01:57:56 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,97
+Sat Jan 13 01:59:00 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,102
+Sat Jan 13 01:59:45 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,127
+Sat Jan 13 02:00:30 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,147
+Sat Jan 13 02:01:50 AEDT 2018 Sat Jan 13 02:01:50 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,148=>Find no block
+Sat Jan 13 02:01:51 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,162
+Sat Jan 13 02:04:01 AEDT 2018 Sat Jan 13 02:04:01 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,163=>Find no block
+Sat Jan 13 02:04:02 AEDT 2018 org.apache.commons.math.MathRuntimeException,136
+Sat Jan 13 02:04:49 AEDT 2018 org.apache.commons.math.MathRuntimeException,444
+Sat Jan 13 02:04:52 AEDT 2018 Sat Jan 13 02:04:52 AEDT 2018 : org.apache.commons.math.util.LocalizedFormats,305=>Find no block
+Sat Jan 13 02:04:54 AEDT 2018 org.apache.commons.math.util.LocalizedFormats,306
+Sat Jan 13 02:04:57 AEDT 2018 Sat Jan 13 02:04:57 AEDT 2018 : org.apache.commons.math.util.LocalizedFormats,307=>Find no block
+Sat Jan 13 02:04:58 AEDT 2018 org.apache.commons.math.util.LocalizedFormats,317
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+try{
+ResourceBundle bundle=ResourceBundle.getBundle("META-INF/localization/LocalizedFormats",locale);
+if(bundle.getLocale().getLanguage().equals(locale.getLanguage())){
+return bundle.getString(toString());
+}
+}catch (MissingResourceException mre) {
+}
+
+return null;
+
+Time : 18/01/13 02:05
+----------------------------------------
+Sat Jan 13 02:07:09 AEDT 2018 Sat Jan 13 02:07:09 AEDT 2018 : org.apache.commons.math.util.LocalizedFormats,324=>Find no block
+Sat Jan 13 02:07:10 AEDT 2018 org.apache.commons.math.util.LocalizedFormats,330
+Sat Jan 13 02:07:11 AEDT 2018 org.apache.commons.math.MathRuntimeException,444
+Sat Jan 13 02:07:12 AEDT 2018 org.apache.commons.math.MathRuntimeException,452
+Sat Jan 13 02:07:15 AEDT 2018 org.apache.commons.math.MathRuntimeException,458
+Sat Jan 13 02:07:27 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,43
+Sat Jan 13 02:07:30 AEDT 2018 Sat Jan 13 02:07:30 AEDT 2018 : org.apache.commons.math.optimization.univariate.BrentOptimizer,44=>Find no block
+Sat Jan 13 02:07:31 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,63
+Sat Jan 13 02:10:18 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,64
+Sat Jan 13 02:10:19 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,65
+Sat Jan 13 02:10:20 AEDT 2018 Sat Jan 13 02:10:20 AEDT 2018 : org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,66=>Find no block
+Sat Jan 13 02:10:21 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,72
+Sat Jan 13 02:10:21 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,113
+Sat Jan 13 02:11:12 AEDT 2018 Sat Jan 13 02:11:12 AEDT 2018 : org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,114=>Find no block
+Sat Jan 13 02:11:13 AEDT 2018 Sat Jan 13 02:11:13 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,61=>Find no block
+Sat Jan 13 02:11:14 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,62
+Sat Jan 13 02:16:11 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,63
+Sat Jan 13 02:16:12 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,64
+Sat Jan 13 02:16:13 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,65
+Sat Jan 13 02:16:14 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,66
+Sat Jan 13 02:16:15 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,67
+Sat Jan 13 02:16:15 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,68
+Sat Jan 13 02:16:16 AEDT 2018 Sat Jan 13 02:16:16 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,69=>Find no block
+Sat Jan 13 02:16:17 AEDT 2018 Sat Jan 13 02:16:17 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,80=>Find no block
+Sat Jan 13 02:16:18 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,81
+Sat Jan 13 02:19:50 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,82
+Sat Jan 13 02:19:50 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,83
+Sat Jan 13 02:19:51 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,84
+Sat Jan 13 02:19:52 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,85
+Sat Jan 13 02:19:53 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,86
+Sat Jan 13 02:19:54 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,87
+Sat Jan 13 02:19:55 AEDT 2018 Sat Jan 13 02:19:55 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,88=>Find no block
+Sat Jan 13 02:19:55 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,152
+Timeout time : 18/01/13 02:21
+Current failed test : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_8 | 18/01/13 02:21
+Sat Jan 13 02:22:29 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,73
+Sat Jan 13 02:24:07 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,78
+Sat Jan 13 02:25:38 AEDT 2018 Sat Jan 13 02:25:38 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,79=>Find no block
+Sat Jan 13 02:25:39 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,83
+Sat Jan 13 02:26:15 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,108
+Sat Jan 13 02:27:25 AEDT 2018 Sat Jan 13 02:27:25 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,109=>Find no block
+Sat Jan 13 02:27:26 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,113
+Sat Jan 13 02:27:55 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,92
+Sat Jan 13 02:28:41 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,102
+Sat Jan 13 02:29:28 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,127
+Sat Jan 13 02:30:14 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,147
+Sat Jan 13 02:31:34 AEDT 2018 Sat Jan 13 02:31:34 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,148=>Find no block
+Sat Jan 13 02:31:35 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,162
+Sat Jan 13 02:33:44 AEDT 2018 Sat Jan 13 02:33:44 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,163=>Find no block
+Sat Jan 13 02:33:45 AEDT 2018 org.apache.commons.math.MathRuntimeException,136
+Sat Jan 13 02:34:30 AEDT 2018 org.apache.commons.math.MathRuntimeException,444
+Sat Jan 13 02:34:33 AEDT 2018 Sat Jan 13 02:34:33 AEDT 2018 : org.apache.commons.math.util.LocalizedFormats,305=>Find no block
+Sat Jan 13 02:34:34 AEDT 2018 org.apache.commons.math.util.LocalizedFormats,306
+Sat Jan 13 02:34:37 AEDT 2018 Sat Jan 13 02:34:37 AEDT 2018 : org.apache.commons.math.util.LocalizedFormats,307=>Find no block
+Sat Jan 13 02:34:37 AEDT 2018 org.apache.commons.math.util.LocalizedFormats,317
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+try{
+ResourceBundle bundle=ResourceBundle.getBundle("META-INF/localization/LocalizedFormats",locale);
+if(bundle.getLocale().getLanguage().equals(locale.getLanguage())){
+return bundle.getString(toString());
+}
+}catch (MissingResourceException mre) {
+}
+
+return null;
+
+Time : 18/01/13 02:35
+----------------------------------------
+Sat Jan 13 02:36:47 AEDT 2018 Sat Jan 13 02:36:47 AEDT 2018 : org.apache.commons.math.util.LocalizedFormats,324=>Find no block
+Sat Jan 13 02:36:48 AEDT 2018 org.apache.commons.math.util.LocalizedFormats,330
+Sat Jan 13 02:36:49 AEDT 2018 org.apache.commons.math.MathRuntimeException,444
+Sat Jan 13 02:36:50 AEDT 2018 org.apache.commons.math.MathRuntimeException,452
+Sat Jan 13 02:36:53 AEDT 2018 org.apache.commons.math.MathRuntimeException,458
+Sat Jan 13 02:37:04 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,43
+Sat Jan 13 02:37:07 AEDT 2018 Sat Jan 13 02:37:07 AEDT 2018 : org.apache.commons.math.optimization.univariate.BrentOptimizer,44=>Find no block
+Sat Jan 13 02:37:08 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,63
+Sat Jan 13 02:39:50 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,64
+Sat Jan 13 02:39:51 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,65
+Sat Jan 13 02:39:52 AEDT 2018 Sat Jan 13 02:39:52 AEDT 2018 : org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,66=>Find no block
+Sat Jan 13 02:39:52 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,72
+Sat Jan 13 02:39:53 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,85
+Sat Jan 13 02:40:25 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,113
+Sat Jan 13 02:41:17 AEDT 2018 Sat Jan 13 02:41:17 AEDT 2018 : org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,114=>Find no block
+Sat Jan 13 02:41:17 AEDT 2018 Sat Jan 13 02:41:17 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,61=>Find no block
+Sat Jan 13 02:41:18 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,62
+Sat Jan 13 02:46:20 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,63
+Sat Jan 13 02:46:21 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,64
+Sat Jan 13 02:46:22 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,65
+Sat Jan 13 02:46:23 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,66
+Sat Jan 13 02:46:24 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,67
+Sat Jan 13 02:46:25 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,68
+Sat Jan 13 02:46:25 AEDT 2018 Sat Jan 13 02:46:25 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,69=>Find no block
+Sat Jan 13 02:46:26 AEDT 2018 Sat Jan 13 02:46:26 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,80=>Find no block
+Sat Jan 13 02:46:27 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,81
+Sat Jan 13 02:50:10 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,82
+Sat Jan 13 02:50:11 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,83
+Sat Jan 13 02:50:12 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,84
+Sat Jan 13 02:50:13 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,85
+Sat Jan 13 02:50:14 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,86
+Sat Jan 13 02:50:14 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,87
+Sat Jan 13 02:50:15 AEDT 2018 Sat Jan 13 02:50:15 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,88=>Find no block
+Sat Jan 13 02:50:16 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,152
+Timeout time : 18/01/13 02:52
+Current failed test : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_9 | 18/01/13 02:52
+Sat Jan 13 02:53:05 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,78
+Sat Jan 13 02:54:34 AEDT 2018 Sat Jan 13 02:54:34 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,79=>Find no block
+Sat Jan 13 02:54:35 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,83
+Sat Jan 13 02:55:11 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,108
+Sat Jan 13 02:56:23 AEDT 2018 Sat Jan 13 02:56:23 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,109=>Find no block
+Sat Jan 13 02:56:23 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,113
+Sat Jan 13 02:56:51 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,102
+Sat Jan 13 02:57:37 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,127
+Sat Jan 13 02:58:22 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,147
+Sat Jan 13 02:59:41 AEDT 2018 Sat Jan 13 02:59:41 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,148=>Find no block
+Sat Jan 13 02:59:42 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,162
+Sat Jan 13 03:01:51 AEDT 2018 Sat Jan 13 03:01:51 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,163=>Find no block
+Sat Jan 13 03:01:51 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,194
+Sat Jan 13 03:02:30 AEDT 2018 org.apache.commons.math.MathRuntimeException,136
+Sat Jan 13 03:03:19 AEDT 2018 org.apache.commons.math.MathRuntimeException,444
+Sat Jan 13 03:03:22 AEDT 2018 Sat Jan 13 03:03:22 AEDT 2018 : org.apache.commons.math.util.LocalizedFormats,305=>Find no block
+Sat Jan 13 03:03:23 AEDT 2018 org.apache.commons.math.util.LocalizedFormats,306
+Sat Jan 13 03:03:26 AEDT 2018 Sat Jan 13 03:03:26 AEDT 2018 : org.apache.commons.math.util.LocalizedFormats,307=>Find no block
+Sat Jan 13 03:03:26 AEDT 2018 org.apache.commons.math.util.LocalizedFormats,317
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+try{
+ResourceBundle bundle=ResourceBundle.getBundle("META-INF/localization/LocalizedFormats",locale);
+if(bundle.getLocale().getLanguage().equals(locale.getLanguage())){
+return bundle.getString(toString());
+}
+}catch (MissingResourceException mre) {
+}
+
+return null;
+
+Time : 18/01/13 03:04
+----------------------------------------
+Sat Jan 13 03:05:35 AEDT 2018 Sat Jan 13 03:05:35 AEDT 2018 : org.apache.commons.math.util.LocalizedFormats,324=>Find no block
+Sat Jan 13 03:05:36 AEDT 2018 org.apache.commons.math.util.LocalizedFormats,330
+Sat Jan 13 03:05:37 AEDT 2018 org.apache.commons.math.MathRuntimeException,444
+Sat Jan 13 03:05:37 AEDT 2018 org.apache.commons.math.MathRuntimeException,452
+Sat Jan 13 03:05:40 AEDT 2018 org.apache.commons.math.MathRuntimeException,458
+Sat Jan 13 03:05:51 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,43
+Sat Jan 13 03:05:54 AEDT 2018 Sat Jan 13 03:05:54 AEDT 2018 : org.apache.commons.math.optimization.univariate.BrentOptimizer,44=>Find no block
+Sat Jan 13 03:05:54 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,63
+Sat Jan 13 03:08:31 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,64
+Sat Jan 13 03:08:31 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,65
+Sat Jan 13 03:08:32 AEDT 2018 Sat Jan 13 03:08:32 AEDT 2018 : org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,66=>Find no block
+Sat Jan 13 03:08:33 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,113
+Sat Jan 13 03:09:20 AEDT 2018 Sat Jan 13 03:09:20 AEDT 2018 : org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,114=>Find no block
+Sat Jan 13 03:09:20 AEDT 2018 Sat Jan 13 03:09:20 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,61=>Find no block
+Sat Jan 13 03:09:21 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,62
+Sat Jan 13 03:14:10 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,63
+Sat Jan 13 03:14:10 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,64
+Sat Jan 13 03:14:11 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,65
+Sat Jan 13 03:14:12 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,66
+Sat Jan 13 03:14:13 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,67
+Sat Jan 13 03:14:13 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,68
+Sat Jan 13 03:14:14 AEDT 2018 Sat Jan 13 03:14:14 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,69=>Find no block
+Sat Jan 13 03:14:15 AEDT 2018 Sat Jan 13 03:14:15 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,80=>Find no block
+Sat Jan 13 03:14:15 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,81
+Sat Jan 13 03:17:42 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,82
+Sat Jan 13 03:17:43 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,83
+Sat Jan 13 03:17:44 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,84
+Sat Jan 13 03:17:44 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,85
+Sat Jan 13 03:17:45 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,86
+Sat Jan 13 03:17:46 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,87
+Sat Jan 13 03:17:47 AEDT 2018 Sat Jan 13 03:17:47 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,88=>Find no block
+Sat Jan 13 03:17:47 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,152
+Sat Jan 13 03:20:03 AEDT 2018 Sat Jan 13 03:20:03 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,153=>Find no block
+Sat Jan 13 03:20:04 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,157
+Sat Jan 13 03:20:05 AEDT 2018 Sat Jan 13 03:20:05 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,158=>Find no block
+Sat Jan 13 03:20:05 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,193
+Sat Jan 13 03:20:06 AEDT 2018 Sat Jan 13 03:20:06 AEDT 2018 : org.apache.commons.math.random.JDKRandomGenerator,28=>Find no block
+Sat Jan 13 03:20:07 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,50
+Sat Jan 13 03:21:33 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,57
+Sat Jan 13 03:22:41 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,58
+Sat Jan 13 03:22:41 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,88
+Timeout time : 18/01/13 03:23
+Current failed test : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_10 | 18/01/13 03:23
+Sat Jan 13 03:23:52 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,78
+Sat Jan 13 03:25:17 AEDT 2018 Sat Jan 13 03:25:17 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,79=>Find no block
+Sat Jan 13 03:25:18 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,83
+Sat Jan 13 03:25:52 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,108
+Sat Jan 13 03:26:58 AEDT 2018 Sat Jan 13 03:26:58 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,109=>Find no block
+Sat Jan 13 03:26:59 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,113
+Sat Jan 13 03:27:25 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,102
+Sat Jan 13 03:28:07 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,127
+Sat Jan 13 03:28:49 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,147
+Sat Jan 13 03:30:04 AEDT 2018 Sat Jan 13 03:30:04 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,148=>Find no block
+Sat Jan 13 03:30:05 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,162
+Sat Jan 13 03:32:06 AEDT 2018 Sat Jan 13 03:32:06 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,163=>Find no block
+Sat Jan 13 03:32:07 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,194
+Sat Jan 13 03:32:41 AEDT 2018 org.apache.commons.math.MathRuntimeException,136
+Sat Jan 13 03:33:25 AEDT 2018 org.apache.commons.math.MathRuntimeException,444
+Sat Jan 13 03:33:27 AEDT 2018 Sat Jan 13 03:33:27 AEDT 2018 : org.apache.commons.math.util.LocalizedFormats,305=>Find no block
+Sat Jan 13 03:33:28 AEDT 2018 org.apache.commons.math.util.LocalizedFormats,306
+Sat Jan 13 03:33:30 AEDT 2018 Sat Jan 13 03:33:30 AEDT 2018 : org.apache.commons.math.util.LocalizedFormats,307=>Find no block
+Sat Jan 13 03:33:31 AEDT 2018 org.apache.commons.math.util.LocalizedFormats,317
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+try{
+ResourceBundle bundle=ResourceBundle.getBundle("META-INF/localization/LocalizedFormats",locale);
+if(bundle.getLocale().getLanguage().equals(locale.getLanguage())){
+return bundle.getString(toString());
+}
+}catch (MissingResourceException mre) {
+}
+
+return null;
+
+Time : 18/01/13 03:34
+----------------------------------------
+Sat Jan 13 03:35:28 AEDT 2018 Sat Jan 13 03:35:28 AEDT 2018 : org.apache.commons.math.util.LocalizedFormats,324=>Find no block
+Sat Jan 13 03:35:29 AEDT 2018 org.apache.commons.math.util.LocalizedFormats,330
+Sat Jan 13 03:35:29 AEDT 2018 org.apache.commons.math.MathRuntimeException,444
+Sat Jan 13 03:35:30 AEDT 2018 org.apache.commons.math.MathRuntimeException,452
+Sat Jan 13 03:35:33 AEDT 2018 org.apache.commons.math.MathRuntimeException,458
+Sat Jan 13 03:35:43 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,43
+Sat Jan 13 03:35:46 AEDT 2018 Sat Jan 13 03:35:46 AEDT 2018 : org.apache.commons.math.optimization.univariate.BrentOptimizer,44=>Find no block
+Sat Jan 13 03:35:47 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,63
+Sat Jan 13 03:38:26 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,64
+Sat Jan 13 03:38:27 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,65
+Sat Jan 13 03:38:28 AEDT 2018 Sat Jan 13 03:38:28 AEDT 2018 : org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,66=>Find no block
+Sat Jan 13 03:38:29 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,113
+Sat Jan 13 03:39:19 AEDT 2018 Sat Jan 13 03:39:19 AEDT 2018 : org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,114=>Find no block
+Sat Jan 13 03:39:19 AEDT 2018 Sat Jan 13 03:39:19 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,61=>Find no block
+Sat Jan 13 03:39:20 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,62
+Sat Jan 13 03:44:05 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,63
+Sat Jan 13 03:44:05 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,64
+Sat Jan 13 03:44:06 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,65
+Sat Jan 13 03:44:07 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,66
+Sat Jan 13 03:44:08 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,67
+Sat Jan 13 03:44:08 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,68
+Sat Jan 13 03:44:09 AEDT 2018 Sat Jan 13 03:44:09 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,69=>Find no block
+Sat Jan 13 03:44:09 AEDT 2018 Sat Jan 13 03:44:09 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,80=>Find no block
+Sat Jan 13 03:44:10 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,81
+Sat Jan 13 03:47:33 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,82
+Sat Jan 13 03:47:33 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,83
+Sat Jan 13 03:47:34 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,84
+Sat Jan 13 03:47:35 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,85
+Sat Jan 13 03:47:35 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,86
+Sat Jan 13 03:47:36 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,87
+Sat Jan 13 03:47:36 AEDT 2018 Sat Jan 13 03:47:36 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,88=>Find no block
+Sat Jan 13 03:47:37 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,152
+Sat Jan 13 03:49:53 AEDT 2018 Sat Jan 13 03:49:53 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,153=>Find no block
+Sat Jan 13 03:49:54 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,157
+Sat Jan 13 03:49:55 AEDT 2018 Sat Jan 13 03:49:55 AEDT 2018 : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,158=>Find no block
+Sat Jan 13 03:49:56 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,193
+Sat Jan 13 03:49:56 AEDT 2018 Sat Jan 13 03:49:56 AEDT 2018 : org.apache.commons.math.random.JDKRandomGenerator,28=>Find no block
+Sat Jan 13 03:49:57 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,50
+Sat Jan 13 03:51:22 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,57
+Sat Jan 13 03:52:31 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,58
+Sat Jan 13 03:52:32 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,88
+Timeout time : 18/01/13 03:53

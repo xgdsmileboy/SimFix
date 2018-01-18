@@ -1,0 +1,345 @@
+=================================================
+Project : time_3	start : 18/01/15 10:10
+Current failed test : org.joda.time.TestMutableDateTime_Adds::testAddWeeks_int_dstOverlapWinter_addZero_purify_2 | 18/01/15 10:10
+Mon Jan 15 10:11:23 EST 2018 org.joda.time.MutableDateTime,723
+Mon Jan 15 10:11:50 EST 2018 Mon Jan 15 10:11:50 EST 2018 : org.joda.time.MutableDateTime,724=>Find no block
+Mon Jan 15 10:11:50 EST 2018 org.joda.time.MutableDateTime,785
+Mon Jan 15 10:12:16 EST 2018 Mon Jan 15 10:12:16 EST 2018 : org.joda.time.MutableDateTime,786=>Find no block
+Mon Jan 15 10:12:17 EST 2018 org.joda.time.DateTimeZone,931
+Mon Jan 15 10:12:54 EST 2018 org.joda.time.chrono.ZonedChronology,351
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/15 10:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Adding time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/15 10:21
+----------------------------------------
+Mon Jan 15 10:28:31 EST 2018 org.joda.time.chrono.ZonedChronology,352
+Mon Jan 15 10:28:31 EST 2018 org.joda.time.chrono.ZonedChronology,354
+Mon Jan 15 10:28:31 EST 2018 org.joda.time.chrono.ZonedChronology,357
+Mon Jan 15 10:28:31 EST 2018 org.joda.time.MutableDateTime,351
+Mon Jan 15 10:28:51 EST 2018 Mon Jan 15 10:28:51 EST 2018 : org.joda.time.MutableDateTime,353=>Find no block
+Mon Jan 15 10:28:51 EST 2018 Mon Jan 15 10:28:51 EST 2018 : org.joda.time.tz.ZoneInfoProvider,151=>Find no block
+Mon Jan 15 10:28:51 EST 2018 org.joda.time.tz.ZoneInfoProvider,152
+Mon Jan 15 10:29:12 EST 2018 org.joda.time.tz.ZoneInfoProvider,153
+Mon Jan 15 10:29:12 EST 2018 org.joda.time.tz.ZoneInfoProvider,154
+Mon Jan 15 10:29:12 EST 2018 org.joda.time.tz.ZoneInfoProvider,149
+Mon Jan 15 10:29:12 EST 2018 org.joda.time.DateTimeZone,211
+Mon Jan 15 10:34:10 EST 2018 org.joda.time.DateTimeZone,212
+Mon Jan 15 10:34:10 EST 2018 org.joda.time.DateTimeZone,213
+Mon Jan 15 10:34:10 EST 2018 org.joda.time.tz.ZoneInfoProvider,135
+Mon Jan 15 10:34:36 EST 2018 org.joda.time.tz.ZoneInfoProvider,139
+Mon Jan 15 10:35:55 EST 2018 org.joda.time.tz.ZoneInfoProvider,140
+Mon Jan 15 10:35:55 EST 2018 org.joda.time.tz.ZoneInfoProvider,144
+Mon Jan 15 10:36:41 EST 2018 org.joda.time.DateTimeZone,205
+Mon Jan 15 10:36:55 EST 2018 org.joda.time.DateTimeZone,208
+Mon Jan 15 10:36:55 EST 2018 org.joda.time.chrono.ZonedChronology,315
+Mon Jan 15 10:39:25 EST 2018 org.joda.time.chrono.ZonedChronology,316
+Mon Jan 15 10:39:25 EST 2018 org.joda.time.chrono.ZonedChronology,317
+Mon Jan 15 10:39:25 EST 2018 org.joda.time.MutableDateTime,1229
+Mon Jan 15 10:39:33 EST 2018 org.joda.time.tz.CachedDateTimeZone,202
+Mon Jan 15 10:44:31 EST 2018 org.joda.time.chrono.ZonedChronology,341
+Mon Jan 15 11:01:14 EST 2018 org.joda.time.chrono.ZonedChronology,342
+Mon Jan 15 11:01:14 EST 2018 org.joda.time.chrono.ZonedChronology,344
+Mon Jan 15 11:01:14 EST 2018 org.joda.time.chrono.ZonedChronology,347
+Mon Jan 15 11:01:14 EST 2018 org.joda.time.chrono.AssembledChronology,236
+Mon Jan 15 11:01:15 EST 2018 org.joda.time.MutableDateTime,456
+Mon Jan 15 11:01:17 EST 2018 org.joda.time.base.BaseDateTime,317
+Mon Jan 15 11:02:44 EST 2018 Mon Jan 15 11:02:44 EST 2018 : org.joda.time.base.BaseDateTime,318=>Find no block
+Mon Jan 15 11:02:45 EST 2018 Mon Jan 15 11:02:45 EST 2018 : org.joda.time.MutableDateTime,454=>Find no block
+Mon Jan 15 11:02:45 EST 2018 org.joda.time.MutableDateTime,473
+Timeout time : 18/01/15 11:11
+Current failed test : org.joda.time.TestMutableDateTime_Adds::testAdd_DurationFieldType_int_dstOverlapWinter_addZero_purify_2 | 18/01/15 11:11
+Mon Jan 15 11:11:53 EST 2018 org.joda.time.MutableDateTime,639
+Mon Jan 15 11:15:09 EST 2018 Mon Jan 15 11:15:09 EST 2018 : org.joda.time.MutableDateTime,640=>Find no block
+Mon Jan 15 11:15:09 EST 2018 org.joda.time.MutableDateTime,636
+Mon Jan 15 11:15:38 EST 2018 org.joda.time.chrono.BasicYearDateTimeField,60
+Mon Jan 15 11:17:01 EST 2018 org.joda.time.MutableDateTime,785
+Mon Jan 15 11:17:27 EST 2018 Mon Jan 15 11:17:27 EST 2018 : org.joda.time.MutableDateTime,786=>Find no block
+Mon Jan 15 11:17:27 EST 2018 org.joda.time.field.ImpreciseDateTimeField,183
+Mon Jan 15 11:17:50 EST 2018 org.joda.time.DateTimeZone,931
+Mon Jan 15 11:18:27 EST 2018 org.joda.time.DurationFieldType,292
+Mon Jan 15 11:19:20 EST 2018 org.joda.time.chrono.ZonedChronology,351
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/15 11:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Adding time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/15 11:27
+----------------------------------------
+Mon Jan 15 11:34:57 EST 2018 org.joda.time.chrono.ZonedChronology,352
+Mon Jan 15 11:34:57 EST 2018 org.joda.time.chrono.ZonedChronology,354
+Mon Jan 15 11:34:57 EST 2018 org.joda.time.chrono.ZonedChronology,357
+Mon Jan 15 11:34:57 EST 2018 org.joda.time.MutableDateTime,351
+Mon Jan 15 11:35:16 EST 2018 Mon Jan 15 11:35:16 EST 2018 : org.joda.time.MutableDateTime,353=>Find no block
+Mon Jan 15 11:35:16 EST 2018 Mon Jan 15 11:35:16 EST 2018 : org.joda.time.tz.ZoneInfoProvider,151=>Find no block
+Mon Jan 15 11:35:16 EST 2018 org.joda.time.tz.ZoneInfoProvider,152
+Mon Jan 15 11:35:37 EST 2018 org.joda.time.tz.ZoneInfoProvider,153
+Mon Jan 15 11:35:37 EST 2018 org.joda.time.tz.ZoneInfoProvider,154
+Mon Jan 15 11:35:38 EST 2018 org.joda.time.tz.ZoneInfoProvider,149
+Mon Jan 15 11:35:38 EST 2018 org.joda.time.DateTimeZone,211
+Mon Jan 15 11:40:35 EST 2018 org.joda.time.DateTimeZone,212
+Mon Jan 15 11:40:35 EST 2018 org.joda.time.DateTimeZone,213
+Mon Jan 15 11:40:35 EST 2018 org.joda.time.tz.ZoneInfoProvider,135
+Mon Jan 15 11:41:01 EST 2018 org.joda.time.tz.ZoneInfoProvider,139
+Mon Jan 15 11:42:20 EST 2018 org.joda.time.tz.ZoneInfoProvider,140
+Mon Jan 15 11:42:20 EST 2018 org.joda.time.tz.ZoneInfoProvider,144
+Mon Jan 15 11:43:07 EST 2018 org.joda.time.DurationFieldType,187
+Mon Jan 15 11:43:08 EST 2018 org.joda.time.DateTimeZone,205
+Mon Jan 15 11:43:22 EST 2018 org.joda.time.DateTimeZone,208
+Mon Jan 15 11:43:22 EST 2018 org.joda.time.chrono.ZonedChronology,315
+Mon Jan 15 11:45:52 EST 2018 org.joda.time.chrono.ZonedChronology,316
+Mon Jan 15 11:45:52 EST 2018 org.joda.time.chrono.ZonedChronology,317
+Mon Jan 15 11:45:52 EST 2018 org.joda.time.MutableDateTime,1229
+Mon Jan 15 11:46:00 EST 2018 org.joda.time.tz.CachedDateTimeZone,202
+Mon Jan 15 11:50:58 EST 2018 org.joda.time.chrono.ZonedChronology,341
+Mon Jan 15 12:07:41 EST 2018 org.joda.time.chrono.ZonedChronology,342
+Mon Jan 15 12:07:41 EST 2018 org.joda.time.chrono.ZonedChronology,344
+Mon Jan 15 12:07:41 EST 2018 org.joda.time.chrono.ZonedChronology,347
+Mon Jan 15 12:07:41 EST 2018 org.joda.time.MutableDateTime,456
+Mon Jan 15 12:07:43 EST 2018 org.joda.time.base.BaseDateTime,317
+Mon Jan 15 12:09:11 EST 2018 Mon Jan 15 12:09:11 EST 2018 : org.joda.time.base.BaseDateTime,318=>Find no block
+Mon Jan 15 12:09:11 EST 2018 Mon Jan 15 12:09:11 EST 2018 : org.joda.time.MutableDateTime,454=>Find no block
+Mon Jan 15 12:09:11 EST 2018 org.joda.time.MutableDateTime,473
+Timeout time : 18/01/15 12:11
+Current failed test : org.joda.time.TestMutableDateTime_Adds::testAddMonths_int_dstOverlapWinter_addZero_purify_2 | 18/01/15 12:11
+Mon Jan 15 12:12:24 EST 2018 org.joda.time.chrono.BasicMonthOfYearDateTimeField,94
+Mon Jan 15 12:15:00 EST 2018 org.joda.time.MutableDateTime,702
+Mon Jan 15 12:15:26 EST 2018 Mon Jan 15 12:15:26 EST 2018 : org.joda.time.MutableDateTime,703=>Find no block
+Mon Jan 15 12:15:26 EST 2018 org.joda.time.MutableDateTime,785
+Mon Jan 15 12:15:53 EST 2018 Mon Jan 15 12:15:53 EST 2018 : org.joda.time.MutableDateTime,786=>Find no block
+Mon Jan 15 12:15:53 EST 2018 org.joda.time.field.ImpreciseDateTimeField,183
+Mon Jan 15 12:16:15 EST 2018 org.joda.time.DateTimeZone,931
+Mon Jan 15 12:16:53 EST 2018 org.joda.time.chrono.ZonedChronology,351
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/15 12:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Adding time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/15 12:25
+----------------------------------------
+Mon Jan 15 12:32:29 EST 2018 org.joda.time.chrono.ZonedChronology,352
+Mon Jan 15 12:32:29 EST 2018 org.joda.time.chrono.ZonedChronology,354
+Mon Jan 15 12:32:29 EST 2018 org.joda.time.chrono.ZonedChronology,357
+Mon Jan 15 12:32:29 EST 2018 org.joda.time.MutableDateTime,351
+Mon Jan 15 12:32:48 EST 2018 Mon Jan 15 12:32:48 EST 2018 : org.joda.time.MutableDateTime,353=>Find no block
+Mon Jan 15 12:32:48 EST 2018 Mon Jan 15 12:32:48 EST 2018 : org.joda.time.tz.ZoneInfoProvider,151=>Find no block
+Mon Jan 15 12:32:48 EST 2018 org.joda.time.tz.ZoneInfoProvider,152
+Mon Jan 15 12:33:09 EST 2018 org.joda.time.tz.ZoneInfoProvider,153
+Mon Jan 15 12:33:09 EST 2018 org.joda.time.tz.ZoneInfoProvider,154
+Mon Jan 15 12:33:09 EST 2018 org.joda.time.tz.ZoneInfoProvider,149
+Mon Jan 15 12:33:09 EST 2018 org.joda.time.DateTimeZone,211
+Mon Jan 15 12:38:07 EST 2018 org.joda.time.DateTimeZone,212
+Mon Jan 15 12:38:07 EST 2018 org.joda.time.DateTimeZone,213
+Mon Jan 15 12:38:07 EST 2018 org.joda.time.tz.ZoneInfoProvider,135
+Mon Jan 15 12:38:33 EST 2018 org.joda.time.tz.ZoneInfoProvider,139
+Mon Jan 15 12:39:52 EST 2018 org.joda.time.tz.ZoneInfoProvider,140
+Mon Jan 15 12:39:52 EST 2018 org.joda.time.tz.ZoneInfoProvider,144
+Mon Jan 15 12:40:39 EST 2018 org.joda.time.DateTimeZone,205
+Mon Jan 15 12:40:52 EST 2018 org.joda.time.DateTimeZone,208
+Mon Jan 15 12:40:52 EST 2018 org.joda.time.chrono.ZonedChronology,315
+Mon Jan 15 12:43:23 EST 2018 org.joda.time.chrono.ZonedChronology,316
+Mon Jan 15 12:43:23 EST 2018 org.joda.time.chrono.ZonedChronology,317
+Mon Jan 15 12:43:23 EST 2018 org.joda.time.MutableDateTime,1229
+Mon Jan 15 12:43:31 EST 2018 org.joda.time.tz.CachedDateTimeZone,202
+Mon Jan 15 12:48:29 EST 2018 org.joda.time.chrono.ZonedChronology,341
+Mon Jan 15 13:05:12 EST 2018 org.joda.time.chrono.ZonedChronology,342
+Mon Jan 15 13:05:12 EST 2018 org.joda.time.chrono.ZonedChronology,344
+Mon Jan 15 13:05:12 EST 2018 org.joda.time.chrono.ZonedChronology,347
+Mon Jan 15 13:05:12 EST 2018 org.joda.time.MutableDateTime,456
+Mon Jan 15 13:05:14 EST 2018 Mon Jan 15 13:05:14 EST 2018 : org.joda.time.MutableDateTime,454=>Find no block
+Mon Jan 15 13:05:14 EST 2018 org.joda.time.MutableDateTime,473
+Timeout time : 18/01/15 13:12
+Current failed test : org.joda.time.TestMutableDateTime_Adds::testAddYears_int_dstOverlapWinter_addZero_purify_2 | 18/01/15 13:12
+Mon Jan 15 13:12:55 EST 2018 org.joda.time.MutableDateTime,660
+Mon Jan 15 13:13:22 EST 2018 Mon Jan 15 13:13:22 EST 2018 : org.joda.time.MutableDateTime,661=>Find no block
+Mon Jan 15 13:13:22 EST 2018 org.joda.time.chrono.BasicYearDateTimeField,60
+Mon Jan 15 13:14:45 EST 2018 org.joda.time.MutableDateTime,785
+Mon Jan 15 13:15:12 EST 2018 Mon Jan 15 13:15:12 EST 2018 : org.joda.time.MutableDateTime,786=>Find no block
+Mon Jan 15 13:15:12 EST 2018 org.joda.time.field.ImpreciseDateTimeField,183
+Mon Jan 15 13:15:34 EST 2018 org.joda.time.DateTimeZone,931
+Mon Jan 15 13:16:12 EST 2018 org.joda.time.chrono.ZonedChronology,351
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/15 13:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Adding time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/15 13:24
+----------------------------------------
+Mon Jan 15 13:31:47 EST 2018 org.joda.time.chrono.ZonedChronology,352
+Mon Jan 15 13:31:47 EST 2018 org.joda.time.chrono.ZonedChronology,354
+Mon Jan 15 13:31:47 EST 2018 org.joda.time.chrono.ZonedChronology,357
+Mon Jan 15 13:31:47 EST 2018 org.joda.time.MutableDateTime,351
+Mon Jan 15 13:32:06 EST 2018 Mon Jan 15 13:32:06 EST 2018 : org.joda.time.MutableDateTime,353=>Find no block
+Mon Jan 15 13:32:06 EST 2018 Mon Jan 15 13:32:06 EST 2018 : org.joda.time.tz.ZoneInfoProvider,151=>Find no block
+Mon Jan 15 13:32:06 EST 2018 org.joda.time.tz.ZoneInfoProvider,152
+Mon Jan 15 13:32:28 EST 2018 org.joda.time.tz.ZoneInfoProvider,153
+Mon Jan 15 13:32:28 EST 2018 org.joda.time.tz.ZoneInfoProvider,154
+Mon Jan 15 13:32:28 EST 2018 org.joda.time.tz.ZoneInfoProvider,149
+Mon Jan 15 13:32:28 EST 2018 org.joda.time.DateTimeZone,211
+Mon Jan 15 13:37:25 EST 2018 org.joda.time.DateTimeZone,212
+Mon Jan 15 13:37:25 EST 2018 org.joda.time.DateTimeZone,213
+Mon Jan 15 13:37:25 EST 2018 org.joda.time.tz.ZoneInfoProvider,135
+Mon Jan 15 13:37:51 EST 2018 org.joda.time.tz.ZoneInfoProvider,139
+Mon Jan 15 13:39:10 EST 2018 org.joda.time.tz.ZoneInfoProvider,140
+Mon Jan 15 13:39:10 EST 2018 org.joda.time.tz.ZoneInfoProvider,144
+Mon Jan 15 13:39:57 EST 2018 org.joda.time.DateTimeZone,205
+Mon Jan 15 13:40:10 EST 2018 org.joda.time.DateTimeZone,208
+Mon Jan 15 13:40:10 EST 2018 org.joda.time.chrono.ZonedChronology,315
+Mon Jan 15 13:42:40 EST 2018 org.joda.time.chrono.ZonedChronology,316
+Mon Jan 15 13:42:40 EST 2018 org.joda.time.chrono.ZonedChronology,317
+Mon Jan 15 13:42:40 EST 2018 org.joda.time.MutableDateTime,1229
+Mon Jan 15 13:42:48 EST 2018 org.joda.time.tz.CachedDateTimeZone,202
+Mon Jan 15 13:47:46 EST 2018 org.joda.time.chrono.ZonedChronology,341
+Mon Jan 15 14:04:29 EST 2018 org.joda.time.chrono.ZonedChronology,342
+Mon Jan 15 14:04:29 EST 2018 org.joda.time.chrono.ZonedChronology,344
+Mon Jan 15 14:04:29 EST 2018 org.joda.time.chrono.ZonedChronology,347
+Mon Jan 15 14:04:29 EST 2018 org.joda.time.MutableDateTime,456
+Mon Jan 15 14:04:31 EST 2018 org.joda.time.base.BaseDateTime,317
+Mon Jan 15 14:05:59 EST 2018 Mon Jan 15 14:05:59 EST 2018 : org.joda.time.base.BaseDateTime,318=>Find no block
+Mon Jan 15 14:05:59 EST 2018 Mon Jan 15 14:05:59 EST 2018 : org.joda.time.MutableDateTime,454=>Find no block
+Mon Jan 15 14:05:59 EST 2018 org.joda.time.MutableDateTime,473
+Timeout time : 18/01/15 14:12
+Current failed test : org.joda.time.TestMutableDateTime_Adds::testAddDays_int_dstOverlapWinter_addZero_purify_2 | 18/01/15 14:12
+Mon Jan 15 14:13:26 EST 2018 org.joda.time.MutableDateTime,764
+Mon Jan 15 14:13:53 EST 2018 Mon Jan 15 14:13:53 EST 2018 : org.joda.time.MutableDateTime,765=>Find no block
+Mon Jan 15 14:13:53 EST 2018 org.joda.time.MutableDateTime,785
+Mon Jan 15 14:14:20 EST 2018 Mon Jan 15 14:14:20 EST 2018 : org.joda.time.MutableDateTime,786=>Find no block
+Mon Jan 15 14:14:20 EST 2018 org.joda.time.DateTimeZone,931
+Mon Jan 15 14:14:57 EST 2018 org.joda.time.chrono.ZonedChronology,351
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Subtracting time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/15 14:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int offset=this.iZone.getOffset(instant);
+long diff=instant-offset;
+if((instant^diff)<0&&(instant^offset)<0){
+throw new ArithmeticException("Adding time zone offset caused overflow");
+}
+return offset;
+
+Time : 18/01/15 14:23
+----------------------------------------
+Mon Jan 15 14:30:33 EST 2018 org.joda.time.chrono.ZonedChronology,352
+Mon Jan 15 14:30:33 EST 2018 org.joda.time.chrono.ZonedChronology,354
+Mon Jan 15 14:30:33 EST 2018 org.joda.time.chrono.ZonedChronology,357
+Mon Jan 15 14:30:33 EST 2018 org.joda.time.MutableDateTime,351
+Mon Jan 15 14:30:53 EST 2018 Mon Jan 15 14:30:53 EST 2018 : org.joda.time.MutableDateTime,353=>Find no block
+Mon Jan 15 14:30:53 EST 2018 Mon Jan 15 14:30:53 EST 2018 : org.joda.time.tz.ZoneInfoProvider,151=>Find no block
+Mon Jan 15 14:30:53 EST 2018 org.joda.time.tz.ZoneInfoProvider,152
+Mon Jan 15 14:31:14 EST 2018 org.joda.time.tz.ZoneInfoProvider,153
+Mon Jan 15 14:31:14 EST 2018 org.joda.time.tz.ZoneInfoProvider,154
+Mon Jan 15 14:31:14 EST 2018 org.joda.time.tz.ZoneInfoProvider,149
+Mon Jan 15 14:31:14 EST 2018 org.joda.time.DateTimeZone,211
+Mon Jan 15 14:36:11 EST 2018 org.joda.time.DateTimeZone,212
+Mon Jan 15 14:36:11 EST 2018 org.joda.time.DateTimeZone,213
+Mon Jan 15 14:36:11 EST 2018 org.joda.time.tz.ZoneInfoProvider,135
+Mon Jan 15 14:36:37 EST 2018 org.joda.time.tz.ZoneInfoProvider,139
+Mon Jan 15 14:37:56 EST 2018 org.joda.time.tz.ZoneInfoProvider,140
+Mon Jan 15 14:37:56 EST 2018 org.joda.time.tz.ZoneInfoProvider,144
+Mon Jan 15 14:38:43 EST 2018 org.joda.time.DateTimeZone,205
+Mon Jan 15 14:38:56 EST 2018 org.joda.time.DateTimeZone,208
+Mon Jan 15 14:38:56 EST 2018 org.joda.time.chrono.ZonedChronology,315
+Mon Jan 15 14:41:27 EST 2018 org.joda.time.chrono.ZonedChronology,316
+Mon Jan 15 14:41:27 EST 2018 org.joda.time.chrono.ZonedChronology,317
+Mon Jan 15 14:41:27 EST 2018 org.joda.time.MutableDateTime,1229
+Mon Jan 15 14:41:35 EST 2018 org.joda.time.tz.CachedDateTimeZone,202
+Mon Jan 15 14:46:33 EST 2018 org.joda.time.chrono.ZonedChronology,341
+Mon Jan 15 15:03:16 EST 2018 org.joda.time.chrono.ZonedChronology,342
+Mon Jan 15 15:03:16 EST 2018 org.joda.time.chrono.ZonedChronology,344
+Mon Jan 15 15:03:16 EST 2018 org.joda.time.chrono.ZonedChronology,347
+Mon Jan 15 15:03:16 EST 2018 org.joda.time.MutableDateTime,456
+Mon Jan 15 15:03:18 EST 2018 org.joda.time.base.BaseDateTime,317
+Mon Jan 15 15:04:46 EST 2018 Mon Jan 15 15:04:46 EST 2018 : org.joda.time.base.BaseDateTime,318=>Find no block
+Mon Jan 15 15:04:46 EST 2018 Mon Jan 15 15:04:46 EST 2018 : org.joda.time.MutableDateTime,454=>Find no block
+Mon Jan 15 15:04:46 EST 2018 org.joda.time.MutableDateTime,473
+Timeout time : 18/01/15 15:13

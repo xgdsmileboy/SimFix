@@ -1,0 +1,323 @@
+=================================================
+Project : closure_75	start : 18/01/12 19:18
+Current failed test : com.google.javascript.jscomp.PeepholeFoldConstantsTest::testIEString | 18/01/12 19:19
+Fri Jan 12 19:33:36 AEDT 2018 com.google.javascript.rhino.Node,1371
+Fri Jan 12 19:34:11 AEDT 2018 com.google.javascript.rhino.Node,1400
+Fri Jan 12 19:37:38 AEDT 2018 com.google.javascript.rhino.Node,1413
+Fri Jan 12 19:40:21 AEDT 2018 Fri Jan 12 19:40:21 AEDT 2018 : com.google.javascript.rhino.Node,2247=>Find no block
+Fri Jan 12 19:40:24 AEDT 2018 com.google.javascript.rhino.Node,2248
+Fri Jan 12 19:40:34 AEDT 2018 com.google.javascript.rhino.Node,2249
+Fri Jan 12 19:40:40 AEDT 2018 Fri Jan 12 19:40:40 AEDT 2018 : com.google.javascript.rhino.Node,2250=>Find no block
+Fri Jan 12 19:40:45 AEDT 2018 com.google.javascript.jscomp.NodeUtil,375
+Fri Jan 12 19:41:05 AEDT 2018 com.google.javascript.jscomp.NodeUtil,364
+Fri Jan 12 19:47:48 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,355
+Fri Jan 12 20:50:16 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,357
+Fri Jan 12 20:50:19 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,358
+Fri Jan 12 20:50:24 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,359
+Fri Jan 12 20:50:27 AEDT 2018 com.google.javascript.jscomp.NodeUtil,301
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case Token.STRING :
+return null;
+
+
+Time : 18/01/12 20:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case Token.CASE :
+
+case Token.STRING :
+return null;
+
+
+Time : 18/01/12 20:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case Token.STRING :
+return null;
+
+case Token.ARRAYLIT :
+
+
+Time : 18/01/12 21:06
+----------------------------------------
+Fri Jan 12 21:13:16 AEDT 2018 com.google.javascript.jscomp.NodeUtil,315
+Fri Jan 12 21:24:33 AEDT 2018 com.google.javascript.jscomp.NodeUtil,317
+Fri Jan 12 21:28:04 AEDT 2018 com.google.javascript.jscomp.NodeUtil,321
+Fri Jan 12 21:35:51 AEDT 2018 com.google.javascript.jscomp.NodeUtil,332
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!Character.isJavaIdentifierStart(s.charAt(0))){
+return null;
+}
+
+Time : 18/01/12 21:42
+----------------------------------------
+Fri Jan 12 21:46:04 AEDT 2018 com.google.javascript.jscomp.NodeUtil,342
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!"goog.exportSymbol".equals(s)){
+return null;
+}
+
+Time : 18/01/12 21:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!s.equals(JSC_PROPERTY_NAME_FN)){
+return null;
+}
+
+Time : 18/01/12 21:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!"goog".equals(s)){
+return null;
+}
+
+Time : 18/01/12 21:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!(s.equals(""))){
+return null;
+}
+
+Time : 18/01/12 22:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!"-".equals(JSC_PROPERTY_NAME_FN)){
+return null;
+}
+
+Time : 18/01/12 22:10
+----------------------------------------
+Fri Jan 12 22:14:41 AEDT 2018 com.google.javascript.jscomp.NodeUtil,349
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!"goog.exportSymbol".equals(s)){
+return null;
+}
+try{
+return Double.parseDouble(s);
+}catch (NumberFormatException e) {
+  return Double.NaN;
+}
+
+
+Time : 18/01/12 22:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!s.equals(JSC_PROPERTY_NAME_FN)){
+return null;
+}
+try{
+return Double.parseDouble(s);
+}catch (NumberFormatException e) {
+  return Double.NaN;
+}
+
+
+Time : 18/01/12 22:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!"goog".equals(s)){
+return null;
+}
+try{
+return Double.parseDouble(s);
+}catch (NumberFormatException e) {
+  return Double.NaN;
+}
+
+
+Time : 18/01/12 22:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!(s.equals(""))){
+return null;
+}
+try{
+return Double.parseDouble(s);
+}catch (NumberFormatException e) {
+  return Double.NaN;
+}
+
+
+Time : 18/01/12 22:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!"-".equals(JSC_PROPERTY_NAME_FN)){
+return null;
+}
+try{
+return Double.parseDouble(s);
+}catch (NumberFormatException e) {
+  return Double.NaN;
+}
+
+
+Time : 18/01/12 22:40
+----------------------------------------
+Fri Jan 12 22:45:46 AEDT 2018 com.google.javascript.jscomp.NodeUtil,356
+Fri Jan 12 23:11:40 AEDT 2018 com.google.javascript.jscomp.NodeUtil,357
+Fri Jan 12 23:11:42 AEDT 2018 Fri Jan 12 23:11:42 AEDT 2018 : com.google.javascript.jscomp.NodeUtil,359=>Find no block
+Fri Jan 12 23:11:44 AEDT 2018 Fri Jan 12 23:11:44 AEDT 2018 : com.google.javascript.jscomp.NodeUtil,363=>Find no block
+Fri Jan 12 23:11:47 AEDT 2018 com.google.javascript.jscomp.NodeUtil,366
+Fri Jan 12 23:11:49 AEDT 2018 Fri Jan 12 23:11:49 AEDT 2018 : com.google.javascript.jscomp.NodeUtil,373=>Find no block
+Fri Jan 12 23:11:51 AEDT 2018 com.google.javascript.jscomp.NodeUtil,387
+Fri Jan 12 23:12:00 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,1019
+Fri Jan 12 23:20:50 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,1128
+Fri Jan 12 23:21:17 AEDT 2018 Fri Jan 12 23:21:17 AEDT 2018 : com.google.javascript.jscomp.CodeGenerator,1132=>Find no block
+Fri Jan 12 23:21:19 AEDT 2018 Fri Jan 12 23:21:19 AEDT 2018 : com.google.javascript.jscomp.CodeGenerator,1133=>Find no block
+Fri Jan 12 23:21:19 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,1145
+Fri Jan 12 23:23:58 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,1155
+Fri Jan 12 23:37:12 AEDT 2018 Fri Jan 12 23:37:12 AEDT 2018 : com.google.javascript.jscomp.CodeGenerator,1160=>Find no block
+Fri Jan 12 23:37:15 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,261
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()!=Token.NEW){
+return ;
+}
+if(value==Double.NEGATIVE_INFINITY){
+replacement=new Node(Token.NEG,Node.newString(Token.NAME,"Infinity"));
+replacement.copyInformationFromForTree(n);
+}else {
+replacement=Node.newNumber(value);
+}
+
+Time : 18/01/12 23:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()!=Token.RETURN){
+return ;
+}
+if(value==Double.NEGATIVE_INFINITY){
+replacement=new Node(Token.NEG,Node.newString(Token.NAME,"Infinity"));
+replacement.copyInformationFromForTree(n);
+}else {
+replacement=Node.newNumber(value);
+}
+
+Time : 18/01/12 23:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()!=Token.RETURN){
+return ;
+}
+if(value!=Double.NEGATIVE_INFINITY){
+replacement=new Node(Token.NEG,Node.newString(Token.NAME,"Infinity"));
+replacement.copyInformationFromForTree(n);
+}else {
+replacement=Node.newNumber(value);
+}
+
+Time : 18/01/13 00:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()!=Token.NAME){
+return ;
+}
+if(value==Double.NEGATIVE_INFINITY){
+replacement=new Node(Token.NEG,Node.newString(Token.NAME,"Infinity"));
+replacement.copyInformationFromForTree(n);
+}else {
+replacement=Node.newNumber(value);
+}
+
+Time : 18/01/13 00:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()!=Token.NAME){
+return ;
+}
+if(!NodeUtil.isFunctionExpression(n)){
+replacement=new Node(Token.NEG,Node.newString(Token.NAME,"Infinity"));
+replacement.copyInformationFromForTree(n);
+}else {
+replacement=Node.newNumber(value);
+}
+
+Time : 18/01/13 00:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n.getType()!=Token.FUNCTION){
+return ;
+}
+if(value==Double.NEGATIVE_INFINITY){
+replacement=new Node(Token.NEG,Node.newString(Token.NAME,"Infinity"));
+replacement.copyInformationFromForTree(n);
+}else {
+replacement=Node.newNumber(value);
+}
+
+Time : 18/01/13 00:23
+----------------------------------------
+Sat Jan 13 00:29:24 AEDT 2018 com.google.javascript.jscomp.NodeUtil,2141
+Sat Jan 13 00:29:39 AEDT 2018 com.google.javascript.jscomp.PeepholeFoldConstants,250
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(result!=null){
+return ;
+}
+double value=result;
+Node replacement;
+
+Time : 18/01/13 00:31
+----------------------------------------
+Timeout time : 18/01/13 00:34

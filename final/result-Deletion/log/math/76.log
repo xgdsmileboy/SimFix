@@ -1,0 +1,481 @@
+=================================================
+Project : math_76	start : 18/01/15 16:17
+Current failed test : org.apache.commons.math.linear.SingularValueSolverTest::testMath320B | 18/01/15 16:18
+Mon Jan 15 16:18:54 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,283
+Mon Jan 15 16:19:43 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,284
+Mon Jan 15 16:19:44 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,288
+Mon Jan 15 16:20:38 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,143
+Mon Jan 15 16:22:30 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,182
+Mon Jan 15 16:32:40 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,217
+Mon Jan 15 16:32:54 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,220
+Mon Jan 15 16:32:55 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,223
+Mon Jan 15 16:33:09 AEDT 2018 org.apache.commons.math.linear.MatrixUtils,202
+Mon Jan 15 16:48:56 AEDT 2018 org.apache.commons.math.linear.MatrixUtils,203
+Mon Jan 15 16:59:42 AEDT 2018 org.apache.commons.math.linear.MatrixUtils,204
+Mon Jan 15 16:59:47 AEDT 2018 org.apache.commons.math.linear.MatrixUtils,206
+Mon Jan 15 16:59:52 AEDT 2018 org.apache.commons.math.linear.MatrixUtils,633
+Mon Jan 15 17:01:01 AEDT 2018 Mon Jan 15 17:01:01 AEDT 2018 : org.apache.commons.math.linear.MatrixUtils,640=>Find no block
+Mon Jan 15 17:01:06 AEDT 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,235
+Mon Jan 15 17:01:17 AEDT 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,252
+Mon Jan 15 17:04:26 AEDT 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,254
+Mon Jan 15 17:04:31 AEDT 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,255
+Mon Jan 15 17:15:27 AEDT 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,256
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int col=rowCount;col<columnCount;col++){
+outDataRow[col]=dataRow[col]-mRow[col];
+}
+
+Time : 18/01/15 17:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int col=0;rowCount<rowCount;col++){
+outDataRow[col]=dataRow[col]-mRow[col];
+}
+
+Time : 18/01/15 17:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int col=0;rowCount<columnCount;col++){
+outDataRow[col]=dataRow[col]-mRow[col];
+}
+
+Time : 18/01/15 17:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int col=0;rowCount<col;col++){
+outDataRow[col]=dataRow[col]-mRow[col];
+}
+
+Time : 18/01/15 17:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int col=columnCount;col<columnCount;col++){
+outDataRow[col]=dataRow[col]-mRow[col];
+}
+
+Time : 18/01/15 17:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=rowCount;row<rowCount;row++){
+ final double[] dataRow=data[row];
+ final double[] mRow=m.data[row];
+ final double[] outDataRow=outData[row];
+for(int col=0;col<columnCount;col++){
+outDataRow[col]=dataRow[col]-mRow[col];
+}
+}
+
+Time : 18/01/15 17:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=rowCount;row<columnCount;row++){
+ final double[] dataRow=data[row];
+ final double[] mRow=m.data[row];
+ final double[] outDataRow=outData[row];
+for(int col=0;col<columnCount;col++){
+outDataRow[col]=dataRow[col]-mRow[col];
+}
+}
+
+Time : 18/01/15 17:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=rowCount;row<rowCount;row++){
+ final double[] dataRow=data[row];
+ final double[] mRow=m.data[row];
+ final double[] outDataRow=outData[row];
+for(int col=rowCount;col<columnCount;col++){
+outDataRow[col]=dataRow[col]-mRow[col];
+}
+}
+
+Time : 18/01/15 17:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=0;row<rowCount;row++){
+ final double[] dataRow=data[row];
+ final double[] mRow=m.data[row];
+ final double[] outDataRow=outData[row];
+for(int col=rowCount;col<columnCount;col++){
+outDataRow[col]=dataRow[col]-mRow[col];
+}
+}
+
+Time : 18/01/15 17:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=rowCount;row<rowCount;row++){
+ final double[] dataRow=data[row];
+ final double[] mRow=m.data[row];
+ final double[] outDataRow=outData[row];
+for(int col=0;row<columnCount;col++){
+outDataRow[col]=dataRow[col]-mRow[col];
+}
+}
+
+Time : 18/01/15 17:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=rowCount;row<rowCount;row++){
+ final double[] dataRow=data[row];
+ final double[] mRow=m.data[row];
+ final double[] outDataRow=outData[row];
+for(int col=rowCount;row<columnCount;col++){
+outDataRow[col]=dataRow[col]-mRow[col];
+}
+}
+
+Time : 18/01/15 17:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=columnCount;row<rowCount;row++){
+ final double[] dataRow=data[row];
+ final double[] mRow=m.data[row];
+ final double[] outDataRow=outData[row];
+for(int col=0;col<columnCount;col++){
+outDataRow[col]=dataRow[col]-mRow[col];
+}
+}
+
+Time : 18/01/15 17:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int columnCount=getColumnDimension();
+ final double[][] outData=new double[rowCount][columnCount];
+
+Time : 18/01/15 17:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int columnCount=getColumnDimension();
+ final double[][] outData=new double[rowCount][columnCount];
+for(int row=0;row<rowCount;row++){
+ final double[] dataRow=data[row];
+ final double[] mRow=m.data[row];
+ final double[] outDataRow=outData[row];
+for(int col=0;row<row;col++){
+outDataRow[col]=dataRow[col]-mRow[col];
+}
+}
+
+Time : 18/01/15 17:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int columnCount=getColumnDimension();
+ final double[][] outData=new double[rowCount][columnCount];
+for(int row=columnCount;row<rowCount;row++){
+ final double[] dataRow=data[row];
+ final double[] mRow=m.data[row];
+ final double[] outDataRow=outData[row];
+for(int col=0;col<columnCount;col++){
+outDataRow[col]=dataRow[col]-mRow[col];
+}
+}
+
+Time : 18/01/15 17:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int columnCount=getColumnDimension();
+ final double[][] outData=new double[rowCount][columnCount];
+for(int row=columnCount;row<rowCount;row++){
+ final double[] dataRow=data[row];
+ final double[] mRow=m.data[row];
+ final double[] outDataRow=outData[row];
+for(int col=columnCount;col<columnCount;col++){
+outDataRow[col]=dataRow[col]-mRow[col];
+}
+}
+
+Time : 18/01/15 17:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int columnCount=getColumnDimension();
+ final double[][] outData=new double[rowCount][columnCount];
+for(int row=0;row<rowCount;row++){
+ final double[] dataRow=data[row];
+ final double[] mRow=m.data[row];
+ final double[] outDataRow=outData[row];
+for(int col=columnCount;col<columnCount;col++){
+outDataRow[col]=dataRow[col]-mRow[col];
+}
+}
+
+Time : 18/01/15 17:53
+----------------------------------------
+Timeout time : 18/01/15 17:58
+Current failed test : org.apache.commons.math.linear.SingularValueSolverTest::testMath320A_purify_1 | 18/01/15 17:58
+Mon Jan 15 18:00:00 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,283
+Mon Jan 15 18:01:08 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,284
+Mon Jan 15 18:01:13 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,288
+Mon Jan 15 18:02:28 AEDT 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,439
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=nRows;i<nCols;i++){
+sum+=dataRow[i]*v[i];
+}
+
+Time : 18/01/15 18:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=nRows;i<nRows;i++){
+sum+=dataRow[i]*v[i];
+}
+
+Time : 18/01/15 18:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=nCols;i<nCols;i++){
+sum+=dataRow[i]*v[i];
+}
+
+Time : 18/01/15 18:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=nCols;i<nRows;i++){
+sum+=dataRow[i]*v[i];
+}
+
+Time : 18/01/15 18:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=nRows;i<nCols;i++){
+if(Double.isNaN(v[i])){
+throw MathRuntimeException.createIllegalArgumentException("NaN weight at index {0}",i);
+}
+sum+=dataRow[i]*v[i];
+}
+
+Time : 18/01/15 18:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=nRows;i<nCols;i++){
+if(Double.isInfinite(v[i])){
+throw MathRuntimeException.createIllegalArgumentException("Infinite weight at index {0}",i);
+}
+sum+=dataRow[i]*v[i];
+}
+
+Time : 18/01/15 18:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=nRows;i<nCols;i++){
+if(Double.isNaN(v[i])){
+throw MathRuntimeException.createIllegalArgumentException("NaN weight at index {0}",i);
+}
+if(Double.isInfinite(v[i])){
+throw MathRuntimeException.createIllegalArgumentException("Infinite weight at index {0}",i);
+}
+sum+=dataRow[i]*v[i];
+}
+
+Time : 18/01/15 18:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<nCols-nRows;i++){
+sum+=dataRow[i]*v[i];
+}
+
+Time : 18/01/15 18:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=nCols;row<nRows;row++){
+ final double[] dataRow=data[row];
+double sum=0;
+for(int i=0;i<nCols;i++){
+sum+=dataRow[i]*v[i];
+}
+out[row]=sum;
+}
+
+Time : 18/01/15 18:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=nCols;row<nRows;row++){
+ final double[] dataRow=data[row];
+double sum=0;
+for(int i=row;i<nCols;i++){
+sum+=dataRow[i]*v[i];
+}
+out[row]=sum;
+}
+
+Time : 18/01/15 19:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=nRows;row<nRows;row++){
+ final double[] dataRow=data[row];
+double sum=0;
+for(int i=0;i<nCols;i++){
+sum+=dataRow[i]*v[i];
+}
+out[row]=sum;
+}
+
+Time : 18/01/15 19:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=nCols;row<nRows;row++){
+ final double[] dataRow=data[nCols];
+double sum=0;
+for(int i=0;i<nCols;i++){
+sum+=dataRow[i]*v[i];
+}
+out[row]=sum;
+}
+
+Time : 18/01/15 19:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=0;row<nRows;row++){
+ final double[] dataRow=data[row];
+double sum=0;
+for(int i=nRows;i<nCols;i++){
+sum+=dataRow[i]*v[i];
+}
+out[row]=sum;
+}
+
+Time : 18/01/15 19:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(v.length!=nCols){
+throw MathRuntimeException.createIllegalArgumentException(VECTOR_LENGTHS_MISMATCH,v.length,nCols);
+}
+ final double[] out=new double[nRows];
+
+Time : 18/01/15 19:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(v.length!=nCols){
+throw MathRuntimeException.createIllegalArgumentException("cannot discard {0} elements from a {1} elements array",nRows,nCols);
+}
+ final double[] out=new double[nRows];
+
+Time : 18/01/15 19:36
+----------------------------------------
+Timeout time : 18/01/15 19:40
+Current failed test : org.apache.commons.math.linear.SingularValueSolverTest::testMath320A_purify_4 | 18/01/15 19:40
+Mon Jan 15 19:41:06 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,283
+Mon Jan 15 19:42:12 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,284
+Mon Jan 15 19:42:16 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,288
+Mon Jan 15 19:43:31 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,143
+Mon Jan 15 19:45:48 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,182
+Mon Jan 15 19:56:38 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,217
+Mon Jan 15 19:56:54 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,220
+Mon Jan 15 19:56:56 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,223
+Mon Jan 15 19:57:13 AEDT 2018 org.apache.commons.math.linear.MatrixUtils,202
+Mon Jan 15 20:13:23 AEDT 2018 org.apache.commons.math.linear.MatrixUtils,203
+Mon Jan 15 20:24:22 AEDT 2018 org.apache.commons.math.linear.MatrixUtils,204
+Mon Jan 15 20:24:23 AEDT 2018 org.apache.commons.math.linear.MatrixUtils,206
+Mon Jan 15 20:24:24 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,229
+Mon Jan 15 20:25:57 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,168
+Mon Jan 15 20:40:18 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,169
+Mon Jan 15 20:40:19 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,170
+Mon Jan 15 20:40:21 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,171
+Mon Jan 15 20:40:22 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,172
+Mon Jan 15 20:40:23 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,173
+Mon Jan 15 20:40:24 AEDT 2018 org.apache.commons.math.linear.SingularValueDecompositionImpl,174
+Mon Jan 15 20:40:25 AEDT 2018 org.apache.commons.math.linear.EigenDecompositionImpl,638
+Mon Jan 15 20:41:16 AEDT 2018 org.apache.commons.math.linear.EigenDecompositionImpl,639
+Mon Jan 15 20:41:54 AEDT 2018 org.apache.commons.math.linear.EigenDecompositionImpl,761
+Mon Jan 15 20:47:39 AEDT 2018 org.apache.commons.math.linear.EigenDecompositionImpl,762
+Mon Jan 15 20:47:40 AEDT 2018 org.apache.commons.math.linear.EigenDecompositionImpl,763
+Mon Jan 15 20:51:38 AEDT 2018 org.apache.commons.math.linear.EigenDecompositionImpl,764
+Mon Jan 15 20:59:43 AEDT 2018 org.apache.commons.math.linear.EigenDecompositionImpl,765
+Mon Jan 15 21:08:15 AEDT 2018 org.apache.commons.math.linear.EigenDecompositionImpl,768
+Mon Jan 15 21:15:01 AEDT 2018 org.apache.commons.math.linear.EigenDecompositionImpl,769
+Timeout time : 18/01/15 21:21

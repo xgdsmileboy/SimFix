@@ -1,0 +1,76 @@
+=================================================
+Project : math_50	start : 18/01/14 07:22
+Current failed test : org.apache.commons.math.analysis.solvers.RegulaFalsiSolverTest::testIssue631 | 18/01/14 07:22
+Sun Jan 14 07:23:54 AEDT 2018 org.apache.commons.math.analysis.solvers.BaseSecantSolver,188
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+f0=ftol;
+if(x==x1){
+x0=0.5*(x0+x1-FastMath.max(rtol*FastMath.abs(x1),atol));
+f0=computeObjectiveValue(x0);
+}
+
+Time : 18/01/14 07:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+x0=x1;
+f0=ftol;
+if(x==x1){
+x0=0.5*(x0+x1-FastMath.max(rtol*FastMath.abs(x1),atol));
+f0=computeObjectiveValue(x0);
+}
+
+Time : 18/01/14 07:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x==x0){
+x0=0.5*(x0+x1-FastMath.max(rtol*FastMath.abs(x1),atol));
+f0=computeObjectiveValue(x0);
+}
+
+Time : 18/01/14 07:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.9704787500656593 : [/home/hz985/jiajun/d4j/projects/math/math_50_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolver.java=>0,0]
+for(m=j;m<n-1;m++){
+double delta=FastMath.abs(realEigenvalues[m])+FastMath.abs(realEigenvalues[m+1]);
+if(FastMath.abs(e[m])+delta==delta){
+break;
+}
+}
+
+Time : 18/01/14 07:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_50_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolver.java=>187,190]
+if(x==x1){
+x0=0.5*(x0+x1-FastMath.max(rtol*FastMath.abs(x1),atol));
+f0=computeObjectiveValue(x0);
+}
+
+Time : 18/01/14 07:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_50_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolver.java=>187,190]
+if(x==x0){
+x0=0.5*(x0+x1-FastMath.max(rtol*FastMath.abs(x1),atol));
+f0=computeObjectiveValue(x0);
+}
+
+Time : 18/01/14 07:30
+----------------------------------------
+Success time : 18/01/14 07:30

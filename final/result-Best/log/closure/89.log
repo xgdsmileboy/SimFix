@@ -1,0 +1,166 @@
+=================================================
+Project : closure_89	start : 18/01/13 21:53
+Current failed test : com.google.javascript.jscomp.CollapsePropertiesTest::testAddPropertyToUncollapsibleFunctionInLocalScopeDepth1 | 18/01/13 21:56
+Sat Jan 13 22:00:10 AEDT 2018 Sat Jan 13 22:00:10 AEDT 2018 : com.google.javascript.rhino.Node,175=>Find no block
+Sat Jan 13 22:00:20 AEDT 2018 com.google.javascript.rhino.Node,195
+Sat Jan 13 22:01:07 AEDT 2018 com.google.javascript.rhino.Node,217
+Sat Jan 13 22:01:25 AEDT 2018 com.google.javascript.rhino.Node,220
+Sat Jan 13 22:01:35 AEDT 2018 com.google.javascript.rhino.Node,222
+Sat Jan 13 22:01:54 AEDT 2018 com.google.javascript.rhino.Node,232
+Sat Jan 13 22:02:13 AEDT 2018 com.google.javascript.rhino.Node,843
+Sat Jan 13 22:22:48 AEDT 2018 com.google.javascript.rhino.Node,844
+Sat Jan 13 22:22:49 AEDT 2018 com.google.javascript.rhino.Node,845
+Sat Jan 13 22:22:50 AEDT 2018 com.google.javascript.rhino.Node,848
+Sat Jan 13 22:22:52 AEDT 2018 com.google.javascript.rhino.Node,849
+Sat Jan 13 22:22:53 AEDT 2018 com.google.javascript.rhino.Node,850
+Sat Jan 13 22:22:55 AEDT 2018 com.google.javascript.rhino.Node,851
+Sat Jan 13 22:22:56 AEDT 2018 com.google.javascript.rhino.Node,854
+Sat Jan 13 22:22:57 AEDT 2018 com.google.javascript.rhino.Node,855
+Sat Jan 13 22:22:58 AEDT 2018 com.google.javascript.rhino.Node,908
+Sat Jan 13 22:23:03 AEDT 2018 com.google.javascript.rhino.Node,916
+Sat Jan 13 22:28:13 AEDT 2018 com.google.javascript.rhino.Node,917
+Sat Jan 13 22:28:14 AEDT 2018 com.google.javascript.rhino.Node,918
+Sat Jan 13 22:28:15 AEDT 2018 com.google.javascript.rhino.Node,929
+Timeout time : 18/01/13 22:37
+Current failed test : com.google.javascript.jscomp.CollapsePropertiesTest::testAddPropertyToChildOfUncollapsibleFunctionInLocalScope | 18/01/13 22:37
+Sat Jan 13 22:39:36 AEDT 2018 Sat Jan 13 22:39:36 AEDT 2018 : com.google.javascript.rhino.Node,175=>Find no block
+Sat Jan 13 22:39:38 AEDT 2018 com.google.javascript.rhino.Node,195
+Sat Jan 13 22:39:48 AEDT 2018 com.google.javascript.rhino.Node,217
+Sat Jan 13 22:40:04 AEDT 2018 com.google.javascript.rhino.Node,220
+Sat Jan 13 22:40:19 AEDT 2018 com.google.javascript.rhino.Node,222
+Sat Jan 13 22:40:29 AEDT 2018 com.google.javascript.rhino.Node,232
+Sat Jan 13 22:40:39 AEDT 2018 com.google.javascript.rhino.Node,843
+Sat Jan 13 22:58:52 AEDT 2018 com.google.javascript.rhino.Node,844
+Sat Jan 13 22:58:54 AEDT 2018 com.google.javascript.rhino.Node,845
+Sat Jan 13 22:58:55 AEDT 2018 com.google.javascript.rhino.Node,848
+Sat Jan 13 22:58:57 AEDT 2018 com.google.javascript.rhino.Node,849
+Sat Jan 13 22:58:58 AEDT 2018 com.google.javascript.rhino.Node,850
+Sat Jan 13 22:58:59 AEDT 2018 com.google.javascript.rhino.Node,851
+Sat Jan 13 22:59:00 AEDT 2018 com.google.javascript.rhino.Node,854
+Sat Jan 13 22:59:02 AEDT 2018 com.google.javascript.rhino.Node,855
+Sat Jan 13 22:59:03 AEDT 2018 com.google.javascript.rhino.Node,908
+Sat Jan 13 22:59:07 AEDT 2018 com.google.javascript.rhino.Node,916
+Sat Jan 13 23:03:41 AEDT 2018 com.google.javascript.rhino.Node,917
+Sat Jan 13 23:03:42 AEDT 2018 com.google.javascript.rhino.Node,918
+Sat Jan 13 23:03:43 AEDT 2018 com.google.javascript.rhino.Node,929
+Timeout time : 18/01/13 23:16
+Current failed test : com.google.javascript.jscomp.CollapsePropertiesTest::testAddPropertyToUncollapsibleFunctionInLocalScopeDepth2 | 18/01/13 23:16
+Sat Jan 13 23:19:52 AEDT 2018 Sat Jan 13 23:19:52 AEDT 2018 : com.google.javascript.rhino.Node,175=>Find no block
+Sat Jan 13 23:19:53 AEDT 2018 com.google.javascript.rhino.Node,195
+Sat Jan 13 23:20:04 AEDT 2018 com.google.javascript.rhino.Node,217
+Sat Jan 13 23:20:15 AEDT 2018 com.google.javascript.rhino.Node,220
+Sat Jan 13 23:20:24 AEDT 2018 com.google.javascript.rhino.Node,222
+Sat Jan 13 23:20:35 AEDT 2018 com.google.javascript.rhino.Node,232
+Sat Jan 13 23:20:44 AEDT 2018 com.google.javascript.rhino.Node,843
+Sat Jan 13 23:42:52 AEDT 2018 com.google.javascript.rhino.Node,844
+Sat Jan 13 23:42:54 AEDT 2018 com.google.javascript.rhino.Node,845
+Sat Jan 13 23:42:55 AEDT 2018 com.google.javascript.rhino.Node,848
+Sat Jan 13 23:42:56 AEDT 2018 com.google.javascript.rhino.Node,849
+Sat Jan 13 23:42:57 AEDT 2018 com.google.javascript.rhino.Node,850
+Sat Jan 13 23:42:59 AEDT 2018 com.google.javascript.rhino.Node,851
+Sat Jan 13 23:43:00 AEDT 2018 com.google.javascript.rhino.Node,854
+Sat Jan 13 23:43:01 AEDT 2018 com.google.javascript.rhino.Node,855
+Sat Jan 13 23:43:02 AEDT 2018 com.google.javascript.rhino.Node,908
+Sat Jan 13 23:43:06 AEDT 2018 com.google.javascript.rhino.Node,916
+Sat Jan 13 23:48:23 AEDT 2018 com.google.javascript.rhino.Node,917
+Sat Jan 13 23:48:25 AEDT 2018 com.google.javascript.rhino.Node,918
+Sat Jan 13 23:48:26 AEDT 2018 com.google.javascript.rhino.Node,929
+Timeout time : 18/01/13 23:56
+Current failed test : com.google.javascript.jscomp.CollapsePropertiesTest::testAliasCreatedForFunctionDepth1_3 | 18/01/13 23:56
+Sun Jan 14 00:00:35 AEDT 2018 Sun Jan 14 00:00:35 AEDT 2018 : com.google.javascript.rhino.Node,175=>Find no block
+Sun Jan 14 00:00:36 AEDT 2018 com.google.javascript.rhino.Node,195
+Sun Jan 14 00:00:46 AEDT 2018 com.google.javascript.rhino.Node,220
+Sun Jan 14 00:00:57 AEDT 2018 com.google.javascript.rhino.Node,222
+Sun Jan 14 00:01:27 AEDT 2018 com.google.javascript.rhino.Node,843
+Sun Jan 14 00:23:28 AEDT 2018 com.google.javascript.rhino.Node,844
+Sun Jan 14 00:23:29 AEDT 2018 com.google.javascript.rhino.Node,845
+Sun Jan 14 00:23:31 AEDT 2018 com.google.javascript.rhino.Node,848
+Sun Jan 14 00:23:32 AEDT 2018 com.google.javascript.rhino.Node,849
+Sun Jan 14 00:23:33 AEDT 2018 com.google.javascript.rhino.Node,850
+Sun Jan 14 00:23:34 AEDT 2018 com.google.javascript.rhino.Node,851
+Sun Jan 14 00:23:35 AEDT 2018 com.google.javascript.rhino.Node,854
+Sun Jan 14 00:23:36 AEDT 2018 com.google.javascript.rhino.Node,855
+Sun Jan 14 00:23:37 AEDT 2018 com.google.javascript.rhino.Node,908
+Sun Jan 14 00:23:41 AEDT 2018 com.google.javascript.rhino.Node,916
+Sun Jan 14 00:29:02 AEDT 2018 com.google.javascript.rhino.Node,917
+Sun Jan 14 00:29:03 AEDT 2018 com.google.javascript.rhino.Node,918
+Sun Jan 14 00:29:04 AEDT 2018 com.google.javascript.rhino.Node,929
+Timeout time : 18/01/14 00:37
+Current failed test : com.google.javascript.jscomp.CollapsePropertiesTest::testAliasCreatedForFunctionDepth1_2 | 18/01/14 00:37
+Sun Jan 14 00:40:41 AEDT 2018 Sun Jan 14 00:40:41 AEDT 2018 : com.google.javascript.rhino.Node,175=>Find no block
+Sun Jan 14 00:40:42 AEDT 2018 com.google.javascript.rhino.Node,195
+Sun Jan 14 00:40:52 AEDT 2018 com.google.javascript.rhino.Node,220
+Sun Jan 14 00:41:02 AEDT 2018 com.google.javascript.rhino.Node,222
+Sun Jan 14 00:41:12 AEDT 2018 com.google.javascript.rhino.Node,232
+Sun Jan 14 00:41:22 AEDT 2018 com.google.javascript.rhino.Node,843
+Sun Jan 14 01:04:01 AEDT 2018 com.google.javascript.rhino.Node,844
+Sun Jan 14 01:04:02 AEDT 2018 com.google.javascript.rhino.Node,845
+Sun Jan 14 01:04:04 AEDT 2018 com.google.javascript.rhino.Node,848
+Sun Jan 14 01:04:05 AEDT 2018 com.google.javascript.rhino.Node,849
+Sun Jan 14 01:04:06 AEDT 2018 com.google.javascript.rhino.Node,850
+Sun Jan 14 01:04:08 AEDT 2018 com.google.javascript.rhino.Node,851
+Sun Jan 14 01:04:09 AEDT 2018 com.google.javascript.rhino.Node,854
+Sun Jan 14 01:04:10 AEDT 2018 com.google.javascript.rhino.Node,855
+Sun Jan 14 01:04:11 AEDT 2018 com.google.javascript.rhino.Node,908
+Sun Jan 14 01:04:16 AEDT 2018 com.google.javascript.rhino.Node,916
+Sun Jan 14 01:09:53 AEDT 2018 com.google.javascript.rhino.Node,917
+Sun Jan 14 01:09:54 AEDT 2018 com.google.javascript.rhino.Node,918
+Sun Jan 14 01:09:56 AEDT 2018 com.google.javascript.rhino.Node,929
+Timeout time : 18/01/14 01:17
+Current failed test : com.google.javascript.jscomp.CollapsePropertiesTest::testAliasCreatedForFunctionDepth2 | 18/01/14 01:17
+Sun Jan 14 01:23:53 AEDT 2018 Sun Jan 14 01:23:53 AEDT 2018 : com.google.javascript.rhino.Node,175=>Find no block
+Sun Jan 14 01:23:54 AEDT 2018 com.google.javascript.rhino.Node,195
+Sun Jan 14 01:24:05 AEDT 2018 com.google.javascript.rhino.Node,220
+Sun Jan 14 01:24:15 AEDT 2018 com.google.javascript.rhino.Node,222
+Sun Jan 14 01:24:25 AEDT 2018 com.google.javascript.rhino.Node,843
+Sun Jan 14 01:50:40 AEDT 2018 com.google.javascript.rhino.Node,844
+Sun Jan 14 01:50:41 AEDT 2018 com.google.javascript.rhino.Node,845
+Sun Jan 14 01:50:43 AEDT 2018 com.google.javascript.rhino.Node,848
+Sun Jan 14 01:50:44 AEDT 2018 com.google.javascript.rhino.Node,849
+Sun Jan 14 01:50:45 AEDT 2018 com.google.javascript.rhino.Node,850
+Sun Jan 14 01:50:46 AEDT 2018 com.google.javascript.rhino.Node,851
+Sun Jan 14 01:50:47 AEDT 2018 com.google.javascript.rhino.Node,854
+Sun Jan 14 01:50:49 AEDT 2018 com.google.javascript.rhino.Node,855
+Sun Jan 14 01:50:50 AEDT 2018 com.google.javascript.rhino.Node,908
+Sun Jan 14 01:50:55 AEDT 2018 com.google.javascript.rhino.Node,916
+Sun Jan 14 01:57:48 AEDT 2018 com.google.javascript.rhino.Node,917
+Sun Jan 14 01:57:49 AEDT 2018 com.google.javascript.rhino.Node,918
+Sun Jan 14 01:57:50 AEDT 2018 com.google.javascript.rhino.Node,929
+Timeout time : 18/01/14 02:01
+Current failed test : com.google.javascript.jscomp.CollapsePropertiesTest::testAliasCreatedForFunctionDepth1_1 | 18/01/14 02:01
+Sun Jan 14 02:11:20 AEDT 2018 Sun Jan 14 02:11:20 AEDT 2018 : com.google.javascript.rhino.Node,175=>Find no block
+Sun Jan 14 02:11:21 AEDT 2018 com.google.javascript.rhino.Node,195
+Sun Jan 14 02:11:31 AEDT 2018 com.google.javascript.rhino.Node,220
+Sun Jan 14 02:11:41 AEDT 2018 com.google.javascript.rhino.Node,222
+Sun Jan 14 02:11:51 AEDT 2018 com.google.javascript.rhino.Node,843
+Sun Jan 14 02:42:14 AEDT 2018 com.google.javascript.rhino.Node,844
+Sun Jan 14 02:42:15 AEDT 2018 com.google.javascript.rhino.Node,845
+Sun Jan 14 02:42:17 AEDT 2018 com.google.javascript.rhino.Node,848
+Sun Jan 14 02:42:18 AEDT 2018 com.google.javascript.rhino.Node,849
+Sun Jan 14 02:42:20 AEDT 2018 com.google.javascript.rhino.Node,850
+Sun Jan 14 02:42:21 AEDT 2018 com.google.javascript.rhino.Node,851
+Sun Jan 14 02:42:23 AEDT 2018 com.google.javascript.rhino.Node,854
+Sun Jan 14 02:42:24 AEDT 2018 com.google.javascript.rhino.Node,855
+Sun Jan 14 02:42:25 AEDT 2018 com.google.javascript.rhino.Node,908
+Sun Jan 14 02:42:30 AEDT 2018 com.google.javascript.rhino.Node,916
+Timeout time : 18/01/14 02:48
+Current failed test : com.google.javascript.jscomp.CollapsePropertiesTest::testAddPropertyToUncollapsibleNamedCtorInLocalScopeDepth1 | 18/01/14 02:48
+Sun Jan 14 02:59:31 AEDT 2018 Sun Jan 14 02:59:31 AEDT 2018 : com.google.javascript.rhino.Node,175=>Find no block
+Sun Jan 14 02:59:32 AEDT 2018 com.google.javascript.rhino.Node,195
+Sun Jan 14 02:59:43 AEDT 2018 com.google.javascript.rhino.Node,211
+Sun Jan 14 02:59:54 AEDT 2018 com.google.javascript.rhino.Node,217
+Sun Jan 14 03:00:05 AEDT 2018 com.google.javascript.rhino.Node,220
+Sun Jan 14 03:00:17 AEDT 2018 com.google.javascript.rhino.Node,222
+Sun Jan 14 03:00:28 AEDT 2018 com.google.javascript.rhino.Node,232
+Sun Jan 14 03:00:40 AEDT 2018 com.google.javascript.rhino.Node,843
+Sun Jan 14 03:30:55 AEDT 2018 com.google.javascript.rhino.Node,844
+Sun Jan 14 03:30:56 AEDT 2018 com.google.javascript.rhino.Node,845
+Sun Jan 14 03:30:57 AEDT 2018 com.google.javascript.rhino.Node,848
+Sun Jan 14 03:30:59 AEDT 2018 com.google.javascript.rhino.Node,849
+Sun Jan 14 03:31:01 AEDT 2018 com.google.javascript.rhino.Node,850
+Sun Jan 14 03:31:02 AEDT 2018 com.google.javascript.rhino.Node,851
+Sun Jan 14 03:31:04 AEDT 2018 com.google.javascript.rhino.Node,854
+Sun Jan 14 03:31:05 AEDT 2018 com.google.javascript.rhino.Node,855
+Sun Jan 14 03:31:06 AEDT 2018 com.google.javascript.rhino.Node,908
+Sun Jan 14 03:31:11 AEDT 2018 com.google.javascript.rhino.Node,916
+Timeout time : 18/01/14 03:36

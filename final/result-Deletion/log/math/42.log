@@ -1,0 +1,1043 @@
+=================================================
+Project : math_42	start : 18/01/15 15:50
+Current failed test : org.apache.commons.math.optimization.linear.SimplexSolverTest::testMath713NegativeVariable | 18/01/15 15:51
+Mon Jan 15 15:53:26 AEDT 2018 org.apache.commons.math.optimization.RealPointValuePair,68
+Mon Jan 15 15:54:50 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,347
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(getBasicRow(col)!=null){
+columnsToDrop.add(col);
+}
+
+Time : 18/01/15 15:55
+----------------------------------------
+Mon Jan 15 15:58:02 AEDT 2018 Mon Jan 15 15:58:02 AEDT 2018 : org.apache.commons.math.optimization.linear.SimplexSolver,181=>Find no block
+Mon Jan 15 15:58:09 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,332
+Mon Jan 15 16:01:14 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,333
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=getNumObjectiveFunctions();i<getArtificialVariableOffset();i++){
+ final double entry=tableau.getEntry(0,i+1);
+if(Precision.compareTo(entry,0.0,maxUlps)>0){
+columnsToDrop.add(i);
+}
+}
+
+Time : 18/01/15 16:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+numArtificialVariables++;
+for(int i=getNumObjectiveFunctions();i<getArtificialVariableOffset();i++){
+ final double entry=tableau.getEntry(0,i);
+if(Precision.compareTo(entry,0.0,maxUlps)>0){
+columnsToDrop.add(i);
+}
+}
+
+Time : 18/01/15 16:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+List<Integer> columnsToDrop=new ArrayList<Integer>();
+columnsToDrop.add(0);
+for(int i=getNumObjectiveFunctions();i<getArtificialVariableOffset();i++){
+ final double entry=tableau.getEntry(0,i+1);
+if(Precision.compareTo(entry,0.0,maxUlps)>0){
+columnsToDrop.add(i);
+}
+}
+
+Time : 18/01/15 16:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+List<Integer> columnsToDrop=new ArrayList<Integer>();
+columnsToDrop.add(0);
+numArtificialVariables++;
+for(int i=getNumObjectiveFunctions();i<getArtificialVariableOffset();i++){
+ final double entry=tableau.getEntry(0,i);
+if(Precision.compareTo(entry,0.0,maxUlps)>0){
+columnsToDrop.add(i);
+}
+}
+
+Time : 18/01/15 16:20
+----------------------------------------
+Mon Jan 15 16:25:14 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,336
+Mon Jan 15 16:25:21 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,337
+Mon Jan 15 16:25:26 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,338
+Mon Jan 15 16:25:32 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,344
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=numArtificialVariables;i<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/15 16:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)!=null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/15 16:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<NEGATIVE_VAR_COLUMN_LABEL.length();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/15 16:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<=getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/15 16:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+numArtificialVariables++;
+for(int i=0;i<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+
+Time : 18/01/15 16:39
+----------------------------------------
+Mon Jan 15 16:43:48 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,345
+Mon Jan 15 16:43:53 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,346
+Mon Jan 15 16:43:57 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,351
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+i++;
+for(int j=0;j<getWidth();j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/15 16:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<getArtificialVariableOffset();j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/15 16:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<NEGATIVE_VAR_COLUMN_LABEL.length();j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+
+Time : 18/01/15 16:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=1;i<getHeight();i++){
+if(i>=numArtificialVariables-1){
+break;
+}
+int col=0;
+for(int j=0;j<getWidth();j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+}
+
+Time : 18/01/15 16:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=1;i<getHeight();i++){
+if(i>=numArtificialVariables){
+break;
+}
+int col=0;
+for(int j=0;j<getWidth();j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+}
+
+Time : 18/01/15 17:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=1;i<getHeight();i++){
+i++;
+int col=0;
+for(int j=0;j<getWidth();j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+}
+
+Time : 18/01/15 17:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+double[][] matrix=new double[getHeight()-1][getWidth()-columnsToDrop.size()];
+for(int i=1;i<getNumArtificialVariables();i++){
+int col=0;
+for(int j=0;j<getWidth();j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+}
+
+Time : 18/01/15 17:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+double[][] matrix=new double[getHeight()-1][getWidth()-columnsToDrop.size()];
+
+Time : 18/01/15 17:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<=getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+double[][] matrix=new double[getHeight()-1][getWidth()-columnsToDrop.size()];
+for(int i=1;i<getHeight();i++){
+int col=0;
+for(int j=0;j<getWidth();j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+}
+
+Time : 18/01/15 17:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<=getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+double[][] matrix=new double[getHeight()-1][getWidth()-columnsToDrop.size()];
+
+Time : 18/01/15 17:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(i);
+}
+}
+double[][] matrix=new double[getHeight()-1][getWidth()-columnsToDrop.size()];
+
+Time : 18/01/15 17:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=numArtificialVariables;i<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+double[][] matrix=new double[getHeight()-1][getWidth()-columnsToDrop.size()];
+for(int i=1;i<getHeight();i++){
+int col=0;
+for(int j=0;j<getWidth();j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+}
+
+Time : 18/01/15 17:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=numArtificialVariables;i<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+double[][] matrix=new double[getHeight()-1][getWidth()-columnsToDrop.size()];
+
+Time : 18/01/15 17:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=restrictToNonNegative?0:1;i<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+double[][] matrix=new double[getHeight()-1][getWidth()-columnsToDrop.size()];
+
+Time : 18/01/15 17:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)!=null){
+columnsToDrop.add(col);
+}
+}
+double[][] matrix=new double[getHeight()-1][getWidth()-columnsToDrop.size()];
+for(int i=1;i<getHeight();i++){
+int col=0;
+for(int j=0;j<getWidth();j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+}
+
+Time : 18/01/15 17:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<getNumArtificialVariables();i++){
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)!=null){
+columnsToDrop.add(col);
+}
+}
+double[][] matrix=new double[getHeight()-1][getWidth()-columnsToDrop.size()];
+
+Time : 18/01/15 17:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double[][] matrix=new double[getHeight()-1][getWidth()-columnsToDrop.size()];
+for(int i=1;i<getHeight();i++){
+int col=0;
+for(int j=0;j<getWidth();j++){
+if(!columnsToDrop.contains(j)){
+matrix[i-1][col++]=tableau.getEntry(i,j);
+}
+}
+}
+
+Time : 18/01/15 17:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double[][] matrix=new double[getHeight()-1][getWidth()-columnsToDrop.size()];
+
+Time : 18/01/15 17:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<getNumArtificialVariables();i++){
+i++;
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+double[][] matrix=new double[getHeight()-1][getWidth()-columnsToDrop.size()];
+
+Time : 18/01/15 17:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<getNumArtificialVariables();i++){
+i++;
+numArtificialVariables++;
+int col=i+getArtificialVariableOffset();
+if(getBasicRow(col)==null){
+columnsToDrop.add(col);
+}
+}
+double[][] matrix=new double[getHeight()-1][getWidth()-columnsToDrop.size()];
+
+Time : 18/01/15 17:51
+----------------------------------------
+Mon Jan 15 17:58:11 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,352
+Mon Jan 15 17:58:17 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,353
+Mon Jan 15 17:58:23 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,354
+Mon Jan 15 17:58:27 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,355
+Mon Jan 15 17:58:31 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,356
+Mon Jan 15 17:58:35 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,361
+Mon Jan 15 18:06:10 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,362
+Mon Jan 15 18:06:14 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,365
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=columnsToDrop.size()-1;i>=0;i--){
+columnLabels.remove((int)columnsToDrop.get(i));
+}
+this.numArtificialVariables=0;
+
+Time : 18/01/15 18:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=columnsToDrop.size()-1;i>=0;i--){
+columnLabels.remove((int)columnsToDrop.get(i));
+}
+
+Time : 18/01/15 18:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=columnsToDrop.size()-1;i>=0;i--){
+if(numArtificialVariables==-1){
+throw new IllegalArgumentException("originalData and permutedData must contain the same objects.");
+}
+columnLabels.remove((int)columnsToDrop.get(i));
+}
+this.numArtificialVariables=0;
+
+Time : 18/01/15 18:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=columnsToDrop.size()-1;i>=0;i--){
+if(numArtificialVariables==-1){
+throw new IllegalArgumentException("originalData and permutedData must contain the same objects.");
+}
+columnLabels.remove((int)columnsToDrop.get(i));
+}
+
+Time : 18/01/15 18:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+columnLabels.add("RHS");
+for(int i=columnsToDrop.size()-1;i>=0;i--){
+columnLabels.remove((int)columnsToDrop.get(i));
+}
+this.numArtificialVariables=0;
+
+Time : 18/01/15 18:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+columnLabels.add("RHS");
+for(int i=columnsToDrop.size()-1;i>=0;i--){
+columnLabels.remove((int)columnsToDrop.get(i));
+}
+
+Time : 18/01/15 18:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=columnsToDrop.size()-1;i>=0;i--){
+columnLabels.remove((int)columnsToDrop.get(i));
+}
+this.numArtificialVariables=numDecisionVariables;
+
+Time : 18/01/15 18:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+numArtificialVariables++;
+for(int i=columnsToDrop.size()-1;i>=0;i--){
+columnLabels.remove((int)columnsToDrop.get(i));
+}
+this.numArtificialVariables=0;
+
+Time : 18/01/15 18:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+numArtificialVariables++;
+for(int i=columnsToDrop.size()-1;i>=0;i--){
+columnLabels.remove((int)columnsToDrop.get(i));
+}
+
+Time : 18/01/15 18:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=columnsToDrop.size()-1;i>=0;i--){
+if(!restrictToNonNegative){
+break;
+}
+columnLabels.remove((int)columnsToDrop.get(i));
+}
+this.numArtificialVariables=0;
+
+Time : 18/01/15 18:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=columnsToDrop.size()-1;i>=0;i--){
+if(!restrictToNonNegative){
+break;
+}
+columnLabels.remove((int)columnsToDrop.get(i));
+}
+
+Time : 18/01/15 18:52
+----------------------------------------
+Mon Jan 15 18:57:47 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,366
+Mon Jan 15 18:57:51 AEDT 2018 Mon Jan 15 18:57:51 AEDT 2018 : org.apache.commons.math.optimization.linear.SimplexTableau,367=>Find no block
+Mon Jan 15 18:57:58 AEDT 2018 org.apache.commons.math.util.MathUtils,330
+Mon Jan 15 18:59:07 AEDT 2018 Mon Jan 15 18:59:07 AEDT 2018 : org.apache.commons.math.util.MathUtils,333=>Find no block
+Mon Jan 15 18:59:12 AEDT 2018 Mon Jan 15 18:59:12 AEDT 2018 : org.apache.commons.math.linear.Array2DRowRealMatrix,73=>Find no block
+Mon Jan 15 18:59:19 AEDT 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,74
+Mon Jan 15 18:59:34 AEDT 2018 Mon Jan 15 18:59:34 AEDT 2018 : org.apache.commons.math.linear.Array2DRowRealMatrix,75=>Find no block
+Mon Jan 15 18:59:38 AEDT 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,261
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+i++;
+if(subMatrix[i].length!=nCols){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+
+Time : 18/01/15 19:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<row;++i){
+if(subMatrix[i].length!=nCols){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 19:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<row;++i){
+if(subMatrix[i].length!=column){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 19:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=nCols;i<data.length;++i){
+if(subMatrix[i].length!=nCols){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 19:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=nCols;i<row;++i){
+if(subMatrix[i].length!=nCols){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 19:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<data.length;++i){
+if(subMatrix[i].length!=nCols){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,column);
+}
+
+Time : 18/01/15 19:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<row;++i){
+if(subMatrix[i].length!=nCols){
+throw new DimensionMismatchException(nCols,subMatrix[i].length);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 19:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+MatrixUtils.checkRowIndex(this,row);
+for(int i=0;i<row;++i){
+if(subMatrix[i].length!=nCols){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 19:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+MatrixUtils.checkColumnIndex(this,column);
+for(int i=0;i<row;++i){
+if(subMatrix[i].length!=nCols){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 19:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+MatrixUtils.checkRowIndex(this,row);
+for(int i=0;i<row;++i){
+if(subMatrix[i].length!=nCols){
+throw new DimensionMismatchException(nCols,subMatrix[i].length);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 19:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+MatrixUtils.checkColumnIndex(this,column);
+for(int i=0;i<row;++i){
+if(subMatrix[i].length!=nCols){
+throw new DimensionMismatchException(nCols,subMatrix[i].length);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 19:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+MatrixUtils.checkRowIndex(this,row);
+MatrixUtils.checkColumnIndex(this,column);
+for(int i=0;i<row;++i){
+if(subMatrix[i].length!=nCols){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 19:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+MatrixUtils.checkRowIndex(this,row);
+MatrixUtils.checkColumnIndex(this,column);
+for(int i=0;i<row;++i){
+if(subMatrix[i].length!=nCols){
+throw new DimensionMismatchException(nCols,subMatrix[i].length);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 19:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<column;++i){
+if(subMatrix[i].length!=nCols){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 20:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<row;++i){
+if(subMatrix[i].length!=i){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 20:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<row;++i){
+if(i!=nCols){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 20:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<column+row;++i){
+if(subMatrix[i].length!=nCols){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 20:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=column;i<column+row;++i){
+if(subMatrix[i].length!=nCols){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 20:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<row;++i){
+if(subMatrix[i].length==nCols){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 20:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<row;++i){
+if(nCols==-1){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 20:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<row;++i){
+if(subMatrix[i].length!=-1){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 20:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<row;++i){
+if(subMatrix[i].length!=nCols){
+throw new IllegalArgumentException("originalData and permutedData must contain the same objects.");
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 20:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<row;++i){
+if(subMatrix[i].length==-1){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 20:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<row;++i){
+if(subMatrix[i].length==nCols){
+throw new IllegalArgumentException("originalData and permutedData must contain the same objects.");
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 20:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<row;++i){
+if(nCols==-1){
+throw new IllegalArgumentException("originalData and permutedData must contain the same objects.");
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 20:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<row;++i){
+if(subMatrix[i].length!=-1){
+throw new IllegalArgumentException("originalData and permutedData must contain the same objects.");
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 20:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<row;++i){
+if(subMatrix[i].length==-1){
+throw new IllegalArgumentException("originalData and permutedData must contain the same objects.");
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 20:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=column;i<row;++i){
+if(subMatrix[i].length!=nCols){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 20:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<row;++i){
+if(((i>>column)&1)!=nCols){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 20:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<row;++i){
+if(((i>>column)&1)==nCols){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+
+Time : 18/01/15 20:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(data==null){
+if(row>0){
+throw new MathIllegalStateException(LocalizedFormats.FIRST_ROWS_NOT_INITIALIZED_YET,row);
+}
+if(column>0){
+throw new MathIllegalStateException(LocalizedFormats.FIRST_COLUMNS_NOT_INITIALIZED_YET,column);
+}
+MathUtils.checkNotNull(subMatrix);
+ final int nRows=subMatrix.length;
+if(nRows==0){
+throw new NoDataException(LocalizedFormats.AT_LEAST_ONE_ROW);
+}
+ final int nCols=subMatrix[0].length;
+if(nCols==0){
+throw new NoDataException(LocalizedFormats.AT_LEAST_ONE_COLUMN);
+}
+data=new double[subMatrix.length][nCols];
+for(int i=nCols;i<data.length;++i){
+if(subMatrix[i].length!=nCols){
+throw new DimensionMismatchException(subMatrix[i].length,nCols);
+}
+System.arraycopy(subMatrix[i],0,data[i+row],column,nCols);
+}
+}else {
+super.setSubMatrix(subMatrix,row,column);
+}
+
+Time : 18/01/15 20:48
+----------------------------------------
+Timeout time : 18/01/15 20:53

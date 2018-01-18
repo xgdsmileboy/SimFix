@@ -1,0 +1,81 @@
+=================================================
+Project : closure_118	start : 18/01/14 04:01
+Current failed test : com.google.javascript.jscomp.DisambiguatePropertiesTest::testOneType4 | 18/01/14 04:02
+Sun Jan 14 04:03:02 AEDT 2018 com.google.javascript.jscomp.DisambiguateProperties,497
+Sun Jan 14 04:59:44 AEDT 2018 com.google.javascript.jscomp.DisambiguateProperties,498
+Sun Jan 14 04:59:49 AEDT 2018 com.google.javascript.jscomp.DisambiguateProperties,500
+Sun Jan 14 04:59:52 AEDT 2018 com.google.javascript.jscomp.DisambiguateProperties,501
+Sun Jan 14 04:59:56 AEDT 2018 Sun Jan 14 04:59:56 AEDT 2018 : com.google.javascript.jscomp.DisambiguateProperties,493=>Find no block
+Sun Jan 14 05:00:00 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,171
+Sun Jan 14 05:01:15 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,172
+Sun Jan 14 05:01:18 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,173
+Sun Jan 14 05:01:21 AEDT 2018 com.google.javascript.jscomp.DisambiguateProperties,442
+Sun Jan 14 05:17:38 AEDT 2018 Sun Jan 14 05:17:38 AEDT 2018 : com.google.javascript.jscomp.DisambiguateProperties,491=>Find no block
+Sun Jan 14 05:17:42 AEDT 2018 com.google.javascript.jscomp.DisambiguateProperties,492
+Sun Jan 14 05:17:46 AEDT 2018 Sun Jan 14 05:17:46 AEDT 2018 : com.google.javascript.jscomp.DisambiguateProperties,513=>Find no block
+Sun Jan 14 05:17:50 AEDT 2018 com.google.javascript.rhino.Node,1430
+Sun Jan 14 05:18:06 AEDT 2018 com.google.javascript.rhino.Node,1446
+Sun Jan 14 05:18:23 AEDT 2018 com.google.javascript.rhino.Node,1459
+Sun Jan 14 05:18:33 AEDT 2018 Sun Jan 14 05:18:33 AEDT 2018 : com.google.javascript.rhino.Node,2194=>Find no block
+Sun Jan 14 05:18:36 AEDT 2018 com.google.javascript.rhino.Node,2195
+Sun Jan 14 05:18:46 AEDT 2018 com.google.javascript.rhino.Node,2196
+Sun Jan 14 05:18:49 AEDT 2018 Sun Jan 14 05:18:49 AEDT 2018 : com.google.javascript.rhino.Node,2197=>Find no block
+Sun Jan 14 05:18:52 AEDT 2018 com.google.javascript.rhino.jstype.JSTypeRegistry,1417
+Sun Jan 14 05:19:11 AEDT 2018 com.google.javascript.rhino.jstype.JSTypeRegistry,1418
+Sun Jan 14 05:19:16 AEDT 2018 com.google.javascript.rhino.jstype.JSTypeRegistry,1419
+Sun Jan 14 05:19:20 AEDT 2018 com.google.javascript.rhino.jstype.JSTypeRegistry,1420
+Sun Jan 14 05:19:24 AEDT 2018 com.google.javascript.rhino.jstype.JSTypeRegistry,1421
+Sun Jan 14 05:19:28 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1571
+Sun Jan 14 05:26:38 AEDT 2018 com.google.javascript.rhino.jstype.StringType,81
+Sun Jan 14 05:26:50 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1675
+Sun Jan 14 05:29:07 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1670
+Sun Jan 14 05:34:10 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1671
+Sun Jan 14 05:34:14 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1672
+Sun Jan 14 05:34:17 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1673
+Sun Jan 14 05:34:20 AEDT 2018 com.google.javascript.rhino.jstype.InstanceObjectType,117
+Sun Jan 14 05:34:29 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,714
+Sun Jan 14 05:36:42 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,787
+Sun Jan 14 05:39:51 AEDT 2018 com.google.javascript.jscomp.DisambiguateProperties,933
+Sun Jan 14 05:42:34 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,656
+Sun Jan 14 05:51:21 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,658
+Sun Jan 14 06:02:35 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,659
+Sun Jan 14 06:06:32 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,705
+Sun Jan 14 06:06:50 AEDT 2018 com.google.javascript.jscomp.TypeValidator,346
+Sun Jan 14 06:30:40 AEDT 2018 com.google.javascript.jscomp.TypeCheck,945
+Sun Jan 14 06:47:08 AEDT 2018 com.google.javascript.jscomp.TypeCheck,946
+Sun Jan 14 06:47:12 AEDT 2018 com.google.javascript.jscomp.TypeCheck,949
+Sun Jan 14 06:47:16 AEDT 2018 com.google.javascript.jscomp.TypeCheck,954
+Sun Jan 14 06:47:19 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1582
+Sun Jan 14 06:51:35 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,798
+Sun Jan 14 06:51:56 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,1152
+Sun Jan 14 06:52:18 AEDT 2018 com.google.javascript.jscomp.DisambiguateProperties,874
+Sun Jan 14 06:54:16 AEDT 2018 com.google.javascript.jscomp.DisambiguateProperties,932
+Sun Jan 14 06:54:20 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,815
+Sun Jan 14 06:55:05 AEDT 2018 com.google.javascript.jscomp.DisambiguateProperties,564
+Sun Jan 14 06:55:24 AEDT 2018 com.google.javascript.jscomp.DisambiguateProperties,827
+Sun Jan 14 06:55:57 AEDT 2018 com.google.javascript.jscomp.DisambiguateProperties,927
+Sun Jan 14 07:05:11 AEDT 2018 com.google.javascript.jscomp.DisambiguateProperties,928
+Sun Jan 14 07:08:20 AEDT 2018 com.google.javascript.jscomp.DisambiguateProperties,930
+Sun Jan 14 07:08:25 AEDT 2018 com.google.javascript.jscomp.DisambiguateProperties,937
+Sun Jan 14 07:08:29 AEDT 2018 com.google.javascript.jscomp.DisambiguateProperties,938
+Sun Jan 14 07:08:33 AEDT 2018 com.google.javascript.jscomp.DisambiguateProperties,951
+Sun Jan 14 07:08:36 AEDT 2018 com.google.javascript.jscomp.DisambiguateProperties,952
+Sun Jan 14 07:08:39 AEDT 2018 Sun Jan 14 07:08:39 AEDT 2018 : com.google.javascript.jscomp.DisambiguateProperties,958=>Find no block
+Sun Jan 14 07:08:43 AEDT 2018 com.google.javascript.jscomp.TypeValidator,345
+Sun Jan 14 07:08:46 AEDT 2018 com.google.javascript.jscomp.DisambiguateProperties,892
+Sun Jan 14 07:09:46 AEDT 2018 com.google.javascript.jscomp.graph.StandardUnionFind,119
+Sun Jan 14 07:32:17 AEDT 2018 com.google.javascript.jscomp.graph.StandardUnionFind,120
+Sun Jan 14 07:32:22 AEDT 2018 com.google.javascript.jscomp.graph.StandardUnionFind,121
+Sun Jan 14 07:32:26 AEDT 2018 com.google.javascript.jscomp.graph.StandardUnionFind,122
+Sun Jan 14 07:32:32 AEDT 2018 com.google.javascript.jscomp.graph.StandardUnionFind,123
+Sun Jan 14 07:32:36 AEDT 2018 com.google.javascript.jscomp.graph.StandardUnionFind,124
+Sun Jan 14 07:32:38 AEDT 2018 com.google.javascript.jscomp.graph.StandardUnionFind,125
+Sun Jan 14 07:32:42 AEDT 2018 com.google.javascript.jscomp.graph.StandardUnionFind,127
+Sun Jan 14 07:32:44 AEDT 2018 Sun Jan 14 07:32:44 AEDT 2018 : com.google.javascript.jscomp.graph.StandardUnionFind,128=>Find no block
+Sun Jan 14 07:32:48 AEDT 2018 com.google.javascript.jscomp.graph.StandardUnionFind,129
+Sun Jan 14 07:50:20 AEDT 2018 com.google.javascript.jscomp.graph.StandardUnionFind,130
+Sun Jan 14 07:50:26 AEDT 2018 com.google.javascript.jscomp.graph.StandardUnionFind,131
+Sun Jan 14 07:50:29 AEDT 2018 Sun Jan 14 07:50:29 AEDT 2018 : com.google.javascript.jscomp.graph.StandardUnionFind,132=>Find no block
+Sun Jan 14 07:50:33 AEDT 2018 com.google.javascript.jscomp.graph.StandardUnionFind,133
+Sun Jan 14 07:56:31 AEDT 2018 com.google.javascript.jscomp.DisambiguateProperties,456
+Timeout time : 18/01/14 09:02

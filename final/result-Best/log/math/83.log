@@ -1,0 +1,350 @@
+=================================================
+Project : math_83	start : 18/01/14 09:25
+Current failed test : org.apache.commons.math.optimization.linear.SimplexSolverTest::testMath286 | 18/01/14 09:26
+Sun Jan 14 09:27:13 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,349
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+++i;
+if(basicRows.contains(basicRow)){
+coefficients[i]=0;
+}else {
+basicRows.add(basicRow);
+coefficients[i]=(basicRow==null?0:getEntry(basicRow,getRhsOffset()))-(restrictToNonNegative?0:mostNegative);
+}
+
+Time : 18/01/14 09:29
+----------------------------------------
+Sun Jan 14 09:30:08 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,151
+Sun Jan 14 09:32:15 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,190
+Sun Jan 14 09:33:05 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,297
+Sun Jan 14 09:33:33 AEDT 2018 Sun Jan 14 09:33:33 AEDT 2018 : org.apache.commons.math.optimization.linear.SimplexSolver,179=>Find no block
+Sun Jan 14 09:33:36 AEDT 2018 Sun Jan 14 09:33:36 AEDT 2018 : org.apache.commons.math.optimization.RealPointValuePair,48=>Find no block
+Sun Jan 14 09:33:39 AEDT 2018 org.apache.commons.math.optimization.RealPointValuePair,49
+Sun Jan 14 09:37:11 AEDT 2018 org.apache.commons.math.optimization.RealPointValuePair,50
+Sun Jan 14 09:37:12 AEDT 2018 Sun Jan 14 09:37:12 AEDT 2018 : org.apache.commons.math.optimization.RealPointValuePair,51=>Find no block
+Sun Jan 14 09:37:13 AEDT 2018 org.apache.commons.math.optimization.RealPointValuePair,86
+Sun Jan 14 09:37:36 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,310
+Sun Jan 14 09:38:28 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,311
+Sun Jan 14 09:40:30 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,312
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=height;j<width-1;j++){
+matrix[i][j]=getEntry(i+1,j+1);
+}
+
+Time : 18/01/14 09:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=height;j<=width-1;j++){
+matrix[i][j]=getEntry(i+1,j+1);
+}
+
+Time : 18/01/14 09:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<width-1;j++){
+j+=height;
+matrix[i][j]=getEntry(i+1,j+1);
+}
+
+Time : 18/01/14 09:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<height;i++){
+for(int j=height;j<width-1;j++){
+matrix[i][j]=getEntry(i+1,j+1);
+}
+matrix[i][width-1]=getEntry(i+1,getRhsOffset());
+}
+
+Time : 18/01/14 09:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int height=getHeight()-1;
+double[][] matrix=new double[height][width];
+for(int i=0;i<height;i++){
+for(int j=height;j<width-1;j++){
+matrix[i][j]=getEntry(i+1,j+1);
+}
+matrix[i][width-1]=getEntry(i+1,getRhsOffset());
+}
+
+Time : 18/01/14 10:13
+----------------------------------------
+Sun Jan 14 10:34:45 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,313
+Sun Jan 14 10:34:47 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,314
+Sun Jan 14 10:34:49 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,315
+Sun Jan 14 10:34:52 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,317
+Sun Jan 14 10:34:54 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,319
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<height;i++){
+for(int j=height;j<width-1;j++){
+matrix[i][j]=getEntry(i+1,j+1);
+}
+matrix[i][width-1]=getEntry(i+1,getRhsOffset());
+}
+this.tableau=new Array2DRowRealMatrix(matrix);
+this.numArtificialVariables=0;
+
+Time : 18/01/14 10:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<numDecisionVariables;i++){
+for(int j=numDecisionVariables;j<width-1;j++){
+matrix[i][j]=getEntry(i+1,j+1);
+}
+matrix[i][width-1]=getEntry(i+1,getRhsOffset());
+}
+this.tableau=new Array2DRowRealMatrix(matrix);
+this.numArtificialVariables=0;
+
+Time : 18/01/14 10:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<height;i++){
+for(int j=numDecisionVariables;j<width-1;j++){
+matrix[i][j]=getEntry(i+1,j+1);
+}
+matrix[i][width-1]=getEntry(i+1,getRhsOffset());
+}
+this.tableau=new Array2DRowRealMatrix(matrix);
+this.numArtificialVariables=0;
+
+Time : 18/01/14 10:47
+----------------------------------------
+Sun Jan 14 11:01:12 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,320
+Sun Jan 14 11:01:14 AEDT 2018 Sun Jan 14 11:01:14 AEDT 2018 : org.apache.commons.math.optimization.linear.SimplexTableau,321=>Find no block
+Sun Jan 14 11:01:16 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,340
+Sun Jan 14 11:02:04 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,341
+Sun Jan 14 11:02:06 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,342
+Sun Jan 14 11:02:11 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,343
+Sun Jan 14 11:24:38 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,344
+Sun Jan 14 11:24:41 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,345
+Sun Jan 14 11:24:42 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,346
+Sun Jan 14 11:24:44 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,351
+Sun Jan 14 11:24:45 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,352
+Sun Jan 14 11:24:46 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,357
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=getNumObjectiveFunctions();i<coefficients.length;i++){
+Integer basicRow=getBasicRow(getNumObjectiveFunctions()+i);
+if(basicRows.contains(basicRow)){
+coefficients[i]=0;
+}else {
+basicRows.add(basicRow);
+coefficients[i]=(basicRow==null?0:getEntry(basicRow,getRhsOffset()))-(restrictToNonNegative?0:mostNegative);
+}
+}
+return new RealPointValuePair(coefficients,f.getValue(coefficients));
+
+Time : 18/01/14 11:25
+----------------------------------------
+Sun Jan 14 11:36:31 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,458
+Sun Jan 14 11:36:38 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,481
+Sun Jan 14 11:36:43 AEDT 2018 org.apache.commons.math.optimization.linear.LinearObjectiveFunction,92
+Sun Jan 14 11:37:37 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,129
+Sun Jan 14 11:38:17 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,132
+Sun Jan 14 11:40:27 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,133
+Sun Jan 14 11:40:29 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,134
+Sun Jan 14 11:40:31 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,137
+Sun Jan 14 11:43:16 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,154
+Sun Jan 14 11:46:16 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,171
+Sun Jan 14 11:47:08 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,172
+Sun Jan 14 11:47:09 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,176
+Sun Jan 14 11:47:12 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,192
+Sun Jan 14 11:48:18 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,884
+Sun Jan 14 12:10:49 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,885
+Sun Jan 14 12:10:53 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,886
+Sun Jan 14 12:10:56 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,887
+Sun Jan 14 12:10:57 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,889
+Sun Jan 14 12:10:58 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,1287
+Sun Jan 14 12:31:28 AEDT 2018 Sun Jan 14 12:31:28 AEDT 2018 : org.apache.commons.math.linear.ArrayRealVector,1292=>Find no block
+Sun Jan 14 12:31:29 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,146
+Sun Jan 14 12:31:29 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,149
+Sun Jan 14 12:31:30 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,150
+Sun Jan 14 12:31:30 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,188
+Sun Jan 14 12:31:31 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,189
+Sun Jan 14 12:31:32 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,307
+Sun Jan 14 12:31:34 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,370
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<getWidth();j++){
+tableau.setEntry(dividendRow,dividendRow,tableau.getEntry(dividendRow,j)/divisor);
+}
+
+Time : 18/01/14 12:33
+----------------------------------------
+Sun Jan 14 12:40:20 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,371
+Sun Jan 14 12:40:21 AEDT 2018 Sun Jan 14 12:40:21 AEDT 2018 : org.apache.commons.math.optimization.linear.SimplexTableau,373=>Find no block
+Sun Jan 14 12:40:21 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,497
+Sun Jan 14 12:41:09 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,42
+Sun Jan 14 12:41:16 AEDT 2018 Sun Jan 14 12:41:16 AEDT 2018 : org.apache.commons.math.optimization.linear.SimplexSolver,43=>Find no block
+Sun Jan 14 12:41:17 AEDT 2018 Sun Jan 14 12:41:17 AEDT 2018 : org.apache.commons.math.optimization.linear.SimplexSolver,49=>Find no block
+Sun Jan 14 12:41:17 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,50
+Sun Jan 14 12:41:49 AEDT 2018 Sun Jan 14 12:41:49 AEDT 2018 : org.apache.commons.math.optimization.linear.SimplexSolver,51=>Find no block
+Sun Jan 14 12:41:51 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,59
+Sun Jan 14 12:48:53 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,60
+Sun Jan 14 12:48:54 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,61
+Sun Jan 14 12:48:55 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,62
+Sun Jan 14 12:48:56 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,63
+Sun Jan 14 12:48:58 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,64
+Sun Jan 14 12:49:00 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,67
+Sun Jan 14 12:49:03 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,77
+Sun Jan 14 13:01:26 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,78
+Sun Jan 14 13:01:28 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,79
+Sun Jan 14 13:01:28 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,80
+Sun Jan 14 13:01:29 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,81
+Sun Jan 14 13:01:29 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,82
+Sun Jan 14 13:01:32 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,83
+Sun Jan 14 13:01:35 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,84
+Sun Jan 14 13:01:38 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,85
+Sun Jan 14 13:01:40 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,89
+Sun Jan 14 13:05:31 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,102
+Sun Jan 14 13:06:25 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,104
+Sun Jan 14 13:06:27 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,105
+Sun Jan 14 13:07:17 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,106
+Sun Jan 14 13:07:24 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,111
+Sun Jan 14 13:08:22 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,112
+Sun Jan 14 13:13:29 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,115
+Sun Jan 14 13:13:31 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,116
+Sun Jan 14 13:13:33 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,117
+Sun Jan 14 13:13:35 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,118
+Sun Jan 14 13:13:37 AEDT 2018 Sun Jan 14 13:13:37 AEDT 2018 : org.apache.commons.math.optimization.linear.SimplexSolver,121=>Find no block
+Sun Jan 14 13:13:39 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,167
+Sun Jan 14 13:14:03 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,185
+Sun Jan 14 13:14:05 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexSolver,187
+Sun Jan 14 13:14:06 AEDT 2018 Sun Jan 14 13:14:06 AEDT 2018 : org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,61=>Find no block
+Sun Jan 14 13:14:07 AEDT 2018 org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,62
+Sun Jan 14 13:14:48 AEDT 2018 Sun Jan 14 13:14:48 AEDT 2018 : org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,63=>Find no block
+Sun Jan 14 13:14:48 AEDT 2018 org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,67
+Sun Jan 14 13:15:10 AEDT 2018 Sun Jan 14 13:15:10 AEDT 2018 : org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,68=>Find no block
+Sun Jan 14 13:15:10 AEDT 2018 org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,86
+Sun Jan 14 13:16:13 AEDT 2018 Sun Jan 14 13:16:13 AEDT 2018 : org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,89=>Find no block
+Sun Jan 14 13:16:14 AEDT 2018 org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,98
+Sun Jan 14 13:16:49 AEDT 2018 org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,99
+Sun Jan 14 13:16:52 AEDT 2018 org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,100
+Sun Jan 14 13:16:55 AEDT 2018 org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,101
+Sun Jan 14 13:16:56 AEDT 2018 org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,103
+Sun Jan 14 13:16:58 AEDT 2018 org.apache.commons.math.optimization.linear.AbstractLinearOptimizer,106
+Sun Jan 14 13:16:59 AEDT 2018 org.apache.commons.math.util.MathUtils,367
+Sun Jan 14 13:19:21 AEDT 2018 org.apache.commons.math.util.MathUtils,368
+Sun Jan 14 13:19:23 AEDT 2018 org.apache.commons.math.util.MathUtils,369
+Sun Jan 14 13:19:25 AEDT 2018 org.apache.commons.math.util.MathUtils,370
+Sun Jan 14 13:19:26 AEDT 2018 org.apache.commons.math.util.MathUtils,372
+Sun Jan 14 13:20:23 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,134
+Sun Jan 14 13:20:28 AEDT 2018 Sun Jan 14 13:20:28 AEDT 2018 : org.apache.commons.math.optimization.linear.SimplexTableau,171=>Find no block
+Sun Jan 14 13:20:28 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,178
+Sun Jan 14 13:20:50 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,179
+Sun Jan 14 13:20:51 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,249
+Sun Jan 14 13:27:05 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,250
+Sun Jan 14 13:27:08 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,441
+Sun Jan 14 13:27:55 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,449
+Sun Jan 14 13:28:00 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,338
+Sun Jan 14 13:40:38 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,339
+Sun Jan 14 13:55:47 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,340
+Sun Jan 14 13:55:50 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,342
+Sun Jan 14 13:55:53 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,296
+Sun Jan 14 13:55:55 AEDT 2018 org.apache.commons.math.optimization.linear.LinearConstraint,81
+Sun Jan 14 13:56:17 AEDT 2018 Sun Jan 14 13:56:17 AEDT 2018 : org.apache.commons.math.optimization.linear.LinearConstraint,82=>Find no block
+Sun Jan 14 13:56:21 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,273
+Sun Jan 14 13:57:03 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,291
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=start;i<getHeight();i++){
+if(MathUtils.equals(getEntry(i,col),1.0,epsilon)&&i<col){
+row=i;
+}else if(!MathUtils.equals(getEntry(i,col),0.0,epsilon)){
+return null;
+}
+}
+
+Time : 18/01/14 14:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Integer row=null;
+int start=getNumObjectiveFunctions();
+for(int i=start;i<getHeight();i++){
+if(MathUtils.equals(getEntry(i,col),1.0,epsilon)&&i<col){
+row=i;
+}else if(!MathUtils.equals(getEntry(i,col),0.0,epsilon)){
+return null;
+}
+}
+return row;
+
+Time : 18/01/14 14:05
+----------------------------------------
+Sun Jan 14 14:08:09 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,292
+Sun Jan 14 14:08:11 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,293
+Sun Jan 14 14:08:13 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,294
+Sun Jan 14 14:08:14 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,295
+Sun Jan 14 14:08:15 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,300
+Sun Jan 14 14:08:16 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,387
+Sun Jan 14 14:16:16 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,388
+Sun Jan 14 14:16:17 AEDT 2018 Sun Jan 14 14:16:17 AEDT 2018 : org.apache.commons.math.optimization.linear.SimplexTableau,391=>Find no block
+Sun Jan 14 14:16:19 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,398
+Sun Jan 14 14:17:05 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,406
+Sun Jan 14 14:17:49 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,415
+Sun Jan 14 14:18:55 AEDT 2018 org.apache.commons.math.util.MathUtils,395
+Sun Jan 14 14:19:37 AEDT 2018 org.apache.commons.math.util.MathUtils,411
+Sun Jan 14 14:22:20 AEDT 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,354
+Sun Jan 14 14:22:25 AEDT 2018 org.apache.commons.math.linear.Array2DRowRealMatrix,367
+Sun Jan 14 14:22:30 AEDT 2018 Sun Jan 14 14:22:30 AEDT 2018 : org.apache.commons.math.linear.Array2DRowRealMatrix,372=>Find no block
+Sun Jan 14 14:22:31 AEDT 2018 Sun Jan 14 14:22:31 AEDT 2018 : org.apache.commons.math.linear.Array2DRowRealMatrix,373=>Find no block
+Sun Jan 14 14:22:33 AEDT 2018 Sun Jan 14 14:22:33 AEDT 2018 : org.apache.commons.math.optimization.linear.LinearConstraint,99=>Find no block
+Sun Jan 14 14:22:35 AEDT 2018 org.apache.commons.math.optimization.linear.LinearConstraint,100
+Sun Jan 14 14:23:44 AEDT 2018 org.apache.commons.math.optimization.linear.LinearConstraint,101
+Sun Jan 14 14:23:46 AEDT 2018 org.apache.commons.math.optimization.linear.LinearConstraint,102
+Sun Jan 14 14:23:47 AEDT 2018 Sun Jan 14 14:23:47 AEDT 2018 : org.apache.commons.math.optimization.linear.LinearConstraint,103=>Find no block
+Sun Jan 14 14:23:47 AEDT 2018 org.apache.commons.math.optimization.linear.LinearConstraint,168
+Sun Jan 14 14:23:49 AEDT 2018 org.apache.commons.math.optimization.linear.LinearConstraint,176
+Sun Jan 14 14:23:53 AEDT 2018 org.apache.commons.math.optimization.linear.LinearConstraint,184
+Sun Jan 14 14:23:55 AEDT 2018 Sun Jan 14 14:23:55 AEDT 2018 : org.apache.commons.math.optimization.linear.SimplexTableau,104=>Find no block
+Sun Jan 14 14:23:57 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,105
+Sun Jan 14 14:24:56 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,106
+Sun Jan 14 14:24:57 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,107
+Sun Jan 14 14:24:59 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,108
+Sun Jan 14 14:25:02 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,109
+Sun Jan 14 14:25:03 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,110
+Sun Jan 14 14:25:05 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,112
+Sun Jan 14 14:25:07 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,114
+Sun Jan 14 14:25:09 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,115
+Sun Jan 14 14:25:10 AEDT 2018 Sun Jan 14 14:25:10 AEDT 2018 : org.apache.commons.math.optimization.linear.SimplexTableau,116=>Find no block
+Sun Jan 14 14:25:10 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,126
+Sun Jan 14 14:26:23 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,127
+Sun Jan 14 14:26:26 AEDT 2018 org.apache.commons.math.optimization.linear.SimplexTableau,129
+Timeout time : 18/01/14 14:27

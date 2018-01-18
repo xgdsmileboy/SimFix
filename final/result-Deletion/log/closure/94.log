@@ -1,0 +1,439 @@
+=================================================
+Project : closure_94	start : 18/01/16 11:47
+Current failed test : com.google.javascript.jscomp.NodeUtilTest::testValidDefine_purify_13 | 18/01/16 11:48
+Tue Jan 16 11:55:20 EST 2018 com.google.javascript.jscomp.NodeUtil,346
+Tue Jan 16 11:58:43 EST 2018 Tue Jan 16 11:58:43 EST 2018 : com.google.javascript.jscomp.NodeUtil,321=>Find no block
+Tue Jan 16 11:58:43 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,908
+Tue Jan 16 11:58:48 EST 2018 com.google.javascript.jscomp.Compiler,1174
+Tue Jan 16 12:01:18 EST 2018 com.google.javascript.jscomp.Compiler,1189
+Tue Jan 16 12:01:19 EST 2018 com.google.javascript.jscomp.Compiler,1185
+Tue Jan 16 12:08:54 EST 2018 com.google.javascript.jscomp.Compiler,1186
+Tue Jan 16 12:08:54 EST 2018 com.google.javascript.jscomp.Compiler,1188
+Tue Jan 16 12:08:54 EST 2018 com.google.javascript.jscomp.Compiler,1191
+Tue Jan 16 12:08:54 EST 2018 com.google.javascript.jscomp.Compiler,1192
+Tue Jan 16 12:08:54 EST 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,144
+Tue Jan 16 12:10:43 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,627
+Tue Jan 16 12:10:44 EST 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,247
+Tue Jan 16 12:12:11 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,1200
+Tue Jan 16 12:12:21 EST 2018 com.google.javascript.rhino.Node,512
+Tue Jan 16 12:12:23 EST 2018 com.google.javascript.rhino.Node,244
+Tue Jan 16 12:12:31 EST 2018 com.google.javascript.rhino.Node,245
+Tue Jan 16 12:12:31 EST 2018 Tue Jan 16 12:12:31 EST 2018 : com.google.javascript.rhino.Node,246=>Find no block
+Tue Jan 16 12:12:31 EST 2018 com.google.javascript.jscomp.Compiler,247
+Tue Jan 16 12:15:15 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,806
+Tue Jan 16 12:16:18 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,807
+Tue Jan 16 12:16:18 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,567
+Tue Jan 16 12:38:41 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,573
+Tue Jan 16 12:38:41 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,577
+Tue Jan 16 12:38:41 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,579
+Tue Jan 16 12:38:41 EST 2018 com.google.javascript.jscomp.Compiler,1171
+Tue Jan 16 12:38:41 EST 2018 Tue Jan 16 12:38:41 EST 2018 : com.google.javascript.jscomp.Compiler,1176=>Find no block
+Tue Jan 16 12:38:41 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,795
+Timeout time : 18/01/16 12:55
+Current failed test : com.google.javascript.jscomp.NodeUtilTest::testValidDefine_purify_14 | 18/01/16 12:55
+Tue Jan 16 13:02:22 EST 2018 com.google.javascript.jscomp.NodeUtil,346
+Tue Jan 16 13:05:41 EST 2018 Tue Jan 16 13:05:41 EST 2018 : com.google.javascript.jscomp.NodeUtil,321=>Find no block
+Tue Jan 16 13:05:41 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,908
+Tue Jan 16 13:05:46 EST 2018 com.google.javascript.jscomp.Compiler,1174
+Tue Jan 16 13:08:15 EST 2018 com.google.javascript.jscomp.Compiler,1189
+Tue Jan 16 13:08:16 EST 2018 com.google.javascript.jscomp.Compiler,1185
+Tue Jan 16 13:15:49 EST 2018 com.google.javascript.jscomp.Compiler,1186
+Tue Jan 16 13:15:49 EST 2018 com.google.javascript.jscomp.Compiler,1188
+Tue Jan 16 13:15:49 EST 2018 com.google.javascript.jscomp.Compiler,1191
+Tue Jan 16 13:15:49 EST 2018 com.google.javascript.jscomp.Compiler,1192
+Tue Jan 16 13:15:49 EST 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,144
+Tue Jan 16 13:17:36 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,702
+Tue Jan 16 13:21:30 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,703
+Tue Jan 16 13:21:30 EST 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,257
+Tue Jan 16 13:22:57 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,1192
+Tue Jan 16 13:23:14 EST 2018 com.google.javascript.rhino.Node,520
+Tue Jan 16 13:23:15 EST 2018 com.google.javascript.jscomp.Compiler,247
+Tue Jan 16 13:25:59 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,806
+Tue Jan 16 13:27:03 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,807
+Tue Jan 16 13:27:04 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,567
+Tue Jan 16 13:49:35 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,573
+Tue Jan 16 13:49:35 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,577
+Tue Jan 16 13:49:35 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,579
+Tue Jan 16 13:49:36 EST 2018 com.google.javascript.jscomp.Compiler,1171
+Tue Jan 16 13:49:36 EST 2018 Tue Jan 16 13:49:36 EST 2018 : com.google.javascript.jscomp.Compiler,1176=>Find no block
+Tue Jan 16 13:49:36 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,795
+Timeout time : 18/01/16 14:02
+Current failed test : com.google.javascript.jscomp.NodeUtilTest::testValidDefine_purify_15 | 18/01/16 14:02
+Tue Jan 16 14:09:20 EST 2018 com.google.javascript.jscomp.NodeUtil,337
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case Token.NEG :
+
+
+Time : 18/01/16 14:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case Token.NOT :
+
+case Token.NAME :
+
+
+Time : 18/01/16 14:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case Token.NAME :
+
+
+Time : 18/01/16 14:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case Token.NOT :
+
+
+Time : 18/01/16 14:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+
+Time : 18/01/16 14:14
+----------------------------------------
+Tue Jan 16 14:15:21 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,888
+Tue Jan 16 14:15:25 EST 2018 com.google.javascript.jscomp.NodeUtil,326
+Tue Jan 16 14:15:31 EST 2018 Tue Jan 16 14:15:31 EST 2018 : com.google.javascript.jscomp.NodeUtil,321=>Find no block
+Tue Jan 16 14:15:31 EST 2018 com.google.javascript.jscomp.Compiler,1174
+Tue Jan 16 14:18:02 EST 2018 com.google.javascript.jscomp.Compiler,1189
+Tue Jan 16 14:18:03 EST 2018 com.google.javascript.jscomp.Compiler,1185
+Tue Jan 16 14:25:40 EST 2018 com.google.javascript.jscomp.Compiler,1186
+Tue Jan 16 14:25:40 EST 2018 com.google.javascript.jscomp.Compiler,1188
+Tue Jan 16 14:25:40 EST 2018 com.google.javascript.jscomp.Compiler,1191
+Tue Jan 16 14:25:41 EST 2018 com.google.javascript.jscomp.Compiler,1192
+Tue Jan 16 14:25:41 EST 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,144
+Tue Jan 16 14:27:27 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,627
+Tue Jan 16 14:27:28 EST 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,247
+Tue Jan 16 14:28:55 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,1200
+Tue Jan 16 14:29:05 EST 2018 com.google.javascript.rhino.Node,512
+Tue Jan 16 14:29:06 EST 2018 com.google.javascript.rhino.Node,244
+Tue Jan 16 14:29:14 EST 2018 com.google.javascript.rhino.Node,245
+Tue Jan 16 14:29:14 EST 2018 Tue Jan 16 14:29:14 EST 2018 : com.google.javascript.rhino.Node,246=>Find no block
+Tue Jan 16 14:29:14 EST 2018 com.google.javascript.jscomp.Compiler,247
+Tue Jan 16 14:31:57 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,806
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(initializerNode.getInitializer()!=null){
+node.addChildToBack(rootNodeJsDocHolder);
+node.addChildToBack(transform(initializerNode.getInitializer()));
+node.setLineno(node.getLineno());
+}
+
+Time : 18/01/16 14:32
+----------------------------------------
+Tue Jan 16 14:33:51 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,807
+Tue Jan 16 14:33:51 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,567
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Node n=newNode(transformTokenType(exprNode.getType()),transform(exprNode.getLeft()),transform(exprNode.getRight()));
+n.setType(exprNode.getLineno());
+n.setCharno(position2charno(exprNode.getAbsolutePosition()+exprNode.getOperatorPosition()));
+return n;
+
+Time : 18/01/16 14:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Node n=newNode(transformTokenType(exprNode.getType()),transform(exprNode.getLeft()),transform(exprNode.getRight()));
+n.setType(exprNode.getLineno());
+return n;
+
+Time : 18/01/16 14:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Node n=newNode(transformTokenType(exprNode.getType()),transform(exprNode.getLeft()),transform(exprNode.getRight()));
+n.setLineno(exprNode.getLineno());
+n.setCharno(position2charno(exprNode.getAbsolutePosition()+exprNode.getOperatorPosition()));
+return templateNode;
+
+Time : 18/01/16 14:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Node n=newNode(transformTokenType(exprNode.getType()),transform(exprNode.getLeft()),transform(exprNode.getRight()));
+n.setCharno(position2charno(exprNode.getAbsolutePosition()+exprNode.getOperatorPosition()));
+return templateNode;
+
+Time : 18/01/16 14:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Node n=newNode(transformTokenType(exprNode.getType()),transform(exprNode.getLeft()),transform(exprNode.getRight()));
+n.setLineno(exprNode.getLineno());
+return templateNode;
+
+Time : 18/01/16 14:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Node n=newNode(transformTokenType(exprNode.getType()),transform(exprNode.getLeft()),transform(exprNode.getRight()));
+return templateNode;
+
+Time : 18/01/16 14:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return templateNode;
+
+Time : 18/01/16 14:57
+----------------------------------------
+Tue Jan 16 15:02:24 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,573
+Tue Jan 16 15:02:24 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,577
+Tue Jan 16 15:02:24 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,579
+Tue Jan 16 15:02:24 EST 2018 com.google.javascript.jscomp.Compiler,1171
+Tue Jan 16 15:02:24 EST 2018 Tue Jan 16 15:02:24 EST 2018 : com.google.javascript.jscomp.Compiler,1176=>Find no block
+Tue Jan 16 15:02:24 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,795
+Timeout time : 18/01/16 15:09
+Current failed test : com.google.javascript.jscomp.ProcessDefinesTest::testOverridingString1 | 18/01/16 15:09
+Tue Jan 16 15:16:27 EST 2018 com.google.javascript.jscomp.NodeUtil,346
+Tue Jan 16 15:19:48 EST 2018 com.google.javascript.jscomp.ProcessDefines,407
+Tue Jan 16 15:19:50 EST 2018 com.google.javascript.jscomp.JSError,189
+Tue Jan 16 15:19:52 EST 2018 com.google.javascript.jscomp.ProcessDefines,180
+Tue Jan 16 15:30:47 EST 2018 com.google.javascript.jscomp.ProcessDefines,160
+Tue Jan 16 15:31:43 EST 2018 com.google.javascript.jscomp.ProcessDefines,161
+Tue Jan 16 15:31:44 EST 2018 com.google.javascript.jscomp.ProcessDefines,179
+Tue Jan 16 15:31:44 EST 2018 com.google.javascript.jscomp.ProcessDefines,242
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(name.refs!=null){
+allRefInfo.put(name.declaration.node,new RefInfo(name.declaration,name));
+}
+
+Time : 18/01/16 15:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(name.declaration==null){
+allRefInfo.put(name.declaration.node,new RefInfo(name.declaration,name));
+}
+
+Time : 18/01/16 15:33
+----------------------------------------
+Tue Jan 16 15:36:49 EST 2018 com.google.javascript.jscomp.ProcessDefines,243
+Tue Jan 16 15:36:50 EST 2018 com.google.javascript.jscomp.ProcessDefines,246
+Tue Jan 16 15:39:31 EST 2018 Tue Jan 16 15:39:31 EST 2018 : com.google.javascript.jscomp.ProcessDefines,254=>Find no block
+Tue Jan 16 15:39:31 EST 2018 com.google.javascript.jscomp.ProcessDefines,278
+Tue Jan 16 15:40:58 EST 2018 com.google.javascript.jscomp.ProcessDefines,279
+Tue Jan 16 15:40:58 EST 2018 com.google.javascript.jscomp.ProcessDefines,280
+Tue Jan 16 15:40:58 EST 2018 Tue Jan 16 15:40:58 EST 2018 : com.google.javascript.jscomp.ProcessDefines,281=>Find no block
+Tue Jan 16 15:40:58 EST 2018 com.google.javascript.jscomp.ProcessDefines,284
+Tue Jan 16 15:41:26 EST 2018 com.google.javascript.jscomp.ProcessDefines,285
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(val.getType()!=Token.FUNCTION){
+return ;
+}
+if(valParent.getType()==Token.ASSIGN&&name.isSimpleName()&&name.declaration==ref){
+compiler.report(t.makeError(val,INVALID_DEFINE_INIT_ERROR,fullName));
+}else if(processDefineAssignment(t,fullName,val,valParent)){
+refInfo.name.removeRef(ref);
+lvalueToRemoveLater=valParent;
+}
+
+Time : 18/01/16 15:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case SET_FROM_LOCAL :
+Node valParent=getValueParent(ref);
+Node val=valParent.getLastChild();
+
+
+Time : 18/01/16 16:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case PROTOTYPE_GET :
+
+case SET_FROM_LOCAL :
+Node valParent=getValueParent(ref);
+Node val=valParent.getLastChild();
+
+
+Time : 18/01/16 16:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case CALL_GET :
+
+case SET_FROM_LOCAL :
+Node valParent=getValueParent(ref);
+Node val=valParent.getLastChild();
+
+
+Time : 18/01/16 16:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Sets.newLinkedHashSet().size()<=1){
+return ;
+}
+case SET_FROM_LOCAL :
+Node valParent=getValueParent(ref);
+Node val=valParent.getLastChild();
+if(valParent.getType()==Token.ASSIGN&&name.isSimpleName()&&name.declaration==ref){
+compiler.report(t.makeError(val,INVALID_DEFINE_INIT_ERROR,fullName));
+}else if(processDefineAssignment(t,fullName,val,valParent)){
+refInfo.name.removeRef(ref);
+lvalueToRemoveLater=valParent;
+}
+
+
+Time : 18/01/16 16:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(compiler.getModuleGraph()==null){
+return ;
+}
+case SET_FROM_LOCAL :
+Node valParent=getValueParent(ref);
+Node val=valParent.getLastChild();
+if(valParent.getType()==Token.ASSIGN&&name.isSimpleName()&&name.declaration==ref){
+compiler.report(t.makeError(val,INVALID_DEFINE_INIT_ERROR,fullName));
+}else if(processDefineAssignment(t,fullName,val,valParent)){
+refInfo.name.removeRef(ref);
+lvalueToRemoveLater=valParent;
+}
+
+
+Time : 18/01/16 16:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(compiler.getModuleGraph()==null){
+return ;
+}
+new SimpleFunctionAliasAnalysis().analyze(new SimpleDefinitionFinder(compiler));
+case SET_FROM_LOCAL :
+Node valParent=getValueParent(ref);
+Node val=valParent.getLastChild();
+if(valParent.getType()==Token.ASSIGN&&name.isSimpleName()&&name.declaration==ref){
+compiler.report(t.makeError(val,INVALID_DEFINE_INIT_ERROR,fullName));
+}else if(processDefineAssignment(t,fullName,val,valParent)){
+refInfo.name.removeRef(ref);
+lvalueToRemoveLater=valParent;
+}
+
+
+Time : 18/01/16 16:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case SET_FROM_LOCAL :
+Node valParent=getValueParent(ref);
+Node val=valParent.getFirstChild().getLastChild();
+if(valParent.getType()==Token.ASSIGN&&name.isSimpleName()&&name.declaration==ref){
+compiler.report(t.makeError(val,INVALID_DEFINE_INIT_ERROR,fullName));
+}else if(processDefineAssignment(t,fullName,val,valParent)){
+refInfo.name.removeRef(ref);
+lvalueToRemoveLater=valParent;
+}
+
+
+Time : 18/01/16 16:11
+----------------------------------------
+Tue Jan 16 16:14:39 EST 2018 com.google.javascript.jscomp.ProcessDefines,286
+Tue Jan 16 16:14:39 EST 2018 com.google.javascript.jscomp.ProcessDefines,292
+Tue Jan 16 16:14:39 EST 2018 com.google.javascript.jscomp.ProcessDefines,405
+Timeout time : 18/01/16 16:16
+Current failed test : com.google.javascript.jscomp.ProcessDefinesTest::testOverridingString3 | 18/01/16 16:16
+Tue Jan 16 16:23:45 EST 2018 com.google.javascript.jscomp.ProcessDefines,148
+Tue Jan 16 16:27:48 EST 2018 Tue Jan 16 16:27:48 EST 2018 : com.google.javascript.jscomp.ProcessDefines,149=>Find no block
+Tue Jan 16 16:27:48 EST 2018 com.google.javascript.jscomp.NodeUtil,346
+Tue Jan 16 16:31:09 EST 2018 com.google.javascript.jscomp.JSError,71
+Tue Jan 16 16:31:11 EST 2018 com.google.javascript.jscomp.ProcessDefines,407
+Tue Jan 16 16:31:13 EST 2018 com.google.javascript.jscomp.BasicErrorManager,132
+Tue Jan 16 16:31:39 EST 2018 com.google.javascript.jscomp.JSError,189
+Tue Jan 16 16:31:41 EST 2018 com.google.javascript.jscomp.ProcessDefines,180
+Tue Jan 16 16:42:36 EST 2018 com.google.javascript.jscomp.ProcessDefines,160
+Tue Jan 16 16:43:32 EST 2018 com.google.javascript.jscomp.ProcessDefines,161
+Tue Jan 16 16:43:32 EST 2018 com.google.javascript.jscomp.ProcessDefines,179
+Tue Jan 16 16:43:32 EST 2018 com.google.javascript.jscomp.ProcessDefines,242
+Tue Jan 16 16:46:39 EST 2018 com.google.javascript.jscomp.ProcessDefines,243
+Tue Jan 16 16:46:39 EST 2018 com.google.javascript.jscomp.ProcessDefines,246
+Tue Jan 16 16:49:19 EST 2018 Tue Jan 16 16:49:19 EST 2018 : com.google.javascript.jscomp.ProcessDefines,254=>Find no block
+Tue Jan 16 16:49:19 EST 2018 com.google.javascript.jscomp.ProcessDefines,278
+Tue Jan 16 16:50:45 EST 2018 com.google.javascript.jscomp.ProcessDefines,279
+Tue Jan 16 16:50:46 EST 2018 com.google.javascript.jscomp.ProcessDefines,280
+Tue Jan 16 16:50:46 EST 2018 Tue Jan 16 16:50:46 EST 2018 : com.google.javascript.jscomp.ProcessDefines,281=>Find no block
+Tue Jan 16 16:50:46 EST 2018 com.google.javascript.jscomp.ProcessDefines,284
+Tue Jan 16 16:51:13 EST 2018 com.google.javascript.jscomp.ProcessDefines,285
+Tue Jan 16 17:16:23 EST 2018 com.google.javascript.jscomp.ProcessDefines,286
+Tue Jan 16 17:16:23 EST 2018 com.google.javascript.jscomp.ProcessDefines,292
+Tue Jan 16 17:16:23 EST 2018 com.google.javascript.jscomp.ProcessDefines,405
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(value==null&&!NodeUtil.isValidDefineValue(value,allDefines.keySet())){
+compiler.report(t.makeError(value,INVALID_DEFINE_INIT_ERROR,name));
+}else if(!isAssignAllowed()){
+compiler.report(t.makeError(valueParent,NON_GLOBAL_DEFINE_INIT_ERROR,name));
+}else {
+DefineInfo info=allDefines.get(name);
+if(info==null){
+info=new DefineInfo(value,valueParent);
+allDefines.put(name,info);
+assignableDefines.put(name,info);
+}else if(info.recordAssignment(value)){
+return true;
+}else {
+compiler.report(t.makeError(valueParent,DEFINE_NOT_ASSIGNABLE_ERROR,name,info.getReasonWhyNotAssignable()));
+}
+}
+
+Time : 18/01/16 17:23
+----------------------------------------
+Timeout time : 18/01/16 17:24

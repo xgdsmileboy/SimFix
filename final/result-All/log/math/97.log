@@ -1,0 +1,280 @@
+=================================================
+Project : math_97	start : 18/01/12 22:56
+Current failed test : org.apache.commons.math.analysis.BrentSolverTest::testRootEndpoints | 18/01/12 22:57
+Fri Jan 12 22:57:54 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverImpl,169
+Fri Jan 12 22:58:48 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,141
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((ret-sign)>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+
+Time : 18/01/12 22:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ret-sign>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+
+Time : 18/01/12 23:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((min-ret)>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+
+Time : 18/01/12 23:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(min-ret>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+
+Time : 18/01/12 23:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((ret-sign)>=0){
+throw new IllegalArgumentException("Initial guess is not in search"+" interval."+ret);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+
+Time : 18/01/12 23:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ret-sign>=0){
+throw new IllegalArgumentException("Initial guess is not in search"+" interval."+ret);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+
+Time : 18/01/12 23:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((min-ret)>=0){
+throw new IllegalArgumentException("Initial guess is not in search"+" interval."+ret);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+
+Time : 18/01/12 23:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(min-ret>=0){
+throw new IllegalArgumentException("Initial guess is not in search"+" interval."+ret);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+
+Time : 18/01/12 23:04
+----------------------------------------
+Fri Jan 12 23:12:55 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,193
+Fri Jan 12 23:19:27 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,194
+Fri Jan 12 23:19:27 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,182
+Sat Jan 13 00:04:10 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,183
+Sat Jan 13 00:04:11 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,184
+Sat Jan 13 00:04:11 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,185
+Sat Jan 13 00:04:12 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,186
+Sat Jan 13 00:04:12 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,187
+Sat Jan 13 00:04:13 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverImpl,140
+Sat Jan 13 00:07:31 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverImpl,141
+Sat Jan 13 00:07:31 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverImpl,142
+Sat Jan 13 00:07:32 AEDT 2018 Sat Jan 13 00:07:32 AEDT 2018 : org.apache.commons.math.analysis.UnivariateRealSolverImpl,143=>Find no block
+Sat Jan 13 00:07:32 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,151
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((ret-sign)>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+return ret;
+
+Time : 18/01/13 00:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ret-sign>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+return ret;
+
+Time : 18/01/13 00:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((min-ret)>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+return ret;
+
+Time : 18/01/13 00:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(min-ret>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+return ret;
+
+Time : 18/01/13 00:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((ret-sign)>=0){
+throw new IllegalArgumentException("Initial guess is not in search"+" interval."+ret);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+return ret;
+
+Time : 18/01/13 00:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ret-sign>=0){
+throw new IllegalArgumentException("Initial guess is not in search"+" interval."+ret);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+return ret;
+
+Time : 18/01/13 00:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((min-ret)>=0){
+throw new IllegalArgumentException("Initial guess is not in search"+" interval."+ret);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+return ret;
+
+Time : 18/01/13 00:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(min-ret>=0){
+throw new IllegalArgumentException("Initial guess is not in search"+" interval."+ret);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+return ret;
+
+Time : 18/01/13 00:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sign*ret>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+return ret;
+
+Time : 18/01/13 00:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+clearResult();
+if(sign*ret>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+return ret;
+
+Time : 18/01/13 00:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+verifyInterval(min,max);
+if(sign*ret>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+return ret;
+
+Time : 18/01/13 00:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+clearResult();
+verifyInterval(min,max);
+if(sign*ret>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+return ret;
+
+Time : 18/01/13 00:16
+----------------------------------------
+Sat Jan 13 00:28:35 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,147
+Sat Jan 13 00:28:35 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,175
+Sat Jan 13 00:44:43 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,176
+Sat Jan 13 00:44:44 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,178
+Sat Jan 13 00:44:45 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,179
+Timeout time : 18/01/13 03:57
