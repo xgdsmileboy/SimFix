@@ -1,0 +1,56 @@
+=================================================
+Project : chart_5	start : 18/01/13 00:33
+Current failed test : org.jfree.data.xy.junit.XYSeriesTests::testBug1955483 | 18/01/13 00:33
+Sat Jan 13 00:34:30 AEDT 2018 org.jfree.data.xy.XYSeries,527
+Sat Jan 13 00:34:36 AEDT 2018 org.jfree.data.xy.XYSeries,564
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index==-1){
+this.data.add(-index-1,new XYDataItem(x,y));
+}else {
+this.data.add(new XYDataItem(x,y));
+}
+
+Time : 18/01/13 00:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.4843740386976974 : [/home/hz985/jiajun/d4j/projects/chart/chart_5_buggy/source/org/jfree/data/xy/XYSeries.java=>0,0]
+if(seriesIndex==-1){
+this.seriesKeys.add(seriesKey);
+this.seriesList.add(data);
+}else {
+this.seriesList.remove(seriesIndex);
+this.seriesList.add(seriesIndex,data);
+}
+
+Time : 18/01/13 00:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/chart/chart_5_buggy/source/org/jfree/data/xy/XYSeries.java=>563,568]
+if(this.autoSort){
+this.data.add(-index-1,new XYDataItem(x,y));
+}else {
+this.data.add(new XYDataItem(x,y));
+}
+
+Time : 18/01/13 00:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/chart/chart_5_buggy/source/org/jfree/data/xy/XYSeries.java=>563,568]
+if(index==-1){
+this.data.add(-index-1,new XYDataItem(x,y));
+}else {
+this.data.add(new XYDataItem(x,y));
+}
+
+Time : 18/01/13 00:35
+----------------------------------------
+Success time : 18/01/13 00:35

@@ -1,0 +1,112 @@
+=================================================
+Project : math_89	start : 18/01/12 14:05
+Current failed test : org.apache.commons.math.stat.FrequencyTest::testAddNonComparable | 18/01/12 14:05
+Fri Jan 12 14:06:51 AEDT 2018 org.apache.commons.math.stat.Frequency,110
+Fri Jan 12 14:07:46 AEDT 2018 Fri Jan 12 14:07:46 AEDT 2018 : org.apache.commons.math.stat.Frequency,57=>Find no block
+Fri Jan 12 14:07:52 AEDT 2018 org.apache.commons.math.stat.Frequency,58
+Fri Jan 12 14:08:24 AEDT 2018 Fri Jan 12 14:08:24 AEDT 2018 : org.apache.commons.math.stat.Frequency,59=>Find no block
+Fri Jan 12 14:08:28 AEDT 2018 Fri Jan 12 14:08:28 AEDT 2018 : org.apache.commons.math.stat.Frequency,66=>Find no block
+Fri Jan 12 14:08:33 AEDT 2018 org.apache.commons.math.stat.Frequency,67
+Fri Jan 12 14:09:05 AEDT 2018 Fri Jan 12 14:09:05 AEDT 2018 : org.apache.commons.math.stat.Frequency,68=>Find no block
+Fri Jan 12 14:09:11 AEDT 2018 org.apache.commons.math.stat.Frequency,78
+Fri Jan 12 14:11:40 AEDT 2018 org.apache.commons.math.stat.Frequency,79
+Fri Jan 12 14:11:45 AEDT 2018 org.apache.commons.math.stat.Frequency,80
+Fri Jan 12 14:15:27 AEDT 2018 org.apache.commons.math.stat.Frequency,81
+Fri Jan 12 14:15:32 AEDT 2018 org.apache.commons.math.stat.Frequency,82
+Fri Jan 12 14:20:03 AEDT 2018 org.apache.commons.math.stat.Frequency,83
+Fri Jan 12 14:26:02 AEDT 2018 org.apache.commons.math.stat.Frequency,84
+Fri Jan 12 14:26:06 AEDT 2018 org.apache.commons.math.stat.Frequency,85
+Fri Jan 12 14:29:58 AEDT 2018 org.apache.commons.math.stat.Frequency,86
+Fri Jan 12 14:34:35 AEDT 2018 org.apache.commons.math.stat.Frequency,87
+Fri Jan 12 14:39:01 AEDT 2018 org.apache.commons.math.stat.Frequency,88
+Fri Jan 12 14:43:10 AEDT 2018 org.apache.commons.math.stat.Frequency,89
+Fri Jan 12 14:46:53 AEDT 2018 org.apache.commons.math.stat.Frequency,90
+Fri Jan 12 14:50:58 AEDT 2018 org.apache.commons.math.stat.Frequency,91
+Fri Jan 12 14:51:05 AEDT 2018 Fri Jan 12 14:51:05 AEDT 2018 : org.apache.commons.math.stat.Frequency,92=>Find no block
+Fri Jan 12 14:51:09 AEDT 2018 org.apache.commons.math.stat.Frequency,93
+Fri Jan 12 14:58:03 AEDT 2018 Fri Jan 12 14:58:03 AEDT 2018 : org.apache.commons.math.stat.Frequency,111=>Find no block
+Fri Jan 12 14:58:08 AEDT 2018 org.apache.commons.math.stat.Frequency,124
+Fri Jan 12 14:59:42 AEDT 2018 org.apache.commons.math.stat.Frequency,125
+Fri Jan 12 15:01:01 AEDT 2018 org.apache.commons.math.stat.Frequency,126
+Fri Jan 12 15:01:05 AEDT 2018 org.apache.commons.math.stat.Frequency,129
+Fri Jan 12 15:02:58 AEDT 2018 org.apache.commons.math.stat.Frequency,130
+Fri Jan 12 15:04:31 AEDT 2018 org.apache.commons.math.stat.Frequency,131
+Fri Jan 12 15:04:35 AEDT 2018 org.apache.commons.math.stat.Frequency,133
+Fri Jan 12 15:04:39 AEDT 2018 Fri Jan 12 15:04:39 AEDT 2018 : org.apache.commons.math.stat.Frequency,138=>Find no block
+Fri Jan 12 15:04:43 AEDT 2018 Fri Jan 12 15:04:43 AEDT 2018 : org.apache.commons.math.stat.Frequency,135=>Find no block
+Fri Jan 12 15:04:47 AEDT 2018 org.apache.commons.math.stat.Frequency,137
+Fri Jan 12 15:07:35 AEDT 2018 Fri Jan 12 15:07:35 AEDT 2018 : org.apache.commons.math.stat.Frequency,139=>Find no block
+Fri Jan 12 15:07:40 AEDT 2018 org.apache.commons.math.stat.Frequency,147
+Fri Jan 12 15:07:50 AEDT 2018 Fri Jan 12 15:07:50 AEDT 2018 : org.apache.commons.math.stat.Frequency,148=>Find no block
+Fri Jan 12 15:07:54 AEDT 2018 org.apache.commons.math.stat.Frequency,156
+Fri Jan 12 15:08:04 AEDT 2018 Fri Jan 12 15:08:04 AEDT 2018 : org.apache.commons.math.stat.Frequency,157=>Find no block
+Fri Jan 12 15:08:08 AEDT 2018 org.apache.commons.math.stat.Frequency,165
+Fri Jan 12 15:08:13 AEDT 2018 Fri Jan 12 15:08:13 AEDT 2018 : org.apache.commons.math.stat.Frequency,166=>Find no block
+Fri Jan 12 15:08:17 AEDT 2018 org.apache.commons.math.stat.Frequency,174
+Fri Jan 12 15:08:27 AEDT 2018 Fri Jan 12 15:08:27 AEDT 2018 : org.apache.commons.math.stat.Frequency,175=>Find no block
+Fri Jan 12 15:08:31 AEDT 2018 org.apache.commons.math.stat.Frequency,179
+Fri Jan 12 15:09:22 AEDT 2018 Fri Jan 12 15:09:22 AEDT 2018 : org.apache.commons.math.stat.Frequency,180=>Find no block
+Fri Jan 12 15:09:26 AEDT 2018 org.apache.commons.math.stat.Frequency,192
+Fri Jan 12 15:09:37 AEDT 2018 org.apache.commons.math.stat.Frequency,203
+Fri Jan 12 15:12:51 AEDT 2018 org.apache.commons.math.stat.Frequency,204
+Fri Jan 12 15:12:55 AEDT 2018 org.apache.commons.math.stat.Frequency,205
+Fri Jan 12 15:13:00 AEDT 2018 org.apache.commons.math.stat.Frequency,206
+Fri Jan 12 15:13:04 AEDT 2018 org.apache.commons.math.stat.Frequency,208
+Fri Jan 12 15:13:08 AEDT 2018 org.apache.commons.math.stat.Frequency,219
+Fri Jan 12 15:14:40 AEDT 2018 org.apache.commons.math.stat.Frequency,220
+Fri Jan 12 15:14:44 AEDT 2018 org.apache.commons.math.stat.Frequency,222
+Fri Jan 12 15:20:06 AEDT 2018 org.apache.commons.math.stat.Frequency,224
+Fri Jan 12 15:20:11 AEDT 2018 org.apache.commons.math.stat.Frequency,225
+Fri Jan 12 15:20:15 AEDT 2018 org.apache.commons.math.stat.Frequency,226
+Fri Jan 12 15:20:20 AEDT 2018 Fri Jan 12 15:20:20 AEDT 2018 : org.apache.commons.math.stat.Frequency,230=>Find no block
+Fri Jan 12 15:20:24 AEDT 2018 Fri Jan 12 15:20:24 AEDT 2018 : org.apache.commons.math.stat.Frequency,228=>Find no block
+Fri Jan 12 15:20:28 AEDT 2018 org.apache.commons.math.stat.Frequency,231
+Fri Jan 12 15:20:32 AEDT 2018 org.apache.commons.math.stat.Frequency,241
+Fri Jan 12 15:22:04 AEDT 2018 org.apache.commons.math.stat.Frequency,251
+Fri Jan 12 15:22:09 AEDT 2018 org.apache.commons.math.stat.Frequency,261
+Fri Jan 12 15:23:34 AEDT 2018 org.apache.commons.math.stat.Frequency,276
+Fri Jan 12 15:25:34 AEDT 2018 org.apache.commons.math.stat.Frequency,277
+Fri Jan 12 15:25:44 AEDT 2018 org.apache.commons.math.stat.Frequency,278
+Fri Jan 12 15:25:48 AEDT 2018 org.apache.commons.math.stat.Frequency,280
+Fri Jan 12 15:25:52 AEDT 2018 org.apache.commons.math.stat.Frequency,291
+Fri Jan 12 15:28:11 AEDT 2018 org.apache.commons.math.stat.Frequency,302
+Fri Jan 12 15:28:16 AEDT 2018 org.apache.commons.math.stat.Frequency,313
+Fri Jan 12 15:30:41 AEDT 2018 org.apache.commons.math.stat.Frequency,327
+Fri Jan 12 15:30:51 AEDT 2018 org.apache.commons.math.stat.Frequency,328
+Fri Jan 12 15:30:55 AEDT 2018 org.apache.commons.math.stat.Frequency,330
+Fri Jan 12 15:32:25 AEDT 2018 org.apache.commons.math.stat.Frequency,331
+Fri Jan 12 15:32:29 AEDT 2018 org.apache.commons.math.stat.Frequency,333
+Fri Jan 12 15:35:47 AEDT 2018 org.apache.commons.math.stat.Frequency,334
+Fri Jan 12 15:35:52 AEDT 2018 org.apache.commons.math.stat.Frequency,335
+Fri Jan 12 15:35:55 AEDT 2018 org.apache.commons.math.stat.Frequency,337
+Fri Jan 12 15:39:35 AEDT 2018 org.apache.commons.math.stat.Frequency,340
+Fri Jan 12 15:41:55 AEDT 2018 org.apache.commons.math.stat.Frequency,341
+Fri Jan 12 15:41:59 AEDT 2018 org.apache.commons.math.stat.Frequency,342
+Fri Jan 12 15:42:03 AEDT 2018 Fri Jan 12 15:42:03 AEDT 2018 : org.apache.commons.math.stat.Frequency,346=>Find no block
+Fri Jan 12 15:42:07 AEDT 2018 Fri Jan 12 15:42:07 AEDT 2018 : org.apache.commons.math.stat.Frequency,344=>Find no block
+Fri Jan 12 15:42:11 AEDT 2018 org.apache.commons.math.stat.Frequency,345
+Fri Jan 12 15:45:32 AEDT 2018 org.apache.commons.math.stat.Frequency,348
+Fri Jan 12 15:45:36 AEDT 2018 org.apache.commons.math.stat.Frequency,349
+Fri Jan 12 15:45:40 AEDT 2018 org.apache.commons.math.stat.Frequency,352
+Fri Jan 12 15:48:05 AEDT 2018 org.apache.commons.math.stat.Frequency,353
+Fri Jan 12 15:48:09 AEDT 2018 org.apache.commons.math.stat.Frequency,356
+Fri Jan 12 15:59:06 AEDT 2018 org.apache.commons.math.stat.Frequency,357
+Fri Jan 12 15:59:10 AEDT 2018 org.apache.commons.math.stat.Frequency,358
+Fri Jan 12 15:59:14 AEDT 2018 org.apache.commons.math.stat.Frequency,359
+Fri Jan 12 15:59:18 AEDT 2018 org.apache.commons.math.stat.Frequency,360
+Fri Jan 12 15:59:23 AEDT 2018 org.apache.commons.math.stat.Frequency,362
+Fri Jan 12 15:59:27 AEDT 2018 Fri Jan 12 15:59:27 AEDT 2018 : org.apache.commons.math.stat.Frequency,364=>Find no block
+Fri Jan 12 15:59:32 AEDT 2018 org.apache.commons.math.stat.Frequency,365
+Fri Jan 12 16:02:26 AEDT 2018 org.apache.commons.math.stat.Frequency,377
+Fri Jan 12 16:03:53 AEDT 2018 org.apache.commons.math.stat.Frequency,389
+Fri Jan 12 16:03:57 AEDT 2018 org.apache.commons.math.stat.Frequency,401
+Fri Jan 12 16:05:24 AEDT 2018 org.apache.commons.math.stat.Frequency,418
+Fri Jan 12 16:07:28 AEDT 2018 org.apache.commons.math.stat.Frequency,419
+Fri Jan 12 16:07:32 AEDT 2018 org.apache.commons.math.stat.Frequency,420
+Fri Jan 12 16:07:37 AEDT 2018 org.apache.commons.math.stat.Frequency,422
+Fri Jan 12 16:07:42 AEDT 2018 org.apache.commons.math.stat.Frequency,435
+Fri Jan 12 16:10:03 AEDT 2018 org.apache.commons.math.stat.Frequency,448
+Fri Jan 12 16:10:08 AEDT 2018 org.apache.commons.math.stat.Frequency,461
+Fri Jan 12 16:12:38 AEDT 2018 Fri Jan 12 16:12:38 AEDT 2018 : org.apache.commons.math.stat.Frequency,468=>Find no block
+Fri Jan 12 16:12:43 AEDT 2018 org.apache.commons.math.stat.Frequency,487
+Failed time : 18/01/12 16:13

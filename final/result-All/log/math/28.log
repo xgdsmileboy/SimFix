@@ -1,0 +1,59 @@
+=================================================
+Project : math_28	start : 18/01/12 19:09
+Current failed test : org.apache.commons.math3.optimization.linear.SimplexSolverTest::testMath828Cycle_purify_1 | 18/01/12 19:10
+Fri Jan 12 19:11:51 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,69
+Fri Jan 12 19:11:59 AEDT 2018 Fri Jan 12 19:11:59 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalStateException,70=>Find no block
+Fri Jan 12 19:12:00 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,74
+Fri Jan 12 19:12:06 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,80
+Fri Jan 12 19:12:52 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,86
+Fri Jan 12 19:13:36 AEDT 2018 org.apache.commons.math3.optimization.linear.AbstractLinearOptimizer,128
+Fri Jan 12 19:18:24 AEDT 2018 org.apache.commons.math3.exception.MaxCountExceededException,42
+Fri Jan 12 19:18:28 AEDT 2018 Fri Jan 12 19:18:28 AEDT 2018 : org.apache.commons.math3.exception.MaxCountExceededException,43=>Find no block
+Fri Jan 12 19:18:29 AEDT 2018 Fri Jan 12 19:18:29 AEDT 2018 : org.apache.commons.math3.exception.MaxCountExceededException,53=>Find no block
+Fri Jan 12 19:18:31 AEDT 2018 org.apache.commons.math3.exception.MaxCountExceededException,54
+Fri Jan 12 19:19:24 AEDT 2018 org.apache.commons.math3.exception.MaxCountExceededException,55
+Fri Jan 12 19:19:25 AEDT 2018 Fri Jan 12 19:19:25 AEDT 2018 : org.apache.commons.math3.exception.MaxCountExceededException,56=>Find no block
+Fri Jan 12 19:19:26 AEDT 2018 org.apache.commons.math3.optimization.linear.SimplexSolver,138
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Precision.equals(minRatio,0.0)&&row.equals(tableau.getBasicRow(column))){
+return row;
+}
+
+Time : 18/01/12 19:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.5245748805139687 : [/home/hz985/jiajun/d4j/projects/math/math_28_buggy/src/main/java/org/apache/commons/math3/optimization/linear/SimplexSolver.java=>0,0]
+if(Precision.equals(vr,0.0)&&Precision.equals(vi,0.0)){
+vr=Precision.EPSILON*norm;
+}
+
+Time : 18/01/12 19:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_28_buggy/src/main/java/org/apache/commons/math3/optimization/linear/SimplexSolver.java=>123,125]
+if(Precision.equals(entry,1.0,maxUlps)&&row.equals(tableau.getBasicRow(column))){
+return row;
+}
+
+Time : 18/01/12 19:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_28_buggy/src/main/java/org/apache/commons/math3/optimization/linear/SimplexSolver.java=>123,125]
+if(Precision.equals(minRatio,0.0)&&row.equals(tableau.getBasicRow(column))){
+return row;
+}
+
+Time : 18/01/12 19:21
+----------------------------------------
+Success time : 18/01/12 19:21
+Current failed test : org.apache.commons.math3.optimization.linear.SimplexSolverTest::testMath828Cycle_purify_2 | 18/01/12 19:21
+Already fixed : org.apache.commons.math3.optimization.linear.SimplexSolverTest::testMath828Cycle_purify_2

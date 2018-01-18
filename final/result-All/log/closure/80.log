@@ -1,0 +1,315 @@
+=================================================
+Project : closure_80	start : 18/01/13 09:53
+Current failed test : com.google.javascript.jscomp.NodeUtilTest::testLocalValue1_purify_61 | 18/01/13 09:59
+Sat Jan 13 10:05:50 EST 2018 com.google.javascript.jscomp.NodeUtil,2923
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!NodeUtil.isImmutableValue(value)){
+return true;
+}
+
+Time : 18/01/13 10:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!value.getBooleanProp(Node.IS_NAMESPACE)){
+return true;
+}
+
+Time : 18/01/13 10:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.7701540462154055 : [/home/jiajun/d4j/projects/closure/closure_80_buggy/src/com/google/javascript/jscomp/NodeUtil.java=>0,0]
+if(!n.getBooleanProp(Node.IS_NAMESPACE)){
+return false;
+}
+Node value=null;
+
+Time : 18/01/13 10:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/jiajun/d4j/projects/closure/closure_80_buggy/src/com/google/javascript/jscomp/NodeUtil.java=>2917,2921]
+if(isAssignmentOp(value)||isSimpleOperator(value)){
+return true;
+}
+
+Time : 18/01/13 10:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/jiajun/d4j/projects/closure/closure_80_buggy/src/com/google/javascript/jscomp/NodeUtil.java=>2917,2921]
+if(!value.getBooleanProp(Node.IS_NAMESPACE)){
+return true;
+}
+
+Time : 18/01/13 10:08
+----------------------------------------
+Success time : 18/01/13 10:08
+Current failed test : com.google.javascript.jscomp.NodeUtilTest::testIsBooleanResult_purify_36 | 18/01/13 10:08
+Sat Jan 13 10:15:32 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,1015
+Sat Jan 13 10:15:38 EST 2018 com.google.javascript.jscomp.NodeUtil,1264
+Sat Jan 13 10:15:39 EST 2018 com.google.javascript.jscomp.NodeUtil,1228
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return NodeUtil.mayHaveSideEffects(n);
+
+Time : 18/01/13 10:18
+----------------------------------------
+Sat Jan 13 10:21:25 EST 2018 com.google.javascript.jscomp.NodeUtil,1239
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return n.hasChildren();
+
+Time : 18/01/13 10:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return true;
+
+Time : 18/01/13 10:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return mayEffectMutableState(n,null);
+
+Time : 18/01/13 10:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return mayHaveSideEffects(n,null);
+
+Time : 18/01/13 10:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return nodeTypeMayHaveSideEffects(n,null);
+
+Time : 18/01/13 10:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return !isFunction(n);
+
+Time : 18/01/13 10:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return n.getType()!=Token.FUNCTION;
+
+Time : 18/01/13 10:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return n!=n.getFirstChild();
+
+Time : 18/01/13 10:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return n.getFirstChild()!=n;
+
+Time : 18/01/13 10:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return !NodeUtil.isFunctionDeclaration(n);
+
+Time : 18/01/13 10:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return n!=n.getFirstChild().getNext();
+
+Time : 18/01/13 10:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return NodeUtil.containsType(n,Token.NAME)||NodeUtil.containsType(n,Token.GETELEM);
+
+Time : 18/01/13 10:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return !isFunctionExpression(n);
+
+Time : 18/01/13 10:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return !isStatement(n);
+
+Time : 18/01/13 10:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return !isNumericResult(n);
+
+Time : 18/01/13 10:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return (NodeUtil.isName(n)||(n.hasChildren()&&NodeUtil.isName(n.getFirstChild())));
+
+Time : 18/01/13 10:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return NodeUtil.isName(n)||(n.hasChildren()&&NodeUtil.isName(n.getFirstChild()));
+
+Time : 18/01/13 10:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return (n.hasChildren()&&NodeUtil.isName(n.getFirstChild()));
+
+Time : 18/01/13 10:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return n.hasChildren()&&NodeUtil.isName(n.getFirstChild());
+
+Time : 18/01/13 10:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return !isConstantName(n);
+
+Time : 18/01/13 10:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return n.getParent().getLastChild()==n;
+
+Time : 18/01/13 10:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return n!=null;
+
+Time : 18/01/13 11:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return !n.getBooleanProp(Node.DIRECT_EVAL);
+
+Time : 18/01/13 11:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return n.getParent().getType()==Token.NAME;
+
+Time : 18/01/13 11:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return n.getAncestor(2).getType()!=Token.SCRIPT;
+
+Time : 18/01/13 11:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return n.getType()==Token.THROW||(n.hasChildren()&&!NodeUtil.isLiteralValue(n.getLastChild(),true));
+
+Time : 18/01/13 11:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return (n.hasChildren()&&!NodeUtil.isLiteralValue(n.getLastChild(),true));
+
+Time : 18/01/13 11:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return n.hasChildren()&&!NodeUtil.isLiteralValue(n.getLastChild(),true);
+
+Time : 18/01/13 11:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return !NodeUtil.isLiteralValue(n.getLastChild(),true);
+
+Time : 18/01/13 11:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return n.getLastChild()!=null;
+
+Time : 18/01/13 11:15
+----------------------------------------
+Sat Jan 13 11:17:36 EST 2018 Sat Jan 13 11:17:36 EST 2018 : com.google.javascript.jscomp.NodeUtil,1243=>Find no block
+Sat Jan 13 11:17:36 EST 2018 Sat Jan 13 11:17:36 EST 2018 : com.google.javascript.jscomp.NodeUtil,1158=>Find no block
+Sat Jan 13 11:17:36 EST 2018 com.google.javascript.jscomp.NodeUtil,1170
+Sat Jan 13 11:21:20 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,831
+Sat Jan 13 11:59:27 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,843
+Timeout time : 18/01/13 12:45

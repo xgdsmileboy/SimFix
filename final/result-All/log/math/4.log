@@ -1,0 +1,216 @@
+=================================================
+Project : math_4	start : 18/01/12 14:05
+Current failed test : org.apache.commons.math3.geometry.euclidean.twod.SubLineTest::testIntersectionParallel_purify_1 | 18/01/12 14:06
+Fri Jan 12 14:08:13 AEDT 2018 org.apache.commons.math3.geometry.euclidean.twod.SubLine,113
+Fri Jan 12 14:30:31 AEDT 2018 org.apache.commons.math3.geometry.euclidean.twod.SubLine,114
+Fri Jan 12 14:30:34 AEDT 2018 org.apache.commons.math3.geometry.euclidean.twod.SubLine,117
+Fri Jan 12 14:30:36 AEDT 2018 org.apache.commons.math3.geometry.euclidean.twod.SubLine,120
+Fri Jan 12 14:30:39 AEDT 2018 org.apache.commons.math3.geometry.euclidean.twod.SubLine,56
+Fri Jan 12 14:30:52 AEDT 2018 Fri Jan 12 14:30:52 AEDT 2018 : org.apache.commons.math3.geometry.euclidean.twod.SubLine,57=>Find no block
+Fri Jan 12 14:30:55 AEDT 2018 org.apache.commons.math3.geometry.euclidean.twod.SubLine,139
+Fri Jan 12 14:32:44 AEDT 2018 org.apache.commons.math3.geometry.euclidean.twod.SubLine,140
+Fri Jan 12 14:32:46 AEDT 2018 org.apache.commons.math3.util.FastMath,2664
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y<0||1/y<0){
+return pow(-x,y);
+}
+
+Time : 18/01/12 14:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y<0||y<=-TWO_POWER_53){
+return pow(-x,y);
+}
+
+Time : 18/01/12 14:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y<0||y<0){
+return pow(-x,y);
+}
+
+Time : 18/01/12 14:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y<0||1/y<0){
+return ((long)y&1)==0?pow(-x,y):-pow(-x,y);
+}
+
+Time : 18/01/12 14:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y<0||1/y<0){
+return -pow(-x,y);
+}
+
+Time : 18/01/12 14:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+y=x<0?FastMath.floor(x):FastMath.ceil(x);
+if(y<0||x<-E){
+return -Math.PI*F_1_2;
+}
+
+Time : 18/01/12 14:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+y=x<0?FastMath.floor(x):FastMath.ceil(x);
+if(x<0||x<-E){
+return -Math.PI*F_1_2;
+}
+
+Time : 18/01/12 14:53
+----------------------------------------
+Fri Jan 12 14:56:58 AEDT 2018 org.apache.commons.math3.util.FastMath,2665
+Fri Jan 12 14:57:04 AEDT 2018 org.apache.commons.math3.util.FastMath,2660
+Fri Jan 12 15:03:55 AEDT 2018 org.apache.commons.math3.util.FastMath,3587
+Timeout time : 18/01/12 15:23
+Current failed test : org.apache.commons.math3.geometry.euclidean.twod.SubLineTest::testIntersectionParallel_purify_2 | 18/01/12 15:23
+Fri Jan 12 15:24:19 AEDT 2018 org.apache.commons.math3.geometry.euclidean.twod.SubLine,113
+Fri Jan 12 15:47:52 AEDT 2018 org.apache.commons.math3.geometry.euclidean.twod.SubLine,114
+Fri Jan 12 15:47:58 AEDT 2018 org.apache.commons.math3.geometry.euclidean.twod.SubLine,117
+Fri Jan 12 15:48:00 AEDT 2018 org.apache.commons.math3.geometry.euclidean.twod.SubLine,120
+Fri Jan 12 15:48:01 AEDT 2018 org.apache.commons.math3.geometry.euclidean.twod.SubLine,56
+Fri Jan 12 15:48:18 AEDT 2018 Fri Jan 12 15:48:18 AEDT 2018 : org.apache.commons.math3.geometry.euclidean.twod.SubLine,57=>Find no block
+Fri Jan 12 15:48:23 AEDT 2018 org.apache.commons.math3.geometry.euclidean.twod.SubLine,139
+Fri Jan 12 15:50:32 AEDT 2018 org.apache.commons.math3.geometry.euclidean.twod.SubLine,140
+Fri Jan 12 15:50:36 AEDT 2018 org.apache.commons.math3.util.FastMath,2664
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y<0||1/y<0){
+return pow(-x,y);
+}
+
+Time : 18/01/12 15:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y<0||y<=-TWO_POWER_53){
+return pow(-x,y);
+}
+
+Time : 18/01/12 15:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y<0||y<0){
+return pow(-x,y);
+}
+
+Time : 18/01/12 15:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y<0||1/y<0){
+return ((long)y&1)==0?pow(-x,y):-pow(-x,y);
+}
+
+Time : 18/01/12 16:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y<0||1/y<0){
+return -pow(-x,y);
+}
+
+Time : 18/01/12 16:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+y=x<0?FastMath.floor(x):FastMath.ceil(x);
+if(y<0||x<-E){
+return -Math.PI*F_1_2;
+}
+
+Time : 18/01/12 16:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+y=x<0?FastMath.floor(x):FastMath.ceil(x);
+if(x<0||x<-E){
+return -Math.PI*F_1_2;
+}
+
+Time : 18/01/12 16:12
+----------------------------------------
+Fri Jan 12 16:17:14 AEDT 2018 org.apache.commons.math3.util.FastMath,2665
+Fri Jan 12 16:17:16 AEDT 2018 org.apache.commons.math3.util.FastMath,2660
+Fri Jan 12 16:24:43 AEDT 2018 org.apache.commons.math3.util.FastMath,3587
+Timeout time : 18/01/12 16:39
+Current failed test : org.apache.commons.math3.geometry.euclidean.threed.SubLineTest::testIntersectionNotIntersecting_purify_1 | 18/01/12 16:39
+Fri Jan 12 16:40:45 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.SubLine,56
+Fri Jan 12 16:40:58 AEDT 2018 Fri Jan 12 16:40:58 AEDT 2018 : org.apache.commons.math3.geometry.euclidean.threed.SubLine,57=>Find no block
+Fri Jan 12 16:41:03 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.SubLine,113
+Fri Jan 12 16:57:45 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.SubLine,116
+Fri Jan 12 16:57:48 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Line,156
+Fri Jan 12 16:58:13 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Line,164
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Vector3D d=zero.subtract(zero);
+ final Vector3D n=new Vector3D(1.0,d,-d.dotProduct(direction),direction);
+return n.getNorm();
+
+Time : 18/01/12 17:00
+----------------------------------------
+Fri Jan 12 17:09:09 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Line,165
+Fri Jan 12 17:09:11 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Line,166
+Fri Jan 12 17:09:14 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Line,195
+Timeout time : 18/01/12 17:55
+Current failed test : org.apache.commons.math3.geometry.euclidean.threed.SubLineTest::testIntersectionNotIntersecting_purify_2 | 18/01/12 17:55
+Fri Jan 12 17:57:10 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.SubLine,56
+Fri Jan 12 17:57:17 AEDT 2018 Fri Jan 12 17:57:17 AEDT 2018 : org.apache.commons.math3.geometry.euclidean.threed.SubLine,57=>Find no block
+Fri Jan 12 17:57:19 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.SubLine,113
+Fri Jan 12 18:14:14 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.SubLine,116
+Fri Jan 12 18:14:16 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Line,156
+Fri Jan 12 18:14:48 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Line,164
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Vector3D d=zero.subtract(zero);
+ final Vector3D n=new Vector3D(1.0,d,-d.dotProduct(direction),direction);
+return n.getNorm();
+
+Time : 18/01/12 18:17
+----------------------------------------
+Fri Jan 12 18:25:56 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Line,165
+Fri Jan 12 18:25:58 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Line,166
+Fri Jan 12 18:26:00 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Line,195
+Timeout time : 18/01/12 19:12

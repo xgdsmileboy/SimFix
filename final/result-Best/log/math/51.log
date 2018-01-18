@@ -1,0 +1,172 @@
+=================================================
+Project : math_51	start : 18/01/14 02:20
+Current failed test : org.apache.commons.math.analysis.solvers.RegulaFalsiSolverTest::testIssue631 | 18/01/14 02:20
+Sun Jan 14 02:21:57 AEDT 2018 Sun Jan 14 02:21:57 AEDT 2018 : org.apache.commons.math.exception.MathIllegalStateException,45=>Find no block
+Sun Jan 14 02:22:01 AEDT 2018 Sun Jan 14 02:22:01 AEDT 2018 : org.apache.commons.math.exception.MathIllegalStateException,36=>Find no block
+Sun Jan 14 02:22:05 AEDT 2018 org.apache.commons.math.exception.MathIllegalStateException,46
+Sun Jan 14 02:22:14 AEDT 2018 Sun Jan 14 02:22:14 AEDT 2018 : org.apache.commons.math.exception.MathIllegalStateException,47=>Find no block
+Sun Jan 14 02:22:15 AEDT 2018 org.apache.commons.math.exception.MathIllegalStateException,67
+Sun Jan 14 02:22:24 AEDT 2018 Sun Jan 14 02:22:24 AEDT 2018 : org.apache.commons.math.exception.MathIllegalStateException,68=>Find no block
+Sun Jan 14 02:22:28 AEDT 2018 org.apache.commons.math.exception.MathIllegalStateException,72
+Sun Jan 14 02:22:36 AEDT 2018 org.apache.commons.math.exception.MathIllegalStateException,78
+Sun Jan 14 02:23:28 AEDT 2018 org.apache.commons.math.exception.MathIllegalStateException,84
+Sun Jan 14 02:24:13 AEDT 2018 org.apache.commons.math.exception.MaxCountExceededException,42
+Sun Jan 14 02:24:21 AEDT 2018 Sun Jan 14 02:24:21 AEDT 2018 : org.apache.commons.math.exception.MaxCountExceededException,43=>Find no block
+Sun Jan 14 02:24:25 AEDT 2018 Sun Jan 14 02:24:25 AEDT 2018 : org.apache.commons.math.exception.MaxCountExceededException,53=>Find no block
+Sun Jan 14 02:24:28 AEDT 2018 org.apache.commons.math.exception.MaxCountExceededException,54
+Sun Jan 14 02:25:20 AEDT 2018 org.apache.commons.math.exception.MaxCountExceededException,55
+Sun Jan 14 02:25:23 AEDT 2018 Sun Jan 14 02:25:23 AEDT 2018 : org.apache.commons.math.exception.MaxCountExceededException,56=>Find no block
+Sun Jan 14 02:25:26 AEDT 2018 org.apache.commons.math.exception.MaxCountExceededException,62
+Sun Jan 14 02:25:31 AEDT 2018 org.apache.commons.math.exception.TooManyEvaluationsException,37
+Sun Jan 14 02:26:16 AEDT 2018 org.apache.commons.math.exception.TooManyEvaluationsException,38
+Sun Jan 14 02:26:18 AEDT 2018 Sun Jan 14 02:26:18 AEDT 2018 : org.apache.commons.math.exception.TooManyEvaluationsException,39=>Find no block
+Sun Jan 14 02:26:19 AEDT 2018 org.apache.commons.math.util.Incrementor,85
+Sun Jan 14 02:27:56 AEDT 2018 Sun Jan 14 02:27:56 AEDT 2018 : org.apache.commons.math.analysis.solvers.BaseAbstractUnivariateRealSolver,295=>Find no block
+Sun Jan 14 02:27:58 AEDT 2018 org.apache.commons.math.analysis.solvers.BaseAbstractUnivariateRealSolver,296
+Sun Jan 14 02:28:02 AEDT 2018 Sun Jan 14 02:28:02 AEDT 2018 : org.apache.commons.math.analysis.solvers.AllowedSolution,41=>Find no block
+Sun Jan 14 02:28:05 AEDT 2018 Sun Jan 14 02:28:05 AEDT 2018 : org.apache.commons.math.analysis.solvers.BaseSecantSolver,250=>Find no block
+Sun Jan 14 02:28:08 AEDT 2018 org.apache.commons.math.util.FastMath,1012
+Sun Jan 14 02:28:37 AEDT 2018 org.apache.commons.math.util.FastMath,1013
+Sun Jan 14 02:28:41 AEDT 2018 org.apache.commons.math.util.FastMath,1014
+Sun Jan 14 02:29:09 AEDT 2018 org.apache.commons.math.util.FastMath,1015
+Sun Jan 14 02:32:07 AEDT 2018 org.apache.commons.math.util.FastMath,1016
+Sun Jan 14 02:36:07 AEDT 2018 org.apache.commons.math.util.FastMath,1017
+Sun Jan 14 02:36:10 AEDT 2018 org.apache.commons.math.util.FastMath,1019
+Sun Jan 14 03:01:58 AEDT 2018 org.apache.commons.math.util.FastMath,1020
+Sun Jan 14 03:02:02 AEDT 2018 org.apache.commons.math.util.FastMath,1021
+Sun Jan 14 03:02:05 AEDT 2018 org.apache.commons.math.util.FastMath,1022
+Sun Jan 14 03:02:06 AEDT 2018 org.apache.commons.math.util.FastMath,1024
+Sun Jan 14 03:02:08 AEDT 2018 org.apache.commons.math.util.FastMath,1025
+Sun Jan 14 03:02:09 AEDT 2018 org.apache.commons.math.util.FastMath,1027
+Sun Jan 14 03:02:10 AEDT 2018 org.apache.commons.math.util.FastMath,1028
+Sun Jan 14 03:02:14 AEDT 2018 org.apache.commons.math.util.FastMath,1029
+Sun Jan 14 03:02:18 AEDT 2018 org.apache.commons.math.util.FastMath,1032
+Sun Jan 14 03:03:35 AEDT 2018 org.apache.commons.math.util.FastMath,1033
+Sun Jan 14 03:03:37 AEDT 2018 org.apache.commons.math.util.FastMath,1034
+Sun Jan 14 03:03:38 AEDT 2018 org.apache.commons.math.util.FastMath,1037
+Sun Jan 14 03:04:46 AEDT 2018 org.apache.commons.math.util.FastMath,1046
+Sun Jan 14 03:06:47 AEDT 2018 org.apache.commons.math.util.FastMath,1047
+Sun Jan 14 03:06:51 AEDT 2018 org.apache.commons.math.util.FastMath,1048
+Sun Jan 14 03:06:54 AEDT 2018 org.apache.commons.math.util.FastMath,1049
+Sun Jan 14 03:06:56 AEDT 2018 Sun Jan 14 03:06:56 AEDT 2018 : org.apache.commons.math.util.FastMath,1050=>Find no block
+Sun Jan 14 03:06:58 AEDT 2018 Sun Jan 14 03:06:58 AEDT 2018 : org.apache.commons.math.util.FastMath,1055=>Find no block
+Sun Jan 14 03:06:59 AEDT 2018 org.apache.commons.math.util.FastMath,1062
+Sun Jan 14 03:08:39 AEDT 2018 org.apache.commons.math.util.FastMath,1063
+Sun Jan 14 03:08:41 AEDT 2018 org.apache.commons.math.util.FastMath,1065
+Sun Jan 14 03:10:28 AEDT 2018 org.apache.commons.math.util.FastMath,1066
+Sun Jan 14 03:10:31 AEDT 2018 org.apache.commons.math.util.FastMath,1067
+Sun Jan 14 03:10:35 AEDT 2018 org.apache.commons.math.util.FastMath,1068
+Sun Jan 14 03:10:39 AEDT 2018 Sun Jan 14 03:10:39 AEDT 2018 : org.apache.commons.math.util.FastMath,1069=>Find no block
+Sun Jan 14 03:10:42 AEDT 2018 org.apache.commons.math.util.FastMath,1070
+Sun Jan 14 03:10:43 AEDT 2018 org.apache.commons.math.util.FastMath,1071
+Sun Jan 14 03:10:44 AEDT 2018 org.apache.commons.math.util.FastMath,1072
+Sun Jan 14 03:10:45 AEDT 2018 Sun Jan 14 03:10:45 AEDT 2018 : org.apache.commons.math.util.FastMath,1074=>Find no block
+Sun Jan 14 03:10:47 AEDT 2018 org.apache.commons.math.util.FastMath,1082
+Sun Jan 14 03:11:09 AEDT 2018 org.apache.commons.math.util.FastMath,1083
+Sun Jan 14 03:11:11 AEDT 2018 org.apache.commons.math.util.FastMath,1086
+Sun Jan 14 03:11:15 AEDT 2018 Sun Jan 14 03:11:15 AEDT 2018 : org.apache.commons.math.util.FastMath,1087=>Find no block
+Sun Jan 14 03:11:18 AEDT 2018 org.apache.commons.math.util.FastMath,1095
+Sun Jan 14 03:13:12 AEDT 2018 org.apache.commons.math.util.FastMath,1096
+Sun Jan 14 03:13:14 AEDT 2018 org.apache.commons.math.util.FastMath,1098
+Sun Jan 14 03:13:15 AEDT 2018 Sun Jan 14 03:13:15 AEDT 2018 : org.apache.commons.math.util.FastMath,1099=>Find no block
+Sun Jan 14 03:13:17 AEDT 2018 org.apache.commons.math.util.FastMath,1120
+Sun Jan 14 03:14:22 AEDT 2018 org.apache.commons.math.util.FastMath,1121
+Sun Jan 14 03:14:26 AEDT 2018 org.apache.commons.math.util.FastMath,1123
+Sun Jan 14 03:19:10 AEDT 2018 org.apache.commons.math.util.FastMath,1128
+Sun Jan 14 03:20:11 AEDT 2018 org.apache.commons.math.util.FastMath,1129
+Sun Jan 14 03:21:27 AEDT 2018 org.apache.commons.math.util.FastMath,1131
+Sun Jan 14 03:23:21 AEDT 2018 org.apache.commons.math.util.FastMath,1132
+Sun Jan 14 03:23:22 AEDT 2018 org.apache.commons.math.util.FastMath,1136
+Sun Jan 14 03:26:59 AEDT 2018 org.apache.commons.math.util.FastMath,1138
+Sun Jan 14 03:27:00 AEDT 2018 org.apache.commons.math.util.FastMath,1140
+Sun Jan 14 03:27:02 AEDT 2018 org.apache.commons.math.util.FastMath,1143
+Sun Jan 14 03:27:03 AEDT 2018 org.apache.commons.math.util.FastMath,1145
+Sun Jan 14 03:27:05 AEDT 2018 Sun Jan 14 03:27:05 AEDT 2018 : org.apache.commons.math.util.FastMath,1147=>Find no block
+Sun Jan 14 03:27:08 AEDT 2018 org.apache.commons.math.util.FastMath,1155
+Sun Jan 14 03:27:38 AEDT 2018 org.apache.commons.math.util.FastMath,1156
+Sun Jan 14 03:27:42 AEDT 2018 org.apache.commons.math.util.FastMath,1157
+Sun Jan 14 03:29:48 AEDT 2018 org.apache.commons.math.util.FastMath,1160
+Sun Jan 14 03:31:50 AEDT 2018 org.apache.commons.math.util.FastMath,1161
+Sun Jan 14 03:37:05 AEDT 2018 org.apache.commons.math.util.FastMath,1162
+Sun Jan 14 03:44:57 AEDT 2018 org.apache.commons.math.util.FastMath,1164
+Sun Jan 14 03:49:14 AEDT 2018 org.apache.commons.math.util.FastMath,1165
+Sun Jan 14 03:50:47 AEDT 2018 org.apache.commons.math.util.FastMath,1168
+Sun Jan 14 03:53:49 AEDT 2018 org.apache.commons.math.util.FastMath,1169
+Sun Jan 14 04:03:54 AEDT 2018 org.apache.commons.math.util.FastMath,1171
+Sun Jan 14 04:16:25 AEDT 2018 org.apache.commons.math.util.FastMath,1172
+Sun Jan 14 04:18:12 AEDT 2018 org.apache.commons.math.util.FastMath,1173
+Sun Jan 14 04:20:04 AEDT 2018 org.apache.commons.math.util.FastMath,1174
+Sun Jan 14 04:22:34 AEDT 2018 org.apache.commons.math.util.FastMath,1175
+Sun Jan 14 04:24:22 AEDT 2018 org.apache.commons.math.util.FastMath,1176
+Sun Jan 14 04:26:50 AEDT 2018 org.apache.commons.math.util.FastMath,1179
+Sun Jan 14 04:29:51 AEDT 2018 org.apache.commons.math.util.FastMath,1180
+Sun Jan 14 04:35:22 AEDT 2018 org.apache.commons.math.util.FastMath,1181
+Sun Jan 14 04:46:44 AEDT 2018 org.apache.commons.math.util.FastMath,1183
+Sun Jan 14 04:58:05 AEDT 2018 org.apache.commons.math.util.FastMath,1184
+Sun Jan 14 04:59:55 AEDT 2018 org.apache.commons.math.util.FastMath,1185
+Sun Jan 14 04:59:56 AEDT 2018 org.apache.commons.math.util.FastMath,1186
+Sun Jan 14 04:59:58 AEDT 2018 org.apache.commons.math.util.FastMath,1187
+Sun Jan 14 04:59:59 AEDT 2018 org.apache.commons.math.util.FastMath,1188
+Sun Jan 14 05:00:00 AEDT 2018 org.apache.commons.math.util.FastMath,1191
+Sun Jan 14 05:03:01 AEDT 2018 org.apache.commons.math.util.FastMath,1192
+Sun Jan 14 05:08:34 AEDT 2018 org.apache.commons.math.util.FastMath,1193
+Sun Jan 14 05:19:54 AEDT 2018 org.apache.commons.math.util.FastMath,1195
+Sun Jan 14 05:19:58 AEDT 2018 org.apache.commons.math.util.FastMath,1196
+Sun Jan 14 05:20:03 AEDT 2018 org.apache.commons.math.util.FastMath,1197
+Sun Jan 14 05:20:07 AEDT 2018 org.apache.commons.math.util.FastMath,1198
+Sun Jan 14 05:20:08 AEDT 2018 org.apache.commons.math.util.FastMath,1199
+Sun Jan 14 05:20:10 AEDT 2018 org.apache.commons.math.util.FastMath,1200
+Sun Jan 14 05:20:11 AEDT 2018 Sun Jan 14 05:20:11 AEDT 2018 : org.apache.commons.math.util.FastMath,1201=>Find no block
+Sun Jan 14 05:20:12 AEDT 2018 org.apache.commons.math.util.FastMath,1210
+Sun Jan 14 05:20:36 AEDT 2018 org.apache.commons.math.util.FastMath,1211
+Sun Jan 14 05:20:38 AEDT 2018 org.apache.commons.math.util.FastMath,1212
+Sun Jan 14 05:21:36 AEDT 2018 org.apache.commons.math.util.FastMath,1221
+Sun Jan 14 05:22:21 AEDT 2018 org.apache.commons.math.util.FastMath,1222
+Sun Jan 14 05:24:01 AEDT 2018 org.apache.commons.math.util.FastMath,1224
+Sun Jan 14 05:24:02 AEDT 2018 org.apache.commons.math.util.FastMath,1226
+Sun Jan 14 05:41:46 AEDT 2018 org.apache.commons.math.util.FastMath,1227
+Sun Jan 14 05:41:48 AEDT 2018 org.apache.commons.math.util.FastMath,1228
+Sun Jan 14 05:41:50 AEDT 2018 org.apache.commons.math.util.FastMath,1229
+Sun Jan 14 05:41:51 AEDT 2018 org.apache.commons.math.util.FastMath,1232
+Sun Jan 14 05:41:53 AEDT 2018 org.apache.commons.math.util.FastMath,1233
+Sun Jan 14 05:41:54 AEDT 2018 org.apache.commons.math.util.FastMath,1235
+Sun Jan 14 05:41:58 AEDT 2018 org.apache.commons.math.util.FastMath,1238
+Sun Jan 14 05:42:54 AEDT 2018 org.apache.commons.math.util.FastMath,1239
+Sun Jan 14 05:42:58 AEDT 2018 org.apache.commons.math.util.FastMath,1240
+Sun Jan 14 05:43:00 AEDT 2018 org.apache.commons.math.util.FastMath,1242
+Sun Jan 14 05:43:02 AEDT 2018 org.apache.commons.math.util.FastMath,1245
+Sun Jan 14 05:44:13 AEDT 2018 org.apache.commons.math.util.FastMath,1743
+Sun Jan 14 05:44:51 AEDT 2018 org.apache.commons.math.util.FastMath,1744
+Sun Jan 14 05:44:55 AEDT 2018 org.apache.commons.math.util.FastMath,1745
+Sun Jan 14 05:45:07 AEDT 2018 org.apache.commons.math.util.FastMath,1746
+Sun Jan 14 05:47:48 AEDT 2018 org.apache.commons.math.util.FastMath,1748
+Sun Jan 14 05:49:20 AEDT 2018 org.apache.commons.math.util.FastMath,1751
+Sun Jan 14 05:50:21 AEDT 2018 org.apache.commons.math.util.FastMath,1752
+Sun Jan 14 05:52:41 AEDT 2018 org.apache.commons.math.util.FastMath,1753
+Sun Jan 14 05:55:59 AEDT 2018 org.apache.commons.math.util.FastMath,1754
+Sun Jan 14 05:59:07 AEDT 2018 org.apache.commons.math.util.FastMath,1755
+Sun Jan 14 06:02:03 AEDT 2018 org.apache.commons.math.util.FastMath,1756
+Sun Jan 14 06:04:54 AEDT 2018 org.apache.commons.math.util.FastMath,1757
+Sun Jan 14 06:07:39 AEDT 2018 org.apache.commons.math.util.FastMath,1758
+Sun Jan 14 06:10:06 AEDT 2018 org.apache.commons.math.util.FastMath,1761
+Sun Jan 14 06:14:40 AEDT 2018 org.apache.commons.math.util.FastMath,1767
+Sun Jan 14 06:20:14 AEDT 2018 org.apache.commons.math.util.FastMath,1768
+Sun Jan 14 06:31:32 AEDT 2018 org.apache.commons.math.util.FastMath,1770
+Sun Jan 14 06:45:17 AEDT 2018 org.apache.commons.math.util.FastMath,1771
+Sun Jan 14 06:45:21 AEDT 2018 org.apache.commons.math.util.FastMath,1772
+Sun Jan 14 06:45:25 AEDT 2018 org.apache.commons.math.util.FastMath,1773
+Sun Jan 14 06:45:29 AEDT 2018 org.apache.commons.math.util.FastMath,1774
+Sun Jan 14 06:45:32 AEDT 2018 org.apache.commons.math.util.FastMath,1775
+Sun Jan 14 06:45:34 AEDT 2018 org.apache.commons.math.util.FastMath,1776
+Sun Jan 14 06:45:36 AEDT 2018 org.apache.commons.math.util.FastMath,1779
+Sun Jan 14 07:02:33 AEDT 2018 org.apache.commons.math.util.FastMath,1780
+Sun Jan 14 07:05:18 AEDT 2018 org.apache.commons.math.util.FastMath,1781
+Sun Jan 14 07:06:31 AEDT 2018 org.apache.commons.math.util.FastMath,1783
+Sun Jan 14 07:06:32 AEDT 2018 org.apache.commons.math.util.FastMath,1793
+Sun Jan 14 07:06:33 AEDT 2018 org.apache.commons.math.util.FastMath,1794
+Sun Jan 14 07:06:35 AEDT 2018 org.apache.commons.math.util.FastMath,1795
+Sun Jan 14 07:06:36 AEDT 2018 org.apache.commons.math.util.FastMath,1796
+Sun Jan 14 07:06:37 AEDT 2018 org.apache.commons.math.util.FastMath,1797
+Sun Jan 14 07:06:39 AEDT 2018 org.apache.commons.math.util.FastMath,1798
+Sun Jan 14 07:06:42 AEDT 2018 org.apache.commons.math.util.FastMath,1800
+Timeout time : 18/01/14 07:21

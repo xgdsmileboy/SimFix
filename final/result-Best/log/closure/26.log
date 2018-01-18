@@ -1,0 +1,149 @@
+=================================================
+Project : closure_26	start : 18/01/14 07:29
+Current failed test : com.google.javascript.jscomp.ProcessCommonJSModulesTest::testDash | 18/01/14 07:30
+Sun Jan 14 07:30:17 AEDT 2018 com.google.javascript.rhino.Node,131
+Sun Jan 14 07:30:30 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,65
+Sun Jan 14 07:33:25 AEDT 2018 Sun Jan 14 07:33:25 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,67=>Find no block
+Sun Jan 14 07:33:26 AEDT 2018 Sun Jan 14 07:33:26 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,39=>Find no block
+Sun Jan 14 07:33:30 AEDT 2018 Sun Jan 14 07:33:30 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,124=>Find no block
+Sun Jan 14 07:33:31 AEDT 2018 Sun Jan 14 07:33:31 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,127=>Find no block
+Sun Jan 14 07:33:33 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,131
+Sun Jan 14 07:39:22 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,137
+Sun Jan 14 07:48:06 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,138
+Sun Jan 14 07:48:08 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,139
+Sun Jan 14 07:48:10 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,142
+Sun Jan 14 07:55:50 AEDT 2018 Sun Jan 14 07:55:50 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,146=>Find no block
+Sun Jan 14 07:55:52 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,173
+Timeout time : 18/01/14 07:57
+Current failed test : com.google.javascript.jscomp.ProcessCommonJSModulesTest::testModuleName_purify_1 | 18/01/14 07:57
+Sun Jan 14 07:57:26 AEDT 2018 com.google.javascript.rhino.Node,131
+Sun Jan 14 07:57:39 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,65
+Sun Jan 14 08:00:33 AEDT 2018 Sun Jan 14 08:00:33 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,67=>Find no block
+Sun Jan 14 08:00:34 AEDT 2018 Sun Jan 14 08:00:34 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,39=>Find no block
+Sun Jan 14 08:00:35 AEDT 2018 Sun Jan 14 08:00:35 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,124=>Find no block
+Sun Jan 14 08:00:36 AEDT 2018 Sun Jan 14 08:00:36 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,127=>Find no block
+Sun Jan 14 08:00:37 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,131
+Sun Jan 14 08:06:28 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,137
+Sun Jan 14 08:15:12 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,138
+Sun Jan 14 08:15:14 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,139
+Sun Jan 14 08:15:16 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,142
+Sun Jan 14 08:22:57 AEDT 2018 Sun Jan 14 08:22:57 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,146=>Find no block
+Sun Jan 14 08:22:58 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,173
+Timeout time : 18/01/14 08:24
+Current failed test : com.google.javascript.jscomp.ProcessCommonJSModulesTest::testModuleName_purify_2 | 18/01/14 08:24
+Sun Jan 14 08:24:34 AEDT 2018 com.google.javascript.rhino.Node,131
+Sun Jan 14 08:24:49 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,65
+Sun Jan 14 08:27:53 AEDT 2018 Sun Jan 14 08:27:53 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,67=>Find no block
+Sun Jan 14 08:27:54 AEDT 2018 Sun Jan 14 08:27:54 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,39=>Find no block
+Sun Jan 14 08:27:56 AEDT 2018 Sun Jan 14 08:27:56 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,124=>Find no block
+Sun Jan 14 08:27:58 AEDT 2018 Sun Jan 14 08:27:58 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,127=>Find no block
+Sun Jan 14 08:28:00 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,131
+Sun Jan 14 08:34:06 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,137
+Sun Jan 14 08:43:21 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,138
+Sun Jan 14 08:43:24 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,139
+Sun Jan 14 08:43:25 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,142
+Timeout time : 18/01/14 08:51
+Current failed test : com.google.javascript.jscomp.ProcessCommonJSModulesTest::testModuleName_purify_3 | 18/01/14 08:51
+Sun Jan 14 08:51:43 AEDT 2018 com.google.javascript.rhino.Node,131
+Sun Jan 14 08:51:58 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,65
+Sun Jan 14 08:55:03 AEDT 2018 Sun Jan 14 08:55:03 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,67=>Find no block
+Sun Jan 14 08:55:05 AEDT 2018 Sun Jan 14 08:55:05 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,39=>Find no block
+Sun Jan 14 08:55:06 AEDT 2018 Sun Jan 14 08:55:06 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,124=>Find no block
+Sun Jan 14 08:55:08 AEDT 2018 Sun Jan 14 08:55:08 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,127=>Find no block
+Sun Jan 14 08:55:10 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,131
+Sun Jan 14 09:01:20 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,137
+Sun Jan 14 09:10:45 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,138
+Sun Jan 14 09:10:46 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,139
+Sun Jan 14 09:10:48 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,142
+Timeout time : 18/01/14 09:18
+Current failed test : com.google.javascript.jscomp.ProcessCommonJSModulesTest::testModuleName_purify_4 | 18/01/14 09:18
+Sun Jan 14 09:18:55 AEDT 2018 com.google.javascript.rhino.Node,131
+Sun Jan 14 09:19:11 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,65
+Sun Jan 14 09:22:17 AEDT 2018 Sun Jan 14 09:22:17 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,67=>Find no block
+Sun Jan 14 09:22:19 AEDT 2018 Sun Jan 14 09:22:19 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,39=>Find no block
+Sun Jan 14 09:22:21 AEDT 2018 Sun Jan 14 09:22:21 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,124=>Find no block
+Sun Jan 14 09:22:22 AEDT 2018 Sun Jan 14 09:22:22 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,127=>Find no block
+Sun Jan 14 09:22:25 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,131
+Sun Jan 14 09:28:38 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,137
+Sun Jan 14 09:38:01 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,138
+Sun Jan 14 09:38:03 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,139
+Sun Jan 14 09:38:04 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,142
+Timeout time : 18/01/14 09:45
+Current failed test : com.google.javascript.jscomp.ProcessCommonJSModulesTest::testModuleName_purify_5 | 18/01/14 09:45
+Sun Jan 14 09:46:03 AEDT 2018 com.google.javascript.rhino.Node,131
+Sun Jan 14 09:46:19 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,65
+Sun Jan 14 09:49:23 AEDT 2018 Sun Jan 14 09:49:23 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,67=>Find no block
+Sun Jan 14 09:49:25 AEDT 2018 Sun Jan 14 09:49:25 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,39=>Find no block
+Sun Jan 14 09:49:27 AEDT 2018 Sun Jan 14 09:49:27 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,124=>Find no block
+Sun Jan 14 09:49:29 AEDT 2018 Sun Jan 14 09:49:29 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,127=>Find no block
+Sun Jan 14 09:49:31 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,131
+Sun Jan 14 09:55:46 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,137
+Sun Jan 14 10:05:10 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,138
+Sun Jan 14 10:05:11 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,139
+Sun Jan 14 10:05:14 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,142
+Timeout time : 18/01/14 10:13
+Current failed test : com.google.javascript.jscomp.CommandLineRunnerTest::testTransformAMDAndProcessCJS | 18/01/14 10:13
+Sun Jan 14 10:13:10 AEDT 2018 com.google.javascript.rhino.Node,131
+Sun Jan 14 10:13:24 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,65
+Sun Jan 14 10:16:33 AEDT 2018 Sun Jan 14 10:16:33 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,67=>Find no block
+Sun Jan 14 10:16:34 AEDT 2018 Sun Jan 14 10:16:34 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,39=>Find no block
+Sun Jan 14 10:16:36 AEDT 2018 Sun Jan 14 10:16:36 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,124=>Find no block
+Sun Jan 14 10:16:37 AEDT 2018 Sun Jan 14 10:16:37 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,127=>Find no block
+Sun Jan 14 10:16:39 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,131
+Sun Jan 14 10:22:54 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,137
+Sun Jan 14 10:32:20 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,138
+Sun Jan 14 10:32:21 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,139
+Sun Jan 14 10:32:23 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,142
+Timeout time : 18/01/14 10:40
+Current failed test : com.google.javascript.jscomp.ProcessCommonJSModulesTest::testVarRenaming | 18/01/14 10:40
+Sun Jan 14 10:40:18 AEDT 2018 com.google.javascript.rhino.Node,131
+Sun Jan 14 10:40:32 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,65
+Sun Jan 14 10:43:40 AEDT 2018 Sun Jan 14 10:43:40 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,67=>Find no block
+Sun Jan 14 10:43:41 AEDT 2018 Sun Jan 14 10:43:41 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,39=>Find no block
+Sun Jan 14 10:43:43 AEDT 2018 Sun Jan 14 10:43:43 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,124=>Find no block
+Sun Jan 14 10:43:45 AEDT 2018 Sun Jan 14 10:43:45 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,127=>Find no block
+Sun Jan 14 10:43:47 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,131
+Sun Jan 14 10:50:03 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,137
+Sun Jan 14 10:59:27 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,138
+Sun Jan 14 10:59:28 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,139
+Sun Jan 14 10:59:29 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,142
+Timeout time : 18/01/14 11:07
+Current failed test : com.google.javascript.jscomp.ProcessCommonJSModulesTest::testWithoutExports | 18/01/14 11:07
+Sun Jan 14 11:07:28 AEDT 2018 com.google.javascript.rhino.Node,131
+Sun Jan 14 11:07:44 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,65
+Sun Jan 14 11:10:54 AEDT 2018 Sun Jan 14 11:10:54 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,67=>Find no block
+Sun Jan 14 11:10:55 AEDT 2018 Sun Jan 14 11:10:55 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,39=>Find no block
+Sun Jan 14 11:10:57 AEDT 2018 Sun Jan 14 11:10:57 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,124=>Find no block
+Sun Jan 14 11:10:59 AEDT 2018 Sun Jan 14 11:10:59 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,127=>Find no block
+Sun Jan 14 11:11:00 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,131
+Sun Jan 14 11:17:17 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,137
+Sun Jan 14 11:26:45 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,138
+Sun Jan 14 11:26:46 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,139
+Sun Jan 14 11:26:47 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,142
+Timeout time : 18/01/14 11:34
+Current failed test : com.google.javascript.jscomp.CommandLineRunnerTest::testProcessCJS | 18/01/14 11:34
+Sun Jan 14 11:34:39 AEDT 2018 com.google.javascript.rhino.Node,131
+Sun Jan 14 11:34:55 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,65
+Sun Jan 14 11:38:04 AEDT 2018 Sun Jan 14 11:38:04 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,67=>Find no block
+Sun Jan 14 11:38:05 AEDT 2018 Sun Jan 14 11:38:05 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,39=>Find no block
+Sun Jan 14 11:38:07 AEDT 2018 Sun Jan 14 11:38:07 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,124=>Find no block
+Sun Jan 14 11:38:09 AEDT 2018 Sun Jan 14 11:38:09 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,127=>Find no block
+Sun Jan 14 11:38:10 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,131
+Sun Jan 14 11:44:24 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,137
+Sun Jan 14 11:53:38 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,138
+Sun Jan 14 11:53:40 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,139
+Sun Jan 14 11:53:41 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,142
+Timeout time : 18/01/14 12:01
+Current failed test : com.google.javascript.jscomp.ProcessCommonJSModulesTest::testExports | 18/01/14 12:01
+Sun Jan 14 12:01:47 AEDT 2018 com.google.javascript.rhino.Node,131
+Sun Jan 14 12:02:03 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,65
+Sun Jan 14 12:05:09 AEDT 2018 Sun Jan 14 12:05:09 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,67=>Find no block
+Sun Jan 14 12:05:11 AEDT 2018 Sun Jan 14 12:05:11 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,39=>Find no block
+Sun Jan 14 12:05:13 AEDT 2018 Sun Jan 14 12:05:13 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,124=>Find no block
+Sun Jan 14 12:05:14 AEDT 2018 Sun Jan 14 12:05:14 AEDT 2018 : com.google.javascript.jscomp.ProcessCommonJSModules,127=>Find no block
+Sun Jan 14 12:05:17 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,131
+Sun Jan 14 12:11:29 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,137
+Sun Jan 14 12:20:46 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,138
+Sun Jan 14 12:20:49 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,139
+Sun Jan 14 12:20:50 AEDT 2018 com.google.javascript.jscomp.ProcessCommonJSModules,142
+Timeout time : 18/01/14 12:28

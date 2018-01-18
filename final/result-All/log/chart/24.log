@@ -1,0 +1,54 @@
+=================================================
+Project : chart_24	start : 18/01/13 04:57
+Current failed test : org.jfree.chart.renderer.junit.GrayPaintScaleTests::testGetPaint | 18/01/13 04:58
+Sat Jan 13 04:59:05 AEDT 2018 org.jfree.chart.renderer.GrayPaintScale,124
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double v=Math.max(value,this.lowerBound);
+value=Math.min(v,this.upperBound);
+int g=(int)((value-this.lowerBound)/(this.upperBound-this.lowerBound)*255.0);
+return new Color(g,g,g);
+
+Time : 18/01/13 05:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.7421904294058788 : [/home/hz985/jiajun/d4j/projects/chart/chart_24_buggy/source/org/jfree/chart/renderer/GrayPaintScale.java=>0,0]
+if(value<lowerOutlierThreshold){
+outliers.add(number);
+if(value<minOutlier&&value>=lowerFaroutThreshold){
+minOutlier=value;
+}
+}else {
+minRegularValue=Math.min(minRegularValue,value);
+maxRegularValue=Math.max(maxRegularValue,value);
+}
+
+Time : 18/01/13 05:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/chart/chart_24_buggy/source/org/jfree/chart/renderer/GrayPaintScale.java=>124,128]
+double v=Math.max(value,this.lowerBound);
+v=Math.min(v,this.upperBound);
+int g=(int)((value-this.lowerBound)/(this.upperBound-this.lowerBound)*255.0);
+return new Color(g,g,g);
+
+Time : 18/01/13 05:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/chart/chart_24_buggy/source/org/jfree/chart/renderer/GrayPaintScale.java=>124,128]
+double v=Math.max(value,this.lowerBound);
+value=Math.min(v,this.upperBound);
+int g=(int)((value-this.lowerBound)/(this.upperBound-this.lowerBound)*255.0);
+return new Color(g,g,g);
+
+Time : 18/01/13 05:01
+----------------------------------------
+Success time : 18/01/13 05:01

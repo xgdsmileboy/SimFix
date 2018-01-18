@@ -1,0 +1,46 @@
+=================================================
+Project : chart_20	start : 18/01/13 05:39
+Current failed test : org.jfree.chart.plot.junit.ValueMarkerTests::test1808376 | 18/01/13 05:39
+Sat Jan 13 05:40:28 AEDT 2018 org.jfree.chart.plot.Marker,265
+Sat Jan 13 05:40:32 AEDT 2018 org.jfree.chart.plot.Marker,238
+Sat Jan 13 05:40:35 AEDT 2018 org.jfree.chart.plot.Marker,211
+Sat Jan 13 05:40:38 AEDT 2018 org.jfree.chart.plot.ValueMarker,107
+Sat Jan 13 05:41:47 AEDT 2018 org.jfree.chart.plot.ValueMarker,95
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(paint,stroke,outlinePaint,outlineStroke,alpha);
+this.value=value;
+
+Time : 18/01/13 05:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.36278376661655 : [/home/hz985/jiajun/d4j/projects/chart/chart_20_buggy/source/org/jfree/chart/plot/ValueMarker.java=>0,0]
+super(paint,stroke,outlinePaint,outlineStroke,alpha);
+this.key=key;
+setLabelOffsetType(LengthAdjustmentType.EXPAND);
+
+Time : 18/01/13 05:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/chart/chart_20_buggy/source/org/jfree/chart/plot/ValueMarker.java=>95,96]
+super(paint,stroke,paint,stroke,alpha);
+this.value=value;
+
+Time : 18/01/13 05:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/chart/chart_20_buggy/source/org/jfree/chart/plot/ValueMarker.java=>95,96]
+super(paint,stroke,outlinePaint,outlineStroke,alpha);
+this.value=value;
+
+Time : 18/01/13 05:42
+----------------------------------------
+Success time : 18/01/13 05:42

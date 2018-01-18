@@ -1,0 +1,101 @@
+=================================================
+Project : lang_55	start : 18/01/15 17:34
+Current failed test : org.apache.commons.lang.time.StopWatchTest::testLang315 | 18/01/15 17:34
+Mon Jan 15 17:35:18 AEDT 2018 org.apache.commons.lang.time.StopWatch,179
+Mon Jan 15 17:47:56 AEDT 2018 org.apache.commons.lang.time.StopWatch,180
+Mon Jan 15 17:47:58 AEDT 2018 Mon Jan 15 17:47:58 AEDT 2018 : org.apache.commons.lang.time.StopWatch,181=>Find no block
+Mon Jan 15 17:47:59 AEDT 2018 org.apache.commons.lang.time.StopWatch,176
+Mon Jan 15 17:50:19 AEDT 2018 org.apache.commons.lang.time.StopWatch,210
+Mon Jan 15 17:56:51 AEDT 2018 org.apache.commons.lang.time.StopWatch,115
+Mon Jan 15 17:58:33 AEDT 2018 org.apache.commons.lang.time.StopWatch,118
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(this.runningState!=STATE_RUNNING&&this.runningState!=STATE_SUSPENDED){
+throw new IllegalStateException("Stopwatch is not running. ");
+}
+this.runningState=STATE_STOPPED;
+
+Time : 18/01/15 18:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(this.runningState!=STATE_STOPPED&&this.runningState!=STATE_SUSPENDED){
+throw new IllegalStateException("Stopwatch is not running. ");
+}
+this.runningState=STATE_STOPPED;
+
+Time : 18/01/15 18:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(this.runningState==STATE_RUNNING&&this.runningState!=STATE_SUSPENDED){
+throw new IllegalStateException("Stopwatch is not running. ");
+}
+this.runningState=STATE_STOPPED;
+
+Time : 18/01/15 18:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(this.runningState==STATE_STOPPED&&this.runningState!=STATE_SUSPENDED){
+throw new IllegalStateException("Stopwatch is not running. ");
+}
+this.runningState=STATE_STOPPED;
+
+Time : 18/01/15 18:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(this.runningState!=STATE_RUNNING&&this.runningState!=STATE_SUSPENDED){
+throw new IllegalStateException("Stopwatch is not running. ");
+}
+
+Time : 18/01/15 18:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.33101362157993 : [/home/hz985/jiajun/d4j/projects/lang/lang_55_buggy/src/java/org/apache/commons/lang/time/StopWatch.java=>0,0]
+if(this.runningState==STATE_STOPPED||this.runningState==STATE_SUSPENDED){
+return this.stopTime-this.startTime;
+}else if(this.runningState==STATE_UNSTARTED){
+return 0;
+}else if(this.runningState==STATE_RUNNING){
+return System.currentTimeMillis()-this.startTime;
+}
+
+Time : 18/01/15 18:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/lang/lang_55_buggy/src/java/org/apache/commons/lang/time/StopWatch.java=>115,119]
+if(this.runningState!=STATE_RUNNING&&this.runningState!=STATE_SUSPENDED){
+throw new IllegalStateException("Stopwatch is not running. ");
+}
+stopTime=System.currentTimeMillis();
+this.runningState=STATE_STOPPED;
+
+Time : 18/01/15 18:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/lang/lang_55_buggy/src/java/org/apache/commons/lang/time/StopWatch.java=>115,119]
+if(this.runningState!=STATE_RUNNING&&this.runningState!=STATE_SUSPENDED){
+throw new IllegalStateException("Stopwatch is not running. ");
+}
+
+Time : 18/01/15 18:05
+----------------------------------------
+Success time : 18/01/15 18:05

@@ -1,0 +1,67 @@
+=================================================
+Project : math_69	start : 18/01/15 21:14
+Current failed test : org.apache.commons.math.stat.correlation.PearsonsCorrelationTest::testPValueNearZero | 18/01/15 21:14
+Mon Jan 15 21:15:24 AEDT 2018 org.apache.commons.math.stat.correlation.PearsonsCorrelation,68
+Mon Jan 15 21:15:27 AEDT 2018 Mon Jan 15 21:15:27 AEDT 2018 : org.apache.commons.math.stat.correlation.PearsonsCorrelation,69=>Find no block
+Mon Jan 15 21:15:28 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,46
+Mon Jan 15 21:15:31 AEDT 2018 Mon Jan 15 21:15:31 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,47=>Find no block
+Mon Jan 15 21:15:31 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,128
+Mon Jan 15 21:17:57 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,129
+Mon Jan 15 21:17:58 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,130
+Mon Jan 15 21:20:59 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,131
+Mon Jan 15 21:25:22 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,132
+Mon Jan 15 21:34:21 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,133
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double c=q0/q1;
+int n=0;
+double relativeError=q0;
+
+Time : 18/01/15 21:41
+----------------------------------------
+Mon Jan 15 21:48:46 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,134
+Mon Jan 15 21:48:47 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,135
+Mon Jan 15 22:20:44 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,136
+Mon Jan 15 22:25:18 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,137
+Mon Jan 15 22:25:19 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,138
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double a=getA(n,x);
+double b=getB(n,x);
+double p2=x*p1+b*p0;
+
+Time : 18/01/15 22:32
+----------------------------------------
+Mon Jan 15 22:33:07 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,139
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double b=getB(n,x);
+double p2=x*p1+b*p0;
+double q2=a*q1+b*q0;
+
+Time : 18/01/15 22:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double b=getB(n,x);
+double p2=x*p1+x*p0;
+double q2=a*q1+b*q0;
+
+Time : 18/01/15 22:41
+----------------------------------------
+Mon Jan 15 22:46:12 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,140
+Mon Jan 15 22:53:16 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,141
+Mon Jan 15 22:53:19 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,142
+Mon Jan 15 22:53:21 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,175
+Mon Jan 15 22:53:23 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,182
+Tue Jan 16 00:27:07 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,184
+Tue Jan 16 00:27:11 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,189
+Timeout time : 18/01/16 02:15

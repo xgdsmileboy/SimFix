@@ -1,0 +1,87 @@
+=================================================
+Project : closure_64	start : 18/01/15 13:54
+Current failed test : com.google.javascript.jscomp.CommandLineRunnerTest::testES5StrictUseStrictMultipleInputs_purify_1 | 18/01/15 13:56
+Mon Jan 15 14:12:42 AEDT 2018 Mon Jan 15 14:12:42 AEDT 2018 : com.google.javascript.rhino.Node,1238=>Find no block
+Mon Jan 15 14:12:47 AEDT 2018 com.google.javascript.rhino.Node,1239
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.start=start;
+this.current=start;
+this.used=true;
+
+Time : 18/01/15 14:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.start=start;
+this.used=false;
+
+Time : 18/01/15 14:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.start=start;
+this.used=true;
+
+Time : 18/01/15 14:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.start=start;
+this.current=start;
+
+Time : 18/01/15 14:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.3563225565351131 : [/home/hz985/jiajun/d4j/projects/closure/closure_64_buggy/src/com/google/javascript/rhino/Node.java=>0,0]
+Node start=(isFunction(n))?n.getLastChild():n;
+return containsType(start,Token.THIS,MATCH_NOT_FUNCTION);
+
+Time : 18/01/15 14:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/closure/closure_64_buggy/src/com/google/javascript/rhino/Node.java=>1239,1241]
+this.start=start;
+this.current=start;
+this.used=false;
+
+Time : 18/01/15 14:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/closure/closure_64_buggy/src/com/google/javascript/rhino/Node.java=>1239,1241]
+this.start=start;
+this.current=start;
+
+Time : 18/01/15 14:36
+----------------------------------------
+Success time : 18/01/15 14:36
+Current failed test : com.google.javascript.jscomp.CommandLineRunnerTest::testES5StrictUseStrictMultipleInputs_purify_2 | 18/01/15 14:36
+Mon Jan 15 14:53:10 AEDT 2018 com.google.javascript.jscomp.AbstractCommandLineRunner,259
+Mon Jan 15 15:04:07 AEDT 2018 com.google.javascript.jscomp.Compiler,1705
+Mon Jan 15 15:05:36 AEDT 2018 com.google.javascript.jscomp.Compiler,1706
+Mon Jan 15 15:07:12 AEDT 2018 com.google.javascript.jscomp.DefaultPassConfig,271
+Mon Jan 15 15:26:50 AEDT 2018 Mon Jan 15 15:26:50 AEDT 2018 : com.google.javascript.jscomp.DefaultPassConfig,1173=>Find no block
+Mon Jan 15 15:26:55 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,140
+Mon Jan 15 15:28:20 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,141
+Mon Jan 15 15:28:31 AEDT 2018 com.google.javascript.jscomp.CodePrinter,631
+Mon Jan 15 15:28:40 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,71
+Mon Jan 15 15:29:08 AEDT 2018 Mon Jan 15 15:29:08 AEDT 2018 : com.google.javascript.jscomp.CodeGenerator,72=>Find no block
+Mon Jan 15 15:29:09 AEDT 2018 com.google.javascript.jscomp.StrictModeCheck,227
+Mon Jan 15 15:57:26 AEDT 2018 com.google.javascript.jscomp.StrictModeCheck,246
+Mon Jan 15 16:17:36 AEDT 2018 Mon Jan 15 16:17:36 AEDT 2018 : com.google.javascript.jscomp.StrictModeCheck,251=>Find no block
+Mon Jan 15 16:17:37 AEDT 2018 com.google.javascript.jscomp.StrictModeCheck,109
+Timeout time : 18/01/15 17:23

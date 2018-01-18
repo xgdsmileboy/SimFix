@@ -1,0 +1,48 @@
+=================================================
+Project : math_8	start : 18/01/12 19:09
+Current failed test : org.apache.commons.math3.distribution.DiscreteRealDistributionTest::testIssue942 | 18/01/12 19:10
+Fri Jan 12 19:11:54 AEDT 2018 org.apache.commons.math3.distribution.DiscreteDistribution,69
+Fri Jan 12 19:12:05 AEDT 2018 Fri Jan 12 19:12:05 AEDT 2018 : org.apache.commons.math3.distribution.DiscreteDistribution,70=>Find no block
+Fri Jan 12 19:12:07 AEDT 2018 org.apache.commons.math3.distribution.DiscreteDistribution,182
+Fri Jan 12 19:13:22 AEDT 2018 org.apache.commons.math3.distribution.DiscreteDistribution,187
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=2;i<sampleSize;i++){
+out[i]=sample();
+}
+
+Time : 18/01/12 19:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.6536860120498647 : [/home/hz985/jiajun/d4j/projects/math/math_8_buggy/src/main/java/org/apache/commons/math3/distribution/DiscreteDistribution.java=>0,0]
+for(int i=2;i<=k;i++){
+logSum-=FastMath.log(i);
+}
+
+Time : 18/01/12 19:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_8_buggy/src/main/java/org/apache/commons/math3/distribution/DiscreteDistribution.java=>189,191]
+for(int i=0;i<sampleSize;i++){
+out[i]=sample();
+}
+
+Time : 18/01/12 19:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_8_buggy/src/main/java/org/apache/commons/math3/distribution/DiscreteDistribution.java=>189,191]
+for(int i=2;i<sampleSize;i++){
+out[i]=sample();
+}
+
+Time : 18/01/12 19:21
+----------------------------------------
+Success time : 18/01/12 19:21

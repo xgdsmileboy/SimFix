@@ -1,0 +1,370 @@
+=================================================
+Project : lang_53	start : 18/01/12 19:06
+Current failed test : org.apache.commons.lang.time.DateUtilsTest::testRoundLang346 | 18/01/12 19:06
+Fri Jan 12 19:07:09 AEDT 2018 org.apache.commons.lang.time.DateUtils,676
+Fri Jan 12 19:35:08 AEDT 2018 org.apache.commons.lang.time.DateUtils,689
+Fri Jan 12 19:35:09 AEDT 2018 org.apache.commons.lang.time.DateUtils,437
+Fri Jan 12 19:36:08 AEDT 2018 org.apache.commons.lang.time.DateUtils,440
+Fri Jan 12 19:39:16 AEDT 2018 org.apache.commons.lang.time.DateUtils,441
+Fri Jan 12 19:39:17 AEDT 2018 org.apache.commons.lang.time.DateUtils,442
+Fri Jan 12 19:39:19 AEDT 2018 org.apache.commons.lang.time.DateUtils,443
+Fri Jan 12 19:39:20 AEDT 2018 org.apache.commons.lang.time.DateUtils,739
+Fri Jan 12 19:55:04 AEDT 2018 org.apache.commons.lang.time.DateUtils,621
+Fri Jan 12 19:56:47 AEDT 2018 org.apache.commons.lang.time.DateUtils,625
+Fri Jan 12 19:57:42 AEDT 2018 org.apache.commons.lang.time.DateUtils,635
+Fri Jan 12 20:01:51 AEDT 2018 org.apache.commons.lang.time.DateUtils,636
+Fri Jan 12 20:04:18 AEDT 2018 org.apache.commons.lang.time.DateUtils,637
+Fri Jan 12 20:11:33 AEDT 2018 org.apache.commons.lang.time.DateUtils,640
+Fri Jan 12 20:35:04 AEDT 2018 org.apache.commons.lang.time.DateUtils,641
+Fri Jan 12 20:35:05 AEDT 2018 org.apache.commons.lang.time.DateUtils,642
+Fri Jan 12 20:35:05 AEDT 2018 org.apache.commons.lang.time.DateUtils,643
+Fri Jan 12 20:35:05 AEDT 2018 org.apache.commons.lang.time.DateUtils,649
+Fri Jan 12 20:46:06 AEDT 2018 org.apache.commons.lang.time.DateUtils,650
+Fri Jan 12 20:46:06 AEDT 2018 org.apache.commons.lang.time.DateUtils,658
+Fri Jan 12 20:55:09 AEDT 2018 org.apache.commons.lang.time.DateUtils,659
+Fri Jan 12 20:55:09 AEDT 2018 org.apache.commons.lang.time.DateUtils,660
+Fri Jan 12 20:55:10 AEDT 2018 org.apache.commons.lang.time.DateUtils,664
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(date.getTime()==time){
+date.setTime(time);
+val.setTime(date);
+}
+
+Time : 18/01/12 20:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(date.getTime()==Calendar.MILLISECOND){
+date.setTime(time);
+val.setTime(date);
+}
+
+Time : 18/01/12 20:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Calendar.getInstance().setTime(date);
+if(date.getTime()==time){
+date.setTime(time);
+val.setTime(date);
+}
+
+Time : 18/01/12 20:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+val.setTime(date);
+if(date.getTime()==time){
+date.setTime(time);
+val.setTime(date);
+}
+
+Time : 18/01/12 20:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(date.getTime()!=time){
+done=true;
+val.setTime(date);
+}
+
+Time : 18/01/12 20:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(date.getTime()==Calendar.SECOND){
+date.setTime(time);
+val.setTime(date);
+}
+
+Time : 18/01/12 20:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(date.getTime()==time){
+done=true;
+val.setTime(date);
+}
+
+Time : 18/01/12 21:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(date.getTime()!=Calendar.SECOND){
+done=true;
+val.setTime(date);
+}
+
+Time : 18/01/12 21:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(date.getTime()==Calendar.SECOND){
+done=true;
+val.setTime(date);
+}
+
+Time : 18/01/12 21:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(date.getTime()==Calendar.MINUTE){
+date.setTime(time);
+val.setTime(date);
+}
+
+Time : 18/01/12 21:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!done&&(!round||minutes<30)){
+time=time-(minutes*60000L);
+}
+if(date.getTime()==time){
+date.setTime(time);
+val.setTime(date);
+}
+
+Time : 18/01/12 21:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(date.getTime()!=Calendar.MINUTE){
+done=true;
+val.setTime(date);
+}
+
+Time : 18/01/12 21:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!done&&(!round||minutes<30)){
+time=time-(minutes*60000L);
+}
+if(date.getTime()!=time){
+done=true;
+val.setTime(date);
+}
+
+Time : 18/01/12 21:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(date.getTime()==Calendar.MINUTE){
+done=true;
+val.setTime(date);
+}
+
+Time : 18/01/12 21:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!done&&(!round||minutes<30)){
+time=time-(minutes*60000L);
+}
+if(date.getTime()==Calendar.MINUTE){
+date.setTime(time);
+val.setTime(date);
+}
+
+Time : 18/01/12 21:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!done&&(!round||minutes<30)){
+time=time-(minutes*60000L);
+}
+if(date.getTime()==time){
+done=true;
+val.setTime(date);
+}
+
+Time : 18/01/12 21:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!done&&(!round||minutes<30)){
+time=time-(minutes*60000L);
+}
+if(date.getTime()!=Calendar.MINUTE){
+done=true;
+val.setTime(date);
+}
+
+Time : 18/01/12 21:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!done&&(!round||minutes<30)){
+time=time-(minutes*60000L);
+}
+if(date.getTime()==Calendar.MINUTE){
+done=true;
+val.setTime(date);
+}
+
+Time : 18/01/12 21:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(done){
+date.setTime(time);
+val.setTime(date);
+}
+
+Time : 18/01/12 21:05
+----------------------------------------
+Fri Jan 12 21:07:18 AEDT 2018 org.apache.commons.lang.time.DateUtils,665
+Fri Jan 12 21:07:18 AEDT 2018 org.apache.commons.lang.time.DateUtils,666
+Fri Jan 12 21:07:18 AEDT 2018 org.apache.commons.lang.time.DateUtils,670
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(date.getTime()==time){
+date.setTime(time);
+val.setTime(date);
+}
+boolean roundUp=false;
+
+Time : 18/01/12 21:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(date.getTime()==Calendar.MILLISECOND){
+date.setTime(time);
+val.setTime(date);
+}
+boolean roundUp=false;
+
+Time : 18/01/12 21:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Calendar.getInstance().setTime(date);
+if(date.getTime()==time){
+date.setTime(time);
+val.setTime(date);
+}
+boolean roundUp=false;
+
+Time : 18/01/12 21:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+val.setTime(date);
+if(date.getTime()==time){
+date.setTime(time);
+val.setTime(date);
+}
+boolean roundUp=false;
+
+Time : 18/01/12 21:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(date.getTime()==Calendar.SECOND){
+date.setTime(time);
+val.setTime(date);
+}
+boolean roundUp=false;
+
+Time : 18/01/12 21:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(done){
+date.setTime(time);
+val.setTime(date);
+}
+boolean roundUp=false;
+
+Time : 18/01/12 21:14
+----------------------------------------
+Fri Jan 12 21:14:51 AEDT 2018 org.apache.commons.lang.time.DateUtils,671
+Fri Jan 12 23:16:48 AEDT 2018 org.apache.commons.lang.time.DateUtils,672
+Fri Jan 12 23:16:48 AEDT 2018 org.apache.commons.lang.time.DateUtils,673
+Fri Jan 12 23:16:48 AEDT 2018 org.apache.commons.lang.time.DateUtils,675
+Fri Jan 12 23:16:48 AEDT 2018 org.apache.commons.lang.time.DateUtils,692
+Fri Jan 12 23:39:55 AEDT 2018 org.apache.commons.lang.time.DateUtils,696
+Fri Jan 12 23:53:25 AEDT 2018 org.apache.commons.lang.time.DateUtils,697
+Fri Jan 12 23:53:25 AEDT 2018 Fri Jan 12 23:53:25 AEDT 2018 : org.apache.commons.lang.time.DateUtils,699=>Find no block
+Fri Jan 12 23:53:25 AEDT 2018 org.apache.commons.lang.time.DateUtils,729
+Fri Jan 12 23:53:25 AEDT 2018 org.apache.commons.lang.time.DateUtils,730
+Fri Jan 12 23:53:26 AEDT 2018 org.apache.commons.lang.time.DateUtils,731
+Fri Jan 12 23:53:26 AEDT 2018 org.apache.commons.lang.time.DateUtils,733
+Fri Jan 12 23:53:26 AEDT 2018 org.apache.commons.lang.time.DateUtils,735
+Fri Jan 12 23:53:26 AEDT 2018 org.apache.commons.lang.time.DateUtils,738
+Fri Jan 12 23:53:27 AEDT 2018 org.apache.commons.lang.time.DateUtils,922
+Fri Jan 12 23:55:27 AEDT 2018 org.apache.commons.lang.time.DateUtils,923
+Fri Jan 12 23:55:27 AEDT 2018 org.apache.commons.lang.time.DateUtils,924
+Fri Jan 12 23:55:27 AEDT 2018 org.apache.commons.lang.time.DateUtils,925
+Fri Jan 12 23:55:27 AEDT 2018 Fri Jan 12 23:55:27 AEDT 2018 : org.apache.commons.lang.time.DateUtils,926=>Find no block
+Fri Jan 12 23:55:27 AEDT 2018 org.apache.commons.lang.time.DateUtils,934
+Fri Jan 12 23:55:28 AEDT 2018 org.apache.commons.lang.time.DateUtils,943
+Fri Jan 12 23:56:03 AEDT 2018 org.apache.commons.lang.time.DateUtils,944
+Fri Jan 12 23:56:04 AEDT 2018 org.apache.commons.lang.time.DateUtils,946
+Fri Jan 12 23:59:12 AEDT 2018 org.apache.commons.lang.time.DateUtils,947
+Fri Jan 12 23:59:12 AEDT 2018 org.apache.commons.lang.time.DateUtils,957
+Fri Jan 12 23:59:13 AEDT 2018 org.apache.commons.lang.time.DateUtils,124
+Fri Jan 12 23:59:14 AEDT 2018 Fri Jan 12 23:59:14 AEDT 2018 : org.apache.commons.lang.time.DateUtils,125=>Find no block
+Fri Jan 12 23:59:14 AEDT 2018 org.apache.commons.lang.time.DateUtils,142
+Fri Jan 12 23:59:15 AEDT 2018 org.apache.commons.lang.time.DateUtils,143
+Fri Jan 12 23:59:15 AEDT 2018 org.apache.commons.lang.time.DateUtils,145
+Sat Jan 13 00:04:06 AEDT 2018 org.apache.commons.lang.time.DateUtils,146
+Sat Jan 13 00:04:06 AEDT 2018 org.apache.commons.lang.time.DateUtils,147
+Sat Jan 13 00:04:06 AEDT 2018 org.apache.commons.lang.time.DateUtils,148
+Sat Jan 13 00:04:06 AEDT 2018 org.apache.commons.lang.time.DateUtils,149
+Sat Jan 13 00:04:07 AEDT 2018 org.apache.commons.lang.time.DateUtils,166
+Sat Jan 13 00:04:07 AEDT 2018 org.apache.commons.lang.time.DateUtils,167
+Sat Jan 13 00:04:07 AEDT 2018 org.apache.commons.lang.time.DateUtils,169
+Timeout time : 18/01/13 00:07

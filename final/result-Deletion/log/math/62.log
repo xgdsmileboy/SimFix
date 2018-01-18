@@ -1,0 +1,285 @@
+=================================================
+Project : math_62	start : 18/01/15 21:09
+Current failed test : org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_1 | 18/01/15 21:10
+Mon Jan 15 21:10:44 AEDT 2018 Mon Jan 15 21:10:44 AEDT 2018 : org.apache.commons.math.optimization.GoalType,27=>Find no block
+Mon Jan 15 21:10:46 AEDT 2018 org.apache.commons.math.util.FastMath,219
+Mon Jan 15 21:12:10 AEDT 2018 org.apache.commons.math.util.FastMath,680
+Mon Jan 15 21:12:47 AEDT 2018 org.apache.commons.math.util.FastMath,681
+Mon Jan 15 21:12:48 AEDT 2018 org.apache.commons.math.util.FastMath,682
+Mon Jan 15 21:13:44 AEDT 2018 org.apache.commons.math.util.FastMath,683
+Mon Jan 15 21:16:53 AEDT 2018 org.apache.commons.math.util.FastMath,684
+Mon Jan 15 21:19:53 AEDT 2018 org.apache.commons.math.util.FastMath,685
+Mon Jan 15 21:19:55 AEDT 2018 org.apache.commons.math.util.FastMath,687
+Mon Jan 15 21:38:40 AEDT 2018 org.apache.commons.math.util.FastMath,688
+Mon Jan 15 21:38:41 AEDT 2018 org.apache.commons.math.util.FastMath,689
+Mon Jan 15 21:38:43 AEDT 2018 org.apache.commons.math.util.FastMath,690
+Mon Jan 15 21:38:45 AEDT 2018 org.apache.commons.math.util.FastMath,692
+Mon Jan 15 21:38:46 AEDT 2018 org.apache.commons.math.util.FastMath,693
+Mon Jan 15 21:38:48 AEDT 2018 org.apache.commons.math.util.FastMath,695
+Mon Jan 15 21:38:49 AEDT 2018 org.apache.commons.math.util.FastMath,696
+Mon Jan 15 21:38:50 AEDT 2018 org.apache.commons.math.util.FastMath,697
+Mon Jan 15 21:38:52 AEDT 2018 org.apache.commons.math.util.FastMath,700
+Mon Jan 15 21:39:34 AEDT 2018 org.apache.commons.math.util.FastMath,701
+Mon Jan 15 21:39:35 AEDT 2018 org.apache.commons.math.util.FastMath,702
+Mon Jan 15 21:39:37 AEDT 2018 org.apache.commons.math.util.FastMath,705
+Mon Jan 15 21:40:17 AEDT 2018 org.apache.commons.math.util.FastMath,714
+Mon Jan 15 21:42:20 AEDT 2018 org.apache.commons.math.util.FastMath,715
+Mon Jan 15 21:42:22 AEDT 2018 org.apache.commons.math.util.FastMath,716
+Mon Jan 15 21:42:24 AEDT 2018 org.apache.commons.math.util.FastMath,717
+Mon Jan 15 21:42:26 AEDT 2018 Mon Jan 15 21:42:26 AEDT 2018 : org.apache.commons.math.util.FastMath,718=>Find no block
+Mon Jan 15 21:42:27 AEDT 2018 Mon Jan 15 21:42:27 AEDT 2018 : org.apache.commons.math.util.FastMath,723=>Find no block
+Mon Jan 15 21:42:29 AEDT 2018 org.apache.commons.math.util.FastMath,730
+Mon Jan 15 21:44:30 AEDT 2018 org.apache.commons.math.util.FastMath,731
+Mon Jan 15 21:44:31 AEDT 2018 org.apache.commons.math.util.FastMath,733
+Mon Jan 15 21:45:40 AEDT 2018 org.apache.commons.math.util.FastMath,734
+Mon Jan 15 21:45:42 AEDT 2018 org.apache.commons.math.util.FastMath,735
+Mon Jan 15 21:45:44 AEDT 2018 org.apache.commons.math.util.FastMath,736
+Mon Jan 15 21:45:46 AEDT 2018 Mon Jan 15 21:45:46 AEDT 2018 : org.apache.commons.math.util.FastMath,737=>Find no block
+Mon Jan 15 21:45:47 AEDT 2018 org.apache.commons.math.util.FastMath,738
+Mon Jan 15 21:45:49 AEDT 2018 org.apache.commons.math.util.FastMath,739
+Mon Jan 15 21:45:50 AEDT 2018 org.apache.commons.math.util.FastMath,740
+Mon Jan 15 21:45:51 AEDT 2018 Mon Jan 15 21:45:51 AEDT 2018 : org.apache.commons.math.util.FastMath,742=>Find no block
+Mon Jan 15 21:45:52 AEDT 2018 org.apache.commons.math.util.FastMath,750
+Mon Jan 15 21:46:29 AEDT 2018 org.apache.commons.math.util.FastMath,751
+Mon Jan 15 21:46:31 AEDT 2018 org.apache.commons.math.util.FastMath,754
+Mon Jan 15 21:46:32 AEDT 2018 Mon Jan 15 21:46:32 AEDT 2018 : org.apache.commons.math.util.FastMath,755=>Find no block
+Mon Jan 15 21:46:34 AEDT 2018 org.apache.commons.math.util.FastMath,763
+Mon Jan 15 21:48:02 AEDT 2018 org.apache.commons.math.util.FastMath,764
+Mon Jan 15 21:48:04 AEDT 2018 org.apache.commons.math.util.FastMath,766
+Mon Jan 15 21:48:06 AEDT 2018 Mon Jan 15 21:48:06 AEDT 2018 : org.apache.commons.math.util.FastMath,767=>Find no block
+Mon Jan 15 21:48:07 AEDT 2018 org.apache.commons.math.util.FastMath,788
+Mon Jan 15 21:49:37 AEDT 2018 org.apache.commons.math.util.FastMath,789
+Mon Jan 15 21:49:39 AEDT 2018 org.apache.commons.math.util.FastMath,791
+Mon Jan 15 21:52:04 AEDT 2018 org.apache.commons.math.util.FastMath,796
+Mon Jan 15 21:53:50 AEDT 2018 org.apache.commons.math.util.FastMath,797
+Mon Jan 15 21:56:16 AEDT 2018 org.apache.commons.math.util.FastMath,799
+Mon Jan 15 21:57:12 AEDT 2018 org.apache.commons.math.util.FastMath,800
+Mon Jan 15 21:57:13 AEDT 2018 org.apache.commons.math.util.FastMath,804
+Mon Jan 15 22:08:22 AEDT 2018 org.apache.commons.math.util.FastMath,806
+Mon Jan 15 22:08:24 AEDT 2018 org.apache.commons.math.util.FastMath,808
+Mon Jan 15 22:08:25 AEDT 2018 org.apache.commons.math.util.FastMath,811
+Mon Jan 15 22:08:26 AEDT 2018 org.apache.commons.math.util.FastMath,813
+Mon Jan 15 22:08:28 AEDT 2018 Mon Jan 15 22:08:28 AEDT 2018 : org.apache.commons.math.util.FastMath,815=>Find no block
+Mon Jan 15 22:08:29 AEDT 2018 org.apache.commons.math.util.FastMath,823
+Mon Jan 15 22:09:11 AEDT 2018 org.apache.commons.math.util.FastMath,824
+Mon Jan 15 22:09:12 AEDT 2018 org.apache.commons.math.util.FastMath,825
+Mon Jan 15 22:12:38 AEDT 2018 org.apache.commons.math.util.FastMath,828
+Mon Jan 15 22:15:00 AEDT 2018 org.apache.commons.math.util.FastMath,829
+Mon Jan 15 22:18:54 AEDT 2018 org.apache.commons.math.util.FastMath,830
+Mon Jan 15 22:25:01 AEDT 2018 org.apache.commons.math.util.FastMath,832
+Mon Jan 15 22:27:51 AEDT 2018 org.apache.commons.math.util.FastMath,833
+Mon Jan 15 22:28:57 AEDT 2018 org.apache.commons.math.util.FastMath,836
+Mon Jan 15 22:30:28 AEDT 2018 org.apache.commons.math.util.FastMath,837
+Mon Jan 15 22:35:47 AEDT 2018 org.apache.commons.math.util.FastMath,839
+Mon Jan 15 22:40:19 AEDT 2018 org.apache.commons.math.util.FastMath,840
+Mon Jan 15 22:42:21 AEDT 2018 org.apache.commons.math.util.FastMath,841
+Mon Jan 15 22:46:07 AEDT 2018 org.apache.commons.math.util.FastMath,842
+Mon Jan 15 22:49:42 AEDT 2018 org.apache.commons.math.util.FastMath,843
+Mon Jan 15 22:53:01 AEDT 2018 org.apache.commons.math.util.FastMath,844
+Mon Jan 15 22:54:21 AEDT 2018 org.apache.commons.math.util.FastMath,847
+Mon Jan 15 22:56:31 AEDT 2018 org.apache.commons.math.util.FastMath,848
+Mon Jan 15 23:00:41 AEDT 2018 org.apache.commons.math.util.FastMath,849
+Mon Jan 15 23:13:36 AEDT 2018 org.apache.commons.math.util.FastMath,851
+Mon Jan 15 23:20:14 AEDT 2018 org.apache.commons.math.util.FastMath,852
+Mon Jan 15 23:23:34 AEDT 2018 org.apache.commons.math.util.FastMath,853
+Mon Jan 15 23:23:36 AEDT 2018 org.apache.commons.math.util.FastMath,854
+Mon Jan 15 23:23:37 AEDT 2018 org.apache.commons.math.util.FastMath,855
+Mon Jan 15 23:23:39 AEDT 2018 org.apache.commons.math.util.FastMath,856
+Mon Jan 15 23:23:40 AEDT 2018 org.apache.commons.math.util.FastMath,859
+Mon Jan 15 23:25:51 AEDT 2018 org.apache.commons.math.util.FastMath,860
+Mon Jan 15 23:30:01 AEDT 2018 org.apache.commons.math.util.FastMath,861
+Timeout time : 18/01/15 23:40
+Current failed test : org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_5 | 18/01/15 23:40
+Mon Jan 15 23:41:35 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,99
+Mon Jan 15 23:41:40 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,135
+Mon Jan 15 23:42:19 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,138
+Mon Jan 15 23:43:19 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,191
+Mon Jan 15 23:44:22 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,194
+Mon Jan 15 23:44:29 AEDT 2018 Mon Jan 15 23:44:29 AEDT 2018 : org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,196=>Find no block
+Mon Jan 15 23:44:31 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,199
+Mon Jan 15 23:49:47 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,200
+Mon Jan 15 23:49:50 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,201
+Mon Jan 15 23:49:51 AEDT 2018 Mon Jan 15 23:49:51 AEDT 2018 : org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,72=>Find no block
+Mon Jan 15 23:49:53 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,73
+Mon Jan 15 23:51:40 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,74
+Mon Jan 15 23:51:42 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,75
+Mon Jan 15 23:51:44 AEDT 2018 Mon Jan 15 23:51:44 AEDT 2018 : org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,76=>Find no block
+Mon Jan 15 23:51:45 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,146
+Mon Jan 15 23:51:51 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,154
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<=maxEvaluations;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/15 23:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=maxEvaluations;i<=maxEvaluations;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/16 00:03
+----------------------------------------
+Tue Jan 16 00:10:52 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,155
+Tue Jan 16 00:10:54 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,158
+Tue Jan 16 00:10:56 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,160
+Tue Jan 16 00:12:31 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,161
+Tue Jan 16 00:12:33 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,162
+Tue Jan 16 00:12:34 AEDT 2018 Tue Jan 16 00:12:34 AEDT 2018 : org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,167=>Find no block
+Tue Jan 16 00:12:36 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,169
+Tue Jan 16 00:22:08 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,170
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+
+Time : 18/01/16 00:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int usedEvaluations=optimizer.getEvaluations();
+
+Time : 18/01/16 00:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+
+Time : 18/01/16 00:25
+----------------------------------------
+Tue Jan 16 00:26:47 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,171
+Tue Jan 16 00:26:49 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,174
+Tue Jan 16 00:27:29 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,176
+Tue Jan 16 00:28:07 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,182
+Tue Jan 16 00:28:53 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,191
+Tue Jan 16 00:28:55 AEDT 2018 Tue Jan 16 00:28:55 AEDT 2018 : org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,205=>Find no block
+Tue Jan 16 00:28:57 AEDT 2018 Tue Jan 16 00:28:57 AEDT 2018 : org.apache.commons.math.optimization.univariate.UnivariateRealPointValuePair,45=>Find no block
+Tue Jan 16 00:28:59 AEDT 2018 org.apache.commons.math.optimization.univariate.UnivariateRealPointValuePair,46
+Tue Jan 16 00:30:23 AEDT 2018 org.apache.commons.math.optimization.univariate.UnivariateRealPointValuePair,47
+Tue Jan 16 00:30:24 AEDT 2018 Tue Jan 16 00:30:24 AEDT 2018 : org.apache.commons.math.optimization.univariate.UnivariateRealPointValuePair,48=>Find no block
+Tue Jan 16 00:30:26 AEDT 2018 org.apache.commons.math.optimization.univariate.UnivariateRealPointValuePair,65
+Tue Jan 16 00:31:06 AEDT 2018 Tue Jan 16 00:31:06 AEDT 2018 : org.apache.commons.math.optimization.univariate.BrentOptimizer,76=>Find no block
+Tue Jan 16 00:31:07 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,77
+Tue Jan 16 00:32:33 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,80
+Tue Jan 16 00:32:39 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,83
+Tue Jan 16 00:33:57 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,84
+Tue Jan 16 00:33:58 AEDT 2018 Tue Jan 16 00:33:58 AEDT 2018 : org.apache.commons.math.optimization.univariate.BrentOptimizer,85=>Find no block
+Tue Jan 16 00:34:00 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,90
+Tue Jan 16 00:34:52 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,91
+Tue Jan 16 00:34:53 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,92
+Tue Jan 16 00:35:45 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,93
+Tue Jan 16 00:36:37 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,96
+Tue Jan 16 00:37:29 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,101
+Tue Jan 16 00:45:03 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,102
+Tue Jan 16 00:45:05 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,103
+Tue Jan 16 00:45:06 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,109
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lo<hi){
+a=lo;
+b=hi;
+}else {
+a=hi;
+b=lo;
+}
+double x=a;
+double v=a;
+
+Time : 18/01/16 00:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lo<hi){
+a=lo;
+b=hi;
+}else {
+a=hi;
+b=lo;
+}
+double x=a;
+double v=x;
+
+Time : 18/01/16 00:51
+----------------------------------------
+Tue Jan 16 01:19:21 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,110
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double x=a;
+double v=x;
+double w=x;
+
+Time : 18/01/16 01:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double x=a;
+double v=relativeThreshold;
+double w=x;
+
+Time : 18/01/16 01:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double x=a;
+double v=absoluteThreshold;
+double w=x;
+
+Time : 18/01/16 01:28
+----------------------------------------
+Tue Jan 16 01:32:07 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,111
+Tue Jan 16 01:44:25 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,112
+Tue Jan 16 01:54:05 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,113
+Tue Jan 16 01:57:11 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,114
+Tue Jan 16 02:00:02 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,115
+Tue Jan 16 02:00:20 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,118
+Tue Jan 16 02:01:18 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,119
+Tue Jan 16 02:02:09 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,121
+Tue Jan 16 02:10:24 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,122
+Timeout time : 18/01/16 02:11

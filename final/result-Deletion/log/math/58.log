@@ -1,0 +1,417 @@
+=================================================
+Project : math_58	start : 18/01/15 16:23
+Current failed test : org.apache.commons.math.optimization.fitting.GaussianFitterTest::testMath519 | 18/01/15 16:23
+Mon Jan 15 16:24:51 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,102
+Mon Jan 15 16:24:55 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,108
+Mon Jan 15 16:24:58 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,114
+Mon Jan 15 16:25:02 AEDT 2018 org.apache.commons.math.exception.NotStrictlyPositiveException,38
+Mon Jan 15 16:25:08 AEDT 2018 Mon Jan 15 16:25:08 AEDT 2018 : org.apache.commons.math.exception.NotStrictlyPositiveException,39=>Find no block
+Mon Jan 15 16:25:09 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,384
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((lmPar==0)||(ratio>=0.75)){
+delta=2*lmNorm;
+lmPar*=0.0;
+}
+
+Time : 18/01/15 16:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((FastMath.abs(actRed)<=costRelativeTolerance&&preRed<=costRelativeTolerance&&ratio<=2.0)||lmPar<=parRelativeTolerance*lmNorm){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 16:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((lmPar==0)||lmPar<=parRelativeTolerance*lmNorm){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 16:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((FastMath.abs(delta)<=0.1*lmNorm)||((ratio==0)&&(delta<=lmPar))){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 16:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((lmPar==0)||((ratio==0)&&(delta<=lmPar))){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 16:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((lmPar==0)&&(ratio>=0.75)){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 16:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((FastMath.abs(actRed)<=2.2204E-16)&&(lmPar<=2.2204E-16)){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 16:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((lmPar==0)||(lmPar<=2.2204E-16)){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 16:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((FastMath.abs(actRed)<=2.2204E-16)&&(ratio>=0.75)){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 16:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((lmPar==0)&&(lmPar<=2.2204E-16)){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 16:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((FastMath.abs(actRed)<=2.2204E-16)||(lmPar<=2.2204E-16)){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 16:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((rank+1>=rank)||(ratio>=0.75)){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 17:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((lmPar==0)||(delta<=lmPar)){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 17:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((lmPar==0)&&(delta<=lmPar)){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 17:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((rank+1>=rank)||(delta<=lmPar)){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 17:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lmNorm>ratio||lmNorm<-lmPar){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 17:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((lmPar==0)||lmNorm<-lmPar){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 17:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((delta==0)||(delta>=0.75)){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 17:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((lmPar<=lmNorm)||(lmPar<=ratio)){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 17:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((lmPar==0)||(lmPar<=ratio)){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 17:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((lmPar==0)||(delta>=0.75)){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 17:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((delta==0)||(lmPar<=ratio)){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 17:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((lmPar<=lmNorm)||(delta>=0.75)){
+delta=2*lmNorm;
+lmPar*=0.5;
+}
+
+Time : 18/01/15 17:27
+----------------------------------------
+Mon Jan 15 17:36:44 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,386
+Mon Jan 15 17:36:45 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,389
+Mon Jan 15 17:36:46 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,390
+Mon Jan 15 17:36:47 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,391
+Mon Jan 15 17:36:48 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,417
+Mon Jan 15 17:56:06 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,418
+Mon Jan 15 18:12:54 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,419
+Mon Jan 15 18:12:55 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,420
+Mon Jan 15 18:12:56 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,422
+Mon Jan 15 18:51:41 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,423
+Mon Jan 15 18:55:19 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,424
+Mon Jan 15 18:58:49 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,425
+Mon Jan 15 19:02:02 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,426
+Mon Jan 15 19:04:32 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,427
+Mon Jan 15 19:04:39 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,516
+Mon Jan 15 19:13:11 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,517
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<=j;++i){
+sum+=weightedResidualJacobian[i][pj]*work1[permutation[i]];
+}
+
+Time : 18/01/15 19:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<j;++i){
+sum+=weightedResidualJacobian[i][j]*work1[permutation[i]];
+}
+
+Time : 18/01/15 19:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<j;++i){
+sum+=weightedResidualJacobian[i][permutation[pj]]*work1[permutation[i]];
+}
+
+Time : 18/01/15 19:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+work2=work2;
+for(int i=0;i<=j;++i){
+sum+=weightedResidualJacobian[i][pj]*work1[permutation[i]];
+}
+
+Time : 18/01/15 19:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+double sum=0;
+for(int i=0;i<=j;++i){
+sum+=weightedResidualJacobian[i][pj]*work1[permutation[i]];
+}
+double s=(work1[pj]-sum)/diagR[pj];
+work1[pj]=s;
+sum2+=s*s;
+}
+
+Time : 18/01/15 19:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+double sum=0;
+for(int i=0;i<j;++i){
+sum+=weightedResidualJacobian[i][j]*work1[permutation[i]];
+}
+double s=(work1[pj]-sum)/diagR[pj];
+work1[pj]=s;
+sum2+=s*s;
+}
+
+Time : 18/01/15 20:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+double sum=0;
+for(int i=0;i<j;++i){
+sum+=weightedResidualJacobian[i][pj]*work1[permutation[i]];
+}
+double s=(work1[pj]-sum)/diagR[j];
+work1[pj]=s;
+sum2+=s*s;
+}
+
+Time : 18/01/15 20:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<rank;++j){
+int pj=permutation[j];
+double sum=0;
+for(int i=0;i<j;++i){
+sum+=weightedResidualJacobian[i][pj]*work1[permutation[i]];
+}
+double s=(work1[pj]-sum)/diagR[j];
+work1[pj]=s;
+sum2+=s*s;
+}
+
+Time : 18/01/15 20:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(rank==solvedCols){
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+work1[pj]*=diag[pj]/dxNorm;
+}
+sum2=0;
+for(int j=0;j<solvedCols;++j){
+int pj=permutation[j];
+double sum=0;
+for(int i=0;i<j;++i){
+sum+=weightedResidualJacobian[i][pj]*work1[permutation[i]];
+}
+double s=(work1[pj]-sum)/diagR[j];
+work1[pj]=s;
+sum2+=s*s;
+}
+parl=fp/(delta*sum2);
+}
+
+Time : 18/01/15 21:09
+----------------------------------------
+Mon Jan 15 21:13:50 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,518
+Mon Jan 15 21:13:53 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,519
+Mon Jan 15 21:13:54 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,520
+Mon Jan 15 21:13:55 AEDT 2018 org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer,522
+Timeout time : 18/01/15 21:24

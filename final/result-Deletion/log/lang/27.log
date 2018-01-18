@@ -1,0 +1,53 @@
+=================================================
+Project : lang_27	start : 18/01/15 17:13
+Current failed test : org.apache.commons.lang3.math.NumberUtilsTest::testCreateNumber_purify_25 | 18/01/15 17:15
+Mon Jan 15 17:16:03 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,489
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(expPos>-1&&expPos<str.length()-1){
+mant=str.substring(0,expPos);
+}else {
+mant=str;
+}
+
+Time : 18/01/15 17:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.0297619047619047 : [/home/hz985/jiajun/d4j/projects/lang/lang_27_buggy/src/main/java/org/apache/commons/lang3/math/NumberUtils.java=>0,0]
+if(expPos>-1&&expPos<str.length()-1){
+exp=str.substring(expPos+1,str.length());
+}else {
+exp=null;
+}
+
+Time : 18/01/15 17:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/lang/lang_27_buggy/src/main/java/org/apache/commons/lang3/math/NumberUtils.java=>488,492]
+if(expPos>-1){
+mant=str.substring(0,expPos);
+}else {
+mant=str;
+}
+
+Time : 18/01/15 17:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/lang/lang_27_buggy/src/main/java/org/apache/commons/lang3/math/NumberUtils.java=>488,492]
+if(expPos>-1&&expPos<str.length()-1){
+mant=str.substring(0,expPos);
+}else {
+mant=str;
+}
+
+Time : 18/01/15 17:17
+----------------------------------------
+Success time : 18/01/15 17:17

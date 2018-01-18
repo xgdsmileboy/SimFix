@@ -1,0 +1,219 @@
+=================================================
+Project : math_47	start : 18/01/16 02:00
+Current failed test : org.apache.commons.math.complex.ComplexTest::testAtanI | 18/01/16 02:01
+Tue Jan 16 02:01:57 AEDT 2018 org.apache.commons.math.complex.Complex,1179
+Tue Jan 16 02:02:13 AEDT 2018 org.apache.commons.math.util.FastMath,2991
+Tue Jan 16 02:05:52 AEDT 2018 org.apache.commons.math.util.FastMath,2994
+Tue Jan 16 02:06:00 AEDT 2018 org.apache.commons.math.complex.Complex,257
+Tue Jan 16 02:06:17 AEDT 2018 org.apache.commons.math.complex.Complex,583
+Tue Jan 16 02:08:27 AEDT 2018 org.apache.commons.math.complex.Complex,579
+Tue Jan 16 02:08:44 AEDT 2018 org.apache.commons.math.complex.Complex,268
+Tue Jan 16 02:24:49 AEDT 2018 org.apache.commons.math.complex.Complex,269
+Tue Jan 16 02:24:57 AEDT 2018 org.apache.commons.math.complex.Complex,270
+Tue Jan 16 02:25:05 AEDT 2018 org.apache.commons.math.util.FastMath,1315
+Tue Jan 16 03:18:02 AEDT 2018 org.apache.commons.math.complex.Complex,747
+Tue Jan 16 03:18:10 AEDT 2018 org.apache.commons.math.util.FastMath,2990
+Tue Jan 16 03:32:20 AEDT 2018 org.apache.commons.math.util.FastMath,2997
+Tue Jan 16 03:32:27 AEDT 2018 org.apache.commons.math.util.FastMath,2978
+Tue Jan 16 03:49:31 AEDT 2018 org.apache.commons.math.util.FastMath,2979
+Tue Jan 16 03:49:39 AEDT 2018 org.apache.commons.math.util.FastMath,2980
+Tue Jan 16 04:27:42 AEDT 2018 org.apache.commons.math.util.FastMath,2982
+Tue Jan 16 04:27:49 AEDT 2018 org.apache.commons.math.complex.Complex,273
+Tue Jan 16 04:27:56 AEDT 2018 org.apache.commons.math.complex.Complex,274
+Tue Jan 16 04:28:04 AEDT 2018 org.apache.commons.math.complex.Complex,275
+Tue Jan 16 04:28:11 AEDT 2018 org.apache.commons.math.util.FastMath,1429
+Timeout time : 18/01/16 04:31
+Current failed test : org.apache.commons.math.complex.ComplexTest::testDivideZero | 18/01/16 04:31
+Tue Jan 16 04:33:26 AEDT 2018 org.apache.commons.math.complex.Complex,1179
+Tue Jan 16 04:34:01 AEDT 2018 org.apache.commons.math.complex.Complex,257
+Tue Jan 16 04:34:18 AEDT 2018 org.apache.commons.math.complex.Complex,256
+Tue Jan 16 04:34:26 AEDT 2018 org.apache.commons.math.complex.Complex,251
+Tue Jan 16 04:37:07 AEDT 2018 org.apache.commons.math.complex.Complex,252
+Tue Jan 16 04:38:29 AEDT 2018 org.apache.commons.math.complex.Complex,327
+Tue Jan 16 04:39:27 AEDT 2018 org.apache.commons.math.complex.Complex,323
+Tue Jan 16 04:41:47 AEDT 2018 org.apache.commons.math.complex.Complex,324
+Tue Jan 16 04:41:55 AEDT 2018 org.apache.commons.math.complex.Complex,322
+Tue Jan 16 04:42:02 AEDT 2018 org.apache.commons.math.complex.Complex,319
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(this!=other){
+return true;
+}
+
+Time : 18/01/16 04:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(this!=null){
+return true;
+}
+
+Time : 18/01/16 04:45
+----------------------------------------
+Tue Jan 16 04:47:40 AEDT 2018 Tue Jan 16 04:47:40 AEDT 2018 : org.apache.commons.math.util.MathUtils,2337=>Find no block
+Tue Jan 16 04:47:47 AEDT 2018 org.apache.commons.math.util.MathUtils,2334
+Tue Jan 16 04:48:58 AEDT 2018 org.apache.commons.math.complex.Complex,364
+Tue Jan 16 04:50:13 AEDT 2018 org.apache.commons.math.complex.Complex,355
+Tue Jan 16 04:51:27 AEDT 2018 Tue Jan 16 04:51:27 AEDT 2018 : org.apache.commons.math.complex.Complex,98=>Find no block
+Tue Jan 16 04:51:35 AEDT 2018 org.apache.commons.math.complex.Complex,99
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.real=real;
+this.imaginary=imaginary;
+isNaN=Double.isInfinite(imaginary)||Double.isNaN(imaginary);
+isInfinite=!isNaN&&(Double.isInfinite(real)||Double.isInfinite(imaginary));
+
+Time : 18/01/16 04:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.real=real;
+this.imaginary=imaginary;
+isNaN=Double.isNaN(real)||Double.isInfinite(real);
+isInfinite=!isNaN&&(Double.isInfinite(real)||Double.isInfinite(imaginary));
+
+Time : 18/01/16 04:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.real=real;
+this.imaginary=imaginary;
+isNaN=Double.isInfinite(real)||Double.isNaN(imaginary);
+isInfinite=!isNaN&&(Double.isInfinite(real)||Double.isInfinite(imaginary));
+
+Time : 18/01/16 04:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.real=real;
+this.imaginary=imaginary;
+isNaN=Double.isNaN(real)||Double.isInfinite(imaginary);
+isInfinite=!isNaN&&(Double.isInfinite(real)||Double.isInfinite(imaginary));
+
+Time : 18/01/16 05:01
+----------------------------------------
+Tue Jan 16 05:07:16 AEDT 2018 org.apache.commons.math.complex.Complex,100
+Tue Jan 16 05:07:23 AEDT 2018 org.apache.commons.math.complex.Complex,102
+Tue Jan 16 05:07:30 AEDT 2018 org.apache.commons.math.complex.Complex,103
+Tue Jan 16 05:07:38 AEDT 2018 Tue Jan 16 05:07:38 AEDT 2018 : org.apache.commons.math.complex.Complex,105=>Find no block
+Tue Jan 16 05:07:45 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,50
+Tue Jan 16 05:08:03 AEDT 2018 Tue Jan 16 05:08:03 AEDT 2018 : org.apache.commons.math.exception.NumberIsTooSmallException,54=>Find no block
+Tue Jan 16 05:08:10 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,68
+Tue Jan 16 05:10:24 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,70
+Tue Jan 16 05:10:31 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,71
+Tue Jan 16 05:10:38 AEDT 2018 Tue Jan 16 05:10:38 AEDT 2018 : org.apache.commons.math.exception.NumberIsTooSmallException,72=>Find no block
+Tue Jan 16 05:10:46 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,78
+Tue Jan 16 05:11:03 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,85
+Tue Jan 16 05:11:20 AEDT 2018 org.apache.commons.math.exception.MathIllegalNumberException,46
+Tue Jan 16 05:12:46 AEDT 2018 org.apache.commons.math.exception.MathIllegalNumberException,47
+Tue Jan 16 05:12:53 AEDT 2018 Tue Jan 16 05:12:53 AEDT 2018 : org.apache.commons.math.exception.MathIllegalNumberException,48=>Find no block
+Tue Jan 16 05:13:01 AEDT 2018 org.apache.commons.math.exception.MathIllegalNumberException,54
+Tue Jan 16 05:13:18 AEDT 2018 Tue Jan 16 05:13:18 AEDT 2018 : org.apache.commons.math.exception.MathIllegalArgumentException,44=>Find no block
+Tue Jan 16 05:13:25 AEDT 2018 Tue Jan 16 05:13:25 AEDT 2018 : org.apache.commons.math.exception.MathIllegalArgumentException,37=>Find no block
+Tue Jan 16 05:13:33 AEDT 2018 org.apache.commons.math.exception.MathIllegalArgumentException,45
+Tue Jan 16 05:13:50 AEDT 2018 Tue Jan 16 05:13:50 AEDT 2018 : org.apache.commons.math.exception.MathIllegalArgumentException,46=>Find no block
+Tue Jan 16 05:13:57 AEDT 2018 org.apache.commons.math.exception.MathIllegalArgumentException,50
+Tue Jan 16 05:14:14 AEDT 2018 org.apache.commons.math.exception.MathIllegalArgumentException,55
+Tue Jan 16 05:14:32 AEDT 2018 org.apache.commons.math.exception.MathIllegalArgumentException,61
+Tue Jan 16 05:14:49 AEDT 2018 org.apache.commons.math.exception.MathIllegalArgumentException,67
+Tue Jan 16 05:14:54 AEDT 2018 org.apache.commons.math.exception.NotPositiveException,37
+Tue Jan 16 05:14:57 AEDT 2018 Tue Jan 16 05:14:57 AEDT 2018 : org.apache.commons.math.exception.NotPositiveException,38=>Find no block
+Tue Jan 16 05:14:58 AEDT 2018 org.apache.commons.math.exception.NotPositiveException,47
+Tue Jan 16 05:15:01 AEDT 2018 Tue Jan 16 05:15:01 AEDT 2018 : org.apache.commons.math.exception.NotPositiveException,48=>Find no block
+Tue Jan 16 05:15:02 AEDT 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,61
+Tue Jan 16 05:15:06 AEDT 2018 Tue Jan 16 05:15:06 AEDT 2018 : org.apache.commons.math.exception.NonMonotonousSequenceException,62=>Find no block
+Tue Jan 16 05:15:07 AEDT 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,80
+Tue Jan 16 05:30:01 AEDT 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,89
+Tue Jan 16 05:30:02 AEDT 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,90
+Tue Jan 16 05:30:03 AEDT 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,91
+Tue Jan 16 05:30:03 AEDT 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,92
+Tue Jan 16 05:30:04 AEDT 2018 Tue Jan 16 05:30:04 AEDT 2018 : org.apache.commons.math.exception.NonMonotonousSequenceException,93=>Find no block
+Tue Jan 16 05:30:05 AEDT 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,99
+Tue Jan 16 05:30:07 AEDT 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,105
+Tue Jan 16 05:30:10 AEDT 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,113
+Tue Jan 16 05:30:44 AEDT 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,119
+Tue Jan 16 05:30:47 AEDT 2018 Tue Jan 16 05:30:47 AEDT 2018 : org.apache.commons.math.util.MathUtils,1946=>Find no block
+Tue Jan 16 05:30:47 AEDT 2018 Tue Jan 16 05:30:47 AEDT 2018 : org.apache.commons.math.util.MathUtils,1946=>Find no block
+Tue Jan 16 05:30:48 AEDT 2018 Tue Jan 16 05:30:48 AEDT 2018 : org.apache.commons.math.util.MathUtils,1946=>Find no block
+Tue Jan 16 05:30:49 AEDT 2018 Tue Jan 16 05:30:49 AEDT 2018 : org.apache.commons.math.exception.MathArithmeticException,43=>Find no block
+Tue Jan 16 05:30:49 AEDT 2018 Tue Jan 16 05:30:49 AEDT 2018 : org.apache.commons.math.exception.MathArithmeticException,38=>Find no block
+Tue Jan 16 05:30:50 AEDT 2018 org.apache.commons.math.exception.MathArithmeticException,44
+Tue Jan 16 05:31:31 AEDT 2018 Tue Jan 16 05:31:31 AEDT 2018 : org.apache.commons.math.exception.MathArithmeticException,45=>Find no block
+Tue Jan 16 05:31:32 AEDT 2018 Tue Jan 16 05:31:32 AEDT 2018 : org.apache.commons.math.exception.MathArithmeticException,55=>Find no block
+Tue Jan 16 05:31:33 AEDT 2018 org.apache.commons.math.exception.MathArithmeticException,56
+Tue Jan 16 05:31:33 AEDT 2018 Tue Jan 16 05:31:33 AEDT 2018 : org.apache.commons.math.exception.MathArithmeticException,57=>Find no block
+Tue Jan 16 05:31:34 AEDT 2018 org.apache.commons.math.exception.MathArithmeticException,61
+Tue Jan 16 05:31:35 AEDT 2018 org.apache.commons.math.exception.MathArithmeticException,66
+Tue Jan 16 05:31:35 AEDT 2018 org.apache.commons.math.exception.MathArithmeticException,72
+Tue Jan 16 05:31:36 AEDT 2018 org.apache.commons.math.exception.MathArithmeticException,78
+Tue Jan 16 05:31:37 AEDT 2018 org.apache.commons.math.exception.NumberIsTooLargeException,50
+Tue Jan 16 05:31:40 AEDT 2018 Tue Jan 16 05:31:40 AEDT 2018 : org.apache.commons.math.exception.NumberIsTooLargeException,54=>Find no block
+Tue Jan 16 05:31:40 AEDT 2018 org.apache.commons.math.exception.NumberIsTooLargeException,67
+Tue Jan 16 05:33:09 AEDT 2018 org.apache.commons.math.exception.NumberIsTooLargeException,69
+Tue Jan 16 05:33:10 AEDT 2018 org.apache.commons.math.exception.NumberIsTooLargeException,70
+Tue Jan 16 05:33:11 AEDT 2018 Tue Jan 16 05:33:11 AEDT 2018 : org.apache.commons.math.exception.NumberIsTooLargeException,71=>Find no block
+Tue Jan 16 05:33:11 AEDT 2018 org.apache.commons.math.exception.NumberIsTooLargeException,77
+Tue Jan 16 05:33:12 AEDT 2018 org.apache.commons.math.exception.NumberIsTooLargeException,84
+Tue Jan 16 05:33:15 AEDT 2018 org.apache.commons.math.exception.NullArgumentException,41
+Tue Jan 16 05:33:17 AEDT 2018 Tue Jan 16 05:33:17 AEDT 2018 : org.apache.commons.math.exception.NullArgumentException,42=>Find no block
+Tue Jan 16 05:33:18 AEDT 2018 org.apache.commons.math.exception.NullArgumentException,50
+Tue Jan 16 05:34:03 AEDT 2018 Tue Jan 16 05:34:03 AEDT 2018 : org.apache.commons.math.exception.NullArgumentException,51=>Find no block
+Tue Jan 16 05:34:04 AEDT 2018 org.apache.commons.math.exception.DimensionMismatchException,44
+Tue Jan 16 05:36:28 AEDT 2018 org.apache.commons.math.exception.DimensionMismatchException,45
+Tue Jan 16 05:36:28 AEDT 2018 Tue Jan 16 05:36:28 AEDT 2018 : org.apache.commons.math.exception.DimensionMismatchException,46=>Find no block
+Tue Jan 16 05:36:29 AEDT 2018 org.apache.commons.math.exception.DimensionMismatchException,56
+Tue Jan 16 05:36:32 AEDT 2018 Tue Jan 16 05:36:32 AEDT 2018 : org.apache.commons.math.exception.DimensionMismatchException,57=>Find no block
+Tue Jan 16 05:36:32 AEDT 2018 org.apache.commons.math.exception.DimensionMismatchException,63
+Tue Jan 16 05:36:35 AEDT 2018 org.apache.commons.math.exception.NotFiniteNumberException,40
+Tue Jan 16 05:36:38 AEDT 2018 Tue Jan 16 05:36:38 AEDT 2018 : org.apache.commons.math.exception.NotFiniteNumberException,41=>Find no block
+Tue Jan 16 05:36:39 AEDT 2018 org.apache.commons.math.exception.NotFiniteNumberException,53
+Tue Jan 16 05:37:01 AEDT 2018 Tue Jan 16 05:37:01 AEDT 2018 : org.apache.commons.math.exception.NotFiniteNumberException,54=>Find no block
+Tue Jan 16 05:37:02 AEDT 2018 Tue Jan 16 05:37:02 AEDT 2018 : org.apache.commons.math.util.MathUtils,2229=>Find no block
+Tue Jan 16 05:37:03 AEDT 2018 Tue Jan 16 05:37:03 AEDT 2018 : org.apache.commons.math.util.MathUtils,2233=>Find no block
+Tue Jan 16 05:37:03 AEDT 2018 org.apache.commons.math.util.MathUtils,2235
+Tue Jan 16 05:37:06 AEDT 2018 org.apache.commons.math.util.MathUtils,2236
+Tue Jan 16 05:37:11 AEDT 2018 org.apache.commons.math.util.MathUtils,2238
+Tue Jan 16 05:37:14 AEDT 2018 org.apache.commons.math.util.MathUtils,2239
+Tue Jan 16 05:37:19 AEDT 2018 org.apache.commons.math.util.MathUtils,2242
+Tue Jan 16 05:37:22 AEDT 2018 org.apache.commons.math.util.MathUtils,2244
+Tue Jan 16 05:37:24 AEDT 2018 org.apache.commons.math.util.MathUtils,101
+Tue Jan 16 05:37:27 AEDT 2018 Tue Jan 16 05:37:27 AEDT 2018 : org.apache.commons.math.util.MathUtils,102=>Find no block
+Tue Jan 16 05:37:29 AEDT 2018 org.apache.commons.math.util.MathUtils,115
+Tue Jan 16 05:40:50 AEDT 2018 org.apache.commons.math.util.MathUtils,116
+Tue Jan 16 05:43:58 AEDT 2018 org.apache.commons.math.util.MathUtils,117
+Tue Jan 16 05:43:58 AEDT 2018 org.apache.commons.math.util.MathUtils,119
+Tue Jan 16 05:43:59 AEDT 2018 org.apache.commons.math.util.MathUtils,133
+Tue Jan 16 05:44:02 AEDT 2018 org.apache.commons.math.util.MathUtils,149
+Tue Jan 16 05:50:34 AEDT 2018 org.apache.commons.math.util.MathUtils,151
+Tue Jan 16 05:50:37 AEDT 2018 org.apache.commons.math.util.MathUtils,155
+Tue Jan 16 05:50:38 AEDT 2018 org.apache.commons.math.util.MathUtils,156
+Tue Jan 16 05:50:39 AEDT 2018 org.apache.commons.math.util.MathUtils,158
+Tue Jan 16 05:50:40 AEDT 2018 org.apache.commons.math.util.MathUtils,159
+Tue Jan 16 05:50:40 AEDT 2018 org.apache.commons.math.util.MathUtils,161
+Tue Jan 16 05:50:41 AEDT 2018 org.apache.commons.math.util.MathUtils,165
+Tue Jan 16 05:50:42 AEDT 2018 org.apache.commons.math.util.MathUtils,172
+Tue Jan 16 05:50:42 AEDT 2018 org.apache.commons.math.util.MathUtils,173
+Tue Jan 16 05:50:43 AEDT 2018 org.apache.commons.math.util.MathUtils,175
+Tue Jan 16 05:50:44 AEDT 2018 org.apache.commons.math.util.MathUtils,179
+Tue Jan 16 05:52:32 AEDT 2018 org.apache.commons.math.util.MathUtils,208
+Tue Jan 16 06:02:14 AEDT 2018 org.apache.commons.math.util.MathUtils,209
+Tue Jan 16 06:13:54 AEDT 2018 org.apache.commons.math.util.MathUtils,210
+Tue Jan 16 06:14:00 AEDT 2018 org.apache.commons.math.util.MathUtils,212
+Tue Jan 16 06:27:16 AEDT 2018 org.apache.commons.math.util.MathUtils,213
+Tue Jan 16 06:27:17 AEDT 2018 org.apache.commons.math.util.MathUtils,216
+Tue Jan 16 06:33:26 AEDT 2018 org.apache.commons.math.util.MathUtils,217
+Tue Jan 16 06:33:33 AEDT 2018 org.apache.commons.math.util.MathUtils,225
+Tue Jan 16 06:43:16 AEDT 2018 org.apache.commons.math.util.MathUtils,226
+Timeout time : 18/01/16 07:03

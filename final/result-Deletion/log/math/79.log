@@ -1,0 +1,98 @@
+=================================================
+Project : math_79	start : 18/01/15 19:11
+Current failed test : org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererTest::testPerformClusterAnalysisDegenerate | 18/01/15 19:12
+Mon Jan 15 19:13:48 AEDT 2018 Mon Jan 15 19:13:48 AEDT 2018 : org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,40=>Find no block
+Mon Jan 15 19:13:52 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,41
+Mon Jan 15 19:14:03 AEDT 2018 Mon Jan 15 19:14:03 AEDT 2018 : org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,42=>Find no block
+Mon Jan 15 19:14:08 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,56
+Mon Jan 15 19:17:08 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,57
+Mon Jan 15 19:17:12 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,89
+Mon Jan 15 19:17:22 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,90
+Mon Jan 15 19:17:27 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,91
+Mon Jan 15 19:17:32 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,107
+Mon Jan 15 19:19:16 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,108
+Mon Jan 15 19:19:21 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,111
+Mon Jan 15 19:22:12 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,112
+Mon Jan 15 19:25:04 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,114
+Mon Jan 15 19:25:08 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,115
+Mon Jan 15 19:43:15 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,139
+Mon Jan 15 19:49:03 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,153
+Mon Jan 15 19:50:24 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,154
+Mon Jan 15 19:50:29 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,155
+Mon Jan 15 19:50:32 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,156
+Mon Jan 15 19:50:36 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,157
+Mon Jan 15 19:50:41 AEDT 2018 Mon Jan 15 19:50:41 AEDT 2018 : org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,161=>Find no block
+Mon Jan 15 19:50:43 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,162
+Mon Jan 15 19:50:48 AEDT 2018 Mon Jan 15 19:50:48 AEDT 2018 : org.apache.commons.math.stat.clustering.Cluster,45=>Find no block
+Mon Jan 15 19:50:53 AEDT 2018 org.apache.commons.math.stat.clustering.Cluster,46
+Mon Jan 15 19:51:03 AEDT 2018 org.apache.commons.math.stat.clustering.Cluster,47
+Mon Jan 15 19:51:08 AEDT 2018 Mon Jan 15 19:51:08 AEDT 2018 : org.apache.commons.math.stat.clustering.Cluster,48=>Find no block
+Mon Jan 15 19:51:12 AEDT 2018 org.apache.commons.math.stat.clustering.Cluster,71
+Mon Jan 15 19:51:23 AEDT 2018 org.apache.commons.math.stat.clustering.EuclideanIntegerPoint,57
+Mon Jan 15 19:51:34 AEDT 2018 org.apache.commons.math.util.MathUtils,1624
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int sum=0;
+for(int i=NAN_GAP;i<p1.length;i++){
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 18/01/15 19:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double sum=0;
+for(int i=0;i<p1.length;i++){
+ final double dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 18/01/15 19:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.428571428571429 : [/home/hz985/jiajun/d4j/projects/math/math_79_buggy/src/main/java/org/apache/commons/math/util/MathUtils.java=>0,0]
+double sum=0;
+for(int i=0;i<p1.length;i++){
+ final double dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 18/01/15 19:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_79_buggy/src/main/java/org/apache/commons/math/util/MathUtils.java=>1624,1629]
+int sum=0;
+for(int i=0;i<p1.length;i++){
+ final int dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 18/01/15 19:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_79_buggy/src/main/java/org/apache/commons/math/util/MathUtils.java=>1624,1629]
+double sum=0;
+for(int i=0;i<p1.length;i++){
+ final double dp=p1[i]-p2[i];
+sum+=dp*dp;
+}
+return Math.sqrt(sum);
+
+Time : 18/01/15 19:54
+----------------------------------------
+Success time : 18/01/15 19:54

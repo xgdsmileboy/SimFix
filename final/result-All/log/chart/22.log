@@ -1,0 +1,334 @@
+=================================================
+Project : chart_22	start : 18/01/13 00:36
+Current failed test : org.jfree.data.junit.KeyedObjects2DTests::testRemoveRowByKey_purify_3 | 18/01/13 00:40
+Sat Jan 13 00:41:07 AEDT 2018 org.jfree.data.KeyedObjects2D,344
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int index=getRowIndex(rowKey);
+if(index<0){
+throw new UnknownKeyException("The key ("+rowKey.toString());
+}
+removeRow(index);
+
+Time : 18/01/13 00:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.4112931795128763 : [/home/hz985/jiajun/d4j/projects/chart/chart_22_buggy/source/org/jfree/data/KeyedObjects2D.java=>0,0]
+int index=getIndex(key);
+if(index<0){
+throw new UnknownKeyException("The key ("+key.toString());
+}
+removeValue(index);
+
+Time : 18/01/13 00:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/chart/chart_22_buggy/source/org/jfree/data/KeyedObjects2D.java=>344,345]
+int index=getRowIndex(rowKey);
+removeRow(index);
+
+Time : 18/01/13 00:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/chart/chart_22_buggy/source/org/jfree/data/KeyedObjects2D.java=>344,345]
+int index=getRowIndex(rowKey);
+if(index<0){
+throw new UnknownKeyException("The key ("+rowKey.toString());
+}
+removeRow(index);
+
+Time : 18/01/13 00:44
+----------------------------------------
+Success time : 18/01/13 00:44
+Current failed test : org.jfree.data.junit.KeyedObjects2DTests::testRemoveRowByKey_purify_4 | 18/01/13 00:44
+Sat Jan 13 00:47:16 AEDT 2018 org.jfree.data.KeyedObjects2D,344
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int index=getRowIndex(rowKey);
+if(index<0){
+throw new UnknownKeyException("The key ("+rowKey);
+}
+removeRow(index);
+
+Time : 18/01/13 00:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.3987170342729172 : [/home/hz985/jiajun/d4j/projects/chart/chart_22_buggy/source/org/jfree/data/KeyedObjects2D.java=>0,0]
+int index=getIndex(key);
+if(index<0){
+throw new UnknownKeyException("The key ("+key);
+}
+removeValue(index);
+
+Time : 18/01/13 00:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/chart/chart_22_buggy/source/org/jfree/data/KeyedObjects2D.java=>344,345]
+int index=getRowIndex(rowKey);
+removeRow(index);
+
+Time : 18/01/13 00:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/chart/chart_22_buggy/source/org/jfree/data/KeyedObjects2D.java=>344,345]
+int index=getRowIndex(rowKey);
+if(index<0){
+throw new UnknownKeyException("The key ("+rowKey);
+}
+removeRow(index);
+
+Time : 18/01/13 00:51
+----------------------------------------
+Success time : 18/01/13 00:51
+Current failed test : org.jfree.data.junit.KeyedObjects2DTests::testSetObject_purify_3 | 18/01/13 00:51
+Sat Jan 13 00:53:11 AEDT 2018 org.jfree.data.KeyedObjects,171
+Sat Jan 13 00:58:11 AEDT 2018 org.jfree.data.UnknownKeyException,56
+Sat Jan 13 00:58:20 AEDT 2018 Sat Jan 13 00:58:20 AEDT 2018 : org.jfree.data.UnknownKeyException,57=>Find no block
+Sat Jan 13 00:58:21 AEDT 2018 org.jfree.data.KeyedObjects2D,231
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(row>0){
+KeyedObjects rowData=(KeyedObjects)this.rows.get(row);
+return rowData.getObject(columnKey);
+}else {
+return null;
+}
+
+Time : 18/01/13 00:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(row>0){
+KeyedObjects rowData=(KeyedObjects)rows.get((row-1)/2);
+return rowData.getObject(columnKey);
+}else {
+return null;
+}
+
+Time : 18/01/13 01:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(row>=column){
+KeyedObjects rowData=(KeyedObjects)this.rows.get(row);
+return rowData.getObject(columnKey);
+}else {
+return null;
+}
+
+Time : 18/01/13 01:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.3900494733999103 : [/home/hz985/jiajun/d4j/projects/chart/chart_22_buggy/source/org/jfree/data/KeyedObjects2D.java=>0,0]
+if(values[i]<maximum){
+double fraction=(values[i]-minimum)/(maximum-minimum);
+if(fraction<0.0){
+fraction=0.0;
+}
+binIndex=(int)(fraction*bins);
+if(binIndex>=bins){
+binIndex=bins-1;
+}
+}
+HistogramBin bin=(HistogramBin)binList.get(binIndex);
+bin.incrementCount();
+
+Time : 18/01/13 01:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/chart/chart_22_buggy/source/org/jfree/data/KeyedObjects2D.java=>231,237]
+if(row>=0){
+KeyedObjects rowData=(KeyedObjects)this.rows.get(row);
+return rowData.getObject(columnKey);
+}else {
+return null;
+}
+
+Time : 18/01/13 01:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/chart/chart_22_buggy/source/org/jfree/data/KeyedObjects2D.java=>231,237]
+if(row>=column){
+KeyedObjects rowData=(KeyedObjects)this.rows.get(row);
+return rowData.getObject(columnKey);
+}else {
+return null;
+}
+
+Time : 18/01/13 01:03
+----------------------------------------
+Success time : 18/01/13 01:03
+Current failed test : org.jfree.data.junit.KeyedObjects2DTests::testSetObject_purify_4 | 18/01/13 01:03
+Sat Jan 13 01:05:20 AEDT 2018 org.jfree.data.KeyedObjects,171
+Sat Jan 13 01:10:48 AEDT 2018 org.jfree.data.UnknownKeyException,56
+Sat Jan 13 01:10:52 AEDT 2018 Sat Jan 13 01:10:52 AEDT 2018 : org.jfree.data.UnknownKeyException,57=>Find no block
+Sat Jan 13 01:10:53 AEDT 2018 org.jfree.data.KeyedObjects2D,231
+Sat Jan 13 01:19:45 AEDT 2018 org.jfree.data.KeyedObjects2D,232
+Sat Jan 13 01:19:46 AEDT 2018 org.jfree.data.KeyedObjects2D,233
+Sat Jan 13 01:19:47 AEDT 2018 org.jfree.data.KeyedObjects2D,226
+Timeout time : 18/01/13 01:25
+Current failed test : org.jfree.data.junit.KeyedObjects2DTests::testRemoveValue_purify_2 | 18/01/13 01:25
+Sat Jan 13 01:26:58 AEDT 2018 org.jfree.data.KeyedObjects,77
+Sat Jan 13 01:28:20 AEDT 2018 org.jfree.data.KeyedObjects2D,297
+Sat Jan 13 01:31:47 AEDT 2018 org.jfree.data.KeyedObjects2D,300
+Sat Jan 13 01:31:48 AEDT 2018 org.jfree.data.KeyedObjects2D,301
+Timeout time : 18/01/13 01:46
+Current failed test : org.jfree.data.junit.KeyedObjects2DTests::testRemoveColumnByIndex_purify_1 | 18/01/13 01:46
+Sat Jan 13 01:47:56 AEDT 2018 org.jfree.data.KeyedObjects,252
+Sat Jan 13 01:52:17 AEDT 2018 Sat Jan 13 01:52:17 AEDT 2018 : org.jfree.data.KeyedObjects,253=>Find no block
+Sat Jan 13 01:52:18 AEDT 2018 org.jfree.data.KeyedObjects,266
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int index=0;
+if(index<0){
+throw new UnknownKeyException("The key ("+key.toString());
+}
+removeValue(index);
+
+Time : 18/01/13 02:02
+----------------------------------------
+Sat Jan 13 02:05:13 AEDT 2018 org.jfree.data.KeyedObjects,267
+Timeout time : 18/01/13 02:08
+Current failed test : org.jfree.data.junit.KeyedObjects2DTests::testRemoveColumnByIndex_purify_2 | 18/01/13 02:08
+Sat Jan 13 02:09:01 AEDT 2018 org.jfree.data.KeyedObjects,252
+Sat Jan 13 02:13:20 AEDT 2018 Sat Jan 13 02:13:20 AEDT 2018 : org.jfree.data.KeyedObjects,253=>Find no block
+Sat Jan 13 02:13:21 AEDT 2018 org.jfree.data.KeyedObjects,266
+Sat Jan 13 02:25:24 AEDT 2018 org.jfree.data.KeyedObjects,267
+Timeout time : 18/01/13 02:29
+Current failed test : org.jfree.data.junit.KeyedObjects2DTests::testRemoveColumnByIndex_purify_3 | 18/01/13 02:29
+Sat Jan 13 02:30:02 AEDT 2018 org.jfree.data.KeyedObjects,252
+Sat Jan 13 02:34:45 AEDT 2018 Sat Jan 13 02:34:45 AEDT 2018 : org.jfree.data.KeyedObjects,253=>Find no block
+Sat Jan 13 02:34:46 AEDT 2018 org.jfree.data.KeyedObjects,266
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int index=0;
+if(index<0){
+throw new UnknownKeyException("The key ("+key.toString());
+}
+removeValue(index);
+
+Time : 18/01/13 02:44
+----------------------------------------
+Sat Jan 13 02:47:28 AEDT 2018 org.jfree.data.KeyedObjects,267
+Timeout time : 18/01/13 02:50
+Current failed test : org.jfree.data.junit.KeyedObjects2DTests::testRemoveColumnByIndex_purify_4 | 18/01/13 02:50
+Sat Jan 13 02:51:25 AEDT 2018 org.jfree.data.KeyedObjects,252
+Sat Jan 13 02:55:46 AEDT 2018 Sat Jan 13 02:55:46 AEDT 2018 : org.jfree.data.KeyedObjects,253=>Find no block
+Sat Jan 13 02:55:47 AEDT 2018 org.jfree.data.KeyedObjects,266
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int index=0;
+if(index<0){
+throw new UnknownKeyException("The key ("+key.toString());
+}
+removeValue(index);
+
+Time : 18/01/13 03:05
+----------------------------------------
+Sat Jan 13 03:08:27 AEDT 2018 org.jfree.data.KeyedObjects,267
+Timeout time : 18/01/13 03:11
+Current failed test : org.jfree.data.junit.KeyedObjects2DTests::testGetValueByKey_purify_4 | 18/01/13 03:11
+Already fixed : org.jfree.data.junit.KeyedObjects2DTests::testGetValueByKey_purify_4
+Current failed test : org.jfree.data.junit.KeyedObjects2DTests::testGetValueByKey_purify_5 | 18/01/13 03:11
+Sat Jan 13 03:12:13 AEDT 2018 org.jfree.data.KeyedObjects,171
+Sat Jan 13 03:18:00 AEDT 2018 org.jfree.data.UnknownKeyException,56
+Sat Jan 13 03:18:04 AEDT 2018 Sat Jan 13 03:18:04 AEDT 2018 : org.jfree.data.UnknownKeyException,57=>Find no block
+Sat Jan 13 03:18:04 AEDT 2018 org.jfree.data.KeyedObjects2D,231
+Sat Jan 13 03:27:36 AEDT 2018 org.jfree.data.KeyedObjects2D,232
+Sat Jan 13 03:27:37 AEDT 2018 org.jfree.data.KeyedObjects2D,233
+Sat Jan 13 03:27:38 AEDT 2018 org.jfree.data.KeyedObjects2D,226
+Timeout time : 18/01/13 03:32
+Current failed test : org.jfree.data.junit.KeyedObjects2DTests::testRemoveColumnByKey_purify_1 | 18/01/13 03:32
+Sat Jan 13 03:33:40 AEDT 2018 org.jfree.data.KeyedObjects,266
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int index=0;
+if(index<0){
+throw new UnknownKeyException("The key ("+key.toString());
+}
+removeValue(index);
+
+Time : 18/01/13 03:43
+----------------------------------------
+Sat Jan 13 03:46:01 AEDT 2018 org.jfree.data.KeyedObjects,267
+Sat Jan 13 03:51:52 AEDT 2018 org.jfree.data.KeyedObjects,268
+Sat Jan 13 03:51:53 AEDT 2018 org.jfree.data.KeyedObjects2D,370
+Timeout time : 18/01/13 03:53
+Current failed test : org.jfree.data.junit.KeyedObjects2DTests::testRemoveColumnByKey_purify_2 | 18/01/13 03:53
+Sat Jan 13 03:55:12 AEDT 2018 org.jfree.data.KeyedObjects,266
+Sat Jan 13 04:07:10 AEDT 2018 org.jfree.data.KeyedObjects,267
+Sat Jan 13 04:13:07 AEDT 2018 org.jfree.data.KeyedObjects,268
+Sat Jan 13 04:13:07 AEDT 2018 org.jfree.data.KeyedObjects2D,370
+Timeout time : 18/01/13 04:15
+Current failed test : org.jfree.data.junit.KeyedObjects2DTests::testRemoveColumnByKey_purify_3 | 18/01/13 04:15
+Sat Jan 13 04:16:16 AEDT 2018 org.jfree.data.KeyedObjects,266
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int index=0;
+if(index<0){
+throw new UnknownKeyException("The key ("+key.toString());
+}
+removeValue(index);
+
+Time : 18/01/13 04:26
+----------------------------------------
+Sat Jan 13 04:29:07 AEDT 2018 org.jfree.data.KeyedObjects,267
+Sat Jan 13 04:35:06 AEDT 2018 org.jfree.data.KeyedObjects,268
+Sat Jan 13 04:35:07 AEDT 2018 org.jfree.data.KeyedObjects2D,370
+Timeout time : 18/01/13 04:36
+Current failed test : org.jfree.data.junit.KeyedObjects2DTests::testRemoveColumnByKey_purify_4 | 18/01/13 04:36
+Sat Jan 13 04:37:41 AEDT 2018 org.jfree.data.KeyedObjects,266
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int index=0;
+if(index<0){
+throw new UnknownKeyException("The key ("+key.toString());
+}
+removeValue(index);
+
+Time : 18/01/13 04:48
+----------------------------------------
+Sat Jan 13 04:51:13 AEDT 2018 org.jfree.data.KeyedObjects,267
+Sat Jan 13 04:57:17 AEDT 2018 org.jfree.data.KeyedObjects,268
+Sat Jan 13 04:57:18 AEDT 2018 org.jfree.data.KeyedObjects2D,370
+Timeout time : 18/01/13 04:57

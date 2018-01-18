@@ -1,0 +1,49 @@
+=================================================
+Project : closure_113	start : 18/01/15 19:15
+Current failed test : com.google.javascript.jscomp.VarCheckTest::testNoUndeclaredVarWhenUsingClosurePass | 18/01/15 19:15
+Mon Jan 15 19:16:16 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,169
+Mon Jan 15 19:16:27 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,164
+Mon Jan 15 19:37:05 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,165
+Mon Jan 15 19:37:10 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,172
+Mon Jan 15 19:37:14 AEDT 2018 Mon Jan 15 19:37:14 AEDT 2018 : com.google.javascript.jscomp.ProcessClosurePrimitives,174=>Find no block
+Mon Jan 15 19:37:17 AEDT 2018 Mon Jan 15 19:37:17 AEDT 2018 : com.google.javascript.jscomp.ProcessClosurePrimitives,1227=>Find no block
+Mon Jan 15 19:37:22 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,1228
+Mon Jan 15 19:38:20 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,1229
+Mon Jan 15 19:38:24 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,1230
+Mon Jan 15 19:38:28 AEDT 2018 Mon Jan 15 19:38:28 AEDT 2018 : com.google.javascript.jscomp.ProcessClosurePrimitives,1231=>Find no block
+Mon Jan 15 19:38:32 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,302
+Mon Jan 15 19:48:37 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,299
+Mon Jan 15 20:38:47 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,300
+Mon Jan 15 20:38:50 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,301
+Mon Jan 15 20:38:54 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,321
+Mon Jan 15 20:59:55 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,322
+Mon Jan 15 21:13:01 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,329
+Mon Jan 15 21:15:35 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,223
+Mon Jan 15 21:15:47 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,296
+Mon Jan 15 21:18:16 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,297
+Mon Jan 15 21:18:19 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,298
+Mon Jan 15 21:47:13 AEDT 2018 Mon Jan 15 21:47:13 AEDT 2018 : com.google.javascript.jscomp.ProcessClosurePrimitives,334=>Find no block
+Mon Jan 15 21:47:15 AEDT 2018 com.google.javascript.jscomp.JSError,140
+Mon Jan 15 21:47:24 AEDT 2018 com.google.javascript.jscomp.VarCheck,194
+Mon Jan 15 22:00:36 AEDT 2018 com.google.javascript.jscomp.VarCheck,195
+Mon Jan 15 22:00:39 AEDT 2018 com.google.javascript.jscomp.VarCheck,187
+Mon Jan 15 22:07:40 AEDT 2018 com.google.javascript.jscomp.VarCheck,188
+Mon Jan 15 22:07:43 AEDT 2018 com.google.javascript.jscomp.VarCheck,191
+Mon Jan 15 22:07:47 AEDT 2018 com.google.javascript.jscomp.VarCheck,199
+Mon Jan 15 22:28:25 AEDT 2018 com.google.javascript.jscomp.VarCheck,182
+Mon Jan 15 22:28:29 AEDT 2018 com.google.javascript.jscomp.VarCheck,185
+Mon Jan 15 22:28:33 AEDT 2018 com.google.javascript.jscomp.Scope,441
+Mon Jan 15 22:36:32 AEDT 2018 com.google.javascript.jscomp.Scope,442
+Mon Jan 15 22:39:18 AEDT 2018 com.google.javascript.jscomp.Scope,445
+Mon Jan 15 22:39:19 AEDT 2018 com.google.javascript.jscomp.VarCheck,243
+Mon Jan 15 23:29:18 AEDT 2018 com.google.javascript.jscomp.VarCheck,251
+Mon Jan 15 23:29:19 AEDT 2018 com.google.javascript.jscomp.VarCheck,255
+Mon Jan 15 23:29:20 AEDT 2018 com.google.javascript.jscomp.VarCheck,257
+Mon Jan 15 23:29:20 AEDT 2018 com.google.javascript.jscomp.VarCheck,258
+Mon Jan 15 23:29:21 AEDT 2018 Mon Jan 15 23:29:21 AEDT 2018 : com.google.javascript.jscomp.VarCheck,259=>Find no block
+Mon Jan 15 23:29:22 AEDT 2018 com.google.javascript.jscomp.VarCheck,368
+Mon Jan 15 23:29:37 AEDT 2018 com.google.javascript.jscomp.Compiler,2440
+Mon Jan 15 23:29:40 AEDT 2018 com.google.javascript.jscomp.Compiler,2441
+Mon Jan 15 23:29:41 AEDT 2018 com.google.javascript.jscomp.Compiler,2443
+Mon Jan 15 23:29:45 AEDT 2018 com.google.javascript.jscomp.Compiler,1087
+Timeout time : 18/01/16 00:16

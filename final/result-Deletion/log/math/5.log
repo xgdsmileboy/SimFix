@@ -1,0 +1,243 @@
+=================================================
+Project : math_5	start : 18/01/17 06:20
+Current failed test : org.apache.commons.math3.complex.ComplexTest::testReciprocalZero | 18/01/17 06:20
+Wed Jan 17 06:21:08 EST 2018 org.apache.commons.math3.complex.Complex,305
+Wed Jan 17 06:21:11 EST 2018 org.apache.commons.math3.complex.Complex,1228
+Wed Jan 17 06:21:21 EST 2018 org.apache.commons.math3.complex.Complex,304
+Wed Jan 17 06:21:21 EST 2018 org.apache.commons.math3.complex.Complex,300
+Wed Jan 17 06:21:44 EST 2018 org.apache.commons.math3.complex.Complex,348
+Wed Jan 17 06:22:08 EST 2018 org.apache.commons.math3.complex.Complex,344
+Wed Jan 17 06:23:15 EST 2018 org.apache.commons.math3.complex.Complex,345
+Wed Jan 17 06:23:15 EST 2018 org.apache.commons.math3.complex.Complex,343
+Wed Jan 17 06:23:15 EST 2018 org.apache.commons.math3.complex.Complex,340
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(this!=other){
+return true;
+}
+
+Time : 18/01/17 06:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(this!=null){
+return true;
+}
+
+Time : 18/01/17 06:34
+----------------------------------------
+Wed Jan 17 06:44:20 EST 2018 Wed Jan 17 06:44:20 EST 2018 : org.apache.commons.math3.complex.Complex,98=>Find no block
+Wed Jan 17 06:44:20 EST 2018 org.apache.commons.math3.complex.Complex,99
+Wed Jan 17 06:53:05 EST 2018 org.apache.commons.math3.complex.Complex,100
+Wed Jan 17 06:53:05 EST 2018 org.apache.commons.math3.complex.Complex,102
+Wed Jan 17 06:53:05 EST 2018 org.apache.commons.math3.complex.Complex,103
+Wed Jan 17 06:53:05 EST 2018 Wed Jan 17 06:53:05 EST 2018 : org.apache.commons.math3.complex.Complex,105=>Find no block
+Wed Jan 17 06:53:05 EST 2018 org.apache.commons.math3.exception.MathIllegalNumberException,46
+Wed Jan 17 06:53:41 EST 2018 org.apache.commons.math3.exception.MathIllegalNumberException,47
+Wed Jan 17 06:53:41 EST 2018 Wed Jan 17 06:53:41 EST 2018 : org.apache.commons.math3.exception.MathIllegalNumberException,48=>Find no block
+Wed Jan 17 06:53:41 EST 2018 org.apache.commons.math3.exception.MathIllegalNumberException,54
+Wed Jan 17 06:53:43 EST 2018 Wed Jan 17 06:53:43 EST 2018 : org.apache.commons.math3.exception.MathIllegalArgumentException,44=>Find no block
+Wed Jan 17 06:53:44 EST 2018 org.apache.commons.math3.exception.MathIllegalArgumentException,45
+Wed Jan 17 06:53:59 EST 2018 org.apache.commons.math3.exception.MathIllegalArgumentException,46
+Wed Jan 17 06:53:59 EST 2018 Wed Jan 17 06:53:59 EST 2018 : org.apache.commons.math3.exception.MathIllegalArgumentException,47=>Find no block
+Wed Jan 17 06:53:59 EST 2018 org.apache.commons.math3.exception.MathIllegalArgumentException,51
+Wed Jan 17 06:54:02 EST 2018 org.apache.commons.math3.exception.MathIllegalArgumentException,57
+Wed Jan 17 06:54:04 EST 2018 org.apache.commons.math3.exception.MathIllegalArgumentException,63
+Wed Jan 17 06:54:06 EST 2018 org.apache.commons.math3.exception.NumberIsTooSmallException,50
+Wed Jan 17 06:54:08 EST 2018 Wed Jan 17 06:54:08 EST 2018 : org.apache.commons.math3.exception.NumberIsTooSmallException,54=>Find no block
+Wed Jan 17 06:54:08 EST 2018 org.apache.commons.math3.exception.NumberIsTooSmallException,68
+Wed Jan 17 06:55:07 EST 2018 org.apache.commons.math3.exception.NumberIsTooSmallException,70
+Wed Jan 17 06:55:07 EST 2018 org.apache.commons.math3.exception.NumberIsTooSmallException,71
+Wed Jan 17 06:55:07 EST 2018 Wed Jan 17 06:55:07 EST 2018 : org.apache.commons.math3.exception.NumberIsTooSmallException,72=>Find no block
+Wed Jan 17 06:55:08 EST 2018 org.apache.commons.math3.exception.NumberIsTooSmallException,78
+Wed Jan 17 06:55:10 EST 2018 org.apache.commons.math3.exception.NumberIsTooSmallException,85
+Wed Jan 17 06:55:12 EST 2018 org.apache.commons.math3.exception.NullArgumentException,41
+Wed Jan 17 06:55:14 EST 2018 Wed Jan 17 06:55:14 EST 2018 : org.apache.commons.math3.exception.NullArgumentException,42=>Find no block
+Wed Jan 17 06:55:14 EST 2018 org.apache.commons.math3.exception.NullArgumentException,50
+Wed Jan 17 06:55:16 EST 2018 Wed Jan 17 06:55:16 EST 2018 : org.apache.commons.math3.exception.NullArgumentException,51=>Find no block
+Wed Jan 17 06:55:16 EST 2018 org.apache.commons.math3.exception.NotPositiveException,37
+Wed Jan 17 06:55:19 EST 2018 Wed Jan 17 06:55:19 EST 2018 : org.apache.commons.math3.exception.NotPositiveException,38=>Find no block
+Wed Jan 17 06:55:19 EST 2018 org.apache.commons.math3.exception.NotPositiveException,47
+Wed Jan 17 06:55:21 EST 2018 Wed Jan 17 06:55:21 EST 2018 : org.apache.commons.math3.exception.NotPositiveException,48=>Find no block
+Wed Jan 17 06:55:21 EST 2018 org.apache.commons.math3.complex.Complex,89
+Wed Jan 17 06:55:23 EST 2018 Wed Jan 17 06:55:23 EST 2018 : org.apache.commons.math3.complex.Complex,90=>Find no block
+Wed Jan 17 06:55:23 EST 2018 org.apache.commons.math3.complex.Complex,116
+Wed Jan 17 06:55:40 EST 2018 org.apache.commons.math3.complex.Complex,117
+Wed Jan 17 06:55:40 EST 2018 org.apache.commons.math3.complex.Complex,119
+Wed Jan 17 06:56:04 EST 2018 org.apache.commons.math3.complex.Complex,120
+Wed Jan 17 06:56:04 EST 2018 org.apache.commons.math3.complex.Complex,122
+Wed Jan 17 07:06:12 EST 2018 org.apache.commons.math3.complex.Complex,123
+Wed Jan 17 07:06:12 EST 2018 org.apache.commons.math3.complex.Complex,124
+Wed Jan 17 07:06:12 EST 2018 org.apache.commons.math3.complex.Complex,126
+Wed Jan 17 07:18:45 EST 2018 org.apache.commons.math3.complex.Complex,127
+Wed Jan 17 07:18:45 EST 2018 org.apache.commons.math3.complex.Complex,129
+Wed Jan 17 07:18:46 EST 2018 org.apache.commons.math3.complex.Complex,130
+Wed Jan 17 07:18:46 EST 2018 org.apache.commons.math3.complex.Complex,132
+Wed Jan 17 07:32:16 EST 2018 org.apache.commons.math3.complex.Complex,133
+Wed Jan 17 07:32:16 EST 2018 org.apache.commons.math3.complex.Complex,157
+Wed Jan 17 07:34:54 EST 2018 org.apache.commons.math3.complex.Complex,158
+Wed Jan 17 07:35:29 EST 2018 org.apache.commons.math3.complex.Complex,159
+Wed Jan 17 07:35:29 EST 2018 org.apache.commons.math3.complex.Complex,162
+Wed Jan 17 07:35:29 EST 2018 org.apache.commons.math3.complex.Complex,175
+Wed Jan 17 07:37:18 EST 2018 org.apache.commons.math3.complex.Complex,176
+Wed Jan 17 07:37:18 EST 2018 org.apache.commons.math3.complex.Complex,179
+Wed Jan 17 07:39:35 EST 2018 org.apache.commons.math3.complex.Complex,197
+Wed Jan 17 07:39:35 EST 2018 org.apache.commons.math3.complex.Complex,198
+Wed Jan 17 07:39:35 EST 2018 org.apache.commons.math3.complex.Complex,201
+Wed Jan 17 07:40:23 EST 2018 org.apache.commons.math3.complex.Complex,248
+Wed Jan 17 07:42:17 EST 2018 org.apache.commons.math3.complex.Complex,249
+Wed Jan 17 07:42:53 EST 2018 org.apache.commons.math3.complex.Complex,250
+Wed Jan 17 07:42:53 EST 2018 org.apache.commons.math3.complex.Complex,253
+Wed Jan 17 07:54:04 EST 2018 org.apache.commons.math3.complex.Complex,254
+Wed Jan 17 07:56:42 EST 2018 org.apache.commons.math3.complex.Complex,255
+Wed Jan 17 07:58:03 EST 2018 org.apache.commons.math3.complex.Complex,256
+Wed Jan 17 07:58:03 EST 2018 org.apache.commons.math3.complex.Complex,259
+Wed Jan 17 07:58:05 EST 2018 org.apache.commons.math3.complex.Complex,260
+Wed Jan 17 07:58:05 EST 2018 org.apache.commons.math3.complex.Complex,263
+Wed Jan 17 08:53:03 EST 2018 org.apache.commons.math3.complex.Complex,264
+Wed Jan 17 08:53:03 EST 2018 org.apache.commons.math3.complex.Complex,265
+Wed Jan 17 08:53:03 EST 2018 org.apache.commons.math3.complex.Complex,266
+Wed Jan 17 08:53:03 EST 2018 org.apache.commons.math3.complex.Complex,269
+Wed Jan 17 08:53:04 EST 2018 org.apache.commons.math3.complex.Complex,270
+Wed Jan 17 08:53:04 EST 2018 org.apache.commons.math3.complex.Complex,271
+Wed Jan 17 08:53:04 EST 2018 org.apache.commons.math3.complex.Complex,285
+Wed Jan 17 08:54:53 EST 2018 org.apache.commons.math3.complex.Complex,286
+Wed Jan 17 08:54:54 EST 2018 org.apache.commons.math3.complex.Complex,288
+Wed Jan 17 08:54:56 EST 2018 org.apache.commons.math3.complex.Complex,289
+Wed Jan 17 08:54:56 EST 2018 org.apache.commons.math3.complex.Complex,291
+Wed Jan 17 08:55:34 EST 2018 org.apache.commons.math3.complex.Complex,292
+Wed Jan 17 08:55:34 EST 2018 org.apache.commons.math3.complex.Complex,294
+Wed Jan 17 09:07:33 EST 2018 org.apache.commons.math3.complex.Complex,301
+Wed Jan 17 09:07:33 EST 2018 org.apache.commons.math3.complex.Complex,308
+Wed Jan 17 09:07:56 EST 2018 org.apache.commons.math3.complex.Complex,309
+Wed Jan 17 09:07:56 EST 2018 org.apache.commons.math3.complex.Complex,312
+Wed Jan 17 09:14:57 EST 2018 org.apache.commons.math3.complex.Complex,313
+Wed Jan 17 09:14:57 EST 2018 org.apache.commons.math3.complex.Complex,314
+Wed Jan 17 09:14:57 EST 2018 org.apache.commons.math3.complex.Complex,315
+Wed Jan 17 09:14:57 EST 2018 org.apache.commons.math3.complex.Complex,317
+Wed Jan 17 09:14:57 EST 2018 org.apache.commons.math3.complex.Complex,318
+Wed Jan 17 09:14:58 EST 2018 org.apache.commons.math3.complex.Complex,319
+Wed Jan 17 09:14:58 EST 2018 org.apache.commons.math3.complex.Complex,341
+Wed Jan 17 09:14:58 EST 2018 org.apache.commons.math3.complex.Complex,346
+Wed Jan 17 09:14:58 EST 2018 org.apache.commons.math3.complex.Complex,351
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(this==other){
+return true;
+}
+return true;
+
+Time : 18/01/17 09:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return true;
+
+Time : 18/01/17 09:27
+----------------------------------------
+Wed Jan 17 09:37:17 EST 2018 org.apache.commons.math3.complex.Complex,363
+Wed Jan 17 09:37:26 EST 2018 org.apache.commons.math3.complex.Complex,364
+Wed Jan 17 09:37:26 EST 2018 org.apache.commons.math3.complex.Complex,366
+Wed Jan 17 09:39:16 EST 2018 org.apache.commons.math3.complex.Complex,376
+Wed Jan 17 09:39:44 EST 2018 org.apache.commons.math3.complex.Complex,385
+Wed Jan 17 09:40:11 EST 2018 org.apache.commons.math3.complex.Complex,396
+Wed Jan 17 09:40:33 EST 2018 org.apache.commons.math3.complex.Complex,409
+Wed Jan 17 09:40:35 EST 2018 org.apache.commons.math3.complex.Complex,438
+Wed Jan 17 09:49:21 EST 2018 org.apache.commons.math3.complex.Complex,439
+Wed Jan 17 09:49:21 EST 2018 org.apache.commons.math3.complex.Complex,440
+Wed Jan 17 09:49:21 EST 2018 org.apache.commons.math3.complex.Complex,442
+Wed Jan 17 09:49:21 EST 2018 org.apache.commons.math3.complex.Complex,447
+Wed Jan 17 09:49:21 EST 2018 org.apache.commons.math3.complex.Complex,449
+Wed Jan 17 09:49:21 EST 2018 org.apache.commons.math3.complex.Complex,462
+Wed Jan 17 09:49:21 EST 2018 org.apache.commons.math3.complex.Complex,463
+Wed Jan 17 09:49:21 EST 2018 org.apache.commons.math3.complex.Complex,465
+Wed Jan 17 09:49:22 EST 2018 org.apache.commons.math3.complex.Complex,467
+Wed Jan 17 09:49:22 EST 2018 org.apache.commons.math3.complex.Complex,469
+Wed Jan 17 09:50:13 EST 2018 org.apache.commons.math3.complex.Complex,481
+Wed Jan 17 09:52:03 EST 2018 org.apache.commons.math3.complex.Complex,482
+Wed Jan 17 09:52:03 EST 2018 org.apache.commons.math3.complex.Complex,484
+Wed Jan 17 09:52:04 EST 2018 org.apache.commons.math3.complex.Complex,488
+Wed Jan 17 09:52:04 EST 2018 org.apache.commons.math3.complex.Complex,490
+Wed Jan 17 09:58:43 EST 2018 org.apache.commons.math3.complex.Complex,501
+Wed Jan 17 09:58:43 EST 2018 org.apache.commons.math3.complex.Complex,502
+Wed Jan 17 09:58:43 EST 2018 org.apache.commons.math3.complex.Complex,505
+Wed Jan 17 09:59:31 EST 2018 org.apache.commons.math3.complex.Complex,528
+Wed Jan 17 10:02:10 EST 2018 org.apache.commons.math3.complex.Complex,529
+Wed Jan 17 10:02:45 EST 2018 org.apache.commons.math3.complex.Complex,530
+Wed Jan 17 10:02:45 EST 2018 org.apache.commons.math3.complex.Complex,533
+Wed Jan 17 10:02:45 EST 2018 org.apache.commons.math3.complex.Complex,546
+Wed Jan 17 10:04:33 EST 2018 org.apache.commons.math3.complex.Complex,547
+Wed Jan 17 10:04:34 EST 2018 org.apache.commons.math3.complex.Complex,549
+Wed Jan 17 10:06:49 EST 2018 org.apache.commons.math3.complex.Complex,569
+Wed Jan 17 10:06:49 EST 2018 org.apache.commons.math3.complex.Complex,570
+Wed Jan 17 10:06:49 EST 2018 org.apache.commons.math3.complex.Complex,573
+Wed Jan 17 10:07:35 EST 2018 org.apache.commons.math3.complex.Complex,593
+Wed Jan 17 10:07:35 EST 2018 org.apache.commons.math3.complex.Complex,594
+Wed Jan 17 10:07:35 EST 2018 org.apache.commons.math3.complex.Complex,597
+Wed Jan 17 10:08:20 EST 2018 org.apache.commons.math3.complex.Complex,617
+Wed Jan 17 10:08:20 EST 2018 org.apache.commons.math3.complex.Complex,618
+Wed Jan 17 10:08:20 EST 2018 org.apache.commons.math3.complex.Complex,621
+Wed Jan 17 10:09:24 EST 2018 org.apache.commons.math3.complex.Complex,658
+Wed Jan 17 10:09:25 EST 2018 org.apache.commons.math3.complex.Complex,659
+Wed Jan 17 10:09:25 EST 2018 org.apache.commons.math3.complex.Complex,662
+Wed Jan 17 10:10:22 EST 2018 org.apache.commons.math3.complex.Complex,698
+Wed Jan 17 10:10:22 EST 2018 org.apache.commons.math3.complex.Complex,699
+Wed Jan 17 10:10:22 EST 2018 org.apache.commons.math3.complex.Complex,702
+Wed Jan 17 10:11:18 EST 2018 org.apache.commons.math3.complex.Complex,739
+Wed Jan 17 10:11:18 EST 2018 org.apache.commons.math3.complex.Complex,740
+Wed Jan 17 10:11:18 EST 2018 org.apache.commons.math3.complex.Complex,743
+Wed Jan 17 10:14:08 EST 2018 org.apache.commons.math3.complex.Complex,744
+Wed Jan 17 10:14:08 EST 2018 org.apache.commons.math3.complex.Complex,784
+Wed Jan 17 10:14:08 EST 2018 org.apache.commons.math3.complex.Complex,785
+Wed Jan 17 10:14:08 EST 2018 org.apache.commons.math3.complex.Complex,788
+Wed Jan 17 10:15:24 EST 2018 org.apache.commons.math3.complex.Complex,814
+Wed Jan 17 10:16:25 EST 2018 org.apache.commons.math3.complex.Complex,815
+Wed Jan 17 10:16:25 EST 2018 org.apache.commons.math3.complex.Complex,826
+Wed Jan 17 10:16:54 EST 2018 org.apache.commons.math3.complex.Complex,862
+Wed Jan 17 10:16:54 EST 2018 org.apache.commons.math3.complex.Complex,863
+Wed Jan 17 10:16:54 EST 2018 org.apache.commons.math3.complex.Complex,866
+Wed Jan 17 10:17:50 EST 2018 org.apache.commons.math3.complex.Complex,902
+Wed Jan 17 10:17:50 EST 2018 org.apache.commons.math3.complex.Complex,903
+Wed Jan 17 10:17:50 EST 2018 org.apache.commons.math3.complex.Complex,906
+Wed Jan 17 10:18:46 EST 2018 org.apache.commons.math3.complex.Complex,945
+Wed Jan 17 10:18:47 EST 2018 org.apache.commons.math3.complex.Complex,946
+Wed Jan 17 10:18:47 EST 2018 org.apache.commons.math3.complex.Complex,949
+Wed Jan 17 10:18:49 EST 2018 org.apache.commons.math3.complex.Complex,950
+Wed Jan 17 10:18:49 EST 2018 org.apache.commons.math3.complex.Complex,953
+Wed Jan 17 10:29:43 EST 2018 org.apache.commons.math3.complex.Complex,954
+Wed Jan 17 10:29:43 EST 2018 org.apache.commons.math3.complex.Complex,955
+Wed Jan 17 10:29:43 EST 2018 org.apache.commons.math3.complex.Complex,957
+Wed Jan 17 10:29:43 EST 2018 org.apache.commons.math3.complex.Complex,980
+Wed Jan 17 10:30:13 EST 2018 org.apache.commons.math3.complex.Complex,1016
+Wed Jan 17 10:30:57 EST 2018 org.apache.commons.math3.complex.Complex,1017
+Wed Jan 17 10:30:57 EST 2018 org.apache.commons.math3.complex.Complex,1019
+Wed Jan 17 10:31:50 EST 2018 org.apache.commons.math3.complex.Complex,1020
+Wed Jan 17 10:31:50 EST 2018 org.apache.commons.math3.complex.Complex,1022
+Wed Jan 17 10:32:12 EST 2018 org.apache.commons.math3.complex.Complex,1023
+Wed Jan 17 10:32:12 EST 2018 org.apache.commons.math3.complex.Complex,1026
+Wed Jan 17 10:34:44 EST 2018 org.apache.commons.math3.complex.Complex,1027
+Wed Jan 17 10:38:09 EST 2018 org.apache.commons.math3.complex.Complex,1028
+Wed Jan 17 10:43:02 EST 2018 org.apache.commons.math3.complex.Complex,1030
+Wed Jan 17 10:43:02 EST 2018 org.apache.commons.math3.complex.Complex,1067
+Wed Jan 17 10:43:34 EST 2018 org.apache.commons.math3.complex.Complex,1068
+Wed Jan 17 10:43:34 EST 2018 org.apache.commons.math3.complex.Complex,1070
+Wed Jan 17 10:44:15 EST 2018 org.apache.commons.math3.complex.Complex,1071
+Wed Jan 17 10:44:16 EST 2018 org.apache.commons.math3.complex.Complex,1073
+Wed Jan 17 10:44:36 EST 2018 org.apache.commons.math3.complex.Complex,1074
+Wed Jan 17 10:44:37 EST 2018 org.apache.commons.math3.complex.Complex,1076
+Wed Jan 17 10:47:04 EST 2018 org.apache.commons.math3.complex.Complex,1077
+Wed Jan 17 10:50:30 EST 2018 org.apache.commons.math3.complex.Complex,1078
+Wed Jan 17 10:55:23 EST 2018 org.apache.commons.math3.complex.Complex,1080
+Wed Jan 17 10:55:23 EST 2018 org.apache.commons.math3.complex.Complex,1104
+Wed Jan 17 10:55:25 EST 2018 org.apache.commons.math3.complex.Complex,1131
+Wed Jan 17 10:57:57 EST 2018 org.apache.commons.math3.complex.Complex,1132
+Wed Jan 17 10:57:57 EST 2018 org.apache.commons.math3.complex.Complex,1136
+Failed time : 18/01/17 11:07

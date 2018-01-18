@@ -1,0 +1,204 @@
+=================================================
+Project : chart_17	start : 18/01/14 09:09
+Current failed test : org.jfree.data.time.junit.TimeSeriesTests::testBug1832432 | 18/01/14 09:09
+Sun Jan 14 09:09:34 EST 2018 org.jfree.data.time.TimeSeries,880
+Sun Jan 14 09:10:06 EST 2018 org.jfree.data.time.TimeSeries,857
+Sun Jan 14 09:11:47 EST 2018 org.jfree.data.time.TimeSeries,876
+Sun Jan 14 09:12:20 EST 2018 org.jfree.data.time.TimeSeries,879
+Sun Jan 14 09:12:20 EST 2018 org.jfree.data.time.TimeSeries,140
+Sun Jan 14 09:12:29 EST 2018 Sun Jan 14 09:12:29 EST 2018 : org.jfree.data.time.TimeSeries,142=>Find no block
+Sun Jan 14 09:12:29 EST 2018 Sun Jan 14 09:12:29 EST 2018 : org.jfree.data.time.Year,96=>Find no block
+Sun Jan 14 09:12:29 EST 2018 org.jfree.data.time.Year,97
+Sun Jan 14 09:17:55 EST 2018 org.jfree.data.time.Year,103
+Sun Jan 14 09:22:55 EST 2018 org.jfree.data.time.Year,104
+Sun Jan 14 09:22:55 EST 2018 Sun Jan 14 09:22:55 EST 2018 : org.jfree.data.time.Year,105=>Find no block
+Sun Jan 14 09:22:56 EST 2018 org.jfree.data.time.Year,136
+Sun Jan 14 09:22:58 EST 2018 org.jfree.data.time.Year,176
+Sun Jan 14 09:23:13 EST 2018 org.jfree.data.time.Year,177
+Sun Jan 14 09:23:14 EST 2018 Sun Jan 14 09:23:14 EST 2018 : org.jfree.data.time.Year,178=>Find no block
+Sun Jan 14 09:23:14 EST 2018 org.jfree.data.time.Year,218
+Sun Jan 14 09:23:14 EST 2018 org.jfree.data.time.Year,233
+Sun Jan 14 09:25:29 EST 2018 org.jfree.data.time.Year,234
+Sun Jan 14 09:25:29 EST 2018 org.jfree.data.time.Year,237
+Sun Jan 14 09:25:29 EST 2018 org.jfree.data.time.Year,252
+Sun Jan 14 09:27:44 EST 2018 org.jfree.data.time.Year,253
+Sun Jan 14 09:27:44 EST 2018 org.jfree.data.time.Year,256
+Sun Jan 14 09:27:44 EST 2018 org.jfree.data.time.Year,317
+Sun Jan 14 09:27:59 EST 2018 org.jfree.data.time.Year,318
+Sun Jan 14 09:27:59 EST 2018 org.jfree.data.time.Year,319
+Sun Jan 14 09:27:59 EST 2018 Sun Jan 14 09:27:59 EST 2018 : org.jfree.data.time.Year,320=>Find no block
+Sun Jan 14 09:27:59 EST 2018 org.jfree.data.time.Year,336
+Sun Jan 14 09:28:50 EST 2018 org.jfree.data.time.TimeSeries,586
+Sun Jan 14 09:29:36 EST 2018 Sun Jan 14 09:29:36 EST 2018 : org.jfree.data.time.TimeSeries,587=>Find no block
+Sun Jan 14 09:29:36 EST 2018 org.jfree.data.time.TimeSeries,600
+Sun Jan 14 09:31:23 EST 2018 org.jfree.data.time.TimeSeries,601
+Sun Jan 14 09:31:24 EST 2018 Sun Jan 14 09:31:24 EST 2018 : org.jfree.data.time.TimeSeries,602=>Find no block
+Sun Jan 14 09:31:24 EST 2018 org.jfree.data.time.TimeSeries,153
+Sun Jan 14 09:31:32 EST 2018 Sun Jan 14 09:31:32 EST 2018 : org.jfree.data.time.TimeSeries,155=>Find no block
+Sun Jan 14 09:31:32 EST 2018 org.jfree.data.general.Series,313
+Sun Jan 14 09:33:20 EST 2018 org.jfree.data.general.Series,314
+Sun Jan 14 09:33:20 EST 2018 Sun Jan 14 09:33:20 EST 2018 : org.jfree.data.general.Series,316=>Find no block
+Sun Jan 14 09:33:20 EST 2018 org.jfree.data.general.Series,326
+Sun Jan 14 09:37:33 EST 2018 org.jfree.data.general.Series,327
+Sun Jan 14 09:37:34 EST 2018 Sun Jan 14 09:37:34 EST 2018 : org.jfree.data.general.Series,334=>Find no block
+Sun Jan 14 09:37:34 EST 2018 org.jfree.data.general.SeriesChangeEvent,61
+Sun Jan 14 09:37:36 EST 2018 Sun Jan 14 09:37:36 EST 2018 : org.jfree.data.general.SeriesChangeEvent,62=>Find no block
+Sun Jan 14 09:37:36 EST 2018 Sun Jan 14 09:37:36 EST 2018 : org.jfree.data.time.RegularTimePeriod,70=>Find no block
+Sun Jan 14 09:37:36 EST 2018 org.jfree.data.time.TimeSeries,339
+Sun Jan 14 09:37:55 EST 2018 org.jfree.data.time.TimeSeries,370
+Sun Jan 14 09:37:57 EST 2018 org.jfree.data.time.TimeSeries,489
+Sun Jan 14 09:38:12 EST 2018 org.jfree.data.time.TimeSeries,492
+Sun Jan 14 09:42:57 EST 2018 org.jfree.data.time.TimeSeries,504
+Sun Jan 14 09:47:39 EST 2018 org.jfree.data.time.TimeSeries,505
+Sun Jan 14 09:52:32 EST 2018 org.jfree.data.time.TimeSeries,506
+Sun Jan 14 10:12:00 EST 2018 org.jfree.data.time.TimeSeries,507
+Sun Jan 14 10:12:07 EST 2018 org.jfree.data.time.TimeSeries,508
+Sun Jan 14 10:12:07 EST 2018 org.jfree.data.time.TimeSeries,511
+Sun Jan 14 10:12:14 EST 2018 org.jfree.data.time.TimeSeries,512
+Sun Jan 14 10:12:14 EST 2018 org.jfree.data.time.TimeSeries,513
+Sun Jan 14 10:12:14 EST 2018 org.jfree.data.time.TimeSeries,514
+Sun Jan 14 10:12:14 EST 2018 org.jfree.data.time.TimeSeries,534
+Sun Jan 14 10:16:52 EST 2018 org.jfree.data.time.TimeSeries,536
+Sun Jan 14 10:16:52 EST 2018 org.jfree.data.time.TimeSeries,540
+Sun Jan 14 10:16:52 EST 2018 org.jfree.data.time.TimeSeries,543
+Sun Jan 14 10:16:52 EST 2018 org.jfree.data.time.TimeSeries,544
+Sun Jan 14 10:16:53 EST 2018 Sun Jan 14 10:16:53 EST 2018 : org.jfree.data.time.TimeSeries,548=>Find no block
+Sun Jan 14 10:16:53 EST 2018 org.jfree.data.time.TimeSeries,738
+Sun Jan 14 10:19:12 EST 2018 org.jfree.data.time.TimeSeries,739
+Sun Jan 14 10:19:12 EST 2018 org.jfree.data.time.TimeSeries,740
+Sun Jan 14 10:19:12 EST 2018 Sun Jan 14 10:19:12 EST 2018 : org.jfree.data.time.TimeSeries,742=>Find no block
+Sun Jan 14 10:19:12 EST 2018 org.jfree.data.time.TimeSeries,746
+Sun Jan 14 10:19:12 EST 2018 Sun Jan 14 10:19:12 EST 2018 : org.jfree.data.time.TimeSeries,750=>Find no block
+Sun Jan 14 10:19:12 EST 2018 Sun Jan 14 10:19:12 EST 2018 : org.jfree.data.time.TimeSeriesDataItem,92=>Find no block
+Sun Jan 14 10:19:13 EST 2018 org.jfree.data.time.TimeSeriesDataItem,93
+Sun Jan 14 10:19:30 EST 2018 org.jfree.data.time.TimeSeriesDataItem,96
+Sun Jan 14 10:19:59 EST 2018 org.jfree.data.time.TimeSeriesDataItem,97
+Sun Jan 14 10:19:59 EST 2018 Sun Jan 14 10:19:59 EST 2018 : org.jfree.data.time.TimeSeriesDataItem,98=>Find no block
+Sun Jan 14 10:19:59 EST 2018 org.jfree.data.time.TimeSeriesDataItem,116
+Sun Jan 14 10:20:01 EST 2018 org.jfree.data.time.TimeSeries,238
+Sun Jan 14 10:20:19 EST 2018 org.jfree.data.general.Series,102
+Sun Jan 14 10:20:22 EST 2018 Sun Jan 14 10:20:22 EST 2018 : org.jfree.data.general.Series,103=>Find no block
+Sun Jan 14 10:20:22 EST 2018 Sun Jan 14 10:20:22 EST 2018 : org.jfree.data.general.Series,111=>Find no block
+Sun Jan 14 10:20:22 EST 2018 org.jfree.data.general.Series,112
+Sun Jan 14 10:20:45 EST 2018 org.jfree.data.general.Series,115
+Sun Jan 14 10:22:12 EST 2018 org.jfree.data.general.Series,116
+Sun Jan 14 10:22:12 EST 2018 org.jfree.data.general.Series,117
+Sun Jan 14 10:22:12 EST 2018 org.jfree.data.general.Series,118
+Sun Jan 14 10:22:12 EST 2018 org.jfree.data.general.Series,119
+Sun Jan 14 10:22:12 EST 2018 Sun Jan 14 10:22:12 EST 2018 : org.jfree.data.general.Series,120=>Find no block
+Sun Jan 14 10:22:13 EST 2018 org.jfree.data.time.TimeSeries,172
+Sun Jan 14 10:22:52 EST 2018 org.jfree.data.time.TimeSeries,173
+Sun Jan 14 10:22:52 EST 2018 org.jfree.data.time.TimeSeries,174
+Sun Jan 14 10:22:52 EST 2018 org.jfree.data.time.TimeSeries,175
+Sun Jan 14 10:22:52 EST 2018 org.jfree.data.time.TimeSeries,176
+Sun Jan 14 10:22:52 EST 2018 org.jfree.data.time.TimeSeries,177
+Sun Jan 14 10:22:52 EST 2018 org.jfree.data.time.TimeSeries,178
+Sun Jan 14 10:22:52 EST 2018 Sun Jan 14 10:22:52 EST 2018 : org.jfree.data.time.TimeSeries,179=>Find no block
+Sun Jan 14 10:22:53 EST 2018 org.jfree.data.general.Series,113
+Sun Jan 14 10:22:53 EST 2018 org.jfree.data.general.Series,130
+Sun Jan 14 10:23:07 EST 2018 org.jfree.data.general.Series,142
+Sun Jan 14 10:23:07 EST 2018 org.jfree.data.general.Series,143
+Sun Jan 14 10:23:07 EST 2018 org.jfree.data.general.Series,145
+Sun Jan 14 10:24:46 EST 2018 org.jfree.data.general.Series,146
+Sun Jan 14 10:24:46 EST 2018 org.jfree.data.general.Series,147
+Sun Jan 14 10:24:46 EST 2018 Sun Jan 14 10:24:46 EST 2018 : org.jfree.data.general.Series,148=>Find no block
+Sun Jan 14 10:24:46 EST 2018 org.jfree.data.general.Series,158
+Sun Jan 14 10:24:48 EST 2018 org.jfree.data.general.Series,170
+Sun Jan 14 10:27:21 EST 2018 org.jfree.data.general.Series,171
+Sun Jan 14 10:27:21 EST 2018 org.jfree.data.general.Series,172
+Sun Jan 14 10:27:21 EST 2018 Sun Jan 14 10:27:21 EST 2018 : org.jfree.data.general.Series,174=>Find no block
+Sun Jan 14 10:27:21 EST 2018 org.jfree.data.general.Series,185
+Sun Jan 14 10:27:23 EST 2018 org.jfree.data.general.Series,197
+Sun Jan 14 10:32:22 EST 2018 org.jfree.data.general.Series,198
+Sun Jan 14 10:32:22 EST 2018 org.jfree.data.general.Series,199
+Sun Jan 14 10:32:22 EST 2018 Sun Jan 14 10:32:22 EST 2018 : org.jfree.data.general.Series,201=>Find no block
+Sun Jan 14 10:32:22 EST 2018 org.jfree.data.general.Series,212
+Sun Jan 14 10:32:24 EST 2018 org.jfree.data.general.Series,241
+Sun Jan 14 10:35:50 EST 2018 org.jfree.data.general.Series,242
+Sun Jan 14 10:35:50 EST 2018 org.jfree.data.general.Series,243
+Sun Jan 14 10:35:50 EST 2018 org.jfree.data.general.Series,244
+Sun Jan 14 10:35:50 EST 2018 org.jfree.data.general.Series,256
+Sun Jan 14 10:36:47 EST 2018 org.jfree.data.general.Series,257
+Sun Jan 14 10:36:48 EST 2018 org.jfree.data.general.Series,259
+Sun Jan 14 10:37:02 EST 2018 org.jfree.data.general.Series,260
+Sun Jan 14 10:37:02 EST 2018 org.jfree.data.general.Series,262
+Sun Jan 14 10:39:37 EST 2018 org.jfree.data.general.Series,263
+Sun Jan 14 10:39:37 EST 2018 org.jfree.data.general.Series,264
+Sun Jan 14 10:39:37 EST 2018 org.jfree.data.general.Series,266
+Sun Jan 14 10:39:40 EST 2018 org.jfree.data.general.Series,267
+Sun Jan 14 10:39:40 EST 2018 org.jfree.data.general.Series,269
+Sun Jan 14 10:40:02 EST 2018 org.jfree.data.general.Series,279
+Sun Jan 14 10:40:56 EST 2018 org.jfree.data.general.Series,280
+Sun Jan 14 10:40:56 EST 2018 org.jfree.data.general.Series,282
+Sun Jan 14 10:40:56 EST 2018 org.jfree.data.general.Series,295
+Sun Jan 14 10:41:45 EST 2018 Sun Jan 14 10:41:45 EST 2018 : org.jfree.data.general.Series,296=>Find no block
+Sun Jan 14 10:41:46 EST 2018 org.jfree.data.general.Series,305
+Sun Jan 14 10:42:18 EST 2018 Sun Jan 14 10:42:18 EST 2018 : org.jfree.data.general.Series,306=>Find no block
+Sun Jan 14 10:42:18 EST 2018 org.jfree.data.general.Series,328
+Sun Jan 14 10:42:18 EST 2018 org.jfree.data.general.Series,329
+Sun Jan 14 10:42:19 EST 2018 org.jfree.data.general.Series,342
+Sun Jan 14 10:42:44 EST 2018 Sun Jan 14 10:42:44 EST 2018 : org.jfree.data.general.Series,343=>Find no block
+Sun Jan 14 10:42:44 EST 2018 org.jfree.data.general.Series,351
+Sun Jan 14 10:43:10 EST 2018 Sun Jan 14 10:43:10 EST 2018 : org.jfree.data.general.Series,352=>Find no block
+Sun Jan 14 10:43:11 EST 2018 org.jfree.data.general.Series,363
+Sun Jan 14 10:44:47 EST 2018 Sun Jan 14 10:44:47 EST 2018 : org.jfree.data.general.Series,365=>Find no block
+Sun Jan 14 10:44:47 EST 2018 org.jfree.data.general.Series,295
+Sun Jan 14 10:44:47 EST 2018 org.jfree.data.general.SeriesException,61
+Sun Jan 14 10:44:49 EST 2018 Sun Jan 14 10:44:49 EST 2018 : org.jfree.data.general.SeriesException,62=>Find no block
+Sun Jan 14 10:44:49 EST 2018 org.jfree.data.time.RegularTimePeriod,85
+Sun Jan 14 10:45:21 EST 2018 org.jfree.data.time.RegularTimePeriod,87
+Sun Jan 14 10:45:21 EST 2018 org.jfree.data.time.RegularTimePeriod,89
+Sun Jan 14 10:45:21 EST 2018 Sun Jan 14 10:45:21 EST 2018 : org.jfree.data.time.RegularTimePeriod,94=>Find no block
+Sun Jan 14 10:45:21 EST 2018 Sun Jan 14 10:45:21 EST 2018 : org.jfree.data.time.RegularTimePeriod,92=>Find no block
+Sun Jan 14 10:45:21 EST 2018 org.jfree.data.time.RegularTimePeriod,95
+Sun Jan 14 10:45:21 EST 2018 org.jfree.data.time.RegularTimePeriod,107
+Sun Jan 14 10:46:38 EST 2018 org.jfree.data.time.RegularTimePeriod,108
+Sun Jan 14 10:46:40 EST 2018 org.jfree.data.time.RegularTimePeriod,110
+Sun Jan 14 10:46:40 EST 2018 org.jfree.data.time.RegularTimePeriod,111
+Sun Jan 14 10:46:42 EST 2018 org.jfree.data.time.RegularTimePeriod,113
+Sun Jan 14 10:46:42 EST 2018 org.jfree.data.time.RegularTimePeriod,114
+Sun Jan 14 10:46:44 EST 2018 org.jfree.data.time.RegularTimePeriod,116
+Sun Jan 14 10:46:44 EST 2018 org.jfree.data.time.RegularTimePeriod,117
+Sun Jan 14 10:46:44 EST 2018 org.jfree.data.time.RegularTimePeriod,119
+Sun Jan 14 10:46:44 EST 2018 org.jfree.data.time.RegularTimePeriod,120
+Sun Jan 14 10:46:44 EST 2018 org.jfree.data.time.RegularTimePeriod,122
+Sun Jan 14 10:46:44 EST 2018 org.jfree.data.time.RegularTimePeriod,123
+Sun Jan 14 10:46:45 EST 2018 org.jfree.data.time.RegularTimePeriod,125
+Sun Jan 14 10:46:45 EST 2018 org.jfree.data.time.RegularTimePeriod,126
+Sun Jan 14 10:46:45 EST 2018 org.jfree.data.time.RegularTimePeriod,129
+Sun Jan 14 10:46:45 EST 2018 org.jfree.data.time.RegularTimePeriod,182
+Sun Jan 14 10:46:47 EST 2018 org.jfree.data.time.RegularTimePeriod,194
+Sun Jan 14 10:46:49 EST 2018 org.jfree.data.time.RegularTimePeriod,254
+Sun Jan 14 10:47:06 EST 2018 org.jfree.data.time.RegularTimePeriod,255
+Sun Jan 14 10:47:06 EST 2018 org.jfree.data.time.RegularTimePeriod,256
+Sun Jan 14 10:47:06 EST 2018 org.jfree.data.time.RegularTimePeriod,268
+Sun Jan 14 10:48:42 EST 2018 org.jfree.data.time.RegularTimePeriod,269
+Sun Jan 14 10:48:43 EST 2018 org.jfree.data.time.RegularTimePeriod,270
+Sun Jan 14 10:48:43 EST 2018 org.jfree.data.time.RegularTimePeriod,279
+Sun Jan 14 10:48:45 EST 2018 Sun Jan 14 10:48:45 EST 2018 : org.jfree.data.time.RegularTimePeriod,88=>Find no block
+Sun Jan 14 10:48:45 EST 2018 org.jfree.data.time.TimeSeries,189
+Sun Jan 14 10:48:47 EST 2018 org.jfree.data.time.TimeSeries,202
+Sun Jan 14 10:51:38 EST 2018 org.jfree.data.time.TimeSeries,203
+Sun Jan 14 10:51:38 EST 2018 org.jfree.data.time.TimeSeries,204
+Sun Jan 14 10:51:38 EST 2018 Sun Jan 14 10:51:38 EST 2018 : org.jfree.data.time.TimeSeries,205=>Find no block
+Sun Jan 14 10:51:38 EST 2018 org.jfree.data.time.TimeSeries,215
+Sun Jan 14 10:51:40 EST 2018 org.jfree.data.time.TimeSeries,227
+Sun Jan 14 10:54:31 EST 2018 org.jfree.data.time.TimeSeries,228
+Sun Jan 14 10:54:32 EST 2018 org.jfree.data.time.TimeSeries,229
+Sun Jan 14 10:54:32 EST 2018 Sun Jan 14 10:54:32 EST 2018 : org.jfree.data.time.TimeSeries,230=>Find no block
+Sun Jan 14 10:54:32 EST 2018 org.jfree.data.time.TimeSeries,248
+Sun Jan 14 10:54:59 EST 2018 org.jfree.data.time.TimeSeries,260
+Sun Jan 14 10:55:01 EST 2018 org.jfree.data.time.TimeSeries,275
+Sun Jan 14 10:55:10 EST 2018 org.jfree.data.time.TimeSeries,276
+Sun Jan 14 10:55:10 EST 2018 org.jfree.data.time.TimeSeries,278
+Sun Jan 14 10:58:01 EST 2018 org.jfree.data.time.TimeSeries,279
+Sun Jan 14 10:58:01 EST 2018 org.jfree.data.time.TimeSeries,280
+Sun Jan 14 10:58:02 EST 2018 org.jfree.data.time.TimeSeries,281
+Sun Jan 14 10:58:02 EST 2018 Sun Jan 14 10:58:02 EST 2018 : org.jfree.data.time.TimeSeries,283=>Find no block
+Sun Jan 14 10:58:02 EST 2018 org.jfree.data.time.TimeSeries,293
+Sun Jan 14 10:58:04 EST 2018 org.jfree.data.time.TimeSeries,309
+Sun Jan 14 10:58:06 EST 2018 org.jfree.data.time.TimeSeries,310
+Sun Jan 14 10:58:06 EST 2018 org.jfree.data.time.TimeSeries,312
+Sun Jan 14 10:58:20 EST 2018 org.jfree.data.time.TimeSeries,313
+Sun Jan 14 10:58:20 EST 2018 Sun Jan 14 10:58:20 EST 2018 : org.jfree.data.time.TimeSeries,314=>Find no block
+Failed time : 18/01/14 10:58

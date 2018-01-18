@@ -1,0 +1,140 @@
+=================================================
+Project : time_19	start : 18/01/14 07:30
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testDateTimeCreation_london | 18/01/14 07:30
+Sun Jan 14 07:33:43 AEDT 2018 org.joda.time.DateTime,331
+Sun Jan 14 07:34:25 AEDT 2018 Sun Jan 14 07:34:25 AEDT 2018 : org.joda.time.DateTime,333=>Find no block
+Sun Jan 14 07:34:26 AEDT 2018 org.joda.time.tz.CachedDateTimeZone,210
+Sun Jan 14 07:51:42 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,2116
+Sun Jan 14 08:05:30 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,2117
+Sun Jan 14 08:05:32 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1372
+Sun Jan 14 08:07:00 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1166
+Sun Jan 14 08:07:04 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,482
+Sun Jan 14 08:07:08 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,740
+Sun Jan 14 08:07:13 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,200
+Sun Jan 14 08:09:10 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,201
+Sun Jan 14 08:10:27 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,202
+Sun Jan 14 08:12:48 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,203
+Sun Jan 14 08:15:08 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,204
+Sun Jan 14 08:17:01 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,205
+Sun Jan 14 08:17:29 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,119
+Sun Jan 14 08:18:07 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,192
+Sun Jan 14 08:19:14 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,193
+Sun Jan 14 08:20:21 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,194
+Sun Jan 14 08:22:43 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,195
+Sun Jan 14 08:24:38 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,196
+Sun Jan 14 08:25:50 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,209
+Sun Jan 14 08:26:59 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1341
+Sun Jan 14 08:29:20 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1342
+Sun Jan 14 08:29:22 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1343
+Sun Jan 14 08:32:07 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1344
+Sun Jan 14 08:32:09 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1347
+Sun Jan 14 08:34:52 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1348
+Sun Jan 14 08:35:30 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1349
+Sun Jan 14 08:35:36 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1350
+Sun Jan 14 08:35:40 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1351
+Sun Jan 14 08:35:42 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1353
+Sun Jan 14 08:47:30 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1354
+Sun Jan 14 08:47:51 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1355
+Sun Jan 14 08:47:53 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1356
+Sun Jan 14 08:47:55 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1359
+Sun Jan 14 08:47:57 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1360
+Sun Jan 14 08:47:59 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1364
+Sun Jan 14 09:05:25 AEDT 2018 Sun Jan 14 09:05:25 AEDT 2018 : org.joda.time.tz.DateTimeZoneBuilder,1367=>Find no block
+Sun Jan 14 09:05:27 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1370
+Sun Jan 14 09:06:51 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1371
+Sun Jan 14 09:06:52 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1375
+Sun Jan 14 09:07:27 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1176
+Sun Jan 14 09:09:05 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1177
+Sun Jan 14 09:09:07 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1178
+Sun Jan 14 09:09:08 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1179
+Sun Jan 14 09:09:10 AEDT 2018 Sun Jan 14 09:09:10 AEDT 2018 : org.joda.time.tz.DateTimeZoneBuilder,1180=>Find no block
+Sun Jan 14 09:09:11 AEDT 2018 Sun Jan 14 09:09:11 AEDT 2018 : org.joda.time.tz.DateTimeZoneBuilder,504=>Find no block
+Sun Jan 14 09:09:13 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,505
+Sun Jan 14 09:09:18 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,509
+Sun Jan 14 09:09:23 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,510
+Sun Jan 14 09:09:25 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,511
+Sun Jan 14 09:09:26 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,512
+Sun Jan 14 09:09:28 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,513
+Sun Jan 14 09:09:30 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,514
+Sun Jan 14 09:09:32 AEDT 2018 Sun Jan 14 09:09:32 AEDT 2018 : org.joda.time.tz.DateTimeZoneBuilder,515=>Find no block
+Sun Jan 14 09:09:34 AEDT 2018 org.joda.time.tz.ZoneInfoProvider,147
+Sun Jan 14 09:12:31 AEDT 2018 org.joda.time.tz.ZoneInfoProvider,224
+Sun Jan 14 09:12:36 AEDT 2018 org.joda.time.tz.ZoneInfoProvider,226
+Sun Jan 14 09:16:55 AEDT 2018 org.joda.time.tz.ZoneInfoProvider,227
+Sun Jan 14 09:16:57 AEDT 2018 org.joda.time.tz.ZoneInfoProvider,228
+Sun Jan 14 09:20:12 AEDT 2018 org.joda.time.tz.ZoneInfoProvider,229
+Sun Jan 14 09:20:15 AEDT 2018 org.joda.time.tz.ZoneInfoProvider,236
+Sun Jan 14 09:21:18 AEDT 2018 org.joda.time.tz.ZoneInfoProvider,237
+Sun Jan 14 09:21:20 AEDT 2018 Sun Jan 14 09:21:20 AEDT 2018 : org.joda.time.tz.ZoneInfoProvider,240=>Find no block
+Sun Jan 14 09:21:23 AEDT 2018 Sun Jan 14 09:21:23 AEDT 2018 : org.joda.time.tz.DateTimeZoneBuilder,747=>Find no block
+Sun Jan 14 09:21:25 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,748
+Sun Jan 14 09:22:03 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,749
+Sun Jan 14 09:22:05 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,750
+Sun Jan 14 09:22:07 AEDT 2018 Sun Jan 14 09:22:07 AEDT 2018 : org.joda.time.tz.DateTimeZoneBuilder,751=>Find no block
+Sun Jan 14 09:22:09 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,95
+Sun Jan 14 09:22:29 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,98
+Sun Jan 14 09:22:29 AEDT 2018 Sun Jan 14 09:22:29 AEDT 2018 : org.joda.time.tz.DateTimeZoneBuilder,110=>Find no block
+Sun Jan 14 09:22:30 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,183
+Sun Jan 14 09:24:40 AEDT 2018 Sun Jan 14 09:24:40 AEDT 2018 : org.joda.time.tz.DateTimeZoneBuilder,184=>Find no block
+Sun Jan 14 09:24:42 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,187
+Sun Jan 14 09:24:58 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,188
+Sun Jan 14 09:25:18 AEDT 2018 org.joda.time.tz.CachedDateTimeZone,87
+Sun Jan 14 09:26:41 AEDT 2018 org.joda.time.tz.CachedDateTimeZone,88
+Sun Jan 14 09:26:43 AEDT 2018 org.joda.time.tz.CachedDateTimeZone,89
+Sun Jan 14 09:26:46 AEDT 2018 Sun Jan 14 09:26:46 AEDT 2018 : org.joda.time.tz.CachedDateTimeZone,90=>Find no block
+Sun Jan 14 09:26:46 AEDT 2018 org.joda.time.tz.CachedDateTimeZone,68
+Sun Jan 14 09:26:50 AEDT 2018 org.joda.time.tz.CachedDateTimeZone,71
+Sun Jan 14 09:26:56 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1500
+Sun Jan 14 09:28:04 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1501
+Sun Jan 14 09:28:06 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1502
+Sun Jan 14 09:28:08 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1503
+Sun Jan 14 09:28:09 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1504
+Sun Jan 14 09:28:11 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1505
+Sun Jan 14 09:28:13 AEDT 2018 Sun Jan 14 09:28:13 AEDT 2018 : org.joda.time.tz.DateTimeZoneBuilder,1506=>Find no block
+Sun Jan 14 09:28:15 AEDT 2018 org.joda.time.tz.CachedDateTimeZone,170
+Sun Jan 14 09:42:25 AEDT 2018 org.joda.time.tz.CachedDateTimeZone,171
+Sun Jan 14 09:42:26 AEDT 2018 Sun Jan 14 09:42:26 AEDT 2018 : org.joda.time.tz.CachedDateTimeZone,172=>Find no block
+Sun Jan 14 09:42:28 AEDT 2018 org.joda.time.tz.ZoneInfoProvider,199
+Sun Jan 14 09:43:45 AEDT 2018 org.joda.time.tz.ZoneInfoProvider,200
+Sun Jan 14 09:43:50 AEDT 2018 org.joda.time.tz.ZoneInfoProvider,201
+Sun Jan 14 09:43:52 AEDT 2018 org.joda.time.tz.ZoneInfoProvider,205
+Sun Jan 14 09:45:09 AEDT 2018 org.joda.time.chrono.GregorianChronology,213
+Sun Jan 14 09:45:24 AEDT 2018 org.joda.time.tz.ZoneInfoProvider,196
+Sun Jan 14 09:47:43 AEDT 2018 org.joda.time.tz.ZoneInfoProvider,214
+Sun Jan 14 09:50:11 AEDT 2018 org.joda.time.chrono.ISOChronology,107
+Sun Jan 14 09:52:34 AEDT 2018 org.joda.time.chrono.ISOChronology,108
+Sun Jan 14 09:52:36 AEDT 2018 org.joda.time.chrono.BasicGJChronology,190
+Sun Jan 14 09:59:23 AEDT 2018 org.joda.time.DateTimeZone,693
+Sun Jan 14 10:00:52 AEDT 2018 Sun Jan 14 10:00:52 AEDT 2018 : org.joda.time.DateTimeZone,694=>Find no block
+Sun Jan 14 10:00:54 AEDT 2018 Sun Jan 14 10:00:54 AEDT 2018 : org.joda.time.DateTimeZone,689=>Find no block
+Sun Jan 14 10:00:56 AEDT 2018 org.joda.time.DateTimeZone,690
+Sun Jan 14 10:02:21 AEDT 2018 org.joda.time.chrono.ISOChronology,122
+Sun Jan 14 10:02:41 AEDT 2018 Sun Jan 14 10:02:41 AEDT 2018 : org.joda.time.chrono.ISOChronology,123=>Find no block
+Sun Jan 14 10:02:42 AEDT 2018 org.joda.time.chrono.ISOChronology,169
+Sun Jan 14 10:02:47 AEDT 2018 Sun Jan 14 10:02:47 AEDT 2018 : org.joda.time.chrono.ISOChronology,180=>Find no block
+Sun Jan 14 10:02:49 AEDT 2018 Sun Jan 14 10:02:49 AEDT 2018 : org.joda.time.chrono.ISOChronology,104=>Find no block
+Sun Jan 14 10:02:50 AEDT 2018 org.joda.time.chrono.ISOChronology,105
+Sun Jan 14 10:04:27 AEDT 2018 org.joda.time.chrono.ISOChronology,106
+Sun Jan 14 10:04:29 AEDT 2018 Sun Jan 14 10:04:29 AEDT 2018 : org.joda.time.chrono.ISOChronology,110=>Find no block
+Sun Jan 14 10:04:31 AEDT 2018 org.joda.time.chrono.ISOChronology,111
+Sun Jan 14 10:06:28 AEDT 2018 org.joda.time.chrono.ISOChronology,112
+Sun Jan 14 10:06:30 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,551
+Sun Jan 14 10:08:13 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,554
+Sun Jan 14 10:08:15 AEDT 2018 org.joda.time.chrono.GJEraDateTimeField,127
+Sun Jan 14 10:16:03 AEDT 2018 org.joda.time.chrono.GJEraDateTimeField,131
+Sun Jan 14 10:16:09 AEDT 2018 org.joda.time.base.AbstractInstant,424
+Sun Jan 14 10:19:42 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1543
+Sun Jan 14 10:28:57 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1187
+Sun Jan 14 10:30:04 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1208
+Sun Jan 14 10:39:22 AEDT 2018 Sun Jan 14 10:39:22 AEDT 2018 : org.joda.time.tz.DateTimeZoneBuilder,1218=>Find no block
+Sun Jan 14 10:39:24 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,576
+Sun Jan 14 10:48:14 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,577
+Sun Jan 14 10:48:16 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,578
+Sun Jan 14 10:48:18 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1579
+Sun Jan 14 11:37:18 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1580
+Sun Jan 14 11:37:21 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1583
+Sun Jan 14 12:33:06 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1199
+Sun Jan 14 12:33:21 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1200
+Sun Jan 14 12:33:23 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1201
+Sun Jan 14 12:33:27 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1206
+Timeout time : 18/01/14 12:34

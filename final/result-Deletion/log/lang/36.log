@@ -1,0 +1,1178 @@
+=================================================
+Project : lang_36	start : 18/01/16 03:08
+Current failed test : org.apache.commons.lang3.math.NumberUtilsTest::testCreateNumber_purify_23 | 18/01/16 03:13
+Tue Jan 16 03:14:12 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,546
+Tue Jan 16 03:17:00 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,480
+Tue Jan 16 03:30:15 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,495
+Tue Jan 16 03:36:50 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,482
+Tue Jan 16 03:43:38 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,474
+Tue Jan 16 03:43:39 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,492
+Tue Jan 16 03:43:40 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,498
+Tue Jan 16 04:01:52 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,499
+Tue Jan 16 04:01:53 AEDT 2018 Tue Jan 16 04:01:53 AEDT 2018 : org.apache.commons.lang3.math.NumberUtils,500=>Find no block
+Tue Jan 16 04:01:54 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,610
+Tue Jan 16 04:06:57 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,611
+Tue Jan 16 04:06:58 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,606
+Tue Jan 16 04:09:09 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,609
+Tue Jan 16 04:12:24 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,491
+Tue Jan 16 04:30:26 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,465
+Tue Jan 16 04:40:26 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,469
+Tue Jan 16 04:48:54 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,470
+Tue Jan 16 04:48:54 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,472
+Timeout time : 18/01/16 05:44
+Current failed test : org.apache.commons.lang3.math.NumberUtilsTest::testIsNumber_purify_12 | 18/01/16 05:44
+Tue Jan 16 05:44:47 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1401
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars==null||start==0){
+return foundDigit&&!hasExp;
+}
+return false;
+
+Time : 18/01/16 05:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||start==0){
+return foundDigit&&!hasExp;
+}
+return false;
+
+Time : 18/01/16 05:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return foundDigit;
+
+Time : 18/01/16 05:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+return foundDigit&&!hasExp;
+}
+return foundDigit;
+
+Time : 18/01/16 05:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+return foundDigit&&!hasExp;
+}
+return foundDigit;
+
+Time : 18/01/16 05:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+return foundDigit&&!hasExp;
+}
+return foundDigit;
+
+Time : 18/01/16 05:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+return foundDigit&&!hasExp;
+}
+return foundDigit;
+
+Time : 18/01/16 05:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+return foundDigit&&!hasExp;
+}
+return foundDigit;
+
+Time : 18/01/16 05:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+return foundDigit&&!hasExp;
+}
+return foundDigit;
+
+Time : 18/01/16 05:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+return foundDigit&&!hasExp;
+}
+return foundDigit;
+
+Time : 18/01/16 05:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]!='L'){
+return foundDigit&&!hasExp;
+}
+return false;
+
+Time : 18/01/16 05:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]==chars[start+i]){
+return foundDigit&&!hasExp;
+}
+return false;
+
+Time : 18/01/16 05:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[start+i]!='L'){
+return foundDigit&&!hasExp;
+}
+return false;
+
+Time : 18/01/16 05:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[start+i]==chars[start+i]){
+return foundDigit&&!hasExp;
+}
+return false;
+
+Time : 18/01/16 05:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]!=' '){
+return foundDigit&&!hasExp;
+}
+return false;
+
+Time : 18/01/16 05:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return true;
+
+Time : 18/01/16 05:57
+----------------------------------------
+Tue Jan 16 05:57:53 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1395
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars==null||start==0){
+return foundDigit&&!hasExp;
+}
+
+Time : 18/01/16 05:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||start==0){
+return foundDigit&&!hasExp;
+}
+
+Time : 18/01/16 05:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]!='L'){
+return foundDigit&&!hasExp;
+}
+
+Time : 18/01/16 06:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]==chars[start+i]){
+return foundDigit&&!hasExp;
+}
+
+Time : 18/01/16 06:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[start+i]!='L'){
+return foundDigit&&!hasExp;
+}
+
+Time : 18/01/16 06:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[start+i]==chars[start+i]){
+return foundDigit&&!hasExp;
+}
+
+Time : 18/01/16 06:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]=='l'||chars[i]!=' '){
+return foundDigit&&!hasExp;
+}
+
+Time : 18/01/16 06:02
+----------------------------------------
+Tue Jan 16 06:03:52 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1388
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return foundDigit;
+}
+
+Time : 18/01/16 06:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!allowSigns&&(chars[i]<'a'||chars[i]>'f')){
+return foundDigit;
+}
+
+Time : 18/01/16 06:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!allowSigns){
+return foundDigit;
+}
+
+Time : 18/01/16 06:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!allowSigns&&i<str.length()){
+return foundDigit;
+}
+
+Time : 18/01/16 06:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<str.length()&&i<str.length()){
+return foundDigit;
+}
+
+Time : 18/01/16 06:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((i!=0)){
+return foundDigit;
+}
+
+Time : 18/01/16 06:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!allowSigns&&(i!=0)){
+return foundDigit;
+}
+
+Time : 18/01/16 06:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((Character.isLetter(str.charAt(i))==false)&&(str.charAt(i)!=' ')){
+return foundDigit;
+}
+
+Time : 18/01/16 06:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!allowSigns&&(str.charAt(i)!=' ')){
+return foundDigit;
+}
+
+Time : 18/01/16 06:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((Character.isLetterOrDigit(str.charAt(i))==false)&&(str.charAt(i)!=' ')){
+return foundDigit;
+}
+
+Time : 18/01/16 06:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((Character.isDigit(str.charAt(i))==false)&&(str.charAt(i)!=' ')){
+return foundDigit;
+}
+
+Time : 18/01/16 06:10
+----------------------------------------
+Tue Jan 16 06:11:29 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1384
+Tue Jan 16 06:18:54 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1379
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((start+i)>=start&&chars[i]<='9'){
+return true;
+}
+
+Time : 18/01/16 06:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<chars.length){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return true;
+}
+
+Time : 18/01/16 06:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<sz-2){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return false;
+}
+
+Time : 18/01/16 06:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(i<sz){
+if(chars[i]>='0'&&chars[i]<='9'){
+return true;
+}
+if(chars[i]=='e'||chars[i]=='E'){
+return false;
+}
+if(!allowSigns&&(chars[i]=='d'||chars[i]=='D'||chars[i]=='f'||chars[i]=='F')){
+return foundDigit;
+}
+if(chars[i]=='l'||chars[i]=='L'){
+return foundDigit&&!hasExp;
+}
+return false;
+}
+
+Time : 18/01/16 06:24
+----------------------------------------
+Tue Jan 16 06:26:36 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1380
+Tue Jan 16 06:26:37 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1348
+Tue Jan 16 06:26:39 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1349
+Tue Jan 16 06:26:40 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1377
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]>='0'&&chars[i]<='9'){
+start=++i;
+foundDigit=true;
+allowSigns=false;
+}else if(chars[i]=='.'){
+if(hasDecPoint||hasExp){
+return false;
+}
+hasDecPoint=true;
+}else if(chars[i]=='e'||chars[i]=='E'){
+if(hasExp){
+return false;
+}
+if(!foundDigit){
+return false;
+}
+hasExp=true;
+allowSigns=true;
+}else if(chars[i]=='+'||chars[i]=='-'){
+if(!allowSigns){
+return false;
+}
+allowSigns=false;
+foundDigit=false;
+}else {
+return false;
+}
+
+Time : 18/01/16 06:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chars[i]>='0'&&chars[i]<='9'){
+start=++i;
+foundDigit=true;
+allowSigns=false;
+}else if(chars[i]=='.'){
+if(hasDecPoint||hasExp){
+return false;
+}
+hasDecPoint=true;
+}else if(chars[i]=='e'||chars[i]=='E'){
+if(hasExp){
+return false;
+}
+if(!foundDigit){
+return false;
+}
+hasExp=true;
+allowSigns=true;
+}else if(chars[i]=='+'||chars[i]=='-'){
+if(!allowSigns){
+return false;
+}
+allowSigns=false;
+foundDigit=false;
+}else {
+return false;
+}
+i++;
+
+Time : 18/01/16 06:56
+----------------------------------------
+Tue Jan 16 06:57:05 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1347
+Tue Jan 16 06:57:06 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1325
+Tue Jan 16 07:39:41 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1341
+Tue Jan 16 07:54:35 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,1343
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sz>start+1){
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+2;
+if(i==sz){
+return false;
+}
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+int i=start;
+
+Time : 18/01/16 07:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int i=start;
+
+Time : 18/01/16 07:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(start>start+1){
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+2;
+if(i==sz){
+return false;
+}
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+int i=start;
+
+Time : 18/01/16 07:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sz>start+1){
+if(sz==-1&&chars[start+1]=='x'){
+int i=start+2;
+if(i==sz){
+return false;
+}
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+int i=start;
+
+Time : 18/01/16 07:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sz>=start+1){
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+2;
+if(i==sz){
+return false;
+}
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+int i=start;
+
+Time : 18/01/16 07:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sz>start+1){
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+2;
+if(i==sz){
+return false;
+}
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+if(str==null||chars==null){
+return true;
+}
+int i=start;
+
+Time : 18/01/16 07:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(str==null||chars==null){
+return true;
+}
+int i=start;
+
+Time : 18/01/16 08:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sz>start+1){
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+2;
+if(i==sz){
+return false;
+}
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+if(str==null||str==null){
+return false;
+}
+int i=start;
+
+Time : 18/01/16 08:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(str==null||str==null){
+return false;
+}
+int i=start;
+
+Time : 18/01/16 08:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(str==null){
+return false;
+}
+if(sz>start+1){
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+2;
+if(i==sz){
+return false;
+}
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+int i=start;
+
+Time : 18/01/16 08:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sz>start+1){
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+2;
+if(i==sz){
+return false;
+}
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+if(start>sz){
+return false;
+}
+int i=start;
+
+Time : 18/01/16 08:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(str==null){
+return false;
+}
+if(sz>start+1){
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+2;
+if(i==sz){
+return false;
+}
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+if(start>sz){
+return false;
+}
+int i=start;
+
+Time : 18/01/16 08:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sz>start+str.length()){
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+2;
+if(i==sz){
+return false;
+}
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+int i=start;
+
+Time : 18/01/16 08:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(start>=start+1){
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+2;
+if(i==sz){
+return false;
+}
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+int i=start;
+
+Time : 18/01/16 08:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sz>start+1){
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+str.length();
+if(i==sz){
+return false;
+}
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+int i=start;
+
+Time : 18/01/16 08:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sz>start+1){
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+2;
+if(i==sz){
+return false;
+}
+str.getChars(0,str.length(),chars,i);
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+int i=start;
+
+Time : 18/01/16 08:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sz>start+1){
+if(str==null){
+str="";
+}
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+2;
+if(i==sz){
+return false;
+}
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+int i=start;
+
+Time : 18/01/16 08:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(start>start+1){
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+str.length();
+if(i==sz){
+return false;
+}
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+int i=start;
+
+Time : 18/01/16 08:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(start>start+1){
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+2;
+if(i==sz){
+return false;
+}
+str.getChars(0,str.length(),chars,i);
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+int i=start;
+
+Time : 18/01/16 08:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(start>start+1){
+if(str==null){
+str="";
+}
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+2;
+if(i==sz){
+return false;
+}
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+int i=start;
+
+Time : 18/01/16 08:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sz>start+1){
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+str.length();
+if(i==sz){
+return false;
+}
+str.getChars(0,str.length(),chars,i);
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+int i=start;
+
+Time : 18/01/16 08:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sz>start+1){
+if(str==null){
+str="";
+}
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+str.length();
+if(i==sz){
+return false;
+}
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+int i=start;
+
+Time : 18/01/16 08:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sz>start+1){
+if(str==null){
+str="";
+}
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+2;
+if(i==sz){
+return false;
+}
+str.getChars(0,str.length(),chars,i);
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+int i=start;
+
+Time : 18/01/16 08:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(start>start+1){
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+str.length();
+if(i==sz){
+return false;
+}
+str.getChars(0,str.length(),chars,i);
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+int i=start;
+
+Time : 18/01/16 08:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(start>start+1){
+if(str==null){
+str="";
+}
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+str.length();
+if(i==sz){
+return false;
+}
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+int i=start;
+
+Time : 18/01/16 08:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(start>start+1){
+if(str==null){
+str="";
+}
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+2;
+if(i==sz){
+return false;
+}
+str.getChars(0,str.length(),chars,i);
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+int i=start;
+
+Time : 18/01/16 08:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sz>start+1){
+if(str==null){
+str="";
+}
+if(chars[start]=='0'&&chars[start+1]=='x'){
+int i=start+str.length();
+if(i==sz){
+return false;
+}
+str.getChars(0,str.length(),chars,i);
+for(;i<chars.length;i++){
+if((chars[i]<'0'||chars[i]>'9')&&(chars[i]<'a'||chars[i]>'f')){
+return false;
+}
+}
+return true;
+}
+}
+int i=start;
+
+Time : 18/01/16 08:14
+----------------------------------------
+Timeout time : 18/01/16 08:14

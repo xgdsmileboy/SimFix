@@ -1,0 +1,101 @@
+=================================================
+Project : lang_61	start : 18/01/12 19:29
+Current failed test : org.apache.commons.lang.text.StrBuilderTest::testIndexOfLang294 | 18/01/12 19:30
+Fri Jan 12 19:30:50 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1184
+Fri Jan 12 20:52:30 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1185
+Fri Jan 12 20:52:31 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1186
+Fri Jan 12 20:52:31 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1187
+Fri Jan 12 20:52:31 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1188
+Fri Jan 12 20:52:31 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1189
+Fri Jan 12 20:52:31 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1202
+Fri Jan 12 21:39:34 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1203
+Fri Jan 12 21:39:34 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1204
+Fri Jan 12 21:39:34 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1205
+Fri Jan 12 21:39:34 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1206
+Fri Jan 12 21:39:34 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1209
+Fri Jan 12 21:39:34 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1747
+Fri Jan 12 21:41:28 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1761
+Fri Jan 12 21:58:23 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1762
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(str==null||(startIndex+CAPACITY)>=size){
+return -1;
+}
+
+Time : 18/01/12 22:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(str==null||startIndex+CAPACITY>=size){
+return -1;
+}
+
+Time : 18/01/12 22:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(str==null||(startIndex+CAPACITY)>size){
+return -1;
+}
+
+Time : 18/01/12 22:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(str==null||startIndex+CAPACITY>size){
+return -1;
+}
+
+Time : 18/01/12 22:05
+----------------------------------------
+Fri Jan 12 22:09:14 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1765
+Fri Jan 12 22:45:18 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1766
+Fri Jan 12 22:45:18 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1769
+Fri Jan 12 22:49:53 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1772
+Fri Jan 12 22:55:26 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1775
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(strLen>size){
+return -1;
+}
+char[] thisBuf=buffer;
+int len=size-strLen;
+
+Time : 18/01/12 22:58
+----------------------------------------
+Fri Jan 12 23:29:25 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1776
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+char[] thisBuf=buffer;
+int len=size-strLen;
+outer: for (int i=startIndex; i < len; i++) {
+  for (int j=0; j < strLen; j++) {
+    if (str.charAt(j) != thisBuf[i + j]) {
+      continue outer;
+    }
+  }
+  return i;
+}
+
+
+Time : 18/01/12 23:33
+----------------------------------------
+Fri Jan 12 23:40:53 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1778
+Sat Jan 13 00:23:34 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1779
+Sat Jan 13 00:23:34 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1780
+Sat Jan 13 00:23:34 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1781
+Sat Jan 13 00:23:35 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1784
+Sat Jan 13 00:23:35 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1114
+Timeout time : 18/01/13 00:30

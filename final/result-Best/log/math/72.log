@@ -1,0 +1,168 @@
+=================================================
+Project : math_72	start : 18/01/14 04:05
+Current failed test : org.apache.commons.math.analysis.solvers.BrentSolverTest::testRootEndpoints_purify_1 | 18/01/14 04:07
+Sun Jan 14 04:09:44 AEDT 2018 org.apache.commons.math.MaxIterationsExceededException,43
+Sun Jan 14 04:09:58 AEDT 2018 org.apache.commons.math.MaxIterationsExceededException,44
+Sun Jan 14 04:10:03 AEDT 2018 Sun Jan 14 04:10:03 AEDT 2018 : org.apache.commons.math.MaxIterationsExceededException,45=>Find no block
+Sun Jan 14 04:10:07 AEDT 2018 org.apache.commons.math.MaxIterationsExceededException,56
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(pattern,maxIterations);
+this.maxIterations=maxIterations;
+
+Time : 18/01/14 04:11
+----------------------------------------
+Sun Jan 14 04:13:25 AEDT 2018 org.apache.commons.math.MaxIterationsExceededException,57
+Sun Jan 14 04:13:31 AEDT 2018 Sun Jan 14 04:13:31 AEDT 2018 : org.apache.commons.math.MaxIterationsExceededException,58=>Find no block
+Sun Jan 14 04:13:37 AEDT 2018 org.apache.commons.math.MaxIterationsExceededException,64
+Sun Jan 14 04:13:55 AEDT 2018 org.apache.commons.math.ConvergenceException,34
+Sun Jan 14 04:14:10 AEDT 2018 Sun Jan 14 04:14:10 AEDT 2018 : org.apache.commons.math.ConvergenceException,35=>Find no block
+Sun Jan 14 04:14:16 AEDT 2018 org.apache.commons.math.ConvergenceException,45
+Sun Jan 14 04:16:07 AEDT 2018 Sun Jan 14 04:16:07 AEDT 2018 : org.apache.commons.math.ConvergenceException,46=>Find no block
+Sun Jan 14 04:16:13 AEDT 2018 org.apache.commons.math.ConvergenceException,53
+Sun Jan 14 04:16:27 AEDT 2018 Sun Jan 14 04:16:27 AEDT 2018 : org.apache.commons.math.ConvergenceException,54=>Find no block
+Sun Jan 14 04:16:34 AEDT 2018 org.apache.commons.math.ConvergenceException,65
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(pattern,arguments);
+
+Time : 18/01/14 04:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(cause);
+
+Time : 18/01/14 04:19
+----------------------------------------
+Sun Jan 14 04:21:10 AEDT 2018 Sun Jan 14 04:21:10 AEDT 2018 : org.apache.commons.math.ConvergenceException,66=>Find no block
+Sun Jan 14 04:21:16 AEDT 2018 Sun Jan 14 04:21:16 AEDT 2018 : org.apache.commons.math.MathException,55=>Find no block
+Sun Jan 14 04:21:22 AEDT 2018 org.apache.commons.math.MathException,56
+Sun Jan 14 04:21:43 AEDT 2018 org.apache.commons.math.MathException,57
+Sun Jan 14 04:21:49 AEDT 2018 Sun Jan 14 04:21:49 AEDT 2018 : org.apache.commons.math.MathException,58=>Find no block
+Sun Jan 14 04:21:54 AEDT 2018 Sun Jan 14 04:21:54 AEDT 2018 : org.apache.commons.math.MathException,67=>Find no block
+Sun Jan 14 04:22:00 AEDT 2018 org.apache.commons.math.MathException,68
+Sun Jan 14 04:22:57 AEDT 2018 org.apache.commons.math.MathException,69
+Sun Jan 14 04:23:03 AEDT 2018 Sun Jan 14 04:23:03 AEDT 2018 : org.apache.commons.math.MathException,70=>Find no block
+Sun Jan 14 04:23:08 AEDT 2018 org.apache.commons.math.MathException,80
+Sun Jan 14 04:23:20 AEDT 2018 org.apache.commons.math.MathException,81
+Sun Jan 14 04:23:22 AEDT 2018 org.apache.commons.math.MathException,82
+Sun Jan 14 04:23:22 AEDT 2018 Sun Jan 14 04:23:22 AEDT 2018 : org.apache.commons.math.MathException,83=>Find no block
+Sun Jan 14 04:23:23 AEDT 2018 org.apache.commons.math.MathException,96
+Sun Jan 14 04:24:11 AEDT 2018 org.apache.commons.math.MathException,97
+Sun Jan 14 04:24:17 AEDT 2018 org.apache.commons.math.MathException,98
+Sun Jan 14 04:24:22 AEDT 2018 Sun Jan 14 04:24:22 AEDT 2018 : org.apache.commons.math.MathException,99=>Find no block
+Sun Jan 14 04:24:28 AEDT 2018 org.apache.commons.math.MathException,110
+Sun Jan 14 04:24:47 AEDT 2018 org.apache.commons.math.MathException,112
+Sun Jan 14 04:26:15 AEDT 2018 org.apache.commons.math.MathException,114
+Sun Jan 14 04:26:22 AEDT 2018 Sun Jan 14 04:26:22 AEDT 2018 : org.apache.commons.math.MathException,119=>Find no block
+Sun Jan 14 04:26:27 AEDT 2018 Sun Jan 14 04:26:27 AEDT 2018 : org.apache.commons.math.MathException,117=>Find no block
+Sun Jan 14 04:26:33 AEDT 2018 org.apache.commons.math.MathException,123
+Sun Jan 14 04:26:37 AEDT 2018 org.apache.commons.math.MathException,133
+Sun Jan 14 04:26:50 AEDT 2018 org.apache.commons.math.MathException,142
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return (pattern==null)?null:arguments.clone();
+
+Time : 18/01/14 04:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.1448360045340225 : [/home/hz985/jiajun/d4j/projects/math/math_72_buggy/src/main/java/org/apache/commons/math/MathException.java=>0,0]
+return (pattern==null)?"":new MessageFormat(translate(pattern,locale),locale).format(arguments);
+
+Time : 18/01/14 04:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_72_buggy/src/main/java/org/apache/commons/math/MathException.java=>142,142]
+return arguments.clone();
+
+Time : 18/01/14 04:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_72_buggy/src/main/java/org/apache/commons/math/MathException.java=>142,142]
+return (pattern==null)?null:arguments.clone();
+
+Time : 18/01/14 04:29
+----------------------------------------
+Success time : 18/01/14 04:29
+Current failed test : org.apache.commons.math.analysis.solvers.BrentSolverTest::testRootEndpoints_purify_3 | 18/01/14 04:29
+Sun Jan 14 04:32:34 AEDT 2018 org.apache.commons.math.analysis.solvers.BrentSolver,115
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Math.abs(yMin)<=functionValueAccuracy){
+setResult(min,0);
+return result;
+}
+
+Time : 18/01/14 04:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.452090549139009 : [/home/hz985/jiajun/d4j/projects/math/math_72_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BrentSolver.java=>0,0]
+if(Math.abs(yMin)<=functionValueAccuracy){
+setResult(min,0);
+ret=min;
+}else if(Math.abs(yMax)<=functionValueAccuracy){
+setResult(max,0);
+ret=max;
+}else {
+throw MathRuntimeException.createIllegalArgumentException(NON_BRACKETING_MESSAGE,min,max,yMin,yMax);
+}
+
+Time : 18/01/14 04:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_72_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BrentSolver.java=>114,117]
+if(Math.abs(yMin)<=functionValueAccuracy){
+setResult(yMin,0);
+return result;
+}
+
+Time : 18/01/14 04:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_72_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BrentSolver.java=>114,117]
+if(Math.abs(yMin)<=functionValueAccuracy){
+setResult(min,0);
+return result;
+}
+
+Time : 18/01/14 04:35
+----------------------------------------
+Success time : 18/01/14 04:35
+Current failed test : org.apache.commons.math.analysis.solvers.BrentSolverTest::testRootEndpoints_purify_4 | 18/01/14 04:35
+Sun Jan 14 04:38:18 AEDT 2018 org.apache.commons.math.analysis.solvers.BrentSolver,115
+Sun Jan 14 04:45:59 AEDT 2018 org.apache.commons.math.analysis.solvers.BrentSolver,116
+Sun Jan 14 04:46:06 AEDT 2018 org.apache.commons.math.analysis.solvers.BrentSolver,127
+Sun Jan 14 04:54:01 AEDT 2018 org.apache.commons.math.analysis.solvers.BrentSolver,128
+Sun Jan 14 04:54:06 AEDT 2018 org.apache.commons.math.analysis.solvers.BrentSolver,184
+Sun Jan 14 05:39:55 AEDT 2018 org.apache.commons.math.analysis.solvers.BrentSolver,185
+Sun Jan 14 05:40:00 AEDT 2018 org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl,196
+Sun Jan 14 05:40:23 AEDT 2018 org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl,225
+Sun Jan 14 05:42:30 AEDT 2018 Sun Jan 14 05:42:30 AEDT 2018 : org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl,230=>Find no block
+Sun Jan 14 05:42:38 AEDT 2018 org.apache.commons.math.analysis.solvers.BrentSolver,102
+Sun Jan 14 05:49:20 AEDT 2018 org.apache.commons.math.analysis.solvers.BrentSolver,103
+Sun Jan 14 05:49:21 AEDT 2018 org.apache.commons.math.analysis.solvers.BrentSolver,106
+Sun Jan 14 06:05:57 AEDT 2018 org.apache.commons.math.analysis.solvers.BrentSolver,107
+Sun Jan 14 06:14:06 AEDT 2018 org.apache.commons.math.analysis.solvers.BrentSolver,113
+Timeout time : 18/01/14 06:18

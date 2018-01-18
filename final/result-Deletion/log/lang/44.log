@@ -1,0 +1,83 @@
+=================================================
+Project : lang_44	start : 18/01/15 17:32
+Current failed test : org.apache.commons.lang.NumberUtilsTest::testLang457 | 18/01/15 17:32
+Mon Jan 15 17:33:34 AEDT 2018 org.apache.commons.lang.NumberUtils,139
+Mon Jan 15 17:33:37 AEDT 2018 org.apache.commons.lang.NumberUtils,142
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(val.length()!=0){
+throw new NumberFormatException("\"\" is not a valid number.");
+}
+
+Time : 18/01/15 17:35
+----------------------------------------
+Mon Jan 15 17:39:58 AEDT 2018 org.apache.commons.lang.NumberUtils,145
+Mon Jan 15 17:40:35 AEDT 2018 org.apache.commons.lang.NumberUtils,152
+Mon Jan 15 17:42:17 AEDT 2018 org.apache.commons.lang.NumberUtils,155
+Mon Jan 15 18:01:38 AEDT 2018 org.apache.commons.lang.NumberUtils,159
+Mon Jan 15 18:10:48 AEDT 2018 org.apache.commons.lang.NumberUtils,160
+Mon Jan 15 18:10:49 AEDT 2018 org.apache.commons.lang.NumberUtils,162
+Mon Jan 15 18:31:55 AEDT 2018 org.apache.commons.lang.NumberUtils,174
+Mon Jan 15 18:31:56 AEDT 2018 org.apache.commons.lang.NumberUtils,177
+Mon Jan 15 18:31:57 AEDT 2018 org.apache.commons.lang.NumberUtils,179
+Mon Jan 15 18:36:35 AEDT 2018 org.apache.commons.lang.NumberUtils,181
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(dec==null&&exp==null&&expPos<numeric.length()-1){
+try{
+return createLong(numeric);
+}catch (NumberFormatException nfe) {
+}
+
+return createBigInteger(numeric);
+}
+
+Time : 18/01/15 18:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.2094681193855221 : [/home/hz985/jiajun/d4j/projects/lang/lang_44_buggy/src/java/org/apache/commons/lang/NumberUtils.java=>0,0]
+if(expPos>-1&&expPos<str.length()-1){
+exp=str.substring(expPos+1,str.length());
+}else {
+exp=null;
+}
+
+Time : 18/01/15 18:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/lang/lang_44_buggy/src/java/org/apache/commons/lang/NumberUtils.java=>193,203]
+if(dec==null&&exp==null&&(numeric.charAt(0)=='-'&&isDigits(numeric.substring(1))||isDigits(numeric))){
+try{
+return createLong(numeric);
+}catch (NumberFormatException nfe) {
+}
+
+return createBigInteger(numeric);
+}
+
+Time : 18/01/15 18:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/lang/lang_44_buggy/src/java/org/apache/commons/lang/NumberUtils.java=>193,203]
+if(dec==null&&exp==null&&expPos<numeric.length()-1){
+try{
+return createLong(numeric);
+}catch (NumberFormatException nfe) {
+}
+
+return createBigInteger(numeric);
+}
+
+Time : 18/01/15 18:47
+----------------------------------------
+Success time : 18/01/15 18:47

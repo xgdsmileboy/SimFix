@@ -1,0 +1,23 @@
+=================================================
+Project : time_7	start : 18/01/12 14:05
+Current failed test : org.joda.time.format.TestDateTimeFormatter::testParseInto_monthDay_feb29_newYork_startOfYear | 18/01/12 14:05
+Fri Jan 12 14:14:58 AEDT 2018 org.joda.time.IllegalFieldValueException,314
+Fri Jan 12 14:15:14 AEDT 2018 org.joda.time.IllegalFieldValueException,323
+Fri Jan 12 14:17:18 AEDT 2018 org.joda.time.IllegalFieldValueException,325
+Fri Jan 12 14:17:19 AEDT 2018 org.joda.time.IllegalFieldValueException,326
+Fri Jan 12 14:17:19 AEDT 2018 Fri Jan 12 14:17:19 AEDT 2018 : org.joda.time.IllegalFieldValueException,328=>Find no block
+Fri Jan 12 14:17:20 AEDT 2018 Fri Jan 12 14:17:20 AEDT 2018 : org.joda.time.format.DateTimeParserBucket,373=>Find no block
+Fri Jan 12 14:17:20 AEDT 2018 org.joda.time.format.DateTimeParserBucket,374
+Fri Jan 12 14:23:47 AEDT 2018 org.joda.time.format.DateTimeParserBucket,375
+Fri Jan 12 14:23:48 AEDT 2018 org.joda.time.format.DateTimeParserBucket,377
+Fri Jan 12 14:38:03 AEDT 2018 org.joda.time.format.DateTimeFormatter,701
+Fri Jan 12 14:44:48 AEDT 2018 org.joda.time.format.DateTimeFormatter,702
+Fri Jan 12 14:44:53 AEDT 2018 org.joda.time.format.DateTimeFormatter,706
+Fri Jan 12 15:20:53 AEDT 2018 org.joda.time.format.DateTimeFormatter,707
+Fri Jan 12 15:51:19 AEDT 2018 org.joda.time.format.DateTimeFormatter,708
+Fri Jan 12 16:21:41 AEDT 2018 org.joda.time.format.DateTimeFormatter,709
+Fri Jan 12 17:04:49 AEDT 2018 org.joda.time.format.DateTimeFormatter,710
+Fri Jan 12 17:49:14 AEDT 2018 org.joda.time.format.DateTimeFormatter,712
+Fri Jan 12 18:28:51 AEDT 2018 org.joda.time.format.DateTimeFormatter,714
+Fri Jan 12 19:14:34 AEDT 2018 org.joda.time.format.DateTimeFormatter,715
+Timeout time : 18/01/12 19:15

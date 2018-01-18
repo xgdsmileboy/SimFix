@@ -1,0 +1,29 @@
+=================================================
+Project : closure_58	start : 18/01/12 19:05
+Current failed test : com.google.javascript.jscomp.LiveVariableAnalysisTest::testExpressionInForIn | 18/01/12 19:06
+Fri Jan 12 19:06:22 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,421
+Fri Jan 12 19:16:56 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,422
+Fri Jan 12 19:17:00 AEDT 2018 Fri Jan 12 19:17:00 AEDT 2018 : com.google.javascript.jscomp.parsing.IRFactory,423=>Find no block
+Fri Jan 12 19:17:03 AEDT 2018 com.google.javascript.jscomp.LiveVariablesAnalysis,200
+Fri Jan 12 20:15:57 AEDT 2018 com.google.javascript.jscomp.LiveVariablesAnalysis,201
+Fri Jan 12 20:15:59 AEDT 2018 com.google.javascript.jscomp.LiveVariablesAnalysis,202
+Fri Jan 12 20:21:33 AEDT 2018 com.google.javascript.jscomp.LiveVariablesAnalysis,206
+Fri Jan 12 20:28:10 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,415
+Fri Jan 12 20:28:17 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,419
+Fri Jan 12 20:52:15 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,420
+Fri Jan 12 20:52:19 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,424
+Fri Jan 12 20:52:22 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,568
+Fri Jan 12 20:52:43 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,146
+Fri Jan 12 20:55:23 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,219
+Fri Jan 12 20:56:47 AEDT 2018 com.google.javascript.jscomp.ControlFlowAnalysis,420
+Fri Jan 12 21:47:17 AEDT 2018 com.google.javascript.jscomp.ControlFlowAnalysis,421
+Fri Jan 12 21:47:17 AEDT 2018 com.google.javascript.jscomp.ControlFlowAnalysis,422
+Fri Jan 12 22:12:26 AEDT 2018 com.google.javascript.jscomp.ControlFlowAnalysis,424
+Fri Jan 12 22:29:04 AEDT 2018 com.google.javascript.jscomp.ControlFlowAnalysis,426
+Fri Jan 12 22:30:28 AEDT 2018 com.google.javascript.jscomp.ControlFlowAnalysis,428
+Fri Jan 12 22:30:31 AEDT 2018 com.google.javascript.jscomp.ControlFlowAnalysis,731
+Fri Jan 12 23:07:58 AEDT 2018 com.google.javascript.jscomp.ControlFlowAnalysis,792
+Fri Jan 12 23:23:08 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,547
+Fri Jan 12 23:23:31 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,231
+Fri Jan 12 23:26:17 AEDT 2018 com.google.javascript.jscomp.LiveVariablesAnalysis,195
+Timeout time : 18/01/13 00:06

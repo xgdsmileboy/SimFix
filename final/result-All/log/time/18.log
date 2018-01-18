@@ -1,0 +1,55 @@
+=================================================
+Project : time_18	start : 18/01/13 00:09
+Current failed test : org.joda.time.chrono.TestGJChronology::testLeapYearRulesConstruction | 18/01/13 00:10
+Sat Jan 13 00:11:58 AEDT 2018 org.joda.time.IllegalFieldValueException,314
+Sat Jan 13 00:12:00 AEDT 2018 org.joda.time.field.FieldUtils,233
+Sat Jan 13 00:17:50 AEDT 2018 org.joda.time.chrono.GJChronology,356
+Sat Jan 13 00:19:42 AEDT 2018 org.joda.time.chrono.GJChronology,364
+Sat Jan 13 01:30:07 AEDT 2018 org.joda.time.DateMidnight,343
+Sat Jan 13 01:31:18 AEDT 2018 org.joda.time.chrono.GJChronology,123
+Sat Jan 13 01:32:04 AEDT 2018 org.joda.time.IllegalFieldValueException,53
+Sat Jan 13 01:43:06 AEDT 2018 org.joda.time.IllegalFieldValueException,50
+Sat Jan 13 01:43:06 AEDT 2018 org.joda.time.IllegalFieldValueException,108
+Sat Jan 13 01:57:04 AEDT 2018 org.joda.time.IllegalFieldValueException,109
+Sat Jan 13 01:57:04 AEDT 2018 org.joda.time.IllegalFieldValueException,110
+Sat Jan 13 01:57:05 AEDT 2018 org.joda.time.IllegalFieldValueException,111
+Sat Jan 13 01:57:05 AEDT 2018 org.joda.time.IllegalFieldValueException,112
+Sat Jan 13 01:57:06 AEDT 2018 org.joda.time.IllegalFieldValueException,113
+Sat Jan 13 01:57:06 AEDT 2018 org.joda.time.IllegalFieldValueException,114
+Sat Jan 13 01:57:06 AEDT 2018 org.joda.time.IllegalFieldValueException,115
+Sat Jan 13 01:57:07 AEDT 2018 org.joda.time.IllegalFieldValueException,116
+Sat Jan 13 01:57:07 AEDT 2018 Sat Jan 13 01:57:07 AEDT 2018 : org.joda.time.IllegalFieldValueException,117=>Find no block
+Sat Jan 13 01:57:08 AEDT 2018 org.joda.time.IllegalFieldValueException,41
+Sat Jan 13 02:08:20 AEDT 2018 org.joda.time.IllegalFieldValueException,44
+Sat Jan 13 02:08:21 AEDT 2018 org.joda.time.IllegalFieldValueException,59
+Sat Jan 13 02:24:38 AEDT 2018 org.joda.time.IllegalFieldValueException,63
+Sat Jan 13 02:43:52 AEDT 2018 org.joda.time.chrono.GJChronology,204
+Sat Jan 13 03:00:23 AEDT 2018 org.joda.time.chrono.GJChronology,205
+Sat Jan 13 03:00:24 AEDT 2018 org.joda.time.chrono.GJChronology,206
+Sat Jan 13 03:00:24 AEDT 2018 org.joda.time.chrono.GJChronology,209
+Sat Jan 13 03:00:25 AEDT 2018 org.joda.time.chrono.GJChronology,385
+Sat Jan 13 03:00:26 AEDT 2018 org.joda.time.chrono.GJChronology,394
+Sat Jan 13 03:01:13 AEDT 2018 org.joda.time.base.AbstractInstant,260
+Sat Jan 13 03:02:01 AEDT 2018 org.joda.time.chrono.GJChronology,194
+Sat Jan 13 03:03:42 AEDT 2018 org.joda.time.Instant,144
+Sat Jan 13 03:03:44 AEDT 2018 org.joda.time.chrono.GJChronology,189
+Sat Jan 13 03:11:58 AEDT 2018 org.joda.time.chrono.GJChronology,191
+Sat Jan 13 03:11:58 AEDT 2018 org.joda.time.chrono.GJChronology,199
+Sat Jan 13 03:31:39 AEDT 2018 org.joda.time.chrono.GJChronology,200
+Sat Jan 13 03:31:40 AEDT 2018 org.joda.time.DateTimeFieldType,378
+Sat Jan 13 03:31:52 AEDT 2018 org.joda.time.chrono.BasicChronology,185
+Sat Jan 13 03:31:54 AEDT 2018 org.joda.time.Instant,256
+Sat Jan 13 03:32:03 AEDT 2018 org.joda.time.DateTimeUtils,272
+Sat Jan 13 03:35:02 AEDT 2018 org.joda.time.DateTimeUtils,269
+Sat Jan 13 03:36:28 AEDT 2018 org.joda.time.tz.FixedDateTimeZone,102
+Sat Jan 13 03:37:16 AEDT 2018 org.joda.time.base.AbstractInstant,262
+Sat Jan 13 03:38:04 AEDT 2018 org.joda.time.base.AbstractInstant,265
+Sat Jan 13 03:49:35 AEDT 2018 org.joda.time.base.AbstractInstant,266
+Sat Jan 13 03:49:35 AEDT 2018 org.joda.time.base.AbstractInstant,259
+Sat Jan 13 03:49:36 AEDT 2018 org.joda.time.DateTimeZone,706
+Sat Jan 13 03:49:52 AEDT 2018 org.joda.time.base.BaseDateTime,252
+Sat Jan 13 04:48:19 AEDT 2018 org.joda.time.base.BaseDateTime,253
+Sat Jan 13 04:48:20 AEDT 2018 org.joda.time.base.BaseDateTime,254
+Sat Jan 13 04:48:20 AEDT 2018 org.joda.time.chrono.BasicChronology,167
+Sat Jan 13 04:48:20 AEDT 2018 org.joda.time.chrono.BasicChronology,172
+Timeout time : 18/01/13 05:11

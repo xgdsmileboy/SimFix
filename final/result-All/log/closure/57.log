@@ -1,0 +1,47 @@
+=================================================
+Project : closure_57	start : 18/01/12 19:05
+Current failed test : com.google.javascript.jscomp.ClosureCodingConventionTest::testRequire | 18/01/12 19:06
+Fri Jan 12 19:20:51 AEDT 2018 com.google.javascript.jscomp.ClosureCodingConvention,185
+Fri Jan 12 19:27:48 AEDT 2018 com.google.javascript.jscomp.ClosureCodingConvention,192
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(target!=null&&target.getType()==Token.STRING){
+className=target.getString();
+}
+
+Time : 18/01/12 19:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.4285714285714286 : [/home/hz985/jiajun/d4j/projects/closure/closure_57_buggy/src/com/google/javascript/jscomp/ClosureCodingConvention.java=>0,0]
+if(last!=null&&last.getType()==Token.STRING){
+String propName=last.getString();
+return (propName.equals(methodName));
+}
+
+Time : 18/01/12 19:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/closure/closure_57_buggy/src/com/google/javascript/jscomp/ClosureCodingConvention.java=>197,199]
+if(target!=null){
+className=target.getString();
+}
+
+Time : 18/01/12 19:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/closure/closure_57_buggy/src/com/google/javascript/jscomp/ClosureCodingConvention.java=>197,199]
+if(target!=null&&target.getType()==Token.STRING){
+className=target.getString();
+}
+
+Time : 18/01/12 19:37
+----------------------------------------
+Success time : 18/01/12 19:37

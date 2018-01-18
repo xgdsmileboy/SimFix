@@ -1,0 +1,94 @@
+=================================================
+Project : math_9	start : 18/01/14 07:15
+Current failed test : org.apache.commons.math3.geometry.euclidean.threed.LineTest::testRevert | 18/01/14 07:17
+Sun Jan 14 07:20:06 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Vector3D,222
+Sun Jan 14 07:22:19 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Vector3D,374
+Sun Jan 14 07:22:41 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Line,87
+Sun Jan 14 07:23:56 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Line,88
+Sun Jan 14 07:24:06 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Line,95
+Sun Jan 14 07:25:56 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Vector3D,249
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return x+y;
+
+Time : 18/01/14 07:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return z-FastMath.exp(-y);
+
+Time : 18/01/14 07:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return z*FastMath.exp(-y);
+
+Time : 18/01/14 07:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return x+z-x;
+
+Time : 18/01/14 07:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return z+FastMath.exp(y);
+
+Time : 18/01/14 07:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return 1/x;
+
+Time : 18/01/14 07:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return z+y;
+
+Time : 18/01/14 08:06
+----------------------------------------
+Sun Jan 14 08:11:34 AEDT 2018 Sun Jan 14 08:11:34 AEDT 2018 : org.apache.commons.math3.geometry.euclidean.threed.Line,54=>Find no block
+Sun Jan 14 08:11:44 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Line,55
+Sun Jan 14 08:14:06 AEDT 2018 Sun Jan 14 08:14:06 AEDT 2018 : org.apache.commons.math3.geometry.euclidean.threed.Line,56=>Find no block
+Sun Jan 14 08:14:14 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Line,74
+Sun Jan 14 08:18:57 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Line,75
+Sun Jan 14 08:19:05 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Line,76
+Sun Jan 14 08:19:13 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Line,79
+Sun Jan 14 08:19:23 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Line,80
+Sun Jan 14 08:19:28 AEDT 2018 Sun Jan 14 08:19:28 AEDT 2018 : org.apache.commons.math3.geometry.euclidean.threed.Line,81=>Find no block
+Sun Jan 14 08:19:35 AEDT 2018 Sun Jan 14 08:19:35 AEDT 2018 : org.apache.commons.math3.geometry.euclidean.threed.Vector3D,151=>Find no block
+Sun Jan 14 08:19:45 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Vector3D,152
+Sun Jan 14 08:31:01 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Vector3D,153
+Sun Jan 14 08:31:09 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Vector3D,154
+Sun Jan 14 08:31:18 AEDT 2018 Sun Jan 14 08:31:18 AEDT 2018 : org.apache.commons.math3.geometry.euclidean.threed.Vector3D,155=>Find no block
+Sun Jan 14 08:31:27 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Vector3D,286
+Sun Jan 14 08:32:25 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Vector3D,287
+Sun Jan 14 08:32:34 AEDT 2018 org.apache.commons.math3.util.MathArrays,866
+Sun Jan 14 08:38:47 AEDT 2018 org.apache.commons.math3.util.MathArrays,867
+Sun Jan 14 08:38:56 AEDT 2018 org.apache.commons.math3.util.MathArrays,868
+Sun Jan 14 08:57:47 AEDT 2018 org.apache.commons.math3.util.MathArrays,869
+Sun Jan 14 09:05:59 AEDT 2018 org.apache.commons.math3.util.MathArrays,870
+Sun Jan 14 09:08:49 AEDT 2018 org.apache.commons.math3.util.MathArrays,871
+Sun Jan 14 09:40:21 AEDT 2018 org.apache.commons.math3.util.MathArrays,874
+Sun Jan 14 09:48:31 AEDT 2018 org.apache.commons.math3.util.MathArrays,875
+Sun Jan 14 11:11:18 AEDT 2018 org.apache.commons.math3.util.MathArrays,878
+Sun Jan 14 11:32:27 AEDT 2018 org.apache.commons.math3.util.MathArrays,879
+Sun Jan 14 11:44:11 AEDT 2018 org.apache.commons.math3.util.MathArrays,880
+Sun Jan 14 11:58:11 AEDT 2018 org.apache.commons.math3.util.MathArrays,881
+Timeout time : 18/01/14 12:20

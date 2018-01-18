@@ -1,0 +1,354 @@
+=================================================
+Project : chart_2	start : 18/01/12 23:13
+Current failed test : org.jfree.data.general.junit.DatasetUtilitiesTests::testBug2849731_3_purify_1 | 18/01/12 23:15
+Fri Jan 12 23:16:34 AEDT 2018 Fri Jan 12 23:16:34 AEDT 2018 : org.jfree.data.xy.XYInterval,78=>Find no block
+Fri Jan 12 23:16:36 AEDT 2018 org.jfree.data.xy.XYInterval,79
+Fri Jan 12 23:33:09 AEDT 2018 org.jfree.data.xy.XYInterval,80
+Fri Jan 12 23:33:11 AEDT 2018 org.jfree.data.xy.XYInterval,81
+Fri Jan 12 23:33:13 AEDT 2018 org.jfree.data.xy.XYInterval,82
+Fri Jan 12 23:33:15 AEDT 2018 org.jfree.data.xy.XYInterval,83
+Fri Jan 12 23:33:16 AEDT 2018 Fri Jan 12 23:33:16 AEDT 2018 : org.jfree.data.xy.XYInterval,84=>Find no block
+Fri Jan 12 23:33:18 AEDT 2018 org.jfree.data.xy.XYInterval,119
+Fri Jan 12 23:33:25 AEDT 2018 org.jfree.data.xy.XYInterval,128
+Fri Jan 12 23:33:30 AEDT 2018 Fri Jan 12 23:33:30 AEDT 2018 : org.jfree.data.xy.XYIntervalSeriesCollection,73=>Find no block
+Fri Jan 12 23:33:32 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,74
+Fri Jan 12 23:34:51 AEDT 2018 Fri Jan 12 23:34:51 AEDT 2018 : org.jfree.data.xy.XYIntervalSeriesCollection,75=>Find no block
+Fri Jan 12 23:34:52 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,84
+Fri Jan 12 23:34:58 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,87
+Timeout time : 18/01/12 23:41
+Current failed test : org.jfree.data.general.junit.DatasetUtilitiesTests::testBug2849731_3_purify_2 | 18/01/12 23:41
+Fri Jan 12 23:43:07 AEDT 2018 Fri Jan 12 23:43:07 AEDT 2018 : org.jfree.data.xy.XYInterval,78=>Find no block
+Fri Jan 12 23:43:08 AEDT 2018 org.jfree.data.xy.XYInterval,79
+Fri Jan 12 23:59:38 AEDT 2018 org.jfree.data.xy.XYInterval,80
+Fri Jan 12 23:59:40 AEDT 2018 org.jfree.data.xy.XYInterval,81
+Fri Jan 12 23:59:42 AEDT 2018 org.jfree.data.xy.XYInterval,82
+Fri Jan 12 23:59:43 AEDT 2018 org.jfree.data.xy.XYInterval,83
+Fri Jan 12 23:59:45 AEDT 2018 Fri Jan 12 23:59:45 AEDT 2018 : org.jfree.data.xy.XYInterval,84=>Find no block
+Fri Jan 12 23:59:46 AEDT 2018 org.jfree.data.xy.XYInterval,119
+Fri Jan 12 23:59:52 AEDT 2018 org.jfree.data.xy.XYInterval,128
+Fri Jan 12 23:59:58 AEDT 2018 Fri Jan 12 23:59:58 AEDT 2018 : org.jfree.data.xy.XYIntervalSeriesCollection,73=>Find no block
+Sat Jan 13 00:00:00 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,74
+Sat Jan 13 00:01:17 AEDT 2018 Sat Jan 13 00:01:17 AEDT 2018 : org.jfree.data.xy.XYIntervalSeriesCollection,75=>Find no block
+Sat Jan 13 00:01:20 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,84
+Sat Jan 13 00:01:26 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,87
+Timeout time : 18/01/13 00:08
+Current failed test : org.jfree.data.general.junit.DatasetUtilitiesTests::testBug2849731_3_purify_3 | 18/01/13 00:08
+Sat Jan 13 00:09:40 AEDT 2018 Sat Jan 13 00:09:40 AEDT 2018 : org.jfree.data.xy.XYInterval,78=>Find no block
+Sat Jan 13 00:09:41 AEDT 2018 org.jfree.data.xy.XYInterval,79
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+yLow=xLow;
+this.xHigh=xHigh;
+this.y=y;
+this.yLow=yLow;
+this.yHigh=yHigh;
+
+Time : 18/01/13 00:19
+----------------------------------------
+Sat Jan 13 00:26:49 AEDT 2018 org.jfree.data.xy.XYInterval,80
+Sat Jan 13 00:26:50 AEDT 2018 org.jfree.data.xy.XYInterval,81
+Sat Jan 13 00:26:51 AEDT 2018 org.jfree.data.xy.XYInterval,82
+Sat Jan 13 00:26:53 AEDT 2018 org.jfree.data.xy.XYInterval,83
+Sat Jan 13 00:26:54 AEDT 2018 Sat Jan 13 00:26:54 AEDT 2018 : org.jfree.data.xy.XYInterval,84=>Find no block
+Sat Jan 13 00:26:55 AEDT 2018 org.jfree.data.xy.XYInterval,119
+Sat Jan 13 00:27:01 AEDT 2018 org.jfree.data.xy.XYInterval,128
+Sat Jan 13 00:27:06 AEDT 2018 Sat Jan 13 00:27:06 AEDT 2018 : org.jfree.data.xy.XYIntervalSeriesCollection,73=>Find no block
+Sat Jan 13 00:27:08 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,74
+Sat Jan 13 00:28:24 AEDT 2018 Sat Jan 13 00:28:24 AEDT 2018 : org.jfree.data.xy.XYIntervalSeriesCollection,75=>Find no block
+Sat Jan 13 00:28:25 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,84
+Sat Jan 13 00:28:31 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,87
+Timeout time : 18/01/13 00:34
+Current failed test : org.jfree.data.general.junit.DatasetUtilitiesTests::testBug2849731_3_purify_4 | 18/01/13 00:34
+Sat Jan 13 00:36:02 AEDT 2018 Sat Jan 13 00:36:02 AEDT 2018 : org.jfree.data.xy.XYInterval,78=>Find no block
+Sat Jan 13 00:36:03 AEDT 2018 org.jfree.data.xy.XYInterval,79
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+yLow=xLow;
+this.xHigh=xHigh;
+this.y=y;
+this.yLow=yLow;
+this.yHigh=yHigh;
+
+Time : 18/01/13 00:45
+----------------------------------------
+Sat Jan 13 00:52:53 AEDT 2018 org.jfree.data.xy.XYInterval,80
+Sat Jan 13 00:52:54 AEDT 2018 org.jfree.data.xy.XYInterval,81
+Sat Jan 13 00:52:56 AEDT 2018 org.jfree.data.xy.XYInterval,82
+Sat Jan 13 00:52:57 AEDT 2018 org.jfree.data.xy.XYInterval,83
+Sat Jan 13 00:52:59 AEDT 2018 Sat Jan 13 00:52:59 AEDT 2018 : org.jfree.data.xy.XYInterval,84=>Find no block
+Sat Jan 13 00:53:00 AEDT 2018 org.jfree.data.xy.XYInterval,119
+Sat Jan 13 00:53:05 AEDT 2018 org.jfree.data.xy.XYInterval,128
+Sat Jan 13 00:53:11 AEDT 2018 Sat Jan 13 00:53:11 AEDT 2018 : org.jfree.data.xy.XYIntervalSeriesCollection,73=>Find no block
+Sat Jan 13 00:53:13 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,74
+Sat Jan 13 00:54:29 AEDT 2018 Sat Jan 13 00:54:29 AEDT 2018 : org.jfree.data.xy.XYIntervalSeriesCollection,75=>Find no block
+Sat Jan 13 00:54:31 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,84
+Sat Jan 13 00:54:36 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,87
+Timeout time : 18/01/13 01:01
+Current failed test : org.jfree.data.general.junit.DatasetUtilitiesTests::testBug2849731_3_purify_5 | 18/01/13 01:01
+Sat Jan 13 01:02:28 AEDT 2018 org.jfree.data.Range,88
+Sat Jan 13 01:11:31 AEDT 2018 org.jfree.data.Range,90
+Sat Jan 13 01:11:33 AEDT 2018 Sat Jan 13 01:11:33 AEDT 2018 : org.jfree.data.xy.XYInterval,78=>Find no block
+Sat Jan 13 01:11:34 AEDT 2018 org.jfree.data.xy.XYInterval,79
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+yLow=xLow;
+this.xHigh=xHigh;
+this.y=y;
+this.yLow=yLow;
+this.yHigh=yHigh;
+
+Time : 18/01/13 01:21
+----------------------------------------
+Timeout time : 18/01/13 01:27
+Current failed test : org.jfree.data.general.junit.DatasetUtilitiesTests::testBug2849731_3_purify_6 | 18/01/13 01:27
+Sat Jan 13 01:29:13 AEDT 2018 org.jfree.data.Range,88
+Sat Jan 13 01:38:55 AEDT 2018 org.jfree.data.Range,90
+Sat Jan 13 01:38:56 AEDT 2018 Sat Jan 13 01:38:56 AEDT 2018 : org.jfree.data.xy.XYInterval,78=>Find no block
+Sat Jan 13 01:38:58 AEDT 2018 org.jfree.data.xy.XYInterval,79
+Timeout time : 18/01/13 01:54
+Current failed test : org.jfree.data.general.junit.DatasetUtilitiesTests::testBug2849731_2_purify_1 | 18/01/13 01:54
+Sat Jan 13 01:55:57 AEDT 2018 Sat Jan 13 01:55:57 AEDT 2018 : org.jfree.data.xy.XYInterval,78=>Find no block
+Sat Jan 13 01:55:59 AEDT 2018 org.jfree.data.xy.XYInterval,79
+Sat Jan 13 02:13:26 AEDT 2018 org.jfree.data.xy.XYInterval,80
+Sat Jan 13 02:13:28 AEDT 2018 org.jfree.data.xy.XYInterval,81
+Sat Jan 13 02:13:30 AEDT 2018 org.jfree.data.xy.XYInterval,82
+Sat Jan 13 02:13:31 AEDT 2018 org.jfree.data.xy.XYInterval,83
+Sat Jan 13 02:13:33 AEDT 2018 Sat Jan 13 02:13:33 AEDT 2018 : org.jfree.data.xy.XYInterval,84=>Find no block
+Sat Jan 13 02:13:34 AEDT 2018 org.jfree.data.xy.XYInterval,92
+Sat Jan 13 02:13:40 AEDT 2018 org.jfree.data.xy.XYInterval,101
+Sat Jan 13 02:13:53 AEDT 2018 Sat Jan 13 02:13:53 AEDT 2018 : org.jfree.data.xy.XYIntervalSeriesCollection,73=>Find no block
+Sat Jan 13 02:13:55 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,74
+Sat Jan 13 02:15:21 AEDT 2018 Sat Jan 13 02:15:21 AEDT 2018 : org.jfree.data.xy.XYIntervalSeriesCollection,75=>Find no block
+Sat Jan 13 02:15:29 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,84
+Sat Jan 13 02:15:36 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,87
+Timeout time : 18/01/13 02:20
+Current failed test : org.jfree.data.general.junit.DatasetUtilitiesTests::testBug2849731_2_purify_2 | 18/01/13 02:20
+Sat Jan 13 02:22:30 AEDT 2018 Sat Jan 13 02:22:30 AEDT 2018 : org.jfree.data.xy.XYInterval,78=>Find no block
+Sat Jan 13 02:22:35 AEDT 2018 org.jfree.data.xy.XYInterval,79
+Sat Jan 13 02:40:11 AEDT 2018 org.jfree.data.xy.XYInterval,80
+Sat Jan 13 02:40:13 AEDT 2018 org.jfree.data.xy.XYInterval,81
+Sat Jan 13 02:40:22 AEDT 2018 org.jfree.data.xy.XYInterval,82
+Sat Jan 13 02:40:28 AEDT 2018 org.jfree.data.xy.XYInterval,83
+Sat Jan 13 02:40:30 AEDT 2018 Sat Jan 13 02:40:30 AEDT 2018 : org.jfree.data.xy.XYInterval,84=>Find no block
+Sat Jan 13 02:40:31 AEDT 2018 org.jfree.data.xy.XYInterval,92
+Sat Jan 13 02:40:36 AEDT 2018 org.jfree.data.xy.XYInterval,101
+Sat Jan 13 02:40:43 AEDT 2018 Sat Jan 13 02:40:43 AEDT 2018 : org.jfree.data.xy.XYIntervalSeriesCollection,73=>Find no block
+Sat Jan 13 02:40:46 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,74
+Sat Jan 13 02:42:13 AEDT 2018 Sat Jan 13 02:42:13 AEDT 2018 : org.jfree.data.xy.XYIntervalSeriesCollection,75=>Find no block
+Sat Jan 13 02:42:15 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,84
+Sat Jan 13 02:42:28 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,87
+Timeout time : 18/01/13 02:47
+Current failed test : org.jfree.data.general.junit.DatasetUtilitiesTests::testBug2849731_2_purify_3 | 18/01/13 02:47
+Sat Jan 13 02:49:16 AEDT 2018 Sat Jan 13 02:49:16 AEDT 2018 : org.jfree.data.xy.XYInterval,78=>Find no block
+Sat Jan 13 02:49:18 AEDT 2018 org.jfree.data.xy.XYInterval,79
+Sat Jan 13 03:06:52 AEDT 2018 org.jfree.data.xy.XYInterval,80
+Sat Jan 13 03:06:54 AEDT 2018 org.jfree.data.xy.XYInterval,81
+Sat Jan 13 03:06:55 AEDT 2018 org.jfree.data.xy.XYInterval,82
+Sat Jan 13 03:06:56 AEDT 2018 org.jfree.data.xy.XYInterval,83
+Sat Jan 13 03:06:58 AEDT 2018 Sat Jan 13 03:06:58 AEDT 2018 : org.jfree.data.xy.XYInterval,84=>Find no block
+Sat Jan 13 03:07:02 AEDT 2018 org.jfree.data.xy.XYInterval,92
+Sat Jan 13 03:07:08 AEDT 2018 org.jfree.data.xy.XYInterval,101
+Sat Jan 13 03:07:14 AEDT 2018 Sat Jan 13 03:07:14 AEDT 2018 : org.jfree.data.xy.XYIntervalSeriesCollection,73=>Find no block
+Sat Jan 13 03:07:15 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,74
+Sat Jan 13 03:08:39 AEDT 2018 Sat Jan 13 03:08:39 AEDT 2018 : org.jfree.data.xy.XYIntervalSeriesCollection,75=>Find no block
+Sat Jan 13 03:08:40 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,84
+Sat Jan 13 03:08:53 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,87
+Timeout time : 18/01/13 03:14
+Current failed test : org.jfree.data.general.junit.DatasetUtilitiesTests::testBug2849731_2_purify_4 | 18/01/13 03:14
+Sat Jan 13 03:16:03 AEDT 2018 Sat Jan 13 03:16:03 AEDT 2018 : org.jfree.data.xy.XYInterval,78=>Find no block
+Sat Jan 13 03:16:05 AEDT 2018 org.jfree.data.xy.XYInterval,79
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+xHigh=xLow;
+this.xHigh=xHigh;
+this.y=y;
+this.yLow=yLow;
+this.yHigh=yHigh;
+
+Time : 18/01/13 03:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+xHigh=xLow;
+this.xHigh=xHigh;
+this.y=y;
+xHigh=yLow;
+this.yHigh=yHigh;
+
+Time : 18/01/13 03:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+xHigh=xLow;
+this.xHigh=xHigh;
+xLow=y;
+this.yLow=yLow;
+this.yHigh=yHigh;
+
+Time : 18/01/13 03:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+xHigh=xLow;
+this.xHigh=xHigh;
+xLow=y;
+xHigh=yLow;
+this.yHigh=yHigh;
+
+Time : 18/01/13 03:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+xHigh=xLow;
+this.xHigh=xHigh;
+this.y=y;
+y=yLow;
+this.yHigh=yHigh;
+
+Time : 18/01/13 03:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+xHigh=xLow;
+this.xHigh=xHigh;
+xLow=y;
+y=yLow;
+this.yHigh=yHigh;
+
+Time : 18/01/13 03:27
+----------------------------------------
+Sat Jan 13 03:37:26 AEDT 2018 org.jfree.data.xy.XYInterval,80
+Sat Jan 13 03:37:27 AEDT 2018 org.jfree.data.xy.XYInterval,81
+Sat Jan 13 03:37:29 AEDT 2018 org.jfree.data.xy.XYInterval,82
+Sat Jan 13 03:37:30 AEDT 2018 org.jfree.data.xy.XYInterval,83
+Sat Jan 13 03:37:35 AEDT 2018 Sat Jan 13 03:37:35 AEDT 2018 : org.jfree.data.xy.XYInterval,84=>Find no block
+Sat Jan 13 03:37:36 AEDT 2018 org.jfree.data.xy.XYInterval,92
+Sat Jan 13 03:37:41 AEDT 2018 org.jfree.data.xy.XYInterval,101
+Sat Jan 13 03:37:46 AEDT 2018 Sat Jan 13 03:37:46 AEDT 2018 : org.jfree.data.xy.XYIntervalSeriesCollection,73=>Find no block
+Sat Jan 13 03:37:47 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,74
+Sat Jan 13 03:39:06 AEDT 2018 Sat Jan 13 03:39:06 AEDT 2018 : org.jfree.data.xy.XYIntervalSeriesCollection,75=>Find no block
+Sat Jan 13 03:39:07 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,84
+Sat Jan 13 03:39:12 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,87
+Timeout time : 18/01/13 03:40
+Current failed test : org.jfree.data.general.junit.DatasetUtilitiesTests::testBug2849731_2_purify_5 | 18/01/13 03:40
+Sat Jan 13 03:42:35 AEDT 2018 Sat Jan 13 03:42:35 AEDT 2018 : org.jfree.data.xy.XYInterval,78=>Find no block
+Sat Jan 13 03:42:36 AEDT 2018 org.jfree.data.xy.XYInterval,79
+Sat Jan 13 03:59:24 AEDT 2018 org.jfree.data.xy.XYInterval,80
+Sat Jan 13 03:59:25 AEDT 2018 org.jfree.data.xy.XYInterval,81
+Sat Jan 13 03:59:27 AEDT 2018 org.jfree.data.xy.XYInterval,82
+Sat Jan 13 03:59:31 AEDT 2018 org.jfree.data.xy.XYInterval,83
+Sat Jan 13 03:59:32 AEDT 2018 Sat Jan 13 03:59:32 AEDT 2018 : org.jfree.data.xy.XYInterval,84=>Find no block
+Sat Jan 13 03:59:33 AEDT 2018 org.jfree.data.xy.XYInterval,92
+Sat Jan 13 03:59:37 AEDT 2018 org.jfree.data.xy.XYInterval,101
+Sat Jan 13 03:59:45 AEDT 2018 Sat Jan 13 03:59:45 AEDT 2018 : org.jfree.data.xy.XYIntervalSeriesCollection,73=>Find no block
+Sat Jan 13 03:59:46 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,74
+Sat Jan 13 04:01:06 AEDT 2018 Sat Jan 13 04:01:06 AEDT 2018 : org.jfree.data.xy.XYIntervalSeriesCollection,75=>Find no block
+Sat Jan 13 04:01:07 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,84
+Sat Jan 13 04:01:12 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,87
+Timeout time : 18/01/13 04:07
+Current failed test : org.jfree.data.general.junit.DatasetUtilitiesTests::testBug2849731_2_purify_6 | 18/01/13 04:07
+Sat Jan 13 04:08:59 AEDT 2018 Sat Jan 13 04:08:59 AEDT 2018 : org.jfree.data.xy.XYInterval,78=>Find no block
+Sat Jan 13 04:09:00 AEDT 2018 org.jfree.data.xy.XYInterval,79
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+xHigh=xLow;
+this.xHigh=xHigh;
+this.y=y;
+this.yLow=yLow;
+this.yHigh=yHigh;
+
+Time : 18/01/13 04:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+xHigh=xLow;
+this.xHigh=xHigh;
+this.y=y;
+xHigh=yLow;
+this.yHigh=yHigh;
+
+Time : 18/01/13 04:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+xHigh=xLow;
+this.xHigh=xHigh;
+xLow=y;
+this.yLow=yLow;
+this.yHigh=yHigh;
+
+Time : 18/01/13 04:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+xHigh=xLow;
+this.xHigh=xHigh;
+xLow=y;
+xHigh=yLow;
+this.yHigh=yHigh;
+
+Time : 18/01/13 04:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+xHigh=xLow;
+this.xHigh=xHigh;
+this.y=y;
+y=yLow;
+this.yHigh=yHigh;
+
+Time : 18/01/13 04:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+xHigh=xLow;
+this.xHigh=xHigh;
+xLow=y;
+y=yLow;
+this.yHigh=yHigh;
+
+Time : 18/01/13 04:19
+----------------------------------------
+Sat Jan 13 04:30:11 AEDT 2018 org.jfree.data.xy.XYInterval,80
+Sat Jan 13 04:30:12 AEDT 2018 org.jfree.data.xy.XYInterval,81
+Sat Jan 13 04:30:14 AEDT 2018 org.jfree.data.xy.XYInterval,82
+Sat Jan 13 04:30:15 AEDT 2018 org.jfree.data.xy.XYInterval,83
+Sat Jan 13 04:30:16 AEDT 2018 Sat Jan 13 04:30:16 AEDT 2018 : org.jfree.data.xy.XYInterval,84=>Find no block
+Sat Jan 13 04:30:17 AEDT 2018 org.jfree.data.xy.XYInterval,92
+Sat Jan 13 04:30:22 AEDT 2018 org.jfree.data.xy.XYInterval,101
+Sat Jan 13 04:30:34 AEDT 2018 Sat Jan 13 04:30:34 AEDT 2018 : org.jfree.data.xy.XYIntervalSeriesCollection,73=>Find no block
+Sat Jan 13 04:30:35 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,74
+Sat Jan 13 04:31:53 AEDT 2018 Sat Jan 13 04:31:53 AEDT 2018 : org.jfree.data.xy.XYIntervalSeriesCollection,75=>Find no block
+Sat Jan 13 04:31:56 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,84
+Sat Jan 13 04:32:07 AEDT 2018 org.jfree.data.xy.XYIntervalSeriesCollection,87
+Timeout time : 18/01/13 04:34

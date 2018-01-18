@@ -1,0 +1,220 @@
+=================================================
+Project : time_13	start : 18/01/16 01:35
+Current failed test : org.joda.time.format.TestISOPeriodFormat::testFormatStandard_negative_purify_6 | 18/01/16 01:35
+Tue Jan 16 01:35:57 EST 2018 org.joda.time.Period,967
+Tue Jan 16 01:37:31 EST 2018 org.joda.time.Period,968
+Tue Jan 16 01:37:31 EST 2018 org.joda.time.Period,969
+Tue Jan 16 01:37:31 EST 2018 org.joda.time.Period,226
+Tue Jan 16 01:37:32 EST 2018 org.joda.time.format.FormatUtils,337
+Tue Jan 16 01:37:58 EST 2018 org.joda.time.format.FormatUtils,338
+Tue Jan 16 01:37:58 EST 2018 org.joda.time.Period,212
+Tue Jan 16 01:37:59 EST 2018 org.joda.time.Period,110
+Tue Jan 16 01:38:00 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1098
+Tue Jan 16 01:39:44 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1100
+Tue Jan 16 01:39:44 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1101
+Tue Jan 16 01:39:44 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1106
+Tue Jan 16 01:39:44 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1142
+Tue Jan 16 01:43:56 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1143
+Tue Jan 16 01:43:56 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1651
+Tue Jan 16 01:45:39 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1127
+Tue Jan 16 01:46:52 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1140
+Tue Jan 16 01:52:29 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1141
+Tue Jan 16 01:52:29 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1674
+Tue Jan 16 01:54:28 EST 2018 org.joda.time.PeriodType,692
+Tue Jan 16 01:56:14 EST 2018 org.joda.time.PeriodType,693
+Tue Jan 16 01:56:14 EST 2018 org.joda.time.PeriodType,688
+Tue Jan 16 01:56:14 EST 2018 org.joda.time.PeriodType,689
+Tue Jan 16 01:56:14 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1650
+Tue Jan 16 01:56:14 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1673
+Tue Jan 16 01:56:14 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1422
+Tue Jan 16 01:58:30 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1423
+Tue Jan 16 01:59:52 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1424
+Tue Jan 16 02:01:17 EST 2018 org.joda.time.format.PeriodFormatterBuilder,864
+Tue Jan 16 02:01:38 EST 2018 org.joda.time.format.PeriodFormatterBuilder,868
+Tue Jan 16 02:01:46 EST 2018 Tue Jan 16 02:01:46 EST 2018 : org.joda.time.format.PeriodFormatterBuilder,869=>Find no block
+Tue Jan 16 02:01:47 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1553
+Tue Jan 16 02:01:47 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1557
+Tue Jan 16 02:01:47 EST 2018 Tue Jan 16 02:01:47 EST 2018 : org.joda.time.format.PeriodFormatterBuilder,1558=>Find no block
+Tue Jan 16 02:01:47 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1466
+Tue Jan 16 02:02:55 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1441
+Tue Jan 16 02:08:39 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1494
+Tue Jan 16 02:08:51 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1091
+Tue Jan 16 02:09:33 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1123
+Tue Jan 16 02:10:15 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1114
+Tue Jan 16 02:11:11 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1147
+Tue Jan 16 02:12:46 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1633
+Tue Jan 16 02:13:13 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1634
+Tue Jan 16 02:13:13 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1636
+Tue Jan 16 02:13:13 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1639
+Tue Jan 16 02:19:01 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1654
+Tue Jan 16 02:19:48 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1658
+Tue Jan 16 02:22:12 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1659
+Tue Jan 16 02:22:12 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1661
+Tue Jan 16 02:22:12 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1662
+Tue Jan 16 02:30:01 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1676
+Tue Jan 16 02:36:01 EST 2018 Tue Jan 16 02:36:01 EST 2018 : org.joda.time.format.PeriodFormatterBuilder,1677=>Find no block
+Tue Jan 16 02:36:01 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1412
+Tue Jan 16 02:36:12 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1413
+Tue Jan 16 02:36:21 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1403
+Tue Jan 16 02:36:32 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1404
+Tue Jan 16 02:36:40 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1400
+Tue Jan 16 02:36:51 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1401
+Tue Jan 16 02:37:00 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1406
+Tue Jan 16 02:37:11 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1407
+Tue Jan 16 02:37:19 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1409
+Tue Jan 16 02:37:30 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1410
+Tue Jan 16 02:37:39 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1434
+Tue Jan 16 02:37:39 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1483
+Tue Jan 16 02:37:51 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1481
+Tue Jan 16 02:38:03 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1487
+Tue Jan 16 02:38:15 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1479
+Tue Jan 16 02:38:27 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1485
+Tue Jan 16 02:38:40 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1397
+Tue Jan 16 02:38:51 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1398
+Tue Jan 16 02:38:59 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1464
+Tue Jan 16 02:41:09 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1465
+Tue Jan 16 02:41:09 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1477
+Tue Jan 16 02:41:22 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1083
+Tue Jan 16 02:43:35 EST 2018 org.joda.time.Period,683
+Tue Jan 16 02:43:48 EST 2018 Tue Jan 16 02:43:48 EST 2018 : org.joda.time.Period,684=>Find no block
+Tue Jan 16 02:43:48 EST 2018 org.joda.time.base.BasePeriod,293
+Tue Jan 16 02:44:30 EST 2018 org.joda.time.base.BasePeriod,294
+Tue Jan 16 02:44:30 EST 2018 org.joda.time.base.BasePeriod,295
+Tue Jan 16 02:44:30 EST 2018 Tue Jan 16 02:44:30 EST 2018 : org.joda.time.base.BasePeriod,296=>Find no block
+Tue Jan 16 02:44:30 EST 2018 Tue Jan 16 02:44:30 EST 2018 : org.joda.time.format.PeriodFormatterBuilder,1430=>Find no block
+Tue Jan 16 02:44:30 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1079
+Tue Jan 16 02:44:31 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1082
+Tue Jan 16 02:44:31 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1788
+Tue Jan 16 02:48:12 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1789
+Tue Jan 16 02:48:12 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1790
+Tue Jan 16 02:48:13 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1791
+Tue Jan 16 02:48:13 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1793
+Tue Jan 16 02:48:13 EST 2018 org.joda.time.format.FormatUtils,246
+Tue Jan 16 03:00:00 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1135
+Tue Jan 16 03:08:10 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1385
+Tue Jan 16 03:09:48 EST 2018 Tue Jan 16 03:09:48 EST 2018 : org.joda.time.format.PeriodFormatterBuilder,1473=>Find no block
+Tue Jan 16 03:09:48 EST 2018 org.joda.time.format.FormatUtils,236
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(value<=0){
+buf.append('-');
+if(value!=Integer.MIN_VALUE){
+value=-value;
+}else {
+buf.append(""+-(long)Integer.MIN_VALUE);
+return ;
+}
+}
+
+Time : 18/01/16 03:17
+----------------------------------------
+Tue Jan 16 03:18:29 EST 2018 org.joda.time.format.FormatUtils,245
+Tue Jan 16 03:18:29 EST 2018 Tue Jan 16 03:18:29 EST 2018 : org.joda.time.format.FormatUtils,258=>Find no block
+Tue Jan 16 03:18:29 EST 2018 org.joda.time.PeriodType,638
+Tue Jan 16 03:18:30 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1089
+Tue Jan 16 03:19:06 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1090
+Tue Jan 16 03:19:06 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1094
+Tue Jan 16 03:20:39 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1095
+Tue Jan 16 03:20:39 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1108
+Tue Jan 16 03:25:13 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1110
+Tue Jan 16 03:25:13 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1113
+Tue Jan 16 03:25:14 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1117
+Tue Jan 16 03:27:34 EST 2018 org.joda.time.format.FormatUtils,336
+Tue Jan 16 03:27:46 EST 2018 org.joda.time.format.FormatUtils,343
+Tue Jan 16 03:28:10 EST 2018 org.joda.time.format.PeriodFormatter,237
+Tue Jan 16 03:28:52 EST 2018 org.joda.time.format.PeriodFormatter,239
+Tue Jan 16 03:28:52 EST 2018 org.joda.time.format.PeriodFormatter,240
+Tue Jan 16 03:28:52 EST 2018 org.joda.time.format.PeriodFormatter,241
+Tue Jan 16 03:28:52 EST 2018 org.joda.time.format.PeriodFormatter,242
+Tue Jan 16 03:28:52 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1121
+Tue Jan 16 03:29:56 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1122
+Tue Jan 16 03:29:56 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1125
+Tue Jan 16 03:31:52 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1126
+Tue Jan 16 03:31:52 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1130
+Tue Jan 16 03:33:18 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1133
+Tue Jan 16 03:43:56 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1134
+Tue Jan 16 03:43:56 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1139
+Tue Jan 16 03:43:56 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1146
+Tue Jan 16 03:43:56 EST 2018 Tue Jan 16 03:43:56 EST 2018 : org.joda.time.format.PeriodFormatterBuilder,1149=>Find no block
+Tue Jan 16 03:43:57 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1797
+Tue Jan 16 03:47:47 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1798
+Tue Jan 16 03:47:47 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1799
+Tue Jan 16 03:47:47 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1800
+Tue Jan 16 03:47:47 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1802
+Tue Jan 16 03:47:47 EST 2018 org.joda.time.format.PeriodFormatter,236
+Tue Jan 16 03:47:47 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1382
+Tue Jan 16 03:47:47 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1387
+Tue Jan 16 03:48:43 EST 2018 Tue Jan 16 03:48:43 EST 2018 : org.joda.time.format.PeriodFormatterBuilder,1393=>Find no block
+Tue Jan 16 03:48:43 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1429
+Tue Jan 16 03:53:40 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1460
+Tue Jan 16 03:54:18 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1806
+Tue Jan 16 04:00:00 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1807
+Tue Jan 16 04:00:00 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1808
+Tue Jan 16 04:06:31 EST 2018 org.joda.time.format.PeriodFormatterBuilder,1809
+Tue Jan 16 04:06:31 EST 2018 Tue Jan 16 04:06:31 EST 2018 : org.joda.time.format.PeriodFormatterBuilder,1811=>Find no block
+Tue Jan 16 04:06:31 EST 2018 Tue Jan 16 04:06:31 EST 2018 : org.joda.time.format.PeriodFormatter,254=>Find no block
+Tue Jan 16 04:06:31 EST 2018 org.joda.time.format.PeriodFormatter,251
+Tue Jan 16 04:06:31 EST 2018 org.joda.time.base.AbstractPeriod,113
+Tue Jan 16 04:07:48 EST 2018 org.joda.time.base.AbstractPeriod,114
+Tue Jan 16 04:08:17 EST 2018 org.joda.time.base.AbstractPeriod,117
+Tue Jan 16 04:08:17 EST 2018 org.joda.time.base.AbstractPeriod,95
+Tue Jan 16 04:08:59 EST 2018 org.joda.time.base.AbstractPeriod,96
+Tue Jan 16 04:09:53 EST 2018 org.joda.time.base.AbstractPeriod,97
+Tue Jan 16 04:09:53 EST 2018 org.joda.time.base.AbstractPeriod,99
+Tue Jan 16 04:09:53 EST 2018 org.joda.time.format.PeriodFormatter,262
+Tue Jan 16 04:10:31 EST 2018 Tue Jan 16 04:10:31 EST 2018 : org.joda.time.format.PeriodFormatter,265=>Find no block
+Tue Jan 16 04:10:31 EST 2018 org.joda.time.format.PeriodFormatter,128
+Tue Jan 16 04:10:32 EST 2018 org.joda.time.format.ISOPeriodFormat,65
+Tue Jan 16 04:11:15 EST 2018 org.joda.time.format.ISOPeriodFormat,85
+Tue Jan 16 04:11:58 EST 2018 org.joda.time.Period,329
+Tue Jan 16 04:11:59 EST 2018 Tue Jan 16 04:11:59 EST 2018 : org.joda.time.Period,330=>Find no block
+Tue Jan 16 04:11:59 EST 2018 org.joda.time.format.FormatUtils,63
+Tue Jan 16 04:17:30 EST 2018 org.joda.time.format.FormatUtils,64
+Tue Jan 16 04:17:30 EST 2018 org.joda.time.format.FormatUtils,66
+Tue Jan 16 04:23:08 EST 2018 org.joda.time.format.FormatUtils,50
+Tue Jan 16 04:41:10 EST 2018 org.joda.time.format.FormatUtils,62
+Tue Jan 16 05:06:55 EST 2018 Tue Jan 16 05:06:55 EST 2018 : org.joda.time.format.FormatUtils,92=>Find no block
+Tue Jan 16 05:06:55 EST 2018 Tue Jan 16 05:06:55 EST 2018 : org.joda.time.base.BasePeriod,94=>Find no block
+Tue Jan 16 05:06:55 EST 2018 org.joda.time.base.BasePeriod,455
+Tue Jan 16 05:07:54 EST 2018 org.joda.time.base.BasePeriod,456
+Tue Jan 16 05:12:33 EST 2018 org.joda.time.base.BasePeriod,457
+Tue Jan 16 05:17:47 EST 2018 org.joda.time.base.BasePeriod,458
+Tue Jan 16 05:23:10 EST 2018 org.joda.time.base.BasePeriod,459
+Tue Jan 16 05:26:24 EST 2018 org.joda.time.base.BasePeriod,460
+Tue Jan 16 05:30:48 EST 2018 org.joda.time.base.BasePeriod,461
+Tue Jan 16 05:32:10 EST 2018 org.joda.time.base.BasePeriod,462
+Tue Jan 16 05:32:10 EST 2018 org.joda.time.base.BasePeriod,90
+Tue Jan 16 05:32:55 EST 2018 org.joda.time.base.BasePeriod,91
+Tue Jan 16 05:32:55 EST 2018 org.joda.time.base.BasePeriod,92
+Tue Jan 16 05:32:56 EST 2018 org.joda.time.base.BasePeriod,93
+Tue Jan 16 05:32:56 EST 2018 org.joda.time.base.BasePeriod,453
+Tue Jan 16 05:33:27 EST 2018 org.joda.time.base.BasePeriod,454
+Tue Jan 16 05:33:27 EST 2018 org.joda.time.base.BasePeriod,397
+Tue Jan 16 05:37:22 EST 2018 Tue Jan 16 05:37:22 EST 2018 : org.joda.time.base.BasePeriod,399=>Find no block
+Tue Jan 16 05:37:22 EST 2018 org.joda.time.base.BasePeriod,390
+Tue Jan 16 05:39:05 EST 2018 org.joda.time.base.BasePeriod,391
+Tue Jan 16 05:39:05 EST 2018 org.joda.time.DurationFieldType,160
+Tue Jan 16 05:39:06 EST 2018 org.joda.time.DurationFieldType,114
+Tue Jan 16 05:39:06 EST 2018 org.joda.time.DurationFieldType,123
+Tue Jan 16 05:39:07 EST 2018 org.joda.time.PeriodType,650
+Tue Jan 16 05:39:59 EST 2018 org.joda.time.base.AbstractPeriod,137
+Tue Jan 16 05:40:16 EST 2018 org.joda.time.PeriodType,648
+Tue Jan 16 05:42:19 EST 2018 org.joda.time.PeriodType,649
+Tue Jan 16 05:42:19 EST 2018 org.joda.time.DurationFieldType,132
+Tue Jan 16 05:42:20 EST 2018 org.joda.time.DurationFieldType,187
+Tue Jan 16 05:42:21 EST 2018 org.joda.time.DateTimeUtils,319
+Tue Jan 16 05:42:34 EST 2018 org.joda.time.DurationFieldType,105
+Tue Jan 16 05:42:34 EST 2018 org.joda.time.DurationFieldType,178
+Tue Jan 16 05:42:35 EST 2018 org.joda.time.DurationFieldType,151
+Tue Jan 16 05:42:36 EST 2018 org.joda.time.base.BasePeriod,308
+Tue Jan 16 05:42:36 EST 2018 org.joda.time.DateTimeUtils,316
+Tue Jan 16 05:42:46 EST 2018 org.joda.time.PeriodType,102
+Tue Jan 16 05:45:25 EST 2018 org.joda.time.PeriodType,103
+Tue Jan 16 05:45:41 EST 2018 org.joda.time.PeriodType,116
+Tue Jan 16 05:45:41 EST 2018 org.joda.time.base.AbstractPeriod,56
+Tue Jan 16 05:45:42 EST 2018 org.joda.time.PeriodType,617
+Tue Jan 16 05:45:46 EST 2018 org.joda.time.base.BasePeriod,329
+Tue Jan 16 05:45:47 EST 2018 org.joda.time.base.AbstractPeriod,45
+Failed time : 18/01/16 05:45

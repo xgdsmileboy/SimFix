@@ -1,0 +1,270 @@
+=================================================
+Project : lang_56	start : 18/01/12 22:00
+Current failed test : org.apache.commons.lang.time.FastDateFormatTest::testLang303 | 18/01/12 22:00
+Fri Jan 12 22:01:00 AEDT 2018 Fri Jan 12 22:01:00 AEDT 2018 : org.apache.commons.lang.exception.NestableRuntimeException,47=>Find no block
+Fri Jan 12 22:01:00 AEDT 2018 Fri Jan 12 22:01:00 AEDT 2018 : org.apache.commons.lang.exception.NestableRuntimeException,53=>Find no block
+Fri Jan 12 22:01:00 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,81
+Fri Jan 12 22:01:16 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,82
+Fri Jan 12 22:01:16 AEDT 2018 Fri Jan 12 22:01:16 AEDT 2018 : org.apache.commons.lang.exception.NestableRuntimeException,83=>Find no block
+Fri Jan 12 22:01:16 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,102
+Fri Jan 12 22:01:17 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,113
+Fri Jan 12 22:01:56 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,115
+Fri Jan 12 22:01:56 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,116
+Fri Jan 12 22:01:56 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,193
+Fri Jan 12 22:02:16 AEDT 2018 Fri Jan 12 22:02:16 AEDT 2018 : org.apache.commons.lang.exception.NestableRuntimeException,194=>Find no block
+Fri Jan 12 22:02:16 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,200
+Fri Jan 12 22:02:47 AEDT 2018 Fri Jan 12 22:02:47 AEDT 2018 : org.apache.commons.lang.exception.NestableRuntimeException,201=>Find no block
+Fri Jan 12 22:02:47 AEDT 2018 org.apache.commons.lang.SerializationException,65
+Fri Jan 12 22:03:07 AEDT 2018 Fri Jan 12 22:03:07 AEDT 2018 : org.apache.commons.lang.SerializationException,66=>Find no block
+Fri Jan 12 22:03:07 AEDT 2018 org.apache.commons.lang.SerializationUtils,101
+Fri Jan 12 22:03:08 AEDT 2018 org.apache.commons.lang.SerializationUtils,104
+Fri Jan 12 22:03:08 AEDT 2018 org.apache.commons.lang.SerializationUtils,107
+Fri Jan 12 22:03:29 AEDT 2018 org.apache.commons.lang.SerializationUtils,108
+Fri Jan 12 22:03:29 AEDT 2018 Fri Jan 12 22:03:29 AEDT 2018 : org.apache.commons.lang.SerializationUtils,110=>Find no block
+Fri Jan 12 22:03:30 AEDT 2018 org.apache.commons.lang.SerializationUtils,111
+Fri Jan 12 22:05:36 AEDT 2018 Fri Jan 12 22:05:36 AEDT 2018 : org.apache.commons.lang.SerializationUtils,113=>Find no block
+Fri Jan 12 22:05:36 AEDT 2018 org.apache.commons.lang.SerializationUtils,132
+Fri Jan 12 22:07:44 AEDT 2018 org.apache.commons.lang.SerializationUtils,133
+Fri Jan 12 22:07:45 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,167
+Fri Jan 12 22:08:10 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,980
+Fri Jan 12 22:09:52 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,983
+Fri Jan 12 22:27:34 AEDT 2018 Fri Jan 12 22:27:34 AEDT 2018 : org.apache.commons.lang.time.FastDateFormat,984=>Find no block
+Fri Jan 12 22:27:34 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,991
+Fri Jan 12 22:27:34 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,547
+Fri Jan 12 22:28:20 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,553
+Fri Jan 12 22:29:06 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,539
+Fri Jan 12 22:29:07 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,540
+Fri Jan 12 22:29:07 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,543
+Fri Jan 12 22:30:11 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,545
+Fri Jan 12 22:31:43 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,546
+Fri Jan 12 22:31:43 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,549
+Fri Jan 12 22:33:04 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,551
+Fri Jan 12 22:34:35 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,552
+Fri Jan 12 22:34:35 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,555
+Fri Jan 12 22:35:41 AEDT 2018 Fri Jan 12 22:35:41 AEDT 2018 : org.apache.commons.lang.time.FastDateFormat,556=>Find no block
+Fri Jan 12 22:35:41 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,213
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(format!=null){
+format=emptyFormat;
+format.init();
+cInstanceCache.put(format,format);
+}
+
+Time : 18/01/12 22:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+FastDateFormat emptyFormat=new FastDateFormat(pattern,timeZone,locale);
+FastDateFormat format=new FastDateFormat(pattern,timeZone,locale);
+if(format==null){
+format=emptyFormat;
+format.init();
+cInstanceCache.put(format,format);
+}
+return format;
+
+Time : 18/01/12 22:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cInstanceCache.get(pattern)==null){
+return null;
+}
+FastDateFormat emptyFormat=new FastDateFormat(pattern,timeZone,locale);
+FastDateFormat format=(FastDateFormat)cInstanceCache.get(emptyFormat);
+if(format==null){
+format=emptyFormat;
+format.init();
+cInstanceCache.put(format,format);
+}
+return format;
+
+Time : 18/01/12 22:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cInstanceCache==null){
+return null;
+}
+if(cInstanceCache.get(pattern)==null){
+return null;
+}
+FastDateFormat emptyFormat=new FastDateFormat(pattern,timeZone,locale);
+FastDateFormat format=(FastDateFormat)cInstanceCache.get(emptyFormat);
+if(format==null){
+format=emptyFormat;
+format.init();
+cInstanceCache.put(format,format);
+}
+return format;
+
+Time : 18/01/12 22:39
+----------------------------------------
+Fri Jan 12 22:41:38 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,214
+Fri Jan 12 22:41:38 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,215
+Fri Jan 12 22:41:38 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,220
+Fri Jan 12 22:41:38 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1002
+Fri Jan 12 22:54:26 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1003
+Fri Jan 12 22:54:26 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1004
+Fri Jan 12 22:54:26 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1005
+Fri Jan 12 22:54:26 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1006
+Fri Jan 12 22:54:27 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1007
+Fri Jan 12 22:54:27 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1008
+Fri Jan 12 22:54:27 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,60
+Fri Jan 12 22:54:28 AEDT 2018 Fri Jan 12 22:54:28 AEDT 2018 : org.apache.commons.lang.exception.NestableRuntimeException,61=>Find no block
+Fri Jan 12 22:54:28 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,70
+Fri Jan 12 22:54:43 AEDT 2018 Fri Jan 12 22:54:43 AEDT 2018 : org.apache.commons.lang.exception.NestableRuntimeException,71=>Find no block
+Fri Jan 12 22:54:43 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,94
+Fri Jan 12 22:55:11 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,95
+Fri Jan 12 22:55:11 AEDT 2018 Fri Jan 12 22:55:11 AEDT 2018 : org.apache.commons.lang.exception.NestableRuntimeException,96=>Find no block
+Fri Jan 12 22:55:12 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,114
+Fri Jan 12 22:55:12 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,118
+Fri Jan 12 22:55:12 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,126
+Fri Jan 12 22:56:04 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,127
+Fri Jan 12 22:56:04 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,129
+Fri Jan 12 22:56:05 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,137
+Fri Jan 12 22:56:05 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,144
+Fri Jan 12 22:56:26 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,151
+Fri Jan 12 22:56:26 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,158
+Fri Jan 12 22:56:27 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,165
+Fri Jan 12 22:56:49 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,172
+Fri Jan 12 22:57:30 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,179
+Fri Jan 12 22:57:31 AEDT 2018 Fri Jan 12 22:57:31 AEDT 2018 : org.apache.commons.lang.exception.NestableRuntimeException,180=>Find no block
+Fri Jan 12 22:57:31 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,186
+Fri Jan 12 22:57:32 AEDT 2018 Fri Jan 12 22:57:32 AEDT 2018 : org.apache.commons.lang.exception.NestableRuntimeException,187=>Find no block
+Fri Jan 12 22:57:32 AEDT 2018 org.apache.commons.lang.SerializationException,44
+Fri Jan 12 22:57:32 AEDT 2018 Fri Jan 12 22:57:32 AEDT 2018 : org.apache.commons.lang.SerializationException,45=>Find no block
+Fri Jan 12 22:57:32 AEDT 2018 org.apache.commons.lang.SerializationException,54
+Fri Jan 12 22:57:32 AEDT 2018 Fri Jan 12 22:57:32 AEDT 2018 : org.apache.commons.lang.SerializationException,55=>Find no block
+Fri Jan 12 22:57:32 AEDT 2018 org.apache.commons.lang.SerializationException,77
+Fri Jan 12 22:58:12 AEDT 2018 Fri Jan 12 22:58:12 AEDT 2018 : org.apache.commons.lang.SerializationException,78=>Find no block
+Fri Jan 12 22:58:12 AEDT 2018 org.apache.commons.lang.SerializationUtils,61
+Fri Jan 12 22:58:12 AEDT 2018 Fri Jan 12 22:58:12 AEDT 2018 : org.apache.commons.lang.SerializationUtils,62=>Find no block
+Fri Jan 12 22:58:12 AEDT 2018 org.apache.commons.lang.SerializationUtils,80
+Fri Jan 12 22:58:13 AEDT 2018 org.apache.commons.lang.SerializationUtils,102
+Fri Jan 12 22:58:13 AEDT 2018 org.apache.commons.lang.SerializationUtils,114
+Fri Jan 12 22:58:14 AEDT 2018 org.apache.commons.lang.SerializationUtils,115
+Fri Jan 12 22:58:14 AEDT 2018 Fri Jan 12 22:58:14 AEDT 2018 : org.apache.commons.lang.SerializationUtils,119=>Find no block
+Fri Jan 12 22:58:14 AEDT 2018 Fri Jan 12 22:58:14 AEDT 2018 : org.apache.commons.lang.SerializationUtils,117=>Find no block
+Fri Jan 12 22:58:14 AEDT 2018 Fri Jan 12 22:58:14 AEDT 2018 : org.apache.commons.lang.SerializationUtils,120=>Find no block
+Fri Jan 12 22:58:14 AEDT 2018 Fri Jan 12 22:58:14 AEDT 2018 : org.apache.commons.lang.SerializationUtils,121=>Find no block
+Fri Jan 12 22:58:15 AEDT 2018 org.apache.commons.lang.SerializationUtils,134
+Fri Jan 12 22:58:15 AEDT 2018 org.apache.commons.lang.SerializationUtils,155
+Fri Jan 12 22:58:16 AEDT 2018 org.apache.commons.lang.SerializationUtils,156
+Fri Jan 12 22:58:16 AEDT 2018 org.apache.commons.lang.SerializationUtils,158
+Fri Jan 12 22:58:17 AEDT 2018 org.apache.commons.lang.SerializationUtils,161
+Fri Jan 12 22:58:17 AEDT 2018 org.apache.commons.lang.SerializationUtils,162
+Fri Jan 12 22:58:18 AEDT 2018 org.apache.commons.lang.SerializationUtils,170
+Fri Jan 12 22:58:18 AEDT 2018 org.apache.commons.lang.SerializationUtils,171
+Fri Jan 12 22:58:18 AEDT 2018 Fri Jan 12 22:58:18 AEDT 2018 : org.apache.commons.lang.SerializationUtils,175=>Find no block
+Fri Jan 12 22:58:19 AEDT 2018 Fri Jan 12 22:58:19 AEDT 2018 : org.apache.commons.lang.SerializationUtils,173=>Find no block
+Fri Jan 12 22:58:19 AEDT 2018 Fri Jan 12 22:58:19 AEDT 2018 : org.apache.commons.lang.SerializationUtils,164=>Find no block
+Fri Jan 12 22:58:19 AEDT 2018 org.apache.commons.lang.SerializationUtils,165
+Fri Jan 12 22:58:19 AEDT 2018 Fri Jan 12 22:58:19 AEDT 2018 : org.apache.commons.lang.SerializationUtils,166=>Find no block
+Fri Jan 12 22:58:19 AEDT 2018 org.apache.commons.lang.SerializationUtils,167
+Fri Jan 12 22:58:20 AEDT 2018 Fri Jan 12 22:58:20 AEDT 2018 : org.apache.commons.lang.SerializationUtils,169=>Find no block
+Fri Jan 12 22:58:20 AEDT 2018 org.apache.commons.lang.SerializationUtils,188
+Fri Jan 12 22:58:20 AEDT 2018 org.apache.commons.lang.SerializationUtils,189
+Fri Jan 12 22:58:21 AEDT 2018 org.apache.commons.lang.SerializationUtils,191
+Fri Jan 12 22:58:21 AEDT 2018 org.apache.commons.lang.SerializationUtils,192
+Fri Jan 12 22:58:21 AEDT 2018 Fri Jan 12 22:58:21 AEDT 2018 : org.apache.commons.lang.time.FastDateFormat,1070=>Find no block
+Fri Jan 12 22:58:22 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1071
+Fri Jan 12 22:59:20 AEDT 2018 Fri Jan 12 22:59:20 AEDT 2018 : org.apache.commons.lang.time.FastDateFormat,1072=>Find no block
+Fri Jan 12 22:59:20 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1078
+Fri Jan 12 22:59:21 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1085
+Fri Jan 12 23:01:17 AEDT 2018 Fri Jan 12 23:01:17 AEDT 2018 : org.apache.commons.lang.time.FastDateFormat,1086=>Find no block
+Fri Jan 12 23:01:17 AEDT 2018 Fri Jan 12 23:01:17 AEDT 2018 : org.apache.commons.lang.time.FastDateFormat,1101=>Find no block
+Fri Jan 12 23:01:17 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1102
+Fri Jan 12 23:01:18 AEDT 2018 Fri Jan 12 23:01:18 AEDT 2018 : org.apache.commons.lang.time.FastDateFormat,1103=>Find no block
+Fri Jan 12 23:01:18 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1109
+Fri Jan 12 23:02:24 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1116
+Fri Jan 12 23:02:25 AEDT 2018 Fri Jan 12 23:02:25 AEDT 2018 : org.apache.commons.lang.time.FastDateFormat,1117=>Find no block
+Fri Jan 12 23:02:25 AEDT 2018 Fri Jan 12 23:02:25 AEDT 2018 : org.apache.commons.lang.time.FastDateFormat,1134=>Find no block
+Fri Jan 12 23:02:25 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1135
+Fri Jan 12 23:02:40 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1136
+Fri Jan 12 23:02:40 AEDT 2018 Fri Jan 12 23:02:40 AEDT 2018 : org.apache.commons.lang.time.FastDateFormat,1137=>Find no block
+Fri Jan 12 23:02:40 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1143
+Fri Jan 12 23:37:17 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1144
+Fri Jan 12 23:37:17 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1145
+Fri Jan 12 23:37:18 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1146
+Fri Jan 12 23:37:18 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1147
+Fri Jan 12 23:37:18 AEDT 2018 Fri Jan 12 23:37:18 AEDT 2018 : org.apache.commons.lang.time.FastDateFormat,1149=>Find no block
+Fri Jan 12 23:37:18 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1150
+Fri Jan 12 23:37:18 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1157
+Fri Jan 12 23:39:15 AEDT 2018 Fri Jan 12 23:39:15 AEDT 2018 : org.apache.commons.lang.time.FastDateFormat,1158=>Find no block
+Fri Jan 12 23:39:15 AEDT 2018 Fri Jan 12 23:39:15 AEDT 2018 : org.apache.commons.lang.time.FastDateFormat,1591=>Find no block
+Fri Jan 12 23:39:16 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1592
+Fri Jan 12 23:39:16 AEDT 2018 Fri Jan 12 23:39:16 AEDT 2018 : org.apache.commons.lang.time.FastDateFormat,1593=>Find no block
+Fri Jan 12 23:39:17 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1599
+Fri Jan 12 23:39:17 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1606
+Fri Jan 12 23:47:43 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1608
+Sat Jan 13 00:30:38 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1609
+Sat Jan 13 00:30:38 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1610
+Sat Jan 13 00:30:39 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1612
+Sat Jan 13 00:30:39 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1615
+Sat Jan 13 00:40:46 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1616
+Sat Jan 13 00:48:50 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1617
+Sat Jan 13 00:53:06 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1619
+Sat Jan 13 00:55:38 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1620
+Sat Jan 13 00:55:38 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1623
+Sat Jan 13 01:03:35 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1624
+Sat Jan 13 01:11:02 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1625
+Sat Jan 13 01:11:02 AEDT 2018 Sat Jan 13 01:11:02 AEDT 2018 : org.apache.commons.lang.time.FastDateFormat,1626=>Find no block
+Sat Jan 13 01:11:02 AEDT 2018 Sat Jan 13 01:11:02 AEDT 2018 : org.apache.commons.lang.time.FastDateFormat,1321=>Find no block
+Sat Jan 13 01:11:02 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1322
+Sat Jan 13 01:11:17 AEDT 2018 Sat Jan 13 01:11:17 AEDT 2018 : org.apache.commons.lang.time.FastDateFormat,1323=>Find no block
+Sat Jan 13 01:11:17 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1329
+Sat Jan 13 01:11:17 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1336
+Sat Jan 13 01:11:38 AEDT 2018 Sat Jan 13 01:11:38 AEDT 2018 : org.apache.commons.lang.time.FastDateFormat,1337=>Find no block
+Sat Jan 13 01:11:38 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1343
+Sat Jan 13 01:20:00 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1344
+Sat Jan 13 01:20:00 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1345
+Sat Jan 13 01:20:00 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,1347
+Sat Jan 13 01:20:00 AEDT 2018 Sat Jan 13 01:20:00 AEDT 2018 : org.apache.commons.lang.time.FastDateFormat,1349=>Find no block
+Sat Jan 13 01:20:00 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,541
+Sat Jan 13 01:20:00 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,154
+Sat Jan 13 01:20:07 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,182
+Sat Jan 13 01:20:33 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,196
+Sat Jan 13 01:21:00 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,216
+Sat Jan 13 01:21:00 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,217
+Sat Jan 13 01:21:00 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,218
+Sat Jan 13 01:21:00 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,235
+Sat Jan 13 01:21:27 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,250
+Sat Jan 13 01:22:04 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,266
+Sat Jan 13 01:22:41 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,281
+Sat Jan 13 01:24:09 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,282
+Sat Jan 13 01:25:12 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,283
+Sat Jan 13 01:25:12 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,285
+Sat Jan 13 01:26:21 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,286
+Sat Jan 13 01:26:21 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,289
+Sat Jan 13 01:29:05 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,290
+Sat Jan 13 01:30:20 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,291
+Sat Jan 13 01:30:20 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,292
+Sat Jan 13 01:30:20 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,296
+Sat Jan 13 01:33:52 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,297
+Sat Jan 13 01:33:52 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,298
+Sat Jan 13 01:38:18 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,299
+Sat Jan 13 01:38:19 AEDT 2018 Sat Jan 13 01:38:19 AEDT 2018 : org.apache.commons.lang.time.FastDateFormat,303=>Find no block
+Sat Jan 13 01:38:19 AEDT 2018 Sat Jan 13 01:38:19 AEDT 2018 : org.apache.commons.lang.time.FastDateFormat,301=>Find no block
+Sat Jan 13 01:38:19 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,302
+Sat Jan 13 01:39:27 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,305
+Sat Jan 13 01:40:26 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,320
+Sat Jan 13 01:40:53 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,335
+Sat Jan 13 01:41:30 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,351
+Sat Jan 13 01:42:07 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,367
+Sat Jan 13 01:42:07 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,368
+Sat Jan 13 01:42:07 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,369
+Sat Jan 13 01:42:08 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,371
+Sat Jan 13 01:42:08 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,372
+Sat Jan 13 01:42:08 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,375
+Sat Jan 13 01:44:51 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,376
+Failed time : 18/01/13 01:46

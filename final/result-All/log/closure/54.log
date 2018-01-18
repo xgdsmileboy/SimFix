@@ -1,0 +1,114 @@
+=================================================
+Project : closure_54	start : 18/01/12 14:05
+Current failed test : com.google.javascript.jscomp.TypedScopeCreatorTest::testPropertyOnUnknownSuperClass2_purify_1 | 18/01/12 14:05
+Fri Jan 12 14:05:52 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1419
+Fri Jan 12 14:06:23 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,556
+Fri Jan 12 14:09:02 AEDT 2018 Fri Jan 12 14:09:02 AEDT 2018 : com.google.javascript.rhino.jstype.JSTypeRegistry,695=>Find no block
+Fri Jan 12 14:09:03 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,768
+Fri Jan 12 14:15:31 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1421
+Fri Jan 12 14:18:30 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1422
+Fri Jan 12 14:18:31 AEDT 2018 com.google.javascript.jscomp.Scope,505
+Fri Jan 12 14:29:22 AEDT 2018 com.google.javascript.jscomp.Scope,506
+Fri Jan 12 14:29:23 AEDT 2018 com.google.javascript.jscomp.Scope,507
+Fri Jan 12 14:29:24 AEDT 2018 Fri Jan 12 14:29:24 AEDT 2018 : com.google.javascript.jscomp.Scope,508=>Find no block
+Fri Jan 12 14:29:24 AEDT 2018 com.google.javascript.jscomp.TypeInference,572
+Fri Jan 12 14:35:35 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,558
+Fri Jan 12 14:38:16 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,559
+Fri Jan 12 14:38:17 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,500
+Timeout time : 18/01/12 14:47
+Current failed test : com.google.javascript.jscomp.TypedScopeCreatorTest::testPropertyOnUnknownSuperClass2_purify_2 | 18/01/12 14:47
+Fri Jan 12 14:48:00 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1419
+Fri Jan 12 14:48:28 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,556
+Fri Jan 12 14:51:05 AEDT 2018 Fri Jan 12 14:51:05 AEDT 2018 : com.google.javascript.rhino.jstype.JSTypeRegistry,695=>Find no block
+Fri Jan 12 14:51:06 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,768
+Fri Jan 12 14:57:29 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1421
+Fri Jan 12 15:00:28 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1422
+Fri Jan 12 15:00:29 AEDT 2018 com.google.javascript.jscomp.Scope,505
+Fri Jan 12 15:11:17 AEDT 2018 com.google.javascript.jscomp.Scope,506
+Fri Jan 12 15:11:18 AEDT 2018 com.google.javascript.jscomp.Scope,507
+Fri Jan 12 15:11:19 AEDT 2018 Fri Jan 12 15:11:19 AEDT 2018 : com.google.javascript.jscomp.Scope,508=>Find no block
+Fri Jan 12 15:11:19 AEDT 2018 com.google.javascript.jscomp.TypeInference,572
+Fri Jan 12 15:17:33 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,558
+Fri Jan 12 15:20:14 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,559
+Fri Jan 12 15:20:15 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,500
+Timeout time : 18/01/12 15:30
+Current failed test : com.google.javascript.jscomp.TypedScopeCreatorTest::testPropertyOnUnknownSuperClass2_purify_3 | 18/01/12 15:30
+Fri Jan 12 15:30:07 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1419
+Fri Jan 12 15:30:35 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,556
+Fri Jan 12 15:33:13 AEDT 2018 Fri Jan 12 15:33:13 AEDT 2018 : com.google.javascript.rhino.jstype.JSTypeRegistry,695=>Find no block
+Fri Jan 12 15:33:14 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,768
+Fri Jan 12 15:39:39 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1421
+Fri Jan 12 15:42:38 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1422
+Fri Jan 12 15:42:40 AEDT 2018 com.google.javascript.jscomp.Scope,505
+Fri Jan 12 15:53:30 AEDT 2018 com.google.javascript.jscomp.Scope,506
+Fri Jan 12 15:53:31 AEDT 2018 com.google.javascript.jscomp.Scope,507
+Fri Jan 12 15:53:32 AEDT 2018 Fri Jan 12 15:53:32 AEDT 2018 : com.google.javascript.jscomp.Scope,508=>Find no block
+Fri Jan 12 15:53:33 AEDT 2018 com.google.javascript.jscomp.TypeInference,572
+Fri Jan 12 15:59:44 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,558
+Fri Jan 12 16:02:28 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,559
+Fri Jan 12 16:02:29 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,500
+Timeout time : 18/01/12 16:12
+Current failed test : com.google.javascript.jscomp.TypedScopeCreatorTest::testPropertyOnUnknownSuperClass2_purify_4 | 18/01/12 16:12
+Fri Jan 12 16:12:16 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1419
+Fri Jan 12 16:12:44 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,556
+Fri Jan 12 16:15:25 AEDT 2018 Fri Jan 12 16:15:25 AEDT 2018 : com.google.javascript.rhino.jstype.JSTypeRegistry,695=>Find no block
+Fri Jan 12 16:15:26 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,768
+Fri Jan 12 16:21:53 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1421
+Fri Jan 12 16:24:52 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1422
+Fri Jan 12 16:24:54 AEDT 2018 com.google.javascript.jscomp.Scope,505
+Fri Jan 12 16:35:51 AEDT 2018 com.google.javascript.jscomp.Scope,506
+Fri Jan 12 16:35:51 AEDT 2018 com.google.javascript.jscomp.Scope,507
+Fri Jan 12 16:35:52 AEDT 2018 Fri Jan 12 16:35:52 AEDT 2018 : com.google.javascript.jscomp.Scope,508=>Find no block
+Fri Jan 12 16:35:54 AEDT 2018 com.google.javascript.jscomp.TypeInference,572
+Fri Jan 12 16:42:10 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,558
+Fri Jan 12 16:44:55 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,559
+Fri Jan 12 16:44:57 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,500
+Timeout time : 18/01/12 16:54
+Current failed test : com.google.javascript.jscomp.TypedScopeCreatorTest::testPropertyOnUnknownSuperClass2_purify_5 | 18/01/12 16:54
+Fri Jan 12 16:54:24 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1419
+Fri Jan 12 16:54:52 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,556
+Fri Jan 12 16:57:31 AEDT 2018 Fri Jan 12 16:57:31 AEDT 2018 : com.google.javascript.rhino.jstype.JSTypeRegistry,695=>Find no block
+Fri Jan 12 16:57:32 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,768
+Fri Jan 12 17:04:01 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1421
+Fri Jan 12 17:07:04 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1422
+Fri Jan 12 17:07:05 AEDT 2018 com.google.javascript.jscomp.Scope,505
+Fri Jan 12 17:18:04 AEDT 2018 com.google.javascript.jscomp.Scope,506
+Fri Jan 12 17:18:05 AEDT 2018 com.google.javascript.jscomp.Scope,507
+Fri Jan 12 17:18:06 AEDT 2018 Fri Jan 12 17:18:06 AEDT 2018 : com.google.javascript.jscomp.Scope,508=>Find no block
+Fri Jan 12 17:18:08 AEDT 2018 com.google.javascript.jscomp.TypeInference,572
+Fri Jan 12 17:24:26 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,558
+Fri Jan 12 17:27:11 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,559
+Fri Jan 12 17:27:12 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,500
+Timeout time : 18/01/12 17:36
+Current failed test : com.google.javascript.jscomp.TypeCheckTest::testIssue537a | 18/01/12 17:36
+Fri Jan 12 17:36:31 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1419
+Fri Jan 12 17:36:59 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,556
+Fri Jan 12 17:39:39 AEDT 2018 Fri Jan 12 17:39:39 AEDT 2018 : com.google.javascript.rhino.jstype.JSTypeRegistry,695=>Find no block
+Fri Jan 12 17:39:40 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,768
+Fri Jan 12 17:46:06 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1421
+Fri Jan 12 17:49:06 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1422
+Fri Jan 12 17:49:08 AEDT 2018 com.google.javascript.jscomp.Scope,505
+Fri Jan 12 18:00:07 AEDT 2018 com.google.javascript.jscomp.Scope,506
+Fri Jan 12 18:00:09 AEDT 2018 com.google.javascript.jscomp.Scope,507
+Fri Jan 12 18:00:09 AEDT 2018 Fri Jan 12 18:00:09 AEDT 2018 : com.google.javascript.jscomp.Scope,508=>Find no block
+Fri Jan 12 18:00:11 AEDT 2018 com.google.javascript.jscomp.TypeInference,572
+Fri Jan 12 18:06:27 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,558
+Fri Jan 12 18:09:09 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,559
+Fri Jan 12 18:09:10 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,500
+Timeout time : 18/01/12 18:18
+Current failed test : com.google.javascript.jscomp.TypeCheckTest::testIssue537b | 18/01/12 18:18
+Fri Jan 12 18:18:39 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1419
+Fri Jan 12 18:19:07 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,556
+Fri Jan 12 18:21:45 AEDT 2018 Fri Jan 12 18:21:45 AEDT 2018 : com.google.javascript.rhino.jstype.JSTypeRegistry,695=>Find no block
+Fri Jan 12 18:21:46 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,768
+Fri Jan 12 18:28:10 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1421
+Fri Jan 12 18:31:10 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,1422
+Fri Jan 12 18:31:11 AEDT 2018 com.google.javascript.jscomp.Scope,505
+Fri Jan 12 18:42:02 AEDT 2018 com.google.javascript.jscomp.Scope,506
+Fri Jan 12 18:42:04 AEDT 2018 com.google.javascript.jscomp.Scope,507
+Fri Jan 12 18:42:04 AEDT 2018 Fri Jan 12 18:42:04 AEDT 2018 : com.google.javascript.jscomp.Scope,508=>Find no block
+Fri Jan 12 18:42:06 AEDT 2018 com.google.javascript.jscomp.TypeInference,572
+Fri Jan 12 18:48:25 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,558
+Fri Jan 12 18:51:08 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,559
+Fri Jan 12 18:51:09 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,500
+Timeout time : 18/01/12 19:00

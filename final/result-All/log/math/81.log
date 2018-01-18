@@ -1,0 +1,49 @@
+=================================================
+Project : math_81	start : 18/01/12 14:05
+Current failed test : org.apache.commons.math.linear.EigenDecompositionImplTest::testMath308 | 18/01/12 14:06
+Fri Jan 12 14:07:15 AEDT 2018 org.apache.commons.math.linear.EigenDecompositionImpl,1509
+Fri Jan 12 14:11:12 AEDT 2018 org.apache.commons.math.linear.EigenDecompositionImpl,1529
+Fri Jan 12 14:39:19 AEDT 2018 org.apache.commons.math.linear.EigenDecompositionImpl,1530
+Fri Jan 12 14:39:20 AEDT 2018 org.apache.commons.math.linear.EigenDecompositionImpl,1533
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double s=0.25*dMin;
+ final int np=nn-2*pingPong;
+double b1=0;
+
+Time : 18/01/12 14:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.0990742691459918 : [/home/hz985/jiajun/d4j/projects/math/math_81_buggy/src/main/java/org/apache/commons/math/linear/EigenDecompositionImpl.java=>0,0]
+progressiveQuotientDifferenceWithShift(d,l,eigenvalue);
+int r=m-1;
+double minG=Math.abs(work[6*r]+work[6*r+3]);
+int sixI=0;
+
+Time : 18/01/12 14:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_81_buggy/src/main/java/org/apache/commons/math/linear/EigenDecompositionImpl.java=>1530,1534]
+double s=0.25*dMin;
+ final int np=nn-2*pingPong;
+double b1=work[np-2];
+
+Time : 18/01/12 14:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_81_buggy/src/main/java/org/apache/commons/math/linear/EigenDecompositionImpl.java=>1530,1534]
+double s=0.25*dMin;
+ final int np=nn-2*pingPong;
+double b1=0;
+
+Time : 18/01/12 14:44
+----------------------------------------
+Success time : 18/01/12 14:44

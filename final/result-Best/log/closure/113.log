@@ -1,0 +1,75 @@
+=================================================
+Project : closure_113	start : 18/01/14 03:51
+Current failed test : com.google.javascript.jscomp.VarCheckTest::testNoUndeclaredVarWhenUsingClosurePass | 18/01/14 03:52
+Sun Jan 14 03:52:18 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,169
+Sun Jan 14 03:52:23 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,164
+Sun Jan 14 04:06:02 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,165
+Sun Jan 14 04:06:04 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,172
+Sun Jan 14 04:06:05 AEDT 2018 Sun Jan 14 04:06:05 AEDT 2018 : com.google.javascript.jscomp.ProcessClosurePrimitives,174=>Find no block
+Sun Jan 14 04:06:06 AEDT 2018 Sun Jan 14 04:06:06 AEDT 2018 : com.google.javascript.jscomp.ProcessClosurePrimitives,1227=>Find no block
+Sun Jan 14 04:06:08 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,1228
+Sun Jan 14 04:06:23 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,1229
+Sun Jan 14 04:06:24 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,1230
+Sun Jan 14 04:06:25 AEDT 2018 Sun Jan 14 04:06:25 AEDT 2018 : com.google.javascript.jscomp.ProcessClosurePrimitives,1231=>Find no block
+Sun Jan 14 04:06:26 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,302
+Sun Jan 14 04:13:39 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,299
+Sun Jan 14 04:32:30 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,300
+Sun Jan 14 04:32:31 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,301
+Sun Jan 14 04:32:33 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,321
+Sun Jan 14 04:42:16 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,322
+Sun Jan 14 04:49:42 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,329
+Sun Jan 14 04:51:33 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,223
+Sun Jan 14 04:51:41 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,296
+Sun Jan 14 04:53:23 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,297
+Sun Jan 14 04:53:24 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,298
+Sun Jan 14 05:16:04 AEDT 2018 Sun Jan 14 05:16:04 AEDT 2018 : com.google.javascript.jscomp.ProcessClosurePrimitives,334=>Find no block
+Sun Jan 14 05:16:05 AEDT 2018 com.google.javascript.jscomp.JSError,140
+Sun Jan 14 05:16:11 AEDT 2018 com.google.javascript.jscomp.VarCheck,194
+Sun Jan 14 05:26:27 AEDT 2018 com.google.javascript.jscomp.VarCheck,195
+Sun Jan 14 05:26:29 AEDT 2018 com.google.javascript.jscomp.VarCheck,187
+Sun Jan 14 05:32:25 AEDT 2018 com.google.javascript.jscomp.VarCheck,188
+Sun Jan 14 05:32:26 AEDT 2018 com.google.javascript.jscomp.VarCheck,191
+Sun Jan 14 05:32:28 AEDT 2018 com.google.javascript.jscomp.VarCheck,199
+Sun Jan 14 05:48:01 AEDT 2018 com.google.javascript.jscomp.VarCheck,182
+Sun Jan 14 05:48:02 AEDT 2018 com.google.javascript.jscomp.VarCheck,185
+Sun Jan 14 05:48:03 AEDT 2018 com.google.javascript.jscomp.Scope,441
+Sun Jan 14 05:52:54 AEDT 2018 com.google.javascript.jscomp.Scope,442
+Sun Jan 14 05:56:18 AEDT 2018 com.google.javascript.jscomp.Scope,445
+Sun Jan 14 05:56:20 AEDT 2018 com.google.javascript.jscomp.VarCheck,243
+Sun Jan 14 06:08:42 AEDT 2018 com.google.javascript.jscomp.VarCheck,251
+Sun Jan 14 06:08:44 AEDT 2018 com.google.javascript.jscomp.VarCheck,255
+Sun Jan 14 06:08:45 AEDT 2018 com.google.javascript.jscomp.VarCheck,257
+Sun Jan 14 06:08:46 AEDT 2018 com.google.javascript.jscomp.VarCheck,258
+Sun Jan 14 06:08:47 AEDT 2018 Sun Jan 14 06:08:47 AEDT 2018 : com.google.javascript.jscomp.VarCheck,259=>Find no block
+Sun Jan 14 06:08:48 AEDT 2018 com.google.javascript.jscomp.VarCheck,368
+Sun Jan 14 06:09:23 AEDT 2018 com.google.javascript.jscomp.Compiler,2440
+Sun Jan 14 06:09:27 AEDT 2018 com.google.javascript.jscomp.Compiler,2441
+Sun Jan 14 06:09:28 AEDT 2018 com.google.javascript.jscomp.Compiler,2443
+Sun Jan 14 06:09:33 AEDT 2018 com.google.javascript.jscomp.Compiler,1087
+Sun Jan 14 06:28:53 AEDT 2018 com.google.javascript.jscomp.Compiler,1088
+Sun Jan 14 06:28:54 AEDT 2018 com.google.javascript.jscomp.Compiler,1091
+Sun Jan 14 06:28:56 AEDT 2018 com.google.javascript.jscomp.Compiler,1092
+Sun Jan 14 06:28:57 AEDT 2018 com.google.javascript.jscomp.Compiler,1093
+Sun Jan 14 06:28:58 AEDT 2018 com.google.javascript.jscomp.Compiler,1094
+Sun Jan 14 06:28:59 AEDT 2018 com.google.javascript.jscomp.Compiler,1095
+Sun Jan 14 06:29:00 AEDT 2018 com.google.javascript.jscomp.BasicErrorManager,47
+Sun Jan 14 06:29:32 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,1173
+Sun Jan 14 06:29:41 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,770
+Sun Jan 14 06:29:54 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,1172
+Sun Jan 14 06:29:55 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,1212
+Sun Jan 14 06:31:49 AEDT 2018 Sun Jan 14 06:31:49 AEDT 2018 : com.google.javascript.jscomp.ProcessClosurePrimitives,1215=>Find no block
+Sun Jan 14 06:31:50 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,799
+Sun Jan 14 06:37:38 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,806
+Sun Jan 14 06:39:33 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,812
+Sun Jan 14 06:42:05 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,779
+Sun Jan 14 06:46:26 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,785
+Sun Jan 14 06:51:42 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,793
+Sun Jan 14 06:57:00 AEDT 2018 com.google.javascript.jscomp.AstValidator,229
+Sun Jan 14 07:00:07 AEDT 2018 com.google.javascript.jscomp.AstValidator,230
+Sun Jan 14 07:01:36 AEDT 2018 com.google.javascript.jscomp.AstValidator,639
+Sun Jan 14 07:06:51 AEDT 2018 com.google.javascript.jscomp.AstValidator,640
+Sun Jan 14 07:06:52 AEDT 2018 com.google.javascript.jscomp.AstValidator,643
+Sun Jan 14 07:06:53 AEDT 2018 Sun Jan 14 07:06:53 AEDT 2018 : com.google.javascript.jscomp.AstValidator,646=>Find no block
+Sun Jan 14 07:06:54 AEDT 2018 Sun Jan 14 07:06:54 AEDT 2018 : com.google.javascript.jscomp.AstValidator,647=>Find no block
+Sun Jan 14 07:06:56 AEDT 2018 com.google.javascript.jscomp.ProcessClosurePrimitives,222
+Timeout time : 18/01/14 08:52

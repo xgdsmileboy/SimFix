@@ -1,0 +1,1355 @@
+=================================================
+Project : math_62	start : 18/01/12 14:11
+Current failed test : org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_1 | 18/01/12 14:12
+Fri Jan 12 14:12:59 AEDT 2018 Fri Jan 12 14:12:59 AEDT 2018 : org.apache.commons.math.optimization.GoalType,27=>Find no block
+Fri Jan 12 14:13:00 AEDT 2018 org.apache.commons.math.util.FastMath,219
+Fri Jan 12 14:16:21 AEDT 2018 org.apache.commons.math.util.FastMath,680
+Fri Jan 12 14:16:41 AEDT 2018 org.apache.commons.math.util.FastMath,681
+Fri Jan 12 14:16:42 AEDT 2018 org.apache.commons.math.util.FastMath,682
+Fri Jan 12 14:17:24 AEDT 2018 org.apache.commons.math.util.FastMath,683
+Fri Jan 12 14:20:18 AEDT 2018 org.apache.commons.math.util.FastMath,684
+Fri Jan 12 14:32:59 AEDT 2018 org.apache.commons.math.util.FastMath,685
+Fri Jan 12 14:33:00 AEDT 2018 org.apache.commons.math.util.FastMath,687
+Fri Jan 12 15:09:52 AEDT 2018 org.apache.commons.math.util.FastMath,688
+Fri Jan 12 15:09:53 AEDT 2018 org.apache.commons.math.util.FastMath,689
+Fri Jan 12 15:09:54 AEDT 2018 org.apache.commons.math.util.FastMath,690
+Fri Jan 12 15:09:55 AEDT 2018 org.apache.commons.math.util.FastMath,692
+Fri Jan 12 15:09:56 AEDT 2018 org.apache.commons.math.util.FastMath,693
+Fri Jan 12 15:09:57 AEDT 2018 org.apache.commons.math.util.FastMath,695
+Fri Jan 12 15:09:58 AEDT 2018 org.apache.commons.math.util.FastMath,696
+Fri Jan 12 15:09:59 AEDT 2018 org.apache.commons.math.util.FastMath,697
+Fri Jan 12 15:10:00 AEDT 2018 org.apache.commons.math.util.FastMath,700
+Fri Jan 12 15:10:46 AEDT 2018 org.apache.commons.math.util.FastMath,701
+Fri Jan 12 15:10:47 AEDT 2018 org.apache.commons.math.util.FastMath,702
+Fri Jan 12 15:10:48 AEDT 2018 org.apache.commons.math.util.FastMath,705
+Fri Jan 12 15:11:25 AEDT 2018 org.apache.commons.math.util.FastMath,714
+Fri Jan 12 15:14:13 AEDT 2018 org.apache.commons.math.util.FastMath,715
+Fri Jan 12 15:14:14 AEDT 2018 org.apache.commons.math.util.FastMath,716
+Fri Jan 12 15:14:15 AEDT 2018 org.apache.commons.math.util.FastMath,717
+Fri Jan 12 15:14:16 AEDT 2018 Fri Jan 12 15:14:16 AEDT 2018 : org.apache.commons.math.util.FastMath,718=>Find no block
+Fri Jan 12 15:14:18 AEDT 2018 Fri Jan 12 15:14:18 AEDT 2018 : org.apache.commons.math.util.FastMath,723=>Find no block
+Fri Jan 12 15:14:19 AEDT 2018 org.apache.commons.math.util.FastMath,730
+Fri Jan 12 15:21:16 AEDT 2018 org.apache.commons.math.util.FastMath,731
+Fri Jan 12 15:21:18 AEDT 2018 org.apache.commons.math.util.FastMath,733
+Fri Jan 12 15:22:56 AEDT 2018 org.apache.commons.math.util.FastMath,734
+Fri Jan 12 15:22:57 AEDT 2018 org.apache.commons.math.util.FastMath,735
+Fri Jan 12 15:22:58 AEDT 2018 org.apache.commons.math.util.FastMath,736
+Fri Jan 12 15:22:59 AEDT 2018 Fri Jan 12 15:22:59 AEDT 2018 : org.apache.commons.math.util.FastMath,737=>Find no block
+Fri Jan 12 15:23:00 AEDT 2018 org.apache.commons.math.util.FastMath,738
+Fri Jan 12 15:23:01 AEDT 2018 org.apache.commons.math.util.FastMath,739
+Fri Jan 12 15:23:02 AEDT 2018 org.apache.commons.math.util.FastMath,740
+Fri Jan 12 15:23:03 AEDT 2018 Fri Jan 12 15:23:03 AEDT 2018 : org.apache.commons.math.util.FastMath,742=>Find no block
+Fri Jan 12 15:23:04 AEDT 2018 org.apache.commons.math.util.FastMath,750
+Fri Jan 12 15:24:20 AEDT 2018 org.apache.commons.math.util.FastMath,751
+Fri Jan 12 15:24:21 AEDT 2018 org.apache.commons.math.util.FastMath,754
+Fri Jan 12 15:24:22 AEDT 2018 Fri Jan 12 15:24:22 AEDT 2018 : org.apache.commons.math.util.FastMath,755=>Find no block
+Fri Jan 12 15:24:24 AEDT 2018 org.apache.commons.math.util.FastMath,763
+Fri Jan 12 15:26:28 AEDT 2018 org.apache.commons.math.util.FastMath,764
+Fri Jan 12 15:26:29 AEDT 2018 org.apache.commons.math.util.FastMath,766
+Fri Jan 12 15:26:30 AEDT 2018 Fri Jan 12 15:26:30 AEDT 2018 : org.apache.commons.math.util.FastMath,767=>Find no block
+Fri Jan 12 15:26:31 AEDT 2018 org.apache.commons.math.util.FastMath,788
+Fri Jan 12 15:28:27 AEDT 2018 org.apache.commons.math.util.FastMath,789
+Fri Jan 12 15:28:28 AEDT 2018 org.apache.commons.math.util.FastMath,791
+Fri Jan 12 15:32:45 AEDT 2018 org.apache.commons.math.util.FastMath,796
+Fri Jan 12 15:36:56 AEDT 2018 org.apache.commons.math.util.FastMath,797
+Fri Jan 12 15:44:20 AEDT 2018 org.apache.commons.math.util.FastMath,799
+Fri Jan 12 15:45:13 AEDT 2018 org.apache.commons.math.util.FastMath,800
+Fri Jan 12 15:45:14 AEDT 2018 org.apache.commons.math.util.FastMath,804
+Fri Jan 12 16:35:30 AEDT 2018 org.apache.commons.math.util.FastMath,806
+Fri Jan 12 16:35:31 AEDT 2018 org.apache.commons.math.util.FastMath,808
+Fri Jan 12 16:35:33 AEDT 2018 org.apache.commons.math.util.FastMath,811
+Fri Jan 12 16:35:34 AEDT 2018 org.apache.commons.math.util.FastMath,813
+Fri Jan 12 16:35:36 AEDT 2018 Fri Jan 12 16:35:36 AEDT 2018 : org.apache.commons.math.util.FastMath,815=>Find no block
+Fri Jan 12 16:35:37 AEDT 2018 org.apache.commons.math.util.FastMath,823
+Fri Jan 12 16:36:01 AEDT 2018 org.apache.commons.math.util.FastMath,824
+Fri Jan 12 16:36:02 AEDT 2018 org.apache.commons.math.util.FastMath,825
+Fri Jan 12 16:38:45 AEDT 2018 org.apache.commons.math.util.FastMath,828
+Fri Jan 12 16:41:04 AEDT 2018 org.apache.commons.math.util.FastMath,829
+Fri Jan 12 16:42:55 AEDT 2018 org.apache.commons.math.util.FastMath,830
+Timeout time : 18/01/12 16:42
+Current failed test : org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_5 | 18/01/12 16:42
+Fri Jan 12 16:43:50 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,99
+Fri Jan 12 16:43:56 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,135
+Fri Jan 12 16:44:39 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,138
+Fri Jan 12 16:46:07 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,191
+Fri Jan 12 16:47:47 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,194
+Fri Jan 12 16:47:56 AEDT 2018 Fri Jan 12 16:47:56 AEDT 2018 : org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,196=>Find no block
+Fri Jan 12 16:47:57 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,199
+Fri Jan 12 16:52:56 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,200
+Fri Jan 12 16:52:58 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,201
+Fri Jan 12 16:52:59 AEDT 2018 Fri Jan 12 16:52:59 AEDT 2018 : org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,72=>Find no block
+Fri Jan 12 16:53:01 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,73
+Fri Jan 12 16:54:18 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,74
+Fri Jan 12 16:54:19 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,75
+Fri Jan 12 16:54:21 AEDT 2018 Fri Jan 12 16:54:21 AEDT 2018 : org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,76=>Find no block
+Fri Jan 12 16:54:22 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,146
+Fri Jan 12 16:55:04 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,154
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations=usedEvaluations;
+}
+
+Time : 18/01/12 16:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations/=usedEvaluations;
+}
+
+Time : 18/01/12 16:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+totalEvaluations+=maxEvaluations;
+totalEvaluations/=usedEvaluations;
+}
+
+Time : 18/01/12 17:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final double usedEvaluations=optimizer.getEvaluations();
+totalEvaluations+=maxEvaluations;
+totalEvaluations/=usedEvaluations;
+}
+
+Time : 18/01/12 17:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<1;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 17:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<=maxEvaluations;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 17:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<=maxEvaluations;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations=usedEvaluations;
+}
+
+Time : 18/01/12 17:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=maxEvaluations+1;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations=usedEvaluations;
+}
+
+Time : 18/01/12 17:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=maxEvaluations;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations=usedEvaluations;
+}
+
+Time : 18/01/12 17:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<maxEvaluations+starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations=usedEvaluations;
+}
+
+Time : 18/01/12 17:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=maxEvaluations;i<maxEvaluations+starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations=usedEvaluations;
+}
+
+Time : 18/01/12 17:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations*=usedEvaluations;
+}
+
+Time : 18/01/12 17:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=starts-1;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 17:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=starts-1;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations=usedEvaluations;
+}
+
+Time : 18/01/12 17:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+totalEvaluations=usedEvaluations;
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 17:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+if(usedEvaluations==-1){
+throw new IllegalArgumentException("originalData and permutedData must contain the same objects.");
+}
+totalEvaluations=usedEvaluations;
+}
+
+Time : 18/01/12 17:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=maxEvaluations+1;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+totalEvaluations=usedEvaluations;
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 17:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=maxEvaluations;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+totalEvaluations=usedEvaluations;
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 17:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+starts-=i;
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 17:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<1;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations=usedEvaluations;
+}
+
+Time : 18/01/12 17:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+totalEvaluations=0;
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 17:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+totalEvaluations=0;
+totalEvaluations=usedEvaluations;
+}
+
+Time : 18/01/12 17:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+totalEvaluations=starts;
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 17:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+starts=0;
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 17:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=3;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 17:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=3;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations=usedEvaluations;
+}
+
+Time : 18/01/12 17:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=2;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 17:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=2;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations=usedEvaluations;
+}
+
+Time : 18/01/12 17:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+maxEvaluations=0;
+totalEvaluations=usedEvaluations;
+}
+
+Time : 18/01/12 17:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+starts=1;
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 17:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+starts=1;
+totalEvaluations=usedEvaluations;
+}
+
+Time : 18/01/12 17:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<3;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 17:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<3;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations=usedEvaluations;
+}
+
+Time : 18/01/12 18:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+totalEvaluations=i;
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 18:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final double usedEvaluations=optimizer.getEvaluations();
+totalEvaluations=i;
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 18:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+totalEvaluations=i;
+totalEvaluations=usedEvaluations;
+}
+
+Time : 18/01/12 18:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations-=usedEvaluations;
+}
+
+Time : 18/01/12 18:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=maxEvaluations;i<=maxEvaluations;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 18:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+maxEvaluations++;
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations=usedEvaluations;
+}
+
+Time : 18/01/12 18:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=maxEvaluations;i<3;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 18:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=maxEvaluations;i<3;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations=usedEvaluations;
+}
+
+Time : 18/01/12 18:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=4;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 18:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=4;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations=usedEvaluations;
+}
+
+Time : 18/01/12 18:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+if((i&1)==0){
+continue;
+}
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 18:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+if((i&1)==0){
+continue;
+}
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations=usedEvaluations;
+}
+
+Time : 18/01/12 18:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+if((i&1)!=0){
+continue;
+}
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 18:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+if((i&1)!=0){
+continue;
+}
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations=usedEvaluations;
+}
+
+Time : 18/01/12 18:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+totalEvaluations=starts+maxEvaluations;
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 18:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+totalEvaluations=maxEvaluations+1;
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 18:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+totalEvaluations=maxEvaluations-1;
+totalEvaluations+=usedEvaluations;
+}
+
+Time : 18/01/12 18:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+{
+optima=new UnivariateRealPointValuePair[starts];
+totalEvaluations=0;
+for(int i=0;i<starts;++i){
+try{
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+}catch (FunctionEvaluationException fee) {
+  optima[i]=null;
+}
+catch (ConvergenceException ce) {
+  optima[i]=null;
+}
+
+ final int usedEvaluations=optimizer.getEvaluations();
+optimizer.setMaxEvaluations(optimizer.getMaxEvaluations()-usedEvaluations);
+totalEvaluations=usedEvaluations;
+}
+sortPairs(goal);
+if(optima[0]==null){
+throw new ConvergenceException(LocalizedFormats.NO_CONVERGENCE_WITH_ANY_START_POINT,starts);
+}
+return optima[0];
+}
+
+Time : 18/01/12 18:51
+----------------------------------------
+Fri Jan 12 18:52:48 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,155
+Fri Jan 12 18:52:49 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,158
+Fri Jan 12 18:52:50 AEDT 2018 org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer,160
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=min;
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+
+Time : 18/01/12 18:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double bound1=min;
+ final double bound2=min;
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+
+Time : 18/01/12 18:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double bound1=min;
+ final double bound2=min*(FastMath.abs(min)+FastMath.abs(bound1));
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+
+Time : 18/01/12 18:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.4548758018385102 : [/home/hz985/jiajun/d4j/projects/math/math_62_buggy/src/main/java/org/apache/commons/math/optimization/univariate/MultiStartUnivariateRealOptimizer.java=>0,0]
+ final double t=qtrap.stage(f,min,max,i);
+ final double s=(4*t-oldt)/3.0;
+if(i>=minimalIterationCount){
+ final double delta=FastMath.abs(s-olds);
+ final double rLimit=relativeAccuracy*(FastMath.abs(olds)+FastMath.abs(s));
+if((delta<=rLimit)||(delta<=absoluteAccuracy)){
+setResult(s,i);
+return result;
+}
+}
+
+Time : 18/01/12 18:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_62_buggy/src/main/java/org/apache/commons/math/optimization/univariate/MultiStartUnivariateRealOptimizer.java=>160,162]
+ final double bound1=(i==0)?min:min+generator.nextDouble()*(max-min);
+ final double bound2=(i==0)?max:min+generator.nextDouble()*(max-min);
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+
+Time : 18/01/12 18:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_62_buggy/src/main/java/org/apache/commons/math/optimization/univariate/MultiStartUnivariateRealOptimizer.java=>160,162]
+ final double bound1=min;
+ final double bound2=min*(FastMath.abs(min)+FastMath.abs(bound1));
+optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2));
+
+Time : 18/01/12 18:59
+----------------------------------------
+Success time : 18/01/12 18:59

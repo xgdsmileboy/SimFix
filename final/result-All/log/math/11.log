@@ -1,0 +1,71 @@
+=================================================
+Project : math_11	start : 18/01/12 19:11
+Current failed test : org.apache.commons.math3.distribution.MultivariateNormalDistributionTest::testUnivariateDistribution | 18/01/12 19:12
+Fri Jan 12 19:14:10 AEDT 2018 org.apache.commons.math3.util.FastMath,1614
+Fri Jan 12 19:24:57 AEDT 2018 Fri Jan 12 19:24:57 AEDT 2018 : org.apache.commons.math3.distribution.AbstractRealDistribution,50=>Find no block
+Fri Jan 12 19:24:59 AEDT 2018 Fri Jan 12 19:24:59 AEDT 2018 : org.apache.commons.math3.distribution.AbstractRealDistribution,60=>Find no block
+Fri Jan 12 19:25:01 AEDT 2018 Fri Jan 12 19:25:01 AEDT 2018 : org.apache.commons.math3.distribution.AbstractRealDistribution,76=>Find no block
+Fri Jan 12 19:25:06 AEDT 2018 org.apache.commons.math3.distribution.AbstractRealDistribution,77
+Fri Jan 12 19:28:40 AEDT 2018 Fri Jan 12 19:28:40 AEDT 2018 : org.apache.commons.math3.distribution.AbstractRealDistribution,78=>Find no block
+Fri Jan 12 19:28:46 AEDT 2018 org.apache.commons.math3.distribution.NormalDistribution,71
+Fri Jan 12 19:30:05 AEDT 2018 Fri Jan 12 19:30:05 AEDT 2018 : org.apache.commons.math3.distribution.NormalDistribution,72=>Find no block
+Fri Jan 12 19:30:07 AEDT 2018 org.apache.commons.math3.distribution.NormalDistribution,86
+Fri Jan 12 19:30:55 AEDT 2018 Fri Jan 12 19:30:55 AEDT 2018 : org.apache.commons.math3.distribution.NormalDistribution,87=>Find no block
+Fri Jan 12 19:31:00 AEDT 2018 org.apache.commons.math3.distribution.NormalDistribution,104
+Fri Jan 12 19:37:16 AEDT 2018 org.apache.commons.math3.distribution.NormalDistribution,106
+Fri Jan 12 19:37:19 AEDT 2018 org.apache.commons.math3.distribution.NormalDistribution,110
+Fri Jan 12 19:37:21 AEDT 2018 org.apache.commons.math3.distribution.NormalDistribution,111
+Fri Jan 12 19:37:22 AEDT 2018 org.apache.commons.math3.distribution.NormalDistribution,112
+Fri Jan 12 19:37:23 AEDT 2018 Fri Jan 12 19:37:23 AEDT 2018 : org.apache.commons.math3.distribution.NormalDistribution,113=>Find no block
+Fri Jan 12 19:37:25 AEDT 2018 org.apache.commons.math3.distribution.NormalDistribution,135
+Fri Jan 12 20:52:00 AEDT 2018 org.apache.commons.math3.distribution.NormalDistribution,136
+Fri Jan 12 20:52:04 AEDT 2018 org.apache.commons.math3.distribution.NormalDistribution,137
+Fri Jan 12 20:52:05 AEDT 2018 Fri Jan 12 20:52:05 AEDT 2018 : org.apache.commons.math3.random.RandomDataGenerator,131=>Find no block
+Fri Jan 12 20:52:06 AEDT 2018 Fri Jan 12 20:52:06 AEDT 2018 : org.apache.commons.math3.random.RandomDataGenerator,118=>Find no block
+Fri Jan 12 20:52:08 AEDT 2018 Fri Jan 12 20:52:08 AEDT 2018 : org.apache.commons.math3.random.RandomDataGenerator,121=>Find no block
+Fri Jan 12 20:52:09 AEDT 2018 Fri Jan 12 20:52:09 AEDT 2018 : org.apache.commons.math3.random.RandomDataGenerator,132=>Find no block
+Fri Jan 12 20:52:11 AEDT 2018 Fri Jan 12 20:52:11 AEDT 2018 : org.apache.commons.math3.random.RandomDataImpl,114=>Find no block
+Fri Jan 12 20:52:13 AEDT 2018 org.apache.commons.math3.random.RandomDataImpl,115
+Fri Jan 12 20:52:25 AEDT 2018 Fri Jan 12 20:52:25 AEDT 2018 : org.apache.commons.math3.random.RandomDataImpl,116=>Find no block
+Fri Jan 12 20:52:26 AEDT 2018 org.apache.commons.math3.util.FastMath,831
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return log(x,null);
+
+Time : 18/01/12 20:54
+----------------------------------------
+Fri Jan 12 21:04:05 AEDT 2018 org.apache.commons.math3.util.FastMath,850
+Fri Jan 12 23:34:30 AEDT 2018 org.apache.commons.math3.util.FastMath,851
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+intVal=(int)-x;
+if(intVal>-1){
+if(hiPrec!=null){
+hiPrec[0]=0.0;
+hiPrec[1]=0.0;
+}
+return 0.0;
+}
+
+Time : 18/01/12 23:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+intVal=x<0?1:0;
+if(intVal>0){
+if(hiPrec!=null){
+hiPrec[0]=0.0;
+hiPrec[1]=0.0;
+}
+return 0.0;
+}
+
+Time : 18/01/13 00:13
+----------------------------------------
+Timeout time : 18/01/13 00:23

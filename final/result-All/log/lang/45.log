@@ -1,0 +1,59 @@
+=================================================
+Project : lang_45	start : 18/01/12 16:11
+Current failed test : org.apache.commons.lang.WordUtilsTest::testAbbreviate | 18/01/12 16:12
+Fri Jan 12 16:12:37 AEDT 2018 org.apache.commons.lang.WordUtils,607
+Fri Jan 12 16:15:32 AEDT 2018 org.apache.commons.lang.WordUtils,608
+Fri Jan 12 16:15:32 AEDT 2018 org.apache.commons.lang.WordUtils,610
+Fri Jan 12 16:20:36 AEDT 2018 org.apache.commons.lang.WordUtils,611
+Fri Jan 12 16:20:36 AEDT 2018 org.apache.commons.lang.WordUtils,618
+Fri Jan 12 16:45:42 AEDT 2018 org.apache.commons.lang.WordUtils,619
+Fri Jan 12 16:45:42 AEDT 2018 org.apache.commons.lang.WordUtils,622
+Fri Jan 12 16:46:43 AEDT 2018 org.apache.commons.lang.WordUtils,623
+Fri Jan 12 16:46:43 AEDT 2018 org.apache.commons.lang.WordUtils,626
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(upper<3){
+upper=lower;
+}
+StringBuffer result=new StringBuffer();
+int index=StringUtils.indexOf(str," ",lower);
+
+Time : 18/01/12 17:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 0.984204377082897 : [/home/hz985/jiajun/d4j/projects/lang/lang_45_buggy/src/java/org/apache/commons/lang/WordUtils.java=>0,0]
+if((str.length()-offset)<(maxWidth-3)){
+offset=str.length()-(maxWidth-3);
+}
+
+Time : 18/01/12 17:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/lang/lang_45_buggy/src/java/org/apache/commons/lang/WordUtils.java=>622,627]
+if(upper<lower){
+upper=lower;
+}
+StringBuffer result=new StringBuffer();
+int index=StringUtils.indexOf(str," ",lower);
+
+Time : 18/01/12 17:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/lang/lang_45_buggy/src/java/org/apache/commons/lang/WordUtils.java=>622,627]
+if(upper<3){
+upper=lower;
+}
+StringBuffer result=new StringBuffer();
+int index=StringUtils.indexOf(str," ",lower);
+
+Time : 18/01/12 17:14
+----------------------------------------
+Success time : 18/01/12 17:14

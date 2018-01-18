@@ -1,0 +1,103 @@
+=================================================
+Project : math_73	start : 18/01/12 14:05
+Current failed test : org.apache.commons.math.analysis.solvers.BrentSolverTest::testBadEndpoints | 18/01/12 14:05
+Fri Jan 12 14:06:59 AEDT 2018 org.apache.commons.math.analysis.solvers.UnivariateRealSolverImpl,209
+Fri Jan 12 14:17:59 AEDT 2018 org.apache.commons.math.analysis.solvers.BrentSolver,138
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+verifySequence(min,initial,yMin);
+if(yInitial*yMax<0){
+return solve(f,initial,yInitial,max,yMax,initial,yInitial);
+}
+return solve(f,min,yMin,max,yMax,initial,yInitial);
+
+Time : 18/01/12 14:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+verifySequence(min,initial,yMin);
+if(yInitial*yMax<0){
+return yInitial;
+}
+return solve(f,min,yMin,max,yMax,initial,yInitial);
+
+Time : 18/01/12 14:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+verifySequence(min,initial,yMin);
+if(yInitial*yMax<0){
+setResult(initial,0);
+return solve(f,initial,yInitial,max,yMax,initial,yInitial);
+}
+return solve(f,min,yMin,max,yMax,initial,yInitial);
+
+Time : 18/01/12 14:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+verifySequence(min,initial,yMin);
+if(yInitial*yMax<0){
+setResult(initial,0);
+return yInitial;
+}
+return solve(f,min,yMin,max,yMax,initial,yInitial);
+
+Time : 18/01/12 14:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+verifyBracketing(min,max,f);
+if(yInitial*yMax<0){
+return solve(f,initial,yInitial,max,yMax,initial,yInitial);
+}
+return solve(f,min,yMin,max,yMax,initial,yInitial);
+
+Time : 18/01/12 14:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.6165632442836158 : [/home/hz985/jiajun/d4j/projects/math/math_73_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BrentSolver.java=>0,0]
+if(f.value(initial)==0.0){
+return initial;
+}
+verifyBracketing(min,max,f);
+verifySequence(min,initial,max);
+
+Time : 18/01/12 14:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_73_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BrentSolver.java=>132,138]
+if(yInitial*yMax<0){
+return solve(f,initial,yInitial,max,yMax,initial,yInitial);
+}
+return solve(f,min,yMin,max,yMax,initial,yInitial);
+
+Time : 18/01/12 14:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_73_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BrentSolver.java=>132,138]
+verifyBracketing(min,max,f);
+if(yInitial*yMax<0){
+return solve(f,initial,yInitial,max,yMax,initial,yInitial);
+}
+return solve(f,min,yMin,max,yMax,initial,yInitial);
+
+Time : 18/01/12 14:24
+----------------------------------------
+Success time : 18/01/12 14:24

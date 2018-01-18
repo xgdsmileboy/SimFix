@@ -1,0 +1,61 @@
+=================================================
+Project : lang_43	start : 18/01/14 00:50
+Current failed test : org.apache.commons.lang.text.ExtendedMessageFormatTest::testEscapedQuote_LANG_477 | 18/01/14 00:50
+Sun Jan 14 00:56:57 AEDT 2018 org.apache.commons.lang.text.ExtendedMessageFormat,158
+Sun Jan 14 00:57:31 AEDT 2018 org.apache.commons.lang.text.ExtendedMessageFormat,159
+Sun Jan 14 00:57:58 AEDT 2018 org.apache.commons.lang.text.ExtendedMessageFormat,419
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int start=pos.getIndex();
+char[] c=pattern.toCharArray();
+if(escapingOn&&c[start]==QUOTE){
+next(pos);
+return appendTo==null?null:appendTo.append(QUOTE);
+}
+
+Time : 18/01/14 00:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.0020093882692773 : [/home/hz985/jiajun/d4j/projects/lang/lang_43_buggy/src/java/org/apache/commons/lang/text/ExtendedMessageFormat.java=>0,0]
+swtich (c[pos.getIndex()]){
+case QUOTE :
+next(pos);
+return appendTo==null?null:appendTo.append(c,lastHold,pos.getIndex()-lastHold);
+
+default :
+next(pos);
+
+}
+
+Time : 18/01/14 00:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/lang/lang_43_buggy/src/java/org/apache/commons/lang/text/ExtendedMessageFormat.java=>419,423]
+int start=pos.getIndex();
+char[] c=pattern.toCharArray();
+if(escapingOn&&c[start]==QUOTE){
+return appendTo==null?null:appendTo.append(QUOTE);
+}
+
+Time : 18/01/14 00:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/lang/lang_43_buggy/src/java/org/apache/commons/lang/text/ExtendedMessageFormat.java=>419,423]
+int start=pos.getIndex();
+char[] c=pattern.toCharArray();
+if(escapingOn&&c[start]==QUOTE){
+next(pos);
+return appendTo==null?null:appendTo.append(QUOTE);
+}
+
+Time : 18/01/14 00:58
+----------------------------------------
+Success time : 18/01/14 00:58

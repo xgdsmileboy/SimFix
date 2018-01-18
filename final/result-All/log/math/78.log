@@ -1,0 +1,155 @@
+=================================================
+Project : math_78	start : 18/01/12 21:47
+Current failed test : org.apache.commons.math.ode.events.EventStateTest::closeEvents_purify_1 | 18/01/12 21:47
+Fri Jan 12 21:48:45 AEDT 2018 org.apache.commons.math.ode.sampling.DummyStepInterpolator,99
+Fri Jan 12 21:53:47 AEDT 2018 Fri Jan 12 21:53:47 AEDT 2018 : org.apache.commons.math.ode.sampling.DummyStepInterpolator,100=>Find no block
+Fri Jan 12 21:53:48 AEDT 2018 org.apache.commons.math.ode.sampling.DummyStepInterpolator,66
+Fri Jan 12 21:53:51 AEDT 2018 Fri Jan 12 21:53:51 AEDT 2018 : org.apache.commons.math.ode.sampling.DummyStepInterpolator,67=>Find no block
+Fri Jan 12 21:53:51 AEDT 2018 Fri Jan 12 21:53:51 AEDT 2018 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,107=>Find no block
+Fri Jan 12 21:53:52 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,109
+Fri Jan 12 22:00:30 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,110
+Fri Jan 12 22:00:31 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,111
+Fri Jan 12 22:12:40 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,112
+Fri Jan 12 22:22:16 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,114
+Fri Jan 12 22:34:42 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,115
+Fri Jan 12 22:50:06 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,116
+Fri Jan 12 23:02:54 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,118
+Fri Jan 12 23:17:11 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,119
+Fri Jan 12 23:22:01 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,120
+Fri Jan 12 23:22:02 AEDT 2018 Fri Jan 12 23:22:02 AEDT 2018 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,122=>Find no block
+Fri Jan 12 23:22:02 AEDT 2018 org.apache.commons.math.ode.events.EventState,271
+Fri Jan 12 23:22:05 AEDT 2018 org.apache.commons.math.ode.events.EventState,242
+Fri Jan 12 23:22:07 AEDT 2018 org.apache.commons.math.ode.events.EventState,243
+Fri Jan 12 23:22:08 AEDT 2018 org.apache.commons.math.ode.events.EventState,249
+Fri Jan 12 23:22:55 AEDT 2018 org.apache.commons.math.ode.events.EventState,250
+Fri Jan 12 23:22:56 AEDT 2018 org.apache.commons.math.ode.events.EventState,251
+Fri Jan 12 23:22:57 AEDT 2018 org.apache.commons.math.ode.events.EventState,285
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+previousEventTime=t;
+g0=handler.g(t,y);
+if(pendingEvent){
+previousEventTime=t;
+g0Positive=increasing;
+nextAction=handler.eventOccurred(t,y,!(increasing^forward));
+}else {
+g0Positive=g0>=0;
+nextAction=EventHandler.CONTINUE;
+}
+
+Time : 18/01/12 23:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+g0=t;
+g0=handler.g(t,y);
+if(pendingEvent){
+previousEventTime=t;
+g0Positive=increasing;
+nextAction=handler.eventOccurred(t,y,!(increasing^forward));
+}else {
+g0Positive=g0>=0;
+nextAction=EventHandler.CONTINUE;
+}
+
+Time : 18/01/12 23:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+g0+=t;
+g0=handler.g(t,y);
+if(pendingEvent){
+previousEventTime=t;
+g0Positive=increasing;
+nextAction=handler.eventOccurred(t,y,!(increasing^forward));
+}else {
+g0Positive=g0>=0;
+nextAction=EventHandler.CONTINUE;
+}
+
+Time : 18/01/12 23:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+g0-=t;
+g0=handler.g(t,y);
+if(pendingEvent){
+previousEventTime=t;
+g0Positive=increasing;
+nextAction=handler.eventOccurred(t,y,!(increasing^forward));
+}else {
+g0Positive=g0>=0;
+nextAction=EventHandler.CONTINUE;
+}
+
+Time : 18/01/12 23:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+previousEventTime*=t;
+g0=handler.g(t,y);
+if(pendingEvent){
+previousEventTime=t;
+g0Positive=increasing;
+nextAction=handler.eventOccurred(t,y,!(increasing^forward));
+}else {
+g0Positive=g0>=0;
+nextAction=EventHandler.CONTINUE;
+}
+
+Time : 18/01/12 23:27
+----------------------------------------
+Timeout time : 18/01/12 23:28
+Current failed test : org.apache.commons.math.ode.events.EventStateTest::closeEvents_purify_2 | 18/01/12 23:28
+Fri Jan 12 23:29:35 AEDT 2018 org.apache.commons.math.ode.sampling.DummyStepInterpolator,66
+Fri Jan 12 23:29:38 AEDT 2018 Fri Jan 12 23:29:38 AEDT 2018 : org.apache.commons.math.ode.sampling.DummyStepInterpolator,67=>Find no block
+Fri Jan 12 23:29:39 AEDT 2018 Fri Jan 12 23:29:39 AEDT 2018 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,107=>Find no block
+Fri Jan 12 23:29:40 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,109
+Fri Jan 12 23:36:14 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,110
+Fri Jan 12 23:36:15 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,111
+Fri Jan 12 23:48:25 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,112
+Fri Jan 12 23:58:16 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,114
+Sat Jan 13 00:11:01 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,115
+Sat Jan 13 00:26:59 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,116
+Sat Jan 13 00:39:58 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,118
+Sat Jan 13 00:54:30 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,119
+Sat Jan 13 00:59:26 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,120
+Sat Jan 13 00:59:27 AEDT 2018 Sat Jan 13 00:59:27 AEDT 2018 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,122=>Find no block
+Sat Jan 13 00:59:27 AEDT 2018 org.apache.commons.math.ode.events.EventState,271
+Sat Jan 13 00:59:30 AEDT 2018 org.apache.commons.math.ode.events.EventState,285
+Sat Jan 13 01:05:41 AEDT 2018 org.apache.commons.math.ode.events.EventState,286
+Sat Jan 13 01:05:42 AEDT 2018 org.apache.commons.math.ode.events.EventState,288
+Timeout time : 18/01/13 01:09
+Current failed test : org.apache.commons.math.ode.events.EventStateTest::closeEvents_purify_4 | 18/01/13 01:09
+Sat Jan 13 01:10:28 AEDT 2018 org.apache.commons.math.ode.sampling.DummyStepInterpolator,66
+Sat Jan 13 01:10:31 AEDT 2018 Sat Jan 13 01:10:31 AEDT 2018 : org.apache.commons.math.ode.sampling.DummyStepInterpolator,67=>Find no block
+Sat Jan 13 01:10:31 AEDT 2018 Sat Jan 13 01:10:31 AEDT 2018 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,107=>Find no block
+Sat Jan 13 01:10:33 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,109
+Sat Jan 13 01:17:20 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,110
+Sat Jan 13 01:17:22 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,111
+Sat Jan 13 01:29:59 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,112
+Sat Jan 13 01:39:46 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,114
+Sat Jan 13 01:52:28 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,115
+Sat Jan 13 02:08:27 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,116
+Sat Jan 13 02:21:31 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,118
+Sat Jan 13 02:36:10 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,119
+Sat Jan 13 02:41:12 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,120
+Sat Jan 13 02:41:13 AEDT 2018 Sat Jan 13 02:41:13 AEDT 2018 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,122=>Find no block
+Sat Jan 13 02:41:13 AEDT 2018 org.apache.commons.math.ode.events.EventState,271
+Sat Jan 13 02:41:16 AEDT 2018 org.apache.commons.math.ode.events.EventState,151
+Sat Jan 13 02:44:16 AEDT 2018 org.apache.commons.math.ode.events.EventState,152
+Sat Jan 13 02:44:17 AEDT 2018 org.apache.commons.math.ode.events.EventState,153
+Sat Jan 13 02:44:18 AEDT 2018 Sat Jan 13 02:44:18 AEDT 2018 : org.apache.commons.math.ode.events.EventState,154=>Find no block
+Sat Jan 13 02:44:18 AEDT 2018 Sat Jan 13 02:44:18 AEDT 2018 : org.apache.commons.math.ode.events.EventState,95=>Find no block
+Sat Jan 13 02:44:19 AEDT 2018 org.apache.commons.math.ode.events.EventState,96
+Timeout time : 18/01/13 02:50

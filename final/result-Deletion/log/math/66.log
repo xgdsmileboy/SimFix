@@ -1,0 +1,236 @@
+=================================================
+Project : math_66	start : 18/01/16 01:02
+Current failed test : org.apache.commons.math.optimization.univariate.BrentOptimizerTest::testQuinticMinStatistics_purify_1 | 18/01/16 01:06
+Tue Jan 16 01:08:22 AEDT 2018 Tue Jan 16 01:08:22 AEDT 2018 : org.apache.commons.math.util.ResizableDoubleArray,142=>Find no block
+Tue Jan 16 01:08:26 AEDT 2018 Tue Jan 16 01:08:26 AEDT 2018 : org.apache.commons.math.util.ResizableDoubleArray,90=>Find no block
+Tue Jan 16 01:08:32 AEDT 2018 Tue Jan 16 01:08:32 AEDT 2018 : org.apache.commons.math.util.ResizableDoubleArray,100=>Find no block
+Tue Jan 16 01:08:37 AEDT 2018 Tue Jan 16 01:08:37 AEDT 2018 : org.apache.commons.math.util.ResizableDoubleArray,106=>Find no block
+Tue Jan 16 01:08:42 AEDT 2018 Tue Jan 16 01:08:42 AEDT 2018 : org.apache.commons.math.util.ResizableDoubleArray,112=>Find no block
+Tue Jan 16 01:08:46 AEDT 2018 Tue Jan 16 01:08:46 AEDT 2018 : org.apache.commons.math.util.ResizableDoubleArray,123=>Find no block
+Tue Jan 16 01:08:52 AEDT 2018 Tue Jan 16 01:08:52 AEDT 2018 : org.apache.commons.math.util.ResizableDoubleArray,131=>Find no block
+Tue Jan 16 01:08:58 AEDT 2018 org.apache.commons.math.util.ResizableDoubleArray,143
+Tue Jan 16 01:15:39 AEDT 2018 Tue Jan 16 01:15:39 AEDT 2018 : org.apache.commons.math.util.ResizableDoubleArray,144=>Find no block
+Tue Jan 16 01:15:44 AEDT 2018 org.apache.commons.math.util.ResizableDoubleArray,267
+Timeout time : 18/01/16 01:38
+Current failed test : org.apache.commons.math.optimization.univariate.BrentOptimizerTest::testQuinticMinStatistics_purify_2 | 18/01/16 01:38
+Tue Jan 16 01:40:44 AEDT 2018 Tue Jan 16 01:40:44 AEDT 2018 : org.apache.commons.math.optimization.univariate.BrentOptimizer,43=>Find no block
+Tue Jan 16 01:40:48 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,44
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+setMaxEvaluations(Integer.MAX_VALUE);
+setMaximalIterationCount(100);
+setAbsoluteAccuracy(1.0E-10);
+
+Time : 18/01/16 01:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+setMaxEvaluations(Integer.MAX_VALUE);
+setMaximalIterationCount(100);
+setRelativeAccuracy(1.0E-14);
+
+Time : 18/01/16 01:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+setMaxEvaluations(Integer.MAX_VALUE);
+setMaximalIterationCount(100);
+
+Time : 18/01/16 01:46
+----------------------------------------
+Tue Jan 16 01:48:16 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,45
+Tue Jan 16 01:48:17 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,46
+Tue Jan 16 01:48:18 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,47
+Tue Jan 16 01:48:19 AEDT 2018 Tue Jan 16 01:48:19 AEDT 2018 : org.apache.commons.math.optimization.univariate.BrentOptimizer,48=>Find no block
+Tue Jan 16 01:48:20 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,57
+Tue Jan 16 01:48:24 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,60
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(f.value(max)==0.0){
+return max;
+}
+clearResult();
+return localMin(getGoalType()==GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy());
+
+Time : 18/01/16 01:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.3694524264624484 : [/home/hz985/jiajun/d4j/projects/math/math_66_buggy/src/main/java/org/apache/commons/math/optimization/univariate/BrentOptimizer.java=>0,0]
+if(f.value(max)==0.0){
+return max;
+}
+verifyBracketing(min,max,f);
+double coefficients[]=((PolynomialFunction)f).getCoefficients();
+
+Time : 18/01/16 01:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_66_buggy/src/main/java/org/apache/commons/math/optimization/univariate/BrentOptimizer.java=>60,63]
+clearResult();
+return localMin(getGoalType()==GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy());
+
+Time : 18/01/16 01:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_66_buggy/src/main/java/org/apache/commons/math/optimization/univariate/BrentOptimizer.java=>60,63]
+if(f.value(max)==0.0){
+return max;
+}
+clearResult();
+return localMin(getGoalType()==GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy());
+
+Time : 18/01/16 01:50
+----------------------------------------
+Success time : 18/01/16 01:50
+Current failed test : org.apache.commons.math.optimization.univariate.BrentOptimizerTest::testSinMin_purify_3 | 18/01/16 01:50
+Tue Jan 16 01:53:19 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,66
+Tue Jan 16 01:54:39 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,107
+Tue Jan 16 02:02:55 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,108
+Tue Jan 16 02:02:59 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,158
+Timeout time : 18/01/16 02:23
+Current failed test : org.apache.commons.math.optimization.univariate.BrentOptimizerTest::testSinMin_purify_5 | 18/01/16 02:23
+Tue Jan 16 02:25:35 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,167
+Timeout time : 18/01/16 02:55
+Current failed test : org.apache.commons.math.optimization.univariate.BrentOptimizerTest::testSinMin_purify_8 | 18/01/16 02:55
+Tue Jan 16 02:58:57 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,152
+Tue Jan 16 02:59:06 AEDT 2018 Tue Jan 16 02:59:06 AEDT 2018 : org.apache.commons.math.optimization.univariate.BrentOptimizer,43=>Find no block
+Tue Jan 16 02:59:10 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,44
+Tue Jan 16 03:03:45 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,45
+Tue Jan 16 03:03:50 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,46
+Tue Jan 16 03:03:56 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,47
+Tue Jan 16 03:04:01 AEDT 2018 Tue Jan 16 03:04:01 AEDT 2018 : org.apache.commons.math.optimization.univariate.BrentOptimizer,48=>Find no block
+Tue Jan 16 03:04:03 AEDT 2018 Tue Jan 16 03:04:03 AEDT 2018 : org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,82=>Find no block
+Tue Jan 16 03:04:07 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,142
+Tue Jan 16 03:05:07 AEDT 2018 Tue Jan 16 03:05:07 AEDT 2018 : org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,143=>Find no block
+Tue Jan 16 03:05:10 AEDT 2018 Tue Jan 16 03:05:10 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,78=>Find no block
+Tue Jan 16 03:05:11 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,87
+Tue Jan 16 03:07:24 AEDT 2018 Tue Jan 16 03:07:24 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,88=>Find no block
+Tue Jan 16 03:07:27 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,102
+Tue Jan 16 03:09:19 AEDT 2018 Tue Jan 16 03:09:19 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,103=>Find no block
+Tue Jan 16 03:09:24 AEDT 2018 org.apache.commons.math.ConvergingAlgorithmImpl,117
+Tue Jan 16 03:11:16 AEDT 2018 Tue Jan 16 03:11:16 AEDT 2018 : org.apache.commons.math.ConvergingAlgorithmImpl,118=>Find no block
+Tue Jan 16 03:11:20 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,57
+Tue Jan 16 03:11:30 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,60
+Tue Jan 16 03:13:54 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,61
+Tue Jan 16 03:14:00 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,66
+Tue Jan 16 03:15:36 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,99
+Tue Jan 16 03:16:13 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,100
+Tue Jan 16 03:16:13 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,102
+Tue Jan 16 03:19:15 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,103
+Tue Jan 16 03:19:20 AEDT 2018 org.apache.commons.math.optimization.univariate.BrentOptimizer,106
+Timeout time : 18/01/16 03:28
+Current failed test : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testSinMin_purify_3 | 18/01/16 03:28
+Tue Jan 16 03:31:29 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,122
+Tue Jan 16 03:31:41 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,196
+Tue Jan 16 03:35:58 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,222
+Tue Jan 16 03:40:33 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,105
+Tue Jan 16 03:45:32 AEDT 2018 org.apache.commons.math.optimization.univariate.AbstractUnivariateRealOptimizer,113
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+evaluations=0;
+return functionValue;
+
+Time : 18/01/16 03:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+evaluations=0;
+return result;
+
+Time : 18/01/16 03:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(functionValue==Double.NaN){
+ final double opt=getResult();
+try{
+functionValue=function.value(opt);
+}catch (FunctionEvaluationException e) {
+  throw new RuntimeException(e);
+}
+
+}
+this.min=min;
+evaluations=0;
+return functionValue;
+
+Time : 18/01/16 03:59
+----------------------------------------
+Timeout time : 18/01/16 04:01
+Current failed test : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_3 | 18/01/16 04:01
+Tue Jan 16 04:04:03 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,107
+Tue Jan 16 04:04:13 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,280
+Tue Jan 16 04:15:00 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,281
+Tue Jan 16 04:15:04 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,282
+Tue Jan 16 04:15:09 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,283
+Timeout time : 18/01/16 04:34
+Current failed test : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_4 | 18/01/16 04:34
+Tue Jan 16 04:36:16 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,122
+Tue Jan 16 04:36:27 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,280
+Tue Jan 16 04:45:03 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,281
+Tue Jan 16 04:45:08 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,282
+Tue Jan 16 04:45:14 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,283
+Tue Jan 16 05:04:15 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,284
+Tue Jan 16 05:04:19 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,285
+Tue Jan 16 05:04:25 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,286
+Tue Jan 16 05:04:31 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,287
+Tue Jan 16 05:04:36 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,288
+Tue Jan 16 05:04:41 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,294
+Timeout time : 18/01/16 05:06
+Current failed test : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_8 | 18/01/16 05:06
+Tue Jan 16 05:08:27 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,280
+Tue Jan 16 05:18:30 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,281
+Tue Jan 16 05:18:34 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,282
+Tue Jan 16 05:18:37 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,283
+Timeout time : 18/01/16 05:38
+Current failed test : org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest::testQuinticMin_purify_9 | 18/01/16 05:38
+Tue Jan 16 05:40:11 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,97
+Tue Jan 16 05:40:18 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,280
+Tue Jan 16 05:48:48 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,281
+Tue Jan 16 05:48:51 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,282
+Tue Jan 16 05:48:53 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,283
+Tue Jan 16 06:07:03 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,284
+Tue Jan 16 06:07:08 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,285
+Tue Jan 16 06:07:11 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,286
+Tue Jan 16 06:07:12 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,287
+Tue Jan 16 06:07:14 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,288
+Tue Jan 16 06:07:18 AEDT 2018 org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer,294
+Timeout time : 18/01/16 06:10

@@ -1,0 +1,77 @@
+=================================================
+Project : closure_105	start : 18/01/14 09:11
+Current failed test : com.google.javascript.jscomp.FoldConstantsTest::testStringJoinAdd | 18/01/14 09:11
+Sun Jan 14 09:14:33 AEDT 2018 Sun Jan 14 09:14:33 AEDT 2018 : com.google.javascript.rhino.Node,177=>Find no block
+Sun Jan 14 09:14:33 AEDT 2018 com.google.javascript.rhino.Node,197
+Sun Jan 14 09:14:40 AEDT 2018 com.google.javascript.rhino.Node,222
+Sun Jan 14 09:14:55 AEDT 2018 com.google.javascript.rhino.Node,805
+Sun Jan 14 09:17:36 AEDT 2018 com.google.javascript.rhino.Node,810
+Sun Jan 14 09:21:30 AEDT 2018 com.google.javascript.rhino.Node,811
+Sun Jan 14 09:21:34 AEDT 2018 com.google.javascript.rhino.Node,903
+Sun Jan 14 09:21:56 AEDT 2018 com.google.javascript.rhino.Node,904
+Sun Jan 14 09:22:05 AEDT 2018 com.google.javascript.rhino.Node,909
+Sun Jan 14 09:31:34 AEDT 2018 com.google.javascript.rhino.Node,910
+Sun Jan 14 09:39:23 AEDT 2018 com.google.javascript.rhino.Node,911
+Sun Jan 14 09:39:26 AEDT 2018 com.google.javascript.rhino.Node,912
+Sun Jan 14 09:46:00 AEDT 2018 com.google.javascript.rhino.Node,913
+Sun Jan 14 09:52:04 AEDT 2018 com.google.javascript.rhino.Node,915
+Sun Jan 14 09:58:41 AEDT 2018 com.google.javascript.rhino.Node,916
+Sun Jan 14 10:05:54 AEDT 2018 com.google.javascript.rhino.Node,917
+Sun Jan 14 10:11:29 AEDT 2018 com.google.javascript.rhino.Node,918
+Sun Jan 14 10:18:35 AEDT 2018 com.google.javascript.rhino.Node,919
+Sun Jan 14 10:18:38 AEDT 2018 com.google.javascript.rhino.Node,921
+Sun Jan 14 10:31:13 AEDT 2018 com.google.javascript.rhino.Node,936
+Sun Jan 14 10:41:39 AEDT 2018 com.google.javascript.rhino.Node,937
+Sun Jan 14 10:41:42 AEDT 2018 com.google.javascript.rhino.Node,938
+Sun Jan 14 10:48:52 AEDT 2018 com.google.javascript.rhino.Node,939
+Sun Jan 14 10:55:47 AEDT 2018 com.google.javascript.rhino.Node,940
+Sun Jan 14 11:02:34 AEDT 2018 Sun Jan 14 11:02:34 AEDT 2018 : com.google.javascript.rhino.Node,942=>Find no block
+Sun Jan 14 11:02:37 AEDT 2018 com.google.javascript.rhino.Node,978
+Sun Jan 14 11:06:12 AEDT 2018 com.google.javascript.rhino.Node,979
+Sun Jan 14 11:06:15 AEDT 2018 com.google.javascript.rhino.Node,980
+Sun Jan 14 11:06:18 AEDT 2018 com.google.javascript.rhino.Node,982
+Sun Jan 14 11:06:22 AEDT 2018 com.google.javascript.rhino.Node,986
+Sun Jan 14 11:31:45 AEDT 2018 com.google.javascript.rhino.Node,987
+Sun Jan 14 11:31:48 AEDT 2018 com.google.javascript.rhino.Node,1005
+Sun Jan 14 11:31:55 AEDT 2018 com.google.javascript.rhino.Node,1010
+Sun Jan 14 11:32:02 AEDT 2018 com.google.javascript.rhino.Node,1011
+Sun Jan 14 11:32:05 AEDT 2018 com.google.javascript.rhino.Node,1012
+Sun Jan 14 11:32:08 AEDT 2018 com.google.javascript.rhino.Node,1019
+Sun Jan 14 11:32:15 AEDT 2018 Sun Jan 14 11:32:15 AEDT 2018 : com.google.javascript.rhino.Node,1020=>Find no block
+Sun Jan 14 11:32:19 AEDT 2018 com.google.javascript.rhino.Node,1026
+Sun Jan 14 11:46:03 AEDT 2018 com.google.javascript.rhino.Node,1027
+Sun Jan 14 11:46:06 AEDT 2018 com.google.javascript.rhino.Node,1029
+Sun Jan 14 12:50:14 AEDT 2018 com.google.javascript.rhino.Node,1030
+Sun Jan 14 12:50:17 AEDT 2018 com.google.javascript.rhino.Node,1031
+Sun Jan 14 12:50:19 AEDT 2018 com.google.javascript.rhino.Node,1034
+Sun Jan 14 12:50:22 AEDT 2018 Sun Jan 14 12:50:22 AEDT 2018 : com.google.javascript.rhino.Node,1032=>Find no block
+Sun Jan 14 12:50:26 AEDT 2018 Sun Jan 14 12:50:26 AEDT 2018 : com.google.javascript.rhino.Node,1037=>Find no block
+Sun Jan 14 12:50:28 AEDT 2018 com.google.javascript.rhino.Node,1330
+Sun Jan 14 12:51:04 AEDT 2018 com.google.javascript.rhino.Token,294
+Sun Jan 14 12:51:20 AEDT 2018 com.google.javascript.rhino.Token,311
+Sun Jan 14 12:51:36 AEDT 2018 com.google.javascript.rhino.Token,336
+Sun Jan 14 12:51:51 AEDT 2018 com.google.javascript.rhino.Token,359
+Sun Jan 14 12:52:07 AEDT 2018 com.google.javascript.rhino.Token,397
+Sun Jan 14 12:52:23 AEDT 2018 com.google.javascript.rhino.Token,402
+Sun Jan 14 12:52:39 AEDT 2018 com.google.javascript.rhino.Token,404
+Sun Jan 14 12:52:48 AEDT 2018 com.google.javascript.rhino.ScriptOrFnNode,54
+Sun Jan 14 12:52:56 AEDT 2018 com.google.javascript.rhino.ScriptOrFnNode,60
+Sun Jan 14 12:52:58 AEDT 2018 com.google.javascript.rhino.ScriptOrFnNode,62
+Sun Jan 14 12:52:59 AEDT 2018 com.google.javascript.rhino.ScriptOrFnNode,69
+Sun Jan 14 12:53:01 AEDT 2018 com.google.javascript.rhino.ScriptOrFnNode,77
+Sun Jan 14 12:53:03 AEDT 2018 com.google.javascript.jscomp.FoldConstants,1484
+Sun Jan 14 12:56:13 AEDT 2018 com.google.javascript.jscomp.FoldConstants,1490
+Sun Jan 14 12:58:34 AEDT 2018 com.google.javascript.jscomp.FoldConstants,1491
+Sun Jan 14 12:58:38 AEDT 2018 com.google.javascript.jscomp.FoldConstants,1492
+Sun Jan 14 12:58:41 AEDT 2018 com.google.javascript.jscomp.FoldConstants,1511
+Sun Jan 14 13:15:35 AEDT 2018 com.google.javascript.jscomp.FoldConstants,1512
+Sun Jan 14 13:34:39 AEDT 2018 com.google.javascript.jscomp.FoldConstants,1513
+Sun Jan 14 13:54:27 AEDT 2018 com.google.javascript.jscomp.FoldConstants,1518
+Sun Jan 14 13:54:35 AEDT 2018 com.google.javascript.jscomp.FoldConstants,1533
+Sun Jan 14 13:55:37 AEDT 2018 com.google.javascript.jscomp.FoldConstants,1534
+Sun Jan 14 13:55:39 AEDT 2018 com.google.javascript.jscomp.FoldConstants,1536
+Sun Jan 14 13:56:37 AEDT 2018 com.google.javascript.jscomp.FoldConstants,1537
+Sun Jan 14 14:03:25 AEDT 2018 com.google.javascript.jscomp.FoldConstants,1538
+Sun Jan 14 14:11:25 AEDT 2018 com.google.javascript.jscomp.FoldConstants,1539
+Sun Jan 14 14:11:27 AEDT 2018 com.google.javascript.jscomp.FoldConstants,1542
+Timeout time : 18/01/14 14:14

@@ -1,0 +1,90 @@
+=================================================
+Project : math_95	start : 18/01/14 07:14
+Current failed test : org.apache.commons.math.distribution.FDistributionTest::testSmallDegreesOfFreedom | 18/01/14 07:15
+Sun Jan 14 07:15:37 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverUtils,179
+Sun Jan 14 07:16:19 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverUtils,128
+Sun Jan 14 07:16:22 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverUtils,171
+Sun Jan 14 07:16:25 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverUtils,174
+Sun Jan 14 07:16:28 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverUtils,178
+Sun Jan 14 07:16:29 AEDT 2018 org.apache.commons.math.distribution.AbstractContinuousDistribution,67
+Sun Jan 14 07:16:33 AEDT 2018 org.apache.commons.math.distribution.AbstractContinuousDistribution,80
+Sun Jan 14 07:17:16 AEDT 2018 org.apache.commons.math.distribution.AbstractContinuousDistribution,81
+Sun Jan 14 07:18:16 AEDT 2018 org.apache.commons.math.distribution.AbstractContinuousDistribution,82
+Sun Jan 14 07:18:34 AEDT 2018 org.apache.commons.math.distribution.AbstractContinuousDistribution,84
+Sun Jan 14 07:18:37 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,119
+Sun Jan 14 07:18:40 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,132
+Sun Jan 14 07:18:43 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,145
+Sun Jan 14 07:19:29 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,147
+Sun Jan 14 07:19:30 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,148
+Sun Jan 14 07:19:31 AEDT 2018 Sun Jan 14 07:19:31 AEDT 2018 : org.apache.commons.math.distribution.AbstractContinuousDistribution,68=>Find no block
+Sun Jan 14 07:19:32 AEDT 2018 org.apache.commons.math.distribution.AbstractContinuousDistribution,61
+Sun Jan 14 07:22:57 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,106
+Sun Jan 14 07:26:30 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,100
+Sun Jan 14 07:26:32 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,103
+Sun Jan 14 07:26:33 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,75
+Sun Jan 14 07:28:53 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,76
+Sun Jan 14 07:28:54 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,78
+Sun Jan 14 07:28:55 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,72
+Sun Jan 14 07:28:56 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,82
+Sun Jan 14 07:32:42 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,170
+Sun Jan 14 07:32:44 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,192
+Sun Jan 14 07:32:47 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,50
+Sun Jan 14 07:32:50 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,51
+Sun Jan 14 07:32:52 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,52
+Sun Jan 14 07:32:53 AEDT 2018 Sun Jan 14 07:32:53 AEDT 2018 : org.apache.commons.math.distribution.FDistributionImpl,53=>Find no block
+Sun Jan 14 07:32:54 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,158
+Sun Jan 14 07:32:56 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,162
+Sun Jan 14 07:33:06 AEDT 2018 Sun Jan 14 07:33:06 AEDT 2018 : org.apache.commons.math.distribution.FDistributionImpl,163=>Find no block
+Sun Jan 14 07:33:08 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,180
+Sun Jan 14 07:33:08 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,184
+Sun Jan 14 07:33:18 AEDT 2018 Sun Jan 14 07:33:18 AEDT 2018 : org.apache.commons.math.distribution.FDistributionImpl,185=>Find no block
+Sun Jan 14 07:33:19 AEDT 2018 org.apache.commons.math.distribution.AbstractDistribution,38
+Sun Jan 14 07:33:22 AEDT 2018 Sun Jan 14 07:33:22 AEDT 2018 : org.apache.commons.math.distribution.AbstractDistribution,39=>Find no block
+Sun Jan 14 07:33:24 AEDT 2018 org.apache.commons.math.distribution.AbstractContinuousDistribution,45
+Sun Jan 14 07:33:24 AEDT 2018 Sun Jan 14 07:33:24 AEDT 2018 : org.apache.commons.math.distribution.AbstractContinuousDistribution,46=>Find no block
+Sun Jan 14 07:33:25 AEDT 2018 org.apache.commons.math.special.Beta,59
+Sun Jan 14 07:34:07 AEDT 2018 org.apache.commons.math.special.Beta,126
+Sun Jan 14 07:43:34 AEDT 2018 org.apache.commons.math.special.Beta,130
+Sun Jan 14 07:43:35 AEDT 2018 org.apache.commons.math.special.Beta,133
+Sun Jan 14 07:43:38 AEDT 2018 org.apache.commons.math.special.Beta,156
+Sun Jan 14 07:45:48 AEDT 2018 org.apache.commons.math.special.Beta,161
+Sun Jan 14 07:53:10 AEDT 2018 org.apache.commons.math.special.Beta,197
+Sun Jan 14 07:55:57 AEDT 2018 org.apache.commons.math.special.Beta,200
+Sun Jan 14 07:55:57 AEDT 2018 org.apache.commons.math.special.Beta,204
+Sun Jan 14 07:58:57 AEDT 2018 org.apache.commons.math.special.Beta,133
+Sun Jan 14 07:58:58 AEDT 2018 org.apache.commons.math.special.Beta,140
+Sun Jan 14 07:59:21 AEDT 2018 org.apache.commons.math.special.Beta,141
+Sun Jan 14 07:59:22 AEDT 2018 org.apache.commons.math.special.Beta,142
+Sun Jan 14 07:59:23 AEDT 2018 org.apache.commons.math.special.Beta,145
+Sun Jan 14 07:59:25 AEDT 2018 org.apache.commons.math.special.Beta,146
+Sun Jan 14 07:59:26 AEDT 2018 org.apache.commons.math.special.Beta,149
+Sun Jan 14 08:01:11 AEDT 2018 org.apache.commons.math.special.Beta,153
+Sun Jan 14 08:01:13 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,51
+Sun Jan 14 08:01:14 AEDT 2018 Sun Jan 14 08:01:14 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,52=>Find no block
+Sun Jan 14 08:01:15 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,133
+Sun Jan 14 08:02:10 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,134
+Sun Jan 14 08:02:11 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,135
+Sun Jan 14 08:03:30 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,136
+Sun Jan 14 08:05:35 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,137
+Sun Jan 14 08:09:25 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,138
+Sun Jan 14 08:14:38 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,139
+Sun Jan 14 08:14:39 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,140
+Sun Jan 14 08:28:42 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,141
+Sun Jan 14 08:30:01 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,142
+Sun Jan 14 08:30:03 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,143
+Sun Jan 14 08:32:32 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,144
+Sun Jan 14 08:36:25 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,145
+Sun Jan 14 08:36:25 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,146
+Sun Jan 14 08:36:28 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,161
+Sun Jan 14 09:05:03 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,162
+Sun Jan 14 09:58:58 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,165
+Sun Jan 14 10:18:04 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,166
+Sun Jan 14 10:52:17 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,167
+Sun Jan 14 11:09:57 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,168
+Sun Jan 14 11:26:12 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,169
+Sun Jan 14 11:26:19 AEDT 2018 Sun Jan 14 11:26:19 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,170=>Find no block
+Sun Jan 14 11:26:25 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,172
+Sun Jan 14 11:46:33 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,178
+Sun Jan 14 12:00:40 AEDT 2018 org.apache.commons.math.special.Gamma,90
+Sun Jan 14 12:12:31 AEDT 2018 org.apache.commons.math.special.Gamma,93
+Timeout time : 18/01/14 12:15

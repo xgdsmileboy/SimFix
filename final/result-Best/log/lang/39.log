@@ -1,0 +1,95 @@
+=================================================
+Project : lang_39	start : 18/01/14 05:41
+Current failed test : org.apache.commons.lang3.StringUtilsTest::testReplace_StringStringArrayStringArray | 18/01/14 05:41
+Sun Jan 14 05:42:28 AEDT 2018 org.apache.commons.lang3.StringUtils,3502
+Sun Jan 14 05:43:08 AEDT 2018 org.apache.commons.lang3.StringUtils,3648
+Sun Jan 14 05:46:55 AEDT 2018 org.apache.commons.lang3.StringUtils,3727
+Sun Jan 14 05:46:58 AEDT 2018 org.apache.commons.lang3.StringUtils,3612
+Sun Jan 14 05:55:42 AEDT 2018 org.apache.commons.lang3.StringUtils,3615
+Sun Jan 14 05:55:44 AEDT 2018 org.apache.commons.lang3.StringUtils,3619
+Sun Jan 14 05:55:46 AEDT 2018 org.apache.commons.lang3.StringUtils,3623
+Sun Jan 14 06:07:54 AEDT 2018 org.apache.commons.lang3.StringUtils,3624
+Sun Jan 14 06:24:51 AEDT 2018 org.apache.commons.lang3.StringUtils,3627
+Sun Jan 14 06:25:44 AEDT 2018 org.apache.commons.lang3.StringUtils,3635
+Sun Jan 14 06:27:50 AEDT 2018 org.apache.commons.lang3.StringUtils,3638
+Sun Jan 14 06:27:53 AEDT 2018 org.apache.commons.lang3.StringUtils,3639
+Sun Jan 14 06:27:56 AEDT 2018 org.apache.commons.lang3.StringUtils,3640
+Sun Jan 14 06:27:57 AEDT 2018 org.apache.commons.lang3.StringUtils,3644
+Sun Jan 14 06:50:51 AEDT 2018 org.apache.commons.lang3.StringUtils,3645
+Sun Jan 14 06:50:53 AEDT 2018 org.apache.commons.lang3.StringUtils,3650
+Sun Jan 14 08:08:36 AEDT 2018 org.apache.commons.lang3.StringUtils,3653
+Sun Jan 14 08:08:37 AEDT 2018 org.apache.commons.lang3.StringUtils,3654
+Sun Jan 14 08:08:39 AEDT 2018 org.apache.commons.lang3.StringUtils,3656
+Sun Jan 14 08:08:40 AEDT 2018 org.apache.commons.lang3.StringUtils,3657
+Sun Jan 14 08:08:41 AEDT 2018 org.apache.commons.lang3.StringUtils,3658
+Sun Jan 14 08:08:41 AEDT 2018 org.apache.commons.lang3.StringUtils,3665
+Sun Jan 14 08:09:26 AEDT 2018 org.apache.commons.lang3.StringUtils,3666
+Sun Jan 14 08:09:27 AEDT 2018 org.apache.commons.lang3.StringUtils,3669
+Sun Jan 14 08:13:13 AEDT 2018 org.apache.commons.lang3.StringUtils,3672
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<searchList.length;i++){
+if(noMoreMatchesForReplIndex[i]||searchList[i]==null||searchList[i].length()==0||replacementList[i]==null){
+continue;
+}
+int greater=replacementList[i].length()-searchList[i].length();
+if(greater>0){
+increase+=3*greater;
+}
+}
+
+Time : 18/01/14 08:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.3414815116080265 : [/home/hz985/jiajun/d4j/projects/lang/lang_39_buggy/src/java/org/apache/commons/lang3/StringUtils.java=>0,0]
+for(int i=0;i<searchLength;i++){
+if(noMoreMatchesForReplIndex[i]||searchList[i]==null||searchList[i].length()==0||replacementList[i]==null){
+continue;
+}
+tempIndex=text.indexOf(searchList[i]);
+if(tempIndex==-1){
+noMoreMatchesForReplIndex[i]=true;
+}else {
+if(textIndex==-1||tempIndex<textIndex){
+textIndex=tempIndex;
+replaceIndex=i;
+}
+}
+}
+
+Time : 18/01/14 08:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/lang/lang_39_buggy/src/java/org/apache/commons/lang3/StringUtils.java=>3675,3680]
+for(int i=0;i<searchList.length;i++){
+int greater=replacementList[i].length()-searchList[i].length();
+if(greater>0){
+increase+=3*greater;
+}
+}
+
+Time : 18/01/14 08:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/lang/lang_39_buggy/src/java/org/apache/commons/lang3/StringUtils.java=>3675,3680]
+for(int i=0;i<searchList.length;i++){
+if(noMoreMatchesForReplIndex[i]||searchList[i]==null||searchList[i].length()==0||replacementList[i]==null){
+continue;
+}
+int greater=replacementList[i].length()-searchList[i].length();
+if(greater>0){
+increase+=3*greater;
+}
+}
+
+Time : 18/01/14 08:14
+----------------------------------------
+Success time : 18/01/14 08:14

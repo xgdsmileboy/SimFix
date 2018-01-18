@@ -1,0 +1,86 @@
+=================================================
+Project : chart_19	start : 18/01/15 13:48
+Current failed test : org.jfree.chart.plot.junit.CategoryPlotTests::testGetDomainAxisIndex_purify_1 | 18/01/15 13:51
+Mon Jan 15 13:54:22 AEDT 2018 org.jfree.chart.event.ChartChangeEvent,69
+Mon Jan 15 13:54:57 AEDT 2018 Mon Jan 15 13:54:57 AEDT 2018 : org.jfree.chart.event.ChartChangeEvent,70=>Find no block
+Mon Jan 15 13:55:06 AEDT 2018 org.jfree.chart.event.ChartChangeEvent,80
+Mon Jan 15 13:55:31 AEDT 2018 Mon Jan 15 13:55:31 AEDT 2018 : org.jfree.chart.event.ChartChangeEvent,81=>Find no block
+Mon Jan 15 13:55:39 AEDT 2018 org.jfree.chart.event.ChartChangeEvent,93
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(source);
+this.chart=chart;
+
+Time : 18/01/15 13:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.2408673886137245 : [/home/hz985/jiajun/d4j/projects/chart/chart_19_buggy/source/org/jfree/chart/event/ChartChangeEvent.java=>0,0]
+super(source);
+this.dataset=dataset;
+
+Time : 18/01/15 13:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/chart/chart_19_buggy/source/org/jfree/chart/event/ChartChangeEvent.java=>93,95]
+super(source);
+this.chart=chart;
+this.type=type;
+
+Time : 18/01/15 13:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/chart/chart_19_buggy/source/org/jfree/chart/event/ChartChangeEvent.java=>93,95]
+super(source);
+this.chart=chart;
+
+Time : 18/01/15 13:57
+----------------------------------------
+Success time : 18/01/15 13:57
+Current failed test : org.jfree.chart.plot.junit.CategoryPlotTests::testGetDomainAxisIndex_purify_2 | 18/01/15 13:57
+Already fixed : org.jfree.chart.plot.junit.CategoryPlotTests::testGetDomainAxisIndex_purify_2
+Current failed test : org.jfree.chart.plot.junit.CategoryPlotTests::testGetDomainAxisIndex_purify_5 | 18/01/15 13:58
+Mon Jan 15 14:01:05 AEDT 2018 org.jfree.chart.plot.CategoryPlot,698
+Mon Jan 15 14:01:42 AEDT 2018 org.jfree.chart.plot.CategoryPlot,657
+Mon Jan 15 14:03:36 AEDT 2018 org.jfree.chart.plot.CategoryPlot,661
+Mon Jan 15 14:10:15 AEDT 2018 org.jfree.chart.plot.CategoryPlot,662
+Mon Jan 15 14:10:24 AEDT 2018 org.jfree.chart.plot.CategoryPlot,640
+Mon Jan 15 14:12:54 AEDT 2018 Mon Jan 15 14:12:54 AEDT 2018 : org.jfree.chart.plot.CategoryPlot,641=>Find no block
+Mon Jan 15 14:13:01 AEDT 2018 org.jfree.chart.plot.CategoryPlot,652
+Mon Jan 15 14:17:05 AEDT 2018 org.jfree.chart.plot.CategoryPlot,653
+Mon Jan 15 14:19:26 AEDT 2018 org.jfree.chart.plot.CategoryPlot,656
+Mon Jan 15 14:19:34 AEDT 2018 org.jfree.chart.plot.CategoryPlot,659
+Mon Jan 15 14:38:35 AEDT 2018 org.jfree.chart.plot.CategoryPlot,660
+Mon Jan 15 14:38:43 AEDT 2018 org.jfree.chart.plot.CategoryPlot,664
+Mon Jan 15 14:47:49 AEDT 2018 org.jfree.chart.plot.CategoryPlot,665
+Mon Jan 15 14:47:58 AEDT 2018 Mon Jan 15 14:47:58 AEDT 2018 : org.jfree.chart.plot.CategoryPlot,667=>Find no block
+Mon Jan 15 14:48:06 AEDT 2018 org.jfree.chart.axis.NumberAxis,431
+Mon Jan 15 14:49:14 AEDT 2018 org.jfree.chart.axis.ValueAxis,1027
+Mon Jan 15 14:49:35 AEDT 2018 org.jfree.chart.util.AbstractObjectList,164
+Mon Jan 15 14:55:15 AEDT 2018 org.jfree.chart.plot.CategoryPlot,473
+Mon Jan 15 15:02:17 AEDT 2018 org.jfree.chart.plot.CategoryPlot,474
+Mon Jan 15 15:02:26 AEDT 2018 org.jfree.chart.axis.Axis,763
+Timeout time : 18/01/15 15:15
+Current failed test : org.jfree.chart.plot.junit.CategoryPlotTests::testGetRangeAxisIndex_purify_5 | 18/01/15 15:15
+Mon Jan 15 15:18:28 AEDT 2018 org.jfree.chart.plot.CategoryPlot,975
+Mon Jan 15 15:21:43 AEDT 2018 org.jfree.chart.plot.CategoryPlot,976
+Mon Jan 15 15:21:44 AEDT 2018 org.jfree.chart.plot.CategoryPlot,973
+Mon Jan 15 15:45:05 AEDT 2018 org.jfree.chart.plot.CategoryPlot,974
+Mon Jan 15 15:45:07 AEDT 2018 org.jfree.chart.plot.CategoryPlot,981
+Mon Jan 15 15:45:08 AEDT 2018 org.jfree.chart.plot.CategoryPlot,931
+Mon Jan 15 15:51:12 AEDT 2018 org.jfree.chart.plot.CategoryPlot,935
+Mon Jan 15 15:58:19 AEDT 2018 org.jfree.chart.plot.CategoryPlot,936
+Mon Jan 15 15:58:21 AEDT 2018 org.jfree.chart.plot.CategoryPlot,914
+Mon Jan 15 16:00:39 AEDT 2018 Mon Jan 15 16:00:39 AEDT 2018 : org.jfree.chart.plot.CategoryPlot,915=>Find no block
+Mon Jan 15 16:00:40 AEDT 2018 org.jfree.chart.plot.CategoryPlot,926
+Mon Jan 15 16:08:55 AEDT 2018 org.jfree.chart.plot.CategoryPlot,927
+Mon Jan 15 16:11:28 AEDT 2018 org.jfree.chart.plot.CategoryPlot,930
+Mon Jan 15 16:11:29 AEDT 2018 org.jfree.chart.plot.CategoryPlot,933
+Timeout time : 18/01/15 16:33

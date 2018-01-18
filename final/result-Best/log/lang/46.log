@@ -1,0 +1,234 @@
+=================================================
+Project : lang_46	start : 18/01/14 01:44
+Current failed test : org.apache.commons.lang.StringEscapeUtilsTest::testEscapeJavaWithSlash | 18/01/14 01:45
+Sun Jan 14 01:45:52 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,244
+Sun Jan 14 01:46:38 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,245
+Sun Jan 14 01:47:39 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,246
+Sun Jan 14 01:48:16 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,86
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return unescapeJava(str);
+
+Time : 18/01/14 01:48
+----------------------------------------
+Sun Jan 14 01:49:05 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,155
+Sun Jan 14 01:52:42 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,159
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(str==null){
+return null;
+}
+if(StringUtils.containsNone(str,CSV_SEARCH_CHARS)){
+return str;
+}
+try{
+StringWriter writer=new StringWriter(str.length()*2);
+escapeJavaStyleString(writer,str,escapeSingleQuotes);
+return writer.toString();
+}catch (IOException ioe) {
+  ioe.printStackTrace();
+  return null;
+}
+
+
+Time : 18/01/14 01:53
+----------------------------------------
+Sun Jan 14 01:58:58 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,160
+Sun Jan 14 01:58:59 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,161
+Sun Jan 14 01:59:00 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,179
+Sun Jan 14 01:59:05 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,182
+Sun Jan 14 02:03:05 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,186
+Sun Jan 14 02:11:05 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,187
+Sun Jan 14 02:31:38 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,188
+Sun Jan 14 02:31:42 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,191
+Sun Jan 14 02:31:43 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,193
+Sun Jan 14 02:31:44 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,195
+Sun Jan 14 02:31:44 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,197
+Sun Jan 14 02:31:45 AEDT 2018 Sun Jan 14 02:31:45 AEDT 2018 : org.apache.commons.lang.StringEscapeUtils,228=>Find no block
+Sun Jan 14 02:31:46 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,248
+Sun Jan 14 02:31:47 AEDT 2018 Sun Jan 14 02:31:47 AEDT 2018 : org.apache.commons.lang.StringEscapeUtils,253=>Find no block
+Sun Jan 14 02:31:48 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,60
+Sun Jan 14 02:31:51 AEDT 2018 Sun Jan 14 02:31:51 AEDT 2018 : org.apache.commons.lang.exception.NestableRuntimeException,47=>Find no block
+Sun Jan 14 02:31:52 AEDT 2018 Sun Jan 14 02:31:52 AEDT 2018 : org.apache.commons.lang.exception.NestableRuntimeException,53=>Find no block
+Sun Jan 14 02:31:53 AEDT 2018 Sun Jan 14 02:31:53 AEDT 2018 : org.apache.commons.lang.exception.NestableRuntimeException,61=>Find no block
+Sun Jan 14 02:31:54 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,70
+Sun Jan 14 02:32:03 AEDT 2018 Sun Jan 14 02:32:03 AEDT 2018 : org.apache.commons.lang.exception.NestableRuntimeException,71=>Find no block
+Sun Jan 14 02:32:04 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,81
+Sun Jan 14 02:32:07 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,82
+Sun Jan 14 02:32:08 AEDT 2018 Sun Jan 14 02:32:08 AEDT 2018 : org.apache.commons.lang.exception.NestableRuntimeException,83=>Find no block
+Sun Jan 14 02:32:08 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,94
+Sun Jan 14 02:32:17 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,95
+Sun Jan 14 02:32:18 AEDT 2018 Sun Jan 14 02:32:18 AEDT 2018 : org.apache.commons.lang.exception.NestableRuntimeException,96=>Find no block
+Sun Jan 14 02:32:19 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,102
+Sun Jan 14 02:32:21 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,113
+Sun Jan 14 02:33:03 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,114
+Sun Jan 14 02:33:04 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,115
+Sun Jan 14 02:33:05 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,116
+Sun Jan 14 02:33:06 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,118
+Sun Jan 14 02:33:08 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,126
+Sun Jan 14 02:33:57 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,127
+Sun Jan 14 02:33:58 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,129
+Sun Jan 14 02:35:21 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,136
+Sun Jan 14 02:35:24 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,143
+Sun Jan 14 02:35:27 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,150
+Sun Jan 14 02:35:30 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,157
+Sun Jan 14 02:35:32 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,164
+Sun Jan 14 02:36:01 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,171
+Sun Jan 14 02:36:38 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,178
+Sun Jan 14 02:36:41 AEDT 2018 Sun Jan 14 02:36:41 AEDT 2018 : org.apache.commons.lang.exception.NestableRuntimeException,179=>Find no block
+Sun Jan 14 02:36:42 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,185
+Sun Jan 14 02:37:14 AEDT 2018 Sun Jan 14 02:37:14 AEDT 2018 : org.apache.commons.lang.exception.NestableRuntimeException,186=>Find no block
+Sun Jan 14 02:37:15 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,192
+Sun Jan 14 02:37:16 AEDT 2018 Sun Jan 14 02:37:16 AEDT 2018 : org.apache.commons.lang.exception.NestableRuntimeException,193=>Find no block
+Sun Jan 14 02:37:17 AEDT 2018 org.apache.commons.lang.exception.NestableRuntimeException,199
+Sun Jan 14 02:37:21 AEDT 2018 Sun Jan 14 02:37:21 AEDT 2018 : org.apache.commons.lang.exception.NestableRuntimeException,200=>Find no block
+Sun Jan 14 02:37:22 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,59
+Sun Jan 14 02:37:23 AEDT 2018 Sun Jan 14 02:37:23 AEDT 2018 : org.apache.commons.lang.StringEscapeUtils,60=>Find no block
+Sun Jan 14 02:37:24 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,102
+Sun Jan 14 02:37:27 AEDT 2018 Sun Jan 14 02:37:27 AEDT 2018 : org.apache.commons.lang.StringEscapeUtils,103=>Find no block
+Sun Jan 14 02:37:28 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,127
+Sun Jan 14 02:38:00 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,143
+Sun Jan 14 02:38:04 AEDT 2018 Sun Jan 14 02:38:04 AEDT 2018 : org.apache.commons.lang.StringEscapeUtils,144=>Find no block
+Sun Jan 14 02:38:05 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,156
+Sun Jan 14 02:38:06 AEDT 2018 Sun Jan 14 02:38:06 AEDT 2018 : org.apache.commons.lang.StringEscapeUtils,162=>Find no block
+Sun Jan 14 02:38:08 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,164
+Sun Jan 14 02:38:09 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,165
+Sun Jan 14 02:38:10 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,180
+Sun Jan 14 02:38:11 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,183
+Sun Jan 14 02:38:12 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,192
+Sun Jan 14 02:38:14 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,194
+Sun Jan 14 02:38:17 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,196
+Sun Jan 14 02:38:20 AEDT 2018 Sun Jan 14 02:38:20 AEDT 2018 : org.apache.commons.lang.StringEscapeUtils,198=>Find no block
+Sun Jan 14 02:38:21 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,200
+Sun Jan 14 02:39:08 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,201
+Sun Jan 14 02:39:09 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,202
+Sun Jan 14 02:39:19 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,204
+Sun Jan 14 02:40:07 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,205
+Sun Jan 14 02:40:08 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,206
+Sun Jan 14 02:40:18 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,208
+Sun Jan 14 02:41:07 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,209
+Sun Jan 14 02:41:08 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,210
+Sun Jan 14 02:41:17 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,212
+Sun Jan 14 02:42:04 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,213
+Sun Jan 14 02:42:05 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,214
+Sun Jan 14 02:42:14 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,216
+Sun Jan 14 02:43:00 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,217
+Sun Jan 14 02:43:00 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,218
+Sun Jan 14 02:43:37 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,220
+Sun Jan 14 02:43:38 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,221
+Sun Jan 14 02:43:39 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,223
+Sun Jan 14 02:43:40 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,225
+Sun Jan 14 02:43:41 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,230
+Sun Jan 14 02:43:42 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,231
+Sun Jan 14 02:43:43 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,233
+Sun Jan 14 02:43:45 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,234
+Sun Jan 14 02:43:54 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,236
+Sun Jan 14 02:44:41 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,237
+Sun Jan 14 02:44:41 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,238
+Sun Jan 14 02:44:51 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,240
+Sun Jan 14 02:45:37 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,241
+Sun Jan 14 02:45:38 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,242
+Sun Jan 14 02:45:48 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,263
+Sun Jan 14 02:46:32 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,276
+Sun Jan 14 02:46:33 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,277
+Sun Jan 14 02:46:36 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,280
+Sun Jan 14 02:52:33 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,281
+Sun Jan 14 02:52:34 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,282
+Sun Jan 14 02:52:35 AEDT 2018 Sun Jan 14 02:52:35 AEDT 2018 : org.apache.commons.lang.StringEscapeUtils,283=>Find no block
+Sun Jan 14 02:52:37 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,285
+Sun Jan 14 02:52:37 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,286
+Sun Jan 14 02:52:38 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,306
+Sun Jan 14 02:52:40 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,307
+Sun Jan 14 02:52:41 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,309
+Sun Jan 14 02:52:42 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,310
+Sun Jan 14 02:52:43 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,312
+Sun Jan 14 03:04:15 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,313
+Sun Jan 14 03:08:37 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,314
+Sun Jan 14 03:08:40 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,315
+Sun Jan 14 03:08:41 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,316
+Sun Jan 14 04:03:40 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,317
+Sun Jan 14 04:03:51 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,318
+Sun Jan 14 04:03:52 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,321
+Sun Jan 14 04:11:55 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,322
+Sun Jan 14 04:11:56 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,326
+Sun Jan 14 04:11:57 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,327
+Sun Jan 14 04:11:59 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,328
+Sun Jan 14 04:12:00 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,329
+Sun Jan 14 04:12:01 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,330
+Sun Jan 14 04:12:03 AEDT 2018 Sun Jan 14 04:12:03 AEDT 2018 : org.apache.commons.lang.StringEscapeUtils,333=>Find no block
+Sun Jan 14 04:12:04 AEDT 2018 Sun Jan 14 04:12:04 AEDT 2018 : org.apache.commons.lang.StringEscapeUtils,331=>Find no block
+Sun Jan 14 04:12:05 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,332
+Sun Jan 14 04:12:06 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,337
+Sun Jan 14 04:12:08 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,339
+Sun Jan 14 04:12:11 AEDT 2018 Sun Jan 14 04:12:11 AEDT 2018 : org.apache.commons.lang.StringEscapeUtils,340=>Find no block
+Sun Jan 14 04:12:12 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,342
+Sun Jan 14 04:12:13 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,343
+Sun Jan 14 04:13:44 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,345
+Sun Jan 14 04:13:45 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,346
+Sun Jan 14 04:15:10 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,348
+Sun Jan 14 04:15:10 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,349
+Sun Jan 14 04:16:33 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,351
+Sun Jan 14 04:16:35 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,352
+Sun Jan 14 04:18:08 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,354
+Sun Jan 14 04:18:09 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,355
+Sun Jan 14 04:19:45 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,357
+Sun Jan 14 04:19:46 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,358
+Sun Jan 14 04:21:22 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,360
+Sun Jan 14 04:21:24 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,361
+Sun Jan 14 04:22:51 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,363
+Sun Jan 14 04:22:53 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,364
+Sun Jan 14 04:24:23 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,368
+Sun Jan 14 04:24:27 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,369
+Sun Jan 14 04:24:29 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,372
+Sun Jan 14 04:24:30 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,373
+Sun Jan 14 04:24:31 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,376
+Sun Jan 14 04:24:32 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,377
+Sun Jan 14 04:24:33 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,378
+Sun Jan 14 04:24:35 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,380
+Sun Jan 14 05:23:29 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,382
+Sun Jan 14 05:25:59 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,385
+Sun Jan 14 05:26:00 AEDT 2018 Sun Jan 14 05:26:00 AEDT 2018 : org.apache.commons.lang.StringEscapeUtils,387=>Find no block
+Sun Jan 14 05:26:01 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,401
+Sun Jan 14 05:26:59 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,421
+Sun Jan 14 05:27:02 AEDT 2018 Sun Jan 14 05:27:02 AEDT 2018 : org.apache.commons.lang.StringEscapeUtils,422=>Find no block
+Sun Jan 14 05:27:03 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,453
+Sun Jan 14 05:27:04 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,454
+Sun Jan 14 05:27:05 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,457
+Sun Jan 14 05:39:23 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,458
+Sun Jan 14 05:39:24 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,459
+Sun Jan 14 05:39:25 AEDT 2018 Sun Jan 14 05:39:25 AEDT 2018 : org.apache.commons.lang.StringEscapeUtils,460=>Find no block
+Sun Jan 14 05:39:27 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,463
+Sun Jan 14 05:39:28 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,464
+Sun Jan 14 05:39:29 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,498
+Sun Jan 14 05:39:47 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,499
+Sun Jan 14 05:39:48 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,501
+Sun Jan 14 05:40:43 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,502
+Sun Jan 14 05:40:44 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,504
+Sun Jan 14 05:42:10 AEDT 2018 Sun Jan 14 05:42:10 AEDT 2018 : org.apache.commons.lang.StringEscapeUtils,505=>Find no block
+Sun Jan 14 05:42:11 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,525
+Sun Jan 14 05:42:12 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,526
+Sun Jan 14 05:42:13 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,529
+Sun Jan 14 05:52:59 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,530
+Sun Jan 14 05:53:00 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,531
+Sun Jan 14 05:53:01 AEDT 2018 Sun Jan 14 05:53:01 AEDT 2018 : org.apache.commons.lang.StringEscapeUtils,532=>Find no block
+Sun Jan 14 05:53:02 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,535
+Sun Jan 14 05:53:05 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,536
+Sun Jan 14 05:53:06 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,559
+Sun Jan 14 05:53:07 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,560
+Sun Jan 14 05:53:08 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,562
+Sun Jan 14 05:53:09 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,563
+Sun Jan 14 05:53:10 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,565
+Sun Jan 14 05:54:54 AEDT 2018 Sun Jan 14 05:54:54 AEDT 2018 : org.apache.commons.lang.StringEscapeUtils,566=>Find no block
+Sun Jan 14 05:54:55 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,589
+Sun Jan 14 05:54:57 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,590
+Sun Jan 14 05:54:58 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,592
+Sun Jan 14 05:54:59 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,593
+Sun Jan 14 05:55:00 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,595
+Sun Jan 14 06:05:29 AEDT 2018 Sun Jan 14 06:05:29 AEDT 2018 : org.apache.commons.lang.StringEscapeUtils,596=>Find no block
+Sun Jan 14 06:05:30 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,616
+Sun Jan 14 06:05:32 AEDT 2018 org.apache.commons.lang.StringEscapeUtils,617
+Failed time : 18/01/14 06:05

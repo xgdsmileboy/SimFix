@@ -1,0 +1,1254 @@
+=================================================
+Project : math_46	start : 18/01/15 20:54
+Current failed test : org.apache.commons.math.complex.ComplexTest::testAtanI | 18/01/15 20:56
+Mon Jan 15 20:58:07 AEDT 2018 org.apache.commons.math.complex.Complex,260
+Mon Jan 15 20:58:26 AEDT 2018 org.apache.commons.math.complex.Complex,587
+Mon Jan 15 21:00:37 AEDT 2018 org.apache.commons.math.util.FastMath,1284
+Mon Jan 15 21:02:29 AEDT 2018 org.apache.commons.math.util.FastMath,1288
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x==Double.POSITIVE_INFINITY){
+if(hiPrec!=null){
+hiPrec[0]=Double.POSITIVE_INFINITY;
+}
+return Double.NaN;
+}
+
+Time : 18/01/15 21:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x==Double.POSITIVE_INFINITY){
+if(E>=TWO_POWER_52||E<=-TWO_POWER_52){
+return pow(-x,E);
+}
+if(hiPrec!=null){
+hiPrec[0]=Double.POSITIVE_INFINITY;
+}
+return Double.NaN;
+}
+
+Time : 18/01/15 21:10
+----------------------------------------
+Mon Jan 15 21:12:19 AEDT 2018 org.apache.commons.math.complex.Complex,583
+Mon Jan 15 21:12:36 AEDT 2018 org.apache.commons.math.util.FastMath,3004
+Mon Jan 15 21:14:29 AEDT 2018 org.apache.commons.math.util.FastMath,3005
+Mon Jan 15 21:14:36 AEDT 2018 org.apache.commons.math.complex.Complex,430
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Double.isNaN(real)||Double.isInfinite(imaginary)){
+return INF;
+}
+
+Time : 18/01/15 21:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Double.isInfinite(real)&&Double.isInfinite(imaginary)){
+return INF;
+}
+
+Time : 18/01/15 21:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Double.isInfinite(imaginary)||Double.isNaN(imaginary)){
+return INF;
+}
+
+Time : 18/01/15 21:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Double.isInfinite(imaginary)||Double.isInfinite(imaginary)){
+return INF;
+}
+
+Time : 18/01/15 21:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Double.isNaN(imaginary)||Double.isInfinite(imaginary)){
+return INF;
+}
+
+Time : 18/01/15 21:22
+----------------------------------------
+Mon Jan 15 21:23:50 AEDT 2018 org.apache.commons.math.complex.Complex,276
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 21:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 21:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 21:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 21:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 21:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 21:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 21:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 21:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(c)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 21:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 21:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=real/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 21:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 21:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 21:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(d)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 21:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(c)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 21:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=real/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 21:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 21:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 21:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(d)){
+double q=c/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(c)){
+double q=c/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(c)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=real/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=real/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(d)){
+double q=real/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(c)){
+double q=real/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(d)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(c)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=real/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(d)){
+double q=c/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(c)){
+double q=c/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(real)<FastMath.abs(c)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<=FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.ulp(1.0)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.ulp(d)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.log(real)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:40
+----------------------------------------
+Mon Jan 15 22:43:23 AEDT 2018 org.apache.commons.math.complex.Complex,277
+Mon Jan 15 22:43:30 AEDT 2018 org.apache.commons.math.complex.Complex,278
+Mon Jan 15 22:43:38 AEDT 2018 org.apache.commons.math.complex.Complex,122
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isInfinite()){
+return Double.NEGATIVE_INFINITY;
+}
+
+Time : 18/01/15 22:44
+----------------------------------------
+Mon Jan 15 22:46:28 AEDT 2018 org.apache.commons.math.complex.Complex,263
+Mon Jan 15 22:46:45 AEDT 2018 org.apache.commons.math.complex.Complex,267
+Mon Jan 15 22:48:18 AEDT 2018 org.apache.commons.math.complex.Complex,268
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double c=divisor.getReal();
+ final double d=divisor.getImaginary();
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double c=divisor.getReal();
+ final double d=divisor.getImaginary();
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double c=divisor.getReal();
+ final double d=divisor.getImaginary();
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double c=divisor.getReal();
+ final double d=divisor.getImaginary();
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double c=divisor.getReal();
+ final double d=divisor.getImaginary();
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 22:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double c=divisor.getReal();
+ final double d=divisor.getImaginary();
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 23:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double c=divisor.getReal();
+ final double d=divisor.getImaginary();
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 23:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double c=divisor.getReal();
+ final double d=divisor.getImaginary();
+if(FastMath.abs(d)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 23:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double c=divisor.getReal();
+ final double d=divisor.getImaginary();
+if(FastMath.abs(c)<FastMath.abs(c)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 23:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double c=divisor.getReal();
+ final double d=divisor.getImaginary();
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 23:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double c=divisor.getReal();
+ final double d=divisor.getImaginary();
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=real/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 23:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double c=divisor.getReal();
+ final double d=divisor.getImaginary();
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 23:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double c=divisor.getReal();
+ final double d=divisor.getImaginary();
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 23:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double c=divisor.getReal();
+ final double d=divisor.getImaginary();
+if(FastMath.abs(d)<FastMath.abs(d)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 23:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double c=divisor.getReal();
+ final double d=divisor.getImaginary();
+if(FastMath.abs(c)<FastMath.abs(c)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 23:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double c=divisor.getReal();
+ final double d=divisor.getImaginary();
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=real/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 23:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double c=divisor.getReal();
+ final double d=divisor.getImaginary();
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 23:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double c=divisor.getReal();
+ final double d=divisor.getImaginary();
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 23:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double c=divisor.getReal();
+ final double d=divisor.getImaginary();
+if(FastMath.abs(d)<FastMath.abs(d)){
+double q=c/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/15 23:27
+----------------------------------------
+Timeout time : 18/01/15 23:28
+Current failed test : org.apache.commons.math.complex.ComplexTest::testDivideZero | 18/01/15 23:28
+Mon Jan 15 23:30:11 AEDT 2018 org.apache.commons.math.complex.Complex,1183
+Mon Jan 15 23:30:47 AEDT 2018 org.apache.commons.math.complex.Complex,260
+Mon Jan 15 23:31:04 AEDT 2018 org.apache.commons.math.complex.Complex,329
+Mon Jan 15 23:32:02 AEDT 2018 org.apache.commons.math.complex.Complex,258
+Mon Jan 15 23:32:09 AEDT 2018 org.apache.commons.math.complex.Complex,253
+Mon Jan 15 23:33:43 AEDT 2018 org.apache.commons.math.complex.Complex,254
+Mon Jan 15 23:35:05 AEDT 2018 org.apache.commons.math.complex.Complex,327
+Mon Jan 15 23:37:29 AEDT 2018 org.apache.commons.math.complex.Complex,328
+Mon Jan 15 23:37:36 AEDT 2018 org.apache.commons.math.complex.Complex,326
+Mon Jan 15 23:37:43 AEDT 2018 org.apache.commons.math.complex.Complex,323
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(this!=other){
+return true;
+}
+
+Time : 18/01/15 23:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(this!=null){
+return true;
+}
+
+Time : 18/01/15 23:41
+----------------------------------------
+Mon Jan 15 23:43:23 AEDT 2018 Mon Jan 15 23:43:23 AEDT 2018 : org.apache.commons.math.util.MathUtils,2337=>Find no block
+Mon Jan 15 23:43:30 AEDT 2018 org.apache.commons.math.util.MathUtils,2334
+Mon Jan 15 23:44:42 AEDT 2018 Mon Jan 15 23:44:42 AEDT 2018 : org.apache.commons.math.complex.Complex,99=>Find no block
+Mon Jan 15 23:44:49 AEDT 2018 org.apache.commons.math.complex.Complex,100
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.real=real;
+this.imaginary=imaginary;
+isNaN=Double.isInfinite(imaginary)||Double.isNaN(imaginary);
+isInfinite=!isNaN&&(Double.isInfinite(real)||Double.isInfinite(imaginary));
+isZero=real==0&&imaginary==0;
+
+Time : 18/01/15 23:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.real=real;
+this.imaginary=imaginary;
+isNaN=Double.isNaN(real)||Double.isInfinite(real);
+isInfinite=!isNaN&&(Double.isInfinite(real)||Double.isInfinite(imaginary));
+isZero=real==0&&imaginary==0;
+
+Time : 18/01/15 23:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.real=real;
+this.imaginary=imaginary;
+isNaN=Double.isInfinite(real)||Double.isNaN(imaginary);
+isInfinite=!isNaN&&(Double.isInfinite(real)||Double.isInfinite(imaginary));
+isZero=real==0&&imaginary==0;
+
+Time : 18/01/15 23:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.real=real;
+this.imaginary=imaginary;
+isNaN=Double.isNaN(real)||Double.isInfinite(imaginary);
+isInfinite=!isNaN&&(Double.isInfinite(real)||Double.isInfinite(imaginary));
+isZero=real==0&&imaginary==0;
+
+Time : 18/01/15 23:57
+----------------------------------------
+Tue Jan 16 00:06:39 AEDT 2018 org.apache.commons.math.complex.Complex,101
+Tue Jan 16 00:06:46 AEDT 2018 org.apache.commons.math.complex.Complex,103
+Tue Jan 16 00:06:53 AEDT 2018 org.apache.commons.math.complex.Complex,104
+Tue Jan 16 00:07:01 AEDT 2018 org.apache.commons.math.complex.Complex,106
+Tue Jan 16 00:07:08 AEDT 2018 Tue Jan 16 00:07:08 AEDT 2018 : org.apache.commons.math.complex.Complex,107=>Find no block
+Tue Jan 16 00:07:15 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,50
+Tue Jan 16 00:07:32 AEDT 2018 Tue Jan 16 00:07:32 AEDT 2018 : org.apache.commons.math.exception.NumberIsTooSmallException,54=>Find no block
+Tue Jan 16 00:07:40 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,68
+Tue Jan 16 00:09:52 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,70
+Tue Jan 16 00:09:59 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,71
+Tue Jan 16 00:10:07 AEDT 2018 Tue Jan 16 00:10:07 AEDT 2018 : org.apache.commons.math.exception.NumberIsTooSmallException,72=>Find no block
+Tue Jan 16 00:10:14 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,78
+Tue Jan 16 00:10:32 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,85
+Tue Jan 16 00:10:49 AEDT 2018 org.apache.commons.math.exception.MathIllegalNumberException,46
+Tue Jan 16 00:12:16 AEDT 2018 org.apache.commons.math.exception.MathIllegalNumberException,47
+Tue Jan 16 00:12:24 AEDT 2018 Tue Jan 16 00:12:24 AEDT 2018 : org.apache.commons.math.exception.MathIllegalNumberException,48=>Find no block
+Tue Jan 16 00:12:32 AEDT 2018 org.apache.commons.math.exception.MathIllegalNumberException,54
+Tue Jan 16 00:12:49 AEDT 2018 Tue Jan 16 00:12:49 AEDT 2018 : org.apache.commons.math.exception.MathIllegalArgumentException,44=>Find no block
+Tue Jan 16 00:12:57 AEDT 2018 Tue Jan 16 00:12:57 AEDT 2018 : org.apache.commons.math.exception.MathIllegalArgumentException,37=>Find no block
+Tue Jan 16 00:13:04 AEDT 2018 org.apache.commons.math.exception.MathIllegalArgumentException,45
+Tue Jan 16 00:13:22 AEDT 2018 Tue Jan 16 00:13:22 AEDT 2018 : org.apache.commons.math.exception.MathIllegalArgumentException,46=>Find no block
+Tue Jan 16 00:13:30 AEDT 2018 org.apache.commons.math.exception.MathIllegalArgumentException,50
+Tue Jan 16 00:13:47 AEDT 2018 org.apache.commons.math.exception.MathIllegalArgumentException,55
+Tue Jan 16 00:14:05 AEDT 2018 org.apache.commons.math.exception.MathIllegalArgumentException,61
+Tue Jan 16 00:14:22 AEDT 2018 org.apache.commons.math.exception.MathIllegalArgumentException,67
+Tue Jan 16 00:14:39 AEDT 2018 org.apache.commons.math.exception.NotPositiveException,37
+Tue Jan 16 00:14:56 AEDT 2018 Tue Jan 16 00:14:56 AEDT 2018 : org.apache.commons.math.exception.NotPositiveException,38=>Find no block
+Tue Jan 16 00:15:04 AEDT 2018 org.apache.commons.math.exception.NotPositiveException,47
+Tue Jan 16 00:15:21 AEDT 2018 Tue Jan 16 00:15:21 AEDT 2018 : org.apache.commons.math.exception.NotPositiveException,48=>Find no block
+Tue Jan 16 00:15:29 AEDT 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,61
+Tue Jan 16 00:15:46 AEDT 2018 Tue Jan 16 00:15:46 AEDT 2018 : org.apache.commons.math.exception.NonMonotonousSequenceException,62=>Find no block
+Tue Jan 16 00:15:53 AEDT 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,80
+Tue Jan 16 00:32:51 AEDT 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,89
+Tue Jan 16 00:32:58 AEDT 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,90
+Tue Jan 16 00:33:06 AEDT 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,91
+Tue Jan 16 00:33:13 AEDT 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,92
+Tue Jan 16 00:33:21 AEDT 2018 Tue Jan 16 00:33:21 AEDT 2018 : org.apache.commons.math.exception.NonMonotonousSequenceException,93=>Find no block
+Tue Jan 16 00:33:28 AEDT 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,99
+Tue Jan 16 00:33:46 AEDT 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,105
+Tue Jan 16 00:34:03 AEDT 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,113
+Tue Jan 16 00:34:57 AEDT 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,119
+Tue Jan 16 00:35:14 AEDT 2018 Tue Jan 16 00:35:14 AEDT 2018 : org.apache.commons.math.util.MathUtils,1946=>Find no block
+Tue Jan 16 00:35:22 AEDT 2018 Tue Jan 16 00:35:22 AEDT 2018 : org.apache.commons.math.util.MathUtils,1946=>Find no block
+Tue Jan 16 00:35:29 AEDT 2018 Tue Jan 16 00:35:29 AEDT 2018 : org.apache.commons.math.util.MathUtils,1946=>Find no block
+Tue Jan 16 00:35:36 AEDT 2018 Tue Jan 16 00:35:36 AEDT 2018 : org.apache.commons.math.exception.MathArithmeticException,43=>Find no block
+Tue Jan 16 00:35:44 AEDT 2018 Tue Jan 16 00:35:44 AEDT 2018 : org.apache.commons.math.exception.MathArithmeticException,38=>Find no block
+Tue Jan 16 00:35:51 AEDT 2018 org.apache.commons.math.exception.MathArithmeticException,44
+Tue Jan 16 00:37:05 AEDT 2018 Tue Jan 16 00:37:05 AEDT 2018 : org.apache.commons.math.exception.MathArithmeticException,45=>Find no block
+Tue Jan 16 00:37:12 AEDT 2018 Tue Jan 16 00:37:12 AEDT 2018 : org.apache.commons.math.exception.MathArithmeticException,55=>Find no block
+Tue Jan 16 00:37:20 AEDT 2018 org.apache.commons.math.exception.MathArithmeticException,56
+Tue Jan 16 00:37:28 AEDT 2018 Tue Jan 16 00:37:28 AEDT 2018 : org.apache.commons.math.exception.MathArithmeticException,57=>Find no block
+Tue Jan 16 00:37:35 AEDT 2018 org.apache.commons.math.exception.MathArithmeticException,61
+Tue Jan 16 00:37:42 AEDT 2018 org.apache.commons.math.exception.MathArithmeticException,66
+Tue Jan 16 00:37:50 AEDT 2018 org.apache.commons.math.exception.MathArithmeticException,72
+Tue Jan 16 00:37:57 AEDT 2018 org.apache.commons.math.exception.MathArithmeticException,78
+Tue Jan 16 00:38:04 AEDT 2018 org.apache.commons.math.exception.NumberIsTooLargeException,50
+Tue Jan 16 00:38:22 AEDT 2018 Tue Jan 16 00:38:22 AEDT 2018 : org.apache.commons.math.exception.NumberIsTooLargeException,54=>Find no block
+Tue Jan 16 00:38:30 AEDT 2018 org.apache.commons.math.exception.NumberIsTooLargeException,67
+Tue Jan 16 00:40:37 AEDT 2018 org.apache.commons.math.exception.NumberIsTooLargeException,69
+Tue Jan 16 00:40:44 AEDT 2018 org.apache.commons.math.exception.NumberIsTooLargeException,70
+Tue Jan 16 00:40:52 AEDT 2018 Tue Jan 16 00:40:52 AEDT 2018 : org.apache.commons.math.exception.NumberIsTooLargeException,71=>Find no block
+Tue Jan 16 00:40:59 AEDT 2018 org.apache.commons.math.exception.NumberIsTooLargeException,77
+Tue Jan 16 00:41:07 AEDT 2018 org.apache.commons.math.exception.NumberIsTooLargeException,84
+Tue Jan 16 00:41:24 AEDT 2018 org.apache.commons.math.exception.NullArgumentException,41
+Tue Jan 16 00:41:41 AEDT 2018 Tue Jan 16 00:41:41 AEDT 2018 : org.apache.commons.math.exception.NullArgumentException,42=>Find no block
+Tue Jan 16 00:41:49 AEDT 2018 org.apache.commons.math.exception.NullArgumentException,50
+Tue Jan 16 00:42:57 AEDT 2018 Tue Jan 16 00:42:57 AEDT 2018 : org.apache.commons.math.exception.NullArgumentException,51=>Find no block
+Tue Jan 16 00:43:05 AEDT 2018 org.apache.commons.math.exception.DimensionMismatchException,44
+Tue Jan 16 00:46:22 AEDT 2018 org.apache.commons.math.exception.DimensionMismatchException,45
+Tue Jan 16 00:46:31 AEDT 2018 Tue Jan 16 00:46:31 AEDT 2018 : org.apache.commons.math.exception.DimensionMismatchException,46=>Find no block
+Tue Jan 16 00:46:38 AEDT 2018 org.apache.commons.math.exception.DimensionMismatchException,56
+Tue Jan 16 00:46:56 AEDT 2018 Tue Jan 16 00:46:56 AEDT 2018 : org.apache.commons.math.exception.DimensionMismatchException,57=>Find no block
+Tue Jan 16 00:47:04 AEDT 2018 org.apache.commons.math.exception.DimensionMismatchException,63
+Tue Jan 16 00:47:21 AEDT 2018 org.apache.commons.math.exception.NotFiniteNumberException,40
+Tue Jan 16 00:47:39 AEDT 2018 Tue Jan 16 00:47:39 AEDT 2018 : org.apache.commons.math.exception.NotFiniteNumberException,41=>Find no block
+Tue Jan 16 00:47:46 AEDT 2018 org.apache.commons.math.exception.NotFiniteNumberException,53
+Tue Jan 16 00:48:31 AEDT 2018 Tue Jan 16 00:48:31 AEDT 2018 : org.apache.commons.math.exception.NotFiniteNumberException,54=>Find no block
+Tue Jan 16 00:48:38 AEDT 2018 Tue Jan 16 00:48:38 AEDT 2018 : org.apache.commons.math.util.MathUtils,2229=>Find no block
+Tue Jan 16 00:48:45 AEDT 2018 Tue Jan 16 00:48:45 AEDT 2018 : org.apache.commons.math.util.MathUtils,2233=>Find no block
+Tue Jan 16 00:48:52 AEDT 2018 org.apache.commons.math.util.MathUtils,2235
+Tue Jan 16 00:49:10 AEDT 2018 org.apache.commons.math.util.MathUtils,2236
+Tue Jan 16 00:49:38 AEDT 2018 org.apache.commons.math.util.MathUtils,2238
+Tue Jan 16 00:49:55 AEDT 2018 org.apache.commons.math.util.MathUtils,2239
+Tue Jan 16 00:50:22 AEDT 2018 org.apache.commons.math.util.MathUtils,2242
+Tue Jan 16 00:50:40 AEDT 2018 org.apache.commons.math.util.MathUtils,2244
+Tue Jan 16 00:50:57 AEDT 2018 org.apache.commons.math.util.MathUtils,101
+Tue Jan 16 00:51:14 AEDT 2018 Tue Jan 16 00:51:14 AEDT 2018 : org.apache.commons.math.util.MathUtils,102=>Find no block
+Tue Jan 16 00:51:21 AEDT 2018 org.apache.commons.math.util.MathUtils,115
+Tue Jan 16 00:55:40 AEDT 2018 org.apache.commons.math.util.MathUtils,116
+Tue Jan 16 00:59:51 AEDT 2018 org.apache.commons.math.util.MathUtils,117
+Tue Jan 16 00:59:59 AEDT 2018 org.apache.commons.math.util.MathUtils,119
+Tue Jan 16 01:00:06 AEDT 2018 org.apache.commons.math.util.MathUtils,133
+Tue Jan 16 01:00:26 AEDT 2018 org.apache.commons.math.util.MathUtils,149
+Tue Jan 16 01:09:05 AEDT 2018 org.apache.commons.math.util.MathUtils,151
+Tue Jan 16 01:09:23 AEDT 2018 org.apache.commons.math.util.MathUtils,155
+Tue Jan 16 01:09:30 AEDT 2018 org.apache.commons.math.util.MathUtils,156
+Tue Jan 16 01:09:38 AEDT 2018 org.apache.commons.math.util.MathUtils,158
+Tue Jan 16 01:09:46 AEDT 2018 org.apache.commons.math.util.MathUtils,159
+Tue Jan 16 01:09:53 AEDT 2018 org.apache.commons.math.util.MathUtils,161
+Tue Jan 16 01:10:00 AEDT 2018 org.apache.commons.math.util.MathUtils,165
+Tue Jan 16 01:10:08 AEDT 2018 org.apache.commons.math.util.MathUtils,172
+Tue Jan 16 01:10:15 AEDT 2018 org.apache.commons.math.util.MathUtils,173
+Tue Jan 16 01:10:23 AEDT 2018 org.apache.commons.math.util.MathUtils,175
+Tue Jan 16 01:10:31 AEDT 2018 org.apache.commons.math.util.MathUtils,179
+Tue Jan 16 01:13:03 AEDT 2018 org.apache.commons.math.util.MathUtils,208
+Tue Jan 16 01:24:56 AEDT 2018 org.apache.commons.math.util.MathUtils,209
+Tue Jan 16 01:36:02 AEDT 2018 org.apache.commons.math.util.MathUtils,210
+Tue Jan 16 01:36:03 AEDT 2018 org.apache.commons.math.util.MathUtils,212
+Tue Jan 16 01:47:19 AEDT 2018 org.apache.commons.math.util.MathUtils,213
+Tue Jan 16 01:47:20 AEDT 2018 org.apache.commons.math.util.MathUtils,216
+Tue Jan 16 01:52:26 AEDT 2018 org.apache.commons.math.util.MathUtils,217
+Tue Jan 16 01:52:27 AEDT 2018 org.apache.commons.math.util.MathUtils,225
+Timeout time : 18/01/16 02:00

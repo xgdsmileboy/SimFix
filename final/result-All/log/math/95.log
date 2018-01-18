@@ -1,0 +1,64 @@
+=================================================
+Project : math_95	start : 18/01/12 17:58
+Current failed test : org.apache.commons.math.distribution.FDistributionTest::testSmallDegreesOfFreedom | 18/01/12 17:59
+Fri Jan 12 17:59:47 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverUtils,179
+Fri Jan 12 18:01:32 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverUtils,128
+Fri Jan 12 18:01:40 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverUtils,171
+Fri Jan 12 18:01:47 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverUtils,174
+Fri Jan 12 18:01:54 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverUtils,178
+Fri Jan 12 18:01:57 AEDT 2018 org.apache.commons.math.distribution.AbstractContinuousDistribution,67
+Fri Jan 12 18:02:04 AEDT 2018 org.apache.commons.math.distribution.AbstractContinuousDistribution,80
+Fri Jan 12 18:03:28 AEDT 2018 org.apache.commons.math.distribution.AbstractContinuousDistribution,81
+Fri Jan 12 18:04:56 AEDT 2018 org.apache.commons.math.distribution.AbstractContinuousDistribution,82
+Fri Jan 12 18:05:38 AEDT 2018 org.apache.commons.math.distribution.AbstractContinuousDistribution,84
+Fri Jan 12 18:05:47 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,119
+Fri Jan 12 18:05:55 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,132
+Fri Jan 12 18:06:03 AEDT 2018 org.apache.commons.math.distribution.FDistributionImpl,145
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double ret;
+double d=getDenominatorDegreesOfFreedom();
+ret=ret=0.0;
+return ret;
+
+Time : 18/01/12 18:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.4559042387984862 : [/home/hz985/jiajun/d4j/projects/math/math_95_buggy/src/java/org/apache/commons/math/distribution/FDistributionImpl.java=>0,0]
+double ret;
+if(x<=0.0){
+ret=0.0;
+}else {
+ret=1.0-Math.exp(-x/getMean());
+}
+return ret;
+
+Time : 18/01/12 18:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_95_buggy/src/java/org/apache/commons/math/distribution/FDistributionImpl.java=>144,148]
+double ret;
+double d=getDenominatorDegreesOfFreedom();
+ret=d/(d-2.0);
+return ret;
+
+Time : 18/01/12 18:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_95_buggy/src/java/org/apache/commons/math/distribution/FDistributionImpl.java=>144,148]
+double ret;
+double d=getDenominatorDegreesOfFreedom();
+ret=ret=0.0;
+return ret;
+
+Time : 18/01/12 18:08
+----------------------------------------
+Success time : 18/01/12 18:08

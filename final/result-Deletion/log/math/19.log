@@ -1,0 +1,112 @@
+=================================================
+Project : math_19	start : 18/01/15 15:23
+Current failed test : org.apache.commons.math3.optimization.direct.CMAESOptimizerTest::testBoundaryRangeTooLarge | 18/01/15 15:24
+Mon Jan 15 15:26:52 AEDT 2018 Mon Jan 15 15:26:52 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalStateException,45=>Find no block
+Mon Jan 15 15:26:55 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,46
+Mon Jan 15 15:27:11 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,47
+Mon Jan 15 15:27:16 AEDT 2018 Mon Jan 15 15:27:16 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalStateException,48=>Find no block
+Mon Jan 15 15:27:20 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,69
+Mon Jan 15 15:27:31 AEDT 2018 Mon Jan 15 15:27:31 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalStateException,70=>Find no block
+Mon Jan 15 15:27:35 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,86
+Mon Jan 15 15:27:47 AEDT 2018 org.apache.commons.math3.exception.util.ExceptionContext,137
+Mon Jan 15 15:28:00 AEDT 2018 org.apache.commons.math3.exception.util.ExceptionContext,147
+Mon Jan 15 15:28:16 AEDT 2018 org.apache.commons.math3.exception.util.ExceptionContext,171
+Mon Jan 15 15:32:32 AEDT 2018 org.apache.commons.math3.exception.util.ExceptionContext,172
+Mon Jan 15 15:32:38 AEDT 2018 org.apache.commons.math3.exception.util.ExceptionContext,173
+Mon Jan 15 16:27:53 AEDT 2018 org.apache.commons.math3.exception.util.ExceptionContext,174
+Mon Jan 15 16:27:57 AEDT 2018 org.apache.commons.math3.exception.util.ExceptionContext,175
+Mon Jan 15 16:28:03 AEDT 2018 org.apache.commons.math3.exception.util.ExceptionContext,176
+Mon Jan 15 16:28:07 AEDT 2018 org.apache.commons.math3.exception.util.ExceptionContext,177
+Mon Jan 15 16:28:14 AEDT 2018 org.apache.commons.math3.exception.util.ExceptionContext,179
+Mon Jan 15 16:28:23 AEDT 2018 org.apache.commons.math3.exception.util.ExceptionContext,180
+Mon Jan 15 16:28:28 AEDT 2018 org.apache.commons.math3.exception.util.ExceptionContext,186
+Mon Jan 15 16:50:10 AEDT 2018 org.apache.commons.math3.exception.util.LocalizedFormats,380
+Mon Jan 15 16:54:43 AEDT 2018 org.apache.commons.math3.exception.util.LocalizedFormats,381
+Mon Jan 15 16:54:49 AEDT 2018 Mon Jan 15 16:54:49 AEDT 2018 : org.apache.commons.math3.exception.util.LocalizedFormats,388=>Find no block
+Mon Jan 15 16:54:54 AEDT 2018 org.apache.commons.math3.exception.util.LocalizedFormats,394
+Mon Jan 15 16:55:00 AEDT 2018 org.apache.commons.math3.util.FastMath,767
+Mon Jan 15 16:56:10 AEDT 2018 org.apache.commons.math3.util.FastMath,3221
+Mon Jan 15 17:22:15 AEDT 2018 org.apache.commons.math3.util.FastMath,3223
+Mon Jan 15 17:22:20 AEDT 2018 org.apache.commons.math3.util.FastMath,3225
+Mon Jan 15 17:22:26 AEDT 2018 org.apache.commons.math3.util.FastMath,3227
+Mon Jan 15 17:22:31 AEDT 2018 org.apache.commons.math3.util.FastMath,3233
+Mon Jan 15 18:03:31 AEDT 2018 org.apache.commons.math3.util.FastMath,3234
+Mon Jan 15 18:11:13 AEDT 2018 org.apache.commons.math3.util.FastMath,3235
+Mon Jan 15 18:13:25 AEDT 2018 org.apache.commons.math3.util.FastMath,3236
+Mon Jan 15 18:13:27 AEDT 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,246
+Mon Jan 15 18:13:32 AEDT 2018 Mon Jan 15 18:13:32 AEDT 2018 : org.apache.commons.math3.optimization.direct.CMAESOptimizer,247=>Find no block
+Mon Jan 15 18:13:33 AEDT 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,253
+Mon Jan 15 18:13:39 AEDT 2018 Mon Jan 15 18:13:39 AEDT 2018 : org.apache.commons.math3.optimization.direct.CMAESOptimizer,256=>Find no block
+Mon Jan 15 18:13:41 AEDT 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,570
+Mon Jan 15 18:23:46 AEDT 2018 org.apache.commons.math3.optimization.direct.CMAESOptimizer,916
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(boundaries==null){
+return x;
+}
+if(dimension==0){
+throw new NumberIsTooLargeException(LocalizedFormats.TOO_LARGE_CUTOFF_SINGULAR_VALUE,chiN,x[0],true);
+}
+double[] res=new double[x.length];
+for(int i=0;i<x.length;i++){
+double diff=boundaries[1][i]-boundaries[0][i];
+res[i]=(x[i]-boundaries[0][i])/diff;
+}
+return res;
+
+Time : 18/01/15 20:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(boundaries==null){
+return x;
+}
+if(dimension==0){
+throw new NumberIsTooLargeException(LocalizedFormats.TOO_LARGE_CUTOFF_SINGULAR_VALUE,chiN,x[0],true);
+}
+double[] res=new double[dimension];
+for(int i=0;i<x.length;i++){
+double diff=boundaries[1][i]-boundaries[0][i];
+res[i]=(x[i]-boundaries[0][i])/diff;
+}
+return res;
+
+Time : 18/01/15 20:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(dimension==0){
+throw new NumberIsTooLargeException(LocalizedFormats.TOO_LARGE_CUTOFF_SINGULAR_VALUE,chiN,x[0],true);
+}
+double[] res=new double[x.length];
+for(int i=0;i<x.length;i++){
+double diff=boundaries[1][i]-boundaries[0][i];
+res[i]=(x[i]-boundaries[0][i])/diff;
+}
+return res;
+
+Time : 18/01/15 20:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(dimension==0){
+throw new NumberIsTooLargeException(LocalizedFormats.TOO_LARGE_CUTOFF_SINGULAR_VALUE,chiN,x[0],true);
+}
+double[] res=new double[dimension];
+for(int i=0;i<x.length;i++){
+double diff=boundaries[1][i]-boundaries[0][i];
+res[i]=(x[i]-boundaries[0][i])/diff;
+}
+return res;
+
+Time : 18/01/15 20:16
+----------------------------------------
+Timeout time : 18/01/15 20:26

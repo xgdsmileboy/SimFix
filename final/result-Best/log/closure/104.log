@@ -1,0 +1,179 @@
+=================================================
+Project : closure_104	start : 18/01/14 03:58
+Current failed test : com.google.javascript.rhino.jstype.UnionTypeTest::testGreatestSubtypeUnionTypes5 | 18/01/14 03:58
+Sun Jan 14 04:10:47 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,287
+Sun Jan 14 04:14:31 AEDT 2018 com.google.javascript.rhino.jstype.JSType,592
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thatType.isUnionType()){
+return ((UnionType)thisType).meet(thatType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/14 04:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(thatType.isUnionType()){
+return thatType.getLeastSupertype(thisType);
+}else if(thatType.isUnionType()){
+return ((UnionType)thatType).meet(thisType);
+}else if(thisType.isObject()&&thatType.isObject()){
+return thisType.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/14 04:28
+----------------------------------------
+Sun Jan 14 04:36:28 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,274
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(JSType alternate : alternates){
+if(alternate.isSubtype(that)){
+builder.addAlternate(alternate);
+}
+return that.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/14 04:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+UnionTypeBuilder builder=new UnionTypeBuilder(registry);
+for(JSType alternate : alternates){
+if(alternate.isSubtype(that)){
+builder.addAlternate(alternate);
+}
+return that.getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}
+
+Time : 18/01/14 04:47
+----------------------------------------
+Sun Jan 14 04:51:51 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,275
+Sun Jan 14 04:51:55 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,276
+Sun Jan 14 04:51:59 AEDT 2018 Sun Jan 14 04:51:59 AEDT 2018 : com.google.javascript.rhino.jstype.UnionType,279=>Find no block
+Sun Jan 14 04:52:03 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,281
+Sun Jan 14 04:58:28 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,290
+Sun Jan 14 05:00:35 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,291
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(result==null){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/14 06:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(result!=null&&that.isSubtype(result)){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/14 06:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(result!=null&&(that.isUnknownType()||result.isUnknownType())){
+return result;
+}else if(this.isObject()&&that.isObject()){
+return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+}else {
+return getNativeType(JSTypeNative.NO_TYPE);
+}
+
+Time : 18/01/14 06:59
+----------------------------------------
+Sun Jan 14 07:02:28 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,292
+Sun Jan 14 07:02:32 AEDT 2018 com.google.javascript.rhino.jstype.UnionTypeBuilder,157
+Sun Jan 14 07:07:45 AEDT 2018 com.google.javascript.rhino.jstype.NoObjectType,342
+Sun Jan 14 07:07:54 AEDT 2018 com.google.javascript.rhino.jstype.NoType,129
+Sun Jan 14 07:08:03 AEDT 2018 com.google.javascript.rhino.jstype.JSType,591
+Sun Jan 14 07:08:06 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,370
+Sun Jan 14 07:09:19 AEDT 2018 com.google.javascript.rhino.jstype.JSType,589
+Sun Jan 14 07:19:02 AEDT 2018 com.google.javascript.rhino.jstype.JSType,587
+Sun Jan 14 07:30:02 AEDT 2018 com.google.javascript.rhino.jstype.JSType,566
+Sun Jan 14 07:38:32 AEDT 2018 com.google.javascript.rhino.jstype.JSType,570
+Sun Jan 14 07:46:54 AEDT 2018 com.google.javascript.rhino.jstype.JSType,578
+Sun Jan 14 08:06:54 AEDT 2018 com.google.javascript.rhino.jstype.JSType,582
+Sun Jan 14 08:06:57 AEDT 2018 com.google.javascript.rhino.jstype.JSType,249
+Sun Jan 14 08:07:05 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,394
+Sun Jan 14 08:08:25 AEDT 2018 com.google.javascript.rhino.jstype.NoObjectType,285
+Sun Jan 14 08:08:34 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,392
+Sun Jan 14 08:11:36 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,393
+Sun Jan 14 08:11:39 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,321
+Sun Jan 14 08:11:47 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,104
+Sun Jan 14 08:16:40 AEDT 2018 Sun Jan 14 08:16:40 AEDT 2018 : com.google.javascript.rhino.jstype.NamedType,97=>Find no block
+Sun Jan 14 08:16:43 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,106
+Sun Jan 14 08:16:46 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,107
+Sun Jan 14 08:16:49 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,108
+Sun Jan 14 08:16:52 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,109
+Sun Jan 14 08:16:55 AEDT 2018 com.google.javascript.rhino.jstype.NamedType,110
+Sun Jan 14 08:16:59 AEDT 2018 Sun Jan 14 08:16:59 AEDT 2018 : com.google.javascript.rhino.jstype.NamedType,111=>Find no block
+Sun Jan 14 08:17:02 AEDT 2018 com.google.javascript.rhino.jstype.InstanceObjectType,157
+Sun Jan 14 08:19:12 AEDT 2018 Sun Jan 14 08:19:12 AEDT 2018 : com.google.javascript.rhino.jstype.JSType,826=>Find no block
+Sun Jan 14 08:19:15 AEDT 2018 com.google.javascript.rhino.jstype.JSType,821
+Sun Jan 14 08:24:05 AEDT 2018 com.google.javascript.rhino.jstype.JSType,822
+Sun Jan 14 08:24:08 AEDT 2018 com.google.javascript.rhino.jstype.JSType,823
+Sun Jan 14 08:24:12 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,257
+Sun Jan 14 08:27:39 AEDT 2018 Sun Jan 14 08:27:39 AEDT 2018 : com.google.javascript.rhino.jstype.UnionType,256=>Find no block
+Sun Jan 14 08:27:42 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,252
+Sun Jan 14 08:27:45 AEDT 2018 com.google.javascript.rhino.jstype.UnionType,253
+Sun Jan 14 08:27:48 AEDT 2018 com.google.javascript.rhino.jstype.UnionTypeBuilder,154
+Sun Jan 14 08:27:52 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,62
+Sun Jan 14 08:28:48 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,63
+Sun Jan 14 08:28:51 AEDT 2018 Sun Jan 14 08:28:51 AEDT 2018 : com.google.javascript.rhino.jstype.ProxyObjectType,64=>Find no block
+Sun Jan 14 08:28:54 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,118
+Sun Jan 14 08:35:41 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,119
+Sun Jan 14 08:35:45 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,120
+Sun Jan 14 08:35:48 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,122
+Sun Jan 14 08:35:52 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,123
+Sun Jan 14 08:35:56 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,124
+Sun Jan 14 08:36:00 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,125
+Sun Jan 14 08:36:04 AEDT 2018 Sun Jan 14 08:36:04 AEDT 2018 : com.google.javascript.rhino.jstype.PrototypeObjectType,127=>Find no block
+Sun Jan 14 08:36:07 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,128
+Sun Jan 14 08:36:10 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,140
+Sun Jan 14 08:42:14 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,136
+Sun Jan 14 08:42:17 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,137
+Sun Jan 14 08:42:19 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,133
+Sun Jan 14 08:42:22 AEDT 2018 com.google.javascript.rhino.jstype.InstanceObjectType,93
+Sun Jan 14 08:46:59 AEDT 2018 com.google.javascript.rhino.jstype.InstanceObjectType,94
+Sun Jan 14 08:49:00 AEDT 2018 com.google.javascript.rhino.jstype.InstanceObjectType,97
+Sun Jan 14 08:49:03 AEDT 2018 com.google.javascript.rhino.jstype.JSTypeRegistry,689
+Sun Jan 14 08:49:10 AEDT 2018 com.google.javascript.rhino.jstype.ObjectType,340
+Sun Jan 14 08:52:32 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,145
+Sun Jan 14 08:52:40 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,221
+Sun Jan 14 08:53:45 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,224
+Sun Jan 14 08:59:50 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,225
+Sun Jan 14 08:59:53 AEDT 2018 Sun Jan 14 08:59:53 AEDT 2018 : com.google.javascript.rhino.jstype.PrototypeObjectType,438=>Find no block
+Sun Jan 14 08:59:57 AEDT 2018 Sun Jan 14 08:59:57 AEDT 2018 : com.google.javascript.rhino.jstype.PrototypeObjectType,436=>Find no block
+Sun Jan 14 09:00:00 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,439
+Sun Jan 14 09:03:38 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,440
+Sun Jan 14 09:03:41 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,441
+Sun Jan 14 09:03:45 AEDT 2018 Sun Jan 14 09:03:45 AEDT 2018 : com.google.javascript.rhino.jstype.PrototypeObjectType,442=>Find no block
+Sun Jan 14 09:03:49 AEDT 2018 com.google.javascript.rhino.jstype.JSTypeRegistry,761
+Sun Jan 14 09:07:38 AEDT 2018 com.google.javascript.rhino.Node,587
+Timeout time : 18/01/14 09:11

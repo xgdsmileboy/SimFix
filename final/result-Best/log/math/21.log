@@ -1,0 +1,1050 @@
+=================================================
+Project : math_21	start : 18/01/15 01:50
+Current failed test : org.apache.commons.math3.linear.RectangularCholeskyDecompositionTest::testMath789_purify_3 | 18/01/15 01:50
+Mon Jan 15 01:51:46 EST 2018 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,100
+Mon Jan 15 01:52:10 EST 2018 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,105
+Mon Jan 15 02:00:55 EST 2018 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,106
+Mon Jan 15 02:00:55 EST 2018 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,115
+Mon Jan 15 02:09:48 EST 2018 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,116
+Mon Jan 15 02:09:48 EST 2018 org.apache.commons.math3.util.FastMath,3508
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(a>b){
+return b;
+}
+
+Time : 18/01/15 02:10
+----------------------------------------
+Mon Jan 15 02:21:33 EST 2018 org.apache.commons.math3.util.FastMath,3511
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(a<b){
+return a;
+}
+
+Time : 18/01/15 02:22
+----------------------------------------
+Mon Jan 15 02:33:22 EST 2018 org.apache.commons.math3.linear.Array2DRowRealMatrix,456
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<j;++i){
+visitor.visit(i,j,data[i][j]);
+}
+
+Time : 18/01/15 02:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=rows;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+
+Time : 18/01/15 02:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<(rows-1);++i){
+visitor.visit(i,j,data[i][j]);
+}
+
+Time : 18/01/15 02:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=rows;i<(rows-1);++i){
+visitor.visit(i,j,data[i][j]);
+}
+
+Time : 18/01/15 02:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<columns;++j){
+for(int i=0;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 18/01/15 02:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=columns;j<columns;++j){
+for(int i=0;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 18/01/15 02:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<columns;++j){
+for(int i=0;i<j;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 18/01/15 02:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<columns;++j){
+for(int i=rows;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 18/01/15 02:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=columns;j<columns;++j){
+for(int i=0;i<=rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 18/01/15 02:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<columns;++j){
+for(int i=0;i<columns-i;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 18/01/15 02:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<rows;++j){
+for(int i=0;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 18/01/15 02:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<columns;++j){
+for(int i=rows;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 18/01/15 02:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<columns;++j){
+for(int i=0;i<=rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 18/01/15 03:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<columns;++j){
+for(int i=0;i<columns;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 18/01/15 03:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<=columns;++j){
+for(int i=rows;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 18/01/15 03:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<columns;++j){
+for(int i=rows;i<columns;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 18/01/15 03:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<=columns;++j){
+for(int i=rows;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 18/01/15 03:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<columns;++j){
+for(int i=rows;i<=rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 18/01/15 03:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<columns;++j){
+for(int i=rows;i<columns;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 18/01/15 03:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<columns;++j){
+for(int i=0;i<=columns;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 18/01/15 03:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<=columns;++j){
+for(int i=rows;i<columns;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 18/01/15 03:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<=columns;++j){
+for(int i=rows;i<columns;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 18/01/15 03:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=rows;j<columns;++j){
+for(int i=rows;i<=columns;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 18/01/15 03:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=rows;j<columns;++j){
+for(int i=0;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 18/01/15 03:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=0;j<columns;++j){
+for(int i=0;i<j;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 18/01/15 03:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=0;j<rows;++j){
+for(int i=0;i<j;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 18/01/15 03:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=0;j<columns;++j){
+for(int i=rows-1;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 18/01/15 03:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=rows;j<columns;++j){
+for(int i=rows-1;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 18/01/15 03:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=rows;j<rows;++j){
+for(int i=rows;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 18/01/15 03:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=0;j<rows;++j){
+for(int i=rows;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 18/01/15 03:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=0;j<columns;++j){
+for(int i=rows;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 18/01/15 03:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=rows;j<rows;++j){
+for(int i=0;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 18/01/15 03:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=rows;j<columns;++j){
+for(int i=rows;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 18/01/15 03:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=rows;j<columns;++j){
+for(int i=0;i<columns;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 18/01/15 03:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=0;j<columns;++j){
+for(int i=rows;i<columns;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 18/01/15 03:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=rows;j<rows;++j){
+for(int i=0;i<columns;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 18/01/15 03:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=rows;j<columns;++j){
+for(int i=rows;i<columns;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 18/01/15 03:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=0;j<rows;++j){
+for(int i=rows;i<columns;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 18/01/15 03:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=rows;j<rows;++j){
+for(int i=rows;i<columns;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 18/01/15 03:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=0;j<columns;++j){
+for(int i=0;i<columns-i;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 18/01/15 03:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=columns;j<columns;++j){
+for(int i=0;i<rows;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 18/01/15 03:40
+----------------------------------------
+Mon Jan 15 03:42:54 EST 2018 org.apache.commons.math3.linear.Array2DRowRealMatrix,457
+Mon Jan 15 03:42:54 EST 2018 org.apache.commons.math3.linear.Array2DRowRealMatrix,458
+Mon Jan 15 03:42:55 EST 2018 org.apache.commons.math3.linear.Array2DRowRealMatrix,459
+Mon Jan 15 03:42:55 EST 2018 org.apache.commons.math3.linear.Array2DRowRealMatrix,460
+Mon Jan 15 03:42:55 EST 2018 org.apache.commons.math3.linear.Array2DRowRealMatrix,461
+Mon Jan 15 03:42:55 EST 2018 org.apache.commons.math3.linear.Array2DRowRealMatrix,464
+Mon Jan 15 03:42:55 EST 2018 org.apache.commons.math3.linear.AbstractRealMatrix,97
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int col=0;col<columnCount;++col){
+out.setEntry(row,row,getEntry(row,col)-m.getEntry(row,col));
+}
+
+Time : 18/01/15 03:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int col=0;col<columnCount;++col){
+out.setEntry(col,col,getEntry(row,col)-m.getEntry(row,col));
+}
+
+Time : 18/01/15 03:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int col=0;col<columnCount;++col){
+out.multiplyEntry(row,col,getEntry(row,col)-m.getEntry(row,col));
+}
+
+Time : 18/01/15 03:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int col=columnCount;col<columnCount;++col){
+out.setEntry(row,col,getEntry(row,col)-m.getEntry(row,col));
+}
+
+Time : 18/01/15 03:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int col=0;col<row;++col){
+out.setEntry(col,col,getEntry(row,col)-m.getEntry(row,col));
+}
+
+Time : 18/01/15 03:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=rowCount;row<rowCount;++row){
+for(int col=0;col<columnCount;++col){
+out.setEntry(row,col,getEntry(row,col)-m.getEntry(row,col));
+}
+}
+
+Time : 18/01/15 03:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=rowCount;row<columnCount;++row){
+for(int col=0;col<columnCount;++col){
+out.setEntry(row,col,getEntry(row,col)-m.getEntry(row,col));
+}
+}
+
+Time : 18/01/15 03:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=0;row<rowCount;++row){
+for(int col=0;col<columnCount;++col){
+out.setEntry(col,col,getEntry(row,col)-m.getEntry(row,col));
+}
+}
+
+Time : 18/01/15 03:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=0;row<rowCount;++row){
+for(int col=0;col<columnCount;++col){
+out.setEntry(row,row,getEntry(row,col)-m.getEntry(row,col));
+}
+}
+
+Time : 18/01/15 03:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=columnCount;row<rowCount;++row){
+for(int col=0;col<columnCount;++col){
+out.setEntry(row,col,getEntry(row,col)-m.getEntry(row,col));
+}
+}
+
+Time : 18/01/15 04:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=0;row<rowCount;++row){
+for(int col=rowCount;rowCount<columnCount;++col){
+out.setEntry(row,col,getEntry(row,col)-m.getEntry(row,col));
+}
+}
+
+Time : 18/01/15 04:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=0;row<rowCount;++row){
+for(int col=rowCount;col<columnCount;++col){
+out.setEntry(row,col,getEntry(row,col)-m.getEntry(row,col));
+}
+}
+
+Time : 18/01/15 04:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=0;row<rowCount;++row){
+for(int col=0;rowCount<columnCount;++col){
+out.setEntry(row,col,getEntry(row,col)-m.getEntry(row,col));
+}
+}
+
+Time : 18/01/15 04:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=columnCount;row<rowCount;++row){
+for(int col=rowCount;col<columnCount;++col){
+out.setEntry(row,col,getEntry(row,col)-m.getEntry(row,col));
+}
+}
+
+Time : 18/01/15 04:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=columnCount;row<rowCount;++row){
+for(int col=0;rowCount<columnCount;++col){
+out.setEntry(row,col,getEntry(row,col)-m.getEntry(row,col));
+}
+}
+
+Time : 18/01/15 04:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=columnCount;row<rowCount;++row){
+for(int col=rowCount;rowCount<columnCount;++col){
+out.setEntry(row,col,getEntry(row,col)-m.getEntry(row,col));
+}
+}
+
+Time : 18/01/15 04:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=0;columnCount+1<rowCount;++row){
+for(int col=0;col<columnCount;++col){
+out.setEntry(row,col,getEntry(row,col)-m.getEntry(row,col));
+}
+}
+
+Time : 18/01/15 04:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=columnCount;columnCount+1<rowCount;++row){
+for(int col=0;col<columnCount;++col){
+out.setEntry(row,col,getEntry(row,col)-m.getEntry(row,col));
+}
+}
+
+Time : 18/01/15 04:11
+----------------------------------------
+Timeout time : 18/01/15 04:21
+Current failed test : org.apache.commons.math3.linear.RectangularCholeskyDecompositionTest::testFullRank_purify_2 | 18/01/15 04:21
+Mon Jan 15 04:23:12 EST 2018 org.apache.commons.math3.util.FastMath,3508
+Mon Jan 15 04:24:57 EST 2018 org.apache.commons.math3.util.FastMath,3511
+Mon Jan 15 04:26:47 EST 2018 org.apache.commons.math3.linear.Array2DRowRealMatrix,456
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<rows;++i){
+visitor.visit(j,j,data[i][j]);
+}
+
+Time : 18/01/15 04:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=0;i<=j;++i){
+visitor.visit(i,j,data[i][j]);
+}
+
+Time : 18/01/15 04:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=0;j<columns;++j){
+for(int i=0;i<=j;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+
+Time : 18/01/15 04:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=0;j<columns;++j){
+for(int i=0;i<=j;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 18/01/15 04:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int rows=getRowDimension();
+ final int columns=getColumnDimension();
+visitor.start(rows,columns,0,rows-1,0,columns-1);
+for(int j=0;j<rows;++j){
+for(int i=0;i<=j;++i){
+visitor.visit(i,j,data[i][j]);
+}
+}
+return visitor.end();
+
+Time : 18/01/15 04:51
+----------------------------------------
+Mon Jan 15 04:56:36 EST 2018 org.apache.commons.math3.linear.Array2DRowRealMatrix,457
+Mon Jan 15 04:56:36 EST 2018 org.apache.commons.math3.linear.Array2DRowRealMatrix,458
+Mon Jan 15 04:56:36 EST 2018 org.apache.commons.math3.linear.Array2DRowRealMatrix,459
+Mon Jan 15 04:56:37 EST 2018 org.apache.commons.math3.linear.Array2DRowRealMatrix,460
+Mon Jan 15 04:56:37 EST 2018 org.apache.commons.math3.linear.Array2DRowRealMatrix,461
+Mon Jan 15 04:56:37 EST 2018 org.apache.commons.math3.linear.Array2DRowRealMatrix,464
+Mon Jan 15 04:56:37 EST 2018 org.apache.commons.math3.linear.AbstractRealMatrix,97
+Mon Jan 15 05:18:08 EST 2018 org.apache.commons.math3.linear.AbstractRealMatrix,99
+Mon Jan 15 05:18:08 EST 2018 org.apache.commons.math3.linear.AbstractRealMatrix,100
+Mon Jan 15 05:18:08 EST 2018 org.apache.commons.math3.linear.AbstractRealMatrix,101
+Mon Jan 15 05:18:09 EST 2018 org.apache.commons.math3.linear.AbstractRealMatrix,102
+Mon Jan 15 05:18:09 EST 2018 org.apache.commons.math3.linear.AbstractRealMatrix,103
+Mon Jan 15 05:18:09 EST 2018 org.apache.commons.math3.linear.AbstractRealMatrix,104
+Mon Jan 15 05:18:09 EST 2018 org.apache.commons.math3.linear.AbstractRealMatrix,108
+Mon Jan 15 05:18:09 EST 2018 org.apache.commons.math3.linear.AbstractRealMatrix,241
+Mon Jan 15 05:18:11 EST 2018 org.apache.commons.math3.linear.AbstractRealMatrix,241
+Mon Jan 15 05:18:11 EST 2018 org.apache.commons.math3.linear.AbstractRealMatrix,256
+Mon Jan 15 05:18:13 EST 2018 org.apache.commons.math3.linear.AbstractRealMatrix,257
+Mon Jan 15 05:18:13 EST 2018 org.apache.commons.math3.linear.AbstractRealMatrix,258
+Mon Jan 15 05:18:13 EST 2018 Mon Jan 15 05:18:13 EST 2018 : org.apache.commons.math3.linear.AbstractRealMatrix,259=>Find no block
+Mon Jan 15 05:18:13 EST 2018 org.apache.commons.math3.linear.AbstractRealMatrix,263
+Mon Jan 15 05:23:51 EST 2018 org.apache.commons.math3.linear.AbstractRealMatrix,264
+Mon Jan 15 05:26:49 EST 2018 org.apache.commons.math3.linear.AbstractRealMatrix,265
+Mon Jan 15 05:26:50 EST 2018 org.apache.commons.math3.linear.AbstractRealMatrix,266
+Mon Jan 15 05:26:50 EST 2018 Mon Jan 15 05:26:50 EST 2018 : org.apache.commons.math3.linear.AbstractRealMatrix,268=>Find no block
+Mon Jan 15 05:26:50 EST 2018 org.apache.commons.math3.linear.AbstractRealMatrix,272
+Mon Jan 15 05:26:52 EST 2018 org.apache.commons.math3.linear.MatrixUtils,130
+Mon Jan 15 05:26:53 EST 2018 org.apache.commons.math3.linear.MatrixUtils,134
+Mon Jan 15 05:27:48 EST 2018 org.apache.commons.math3.linear.MatrixUtils,523
+Mon Jan 15 05:28:21 EST 2018 Mon Jan 15 05:28:21 EST 2018 : org.apache.commons.math3.linear.MatrixUtils,528=>Find no block
+Mon Jan 15 05:28:21 EST 2018 Mon Jan 15 05:28:21 EST 2018 : org.apache.commons.math3.linear.RectangularCholeskyDecomposition,63=>Find no block
+Mon Jan 15 05:28:21 EST 2018 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,65
+Mon Jan 15 05:31:01 EST 2018 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,66
+Mon Jan 15 05:31:01 EST 2018 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,67
+Mon Jan 15 05:32:26 EST 2018 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,69
+Mon Jan 15 05:34:25 EST 2018 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,70
+Mon Jan 15 05:43:17 EST 2018 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,71
+Mon Jan 15 05:57:16 EST 2018 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,72
+Mon Jan 15 05:57:16 EST 2018 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,75
+Mon Jan 15 06:08:10 EST 2018 org.apache.commons.math3.linear.RectangularCholeskyDecomposition,76
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(c[ii][ii]>c[isi][isi]){
+++r;
+swap[r]=i;
+}
+
+Time : 18/01/15 06:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+++r;
+for(int i=r+1;i<order;++i){
+int ii=index[i];
+int isi=index[swap[i]];
+if(c[ii][ii]>c[isi][isi]){
+swap[r]=i;
+}
+}
+
+Time : 18/01/15 06:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+r++;
+for(int i=r+1;i<order;++i){
+int ii=index[i];
+int isi=index[swap[i]];
+if(c[ii][ii]>c[isi][isi]){
+swap[r]=i;
+}
+}
+
+Time : 18/01/15 06:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+rank++;
+r++;
+for(int i=r+1;i<order;++i){
+int ii=index[i];
+int isi=index[swap[i]];
+if(c[ii][ii]>c[isi][isi]){
+swap[r]=i;
+}
+}
+
+Time : 18/01/15 06:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+++r;
+if(swap[r]!=r){
+int tmp=index[r];
+index[r]=index[swap[r]];
+index[swap[r]]=tmp;
+}
+
+Time : 18/01/15 06:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+++r;
+if(swap[r]!=small){
+int tmp=index[r];
+index[r]=index[swap[r]];
+index[swap[r]]=tmp;
+}
+
+Time : 18/01/15 06:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=r+1;i<r;++i){
+ final int ii=index[i];
+ final double e=inverse*c[ii][ir];
+b[i][r]=e;
+c[ii][ii]-=e*e;
+for(int j=r+1;j<i;++j){
+ final int ij=index[j];
+ final double f=c[ii][ij]-e*b[j][r];
+c[ii][ij]=f;
+c[ij][ii]=f;
+}
+}
+
+Time : 18/01/15 06:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=r+1;i<rank;++i){
+ final int ii=index[i];
+ final double e=inverse*c[ii][ir];
+b[i][r]=e;
+c[ii][ii]-=e*e;
+for(int j=r+1;j<i;++j){
+ final int ij=index[j];
+ final double f=c[ii][ij]-e*b[j][r];
+c[ii][ij]=f;
+c[ij][ii]=f;
+}
+}
+
+Time : 18/01/15 06:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=r+1;i<(r>>1);++i){
+ final int ii=index[i];
+ final double e=inverse*c[ii][ir];
+b[i][r]=e;
+c[ii][ii]-=e*e;
+for(int j=r+1;j<i;++j){
+ final int ij=index[j];
+ final double f=c[ii][ij]-e*b[j][r];
+c[ii][ij]=f;
+c[ij][ii]=f;
+}
+}
+
+Time : 18/01/15 06:52
+----------------------------------------
+Timeout time : 18/01/15 06:53

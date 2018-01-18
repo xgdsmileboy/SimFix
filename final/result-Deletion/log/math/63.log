@@ -1,0 +1,114 @@
+=================================================
+Project : math_63	start : 18/01/17 11:07
+Current failed test : org.apache.commons.math.util.MathUtilsTest::testArrayEquals | 18/01/17 11:07
+Wed Jan 17 11:08:25 EST 2018 org.apache.commons.math.util.MathUtils,417
+Wed Jan 17 11:09:15 EST 2018 org.apache.commons.math.util.MathUtils,523
+Wed Jan 17 11:09:33 EST 2018 org.apache.commons.math.util.MathUtils,524
+Wed Jan 17 11:09:33 EST 2018 org.apache.commons.math.util.MathUtils,526
+Wed Jan 17 11:14:10 EST 2018 org.apache.commons.math.util.MathUtils,527
+Wed Jan 17 11:14:10 EST 2018 org.apache.commons.math.util.MathUtils,529
+Wed Jan 17 11:19:28 EST 2018 org.apache.commons.math.util.MathUtils,530
+Wed Jan 17 11:19:28 EST 2018 org.apache.commons.math.util.MathUtils,534
+Wed Jan 17 12:10:09 EST 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,63
+Wed Jan 17 12:10:11 EST 2018 Wed Jan 17 12:10:11 EST 2018 : org.apache.commons.math.exception.NonMonotonousSequenceException,64=>Find no block
+Wed Jan 17 12:10:11 EST 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,82
+Wed Jan 17 12:16:35 EST 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,91
+Wed Jan 17 12:16:35 EST 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,92
+Wed Jan 17 12:16:35 EST 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,93
+Wed Jan 17 12:16:35 EST 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,94
+Wed Jan 17 12:16:35 EST 2018 Wed Jan 17 12:16:35 EST 2018 : org.apache.commons.math.exception.NonMonotonousSequenceException,95=>Find no block
+Wed Jan 17 12:16:35 EST 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,101
+Wed Jan 17 12:16:36 EST 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,107
+Wed Jan 17 12:16:37 EST 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,115
+Wed Jan 17 12:16:53 EST 2018 org.apache.commons.math.exception.NonMonotonousSequenceException,121
+Wed Jan 17 12:16:54 EST 2018 org.apache.commons.math.exception.MathIllegalNumberException,50
+Wed Jan 17 12:17:37 EST 2018 org.apache.commons.math.exception.MathIllegalNumberException,51
+Wed Jan 17 12:17:37 EST 2018 Wed Jan 17 12:17:37 EST 2018 : org.apache.commons.math.exception.MathIllegalNumberException,52=>Find no block
+Wed Jan 17 12:17:37 EST 2018 org.apache.commons.math.exception.MathIllegalNumberException,64
+Wed Jan 17 12:18:22 EST 2018 org.apache.commons.math.exception.MathIllegalNumberException,65
+Wed Jan 17 12:18:22 EST 2018 Wed Jan 17 12:18:22 EST 2018 : org.apache.commons.math.exception.MathIllegalNumberException,66=>Find no block
+Wed Jan 17 12:18:22 EST 2018 org.apache.commons.math.exception.MathIllegalNumberException,72
+Wed Jan 17 12:18:23 EST 2018 Wed Jan 17 12:18:23 EST 2018 : org.apache.commons.math.exception.MathIllegalArgumentException,61=>Find no block
+Wed Jan 17 12:18:24 EST 2018 org.apache.commons.math.exception.MathIllegalArgumentException,62
+Wed Jan 17 12:19:49 EST 2018 org.apache.commons.math.exception.MathIllegalArgumentException,63
+Wed Jan 17 12:19:49 EST 2018 org.apache.commons.math.exception.MathIllegalArgumentException,64
+Wed Jan 17 12:19:50 EST 2018 Wed Jan 17 12:19:50 EST 2018 : org.apache.commons.math.exception.MathIllegalArgumentException,65=>Find no block
+Wed Jan 17 12:19:50 EST 2018 org.apache.commons.math.exception.MathIllegalArgumentException,72
+Wed Jan 17 12:19:51 EST 2018 Wed Jan 17 12:19:51 EST 2018 : org.apache.commons.math.exception.MathIllegalArgumentException,73=>Find no block
+Wed Jan 17 12:19:51 EST 2018 org.apache.commons.math.exception.MathIllegalArgumentException,83
+Wed Jan 17 12:19:57 EST 2018 org.apache.commons.math.exception.MathIllegalArgumentException,89
+Wed Jan 17 12:19:58 EST 2018 org.apache.commons.math.exception.MathIllegalArgumentException,95
+Wed Jan 17 12:20:00 EST 2018 Wed Jan 17 12:20:00 EST 2018 : org.apache.commons.math.util.MathUtils,1806=>Find no block
+Wed Jan 17 12:20:00 EST 2018 Wed Jan 17 12:20:00 EST 2018 : org.apache.commons.math.util.MathUtils,1806=>Find no block
+Wed Jan 17 12:20:00 EST 2018 Wed Jan 17 12:20:00 EST 2018 : org.apache.commons.math.util.MathUtils,1806=>Find no block
+Wed Jan 17 12:20:00 EST 2018 org.apache.commons.math.util.MathUtils,88
+Wed Jan 17 12:20:01 EST 2018 Wed Jan 17 12:20:01 EST 2018 : org.apache.commons.math.util.MathUtils,89=>Find no block
+Wed Jan 17 12:20:01 EST 2018 org.apache.commons.math.util.MathUtils,102
+Wed Jan 17 12:21:35 EST 2018 org.apache.commons.math.util.MathUtils,103
+Wed Jan 17 12:23:58 EST 2018 org.apache.commons.math.util.MathUtils,104
+Wed Jan 17 12:23:58 EST 2018 org.apache.commons.math.util.MathUtils,106
+Wed Jan 17 12:23:58 EST 2018 org.apache.commons.math.util.MathUtils,120
+Wed Jan 17 12:23:59 EST 2018 org.apache.commons.math.util.MathUtils,136
+Wed Jan 17 12:29:15 EST 2018 org.apache.commons.math.util.MathUtils,138
+Wed Jan 17 12:29:16 EST 2018 org.apache.commons.math.util.MathUtils,142
+Wed Jan 17 12:29:16 EST 2018 org.apache.commons.math.util.MathUtils,143
+Wed Jan 17 12:29:16 EST 2018 org.apache.commons.math.util.MathUtils,145
+Wed Jan 17 12:29:16 EST 2018 org.apache.commons.math.util.MathUtils,146
+Wed Jan 17 12:29:17 EST 2018 org.apache.commons.math.util.MathUtils,148
+Wed Jan 17 12:29:17 EST 2018 org.apache.commons.math.util.MathUtils,152
+Wed Jan 17 12:29:17 EST 2018 org.apache.commons.math.util.MathUtils,159
+Wed Jan 17 12:29:17 EST 2018 org.apache.commons.math.util.MathUtils,160
+Wed Jan 17 12:29:17 EST 2018 org.apache.commons.math.util.MathUtils,162
+Wed Jan 17 12:29:17 EST 2018 org.apache.commons.math.util.MathUtils,166
+Wed Jan 17 12:30:10 EST 2018 org.apache.commons.math.util.MathUtils,195
+Wed Jan 17 12:34:36 EST 2018 org.apache.commons.math.util.MathUtils,196
+Wed Jan 17 12:38:20 EST 2018 org.apache.commons.math.util.MathUtils,197
+Wed Jan 17 12:38:21 EST 2018 org.apache.commons.math.util.MathUtils,199
+Wed Jan 17 12:42:36 EST 2018 org.apache.commons.math.util.MathUtils,200
+Wed Jan 17 12:42:36 EST 2018 org.apache.commons.math.util.MathUtils,203
+Wed Jan 17 12:44:02 EST 2018 org.apache.commons.math.util.MathUtils,204
+Wed Jan 17 12:44:02 EST 2018 org.apache.commons.math.util.MathUtils,211
+Wed Jan 17 12:58:02 EST 2018 org.apache.commons.math.util.MathUtils,212
+Wed Jan 17 13:53:54 EST 2018 org.apache.commons.math.util.MathUtils,214
+Wed Jan 17 13:59:51 EST 2018 org.apache.commons.math.util.MathUtils,215
+Wed Jan 17 13:59:51 EST 2018 org.apache.commons.math.util.MathUtils,216
+Wed Jan 17 13:59:51 EST 2018 org.apache.commons.math.util.MathUtils,217
+Wed Jan 17 13:59:51 EST 2018 org.apache.commons.math.util.MathUtils,219
+Wed Jan 17 13:59:51 EST 2018 org.apache.commons.math.util.MathUtils,222
+Wed Jan 17 14:07:28 EST 2018 org.apache.commons.math.util.MathUtils,223
+Wed Jan 17 14:07:28 EST 2018 org.apache.commons.math.util.MathUtils,230
+Wed Jan 17 14:07:29 EST 2018 org.apache.commons.math.util.MathUtils,231
+Wed Jan 17 14:07:29 EST 2018 org.apache.commons.math.util.MathUtils,232
+Wed Jan 17 14:07:29 EST 2018 Wed Jan 17 14:07:29 EST 2018 : org.apache.commons.math.util.MathUtils,234=>Find no block
+Wed Jan 17 14:07:29 EST 2018 org.apache.commons.math.util.MathUtils,238
+Wed Jan 17 14:15:05 EST 2018 org.apache.commons.math.util.MathUtils,239
+Wed Jan 17 14:15:05 EST 2018 org.apache.commons.math.util.MathUtils,240
+Wed Jan 17 14:15:05 EST 2018 org.apache.commons.math.util.MathUtils,241
+Wed Jan 17 14:15:06 EST 2018 org.apache.commons.math.util.MathUtils,242
+Wed Jan 17 14:15:06 EST 2018 org.apache.commons.math.util.MathUtils,245
+Wed Jan 17 14:48:56 EST 2018 org.apache.commons.math.util.MathUtils,271
+Wed Jan 17 14:53:18 EST 2018 org.apache.commons.math.util.MathUtils,272
+Wed Jan 17 14:57:02 EST 2018 org.apache.commons.math.util.MathUtils,273
+Wed Jan 17 14:57:02 EST 2018 org.apache.commons.math.util.MathUtils,275
+Wed Jan 17 14:57:02 EST 2018 org.apache.commons.math.util.MathUtils,276
+Wed Jan 17 14:57:02 EST 2018 org.apache.commons.math.util.MathUtils,278
+Wed Jan 17 14:59:11 EST 2018 org.apache.commons.math.util.MathUtils,279
+Wed Jan 17 14:59:11 EST 2018 org.apache.commons.math.util.MathUtils,281
+Wed Jan 17 15:02:02 EST 2018 org.apache.commons.math.util.MathUtils,282
+Wed Jan 17 15:02:02 EST 2018 org.apache.commons.math.util.MathUtils,285
+Wed Jan 17 15:31:45 EST 2018 org.apache.commons.math.util.MathUtils,286
+Wed Jan 17 15:31:45 EST 2018 org.apache.commons.math.util.MathUtils,287
+Wed Jan 17 15:31:45 EST 2018 org.apache.commons.math.util.MathUtils,290
+Wed Jan 17 15:35:11 EST 2018 org.apache.commons.math.util.MathUtils,312
+Wed Jan 17 15:39:37 EST 2018 org.apache.commons.math.util.MathUtils,313
+Wed Jan 17 15:43:20 EST 2018 org.apache.commons.math.util.MathUtils,314
+Wed Jan 17 15:43:20 EST 2018 org.apache.commons.math.util.MathUtils,316
+Wed Jan 17 15:47:57 EST 2018 org.apache.commons.math.util.MathUtils,317
+Wed Jan 17 15:47:57 EST 2018 org.apache.commons.math.util.MathUtils,324
+Wed Jan 17 15:50:58 EST 2018 org.apache.commons.math.util.MathUtils,325
+Wed Jan 17 15:50:58 EST 2018 org.apache.commons.math.util.MathUtils,332
+Wed Jan 17 15:54:00 EST 2018 org.apache.commons.math.util.MathUtils,333
+Wed Jan 17 15:54:00 EST 2018 org.apache.commons.math.util.MathUtils,336
+Wed Jan 17 15:56:09 EST 2018 org.apache.commons.math.util.MathUtils,337
+Wed Jan 17 15:56:09 EST 2018 org.apache.commons.math.util.MathUtils,343
+Timeout time : 18/01/17 16:08

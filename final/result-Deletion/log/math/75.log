@@ -1,0 +1,37 @@
+=================================================
+Project : math_75	start : 18/01/15 23:12
+Current failed test : org.apache.commons.math.stat.FrequencyTest::testPcts | 18/01/15 23:13
+Mon Jan 15 23:14:54 AEDT 2018 org.apache.commons.math.stat.Frequency,303
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return getPct((Comparable<?>)v);
+
+Time : 18/01/15 23:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.9622504486493764 : [/home/hz985/jiajun/d4j/projects/math/math_75_buggy/src/main/java/org/apache/commons/math/stat/Frequency.java=>0,0]
+return getPct(Long.valueOf(v));
+
+Time : 18/01/15 23:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_75_buggy/src/main/java/org/apache/commons/math/stat/Frequency.java=>303,303]
+return getCumPct((Comparable<?>)v);
+
+Time : 18/01/15 23:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_75_buggy/src/main/java/org/apache/commons/math/stat/Frequency.java=>303,303]
+return getPct((Comparable<?>)v);
+
+Time : 18/01/15 23:16
+----------------------------------------
+Success time : 18/01/15 23:16

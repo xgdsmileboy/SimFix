@@ -1,0 +1,382 @@
+=================================================
+Project : math_78	start : 18/01/14 12:22
+Current failed test : org.apache.commons.math.ode.events.EventStateTest::closeEvents_purify_1 | 18/01/14 12:23
+Sun Jan 14 12:25:06 AEDT 2018 org.apache.commons.math.ode.sampling.DummyStepInterpolator,99
+Sun Jan 14 12:30:44 AEDT 2018 Sun Jan 14 12:30:44 AEDT 2018 : org.apache.commons.math.ode.sampling.DummyStepInterpolator,100=>Find no block
+Sun Jan 14 12:30:51 AEDT 2018 org.apache.commons.math.ode.sampling.DummyStepInterpolator,66
+Sun Jan 14 12:31:00 AEDT 2018 Sun Jan 14 12:31:00 AEDT 2018 : org.apache.commons.math.ode.sampling.DummyStepInterpolator,67=>Find no block
+Sun Jan 14 12:31:04 AEDT 2018 Sun Jan 14 12:31:04 AEDT 2018 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,107=>Find no block
+Sun Jan 14 12:31:08 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,109
+Sun Jan 14 12:33:20 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,110
+Sun Jan 14 12:33:23 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,111
+Sun Jan 14 12:36:25 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,112
+Sun Jan 14 12:39:43 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,114
+Sun Jan 14 12:44:15 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,115
+Sun Jan 14 12:47:44 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,116
+Sun Jan 14 12:51:59 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,118
+Sun Jan 14 12:57:59 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,119
+Sun Jan 14 13:01:51 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,120
+Sun Jan 14 13:01:55 AEDT 2018 Sun Jan 14 13:01:55 AEDT 2018 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,122=>Find no block
+Sun Jan 14 13:01:59 AEDT 2018 org.apache.commons.math.ode.events.EventState,271
+Sun Jan 14 13:02:09 AEDT 2018 org.apache.commons.math.ode.events.EventState,242
+Sun Jan 14 13:02:18 AEDT 2018 org.apache.commons.math.ode.events.EventState,243
+Sun Jan 14 13:02:22 AEDT 2018 org.apache.commons.math.ode.events.EventState,249
+Sun Jan 14 13:03:12 AEDT 2018 org.apache.commons.math.ode.events.EventState,250
+Sun Jan 14 13:03:15 AEDT 2018 org.apache.commons.math.ode.events.EventState,251
+Sun Jan 14 13:03:18 AEDT 2018 org.apache.commons.math.ode.events.EventState,285
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+t0=t;
+g0=handler.g(t,y);
+pendingEvent=nextAction>0;
+if(pendingEvent){
+previousEventTime=t;
+g0Positive=increasing;
+nextAction=handler.eventOccurred(t,y,!(increasing^forward));
+}else {
+g0Positive=g0>=0;
+nextAction=EventHandler.CONTINUE;
+}
+
+Time : 18/01/14 13:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+t0=t0;
+g0=handler.g(t,y);
+if(pendingEvent){
+previousEventTime=t;
+g0Positive=increasing;
+nextAction=handler.eventOccurred(t,y,!(increasing^forward));
+}else {
+g0Positive=g0>=0;
+nextAction=EventHandler.CONTINUE;
+}
+
+Time : 18/01/14 13:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+t0=t;
+g0=handler.g(t,y);
+pendingEvent=true;
+if(pendingEvent){
+previousEventTime=t;
+g0Positive=increasing;
+nextAction=handler.eventOccurred(t,y,!(increasing^forward));
+}else {
+g0Positive=g0>=0;
+nextAction=EventHandler.CONTINUE;
+}
+
+Time : 18/01/14 13:07
+----------------------------------------
+Sun Jan 14 13:09:09 AEDT 2018 org.apache.commons.math.ode.events.EventState,286
+Sun Jan 14 13:09:14 AEDT 2018 org.apache.commons.math.ode.events.EventState,288
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+pendingEvent=nextAction>0;
+if(pendingEvent){
+previousEventTime=t;
+g0Positive=increasing;
+nextAction=handler.eventOccurred(t,y,!(increasing^forward));
+}else {
+g0Positive=g0>=0;
+nextAction=EventHandler.CONTINUE;
+}
+
+Time : 18/01/14 13:11
+----------------------------------------
+Sun Jan 14 13:16:02 AEDT 2018 org.apache.commons.math.ode.events.EventState,294
+Sun Jan 14 13:16:04 AEDT 2018 org.apache.commons.math.ode.events.EventState,295
+Sun Jan 14 13:16:08 AEDT 2018 Sun Jan 14 13:16:08 AEDT 2018 : org.apache.commons.math.ode.events.EventState,297=>Find no block
+Sun Jan 14 13:16:11 AEDT 2018 org.apache.commons.math.ode.events.EventState,151
+Sun Jan 14 13:18:11 AEDT 2018 org.apache.commons.math.ode.events.EventState,152
+Sun Jan 14 13:18:15 AEDT 2018 org.apache.commons.math.ode.events.EventState,153
+Sun Jan 14 13:18:19 AEDT 2018 Sun Jan 14 13:18:19 AEDT 2018 : org.apache.commons.math.ode.events.EventState,154=>Find no block
+Sun Jan 14 13:18:22 AEDT 2018 org.apache.commons.math.ode.events.EventState,172
+Sun Jan 14 13:24:07 AEDT 2018 org.apache.commons.math.ode.events.EventState,173
+Sun Jan 14 13:24:11 AEDT 2018 org.apache.commons.math.ode.events.EventState,174
+Sun Jan 14 13:32:12 AEDT 2018 org.apache.commons.math.ode.events.EventState,175
+Sun Jan 14 13:44:24 AEDT 2018 org.apache.commons.math.ode.events.EventState,177
+Sun Jan 14 13:51:34 AEDT 2018 org.apache.commons.math.ode.events.EventState,178
+Sun Jan 14 13:54:52 AEDT 2018 org.apache.commons.math.ode.events.EventState,179
+Sun Jan 14 13:54:55 AEDT 2018 org.apache.commons.math.ode.events.EventState,180
+Timeout time : 18/01/14 14:05
+Current failed test : org.apache.commons.math.ode.events.EventStateTest::closeEvents_purify_2 | 18/01/14 14:05
+Sun Jan 14 14:06:45 AEDT 2018 org.apache.commons.math.ode.sampling.DummyStepInterpolator,66
+Sun Jan 14 14:06:58 AEDT 2018 Sun Jan 14 14:06:58 AEDT 2018 : org.apache.commons.math.ode.sampling.DummyStepInterpolator,67=>Find no block
+Sun Jan 14 14:07:01 AEDT 2018 Sun Jan 14 14:07:01 AEDT 2018 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,107=>Find no block
+Sun Jan 14 14:07:04 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,109
+Sun Jan 14 14:09:14 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,110
+Sun Jan 14 14:09:17 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,111
+Sun Jan 14 14:12:18 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,112
+Sun Jan 14 14:15:35 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,114
+Sun Jan 14 14:20:07 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,115
+Sun Jan 14 14:23:32 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,116
+Sun Jan 14 14:27:49 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,118
+Sun Jan 14 14:33:45 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,119
+Sun Jan 14 14:37:34 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,120
+Sun Jan 14 14:37:38 AEDT 2018 Sun Jan 14 14:37:38 AEDT 2018 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,122=>Find no block
+Sun Jan 14 14:37:43 AEDT 2018 org.apache.commons.math.ode.events.EventState,271
+Sun Jan 14 14:37:52 AEDT 2018 org.apache.commons.math.ode.events.EventState,285
+Sun Jan 14 14:42:03 AEDT 2018 org.apache.commons.math.ode.events.EventState,286
+Sun Jan 14 14:42:07 AEDT 2018 org.apache.commons.math.ode.events.EventState,288
+Sun Jan 14 14:48:22 AEDT 2018 org.apache.commons.math.ode.events.EventState,294
+Sun Jan 14 14:48:25 AEDT 2018 org.apache.commons.math.ode.events.EventState,295
+Sun Jan 14 14:48:29 AEDT 2018 Sun Jan 14 14:48:29 AEDT 2018 : org.apache.commons.math.ode.events.EventState,297=>Find no block
+Sun Jan 14 14:48:32 AEDT 2018 org.apache.commons.math.ode.events.EventState,151
+Sun Jan 14 14:50:35 AEDT 2018 org.apache.commons.math.ode.events.EventState,152
+Sun Jan 14 14:50:39 AEDT 2018 org.apache.commons.math.ode.events.EventState,153
+Sun Jan 14 14:50:42 AEDT 2018 Sun Jan 14 14:50:42 AEDT 2018 : org.apache.commons.math.ode.events.EventState,154=>Find no block
+Sun Jan 14 14:50:45 AEDT 2018 Sun Jan 14 14:50:45 AEDT 2018 : org.apache.commons.math.ode.events.EventState,95=>Find no block
+Sun Jan 14 14:50:52 AEDT 2018 org.apache.commons.math.ode.events.EventState,96
+Sun Jan 14 14:53:28 AEDT 2018 org.apache.commons.math.ode.events.EventState,97
+Sun Jan 14 14:53:34 AEDT 2018 org.apache.commons.math.ode.events.EventState,98
+Sun Jan 14 14:56:22 AEDT 2018 org.apache.commons.math.ode.events.EventState,99
+Sun Jan 14 14:58:09 AEDT 2018 org.apache.commons.math.ode.events.EventState,102
+Sun Jan 14 14:59:42 AEDT 2018 org.apache.commons.math.ode.events.EventState,103
+Sun Jan 14 15:01:08 AEDT 2018 org.apache.commons.math.ode.events.EventState,104
+Sun Jan 14 15:02:05 AEDT 2018 org.apache.commons.math.ode.events.EventState,105
+Sun Jan 14 15:03:28 AEDT 2018 org.apache.commons.math.ode.events.EventState,106
+Sun Jan 14 15:04:52 AEDT 2018 org.apache.commons.math.ode.events.EventState,107
+Sun Jan 14 15:05:55 AEDT 2018 org.apache.commons.math.ode.events.EventState,108
+Sun Jan 14 15:07:01 AEDT 2018 org.apache.commons.math.ode.events.EventState,109
+Sun Jan 14 15:07:04 AEDT 2018 Sun Jan 14 15:07:04 AEDT 2018 : org.apache.commons.math.ode.events.EventState,111=>Find no block
+Sun Jan 14 15:07:09 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,211
+Sun Jan 14 15:08:56 AEDT 2018 Sun Jan 14 15:08:56 AEDT 2018 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,212=>Find no block
+Sun Jan 14 15:09:00 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,219
+Sun Jan 14 15:13:23 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,220
+Sun Jan 14 15:13:26 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,221
+Sun Jan 14 15:13:30 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,224
+Sun Jan 14 15:13:33 AEDT 2018 Sun Jan 14 15:13:33 AEDT 2018 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,226=>Find no block
+Sun Jan 14 15:13:36 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,245
+Sun Jan 14 15:16:04 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,246
+Sun Jan 14 15:16:08 AEDT 2018 Sun Jan 14 15:16:08 AEDT 2018 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,247=>Find no block
+Sun Jan 14 15:16:12 AEDT 2018 org.apache.commons.math.MaxIterationsExceededException,43
+Sun Jan 14 15:16:21 AEDT 2018 org.apache.commons.math.MaxIterationsExceededException,44
+Sun Jan 14 15:16:24 AEDT 2018 Sun Jan 14 15:16:24 AEDT 2018 : org.apache.commons.math.MaxIterationsExceededException,45=>Find no block
+Sun Jan 14 15:16:28 AEDT 2018 org.apache.commons.math.MaxIterationsExceededException,56
+Sun Jan 14 15:17:27 AEDT 2018 org.apache.commons.math.MaxIterationsExceededException,57
+Sun Jan 14 15:17:31 AEDT 2018 Sun Jan 14 15:17:31 AEDT 2018 : org.apache.commons.math.MaxIterationsExceededException,58=>Find no block
+Sun Jan 14 15:17:35 AEDT 2018 org.apache.commons.math.MaxIterationsExceededException,64
+Sun Jan 14 15:17:44 AEDT 2018 org.apache.commons.math.ConvergenceException,34
+Sun Jan 14 15:17:53 AEDT 2018 Sun Jan 14 15:17:53 AEDT 2018 : org.apache.commons.math.ConvergenceException,35=>Find no block
+Sun Jan 14 15:17:56 AEDT 2018 org.apache.commons.math.ConvergenceException,45
+Sun Jan 14 15:19:12 AEDT 2018 Sun Jan 14 15:19:12 AEDT 2018 : org.apache.commons.math.ConvergenceException,46=>Find no block
+Sun Jan 14 15:19:15 AEDT 2018 org.apache.commons.math.ConvergenceException,53
+Sun Jan 14 15:19:24 AEDT 2018 Sun Jan 14 15:19:24 AEDT 2018 : org.apache.commons.math.ConvergenceException,54=>Find no block
+Sun Jan 14 15:19:29 AEDT 2018 org.apache.commons.math.ConvergenceException,65
+Sun Jan 14 15:20:55 AEDT 2018 Sun Jan 14 15:20:55 AEDT 2018 : org.apache.commons.math.ConvergenceException,66=>Find no block
+Sun Jan 14 15:20:57 AEDT 2018 Sun Jan 14 15:20:57 AEDT 2018 : org.apache.commons.math.MathException,55=>Find no block
+Sun Jan 14 15:21:00 AEDT 2018 org.apache.commons.math.MathException,56
+Sun Jan 14 15:21:08 AEDT 2018 org.apache.commons.math.MathException,57
+Sun Jan 14 15:21:11 AEDT 2018 Sun Jan 14 15:21:11 AEDT 2018 : org.apache.commons.math.MathException,58=>Find no block
+Sun Jan 14 15:21:14 AEDT 2018 Sun Jan 14 15:21:14 AEDT 2018 : org.apache.commons.math.MathException,67=>Find no block
+Sun Jan 14 15:21:17 AEDT 2018 org.apache.commons.math.MathException,68
+Sun Jan 14 15:21:50 AEDT 2018 org.apache.commons.math.MathException,69
+Sun Jan 14 15:21:54 AEDT 2018 Sun Jan 14 15:21:54 AEDT 2018 : org.apache.commons.math.MathException,70=>Find no block
+Sun Jan 14 15:21:57 AEDT 2018 org.apache.commons.math.MathException,80
+Sun Jan 14 15:22:03 AEDT 2018 org.apache.commons.math.MathException,81
+Sun Jan 14 15:22:06 AEDT 2018 org.apache.commons.math.MathException,82
+Sun Jan 14 15:22:09 AEDT 2018 Sun Jan 14 15:22:09 AEDT 2018 : org.apache.commons.math.MathException,83=>Find no block
+Sun Jan 14 15:22:11 AEDT 2018 org.apache.commons.math.MathException,96
+Sun Jan 14 15:22:43 AEDT 2018 org.apache.commons.math.MathException,97
+Sun Jan 14 15:22:46 AEDT 2018 org.apache.commons.math.MathException,98
+Sun Jan 14 15:22:50 AEDT 2018 Sun Jan 14 15:22:50 AEDT 2018 : org.apache.commons.math.MathException,99=>Find no block
+Sun Jan 14 15:22:54 AEDT 2018 org.apache.commons.math.MathException,110
+Sun Jan 14 15:23:04 AEDT 2018 org.apache.commons.math.MathException,112
+Sun Jan 14 15:23:47 AEDT 2018 org.apache.commons.math.MathException,114
+Sun Jan 14 15:23:50 AEDT 2018 Sun Jan 14 15:23:50 AEDT 2018 : org.apache.commons.math.MathException,119=>Find no block
+Sun Jan 14 15:23:54 AEDT 2018 Sun Jan 14 15:23:54 AEDT 2018 : org.apache.commons.math.MathException,117=>Find no block
+Sun Jan 14 15:23:58 AEDT 2018 org.apache.commons.math.MathException,123
+Sun Jan 14 15:24:02 AEDT 2018 org.apache.commons.math.MathException,133
+Sun Jan 14 15:24:12 AEDT 2018 org.apache.commons.math.MathException,142
+Sun Jan 14 15:25:13 AEDT 2018 org.apache.commons.math.MathException,153
+Sun Jan 14 15:25:22 AEDT 2018 org.apache.commons.math.MathException,159
+Sun Jan 14 15:26:12 AEDT 2018 org.apache.commons.math.MathException,165
+Sun Jan 14 15:27:02 AEDT 2018 org.apache.commons.math.MathException,173
+Sun Jan 14 15:27:10 AEDT 2018 Sun Jan 14 15:27:10 AEDT 2018 : org.apache.commons.math.MathException,174=>Find no block
+Sun Jan 14 15:27:14 AEDT 2018 Sun Jan 14 15:27:14 AEDT 2018 : org.apache.commons.math.MathException,183=>Find no block
+Sun Jan 14 15:27:16 AEDT 2018 org.apache.commons.math.MathException,184
+Sun Jan 14 15:27:24 AEDT 2018 org.apache.commons.math.MathException,185
+Sun Jan 14 15:27:27 AEDT 2018 org.apache.commons.math.MathException,187
+Sun Jan 14 15:27:30 AEDT 2018 Sun Jan 14 15:27:30 AEDT 2018 : org.apache.commons.math.MathException,188=>Find no block
+Sun Jan 14 15:27:34 AEDT 2018 Sun Jan 14 15:27:34 AEDT 2018 : org.apache.commons.math.MathException,189=>Find no block
+Sun Jan 14 15:27:37 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,48
+Sun Jan 14 15:27:44 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,49
+Sun Jan 14 15:27:47 AEDT 2018 Sun Jan 14 15:27:47 AEDT 2018 : org.apache.commons.math.FunctionEvaluationException,50=>Find no block
+Sun Jan 14 15:27:50 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,60
+Sun Jan 14 15:31:18 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,61
+Sun Jan 14 15:31:21 AEDT 2018 Sun Jan 14 15:31:21 AEDT 2018 : org.apache.commons.math.FunctionEvaluationException,62=>Find no block
+Sun Jan 14 15:31:24 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,74
+Sun Jan 14 15:32:45 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,75
+Sun Jan 14 15:32:50 AEDT 2018 Sun Jan 14 15:32:50 AEDT 2018 : org.apache.commons.math.FunctionEvaluationException,76=>Find no block
+Sun Jan 14 15:32:53 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,88
+Sun Jan 14 15:34:41 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,89
+Sun Jan 14 15:34:43 AEDT 2018 Sun Jan 14 15:34:43 AEDT 2018 : org.apache.commons.math.FunctionEvaluationException,90=>Find no block
+Sun Jan 14 15:34:47 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,100
+Sun Jan 14 15:35:09 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,101
+Sun Jan 14 15:35:12 AEDT 2018 Sun Jan 14 15:35:12 AEDT 2018 : org.apache.commons.math.FunctionEvaluationException,102=>Find no block
+Sun Jan 14 15:35:15 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,112
+Sun Jan 14 15:38:56 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,113
+Sun Jan 14 15:39:01 AEDT 2018 Sun Jan 14 15:39:01 AEDT 2018 : org.apache.commons.math.FunctionEvaluationException,114=>Find no block
+Sun Jan 14 15:39:05 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,128
+Sun Jan 14 15:40:36 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,129
+Sun Jan 14 15:40:40 AEDT 2018 Sun Jan 14 15:40:40 AEDT 2018 : org.apache.commons.math.FunctionEvaluationException,130=>Find no block
+Sun Jan 14 15:40:44 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,144
+Sun Jan 14 15:43:13 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,145
+Sun Jan 14 15:43:18 AEDT 2018 Sun Jan 14 15:43:18 AEDT 2018 : org.apache.commons.math.FunctionEvaluationException,146=>Find no block
+Sun Jan 14 15:43:22 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,154
+Sun Jan 14 15:45:55 AEDT 2018 org.apache.commons.math.ode.events.EventState,203
+Sun Jan 14 15:46:03 AEDT 2018 org.apache.commons.math.ode.events.EventState,206
+Sun Jan 14 15:46:12 AEDT 2018 org.apache.commons.math.ode.events.EventState,207
+Sun Jan 14 15:46:15 AEDT 2018 Sun Jan 14 15:46:15 AEDT 2018 : org.apache.commons.math.ode.events.EventState,208=>Find no block
+Sun Jan 14 15:46:19 AEDT 2018 org.apache.commons.math.ode.events.EventState,209
+Sun Jan 14 15:46:23 AEDT 2018 Sun Jan 14 15:46:23 AEDT 2018 : org.apache.commons.math.ode.events.EventState,210=>Find no block
+Sun Jan 14 15:46:25 AEDT 2018 org.apache.commons.math.ode.events.EventState,211
+Sun Jan 14 15:46:30 AEDT 2018 org.apache.commons.math.ode.events.EventState,117
+Sun Jan 14 15:46:39 AEDT 2018 org.apache.commons.math.ode.events.EventState,124
+Timeout time : 18/01/14 15:46
+Current failed test : org.apache.commons.math.ode.events.EventStateTest::closeEvents_purify_4 | 18/01/14 15:46
+Sun Jan 14 15:48:00 AEDT 2018 org.apache.commons.math.ode.sampling.DummyStepInterpolator,66
+Sun Jan 14 15:48:08 AEDT 2018 Sun Jan 14 15:48:08 AEDT 2018 : org.apache.commons.math.ode.sampling.DummyStepInterpolator,67=>Find no block
+Sun Jan 14 15:48:11 AEDT 2018 Sun Jan 14 15:48:11 AEDT 2018 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,107=>Find no block
+Sun Jan 14 15:48:16 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,109
+Sun Jan 14 15:50:32 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,110
+Sun Jan 14 15:50:34 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,111
+Sun Jan 14 15:53:34 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,112
+Sun Jan 14 15:56:52 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,114
+Sun Jan 14 16:01:24 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,115
+Sun Jan 14 16:04:49 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,116
+Sun Jan 14 16:09:06 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,118
+Sun Jan 14 16:15:03 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,119
+Sun Jan 14 16:18:54 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,120
+Sun Jan 14 16:18:57 AEDT 2018 Sun Jan 14 16:18:57 AEDT 2018 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,122=>Find no block
+Sun Jan 14 16:19:01 AEDT 2018 org.apache.commons.math.ode.events.EventState,271
+Sun Jan 14 16:19:09 AEDT 2018 org.apache.commons.math.ode.events.EventState,151
+Sun Jan 14 16:21:14 AEDT 2018 org.apache.commons.math.ode.events.EventState,152
+Sun Jan 14 16:21:18 AEDT 2018 org.apache.commons.math.ode.events.EventState,153
+Sun Jan 14 16:21:22 AEDT 2018 Sun Jan 14 16:21:22 AEDT 2018 : org.apache.commons.math.ode.events.EventState,154=>Find no block
+Sun Jan 14 16:21:25 AEDT 2018 Sun Jan 14 16:21:25 AEDT 2018 : org.apache.commons.math.ode.events.EventState,95=>Find no block
+Sun Jan 14 16:21:29 AEDT 2018 org.apache.commons.math.ode.events.EventState,96
+Sun Jan 14 16:24:09 AEDT 2018 org.apache.commons.math.ode.events.EventState,97
+Sun Jan 14 16:24:14 AEDT 2018 org.apache.commons.math.ode.events.EventState,98
+Sun Jan 14 16:27:05 AEDT 2018 org.apache.commons.math.ode.events.EventState,99
+Sun Jan 14 16:28:53 AEDT 2018 org.apache.commons.math.ode.events.EventState,102
+Sun Jan 14 16:30:27 AEDT 2018 org.apache.commons.math.ode.events.EventState,103
+Sun Jan 14 16:31:50 AEDT 2018 org.apache.commons.math.ode.events.EventState,104
+Sun Jan 14 16:32:48 AEDT 2018 org.apache.commons.math.ode.events.EventState,105
+Sun Jan 14 16:34:13 AEDT 2018 org.apache.commons.math.ode.events.EventState,106
+Sun Jan 14 16:35:38 AEDT 2018 org.apache.commons.math.ode.events.EventState,107
+Sun Jan 14 16:36:39 AEDT 2018 org.apache.commons.math.ode.events.EventState,108
+Sun Jan 14 16:37:48 AEDT 2018 org.apache.commons.math.ode.events.EventState,109
+Sun Jan 14 16:37:52 AEDT 2018 Sun Jan 14 16:37:52 AEDT 2018 : org.apache.commons.math.ode.events.EventState,111=>Find no block
+Sun Jan 14 16:37:56 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,211
+Sun Jan 14 16:39:41 AEDT 2018 Sun Jan 14 16:39:41 AEDT 2018 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,212=>Find no block
+Sun Jan 14 16:39:44 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,219
+Sun Jan 14 16:44:09 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,220
+Sun Jan 14 16:44:12 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,221
+Sun Jan 14 16:44:14 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,224
+Sun Jan 14 16:44:18 AEDT 2018 Sun Jan 14 16:44:18 AEDT 2018 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,226=>Find no block
+Sun Jan 14 16:44:22 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,245
+Sun Jan 14 16:46:52 AEDT 2018 org.apache.commons.math.ode.sampling.AbstractStepInterpolator,246
+Sun Jan 14 16:46:56 AEDT 2018 Sun Jan 14 16:46:56 AEDT 2018 : org.apache.commons.math.ode.sampling.AbstractStepInterpolator,247=>Find no block
+Sun Jan 14 16:47:00 AEDT 2018 org.apache.commons.math.MaxIterationsExceededException,43
+Sun Jan 14 16:47:09 AEDT 2018 org.apache.commons.math.MaxIterationsExceededException,44
+Sun Jan 14 16:47:12 AEDT 2018 Sun Jan 14 16:47:12 AEDT 2018 : org.apache.commons.math.MaxIterationsExceededException,45=>Find no block
+Sun Jan 14 16:47:16 AEDT 2018 org.apache.commons.math.MaxIterationsExceededException,56
+Sun Jan 14 16:48:13 AEDT 2018 org.apache.commons.math.MaxIterationsExceededException,57
+Sun Jan 14 16:48:18 AEDT 2018 Sun Jan 14 16:48:18 AEDT 2018 : org.apache.commons.math.MaxIterationsExceededException,58=>Find no block
+Sun Jan 14 16:48:21 AEDT 2018 org.apache.commons.math.MaxIterationsExceededException,64
+Sun Jan 14 16:48:30 AEDT 2018 org.apache.commons.math.ConvergenceException,34
+Sun Jan 14 16:48:38 AEDT 2018 Sun Jan 14 16:48:38 AEDT 2018 : org.apache.commons.math.ConvergenceException,35=>Find no block
+Sun Jan 14 16:48:43 AEDT 2018 org.apache.commons.math.ConvergenceException,45
+Sun Jan 14 16:50:00 AEDT 2018 Sun Jan 14 16:50:00 AEDT 2018 : org.apache.commons.math.ConvergenceException,46=>Find no block
+Sun Jan 14 16:50:03 AEDT 2018 org.apache.commons.math.ConvergenceException,53
+Sun Jan 14 16:50:12 AEDT 2018 Sun Jan 14 16:50:12 AEDT 2018 : org.apache.commons.math.ConvergenceException,54=>Find no block
+Sun Jan 14 16:50:15 AEDT 2018 org.apache.commons.math.ConvergenceException,65
+Sun Jan 14 16:51:39 AEDT 2018 Sun Jan 14 16:51:39 AEDT 2018 : org.apache.commons.math.ConvergenceException,66=>Find no block
+Sun Jan 14 16:51:42 AEDT 2018 Sun Jan 14 16:51:42 AEDT 2018 : org.apache.commons.math.MathException,55=>Find no block
+Sun Jan 14 16:51:46 AEDT 2018 org.apache.commons.math.MathException,56
+Sun Jan 14 16:51:53 AEDT 2018 org.apache.commons.math.MathException,57
+Sun Jan 14 16:51:56 AEDT 2018 Sun Jan 14 16:51:56 AEDT 2018 : org.apache.commons.math.MathException,58=>Find no block
+Sun Jan 14 16:51:59 AEDT 2018 Sun Jan 14 16:51:59 AEDT 2018 : org.apache.commons.math.MathException,67=>Find no block
+Sun Jan 14 16:52:02 AEDT 2018 org.apache.commons.math.MathException,68
+Sun Jan 14 16:52:34 AEDT 2018 org.apache.commons.math.MathException,69
+Sun Jan 14 16:52:38 AEDT 2018 Sun Jan 14 16:52:38 AEDT 2018 : org.apache.commons.math.MathException,70=>Find no block
+Sun Jan 14 16:52:42 AEDT 2018 org.apache.commons.math.MathException,80
+Sun Jan 14 16:52:51 AEDT 2018 org.apache.commons.math.MathException,81
+Sun Jan 14 16:52:55 AEDT 2018 org.apache.commons.math.MathException,82
+Sun Jan 14 16:52:59 AEDT 2018 Sun Jan 14 16:52:59 AEDT 2018 : org.apache.commons.math.MathException,83=>Find no block
+Sun Jan 14 16:53:02 AEDT 2018 org.apache.commons.math.MathException,96
+Sun Jan 14 16:53:33 AEDT 2018 org.apache.commons.math.MathException,97
+Sun Jan 14 16:53:35 AEDT 2018 org.apache.commons.math.MathException,98
+Sun Jan 14 16:53:40 AEDT 2018 Sun Jan 14 16:53:40 AEDT 2018 : org.apache.commons.math.MathException,99=>Find no block
+Sun Jan 14 16:53:43 AEDT 2018 org.apache.commons.math.MathException,110
+Sun Jan 14 16:53:53 AEDT 2018 org.apache.commons.math.MathException,112
+Sun Jan 14 16:54:36 AEDT 2018 org.apache.commons.math.MathException,114
+Sun Jan 14 16:54:39 AEDT 2018 Sun Jan 14 16:54:39 AEDT 2018 : org.apache.commons.math.MathException,119=>Find no block
+Sun Jan 14 16:54:43 AEDT 2018 Sun Jan 14 16:54:43 AEDT 2018 : org.apache.commons.math.MathException,117=>Find no block
+Sun Jan 14 16:54:47 AEDT 2018 org.apache.commons.math.MathException,123
+Sun Jan 14 16:54:49 AEDT 2018 org.apache.commons.math.MathException,133
+Sun Jan 14 16:54:59 AEDT 2018 org.apache.commons.math.MathException,142
+Sun Jan 14 16:55:58 AEDT 2018 org.apache.commons.math.MathException,153
+Sun Jan 14 16:56:07 AEDT 2018 org.apache.commons.math.MathException,159
+Sun Jan 14 16:56:55 AEDT 2018 org.apache.commons.math.MathException,165
+Sun Jan 14 16:57:43 AEDT 2018 org.apache.commons.math.MathException,173
+Sun Jan 14 16:57:51 AEDT 2018 Sun Jan 14 16:57:51 AEDT 2018 : org.apache.commons.math.MathException,174=>Find no block
+Sun Jan 14 16:57:55 AEDT 2018 Sun Jan 14 16:57:55 AEDT 2018 : org.apache.commons.math.MathException,183=>Find no block
+Sun Jan 14 16:57:59 AEDT 2018 org.apache.commons.math.MathException,184
+Sun Jan 14 16:58:07 AEDT 2018 org.apache.commons.math.MathException,185
+Sun Jan 14 16:58:11 AEDT 2018 org.apache.commons.math.MathException,187
+Sun Jan 14 16:58:14 AEDT 2018 Sun Jan 14 16:58:14 AEDT 2018 : org.apache.commons.math.MathException,188=>Find no block
+Sun Jan 14 16:58:17 AEDT 2018 Sun Jan 14 16:58:17 AEDT 2018 : org.apache.commons.math.MathException,189=>Find no block
+Sun Jan 14 16:58:20 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,48
+Sun Jan 14 16:58:26 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,49
+Sun Jan 14 16:58:29 AEDT 2018 Sun Jan 14 16:58:29 AEDT 2018 : org.apache.commons.math.FunctionEvaluationException,50=>Find no block
+Sun Jan 14 16:58:32 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,60
+Sun Jan 14 17:02:03 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,61
+Sun Jan 14 17:02:07 AEDT 2018 Sun Jan 14 17:02:07 AEDT 2018 : org.apache.commons.math.FunctionEvaluationException,62=>Find no block
+Sun Jan 14 17:02:11 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,74
+Sun Jan 14 17:03:34 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,75
+Sun Jan 14 17:03:38 AEDT 2018 Sun Jan 14 17:03:38 AEDT 2018 : org.apache.commons.math.FunctionEvaluationException,76=>Find no block
+Sun Jan 14 17:03:41 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,88
+Sun Jan 14 17:05:31 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,89
+Sun Jan 14 17:05:34 AEDT 2018 Sun Jan 14 17:05:34 AEDT 2018 : org.apache.commons.math.FunctionEvaluationException,90=>Find no block
+Sun Jan 14 17:05:38 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,100
+Sun Jan 14 17:05:59 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,101
+Sun Jan 14 17:06:02 AEDT 2018 Sun Jan 14 17:06:02 AEDT 2018 : org.apache.commons.math.FunctionEvaluationException,102=>Find no block
+Sun Jan 14 17:06:05 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,112
+Sun Jan 14 17:09:47 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,113
+Sun Jan 14 17:09:49 AEDT 2018 Sun Jan 14 17:09:49 AEDT 2018 : org.apache.commons.math.FunctionEvaluationException,114=>Find no block
+Sun Jan 14 17:09:54 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,128
+Sun Jan 14 17:11:27 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,129
+Sun Jan 14 17:11:32 AEDT 2018 Sun Jan 14 17:11:32 AEDT 2018 : org.apache.commons.math.FunctionEvaluationException,130=>Find no block
+Sun Jan 14 17:11:36 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,144
+Sun Jan 14 17:14:04 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,145
+Sun Jan 14 17:14:09 AEDT 2018 Sun Jan 14 17:14:09 AEDT 2018 : org.apache.commons.math.FunctionEvaluationException,146=>Find no block
+Sun Jan 14 17:14:14 AEDT 2018 org.apache.commons.math.FunctionEvaluationException,154
+Sun Jan 14 17:16:48 AEDT 2018 org.apache.commons.math.ode.events.EventState,203
+Sun Jan 14 17:16:57 AEDT 2018 org.apache.commons.math.ode.events.EventState,206
+Sun Jan 14 17:17:05 AEDT 2018 org.apache.commons.math.ode.events.EventState,207
+Sun Jan 14 17:17:09 AEDT 2018 Sun Jan 14 17:17:09 AEDT 2018 : org.apache.commons.math.ode.events.EventState,208=>Find no block
+Sun Jan 14 17:17:11 AEDT 2018 org.apache.commons.math.ode.events.EventState,209
+Sun Jan 14 17:17:15 AEDT 2018 Sun Jan 14 17:17:15 AEDT 2018 : org.apache.commons.math.ode.events.EventState,210=>Find no block
+Sun Jan 14 17:17:19 AEDT 2018 org.apache.commons.math.ode.events.EventState,211
+Sun Jan 14 17:17:21 AEDT 2018 org.apache.commons.math.ode.events.EventState,117
+Sun Jan 14 17:17:30 AEDT 2018 org.apache.commons.math.ode.events.EventState,124
+Sun Jan 14 17:17:38 AEDT 2018 org.apache.commons.math.ode.events.EventState,131
+Sun Jan 14 17:17:45 AEDT 2018 org.apache.commons.math.ode.events.EventState,138
+Sun Jan 14 17:17:53 AEDT 2018 org.apache.commons.math.ode.events.EventState,172
+Sun Jan 14 17:23:37 AEDT 2018 org.apache.commons.math.ode.events.EventState,173
+Sun Jan 14 17:23:40 AEDT 2018 org.apache.commons.math.ode.events.EventState,174
+Timeout time : 18/01/14 17:27

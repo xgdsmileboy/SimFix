@@ -1,0 +1,57 @@
+=================================================
+Project : math_11	start : 18/01/14 06:54
+Current failed test : org.apache.commons.math3.distribution.MultivariateNormalDistributionTest::testUnivariateDistribution | 18/01/14 06:55
+Sun Jan 14 06:58:37 AEDT 2018 org.apache.commons.math3.util.FastMath,1614
+Sun Jan 14 07:07:32 AEDT 2018 Sun Jan 14 07:07:32 AEDT 2018 : org.apache.commons.math3.distribution.AbstractRealDistribution,50=>Find no block
+Sun Jan 14 07:07:40 AEDT 2018 Sun Jan 14 07:07:40 AEDT 2018 : org.apache.commons.math3.distribution.AbstractRealDistribution,60=>Find no block
+Sun Jan 14 07:07:49 AEDT 2018 Sun Jan 14 07:07:49 AEDT 2018 : org.apache.commons.math3.distribution.AbstractRealDistribution,76=>Find no block
+Sun Jan 14 07:07:57 AEDT 2018 org.apache.commons.math3.distribution.AbstractRealDistribution,77
+Sun Jan 14 07:12:33 AEDT 2018 Sun Jan 14 07:12:33 AEDT 2018 : org.apache.commons.math3.distribution.AbstractRealDistribution,78=>Find no block
+Sun Jan 14 07:12:42 AEDT 2018 org.apache.commons.math3.distribution.NormalDistribution,71
+Sun Jan 14 07:14:46 AEDT 2018 Sun Jan 14 07:14:46 AEDT 2018 : org.apache.commons.math3.distribution.NormalDistribution,72=>Find no block
+Sun Jan 14 07:14:56 AEDT 2018 org.apache.commons.math3.distribution.NormalDistribution,86
+Sun Jan 14 07:16:22 AEDT 2018 Sun Jan 14 07:16:22 AEDT 2018 : org.apache.commons.math3.distribution.NormalDistribution,87=>Find no block
+Sun Jan 14 07:16:29 AEDT 2018 org.apache.commons.math3.distribution.NormalDistribution,104
+Sun Jan 14 07:25:17 AEDT 2018 org.apache.commons.math3.distribution.NormalDistribution,106
+Sun Jan 14 07:25:24 AEDT 2018 org.apache.commons.math3.distribution.NormalDistribution,110
+Sun Jan 14 07:25:32 AEDT 2018 org.apache.commons.math3.distribution.NormalDistribution,111
+Sun Jan 14 07:25:41 AEDT 2018 org.apache.commons.math3.distribution.NormalDistribution,112
+Sun Jan 14 07:25:49 AEDT 2018 Sun Jan 14 07:25:49 AEDT 2018 : org.apache.commons.math3.distribution.NormalDistribution,113=>Find no block
+Sun Jan 14 07:25:57 AEDT 2018 org.apache.commons.math3.distribution.NormalDistribution,135
+Sun Jan 14 07:51:45 AEDT 2018 org.apache.commons.math3.distribution.NormalDistribution,136
+Sun Jan 14 07:51:51 AEDT 2018 org.apache.commons.math3.distribution.NormalDistribution,137
+Sun Jan 14 07:52:01 AEDT 2018 Sun Jan 14 07:52:01 AEDT 2018 : org.apache.commons.math3.random.RandomDataGenerator,131=>Find no block
+Sun Jan 14 07:52:10 AEDT 2018 Sun Jan 14 07:52:10 AEDT 2018 : org.apache.commons.math3.random.RandomDataGenerator,118=>Find no block
+Sun Jan 14 07:52:18 AEDT 2018 Sun Jan 14 07:52:18 AEDT 2018 : org.apache.commons.math3.random.RandomDataGenerator,121=>Find no block
+Sun Jan 14 07:52:26 AEDT 2018 Sun Jan 14 07:52:26 AEDT 2018 : org.apache.commons.math3.random.RandomDataGenerator,132=>Find no block
+Sun Jan 14 07:52:33 AEDT 2018 Sun Jan 14 07:52:33 AEDT 2018 : org.apache.commons.math3.random.RandomDataImpl,114=>Find no block
+Sun Jan 14 07:52:43 AEDT 2018 org.apache.commons.math3.random.RandomDataImpl,115
+Sun Jan 14 07:53:05 AEDT 2018 Sun Jan 14 07:53:05 AEDT 2018 : org.apache.commons.math3.random.RandomDataImpl,116=>Find no block
+Sun Jan 14 07:53:15 AEDT 2018 org.apache.commons.math3.util.FastMath,831
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return log(x,null);
+
+Time : 18/01/14 07:55
+----------------------------------------
+Sun Jan 14 08:01:23 AEDT 2018 org.apache.commons.math3.util.FastMath,850
+Sun Jan 14 10:01:43 AEDT 2018 org.apache.commons.math3.util.FastMath,851
+Sun Jan 14 10:07:15 AEDT 2018 org.apache.commons.math3.util.FastMath,853
+Sun Jan 14 10:07:21 AEDT 2018 org.apache.commons.math3.util.FastMath,861
+Sun Jan 14 10:07:27 AEDT 2018 org.apache.commons.math3.util.FastMath,871
+Sun Jan 14 10:07:35 AEDT 2018 org.apache.commons.math3.util.FastMath,881
+Sun Jan 14 10:22:44 AEDT 2018 org.apache.commons.math3.util.FastMath,883
+Sun Jan 14 10:24:18 AEDT 2018 org.apache.commons.math3.util.FastMath,884
+Sun Jan 14 10:25:57 AEDT 2018 org.apache.commons.math3.util.FastMath,886
+Sun Jan 14 10:26:07 AEDT 2018 org.apache.commons.math3.util.FastMath,888
+Sun Jan 14 10:35:13 AEDT 2018 org.apache.commons.math3.util.FastMath,890
+Sun Jan 14 10:35:22 AEDT 2018 org.apache.commons.math3.util.FastMath,898
+Sun Jan 14 10:40:12 AEDT 2018 org.apache.commons.math3.util.FastMath,899
+Sun Jan 14 10:40:19 AEDT 2018 org.apache.commons.math3.util.FastMath,906
+Sun Jan 14 10:43:02 AEDT 2018 org.apache.commons.math3.util.FastMath,907
+Sun Jan 14 10:43:08 AEDT 2018 org.apache.commons.math3.util.FastMath,908
+Sun Jan 14 11:01:17 AEDT 2018 org.apache.commons.math3.util.FastMath,914
+Sun Jan 14 11:22:33 AEDT 2018 org.apache.commons.math3.util.FastMath,923
+Timeout time : 18/01/14 11:58

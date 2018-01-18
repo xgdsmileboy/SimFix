@@ -1,0 +1,204 @@
+=================================================
+Project : closure_107	start : 18/01/16 00:22
+Current failed test : com.google.javascript.jscomp.CommandLineRunnerTest::testGetMsgWiringNoWarnings | 18/01/16 00:23
+Tue Jan 16 00:23:24 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,259
+Tue Jan 16 00:25:38 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,260
+Tue Jan 16 00:25:39 AEDT 2018 Tue Jan 16 00:25:39 AEDT 2018 : com.google.javascript.jscomp.JsMessageVisitor,276=>Find no block
+Tue Jan 16 00:25:41 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,277
+Tue Jan 16 00:46:07 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,279
+Tue Jan 16 00:46:08 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,406
+Tue Jan 16 00:46:15 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,939
+Tue Jan 16 00:47:51 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,940
+Tue Jan 16 00:47:53 AEDT 2018 Tue Jan 16 00:47:53 AEDT 2018 : com.google.javascript.jscomp.JsMessageVisitor,941=>Find no block
+Tue Jan 16 00:47:53 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,944
+Tue Jan 16 00:48:29 AEDT 2018 com.google.javascript.jscomp.BasicErrorManager,170
+Tue Jan 16 00:49:42 AEDT 2018 com.google.javascript.rhino.JSDocInfo,1211
+Tue Jan 16 00:50:08 AEDT 2018 com.google.javascript.rhino.JSDocInfo,1215
+Tue Jan 16 00:50:57 AEDT 2018 com.google.javascript.rhino.JSDocInfo,1216
+Tue Jan 16 00:50:58 AEDT 2018 Tue Jan 16 00:50:58 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,1217=>Find no block
+Tue Jan 16 00:50:59 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,425
+Tue Jan 16 00:54:37 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,430
+Tue Jan 16 00:54:39 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,433
+Tue Jan 16 00:54:40 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,435
+Tue Jan 16 00:54:42 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,436
+Tue Jan 16 00:54:44 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,437
+Tue Jan 16 00:54:46 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1594
+Tue Jan 16 00:55:58 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,120
+Tue Jan 16 00:56:04 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,178
+Tue Jan 16 00:56:23 AEDT 2018 Tue Jan 16 00:56:23 AEDT 2018 : com.google.javascript.rhino.JSDocInfoBuilder,185=>Find no block
+Tue Jan 16 00:56:25 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,645
+Tue Jan 16 00:56:51 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,646
+Tue Jan 16 00:56:52 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,647
+Tue Jan 16 00:56:53 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,648
+Tue Jan 16 00:56:54 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,249
+Tue Jan 16 01:01:34 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,257
+Tue Jan 16 01:06:27 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,264
+Tue Jan 16 01:15:36 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,266
+Tue Jan 16 01:17:20 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,268
+Tue Jan 16 01:33:49 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,271
+Tue Jan 16 01:41:43 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,272
+Tue Jan 16 01:41:44 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,388
+Tue Jan 16 01:45:11 AEDT 2018 Tue Jan 16 01:45:11 AEDT 2018 : com.google.javascript.jscomp.JsMessageVisitor,389=>Find no block
+Tue Jan 16 01:45:13 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,864
+Tue Jan 16 01:45:28 AEDT 2018 Tue Jan 16 01:45:28 AEDT 2018 : com.google.javascript.jscomp.JsMessage,325=>Find no block
+Tue Jan 16 01:45:29 AEDT 2018 Tue Jan 16 01:45:29 AEDT 2018 : com.google.javascript.jscomp.JsMessage,315=>Find no block
+Tue Jan 16 01:45:30 AEDT 2018 Tue Jan 16 01:45:30 AEDT 2018 : com.google.javascript.jscomp.JsMessage,316=>Find no block
+Tue Jan 16 01:45:31 AEDT 2018 com.google.javascript.jscomp.JsMessage,326
+Tue Jan 16 01:45:38 AEDT 2018 Tue Jan 16 01:45:38 AEDT 2018 : com.google.javascript.jscomp.JsMessage,327=>Find no block
+Tue Jan 16 01:45:39 AEDT 2018 Tue Jan 16 01:45:39 AEDT 2018 : com.google.javascript.jscomp.JsMessage,296=>Find no block
+Tue Jan 16 01:45:41 AEDT 2018 com.google.javascript.jscomp.JsMessage,331
+Tue Jan 16 01:45:59 AEDT 2018 com.google.javascript.jscomp.JsMessage,347
+Tue Jan 16 01:46:07 AEDT 2018 com.google.javascript.jscomp.JsMessage,348
+Tue Jan 16 01:46:08 AEDT 2018 com.google.javascript.jscomp.SourceFile,108
+Tue Jan 16 01:46:13 AEDT 2018 Tue Jan 16 01:46:13 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,1423=>Find no block
+Tue Jan 16 01:46:15 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1424
+Tue Jan 16 01:47:29 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1425
+Tue Jan 16 01:47:31 AEDT 2018 Tue Jan 16 01:47:31 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,1426=>Find no block
+Tue Jan 16 01:47:33 AEDT 2018 Tue Jan 16 01:47:33 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,1419=>Find no block
+Tue Jan 16 01:47:34 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1470
+Tue Jan 16 01:47:38 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1504
+Tue Jan 16 01:51:14 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1509
+Tue Jan 16 01:56:46 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1510
+Tue Jan 16 01:57:49 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1511
+Tue Jan 16 01:59:14 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1514
+Tue Jan 16 02:00:45 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1515
+Tue Jan 16 02:00:57 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1516
+Tue Jan 16 02:00:58 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1519
+Tue Jan 16 02:08:54 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1520
+Tue Jan 16 02:18:49 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1522
+Tue Jan 16 02:33:45 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1523
+Tue Jan 16 02:37:52 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1525
+Tue Jan 16 02:40:11 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1530
+Tue Jan 16 02:40:12 AEDT 2018 Tue Jan 16 02:40:12 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,1533=>Find no block
+Tue Jan 16 02:40:14 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1561
+Tue Jan 16 02:40:35 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1562
+Tue Jan 16 02:41:59 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1564
+Tue Jan 16 03:00:33 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1565
+Tue Jan 16 03:00:34 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1578
+Tue Jan 16 03:07:20 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1584
+Tue Jan 16 03:07:21 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1586
+Tue Jan 16 03:07:23 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1587
+Tue Jan 16 03:07:25 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1590
+Tue Jan 16 03:07:26 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1591
+Tue Jan 16 03:07:28 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1593
+Tue Jan 16 03:07:29 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1598
+Tue Jan 16 03:07:31 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,2517
+Tue Jan 16 03:08:26 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,2518
+Tue Jan 16 03:08:27 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,2519
+Tue Jan 16 03:08:28 AEDT 2018 Tue Jan 16 03:08:28 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,1473=>Find no block
+Tue Jan 16 03:08:29 AEDT 2018 Tue Jan 16 03:08:29 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,1478=>Find no block
+Tue Jan 16 03:08:30 AEDT 2018 Tue Jan 16 03:08:30 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,1481=>Find no block
+Tue Jan 16 03:08:32 AEDT 2018 Tue Jan 16 03:08:32 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,1484=>Find no block
+Tue Jan 16 03:08:33 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocTokenStream,203
+Tue Jan 16 03:10:12 AEDT 2018 Tue Jan 16 03:10:12 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocTokenStream,204=>Find no block
+Tue Jan 16 03:10:14 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocTokenStream,206
+Tue Jan 16 03:10:15 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocTokenStream,213
+Tue Jan 16 03:11:25 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocTokenStream,214
+Tue Jan 16 03:12:33 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocTokenStream,215
+Tue Jan 16 03:13:10 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocTokenStream,216
+Tue Jan 16 03:14:06 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocTokenStream,219
+Tue Jan 16 03:14:19 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocTokenStream,220
+Tue Jan 16 03:14:20 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocTokenStream,326
+Tue Jan 16 03:14:32 AEDT 2018 Tue Jan 16 03:14:32 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocTokenStream,327=>Find no block
+Tue Jan 16 03:14:33 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocTokenStream,330
+Tue Jan 16 03:16:26 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocTokenStream,331
+Tue Jan 16 03:16:27 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocTokenStream,332
+Tue Jan 16 03:16:29 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocTokenStream,393
+Tue Jan 16 03:18:01 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocTokenStream,394
+Tue Jan 16 03:18:03 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocTokenStream,395
+Tue Jan 16 03:18:04 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocTokenStream,398
+Tue Jan 16 03:18:06 AEDT 2018 com.google.javascript.jscomp.NodeTraversal,709
+Tue Jan 16 03:18:34 AEDT 2018 com.google.javascript.jscomp.NodeTraversal,720
+Tue Jan 16 03:19:02 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,205
+Tue Jan 16 03:28:38 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,206
+Tue Jan 16 03:28:39 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,211
+Tue Jan 16 03:38:44 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,212
+Tue Jan 16 03:43:48 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,213
+Tue Jan 16 03:45:37 AEDT 2018 com.google.javascript.jscomp.JSError,140
+Tue Jan 16 03:45:44 AEDT 2018 com.google.javascript.jscomp.PhaseOptimizer,217
+Tue Jan 16 03:45:49 AEDT 2018 com.google.javascript.jscomp.Compiler,769
+Tue Jan 16 03:45:54 AEDT 2018 com.google.javascript.jscomp.Compiler,852
+Tue Jan 16 03:45:55 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,243
+Tue Jan 16 03:46:13 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,245
+Tue Jan 16 03:46:18 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,855
+Tue Jan 16 03:46:38 AEDT 2018 com.google.javascript.jscomp.JSError,190
+Tue Jan 16 03:47:16 AEDT 2018 com.google.javascript.jscomp.AbstractMessageFormatter,74
+Tue Jan 16 03:47:43 AEDT 2018 com.google.javascript.jscomp.LightweightMessageFormatter,60
+Tue Jan 16 03:47:49 AEDT 2018 com.google.javascript.jscomp.BasicErrorManager,47
+Tue Jan 16 03:48:22 AEDT 2018 com.google.javascript.rhino.Node,2390
+Tue Jan 16 03:48:27 AEDT 2018 com.google.javascript.jscomp.NodeTraversal,432
+Tue Jan 16 03:48:41 AEDT 2018 com.google.javascript.jscomp.CompilerOptions,1315
+Tue Jan 16 03:48:52 AEDT 2018 com.google.javascript.jscomp.CompilerOptions,1316
+Tue Jan 16 03:49:07 AEDT 2018 com.google.javascript.jscomp.CompilerOptions,1317
+Tue Jan 16 03:49:17 AEDT 2018 com.google.javascript.jscomp.CompilerOptions,1337
+Tue Jan 16 03:49:28 AEDT 2018 com.google.javascript.jscomp.CompilerOptions,1338
+Tue Jan 16 03:49:44 AEDT 2018 com.google.javascript.jscomp.CompilerOptions,1339
+Tue Jan 16 03:49:53 AEDT 2018 com.google.javascript.jscomp.CompilerOptions,1374
+Tue Jan 16 03:50:05 AEDT 2018 com.google.javascript.jscomp.CompilerOptions,1375
+Tue Jan 16 03:50:22 AEDT 2018 com.google.javascript.jscomp.CompilerOptions,1376
+Tue Jan 16 03:50:31 AEDT 2018 com.google.javascript.jscomp.DefaultPassConfig,275
+Tue Jan 16 03:55:34 AEDT 2018 com.google.javascript.jscomp.DefaultPassConfig,343
+Tue Jan 16 04:00:39 AEDT 2018 com.google.javascript.jscomp.Compiler,2442
+Tue Jan 16 04:00:43 AEDT 2018 Tue Jan 16 04:00:43 AEDT 2018 : com.google.javascript.jscomp.Compiler,2443=>Find no block
+Tue Jan 16 04:00:44 AEDT 2018 Tue Jan 16 04:00:44 AEDT 2018 : com.google.javascript.jscomp.EmptyMessageBundle,27=>Find no block
+Tue Jan 16 04:00:46 AEDT 2018 com.google.javascript.jscomp.EmptyMessageBundle,34
+Tue Jan 16 04:00:53 AEDT 2018 Tue Jan 16 04:00:53 AEDT 2018 : com.google.javascript.jscomp.DefaultPassConfig,1172=>Find no block
+Tue Jan 16 04:00:55 AEDT 2018 Tue Jan 16 04:00:55 AEDT 2018 : com.google.javascript.jscomp.DefaultPassConfig,1174=>Find no block
+Tue Jan 16 04:00:56 AEDT 2018 com.google.javascript.jscomp.CommandLineRunner,861
+Tue Jan 16 04:01:09 AEDT 2018 Tue Jan 16 04:01:09 AEDT 2018 : com.google.javascript.jscomp.JsMessageVisitor,170=>Find no block
+Tue Jan 16 04:01:11 AEDT 2018 Tue Jan 16 04:01:11 AEDT 2018 : com.google.javascript.jscomp.JsMessageVisitor,140=>Find no block
+Tue Jan 16 04:01:12 AEDT 2018 Tue Jan 16 04:01:12 AEDT 2018 : com.google.javascript.jscomp.JsMessageVisitor,143=>Find no block
+Tue Jan 16 04:01:14 AEDT 2018 Tue Jan 16 04:01:14 AEDT 2018 : com.google.javascript.jscomp.JsMessageVisitor,154=>Find no block
+Tue Jan 16 04:01:15 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,172
+Tue Jan 16 04:04:35 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,173
+Tue Jan 16 04:04:36 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,174
+Tue Jan 16 04:04:38 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,175
+Tue Jan 16 04:04:39 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,177
+Tue Jan 16 04:04:41 AEDT 2018 Tue Jan 16 04:04:41 AEDT 2018 : com.google.javascript.jscomp.JsMessageVisitor,183=>Find no block
+Tue Jan 16 04:04:42 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,187
+Tue Jan 16 04:13:59 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,189
+Tue Jan 16 04:19:53 AEDT 2018 Tue Jan 16 04:19:53 AEDT 2018 : com.google.javascript.jscomp.JsMessageVisitor,193=>Find no block
+Tue Jan 16 04:19:54 AEDT 2018 Tue Jan 16 04:19:54 AEDT 2018 : com.google.javascript.jscomp.JsMessageVisitor,201=>Find no block
+Tue Jan 16 04:19:56 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,204
+Tue Jan 16 04:19:57 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,239
+Tue Jan 16 04:20:03 AEDT 2018 Tue Jan 16 04:20:03 AEDT 2018 : com.google.javascript.jscomp.CheckRegExp,59=>Find no block
+Tue Jan 16 04:20:04 AEDT 2018 Tue Jan 16 04:20:04 AEDT 2018 : com.google.javascript.jscomp.CheckRegExp,53=>Find no block
+Tue Jan 16 04:20:05 AEDT 2018 com.google.javascript.jscomp.CheckRegExp,60
+Tue Jan 16 04:21:46 AEDT 2018 Tue Jan 16 04:21:46 AEDT 2018 : com.google.javascript.jscomp.CheckRegExp,61=>Find no block
+Tue Jan 16 04:21:47 AEDT 2018 com.google.javascript.jscomp.CheckRegExp,56
+Tue Jan 16 04:21:52 AEDT 2018 com.google.javascript.jscomp.CheckRegExp,65
+Tue Jan 16 04:24:32 AEDT 2018 Tue Jan 16 04:24:32 AEDT 2018 : com.google.javascript.jscomp.CheckRegExp,66=>Find no block
+Tue Jan 16 04:24:33 AEDT 2018 com.google.javascript.jscomp.CheckRegExp,70
+Tue Jan 16 04:52:57 AEDT 2018 com.google.javascript.jscomp.CheckRegExp,71
+Tue Jan 16 04:57:27 AEDT 2018 com.google.javascript.jscomp.CheckRegExp,72
+Tue Jan 16 04:57:28 AEDT 2018 com.google.javascript.jscomp.CheckRegExp,90
+Tue Jan 16 04:57:30 AEDT 2018 Tue Jan 16 04:57:30 AEDT 2018 : com.google.javascript.jscomp.CheckRegExp,102=>Find no block
+Tue Jan 16 04:57:31 AEDT 2018 Tue Jan 16 04:57:31 AEDT 2018 : com.google.javascript.jscomp.DefaultPassConfig,1174=>Find no block
+Tue Jan 16 04:57:32 AEDT 2018 Tue Jan 16 04:57:32 AEDT 2018 : com.google.javascript.jscomp.DefaultPassConfig,1177=>Find no block
+Tue Jan 16 04:57:33 AEDT 2018 Tue Jan 16 04:57:33 AEDT 2018 : com.google.javascript.jscomp.DefaultPassConfig,1178=>Find no block
+Tue Jan 16 04:57:34 AEDT 2018 Tue Jan 16 04:57:34 AEDT 2018 : com.google.javascript.jscomp.DefaultPassConfig,1180=>Find no block
+Tue Jan 16 04:57:35 AEDT 2018 Tue Jan 16 04:57:35 AEDT 2018 : com.google.javascript.jscomp.DefaultPassConfig,1025=>Find no block
+Tue Jan 16 04:57:36 AEDT 2018 Tue Jan 16 04:57:36 AEDT 2018 : com.google.javascript.jscomp.JsMessage,52=>Find no block
+Tue Jan 16 04:57:38 AEDT 2018 Tue Jan 16 04:57:38 AEDT 2018 : com.google.javascript.jscomp.JsMessage,53=>Find no block
+Tue Jan 16 04:57:39 AEDT 2018 Tue Jan 16 04:57:39 AEDT 2018 : com.google.javascript.jscomp.JsMessage,54=>Find no block
+Tue Jan 16 04:57:41 AEDT 2018 Tue Jan 16 04:57:41 AEDT 2018 : com.google.javascript.jscomp.JsMessage,55=>Find no block
+Tue Jan 16 04:57:42 AEDT 2018 com.google.javascript.jscomp.ReplaceMessages,44
+Tue Jan 16 05:01:33 AEDT 2018 com.google.javascript.jscomp.ReplaceMessages,46
+Tue Jan 16 05:01:34 AEDT 2018 com.google.javascript.jscomp.ReplaceMessages,47
+Tue Jan 16 05:01:35 AEDT 2018 Tue Jan 16 05:01:35 AEDT 2018 : com.google.javascript.jscomp.ReplaceMessages,48=>Find no block
+Tue Jan 16 05:01:36 AEDT 2018 Tue Jan 16 05:01:36 AEDT 2018 : com.google.javascript.jscomp.ReplaceMessages,36=>Find no block
+Tue Jan 16 05:01:37 AEDT 2018 com.google.javascript.jscomp.CompilationLevel,62
+Tue Jan 16 05:02:27 AEDT 2018 com.google.javascript.jscomp.CompilationLevel,63
+Tue Jan 16 05:02:59 AEDT 2018 com.google.javascript.jscomp.CompilationLevel,130
+Tue Jan 16 05:03:34 AEDT 2018 com.google.javascript.jscomp.CompilationLevel,131
+Tue Jan 16 05:03:36 AEDT 2018 com.google.javascript.jscomp.CompilationLevel,132
+Tue Jan 16 05:04:15 AEDT 2018 com.google.javascript.jscomp.CompilationLevel,133
+Tue Jan 16 05:04:48 AEDT 2018 com.google.javascript.jscomp.CompilationLevel,134
+Tue Jan 16 05:05:07 AEDT 2018 com.google.javascript.jscomp.CompilationLevel,135
+Tue Jan 16 05:05:29 AEDT 2018 com.google.javascript.jscomp.CompilationLevel,136
+Tue Jan 16 05:05:44 AEDT 2018 com.google.javascript.jscomp.CompilationLevel,137
+Tue Jan 16 05:06:04 AEDT 2018 com.google.javascript.jscomp.CompilationLevel,138
+Tue Jan 16 05:06:34 AEDT 2018 com.google.javascript.jscomp.CompilationLevel,139
+Tue Jan 16 05:07:01 AEDT 2018 com.google.javascript.jscomp.CompilationLevel,140
+Tue Jan 16 05:07:24 AEDT 2018 com.google.javascript.jscomp.CompilationLevel,141
+Failed time : 18/01/16 05:07

@@ -1,0 +1,84 @@
+=================================================
+Project : time_6	start : 18/01/13 00:11
+Current failed test : org.joda.time.chrono.TestGJDate::test_plusYears_positiveToZero_crossCutover | 18/01/13 00:12
+Sat Jan 13 00:14:40 AEDT 2018 org.joda.time.IllegalFieldValueException,314
+Sat Jan 13 00:14:42 AEDT 2018 org.joda.time.chrono.JulianChronology,80
+Sat Jan 13 00:20:54 AEDT 2018 org.joda.time.chrono.GJChronology,975
+Timeout time : 18/01/13 01:14
+Current failed test : org.joda.time.chrono.TestGJDate::test_plusWeekyears_positiveToZero_crossCutover | 18/01/13 01:14
+Sat Jan 13 01:16:44 AEDT 2018 org.joda.time.IllegalFieldValueException,314
+Sat Jan 13 01:16:45 AEDT 2018 org.joda.time.LocalDate,1965
+Sat Jan 13 01:21:37 AEDT 2018 org.joda.time.LocalDate,1500
+Sat Jan 13 01:30:57 AEDT 2018 org.joda.time.LocalDate,1531
+Sat Jan 13 01:40:23 AEDT 2018 org.joda.time.LocalDate,1663
+Sat Jan 13 01:49:15 AEDT 2018 org.joda.time.LocalDate,1708
+Sat Jan 13 01:58:12 AEDT 2018 org.joda.time.LocalDate,1763
+Sat Jan 13 01:58:14 AEDT 2018 org.joda.time.LocalDate,1894
+Sat Jan 13 02:07:19 AEDT 2018 org.joda.time.LocalDate,1895
+Sat Jan 13 02:07:19 AEDT 2018 org.joda.time.LocalDate,1896
+Sat Jan 13 02:07:20 AEDT 2018 Sat Jan 13 02:07:20 AEDT 2018 : org.joda.time.LocalDate,1897=>Find no block
+Sat Jan 13 02:07:21 AEDT 2018 org.joda.time.field.SkipDateTimeField,90
+Timeout time : 18/01/13 02:17
+Current failed test : org.joda.time.chrono.TestGJDate::test_cutoverPreZero | 18/01/13 02:17
+Sat Jan 13 02:19:07 AEDT 2018 org.joda.time.base.AbstractInstant,137
+Sat Jan 13 02:19:09 AEDT 2018 org.joda.time.chrono.BasicChronology,507
+Sat Jan 13 02:36:28 AEDT 2018 org.joda.time.chrono.BasicChronology,531
+Sat Jan 13 02:44:50 AEDT 2018 org.joda.time.LocalDate,728
+Timeout time : 18/01/13 03:19
+Current failed test : org.joda.time.chrono.TestGJDate::test_plusYears_positiveToNegative_crossCutover | 18/01/13 03:19
+Sat Jan 13 03:21:10 AEDT 2018 org.joda.time.chrono.GJChronology,975
+Timeout time : 18/01/13 04:21
+Current failed test : org.joda.time.chrono.TestGJDate::test_plusWeekyears_positiveToNegative_crossCutover | 18/01/13 04:21
+Sat Jan 13 04:23:18 AEDT 2018 org.joda.time.field.SkipDateTimeField,94
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(value<=iSkip){
+if(value==iSkip){
+throw new IllegalFieldValueException(DateTimeFieldType.year(),Integer.valueOf(value),null,null);
+}
+getMaximumValue();
+}
+
+Time : 18/01/13 04:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.6886549721719895 : [/home/hz985/jiajun/d4j/projects/time/time_6_buggy/src/main/java/org/joda/time/field/SkipDateTimeField.java=>0,0]
+int value=getWrappedField().get(instant);
+if(value==0){
+value=getMaximumValue();
+}
+return value;
+
+Time : 18/01/13 04:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/time/time_6_buggy/src/main/java/org/joda/time/field/SkipDateTimeField.java=>89,95]
+if(value<=iSkip){
+if(value==iSkip){
+throw new IllegalFieldValueException(DateTimeFieldType.year(),Integer.valueOf(value),null,null);
+}
+value++;
+}
+
+Time : 18/01/13 04:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/time/time_6_buggy/src/main/java/org/joda/time/field/SkipDateTimeField.java=>89,95]
+if(value<=iSkip){
+if(value==iSkip){
+throw new IllegalFieldValueException(DateTimeFieldType.year(),Integer.valueOf(value),null,null);
+}
+getMaximumValue();
+}
+
+Time : 18/01/13 04:39
+----------------------------------------
+Success time : 18/01/13 04:39

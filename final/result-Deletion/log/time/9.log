@@ -1,0 +1,241 @@
+=================================================
+Project : time_9	start : 18/01/16 20:22
+Current failed test : org.joda.time.TestDateTimeZone::testForOffsetHoursMinutes_int_int_purify_11 | 18/01/16 20:24
+Tue Jan 16 20:24:59 EST 2018 org.joda.time.DateTimeZone,267
+Tue Jan 16 20:26:25 EST 2018 org.joda.time.DateTimeZone,364
+Tue Jan 16 20:32:19 EST 2018 org.joda.time.DateTimeZone,365
+Tue Jan 16 20:37:06 EST 2018 org.joda.time.DateTimeZone,366
+Tue Jan 16 20:37:06 EST 2018 org.joda.time.DateTimeZone,261
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(minutesOffset<0||minutesOffset>=0){
+throw new IllegalArgumentException("Minutes out of range: "+minutesOffset);
+}
+int offset=0;
+
+Time : 18/01/16 20:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((serialVersionUID^serialVersionUID)<0||minutesOffset>=0){
+throw new IllegalArgumentException("Minutes out of range: "+minutesOffset);
+}
+int offset=0;
+
+Time : 18/01/16 20:42
+----------------------------------------
+Tue Jan 16 20:54:18 EST 2018 org.joda.time.DateTimeZone,263
+Tue Jan 16 20:56:00 EST 2018 org.joda.time.DateTimeZone,264
+Tue Jan 16 20:56:00 EST 2018 org.joda.time.DateTimeZone,269
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hoursInMinutes<0){
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,-minutesOffset);
+}else {
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,minutesOffset);
+}
+if(offset==0){
+throw new IllegalArgumentException("The offset cannot be zero");
+}
+offset=FieldUtils.safeMultiply(minutesOffset,DateTimeConstants.MILLIS_PER_MINUTE);
+
+Time : 18/01/16 20:57
+----------------------------------------
+Tue Jan 16 20:58:41 EST 2018 Tue Jan 16 20:58:41 EST 2018 : org.joda.time.DateTimeZone,272=>Find no block
+Tue Jan 16 20:58:41 EST 2018 org.joda.time.DateTimeZone,273
+Tue Jan 16 20:58:42 EST 2018 org.joda.time.DateTimeZone,258
+Tue Jan 16 20:59:24 EST 2018 org.joda.time.DateTimeZone,255
+Tue Jan 16 20:59:25 EST 2018 org.joda.time.DateTimeZone,283
+Tue Jan 16 20:59:41 EST 2018 org.joda.time.DateTimeZone,284
+Tue Jan 16 20:59:41 EST 2018 org.joda.time.DateTimeZone,634
+Tue Jan 16 21:23:27 EST 2018 org.joda.time.DateTimeZone,350
+Tue Jan 16 21:25:18 EST 2018 org.joda.time.DateTimeZone,353
+Tue Jan 16 21:25:18 EST 2018 org.joda.time.DateTimeZone,357
+Tue Jan 16 21:30:44 EST 2018 org.joda.time.DateTimeZone,358
+Tue Jan 16 21:30:44 EST 2018 org.joda.time.DateTimeZone,632
+Tue Jan 16 21:51:07 EST 2018 org.joda.time.DateTimeZone,633
+Tue Jan 16 21:51:07 EST 2018 org.joda.time.DateTimeZone,640
+Tue Jan 16 22:08:10 EST 2018 org.joda.time.DateTimeZone,641
+Tue Jan 16 22:16:50 EST 2018 org.joda.time.DateTimeZone,642
+Tue Jan 16 22:28:11 EST 2018 org.joda.time.DateTimeZone,644
+Tue Jan 16 22:40:51 EST 2018 org.joda.time.DateTimeZone,645
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int minutes=offset/DateTimeConstants.MILLIS_PER_MINUTE;
+if(offset==0){
+throw new IllegalArgumentException("The offset cannot be zero");
+}
+buf.append(':');
+FormatUtils.appendPaddedInteger(buf,minutes,2);
+
+Time : 18/01/16 22:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int minutes=offset/DateTimeConstants.MILLIS_PER_MINUTE;
+if(offset==0){
+throw new IllegalArgumentException("The offset cannot be zero");
+}
+minutes=offset;
+buf.append(':');
+FormatUtils.appendPaddedInteger(buf,minutes,2);
+
+Time : 18/01/16 22:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int minutes=offset/DateTimeConstants.MILLIS_PER_MINUTE;
+if(offset==0){
+throw new IllegalArgumentException("The offset cannot be zero");
+}
+buf.append(':');
+
+Time : 18/01/16 22:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int minutes=offset/DateTimeConstants.MILLIS_PER_MINUTE;
+if(offset==0){
+throw new IllegalArgumentException("The offset cannot be zero");
+}
+minutes=offset;
+buf.append(':');
+
+Time : 18/01/16 22:49
+----------------------------------------
+Tue Jan 16 22:50:34 EST 2018 org.joda.time.DateTimeZone,646
+Timeout time : 18/01/16 22:55
+Current failed test : org.joda.time.TestDateTimeZone::testForOffsetHoursMinutes_int_int_purify_12 | 18/01/16 22:55
+Tue Jan 16 22:56:08 EST 2018 org.joda.time.DateTimeZone,265
+Tue Jan 16 22:57:34 EST 2018 org.joda.time.DateTimeZone,636
+Tue Jan 16 23:21:35 EST 2018 org.joda.time.DateTimeZone,637
+Tue Jan 16 23:21:35 EST 2018 org.joda.time.DateTimeZone,364
+Tue Jan 16 23:27:35 EST 2018 org.joda.time.DateTimeZone,365
+Tue Jan 16 23:32:22 EST 2018 org.joda.time.DateTimeZone,366
+Tue Jan 16 23:32:22 EST 2018 org.joda.time.DateTimeZone,261
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(minutesOffset<0||minutesOffset>=0){
+throw new IllegalArgumentException("Minutes out of range: "+minutesOffset);
+}
+int offset=0;
+
+Time : 18/01/16 23:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((serialVersionUID^serialVersionUID)<0||minutesOffset>=0){
+throw new IllegalArgumentException("Minutes out of range: "+minutesOffset);
+}
+int offset=0;
+
+Time : 18/01/16 23:38
+----------------------------------------
+Tue Jan 16 23:49:47 EST 2018 org.joda.time.DateTimeZone,263
+Tue Jan 16 23:51:30 EST 2018 org.joda.time.DateTimeZone,264
+Tue Jan 16 23:51:30 EST 2018 org.joda.time.DateTimeZone,269
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hoursInMinutes<0){
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,-minutesOffset);
+}else {
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,minutesOffset);
+}
+if(offset==0){
+throw new IllegalArgumentException("The offset cannot be zero");
+}
+offset=FieldUtils.safeMultiply(minutesOffset,DateTimeConstants.MILLIS_PER_MINUTE);
+
+Time : 18/01/16 23:53
+----------------------------------------
+Tue Jan 16 23:54:12 EST 2018 Tue Jan 16 23:54:12 EST 2018 : org.joda.time.DateTimeZone,272=>Find no block
+Tue Jan 16 23:54:12 EST 2018 org.joda.time.DateTimeZone,273
+Tue Jan 16 23:54:13 EST 2018 org.joda.time.DateTimeZone,258
+Tue Jan 16 23:54:56 EST 2018 org.joda.time.DateTimeZone,255
+Tue Jan 16 23:54:57 EST 2018 org.joda.time.DateTimeZone,283
+Tue Jan 16 23:55:13 EST 2018 org.joda.time.DateTimeZone,284
+Tue Jan 16 23:55:13 EST 2018 org.joda.time.DateTimeZone,350
+Tue Jan 16 23:57:05 EST 2018 org.joda.time.DateTimeZone,353
+Tue Jan 16 23:57:06 EST 2018 org.joda.time.DateTimeZone,357
+Wed Jan 17 00:02:33 EST 2018 org.joda.time.DateTimeZone,358
+Wed Jan 17 00:02:33 EST 2018 org.joda.time.DateTimeZone,632
+Wed Jan 17 00:22:58 EST 2018 org.joda.time.DateTimeZone,633
+Wed Jan 17 00:22:59 EST 2018 org.joda.time.DateTimeZone,640
+Wed Jan 17 00:40:00 EST 2018 org.joda.time.DateTimeZone,641
+Wed Jan 17 00:48:37 EST 2018 org.joda.time.DateTimeZone,642
+Wed Jan 17 00:59:57 EST 2018 org.joda.time.DateTimeZone,644
+Wed Jan 17 01:12:39 EST 2018 org.joda.time.DateTimeZone,645
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int minutes=offset/DateTimeConstants.MILLIS_PER_MINUTE;
+if(offset==0){
+throw new IllegalArgumentException("The offset cannot be zero");
+}
+buf.append(':');
+FormatUtils.appendPaddedInteger(buf,minutes,2);
+
+Time : 18/01/17 01:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int minutes=offset/DateTimeConstants.MILLIS_PER_MINUTE;
+if(offset==0){
+throw new IllegalArgumentException("The offset cannot be zero");
+}
+minutes=offset;
+buf.append(':');
+FormatUtils.appendPaddedInteger(buf,minutes,2);
+
+Time : 18/01/17 01:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int minutes=offset/DateTimeConstants.MILLIS_PER_MINUTE;
+if(offset==0){
+throw new IllegalArgumentException("The offset cannot be zero");
+}
+buf.append(':');
+
+Time : 18/01/17 01:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int minutes=offset/DateTimeConstants.MILLIS_PER_MINUTE;
+if(offset==0){
+throw new IllegalArgumentException("The offset cannot be zero");
+}
+minutes=offset;
+buf.append(':');
+
+Time : 18/01/17 01:21
+----------------------------------------
+Wed Jan 17 01:22:21 EST 2018 org.joda.time.DateTimeZone,646
+Timeout time : 18/01/17 01:26

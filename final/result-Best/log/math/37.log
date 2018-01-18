@@ -1,0 +1,170 @@
+=================================================
+Project : math_37	start : 18/01/15 11:55
+Current failed test : org.apache.commons.math.complex.ComplexTest::testTanh_purify_2 | 18/01/15 11:56
+Mon Jan 15 11:56:22 EST 2018 org.apache.commons.math.complex.Complex,1066
+Mon Jan 15 11:58:39 EST 2018 org.apache.commons.math.complex.Complex,1067
+Mon Jan 15 11:58:40 EST 2018 org.apache.commons.math.complex.Complex,1068
+Mon Jan 15 11:58:40 EST 2018 org.apache.commons.math.complex.Complex,1070
+Mon Jan 15 11:58:40 EST 2018 org.apache.commons.math.util.FastMath,393
+Mon Jan 15 12:00:47 EST 2018 org.apache.commons.math.util.FastMath,453
+Mon Jan 15 12:00:47 EST 2018 org.apache.commons.math.complex.Complex,1063
+Mon Jan 15 12:00:47 EST 2018 org.apache.commons.math.util.FastMath,867
+Mon Jan 15 12:01:12 EST 2018 org.apache.commons.math.util.FastMath,871
+Mon Jan 15 12:01:31 EST 2018 org.apache.commons.math.util.FastMath,807
+Mon Jan 15 12:01:53 EST 2018 org.apache.commons.math.util.FastMath,383
+Mon Jan 15 12:05:34 EST 2018 org.apache.commons.math.util.FastMath,392
+Mon Jan 15 12:05:34 EST 2018 org.apache.commons.math.util.FastMath,442
+Mon Jan 15 12:10:05 EST 2018 org.apache.commons.math.util.FastMath,443
+Mon Jan 15 12:10:06 EST 2018 org.apache.commons.math.util.FastMath,452
+Mon Jan 15 12:10:06 EST 2018 org.apache.commons.math.util.FastMath,2306
+Mon Jan 15 12:10:45 EST 2018 org.apache.commons.math.util.FastMath,826
+Timeout time : 18/01/15 12:33
+Current failed test : org.apache.commons.math.complex.ComplexTest::testTanh_purify_3 | 18/01/15 12:33
+Mon Jan 15 12:33:45 EST 2018 org.apache.commons.math.complex.Complex,1066
+Mon Jan 15 12:36:03 EST 2018 org.apache.commons.math.complex.Complex,1067
+Mon Jan 15 12:36:03 EST 2018 org.apache.commons.math.complex.Complex,1068
+Mon Jan 15 12:36:03 EST 2018 org.apache.commons.math.complex.Complex,1070
+Mon Jan 15 12:36:03 EST 2018 org.apache.commons.math.util.FastMath,393
+Mon Jan 15 12:38:11 EST 2018 org.apache.commons.math.util.FastMath,397
+Mon Jan 15 12:39:48 EST 2018 org.apache.commons.math.util.FastMath,453
+Mon Jan 15 12:39:48 EST 2018 org.apache.commons.math.util.FastMath,457
+Mon Jan 15 12:41:06 EST 2018 org.apache.commons.math.complex.Complex,1063
+Mon Jan 15 12:41:06 EST 2018 org.apache.commons.math.util.FastMath,867
+Mon Jan 15 12:41:30 EST 2018 org.apache.commons.math.util.FastMath,871
+Mon Jan 15 12:41:49 EST 2018 org.apache.commons.math.util.FastMath,396
+Mon Jan 15 12:41:49 EST 2018 org.apache.commons.math.util.FastMath,456
+Mon Jan 15 12:41:49 EST 2018 org.apache.commons.math.util.FastMath,807
+Mon Jan 15 12:42:12 EST 2018 org.apache.commons.math.util.FastMath,383
+Mon Jan 15 12:45:52 EST 2018 org.apache.commons.math.util.FastMath,392
+Mon Jan 15 12:45:52 EST 2018 org.apache.commons.math.util.FastMath,442
+Mon Jan 15 12:50:24 EST 2018 org.apache.commons.math.util.FastMath,443
+Mon Jan 15 12:50:24 EST 2018 org.apache.commons.math.util.FastMath,452
+Mon Jan 15 12:50:24 EST 2018 org.apache.commons.math.util.FastMath,2306
+Mon Jan 15 12:51:03 EST 2018 org.apache.commons.math.util.FastMath,826
+Timeout time : 18/01/15 13:10
+Current failed test : org.apache.commons.math.complex.ComplexTest::testTanhInf_purify_3 | 18/01/15 13:10
+Mon Jan 15 13:11:08 EST 2018 org.apache.commons.math.complex.Complex,1178
+Mon Jan 15 13:12:18 EST 2018 org.apache.commons.math.complex.Complex,1182
+Mon Jan 15 13:13:18 EST 2018 org.apache.commons.math.complex.Complex,1066
+Mon Jan 15 13:15:36 EST 2018 org.apache.commons.math.complex.Complex,1067
+Mon Jan 15 13:15:36 EST 2018 org.apache.commons.math.complex.Complex,1068
+Mon Jan 15 13:15:36 EST 2018 org.apache.commons.math.complex.Complex,1070
+Mon Jan 15 13:15:36 EST 2018 org.apache.commons.math.util.FastMath,393
+Mon Jan 15 13:17:43 EST 2018 org.apache.commons.math.util.FastMath,453
+Mon Jan 15 13:17:43 EST 2018 org.apache.commons.math.complex.Complex,1063
+Mon Jan 15 13:17:43 EST 2018 org.apache.commons.math.util.FastMath,867
+Mon Jan 15 13:18:07 EST 2018 org.apache.commons.math.util.FastMath,871
+Mon Jan 15 13:18:26 EST 2018 org.apache.commons.math.util.FastMath,807
+Mon Jan 15 13:18:48 EST 2018 org.apache.commons.math.util.FastMath,383
+Mon Jan 15 13:22:29 EST 2018 org.apache.commons.math.util.FastMath,392
+Mon Jan 15 13:22:29 EST 2018 org.apache.commons.math.util.FastMath,442
+Mon Jan 15 13:26:59 EST 2018 org.apache.commons.math.util.FastMath,443
+Mon Jan 15 13:26:59 EST 2018 org.apache.commons.math.util.FastMath,452
+Mon Jan 15 13:27:00 EST 2018 org.apache.commons.math.util.FastMath,826
+Timeout time : 18/01/15 13:48
+Current failed test : org.apache.commons.math.complex.ComplexTest::testTanhInf_purify_4 | 18/01/15 13:48
+Mon Jan 15 13:48:31 EST 2018 org.apache.commons.math.complex.Complex,1178
+Mon Jan 15 13:49:43 EST 2018 org.apache.commons.math.complex.Complex,1182
+Mon Jan 15 13:50:43 EST 2018 org.apache.commons.math.complex.Complex,1066
+Mon Jan 15 13:53:01 EST 2018 org.apache.commons.math.complex.Complex,1067
+Mon Jan 15 13:53:01 EST 2018 org.apache.commons.math.complex.Complex,1068
+Mon Jan 15 13:53:01 EST 2018 org.apache.commons.math.complex.Complex,1070
+Mon Jan 15 13:53:01 EST 2018 org.apache.commons.math.util.FastMath,397
+Mon Jan 15 13:54:39 EST 2018 org.apache.commons.math.util.FastMath,457
+Mon Jan 15 13:55:56 EST 2018 org.apache.commons.math.complex.Complex,1063
+Mon Jan 15 13:55:56 EST 2018 org.apache.commons.math.util.FastMath,867
+Mon Jan 15 13:56:21 EST 2018 org.apache.commons.math.util.FastMath,871
+Mon Jan 15 13:56:39 EST 2018 org.apache.commons.math.util.FastMath,396
+Mon Jan 15 13:56:39 EST 2018 org.apache.commons.math.util.FastMath,456
+Mon Jan 15 13:56:40 EST 2018 org.apache.commons.math.util.FastMath,807
+Mon Jan 15 13:57:01 EST 2018 org.apache.commons.math.util.FastMath,383
+Mon Jan 15 14:00:42 EST 2018 org.apache.commons.math.util.FastMath,392
+Mon Jan 15 14:02:48 EST 2018 org.apache.commons.math.util.FastMath,442
+Mon Jan 15 14:07:19 EST 2018 org.apache.commons.math.util.FastMath,443
+Mon Jan 15 14:07:20 EST 2018 org.apache.commons.math.util.FastMath,452
+Mon Jan 15 14:07:20 EST 2018 org.apache.commons.math.util.FastMath,826
+Timeout time : 18/01/15 14:25
+Current failed test : org.apache.commons.math.complex.ComplexTest::testTan_purify_2 | 18/01/15 14:25
+Mon Jan 15 14:25:53 EST 2018 org.apache.commons.math.complex.Complex,1022
+Mon Jan 15 14:28:10 EST 2018 org.apache.commons.math.complex.Complex,1023
+Mon Jan 15 14:28:10 EST 2018 org.apache.commons.math.complex.Complex,1024
+Mon Jan 15 14:28:10 EST 2018 org.apache.commons.math.complex.Complex,1026
+Mon Jan 15 14:28:10 EST 2018 org.apache.commons.math.util.FastMath,393
+Mon Jan 15 14:30:18 EST 2018 org.apache.commons.math.util.FastMath,453
+Mon Jan 15 14:30:18 EST 2018 org.apache.commons.math.complex.Complex,1018
+Mon Jan 15 14:30:18 EST 2018 org.apache.commons.math.util.FastMath,867
+Mon Jan 15 14:30:43 EST 2018 org.apache.commons.math.util.FastMath,871
+Mon Jan 15 14:31:02 EST 2018 org.apache.commons.math.util.FastMath,807
+Mon Jan 15 14:31:25 EST 2018 org.apache.commons.math.util.FastMath,383
+Mon Jan 15 14:35:05 EST 2018 org.apache.commons.math.util.FastMath,392
+Mon Jan 15 14:35:05 EST 2018 org.apache.commons.math.util.FastMath,442
+Mon Jan 15 14:39:36 EST 2018 org.apache.commons.math.util.FastMath,443
+Mon Jan 15 14:39:36 EST 2018 org.apache.commons.math.util.FastMath,452
+Mon Jan 15 14:39:36 EST 2018 org.apache.commons.math.util.FastMath,2306
+Mon Jan 15 14:40:15 EST 2018 org.apache.commons.math.util.FastMath,826
+Timeout time : 18/01/15 15:02
+Current failed test : org.apache.commons.math.complex.ComplexTest::testTan_purify_3 | 18/01/15 15:02
+Mon Jan 15 15:03:16 EST 2018 org.apache.commons.math.complex.Complex,1022
+Mon Jan 15 15:05:34 EST 2018 org.apache.commons.math.complex.Complex,1023
+Mon Jan 15 15:05:34 EST 2018 org.apache.commons.math.complex.Complex,1024
+Mon Jan 15 15:05:34 EST 2018 org.apache.commons.math.complex.Complex,1026
+Mon Jan 15 15:05:34 EST 2018 org.apache.commons.math.util.FastMath,393
+Mon Jan 15 15:07:41 EST 2018 org.apache.commons.math.util.FastMath,397
+Mon Jan 15 15:09:18 EST 2018 org.apache.commons.math.util.FastMath,453
+Mon Jan 15 15:09:18 EST 2018 org.apache.commons.math.util.FastMath,457
+Mon Jan 15 15:10:36 EST 2018 org.apache.commons.math.complex.Complex,1018
+Mon Jan 15 15:10:36 EST 2018 org.apache.commons.math.util.FastMath,867
+Mon Jan 15 15:11:00 EST 2018 org.apache.commons.math.util.FastMath,871
+Mon Jan 15 15:11:19 EST 2018 org.apache.commons.math.util.FastMath,396
+Mon Jan 15 15:11:19 EST 2018 org.apache.commons.math.util.FastMath,456
+Mon Jan 15 15:11:20 EST 2018 org.apache.commons.math.util.FastMath,807
+Mon Jan 15 15:11:42 EST 2018 org.apache.commons.math.util.FastMath,383
+Mon Jan 15 15:15:23 EST 2018 org.apache.commons.math.util.FastMath,392
+Mon Jan 15 15:15:23 EST 2018 org.apache.commons.math.util.FastMath,442
+Mon Jan 15 15:19:56 EST 2018 org.apache.commons.math.util.FastMath,443
+Mon Jan 15 15:19:56 EST 2018 org.apache.commons.math.util.FastMath,452
+Mon Jan 15 15:19:56 EST 2018 org.apache.commons.math.util.FastMath,2306
+Mon Jan 15 15:20:35 EST 2018 org.apache.commons.math.util.FastMath,826
+Timeout time : 18/01/15 15:40
+Current failed test : org.apache.commons.math.complex.ComplexTest::testTanInf_purify_1 | 18/01/15 15:40
+Mon Jan 15 15:40:39 EST 2018 org.apache.commons.math.complex.Complex,1178
+Mon Jan 15 15:41:49 EST 2018 org.apache.commons.math.complex.Complex,1182
+Mon Jan 15 15:42:49 EST 2018 org.apache.commons.math.complex.Complex,1022
+Mon Jan 15 15:45:06 EST 2018 org.apache.commons.math.complex.Complex,1023
+Mon Jan 15 15:45:06 EST 2018 org.apache.commons.math.complex.Complex,1024
+Mon Jan 15 15:45:06 EST 2018 org.apache.commons.math.complex.Complex,1026
+Mon Jan 15 15:45:07 EST 2018 org.apache.commons.math.util.FastMath,393
+Mon Jan 15 15:47:13 EST 2018 org.apache.commons.math.util.FastMath,453
+Mon Jan 15 15:47:14 EST 2018 org.apache.commons.math.complex.Complex,1018
+Mon Jan 15 15:47:14 EST 2018 org.apache.commons.math.util.FastMath,867
+Mon Jan 15 15:47:37 EST 2018 org.apache.commons.math.util.FastMath,871
+Mon Jan 15 15:47:57 EST 2018 org.apache.commons.math.util.FastMath,807
+Mon Jan 15 15:48:19 EST 2018 org.apache.commons.math.util.FastMath,383
+Mon Jan 15 15:51:59 EST 2018 org.apache.commons.math.util.FastMath,392
+Mon Jan 15 15:51:59 EST 2018 org.apache.commons.math.util.FastMath,442
+Mon Jan 15 15:56:30 EST 2018 org.apache.commons.math.util.FastMath,443
+Mon Jan 15 15:56:30 EST 2018 org.apache.commons.math.util.FastMath,452
+Mon Jan 15 15:56:30 EST 2018 org.apache.commons.math.util.FastMath,826
+Timeout time : 18/01/15 16:17
+Current failed test : org.apache.commons.math.complex.ComplexTest::testTanInf_purify_2 | 18/01/15 16:17
+Mon Jan 15 16:18:02 EST 2018 org.apache.commons.math.complex.Complex,1178
+Mon Jan 15 16:19:11 EST 2018 org.apache.commons.math.complex.Complex,1182
+Mon Jan 15 16:20:11 EST 2018 org.apache.commons.math.complex.Complex,1022
+Mon Jan 15 16:22:29 EST 2018 org.apache.commons.math.complex.Complex,1023
+Mon Jan 15 16:22:29 EST 2018 org.apache.commons.math.complex.Complex,1024
+Mon Jan 15 16:22:29 EST 2018 org.apache.commons.math.complex.Complex,1026
+Mon Jan 15 16:22:29 EST 2018 org.apache.commons.math.util.FastMath,397
+Mon Jan 15 16:24:07 EST 2018 org.apache.commons.math.util.FastMath,457
+Mon Jan 15 16:25:24 EST 2018 org.apache.commons.math.complex.Complex,1018
+Mon Jan 15 16:25:24 EST 2018 org.apache.commons.math.util.FastMath,867
+Mon Jan 15 16:25:50 EST 2018 org.apache.commons.math.util.FastMath,871
+Mon Jan 15 16:26:09 EST 2018 org.apache.commons.math.util.FastMath,396
+Mon Jan 15 16:26:09 EST 2018 org.apache.commons.math.util.FastMath,456
+Mon Jan 15 16:26:09 EST 2018 org.apache.commons.math.util.FastMath,807
+Mon Jan 15 16:26:31 EST 2018 org.apache.commons.math.util.FastMath,383
+Mon Jan 15 16:30:12 EST 2018 org.apache.commons.math.util.FastMath,392
+Mon Jan 15 16:32:19 EST 2018 org.apache.commons.math.util.FastMath,442
+Mon Jan 15 16:36:51 EST 2018 org.apache.commons.math.util.FastMath,443
+Mon Jan 15 16:36:51 EST 2018 org.apache.commons.math.util.FastMath,452
+Mon Jan 15 16:36:51 EST 2018 org.apache.commons.math.util.FastMath,826
+Timeout time : 18/01/15 16:55

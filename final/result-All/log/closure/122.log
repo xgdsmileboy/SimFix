@@ -1,0 +1,112 @@
+=================================================
+Project : closure_122	start : 18/01/12 19:05
+Current failed test : com.google.javascript.jscomp.parsing.ParserTest::testSuspiciousBlockCommentWarning3 | 18/01/12 19:06
+Fri Jan 12 19:23:01 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,201
+Fri Jan 12 19:26:00 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,252
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(comment.getValue().indexOf("/* @")==-1||comment.getValue().indexOf("\n * @")!=-1){
+errorReporter.warning(SUSPICIOUS_COMMENT_WARNING,sourceName,comment.getLineno(),"",0);
+}
+
+Time : 18/01/12 19:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!rootNodeJsDocHolder.isReturn()){
+errorReporter.warning(SUSPICIOUS_COMMENT_WARNING,sourceName,comment.getLineno(),"",0);
+}
+
+Time : 18/01/12 19:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sourceName!=null||comment.getValue().indexOf("\n * @")!=-1){
+errorReporter.warning(SUSPICIOUS_COMMENT_WARNING,sourceName,comment.getLineno(),"",0);
+}
+
+Time : 18/01/12 19:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(comment.getValue().indexOf("/* @")!=1||comment.getValue().indexOf("\n * @")!=-1){
+errorReporter.warning(SUSPICIOUS_COMMENT_WARNING,sourceName,comment.getLineno(),"",0);
+}
+
+Time : 18/01/12 19:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!rootNodeJsDocHolder.isName()){
+errorReporter.warning(SUSPICIOUS_COMMENT_WARNING,sourceName,comment.getLineno(),"",0);
+}
+
+Time : 18/01/12 19:52
+----------------------------------------
+Fri Jan 12 20:05:10 AEDT 2018 Fri Jan 12 20:05:10 AEDT 2018 : com.google.javascript.jscomp.parsing.IRFactory,258=>Find no block
+Fri Jan 12 20:05:13 AEDT 2018 Fri Jan 12 20:05:13 AEDT 2018 : com.google.javascript.rhino.jstype.SimpleSourceFile,50=>Find no block
+Fri Jan 12 20:05:14 AEDT 2018 com.google.javascript.rhino.jstype.SimpleSourceFile,51
+Fri Jan 12 20:21:09 AEDT 2018 com.google.javascript.rhino.jstype.SimpleSourceFile,52
+Fri Jan 12 20:21:10 AEDT 2018 Fri Jan 12 20:21:10 AEDT 2018 : com.google.javascript.rhino.jstype.SimpleSourceFile,53=>Find no block
+Fri Jan 12 20:21:11 AEDT 2018 com.google.javascript.rhino.jstype.SimpleSourceFile,57
+Fri Jan 12 20:26:57 AEDT 2018 com.google.javascript.jscomp.parsing.ParserRunner,54
+Fri Jan 12 20:28:22 AEDT 2018 com.google.javascript.rhino.jstype.JSTypeRegistry,217
+Fri Jan 12 20:28:27 AEDT 2018 Fri Jan 12 20:28:27 AEDT 2018 : com.google.javascript.rhino.jstype.JSTypeRegistry,218=>Find no block
+Fri Jan 12 20:28:28 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,510
+Fri Jan 12 20:50:19 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,935
+Fri Jan 12 20:51:07 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,163
+Fri Jan 12 20:52:00 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,164
+Fri Jan 12 20:52:39 AEDT 2018 com.google.javascript.rhino.TokenStream,187
+Fri Jan 12 20:54:03 AEDT 2018 com.google.javascript.rhino.TokenStream,58
+Fri Jan 12 20:54:09 AEDT 2018 com.google.javascript.rhino.TokenStream,59
+Fri Jan 12 20:54:10 AEDT 2018 com.google.javascript.rhino.TokenStream,61
+Fri Jan 12 20:54:17 AEDT 2018 com.google.javascript.rhino.TokenStream,63
+Fri Jan 12 20:54:21 AEDT 2018 com.google.javascript.rhino.TokenStream,185
+Fri Jan 12 21:22:54 AEDT 2018 com.google.javascript.rhino.jstype.ObjectType,490
+Fri Jan 12 21:22:59 AEDT 2018 com.google.javascript.rhino.jstype.PropertyMap,152
+Fri Jan 12 21:43:03 AEDT 2018 com.google.javascript.rhino.jstype.PropertyMap,153
+Fri Jan 12 21:43:04 AEDT 2018 com.google.javascript.rhino.jstype.PropertyMap,156
+Fri Jan 12 21:43:05 AEDT 2018 com.google.javascript.rhino.jstype.PropertyMap,157
+Fri Jan 12 21:43:07 AEDT 2018 com.google.javascript.rhino.jstype.PropertyMap,158
+Fri Jan 12 21:43:08 AEDT 2018 com.google.javascript.rhino.jstype.PropertyMap,174
+Fri Jan 12 22:01:19 AEDT 2018 com.google.javascript.rhino.jstype.PropertyMap,175
+Fri Jan 12 22:01:20 AEDT 2018 Fri Jan 12 22:01:20 AEDT 2018 : com.google.javascript.rhino.jstype.PropertyMap,176=>Find no block
+Fri Jan 12 22:01:21 AEDT 2018 com.google.javascript.rhino.jstype.PropertyMap,177
+Fri Jan 12 22:31:01 AEDT 2018 com.google.javascript.rhino.jstype.PropertyMap,178
+Fri Jan 12 22:31:02 AEDT 2018 com.google.javascript.rhino.jstype.PropertyMap,179
+Fri Jan 12 22:31:03 AEDT 2018 com.google.javascript.rhino.jstype.PropertyMap,181
+Fri Jan 12 22:31:05 AEDT 2018 Fri Jan 12 22:31:05 AEDT 2018 : com.google.javascript.rhino.jstype.PropertyMap,186=>Find no block
+Fri Jan 12 22:31:05 AEDT 2018 com.google.javascript.rhino.jstype.PropertyMap,114
+Fri Jan 12 22:57:14 AEDT 2018 com.google.javascript.rhino.jstype.PropertyMap,118
+Fri Jan 12 22:57:15 AEDT 2018 com.google.javascript.rhino.jstype.PropertyMap,119
+Fri Jan 12 22:57:16 AEDT 2018 com.google.javascript.rhino.jstype.PropertyMap,102
+Fri Jan 12 23:06:26 AEDT 2018 com.google.javascript.rhino.jstype.PropertyMap,103
+Fri Jan 12 23:06:28 AEDT 2018 com.google.javascript.rhino.jstype.PropertyMap,111
+Fri Jan 12 23:06:29 AEDT 2018 com.google.javascript.rhino.jstype.PropertyMap,99
+Fri Jan 12 23:06:34 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,250
+Fri Jan 12 23:25:37 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1523
+Fri Jan 12 23:28:24 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,956
+Fri Jan 12 23:28:29 AEDT 2018 com.google.javascript.rhino.Node,1135
+Fri Jan 12 23:31:43 AEDT 2018 Fri Jan 12 23:31:43 AEDT 2018 : com.google.javascript.rhino.Node,1136=>Find no block
+Fri Jan 12 23:31:44 AEDT 2018 com.google.javascript.rhino.IR,455
+Fri Jan 12 23:32:20 AEDT 2018 com.google.javascript.rhino.Node,502
+Fri Jan 12 23:32:25 AEDT 2018 com.google.javascript.rhino.Node,151
+Fri Jan 12 23:32:43 AEDT 2018 com.google.javascript.rhino.Node,152
+Fri Jan 12 23:32:44 AEDT 2018 Fri Jan 12 23:32:44 AEDT 2018 : com.google.javascript.rhino.Node,153=>Find no block
+Fri Jan 12 23:32:45 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,520
+Fri Jan 12 23:35:12 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,200
+Fri Jan 12 23:35:14 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,196
+Fri Jan 12 23:51:54 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,197
+Fri Jan 12 23:51:56 AEDT 2018 Fri Jan 12 23:51:56 AEDT 2018 : com.google.javascript.jscomp.parsing.IRFactory,203=>Find no block
+Fri Jan 12 23:51:57 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1246
+Timeout time : 18/01/13 00:23

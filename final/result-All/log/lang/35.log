@@ -1,0 +1,113 @@
+=================================================
+Project : lang_35	start : 18/01/12 19:07
+Current failed test : org.apache.commons.lang3.ArrayUtilsAddTest::testLANG571_purify_1 | 18/01/12 19:08
+Fri Jan 12 19:08:55 AEDT 2018 org.apache.commons.lang3.ArrayUtils,3292
+Fri Jan 12 19:09:48 AEDT 2018 org.apache.commons.lang3.ArrayUtils,3295
+Fri Jan 12 19:09:48 AEDT 2018 org.apache.commons.lang3.ArrayUtils,3290
+Fri Jan 12 19:10:32 AEDT 2018 Fri Jan 12 19:10:32 AEDT 2018 : org.apache.commons.lang3.ArrayUtils,3298=>Find no block
+Fri Jan 12 19:10:32 AEDT 2018 org.apache.commons.lang3.ArrayUtils,3299
+Fri Jan 12 19:24:09 AEDT 2018 org.apache.commons.lang3.ArrayUtils,3300
+Fri Jan 12 19:24:09 AEDT 2018 org.apache.commons.lang3.ArrayUtils,3535
+Fri Jan 12 19:30:50 AEDT 2018 org.apache.commons.lang3.ArrayUtils,3529
+Fri Jan 12 19:34:33 AEDT 2018 org.apache.commons.lang3.ArrayUtils,143
+Fri Jan 12 19:34:35 AEDT 2018 Fri Jan 12 19:34:35 AEDT 2018 : org.apache.commons.lang3.ArrayUtils,144=>Find no block
+Fri Jan 12 19:34:35 AEDT 2018 org.apache.commons.lang3.ArrayUtils,160
+Fri Jan 12 19:36:23 AEDT 2018 org.apache.commons.lang3.ArrayUtils,176
+Fri Jan 12 19:37:56 AEDT 2018 org.apache.commons.lang3.ArrayUtils,177
+Fri Jan 12 19:37:57 AEDT 2018 org.apache.commons.lang3.ArrayUtils,179
+Fri Jan 12 19:41:25 AEDT 2018 org.apache.commons.lang3.ArrayUtils,193
+Fri Jan 12 19:41:26 AEDT 2018 org.apache.commons.lang3.ArrayUtils,224
+Fri Jan 12 19:41:28 AEDT 2018 org.apache.commons.lang3.ArrayUtils,225
+Fri Jan 12 19:41:28 AEDT 2018 org.apache.commons.lang3.ArrayUtils,227
+Fri Jan 12 19:46:33 AEDT 2018 org.apache.commons.lang3.ArrayUtils,228
+Fri Jan 12 21:26:51 AEDT 2018 org.apache.commons.lang3.ArrayUtils,229
+Fri Jan 12 21:31:26 AEDT 2018 org.apache.commons.lang3.ArrayUtils,230
+Fri Jan 12 21:31:27 AEDT 2018 org.apache.commons.lang3.ArrayUtils,231
+Fri Jan 12 21:31:27 AEDT 2018 org.apache.commons.lang3.ArrayUtils,232
+Fri Jan 12 21:31:27 AEDT 2018 org.apache.commons.lang3.ArrayUtils,233
+Fri Jan 12 21:31:27 AEDT 2018 org.apache.commons.lang3.ArrayUtils,234
+Fri Jan 12 21:31:28 AEDT 2018 org.apache.commons.lang3.ArrayUtils,235
+Fri Jan 12 21:31:28 AEDT 2018 org.apache.commons.lang3.ArrayUtils,236
+Fri Jan 12 21:31:28 AEDT 2018 org.apache.commons.lang3.ArrayUtils,240
+Fri Jan 12 21:31:28 AEDT 2018 Fri Jan 12 21:31:28 AEDT 2018 : org.apache.commons.lang3.ArrayUtils,241=>Find no block
+Fri Jan 12 21:31:28 AEDT 2018 org.apache.commons.lang3.ArrayUtils,242
+Fri Jan 12 21:31:28 AEDT 2018 org.apache.commons.lang3.ArrayUtils,247
+Timeout time : 18/01/12 21:38
+Current failed test : org.apache.commons.lang3.ArrayUtilsAddTest::testLANG571_purify_2 | 18/01/12 21:38
+Fri Jan 12 21:39:30 AEDT 2018 org.apache.commons.lang3.ArrayUtils,3568
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(element==null){
+throw new IllegalArgumentException("The object to build a hash code for must not be null");
+}
+Class<?> clss=null;
+if(array!=null){
+clss=array.getClass().getComponentType();
+}else if(element!=null){
+clss=element.getClass();
+}else {
+return (T[])new Object[]{null};
+}
+ @SuppressWarnings("unchecked") final T[] newArray=(T[])add(array,index,element,clss);
+return newArray;
+
+Time : 18/01/12 21:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.3106436824473697 : [/home/hz985/jiajun/d4j/projects/lang/lang_35_buggy/src/main/java/org/apache/commons/lang3/ArrayUtils.java=>0,0]
+if(object==null){
+throw new IllegalArgumentException("The object to build a hash code for must not be null");
+}
+HashCodeBuilder builder=new HashCodeBuilder(initialNonZeroOddNumber,multiplierNonZeroOddNumber);
+Class<?> clazz=object.getClass();
+reflectionAppend(object,clazz,builder,testTransients,excludeFields);
+while(clazz.getSuperclass()!=null&&clazz!=reflectUpToClass){
+clazz=clazz.getSuperclass();
+reflectionAppend(object,clazz,builder,testTransients,excludeFields);
+}
+return builder.toHashCode();
+
+Time : 18/01/12 21:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/lang/lang_35_buggy/src/main/java/org/apache/commons/lang3/ArrayUtils.java=>3568,3578]
+Class<?> clss=null;
+if(array!=null){
+clss=array.getClass().getComponentType();
+}else if(element!=null){
+clss=element.getClass();
+}else {
+return (T[])new Object[]{null};
+}
+ @SuppressWarnings("unchecked") final T[] newArray=(T[])add(array,index,element,clss);
+return newArray;
+
+Time : 18/01/12 21:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/lang/lang_35_buggy/src/main/java/org/apache/commons/lang3/ArrayUtils.java=>3568,3578]
+if(element==null){
+throw new IllegalArgumentException("The object to build a hash code for must not be null");
+}
+Class<?> clss=null;
+if(array!=null){
+clss=array.getClass().getComponentType();
+}else if(element!=null){
+clss=element.getClass();
+}else {
+return (T[])new Object[]{null};
+}
+ @SuppressWarnings("unchecked") final T[] newArray=(T[])add(array,index,element,clss);
+return newArray;
+
+Time : 18/01/12 21:44
+----------------------------------------
+Success time : 18/01/12 21:44

@@ -1,0 +1,180 @@
+=================================================
+Project : math_69	start : 18/01/14 08:30
+Current failed test : org.apache.commons.math.stat.correlation.PearsonsCorrelationTest::testPValueNearZero | 18/01/14 08:30
+Sun Jan 14 08:32:05 AEDT 2018 org.apache.commons.math.stat.correlation.PearsonsCorrelation,68
+Sun Jan 14 08:32:16 AEDT 2018 Sun Jan 14 08:32:16 AEDT 2018 : org.apache.commons.math.stat.correlation.PearsonsCorrelation,69=>Find no block
+Sun Jan 14 08:32:20 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,46
+Sun Jan 14 08:32:32 AEDT 2018 Sun Jan 14 08:32:32 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,47=>Find no block
+Sun Jan 14 08:32:35 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,128
+Sun Jan 14 08:34:47 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,129
+Sun Jan 14 08:34:51 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,130
+Sun Jan 14 08:37:11 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,131
+Sun Jan 14 08:40:01 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,132
+Sun Jan 14 08:45:28 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,133
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double c=q0/q1;
+int n=0;
+double relativeError=q0;
+
+Time : 18/01/14 08:50
+----------------------------------------
+Sun Jan 14 08:55:32 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,134
+Sun Jan 14 08:55:36 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,135
+Sun Jan 14 09:33:07 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,136
+Sun Jan 14 09:38:24 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,137
+Sun Jan 14 09:38:28 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,138
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double a=getA(n,x);
+double b=getB(n,x);
+double p2=x*p1+b*p0;
+
+Time : 18/01/14 09:44
+----------------------------------------
+Sun Jan 14 09:45:40 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,139
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double b=getB(n,x);
+double p2=x*p1+b*p0;
+double q2=a*q1+b*q0;
+
+Time : 18/01/14 09:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double b=getB(n,x);
+double p2=x*p1+x*p0;
+double q2=a*q1+b*q0;
+
+Time : 18/01/14 09:52
+----------------------------------------
+Sun Jan 14 09:56:03 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,140
+Sun Jan 14 10:00:05 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,141
+Sun Jan 14 10:00:09 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,142
+Sun Jan 14 10:00:13 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,175
+Sun Jan 14 10:00:18 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,182
+Sun Jan 14 10:26:33 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,184
+Sun Jan 14 10:26:36 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,189
+Sun Jan 14 10:58:28 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,192
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+relativeError=Math.cos(r/c-1.0);
+c=p2/q2;
+p0=r;
+
+Time : 18/01/14 11:22
+----------------------------------------
+Sun Jan 14 11:35:11 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,193
+Sun Jan 14 11:48:32 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,194
+Sun Jan 14 12:04:39 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,195
+Sun Jan 14 12:16:36 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,196
+Sun Jan 14 12:16:42 AEDT 2018 Sun Jan 14 12:16:42 AEDT 2018 : org.apache.commons.math.util.ContinuedFraction,197=>Find no block
+Sun Jan 14 12:16:46 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,199
+Sun Jan 14 12:32:22 AEDT 2018 org.apache.commons.math.util.ContinuedFraction,205
+Sun Jan 14 12:46:05 AEDT 2018 org.apache.commons.math.distribution.TDistributionImpl,128
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x<0.0){
+ret=0.5*t;
+}else {
+ret=1.0-0.5*t;
+return -1;
+}
+
+Time : 18/01/14 12:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x<0.0){
+ret=0.5*t;
+return -1;
+}else {
+ret=1.0-0.5*t;
+return -1;
+}
+
+Time : 18/01/14 12:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x<0.0){
+ret=0.5*t;
+}else {
+ret=1.0-0.5*t;
+return 0;
+}
+
+Time : 18/01/14 12:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x<0.0){
+ret=0.5*t;
+return 0;
+}else {
+ret=1.0-0.5*t;
+return 0;
+}
+
+Time : 18/01/14 13:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x<0.0){
+ret=0.5*t;
+}else {
+ret=1.0-0.5*t;
+return 1/(x*x);
+}
+
+Time : 18/01/14 13:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x<0.0){
+ret=0.5*t;
+return 1/(x*x);
+}else {
+ret=1.0-0.5*t;
+return 1/(x*x);
+}
+
+Time : 18/01/14 13:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+x=t*Math.sqrt(DEFAULT_INVERSE_ABSOLUTE_ACCURACY+DEFAULT_INVERSE_ABSOLUTE_ACCURACY)-0.5;
+if(x<0.0){
+ret=0.5*t;
+}else {
+ret=1.0-0.5*t;
+}
+
+Time : 18/01/14 13:22
+----------------------------------------
+Timeout time : 18/01/14 13:32
