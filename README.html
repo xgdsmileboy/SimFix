@@ -1,600 +1,620 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-    <title>README.md</title><link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'><style type='text/css'>html, body {overflow-x: initial !important;}.CodeMirror { height: auto; }
-    .CodeMirror-scroll { overflow-y: hidden; overflow-x: auto; }
-    .CodeMirror-lines { padding: 4px 0px; }
-    .CodeMirror pre { }
-    .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler { background-color: white; }
-    .CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background-color: rgb(247, 247, 247); white-space: nowrap; }
-    .CodeMirror-linenumbers { }
-    .CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
-    .CodeMirror div.CodeMirror-cursor { border-left-width: 1px; border-left-style: solid; border-left-color: black; z-index: 3; }
-    .CodeMirror div.CodeMirror-secondarycursor { border-left-width: 1px; border-left-style: solid; border-left-color: silver; }
-    .CodeMirror.cm-keymap-fat-cursor div.CodeMirror-cursor { width: auto; border: 0px; background-color: rgb(119, 238, 119); z-index: 1; background-position: initial initial; background-repeat: initial initial; }
-    .CodeMirror div.CodeMirror-cursor.CodeMirror-overwrite { }
-    .cm-tab { display: inline-block; }
-    .cm-s-typora-default .cm-header, .cm-s-typora-default .cm-property { color: rgb(217, 79, 138); }
-    .cm-s-typora-default pre.cm-header1:not(.cm-atom) :not(.cm-overlay) { font-size: 2rem; line-height: 2rem; }
-    .cm-s-typora-default pre.cm-header2:not(.cm-atom) :not(.cm-overlay) { font-size: 1.4rem; line-height: 1.4rem; }
-    .cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number { color: rgb(149, 132, 134); }
-    .cm-s-typora-default .cm-table-row, .cm-s-typora-default .cm-block-start { font-family: monospace; }
-    .cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code { color: rgb(74, 90, 159); font-family: monospace; }
-    .cm-s-typora-default .cm-tag { color: rgb(169, 68, 66); }
-    .cm-s-typora-default .cm-string { color: rgb(126, 134, 169); }
-    .cm-s-typora-default .cm-link { color: rgb(196, 122, 15); text-decoration: underline; }
-    .cm-s-typora-default .cm-variable-2, .cm-s-typora-default .cm-variable-1 { color: inherit; }
-    .cm-s-typora-default .cm-overlay { font-size: 1rem; font-family: monospace; }
-    .CodeMirror.cm-s-typora-default div.CodeMirror-cursor { border-left-width: 3px; border-left-style: solid; border-left-color: rgb(228, 98, 154); }
-    .cm-s-typora-default .CodeMirror-activeline-background { left: -60px; right: -30px; background-color: rgba(204, 204, 204, 0.2); background-position: initial initial; background-repeat: initial initial; }
-    .cm-s-typora-default .CodeMirror-gutters { border-right-style: none; background-color: inherit; }
-    .cm-s-typora-default .cm-trailing-space-new-line::after, .cm-startspace::after, .cm-starttab .cm-tab::after { content: '•'; position: absolute; left: 0px; opacity: 0; font-family: LetterGothicStd, monospace; }
-    .os-windows .cm-startspace::after, .os-windows .cm-starttab .cm-tab::after { left: -0.1em; }
-    .cm-starttab .cm-tab::after { content: ' '; }
-    .cm-startspace, .cm-tab, .cm-starttab, .cm-trailing-space-a, .cm-trailing-space-b, .cm-trailing-space-new-line { font-family: monospace; position: relative; }
-    .cm-s-typora-default .cm-trailing-space-new-line::after { content: '↓'; opacity: 0.3; }
-    .cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
-    .cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
-    .cm-s-inner .cm-number { color: rgb(17, 102, 68); }
-    .cm-s-inner .cm-def { color: rgb(0, 0, 255); }
-    .cm-s-inner .cm-variable { color: black; }
-    .cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
-    .cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
-    .cm-s-inner .cm-property { color: black; }
-    .cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
-    .cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
-    .cm-s-inner .cm-string { color: rgb(170, 17, 17); }
-    .cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
-    .cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
-    .cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
-    .cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
-    .cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
-    .cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
-    .cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
-    .cm-s-inner .cm-header, .cm-s-inner.cm-header { color: blue; }
-    .cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
-    .cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
-    .cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
-    .cm-negative { color: rgb(221, 68, 68); }
-    .cm-positive { color: rgb(34, 153, 34); }
-    .cm-header, .cm-strong { font-weight: bold; }
-    .cm-del { text-decoration: line-through; }
-    .cm-em { font-style: italic; }
-    .cm-link { text-decoration: underline; }
-    .cm-error { color: rgb(255, 0, 0); }
-    .cm-invalidchar { color: rgb(255, 0, 0); }
-    div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
-    div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
-    .cm-s-inner .CodeMirror-activeline-background { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
-    .CodeMirror { position: relative; overflow: hidden; }
-    .CodeMirror-scroll { margin-bottom: -30px; margin-right: -30px; padding-bottom: 30px; padding-right: 30px; height: 100%; outline: none; position: relative; box-sizing: content-box; }
-    .CodeMirror-sizer { position: relative; }
-    .CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler { position: absolute; z-index: 6; display: none; }
-    .CodeMirror-vscrollbar { right: 0px; top: 0px; overflow-x: hidden; overflow-y: scroll; }
-    .CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow-y: hidden; overflow-x: scroll; }
-    .CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
-    .CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
-    .CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
-    .CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
-    .CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
-    .CodeMirror-lines { cursor: text; }
-    .CodeMirror pre { border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; border-width: 0px; background-color: transparent; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; background-position: initial initial; background-repeat: initial initial; }
-    .CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
-    .CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: -webkit-fit-content; }
-    .CodeMirror-wrap .CodeMirror-code pre { border-right-style: none; width: auto; }
-    .CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
-    .CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
-    .CodeMirror-widget { }
-    .CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
-    .CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
-    .CodeMirror-measure pre { position: static; }
-    .CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-style: none; width: 0px; }
-    .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
-    .CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
-    .CodeMirror-selected { background-color: rgb(217, 217, 217); background-position: initial initial; background-repeat: initial initial; }
-    .CodeMirror-focused .CodeMirror-selected { background-color: rgb(215, 212, 240); background-position: initial initial; background-repeat: initial initial; }
-    .cm-searching { background-color: rgba(255, 255, 0, 0.4); background-position: initial initial; background-repeat: initial initial; }
-    .CodeMirror span { }
-    @media print {
-    .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
-    }
-    .CodeMirror-lint-markers { width: 16px; }
-    .CodeMirror-lint-tooltip { background-color: infobackground; border: 1px solid black; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; color: infotext; font-family: monospace; overflow: hidden; padding: 2px 5px; position: fixed; white-space: pre-wrap; z-index: 10000; max-width: 600px; opacity: 0; transition: opacity 0.4s; font-size: 0.8em; }
-    .CodeMirror-lint-mark-error, .CodeMirror-lint-mark-warning { background-position: left bottom; background-repeat: repeat no-repeat; }
-    .CodeMirror-lint-mark-error { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAYAAAC09K7GAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sJDw4cOCW1/KIAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAAHElEQVQI12NggIL/DAz/GdA5/xkY/qPKMDAwAADLZwf5rvm+LQAAAABJRU5ErkJggg==); }
-    .CodeMirror-lint-marker-error, .CodeMirror-lint-marker-warning { cursor: pointer; display: inline-block; height: 16px; width: 16px; vertical-align: middle; position: relative; background-position: center center; background-repeat: no-repeat no-repeat; }
-    .CodeMirror-lint-message-error, .CodeMirror-lint-message-warning { padding-left: 18px; background-position: left top; background-repeat: no-repeat no-repeat; }
-    .CodeMirror-lint-marker-error, .CodeMirror-lint-message-error { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAHlBMVEW7AAC7AACxAAC7AAC7AAAAAAC4AAC5AAD///+7AAAUdclpAAAABnRSTlMXnORSiwCK0ZKSAAAATUlEQVR42mWPOQ7AQAgDuQLx/z8csYRmPRIFIwRGnosRrpamvkKi0FTIiMASR3hhKW+hAN6/tIWhu9PDWiTGNEkTtIOucA5Oyr9ckPgAWm0GPBog6v4AAAAASUVORK5CYII=); }
-    .CodeMirror-lint-marker-warning, .CodeMirror-lint-message-warning { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAANlBMVEX/uwDvrwD/uwD/uwD/uwD/uwD/uwD/uwD/uwD6twD/uwAAAADurwD2tQD7uAD+ugAAAAD/uwDhmeTRAAAADHRSTlMJ8mN1EYcbmiixgACm7WbuAAAAVklEQVR42n3PUQqAIBBFUU1LLc3u/jdbOJoW1P08DA9Gba8+YWJ6gNJoNYIBzAA2chBth5kLmG9YUoG0NHAUwFXwO9LuBQL1giCQb8gC9Oro2vp5rncCIY8L8uEx5ZkAAAAASUVORK5CYII=); }
-    .CodeMirror-lint-marker-multiple { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAMAAADzjKfhAAAACVBMVEUAAAAAAAC/v7914kyHAAAAAXRSTlMAQObYZgAAACNJREFUeNo1ioEJAAAIwmz/H90iFFSGJgFMe3gaLZ0od+9/AQZ0ADosbYraAAAAAElFTkSuQmCC); width: 100%; height: 100%; background-position: right bottom; background-repeat: no-repeat no-repeat; }
-    html { font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); }
-    body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
-    a:active, a:hover { outline: 0px; }
-    .in-text-selection, ::selection { background-color: rgb(181, 214, 252); text-shadow: none; background-position: initial initial; background-repeat: initial initial; }
-    #write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; white-space: pre-wrap; overflow-x: auto; }
-    .for-image #write { padding-left: 8px; padding-right: 8px; }
-    body.typora-export { padding-left: 30px; padding-right: 30px; }
-    @media screen and (max-width: 500px) {
-    body.typora-export { padding-left: 0px; padding-right: 0px; }
-    .CodeMirror-sizer { margin-left: 0px !important; }
-    .CodeMirror-gutters { display: none !important; }
-    }
-    .typora-export #write { margin: 0px auto; }
-    #write > p:first-child, #write > ul:first-child, #write > ol:first-child, #write > pre:first-child, #write > blockquote:first-child, #write > div:first-child, #write > table:first-child { margin-top: 30px; }
-    #write li > table:first-child { margin-top: -20px; }
-    img { max-width: 100%; }
-    input, button, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; line-height: inherit; }
-    input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
-    ::before, ::after, * { box-sizing: border-box; }
-    #write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write div, #write pre { width: inherit; }
-    #write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6 { position: relative; }
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.8rem; }
-    h3 { font-size: 1.6rem; }
-    h4 { font-size: 1.4rem; }
-    h5 { font-size: 1.2rem; }
-    h6 { font-size: 1rem; }
-    p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
-    .mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0rem; -webkit-margin-after: 0rem; }
-    .hidden { display: none; }
-    .md-blockmeta { color: rgb(204, 204, 204); font-weight: bold; font-style: italic; }
-    a { cursor: pointer; }
-    #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; margin: 4px 0px 0px; }
-    tr { break-inside: avoid; break-after: auto; }
-    thead { display: table-header-group; }
-    table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
-    table.md-table td { min-width: 80px; }
-    .CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
-    .CodeMirror { text-align: left; }
-    .CodeMirror-placeholder { opacity: 0.3; }
-    .CodeMirror pre { padding: 0px 4px; }
-    .CodeMirror-lines { padding: 0px; }
-    div.hr:focus { cursor: none; }
-    pre { white-space: pre-wrap; }
-    .CodeMirror-gutters { margin-right: 4px; }
-    .md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
-    .md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
-    .md-fences .CodeMirror.CodeMirror-wrap { top: -1.6em; margin-bottom: -1.6em; }
-    .md-fences.mock-cm { white-space: pre-wrap; }
-    .show-fences-line-number .md-fences { padding-left: 0px; }
-    .show-fences-line-number .md-fences.mock-cm { padding-left: 40px; }
-    .footnotes { opacity: 0.8; font-size: 0.9rem; padding-top: 1em; padding-bottom: 1em; }
-    .footnotes + .footnotes { margin-top: -1em; }
-    .md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background-color: transparent; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: normal; text-align: left; box-sizing: content-box; direction: ltr; background-position: initial initial; background-repeat: initial initial; }
-    li div { padding-top: 0px; }
-    blockquote { margin: 1rem 0px; }
-    li p, li .mathjax-block { margin: 0.5rem 0px; }
-    li { margin: 0px; position: relative; }
-    blockquote > :last-child { margin-bottom: 0px; }
-    blockquote > :first-child { margin-top: 0px; }
-    .footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; }
-    @media print {
-    html, body { height: 100%; }
-    .typora-export * { -webkit-print-color-adjust: exact; }
-    h1, h2, h3, h4, h5, h6 { break-after: avoid-page; orphans: 2; }
-    p { orphans: 4; }
-    html.blink-to-pdf { font-size: 13px; }
-    .typora-export #write { padding-left: 1cm; padding-right: 1cm; }
-    .typora-export #write::after { height: 0px; }
-    @page { margin: 20mm 0mm; }
-    }
-    .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
-    a img, img a { cursor: pointer; }
-    pre.md-meta-block { font-size: 0.8rem; min-height: 2.86rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; background-position: initial initial; background-repeat: initial initial; }
-    p .md-image:only-child, p img:only-child { display: inline-block; width: 100%; text-align: center; }
-    #write .MathJax_Display { margin: 0.8em 0px 0px; }
-    .mathjax-block { white-space: pre; overflow: hidden; width: 100%; }
-    p + .mathjax-block { margin-top: -1.143rem; }
-    .mathjax-block:not(:empty)::after { display: none; }
-    [contenteditable="true"]:active, [contenteditable="true"]:focus { outline: none; box-shadow: none; }
-    .task-list { list-style-type: none; }
-    .task-list-item { position: relative; padding-left: 1em; }
-    .task-list-item input { position: absolute; top: 0px; left: 0px; }
-    .math { font-size: 1rem; }
-    .md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
-    .md-toc-content { position: relative; margin-left: 0px; }
-    .md-toc::after, .md-toc-content::after { display: none; }
-    .md-toc-item { display: block; color: rgb(65, 131, 196); text-decoration: none; }
-    .md-toc-inner:hover { }
-    .md-toc-inner { display: inline-block; cursor: pointer; }
-    .md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: bold; }
-    .md-toc-h2 .md-toc-inner { margin-left: 2em; }
-    .md-toc-h3 .md-toc-inner { margin-left: 4em; }
-    .md-toc-h4 .md-toc-inner { margin-left: 6em; }
-    .md-toc-h5 .md-toc-inner { margin-left: 8em; }
-    .md-toc-h6 .md-toc-inner { margin-left: 10em; }
-    @media screen and (max-width: 48em) {
-    .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
-    .md-toc-h4 .md-toc-inner { margin-left: 5em; }
-    .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
-    .md-toc-h6 .md-toc-inner { margin-left: 8em; }
-    }
-    a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
-    .footnote-line a:not(.reversefootnote) { color: inherit; }
-    .md-attr { display: none; }
-    .md-fn-count::after { content: '.'; }
-    .md-tag { opacity: 0.5; }
-    .md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: monospace; }
-    code { text-align: left; }
-    h1 .md-tag, h2 .md-tag, h3 .md-tag, h4 .md-tag, h5 .md-tag, h6 .md-tag { font-weight: initial; opacity: 0.35; }
-    a.md-header-anchor.md-print-anchor { border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: none !important; background-color: transparent !important; text-shadow: initial !important; background-position: initial initial !important; background-repeat: initial initial !important; }
-    .md-inline-math .MathJax_SVG .noError { display: none !important; }
-    .mathjax-block .MathJax_SVG_Display { text-align: center; margin: 1em 0em; position: relative; text-indent: 0px; max-width: none; max-height: none; min-width: 0px; min-height: 0px; width: 100%; display: block !important; }
-    .MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
-    .MathJax_SVG .MJX-monospace { font-family: monospace; }
-    .MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-    .MathJax_SVG { display: inline; font-style: normal; font-weight: normal; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
-    .MathJax_SVG * { transition: none; }
-    @include-when-export url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
-    /**
-    * css forked from https://github.com/GitbookIO/gitbook
-    * www.gitbook.com
-    * Apache License
-    * https://github.com/GitbookIO/gitbook/blob/master/LICENSE
-    **/
-    @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Open Sans Regular'),url('file:///Users/Jiajun/Library/Application%20Support/abnerworks.Typora/themes/github/400.woff') format('woff')
-    }
-    @font-face {
-    font-family: 'Open Sans';
-    font-style: italic;
-    font-weight: normal;
-    src: local('Open Sans Italic'),url('file:///Users/Jiajun/Library/Application%20Support/abnerworks.Typora/themes/github/400i.woff') format('woff')
-    }
-    @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: bold;
-    src: local('Open Sans Bold'),url('file:///Users/Jiajun/Library/Application%20Support/abnerworks.Typora/themes/github/700.woff') format('woff')
-    }
-    @font-face {
-    font-family: 'Open Sans';
-    font-style: italic;
-    font-weight: bold;
-    src: local('Open Sans Bold Italic'),url('file:///Users/Jiajun/Library/Application%20Support/abnerworks.Typora/themes/github/700i.woff') format('woff')
-    }
-    html {
-    font-size: 16px;
-    }
-    body {
-    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: rgb(51, 51, 51);
-    line-height: 1.6;
-    }
-    #write{
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 20px 30px 40px 30px;
-    padding-top: 20px;
-    padding-bottom: 100px;
-    }
-    #write > ul:first-child,
-    #write > ol:first-child{
-    margin-top: 30px;
-    }
-    body > *:first-child {
-    margin-top: 0 !important;
-    }
-    body > *:last-child {
-    margin-bottom: 0 !important;
-    }
-    a {
-    color: #4183C4;
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-    position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    line-height: 1.4;
-    cursor: text;
-    }
-    h1:hover a.anchor,
-    h2:hover a.anchor,
-    h3:hover a.anchor,
-    h4:hover a.anchor,
-    h5:hover a.anchor,
-    h6:hover a.anchor {
-    /*background: url("file:///Users/Jiajun/Library/Application%20Support/images/modules/styleguide/para.png") no-repeat 10px center;*/
-    text-decoration: none;
-    }
-    h1 tt,
-    h1 code {
-    font-size: inherit;
-    }
-    h2 tt,
-    h2 code {
-    font-size: inherit;
-    }
-    h3 tt,
-    h3 code {
-    font-size: inherit;
-    }
-    h4 tt,
-    h4 code {
-    font-size: inherit;
-    }
-    h5 tt,
-    h5 code {
-    font-size: inherit;
-    }
-    h6 tt,
-    h6 code {
-    font-size: inherit;
-    }
-    h1 {
-    padding-bottom: .3em;
-    font-size: 2.25em;
-    line-height: 1.2;
-    border-bottom: 1px solid #eee;
-    }
-    h2 {
-    padding-bottom: .3em;
-    font-size: 1.75em;
-    line-height: 1.225;
-    border-bottom: 1px solid #eee;
-    }
-    h3 {
-    font-size: 1.5em;
-    line-height: 1.43;
-    }
-    h4 {
-    font-size: 1.25em;
-    }
-    h5 {
-    font-size: 1em;
-    }
-    h6 {
-    font-size: 1em;
-    color: #777;
-    }
-    p,
-    blockquote,
-    ul,
-    ol,
-    dl,
-    table{
-    margin: 0.8em 0;
-    }
-    li>ol,
-    li>ul {
-    margin: 0 0;
-    }
-    hr {
-    height: 4px;
-    padding: 0;
-    margin: 16px 0;
-    background-color: #e7e7e7;
-    border: 0 none;
-    overflow: hidden;
-    box-sizing: content-box;
-    border-bottom: 1px solid #ddd;
-    }
-    body > h2:first-child {
-    margin-top: 0;
-    padding-top: 0;
-    }
-    body > h1:first-child {
-    margin-top: 0;
-    padding-top: 0;
-    }
-    body > h1:first-child + h2 {
-    margin-top: 0;
-    padding-top: 0;
-    }
-    body > h3:first-child,
-    body > h4:first-child,
-    body > h5:first-child,
-    body > h6:first-child {
-    margin-top: 0;
-    padding-top: 0;
-    }
-    a:first-child h1,
-    a:first-child h2,
-    a:first-child h3,
-    a:first-child h4,
-    a:first-child h5,
-    a:first-child h6 {
-    margin-top: 0;
-    padding-top: 0;
-    }
-    h1 p,
-    h2 p,
-    h3 p,
-    h4 p,
-    h5 p,
-    h6 p {
-    margin-top: 0;
-    }
-    li p.first {
-    display: inline-block;
-    }
-    ul,
-    ol {
-    padding-left: 30px;
-    }
-    ul:first-child,
-    ol:first-child {
-    margin-top: 0;
-    }
-    ul:last-child,
-    ol:last-child {
-    margin-bottom: 0;
-    }
-    blockquote {
-    border-left: 4px solid #dddddd;
-    padding: 0 15px;
-    color: #777777;
-    }
-    blockquote blockquote {
-    padding-right: 0;
-    }
-    table {
-    padding: 0;
-    word-break: initial;
-    }
-    #write {
-    overflow-x: auto;
-    }
-    table tr {
-    border-top: 1px solid #cccccc;
-    background-color: white;
-    margin: 0;
-    padding: 0;
-    }
-    table tr:nth-child(2n) {
-    background-color: #f8f8f8;
-    }
-    table tr th {
-    font-weight: bold;
-    border: 1px solid #cccccc;
-    text-align: left;
-    margin: 0;
-    padding: 6px 13px;
-    }
-    table tr td {
-    border: 1px solid #cccccc;
-    text-align: left;
-    margin: 0;
-    padding: 6px 13px;
-    }
-    table tr th:first-child,
-    table tr td:first-child {
-    margin-top: 0;
-    }
-    table tr th:last-child,
-    table tr td:last-child {
-    margin-bottom: 0;
-    }
-    .CodeMirror-gutters {
-    border-right: 1px solid #ddd;
-    }
-    .md-fences,
-    code,
-    tt {
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
-    border-radius: 3px;
-    padding: 0;
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
-    padding: 2px 4px 0px 4px;
-    font-size: 0.9em;
-    }
-    .md-fences {
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding: 0.2em 1em;
-    padding-top: 8px;
-    padding-bottom: 6px;
-    }
-    .task-list{
-    padding-left: 0;
-    }
-    .task-list-item {
-    padding-left:32px;
-    }
-    .task-list-item input {
-    top: 3px;
-    left: 8px;
-    }
-    @media screen and (min-width: 914px) {
-    /*body {
-    width: 854px;
-    margin: 0 auto;
-    }*/
-    }
-    @media print {
-    html {
-    font-size: 13px;
-    }
-    table,
-    pre {
-    page-break-inside: avoid;
-    }
-    pre {
-    word-wrap: break-word;
-    }
-    }
-    .md-fences {
-    background-color: #f8f8f8;
-    }
-    #write pre.md-meta-block {
-    padding: 1rem;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: #f7f7f7;
-    border: 0;
-    border-radius: 3px;
-    color: #777777;
-    margin-top: 0 !important;
-    }
-    .mathjax-block>.code-tooltip {
-    bottom: .375rem;
-    }
-    #write>h3.md-focus:before{
-    left: -1.5625rem;
-    top: .375rem;
-    }
-    #write>h4.md-focus:before{
-    left: -1.5625rem;
-    top: .285714286rem;
-    }
-    #write>h5.md-focus:before{
-    left: -1.5625rem;
-    top: .285714286rem;
-    }
-    #write>h6.md-focus:before{
-    left: -1.5625rem;
-    top: .285714286rem;
-    }
-    .md-image>.md-meta {
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
-    border-radius: 3px;
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
-    padding: 2px 4px 0px 4px;
-    font-size: 0.9em;
-    color: inherit;
-    }
-    .md-tag{
-    color: inherit;
-    }
-    .md-toc {
-    margin-top:20px;
-    padding-bottom:20px;
-    }
-    #typora-quick-open {
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
-    }
-    #typora-quick-open-item {
-    background-color: #FAFAFA;
-    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
-    border-style: solid;
-    border-width: 1px;
-    }
-    #md-notification:before {
-    top: 10px;
-    }
-    /** focus mode */
-    .on-focus-mode blockquote {
-    border-left-color: rgba(85, 85, 85, 0.12);
-    }
-    header, .context-menu, .megamenu-content, footer{
-    font-family: "Segoe UI", "Arial", sans-serif;
-    }
-    </style>
-  </head>
-  <body class='typora-export' >
-    <div  id='write'  class = 'is-mac'><h1><a name='header-c1' class='md-header-anchor '></a>SimFix</h1><ul><li><a href='#user-content-i-introduction'>I. Introduction of SimFix</a></li><li><a href='#user-content-ii-environment'>II. Environment setup</a></li><li><a href='#user-content-iii-how-to-run'>III. Run SimFix Step-by-Step</a></li><li><a href='#user-content-iv-evaluation-result'>IV. Evaluation Result</a></li><li><a href='#user-content-v-structure-of-the-project'>V. Structure of the project</a></li></ul><h2><a name='header-c22' class='md-header-anchor '></a>I. Introduction</h2><p><em>SimFix</em> is an automatic program repair technique, which leverages similar code snippets in the same project to generate patches. The following figure is the workflow of our approach.</p><p><img src='./doc/figure/overview.png' alt='The workflow of this technique.\label{workflow}' /></p><ol start='' ><li><strong>Fault Localization</strong> : obtain a ranking list of candidate buggy statements.</li><li><strong>Similar Code Identification</strong> : identify the similarity between buggy code snippet and each candidate similar code snippet by leveraging three similarity metrics, according to which we obtain a list of candidate similar snippet with decending order of similarity value.</li><li><strong>Variable Mapping</strong> : establish the mapping relationship between variables in buggy and similar code snippet by leveraging similarity metrics and then obtain a mapping table.</li><li><strong>Modification Extraction</strong> : extract code modifications to buggy code snippet via AST (Abstract Syntax Tree) matching and differencing, during which the variable mapping table will be used.</li><li><strong>Patch Generation &amp; Validation</strong> : generate repair patches by applying extracted code modifications to the buggy code snippet with combining and ranking whose modifications, then using the test suite to validate the correctness for each candidate patch.</li></ol><h2><a name='header-c43' class='md-header-anchor '></a>II. Environment</h2><ul><li><p>OS: Linux (Tested on Ubuntu 16.04.2 LTS)</p></li><li><p>Download and configure <a href='https://github.com/rjust/defects4j'>Defects4J</a> running environment.</p></li><li><p>Configure the following path.</p><ul><li>DEFECTS4J_HOME=&quot;home_of_defects4j&quot;</li></ul></li></ul><h2><a name='header-c59' class='md-header-anchor '></a>III. How to run</h2><p><em>SimFix</em> was traditionally developed as an Eclipse Java project, you can simply import this project to your workspace and run it as a common Java program. The main class is <strong>cofix.main.Main</strong>, and for the running option please refer to the <a href='#user-content-step-2-running-options'>Running Options</a>.</p><h4><a name='header-c62' class='md-header-anchor '></a>Before running</h4><ul><li><p><code>unzip</code> file <code>sbfl/data.zip</code> to <code>sbfl/data</code>  : used for fault localization</p></li><li><p>using the command line provided by Defects4J to checkout a buggy version of benchmark for testing.</p><p> <code>Example: defects4j checkout -p Chart -v 1b -w ${buggy_program_path}/chart/chart_1_buggy</code></p><p><strong><em>NOTE</em></strong> : the path of the buggy version of benchmark have to be set as:</p><p><code>…/projectName/projectName_id_buggy</code>  =&gt; <code>Example: /home/user/chart/chart_1_buggy</code></p></li></ul><h4><a name='header-c76' class='md-header-anchor '></a>Step 1, Build The Project</h4><p>Originally, <em>SimFix</em> was developed as an <a href='http://www.eclipse.org/mars/'>Eclipse</a> Java Project, you can simply <strong>import</strong> the project into your workspace and the class <code>cofix.main.Main</code> is the entry of the whole program.</p><h4><a name='header-c79' class='md-header-anchor '></a>Step 2, Running Options</h4><p>Our prototype of <em>SimFix</em> needs <strong>three</strong> input options for running.</p><ul><li><p><code>--proj_home</code> : the home of buggy program of benchmark. (<code>${buggy_program_path}</code> for the example)</p></li><li><p><code>--proj_name</code> : the project name of buggy program of benchmark. (<code>chart</code> for the example)</p></li><li><p><code>--bug_id</code> : the identifier of the buggy program. (<code>1</code> for the example)</p><ul><li><p>the option of <code>--bugy_id</code> supports multiple formats:</p><p><code>single_id</code> : repair single bug, <code>e.g., 1</code>.</p><p><code>startId-endId</code> : repair a series of bugs with consecutive identifiers, <code>e.g., 1-3</code>.</p><p><code>single_id,single_id,single_id</code> : repair any bugs for the specific program, <code>e.g., 1,5,9</code>.</p><p><code>all</code> : repair all buggy versions of a specific project, <code>i.e., all</code>.</p></li></ul><pre class="md-fences md-end-block" lang="powershell"> <div class="CodeMirror cm-s-inner CodeMirror-wrap  " lang="powershell"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 4px;"></div><div class="CodeMirror-hscrollbar" style="left: 0px;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-vscrollbar"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; min-height: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><div style="width: 50px; height: 50px; overflow-x: scroll;"></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-identifier">Usage</span><span class="cm-operator">:</span> <span class="cm-operator">--</span><span class="cm-identifier">proj_home</span><span class="cm-operator">=</span><span class="cm-variable-2">${proj_home}</span> <span class="cm-operator">--</span><span class="cm-identifier">proj_name</span><span class="cm-operator">=</span><span class="cm-variable-2">${proj_name}</span> <span class="cm-operator">--</span><span class="cm-identifier">bug_id</span><span class="cm-operator">=</span><span class="cm-variable-2">${bug_id}</span></span></pre></div><div class="" style="position: relative;"><pre class=""><span style="padding-right: 0.1px;"><span class="cm-identifier">Example</span><span class="cm-operator">:</span> <span class="cm-operator">--</span><span class="cm-identifier">proj_home</span><span class="cm-operator">=/</span><span class="cm-identifier">home</span><span class="cm-operator">/</span><span class="cm-identifier">user</span> <span class="cm-operator">--</span><span class="cm-identifier">proj_name</span><span class="cm-operator">=</span><span class="cm-identifier">chart</span> <span class="cm-operator">--</span><span class="cm-identifier">bug_id</span><span class="cm-operator">=</span><span class="cm-number">1</span></span></pre></div><div class="" style="position: relative;"><pre class=""><span style="padding-right: 0.1px;"><span class="cm-identifier">Another</span><span class="cm-operator">:</span> <span class="cm-operator">--</span><span class="cm-identifier">proj_home</span><span class="cm-operator">=/</span><span class="cm-identifier">home</span><span class="cm-operator">/</span><span class="cm-identifier">user</span> <span class="cm-operator">--</span><span class="cm-identifier">proj_name</span><span class="cm-operator">=</span><span class="cm-identifier">chart</span> <span class="cm-operator">--</span><span class="cm-identifier">bug_id</span><span class="cm-operator">=</span><span class="cm-number">1</span><span class="cm-punctuation">,</span><span class="cm-number">4</span><span class="cm-punctuation">,</span><span class="cm-number">8</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; top: 0px;"></div><div class="CodeMirror-gutters" style="display: none; height: 66px;"></div></div></div></pre></li></ul><p><strong>OPTION 1</strong> : run within eclipse.</p><ul><li><p>From the Main class:</p><p> <code>Run As</code>→<code>Run Configurations…</code> →<code>Arguments</code> : set the above arguments as <em>Program Arguments</em>.</p></li></ul><p><strong>OPTION 2</strong> : run using command line.</p><ul><li><p>We also provide runnable jar file of <em>SimFix</em> in the home folder of the project <code>i.e., simfix.jar</code>.</p><p>set the home directory of the <em>SimFix</em> project as your correct path and then run as:</p><p><code>java -jar simfix.jar --proj_home=/home/user --proj_name=chart --bug_id=1</code></p></li></ul><h4><a name='header-c123' class='md-header-anchor '></a>Step 3, Result Analysis</h4><p>After finishing the repair, there will be two additional folders: <code>log</code> and <code>patch</code>.</p><ul><li><p><code>log</code> : debug output, including buggy statements already tried, patches and reference code snippet for correct patch generation.</p></li><li><p><code>patch</code> : a single source file repaired by <em>SimFix</em> that can pass the test suite. In the source file, you can find the patch, which is formatted as (example of Chart_1):</p><pre class="md-fences md-end-block" lang="java"> <div class="CodeMirror cm-s-inner CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 4px;"></div><div class="CodeMirror-hscrollbar" style="left: 0px;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-vscrollbar"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; min-height: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><div style="width: 50px; height: 50px; overflow-x: scroll;"></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-comment">// start of generated patch</span></span></pre></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-variable-3">int</span> <span class="cm-variable">index</span><span class="cm-operator">=</span><span class="cm-keyword">this</span>.<span class="cm-variable">plot</span>.<span class="cm-variable">getIndexOf</span>(<span class="cm-keyword">this</span>);</span></pre><pre class=""><span style="padding-right: 0.1px;"><span class="cm-variable">CategoryDataset</span> <span class="cm-variable">dataset</span><span class="cm-operator">=</span><span class="cm-keyword">this</span>.<span class="cm-variable">plot</span>.<span class="cm-variable">getDataset</span>(<span class="cm-variable">index</span>);</span></pre><pre class=""><span style="padding-right: 0.1px;"><span class="cm-keyword">if</span>(<span class="cm-variable">dataset</span><span class="cm-operator">==</span><span class="cm-atom">null</span>){</span></pre><pre class=""><span style="padding-right: 0.1px;"><span class="cm-keyword">return</span> <span class="cm-variable">result</span>;</span></pre><pre class=""><span style="padding-right: 0.1px;">}</span></pre><pre class=""><span style="padding-right: 0.1px;"><span class="cm-comment">// end of generated patch</span></span></pre><pre class=""><span style="padding-right: 0.1px;"><span class="cm-comment">/* start of original code</span></span></pre><pre class=""><span style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  <span class="cm-comment">int index = this.plot.getIndexOf(this);</span></span></pre><pre class=""><span style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  <span class="cm-comment">CategoryDataset dataset = this.plot.getDataset(index);</span></span></pre><pre class=""><span style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  <span class="cm-comment">if (dataset != null) {</span></span></pre><pre class=""><span style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span class="cm-comment">return result;</span></span></pre><pre class=""><span style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  <span class="cm-comment">}</span></span></pre><pre class=""><span style="padding-right: 0.1px;"> <span class="cm-comment">end of original code*/</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; top: 0px;"></div><div class="CodeMirror-gutters" style="display: none; height: 308px;"></div></div></div></pre></li></ul><h2><a name='header-c134' class='md-header-anchor '></a>IV. Evaluation Result</h2><p>Totally, <em>SimFix</em> successfully repair 40 bugs among 357 bugs in Defects4j v1.0 benchmark with generating 20 plausible but incorrect patches. The details are listed below.</p><ul><li><p><strong>Completely Correct Patch (35):</strong> completely fix the bug.</p><blockquote><p>Chart (4) : <a href='./final/patch/chart/1/0/1_AbstractCategoryItemRenderer.java#L1795'>1</a>, <a href='./final/patch/chart/3/0/1_TimeSeries.java#L626'>3</a>, <a href='./final/patch/chart/7/0/1_TimePeriodValues.java#L299'>7</a>, <a href='./final/patch/chart/20/0/1_ValueMarker.java#L95'>20</a></p><p>Math (14) : <a href='./final/patch/math/5/0/1_Complex.java#L304'>5</a>, <a href='./final/patch/math/33/0/1_SimplexTableau.java#L338'>33</a>, <a href='./final/patch/math/35/0/1_ElitisticListPopulation.java#L50'>35-L1</a>, <a href='./final/patch/math/35/1/1_ElitisticListPopulation.java#L64'>35-L2</a>, <a href='./final/patch/math/41/0/1_Variance.java#L520'>41</a>, <a href='./final/patch/math/50/0/1_BaseSecantSolver.java#L187'>50</a>, <a href='./final/patch/math/53/0/1_Complex.java#L152'>53</a>, <a href='./final/patch/math/57/0/1_KMeansPlusPlusClusterer.java#L175'>57</a>, <a href='./final/patch/math/59/0/1_FastMath.java#L3482'>59</a>, <a href='./final/patch/math/63/0/1_MathUtils.java#L417'>63</a>, <a href='./final/patch/math/70/0/1_BisectionSolver.java#L72'>70</a>, <a href='./final/patch/math/71/0/1_RungeKuttaIntegrator.java#L174'>71-L1</a>, <a href='./final/patch/math/71/2/1_EmbeddedRungeKuttaIntegrator.java#L294'>71-L2</a>, <a href='./final/patch/math/75/0/1_Frequency.java#L303'>75</a>, <a href='./final/patch/math/79/0/1_MathUtils.java#L1624'>79</a>, <a href='./final/patch/math/98/0/1_BigMatrixImpl.java#L989'>98-L1</a>, <a href='./final/patch/math/98/4/1_RealMatrixImpl.java#L776'>98-L2</a></p><p>Lang (10) : <a href='./final/patch/lang/7/0/1_NumberUtils.java#L452'>7</a>, <a href='./final/patch/lang/10/0/1_FastDateParser.java#L306'>10</a>, <a href='./final/patch/lang/27/0/1_NumberUtils.java#L488'>27</a>, <a href='./final/patch/lang/33/0/1_ClassUtils.java#L909'>33</a>, <a href='./final/patch/lang/35/0/1_ArrayUtils.java#L3292'>35-L1</a>, <a href='./final/patch/lang/35/1/1_ArrayUtils.java#L3571'>35-L2</a>, <a href='./final/patch/lang/39/0/1_StringUtils.java#L3675'>39</a>, <a href='./final/patch/lang/41/0/1_ClassUtils.java#L169'>41-L1</a>, <a href='./final/patch/lang/41/13/1_ClassUtils.java#L229'>41-L2</a>, <a href='./final/patch/lang/43/0/1_ExtendedMessageFormat.java#L419'>43</a>, <a href='./final/patch/lang/58/0/1_NumberUtils.java#L452'>58</a>, <a href='./final/patch/lang/60/0/1_StrBuilder.java#L1673'>60-L1</a>, <a href='./final/patch/lang/60/1/1_StrBuilder.java#L1730'>60-L2</a></p><p>Closure (6) : <a href='./final/patch/closure/14/0/1_ControlFlowAnalysis.java#L766'>14</a>, <a href='./final/patch/closure/57/0/1_ClosureCodingConvention.java#L197'>57</a>, <a href='./final/patch/closure/62/0/1_LightweightMessageFormatter.java#L97'>62</a>, <a href='./final/patch/closure/63/0/1_LightweightMessageFormatter.java#L97'>63</a>, <a href='./final/patch/closure/73/0/1_CodeGenerator.java#L1045'>73</a>, <a href='./final/patch/closure/115/0/1_FunctionInjector.java#L730'>115</a></p><p>Time (1) : <a href='./final/patch/time/7/0/1_DateTimeFormatter.java#L708'>7</a></p></blockquote></li><li><p><strong>Partially Correct Path (5):</strong> generate at least one correct patch for one location for multiple location bug.</p><blockquote><p>Chart (2) : <a href='./final/patch/chart/18/1/1_DefaultKeyedValues.java#L334'>18</a>, <a href='./final/patch/chart/22/0/1_KeyedObjects2D.java#L344'>22</a></p><p>Math (1) : <a href='./final/patch/math/72/0/1_BrentSolver.java#L114'>72</a></p><p>Closure (2) : <a href='./final/patch/closure/68/0/1_JsDocInfoParser.java#L1760'>68</a>, <a href='./final/patch/closure/79/3/1_VarCheck.java#L249'>79-L1</a>, <a href='./final/patch/closure/79/4/1_VarCheck.java#L134'>79-L2</a></p></blockquote></li><li><p><strong>Incorrect Patch (20):</strong></p><blockquote><p>Chart (3) : <a href='./final/patch/chart/12/0/1_MultiplePiePlot.java#L145'>12</a>, <a href='./final/patch/chart/14/3/1_CategoryPlot.java#L2440'>14</a>, <a href='./final/patch/chart/25/0/1_DatasetUtilities.java#L576'>25</a></p><p>Math (12) : <a href='./final/patch/math/1/0/1_BigFraction.java#L303'>1</a>, <a href='./final/patch/math/6/0/1_BaseOptimizer.java#L93'>6</a>, <a href='./final/patch/math/8/0/1_DiscreteDistribution.java#L189'>8</a>, <a href='./final/patch/math/20/0/1_CMAESOptimizer.java#L994'>20</a>, <a href='./final/patch/math/28/0/1_SimplexSolver.java#L123'>28</a>, <a href='./final/patch/math/40/0/1_BracketingNthOrderBrentSolver.java#L326'>40</a>, <a href='./final/patch/math/73/0/1_BrentSolver.java#L132'>73</a>, <a href='./final/patch/math/80/0/1_EigenDecompositionImpl.java#L1137'>80</a>, <a href='./final/patch/math/81/0/1_EigenDecompositionImpl.java#L1535'>81</a>, <a href='./final/patch/math/82/0/1_SimplexSolver.java#L62'>82</a>, <a href='./final/patch/math/85/0/1_UnivariateRealSolverUtils.java#L198'>85</a>, <a href='./final/patch/math/88/0/1_SimplexSolver.java#L83'>88</a></p><p>Lang (3) : <a href='./final/patch/lang/44/0/1_NumberUtils.java#L193'>44</a>, <a href='./final/patch/lang/45/0/1_WordUtils.java#L622'>45</a>, <a href='./final/patch/lang/63/0/1_DurationFormatUtils.java#L436'>63</a></p><p>Closure (1) : <a href='./final/patch/closure/106/2/1_JsDocInfoParser.java#L1307'>106</a></p><p>Time (1) : <a href='./final/patch/time/9/0/1_IllegalFieldValueException.java#L45'>9</a></p></blockquote></li></ul><h2><a name='header-c176' class='md-header-anchor '></a>V. Structure of the project</h2><pre class="md-fences md-end-block" lang="powershell"> <div class="CodeMirror cm-s-inner CodeMirror-wrap      " lang="powershell"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 4px;"></div><div class="CodeMirror-hscrollbar" style="left: 0px;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-vscrollbar"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; min-height: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><div style="width: 50px; height: 50px; overflow-x: scroll;"></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-operator">|---</span> <span class="cm-identifier">README</span><span class="cm-punctuation">.</span><span class="cm-builtin">md</span> &nbsp; <span class="cm-operator">:</span>  <span class="cm-identifier">user</span> <span class="cm-identifier">guidance</span></span></pre></div><div class="" style="position: relative;"><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-operator">|---</span> <span class="cm-identifier">bin</span> &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-operator">:</span>  <span class="cm-identifier">binary</span> <span class="cm-identifier">code</span></span></pre></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-operator">|---</span> <span class="cm-identifier">d4j-info</span> &nbsp;  <span class="cm-operator">:</span>  <span class="cm-identifier">defects4j</span> <span class="cm-identifier">information</span></span></pre><div class="" style="position: relative;"><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-operator">|---</span> <span class="cm-identifier">doc</span> &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-operator">:</span>  <span class="cm-identifier">document</span></span></pre></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-operator">|---</span> <span class="cm-identifier">final</span> &nbsp; &nbsp; &nbsp; <span class="cm-operator">:</span>  <span class="cm-identifier">evaluation</span> <span class="cm-identifier">result</span></span></pre><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-operator">|---</span> <span class="cm-identifier">lib</span> &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-operator">:</span>  <span class="cm-identifier">dependent</span> <span class="cm-identifier">libraries</span></span></pre><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-operator">|---</span> <span class="cm-identifier">sbfl</span> &nbsp; &nbsp; &nbsp;  <span class="cm-operator">:</span>  <span class="cm-identifier">fault</span> <span class="cm-identifier">localization</span> <span class="cm-identifier">tool</span></span></pre><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-operator">|---</span> <span class="cm-identifier">simfix</span><span class="cm-punctuation">.</span><span class="cm-identifier">jar</span>  <span class="cm-operator">:</span>  <span class="cm-identifier">runnable</span> <span class="cm-identifier">jar</span> <span class="cm-identifier">file</span></span></pre><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-operator">|---</span> <span class="cm-identifier">src</span> &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-operator">:</span>  <span class="cm-identifier">source</span> <span class="cm-identifier">code</span></span></pre><div class="" style="position: relative;"><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-operator">|---</span> <span class="cm-identifier">test</span> &nbsp; &nbsp; &nbsp;  <span class="cm-operator">:</span>  <span class="cm-identifier">test</span> <span class="cm-identifier">suite</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; top: 0px;"></div><div class="CodeMirror-gutters" style="display: none; height: 220px;"></div></div></div></pre><hr /><p><u><strong>ALL</strong> suggestions are welcomed.</u></p></div>
-  </body>
+	<head>
+		<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+		<title>README.md</title><link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}.CodeMirror { height: auto; }
+		.CodeMirror-scroll { overflow-y: hidden; overflow-x: auto; }
+		.CodeMirror-lines { padding: 4px 0px; }
+		.CodeMirror pre { }
+		.CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler { background-color: white; }
+		.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background-color: rgb(247, 247, 247); white-space: nowrap; }
+		.CodeMirror-linenumbers { }
+		.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+		.CodeMirror div.CodeMirror-cursor { border-left-width: 1px; border-left-style: solid; border-left-color: black; z-index: 3; }
+		.CodeMirror div.CodeMirror-secondarycursor { border-left-width: 1px; border-left-style: solid; border-left-color: silver; }
+		.CodeMirror.cm-keymap-fat-cursor div.CodeMirror-cursor { width: auto; border: 0px; background-color: rgb(119, 238, 119); z-index: 1; background-position: initial initial; background-repeat: initial initial; }
+		.CodeMirror div.CodeMirror-cursor.CodeMirror-overwrite { }
+		.cm-tab { display: inline-block; }
+		.cm-s-typora-default .cm-header, .cm-s-typora-default .cm-property { color: rgb(217, 79, 138); }
+		.cm-s-typora-default pre.cm-header1:not(.cm-atom) :not(.cm-overlay) { font-size: 2rem; line-height: 2rem; }
+		.cm-s-typora-default pre.cm-header2:not(.cm-atom) :not(.cm-overlay) { font-size: 1.4rem; line-height: 1.4rem; }
+		.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number { color: rgb(149, 132, 134); }
+		.cm-s-typora-default .cm-table-row, .cm-s-typora-default .cm-block-start { font-family: monospace; }
+		.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code { color: rgb(74, 90, 159); font-family: monospace; }
+		.cm-s-typora-default .cm-tag { color: rgb(169, 68, 66); }
+		.cm-s-typora-default .cm-string { color: rgb(126, 134, 169); }
+		.cm-s-typora-default .cm-link { color: rgb(196, 122, 15); text-decoration: underline; }
+		.cm-s-typora-default .cm-variable-2, .cm-s-typora-default .cm-variable-1 { color: inherit; }
+		.cm-s-typora-default .cm-overlay { font-family: monospace; }
+		.CodeMirror.cm-s-typora-default div.CodeMirror-cursor { border-left-width: 3px; border-left-style: solid; border-left-color: rgb(228, 98, 154); }
+		.cm-s-typora-default .CodeMirror-activeline-background { left: -60px; right: -30px; background-color: rgba(204, 204, 204, 0.2); background-position: initial initial; background-repeat: initial initial; }
+		.cm-s-typora-default .CodeMirror-gutters { border-right-style: none; background-color: inherit; }
+		.cm-s-typora-default .cm-trailing-space-new-line::after, .cm-startspace::after, .cm-starttab .cm-tab::after { content: '•'; position: absolute; left: 0px; opacity: 0; font-family: LetterGothicStd, monospace; }
+		.os-windows .cm-startspace::after, .os-windows .cm-starttab .cm-tab::after { left: -0.1em; }
+		.cm-starttab .cm-tab::after { content: " "; }
+		.cm-startspace, .cm-tab, .cm-starttab, .cm-trailing-space-a, .cm-trailing-space-b, .cm-trailing-space-new-line { font-family: monospace; position: relative; }
+		.cm-s-typora-default .cm-trailing-space-new-line::after { content: '↓'; opacity: 0.3; }
+		.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+		.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+		.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+		.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+		.cm-s-inner .cm-variable { color: black; }
+		.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+		.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+		.cm-s-inner .cm-property { color: black; }
+		.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+		.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+		.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+		.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+		.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+		.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+		.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+		.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+		.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+		.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+		.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: blue; }
+		.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+		.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+		.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+		.cm-negative { color: rgb(221, 68, 68); }
+		.cm-positive { color: rgb(34, 153, 34); }
+		.cm-header, .cm-strong { font-weight: bold; }
+		.cm-del { text-decoration: line-through; }
+		.cm-em { font-style: italic; }
+		.cm-link { text-decoration: underline; }
+		.cm-error { color: rgb(255, 0, 0); }
+		.cm-invalidchar { color: rgb(255, 0, 0); }
+		.cm-constant { color: rgb(38, 139, 210); }
+		.cm-defined { color: rgb(181, 137, 0); }
+		div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+		div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+		.cm-s-inner .CodeMirror-activeline-background { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+		.CodeMirror { position: relative; overflow: hidden; }
+		.CodeMirror-scroll { margin-bottom: -30px; margin-right: -30px; padding-bottom: 30px; padding-right: 30px; height: 100%; outline: none; position: relative; box-sizing: content-box; }
+		.CodeMirror-sizer { position: relative; }
+		.CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler { position: absolute; z-index: 6; display: none; }
+		.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow-x: hidden; overflow-y: scroll; }
+		.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow-y: hidden; overflow-x: scroll; }
+		.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+		.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+		.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+		.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+		.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background-image: none !important; border: none !important; background-position: initial initial !important; background-repeat: initial initial !important; }
+		.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+		.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+		.CodeMirror-lines { cursor: text; }
+		.CodeMirror pre { border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; border-width: 0px; background-color: transparent; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; background-position: initial initial; background-repeat: initial initial; }
+		.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+		.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: fit-content; }
+		.CodeMirror-wrap .CodeMirror-code pre { border-right-style: none; width: auto; }
+		.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+		.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+		.CodeMirror-widget { }
+		.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+		.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+		.CodeMirror-measure pre { position: static; }
+		.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-style: none; width: 0px; }
+		.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+		.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+		.CodeMirror-selected { background-color: rgb(217, 217, 217); background-position: initial initial; background-repeat: initial initial; }
+		.CodeMirror-focused .CodeMirror-selected { background-color: rgb(215, 212, 240); background-position: initial initial; background-repeat: initial initial; }
+		.cm-searching { background-color: rgba(255, 255, 0, 0.4); background-position: initial initial; background-repeat: initial initial; }
+		.CodeMirror span { }
+		@media print {
+		.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+		}
+		.CodeMirror-lint-markers { width: 16px; }
+		.CodeMirror-lint-tooltip { background-color: infobackground; border: 1px solid black; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; color: infotext; font-family: monospace; overflow: hidden; padding: 2px 5px; position: fixed; white-space: pre-wrap; z-index: 10000; max-width: 600px; opacity: 0; transition: opacity 0.4s; font-size: 0.8em; }
+		.CodeMirror-lint-mark-error, .CodeMirror-lint-mark-warning { background-position: left bottom; background-repeat: repeat no-repeat; }
+		.CodeMirror-lint-mark-error { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAYAAAC09K7GAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sJDw4cOCW1/KIAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAAHElEQVQI12NggIL/DAz/GdA5/xkY/qPKMDAwAADLZwf5rvm+LQAAAABJRU5ErkJggg==); }
+		.CodeMirror-lint-marker-error, .CodeMirror-lint-marker-warning { cursor: pointer; display: inline-block; height: 16px; width: 16px; vertical-align: middle; position: relative; background-position: center center; background-repeat: no-repeat no-repeat; }
+		.CodeMirror-lint-message-error, .CodeMirror-lint-message-warning { padding-left: 18px; background-position: left top; background-repeat: no-repeat no-repeat; }
+		.CodeMirror-lint-marker-error, .CodeMirror-lint-message-error { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAHlBMVEW7AAC7AACxAAC7AAC7AAAAAAC4AAC5AAD///+7AAAUdclpAAAABnRSTlMXnORSiwCK0ZKSAAAATUlEQVR42mWPOQ7AQAgDuQLx/z8csYRmPRIFIwRGnosRrpamvkKi0FTIiMASR3hhKW+hAN6/tIWhu9PDWiTGNEkTtIOucA5Oyr9ckPgAWm0GPBog6v4AAAAASUVORK5CYII=); }
+		.CodeMirror-lint-marker-warning, .CodeMirror-lint-message-warning { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAANlBMVEX/uwDvrwD/uwD/uwD/uwD/uwD/uwD/uwD/uwD6twD/uwAAAADurwD2tQD7uAD+ugAAAAD/uwDhmeTRAAAADHRSTlMJ8mN1EYcbmiixgACm7WbuAAAAVklEQVR42n3PUQqAIBBFUU1LLc3u/jdbOJoW1P08DA9Gba8+YWJ6gNJoNYIBzAA2chBth5kLmG9YUoG0NHAUwFXwO9LuBQL1giCQb8gC9Oro2vp5rncCIY8L8uEx5ZkAAAAASUVORK5CYII=); }
+		.CodeMirror-lint-marker-multiple { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAMAAADzjKfhAAAACVBMVEUAAAAAAAC/v7914kyHAAAAAXRSTlMAQObYZgAAACNJREFUeNo1ioEJAAAIwmz/H90iFFSGJgFMe3gaLZ0od+9/AQZ0ADosbYraAAAAAElFTkSuQmCC); width: 100%; height: 100%; background-position: right bottom; background-repeat: no-repeat no-repeat; }
+		:root { --bg-color:  #ffffff; --text-color:  #333333; --code-block-bg-color: inherit; }
+		html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+		body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+		a:active, a:hover { outline: 0px; }
+		.in-text-selection, ::selection { background-color: rgb(181, 214, 252); text-shadow: none; background-position: initial initial; background-repeat: initial initial; }
+		#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; white-space: pre-wrap; overflow-x: visible; }
+		.for-image #write { padding-left: 8px; padding-right: 8px; }
+		body.typora-export { padding-left: 30px; padding-right: 30px; }
+		@media screen and (max-width: 500px) {
+		body.typora-export { padding-left: 0px; padding-right: 0px; }
+		.CodeMirror-sizer { margin-left: 0px !important; }
+		.CodeMirror-gutters { display: none !important; }
+		}
+		.typora-export #write { margin: 0px auto; }
+		#write > p:first-child, #write > ul:first-child, #write > ol:first-child, #write > pre:first-child, #write > blockquote:first-child, #write > div:first-child, #write > table:first-child { margin-top: 30px; }
+		#write li > table:first-child { margin-top: -20px; }
+		img { max-width: 100%; vertical-align: middle; }
+		input, button, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+		input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+		::before, ::after, * { box-sizing: border-box; }
+		#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write div, #write pre { width: inherit; }
+		#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6 { position: relative; }
+		h1 { font-size: 2rem; }
+		h2 { font-size: 1.8rem; }
+		h3 { font-size: 1.6rem; }
+		h4 { font-size: 1.4rem; }
+		h5 { font-size: 1.2rem; }
+		h6 { font-size: 1rem; }
+		p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
+		.typora-export p { white-space: normal; }
+		.mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0rem; -webkit-margin-after: 0rem; }
+		.hidden { display: none; }
+		.md-blockmeta { color: rgb(204, 204, 204); font-weight: bold; font-style: italic; }
+		a { cursor: pointer; }
+		sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.701961); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; }
+		#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; margin: 4px 0px 0px; }
+		figure { max-width: 100%; overflow-x: auto; margin: 0px; }
+		tr { break-inside: avoid; break-after: auto; }
+		thead { display: table-header-group; }
+		table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+		table.md-table td { min-width: 80px; }
+		.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+		.CodeMirror { text-align: left; }
+		.CodeMirror-placeholder { opacity: 0.3; }
+		.CodeMirror pre { padding: 0px 4px; }
+		.CodeMirror-lines { padding: 0px; }
+		div.hr:focus { cursor: none; }
+		pre { white-space: pre-wrap; }
+		.CodeMirror-gutters { margin-right: 4px; }
+		.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: var(--code-block-bg-color); position: relative !important; }
+		.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+		.md-fences .CodeMirror.CodeMirror-wrap { top: -1.6em; margin-bottom: -1.6em; }
+		.md-fences.mock-cm { white-space: pre-wrap; }
+		.show-fences-line-number .md-fences { padding-left: 0px; }
+		.show-fences-line-number .md-fences.mock-cm { padding-left: 40px; }
+		.CodeMirror-line { break-inside: avoid; }
+		.footnotes { opacity: 0.8; font-size: 0.9rem; padding-top: 1em; padding-bottom: 1em; }
+		.footnotes + .footnotes { margin-top: -1em; }
+		.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background-color: transparent; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: normal; text-align: left; box-sizing: content-box; direction: ltr; background-position: initial initial; background-repeat: initial initial; }
+		li div { padding-top: 0px; }
+		blockquote { margin: 1rem 0px; }
+		li p, li .mathjax-block { margin: 0.5rem 0px; }
+		li { margin: 0px; position: relative; }
+		blockquote > :last-child { margin-bottom: 0px; }
+		blockquote > :first-child { margin-top: 0px; }
+		.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; }
+		@media print {
+		html, body { border: 1px solid transparent; height: 99%; break-after: avoid-page; break-before: avoid-page; }
+		.typora-export * { -webkit-print-color-adjust: exact; }
+		h1, h2, h3, h4, h5, h6 { break-after: avoid-page; orphans: 2; }
+		p { orphans: 4; }
+		html.blink-to-pdf { font-size: 13px; }
+		.typora-export #write { padding-left: 1cm; padding-right: 1cm; padding-bottom: 0px; break-after: avoid-page; }
+		.typora-export #write::after { height: 0px; }
+		@page { margin: 20mm 0mm; }
+		}
+		.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+		a img, img a { cursor: pointer; }
+		pre.md-meta-block { font-size: 0.8rem; min-height: 2.86rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+		p > img:only-child { display: block; margin: auto; }
+		p .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+		#write .MathJax_Display { margin: 0.8em 0px 0px; }
+		.mathjax-block { white-space: pre; overflow: hidden; width: 100%; }
+		p + .mathjax-block { margin-top: -1.143rem; }
+		.mathjax-block:not(:empty)::after { display: none; }
+		[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: none; box-shadow: none; }
+		.task-list { list-style-type: none; }
+		.task-list-item { position: relative; padding-left: 1em; }
+		.task-list-item input { position: absolute; top: 0px; left: 0px; }
+		.math { font-size: 1rem; }
+		.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+		.md-toc-content { position: relative; margin-left: 0px; }
+		.md-toc::after, .md-toc-content::after { display: none; }
+		.md-toc-item { display: block; color: rgb(65, 131, 196); }
+		.md-toc-item a { text-decoration: none; }
+		.md-toc-inner:hover { }
+		.md-toc-inner { display: inline-block; cursor: pointer; }
+		.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: bold; }
+		.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+		.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+		.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+		.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+		.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+		@media screen and (max-width: 48em) {
+		.md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+		.md-toc-h4 .md-toc-inner { margin-left: 5em; }
+		.md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+		.md-toc-h6 .md-toc-inner { margin-left: 8em; }
+		}
+		a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+		.footnote-line a:not(.reversefootnote) { color: inherit; }
+		.md-attr { display: none; }
+		.md-fn-count::after { content: "."; }
+		.md-tag { opacity: 0.5; }
+		.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: monospace; }
+		code { text-align: left; }
+		h1 .md-tag, h2 .md-tag, h3 .md-tag, h4 .md-tag, h5 .md-tag, h6 .md-tag { font-weight: initial; opacity: 0.35; }
+		a.md-print-anchor { border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: none !important; background-color: transparent !important; text-shadow: initial !important; background-position: initial initial !important; background-repeat: initial initial !important; }
+		.md-inline-math .MathJax_SVG .noError { display: none !important; }
+		.mathjax-block .MathJax_SVG_Display { text-align: center; margin: 1em 0em; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; display: block !important; }
+		.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+		.MathJax_SVG .MJX-monospace { font-family: monospace; }
+		.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+		.MathJax_SVG { display: inline; font-style: normal; font-weight: normal; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+		.MathJax_SVG * { transition: none; }
+		.md-diagram-panel > svg { max-width: 100%; }
+		[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; }
+		:root {
+		--side-bar-bg-color: #fafafa;
+		--control-text-color: #777;
+		}
+		@include-when-export url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+		@font-face {
+		font-family: 'Open Sans';
+		font-style: normal;
+		font-weight: normal;
+		src: local('Open Sans Regular'),url('file:///Users/Jiajun/Library/Application%20Support/abnerworks.Typora/themes/github/400.woff') format('woff')
+		}
+		@font-face {
+		font-family: 'Open Sans';
+		font-style: italic;
+		font-weight: normal;
+		src: local('Open Sans Italic'),url('file:///Users/Jiajun/Library/Application%20Support/abnerworks.Typora/themes/github/400i.woff') format('woff')
+		}
+		@font-face {
+		font-family: 'Open Sans';
+		font-style: normal;
+		font-weight: bold;
+		src: local('Open Sans Bold'),url('file:///Users/Jiajun/Library/Application%20Support/abnerworks.Typora/themes/github/700.woff') format('woff')
+		}
+		@font-face {
+		font-family: 'Open Sans';
+		font-style: italic;
+		font-weight: bold;
+		src: local('Open Sans Bold Italic'),url('file:///Users/Jiajun/Library/Application%20Support/abnerworks.Typora/themes/github/700i.woff') format('woff')
+		}
+		html {
+		font-size: 16px;
+		}
+		body {
+		font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+		color: rgb(51, 51, 51);
+		line-height: 1.6;
+		}
+		#write{
+		max-width: 860px;
+			margin: 0 auto;
+			padding: 20px 30px 40px 30px;
+			padding-top: 20px;
+		padding-bottom: 100px;
+		}
+		#write > ul:first-child,
+		#write > ol:first-child{
+		margin-top: 30px;
+		}
+		body > *:first-child {
+		margin-top: 0 !important;
+		}
+		body > *:last-child {
+		margin-bottom: 0 !important;
+		}
+		a {
+		color: #4183C4;
+		}
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+		position: relative;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		font-weight: bold;
+		line-height: 1.4;
+		cursor: text;
+		}
+		h1:hover a.anchor,
+		h2:hover a.anchor,
+		h3:hover a.anchor,
+		h4:hover a.anchor,
+		h5:hover a.anchor,
+		h6:hover a.anchor {
+		/*background: url("file:///Users/Jiajun/Library/Application%20Support/images/modules/styleguide/para.png") no-repeat 10px center;*/
+		text-decoration: none;
+		}
+		h1 tt,
+		h1 code {
+		font-size: inherit;
+		}
+		h2 tt,
+		h2 code {
+		font-size: inherit;
+		}
+		h3 tt,
+		h3 code {
+		font-size: inherit;
+		}
+		h4 tt,
+		h4 code {
+		font-size: inherit;
+		}
+		h5 tt,
+		h5 code {
+		font-size: inherit;
+		}
+		h6 tt,
+		h6 code {
+		font-size: inherit;
+		}
+		h1 {
+		padding-bottom: .3em;
+		font-size: 2.25em;
+		line-height: 1.2;
+		border-bottom: 1px solid #eee;
+		}
+		h2 {
+		padding-bottom: .3em;
+		font-size: 1.75em;
+		line-height: 1.225;
+		border-bottom: 1px solid #eee;
+		}
+		h3 {
+		font-size: 1.5em;
+		line-height: 1.43;
+		}
+		h4 {
+		font-size: 1.25em;
+		}
+		h5 {
+		font-size: 1em;
+		}
+		h6 {
+		font-size: 1em;
+		color: #777;
+		}
+		p,
+		blockquote,
+		ul,
+		ol,
+		dl,
+		table{
+		margin: 0.8em 0;
+		}
+		li>ol,
+		li>ul {
+		margin: 0 0;
+		}
+		hr {
+		height: 4px;
+		padding: 0;
+		margin: 16px 0;
+		background-color: #e7e7e7;
+		border: 0 none;
+		overflow: hidden;
+		box-sizing: content-box;
+		border-bottom: 1px solid #ddd;
+		}
+		body > h2:first-child {
+		margin-top: 0;
+		padding-top: 0;
+		}
+		body > h1:first-child {
+		margin-top: 0;
+		padding-top: 0;
+		}
+		body > h1:first-child + h2 {
+		margin-top: 0;
+		padding-top: 0;
+		}
+		body > h3:first-child,
+		body > h4:first-child,
+		body > h5:first-child,
+		body > h6:first-child {
+		margin-top: 0;
+		padding-top: 0;
+		}
+		a:first-child h1,
+		a:first-child h2,
+		a:first-child h3,
+		a:first-child h4,
+		a:first-child h5,
+		a:first-child h6 {
+		margin-top: 0;
+		padding-top: 0;
+		}
+		h1 p,
+		h2 p,
+		h3 p,
+		h4 p,
+		h5 p,
+		h6 p {
+		margin-top: 0;
+		}
+		li p.first {
+		display: inline-block;
+		}
+		ul,
+		ol {
+		padding-left: 30px;
+		}
+		ul:first-child,
+		ol:first-child {
+		margin-top: 0;
+		}
+		ul:last-child,
+		ol:last-child {
+		margin-bottom: 0;
+		}
+		blockquote {
+		border-left: 4px solid #dddddd;
+		padding: 0 15px;
+		color: #777777;
+		}
+		blockquote blockquote {
+		padding-right: 0;
+		}
+		table {
+		padding: 0;
+		word-break: initial;
+		}
+		table tr {
+		border-top: 1px solid #cccccc;
+		margin: 0;
+		padding: 0;
+		}
+		table tr:nth-child(2n) {
+		background-color: #f8f8f8;
+		}
+		table tr th {
+		font-weight: bold;
+		border: 1px solid #cccccc;
+		text-align: left;
+		margin: 0;
+		padding: 6px 13px;
+		}
+		table tr td {
+		border: 1px solid #cccccc;
+		text-align: left;
+		margin: 0;
+		padding: 6px 13px;
+		}
+		table tr th:first-child,
+		table tr td:first-child {
+		margin-top: 0;
+		}
+		table tr th:last-child,
+		table tr td:last-child {
+		margin-bottom: 0;
+		}
+		.CodeMirror-gutters {
+		border-right: 1px solid #ddd;
+		}
+		.md-fences,
+		code,
+		tt {
+		border: 1px solid #ddd;
+		background-color: #f8f8f8;
+		border-radius: 3px;
+		padding: 0;
+		font-family: Consolas, "Liberation Mono", Courier, monospace;
+		padding: 2px 4px 0px 4px;
+		font-size: 0.9em;
+		}
+		.md-fences {
+		margin-bottom: 15px;
+		margin-top: 15px;
+		padding: 0.2em 1em;
+		padding-top: 8px;
+		padding-bottom: 6px;
+		}
+		.task-list{
+			padding-left: 0;
+		}
+		.task-list-item {
+			padding-left:32px;
+		}
+		.task-list-item input {
+		top: 3px;
+		left: 8px;
+		}
+		@media screen and (min-width: 914px) {
+		/*body {
+		width: 854px;
+		margin: 0 auto;
+		}*/
+		}
+		@media print {
+		html {
+		font-size: 13px;
+		}
+		table,
+		pre {
+		page-break-inside: avoid;
+		}
+		pre {
+		word-wrap: break-word;
+		}
+		}
+		.md-fences {
+			background-color: #f8f8f8;
+		}
+		#write pre.md-meta-block {
+			padding: 1rem;
+		font-size: 85%;
+		line-height: 1.45;
+		background-color: #f7f7f7;
+		border: 0;
+		border-radius: 3px;
+		color: #777777;
+		margin-top: 0 !important;
+		}
+		.mathjax-block>.code-tooltip {
+			bottom: .375rem;
+		}
+		#write>h3.md-focus:before{
+			left: -1.5625rem;
+			top: .375rem;
+		}
+		#write>h4.md-focus:before{
+			left: -1.5625rem;
+			top: .285714286rem;
+		}
+		#write>h5.md-focus:before{
+			left: -1.5625rem;
+			top: .285714286rem;
+		}
+		#write>h6.md-focus:before{
+			left: -1.5625rem;
+			top: .285714286rem;
+		}
+		.md-image>.md-meta {
+		border: 1px solid #ddd;
+		border-radius: 3px;
+		font-family: Consolas, "Liberation Mono", Courier, monospace;
+		padding: 2px 4px 0px 4px;
+		font-size: 0.9em;
+		color: inherit;
+		}
+		.md-tag{
+			color: inherit;
+		}
+		.md-toc {
+		margin-top:20px;
+		padding-bottom:20px;
+		}
+		.sidebar-tabs {
+		border-bottom: none;
+		}
+		#typora-quick-open {
+		border: 1px solid #ddd;
+		background-color: #f8f8f8;
+		}
+		#typora-quick-open-item {
+		background-color: #FAFAFA;
+		border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+		border-style: solid;
+		border-width: 1px;
+		}
+		#md-notification:before {
+		top: 10px;
+		}
+		/** focus mode */
+		.on-focus-mode blockquote {
+		border-left-color: rgba(85, 85, 85, 0.12);
+		}
+		header, .context-menu, .megamenu-content, footer{
+		font-family: "Segoe UI", "Arial", sans-serif;
+		}
+		.file-node-content:hover .file-node-icon,
+		.file-node-content:hover .file-node-open-state{
+		visibility: visible;
+		}
+		.mac-seamless-mode #typora-sidebar {
+		background-color: #fafafa;
+		background-color: var(--side-bar-bg-color);
+		}
+		.md-lang {
+		color: #b4654d;
+		}
+		</style>
+	</head>
+	<body class='typora-export' >
+		<div  id='write'  class = 'is-mac'><h1><a name='header-n0' class='md-header-anchor '></a>SimFix</h1><ul><li><a href='#user-content-i-introduction'>I. Introduction of SimFix</a></li><li><a href='#user-content-ii-environment'>II. Environment setup</a></li><li><a href='#user-content-iii-how-to-run'>III. Run SimFix Step-by-Step</a></li><li><a href='#user-content-iv-evaluation-result'>IV. Evaluation Result</a></li><li><a href='#user-content-v-structure-of-the-project'>V. Structure of the project</a></li></ul><h2><a name='header-n18' class='md-header-anchor '></a>I. Introduction</h2><p><em>SimFix</em> is an automatic program repair technique, which leverages similar code snippets in the same project to generate patches. The following figure is the workflow of our approach.</p><p><img src='./doc/figure/overview.png' alt='The workflow of this technique.\label{workflow}' /></p><ol start='' ><li><strong>Fault Localization</strong> : obtain a ranking list of candidate buggy statements.</li><li><strong>Similar Code Identification</strong> : identify the similarity between buggy code snippet and each candidate similar code snippet by leveraging three similarity metrics, according to which we obtain a list of candidate similar snippet with decending order of similarity value.</li><li><strong>Variable Mapping</strong> : establish the mapping relationship between variables in buggy and similar code snippet by leveraging similarity metrics and then obtain a mapping table.</li><li><strong>Modification Extraction</strong> : extract code modifications to buggy code snippet via AST (Abstract Syntax Tree) matching and differencing, during which the variable mapping table will be used.</li><li><strong>Patch Generation &amp; Validation</strong> : generate repair patches by applying extracted code modifications to the buggy code snippet with combining and ranking whose modifications, then using the test suite to validate the correctness for each candidate patch.</li></ol><h2><a name='header-n39' class='md-header-anchor '></a>II. Environment</h2><ul><li><p>OS: Linux (Tested on Ubuntu 16.04.2 LTS)</p></li><li><p>Download and configure <a href='https://github.com/rjust/defects4j'>Defects4J</a> running environment.</p></li><li><p>Configure the following path.</p><ul><li>DEFECTS4J_HOME=&quot;home_of_defects4j&quot;</li></ul></li></ul><h2><a name='header-n55' class='md-header-anchor '></a>III. How to run</h2><p><em>SimFix</em> was traditionally developed as an Eclipse Java project, you can simply import this project to your workspace and run it as a common Java program. The main class is <strong>cofix.main.Main</strong>, and for the running option please refer to the <a href='#user-content-step-2-running-options'>Running Options</a>.</p><h4><a name='header-n58' class='md-header-anchor '></a>Before running</h4><ul><li><p><code>unzip</code> file <code>sbfl/data.zip</code> to <code>sbfl/data</code>  : used for fault localization</p></li><li><p>using the command line provided by Defects4J to checkout a buggy version of benchmark for testing.</p><p><code>Example: defects4j checkout -p Chart -v 1b -w ${buggy_program_path}/chart/chart_1_buggy</code></p></li></ul><p>  <strong><em>NOTE</em></strong> : the path of the buggy version of benchmark have to be set as:</p><p>  <code>…/projectName/projectName_id_buggy</code>  =&gt; <code>Example: /home/user/chart/chart_1_buggy</code></p><h4><a name='header-n72' class='md-header-anchor '></a>Step 1, Build The Project</h4><p>Originally, <em>SimFix</em> was developed as an <a href='http://www.eclipse.org/mars/'>Eclipse</a> Java Project, you can simply <strong>import</strong> the project into your workspace and the class <code>cofix.main.Main</code> is the entry of the whole program.</p><h4><a name='header-n75' class='md-header-anchor '></a>Step 2, Running Options</h4><p>Our prototype of <em>SimFix</em> needs <strong>three</strong> input options for running.</p><ul><li><p><code>--proj_home</code> : the home of buggy program of benchmark. (<code>${buggy_program_path}</code> for the example)</p></li><li><p><code>--proj_name</code> : the project name of buggy program of benchmark. (<code>chart</code> for the example)</p></li><li><p><code>--bug_id</code> : the identifier of the buggy program. (<code>1</code> for the example)</p><ul><li><p>the option of <code>--bugy_id</code> supports multiple formats:</p><p><code>single_id</code> : repair single bug, <code>e.g., 1</code>.</p><p><code>startId-endId</code> : repair a series of bugs with consecutive identifiers, <code>e.g., 1-3</code>.</p><p><code>single_id,single_id,single_id</code> : repair any bugs for the specific program, <code>e.g., 1,5,9</code>.</p><p><code>all</code> : repair all buggy versions of a specific project, <code>i.e., all</code>.</p></li></ul><pre class="md-fences md-end-block" lang="powershell"> <div class="CodeMirror cm-s-inner CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 4px;"></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 30px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-identifier">Usage</span><span class="cm-operator">:</span> <span class="cm-operator">--</span><span class="cm-identifier">proj_home</span><span class="cm-operator">=</span><span class="cm-variable-2">${proj_home}</span> <span class="cm-operator">--</span><span class="cm-identifier">proj_name</span><span class="cm-operator">=</span><span class="cm-variable-2">${proj_name}</span> <span class="cm-operator">--</span><span class="cm-identifier">bug_id</span><span class="cm-operator">=</span><span class="cm-variable-2">${bug_id}</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-identifier">Example</span><span class="cm-operator">:</span> <span class="cm-operator">--</span><span class="cm-identifier">proj_home</span><span class="cm-operator">=/</span><span class="cm-identifier">home</span><span class="cm-operator">/</span><span class="cm-identifier">user</span> <span class="cm-operator">--</span><span class="cm-identifier">proj_name</span><span class="cm-operator">=</span><span class="cm-identifier">chart</span> <span class="cm-operator">--</span><span class="cm-identifier">bug_id</span><span class="cm-operator">=</span><span class="cm-number">1</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-identifier">Another</span><span class="cm-operator">:</span> <span class="cm-operator">--</span><span class="cm-identifier">proj_home</span><span class="cm-operator">=/</span><span class="cm-identifier">home</span><span class="cm-operator">/</span><span class="cm-identifier">user</span> <span class="cm-operator">--</span><span class="cm-identifier">proj_name</span><span class="cm-operator">=</span><span class="cm-identifier">chart</span> <span class="cm-operator">--</span><span class="cm-identifier">bug_id</span><span class="cm-operator">=</span><span class="cm-number">1</span><span class="cm-punctuation">,</span><span class="cm-number">4</span><span class="cm-punctuation">,</span><span class="cm-number">8</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 66px;"></div><div class="CodeMirror-gutters" style="display: none; height: 96px;"></div></div></div></pre></li></ul><p><strong>OPTION 1</strong> : run within eclipse.</p><ul><li><p>From the Main class:</p><p><code>Run As</code>→<code>Run Configurations…</code> →<code>Arguments</code> : set the above arguments as <em>Program Arguments</em>.</p></li></ul><p><strong>OPTION 2</strong> : run using command line.</p><ul><li><p>We also provide runnable jar file of <em>SimFix</em> in the home folder of the project <code>i.e., simfix.jar</code>.</p><p>set the home directory of the <em>SimFix</em> project as your correct path and then run as:</p><p><code>java -jar simfix.jar --proj_home=/home/user --proj_name=chart --bug_id=1</code></p></li></ul><h4><a name='header-n119' class='md-header-anchor '></a>Step 3, Result Analysis</h4><p>After finishing the repair, there will be two additional folders: <code>log</code> and <code>patch</code>.</p><ul><li><p><code>log</code> : debug output, including buggy statements already tried, patches and reference code snippet for correct patch generation.</p></li><li><p><code>patch</code> : a single source file repaired by <em>SimFix</em> that can pass the test suite. In the source file, you can find the patch, which is formatted as (example of Chart_1):</p><pre class="md-fences md-end-block" lang="java" style="page-break-inside: unset;"> <div class="CodeMirror cm-s-inner CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 4px;"></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 30px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// start of generated patch</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-3">int</span> <span class="cm-variable">index</span><span class="cm-operator">=</span><span class="cm-keyword">this</span>.<span class="cm-variable">plot</span>.<span class="cm-variable">getIndexOf</span>(<span class="cm-keyword">this</span>);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">CategoryDataset</span> <span class="cm-variable">dataset</span><span class="cm-operator">=</span><span class="cm-keyword">this</span>.<span class="cm-variable">plot</span>.<span class="cm-variable">getDataset</span>(<span class="cm-variable">index</span>);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">if</span>(<span class="cm-variable">dataset</span><span class="cm-operator">==</span><span class="cm-atom">null</span>){</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">return</span> <span class="cm-variable">result</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// end of generated patch</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">/* start of original code</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">int index = this.plot.getIndexOf(this);</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">CategoryDataset dataset = this.plot.getDataset(index);</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">if (dataset != null) {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">return result;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-comment">end of original code*/</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 308px;"></div><div class="CodeMirror-gutters" style="display: none; height: 338px;"></div></div></div></pre></li></ul><h2><a name='header-n130' class='md-header-anchor '></a>IV. Evaluation Result</h2><p>Totally, <em>SimFix</em> successfully repair 34 bugs among 357 bugs in Defects4j v1.0 benchmark with generating 22 plausible but incorrect patches. The following table and venn diagram are comparison with existing approaches. More details are presented in the sub-folder <a href='./final'>final</a>.</p><figure><table><thead><tr><th style='text-align:center;' ><img src='./doc/figure/result.png' alt='The comparison with existing approaches.\label{compare}' /></th><th style='text-align:center;' ><img src='./doc/figure/venn.png' alt='Intersection among different approaches.\label{venn}' /></th></tr></thead><tbody><tr><td style='text-align:center;' >The comparison with existing approaches.</td><td style='text-align:center;' >Intersections.</td></tr></tbody></table></figure><h2><a name='header-n172' class='md-header-anchor '></a>V. Structure of the project</h2><pre class="md-fences md-end-block" lang="powershell"> <div class="CodeMirror cm-s-inner CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 4px;"></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 30px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-operator">|---</span> <span class="cm-identifier">README</span><span class="cm-punctuation">.</span><span class="cm-builtin">md</span> &nbsp; <span class="cm-operator">:</span> &nbsp;<span class="cm-identifier">user</span> <span class="cm-identifier">guidance</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-operator">|---</span> <span class="cm-identifier">bin</span> &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-operator">:</span> &nbsp;<span class="cm-identifier">binary</span> <span class="cm-identifier">code</span></span></pre><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-operator">|---</span> <span class="cm-identifier">d4j-info</span> &nbsp; &nbsp;<span class="cm-operator">:</span> &nbsp;<span class="cm-identifier">defects4j</span> <span class="cm-identifier">information</span></span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-operator">|---</span> <span class="cm-identifier">doc</span> &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-operator">:</span> &nbsp;<span class="cm-identifier">document</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-operator">|---</span> <span class="cm-identifier">final</span> &nbsp; &nbsp; &nbsp; <span class="cm-operator">:</span> &nbsp;<span class="cm-identifier">evaluation</span> <span class="cm-identifier">result</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-operator">|---</span> <span class="cm-identifier">lib</span> &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-operator">:</span> &nbsp;<span class="cm-identifier">dependent</span> <span class="cm-identifier">libraries</span></span></pre><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-operator">|---</span> <span class="cm-identifier">sbfl</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-operator">:</span> &nbsp;<span class="cm-identifier">fault</span> <span class="cm-identifier">localization</span> <span class="cm-identifier">tool</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-operator">|---</span> <span class="cm-identifier">src</span> &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-operator">:</span> &nbsp;<span class="cm-identifier">source</span> <span class="cm-identifier">code</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-operator">|---</span> <span class="cm-identifier">test</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-operator">:</span> &nbsp;<span class="cm-identifier">test</span> <span class="cm-identifier">suite</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 198px;"></div><div class="CodeMirror-gutters" style="display: none; height: 228px;"></div></div></div></pre><hr /><p><u><strong>ALL</strong> suggestions are welcomed.</u></p></div>
+	</body>
 </html>
