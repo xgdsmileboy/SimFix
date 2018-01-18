@@ -1,0 +1,27 @@
+=================================================
+Project : closure_95	start : 18/01/15 19:26
+Current failed test : com.google.javascript.jscomp.TypeCheckTest::testQualifiedNameInference5 | 18/01/15 19:27
+Mon Jan 15 19:33:58 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,278
+Mon Jan 15 19:39:53 AEDT 2018 com.google.javascript.jscomp.CodeGenerator,289
+Mon Jan 15 19:45:48 AEDT 2018 com.google.javascript.rhino.jstype.ObjectType,314
+Mon Jan 15 19:46:48 AEDT 2018 com.google.javascript.rhino.jstype.ObjectType,446
+Mon Jan 15 19:46:58 AEDT 2018 com.google.javascript.rhino.jstype.UnknownType,175
+Mon Jan 15 19:47:10 AEDT 2018 com.google.javascript.rhino.jstype.UnknownType,136
+Mon Jan 15 19:47:21 AEDT 2018 com.google.javascript.rhino.JSDocInfo,834
+Mon Jan 15 19:51:43 AEDT 2018 com.google.javascript.jscomp.LinkedFlowScope,114
+Mon Jan 15 19:55:26 AEDT 2018 com.google.javascript.jscomp.LinkedFlowScope,122
+Mon Jan 15 19:57:45 AEDT 2018 com.google.javascript.jscomp.TypeInference,1262
+Mon Jan 15 20:01:49 AEDT 2018 com.google.javascript.jscomp.TypeInference,560
+Mon Jan 15 20:06:44 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1385
+Mon Jan 15 20:28:04 AEDT 2018 com.google.javascript.jscomp.TypeInference,557
+Mon Jan 15 20:28:05 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,241
+Mon Jan 15 20:33:29 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,678
+Mon Jan 15 20:57:37 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,679
+Mon Jan 15 20:57:42 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,680
+Mon Jan 15 20:57:47 AEDT 2018 com.google.javascript.jscomp.ClosureCodingConvention,133
+Mon Jan 15 21:03:28 AEDT 2018 com.google.javascript.jscomp.ClosureCodingConvention,121
+Mon Jan 15 23:15:48 AEDT 2018 com.google.javascript.jscomp.ClosureCodingConvention,131
+Mon Jan 15 23:31:19 AEDT 2018 com.google.javascript.jscomp.TypeInference,1048
+Mon Jan 15 23:55:59 AEDT 2018 com.google.javascript.jscomp.TypeInference,1049
+Mon Jan 15 23:56:04 AEDT 2018 com.google.javascript.jscomp.TypedScopeCreator,308
+Timeout time : 18/01/16 00:33

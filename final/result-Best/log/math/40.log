@@ -1,0 +1,679 @@
+=================================================
+Project : math_40	start : 18/01/14 07:19
+Current failed test : org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolverTest::testIssue716 | 18/01/14 07:20
+Sun Jan 14 07:21:54 AEDT 2018 org.apache.commons.math.exception.MathIllegalStateException,80
+Sun Jan 14 07:23:07 AEDT 2018 org.apache.commons.math.exception.MathIllegalStateException,86
+Sun Jan 14 07:24:15 AEDT 2018 Sun Jan 14 07:24:15 AEDT 2018 : org.apache.commons.math.exception.MathIllegalStateException,45=>Find no block
+Sun Jan 14 07:24:21 AEDT 2018 org.apache.commons.math.exception.MathIllegalStateException,46
+Sun Jan 14 07:24:52 AEDT 2018 org.apache.commons.math.exception.MathIllegalStateException,47
+Sun Jan 14 07:24:58 AEDT 2018 Sun Jan 14 07:24:58 AEDT 2018 : org.apache.commons.math.exception.MathIllegalStateException,48=>Find no block
+Sun Jan 14 07:25:05 AEDT 2018 org.apache.commons.math.exception.MathIllegalStateException,69
+Sun Jan 14 07:25:21 AEDT 2018 Sun Jan 14 07:25:21 AEDT 2018 : org.apache.commons.math.exception.MathIllegalStateException,70=>Find no block
+Sun Jan 14 07:25:29 AEDT 2018 org.apache.commons.math.exception.MathIllegalStateException,74
+Sun Jan 14 07:25:44 AEDT 2018 org.apache.commons.math.exception.MaxCountExceededException,42
+Sun Jan 14 07:26:01 AEDT 2018 Sun Jan 14 07:26:01 AEDT 2018 : org.apache.commons.math.exception.MaxCountExceededException,43=>Find no block
+Sun Jan 14 07:26:06 AEDT 2018 Sun Jan 14 07:26:06 AEDT 2018 : org.apache.commons.math.exception.MaxCountExceededException,53=>Find no block
+Sun Jan 14 07:26:14 AEDT 2018 org.apache.commons.math.exception.MaxCountExceededException,54
+Sun Jan 14 07:27:29 AEDT 2018 org.apache.commons.math.exception.MaxCountExceededException,55
+Sun Jan 14 07:27:37 AEDT 2018 Sun Jan 14 07:27:37 AEDT 2018 : org.apache.commons.math.exception.MaxCountExceededException,56=>Find no block
+Sun Jan 14 07:27:44 AEDT 2018 org.apache.commons.math.exception.MaxCountExceededException,62
+Sun Jan 14 07:27:57 AEDT 2018 org.apache.commons.math.exception.TooManyEvaluationsException,37
+Sun Jan 14 07:29:13 AEDT 2018 org.apache.commons.math.exception.TooManyEvaluationsException,38
+Sun Jan 14 07:29:18 AEDT 2018 Sun Jan 14 07:29:18 AEDT 2018 : org.apache.commons.math.exception.TooManyEvaluationsException,39=>Find no block
+Sun Jan 14 07:29:23 AEDT 2018 org.apache.commons.math.util.Incrementor,65
+Sun Jan 14 07:29:51 AEDT 2018 org.apache.commons.math.util.Incrementor,151
+Sun Jan 14 07:32:33 AEDT 2018 Sun Jan 14 07:32:33 AEDT 2018 : org.apache.commons.math.analysis.solvers.BaseAbstractUnivariateRealSolver,295=>Find no block
+Sun Jan 14 07:32:38 AEDT 2018 org.apache.commons.math.analysis.solvers.BaseAbstractUnivariateRealSolver,296
+Sun Jan 14 07:32:56 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,393
+Sun Jan 14 07:34:52 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,394
+Sun Jan 14 07:34:59 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,128
+Sun Jan 14 07:38:34 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,129
+Sun Jan 14 07:38:39 AEDT 2018 Sun Jan 14 07:38:39 AEDT 2018 : org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,130=>Find no block
+Sun Jan 14 07:38:45 AEDT 2018 org.apache.commons.math.analysis.solvers.AbstractUnivariateRealSolver,59
+Sun Jan 14 07:40:08 AEDT 2018 Sun Jan 14 07:40:08 AEDT 2018 : org.apache.commons.math.analysis.solvers.AbstractUnivariateRealSolver,60=>Find no block
+Sun Jan 14 07:40:14 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,124
+Sun Jan 14 07:40:21 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,125
+Sun Jan 14 07:40:26 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,265
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(signChangeIndex-start>=start-signChangeIndex){
+++start;
+}else {
+--end;
+}
+
+Time : 18/01/14 07:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(signChangeIndex-start>=end-nbPoints){
+++start;
+}else {
+--end;
+}
+
+Time : 18/01/14 07:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(signChangeIndex-start>=start-nbPoints){
+++start;
+}else {
+--end;
+}
+
+Time : 18/01/14 07:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+end=start+MAXIMAL_AGING-signChangeIndex;
+if(signChangeIndex-start>=end-signChangeIndex){
+++start;
+}else {
+--end;
+}
+
+Time : 18/01/14 07:47
+----------------------------------------
+Sun Jan 14 07:49:09 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,235
+Sun Jan 14 07:51:18 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,294
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+nbPoints=end-start;
+System.arraycopy(y,1,y,0,nbPoints);
+System.arraycopy(y,start,y,0,nbPoints);
+
+Time : 18/01/14 07:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+nbPoints=end-start;
+System.arraycopy(x,start,x,0,nbPoints);
+x[start]=nextX;
+System.arraycopy(y,start,y,0,nbPoints);
+
+Time : 18/01/14 07:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+y[start]=nextY;
+nbPoints=end-start;
+System.arraycopy(x,start,x,0,nbPoints);
+System.arraycopy(y,start,y,0,nbPoints);
+
+Time : 18/01/14 07:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+y[start]=nextY;
+nbPoints=end-start;
+System.arraycopy(x,start,x,0,nbPoints);
+x[start]=nextX;
+System.arraycopy(y,start,y,0,nbPoints);
+
+Time : 18/01/14 07:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+nbPoints=end-start;
+System.arraycopy(x,start,x,0,nbPoints);
+System.arraycopy(y,nbPoints,y,0,nbPoints);
+
+Time : 18/01/14 07:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+nbPoints=end-start;
+System.arraycopy(y,start,x,0,nbPoints);
+System.arraycopy(y,nbPoints,y,0,nbPoints);
+
+Time : 18/01/14 08:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+nbPoints=end-start;
+System.arraycopy(x,start,tmpX,0,nbPoints);
+System.arraycopy(y,nbPoints,y,0,nbPoints);
+
+Time : 18/01/14 08:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+nbPoints=end-start;
+System.arraycopy(y,0,tmpX,0,nbPoints);
+System.arraycopy(y,nbPoints,y,0,nbPoints);
+
+Time : 18/01/14 08:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(tmpX,0,tmpX,0,nbPoints);
+nbPoints=end-start;
+System.arraycopy(x,start,x,0,nbPoints);
+System.arraycopy(y,nbPoints,y,0,nbPoints);
+
+Time : 18/01/14 08:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(tmpX,0,tmpX,0,nbPoints);
+nbPoints=end-start;
+System.arraycopy(y,start,x,0,nbPoints);
+System.arraycopy(y,nbPoints,y,0,nbPoints);
+
+Time : 18/01/14 08:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(tmpX,0,tmpX,0,nbPoints);
+nbPoints=end-start;
+System.arraycopy(x,start,tmpX,0,nbPoints);
+System.arraycopy(y,nbPoints,y,0,nbPoints);
+
+Time : 18/01/14 08:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(tmpX,0,tmpX,0,nbPoints);
+nbPoints=end-start;
+System.arraycopy(y,0,tmpX,0,nbPoints);
+System.arraycopy(y,nbPoints,y,0,nbPoints);
+
+Time : 18/01/14 08:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+nbPoints=end-start;
+System.arraycopy(x,MAXIMAL_AGING,x,0,nbPoints);
+System.arraycopy(y,start,y,0,nbPoints);
+
+Time : 18/01/14 08:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+nbPoints=end-start;
+System.arraycopy(x,signChangeIndex,x,0,nbPoints);
+System.arraycopy(y,start,y,0,nbPoints);
+
+Time : 18/01/14 08:32
+----------------------------------------
+Sun Jan 14 08:37:24 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,295
+Sun Jan 14 08:37:29 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,296
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(y,1,y,0,nbPoints);
+System.arraycopy(y,start,y,0,nbPoints);
+signChangeIndex-=start;
+
+Time : 18/01/14 08:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(x,start,x,0,nbPoints);
+x[start]=nextX;
+System.arraycopy(y,start,y,0,nbPoints);
+signChangeIndex-=start;
+
+Time : 18/01/14 08:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+y[start]=nextY;
+System.arraycopy(x,start,x,0,nbPoints);
+System.arraycopy(y,start,y,0,nbPoints);
+signChangeIndex-=start;
+
+Time : 18/01/14 08:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+y[start]=nextY;
+System.arraycopy(x,start,x,0,nbPoints);
+x[start]=nextX;
+System.arraycopy(y,start,y,0,nbPoints);
+signChangeIndex-=start;
+
+Time : 18/01/14 08:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+++nbPoints;
+System.arraycopy(x,start,x,0,nbPoints);
+x[start]=nextX;
+System.arraycopy(y,start,y,0,nbPoints);
+signChangeIndex-=start;
+
+Time : 18/01/14 08:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+y[start]=nextY;
+++nbPoints;
+System.arraycopy(x,start,x,0,nbPoints);
+System.arraycopy(y,start,y,0,nbPoints);
+signChangeIndex-=start;
+
+Time : 18/01/14 08:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+y[start]=nextY;
+++nbPoints;
+System.arraycopy(x,start,x,0,nbPoints);
+x[start]=nextX;
+System.arraycopy(y,start,y,0,nbPoints);
+signChangeIndex-=start;
+
+Time : 18/01/14 08:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(x,start,x,0,nbPoints);
+System.arraycopy(y,nbPoints,y,0,nbPoints);
+signChangeIndex-=start;
+
+Time : 18/01/14 08:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(y,start,x,0,nbPoints);
+System.arraycopy(y,nbPoints,y,0,nbPoints);
+signChangeIndex-=start;
+
+Time : 18/01/14 08:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(x,start,tmpX,0,nbPoints);
+System.arraycopy(y,nbPoints,y,0,nbPoints);
+signChangeIndex-=start;
+
+Time : 18/01/14 08:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(y,0,tmpX,0,nbPoints);
+System.arraycopy(y,nbPoints,y,0,nbPoints);
+signChangeIndex-=start;
+
+Time : 18/01/14 08:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(tmpX,0,tmpX,0,nbPoints);
+System.arraycopy(x,start,x,0,nbPoints);
+System.arraycopy(y,nbPoints,y,0,nbPoints);
+signChangeIndex-=start;
+
+Time : 18/01/14 08:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(tmpX,0,tmpX,0,nbPoints);
+System.arraycopy(y,start,x,0,nbPoints);
+System.arraycopy(y,nbPoints,y,0,nbPoints);
+signChangeIndex-=start;
+
+Time : 18/01/14 09:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(tmpX,0,tmpX,0,nbPoints);
+System.arraycopy(x,start,tmpX,0,nbPoints);
+System.arraycopy(y,nbPoints,y,0,nbPoints);
+signChangeIndex-=start;
+
+Time : 18/01/14 09:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(tmpX,0,tmpX,0,nbPoints);
+System.arraycopy(y,0,tmpX,0,nbPoints);
+System.arraycopy(y,nbPoints,y,0,nbPoints);
+signChangeIndex-=start;
+
+Time : 18/01/14 09:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(x,signChangeIndex,x,0,nbPoints);
+System.arraycopy(y,start,y,0,nbPoints);
+signChangeIndex-=start;
+
+Time : 18/01/14 09:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(x,MAXIMAL_AGING,x,0,nbPoints);
+System.arraycopy(y,start,y,0,nbPoints);
+signChangeIndex-=start;
+
+Time : 18/01/14 09:22
+----------------------------------------
+Sun Jan 14 09:31:37 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,297
+Sun Jan 14 09:31:43 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,260
+Sun Jan 14 09:31:49 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,269
+Sun Jan 14 09:32:05 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,290
+Sun Jan 14 10:46:27 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,299
+Sun Jan 14 10:46:33 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,316
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(y,1,y,0,nbPoints);
+x[signChangeIndex]=nextX;
+System.arraycopy(y,signChangeIndex,y,signChangeIndex+1,nbPoints-signChangeIndex);
+
+Time : 18/01/14 10:48
+----------------------------------------
+Sun Jan 14 11:05:14 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,317
+Sun Jan 14 11:05:19 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,318
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+x[signChangeIndex]=nextX;
+System.arraycopy(x,signChangeIndex,x,0,nbPoints);
+y[signChangeIndex]=nextY;
+
+Time : 18/01/14 11:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(y,signChangeIndex,y,0,nbPoints);
+x[signChangeIndex]=nextX;
+System.arraycopy(y,signChangeIndex,y,signChangeIndex+1,nbPoints-signChangeIndex);
+y[signChangeIndex]=nextY;
+
+Time : 18/01/14 11:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(y,signChangeIndex,y,0,nbPoints);
+x[signChangeIndex]=nextX;
+System.arraycopy(x,signChangeIndex,y,signChangeIndex+1,nbPoints-signChangeIndex);
+y[signChangeIndex]=nextY;
+
+Time : 18/01/14 11:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+x[signChangeIndex]=nextX;
+nbPoints=nbPoints-signChangeIndex;
+System.arraycopy(x,signChangeIndex,x,0,nbPoints);
+y[signChangeIndex]=nextY;
+
+Time : 18/01/14 11:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(y,signChangeIndex,y,0,nbPoints);
+x[signChangeIndex]=nextX;
+System.arraycopy(x,signChangeIndex,x,0,nbPoints);
+y[signChangeIndex]=nextY;
+
+Time : 18/01/14 11:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(y,signChangeIndex,y,0,nbPoints);
+x[signChangeIndex]=nextX;
+nbPoints=nbPoints-signChangeIndex;
+System.arraycopy(y,signChangeIndex,y,signChangeIndex+1,nbPoints-signChangeIndex);
+y[signChangeIndex]=nextY;
+
+Time : 18/01/14 11:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(y,signChangeIndex,y,0,nbPoints);
+x[signChangeIndex]=nextX;
+nbPoints=nbPoints-signChangeIndex;
+System.arraycopy(x,signChangeIndex,y,signChangeIndex+1,nbPoints-signChangeIndex);
+y[signChangeIndex]=nextY;
+
+Time : 18/01/14 11:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(y,signChangeIndex,y,0,nbPoints);
+x[signChangeIndex]=nextX;
+nbPoints=nbPoints-signChangeIndex;
+System.arraycopy(y,signChangeIndex,x,signChangeIndex+1,nbPoints-signChangeIndex);
+y[signChangeIndex]=nextY;
+
+Time : 18/01/14 11:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(y,signChangeIndex,y,0,nbPoints);
+x[signChangeIndex]=nextX;
+nbPoints=nbPoints-signChangeIndex;
+System.arraycopy(x,signChangeIndex,x,0,nbPoints);
+y[signChangeIndex]=nextY;
+
+Time : 18/01/14 11:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+x[signChangeIndex]=nextX;
+System.arraycopy(x,1,x,0,nbPoints);
+y[signChangeIndex]=nextY;
+
+Time : 18/01/14 11:24
+----------------------------------------
+Sun Jan 14 11:40:18 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,319
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(x,signChangeIndex,x,0,nbPoints);
+y[signChangeIndex]=nextY;
+++nbPoints;
+
+Time : 18/01/14 11:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(y,signChangeIndex,y,0,nbPoints);
+System.arraycopy(y,signChangeIndex,y,signChangeIndex+1,nbPoints-signChangeIndex);
+y[signChangeIndex]=nextY;
+++nbPoints;
+
+Time : 18/01/14 11:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(y,signChangeIndex,y,0,nbPoints);
+System.arraycopy(x,signChangeIndex,y,signChangeIndex+1,nbPoints-signChangeIndex);
+y[signChangeIndex]=nextY;
+++nbPoints;
+
+Time : 18/01/14 11:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+nbPoints=nbPoints-signChangeIndex;
+System.arraycopy(x,signChangeIndex,x,0,nbPoints);
+y[signChangeIndex]=nextY;
+++nbPoints;
+
+Time : 18/01/14 11:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(y,signChangeIndex,y,0,nbPoints);
+System.arraycopy(x,signChangeIndex,x,0,nbPoints);
+y[signChangeIndex]=nextY;
+++nbPoints;
+
+Time : 18/01/14 11:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+nbPoints=nbPoints-signChangeIndex;
+System.arraycopy(y,signChangeIndex,y,0,nbPoints);
+System.arraycopy(y,signChangeIndex,y,signChangeIndex+1,nbPoints-signChangeIndex);
+y[signChangeIndex]=nextY;
+++nbPoints;
+
+Time : 18/01/14 11:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+nbPoints=nbPoints-signChangeIndex;
+System.arraycopy(y,signChangeIndex,y,0,nbPoints);
+System.arraycopy(x,signChangeIndex,y,signChangeIndex+1,nbPoints-signChangeIndex);
+y[signChangeIndex]=nextY;
+++nbPoints;
+
+Time : 18/01/14 11:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+nbPoints=nbPoints-signChangeIndex;
+System.arraycopy(y,signChangeIndex,y,0,nbPoints);
+System.arraycopy(y,signChangeIndex,x,signChangeIndex+1,nbPoints-signChangeIndex);
+y[signChangeIndex]=nextY;
+++nbPoints;
+
+Time : 18/01/14 11:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+nbPoints=nbPoints-signChangeIndex;
+System.arraycopy(y,signChangeIndex,y,0,nbPoints);
+System.arraycopy(x,signChangeIndex,x,0,nbPoints);
+y[signChangeIndex]=nextY;
+++nbPoints;
+
+Time : 18/01/14 11:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+System.arraycopy(x,1,x,0,nbPoints);
+y[signChangeIndex]=nextY;
+++nbPoints;
+
+Time : 18/01/14 11:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+x[1]=getStartValue();
+System.arraycopy(y,signChangeIndex,y,signChangeIndex+1,nbPoints-signChangeIndex);
+y[signChangeIndex]=nextY;
+++nbPoints;
+
+Time : 18/01/14 12:16
+----------------------------------------
+Sun Jan 14 12:19:44 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,320
+Sun Jan 14 12:19:49 AEDT 2018 org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver,323
+Timeout time : 18/01/14 12:21

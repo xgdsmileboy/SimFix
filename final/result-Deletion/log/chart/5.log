@@ -1,0 +1,263 @@
+=================================================
+Project : chart_5	start : 18/01/15 18:52
+Current failed test : org.jfree.data.xy.junit.XYSeriesTests::testBug1955483 | 18/01/15 18:52
+Mon Jan 15 18:53:44 AEDT 2018 org.jfree.data.xy.XYSeries,527
+Mon Jan 15 18:53:49 AEDT 2018 org.jfree.data.xy.XYSeries,564
+Mon Jan 15 18:56:01 AEDT 2018 org.jfree.data.xy.XYSeries,563
+Mon Jan 15 18:56:02 AEDT 2018 org.jfree.data.xy.XYSeries,570
+Mon Jan 15 18:59:28 AEDT 2018 org.jfree.data.xy.XYSeries,541
+Mon Jan 15 19:00:07 AEDT 2018 org.jfree.data.xy.XYSeries,546
+Mon Jan 15 19:05:30 AEDT 2018 org.jfree.data.xy.XYSeries,547
+Mon Jan 15 19:05:32 AEDT 2018 org.jfree.data.xy.XYSeries,548
+Mon Jan 15 19:13:33 AEDT 2018 org.jfree.data.xy.XYSeries,574
+Mon Jan 15 19:38:46 AEDT 2018 org.jfree.data.xy.XYSeries,575
+Mon Jan 15 19:38:48 AEDT 2018 org.jfree.data.xy.XYSeries,590
+Mon Jan 15 19:50:09 AEDT 2018 org.jfree.data.xy.XYDataItem,191
+Mon Jan 15 19:50:41 AEDT 2018 org.jfree.data.xy.XYSeries,589
+Mon Jan 15 19:50:42 AEDT 2018 org.jfree.data.xy.XYDataItem,179
+Mon Jan 15 19:52:07 AEDT 2018 org.jfree.data.xy.XYDataItem,180
+Mon Jan 15 19:54:27 AEDT 2018 org.jfree.data.xy.XYDataItem,181
+Mon Jan 15 19:54:28 AEDT 2018 org.jfree.data.xy.XYDataItem,183
+Mon Jan 15 19:54:30 AEDT 2018 org.jfree.data.xy.XYDataItem,187
+Mon Jan 15 19:54:31 AEDT 2018 Mon Jan 15 19:54:31 AEDT 2018 : org.jfree.data.xy.XYDataItem,194=>Find no block
+Mon Jan 15 19:54:32 AEDT 2018 org.jfree.data.xy.XYDataItem,203
+Mon Jan 15 19:57:35 AEDT 2018 org.jfree.data.xy.XYDataItem,96
+Mon Jan 15 19:57:40 AEDT 2018 Mon Jan 15 19:57:40 AEDT 2018 : org.jfree.data.xy.XYDataItem,72=>Find no block
+Mon Jan 15 19:57:41 AEDT 2018 org.jfree.data.xy.XYDataItem,73
+Mon Jan 15 19:57:43 AEDT 2018 org.jfree.data.xy.XYDataItem,76
+Mon Jan 15 19:59:34 AEDT 2018 org.jfree.data.xy.XYDataItem,77
+Mon Jan 15 19:59:36 AEDT 2018 Mon Jan 15 19:59:36 AEDT 2018 : org.jfree.data.xy.XYDataItem,78=>Find no block
+Mon Jan 15 19:59:37 AEDT 2018 org.jfree.data.xy.XYSeries,186
+Mon Jan 15 20:00:13 AEDT 2018 org.jfree.data.general.Series,313
+Mon Jan 15 20:01:52 AEDT 2018 org.jfree.data.general.Series,314
+Mon Jan 15 20:01:55 AEDT 2018 Mon Jan 15 20:01:55 AEDT 2018 : org.jfree.data.general.Series,316=>Find no block
+Mon Jan 15 20:01:56 AEDT 2018 org.jfree.data.general.Series,326
+Mon Jan 15 20:09:22 AEDT 2018 org.jfree.data.general.Series,327
+Mon Jan 15 20:09:24 AEDT 2018 Mon Jan 15 20:09:24 AEDT 2018 : org.jfree.data.general.Series,334=>Find no block
+Mon Jan 15 20:09:25 AEDT 2018 org.jfree.data.general.SeriesChangeEvent,61
+Mon Jan 15 20:09:30 AEDT 2018 Mon Jan 15 20:09:30 AEDT 2018 : org.jfree.data.general.SeriesChangeEvent,62=>Find no block
+Mon Jan 15 20:09:32 AEDT 2018 org.jfree.data.xy.XYSeries,153
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(key);
+this.data=new java.util.ArrayList();
+this.allowDuplicateXValues=allowDuplicateXValues;
+
+Time : 18/01/15 20:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(key);
+if(maximumItemCount<0){
+throw new IllegalArgumentException("Requires start >= 0.");
+}
+this.data=new java.util.ArrayList();
+this.allowDuplicateXValues=allowDuplicateXValues;
+
+Time : 18/01/15 20:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(key);
+if(maximumItemCount<maximumItemCount){
+throw new IllegalArgumentException("Requires start <= end.");
+}
+this.data=new java.util.ArrayList();
+this.allowDuplicateXValues=allowDuplicateXValues;
+
+Time : 18/01/15 20:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(key);
+if(maximumItemCount<0){
+throw new IllegalArgumentException("Requires start >= 0.");
+}
+if(maximumItemCount<maximumItemCount){
+throw new IllegalArgumentException("Requires start <= end.");
+}
+this.data=new java.util.ArrayList();
+this.allowDuplicateXValues=allowDuplicateXValues;
+
+Time : 18/01/15 20:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(key);
+if(key==null){
+throw new IllegalArgumentException("Null \'key\' argument.");
+}
+this.data=new java.util.ArrayList();
+this.allowDuplicateXValues=allowDuplicateXValues;
+
+Time : 18/01/15 20:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(key);
+if(maximumItemCount<0){
+throw new IllegalArgumentException("Negative \'maximum\' argument.");
+}
+this.data=new java.util.ArrayList();
+this.allowDuplicateXValues=allowDuplicateXValues;
+
+Time : 18/01/15 20:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(key);
+this.data=new java.util.ArrayList();
+if(key==null){
+throw new IllegalArgumentException("Null \'key\' argument.");
+}
+this.allowDuplicateXValues=allowDuplicateXValues;
+
+Time : 18/01/15 20:18
+----------------------------------------
+Mon Jan 15 20:19:11 AEDT 2018 Mon Jan 15 20:19:11 AEDT 2018 : org.jfree.data.xy.XYSeries,109=>Find no block
+Mon Jan 15 20:19:13 AEDT 2018 org.jfree.data.xy.XYSeries,154
+Mon Jan 15 20:19:14 AEDT 2018 org.jfree.data.xy.XYSeries,155
+Mon Jan 15 20:19:15 AEDT 2018 org.jfree.data.xy.XYSeries,156
+Mon Jan 15 20:19:17 AEDT 2018 Mon Jan 15 20:19:17 AEDT 2018 : org.jfree.data.xy.XYSeries,157=>Find no block
+Mon Jan 15 20:19:18 AEDT 2018 org.jfree.data.general.Series,102
+Mon Jan 15 20:19:24 AEDT 2018 Mon Jan 15 20:19:24 AEDT 2018 : org.jfree.data.general.Series,103=>Find no block
+Mon Jan 15 20:19:25 AEDT 2018 Mon Jan 15 20:19:25 AEDT 2018 : org.jfree.data.general.Series,111=>Find no block
+Mon Jan 15 20:19:27 AEDT 2018 org.jfree.data.general.Series,112
+Mon Jan 15 20:20:04 AEDT 2018 org.jfree.data.general.Series,115
+Mon Jan 15 20:59:27 AEDT 2018 org.jfree.data.general.Series,116
+Mon Jan 15 20:59:28 AEDT 2018 org.jfree.data.general.Series,117
+Mon Jan 15 20:59:30 AEDT 2018 org.jfree.data.general.Series,118
+Mon Jan 15 20:59:31 AEDT 2018 org.jfree.data.general.Series,119
+Mon Jan 15 20:59:32 AEDT 2018 Mon Jan 15 20:59:32 AEDT 2018 : org.jfree.data.general.Series,120=>Find no block
+Mon Jan 15 20:59:33 AEDT 2018 org.jfree.data.xy.XYDataItem,74
+Mon Jan 15 20:59:34 AEDT 2018 org.jfree.data.xy.XYDataItem,87
+Mon Jan 15 20:59:39 AEDT 2018 Mon Jan 15 20:59:39 AEDT 2018 : org.jfree.data.xy.XYDataItem,88=>Find no block
+Mon Jan 15 20:59:40 AEDT 2018 org.jfree.data.xy.XYDataItem,111
+Mon Jan 15 20:59:45 AEDT 2018 org.jfree.data.xy.XYDataItem,120
+Mon Jan 15 20:59:50 AEDT 2018 org.jfree.data.xy.XYDataItem,134
+Mon Jan 15 21:04:11 AEDT 2018 org.jfree.data.xy.XYDataItem,135
+Mon Jan 15 21:05:08 AEDT 2018 org.jfree.data.xy.XYDataItem,136
+Mon Jan 15 21:05:09 AEDT 2018 org.jfree.data.xy.XYDataItem,138
+Mon Jan 15 21:05:10 AEDT 2018 org.jfree.data.xy.XYDataItem,148
+Mon Jan 15 21:05:38 AEDT 2018 Mon Jan 15 21:05:38 AEDT 2018 : org.jfree.data.xy.XYDataItem,149=>Find no block
+Mon Jan 15 21:05:40 AEDT 2018 org.jfree.data.xy.XYDataItem,158
+Mon Jan 15 21:06:28 AEDT 2018 Mon Jan 15 21:06:28 AEDT 2018 : org.jfree.data.xy.XYDataItem,159=>Find no block
+Mon Jan 15 21:06:30 AEDT 2018 org.jfree.data.xy.XYDataItem,184
+Mon Jan 15 21:06:31 AEDT 2018 org.jfree.data.xy.XYDataItem,188
+Mon Jan 15 21:06:31 AEDT 2018 org.jfree.data.xy.XYDataItem,200
+Mon Jan 15 21:07:06 AEDT 2018 org.jfree.data.xy.XYDataItem,216
+Mon Jan 15 21:07:11 AEDT 2018 org.jfree.data.xy.XYDataItem,228
+Mon Jan 15 21:08:59 AEDT 2018 org.jfree.data.xy.XYDataItem,229
+Mon Jan 15 21:09:00 AEDT 2018 org.jfree.data.xy.XYDataItem,231
+Mon Jan 15 21:09:36 AEDT 2018 org.jfree.data.xy.XYDataItem,232
+Mon Jan 15 21:09:37 AEDT 2018 org.jfree.data.xy.XYDataItem,234
+Mon Jan 15 21:26:28 AEDT 2018 org.jfree.data.xy.XYDataItem,235
+Mon Jan 15 21:26:29 AEDT 2018 org.jfree.data.xy.XYDataItem,236
+Mon Jan 15 21:26:31 AEDT 2018 org.jfree.data.xy.XYDataItem,238
+Mon Jan 15 21:39:53 AEDT 2018 org.jfree.data.xy.XYDataItem,239
+Mon Jan 15 21:39:54 AEDT 2018 org.jfree.data.xy.XYDataItem,241
+Mon Jan 15 21:51:34 AEDT 2018 org.jfree.data.xy.XYDataItem,251
+Mon Jan 15 21:54:00 AEDT 2018 org.jfree.data.xy.XYDataItem,252
+Mon Jan 15 21:54:01 AEDT 2018 org.jfree.data.xy.XYDataItem,253
+Mon Jan 15 21:54:02 AEDT 2018 org.jfree.data.xy.XYDataItem,263
+Mon Jan 15 21:54:08 AEDT 2018 org.jfree.data.xy.XYSeries,125
+Mon Jan 15 21:54:13 AEDT 2018 Mon Jan 15 21:54:13 AEDT 2018 : org.jfree.data.xy.XYSeries,126=>Find no block
+Mon Jan 15 21:54:14 AEDT 2018 org.jfree.data.xy.XYSeries,137
+Mon Jan 15 21:54:33 AEDT 2018 Mon Jan 15 21:54:33 AEDT 2018 : org.jfree.data.xy.XYSeries,138=>Find no block
+Mon Jan 15 21:54:34 AEDT 2018 org.jfree.data.xy.XYSeries,167
+Mon Jan 15 21:54:39 AEDT 2018 org.jfree.data.xy.XYSeries,177
+Mon Jan 15 21:54:43 AEDT 2018 org.jfree.data.xy.XYSeries,196
+Mon Jan 15 21:55:41 AEDT 2018 org.jfree.data.xy.XYSeries,207
+Mon Jan 15 21:55:45 AEDT 2018 org.jfree.data.xy.XYSeries,225
+Mon Jan 15 22:17:31 AEDT 2018 org.jfree.data.xy.XYSeries,226
+Mon Jan 15 22:17:33 AEDT 2018 org.jfree.data.xy.XYSeries,227
+Mon Jan 15 22:17:34 AEDT 2018 org.jfree.data.xy.XYSeries,228
+Mon Jan 15 22:17:36 AEDT 2018 org.jfree.data.xy.XYSeries,229
+Mon Jan 15 22:17:37 AEDT 2018 org.jfree.data.xy.XYSeries,231
+Mon Jan 15 22:17:38 AEDT 2018 org.jfree.data.xy.XYSeries,232
+Mon Jan 15 22:17:39 AEDT 2018 Mon Jan 15 22:17:39 AEDT 2018 : org.jfree.data.xy.XYSeries,234=>Find no block
+Mon Jan 15 22:17:41 AEDT 2018 org.jfree.data.xy.XYSeries,244
+Mon Jan 15 22:19:12 AEDT 2018 Mon Jan 15 22:19:12 AEDT 2018 : org.jfree.data.xy.XYSeries,245=>Find no block
+Mon Jan 15 22:19:13 AEDT 2018 org.jfree.data.xy.XYSeries,255
+Mon Jan 15 22:20:04 AEDT 2018 Mon Jan 15 22:20:04 AEDT 2018 : org.jfree.data.xy.XYSeries,256=>Find no block
+Mon Jan 15 22:20:06 AEDT 2018 org.jfree.data.xy.XYSeries,269
+Mon Jan 15 22:21:19 AEDT 2018 Mon Jan 15 22:21:19 AEDT 2018 : org.jfree.data.xy.XYSeries,270=>Find no block
+Mon Jan 15 22:21:20 AEDT 2018 org.jfree.data.xy.XYSeries,281
+Mon Jan 15 22:22:24 AEDT 2018 Mon Jan 15 22:22:24 AEDT 2018 : org.jfree.data.xy.XYSeries,282=>Find no block
+Mon Jan 15 22:22:25 AEDT 2018 org.jfree.data.xy.XYSeries,296
+Mon Jan 15 22:23:45 AEDT 2018 Mon Jan 15 22:23:45 AEDT 2018 : org.jfree.data.xy.XYSeries,297=>Find no block
+Mon Jan 15 22:23:47 AEDT 2018 org.jfree.data.xy.XYSeries,315
+Mon Jan 15 22:24:37 AEDT 2018 Mon Jan 15 22:24:37 AEDT 2018 : org.jfree.data.xy.XYSeries,316=>Find no block
+Mon Jan 15 22:24:38 AEDT 2018 org.jfree.data.xy.XYSeries,333
+Mon Jan 15 22:26:50 AEDT 2018 org.jfree.data.xy.XYSeries,334
+Mon Jan 15 22:26:52 AEDT 2018 Mon Jan 15 22:26:52 AEDT 2018 : org.jfree.data.xy.XYSeries,335=>Find no block
+Mon Jan 15 22:26:53 AEDT 2018 org.jfree.data.xy.XYSeries,348
+Mon Jan 15 22:27:32 AEDT 2018 org.jfree.data.xy.XYSeries,349
+Mon Jan 15 22:27:33 AEDT 2018 org.jfree.data.xy.XYSeries,352
+Mon Jan 15 22:47:57 AEDT 2018 org.jfree.data.xy.XYSeries,353
+Mon Jan 15 22:48:15 AEDT 2018 org.jfree.data.xy.XYSeries,354
+Mon Jan 15 22:48:16 AEDT 2018 org.jfree.data.xy.XYSeries,355
+Mon Jan 15 22:48:21 AEDT 2018 org.jfree.data.xy.XYSeries,358
+Mon Jan 15 22:48:23 AEDT 2018 org.jfree.data.xy.XYSeries,360
+Mon Jan 15 22:51:27 AEDT 2018 Mon Jan 15 22:51:27 AEDT 2018 : org.jfree.data.xy.XYSeries,362=>Find no block
+Mon Jan 15 22:51:28 AEDT 2018 org.jfree.data.xy.XYSeries,363
+Mon Jan 15 22:51:30 AEDT 2018 org.jfree.data.xy.XYSeries,365
+Mon Jan 15 22:51:31 AEDT 2018 org.jfree.data.xy.XYSeries,366
+Mon Jan 15 22:51:32 AEDT 2018 org.jfree.data.xy.XYSeries,369
+Mon Jan 15 22:51:33 AEDT 2018 Mon Jan 15 22:51:33 AEDT 2018 : org.jfree.data.xy.XYSeries,371=>Find no block
+Mon Jan 15 22:51:34 AEDT 2018 org.jfree.data.xy.XYSeries,373
+Mon Jan 15 22:51:35 AEDT 2018 Mon Jan 15 22:51:35 AEDT 2018 : org.jfree.data.xy.XYSeries,376=>Find no block
+Mon Jan 15 22:51:36 AEDT 2018 org.jfree.data.xy.XYSeries,378
+Mon Jan 15 22:51:38 AEDT 2018 org.jfree.data.xy.XYSeries,381
+Mon Jan 15 22:51:39 AEDT 2018 org.jfree.data.xy.XYSeries,382
+Mon Jan 15 22:51:40 AEDT 2018 org.jfree.data.xy.XYSeries,383
+Mon Jan 15 22:51:40 AEDT 2018 org.jfree.data.xy.XYSeries,386
+Mon Jan 15 22:55:20 AEDT 2018 org.jfree.data.xy.XYSeries,388
+Mon Jan 15 22:55:21 AEDT 2018 org.jfree.data.xy.XYSeries,389
+Mon Jan 15 22:55:22 AEDT 2018 org.jfree.data.xy.XYSeries,391
+Mon Jan 15 22:56:51 AEDT 2018 org.jfree.data.xy.XYSeries,392
+Mon Jan 15 22:56:52 AEDT 2018 Mon Jan 15 22:56:52 AEDT 2018 : org.jfree.data.xy.XYSeries,394=>Find no block
+Mon Jan 15 22:56:54 AEDT 2018 org.jfree.data.xy.XYSeries,404
+Mon Jan 15 23:07:44 AEDT 2018 org.jfree.data.xy.XYSeries,405
+Mon Jan 15 23:07:45 AEDT 2018 org.jfree.data.xy.XYSeries,407
+Mon Jan 15 23:18:12 AEDT 2018 Mon Jan 15 23:18:12 AEDT 2018 : org.jfree.data.xy.XYSeries,408=>Find no block
+Mon Jan 15 23:18:13 AEDT 2018 org.jfree.data.xy.XYSeries,419
+Mon Jan 15 23:23:20 AEDT 2018 org.jfree.data.xy.XYSeries,420
+Mon Jan 15 23:23:22 AEDT 2018 org.jfree.data.xy.XYSeries,421
+Mon Jan 15 23:23:23 AEDT 2018 org.jfree.data.xy.XYSeries,433
+Mon Jan 15 23:23:28 AEDT 2018 org.jfree.data.xy.XYSeries,440
+Mon Jan 15 23:24:06 AEDT 2018 org.jfree.data.xy.XYSeries,441
+Mon Jan 15 23:24:08 AEDT 2018 org.jfree.data.xy.XYSeries,442
+Mon Jan 15 23:24:10 AEDT 2018 Mon Jan 15 23:24:10 AEDT 2018 : org.jfree.data.xy.XYSeries,444=>Find no block
+Mon Jan 15 23:24:11 AEDT 2018 org.jfree.data.xy.XYSeries,454
+Mon Jan 15 23:24:46 AEDT 2018 org.jfree.data.xy.XYSeries,465
+Mon Jan 15 23:24:53 AEDT 2018 org.jfree.data.xy.XYSeries,476
+Mon Jan 15 23:24:58 AEDT 2018 org.jfree.data.xy.XYSeries,489
+Mon Jan 15 23:28:59 AEDT 2018 org.jfree.data.xy.XYSeries,490
+Mon Jan 15 23:29:00 AEDT 2018 org.jfree.data.xy.XYSeries,491
+Mon Jan 15 23:29:01 AEDT 2018 Mon Jan 15 23:29:01 AEDT 2018 : org.jfree.data.xy.XYSeries,492=>Find no block
+Mon Jan 15 23:29:02 AEDT 2018 org.jfree.data.xy.XYSeries,504
+Mon Jan 15 23:34:47 AEDT 2018 org.jfree.data.xy.XYSeries,505
+Mon Jan 15 23:39:17 AEDT 2018 org.jfree.data.xy.XYSeries,506
+Mon Jan 15 23:39:18 AEDT 2018 org.jfree.data.xy.XYSeries,509
+Mon Jan 15 23:39:20 AEDT 2018 org.jfree.data.xy.XYSeries,510
+Mon Jan 15 23:39:21 AEDT 2018 org.jfree.data.xy.XYSeries,511
+Mon Jan 15 23:39:23 AEDT 2018 Mon Jan 15 23:39:23 AEDT 2018 : org.jfree.data.xy.XYSeries,513=>Find no block
+Mon Jan 15 23:39:24 AEDT 2018 org.jfree.data.xy.XYSeries,542
+Mon Jan 15 23:39:25 AEDT 2018 org.jfree.data.xy.XYSeries,549
+Mon Jan 15 23:46:05 AEDT 2018 org.jfree.data.xy.XYSeries,551
+Timeout time : 18/01/15 23:53

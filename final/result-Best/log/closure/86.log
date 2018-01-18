@@ -1,0 +1,61 @@
+=================================================
+Project : closure_86	start : 18/01/14 07:55
+Current failed test : com.google.javascript.jscomp.NodeUtilTest::testLocalValue1 | 18/01/14 07:56
+Sun Jan 14 08:10:37 AEDT 2018 com.google.javascript.jscomp.NodeUtil,762
+Sun Jan 14 08:18:35 AEDT 2018 com.google.javascript.jscomp.NodeUtil,2465
+Sun Jan 14 08:18:46 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,820
+Sun Jan 14 08:19:58 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,160
+Sun Jan 14 08:23:09 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,161
+Sun Jan 14 08:23:11 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,279
+Sun Jan 14 08:23:35 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,280
+Sun Jan 14 08:23:37 AEDT 2018 com.google.javascript.rhino.Node,2166
+Sun Jan 14 08:25:27 AEDT 2018 Sun Jan 14 08:25:27 AEDT 2018 : com.google.javascript.rhino.Node,2167=>Find no block
+Sun Jan 14 08:25:28 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,336
+Sun Jan 14 08:26:27 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,553
+Sun Jan 14 08:48:38 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,554
+Sun Jan 14 08:48:40 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,555
+Sun Jan 14 08:51:34 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,556
+Sun Jan 14 08:51:35 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,558
+Sun Jan 14 08:57:23 AEDT 2018 Sun Jan 14 08:57:23 AEDT 2018 : com.google.javascript.jscomp.PureFunctionIdentifier,566=>Find no block
+Sun Jan 14 08:57:24 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,356
+Sun Jan 14 09:00:03 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,358
+Sun Jan 14 09:00:04 AEDT 2018 com.google.javascript.jscomp.NodeUtil,2416
+Sun Jan 14 09:00:55 AEDT 2018 Sun Jan 14 09:00:55 AEDT 2018 : com.google.javascript.jscomp.NodeUtil,2425=>Find no block
+Sun Jan 14 09:00:56 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,551
+Sun Jan 14 09:01:01 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,914
+Sun Jan 14 09:06:53 AEDT 2018 Sun Jan 14 09:06:53 AEDT 2018 : com.google.javascript.jscomp.PureFunctionIdentifier,915=>Find no block
+Sun Jan 14 09:06:54 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,446
+Sun Jan 14 09:25:45 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,447
+Sun Jan 14 09:25:46 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,448
+Sun Jan 14 09:25:48 AEDT 2018 Sun Jan 14 09:25:48 AEDT 2018 : com.google.javascript.jscomp.PureFunctionIdentifier,449=>Find no block
+Sun Jan 14 09:25:49 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,559
+Sun Jan 14 09:25:51 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,439
+Sun Jan 14 09:36:03 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,441
+Sun Jan 14 09:50:18 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,445
+Sun Jan 14 09:50:20 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,495
+Sun Jan 14 10:00:31 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,496
+Sun Jan 14 10:00:32 AEDT 2018 com.google.javascript.jscomp.NodeUtil,2450
+Sun Jan 14 10:01:57 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,155
+Sun Jan 14 10:28:14 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,159
+Sun Jan 14 10:28:16 AEDT 2018 com.google.javascript.jscomp.NodeUtil,825
+Sun Jan 14 10:33:24 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,550
+Sun Jan 14 11:02:16 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,1030
+Sun Jan 14 11:10:48 AEDT 2018 Sun Jan 14 11:10:48 AEDT 2018 : com.google.javascript.jscomp.PureFunctionIdentifier,1031=>Find no block
+Sun Jan 14 11:10:49 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,426
+Sun Jan 14 11:20:15 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,427
+Sun Jan 14 11:23:44 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,584
+Sun Jan 14 11:30:39 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,590
+Sun Jan 14 11:36:42 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,595
+Sun Jan 14 11:48:48 AEDT 2018 Sun Jan 14 11:48:48 AEDT 2018 : com.google.javascript.jscomp.PureFunctionIdentifier,596=>Find no block
+Sun Jan 14 11:48:49 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,269
+Sun Jan 14 12:10:05 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,270
+Sun Jan 14 12:10:07 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,272
+Sun Jan 14 12:10:08 AEDT 2018 com.google.javascript.jscomp.NodeUtil,1462
+Sun Jan 14 12:19:40 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,419
+Sun Jan 14 12:19:59 AEDT 2018 com.google.javascript.jscomp.FunctionNames,97
+Sun Jan 14 12:30:39 AEDT 2018 com.google.javascript.rhino.Node,2174
+Sun Jan 14 12:32:29 AEDT 2018 Sun Jan 14 12:32:29 AEDT 2018 : com.google.javascript.rhino.Node,2175=>Find no block
+Sun Jan 14 12:32:31 AEDT 2018 com.google.javascript.jscomp.PureFunctionIdentifier,797
+Sun Jan 14 13:03:12 AEDT 2018 com.google.javascript.jscomp.NodeUtil,692
+Sun Jan 14 13:03:57 AEDT 2018 com.google.javascript.jscomp.NodeUtil,701
+Timeout time : 18/01/14 13:10

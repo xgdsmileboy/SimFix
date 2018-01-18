@@ -1,0 +1,152 @@
+=================================================
+Project : math_32	start : 18/01/15 15:38
+Current failed test : org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSetTest::testIssue780 | 18/01/15 15:39
+Mon Jan 15 15:40:10 AEDT 2018 org.apache.commons.math3.geometry.partitioning.utilities.AVLTree,167
+Mon Jan 15 15:47:18 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSet,83
+Mon Jan 15 15:47:23 AEDT 2018 Mon Jan 15 15:47:23 AEDT 2018 : org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSet,84=>Find no block
+Mon Jan 15 15:47:24 AEDT 2018 org.apache.commons.math3.geometry.euclidean.twod.SubLine,56
+Mon Jan 15 15:47:31 AEDT 2018 Mon Jan 15 15:47:31 AEDT 2018 : org.apache.commons.math3.geometry.euclidean.twod.SubLine,57=>Find no block
+Mon Jan 15 15:47:33 AEDT 2018 org.apache.commons.math3.geometry.euclidean.twod.SubLine,139
+Mon Jan 15 15:47:39 AEDT 2018 org.apache.commons.math3.geometry.euclidean.twod.SubLine,140
+Mon Jan 15 15:47:40 AEDT 2018 org.apache.commons.math3.geometry.euclidean.twod.PolygonsSet,135
+Mon Jan 15 15:49:00 AEDT 2018 org.apache.commons.math3.geometry.euclidean.twod.PolygonsSet,136
+Mon Jan 15 15:49:07 AEDT 2018 org.apache.commons.math3.geometry.euclidean.twod.PolygonsSet,330
+Mon Jan 15 15:49:13 AEDT 2018 org.apache.commons.math3.util.FastMath,2480
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double denom=1.0/(1.0+(xa+xb)*(TANGENT_TABLE_A[idx]+TANGENT_TABLE_B[idx]));
+ya=epsA*denom;
+yb=ya*denom;
+
+Time : 18/01/15 16:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double denom=1.0/(1.0+(xa+xb)*(TANGENT_TABLE_A[idx]+TANGENT_TABLE_B[idx]));
+ya=epsA*denom;
+yb=epsA*denom;
+
+Time : 18/01/15 16:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+yb+=epsB/E;
+ final double denom=1.0/(1.0+(xa+xb)*(TANGENT_TABLE_A[idx]+TANGENT_TABLE_B[idx]));
+ya=epsA*denom;
+yb=epsA*denom;
+
+Time : 18/01/15 16:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double denom=1.0/(1.0+(xa+xb)*(TANGENT_TABLE_A[idx]+TANGENT_TABLE_B[idx]));
+yb=epsA*denom;
+
+Time : 18/01/15 16:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+yb+=epsB/E;
+ final double denom=1.0/(1.0+(xa+xb)*(TANGENT_TABLE_A[idx]+TANGENT_TABLE_B[idx]));
+yb=epsA*denom;
+
+Time : 18/01/15 16:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double denom=1.0/(1.0+(xa+xb)*(TANGENT_TABLE_A[idx]+TANGENT_TABLE_B[idx]));
+ya=epsA*denom;
+temp=denom+epsA;
+yb=temp*ya;
+
+Time : 18/01/15 16:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double denom=1.0/(1.0+(xa+xb)*(TANGENT_TABLE_A[idx]+TANGENT_TABLE_B[idx]));
+ya=epsA*denom;
+temp=denom+epsB;
+yb=temp*ya;
+
+Time : 18/01/15 16:34
+----------------------------------------
+Mon Jan 15 16:43:45 AEDT 2018 org.apache.commons.math3.util.FastMath,2482
+Mon Jan 15 16:43:46 AEDT 2018 org.apache.commons.math3.util.FastMath,2483
+Mon Jan 15 16:43:47 AEDT 2018 Mon Jan 15 16:43:47 AEDT 2018 : org.apache.commons.math3.util.FastMath,2484=>Find no block
+Mon Jan 15 16:43:48 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Plane,81
+Mon Jan 15 16:43:52 AEDT 2018 Mon Jan 15 16:43:52 AEDT 2018 : org.apache.commons.math3.geometry.euclidean.threed.Plane,82=>Find no block
+Mon Jan 15 16:43:55 AEDT 2018 org.apache.commons.math3.geometry.partitioning.AbstractRegion,204
+Mon Jan 15 16:45:17 AEDT 2018 org.apache.commons.math3.geometry.partitioning.AbstractRegion,205
+Mon Jan 15 16:46:40 AEDT 2018 org.apache.commons.math3.geometry.partitioning.AbstractRegion,206
+Mon Jan 15 16:51:01 AEDT 2018 org.apache.commons.math3.geometry.partitioning.AbstractRegion,207
+Mon Jan 15 16:53:55 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Plane,324
+Mon Jan 15 16:53:59 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Plane,406
+Mon Jan 15 16:55:08 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.Plane,427
+Mon Jan 15 16:56:02 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.SubPlane,63
+Mon Jan 15 16:56:07 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.SubPlane,64
+Mon Jan 15 16:56:08 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.SubPlane,105
+Mon Jan 15 16:56:14 AEDT 2018 org.apache.commons.math3.geometry.euclidean.threed.SubPlane,106
+Mon Jan 15 16:56:16 AEDT 2018 org.apache.commons.math3.util.MathArrays,674
+Mon Jan 15 16:59:53 AEDT 2018 org.apache.commons.math3.util.MathArrays,675
+Mon Jan 15 16:59:54 AEDT 2018 org.apache.commons.math3.util.MathArrays,676
+Mon Jan 15 17:09:45 AEDT 2018 org.apache.commons.math3.util.MathArrays,677
+Mon Jan 15 17:13:59 AEDT 2018 org.apache.commons.math3.util.MathArrays,678
+Mon Jan 15 17:15:43 AEDT 2018 org.apache.commons.math3.util.MathArrays,679
+Mon Jan 15 17:31:53 AEDT 2018 org.apache.commons.math3.util.MathArrays,682
+Mon Jan 15 17:36:38 AEDT 2018 org.apache.commons.math3.util.MathArrays,683
+Mon Jan 15 18:23:57 AEDT 2018 org.apache.commons.math3.util.MathArrays,686
+Mon Jan 15 18:37:22 AEDT 2018 org.apache.commons.math3.util.MathArrays,687
+Mon Jan 15 18:46:07 AEDT 2018 org.apache.commons.math3.util.MathArrays,688
+Mon Jan 15 18:53:47 AEDT 2018 org.apache.commons.math3.util.MathArrays,689
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double a2Low=a2-a2High;
+ final double cb2=SPLIT_FACTOR*b2;
+ final double b2High=a2Low-(cb2-a2High);
+
+Time : 18/01/15 18:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double a2Low=a2-a2High;
+ final double cb2=SPLIT_FACTOR*b2;
+ final double b2High=cb2-(a2Low-a2High);
+
+Time : 18/01/15 18:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double a2Low=a2-a2High;
+ final double cb2=SPLIT_FACTOR*b2;
+ final double b2High=a2-(cb2-b2);
+
+Time : 18/01/15 19:10
+----------------------------------------
+Mon Jan 15 19:13:10 AEDT 2018 org.apache.commons.math3.util.MathArrays,690
+Mon Jan 15 19:16:14 AEDT 2018 org.apache.commons.math3.util.MathArrays,691
+Mon Jan 15 19:28:54 AEDT 2018 org.apache.commons.math3.util.MathArrays,694
+Mon Jan 15 19:46:19 AEDT 2018 org.apache.commons.math3.util.MathArrays,695
+Mon Jan 15 20:00:35 AEDT 2018 org.apache.commons.math3.util.MathArrays,698
+Mon Jan 15 20:13:07 AEDT 2018 org.apache.commons.math3.util.MathArrays,699
+Mon Jan 15 20:29:17 AEDT 2018 org.apache.commons.math3.util.MathArrays,700
+Timeout time : 18/01/15 20:40

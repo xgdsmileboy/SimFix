@@ -1,0 +1,79 @@
+=================================================
+Project : lang_48	start : 18/01/12 14:05
+Current failed test : org.apache.commons.lang.builder.EqualsBuilderTest::testBigDecimal | 18/01/12 14:05
+Fri Jan 12 14:06:00 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,372
+Fri Jan 12 14:07:03 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,381
+Fri Jan 12 14:07:06 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,368
+Fri Jan 12 14:07:07 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,371
+Fri Jan 12 14:07:07 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,374
+Fri Jan 12 14:08:01 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,378
+Fri Jan 12 14:10:41 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,379
+Fri Jan 12 17:08:11 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,408
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!lhsClass.isArray()){
+isEquals=lhs.equals(rhs);
+}else if(lhs.getClass()!=rhs.getClass()){
+this.setEquals(false);
+}else if(lhs instanceof long[]){
+append((long[])lhs,(long[])rhs);
+}else if(lhs instanceof int[]){
+append((int[])lhs,(int[])rhs);
+}else if(lhs instanceof short[]){
+append((short[])lhs,(short[])rhs);
+}else if(lhs instanceof char[]){
+append((char[])lhs,(char[])rhs);
+}else if(lhs instanceof byte[]){
+append((byte[])lhs,(byte[])rhs);
+}else if(lhs instanceof double[]){
+append((double[])lhs,(double[])rhs);
+}else if(lhs instanceof float[]){
+append((float[])lhs,(float[])rhs);
+}else if(lhs instanceof boolean[]){
+append((boolean[])lhs,(boolean[])rhs);
+}else {
+append((Object[])lhs,(Object[])rhs);
+}
+return new EqualsBuilder();
+
+Time : 18/01/12 18:07
+----------------------------------------
+Fri Jan 12 18:12:02 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,831
+Fri Jan 12 18:12:03 AEDT 2018 Fri Jan 12 18:12:03 AEDT 2018 : org.apache.commons.lang.builder.EqualsBuilder,100=>Find no block
+Fri Jan 12 18:12:03 AEDT 2018 Fri Jan 12 18:12:03 AEDT 2018 : org.apache.commons.lang.builder.EqualsBuilder,92=>Find no block
+Fri Jan 12 18:12:03 AEDT 2018 Fri Jan 12 18:12:03 AEDT 2018 : org.apache.commons.lang.builder.EqualsBuilder,102=>Find no block
+Fri Jan 12 18:12:03 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,125
+Fri Jan 12 18:12:40 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,148
+Fri Jan 12 18:13:21 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,171
+Fri Jan 12 18:14:13 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,195
+Fri Jan 12 18:14:57 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,224
+Fri Jan 12 18:15:48 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,255
+Fri Jan 12 18:16:39 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,256
+Fri Jan 12 18:16:39 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,258
+Fri Jan 12 18:17:19 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,259
+Fri Jan 12 18:17:19 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,265
+Fri Jan 12 18:20:58 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,266
+Fri Jan 12 18:23:39 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,268
+Fri Jan 12 18:30:07 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,269
+Fri Jan 12 18:32:00 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,270
+Fri Jan 12 18:32:01 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,272
+Fri Jan 12 18:32:01 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,274
+Fri Jan 12 18:32:01 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,275
+Fri Jan 12 18:32:02 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,276
+Fri Jan 12 18:32:02 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,278
+Fri Jan 12 18:32:02 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,282
+Fri Jan 12 18:32:03 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,284
+Fri Jan 12 18:35:12 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,286
+Fri Jan 12 18:38:15 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,287
+Fri Jan 12 18:41:43 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,288
+Fri Jan 12 18:41:43 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,289
+Fri Jan 12 18:41:43 AEDT 2018 Fri Jan 12 18:41:43 AEDT 2018 : org.apache.commons.lang.builder.EqualsBuilder,298=>Find no block
+Fri Jan 12 18:41:44 AEDT 2018 Fri Jan 12 18:41:44 AEDT 2018 : org.apache.commons.lang.builder.EqualsBuilder,291=>Find no block
+Fri Jan 12 18:41:44 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,297
+Fri Jan 12 18:46:28 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,299
+Fri Jan 12 18:47:07 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,320
+Fri Jan 12 18:49:03 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,321
+Fri Jan 12 18:49:04 AEDT 2018 org.apache.commons.lang.builder.EqualsBuilder,322
+Timeout time : 18/01/12 19:06

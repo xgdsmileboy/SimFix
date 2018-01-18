@@ -1,0 +1,231 @@
+=================================================
+Project : math_96	start : 18/01/14 05:34
+Current failed test : org.apache.commons.math.complex.ComplexTest::testMath221 | 18/01/14 05:34
+Sun Jan 14 05:35:03 AEDT 2018 org.apache.commons.math.complex.Complex,277
+Sun Jan 14 05:35:28 AEDT 2018 org.apache.commons.math.complex.Complex,280
+Sun Jan 14 05:36:33 AEDT 2018 org.apache.commons.math.complex.Complex,363
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isNaN()||rhs.isNaN()){
+return NaN;
+}
+if(Double.isInfinite(real)||Double.isInfinite(imaginary)){
+return INF;
+}
+return createComplex(real,-imaginary);
+
+Time : 18/01/14 05:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isNaN()||rhs.isNaN()){
+return NaN;
+}
+if(Double.isInfinite(real)||Double.isInfinite(imaginary)){
+return INF;
+}
+if(isNaN()){
+return NaN;
+}
+return createComplex(real,-imaginary);
+
+Time : 18/01/14 05:39
+----------------------------------------
+Sun Jan 14 05:43:21 AEDT 2018 org.apache.commons.math.complex.Complex,358
+Sun Jan 14 05:43:22 AEDT 2018 org.apache.commons.math.complex.Complex,258
+Sun Jan 14 05:44:29 AEDT 2018 org.apache.commons.math.complex.Complex,355
+Sun Jan 14 05:44:30 AEDT 2018 org.apache.commons.math.complex.Complex,255
+Sun Jan 14 05:44:31 AEDT 2018 Sun Jan 14 05:44:31 AEDT 2018 : org.apache.commons.math.complex.Complex,263=>Find no block
+Sun Jan 14 05:44:32 AEDT 2018 org.apache.commons.math.complex.Complex,254
+Sun Jan 14 05:46:27 AEDT 2018 org.apache.commons.math.complex.Complex,250
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(other==null){
+ret=false;
+}else {
+try{
+Complex rhs=(Complex)other;
+if(rhs.isNaN()){
+ret=this.isNaN();
+}else {
+ret=(Double.doubleToRawLongBits(real)==Double.doubleToRawLongBits(rhs.getReal()))&&(Double.doubleToRawLongBits(imaginary)==Double.doubleToRawLongBits(rhs.getImaginary()));
+}
+}catch (ClassCastException ex) {
+  ret=false;
+}
+
+return true;
+}
+
+Time : 18/01/14 05:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(other==null){
+ret=false;
+return true;
+}else {
+try{
+Complex rhs=(Complex)other;
+if(rhs.isNaN()){
+ret=this.isNaN();
+}else {
+ret=(Double.doubleToRawLongBits(real)==Double.doubleToRawLongBits(rhs.getReal()))&&(Double.doubleToRawLongBits(imaginary)==Double.doubleToRawLongBits(rhs.getImaginary()));
+}
+}catch (ClassCastException ex) {
+  ret=false;
+}
+
+return true;
+}
+
+Time : 18/01/14 05:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(other==null){
+return false;
+}
+if(other==null){
+ret=false;
+}else {
+try{
+Complex rhs=(Complex)other;
+if(rhs.isNaN()){
+ret=this.isNaN();
+}else {
+ret=(Double.doubleToRawLongBits(real)==Double.doubleToRawLongBits(rhs.getReal()))&&(Double.doubleToRawLongBits(imaginary)==Double.doubleToRawLongBits(rhs.getImaginary()));
+}
+}catch (ClassCastException ex) {
+  ret=false;
+}
+
+return true;
+}
+
+Time : 18/01/14 05:48
+----------------------------------------
+Sun Jan 14 05:49:21 AEDT 2018 org.apache.commons.math.complex.Complex,248
+Sun Jan 14 05:50:47 AEDT 2018 org.apache.commons.math.complex.Complex,266
+Sun Jan 14 05:52:35 AEDT 2018 org.apache.commons.math.complex.Complex,872
+Sun Jan 14 05:52:38 AEDT 2018 org.apache.commons.math.complex.Complex,310
+Sun Jan 14 05:53:46 AEDT 2018 org.apache.commons.math.complex.Complex,299
+Sun Jan 14 05:53:55 AEDT 2018 org.apache.commons.math.complex.Complex,76
+Sun Jan 14 05:53:58 AEDT 2018 org.apache.commons.math.complex.Complex,77
+Sun Jan 14 05:54:00 AEDT 2018 org.apache.commons.math.complex.Complex,78
+Sun Jan 14 05:54:01 AEDT 2018 Sun Jan 14 05:54:01 AEDT 2018 : org.apache.commons.math.complex.Complex,79=>Find no block
+Sun Jan 14 05:54:01 AEDT 2018 org.apache.commons.math.complex.Complex,92
+Sun Jan 14 05:54:24 AEDT 2018 org.apache.commons.math.complex.Complex,93
+Sun Jan 14 05:54:25 AEDT 2018 org.apache.commons.math.complex.Complex,96
+Sun Jan 14 05:54:27 AEDT 2018 org.apache.commons.math.complex.Complex,97
+Sun Jan 14 05:54:28 AEDT 2018 org.apache.commons.math.complex.Complex,100
+Sun Jan 14 05:59:02 AEDT 2018 org.apache.commons.math.complex.Complex,101
+Sun Jan 14 05:59:03 AEDT 2018 org.apache.commons.math.complex.Complex,102
+Sun Jan 14 05:59:04 AEDT 2018 org.apache.commons.math.complex.Complex,104
+Sun Jan 14 06:02:50 AEDT 2018 org.apache.commons.math.complex.Complex,105
+Sun Jan 14 06:02:51 AEDT 2018 org.apache.commons.math.complex.Complex,107
+Sun Jan 14 06:02:52 AEDT 2018 org.apache.commons.math.complex.Complex,108
+Sun Jan 14 06:02:53 AEDT 2018 org.apache.commons.math.complex.Complex,110
+Sun Jan 14 06:06:31 AEDT 2018 org.apache.commons.math.complex.Complex,111
+Sun Jan 14 06:06:32 AEDT 2018 org.apache.commons.math.complex.Complex,133
+Sun Jan 14 06:09:39 AEDT 2018 org.apache.commons.math.complex.Complex,152
+Sun Jan 14 06:10:30 AEDT 2018 org.apache.commons.math.complex.Complex,153
+Sun Jan 14 06:10:31 AEDT 2018 org.apache.commons.math.complex.Complex,155
+Sun Jan 14 06:11:34 AEDT 2018 org.apache.commons.math.complex.Complex,194
+Sun Jan 14 06:11:35 AEDT 2018 org.apache.commons.math.complex.Complex,195
+Sun Jan 14 06:11:36 AEDT 2018 org.apache.commons.math.complex.Complex,198
+Sun Jan 14 06:12:12 AEDT 2018 org.apache.commons.math.complex.Complex,199
+Sun Jan 14 06:13:03 AEDT 2018 org.apache.commons.math.complex.Complex,200
+Sun Jan 14 06:14:06 AEDT 2018 org.apache.commons.math.complex.Complex,201
+Sun Jan 14 06:14:07 AEDT 2018 org.apache.commons.math.complex.Complex,204
+Sun Jan 14 06:14:47 AEDT 2018 org.apache.commons.math.complex.Complex,205
+Sun Jan 14 06:14:48 AEDT 2018 org.apache.commons.math.complex.Complex,208
+Sun Jan 14 06:23:58 AEDT 2018 org.apache.commons.math.complex.Complex,209
+Sun Jan 14 06:23:59 AEDT 2018 org.apache.commons.math.complex.Complex,210
+Sun Jan 14 06:24:00 AEDT 2018 org.apache.commons.math.complex.Complex,212
+Sun Jan 14 06:25:03 AEDT 2018 org.apache.commons.math.complex.Complex,213
+Sun Jan 14 06:29:02 AEDT 2018 org.apache.commons.math.complex.Complex,214
+Sun Jan 14 06:29:03 AEDT 2018 org.apache.commons.math.complex.Complex,217
+Sun Jan 14 06:29:03 AEDT 2018 org.apache.commons.math.complex.Complex,218
+Sun Jan 14 06:29:04 AEDT 2018 org.apache.commons.math.complex.Complex,220
+Sun Jan 14 06:30:30 AEDT 2018 org.apache.commons.math.complex.Complex,221
+Sun Jan 14 06:34:30 AEDT 2018 org.apache.commons.math.complex.Complex,222
+Sun Jan 14 06:34:30 AEDT 2018 org.apache.commons.math.complex.Complex,249
+Sun Jan 14 06:34:33 AEDT 2018 org.apache.commons.math.complex.Complex,251
+Sun Jan 14 06:34:37 AEDT 2018 org.apache.commons.math.complex.Complex,256
+Sun Jan 14 06:34:38 AEDT 2018 Sun Jan 14 06:34:38 AEDT 2018 : org.apache.commons.math.complex.Complex,260=>Find no block
+Sun Jan 14 06:34:39 AEDT 2018 org.apache.commons.math.complex.Complex,262
+Sun Jan 14 06:34:42 AEDT 2018 org.apache.commons.math.complex.Complex,278
+Sun Jan 14 06:34:43 AEDT 2018 org.apache.commons.math.complex.Complex,290
+Sun Jan 14 06:34:52 AEDT 2018 org.apache.commons.math.complex.Complex,323
+Sun Jan 14 06:36:13 AEDT 2018 org.apache.commons.math.complex.Complex,356
+Sun Jan 14 06:36:14 AEDT 2018 org.apache.commons.math.complex.Complex,361
+Sun Jan 14 06:36:14 AEDT 2018 org.apache.commons.math.complex.Complex,376
+Sun Jan 14 06:36:15 AEDT 2018 org.apache.commons.math.complex.Complex,377
+Sun Jan 14 06:36:16 AEDT 2018 org.apache.commons.math.complex.Complex,380
+Sun Jan 14 06:38:17 AEDT 2018 org.apache.commons.math.complex.Complex,402
+Sun Jan 14 06:38:18 AEDT 2018 org.apache.commons.math.complex.Complex,403
+Sun Jan 14 06:38:18 AEDT 2018 org.apache.commons.math.complex.Complex,406
+Sun Jan 14 06:41:14 AEDT 2018 org.apache.commons.math.complex.Complex,425
+Sun Jan 14 06:41:46 AEDT 2018 org.apache.commons.math.complex.Complex,426
+Sun Jan 14 06:41:47 AEDT 2018 org.apache.commons.math.complex.Complex,429
+Sun Jan 14 06:43:06 AEDT 2018 org.apache.commons.math.complex.Complex,448
+Sun Jan 14 06:43:06 AEDT 2018 org.apache.commons.math.complex.Complex,449
+Sun Jan 14 06:43:08 AEDT 2018 org.apache.commons.math.complex.Complex,452
+Sun Jan 14 06:44:27 AEDT 2018 org.apache.commons.math.complex.Complex,471
+Sun Jan 14 06:44:28 AEDT 2018 org.apache.commons.math.complex.Complex,472
+Sun Jan 14 06:44:29 AEDT 2018 org.apache.commons.math.complex.Complex,475
+Sun Jan 14 06:46:18 AEDT 2018 org.apache.commons.math.complex.Complex,506
+Sun Jan 14 06:46:20 AEDT 2018 org.apache.commons.math.complex.Complex,507
+Sun Jan 14 06:46:21 AEDT 2018 org.apache.commons.math.complex.Complex,510
+Sun Jan 14 06:48:29 AEDT 2018 org.apache.commons.math.complex.Complex,540
+Sun Jan 14 06:48:30 AEDT 2018 org.apache.commons.math.complex.Complex,541
+Sun Jan 14 06:48:31 AEDT 2018 org.apache.commons.math.complex.Complex,544
+Sun Jan 14 06:50:39 AEDT 2018 org.apache.commons.math.complex.Complex,575
+Sun Jan 14 06:50:40 AEDT 2018 org.apache.commons.math.complex.Complex,576
+Sun Jan 14 06:50:41 AEDT 2018 org.apache.commons.math.complex.Complex,579
+Sun Jan 14 06:53:45 AEDT 2018 org.apache.commons.math.complex.Complex,580
+Sun Jan 14 06:53:46 AEDT 2018 org.apache.commons.math.complex.Complex,613
+Sun Jan 14 06:53:47 AEDT 2018 org.apache.commons.math.complex.Complex,614
+Sun Jan 14 06:53:48 AEDT 2018 org.apache.commons.math.complex.Complex,617
+Sun Jan 14 06:55:55 AEDT 2018 org.apache.commons.math.complex.Complex,639
+Sun Jan 14 06:55:58 AEDT 2018 org.apache.commons.math.complex.Complex,640
+Sun Jan 14 06:55:59 AEDT 2018 org.apache.commons.math.complex.Complex,642
+Sun Jan 14 06:57:28 AEDT 2018 org.apache.commons.math.complex.Complex,672
+Sun Jan 14 06:57:29 AEDT 2018 org.apache.commons.math.complex.Complex,673
+Sun Jan 14 06:57:30 AEDT 2018 org.apache.commons.math.complex.Complex,676
+Sun Jan 14 06:59:40 AEDT 2018 org.apache.commons.math.complex.Complex,706
+Sun Jan 14 06:59:41 AEDT 2018 org.apache.commons.math.complex.Complex,707
+Sun Jan 14 06:59:42 AEDT 2018 org.apache.commons.math.complex.Complex,710
+Sun Jan 14 07:01:52 AEDT 2018 org.apache.commons.math.complex.Complex,748
+Sun Jan 14 07:01:53 AEDT 2018 org.apache.commons.math.complex.Complex,749
+Sun Jan 14 07:01:55 AEDT 2018 org.apache.commons.math.complex.Complex,752
+Sun Jan 14 07:02:11 AEDT 2018 org.apache.commons.math.complex.Complex,753
+Sun Jan 14 07:02:12 AEDT 2018 org.apache.commons.math.complex.Complex,756
+Sun Jan 14 07:06:20 AEDT 2018 org.apache.commons.math.complex.Complex,757
+Sun Jan 14 07:06:21 AEDT 2018 org.apache.commons.math.complex.Complex,758
+Sun Jan 14 07:06:22 AEDT 2018 org.apache.commons.math.complex.Complex,760
+Sun Jan 14 07:06:23 AEDT 2018 org.apache.commons.math.complex.Complex,784
+Sun Jan 14 07:07:49 AEDT 2018 org.apache.commons.math.complex.Complex,814
+Sun Jan 14 07:07:50 AEDT 2018 org.apache.commons.math.complex.Complex,815
+Sun Jan 14 07:07:50 AEDT 2018 org.apache.commons.math.complex.Complex,818
+Sun Jan 14 07:11:12 AEDT 2018 org.apache.commons.math.complex.Complex,819
+Sun Jan 14 07:11:13 AEDT 2018 org.apache.commons.math.complex.Complex,820
+Sun Jan 14 07:11:14 AEDT 2018 org.apache.commons.math.complex.Complex,822
+Sun Jan 14 07:11:15 AEDT 2018 org.apache.commons.math.complex.Complex,852
+Sun Jan 14 07:11:15 AEDT 2018 org.apache.commons.math.complex.Complex,853
+Sun Jan 14 07:11:16 AEDT 2018 org.apache.commons.math.complex.Complex,856
+Sun Jan 14 07:14:30 AEDT 2018 org.apache.commons.math.complex.Complex,857
+Sun Jan 14 07:14:31 AEDT 2018 org.apache.commons.math.complex.Complex,858
+Sun Jan 14 07:14:31 AEDT 2018 org.apache.commons.math.complex.Complex,860
+Failed time : 18/01/14 07:14

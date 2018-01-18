@@ -1,0 +1,86 @@
+=================================================
+Project : time_22	start : 18/01/12 19:07
+Current failed test : org.joda.time.TestDuration_Basics::testToPeriod_fixedZone | 18/01/12 19:07
+Fri Jan 12 19:09:26 AEDT 2018 org.joda.time.tz.FixedDateTimeZone,61
+Fri Jan 12 19:09:28 AEDT 2018 org.joda.time.DateTimeZone,353
+Fri Jan 12 19:09:31 AEDT 2018 org.joda.time.DateTimeZone,363
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(ref!=null){
+zone=ref.get();
+if(zone!=null){
+return zone;
+}
+}
+zone=zone=DateTimeZone.getDefault();
+iFixedOffsetCache.put(id,new SoftReference<DateTimeZone>(zone));
+
+Time : 18/01/12 19:16
+----------------------------------------
+Fri Jan 12 19:29:15 AEDT 2018 org.joda.time.DateTimeZone,364
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+zone=zone=DateTimeZone.getDefault();
+iFixedOffsetCache.put(id,new SoftReference<DateTimeZone>(zone));
+return zone;
+
+Time : 18/01/12 19:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+zone=new FixedDateTimeZone(id,null,offset,offset);
+iFixedOffsetCache.put(id,new SoftReference<DateTimeZone>(zone));
+return getDefault();
+
+Time : 18/01/12 19:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(id.equals("UTC")){
+return DateTimeZone.UTC;
+}
+zone=new FixedDateTimeZone(id,null,offset,offset);
+iFixedOffsetCache.put(id,new SoftReference<DateTimeZone>(zone));
+return getDefault();
+
+Time : 18/01/12 19:46
+----------------------------------------
+Fri Jan 12 19:49:02 AEDT 2018 org.joda.time.DateTimeZone,365
+Fri Jan 12 19:49:03 AEDT 2018 org.joda.time.DateTimeZone,237
+Fri Jan 12 19:50:18 AEDT 2018 org.joda.time.DateTimeZone,254
+Fri Jan 12 19:50:20 AEDT 2018 org.joda.time.DateTimeZone,257
+Fri Jan 12 19:52:04 AEDT 2018 org.joda.time.DateTimeZone,260
+Fri Jan 12 20:30:58 AEDT 2018 org.joda.time.DateTimeZone,262
+Fri Jan 12 20:39:41 AEDT 2018 org.joda.time.DateTimeZone,263
+Fri Jan 12 20:45:50 AEDT 2018 org.joda.time.DateTimeZone,266
+Fri Jan 12 20:45:51 AEDT 2018 org.joda.time.DateTimeZone,268
+Fri Jan 12 21:34:34 AEDT 2018 Fri Jan 12 21:34:34 AEDT 2018 : org.joda.time.DateTimeZone,271=>Find no block
+Fri Jan 12 21:34:35 AEDT 2018 org.joda.time.DateTimeZone,272
+Fri Jan 12 21:37:35 AEDT 2018 org.joda.time.base.AbstractDuration,80
+Fri Jan 12 21:37:37 AEDT 2018 org.joda.time.DateTimeZone,352
+Fri Jan 12 21:37:38 AEDT 2018 org.joda.time.DateTimeZone,356
+Fri Jan 12 21:48:21 AEDT 2018 org.joda.time.DateTimeZone,357
+Fri Jan 12 21:48:22 AEDT 2018 org.joda.time.tz.FixedDateTimeZone,57
+Fri Jan 12 21:49:39 AEDT 2018 org.joda.time.DateTimeZone,282
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+String id=printOffset(millisOffset);
+return getDefault();
+
+Time : 18/01/12 21:51
+----------------------------------------
+Fri Jan 12 21:54:04 AEDT 2018 org.joda.time.DateTimeZone,283
+Fri Jan 12 21:54:05 AEDT 2018 org.joda.time.DateTimeZone,349
+Fri Jan 12 22:02:55 AEDT 2018 org.joda.time.DateTimeZone,631
+Fri Jan 12 23:15:59 AEDT 2018 org.joda.time.DateTimeZone,632
+Timeout time : 18/01/13 00:09

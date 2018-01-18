@@ -1,0 +1,1878 @@
+=================================================
+Project : chart_6	start : 18/01/15 23:53
+Current failed test : org.jfree.chart.util.junit.ShapeListTests::testSerialization | 18/01/15 23:54
+Mon Jan 15 23:55:31 AEDT 2018 org.jfree.chart.util.ShapeList,121
+Mon Jan 15 23:55:36 AEDT 2018 org.jfree.chart.util.ShapeList,137
+Mon Jan 15 23:58:53 AEDT 2018 org.jfree.chart.util.ShapeList,138
+Mon Jan 15 23:58:55 AEDT 2018 org.jfree.chart.util.ShapeList,139
+Mon Jan 15 23:58:56 AEDT 2018 org.jfree.chart.util.ShapeList,140
+Mon Jan 15 23:58:58 AEDT 2018 org.jfree.chart.util.ShapeList,143
+Mon Jan 15 23:58:59 AEDT 2018 org.jfree.chart.util.ShapeList,163
+Tue Jan 16 00:04:10 AEDT 2018 org.jfree.chart.util.ShapeList,164
+Tue Jan 16 00:04:11 AEDT 2018 org.jfree.chart.util.ShapeList,165
+Tue Jan 16 00:04:12 AEDT 2018 org.jfree.chart.util.AbstractObjectList,212
+Tue Jan 16 00:07:00 AEDT 2018 org.jfree.chart.util.AbstractObjectList,213
+Tue Jan 16 00:07:01 AEDT 2018 org.jfree.chart.util.AbstractObjectList,214
+Tue Jan 16 00:07:02 AEDT 2018 org.jfree.chart.util.AbstractObjectList,215
+Tue Jan 16 00:07:03 AEDT 2018 org.jfree.chart.util.AbstractObjectList,216
+Tue Jan 16 00:07:05 AEDT 2018 org.jfree.chart.util.AbstractObjectList,194
+Tue Jan 16 00:07:10 AEDT 2018 org.jfree.chart.util.ShapeList,81
+Tue Jan 16 00:08:39 AEDT 2018 Tue Jan 16 00:08:39 AEDT 2018 : org.jfree.chart.util.ShapeList,82=>Find no block
+Tue Jan 16 00:08:40 AEDT 2018 org.jfree.chart.util.AbstractObjectList,265
+Tue Jan 16 00:11:54 AEDT 2018 org.jfree.chart.util.AbstractObjectList,193
+Tue Jan 16 00:11:56 AEDT 2018 org.jfree.chart.util.SerialUtilities,271
+Tue Jan 16 00:16:16 AEDT 2018 org.jfree.chart.util.SerialUtilities,272
+Tue Jan 16 00:16:18 AEDT 2018 org.jfree.chart.util.SerialUtilities,273
+Tue Jan 16 00:20:25 AEDT 2018 org.jfree.chart.util.SerialUtilities,274
+Tue Jan 16 00:24:08 AEDT 2018 org.jfree.chart.util.SerialUtilities,275
+Tue Jan 16 00:24:09 AEDT 2018 Tue Jan 16 00:24:09 AEDT 2018 : org.jfree.chart.util.SerialUtilities,276=>Find no block
+Tue Jan 16 00:24:11 AEDT 2018 org.jfree.chart.util.SerialUtilities,361
+Tue Jan 16 00:26:14 AEDT 2018 org.jfree.chart.util.SerialUtilities,362
+Tue Jan 16 00:26:16 AEDT 2018 org.jfree.chart.util.SerialUtilities,363
+Tue Jan 16 00:28:30 AEDT 2018 org.jfree.chart.util.SerialUtilities,364
+Tue Jan 16 00:30:50 AEDT 2018 org.jfree.chart.util.SerialUtilities,365
+Tue Jan 16 00:33:08 AEDT 2018 org.jfree.chart.util.SerialUtilities,366
+Tue Jan 16 00:33:09 AEDT 2018 Tue Jan 16 00:33:09 AEDT 2018 : org.jfree.chart.util.SerialUtilities,367=>Find no block
+Tue Jan 16 00:33:10 AEDT 2018 org.jfree.chart.util.AbstractObjectList,261
+Tue Jan 16 00:33:11 AEDT 2018 org.jfree.chart.util.AbstractObjectList,262
+Tue Jan 16 00:33:12 AEDT 2018 org.jfree.chart.util.AbstractObjectList,288
+Tue Jan 16 00:35:07 AEDT 2018 org.jfree.chart.util.AbstractObjectList,259
+Tue Jan 16 00:39:28 AEDT 2018 org.jfree.chart.util.AbstractObjectList,260
+Tue Jan 16 00:39:30 AEDT 2018 org.jfree.chart.util.AbstractObjectList,286
+Tue Jan 16 00:46:11 AEDT 2018 org.jfree.chart.util.AbstractObjectList,287
+Tue Jan 16 00:46:13 AEDT 2018 org.jfree.chart.util.ShapeList,70
+Tue Jan 16 00:47:04 AEDT 2018 org.jfree.chart.util.AbstractObjectList,206
+Tue Jan 16 00:50:55 AEDT 2018 org.jfree.chart.util.AbstractObjectList,207
+Tue Jan 16 00:50:56 AEDT 2018 org.jfree.chart.util.AbstractObjectList,208
+Tue Jan 16 00:58:54 AEDT 2018 org.jfree.chart.util.AbstractObjectList,211
+Tue Jan 16 00:58:55 AEDT 2018 org.jfree.chart.util.AbstractObjectList,221
+Tue Jan 16 01:00:59 AEDT 2018 org.jfree.chart.util.AbstractObjectList,109
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Object result=null;
+return result;
+
+Time : 18/01/16 01:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Object result=null;
+if(this.equals(Layer.FOREGROUND)){
+result=Layer.FOREGROUND;
+}else if(this.equals(Layer.BACKGROUND)){
+result=Layer.BACKGROUND;
+}
+return result;
+
+Time : 18/01/16 01:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+Object result=null;
+if(this.equals(HorizontalAlignment.LEFT)){
+result=HorizontalAlignment.LEFT;
+}else if(this.equals(HorizontalAlignment.RIGHT)){
+result=HorizontalAlignment.RIGHT;
+}else if(this.equals(HorizontalAlignment.CENTER)){
+result=HorizontalAlignment.CENTER;
+}
+return result;
+
+Time : 18/01/16 01:08
+----------------------------------------
+Tue Jan 16 01:10:39 AEDT 2018 org.jfree.chart.util.AbstractObjectList,110
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.objects[index]=result;
+if(index>=0&&index<this.size){
+result=this.objects[index];
+}
+
+Time : 18/01/16 01:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.objects[index]=result;
+this.size=Math.max(this.size,index+1);
+if(index>=0&&index<this.size){
+result=this.objects[index];
+}
+
+Time : 18/01/16 01:12
+----------------------------------------
+Tue Jan 16 01:15:54 AEDT 2018 org.jfree.chart.util.AbstractObjectList,111
+Tue Jan 16 01:15:55 AEDT 2018 org.jfree.chart.util.AbstractObjectList,113
+Tue Jan 16 01:15:57 AEDT 2018 org.jfree.chart.util.AbstractObjectList,123
+Tue Jan 16 01:17:53 AEDT 2018 org.jfree.chart.util.AbstractObjectList,126
+Tue Jan 16 01:24:06 AEDT 2018 org.jfree.chart.util.AbstractObjectList,131
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 01:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 01:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 01:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 01:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+
+Time : 18/01/16 01:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+
+Time : 18/01/16 01:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 01:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+this.objects[index]=object;
+
+Time : 18/01/16 01:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+
+Time : 18/01/16 01:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 01:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.objects[index]=object;
+
+Time : 18/01/16 01:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+
+Time : 18/01/16 01:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0||index>3){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 01:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0||index>3){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 01:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("The index value ("+index);
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 01:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("The index value ("+index);
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 01:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0||index>3){
+throw new IllegalArgumentException("The index value ("+index);
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 01:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0||index>3){
+throw new IllegalArgumentException("The index value ("+index);
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 01:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0||index>3){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 01:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0||index>3){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+this.objects[index]=object;
+
+Time : 18/01/16 01:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0||index>3){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+
+Time : 18/01/16 01:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("The index value ("+index);
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 01:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("The index value ("+index);
+}
+this.objects[index]=object;
+
+Time : 18/01/16 01:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("The index value ("+index);
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+
+Time : 18/01/16 01:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0||index>3){
+throw new IllegalArgumentException("The index value ("+index);
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 01:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0||index>3){
+throw new IllegalArgumentException("The index value ("+index);
+}
+this.objects[index]=object;
+
+Time : 18/01/16 01:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0||index>3){
+throw new IllegalArgumentException("The index value ("+index);
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+
+Time : 18/01/16 01:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0||index>3){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+
+Time : 18/01/16 01:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("The index value ("+index);
+}
+
+Time : 18/01/16 01:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("TimeSeriesDataset.addSeries(): "+"cannot add more series than specified in c\'tor");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 01:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("The \'index\' argument is out of range.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 01:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("The \'index\' argument is out of range.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 01:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("The \'index\' argument is out of range.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+
+Time : 18/01/16 01:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("TimeSeriesDataset.addValue(): series #"+index);
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 01:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("TimeSeriesDataset.addValue(): series #"+index);
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 01:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("TimeSeriesDataset.addValue(): series #"+index);
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+
+Time : 18/01/16 01:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("DefaultIntervalCategoryDataset.setCategoryKeys(): "+"null category not permitted.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 01:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("DefaultIntervalCategoryDataset.setCategoryKeys(): "+"null category not permitted.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 01:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("DefaultIntervalCategoryDataset.setCategoryKeys(): "+"null category not permitted.");
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 01:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("DefaultIntervalCategoryDataset.setCategoryKeys(): "+"null category not permitted.");
+}
+this.objects[index]=object;
+
+Time : 18/01/16 01:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("DefaultIntervalCategoryDataset.setCategoryKeys(): "+"null category not permitted.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+
+Time : 18/01/16 01:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("DefaultIntervalCategoryDataset.setCategoryKeys(): "+"null category not permitted.");
+}
+
+Time : 18/01/16 01:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Index out of range.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 01:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Index out of range.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 01:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Index out of range.");
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 01:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Index out of range.");
+}
+this.objects[index]=object;
+
+Time : 18/01/16 01:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Index out of range.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+
+Time : 18/01/16 01:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Index out of range.");
+}
+
+Time : 18/01/16 01:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("The \'data\' array must contain "+"three arrays all having the same length.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 01:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("The \'data\' array must contain "+"three arrays all having the same length.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 01:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("The \'data\' array must contain "+"three arrays all having the same length.");
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 01:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("The \'data\' array must contain "+"three arrays all having the same length.");
+}
+this.objects[index]=object;
+
+Time : 18/01/16 01:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("The \'data\' array must contain "+"three arrays all having the same length.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+
+Time : 18/01/16 01:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("The \'data\' array must contain "+"three arrays all having the same length.");
+}
+
+Time : 18/01/16 01:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Index "+index);
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 01:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Index "+index);
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 01:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Index "+index);
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 01:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Index "+index);
+}
+this.objects[index]=object;
+
+Time : 18/01/16 02:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Index "+index);
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+
+Time : 18/01/16 02:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Index "+index);
+}
+
+Time : 18/01/16 02:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Period can\'t be longer than dataset.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 02:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Period can\'t be longer than dataset.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 02:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Period can\'t be longer than dataset.");
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 02:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Period can\'t be longer than dataset.");
+}
+this.objects[index]=object;
+
+Time : 18/01/16 02:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Period can\'t be longer than dataset.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+
+Time : 18/01/16 02:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Period can\'t be longer than dataset.");
+}
+
+Time : 18/01/16 02:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(index>this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 02:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(index>this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 02:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(increment>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 02:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(increment>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 02:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(increment>this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 02:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(increment>this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 02:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index>this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 02:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index>this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 02:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(index>this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+
+Time : 18/01/16 02:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(increment>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 02:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(increment>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 02:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(increment>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+
+Time : 18/01/16 02:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(increment>this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 02:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(increment>this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 02:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(increment>this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+
+Time : 18/01/16 02:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index>this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+
+Time : 18/01/16 02:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(increment>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+
+Time : 18/01/16 02:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("More data than series to put them "+"in");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 02:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("More data than series to put them "+"in");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 02:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("More data than series to put them "+"in");
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 02:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("More data than series to put them "+"in");
+}
+this.objects[index]=object;
+
+Time : 18/01/16 02:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("More data than series to put them "+"in");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+
+Time : 18/01/16 02:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("More data than series to put them "+"in");
+}
+
+Time : 18/01/16 02:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(size<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 02:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(size<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 02:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(size<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 02:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(size<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+this.objects[index]=object;
+
+Time : 18/01/16 02:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(size<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+
+Time : 18/01/16 02:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(size<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+
+Time : 18/01/16 02:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+this.size=Math.min(this.size,index+1);
+
+Time : 18/01/16 02:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+this.size=Math.min(this.size,index+1);
+
+Time : 18/01/16 02:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+this.objects[index]=object;
+this.size=Math.min(this.size,index+1);
+
+Time : 18/01/16 02:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.min(this.size,index+1);
+
+Time : 18/01/16 02:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.objects[index]=object;
+this.size=Math.min(this.size,index+1);
+
+Time : 18/01/16 02:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.min(this.size,index+1);
+
+Time : 18/01/16 02:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+this.size=Math.min(this.size,index+1);
+
+Time : 18/01/16 02:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.size=Math.min(this.size,index+1);
+
+Time : 18/01/16 02:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+index=-(index+1);
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 02:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+index=-(index+1);
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 02:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+index=-(index+1);
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 02:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+index=-(index+1);
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+this.objects[index]=object;
+
+Time : 18/01/16 02:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+index=-(index+1);
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+
+Time : 18/01/16 02:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+index=-(index+1);
+throw new IllegalArgumentException("Requires index >= 0.");
+}
+
+Time : 18/01/16 02:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IndexOutOfBoundsException("Invalid \'index\': "+index);
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 02:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IndexOutOfBoundsException("Invalid \'index\': "+index);
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+this.objects[index]=object;
+
+Time : 18/01/16 02:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IndexOutOfBoundsException("Invalid \'index\': "+index);
+}
+this.size=Math.max(this.size,index+1);
+
+Time : 18/01/16 02:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IndexOutOfBoundsException("Invalid \'index\': "+index);
+}
+this.objects[index]=object;
+
+Time : 18/01/16 02:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IndexOutOfBoundsException("Invalid \'index\': "+index);
+}
+if(index>=this.objects.length){
+Object[] enlarged=new Object[index+this.increment];
+System.arraycopy(this.objects,0,enlarged,0,this.objects.length);
+this.objects=enlarged;
+}
+
+Time : 18/01/16 02:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<0){
+throw new IndexOutOfBoundsException("Invalid \'index\': "+index);
+}
+
+Time : 18/01/16 02:37
+----------------------------------------
+Tue Jan 16 02:40:56 AEDT 2018 org.jfree.chart.util.AbstractObjectList,132
+Tue Jan 16 02:40:57 AEDT 2018 Tue Jan 16 02:40:57 AEDT 2018 : org.jfree.chart.util.AbstractObjectList,133=>Find no block
+Tue Jan 16 02:40:59 AEDT 2018 org.jfree.chart.util.ShapeList,105
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(obj!=this){
+return true;
+}
+
+Time : 18/01/16 02:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(obj!=null){
+return true;
+}
+
+Time : 18/01/16 02:42
+----------------------------------------
+Tue Jan 16 02:43:42 AEDT 2018 org.jfree.chart.util.ShapeList,108
+Tue Jan 16 02:44:17 AEDT 2018 org.jfree.chart.util.ShapeList,111
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(obj!=this){
+return true;
+}
+if(!(obj instanceof ShapeList)){
+return false;
+}
+return super.equals(obj);
+
+Time : 18/01/16 02:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(obj!=null){
+return true;
+}
+if(!(obj instanceof ShapeList)){
+return false;
+}
+return super.equals(obj);
+
+Time : 18/01/16 02:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(obj!=this){
+return true;
+}
+return super.equals(obj);
+
+Time : 18/01/16 02:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(obj!=null){
+return true;
+}
+return super.equals(obj);
+
+Time : 18/01/16 02:49
+----------------------------------------
+Tue Jan 16 02:51:04 AEDT 2018 org.jfree.chart.util.AbstractObjectList,178
+Tue Jan 16 02:52:19 AEDT 2018 org.jfree.chart.util.AbstractObjectList,182
+Tue Jan 16 02:52:21 AEDT 2018 org.jfree.chart.util.AbstractObjectList,186
+Tue Jan 16 02:52:54 AEDT 2018 org.jfree.chart.util.AbstractObjectList,190
+Tue Jan 16 02:57:29 AEDT 2018 org.jfree.chart.util.AbstractObjectList,191
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=listSize;i<listSize;i++){
+if(!ObjectUtilities.equal(get(i),other.get(i))){
+return false;
+}
+}
+
+Time : 18/01/16 02:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=DEFAULT_INITIAL_CAPACITY;i<listSize;i++){
+if(!ObjectUtilities.equal(get(i),other.get(i))){
+return false;
+}
+}
+
+Time : 18/01/16 02:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+AbstractObjectList other=(AbstractObjectList)obj;
+int listSize=size();
+
+Time : 18/01/16 03:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+AbstractObjectList other=(AbstractObjectList)obj;
+
+Time : 18/01/16 03:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int listSize=size();
+
+Time : 18/01/16 03:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+AbstractObjectList other=(AbstractObjectList)obj;
+int listSize=size();
+for(int i=listSize;i<listSize;i++){
+if(!ObjectUtilities.equal(get(i),other.get(i))){
+return false;
+}
+}
+
+Time : 18/01/16 03:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+AbstractObjectList other=(AbstractObjectList)obj;
+int listSize=size();
+for(int i=DEFAULT_INITIAL_CAPACITY;i<listSize;i++){
+if(!ObjectUtilities.equal(get(i),other.get(i))){
+return false;
+}
+}
+
+Time : 18/01/16 03:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+
+Time : 18/01/16 03:06
+----------------------------------------
+Tue Jan 16 03:10:22 AEDT 2018 org.jfree.chart.util.AbstractObjectList,192
+Tue Jan 16 03:10:23 AEDT 2018 org.jfree.chart.util.SerialUtilities,92
+Tue Jan 16 03:10:43 AEDT 2018 org.jfree.chart.util.ObjectUtilities,128
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(o1==null){
+return o1.equals(o2);
+}else {
+return true;
+}
+
+Time : 18/01/16 03:11
+----------------------------------------
+Tue Jan 16 03:12:15 AEDT 2018 org.jfree.chart.util.ObjectUtilities,129
+Tue Jan 16 03:12:16 AEDT 2018 org.jfree.chart.util.ObjectUtilities,125
+Tue Jan 16 03:13:53 AEDT 2018 org.jfree.chart.util.ShapeList,133
+Tue Jan 16 03:16:01 AEDT 2018 org.jfree.chart.util.ShapeList,134
+Tue Jan 16 03:16:03 AEDT 2018 org.jfree.chart.util.ShapeList,135
+Tue Jan 16 03:22:58 AEDT 2018 org.jfree.chart.util.ShapeList,136
+Tue Jan 16 03:22:59 AEDT 2018 Tue Jan 16 03:22:59 AEDT 2018 : org.jfree.chart.util.ShapeList,147=>Find no block
+Tue Jan 16 03:23:00 AEDT 2018 org.jfree.chart.util.ShapeList,160
+Tue Jan 16 03:27:51 AEDT 2018 org.jfree.chart.util.ShapeList,161
+Tue Jan 16 03:27:52 AEDT 2018 org.jfree.chart.util.ShapeList,162
+Tue Jan 16 03:27:54 AEDT 2018 Tue Jan 16 03:27:54 AEDT 2018 : org.jfree.chart.util.ShapeList,169=>Find no block
+Tue Jan 16 03:27:55 AEDT 2018 org.jfree.chart.util.AbstractObjectList,255
+Tue Jan 16 03:27:56 AEDT 2018 org.jfree.chart.util.AbstractObjectList,256
+Tue Jan 16 03:27:57 AEDT 2018 org.jfree.chart.util.AbstractObjectList,257
+Tue Jan 16 03:40:32 AEDT 2018 org.jfree.chart.util.AbstractObjectList,258
+Tue Jan 16 03:40:34 AEDT 2018 Tue Jan 16 03:40:34 AEDT 2018 : org.jfree.chart.util.AbstractObjectList,269=>Find no block
+Tue Jan 16 03:40:36 AEDT 2018 org.jfree.chart.util.AbstractObjectList,282
+Tue Jan 16 03:49:06 AEDT 2018 org.jfree.chart.util.AbstractObjectList,283
+Tue Jan 16 03:49:07 AEDT 2018 org.jfree.chart.util.AbstractObjectList,284
+Tue Jan 16 03:49:08 AEDT 2018 org.jfree.chart.util.AbstractObjectList,285
+Tue Jan 16 03:49:10 AEDT 2018 Tue Jan 16 03:49:10 AEDT 2018 : org.jfree.chart.util.AbstractObjectList,292=>Find no block
+Tue Jan 16 03:49:12 AEDT 2018 org.jfree.chart.util.SerialUtilities,278
+Tue Jan 16 03:53:46 AEDT 2018 org.jfree.chart.util.SerialUtilities,279
+Tue Jan 16 03:53:48 AEDT 2018 org.jfree.chart.util.SerialUtilities,280
+Tue Jan 16 03:58:36 AEDT 2018 org.jfree.chart.util.SerialUtilities,281
+Tue Jan 16 04:04:22 AEDT 2018 org.jfree.chart.util.SerialUtilities,282
+Tue Jan 16 04:04:24 AEDT 2018 Tue Jan 16 04:04:24 AEDT 2018 : org.jfree.chart.util.SerialUtilities,283=>Find no block
+Tue Jan 16 04:04:25 AEDT 2018 org.jfree.chart.util.SerialUtilities,369
+Tue Jan 16 04:06:54 AEDT 2018 org.jfree.chart.util.SerialUtilities,370
+Tue Jan 16 04:06:56 AEDT 2018 org.jfree.chart.util.SerialUtilities,371
+Tue Jan 16 04:09:19 AEDT 2018 org.jfree.chart.util.SerialUtilities,372
+Tue Jan 16 04:11:55 AEDT 2018 org.jfree.chart.util.SerialUtilities,373
+Tue Jan 16 04:14:51 AEDT 2018 org.jfree.chart.util.SerialUtilities,374
+Tue Jan 16 04:14:52 AEDT 2018 Tue Jan 16 04:14:52 AEDT 2018 : org.jfree.chart.util.SerialUtilities,375=>Find no block
+Tue Jan 16 04:14:54 AEDT 2018 org.jfree.chart.util.SerialUtilities,263
+Tue Jan 16 04:14:58 AEDT 2018 org.jfree.chart.util.SerialUtilities,266
+Tue Jan 16 04:17:02 AEDT 2018 org.jfree.chart.util.SerialUtilities,267
+Tue Jan 16 04:17:03 AEDT 2018 org.jfree.chart.util.SerialUtilities,268
+Tue Jan 16 04:32:15 AEDT 2018 org.jfree.chart.util.SerialUtilities,269
+Tue Jan 16 04:32:37 AEDT 2018 org.jfree.chart.util.SerialUtilities,270
+Tue Jan 16 04:32:38 AEDT 2018 org.jfree.chart.util.SerialUtilities,277
+Tue Jan 16 04:32:40 AEDT 2018 org.jfree.chart.util.SerialUtilities,340
+Tue Jan 16 04:48:58 AEDT 2018 org.jfree.chart.util.SerialUtilities,355
+Tue Jan 16 04:49:00 AEDT 2018 org.jfree.chart.util.SerialUtilities,358
+Timeout time : 18/01/16 04:55

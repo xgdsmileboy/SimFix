@@ -1,0 +1,33 @@
+=================================================
+Project : closure_64	start : 18/01/14 04:37
+Current failed test : com.google.javascript.jscomp.CommandLineRunnerTest::testES5StrictUseStrictMultipleInputs_purify_2 | 18/01/14 04:37
+Sun Jan 14 04:48:01 EST 2018 com.google.javascript.jscomp.DefaultPassConfig,271
+Sun Jan 14 04:59:24 EST 2018 com.google.javascript.jscomp.AbstractCommandLineRunner,259
+Sun Jan 14 05:05:32 EST 2018 com.google.javascript.jscomp.Compiler,1705
+Sun Jan 14 05:06:02 EST 2018 com.google.javascript.jscomp.Compiler,1706
+Sun Jan 14 05:06:29 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,140
+Sun Jan 14 05:06:57 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,141
+Sun Jan 14 05:06:59 EST 2018 Sun Jan 14 05:06:59 EST 2018 : com.google.javascript.jscomp.DefaultPassConfig,1173=>Find no block
+Sun Jan 14 05:06:59 EST 2018 com.google.javascript.jscomp.CodePrinter,631
+Sun Jan 14 05:07:01 EST 2018 com.google.javascript.jscomp.CodeGenerator,71
+Sun Jan 14 05:07:12 EST 2018 Sun Jan 14 05:07:12 EST 2018 : com.google.javascript.jscomp.CodeGenerator,72=>Find no block
+Sun Jan 14 05:07:12 EST 2018 com.google.javascript.jscomp.StrictModeCheck,227
+Sun Jan 14 05:29:10 EST 2018 com.google.javascript.jscomp.StrictModeCheck,246
+Sun Jan 14 05:45:09 EST 2018 Sun Jan 14 05:45:09 EST 2018 : com.google.javascript.jscomp.StrictModeCheck,251=>Find no block
+Sun Jan 14 05:45:10 EST 2018 com.google.javascript.jscomp.StrictModeCheck,109
+Sun Jan 14 09:07:36 EST 2018 com.google.javascript.jscomp.StrictModeCheck,160
+Sun Jan 14 09:38:53 EST 2018 Sun Jan 14 09:38:53 EST 2018 : com.google.javascript.jscomp.StrictModeCheck,171=>Find no block
+Sun Jan 14 09:38:53 EST 2018 com.google.javascript.jscomp.StatementFusion,61
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!NodeUtil.isExpressionNode(c)&&c!=last){
+return true;
+}
+
+Time : 18/01/14 09:39
+----------------------------------------
+Sun Jan 14 09:43:47 EST 2018 com.google.javascript.jscomp.StrictModeCheck,106
+Sun Jan 14 09:47:42 EST 2018 com.google.javascript.jscomp.StrictModeCheck,134
+Timeout time : 18/01/14 09:48

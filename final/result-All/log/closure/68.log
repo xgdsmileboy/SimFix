@@ -1,0 +1,327 @@
+=================================================
+Project : closure_68	start : 18/01/12 14:05
+Current failed test : com.google.javascript.jscomp.parsing.JsDocInfoParserTest::testIssue477 | 18/01/12 14:06
+Fri Jan 12 14:17:11 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocTokenStream,352
+Fri Jan 12 14:20:34 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,886
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+jsdocBuilder.build(null);
+token=eatTokensUntilEOL();
+
+
+Time : 18/01/12 14:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+jsdocBuilder.build(null);
+token=next();
+
+
+Time : 18/01/12 14:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+jsdocBuilder.build(null);
+skipEOLs();
+token=next();
+
+
+
+Time : 18/01/12 14:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+lineno=stream.getLineno();
+jsdocBuilder.build(null);
+token=next();
+
+
+
+Time : 18/01/12 14:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+charno=stream.getCharno();
+jsdocBuilder.build(null);
+token=next();
+
+
+
+Time : 18/01/12 14:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+skipEOLs();
+lineno=stream.getLineno();
+charno=stream.getCharno();
+
+jsdocBuilder.build(null);
+token=next();
+
+
+
+Time : 18/01/12 14:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+type=null;
+jsdocBuilder.build(null);
+token=next();
+
+
+
+Time : 18/01/12 14:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+skipEOLs();
+lineno=stream.getLineno();
+charno=stream.getCharno();
+type=null;
+
+jsdocBuilder.build(null);
+token=next();
+
+
+
+Time : 18/01/12 14:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+jsdocBuilder.build(null);
+lineno=stream.getLineno();
+
+
+Time : 18/01/12 15:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+jsdocBuilder.build(null);
+charno=stream.getChar();
+
+
+Time : 18/01/12 15:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+jsdocBuilder.build(null);
+token=current();
+
+
+Time : 18/01/12 15:10
+----------------------------------------
+Fri Jan 12 15:14:12 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,887
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+jsdocBuilder.build(null);
+token=eatTokensUntilEOL();
+checkExtendedTypes(extendedTypes);
+
+
+Time : 18/01/12 15:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+jsdocBuilder.build(null);
+token=next();
+checkExtendedTypes(extendedTypes);
+
+
+Time : 18/01/12 15:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+lineno=stream.getLineno();
+jsdocBuilder.build(null);
+token=next();
+checkExtendedTypes(extendedTypes);
+
+
+
+Time : 18/01/12 15:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+charno=stream.getCharno();
+jsdocBuilder.build(null);
+token=next();
+checkExtendedTypes(extendedTypes);
+
+
+
+Time : 18/01/12 15:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+lineno=stream.getLineno();
+charno=stream.getCharno();
+
+jsdocBuilder.build(null);
+token=next();
+checkExtendedTypes(extendedTypes);
+
+
+
+Time : 18/01/12 15:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+type=null;
+jsdocBuilder.build(null);
+token=next();
+checkExtendedTypes(extendedTypes);
+
+
+
+Time : 18/01/12 15:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+lineno=stream.getLineno();
+charno=stream.getCharno();
+type=null;
+
+jsdocBuilder.build(null);
+token=next();
+checkExtendedTypes(extendedTypes);
+
+
+
+Time : 18/01/12 15:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+jsdocBuilder.build(null);
+lineno=stream.getLineno();
+checkExtendedTypes(extendedTypes);
+
+
+Time : 18/01/12 15:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+jsdocBuilder.build(null);
+charno=stream.getChar();
+checkExtendedTypes(extendedTypes);
+
+
+Time : 18/01/12 15:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+jsdocBuilder.build(null);
+token=current();
+checkExtendedTypes(extendedTypes);
+
+
+Time : 18/01/12 15:54
+----------------------------------------
+Fri Jan 12 15:58:56 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1761
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(token!=JsDocToken.LP){
+restoreLookAhead(token);
+return reportTypeSyntaxWarning("msg.jsdoc.missing.lp");
+}
+
+Time : 18/01/12 16:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.1196263565463043 : [/home/hz985/jiajun/d4j/projects/closure/closure_68_buggy/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java=>0,0]
+if(token==JsDocToken.COMMA||token==JsDocToken.EQUALS||token==JsDocToken.RC||token==JsDocToken.RP||token==JsDocToken.PIPE){
+restoreLookAhead(token);
+return newNode(Token.QMARK);
+}
+return wrapNode(Token.QMARK,parseBasicTypeExpression(token));
+
+Time : 18/01/12 16:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/closure/closure_68_buggy/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java=>1760,1762]
+if(token!=JsDocToken.LP){
+return reportTypeSyntaxWarning("msg.jsdoc.missing.lp");
+}
+
+Time : 18/01/12 16:27
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/closure/closure_68_buggy/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java=>1760,1762]
+if(token!=JsDocToken.LP){
+restoreLookAhead(token);
+return reportTypeSyntaxWarning("msg.jsdoc.missing.lp");
+}
+
+Time : 18/01/12 16:27
+----------------------------------------
+Success time : 18/01/12 16:27

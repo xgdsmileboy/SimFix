@@ -1,0 +1,106 @@
+=================================================
+Project : math_16	start : 18/01/14 06:57
+Current failed test : org.apache.commons.math3.util.FastMathTest::testMath905LargeNegative_purify_1 | 18/01/14 06:59
+Sun Jan 14 07:10:02 AEDT 2018 org.apache.commons.math3.util.FastMath,399
+Sun Jan 14 07:15:10 AEDT 2018 org.apache.commons.math3.util.FastMath,384
+Sun Jan 14 07:28:15 AEDT 2018 org.apache.commons.math3.util.FastMath,393
+Sun Jan 14 07:36:21 AEDT 2018 org.apache.commons.math3.util.FastMath,397
+Sun Jan 14 07:36:25 AEDT 2018 org.apache.commons.math3.util.FastMath,870
+Sun Jan 14 07:37:29 AEDT 2018 org.apache.commons.math3.util.FastMath,874
+Sun Jan 14 07:38:18 AEDT 2018 Sun Jan 14 07:38:18 AEDT 2018 : org.apache.commons.math3.random.MersenneTwister,131=>Find no block
+Sun Jan 14 07:38:20 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,132
+Sun Jan 14 07:39:02 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,133
+Sun Jan 14 07:39:06 AEDT 2018 Sun Jan 14 07:39:06 AEDT 2018 : org.apache.commons.math3.random.MersenneTwister,134=>Find no block
+Sun Jan 14 07:39:08 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,144
+Sun Jan 14 07:42:47 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,146
+Sun Jan 14 07:42:48 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,147
+Sun Jan 14 07:42:50 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,150
+Sun Jan 14 07:42:51 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,151
+Sun Jan 14 07:42:55 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,154
+Sun Jan 14 07:43:00 AEDT 2018 Sun Jan 14 07:43:00 AEDT 2018 : org.apache.commons.math3.random.MersenneTwister,155=>Find no block
+Sun Jan 14 07:43:04 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,167
+Sun Jan 14 07:43:13 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,172
+Sun Jan 14 07:45:37 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,173
+Sun Jan 14 07:48:36 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,174
+Sun Jan 14 07:48:38 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,176
+Timeout time : 18/01/14 08:24
+Current failed test : org.apache.commons.math3.util.FastMathTest::testMath905LargeNegative_purify_2 | 18/01/14 08:24
+Sun Jan 14 08:35:39 AEDT 2018 org.apache.commons.math3.util.FastMath,399
+Sun Jan 14 08:40:45 AEDT 2018 org.apache.commons.math3.util.FastMath,460
+Sun Jan 14 08:45:16 AEDT 2018 org.apache.commons.math3.util.FastMath,384
+Sun Jan 14 08:58:18 AEDT 2018 org.apache.commons.math3.util.FastMath,393
+Sun Jan 14 09:06:18 AEDT 2018 org.apache.commons.math3.util.FastMath,397
+Sun Jan 14 09:06:21 AEDT 2018 org.apache.commons.math3.util.FastMath,444
+Sun Jan 14 09:19:21 AEDT 2018 org.apache.commons.math3.util.FastMath,445
+Sun Jan 14 09:19:22 AEDT 2018 org.apache.commons.math3.util.FastMath,454
+Sun Jan 14 09:19:24 AEDT 2018 org.apache.commons.math3.util.FastMath,458
+Sun Jan 14 09:19:26 AEDT 2018 org.apache.commons.math3.util.FastMath,870
+Sun Jan 14 09:20:29 AEDT 2018 org.apache.commons.math3.util.FastMath,874
+Sun Jan 14 09:21:22 AEDT 2018 Sun Jan 14 09:21:22 AEDT 2018 : org.apache.commons.math3.random.MersenneTwister,131=>Find no block
+Sun Jan 14 09:21:23 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,132
+Sun Jan 14 09:22:01 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,133
+Sun Jan 14 09:22:05 AEDT 2018 Sun Jan 14 09:22:05 AEDT 2018 : org.apache.commons.math3.random.MersenneTwister,134=>Find no block
+Sun Jan 14 09:22:08 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,144
+Sun Jan 14 09:25:50 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,146
+Sun Jan 14 09:25:54 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,147
+Sun Jan 14 09:25:56 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,150
+Sun Jan 14 09:25:57 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,151
+Sun Jan 14 09:25:59 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,154
+Sun Jan 14 09:26:00 AEDT 2018 Sun Jan 14 09:26:00 AEDT 2018 : org.apache.commons.math3.random.MersenneTwister,155=>Find no block
+Sun Jan 14 09:26:02 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,167
+Sun Jan 14 09:26:12 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,172
+Sun Jan 14 09:28:34 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,173
+Sun Jan 14 09:31:28 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,174
+Sun Jan 14 09:31:32 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,176
+Timeout time : 18/01/14 09:50
+Current failed test : org.apache.commons.math3.util.FastMathTest::testMath905LargePositive_purify_1 | 18/01/14 09:50
+Sun Jan 14 10:01:25 AEDT 2018 org.apache.commons.math3.util.FastMath,395
+Sun Jan 14 10:09:25 AEDT 2018 org.apache.commons.math3.util.FastMath,384
+Sun Jan 14 10:22:29 AEDT 2018 org.apache.commons.math3.util.FastMath,393
+Sun Jan 14 10:22:33 AEDT 2018 org.apache.commons.math3.util.FastMath,870
+Sun Jan 14 10:23:33 AEDT 2018 org.apache.commons.math3.util.FastMath,874
+Sun Jan 14 10:24:22 AEDT 2018 Sun Jan 14 10:24:22 AEDT 2018 : org.apache.commons.math3.random.MersenneTwister,131=>Find no block
+Sun Jan 14 10:24:24 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,132
+Sun Jan 14 10:25:03 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,133
+Sun Jan 14 10:25:07 AEDT 2018 Sun Jan 14 10:25:07 AEDT 2018 : org.apache.commons.math3.random.MersenneTwister,134=>Find no block
+Sun Jan 14 10:25:10 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,144
+Sun Jan 14 10:28:53 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,146
+Sun Jan 14 10:28:57 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,147
+Sun Jan 14 10:28:59 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,150
+Sun Jan 14 10:29:02 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,151
+Sun Jan 14 10:29:04 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,154
+Sun Jan 14 10:29:05 AEDT 2018 Sun Jan 14 10:29:05 AEDT 2018 : org.apache.commons.math3.random.MersenneTwister,155=>Find no block
+Sun Jan 14 10:29:07 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,167
+Sun Jan 14 10:29:17 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,172
+Sun Jan 14 10:31:35 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,173
+Sun Jan 14 10:34:26 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,174
+Sun Jan 14 10:34:28 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,176
+Sun Jan 14 11:15:14 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,177
+Timeout time : 18/01/14 11:16
+Current failed test : org.apache.commons.math3.util.FastMathTest::testMath905LargePositive_purify_2 | 18/01/14 11:16
+Sun Jan 14 11:26:55 AEDT 2018 org.apache.commons.math3.util.FastMath,395
+Sun Jan 14 11:34:51 AEDT 2018 org.apache.commons.math3.util.FastMath,456
+Sun Jan 14 11:34:55 AEDT 2018 org.apache.commons.math3.util.FastMath,384
+Sun Jan 14 11:47:40 AEDT 2018 org.apache.commons.math3.util.FastMath,393
+Sun Jan 14 11:47:42 AEDT 2018 org.apache.commons.math3.util.FastMath,444
+Sun Jan 14 12:00:29 AEDT 2018 org.apache.commons.math3.util.FastMath,445
+Sun Jan 14 12:00:30 AEDT 2018 org.apache.commons.math3.util.FastMath,454
+Sun Jan 14 12:00:32 AEDT 2018 org.apache.commons.math3.util.FastMath,870
+Sun Jan 14 12:01:30 AEDT 2018 org.apache.commons.math3.util.FastMath,874
+Sun Jan 14 12:02:22 AEDT 2018 Sun Jan 14 12:02:22 AEDT 2018 : org.apache.commons.math3.random.MersenneTwister,131=>Find no block
+Sun Jan 14 12:02:25 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,132
+Sun Jan 14 12:03:03 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,133
+Sun Jan 14 12:03:04 AEDT 2018 Sun Jan 14 12:03:04 AEDT 2018 : org.apache.commons.math3.random.MersenneTwister,134=>Find no block
+Sun Jan 14 12:03:06 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,144
+Sun Jan 14 12:06:40 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,146
+Sun Jan 14 12:06:43 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,147
+Sun Jan 14 12:06:46 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,150
+Sun Jan 14 12:06:47 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,151
+Sun Jan 14 12:06:49 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,154
+Sun Jan 14 12:06:50 AEDT 2018 Sun Jan 14 12:06:50 AEDT 2018 : org.apache.commons.math3.random.MersenneTwister,155=>Find no block
+Sun Jan 14 12:06:51 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,167
+Sun Jan 14 12:07:01 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,172
+Sun Jan 14 12:09:18 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,173
+Sun Jan 14 12:12:04 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,174
+Sun Jan 14 12:12:07 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,176
+Timeout time : 18/01/14 12:41

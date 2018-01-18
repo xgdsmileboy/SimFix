@@ -1,0 +1,67 @@
+=================================================
+Project : math_2	start : 18/01/12 16:11
+Current failed test : org.apache.commons.math3.distribution.HypergeometricDistributionTest::testMath1021 | 18/01/12 16:11
+Fri Jan 12 16:12:40 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,193
+Fri Jan 12 16:12:47 AEDT 2018 org.apache.commons.math3.random.Well19937c,86
+Fri Jan 12 16:30:42 AEDT 2018 org.apache.commons.math3.random.Well19937c,87
+Fri Jan 12 16:30:44 AEDT 2018 org.apache.commons.math3.random.Well19937c,89
+Fri Jan 12 16:46:24 AEDT 2018 org.apache.commons.math3.random.Well19937c,90
+Fri Jan 12 17:03:11 AEDT 2018 org.apache.commons.math3.random.Well19937c,91
+Fri Jan 12 17:21:29 AEDT 2018 org.apache.commons.math3.random.Well19937c,92
+Fri Jan 12 17:41:17 AEDT 2018 org.apache.commons.math3.random.Well19937c,94
+Fri Jan 12 18:15:33 AEDT 2018 org.apache.commons.math3.random.Well19937c,95
+Fri Jan 12 18:37:38 AEDT 2018 org.apache.commons.math3.random.Well19937c,96
+Fri Jan 12 18:43:35 AEDT 2018 org.apache.commons.math3.random.Well19937c,97
+Fri Jan 12 19:15:28 AEDT 2018 org.apache.commons.math3.random.Well19937c,98
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int z3=z1^z2;
+int z4=0;
+v[index]=z3;
+
+Time : 18/01/12 20:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int z3=z1^z2;
+int z4=0;
+v[index]+=z3;
+
+Time : 18/01/12 20:13
+----------------------------------------
+Fri Jan 12 20:33:35 AEDT 2018 org.apache.commons.math3.random.Well19937c,100
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int z4=0;
+v[index]=z3;
+v[indexRm1]=z4;
+
+Time : 18/01/12 20:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int z4=0;
+v[index]=z3;
+v[indexRm1]+=z4;
+
+Time : 18/01/12 20:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int z4=0;
+v[index]=z1-v0;
+v[indexRm1]=z4;
+
+Time : 18/01/12 21:04
+----------------------------------------
+Timeout time : 18/01/12 21:14

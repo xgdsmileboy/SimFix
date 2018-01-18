@@ -1,0 +1,266 @@
+=================================================
+Project : chart_19	start : 18/01/12 19:33
+Current failed test : org.jfree.chart.plot.junit.CategoryPlotTests::testGetDomainAxisIndex_purify_5 | 18/01/12 19:34
+Fri Jan 12 19:35:39 AEDT 2018 org.jfree.chart.plot.CategoryPlot,698
+Fri Jan 12 19:36:45 AEDT 2018 org.jfree.chart.plot.CategoryPlot,657
+Fri Jan 12 19:37:50 AEDT 2018 org.jfree.chart.plot.CategoryPlot,661
+Fri Jan 12 19:42:12 AEDT 2018 org.jfree.chart.plot.CategoryPlot,662
+Fri Jan 12 19:42:13 AEDT 2018 org.jfree.chart.plot.CategoryPlot,640
+Fri Jan 12 19:43:35 AEDT 2018 Fri Jan 12 19:43:35 AEDT 2018 : org.jfree.chart.plot.CategoryPlot,641=>Find no block
+Fri Jan 12 19:43:36 AEDT 2018 org.jfree.chart.plot.CategoryPlot,652
+Fri Jan 12 19:58:02 AEDT 2018 org.jfree.chart.plot.CategoryPlot,653
+Fri Jan 12 20:00:02 AEDT 2018 org.jfree.chart.plot.CategoryPlot,656
+Fri Jan 12 20:00:08 AEDT 2018 org.jfree.chart.plot.CategoryPlot,659
+Fri Jan 12 20:07:41 AEDT 2018 org.jfree.chart.plot.CategoryPlot,660
+Fri Jan 12 20:07:46 AEDT 2018 org.jfree.chart.plot.CategoryPlot,664
+Fri Jan 12 20:23:44 AEDT 2018 org.jfree.chart.plot.CategoryPlot,665
+Fri Jan 12 20:23:51 AEDT 2018 Fri Jan 12 20:23:51 AEDT 2018 : org.jfree.chart.plot.CategoryPlot,667=>Find no block
+Fri Jan 12 20:23:57 AEDT 2018 org.jfree.chart.axis.NumberAxis,431
+Fri Jan 12 20:25:24 AEDT 2018 org.jfree.chart.axis.ValueAxis,1027
+Fri Jan 12 20:25:37 AEDT 2018 org.jfree.chart.util.AbstractObjectList,164
+Fri Jan 12 20:35:12 AEDT 2018 org.jfree.chart.plot.CategoryPlot,473
+Fri Jan 12 20:41:38 AEDT 2018 org.jfree.chart.plot.CategoryPlot,474
+Fri Jan 12 20:41:44 AEDT 2018 org.jfree.chart.axis.Axis,763
+Fri Jan 12 21:05:54 AEDT 2018 org.jfree.chart.axis.Axis,764
+Fri Jan 12 21:06:01 AEDT 2018 org.jfree.chart.axis.Axis,765
+Fri Jan 12 21:06:07 AEDT 2018 Fri Jan 12 21:06:07 AEDT 2018 : org.jfree.chart.axis.Axis,767=>Find no block
+Fri Jan 12 21:06:15 AEDT 2018 org.jfree.chart.plot.CategoryPlot,858
+Fri Jan 12 21:07:48 AEDT 2018 org.jfree.chart.axis.CategoryAxis,197
+Fri Jan 12 21:17:02 AEDT 2018 org.jfree.chart.axis.CategoryAxis,199
+Fri Jan 12 21:17:08 AEDT 2018 org.jfree.chart.axis.CategoryAxis,200
+Fri Jan 12 21:20:33 AEDT 2018 org.jfree.chart.axis.CategoryAxis,201
+Fri Jan 12 21:23:46 AEDT 2018 org.jfree.chart.axis.CategoryAxis,202
+Fri Jan 12 21:25:10 AEDT 2018 org.jfree.chart.axis.CategoryAxis,203
+Fri Jan 12 21:26:42 AEDT 2018 org.jfree.chart.axis.CategoryAxis,205
+Fri Jan 12 21:28:12 AEDT 2018 org.jfree.chart.axis.CategoryAxis,207
+Fri Jan 12 21:30:54 AEDT 2018 org.jfree.chart.axis.CategoryAxis,208
+Fri Jan 12 21:33:24 AEDT 2018 org.jfree.chart.axis.CategoryAxis,209
+Fri Jan 12 21:35:08 AEDT 2018 org.jfree.chart.axis.CategoryAxis,210
+Fri Jan 12 21:36:15 AEDT 2018 org.jfree.chart.axis.CategoryAxis,211
+Fri Jan 12 21:36:22 AEDT 2018 Fri Jan 12 21:36:22 AEDT 2018 : org.jfree.chart.axis.CategoryAxis,213=>Find no block
+Fri Jan 12 21:36:28 AEDT 2018 Fri Jan 12 21:36:28 AEDT 2018 : org.jfree.chart.axis.CategoryAxis,827=>Find no block
+Fri Jan 12 21:36:34 AEDT 2018 org.jfree.chart.axis.NumberAxis,490
+Fri Jan 12 22:04:49 AEDT 2018 org.jfree.chart.plot.CategoryPlot,481
+Timeout time : 18/01/12 22:05
+Current failed test : org.jfree.chart.plot.junit.CategoryPlotTests::testGetRangeAxisIndex_purify_5 | 18/01/12 22:05
+Fri Jan 12 22:07:08 AEDT 2018 org.jfree.chart.plot.CategoryPlot,975
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.rangeAxes.set(result,axis);
+if(parent instanceof CategoryPlot){
+CategoryPlot p=(CategoryPlot)parent;
+result=p.getRangeAxisIndex(axis);
+}
+
+Time : 18/01/12 22:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.rangeAxes.set(result,axis);
+if(axis!=null){
+CategoryPlot p=(CategoryPlot)parent;
+result=p.getRangeAxisIndex(axis);
+}
+
+Time : 18/01/12 22:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.rangeAxes.set(result,axis);
+if(axis!=null){
+axis.configure();
+axis.addChangeListener(this);
+}
+if(parent instanceof CategoryPlot){
+CategoryPlot p=(CategoryPlot)parent;
+result=p.getRangeAxisIndex(axis);
+}
+
+Time : 18/01/12 22:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.rangeAxes.set(result,axis);
+if(axis!=null){
+axis.configure();
+axis.addChangeListener(this);
+}
+if(axis!=null){
+CategoryPlot p=(CategoryPlot)parent;
+result=p.getRangeAxisIndex(axis);
+}
+
+Time : 18/01/12 22:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.domainAxes.set(result,axis);
+if(parent instanceof CategoryPlot){
+CategoryPlot p=(CategoryPlot)parent;
+result=p.getRangeAxisIndex(axis);
+}
+
+Time : 18/01/12 22:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.domainAxes.set(result,axis);
+if(axis!=null){
+CategoryPlot p=(CategoryPlot)parent;
+result=p.getRangeAxisIndex(axis);
+}
+
+Time : 18/01/12 22:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.domainAxes.set(result,axis);
+if(axis!=null){
+axis.configure();
+axis.addChangeListener(this);
+}
+if(parent instanceof CategoryPlot){
+CategoryPlot p=(CategoryPlot)parent;
+result=p.getRangeAxisIndex(axis);
+}
+
+Time : 18/01/12 22:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.domainAxes.set(result,axis);
+if(axis!=null){
+axis.configure();
+axis.addChangeListener(this);
+}
+if(axis!=null){
+CategoryPlot p=(CategoryPlot)parent;
+result=p.getRangeAxisIndex(axis);
+}
+
+Time : 18/01/12 22:18
+----------------------------------------
+Fri Jan 12 22:34:47 AEDT 2018 org.jfree.chart.plot.CategoryPlot,976
+Fri Jan 12 22:34:48 AEDT 2018 org.jfree.chart.plot.CategoryPlot,973
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result=this.rangeAxes.indexOf(axis);
+this.rangeAxes.set(result,axis);
+if(result<0){
+Plot parent=getParent();
+if(parent instanceof CategoryPlot){
+CategoryPlot p=(CategoryPlot)parent;
+result=p.getRangeAxisIndex(axis);
+}
+}
+return result;
+
+Time : 18/01/12 22:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result=this.rangeAxes.indexOf(axis);
+if(axis!=null){
+axis.setPlot(this);
+}
+this.rangeAxes.set(result,axis);
+if(result<0){
+Plot parent=getParent();
+if(parent instanceof CategoryPlot){
+CategoryPlot p=(CategoryPlot)parent;
+result=p.getRangeAxisIndex(axis);
+}
+}
+return result;
+
+Time : 18/01/12 22:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result=this.rangeAxes.indexOf(axis);
+this.rangeAxes.set(result,axis);
+if(axis!=null){
+axis.configure();
+axis.addChangeListener(this);
+}
+if(result<0){
+Plot parent=getParent();
+if(parent instanceof CategoryPlot){
+CategoryPlot p=(CategoryPlot)parent;
+result=p.getRangeAxisIndex(axis);
+}
+}
+return result;
+
+Time : 18/01/12 22:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int result=this.rangeAxes.indexOf(axis);
+if(axis!=null){
+axis.setPlot(this);
+}
+this.rangeAxes.set(result,axis);
+if(axis!=null){
+axis.configure();
+axis.addChangeListener(this);
+}
+if(result<0){
+Plot parent=getParent();
+if(parent instanceof CategoryPlot){
+CategoryPlot p=(CategoryPlot)parent;
+result=p.getRangeAxisIndex(axis);
+}
+}
+return result;
+
+Time : 18/01/12 22:47
+----------------------------------------
+Fri Jan 12 22:58:36 AEDT 2018 org.jfree.chart.plot.CategoryPlot,974
+Fri Jan 12 22:58:37 AEDT 2018 org.jfree.chart.plot.CategoryPlot,981
+Fri Jan 12 22:58:39 AEDT 2018 org.jfree.chart.plot.CategoryPlot,931
+Fri Jan 12 23:05:11 AEDT 2018 org.jfree.chart.plot.CategoryPlot,935
+Fri Jan 12 23:13:49 AEDT 2018 org.jfree.chart.plot.CategoryPlot,936
+Fri Jan 12 23:13:50 AEDT 2018 org.jfree.chart.plot.CategoryPlot,914
+Fri Jan 12 23:15:46 AEDT 2018 Fri Jan 12 23:15:46 AEDT 2018 : org.jfree.chart.plot.CategoryPlot,915=>Find no block
+Fri Jan 12 23:15:47 AEDT 2018 org.jfree.chart.plot.CategoryPlot,926
+Fri Jan 12 23:35:38 AEDT 2018 org.jfree.chart.plot.CategoryPlot,927
+Fri Jan 12 23:38:19 AEDT 2018 org.jfree.chart.plot.CategoryPlot,930
+Fri Jan 12 23:38:20 AEDT 2018 org.jfree.chart.plot.CategoryPlot,933
+Fri Jan 12 23:48:39 AEDT 2018 org.jfree.chart.plot.CategoryPlot,934
+Fri Jan 12 23:48:40 AEDT 2018 org.jfree.chart.plot.CategoryPlot,938
+Sat Jan 13 00:02:56 AEDT 2018 org.jfree.chart.plot.CategoryPlot,939
+Sat Jan 13 00:02:57 AEDT 2018 Sat Jan 13 00:02:57 AEDT 2018 : org.jfree.chart.plot.CategoryPlot,941=>Find no block
+Sat Jan 13 00:02:58 AEDT 2018 org.jfree.chart.plot.CategoryPlot,3151
+Sat Jan 13 00:06:03 AEDT 2018 org.jfree.chart.axis.NumberAxis,431
+Sat Jan 13 00:07:03 AEDT 2018 org.jfree.chart.axis.ValueAxis,1027
+Sat Jan 13 00:07:07 AEDT 2018 org.jfree.chart.plot.CategoryPlot,871
+Sat Jan 13 00:07:11 AEDT 2018 org.jfree.chart.util.AbstractObjectList,164
+Sat Jan 13 00:15:28 AEDT 2018 org.jfree.chart.plot.CategoryPlot,473
+Sat Jan 13 00:21:08 AEDT 2018 org.jfree.chart.plot.CategoryPlot,474
+Sat Jan 13 00:21:09 AEDT 2018 org.jfree.chart.axis.Axis,763
+Timeout time : 18/01/13 00:37

@@ -1,0 +1,318 @@
+=================================================
+Project : math_2	start : 18/01/14 03:29
+Current failed test : org.apache.commons.math3.distribution.HypergeometricDistributionTest::testMath1021 | 18/01/14 03:30
+Sun Jan 14 03:31:31 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,193
+Sun Jan 14 03:31:38 AEDT 2018 org.apache.commons.math3.random.Well19937c,86
+Sun Jan 14 03:33:22 AEDT 2018 org.apache.commons.math3.random.Well19937c,87
+Sun Jan 14 03:33:23 AEDT 2018 org.apache.commons.math3.random.Well19937c,89
+Sun Jan 14 03:34:59 AEDT 2018 org.apache.commons.math3.random.Well19937c,90
+Sun Jan 14 03:36:38 AEDT 2018 org.apache.commons.math3.random.Well19937c,91
+Sun Jan 14 03:36:45 AEDT 2018 org.apache.commons.math3.random.Well19937c,92
+Sun Jan 14 03:37:10 AEDT 2018 org.apache.commons.math3.random.Well19937c,94
+Sun Jan 14 03:58:38 AEDT 2018 org.apache.commons.math3.random.Well19937c,95
+Sun Jan 14 04:01:27 AEDT 2018 org.apache.commons.math3.random.Well19937c,96
+Sun Jan 14 04:02:57 AEDT 2018 org.apache.commons.math3.random.Well19937c,97
+Sun Jan 14 04:05:58 AEDT 2018 org.apache.commons.math3.random.Well19937c,98
+Sun Jan 14 04:12:20 AEDT 2018 org.apache.commons.math3.random.Well19937c,100
+Sun Jan 14 04:18:18 AEDT 2018 org.apache.commons.math3.random.Well19937c,101
+Sun Jan 14 04:19:52 AEDT 2018 org.apache.commons.math3.random.Well19937c,102
+Sun Jan 14 04:23:38 AEDT 2018 org.apache.commons.math3.random.Well19937c,103
+Sun Jan 14 04:26:39 AEDT 2018 org.apache.commons.math3.random.Well19937c,108
+Sun Jan 14 04:28:24 AEDT 2018 org.apache.commons.math3.random.Well19937c,109
+Sun Jan 14 04:30:14 AEDT 2018 org.apache.commons.math3.random.Well19937c,111
+Sun Jan 14 04:30:18 AEDT 2018 org.apache.commons.math3.random.BitsStreamGenerator,90
+Sun Jan 14 04:31:09 AEDT 2018 org.apache.commons.math3.random.BitsStreamGenerator,91
+Sun Jan 14 04:31:11 AEDT 2018 org.apache.commons.math3.random.BitsStreamGenerator,92
+Sun Jan 14 04:31:13 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,130
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(upper>tmp){
+return 1;
+}
+if(tmp>lower){
+lower=((int)Math.ceil(tmp))-1;
+}
+
+Time : 18/01/14 04:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(upper>tmp){
+return 1;
+}
+if(tmp>lower){
+lower=((int)Math.ceil(tmp))-1;
+return 0;
+}
+
+Time : 18/01/14 04:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(tmp<upper){
+upper=((int)Math.ceil(tmp))-1;
+return 1;
+}
+
+Time : 18/01/14 04:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(tmp<upper){
+upper=((int)Math.ceil(tmp))-1;
+return 0;
+}
+
+Time : 18/01/14 04:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower<lower){
+return 0;
+}
+if(tmp<upper){
+upper=((int)Math.ceil(tmp))-1;
+return 1;
+}
+
+Time : 18/01/14 04:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chebyshevApplies){
+double k=FastMath.sqrt((1.0-p)/p);
+double tmp=mu-k*sigma;
+if(tmp>lower){
+lower=((int)Math.ceil(tmp))-1;
+}
+k=1.0/k;
+tmp=p+k*sigma;
+if(tmp<upper){
+upper=((int)Math.ceil(tmp))-1;
+}
+}
+
+Time : 18/01/14 04:56
+----------------------------------------
+Sun Jan 14 05:12:24 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,131
+Sun Jan 14 05:12:25 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,132
+Sun Jan 14 05:12:27 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,135
+Sun Jan 14 05:12:28 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,136
+Sun Jan 14 05:12:30 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,137
+Sun Jan 14 05:12:32 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,138
+Sun Jan 14 05:12:33 AEDT 2018 org.apache.commons.math3.util.FastMath,385
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!RECOMPUTE_TABLES_AT_RUNTIME){
+return Double.NaN;
+}
+return Math.sqrt(a);
+
+Time : 18/01/14 05:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return Math.floor(a);
+
+Time : 18/01/14 05:25
+----------------------------------------
+Sun Jan 14 05:36:17 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,125
+Sun Jan 14 05:40:50 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,126
+Sun Jan 14 05:42:56 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,127
+Sun Jan 14 05:42:58 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,129
+Sun Jan 14 05:43:00 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,142
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(chebyshevApplies){
+double k=FastMath.sqrt((1.0-p)/p);
+double tmp=mu-k*sigma;
+if(tmp>lower){
+lower=((int)Math.ceil(tmp))-1;
+}
+k=1.0/k;
+tmp=p+k*sigma;
+if(tmp<upper){
+upper=((int)Math.ceil(tmp))-1;
+}
+}
+return solveInverseCumulativeProbability(p,lower,upper);
+
+Time : 18/01/14 05:45
+----------------------------------------
+Sun Jan 14 06:00:31 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,158
+Sun Jan 14 06:07:39 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,176
+Sun Jan 14 06:12:04 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,105
+Sun Jan 14 06:22:57 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,106
+Sun Jan 14 06:22:58 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,109
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower==Integer.MIN_VALUE){
+if(checkedCumulativeProbability(lower)>=p){
+return lower;
+}
+}else {
+lower-=1;
+return 0;
+}
+
+Time : 18/01/14 06:27
+----------------------------------------
+Sun Jan 14 06:31:10 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,114
+Sun Jan 14 06:31:13 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,118
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower==Integer.MIN_VALUE){
+if(checkedCumulativeProbability(lower)>=p){
+return lower;
+}
+}else {
+lower-=1;
+return 0;
+}
+int upper=getSupportUpperBound();
+if(p==1.0){
+return upper;
+}
+
+Time : 18/01/14 06:34
+----------------------------------------
+Sun Jan 14 06:40:14 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,119
+Sun Jan 14 06:40:15 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,268
+Sun Jan 14 06:40:22 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,279
+Sun Jan 14 06:40:29 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,280
+Sun Jan 14 06:40:32 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,281
+Sun Jan 14 06:40:33 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,283
+Sun Jan 14 06:40:41 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,292
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double N=getPopulationSize();
+ final double m=getNumberOfSuccesses();
+ final double n=getSampleSize();
+return 2.0*new TDistribution(n-1).cumulativeProbability(-m);
+
+Time : 18/01/14 06:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double N=getPopulationSize();
+ final double m=getNumberOfSuccesses();
+ final double n=getSampleSize();
+return m*m;
+
+Time : 18/01/14 06:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double N=getPopulationSize();
+ final double m=getNumberOfSuccesses();
+ final double n=getSampleSize();
+return n/FastMath.pow(numericalVariance,1/m);
+
+Time : 18/01/14 06:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double N=getPopulationSize();
+ final double m=getNumberOfSuccesses();
+ final double n=getSampleSize();
+return m/(n-1.0);
+
+Time : 18/01/14 06:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double N=getPopulationSize();
+ final double m=getNumberOfSuccesses();
+ final double n=getSampleSize();
+return m/n;
+
+Time : 18/01/14 06:52
+----------------------------------------
+Sun Jan 14 06:55:21 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,293
+Sun Jan 14 06:55:23 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,294
+Sun Jan 14 06:55:24 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,295
+Sun Jan 14 06:55:26 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,308
+Sun Jan 14 06:56:31 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,321
+Sun Jan 14 06:57:30 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,101
+Sun Jan 14 06:57:32 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,161
+Sun Jan 14 06:57:39 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,170
+Sun Jan 14 06:57:47 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,179
+Sun Jan 14 06:57:52 AEDT 2018 org.apache.commons.math3.util.FastMath,3429
+Sun Jan 14 06:59:05 AEDT 2018 org.apache.commons.math3.util.FastMath,3497
+Sun Jan 14 07:00:17 AEDT 2018 Sun Jan 14 07:00:17 AEDT 2018 : org.apache.commons.math3.distribution.AbstractIntegerDistribution,47=>Find no block
+Sun Jan 14 07:00:21 AEDT 2018 Sun Jan 14 07:00:21 AEDT 2018 : org.apache.commons.math3.distribution.AbstractIntegerDistribution,71=>Find no block
+Sun Jan 14 07:00:22 AEDT 2018 org.apache.commons.math3.distribution.AbstractIntegerDistribution,72
+Sun Jan 14 07:00:53 AEDT 2018 Sun Jan 14 07:00:53 AEDT 2018 : org.apache.commons.math3.distribution.AbstractIntegerDistribution,73=>Find no block
+Sun Jan 14 07:00:57 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,63
+Sun Jan 14 07:01:03 AEDT 2018 Sun Jan 14 07:01:03 AEDT 2018 : org.apache.commons.math3.distribution.HypergeometricDistribution,64=>Find no block
+Sun Jan 14 07:01:05 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,84
+Sun Jan 14 07:06:07 AEDT 2018 Sun Jan 14 07:06:07 AEDT 2018 : org.apache.commons.math3.distribution.HypergeometricDistribution,45=>Find no block
+Sun Jan 14 07:06:08 AEDT 2018 Sun Jan 14 07:06:08 AEDT 2018 : org.apache.commons.math3.distribution.HypergeometricDistribution,47=>Find no block
+Sun Jan 14 07:06:10 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,86
+Sun Jan 14 07:07:36 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,90
+Sun Jan 14 07:09:30 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,94
+Sun Jan 14 07:11:03 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,99
+Sun Jan 14 07:12:25 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,103
+Sun Jan 14 07:13:55 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,108
+Sun Jan 14 07:17:04 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,109
+Sun Jan 14 07:18:09 AEDT 2018 org.apache.commons.math3.distribution.HypergeometricDistribution,110
+Sun Jan 14 07:18:11 AEDT 2018 Sun Jan 14 07:18:11 AEDT 2018 : org.apache.commons.math3.distribution.HypergeometricDistribution,111=>Find no block
+Sun Jan 14 07:18:13 AEDT 2018 org.apache.commons.math3.random.Well19937c,57
+Sun Jan 14 07:18:18 AEDT 2018 Sun Jan 14 07:18:18 AEDT 2018 : org.apache.commons.math3.random.Well19937c,58=>Find no block
+Sun Jan 14 07:18:20 AEDT 2018 org.apache.commons.math3.random.AbstractWell,72
+Sun Jan 14 07:18:47 AEDT 2018 Sun Jan 14 07:18:47 AEDT 2018 : org.apache.commons.math3.random.AbstractWell,73=>Find no block
+Sun Jan 14 07:18:48 AEDT 2018 Sun Jan 14 07:18:48 AEDT 2018 : org.apache.commons.math3.random.AbstractWell,94=>Find no block
+Sun Jan 14 07:18:50 AEDT 2018 org.apache.commons.math3.random.AbstractWell,99
+Sun Jan 14 07:29:41 AEDT 2018 org.apache.commons.math3.random.AbstractWell,100
+Sun Jan 14 07:29:43 AEDT 2018 org.apache.commons.math3.random.AbstractWell,101
+Sun Jan 14 07:36:30 AEDT 2018 org.apache.commons.math3.random.AbstractWell,102
+Sun Jan 14 07:39:08 AEDT 2018 org.apache.commons.math3.random.AbstractWell,106
+Sun Jan 14 07:42:04 AEDT 2018 org.apache.commons.math3.random.AbstractWell,107
+Sun Jan 14 07:42:44 AEDT 2018 org.apache.commons.math3.random.AbstractWell,108
+Sun Jan 14 07:43:22 AEDT 2018 org.apache.commons.math3.random.AbstractWell,109
+Sun Jan 14 07:44:00 AEDT 2018 org.apache.commons.math3.random.AbstractWell,110
+Sun Jan 14 07:52:23 AEDT 2018 org.apache.commons.math3.random.AbstractWell,111
+Sun Jan 14 08:03:29 AEDT 2018 org.apache.commons.math3.random.AbstractWell,112
+Sun Jan 14 08:03:31 AEDT 2018 org.apache.commons.math3.random.AbstractWell,113
+Sun Jan 14 08:03:32 AEDT 2018 org.apache.commons.math3.random.AbstractWell,114
+Sun Jan 14 08:03:34 AEDT 2018 org.apache.commons.math3.random.AbstractWell,115
+Sun Jan 14 08:03:36 AEDT 2018 org.apache.commons.math3.random.AbstractWell,116
+Sun Jan 14 08:03:38 AEDT 2018 org.apache.commons.math3.random.AbstractWell,120
+Sun Jan 14 08:13:25 AEDT 2018 Sun Jan 14 08:13:25 AEDT 2018 : org.apache.commons.math3.random.AbstractWell,122=>Find no block
+Sun Jan 14 08:13:27 AEDT 2018 org.apache.commons.math3.random.AbstractWell,154
+Sun Jan 14 08:13:34 AEDT 2018 org.apache.commons.math3.random.AbstractWell,155
+Sun Jan 14 08:13:36 AEDT 2018 org.apache.commons.math3.random.AbstractWell,156
+Sun Jan 14 08:13:39 AEDT 2018 org.apache.commons.math3.random.AbstractWell,159
+Timeout time : 18/01/14 08:31

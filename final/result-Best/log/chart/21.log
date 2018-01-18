@@ -1,0 +1,488 @@
+=================================================
+Project : chart_21	start : 18/01/14 16:00
+Current failed test : org.jfree.data.statistics.junit.DefaultBoxAndWhiskerCategoryDatasetTests::testGetRangeBounds_purify_7 | 18/01/14 16:00
+Sun Jan 14 16:00:49 EST 2018 org.jfree.data.Range,335
+Sun Jan 14 16:00:51 EST 2018 org.jfree.data.Range,365
+Sun Jan 14 16:00:53 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,173
+Sun Jan 14 16:01:45 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,174
+Sun Jan 14 16:01:45 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,175
+Sun Jan 14 16:01:45 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,183
+Sun Jan 14 16:02:41 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,172
+Sun Jan 14 16:02:41 EST 2018 org.jfree.data.KeyedObject,103
+Sun Jan 14 16:02:55 EST 2018 Sun Jan 14 16:02:55 EST 2018 : org.jfree.data.KeyedObject,104=>Find no block
+Sun Jan 14 16:02:55 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,155
+Sun Jan 14 16:03:13 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,740
+Sun Jan 14 16:03:32 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,741
+Sun Jan 14 16:03:32 EST 2018 Sun Jan 14 16:03:32 EST 2018 : org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,742=>Find no block
+Sun Jan 14 16:03:32 EST 2018 org.jfree.data.KeyedObjects,203
+Sun Jan 14 16:05:43 EST 2018 org.jfree.data.KeyedObjects,204
+Sun Jan 14 16:05:43 EST 2018 Sun Jan 14 16:05:43 EST 2018 : org.jfree.data.KeyedObjects,205=>Find no block
+Sun Jan 14 16:05:44 EST 2018 org.jfree.data.KeyedObjects2D,272
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.rowKeys.remove(rowKey);
+if(rowIndex>=0){
+row=(KeyedObjects)this.rows.get(rowIndex);
+}else {
+this.rowKeys.add(rowKey);
+row=new KeyedObjects();
+this.rows.add(row);
+}
+
+Time : 18/01/14 16:07
+----------------------------------------
+Sun Jan 14 16:08:07 EST 2018 org.jfree.data.Range,330
+Sun Jan 14 16:08:21 EST 2018 org.jfree.data.Range,333
+Sun Jan 14 16:11:04 EST 2018 org.jfree.data.Range,334
+Sun Jan 14 16:11:04 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,147
+Sun Jan 14 16:11:06 EST 2018 Sun Jan 14 16:11:06 EST 2018 : org.jfree.data.statistics.BoxAndWhiskerItem,152=>Find no block
+Sun Jan 14 16:11:06 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,532
+Sun Jan 14 16:11:08 EST 2018 org.jfree.data.KeyedObjects,136
+Sun Jan 14 16:16:07 EST 2018 org.jfree.data.KeyedObject,85
+Sun Jan 14 16:16:21 EST 2018 org.jfree.data.KeyedObjects,134
+Sun Jan 14 16:17:52 EST 2018 org.jfree.data.KeyedObjects,135
+Sun Jan 14 16:17:52 EST 2018 Sun Jan 14 16:17:52 EST 2018 : org.jfree.data.KeyedObject,74=>Find no block
+Sun Jan 14 16:17:52 EST 2018 org.jfree.data.KeyedObject,75
+Sun Jan 14 16:18:11 EST 2018 org.jfree.data.KeyedObject,76
+Sun Jan 14 16:18:12 EST 2018 Sun Jan 14 16:18:12 EST 2018 : org.jfree.data.KeyedObject,77=>Find no block
+Sun Jan 14 16:18:12 EST 2018 Sun Jan 14 16:18:12 EST 2018 : org.jfree.data.statistics.BoxAndWhiskerItem,113=>Find no block
+Sun Jan 14 16:18:12 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,115
+Sun Jan 14 16:18:20 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,116
+Sun Jan 14 16:18:20 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,117
+Sun Jan 14 16:18:20 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,118
+Sun Jan 14 16:18:20 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,119
+Sun Jan 14 16:18:20 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,120
+Sun Jan 14 16:18:20 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,121
+Sun Jan 14 16:18:21 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,122
+Sun Jan 14 16:18:21 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,123
+Sun Jan 14 16:18:21 EST 2018 Sun Jan 14 16:18:21 EST 2018 : org.jfree.data.statistics.BoxAndWhiskerItem,125=>Find no block
+Sun Jan 14 16:18:21 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,214
+Sun Jan 14 16:18:23 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,223
+Sun Jan 14 16:18:25 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,147
+Sun Jan 14 16:19:03 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,150
+Sun Jan 14 16:19:03 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,151
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int r=this.data.getRowIndex(rowKey);
+int c=this.data.getColumnIndex(columnKey);
+if((this.maximumRangeValueRow==r&&this.maximumRangeValueColumn==c)||(this.minimumRangeValueRow==r&&this.minimumRangeValueColumn==c)){
+r++;
+updateBounds();
+}
+
+Time : 18/01/14 16:19
+----------------------------------------
+Sun Jan 14 16:20:00 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,152
+Sun Jan 14 16:20:00 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,158
+Sun Jan 14 16:21:29 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,159
+Sun Jan 14 16:21:29 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,160
+Sun Jan 14 16:21:29 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,162
+Sun Jan 14 16:22:00 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,163
+Sun Jan 14 16:22:00 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,164
+Sun Jan 14 16:22:00 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,167
+Sun Jan 14 16:24:04 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,168
+Sun Jan 14 16:24:04 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,169
+Sun Jan 14 16:24:04 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,170
+Sun Jan 14 16:24:04 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,178
+Sun Jan 14 16:26:02 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,179
+Sun Jan 14 16:26:02 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,180
+Sun Jan 14 16:26:02 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,181
+Sun Jan 14 16:26:02 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,189
+Sun Jan 14 16:28:51 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,191
+Sun Jan 14 16:28:51 EST 2018 Sun Jan 14 16:28:51 EST 2018 : org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,193=>Find no block
+Sun Jan 14 16:28:51 EST 2018 org.jfree.data.KeyedObjects2D,150
+Sun Jan 14 16:29:05 EST 2018 org.jfree.data.KeyedObjects2D,187
+Sun Jan 14 16:29:19 EST 2018 org.jfree.data.KeyedObjects2D,250
+Sun Jan 14 16:29:47 EST 2018 Sun Jan 14 16:29:47 EST 2018 : org.jfree.data.KeyedObjects2D,251=>Find no block
+Sun Jan 14 16:29:48 EST 2018 org.jfree.data.KeyedObjects2D,263
+Sun Jan 14 16:30:09 EST 2018 org.jfree.data.KeyedObjects2D,266
+Sun Jan 14 16:30:24 EST 2018 org.jfree.data.KeyedObjects2D,270
+Sun Jan 14 16:33:08 EST 2018 org.jfree.data.KeyedObjects2D,271
+Sun Jan 14 16:33:08 EST 2018 org.jfree.data.KeyedObjects2D,275
+Sun Jan 14 16:33:08 EST 2018 org.jfree.data.KeyedObjects2D,276
+Sun Jan 14 16:33:08 EST 2018 org.jfree.data.KeyedObjects2D,277
+Sun Jan 14 16:33:08 EST 2018 org.jfree.data.KeyedObjects2D,279
+Sun Jan 14 16:37:31 EST 2018 org.jfree.data.KeyedObjects2D,280
+Sun Jan 14 16:38:58 EST 2018 org.jfree.data.KeyedObjects2D,281
+Sun Jan 14 16:41:43 EST 2018 org.jfree.data.KeyedObjects2D,282
+Sun Jan 14 16:41:43 EST 2018 Sun Jan 14 16:41:43 EST 2018 : org.jfree.data.KeyedObjects2D,285=>Find no block
+Sun Jan 14 16:41:43 EST 2018 Sun Jan 14 16:41:43 EST 2018 : org.jfree.data.KeyedObjects,67=>Find no block
+Sun Jan 14 16:41:43 EST 2018 org.jfree.data.KeyedObjects,68
+Sun Jan 14 16:41:52 EST 2018 Sun Jan 14 16:41:52 EST 2018 : org.jfree.data.KeyedObjects,69=>Find no block
+Sun Jan 14 16:41:52 EST 2018 org.jfree.data.KeyedObjects,128
+Sun Jan 14 16:42:17 EST 2018 org.jfree.data.KeyedObjects,131
+Sun Jan 14 16:43:40 EST 2018 org.jfree.data.KeyedObjects,132
+Sun Jan 14 16:46:16 EST 2018 org.jfree.data.KeyedObjects,133
+Sun Jan 14 16:46:16 EST 2018 org.jfree.data.KeyedObjects,140
+Sun Jan 14 16:47:47 EST 2018 org.jfree.data.KeyedObjects,201
+Sun Jan 14 16:52:47 EST 2018 org.jfree.data.KeyedObjects,202
+Sun Jan 14 16:52:47 EST 2018 org.jfree.data.KeyedObjects,207
+Sun Jan 14 16:52:47 EST 2018 org.jfree.data.KeyedObjects,208
+Sun Jan 14 16:52:47 EST 2018 Sun Jan 14 16:52:47 EST 2018 : org.jfree.data.KeyedObjects,210=>Find no block
+Sun Jan 14 16:52:47 EST 2018 org.jfree.data.general.AbstractDataset,172
+Sun Jan 14 16:53:09 EST 2018 Sun Jan 14 16:53:09 EST 2018 : org.jfree.data.general.AbstractDataset,173=>Find no block
+Sun Jan 14 16:53:09 EST 2018 org.jfree.data.general.AbstractDataset,186
+Sun Jan 14 16:55:23 EST 2018 org.jfree.data.general.AbstractDataset,187
+Sun Jan 14 16:55:23 EST 2018 Sun Jan 14 16:55:23 EST 2018 : org.jfree.data.general.AbstractDataset,194=>Find no block
+Sun Jan 14 16:55:23 EST 2018 org.jfree.data.general.DatasetChangeEvent,73
+Sun Jan 14 16:55:25 EST 2018 org.jfree.data.general.DatasetChangeEvent,74
+Sun Jan 14 16:55:25 EST 2018 Sun Jan 14 16:55:25 EST 2018 : org.jfree.data.general.DatasetChangeEvent,75=>Find no block
+Sun Jan 14 16:55:25 EST 2018 Sun Jan 14 16:55:25 EST 2018 : org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,106=>Find no block
+Sun Jan 14 16:55:25 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,107
+Sun Jan 14 16:55:41 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,108
+Sun Jan 14 16:55:41 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,109
+Sun Jan 14 16:55:41 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,110
+Sun Jan 14 16:55:41 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,111
+Sun Jan 14 16:55:41 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,112
+Sun Jan 14 16:55:41 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,113
+Sun Jan 14 16:55:41 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,114
+Sun Jan 14 16:55:42 EST 2018 Sun Jan 14 16:55:42 EST 2018 : org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,115=>Find no block
+Sun Jan 14 16:55:42 EST 2018 Sun Jan 14 16:55:42 EST 2018 : org.jfree.data.KeyedObjects2D,74=>Find no block
+Sun Jan 14 16:55:42 EST 2018 org.jfree.data.KeyedObjects2D,75
+Sun Jan 14 16:55:44 EST 2018 org.jfree.data.KeyedObjects2D,76
+Sun Jan 14 16:55:44 EST 2018 org.jfree.data.KeyedObjects2D,77
+Sun Jan 14 16:55:44 EST 2018 Sun Jan 14 16:55:44 EST 2018 : org.jfree.data.KeyedObjects2D,78=>Find no block
+Sun Jan 14 16:55:44 EST 2018 Sun Jan 14 16:55:44 EST 2018 : org.jfree.data.Range,85=>Find no block
+Sun Jan 14 16:55:44 EST 2018 org.jfree.data.Range,86
+Sun Jan 14 16:57:08 EST 2018 org.jfree.data.Range,91
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.lower=upper;
+this.upper=upper;
+
+Time : 18/01/14 16:58
+----------------------------------------
+Sun Jan 14 16:58:45 EST 2018 org.jfree.data.Range,92
+Sun Jan 14 16:58:45 EST 2018 Sun Jan 14 16:58:45 EST 2018 : org.jfree.data.Range,93=>Find no block
+Sun Jan 14 16:58:45 EST 2018 Sun Jan 14 16:58:45 EST 2018 : org.jfree.data.general.AbstractDataset,96=>Find no block
+Sun Jan 14 16:58:45 EST 2018 org.jfree.data.general.AbstractDataset,97
+Sun Jan 14 16:59:06 EST 2018 org.jfree.data.general.AbstractDataset,98
+Sun Jan 14 16:59:06 EST 2018 Sun Jan 14 16:59:06 EST 2018 : org.jfree.data.general.AbstractDataset,99=>Find no block
+Sun Jan 14 16:59:06 EST 2018 org.jfree.data.general.DatasetGroup,65
+Sun Jan 14 16:59:20 EST 2018 org.jfree.data.general.DatasetGroup,66
+Sun Jan 14 16:59:20 EST 2018 Sun Jan 14 16:59:20 EST 2018 : org.jfree.data.general.DatasetGroup,67=>Find no block
+Sun Jan 14 16:59:20 EST 2018 org.jfree.data.KeyedObject,94
+Sun Jan 14 16:59:22 EST 2018 org.jfree.data.KeyedObject,117
+Sun Jan 14 17:04:04 EST 2018 org.jfree.data.KeyedObject,118
+Sun Jan 14 17:04:17 EST 2018 org.jfree.data.KeyedObject,119
+Sun Jan 14 17:04:17 EST 2018 org.jfree.data.KeyedObject,120
+Sun Jan 14 17:04:17 EST 2018 org.jfree.data.KeyedObject,122
+Sun Jan 14 17:04:17 EST 2018 org.jfree.data.KeyedObject,134
+Sun Jan 14 17:05:12 EST 2018 org.jfree.data.KeyedObject,135
+Sun Jan 14 17:05:12 EST 2018 org.jfree.data.KeyedObject,138
+Sun Jan 14 17:05:27 EST 2018 org.jfree.data.KeyedObject,139
+Sun Jan 14 17:05:27 EST 2018 org.jfree.data.KeyedObject,141
+Sun Jan 14 17:18:00 EST 2018 org.jfree.data.KeyedObject,142
+Sun Jan 14 17:18:00 EST 2018 org.jfree.data.KeyedObject,143
+Sun Jan 14 17:18:00 EST 2018 org.jfree.data.KeyedObject,146
+Sun Jan 14 17:23:52 EST 2018 org.jfree.data.KeyedObject,147
+Sun Jan 14 17:23:52 EST 2018 org.jfree.data.KeyedObject,150
+Sun Jan 14 17:29:52 EST 2018 org.jfree.data.UnknownKeyException,56
+Sun Jan 14 17:29:54 EST 2018 Sun Jan 14 17:29:54 EST 2018 : org.jfree.data.UnknownKeyException,57=>Find no block
+Sun Jan 14 17:29:54 EST 2018 org.jfree.data.Range,87
+Sun Jan 14 17:29:54 EST 2018 org.jfree.data.Range,89
+Sun Jan 14 17:29:54 EST 2018 org.jfree.data.Range,101
+Sun Jan 14 17:29:56 EST 2018 org.jfree.data.Range,110
+Sun Jan 14 17:29:58 EST 2018 org.jfree.data.Range,119
+Sun Jan 14 17:29:59 EST 2018 org.jfree.data.Range,128
+Sun Jan 14 17:30:01 EST 2018 org.jfree.data.Range,140
+Sun Jan 14 17:30:25 EST 2018 org.jfree.data.Range,153
+Sun Jan 14 17:32:16 EST 2018 org.jfree.data.Range,154
+Sun Jan 14 17:32:16 EST 2018 org.jfree.data.Range,157
+Sun Jan 14 17:32:16 EST 2018 org.jfree.data.Range,170
+Sun Jan 14 17:39:35 EST 2018 org.jfree.data.Range,171
+Sun Jan 14 17:39:35 EST 2018 org.jfree.data.Range,172
+Sun Jan 14 17:39:35 EST 2018 org.jfree.data.Range,173
+Sun Jan 14 17:39:35 EST 2018 org.jfree.data.Range,175
+Sun Jan 14 17:39:35 EST 2018 org.jfree.data.Range,176
+Sun Jan 14 17:39:35 EST 2018 org.jfree.data.Range,179
+Sun Jan 14 17:39:35 EST 2018 org.jfree.data.Range,199
+Sun Jan 14 17:40:59 EST 2018 org.jfree.data.Range,200
+Sun Jan 14 17:40:59 EST 2018 org.jfree.data.Range,203
+Sun Jan 14 17:41:00 EST 2018 org.jfree.data.Range,204
+Sun Jan 14 17:41:00 EST 2018 org.jfree.data.Range,207
+Sun Jan 14 17:41:00 EST 2018 org.jfree.data.Range,209
+Sun Jan 14 17:41:00 EST 2018 org.jfree.data.Range,211
+Sun Jan 14 17:41:00 EST 2018 org.jfree.data.Range,228
+Sun Jan 14 17:41:54 EST 2018 org.jfree.data.Range,229
+Sun Jan 14 17:41:55 EST 2018 org.jfree.data.Range,231
+Sun Jan 14 17:43:19 EST 2018 org.jfree.data.Range,232
+Sun Jan 14 17:43:19 EST 2018 org.jfree.data.Range,234
+Sun Jan 14 17:43:19 EST 2018 org.jfree.data.Range,235
+Sun Jan 14 17:43:19 EST 2018 org.jfree.data.Range,238
+Sun Jan 14 17:43:20 EST 2018 org.jfree.data.Range,255
+Sun Jan 14 17:43:36 EST 2018 org.jfree.data.Range,256
+Sun Jan 14 17:43:36 EST 2018 org.jfree.data.Range,258
+Sun Jan 14 17:44:51 EST 2018 org.jfree.data.Range,259
+Sun Jan 14 17:44:51 EST 2018 org.jfree.data.Range,260
+Sun Jan 14 17:44:51 EST 2018 org.jfree.data.Range,261
+Sun Jan 14 17:44:51 EST 2018 org.jfree.data.Range,274
+Sun Jan 14 17:44:53 EST 2018 org.jfree.data.Range,290
+Sun Jan 14 17:44:55 EST 2018 org.jfree.data.Range,291
+Sun Jan 14 17:44:55 EST 2018 org.jfree.data.Range,295
+Sun Jan 14 17:44:55 EST 2018 org.jfree.data.Range,311
+Sun Jan 14 17:46:24 EST 2018 org.jfree.data.Range,312
+Sun Jan 14 17:46:24 EST 2018 org.jfree.data.Range,314
+Sun Jan 14 17:46:24 EST 2018 org.jfree.data.Range,315
+Sun Jan 14 17:46:24 EST 2018 org.jfree.data.Range,318
+Sun Jan 14 17:46:25 EST 2018 org.jfree.data.Range,331
+Sun Jan 14 17:46:25 EST 2018 org.jfree.data.Range,337
+Sun Jan 14 17:46:25 EST 2018 org.jfree.data.Range,338
+Sun Jan 14 17:46:25 EST 2018 org.jfree.data.Range,340
+Sun Jan 14 17:46:25 EST 2018 org.jfree.data.Range,351
+Sun Jan 14 17:49:12 EST 2018 org.jfree.data.Range,352
+Sun Jan 14 17:49:12 EST 2018 org.jfree.data.Range,353
+Failed time : 18/01/14 17:49
+Current failed test : org.jfree.data.statistics.junit.DefaultBoxAndWhiskerCategoryDatasetTests::testGetRangeBounds_purify_8 | 18/01/14 17:49
+Sun Jan 14 17:49:27 EST 2018 org.jfree.data.Range,335
+Sun Jan 14 17:49:29 EST 2018 org.jfree.data.Range,365
+Sun Jan 14 17:49:31 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,173
+Sun Jan 14 17:50:22 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,174
+Sun Jan 14 17:50:22 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,175
+Sun Jan 14 17:50:22 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,183
+Sun Jan 14 17:51:18 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,172
+Sun Jan 14 17:51:18 EST 2018 org.jfree.data.KeyedObject,103
+Sun Jan 14 17:51:32 EST 2018 Sun Jan 14 17:51:32 EST 2018 : org.jfree.data.KeyedObject,104=>Find no block
+Sun Jan 14 17:51:32 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,155
+Sun Jan 14 17:51:51 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,740
+Sun Jan 14 17:52:09 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,741
+Sun Jan 14 17:52:09 EST 2018 Sun Jan 14 17:52:09 EST 2018 : org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,742=>Find no block
+Sun Jan 14 17:52:09 EST 2018 org.jfree.data.KeyedObjects,203
+Sun Jan 14 17:54:21 EST 2018 org.jfree.data.KeyedObjects,204
+Sun Jan 14 17:54:21 EST 2018 Sun Jan 14 17:54:21 EST 2018 : org.jfree.data.KeyedObjects,205=>Find no block
+Sun Jan 14 17:54:21 EST 2018 org.jfree.data.KeyedObjects2D,272
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.rowKeys.remove(rowKey);
+if(rowIndex>=0){
+row=(KeyedObjects)this.rows.get(rowIndex);
+}else {
+this.rowKeys.add(rowKey);
+row=new KeyedObjects();
+this.rows.add(row);
+}
+
+Time : 18/01/14 17:56
+----------------------------------------
+Sun Jan 14 17:56:44 EST 2018 org.jfree.data.Range,330
+Sun Jan 14 17:56:59 EST 2018 org.jfree.data.Range,333
+Sun Jan 14 17:59:41 EST 2018 org.jfree.data.Range,334
+Sun Jan 14 17:59:42 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,147
+Sun Jan 14 17:59:43 EST 2018 Sun Jan 14 17:59:43 EST 2018 : org.jfree.data.statistics.BoxAndWhiskerItem,152=>Find no block
+Sun Jan 14 17:59:44 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,532
+Sun Jan 14 17:59:45 EST 2018 org.jfree.data.KeyedObjects,136
+Sun Jan 14 18:04:44 EST 2018 org.jfree.data.KeyedObject,85
+Sun Jan 14 18:04:58 EST 2018 org.jfree.data.KeyedObjects,134
+Sun Jan 14 18:06:29 EST 2018 org.jfree.data.KeyedObjects,135
+Sun Jan 14 18:06:29 EST 2018 Sun Jan 14 18:06:29 EST 2018 : org.jfree.data.KeyedObject,74=>Find no block
+Sun Jan 14 18:06:29 EST 2018 org.jfree.data.KeyedObject,75
+Sun Jan 14 18:06:48 EST 2018 org.jfree.data.KeyedObject,76
+Sun Jan 14 18:06:48 EST 2018 Sun Jan 14 18:06:48 EST 2018 : org.jfree.data.KeyedObject,77=>Find no block
+Sun Jan 14 18:06:48 EST 2018 Sun Jan 14 18:06:48 EST 2018 : org.jfree.data.statistics.BoxAndWhiskerItem,113=>Find no block
+Sun Jan 14 18:06:49 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,115
+Sun Jan 14 18:06:57 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,116
+Sun Jan 14 18:06:57 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,117
+Sun Jan 14 18:06:57 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,118
+Sun Jan 14 18:06:57 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,119
+Sun Jan 14 18:06:57 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,120
+Sun Jan 14 18:06:57 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,121
+Sun Jan 14 18:06:57 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,122
+Sun Jan 14 18:06:57 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,123
+Sun Jan 14 18:06:58 EST 2018 Sun Jan 14 18:06:58 EST 2018 : org.jfree.data.statistics.BoxAndWhiskerItem,125=>Find no block
+Sun Jan 14 18:06:58 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,214
+Sun Jan 14 18:07:00 EST 2018 org.jfree.data.statistics.BoxAndWhiskerItem,223
+Sun Jan 14 18:07:01 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,147
+Sun Jan 14 18:07:40 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,150
+Sun Jan 14 18:07:40 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,151
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int r=this.data.getRowIndex(rowKey);
+int c=this.data.getColumnIndex(columnKey);
+if((this.maximumRangeValueRow==r&&this.maximumRangeValueColumn==c)||(this.minimumRangeValueRow==r&&this.minimumRangeValueColumn==c)){
+r++;
+updateBounds();
+}
+
+Time : 18/01/14 18:08
+----------------------------------------
+Sun Jan 14 18:08:37 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,152
+Sun Jan 14 18:08:37 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,158
+Sun Jan 14 18:10:05 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,159
+Sun Jan 14 18:10:05 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,160
+Sun Jan 14 18:10:05 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,162
+Sun Jan 14 18:10:36 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,163
+Sun Jan 14 18:10:36 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,164
+Sun Jan 14 18:10:36 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,167
+Sun Jan 14 18:12:40 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,168
+Sun Jan 14 18:12:40 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,169
+Sun Jan 14 18:12:40 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,170
+Sun Jan 14 18:12:40 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,178
+Sun Jan 14 18:14:38 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,179
+Sun Jan 14 18:14:38 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,180
+Sun Jan 14 18:14:38 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,181
+Sun Jan 14 18:14:38 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,189
+Sun Jan 14 18:17:27 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,191
+Sun Jan 14 18:17:27 EST 2018 Sun Jan 14 18:17:27 EST 2018 : org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,193=>Find no block
+Sun Jan 14 18:17:27 EST 2018 org.jfree.data.KeyedObjects2D,150
+Sun Jan 14 18:17:41 EST 2018 org.jfree.data.KeyedObjects2D,187
+Sun Jan 14 18:17:56 EST 2018 org.jfree.data.KeyedObjects2D,250
+Sun Jan 14 18:18:24 EST 2018 Sun Jan 14 18:18:24 EST 2018 : org.jfree.data.KeyedObjects2D,251=>Find no block
+Sun Jan 14 18:18:24 EST 2018 org.jfree.data.KeyedObjects2D,263
+Sun Jan 14 18:18:46 EST 2018 org.jfree.data.KeyedObjects2D,266
+Sun Jan 14 18:19:00 EST 2018 org.jfree.data.KeyedObjects2D,270
+Sun Jan 14 18:21:44 EST 2018 org.jfree.data.KeyedObjects2D,271
+Sun Jan 14 18:21:44 EST 2018 org.jfree.data.KeyedObjects2D,275
+Sun Jan 14 18:21:45 EST 2018 org.jfree.data.KeyedObjects2D,276
+Sun Jan 14 18:21:45 EST 2018 org.jfree.data.KeyedObjects2D,277
+Sun Jan 14 18:21:45 EST 2018 org.jfree.data.KeyedObjects2D,279
+Sun Jan 14 18:26:06 EST 2018 org.jfree.data.KeyedObjects2D,280
+Sun Jan 14 18:27:33 EST 2018 org.jfree.data.KeyedObjects2D,281
+Sun Jan 14 18:30:18 EST 2018 org.jfree.data.KeyedObjects2D,282
+Sun Jan 14 18:30:18 EST 2018 Sun Jan 14 18:30:18 EST 2018 : org.jfree.data.KeyedObjects2D,285=>Find no block
+Sun Jan 14 18:30:18 EST 2018 Sun Jan 14 18:30:18 EST 2018 : org.jfree.data.KeyedObjects,67=>Find no block
+Sun Jan 14 18:30:18 EST 2018 org.jfree.data.KeyedObjects,68
+Sun Jan 14 18:30:27 EST 2018 Sun Jan 14 18:30:27 EST 2018 : org.jfree.data.KeyedObjects,69=>Find no block
+Sun Jan 14 18:30:27 EST 2018 org.jfree.data.KeyedObjects,128
+Sun Jan 14 18:30:52 EST 2018 org.jfree.data.KeyedObjects,131
+Sun Jan 14 18:32:16 EST 2018 org.jfree.data.KeyedObjects,132
+Sun Jan 14 18:34:51 EST 2018 org.jfree.data.KeyedObjects,133
+Sun Jan 14 18:34:51 EST 2018 org.jfree.data.KeyedObjects,140
+Sun Jan 14 18:36:23 EST 2018 org.jfree.data.KeyedObjects,201
+Sun Jan 14 18:41:22 EST 2018 org.jfree.data.KeyedObjects,202
+Sun Jan 14 18:41:22 EST 2018 org.jfree.data.KeyedObjects,207
+Sun Jan 14 18:41:22 EST 2018 org.jfree.data.KeyedObjects,208
+Sun Jan 14 18:41:22 EST 2018 Sun Jan 14 18:41:22 EST 2018 : org.jfree.data.KeyedObjects,210=>Find no block
+Sun Jan 14 18:41:22 EST 2018 org.jfree.data.general.AbstractDataset,172
+Sun Jan 14 18:41:44 EST 2018 Sun Jan 14 18:41:44 EST 2018 : org.jfree.data.general.AbstractDataset,173=>Find no block
+Sun Jan 14 18:41:44 EST 2018 org.jfree.data.general.AbstractDataset,186
+Sun Jan 14 18:43:57 EST 2018 org.jfree.data.general.AbstractDataset,187
+Sun Jan 14 18:43:57 EST 2018 Sun Jan 14 18:43:57 EST 2018 : org.jfree.data.general.AbstractDataset,194=>Find no block
+Sun Jan 14 18:43:58 EST 2018 org.jfree.data.general.DatasetChangeEvent,73
+Sun Jan 14 18:44:00 EST 2018 org.jfree.data.general.DatasetChangeEvent,74
+Sun Jan 14 18:44:00 EST 2018 Sun Jan 14 18:44:00 EST 2018 : org.jfree.data.general.DatasetChangeEvent,75=>Find no block
+Sun Jan 14 18:44:00 EST 2018 Sun Jan 14 18:44:00 EST 2018 : org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,106=>Find no block
+Sun Jan 14 18:44:00 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,107
+Sun Jan 14 18:44:15 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,108
+Sun Jan 14 18:44:15 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,109
+Sun Jan 14 18:44:16 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,110
+Sun Jan 14 18:44:16 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,111
+Sun Jan 14 18:44:16 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,112
+Sun Jan 14 18:44:16 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,113
+Sun Jan 14 18:44:16 EST 2018 org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,114
+Sun Jan 14 18:44:16 EST 2018 Sun Jan 14 18:44:16 EST 2018 : org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset,115=>Find no block
+Sun Jan 14 18:44:16 EST 2018 Sun Jan 14 18:44:16 EST 2018 : org.jfree.data.KeyedObjects2D,74=>Find no block
+Sun Jan 14 18:44:16 EST 2018 org.jfree.data.KeyedObjects2D,75
+Sun Jan 14 18:44:18 EST 2018 org.jfree.data.KeyedObjects2D,76
+Sun Jan 14 18:44:18 EST 2018 org.jfree.data.KeyedObjects2D,77
+Sun Jan 14 18:44:19 EST 2018 Sun Jan 14 18:44:19 EST 2018 : org.jfree.data.KeyedObjects2D,78=>Find no block
+Sun Jan 14 18:44:19 EST 2018 Sun Jan 14 18:44:19 EST 2018 : org.jfree.data.Range,85=>Find no block
+Sun Jan 14 18:44:19 EST 2018 org.jfree.data.Range,86
+Sun Jan 14 18:45:43 EST 2018 org.jfree.data.Range,91
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(lower>upper){
+String msg="Range(double, double): require lower ("+lower;
+throw new IllegalArgumentException(msg);
+}
+this.lower=upper;
+this.upper=upper;
+
+Time : 18/01/14 18:46
+----------------------------------------
+Sun Jan 14 18:47:19 EST 2018 org.jfree.data.Range,92
+Sun Jan 14 18:47:19 EST 2018 Sun Jan 14 18:47:19 EST 2018 : org.jfree.data.Range,93=>Find no block
+Sun Jan 14 18:47:19 EST 2018 Sun Jan 14 18:47:19 EST 2018 : org.jfree.data.general.AbstractDataset,96=>Find no block
+Sun Jan 14 18:47:19 EST 2018 org.jfree.data.general.AbstractDataset,97
+Sun Jan 14 18:47:39 EST 2018 org.jfree.data.general.AbstractDataset,98
+Sun Jan 14 18:47:39 EST 2018 Sun Jan 14 18:47:39 EST 2018 : org.jfree.data.general.AbstractDataset,99=>Find no block
+Sun Jan 14 18:47:39 EST 2018 org.jfree.data.general.DatasetGroup,65
+Sun Jan 14 18:47:53 EST 2018 org.jfree.data.general.DatasetGroup,66
+Sun Jan 14 18:47:53 EST 2018 Sun Jan 14 18:47:53 EST 2018 : org.jfree.data.general.DatasetGroup,67=>Find no block
+Sun Jan 14 18:47:53 EST 2018 org.jfree.data.KeyedObject,94
+Sun Jan 14 18:47:55 EST 2018 org.jfree.data.KeyedObject,117
+Sun Jan 14 18:52:37 EST 2018 org.jfree.data.KeyedObject,118
+Sun Jan 14 18:52:51 EST 2018 org.jfree.data.KeyedObject,119
+Sun Jan 14 18:52:51 EST 2018 org.jfree.data.KeyedObject,120
+Sun Jan 14 18:52:51 EST 2018 org.jfree.data.KeyedObject,122
+Sun Jan 14 18:52:51 EST 2018 org.jfree.data.KeyedObject,134
+Sun Jan 14 18:53:45 EST 2018 org.jfree.data.KeyedObject,135
+Sun Jan 14 18:53:46 EST 2018 org.jfree.data.KeyedObject,138
+Sun Jan 14 18:54:00 EST 2018 org.jfree.data.KeyedObject,139
+Sun Jan 14 18:54:00 EST 2018 org.jfree.data.KeyedObject,141
+Sun Jan 14 19:06:34 EST 2018 org.jfree.data.KeyedObject,142
+Sun Jan 14 19:06:34 EST 2018 org.jfree.data.KeyedObject,143
+Sun Jan 14 19:06:34 EST 2018 org.jfree.data.KeyedObject,146
+Sun Jan 14 19:12:26 EST 2018 org.jfree.data.KeyedObject,147
+Sun Jan 14 19:12:27 EST 2018 org.jfree.data.KeyedObject,150
+Sun Jan 14 19:18:26 EST 2018 org.jfree.data.UnknownKeyException,56
+Sun Jan 14 19:18:27 EST 2018 Sun Jan 14 19:18:27 EST 2018 : org.jfree.data.UnknownKeyException,57=>Find no block
+Sun Jan 14 19:18:28 EST 2018 org.jfree.data.Range,87
+Sun Jan 14 19:18:28 EST 2018 org.jfree.data.Range,89
+Sun Jan 14 19:18:28 EST 2018 org.jfree.data.Range,101
+Sun Jan 14 19:18:30 EST 2018 org.jfree.data.Range,110
+Sun Jan 14 19:18:31 EST 2018 org.jfree.data.Range,119
+Sun Jan 14 19:18:33 EST 2018 org.jfree.data.Range,128
+Sun Jan 14 19:18:35 EST 2018 org.jfree.data.Range,140
+Sun Jan 14 19:18:59 EST 2018 org.jfree.data.Range,153
+Sun Jan 14 19:20:50 EST 2018 org.jfree.data.Range,154
+Sun Jan 14 19:20:50 EST 2018 org.jfree.data.Range,157
+Sun Jan 14 19:20:51 EST 2018 org.jfree.data.Range,170
+Sun Jan 14 19:28:09 EST 2018 org.jfree.data.Range,171
+Sun Jan 14 19:28:09 EST 2018 org.jfree.data.Range,172
+Sun Jan 14 19:28:09 EST 2018 org.jfree.data.Range,173
+Sun Jan 14 19:28:09 EST 2018 org.jfree.data.Range,175
+Sun Jan 14 19:28:10 EST 2018 org.jfree.data.Range,176
+Sun Jan 14 19:28:10 EST 2018 org.jfree.data.Range,179
+Sun Jan 14 19:28:10 EST 2018 org.jfree.data.Range,199
+Sun Jan 14 19:29:34 EST 2018 org.jfree.data.Range,200
+Sun Jan 14 19:29:34 EST 2018 org.jfree.data.Range,203
+Sun Jan 14 19:29:34 EST 2018 org.jfree.data.Range,204
+Sun Jan 14 19:29:35 EST 2018 org.jfree.data.Range,207
+Sun Jan 14 19:29:35 EST 2018 org.jfree.data.Range,209
+Sun Jan 14 19:29:35 EST 2018 org.jfree.data.Range,211
+Sun Jan 14 19:29:35 EST 2018 org.jfree.data.Range,228
+Sun Jan 14 19:30:28 EST 2018 org.jfree.data.Range,229
+Sun Jan 14 19:30:29 EST 2018 org.jfree.data.Range,231
+Sun Jan 14 19:31:53 EST 2018 org.jfree.data.Range,232
+Sun Jan 14 19:31:53 EST 2018 org.jfree.data.Range,234
+Sun Jan 14 19:31:53 EST 2018 org.jfree.data.Range,235
+Sun Jan 14 19:31:53 EST 2018 org.jfree.data.Range,238
+Sun Jan 14 19:31:54 EST 2018 org.jfree.data.Range,255
+Sun Jan 14 19:32:10 EST 2018 org.jfree.data.Range,256
+Sun Jan 14 19:32:10 EST 2018 org.jfree.data.Range,258
+Sun Jan 14 19:33:25 EST 2018 org.jfree.data.Range,259
+Sun Jan 14 19:33:25 EST 2018 org.jfree.data.Range,260
+Sun Jan 14 19:33:25 EST 2018 org.jfree.data.Range,261
+Sun Jan 14 19:33:25 EST 2018 org.jfree.data.Range,274
+Sun Jan 14 19:33:27 EST 2018 org.jfree.data.Range,290
+Sun Jan 14 19:33:29 EST 2018 org.jfree.data.Range,291
+Sun Jan 14 19:33:29 EST 2018 org.jfree.data.Range,295
+Sun Jan 14 19:33:29 EST 2018 org.jfree.data.Range,311
+Sun Jan 14 19:34:58 EST 2018 org.jfree.data.Range,312
+Sun Jan 14 19:34:58 EST 2018 org.jfree.data.Range,314
+Sun Jan 14 19:34:58 EST 2018 org.jfree.data.Range,315
+Sun Jan 14 19:34:58 EST 2018 org.jfree.data.Range,318
+Sun Jan 14 19:34:58 EST 2018 org.jfree.data.Range,331
+Sun Jan 14 19:34:59 EST 2018 org.jfree.data.Range,337
+Sun Jan 14 19:34:59 EST 2018 org.jfree.data.Range,338
+Sun Jan 14 19:34:59 EST 2018 org.jfree.data.Range,340
+Sun Jan 14 19:34:59 EST 2018 org.jfree.data.Range,351
+Sun Jan 14 19:37:46 EST 2018 org.jfree.data.Range,352
+Sun Jan 14 19:37:46 EST 2018 org.jfree.data.Range,353
+Failed time : 18/01/14 19:37

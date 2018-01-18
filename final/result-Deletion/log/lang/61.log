@@ -1,0 +1,108 @@
+=================================================
+Project : lang_61	start : 18/01/15 23:08
+Current failed test : org.apache.commons.lang.text.StrBuilderTest::testIndexOfLang294 | 18/01/15 23:08
+Mon Jan 15 23:08:59 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1184
+Mon Jan 15 23:50:57 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1185
+Mon Jan 15 23:50:58 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1186
+Mon Jan 15 23:50:58 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1187
+Mon Jan 15 23:50:58 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1188
+Mon Jan 15 23:50:59 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1189
+Mon Jan 15 23:50:59 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1202
+Tue Jan 16 00:16:53 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1203
+Tue Jan 16 00:16:54 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1204
+Tue Jan 16 00:16:54 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1205
+Tue Jan 16 00:16:54 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1206
+Tue Jan 16 00:16:56 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1209
+Tue Jan 16 00:16:57 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1747
+Tue Jan 16 00:17:33 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1761
+Tue Jan 16 00:25:38 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1762
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(str==null||(startIndex+CAPACITY)>=size){
+return -1;
+}
+
+Time : 18/01/16 00:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(str==null||(startIndex+CAPACITY)>size){
+return -1;
+}
+
+Time : 18/01/16 00:29
+----------------------------------------
+Tue Jan 16 00:32:28 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1765
+Tue Jan 16 01:08:21 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1766
+Tue Jan 16 01:08:22 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1769
+Tue Jan 16 01:10:25 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1772
+Tue Jan 16 01:13:18 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1775
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(strLen>size){
+return -1;
+}
+char[] thisBuf=buffer;
+int len=size-strLen;
+
+Time : 18/01/16 01:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+char[] thisBuf=buffer;
+int len=size-strLen;
+
+Time : 18/01/16 01:16
+----------------------------------------
+Tue Jan 16 01:39:47 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1776
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+char[] thisBuf=buffer;
+int len=size-strLen;
+outer: for (int i=startIndex; i < len; i++) {
+  for (int j=0; j < strLen; j++) {
+    if (str.charAt(j) != thisBuf[i + j]) {
+      continue outer;
+    }
+  }
+  return i;
+}
+
+
+Time : 18/01/16 01:41
+----------------------------------------
+Tue Jan 16 01:48:17 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1778
+Tue Jan 16 02:13:27 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1779
+Tue Jan 16 02:13:28 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1780
+Tue Jan 16 02:13:28 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1781
+Tue Jan 16 02:13:29 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1784
+Tue Jan 16 02:13:29 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1114
+Tue Jan 16 02:19:50 AEDT 2018 org.apache.commons.lang.text.StrBuilder,1115
+Tue Jan 16 02:19:50 AEDT 2018 Tue Jan 16 02:19:50 AEDT 2018 : org.apache.commons.lang.text.StrBuilder,1116=>Find no block
+Tue Jan 16 02:19:50 AEDT 2018 org.apache.commons.lang.text.StrBuilder,121
+Tue Jan 16 02:25:42 AEDT 2018 org.apache.commons.lang.text.StrBuilder,122
+Tue Jan 16 02:32:06 AEDT 2018 org.apache.commons.lang.text.StrBuilder,125
+Tue Jan 16 02:32:06 AEDT 2018 org.apache.commons.lang.text.StrBuilder,126
+Tue Jan 16 02:32:07 AEDT 2018 Tue Jan 16 02:32:07 AEDT 2018 : org.apache.commons.lang.text.StrBuilder,128=>Find no block
+Tue Jan 16 02:32:07 AEDT 2018 org.apache.commons.lang.text.StrBuilder,474
+Tue Jan 16 02:39:20 AEDT 2018 org.apache.commons.lang.text.StrBuilder,475
+Tue Jan 16 02:39:21 AEDT 2018 org.apache.commons.lang.text.StrBuilder,476
+Tue Jan 16 02:39:21 AEDT 2018 org.apache.commons.lang.text.StrBuilder,477
+Tue Jan 16 02:39:21 AEDT 2018 org.apache.commons.lang.text.StrBuilder,469
+Tue Jan 16 02:42:55 AEDT 2018 org.apache.commons.lang.text.StrBuilder,472
+Tue Jan 16 03:52:15 AEDT 2018 org.apache.commons.lang.text.StrBuilder,473
+Tue Jan 16 03:52:16 AEDT 2018 org.apache.commons.lang.text.StrBuilder,479
+Tue Jan 16 03:52:16 AEDT 2018 org.apache.commons.lang.text.StrBuilder,182
+Tue Jan 16 03:52:44 AEDT 2018 org.apache.commons.lang.text.StrBuilder,228
+Tue Jan 16 04:07:46 AEDT 2018 org.apache.commons.lang.text.StrBuilder,233
+Timeout time : 18/01/16 04:08

@@ -1,0 +1,234 @@
+=================================================
+Project : math_71	start : 18/01/12 14:08
+Current failed test : org.apache.commons.math.ode.nonstiff.ClassicalRungeKuttaIntegratorTest::testMissedEndEvent_purify_1 | 18/01/12 14:09
+Fri Jan 12 14:10:18 AEDT 2018 org.apache.commons.math.ode.nonstiff.RungeKuttaIntegrator,180
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Math.abs(dt)<=Math.abs(stepStart)){
+loop=false;
+}else {
+stepSize=dt;
+}
+
+Time : 18/01/12 14:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Math.abs(dt)<Math.abs(t)){
+loop=false;
+}else {
+stepSize=dt;
+}
+
+Time : 18/01/12 14:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Math.abs(dt)<=Math.abs(t)){
+loop=false;
+}else {
+stepSize=dt;
+}
+
+Time : 18/01/12 14:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Math.abs(dt)<Math.abs(stepStart)){
+loop=false;
+}else {
+stepSize=dt;
+}
+
+Time : 18/01/12 14:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Math.abs(dt)<=Math.ulp(stepStart)){
+stepSize=0;
+loop=false;
+}else {
+stepSize=dt;
+}
+
+Time : 18/01/12 14:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Math.abs(dt)<=Math.ulp(stepStart)){
+interpolator.storeTime(stepStart);
+System.arraycopy(y,0,yTmp,0,y0.length);
+stepSize=0;
+loop=false;
+
+loop=false;
+}else {
+stepSize=dt;
+}
+
+Time : 18/01/12 14:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.0791107674086833 : [/home/hz985/jiajun/d4j/projects/math/math_71_buggy/src/main/java/org/apache/commons/math/ode/nonstiff/RungeKuttaIntegrator.java=>0,0]
+if(Math.abs(dt)<=Math.ulp(stepStart)){
+interpolator.storeTime(stepStart);
+System.arraycopy(y,0,yTmp,0,y0.length);
+hNew=0;
+stepSize=0;
+loop=false;
+}else {
+hNew=dt;
+interpolator.rescale(hNew);
+}
+
+Time : 18/01/12 14:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_71_buggy/src/main/java/org/apache/commons/math/ode/nonstiff/RungeKuttaIntegrator.java=>174,184]
+if(Math.abs(dt)<=Math.ulp(stepStart)){
+loop=false;
+}else {
+stepSize=dt;
+}
+
+Time : 18/01/12 14:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_71_buggy/src/main/java/org/apache/commons/math/ode/nonstiff/RungeKuttaIntegrator.java=>174,184]
+if(Math.abs(dt)<=Math.ulp(stepStart)){
+interpolator.storeTime(stepStart);
+System.arraycopy(y,0,yTmp,0,y0.length);
+stepSize=0;
+loop=false;
+
+loop=false;
+}else {
+stepSize=dt;
+}
+
+Time : 18/01/12 14:15
+----------------------------------------
+Success time : 18/01/12 14:15
+Current failed test : org.apache.commons.math.ode.nonstiff.ClassicalRungeKuttaIntegratorTest::testMissedEndEvent_purify_4 | 18/01/12 14:15
+Already fixed : org.apache.commons.math.ode.nonstiff.ClassicalRungeKuttaIntegratorTest::testMissedEndEvent_purify_4
+Current failed test : org.apache.commons.math.ode.nonstiff.DormandPrince853IntegratorTest::testMissedEndEvent_purify_2 | 18/01/12 14:16
+Fri Jan 12 14:17:17 AEDT 2018 org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator,300
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Math.abs(dt)<=Math.abs(stepStart)){
+loop=false;
+}else {
+hNew=dt;
+}
+
+Time : 18/01/12 14:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Math.abs(dt)<Math.abs(stepStart)){
+loop=false;
+}else {
+hNew=dt;
+}
+
+Time : 18/01/12 14:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Math.abs(dt)<=Math.ulp(stepStart)){
+stepSize=0;
+loop=false;
+}else {
+hNew=dt;
+}
+
+Time : 18/01/12 14:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Math.abs(dt)<=Math.ulp(stepStart)){
+interpolator.storeTime(stepStart);
+System.arraycopy(y,0,yTmp,0,y0.length);
+stepSize=0;
+loop=false;
+
+loop=false;
+}else {
+hNew=dt;
+}
+
+Time : 18/01/12 14:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.0791107674086833 : [/home/hz985/jiajun/d4j/projects/math/math_71_buggy/src/main/java/org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java=>0,0]
+if(Math.abs(dt)<=Math.ulp(stepStart)){
+interpolator.storeTime(stepStart);
+System.arraycopy(y,0,yTmp,0,y0.length);
+hNew=0;
+stepSize=0;
+loop=false;
+}else {
+hNew=dt;
+interpolator.rescale(hNew);
+}
+
+Time : 18/01/12 14:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_71_buggy/src/main/java/org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java=>294,304]
+if(Math.abs(dt)<=Math.ulp(stepStart)){
+loop=false;
+}else {
+hNew=dt;
+}
+
+Time : 18/01/12 14:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_71_buggy/src/main/java/org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java=>294,304]
+if(Math.abs(dt)<=Math.ulp(stepStart)){
+interpolator.storeTime(stepStart);
+System.arraycopy(y,0,yTmp,0,y0.length);
+stepSize=0;
+loop=false;
+
+loop=false;
+}else {
+hNew=dt;
+}
+
+Time : 18/01/12 14:21
+----------------------------------------
+Success time : 18/01/12 14:21

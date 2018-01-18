@@ -1,0 +1,134 @@
+=================================================
+Project : math_77	start : 18/01/12 19:09
+Current failed test : org.apache.commons.math.linear.ArrayRealVectorTest::testBasicFunctions_purify_8 | 18/01/12 19:13
+Fri Jan 12 19:14:43 AEDT 2018 org.apache.commons.math.linear.ArrayRealVector,719
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double max=0;
+for(double a : data){
+max=Math.max(max,Math.abs(a));
+}
+return max;
+
+Time : 18/01/12 19:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.3962811368329753 : [/home/hz985/jiajun/d4j/projects/math/math_77_buggy/src/main/java/org/apache/commons/math/linear/ArrayRealVector.java=>0,0]
+double max=0;
+for(int i=0;i<p1.length;i++){
+max=Math.max(max,Math.abs(p1[i]-p2[i]));
+}
+return max;
+
+Time : 18/01/12 19:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_77_buggy/src/main/java/org/apache/commons/math/linear/ArrayRealVector.java=>719,723]
+double max=0;
+for(double a : data){
+max+=Math.max(max,Math.abs(a));
+}
+return max;
+
+Time : 18/01/12 19:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_77_buggy/src/main/java/org/apache/commons/math/linear/ArrayRealVector.java=>719,723]
+double max=0;
+for(double a : data){
+max=Math.max(max,Math.abs(a));
+}
+return max;
+
+Time : 18/01/12 19:15
+----------------------------------------
+Success time : 18/01/12 19:15
+Current failed test : org.apache.commons.math.linear.SparseRealVectorTest::testBasicFunctions_purify_5 | 18/01/12 19:15
+Fri Jan 12 19:17:04 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,499
+Fri Jan 12 19:54:38 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,500
+Fri Jan 12 19:54:39 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,501
+Fri Jan 12 19:54:40 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,502
+Fri Jan 12 19:54:41 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,503
+Fri Jan 12 19:54:42 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,505
+Fri Jan 12 19:54:43 AEDT 2018 org.apache.commons.math.linear.AbstractRealVector,222
+Fri Jan 12 20:10:19 AEDT 2018 org.apache.commons.math.linear.AbstractRealVector,223
+Fri Jan 12 20:10:20 AEDT 2018 org.apache.commons.math.linear.AbstractRealVector,225
+Fri Jan 12 20:10:21 AEDT 2018 org.apache.commons.math.linear.AbstractRealVector,226
+Fri Jan 12 20:10:22 AEDT 2018 org.apache.commons.math.linear.AbstractRealVector,228
+Fri Jan 12 20:10:22 AEDT 2018 org.apache.commons.math.linear.AbstractRealVector,210
+Fri Jan 12 20:30:23 AEDT 2018 org.apache.commons.math.linear.AbstractRealVector,211
+Fri Jan 12 20:30:25 AEDT 2018 org.apache.commons.math.linear.AbstractRealVector,213
+Fri Jan 12 20:30:26 AEDT 2018 org.apache.commons.math.linear.AbstractRealVector,214
+Fri Jan 12 20:30:27 AEDT 2018 org.apache.commons.math.linear.AbstractRealVector,215
+Fri Jan 12 20:30:28 AEDT 2018 Fri Jan 12 20:30:28 AEDT 2018 : org.apache.commons.math.linear.AbstractRealVector,216=>Find no block
+Fri Jan 12 20:30:29 AEDT 2018 org.apache.commons.math.linear.AbstractRealVector,217
+Fri Jan 12 20:30:30 AEDT 2018 Fri Jan 12 20:30:30 AEDT 2018 : org.apache.commons.math.linear.OpenMapRealVector,863=>Find no block
+Fri Jan 12 20:30:31 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,864
+Fri Jan 12 20:32:16 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,865
+Fri Jan 12 20:32:17 AEDT 2018 Fri Jan 12 20:32:17 AEDT 2018 : org.apache.commons.math.linear.OpenMapRealVector,866=>Find no block
+Fri Jan 12 20:32:18 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,870
+Fri Jan 12 20:32:45 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,875
+Fri Jan 12 20:34:04 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,876
+Fri Jan 12 20:34:04 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,809
+Fri Jan 12 20:34:08 AEDT 2018 Fri Jan 12 20:34:08 AEDT 2018 : org.apache.commons.math.linear.OpenMapRealVector,825=>Find no block
+Fri Jan 12 20:34:09 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,826
+Fri Jan 12 20:35:28 AEDT 2018 Fri Jan 12 20:35:28 AEDT 2018 : org.apache.commons.math.linear.OpenMapRealVector,827=>Find no block
+Fri Jan 12 20:35:29 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,832
+Fri Jan 12 20:36:30 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,117
+Fri Jan 12 20:36:33 AEDT 2018 Fri Jan 12 20:36:33 AEDT 2018 : org.apache.commons.math.linear.OpenMapRealVector,118=>Find no block
+Fri Jan 12 20:36:33 AEDT 2018 Fri Jan 12 20:36:33 AEDT 2018 : org.apache.commons.math.linear.OpenMapRealVector,126=>Find no block
+Fri Jan 12 20:36:34 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,127
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int key=0;key<values.length;key++){
+double value=DEFAULT_ZERO_TOLERANCE/DEFAULT_ZERO_TOLERANCE;
+if(!isDefaultValue(value)){
+entries.put(key,value);
+}
+}
+
+Time : 18/01/12 21:12
+----------------------------------------
+Fri Jan 12 21:30:37 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,128
+Fri Jan 12 21:30:38 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,129
+Fri Jan 12 21:30:38 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,130
+Fri Jan 12 21:30:39 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,131
+Fri Jan 12 21:30:40 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,132
+Fri Jan 12 21:30:41 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,133
+Fri Jan 12 21:30:41 AEDT 2018 Fri Jan 12 21:30:41 AEDT 2018 : org.apache.commons.math.linear.OpenMapRealVector,136=>Find no block
+Fri Jan 12 21:30:42 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,205
+Fri Jan 12 21:32:30 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,248
+Fri Jan 12 21:32:32 AEDT 2018 Fri Jan 12 21:32:32 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,505=>Find no block
+Fri Jan 12 21:32:33 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,508
+Fri Jan 12 21:33:34 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,511
+Fri Jan 12 21:33:34 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,513
+Fri Jan 12 21:33:35 AEDT 2018 Fri Jan 12 21:33:35 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,516=>Find no block
+Fri Jan 12 21:33:36 AEDT 2018 Fri Jan 12 21:33:36 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,518=>Find no block
+Fri Jan 12 21:33:37 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,525
+Fri Jan 12 21:33:39 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,554
+Fri Jan 12 21:33:42 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,558
+Fri Jan 12 21:34:49 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,561
+Fri Jan 12 21:35:32 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,572
+Fri Jan 12 21:35:33 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,578
+Fri Jan 12 21:36:18 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,582
+Fri Jan 12 21:36:18 AEDT 2018 Fri Jan 12 21:36:18 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,590=>Find no block
+Fri Jan 12 21:36:19 AEDT 2018 Fri Jan 12 21:36:19 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,585=>Find no block
+Fri Jan 12 21:36:20 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,586
+Fri Jan 12 21:36:21 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,587
+Fri Jan 12 21:36:21 AEDT 2018 Fri Jan 12 21:36:21 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,592=>Find no block
+Fri Jan 12 21:36:22 AEDT 2018 Fri Jan 12 21:36:22 AEDT 2018 : org.apache.commons.math.linear.RealVector,72=>Find no block
+Fri Jan 12 21:36:23 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,110
+Fri Jan 12 21:36:26 AEDT 2018 Fri Jan 12 21:36:26 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,111=>Find no block
+Fri Jan 12 21:36:26 AEDT 2018 Fri Jan 12 21:36:26 AEDT 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,127=>Find no block
+Fri Jan 12 21:36:27 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,128
+Timeout time : 18/01/12 21:47

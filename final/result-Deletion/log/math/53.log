@@ -1,0 +1,50 @@
+=================================================
+Project : math_53	start : 18/01/15 21:16
+Current failed test : org.apache.commons.math.complex.ComplexTest::testAddNaN | 18/01/15 21:17
+Mon Jan 15 21:18:59 AEDT 2018 org.apache.commons.math.complex.Complex,152
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+MathUtils.checkNotNull(rhs);
+if(isNaN||rhs.isNaN){
+return NaN;
+}
+return createComplex(real+rhs.getReal(),imaginary+rhs.getImaginary());
+
+Time : 18/01/15 21:19
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.800922844719878 : [/home/hz985/jiajun/d4j/projects/math/math_53_buggy/src/main/java/org/apache/commons/math/complex/Complex.java=>0,0]
+MathUtils.checkNotNull(rhs);
+if(isNaN||rhs.isNaN){
+return NaN;
+}
+return createComplex(real-rhs.getReal(),imaginary-rhs.getImaginary());
+
+Time : 18/01/15 21:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_53_buggy/src/main/java/org/apache/commons/math/complex/Complex.java=>152,154]
+MathUtils.checkNotNull(rhs);
+return createComplex(real+rhs.getReal(),imaginary+rhs.getImaginary());
+
+Time : 18/01/15 21:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_53_buggy/src/main/java/org/apache/commons/math/complex/Complex.java=>152,154]
+MathUtils.checkNotNull(rhs);
+if(isNaN||rhs.isNaN){
+return NaN;
+}
+return createComplex(real+rhs.getReal(),imaginary+rhs.getImaginary());
+
+Time : 18/01/15 21:21
+----------------------------------------
+Success time : 18/01/15 21:21

@@ -1,0 +1,87 @@
+=================================================
+Project : closure_111	start : 18/01/12 19:05
+Current failed test : com.google.javascript.jscomp.ClosureReverseAbstractInterpreterTest::testGoogIsArray2 | 18/01/12 19:06
+Fri Jan 12 19:06:45 AEDT 2018 Fri Jan 12 19:06:45 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,54=>Find no block
+Fri Jan 12 19:06:46 AEDT 2018 com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter,378
+Fri Jan 12 19:07:48 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,196
+Fri Jan 12 19:12:09 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,198
+Fri Jan 12 19:12:10 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,192
+Fri Jan 12 19:14:39 AEDT 2018 com.google.javascript.rhino.jstype.AllType,100
+Fri Jan 12 19:15:12 AEDT 2018 Fri Jan 12 19:15:12 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,44=>Find no block
+Fri Jan 12 19:15:13 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,249
+Fri Jan 12 19:20:05 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,250
+Fri Jan 12 19:20:06 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,251
+Fri Jan 12 19:20:08 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,223
+Fri Jan 12 20:40:28 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,224
+Fri Jan 12 20:40:30 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,225
+Fri Jan 12 20:40:31 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,226
+Fri Jan 12 20:40:32 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,228
+Fri Jan 12 20:40:33 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,230
+Fri Jan 12 20:40:34 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,231
+Fri Jan 12 20:40:35 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,245
+Fri Jan 12 20:48:12 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,248
+Fri Jan 12 20:48:13 AEDT 2018 Fri Jan 12 20:48:13 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,261=>Find no block
+Fri Jan 12 20:48:14 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,262
+Fri Jan 12 20:49:53 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,263
+Fri Jan 12 20:49:54 AEDT 2018 Fri Jan 12 20:49:54 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,264=>Find no block
+Fri Jan 12 20:49:56 AEDT 2018 Fri Jan 12 20:49:56 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,257=>Find no block
+Fri Jan 12 20:49:57 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,220
+Fri Jan 12 21:56:11 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,221
+Fri Jan 12 21:56:12 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,222
+Fri Jan 12 21:56:13 AEDT 2018 com.google.javascript.rhino.jstype.AllType,85
+Fri Jan 12 21:56:18 AEDT 2018 com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter,691
+Fri Jan 12 21:58:00 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,219
+Fri Jan 12 22:51:13 AEDT 2018 com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter,161
+Fri Jan 12 22:56:19 AEDT 2018 com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter,162
+Fri Jan 12 22:59:37 AEDT 2018 com.google.javascript.jscomp.Compiler,1609
+Fri Jan 12 23:02:06 AEDT 2018 com.google.javascript.jscomp.Compiler,1610
+Fri Jan 12 23:02:07 AEDT 2018 com.google.javascript.jscomp.Compiler,1612
+Fri Jan 12 23:02:08 AEDT 2018 com.google.javascript.jscomp.Compiler,1613
+Fri Jan 12 23:02:09 AEDT 2018 com.google.javascript.jscomp.Compiler,1615
+Fri Jan 12 23:02:10 AEDT 2018 com.google.javascript.jscomp.Compiler,1616
+Fri Jan 12 23:02:12 AEDT 2018 Fri Jan 12 23:02:12 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,165=>Find no block
+Fri Jan 12 23:02:13 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,128
+Fri Jan 12 23:02:19 AEDT 2018 Fri Jan 12 23:02:19 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,50=>Find no block
+Fri Jan 12 23:02:20 AEDT 2018 Fri Jan 12 23:02:20 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,67=>Find no block
+Fri Jan 12 23:02:21 AEDT 2018 Fri Jan 12 23:02:21 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,79=>Find no block
+Fri Jan 12 23:02:22 AEDT 2018 Fri Jan 12 23:02:22 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,100=>Find no block
+Fri Jan 12 23:02:23 AEDT 2018 com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,129
+Fri Jan 12 23:04:00 AEDT 2018 Fri Jan 12 23:04:00 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,214=>Find no block
+Fri Jan 12 23:04:02 AEDT 2018 Fri Jan 12 23:04:02 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,131=>Find no block
+Fri Jan 12 23:04:03 AEDT 2018 Fri Jan 12 23:04:03 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,183=>Find no block
+Fri Jan 12 23:04:04 AEDT 2018 Fri Jan 12 23:04:04 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,153=>Find no block
+Fri Jan 12 23:04:05 AEDT 2018 Fri Jan 12 23:04:05 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,68=>Find no block
+Fri Jan 12 23:04:06 AEDT 2018 Fri Jan 12 23:04:06 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,201=>Find no block
+Fri Jan 12 23:04:08 AEDT 2018 Fri Jan 12 23:04:08 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,177=>Find no block
+Fri Jan 12 23:04:09 AEDT 2018 Fri Jan 12 23:04:09 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,101=>Find no block
+Fri Jan 12 23:04:11 AEDT 2018 Fri Jan 12 23:04:11 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,51=>Find no block
+Fri Jan 12 23:04:12 AEDT 2018 Fri Jan 12 23:04:12 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,189=>Find no block
+Fri Jan 12 23:04:13 AEDT 2018 Fri Jan 12 23:04:13 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,80=>Find no block
+Fri Jan 12 23:04:14 AEDT 2018 Fri Jan 12 23:04:14 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,142=>Find no block
+Fri Jan 12 23:04:15 AEDT 2018 Fri Jan 12 23:04:15 AEDT 2018 : com.google.javascript.jscomp.type.ClosureReverseAbstractInterpreter,171=>Find no block
+Fri Jan 12 23:04:16 AEDT 2018 Fri Jan 12 23:04:16 AEDT 2018 : com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter,443=>Find no block
+Fri Jan 12 23:04:17 AEDT 2018 Fri Jan 12 23:04:17 AEDT 2018 : com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter,491=>Find no block
+Fri Jan 12 23:04:20 AEDT 2018 Fri Jan 12 23:04:20 AEDT 2018 : com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter,159=>Find no block
+Fri Jan 12 23:04:21 AEDT 2018 Fri Jan 12 23:04:21 AEDT 2018 : com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter,181=>Find no block
+Fri Jan 12 23:04:22 AEDT 2018 com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter,124
+Fri Jan 12 23:21:26 AEDT 2018 com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter,125
+Fri Jan 12 23:21:28 AEDT 2018 com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter,128
+Fri Jan 12 23:21:29 AEDT 2018 Fri Jan 12 23:21:29 AEDT 2018 : com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter,363=>Find no block
+Fri Jan 12 23:21:29 AEDT 2018 com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter,122
+Fri Jan 12 23:31:07 AEDT 2018 com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter,123
+Fri Jan 12 23:31:08 AEDT 2018 Fri Jan 12 23:31:08 AEDT 2018 : com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter,120=>Find no block
+Fri Jan 12 23:31:10 AEDT 2018 com.google.javascript.jscomp.Compiler,1594
+Fri Jan 12 23:33:44 AEDT 2018 Fri Jan 12 23:33:44 AEDT 2018 : com.google.javascript.jscomp.Compiler,1599=>Find no block
+Fri Jan 12 23:33:45 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,757
+Fri Jan 12 23:40:22 AEDT 2018 Fri Jan 12 23:40:22 AEDT 2018 : com.google.javascript.jscomp.parsing.IRFactory,758=>Find no block
+Fri Jan 12 23:40:23 AEDT 2018 com.google.javascript.jscomp.LinkedFlowScope,148
+Fri Jan 12 23:45:31 AEDT 2018 com.google.javascript.jscomp.LinkedFlowScope,147
+Fri Jan 12 23:45:32 AEDT 2018 Fri Jan 12 23:45:32 AEDT 2018 : com.google.javascript.jscomp.LinkedFlowScope,145=>Find no block
+Fri Jan 12 23:45:33 AEDT 2018 com.google.javascript.jscomp.LinkedFlowScope,146
+Fri Jan 12 23:46:32 AEDT 2018 Fri Jan 12 23:46:32 AEDT 2018 : com.google.javascript.rhino.jstype.SimpleSlot,51=>Find no block
+Fri Jan 12 23:46:33 AEDT 2018 com.google.javascript.rhino.jstype.SimpleSlot,66
+Fri Jan 12 23:47:21 AEDT 2018 com.google.javascript.rhino.jstype.SimpleSlot,71
+Fri Jan 12 23:48:04 AEDT 2018 com.google.javascript.jscomp.PrepareAst,135
+Sat Jan 13 00:06:29 AEDT 2018 com.google.javascript.jscomp.PrepareAst,136
+Sat Jan 13 00:06:30 AEDT 2018 com.google.javascript.jscomp.PrepareAst,158
+Timeout time : 18/01/13 00:06

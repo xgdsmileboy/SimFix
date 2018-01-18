@@ -1,0 +1,93 @@
+=================================================
+Project : time_27	start : 18/01/12 19:07
+Current failed test : org.joda.time.format.TestPeriodFormatterBuilder::testBug2495455 | 18/01/12 19:07
+Fri Jan 12 19:09:14 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,1736
+Fri Jan 12 19:38:51 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,1351
+Fri Jan 12 20:10:33 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,192
+Fri Jan 12 20:10:50 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,195
+Fri Jan 12 20:13:28 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,196
+Fri Jan 12 20:13:31 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,197
+Fri Jan 12 20:13:33 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,818
+Fri Jan 12 20:15:08 AEDT 2018 org.joda.time.format.PeriodFormatter,324
+Fri Jan 12 20:36:28 AEDT 2018 org.joda.time.format.PeriodFormatter,326
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+checkParser();
+MutablePeriod period=new MutablePeriod(0,iParseType);
+int newPos=text.length();
+if(newPos>=0){
+if(newPos>=text.length()){
+return period;
+}
+}else {
+newPos=~newPos;
+}
+throw new IllegalArgumentException(FormatUtils.createErrorMessage(text,newPos));
+
+Time : 18/01/12 20:40
+----------------------------------------
+Fri Jan 12 20:59:29 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,1304
+Fri Jan 12 20:59:36 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,1305
+Fri Jan 12 20:59:38 AEDT 2018 org.joda.time.convert.ReadablePeriodConverter,81
+Fri Jan 12 20:59:44 AEDT 2018 org.joda.time.convert.ReadableDurationConverter,88
+Fri Jan 12 20:59:50 AEDT 2018 org.joda.time.convert.ConverterManager,105
+Fri Jan 12 21:09:24 AEDT 2018 org.joda.time.convert.ConverterManager,107
+Fri Jan 12 21:09:26 AEDT 2018 org.joda.time.convert.ConverterManager,116
+Fri Jan 12 21:09:29 AEDT 2018 org.joda.time.convert.ConverterManager,126
+Fri Jan 12 21:09:31 AEDT 2018 org.joda.time.convert.ConverterManager,134
+Fri Jan 12 21:09:34 AEDT 2018 org.joda.time.convert.ConverterManager,142
+Fri Jan 12 21:09:36 AEDT 2018 Fri Jan 12 21:09:36 AEDT 2018 : org.joda.time.convert.ConverterManager,147=>Find no block
+Fri Jan 12 21:09:39 AEDT 2018 org.joda.time.convert.ConverterManager,90
+Fri Jan 12 21:09:45 AEDT 2018 org.joda.time.convert.LongConverter,40
+Fri Jan 12 21:09:51 AEDT 2018 Fri Jan 12 21:09:51 AEDT 2018 : org.joda.time.convert.LongConverter,41=>Find no block
+Fri Jan 12 21:09:54 AEDT 2018 org.joda.time.convert.ReadablePartialConverter,41
+Fri Jan 12 21:09:56 AEDT 2018 Fri Jan 12 21:09:56 AEDT 2018 : org.joda.time.convert.ReadablePartialConverter,42=>Find no block
+Fri Jan 12 21:09:59 AEDT 2018 org.joda.time.convert.ReadableInstantConverter,42
+Fri Jan 12 21:10:02 AEDT 2018 Fri Jan 12 21:10:02 AEDT 2018 : org.joda.time.convert.ReadableInstantConverter,43=>Find no block
+Fri Jan 12 21:10:04 AEDT 2018 org.joda.time.convert.CalendarConverter,49
+Fri Jan 12 21:10:07 AEDT 2018 Fri Jan 12 21:10:07 AEDT 2018 : org.joda.time.convert.CalendarConverter,50=>Find no block
+Fri Jan 12 21:10:09 AEDT 2018 org.joda.time.convert.DateConverter,41
+Fri Jan 12 21:10:12 AEDT 2018 Fri Jan 12 21:10:12 AEDT 2018 : org.joda.time.convert.DateConverter,42=>Find no block
+Fri Jan 12 21:10:14 AEDT 2018 org.joda.time.convert.ReadablePeriodConverter,42
+Fri Jan 12 21:10:17 AEDT 2018 Fri Jan 12 21:10:17 AEDT 2018 : org.joda.time.convert.ReadablePeriodConverter,43=>Find no block
+Fri Jan 12 21:10:19 AEDT 2018 org.joda.time.convert.NullConverter,45
+Fri Jan 12 21:10:22 AEDT 2018 Fri Jan 12 21:10:22 AEDT 2018 : org.joda.time.convert.NullConverter,46=>Find no block
+Fri Jan 12 21:10:24 AEDT 2018 org.joda.time.convert.ReadableIntervalConverter,42
+Fri Jan 12 21:10:27 AEDT 2018 Fri Jan 12 21:10:27 AEDT 2018 : org.joda.time.convert.ReadableIntervalConverter,43=>Find no block
+Fri Jan 12 21:10:29 AEDT 2018 org.joda.time.convert.ReadableDurationConverter,42
+Fri Jan 12 21:10:32 AEDT 2018 Fri Jan 12 21:10:32 AEDT 2018 : org.joda.time.convert.ReadableDurationConverter,43=>Find no block
+Fri Jan 12 21:10:34 AEDT 2018 org.joda.time.convert.StringConverter,50
+Fri Jan 12 21:10:37 AEDT 2018 Fri Jan 12 21:10:37 AEDT 2018 : org.joda.time.convert.StringConverter,51=>Find no block
+Fri Jan 12 21:10:39 AEDT 2018 org.joda.time.format.ISOPeriodFormat,66
+Fri Jan 12 21:19:51 AEDT 2018 org.joda.time.convert.AbstractConverter,38
+Fri Jan 12 21:19:53 AEDT 2018 Fri Jan 12 21:19:53 AEDT 2018 : org.joda.time.convert.AbstractConverter,39=>Find no block
+Fri Jan 12 21:19:56 AEDT 2018 org.joda.time.MutablePeriod,925
+Fri Jan 12 21:24:19 AEDT 2018 Fri Jan 12 21:24:19 AEDT 2018 : org.joda.time.MutablePeriod,926=>Find no block
+Fri Jan 12 21:24:21 AEDT 2018 org.joda.time.MutablePeriod,947
+Fri Jan 12 21:26:53 AEDT 2018 Fri Jan 12 21:26:53 AEDT 2018 : org.joda.time.MutablePeriod,948=>Find no block
+Fri Jan 12 21:26:55 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,1303
+Fri Jan 12 23:33:10 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,1520
+Fri Jan 12 23:36:12 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,1521
+Fri Jan 12 23:39:15 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,1523
+Fri Jan 12 23:41:52 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,500
+Fri Jan 12 23:45:33 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,501
+Fri Jan 12 23:45:33 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,555
+Fri Jan 12 23:50:47 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,652
+Fri Jan 12 23:52:00 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,552
+Fri Jan 12 23:54:29 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,1600
+Fri Jan 12 23:54:32 AEDT 2018 Fri Jan 12 23:54:32 AEDT 2018 : org.joda.time.format.PeriodFormatterBuilder,857=>Find no block
+Fri Jan 12 23:54:32 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,858
+Fri Jan 12 23:56:54 AEDT 2018 Fri Jan 12 23:56:54 AEDT 2018 : org.joda.time.format.PeriodFormatterBuilder,859=>Find no block
+Fri Jan 12 23:56:54 AEDT 2018 org.joda.time.convert.ConverterSet,266
+Fri Jan 12 23:58:49 AEDT 2018 org.joda.time.convert.ConverterSet,269
+Sat Jan 13 00:00:49 AEDT 2018 org.joda.time.convert.ConverterSet,271
+Sat Jan 13 00:00:50 AEDT 2018 org.joda.time.convert.ReadableIntervalConverter,113
+Sat Jan 13 00:00:51 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,898
+Sat Jan 13 00:00:52 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,901
+Sat Jan 13 00:01:03 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,592
+Sat Jan 13 00:04:25 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,593
+Sat Jan 13 00:04:25 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,605
+Sat Jan 13 00:05:05 AEDT 2018 org.joda.time.format.PeriodFormatterBuilder,606
+Timeout time : 18/01/13 00:09

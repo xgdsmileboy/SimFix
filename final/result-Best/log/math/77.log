@@ -1,0 +1,406 @@
+=================================================
+Project : math_77	start : 18/01/15 16:55
+Current failed test : org.apache.commons.math.linear.ArrayRealVectorTest::testBasicFunctions_purify_8 | 18/01/15 16:57
+Mon Jan 15 16:57:46 EST 2018 org.apache.commons.math.linear.ArrayRealVector,719
+Mon Jan 15 17:00:14 EST 2018 org.apache.commons.math.linear.ArrayRealVector,720
+Mon Jan 15 17:06:20 EST 2018 org.apache.commons.math.linear.ArrayRealVector,721
+Mon Jan 15 17:06:20 EST 2018 org.apache.commons.math.linear.ArrayRealVector,723
+Mon Jan 15 17:06:20 EST 2018 org.apache.commons.math.linear.ArrayRealVector,709
+Mon Jan 15 17:08:56 EST 2018 org.apache.commons.math.linear.ArrayRealVector,710
+Mon Jan 15 17:13:00 EST 2018 org.apache.commons.math.linear.ArrayRealVector,711
+Mon Jan 15 17:13:00 EST 2018 org.apache.commons.math.linear.ArrayRealVector,713
+Mon Jan 15 17:13:00 EST 2018 org.apache.commons.math.linear.ArrayRealVector,699
+Mon Jan 15 17:14:50 EST 2018 org.apache.commons.math.linear.ArrayRealVector,700
+Mon Jan 15 17:16:08 EST 2018 org.apache.commons.math.linear.ArrayRealVector,701
+Mon Jan 15 17:16:08 EST 2018 org.apache.commons.math.linear.ArrayRealVector,703
+Mon Jan 15 17:16:08 EST 2018 Mon Jan 15 17:16:08 EST 2018 : org.apache.commons.math.linear.ArrayRealVector,82=>Find no block
+Mon Jan 15 17:16:08 EST 2018 org.apache.commons.math.linear.ArrayRealVector,83
+Mon Jan 15 17:17:11 EST 2018 Mon Jan 15 17:17:11 EST 2018 : org.apache.commons.math.linear.ArrayRealVector,84=>Find no block
+Mon Jan 15 17:17:11 EST 2018 Mon Jan 15 17:17:11 EST 2018 : org.apache.commons.math.linear.AbstractRealVector,34=>Find no block
+Mon Jan 15 17:17:11 EST 2018 Mon Jan 15 17:17:11 EST 2018 : org.apache.commons.math.linear.AbstractRealVector,819=>Find no block
+Mon Jan 15 17:17:11 EST 2018 org.apache.commons.math.MathRuntimeException,434
+Mon Jan 15 17:17:12 EST 2018 org.apache.commons.math.MathRuntimeException,442
+Mon Jan 15 17:17:13 EST 2018 org.apache.commons.math.MathRuntimeException,448
+Mon Jan 15 17:17:14 EST 2018 Mon Jan 15 17:17:14 EST 2018 : org.apache.commons.math.MathRuntimeException,59=>Find no block
+Mon Jan 15 17:17:14 EST 2018 org.apache.commons.math.MathRuntimeException,60
+Mon Jan 15 17:17:25 EST 2018 org.apache.commons.math.MathRuntimeException,61
+Mon Jan 15 17:17:25 EST 2018 Mon Jan 15 17:17:25 EST 2018 : org.apache.commons.math.MathRuntimeException,62=>Find no block
+Mon Jan 15 17:17:25 EST 2018 org.apache.commons.math.MathRuntimeException,72
+Mon Jan 15 17:17:26 EST 2018 org.apache.commons.math.MathRuntimeException,73
+Mon Jan 15 17:17:26 EST 2018 org.apache.commons.math.MathRuntimeException,74
+Mon Jan 15 17:17:26 EST 2018 Mon Jan 15 17:17:26 EST 2018 : org.apache.commons.math.MathRuntimeException,75=>Find no block
+Mon Jan 15 17:17:26 EST 2018 org.apache.commons.math.MathRuntimeException,88
+Mon Jan 15 17:17:37 EST 2018 org.apache.commons.math.MathRuntimeException,89
+Mon Jan 15 17:17:37 EST 2018 org.apache.commons.math.MathRuntimeException,90
+Mon Jan 15 17:17:37 EST 2018 Mon Jan 15 17:17:37 EST 2018 : org.apache.commons.math.MathRuntimeException,91=>Find no block
+Mon Jan 15 17:17:37 EST 2018 org.apache.commons.math.MathRuntimeException,102
+Mon Jan 15 17:17:38 EST 2018 org.apache.commons.math.MathRuntimeException,104
+Mon Jan 15 17:17:39 EST 2018 org.apache.commons.math.MathRuntimeException,106
+Mon Jan 15 17:17:39 EST 2018 Mon Jan 15 17:17:39 EST 2018 : org.apache.commons.math.MathRuntimeException,111=>Find no block
+Mon Jan 15 17:17:40 EST 2018 Mon Jan 15 17:17:40 EST 2018 : org.apache.commons.math.MathRuntimeException,109=>Find no block
+Mon Jan 15 17:17:40 EST 2018 org.apache.commons.math.MathRuntimeException,115
+Mon Jan 15 17:17:40 EST 2018 org.apache.commons.math.MathRuntimeException,128
+Mon Jan 15 17:17:41 EST 2018 org.apache.commons.math.MathRuntimeException,136
+Mon Jan 15 17:17:42 EST 2018 org.apache.commons.math.MathRuntimeException,144
+Mon Jan 15 17:17:57 EST 2018 org.apache.commons.math.MathRuntimeException,154
+Mon Jan 15 17:17:58 EST 2018 org.apache.commons.math.MathRuntimeException,160
+Mon Jan 15 17:17:59 EST 2018 org.apache.commons.math.MathRuntimeException,166
+Mon Jan 15 17:18:00 EST 2018 org.apache.commons.math.MathRuntimeException,174
+Mon Jan 15 17:18:01 EST 2018 Mon Jan 15 17:18:01 EST 2018 : org.apache.commons.math.MathRuntimeException,175=>Find no block
+Mon Jan 15 17:18:01 EST 2018 Mon Jan 15 17:18:01 EST 2018 : org.apache.commons.math.MathRuntimeException,184=>Find no block
+Mon Jan 15 17:18:01 EST 2018 org.apache.commons.math.MathRuntimeException,185
+Mon Jan 15 17:18:02 EST 2018 org.apache.commons.math.MathRuntimeException,186
+Mon Jan 15 17:18:02 EST 2018 org.apache.commons.math.MathRuntimeException,188
+Mon Jan 15 17:18:03 EST 2018 Mon Jan 15 17:18:03 EST 2018 : org.apache.commons.math.MathRuntimeException,189=>Find no block
+Mon Jan 15 17:18:03 EST 2018 Mon Jan 15 17:18:03 EST 2018 : org.apache.commons.math.MathRuntimeException,190=>Find no block
+Mon Jan 15 17:18:03 EST 2018 org.apache.commons.math.MathRuntimeException,201
+Mon Jan 15 17:18:04 EST 2018 org.apache.commons.math.MathRuntimeException,230
+Mon Jan 15 17:18:05 EST 2018 org.apache.commons.math.MathRuntimeException,259
+Mon Jan 15 17:18:06 EST 2018 org.apache.commons.math.MathRuntimeException,291
+Mon Jan 15 17:18:29 EST 2018 org.apache.commons.math.MathRuntimeException,292
+Mon Jan 15 17:18:29 EST 2018 org.apache.commons.math.MathRuntimeException,293
+Mon Jan 15 17:18:29 EST 2018 org.apache.commons.math.MathRuntimeException,305
+Mon Jan 15 17:18:30 EST 2018 org.apache.commons.math.MathRuntimeException,333
+Mon Jan 15 17:18:54 EST 2018 org.apache.commons.math.MathRuntimeException,334
+Mon Jan 15 17:18:54 EST 2018 org.apache.commons.math.MathRuntimeException,335
+Mon Jan 15 17:18:54 EST 2018 org.apache.commons.math.MathRuntimeException,347
+Mon Jan 15 17:18:55 EST 2018 org.apache.commons.math.MathRuntimeException,376
+Mon Jan 15 17:18:56 EST 2018 org.apache.commons.math.MathRuntimeException,405
+Mon Jan 15 17:18:57 EST 2018 org.apache.commons.math.MathRuntimeException,434
+Mon Jan 15 17:18:57 EST 2018 org.apache.commons.math.MathRuntimeException,466
+Mon Jan 15 17:18:58 EST 2018 org.apache.commons.math.MathRuntimeException,492
+Mon Jan 15 17:18:59 EST 2018 org.apache.commons.math.MathRuntimeException,493
+Mon Jan 15 17:18:59 EST 2018 org.apache.commons.math.MathRuntimeException,495
+Mon Jan 15 17:18:59 EST 2018 org.apache.commons.math.MathRuntimeException,495
+Mon Jan 15 17:18:59 EST 2018 org.apache.commons.math.MathRuntimeException,503
+Mon Jan 15 17:19:05 EST 2018 org.apache.commons.math.MathRuntimeException,509
+Mon Jan 15 17:19:11 EST 2018 org.apache.commons.math.MathRuntimeException,201
+Mon Jan 15 17:19:11 EST 2018 org.apache.commons.math.MathRuntimeException,209
+Mon Jan 15 17:19:11 EST 2018 org.apache.commons.math.MathRuntimeException,215
+Mon Jan 15 17:19:11 EST 2018 org.apache.commons.math.FunctionEvaluationException,48
+Mon Jan 15 17:19:12 EST 2018 org.apache.commons.math.FunctionEvaluationException,49
+Mon Jan 15 17:19:12 EST 2018 Mon Jan 15 17:19:12 EST 2018 : org.apache.commons.math.FunctionEvaluationException,50=>Find no block
+Mon Jan 15 17:19:12 EST 2018 org.apache.commons.math.FunctionEvaluationException,60
+Mon Jan 15 17:20:40 EST 2018 org.apache.commons.math.FunctionEvaluationException,61
+Mon Jan 15 17:20:40 EST 2018 Mon Jan 15 17:20:40 EST 2018 : org.apache.commons.math.FunctionEvaluationException,62=>Find no block
+Mon Jan 15 17:20:40 EST 2018 org.apache.commons.math.FunctionEvaluationException,74
+Mon Jan 15 17:21:15 EST 2018 org.apache.commons.math.FunctionEvaluationException,75
+Mon Jan 15 17:21:15 EST 2018 Mon Jan 15 17:21:15 EST 2018 : org.apache.commons.math.FunctionEvaluationException,76=>Find no block
+Mon Jan 15 17:21:15 EST 2018 org.apache.commons.math.FunctionEvaluationException,88
+Mon Jan 15 17:22:08 EST 2018 org.apache.commons.math.FunctionEvaluationException,89
+Mon Jan 15 17:22:08 EST 2018 Mon Jan 15 17:22:08 EST 2018 : org.apache.commons.math.FunctionEvaluationException,90=>Find no block
+Mon Jan 15 17:22:08 EST 2018 org.apache.commons.math.FunctionEvaluationException,100
+Mon Jan 15 17:22:14 EST 2018 org.apache.commons.math.FunctionEvaluationException,101
+Mon Jan 15 17:22:14 EST 2018 Mon Jan 15 17:22:14 EST 2018 : org.apache.commons.math.FunctionEvaluationException,102=>Find no block
+Mon Jan 15 17:22:14 EST 2018 org.apache.commons.math.FunctionEvaluationException,112
+Mon Jan 15 17:23:47 EST 2018 org.apache.commons.math.FunctionEvaluationException,113
+Mon Jan 15 17:23:47 EST 2018 Mon Jan 15 17:23:47 EST 2018 : org.apache.commons.math.FunctionEvaluationException,114=>Find no block
+Mon Jan 15 17:23:47 EST 2018 org.apache.commons.math.FunctionEvaluationException,128
+Mon Jan 15 17:24:15 EST 2018 org.apache.commons.math.FunctionEvaluationException,129
+Mon Jan 15 17:24:15 EST 2018 Mon Jan 15 17:24:15 EST 2018 : org.apache.commons.math.FunctionEvaluationException,130=>Find no block
+Mon Jan 15 17:24:15 EST 2018 org.apache.commons.math.FunctionEvaluationException,144
+Mon Jan 15 17:25:09 EST 2018 org.apache.commons.math.FunctionEvaluationException,145
+Mon Jan 15 17:25:09 EST 2018 Mon Jan 15 17:25:09 EST 2018 : org.apache.commons.math.FunctionEvaluationException,146=>Find no block
+Mon Jan 15 17:25:09 EST 2018 org.apache.commons.math.FunctionEvaluationException,154
+Mon Jan 15 17:26:07 EST 2018 Mon Jan 15 17:26:07 EST 2018 : org.apache.commons.math.MathException,55=>Find no block
+Mon Jan 15 17:26:07 EST 2018 org.apache.commons.math.MathException,56
+Mon Jan 15 17:26:08 EST 2018 org.apache.commons.math.MathException,57
+Mon Jan 15 17:26:08 EST 2018 Mon Jan 15 17:26:08 EST 2018 : org.apache.commons.math.MathException,58=>Find no block
+Mon Jan 15 17:26:08 EST 2018 Mon Jan 15 17:26:08 EST 2018 : org.apache.commons.math.MathException,67=>Find no block
+Mon Jan 15 17:26:08 EST 2018 org.apache.commons.math.MathException,68
+Mon Jan 15 17:26:08 EST 2018 org.apache.commons.math.MathException,69
+Mon Jan 15 17:26:08 EST 2018 Mon Jan 15 17:26:08 EST 2018 : org.apache.commons.math.MathException,70=>Find no block
+Mon Jan 15 17:26:08 EST 2018 org.apache.commons.math.MathException,80
+Mon Jan 15 17:26:09 EST 2018 org.apache.commons.math.MathException,81
+Mon Jan 15 17:26:09 EST 2018 org.apache.commons.math.MathException,82
+Mon Jan 15 17:26:09 EST 2018 Mon Jan 15 17:26:09 EST 2018 : org.apache.commons.math.MathException,83=>Find no block
+Mon Jan 15 17:26:09 EST 2018 org.apache.commons.math.MathException,96
+Mon Jan 15 17:26:09 EST 2018 org.apache.commons.math.MathException,97
+Mon Jan 15 17:26:09 EST 2018 org.apache.commons.math.MathException,98
+Mon Jan 15 17:26:09 EST 2018 Mon Jan 15 17:26:09 EST 2018 : org.apache.commons.math.MathException,99=>Find no block
+Mon Jan 15 17:26:09 EST 2018 org.apache.commons.math.MathException,110
+Mon Jan 15 17:26:09 EST 2018 org.apache.commons.math.MathException,112
+Mon Jan 15 17:26:09 EST 2018 org.apache.commons.math.MathException,114
+Mon Jan 15 17:26:09 EST 2018 Mon Jan 15 17:26:09 EST 2018 : org.apache.commons.math.MathException,119=>Find no block
+Mon Jan 15 17:26:09 EST 2018 Mon Jan 15 17:26:09 EST 2018 : org.apache.commons.math.MathException,117=>Find no block
+Mon Jan 15 17:26:09 EST 2018 org.apache.commons.math.MathException,123
+Mon Jan 15 17:26:10 EST 2018 org.apache.commons.math.MathException,133
+Mon Jan 15 17:26:10 EST 2018 org.apache.commons.math.MathException,142
+Mon Jan 15 17:26:10 EST 2018 org.apache.commons.math.MathException,153
+Mon Jan 15 17:26:10 EST 2018 org.apache.commons.math.MathException,159
+Mon Jan 15 17:26:10 EST 2018 org.apache.commons.math.MathException,165
+Mon Jan 15 17:26:10 EST 2018 org.apache.commons.math.MathException,173
+Mon Jan 15 17:26:10 EST 2018 Mon Jan 15 17:26:10 EST 2018 : org.apache.commons.math.MathException,174=>Find no block
+Mon Jan 15 17:26:10 EST 2018 Mon Jan 15 17:26:10 EST 2018 : org.apache.commons.math.MathException,183=>Find no block
+Mon Jan 15 17:26:10 EST 2018 org.apache.commons.math.MathException,184
+Mon Jan 15 17:26:10 EST 2018 org.apache.commons.math.MathException,185
+Mon Jan 15 17:26:10 EST 2018 org.apache.commons.math.MathException,187
+Mon Jan 15 17:26:10 EST 2018 Mon Jan 15 17:26:10 EST 2018 : org.apache.commons.math.MathException,188=>Find no block
+Mon Jan 15 17:26:10 EST 2018 Mon Jan 15 17:26:10 EST 2018 : org.apache.commons.math.MathException,189=>Find no block
+Mon Jan 15 17:26:11 EST 2018 org.apache.commons.math.MathRuntimeException,305
+Mon Jan 15 17:26:11 EST 2018 org.apache.commons.math.MathRuntimeException,313
+Mon Jan 15 17:26:11 EST 2018 org.apache.commons.math.MathRuntimeException,319
+Mon Jan 15 17:26:11 EST 2018 org.apache.commons.math.MathRuntimeException,347
+Mon Jan 15 17:26:11 EST 2018 org.apache.commons.math.MathRuntimeException,355
+Mon Jan 15 17:26:11 EST 2018 org.apache.commons.math.MathRuntimeException,361
+Mon Jan 15 17:26:11 EST 2018 org.apache.commons.math.MathRuntimeException,376
+Mon Jan 15 17:26:11 EST 2018 org.apache.commons.math.MathRuntimeException,384
+Mon Jan 15 17:26:11 EST 2018 org.apache.commons.math.MathRuntimeException,390
+Mon Jan 15 17:26:11 EST 2018 org.apache.commons.math.MathRuntimeException,259
+Mon Jan 15 17:26:11 EST 2018 org.apache.commons.math.MathRuntimeException,267
+Mon Jan 15 17:26:11 EST 2018 org.apache.commons.math.MathRuntimeException,273
+Mon Jan 15 17:26:12 EST 2018 org.apache.commons.math.MathRuntimeException,230
+Mon Jan 15 17:26:12 EST 2018 org.apache.commons.math.MathRuntimeException,238
+Mon Jan 15 17:26:12 EST 2018 org.apache.commons.math.MathRuntimeException,244
+Mon Jan 15 17:26:12 EST 2018 org.apache.commons.math.MathRuntimeException,466
+Mon Jan 15 17:26:12 EST 2018 org.apache.commons.math.MathRuntimeException,474
+Mon Jan 15 17:26:12 EST 2018 org.apache.commons.math.MathRuntimeException,480
+Mon Jan 15 17:26:12 EST 2018 org.apache.commons.math.MathRuntimeException,405
+Mon Jan 15 17:26:12 EST 2018 org.apache.commons.math.MathRuntimeException,413
+Mon Jan 15 17:26:12 EST 2018 org.apache.commons.math.MathRuntimeException,419
+Mon Jan 15 17:26:12 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,57
+Mon Jan 15 17:26:13 EST 2018 Mon Jan 15 17:26:13 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,58=>Find no block
+Mon Jan 15 17:26:13 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,65
+Mon Jan 15 17:26:14 EST 2018 Mon Jan 15 17:26:14 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,66=>Find no block
+Mon Jan 15 17:26:15 EST 2018 Mon Jan 15 17:26:15 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,73=>Find no block
+Mon Jan 15 17:26:15 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,74
+Mon Jan 15 17:26:52 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,75
+Mon Jan 15 17:26:52 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,76
+Mon Jan 15 17:26:52 EST 2018 Mon Jan 15 17:26:52 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,77=>Find no block
+Mon Jan 15 17:26:52 EST 2018 Mon Jan 15 17:26:52 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,84=>Find no block
+Mon Jan 15 17:26:52 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,85
+Mon Jan 15 17:27:16 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,86
+Mon Jan 15 17:27:16 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,87
+Mon Jan 15 17:27:16 EST 2018 Mon Jan 15 17:27:16 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,88=>Find no block
+Mon Jan 15 17:27:16 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,96
+Mon Jan 15 17:27:33 EST 2018 Mon Jan 15 17:27:33 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,97=>Find no block
+Mon Jan 15 17:27:33 EST 2018 Mon Jan 15 17:27:33 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,105=>Find no block
+Mon Jan 15 17:27:33 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,106
+Mon Jan 15 17:28:19 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,107
+Mon Jan 15 17:28:19 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,108
+Mon Jan 15 17:28:19 EST 2018 Mon Jan 15 17:28:19 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,109=>Find no block
+Mon Jan 15 17:28:19 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,117
+Mon Jan 15 17:28:20 EST 2018 Mon Jan 15 17:28:20 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,118=>Find no block
+Mon Jan 15 17:28:20 EST 2018 Mon Jan 15 17:28:20 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,126=>Find no block
+Mon Jan 15 17:28:20 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,127
+Mon Jan 15 17:37:46 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,128
+Mon Jan 15 17:37:46 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,129
+Mon Jan 15 17:37:46 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,130
+Mon Jan 15 17:37:46 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,131
+Mon Jan 15 17:37:46 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,132
+Mon Jan 15 17:37:46 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,133
+Mon Jan 15 17:37:46 EST 2018 Mon Jan 15 17:37:46 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,136=>Find no block
+Mon Jan 15 17:37:46 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,144
+Mon Jan 15 17:37:46 EST 2018 Mon Jan 15 17:37:46 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,145=>Find no block
+Mon Jan 15 17:37:46 EST 2018 Mon Jan 15 17:37:46 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,153=>Find no block
+Mon Jan 15 17:37:46 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,154
+Mon Jan 15 17:44:45 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,155
+Mon Jan 15 17:44:45 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,156
+Mon Jan 15 17:44:45 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,157
+Mon Jan 15 17:44:45 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,158
+Mon Jan 15 17:44:45 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,159
+Mon Jan 15 17:44:45 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,160
+Mon Jan 15 17:44:45 EST 2018 Mon Jan 15 17:44:45 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,163=>Find no block
+Failed time : 18/01/15 17:44
+Current failed test : org.apache.commons.math.linear.SparseRealVectorTest::testBasicFunctions_purify_5 | 18/01/15 17:44
+Mon Jan 15 17:45:12 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,499
+Mon Jan 15 17:50:01 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,500
+Mon Jan 15 17:50:01 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,501
+Mon Jan 15 17:50:01 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,502
+Mon Jan 15 17:50:01 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,503
+Mon Jan 15 17:50:01 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,505
+Mon Jan 15 17:50:01 EST 2018 org.apache.commons.math.linear.AbstractRealVector,222
+Mon Jan 15 17:53:25 EST 2018 org.apache.commons.math.linear.AbstractRealVector,223
+Mon Jan 15 17:53:25 EST 2018 org.apache.commons.math.linear.AbstractRealVector,225
+Mon Jan 15 17:53:25 EST 2018 org.apache.commons.math.linear.AbstractRealVector,226
+Mon Jan 15 17:53:25 EST 2018 org.apache.commons.math.linear.AbstractRealVector,228
+Mon Jan 15 17:53:25 EST 2018 org.apache.commons.math.linear.AbstractRealVector,210
+Mon Jan 15 17:59:16 EST 2018 org.apache.commons.math.linear.AbstractRealVector,211
+Mon Jan 15 17:59:16 EST 2018 org.apache.commons.math.linear.AbstractRealVector,213
+Mon Jan 15 17:59:16 EST 2018 org.apache.commons.math.linear.AbstractRealVector,214
+Mon Jan 15 17:59:16 EST 2018 org.apache.commons.math.linear.AbstractRealVector,215
+Mon Jan 15 17:59:16 EST 2018 Mon Jan 15 17:59:16 EST 2018 : org.apache.commons.math.linear.AbstractRealVector,216=>Find no block
+Mon Jan 15 17:59:16 EST 2018 org.apache.commons.math.linear.AbstractRealVector,217
+Mon Jan 15 17:59:16 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,809
+Mon Jan 15 17:59:17 EST 2018 Mon Jan 15 17:59:17 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,825=>Find no block
+Mon Jan 15 17:59:17 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,826
+Mon Jan 15 17:59:28 EST 2018 Mon Jan 15 17:59:28 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,827=>Find no block
+Mon Jan 15 17:59:28 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,832
+Mon Jan 15 17:59:38 EST 2018 Mon Jan 15 17:59:38 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,863=>Find no block
+Mon Jan 15 17:59:38 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,864
+Mon Jan 15 17:59:39 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,865
+Mon Jan 15 17:59:39 EST 2018 Mon Jan 15 17:59:39 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,866=>Find no block
+Mon Jan 15 17:59:39 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,870
+Mon Jan 15 17:59:40 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,875
+Mon Jan 15 18:00:00 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,876
+Mon Jan 15 18:00:00 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,117
+Mon Jan 15 18:00:01 EST 2018 Mon Jan 15 18:00:01 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,118=>Find no block
+Mon Jan 15 18:00:01 EST 2018 Mon Jan 15 18:00:01 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,126=>Find no block
+Mon Jan 15 18:00:01 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,127
+Mon Jan 15 18:09:25 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,128
+Mon Jan 15 18:09:26 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,129
+Mon Jan 15 18:09:26 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,130
+Mon Jan 15 18:09:26 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,131
+Mon Jan 15 18:09:26 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,132
+Mon Jan 15 18:09:26 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,133
+Mon Jan 15 18:09:26 EST 2018 Mon Jan 15 18:09:26 EST 2018 : org.apache.commons.math.linear.OpenMapRealVector,136=>Find no block
+Mon Jan 15 18:09:26 EST 2018 org.apache.commons.math.linear.OpenMapRealVector,205
+Mon Jan 15 18:10:19 EST 2018 Mon Jan 15 18:10:19 EST 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,505=>Find no block
+Mon Jan 15 18:10:20 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,508
+Mon Jan 15 18:10:36 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,511
+Mon Jan 15 18:10:36 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,513
+Mon Jan 15 18:10:36 EST 2018 Mon Jan 15 18:10:36 EST 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,516=>Find no block
+Mon Jan 15 18:10:36 EST 2018 Mon Jan 15 18:10:36 EST 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,518=>Find no block
+Mon Jan 15 18:10:36 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,525
+Mon Jan 15 18:10:37 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,554
+Mon Jan 15 18:10:38 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,558
+Mon Jan 15 18:11:21 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,561
+Mon Jan 15 18:11:46 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,572
+Mon Jan 15 18:11:46 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,578
+Mon Jan 15 18:12:12 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,582
+Mon Jan 15 18:12:12 EST 2018 Mon Jan 15 18:12:12 EST 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,590=>Find no block
+Mon Jan 15 18:12:12 EST 2018 Mon Jan 15 18:12:12 EST 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,585=>Find no block
+Mon Jan 15 18:12:12 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,586
+Mon Jan 15 18:12:12 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,587
+Mon Jan 15 18:12:12 EST 2018 Mon Jan 15 18:12:12 EST 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,592=>Find no block
+Mon Jan 15 18:12:12 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,248
+Mon Jan 15 18:12:13 EST 2018 Mon Jan 15 18:12:13 EST 2018 : org.apache.commons.math.linear.RealVector,72=>Find no block
+Mon Jan 15 18:12:13 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,110
+Mon Jan 15 18:12:14 EST 2018 Mon Jan 15 18:12:14 EST 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,111=>Find no block
+Mon Jan 15 18:12:14 EST 2018 Mon Jan 15 18:12:14 EST 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,127=>Find no block
+Mon Jan 15 18:12:14 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,128
+Mon Jan 15 18:15:02 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,129
+Mon Jan 15 18:15:02 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,130
+Mon Jan 15 18:15:02 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,131
+Mon Jan 15 18:15:02 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,132
+Mon Jan 15 18:15:02 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,133
+Mon Jan 15 18:15:02 EST 2018 Mon Jan 15 18:15:02 EST 2018 : org.apache.commons.math.util.OpenIntToDoubleHashMap,134=>Find no block
+Mon Jan 15 18:15:02 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,160
+Mon Jan 15 18:15:03 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,163
+Mon Jan 15 18:15:18 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,164
+Mon Jan 15 18:15:18 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,165
+Mon Jan 15 18:15:18 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,166
+Mon Jan 15 18:15:18 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,266
+Mon Jan 15 18:15:19 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,279
+Mon Jan 15 18:17:41 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,280
+Mon Jan 15 18:17:41 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,281
+Mon Jan 15 18:17:41 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,282
+Mon Jan 15 18:17:41 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,417
+Mon Jan 15 18:19:05 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,418
+Mon Jan 15 18:19:05 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,419
+Mon Jan 15 18:21:23 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,420
+Mon Jan 15 18:22:09 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,425
+Mon Jan 15 18:24:16 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,426
+Mon Jan 15 18:26:58 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,427
+Mon Jan 15 18:32:42 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,428
+Mon Jan 15 18:32:42 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,429
+Mon Jan 15 18:32:42 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,430
+Mon Jan 15 18:32:42 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,433
+Mon Jan 15 18:32:42 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,435
+Mon Jan 15 18:35:36 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,476
+Mon Jan 15 18:35:37 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,485
+Mon Jan 15 18:36:07 EST 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,486
+Mon Jan 15 18:36:07 EST 2018 Mon Jan 15 18:36:07 EST 2018 : org.apache.commons.math.linear.AbstractRealVector,34=>Find no block
+Mon Jan 15 18:36:07 EST 2018 Mon Jan 15 18:36:07 EST 2018 : org.apache.commons.math.linear.AbstractRealVector,819=>Find no block
+Mon Jan 15 18:36:07 EST 2018 org.apache.commons.math.MathRuntimeException,434
+Mon Jan 15 18:36:08 EST 2018 org.apache.commons.math.MathRuntimeException,442
+Mon Jan 15 18:36:09 EST 2018 org.apache.commons.math.MathRuntimeException,448
+Mon Jan 15 18:36:10 EST 2018 Mon Jan 15 18:36:10 EST 2018 : org.apache.commons.math.MathRuntimeException,59=>Find no block
+Mon Jan 15 18:36:10 EST 2018 org.apache.commons.math.MathRuntimeException,60
+Mon Jan 15 18:36:21 EST 2018 org.apache.commons.math.MathRuntimeException,61
+Mon Jan 15 18:36:21 EST 2018 Mon Jan 15 18:36:21 EST 2018 : org.apache.commons.math.MathRuntimeException,62=>Find no block
+Mon Jan 15 18:36:21 EST 2018 org.apache.commons.math.MathRuntimeException,72
+Mon Jan 15 18:36:22 EST 2018 org.apache.commons.math.MathRuntimeException,73
+Mon Jan 15 18:36:22 EST 2018 org.apache.commons.math.MathRuntimeException,74
+Mon Jan 15 18:36:22 EST 2018 Mon Jan 15 18:36:22 EST 2018 : org.apache.commons.math.MathRuntimeException,75=>Find no block
+Mon Jan 15 18:36:22 EST 2018 org.apache.commons.math.MathRuntimeException,88
+Mon Jan 15 18:36:33 EST 2018 org.apache.commons.math.MathRuntimeException,89
+Mon Jan 15 18:36:33 EST 2018 org.apache.commons.math.MathRuntimeException,90
+Mon Jan 15 18:36:33 EST 2018 Mon Jan 15 18:36:33 EST 2018 : org.apache.commons.math.MathRuntimeException,91=>Find no block
+Mon Jan 15 18:36:33 EST 2018 org.apache.commons.math.MathRuntimeException,102
+Mon Jan 15 18:36:35 EST 2018 org.apache.commons.math.MathRuntimeException,104
+Mon Jan 15 18:36:36 EST 2018 org.apache.commons.math.MathRuntimeException,106
+Mon Jan 15 18:36:36 EST 2018 Mon Jan 15 18:36:36 EST 2018 : org.apache.commons.math.MathRuntimeException,111=>Find no block
+Mon Jan 15 18:36:36 EST 2018 Mon Jan 15 18:36:36 EST 2018 : org.apache.commons.math.MathRuntimeException,109=>Find no block
+Mon Jan 15 18:36:36 EST 2018 org.apache.commons.math.MathRuntimeException,115
+Mon Jan 15 18:36:36 EST 2018 org.apache.commons.math.MathRuntimeException,128
+Mon Jan 15 18:36:37 EST 2018 org.apache.commons.math.MathRuntimeException,136
+Mon Jan 15 18:36:38 EST 2018 org.apache.commons.math.MathRuntimeException,144
+Mon Jan 15 18:36:55 EST 2018 org.apache.commons.math.MathRuntimeException,154
+Mon Jan 15 18:36:56 EST 2018 org.apache.commons.math.MathRuntimeException,160
+Mon Jan 15 18:36:57 EST 2018 org.apache.commons.math.MathRuntimeException,166
+Mon Jan 15 18:36:58 EST 2018 org.apache.commons.math.MathRuntimeException,174
+Mon Jan 15 18:36:59 EST 2018 Mon Jan 15 18:36:59 EST 2018 : org.apache.commons.math.MathRuntimeException,175=>Find no block
+Mon Jan 15 18:36:59 EST 2018 Mon Jan 15 18:36:59 EST 2018 : org.apache.commons.math.MathRuntimeException,184=>Find no block
+Mon Jan 15 18:36:59 EST 2018 org.apache.commons.math.MathRuntimeException,185
+Mon Jan 15 18:37:00 EST 2018 org.apache.commons.math.MathRuntimeException,186
+Mon Jan 15 18:37:00 EST 2018 org.apache.commons.math.MathRuntimeException,188
+Mon Jan 15 18:37:00 EST 2018 Mon Jan 15 18:37:00 EST 2018 : org.apache.commons.math.MathRuntimeException,189=>Find no block
+Mon Jan 15 18:37:00 EST 2018 Mon Jan 15 18:37:00 EST 2018 : org.apache.commons.math.MathRuntimeException,190=>Find no block
+Mon Jan 15 18:37:00 EST 2018 org.apache.commons.math.MathRuntimeException,201
+Mon Jan 15 18:37:01 EST 2018 org.apache.commons.math.MathRuntimeException,230
+Mon Jan 15 18:37:02 EST 2018 org.apache.commons.math.MathRuntimeException,259
+Mon Jan 15 18:37:03 EST 2018 org.apache.commons.math.MathRuntimeException,291
+Mon Jan 15 18:37:27 EST 2018 org.apache.commons.math.MathRuntimeException,292
+Mon Jan 15 18:37:27 EST 2018 org.apache.commons.math.MathRuntimeException,293
+Mon Jan 15 18:37:27 EST 2018 org.apache.commons.math.MathRuntimeException,305
+Mon Jan 15 18:37:28 EST 2018 org.apache.commons.math.MathRuntimeException,333
+Mon Jan 15 18:37:51 EST 2018 org.apache.commons.math.MathRuntimeException,334
+Mon Jan 15 18:37:51 EST 2018 org.apache.commons.math.MathRuntimeException,335
+Mon Jan 15 18:37:51 EST 2018 org.apache.commons.math.MathRuntimeException,347
+Mon Jan 15 18:37:52 EST 2018 org.apache.commons.math.MathRuntimeException,376
+Mon Jan 15 18:37:53 EST 2018 org.apache.commons.math.MathRuntimeException,405
+Mon Jan 15 18:37:54 EST 2018 org.apache.commons.math.MathRuntimeException,434
+Mon Jan 15 18:37:54 EST 2018 org.apache.commons.math.MathRuntimeException,466
+Mon Jan 15 18:37:55 EST 2018 org.apache.commons.math.MathRuntimeException,492
+Mon Jan 15 18:37:56 EST 2018 org.apache.commons.math.MathRuntimeException,493
+Mon Jan 15 18:37:56 EST 2018 org.apache.commons.math.MathRuntimeException,495
+Mon Jan 15 18:37:56 EST 2018 org.apache.commons.math.MathRuntimeException,495
+Mon Jan 15 18:37:56 EST 2018 org.apache.commons.math.MathRuntimeException,503
+Mon Jan 15 18:38:02 EST 2018 org.apache.commons.math.MathRuntimeException,509
+Mon Jan 15 18:38:08 EST 2018 org.apache.commons.math.MathRuntimeException,201
+Mon Jan 15 18:38:08 EST 2018 org.apache.commons.math.MathRuntimeException,209
+Mon Jan 15 18:38:08 EST 2018 org.apache.commons.math.MathRuntimeException,215
+Mon Jan 15 18:38:08 EST 2018 org.apache.commons.math.FunctionEvaluationException,48
+Mon Jan 15 18:38:09 EST 2018 org.apache.commons.math.FunctionEvaluationException,49
+Mon Jan 15 18:38:09 EST 2018 Mon Jan 15 18:38:09 EST 2018 : org.apache.commons.math.FunctionEvaluationException,50=>Find no block
+Mon Jan 15 18:38:09 EST 2018 org.apache.commons.math.FunctionEvaluationException,60
+Mon Jan 15 18:39:39 EST 2018 org.apache.commons.math.FunctionEvaluationException,61
+Mon Jan 15 18:39:39 EST 2018 Mon Jan 15 18:39:39 EST 2018 : org.apache.commons.math.FunctionEvaluationException,62=>Find no block
+Mon Jan 15 18:39:39 EST 2018 org.apache.commons.math.FunctionEvaluationException,74
+Mon Jan 15 18:40:14 EST 2018 org.apache.commons.math.FunctionEvaluationException,75
+Mon Jan 15 18:40:14 EST 2018 Mon Jan 15 18:40:14 EST 2018 : org.apache.commons.math.FunctionEvaluationException,76=>Find no block
+Mon Jan 15 18:40:14 EST 2018 org.apache.commons.math.FunctionEvaluationException,88
+Mon Jan 15 18:41:07 EST 2018 org.apache.commons.math.FunctionEvaluationException,89
+Mon Jan 15 18:41:07 EST 2018 Mon Jan 15 18:41:07 EST 2018 : org.apache.commons.math.FunctionEvaluationException,90=>Find no block
+Mon Jan 15 18:41:07 EST 2018 org.apache.commons.math.FunctionEvaluationException,100
+Mon Jan 15 18:41:13 EST 2018 org.apache.commons.math.FunctionEvaluationException,101
+Mon Jan 15 18:41:13 EST 2018 Mon Jan 15 18:41:13 EST 2018 : org.apache.commons.math.FunctionEvaluationException,102=>Find no block
+Mon Jan 15 18:41:13 EST 2018 org.apache.commons.math.FunctionEvaluationException,112
+Mon Jan 15 18:42:47 EST 2018 org.apache.commons.math.FunctionEvaluationException,113
+Mon Jan 15 18:42:47 EST 2018 Mon Jan 15 18:42:47 EST 2018 : org.apache.commons.math.FunctionEvaluationException,114=>Find no block
+Mon Jan 15 18:42:47 EST 2018 org.apache.commons.math.FunctionEvaluationException,128
+Mon Jan 15 18:43:14 EST 2018 org.apache.commons.math.FunctionEvaluationException,129
+Mon Jan 15 18:43:14 EST 2018 Mon Jan 15 18:43:14 EST 2018 : org.apache.commons.math.FunctionEvaluationException,130=>Find no block
+Mon Jan 15 18:43:14 EST 2018 org.apache.commons.math.FunctionEvaluationException,144
+Mon Jan 15 18:44:07 EST 2018 org.apache.commons.math.FunctionEvaluationException,145
+Mon Jan 15 18:44:07 EST 2018 Mon Jan 15 18:44:07 EST 2018 : org.apache.commons.math.FunctionEvaluationException,146=>Find no block
+Mon Jan 15 18:44:07 EST 2018 org.apache.commons.math.FunctionEvaluationException,154
+Mon Jan 15 18:45:05 EST 2018 Mon Jan 15 18:45:05 EST 2018 : org.apache.commons.math.MathException,55=>Find no block
+Mon Jan 15 18:45:05 EST 2018 org.apache.commons.math.MathException,56
+Mon Jan 15 18:45:06 EST 2018 org.apache.commons.math.MathException,57
+Mon Jan 15 18:45:06 EST 2018 Mon Jan 15 18:45:06 EST 2018 : org.apache.commons.math.MathException,58=>Find no block
+Mon Jan 15 18:45:06 EST 2018 Mon Jan 15 18:45:06 EST 2018 : org.apache.commons.math.MathException,67=>Find no block
+Mon Jan 15 18:45:07 EST 2018 org.apache.commons.math.MathException,68
+Mon Jan 15 18:45:07 EST 2018 org.apache.commons.math.MathException,69
+Mon Jan 15 18:45:07 EST 2018 Mon Jan 15 18:45:07 EST 2018 : org.apache.commons.math.MathException,70=>Find no block
+Mon Jan 15 18:45:07 EST 2018 org.apache.commons.math.MathException,80
+Mon Jan 15 18:45:07 EST 2018 org.apache.commons.math.MathException,81
+Mon Jan 15 18:45:07 EST 2018 org.apache.commons.math.MathException,82
+Mon Jan 15 18:45:07 EST 2018 Mon Jan 15 18:45:07 EST 2018 : org.apache.commons.math.MathException,83=>Find no block
+Mon Jan 15 18:45:07 EST 2018 org.apache.commons.math.MathException,96
+Mon Jan 15 18:45:07 EST 2018 org.apache.commons.math.MathException,97
+Mon Jan 15 18:45:07 EST 2018 org.apache.commons.math.MathException,98
+Mon Jan 15 18:45:07 EST 2018 Mon Jan 15 18:45:07 EST 2018 : org.apache.commons.math.MathException,99=>Find no block
+Mon Jan 15 18:45:07 EST 2018 org.apache.commons.math.MathException,110
+Failed time : 18/01/15 18:45

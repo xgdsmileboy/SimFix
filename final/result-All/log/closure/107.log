@@ -1,0 +1,70 @@
+=================================================
+Project : closure_107	start : 18/01/12 23:27
+Current failed test : com.google.javascript.jscomp.CommandLineRunnerTest::testGetMsgWiringNoWarnings | 18/01/12 23:27
+Fri Jan 12 23:28:09 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,259
+Fri Jan 12 23:38:36 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,260
+Fri Jan 12 23:38:37 AEDT 2018 Fri Jan 12 23:38:37 AEDT 2018 : com.google.javascript.jscomp.JsMessageVisitor,276=>Find no block
+Fri Jan 12 23:38:38 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,277
+Sat Jan 13 00:15:05 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,279
+Sat Jan 13 00:15:06 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,406
+Sat Jan 13 00:15:13 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,939
+Sat Jan 13 00:20:23 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,940
+Sat Jan 13 00:20:24 AEDT 2018 Sat Jan 13 00:20:24 AEDT 2018 : com.google.javascript.jscomp.JsMessageVisitor,941=>Find no block
+Sat Jan 13 00:20:25 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,944
+Sat Jan 13 00:21:47 AEDT 2018 com.google.javascript.jscomp.BasicErrorManager,170
+Sat Jan 13 00:23:05 AEDT 2018 com.google.javascript.rhino.JSDocInfo,1211
+Sat Jan 13 00:25:07 AEDT 2018 com.google.javascript.rhino.JSDocInfo,1215
+Sat Jan 13 00:26:23 AEDT 2018 com.google.javascript.rhino.JSDocInfo,1216
+Sat Jan 13 00:26:25 AEDT 2018 Sat Jan 13 00:26:25 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,1217=>Find no block
+Sat Jan 13 00:26:26 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,425
+Sat Jan 13 01:14:55 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,430
+Sat Jan 13 01:14:57 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,433
+Sat Jan 13 01:14:58 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,435
+Sat Jan 13 01:14:59 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,436
+Sat Jan 13 01:15:01 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,437
+Sat Jan 13 01:15:02 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1594
+Sat Jan 13 01:19:55 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,120
+Sat Jan 13 01:20:43 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,178
+Sat Jan 13 01:21:18 AEDT 2018 Sat Jan 13 01:21:18 AEDT 2018 : com.google.javascript.rhino.JSDocInfoBuilder,185=>Find no block
+Sat Jan 13 01:21:19 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,645
+Sat Jan 13 01:26:03 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,646
+Sat Jan 13 01:26:04 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,647
+Sat Jan 13 01:26:06 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,648
+Sat Jan 13 01:26:10 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,249
+Sat Jan 13 01:40:43 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,257
+Sat Jan 13 01:55:11 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,264
+Sat Jan 13 02:20:49 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,266
+Sat Jan 13 02:23:20 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,268
+Sat Jan 13 02:51:00 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,271
+Sat Jan 13 03:18:46 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,272
+Sat Jan 13 03:18:47 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,388
+Sat Jan 13 03:22:34 AEDT 2018 Sat Jan 13 03:22:34 AEDT 2018 : com.google.javascript.jscomp.JsMessageVisitor,389=>Find no block
+Sat Jan 13 03:22:36 AEDT 2018 com.google.javascript.jscomp.JsMessageVisitor,864
+Sat Jan 13 03:23:13 AEDT 2018 Sat Jan 13 03:23:13 AEDT 2018 : com.google.javascript.jscomp.JsMessage,325=>Find no block
+Sat Jan 13 03:23:14 AEDT 2018 Sat Jan 13 03:23:14 AEDT 2018 : com.google.javascript.jscomp.JsMessage,315=>Find no block
+Sat Jan 13 03:23:15 AEDT 2018 Sat Jan 13 03:23:15 AEDT 2018 : com.google.javascript.jscomp.JsMessage,316=>Find no block
+Sat Jan 13 03:23:17 AEDT 2018 com.google.javascript.jscomp.JsMessage,326
+Sat Jan 13 03:23:53 AEDT 2018 Sat Jan 13 03:23:53 AEDT 2018 : com.google.javascript.jscomp.JsMessage,327=>Find no block
+Sat Jan 13 03:23:54 AEDT 2018 Sat Jan 13 03:23:54 AEDT 2018 : com.google.javascript.jscomp.JsMessage,296=>Find no block
+Sat Jan 13 03:23:56 AEDT 2018 com.google.javascript.jscomp.JsMessage,331
+Sat Jan 13 03:24:23 AEDT 2018 com.google.javascript.jscomp.JsMessage,347
+Sat Jan 13 03:24:54 AEDT 2018 com.google.javascript.jscomp.JsMessage,348
+Sat Jan 13 03:24:55 AEDT 2018 com.google.javascript.jscomp.SourceFile,108
+Sat Jan 13 03:25:01 AEDT 2018 Sat Jan 13 03:25:01 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,1423=>Find no block
+Sat Jan 13 03:25:02 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1424
+Sat Jan 13 03:28:49 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1425
+Sat Jan 13 03:28:50 AEDT 2018 Sat Jan 13 03:28:50 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,1426=>Find no block
+Sat Jan 13 03:28:52 AEDT 2018 Sat Jan 13 03:28:52 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,1419=>Find no block
+Sat Jan 13 03:28:53 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1470
+Sat Jan 13 03:29:04 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1504
+Sat Jan 13 03:33:56 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1509
+Sat Jan 13 03:41:42 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1510
+Sat Jan 13 03:44:46 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1511
+Sat Jan 13 03:48:50 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1514
+Sat Jan 13 03:54:19 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1515
+Sat Jan 13 03:54:48 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1516
+Sat Jan 13 03:54:50 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1519
+Sat Jan 13 04:01:18 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1520
+Sat Jan 13 04:10:46 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1522
+Sat Jan 13 04:27:22 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1523
+Timeout time : 18/01/13 04:28

@@ -1,0 +1,245 @@
+=================================================
+Project : math_1	start : 18/01/14 01:26
+Current failed test : org.apache.commons.math3.fraction.BigFractionTest::testDigitLimitConstructor_purify_1 | 18/01/14 01:29
+Sun Jan 14 01:30:44 AEDT 2018 Sun Jan 14 01:30:44 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalStateException,45=>Find no block
+Sun Jan 14 01:30:46 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,46
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+context=new ExceptionContext(this);
+context.addMessage(LocalizedFormats.CONTRACTION_CRITERIA_SMALLER_THAN_ONE,args);
+
+Time : 18/01/14 01:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.2183170883849714 : [/home/hz985/jiajun/d4j/projects/math/math_1_buggy/src/main/java/org/apache/commons/math3/exception/MathIllegalStateException.java=>0,0]
+if(contraction<=1){
+ final NumberIsTooSmallException e=new NumberIsTooSmallException(contraction,1,false);
+e.getContext().addMessage(LocalizedFormats.CONTRACTION_CRITERIA_SMALLER_THAN_ONE,contraction);
+throw e;
+}
+
+Time : 18/01/14 01:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_1_buggy/src/main/java/org/apache/commons/math3/exception/MathIllegalStateException.java=>46,47]
+context=new ExceptionContext(this);
+context.addMessage(pattern,args);
+
+Time : 18/01/14 01:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_1_buggy/src/main/java/org/apache/commons/math3/exception/MathIllegalStateException.java=>46,47]
+context=new ExceptionContext(this);
+context.addMessage(LocalizedFormats.CONTRACTION_CRITERIA_SMALLER_THAN_ONE,args);
+
+Time : 18/01/14 01:34
+----------------------------------------
+Success time : 18/01/14 01:34
+Current failed test : org.apache.commons.math3.fraction.BigFractionTest::testDigitLimitConstructor_purify_8 | 18/01/14 01:34
+Sun Jan 14 01:36:20 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,80
+Sun Jan 14 01:37:20 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,86
+Sun Jan 14 01:38:14 AEDT 2018 org.apache.commons.math3.exception.util.LocalizedFormats,382
+Sun Jan 14 01:42:39 AEDT 2018 org.apache.commons.math3.exception.util.LocalizedFormats,383
+Sun Jan 14 01:42:40 AEDT 2018 Sun Jan 14 01:42:40 AEDT 2018 : org.apache.commons.math3.exception.util.LocalizedFormats,390=>Find no block
+Sun Jan 14 01:42:43 AEDT 2018 org.apache.commons.math3.exception.util.LocalizedFormats,396
+Sun Jan 14 01:42:45 AEDT 2018 org.apache.commons.math3.fraction.BigFraction,306
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((n<maxIterations)&&(FastMath.abs(value-value)>epsilon)){
+throw new FractionConversionException(value,p2,q2);
+}
+
+Time : 18/01/14 01:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.3059069600907303 : [/home/hz985/jiajun/d4j/projects/math/math_1_buggy/src/main/java/org/apache/commons/math3/fraction/BigFraction.java=>0,0]
+if((n<maxIterations)&&(FastMath.abs(convergent-value)>epsilon)){
+p0=p1;
+p1=p2;
+q0=q1;
+q1=q2;
+a0=a1;
+r0=r1;
+}else {
+stop=true;
+}
+
+Time : 18/01/14 01:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_1_buggy/src/main/java/org/apache/commons/math3/fraction/BigFraction.java=>303,307]
+if((p2>overflow)||(q2>overflow)){
+throw new FractionConversionException(value,p2,q2);
+}
+
+Time : 18/01/14 01:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_1_buggy/src/main/java/org/apache/commons/math3/fraction/BigFraction.java=>303,307]
+if((n<maxIterations)&&(FastMath.abs(value-value)>epsilon)){
+throw new FractionConversionException(value,p2,q2);
+}
+
+Time : 18/01/14 01:47
+----------------------------------------
+Success time : 18/01/14 01:47
+Current failed test : org.apache.commons.math3.fraction.FractionTest::testDigitLimitConstructor_purify_8 | 18/01/14 01:47
+Sun Jan 14 01:49:00 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,80
+Sun Jan 14 01:49:57 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,86
+Sun Jan 14 01:50:48 AEDT 2018 org.apache.commons.math3.exception.util.LocalizedFormats,382
+Sun Jan 14 01:54:44 AEDT 2018 org.apache.commons.math3.exception.util.LocalizedFormats,383
+Sun Jan 14 01:54:46 AEDT 2018 Sun Jan 14 01:54:46 AEDT 2018 : org.apache.commons.math3.exception.util.LocalizedFormats,390=>Find no block
+Sun Jan 14 01:54:48 AEDT 2018 org.apache.commons.math3.exception.util.LocalizedFormats,396
+Sun Jan 14 01:54:49 AEDT 2018 org.apache.commons.math3.fraction.Fraction,215
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((FastMath.abs(p2)>overflow)&&q2<maxDenominator){
+throw new FractionConversionException(value,p2,q2);
+}
+
+Time : 18/01/14 01:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((q2==0)||(overflow==0)){
+throw new FractionConversionException(value,p2,q2);
+}
+
+Time : 18/01/14 02:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((q2==0)||(overflow==0)){
+throw new MathArithmeticException(LocalizedFormats.GCD_OVERFLOW_64_BITS,p2,q1);
+}
+
+Time : 18/01/14 02:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((FastMath.abs(value)<=DEFAULT_EPSILON&&DEFAULT_EPSILON<=2.0)){
+throw new FractionConversionException(value,p2,q2);
+}
+
+Time : 18/01/14 02:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((FastMath.abs(value)>overflow)||DEFAULT_EPSILON<=DEFAULT_EPSILON*DEFAULT_EPSILON){
+throw new FractionConversionException(value,p2,q2);
+}
+
+Time : 18/01/14 02:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(stop&&(FastMath.abs(DEFAULT_EPSILON-DEFAULT_EPSILON)<=DEFAULT_EPSILON)){
+throw new FractionConversionException(value,p2,q2);
+}
+
+Time : 18/01/14 02:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(stop&&(FastMath.abs(q2)>overflow)){
+throw new FractionConversionException(value,p2,q2);
+}
+
+Time : 18/01/14 02:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(value)<=0.1*DEFAULT_EPSILON||(DEFAULT_EPSILON==0&&value<=DEFAULT_EPSILON&&DEFAULT_EPSILON<0)){
+throw new FractionConversionException(value,p2,q2);
+}
+
+Time : 18/01/14 02:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((FastMath.abs(DEFAULT_EPSILON)>overflow)||DEFAULT_EPSILON<=DEFAULT_EPSILON*DEFAULT_EPSILON){
+throw new FractionConversionException(value,p2,q2);
+}
+
+Time : 18/01/14 02:23
+----------------------------------------
+Sun Jan 14 02:28:07 AEDT 2018 org.apache.commons.math3.fraction.FractionConversionException,53
+Sun Jan 14 02:28:28 AEDT 2018 Sun Jan 14 02:28:28 AEDT 2018 : org.apache.commons.math3.fraction.FractionConversionException,54=>Find no block
+Sun Jan 14 02:28:29 AEDT 2018 Sun Jan 14 02:28:29 AEDT 2018 : org.apache.commons.math3.exception.ConvergenceException,48=>Find no block
+Sun Jan 14 02:28:31 AEDT 2018 org.apache.commons.math3.exception.ConvergenceException,49
+Sun Jan 14 02:29:44 AEDT 2018 Sun Jan 14 02:29:44 AEDT 2018 : org.apache.commons.math3.exception.ConvergenceException,50=>Find no block
+Sun Jan 14 02:29:46 AEDT 2018 org.apache.commons.math3.fraction.Fraction,144
+Sun Jan 14 02:30:41 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,69
+Sun Jan 14 02:30:47 AEDT 2018 Sun Jan 14 02:30:47 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalStateException,70=>Find no block
+Sun Jan 14 02:30:50 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,74
+Sun Jan 14 02:30:56 AEDT 2018 Sun Jan 14 02:30:56 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalStateException,45=>Find no block
+Sun Jan 14 02:30:58 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,46
+Sun Jan 14 02:31:57 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,47
+Sun Jan 14 02:31:59 AEDT 2018 Sun Jan 14 02:31:59 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalStateException,48=>Find no block
+Sun Jan 14 02:32:01 AEDT 2018 org.apache.commons.math3.fraction.Fraction,220
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(n<maxIterations&&FastMath.abs(convergent-value)>epsilon&&r0<=value){
+p0=p1;
+p1=p2;
+q0=q1;
+q1=q2;
+a0=a1;
+r0=r1;
+}else {
+stop=true;
+}
+
+Time : 18/01/14 02:38
+----------------------------------------
+Sun Jan 14 02:49:10 AEDT 2018 org.apache.commons.math3.fraction.Fraction,221
+Sun Jan 14 02:49:12 AEDT 2018 org.apache.commons.math3.fraction.Fraction,222
+Sun Jan 14 02:49:13 AEDT 2018 org.apache.commons.math3.fraction.Fraction,223
+Sun Jan 14 02:49:16 AEDT 2018 org.apache.commons.math3.fraction.Fraction,224
+Sun Jan 14 02:49:17 AEDT 2018 org.apache.commons.math3.fraction.Fraction,225
+Sun Jan 14 02:49:20 AEDT 2018 org.apache.commons.math3.fraction.Fraction,195
+Sun Jan 14 03:00:49 AEDT 2018 org.apache.commons.math3.fraction.Fraction,196
+Sun Jan 14 03:04:43 AEDT 2018 org.apache.commons.math3.fraction.Fraction,197
+Sun Jan 14 03:08:41 AEDT 2018 org.apache.commons.math3.fraction.Fraction,198
+Sun Jan 14 03:15:06 AEDT 2018 org.apache.commons.math3.fraction.Fraction,200
+Sun Jan 14 03:15:13 AEDT 2018 org.apache.commons.math3.fraction.Fraction,201
+Sun Jan 14 03:19:59 AEDT 2018 org.apache.commons.math3.fraction.Fraction,203
+Sun Jan 14 03:22:58 AEDT 2018 org.apache.commons.math3.fraction.Fraction,204
+Sun Jan 14 03:23:00 AEDT 2018 org.apache.commons.math3.fraction.Fraction,206
+Timeout time : 18/01/14 03:28

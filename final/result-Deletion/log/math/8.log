@@ -1,0 +1,51 @@
+=================================================
+Project : math_8	start : 18/01/15 19:32
+Current failed test : org.apache.commons.math3.distribution.DiscreteRealDistributionTest::testIssue942 | 18/01/15 19:33
+Mon Jan 15 19:35:37 AEDT 2018 org.apache.commons.math3.distribution.DiscreteDistribution,69
+Mon Jan 15 19:35:52 AEDT 2018 Mon Jan 15 19:35:52 AEDT 2018 : org.apache.commons.math3.distribution.DiscreteDistribution,70=>Find no block
+Mon Jan 15 19:35:58 AEDT 2018 org.apache.commons.math3.distribution.DiscreteDistribution,182
+Mon Jan 15 19:38:04 AEDT 2018 org.apache.commons.math3.distribution.DiscreteDistribution,187
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=sampleSize;i<sampleSize;i++){
+out[i]=sample();
+}
+
+Time : 18/01/15 19:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.5322446312110585 : [/home/hz985/jiajun/d4j/projects/math/math_8_buggy/src/main/java/org/apache/commons/math3/distribution/DiscreteDistribution.java=>0,0]
+for(int i=numPoints-1;i>=0;i--){
+if(!taken[i]){
+nextPointIndex=i;
+break;
+}
+}
+
+Time : 18/01/15 19:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_8_buggy/src/main/java/org/apache/commons/math3/distribution/DiscreteDistribution.java=>189,191]
+for(int i=0;i<sampleSize;i++){
+out[i]=sample();
+}
+
+Time : 18/01/15 19:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_8_buggy/src/main/java/org/apache/commons/math3/distribution/DiscreteDistribution.java=>189,191]
+for(int i=sampleSize;i<sampleSize;i++){
+out[i]=sample();
+}
+
+Time : 18/01/15 19:50
+----------------------------------------
+Success time : 18/01/15 19:50

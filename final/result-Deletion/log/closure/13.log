@@ -1,0 +1,116 @@
+=================================================
+Project : closure_13	start : 18/01/15 13:48
+Current failed test : com.google.javascript.jscomp.IntegrationTest::testIssue787 | 18/01/15 13:49
+Mon Jan 15 13:49:35 AEDT 2018 com.google.javascript.rhino.Node,125
+Mon Jan 15 13:49:47 AEDT 2018 com.google.javascript.rhino.Node,129
+Mon Jan 15 13:49:59 AEDT 2018 com.google.javascript.rhino.Node,141
+Mon Jan 15 13:50:09 AEDT 2018 com.google.javascript.rhino.Node,143
+Mon Jan 15 13:50:20 AEDT 2018 com.google.javascript.rhino.Node,958
+Mon Jan 15 14:12:02 AEDT 2018 com.google.javascript.rhino.Node,962
+Mon Jan 15 14:12:03 AEDT 2018 com.google.javascript.rhino.Node,965
+Mon Jan 15 14:12:04 AEDT 2018 com.google.javascript.rhino.Node,1011
+Mon Jan 15 14:12:09 AEDT 2018 com.google.javascript.rhino.Node,1016
+Mon Jan 15 14:12:14 AEDT 2018 com.google.javascript.rhino.Node,1017
+Mon Jan 15 14:12:16 AEDT 2018 com.google.javascript.rhino.Node,1018
+Mon Jan 15 14:12:17 AEDT 2018 com.google.javascript.rhino.Node,1025
+Mon Jan 15 14:12:22 AEDT 2018 Mon Jan 15 14:12:22 AEDT 2018 : com.google.javascript.rhino.Node,1026=>Find no block
+Mon Jan 15 14:12:23 AEDT 2018 com.google.javascript.rhino.Node,1030
+Mon Jan 15 14:18:10 AEDT 2018 com.google.javascript.rhino.Node,1031
+Mon Jan 15 14:18:11 AEDT 2018 com.google.javascript.rhino.Node,1033
+Mon Jan 15 15:11:46 AEDT 2018 com.google.javascript.rhino.Node,1034
+Mon Jan 15 15:11:48 AEDT 2018 Mon Jan 15 15:11:48 AEDT 2018 : com.google.javascript.rhino.Node,1035=>Find no block
+Mon Jan 15 15:11:49 AEDT 2018 com.google.javascript.rhino.Node,1036
+Mon Jan 15 15:11:51 AEDT 2018 com.google.javascript.rhino.Node,1038
+Mon Jan 15 15:11:52 AEDT 2018 Mon Jan 15 15:11:52 AEDT 2018 : com.google.javascript.rhino.Node,1037=>Find no block
+Mon Jan 15 15:11:53 AEDT 2018 Mon Jan 15 15:11:53 AEDT 2018 : com.google.javascript.rhino.Node,1040=>Find no block
+Mon Jan 15 15:11:55 AEDT 2018 com.google.javascript.rhino.Node,1430
+Mon Jan 15 15:12:00 AEDT 2018 com.google.javascript.rhino.Node,1446
+Mon Jan 15 15:12:04 AEDT 2018 com.google.javascript.rhino.Node,1459
+Mon Jan 15 15:12:08 AEDT 2018 com.google.javascript.jscomp.DataFlowAnalysis,297
+Mon Jan 15 15:15:51 AEDT 2018 com.google.javascript.jscomp.DataFlowAnalysis,298
+Mon Jan 15 15:15:53 AEDT 2018 com.google.javascript.jscomp.DataFlowAnalysis,299
+Mon Jan 15 15:15:54 AEDT 2018 com.google.javascript.jscomp.DataFlowAnalysis,300
+Mon Jan 15 15:15:55 AEDT 2018 Mon Jan 15 15:15:55 AEDT 2018 : com.google.javascript.jscomp.DataFlowAnalysis,301=>Find no block
+Mon Jan 15 15:15:57 AEDT 2018 com.google.javascript.jscomp.DataFlowAnalysis,302
+Mon Jan 15 15:15:58 AEDT 2018 com.google.javascript.jscomp.MaybeReachingVariableUse,122
+Mon Jan 15 15:16:22 AEDT 2018 com.google.javascript.jscomp.MaybeReachingVariableUse,123
+Mon Jan 15 15:16:31 AEDT 2018 com.google.javascript.jscomp.MaybeReachingVariableUse,124
+Mon Jan 15 15:16:32 AEDT 2018 Mon Jan 15 15:16:32 AEDT 2018 : com.google.javascript.jscomp.MaybeReachingVariableUse,125=>Find no block
+Mon Jan 15 15:16:33 AEDT 2018 com.google.javascript.jscomp.MaybeReachingVariableUse,126
+Mon Jan 15 15:16:35 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,236
+Mon Jan 15 15:23:40 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,238
+Mon Jan 15 15:26:56 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,79
+Mon Jan 15 15:27:00 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,82
+Mon Jan 15 15:27:41 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,85
+Mon Jan 15 15:27:42 AEDT 2018 com.google.javascript.jscomp.CheckUnreachableCode,105
+Mon Jan 15 15:28:12 AEDT 2018 com.google.javascript.jscomp.CheckUnreachableCode,106
+Mon Jan 15 15:28:13 AEDT 2018 com.google.javascript.rhino.InputId,74
+Mon Jan 15 15:28:18 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,150
+Mon Jan 15 15:48:06 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,151
+Mon Jan 15 15:48:08 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,154
+Mon Jan 15 15:48:10 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,155
+Mon Jan 15 15:49:32 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,156
+Mon Jan 15 15:49:33 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,158
+Mon Jan 15 15:49:34 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,166
+Mon Jan 15 15:51:28 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,168
+Mon Jan 15 15:51:29 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,169
+Mon Jan 15 15:51:30 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,171
+Mon Jan 15 15:51:31 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,172
+Mon Jan 15 15:51:32 AEDT 2018 Mon Jan 15 15:51:32 AEDT 2018 : com.google.javascript.jscomp.MustBeReachingVariableDef,176=>Find no block
+Mon Jan 15 15:51:34 AEDT 2018 Mon Jan 15 15:51:34 AEDT 2018 : com.google.javascript.jscomp.MustBeReachingVariableDef,179=>Find no block
+Mon Jan 15 15:51:35 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,183
+Mon Jan 15 15:53:13 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,184
+Mon Jan 15 15:53:14 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,185
+Mon Jan 15 15:53:16 AEDT 2018 Mon Jan 15 15:53:16 AEDT 2018 : com.google.javascript.jscomp.MustBeReachingVariableDef,188=>Find no block
+Mon Jan 15 15:53:16 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,189
+Mon Jan 15 15:55:07 AEDT 2018 com.google.javascript.jscomp.MaybeReachingVariableUse,167
+Mon Jan 15 16:00:22 AEDT 2018 com.google.javascript.jscomp.MaybeReachingVariableUse,169
+Mon Jan 15 16:02:34 AEDT 2018 com.google.javascript.jscomp.DeadAssignmentsElimination,90
+Mon Jan 15 16:02:38 AEDT 2018 Mon Jan 15 16:02:38 AEDT 2018 : com.google.javascript.jscomp.ShadowVariables,157=>Find no block
+Mon Jan 15 16:02:39 AEDT 2018 com.google.javascript.jscomp.ShadowVariables,158
+Mon Jan 15 16:15:27 AEDT 2018 com.google.javascript.jscomp.ShadowVariables,159
+Mon Jan 15 16:15:28 AEDT 2018 com.google.javascript.jscomp.DataFlowAnalysis,558
+Mon Jan 15 17:13:34 AEDT 2018 com.google.javascript.jscomp.DataFlowAnalysis,559
+Mon Jan 15 17:13:35 AEDT 2018 com.google.javascript.jscomp.DataFlowAnalysis,560
+Mon Jan 15 17:13:36 AEDT 2018 com.google.javascript.jscomp.DataFlowAnalysis,561
+Mon Jan 15 17:13:37 AEDT 2018 Mon Jan 15 17:13:37 AEDT 2018 : com.google.javascript.jscomp.DataFlowAnalysis,563=>Find no block
+Mon Jan 15 17:13:38 AEDT 2018 com.google.javascript.jscomp.CheckAccidentalSemicolon,49
+Mon Jan 15 17:19:03 AEDT 2018 com.google.javascript.jscomp.CheckAccidentalSemicolon,50
+Mon Jan 15 17:23:16 AEDT 2018 Mon Jan 15 17:23:16 AEDT 2018 : com.google.javascript.rhino.Node,2147=>Find no block
+Mon Jan 15 17:23:18 AEDT 2018 com.google.javascript.rhino.Node,2148
+Mon Jan 15 17:23:22 AEDT 2018 com.google.javascript.rhino.Node,2149
+Mon Jan 15 17:23:23 AEDT 2018 Mon Jan 15 17:23:23 AEDT 2018 : com.google.javascript.rhino.Node,2150=>Find no block
+Mon Jan 15 17:23:24 AEDT 2018 com.google.javascript.rhino.Node,352
+Mon Jan 15 17:23:33 AEDT 2018 com.google.javascript.rhino.TokenStream,160
+Mon Jan 15 17:23:44 AEDT 2018 com.google.javascript.jscomp.DataFlowAnalysis,316
+Mon Jan 15 17:27:25 AEDT 2018 com.google.javascript.jscomp.DataFlowAnalysis,317
+Mon Jan 15 17:27:26 AEDT 2018 com.google.javascript.jscomp.DataFlowAnalysis,318
+Mon Jan 15 17:27:28 AEDT 2018 com.google.javascript.jscomp.DataFlowAnalysis,319
+Mon Jan 15 17:27:29 AEDT 2018 Mon Jan 15 17:27:29 AEDT 2018 : com.google.javascript.jscomp.DataFlowAnalysis,320=>Find no block
+Mon Jan 15 17:27:30 AEDT 2018 com.google.javascript.jscomp.DataFlowAnalysis,321
+Mon Jan 15 17:27:31 AEDT 2018 com.google.javascript.jscomp.ControlFlowGraph,180
+Mon Jan 15 17:30:14 AEDT 2018 com.google.javascript.jscomp.ShadowVariables,188
+Mon Jan 15 17:56:18 AEDT 2018 Mon Jan 15 17:56:18 AEDT 2018 : com.google.javascript.jscomp.ShadowVariables,226=>Find no block
+Mon Jan 15 17:56:20 AEDT 2018 com.google.javascript.jscomp.OptimizeArgumentsArray,107
+Mon Jan 15 17:56:31 AEDT 2018 com.google.javascript.jscomp.OptimizeArgumentsArray,135
+Mon Jan 15 17:57:23 AEDT 2018 com.google.javascript.jscomp.CheckUnreachableCode,99
+Mon Jan 15 17:57:57 AEDT 2018 com.google.javascript.jscomp.CheckUnreachableCode,100
+Mon Jan 15 17:59:19 AEDT 2018 com.google.javascript.jscomp.CheckUnreachableCode,104
+Mon Jan 15 17:59:21 AEDT 2018 com.google.javascript.jscomp.CheckUnreachableCode,110
+Mon Jan 15 17:59:30 AEDT 2018 com.google.javascript.jscomp.LiveVariablesAnalysis,196
+Mon Jan 15 18:03:39 AEDT 2018 com.google.javascript.jscomp.LiveVariablesAnalysis,198
+Mon Jan 15 18:05:25 AEDT 2018 com.google.javascript.jscomp.GlobalNamespace,496
+Mon Jan 15 18:05:29 AEDT 2018 com.google.javascript.jscomp.LiveVariablesAnalysis,62
+Mon Jan 15 18:10:32 AEDT 2018 com.google.javascript.jscomp.LiveVariablesAnalysis,63
+Mon Jan 15 18:13:49 AEDT 2018 com.google.javascript.jscomp.LiveVariablesAnalysis,64
+Mon Jan 15 18:13:50 AEDT 2018 com.google.javascript.jscomp.LiveVariablesAnalysis,66
+Mon Jan 15 18:13:51 AEDT 2018 com.google.javascript.jscomp.CheckAccidentalSemicolon,63
+Mon Jan 15 18:35:29 AEDT 2018 com.google.javascript.jscomp.CheckAccidentalSemicolon,64
+Mon Jan 15 18:35:30 AEDT 2018 Mon Jan 15 18:35:30 AEDT 2018 : com.google.javascript.jscomp.CheckAccidentalSemicolon,73=>Find no block
+Mon Jan 15 18:35:31 AEDT 2018 com.google.javascript.rhino.TokenStream,158
+Mon Jan 15 18:35:35 AEDT 2018 com.google.javascript.rhino.Node,955
+Mon Jan 15 18:35:54 AEDT 2018 com.google.javascript.rhino.Node,956
+Mon Jan 15 18:35:56 AEDT 2018 com.google.javascript.jscomp.ControlFlowAnalysis,298
+Mon Jan 15 18:43:00 AEDT 2018 com.google.javascript.jscomp.ControlFlowAnalysis,299
+Mon Jan 15 18:45:18 AEDT 2018 com.google.javascript.jscomp.ControlFlowAnalysis,358
+Timeout time : 18/01/15 18:49

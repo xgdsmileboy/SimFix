@@ -1,0 +1,216 @@
+=================================================
+Project : time_2	start : 18/01/12 17:38
+Current failed test : org.joda.time.TestPartial_Basics::testWith_baseAndArgHaveNoRange_purify_1 | 18/01/12 17:39
+Fri Jan 12 17:41:23 AEDT 2018 org.joda.time.Partial,224
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(loopType.getRangeDurationType()!=null){
+throw new IllegalArgumentException("Types array must not contain duplicate: "+types[i-1].getName());
+}
+
+Time : 18/01/12 17:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(loopType.getRangeDurationType()!=null){
+throw new ClassCastException("ReadablePartial objects must have matching field types");
+}
+
+Time : 18/01/12 17:44
+----------------------------------------
+Fri Jan 12 17:45:56 AEDT 2018 org.joda.time.field.UnsupportedDurationField,227
+Fri Jan 12 17:45:57 AEDT 2018 org.joda.time.Partial,223
+Fri Jan 12 17:45:58 AEDT 2018 org.joda.time.DurationFieldType,286
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case ERAS :
+return chronology.months();
+
+
+Time : 18/01/12 17:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case ERAS :
+return chronology.days();
+
+
+Time : 18/01/12 17:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case ERAS :
+return chronology.hours();
+
+
+Time : 18/01/12 17:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case ERAS :
+return chronology.seconds();
+
+
+Time : 18/01/12 17:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case ERAS :
+return chronology.months();
+
+case CENTURIES :
+
+
+Time : 18/01/12 17:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case ERAS :
+return chronology.days();
+
+case CENTURIES :
+
+
+Time : 18/01/12 17:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case ERAS :
+return chronology.hours();
+
+case CENTURIES :
+
+
+Time : 18/01/12 17:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case ERAS :
+return chronology.seconds();
+
+case CENTURIES :
+
+
+Time : 18/01/12 17:55
+----------------------------------------
+Fri Jan 12 17:55:45 AEDT 2018 org.joda.time.Partial,222
+Fri Jan 12 18:12:05 AEDT 2018 Fri Jan 12 18:12:05 AEDT 2018 : org.joda.time.Partial,140=>Find no block
+Fri Jan 12 18:12:05 AEDT 2018 Fri Jan 12 18:12:05 AEDT 2018 : org.joda.time.Partial,162=>Find no block
+Fri Jan 12 18:12:06 AEDT 2018 org.joda.time.Partial,139
+Fri Jan 12 18:12:07 AEDT 2018 org.joda.time.Partial,159
+Fri Jan 12 18:26:12 AEDT 2018 org.joda.time.Partial,160
+Fri Jan 12 18:26:12 AEDT 2018 org.joda.time.Partial,161
+Fri Jan 12 18:26:12 AEDT 2018 org.joda.time.Partial,153
+Fri Jan 12 18:26:13 AEDT 2018 org.joda.time.Partial,154
+Fri Jan 12 18:26:13 AEDT 2018 org.joda.time.Partial,155
+Fri Jan 12 18:26:13 AEDT 2018 org.joda.time.Partial,156
+Fri Jan 12 18:26:13 AEDT 2018 org.joda.time.Partial,434
+Fri Jan 12 18:35:21 AEDT 2018 org.joda.time.Partial,435
+Fri Jan 12 18:35:21 AEDT 2018 org.joda.time.Partial,438
+Fri Jan 12 18:51:23 AEDT 2018 org.joda.time.Partial,439
+Fri Jan 12 18:51:23 AEDT 2018 org.joda.time.Partial,440
+Timeout time : 18/01/12 19:21
+Current failed test : org.joda.time.TestPartial_Basics::testWith_baseAndArgHaveNoRange_purify_2 | 18/01/12 19:21
+Fri Jan 12 19:23:43 AEDT 2018 org.joda.time.Partial,224
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(loopType.getRangeDurationType()!=null){
+throw new IllegalArgumentException("Types array must not contain duplicate: "+types[i-1].getName());
+}
+
+Time : 18/01/12 19:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(loopType.getRangeDurationType()!=null){
+throw new ClassCastException("ReadablePartial objects must have matching field types");
+}
+
+Time : 18/01/12 19:27
+----------------------------------------
+Fri Jan 12 19:28:31 AEDT 2018 org.joda.time.field.UnsupportedDurationField,227
+Fri Jan 12 19:28:32 AEDT 2018 org.joda.time.Partial,223
+Fri Jan 12 19:28:32 AEDT 2018 org.joda.time.DurationFieldType,286
+Fri Jan 12 19:35:20 AEDT 2018 org.joda.time.Partial,222
+Fri Jan 12 19:52:45 AEDT 2018 Fri Jan 12 19:52:45 AEDT 2018 : org.joda.time.Partial,140=>Find no block
+Fri Jan 12 19:52:45 AEDT 2018 Fri Jan 12 19:52:45 AEDT 2018 : org.joda.time.Partial,162=>Find no block
+Fri Jan 12 19:52:45 AEDT 2018 org.joda.time.Partial,139
+Fri Jan 12 19:52:46 AEDT 2018 org.joda.time.Partial,159
+Fri Jan 12 20:11:21 AEDT 2018 org.joda.time.Partial,160
+Fri Jan 12 20:11:23 AEDT 2018 org.joda.time.Partial,161
+Fri Jan 12 20:11:24 AEDT 2018 org.joda.time.Partial,153
+Fri Jan 12 20:11:25 AEDT 2018 org.joda.time.Partial,154
+Fri Jan 12 20:11:27 AEDT 2018 org.joda.time.Partial,155
+Fri Jan 12 20:11:29 AEDT 2018 org.joda.time.Partial,156
+Fri Jan 12 20:11:31 AEDT 2018 org.joda.time.Partial,434
+Fri Jan 12 20:23:24 AEDT 2018 org.joda.time.Partial,435
+Fri Jan 12 20:23:26 AEDT 2018 org.joda.time.Partial,438
+Fri Jan 12 20:46:38 AEDT 2018 org.joda.time.Partial,439
+Fri Jan 12 20:46:39 AEDT 2018 org.joda.time.Partial,440
+Timeout time : 18/01/12 21:04
+Current failed test : org.joda.time.TestPartial_Basics::testWith_baseAndArgHaveNoRange_purify_3 | 18/01/12 21:04
+Fri Jan 12 21:07:50 AEDT 2018 org.joda.time.Partial,224
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(loopType.getRangeDurationType()!=null){
+throw new IllegalArgumentException("Types array must not contain duplicate: "+types[i-1].getName());
+}
+
+Time : 18/01/12 21:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(loopType.getRangeDurationType()!=null){
+throw new ClassCastException("ReadablePartial objects must have matching field types");
+}
+
+Time : 18/01/12 21:14
+----------------------------------------
+Fri Jan 12 21:16:45 AEDT 2018 org.joda.time.field.UnsupportedDurationField,227
+Fri Jan 12 21:16:49 AEDT 2018 org.joda.time.Partial,223
+Fri Jan 12 21:16:50 AEDT 2018 org.joda.time.DurationFieldType,286
+Fri Jan 12 21:26:22 AEDT 2018 org.joda.time.Partial,222
+Fri Jan 12 21:53:26 AEDT 2018 Fri Jan 12 21:53:26 AEDT 2018 : org.joda.time.Partial,140=>Find no block
+Fri Jan 12 21:53:27 AEDT 2018 Fri Jan 12 21:53:27 AEDT 2018 : org.joda.time.Partial,162=>Find no block
+Fri Jan 12 21:53:27 AEDT 2018 org.joda.time.Partial,139
+Fri Jan 12 21:53:29 AEDT 2018 org.joda.time.Partial,159
+Fri Jan 12 22:10:13 AEDT 2018 org.joda.time.Partial,160
+Fri Jan 12 22:10:14 AEDT 2018 org.joda.time.Partial,161
+Fri Jan 12 22:10:14 AEDT 2018 org.joda.time.Partial,153
+Fri Jan 12 22:10:14 AEDT 2018 org.joda.time.Partial,154
+Fri Jan 12 22:10:15 AEDT 2018 org.joda.time.Partial,155
+Fri Jan 12 22:10:15 AEDT 2018 org.joda.time.Partial,156
+Fri Jan 12 22:10:15 AEDT 2018 org.joda.time.Partial,434
+Fri Jan 12 22:20:49 AEDT 2018 org.joda.time.Partial,435
+Fri Jan 12 22:20:50 AEDT 2018 org.joda.time.Partial,438
+Fri Jan 12 22:39:17 AEDT 2018 org.joda.time.Partial,439
+Fri Jan 12 22:39:18 AEDT 2018 org.joda.time.Partial,440
+Timeout time : 18/01/12 22:47

@@ -1,0 +1,1136 @@
+=================================================
+Project : math_46	start : 18/01/12 19:06
+Current failed test : org.apache.commons.math.complex.ComplexTest::testAtanI | 18/01/12 19:07
+Fri Jan 12 19:08:45 AEDT 2018 org.apache.commons.math.complex.Complex,260
+Fri Jan 12 19:08:51 AEDT 2018 org.apache.commons.math.complex.Complex,587
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isNaN){
+return NaN;
+}
+return NaN;
+
+Time : 18/01/12 19:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Double.isInfinite(real)){
+return !isInfinite()?ZERO:NaN;
+}
+if(isNaN){
+return NaN;
+}
+return NaN;
+
+Time : 18/01/12 19:14
+----------------------------------------
+Fri Jan 12 19:16:23 AEDT 2018 org.apache.commons.math.util.FastMath,1284
+Fri Jan 12 19:19:55 AEDT 2018 org.apache.commons.math.util.FastMath,1288
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x==Double.POSITIVE_INFINITY){
+if(hiPrec!=null){
+hiPrec[0]=Double.POSITIVE_INFINITY;
+}
+return Double.NaN;
+}
+
+Time : 18/01/12 19:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x*x==Double.POSITIVE_INFINITY){
+if(hiPrec!=null){
+hiPrec[0]=Double.POSITIVE_INFINITY;
+}
+return Double.NaN;
+}
+
+Time : 18/01/12 19:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x==Double.POSITIVE_INFINITY){
+if(E>=TWO_POWER_52||E<=-TWO_POWER_52){
+return pow(-x,E);
+}
+if(hiPrec!=null){
+hiPrec[0]=Double.POSITIVE_INFINITY;
+}
+return Double.NaN;
+}
+
+Time : 18/01/12 19:29
+----------------------------------------
+Fri Jan 12 19:31:44 AEDT 2018 org.apache.commons.math.complex.Complex,583
+Fri Jan 12 19:32:37 AEDT 2018 org.apache.commons.math.util.FastMath,3004
+Fri Jan 12 19:36:55 AEDT 2018 org.apache.commons.math.util.FastMath,3005
+Fri Jan 12 19:36:57 AEDT 2018 org.apache.commons.math.complex.Complex,430
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Double.isNaN(real)||Double.isInfinite(imaginary)){
+return INF;
+}
+
+Time : 18/01/12 19:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Double.isInfinite(real)&&Double.isInfinite(imaginary)){
+return INF;
+}
+
+Time : 18/01/12 19:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Double.isInfinite(imaginary)||Double.isNaN(imaginary)){
+return INF;
+}
+
+Time : 18/01/12 19:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Double.isInfinite(imaginary)||Double.isInfinite(imaginary)){
+return INF;
+}
+
+Time : 18/01/12 19:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Double.isInfinite(real)||Double.isInfinite(imaginary)){
+return NaN;
+}
+
+Time : 18/01/12 19:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Double.isInfinite(real)||Double.isNaN(real)){
+return NaN;
+}
+
+Time : 18/01/12 19:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Double.isInfinite(real)||Double.isNaN(imaginary)){
+return NaN;
+}
+
+Time : 18/01/12 19:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Double.isNaN(imaginary)||Double.isInfinite(imaginary)){
+return INF;
+}
+
+Time : 18/01/12 19:50
+----------------------------------------
+Fri Jan 12 19:52:45 AEDT 2018 org.apache.commons.math.complex.Complex,276
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 19:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 19:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 19:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 19:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(c)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=real/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=real/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(c)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=real/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(d)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(c)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(d)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(c)){
+double q=real/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(d)){
+double q=c/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(c)){
+double q=c/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=real/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(d)){
+double q=real/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(c)){
+double q=real/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(d)){
+double q=c/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(c)){
+double q=c/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=real/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(c)){
+double q=real/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.abs(d)){
+double q=real/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(c)){
+double q=real/imaginary;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=imaginary/real;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 20:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return NaN;
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return NaN;
+}
+
+Time : 18/01/12 21:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return NaN;
+}
+
+Time : 18/01/12 21:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(real)<FastMath.abs(c)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 21:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+MathUtils.checkNotNull(ONE);
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return NaN;
+}
+
+Time : 18/01/12 21:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Double.isInfinite(real)||Double.isInfinite(imaginary)){
+return INF;
+}
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return NaN;
+}
+
+Time : 18/01/12 21:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+MathUtils.checkNotNull(ONE);
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return NaN;
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return NaN;
+}
+
+Time : 18/01/12 21:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Double.isInfinite(real)||Double.isInfinite(imaginary)){
+return INF;
+}
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return NaN;
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return NaN;
+}
+
+Time : 18/01/12 21:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+MathUtils.checkNotNull(ONE);
+if(Double.isInfinite(real)||Double.isInfinite(imaginary)){
+return INF;
+}
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return NaN;
+}
+
+Time : 18/01/12 21:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+MathUtils.checkNotNull(ONE);
+if(Double.isInfinite(real)||Double.isInfinite(imaginary)){
+return INF;
+}
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return NaN;
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return NaN;
+}
+
+Time : 18/01/12 21:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Double.isInfinite(c)||Double.isInfinite(imaginary)){
+return INF;
+}
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return NaN;
+}
+
+Time : 18/01/12 21:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Double.isInfinite(c)||Double.isInfinite(imaginary)){
+return INF;
+}
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return NaN;
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return NaN;
+}
+
+Time : 18/01/12 21:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Double.isInfinite(d)){
+return !isInfinite()?ZERO:NaN;
+}
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return NaN;
+}
+
+Time : 18/01/12 21:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Double.isInfinite(d)){
+return !isInfinite()?ZERO:NaN;
+}
+if(FastMath.abs(c)<FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return NaN;
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return NaN;
+}
+
+Time : 18/01/12 21:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<MathUtils.EPSILON){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 21:29
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!(isInfinite&&(FastMath.abs(real-real)<=real))){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 21:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<Double.MIN_VALUE){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 21:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<=FastMath.abs(d)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 21:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(FastMath.abs(d)<FastMath.ulp(1.0)){
+double q=c/d;
+double denominator=c*q+d;
+return createComplex((real*q+imaginary)/denominator,(imaginary*q-real)/denominator);
+}else {
+double q=d/c;
+double denominator=d*q+c;
+return createComplex((imaginary*q+real)/denominator,(imaginary-real*q)/denominator);
+}
+
+Time : 18/01/12 21:37
+----------------------------------------
+Timeout time : 18/01/12 21:39
+Current failed test : org.apache.commons.math.complex.ComplexTest::testDivideZero | 18/01/12 21:39
+Fri Jan 12 21:40:17 AEDT 2018 org.apache.commons.math.complex.Complex,1183
+Fri Jan 12 21:41:48 AEDT 2018 org.apache.commons.math.complex.Complex,260
+Fri Jan 12 21:41:54 AEDT 2018 org.apache.commons.math.complex.Complex,329
+Fri Jan 12 21:42:36 AEDT 2018 org.apache.commons.math.complex.Complex,258
+Fri Jan 12 21:42:38 AEDT 2018 org.apache.commons.math.complex.Complex,253
+Fri Jan 12 21:44:51 AEDT 2018 org.apache.commons.math.complex.Complex,254
+Fri Jan 12 21:47:06 AEDT 2018 org.apache.commons.math.complex.Complex,327
+Fri Jan 12 21:52:41 AEDT 2018 org.apache.commons.math.complex.Complex,328
+Fri Jan 12 21:52:42 AEDT 2018 org.apache.commons.math.complex.Complex,326
+Fri Jan 12 21:52:44 AEDT 2018 org.apache.commons.math.complex.Complex,323
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(this!=other){
+return true;
+}
+
+Time : 18/01/12 21:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(this!=null){
+return true;
+}
+
+Time : 18/01/12 21:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(other instanceof Complex){
+return true;
+}
+
+Time : 18/01/12 21:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(isInfinite){
+return true;
+}
+
+Time : 18/01/12 22:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 0.7006490497453707 : [/home/hz985/jiajun/d4j/projects/math/math_46_buggy/src/main/java/org/apache/commons/math/complex/Complex.java=>0,0]
+if(!result){
+return false;
+}else {
+return Arrays.equals(internalArray,other.internalArray);
+}
+
+Time : 18/01/12 22:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_46_buggy/src/main/java/org/apache/commons/math/complex/Complex.java=>323,325]
+if(this==other){
+return true;
+}
+
+Time : 18/01/12 22:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_46_buggy/src/main/java/org/apache/commons/math/complex/Complex.java=>323,325]
+if(isInfinite){
+return true;
+}
+
+Time : 18/01/12 22:03
+----------------------------------------
+Success time : 18/01/12 22:03

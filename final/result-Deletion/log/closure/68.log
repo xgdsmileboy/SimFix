@@ -1,0 +1,182 @@
+=================================================
+Project : closure_68	start : 18/01/15 13:54
+Current failed test : com.google.javascript.jscomp.parsing.JsDocInfoParserTest::testIssue477 | 18/01/15 13:56
+Mon Jan 15 14:04:00 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocTokenStream,352
+Mon Jan 15 14:06:07 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,886
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+jsdocBuilder.build(null);
+
+
+Time : 18/01/15 14:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case BANG :
+
+case EOF :
+jsdocBuilder.build(null);
+
+
+Time : 18/01/15 14:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+
+
+Time : 18/01/15 14:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case BANG :
+
+case EOF :
+
+
+Time : 18/01/15 14:22
+----------------------------------------
+Mon Jan 15 14:26:58 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,887
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+jsdocBuilder.build(null);
+checkExtendedTypes(extendedTypes);
+
+
+Time : 18/01/15 14:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case BANG :
+
+case EOF :
+jsdocBuilder.build(null);
+checkExtendedTypes(extendedTypes);
+
+
+Time : 18/01/15 14:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+checkExtendedTypes(extendedTypes);
+
+
+Time : 18/01/15 14:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+jsdocBuilder.build(null);
+
+
+Time : 18/01/15 14:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case BANG :
+
+case EOF :
+checkExtendedTypes(extendedTypes);
+
+
+Time : 18/01/15 14:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case BANG :
+
+case EOF :
+jsdocBuilder.build(null);
+
+
+Time : 18/01/15 14:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case EOF :
+
+
+Time : 18/01/15 15:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+case BANG :
+
+case EOF :
+
+
+Time : 18/01/15 15:11
+----------------------------------------
+Mon Jan 15 15:18:41 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1761
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(token!=JsDocToken.LP){
+restoreLookAhead(token);
+return reportTypeSyntaxWarning("msg.jsdoc.missing.lp");
+}
+
+Time : 18/01/15 15:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.1196263565463043 : [/home/hz985/jiajun/d4j/projects/closure/closure_68_buggy/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java=>0,0]
+if(token==JsDocToken.COMMA||token==JsDocToken.EQUALS||token==JsDocToken.RC||token==JsDocToken.RP||token==JsDocToken.PIPE){
+restoreLookAhead(token);
+return newNode(Token.QMARK);
+}
+return wrapNode(Token.QMARK,parseBasicTypeExpression(token));
+
+Time : 18/01/15 15:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/closure/closure_68_buggy/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java=>1760,1762]
+if(token!=JsDocToken.LP){
+return reportTypeSyntaxWarning("msg.jsdoc.missing.lp");
+}
+
+Time : 18/01/15 15:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/closure/closure_68_buggy/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java=>1760,1762]
+if(token!=JsDocToken.LP){
+restoreLookAhead(token);
+return reportTypeSyntaxWarning("msg.jsdoc.missing.lp");
+}
+
+Time : 18/01/15 15:28
+----------------------------------------
+Success time : 18/01/15 15:28

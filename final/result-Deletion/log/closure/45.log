@@ -1,0 +1,80 @@
+=================================================
+Project : closure_45	start : 18/01/16 00:05
+Current failed test : com.google.javascript.jscomp.RemoveUnusedVarsTest::testIssue618_1 | 18/01/16 00:05
+Tue Jan 16 00:05:52 AEDT 2018 com.google.javascript.rhino.InputId,74
+Tue Jan 16 00:05:55 AEDT 2018 com.google.javascript.rhino.Node,343
+Tue Jan 16 00:06:05 AEDT 2018 Tue Jan 16 00:06:05 AEDT 2018 : com.google.javascript.rhino.Node,117=>Find no block
+Tue Jan 16 00:06:06 AEDT 2018 com.google.javascript.rhino.Node,129
+Tue Jan 16 00:06:14 AEDT 2018 com.google.javascript.rhino.Node,142
+Tue Jan 16 00:06:22 AEDT 2018 com.google.javascript.rhino.Node,143
+Tue Jan 16 00:06:31 AEDT 2018 com.google.javascript.rhino.Node,858
+Tue Jan 16 00:30:16 AEDT 2018 com.google.javascript.rhino.Node,859
+Tue Jan 16 00:30:17 AEDT 2018 com.google.javascript.rhino.Node,860
+Tue Jan 16 00:30:18 AEDT 2018 com.google.javascript.rhino.Node,863
+Tue Jan 16 00:30:18 AEDT 2018 com.google.javascript.rhino.Node,864
+Tue Jan 16 00:30:19 AEDT 2018 com.google.javascript.rhino.Node,865
+Tue Jan 16 00:30:20 AEDT 2018 com.google.javascript.rhino.Node,866
+Tue Jan 16 00:30:20 AEDT 2018 com.google.javascript.rhino.Node,869
+Tue Jan 16 00:30:21 AEDT 2018 com.google.javascript.rhino.Node,870
+Tue Jan 16 00:30:22 AEDT 2018 com.google.javascript.rhino.Node,915
+Tue Jan 16 00:30:25 AEDT 2018 com.google.javascript.rhino.Node,922
+Tue Jan 16 00:34:16 AEDT 2018 com.google.javascript.rhino.Node,923
+Tue Jan 16 00:34:17 AEDT 2018 com.google.javascript.rhino.Node,924
+Tue Jan 16 00:34:18 AEDT 2018 com.google.javascript.rhino.Node,932
+Tue Jan 16 01:47:27 AEDT 2018 com.google.javascript.rhino.Node,933
+Tue Jan 16 01:47:28 AEDT 2018 com.google.javascript.rhino.Node,934
+Tue Jan 16 01:47:56 AEDT 2018 com.google.javascript.rhino.Node,935
+Tue Jan 16 01:47:57 AEDT 2018 com.google.javascript.rhino.Node,936
+Tue Jan 16 01:47:57 AEDT 2018 com.google.javascript.rhino.Node,937
+Tue Jan 16 01:47:58 AEDT 2018 com.google.javascript.rhino.Node,941
+Tue Jan 16 01:48:00 AEDT 2018 com.google.javascript.rhino.Node,944
+Tue Jan 16 01:48:00 AEDT 2018 com.google.javascript.rhino.Node,946
+Tue Jan 16 01:48:01 AEDT 2018 com.google.javascript.rhino.Node,947
+Tue Jan 16 01:48:02 AEDT 2018 com.google.javascript.rhino.Node,948
+Tue Jan 16 01:48:03 AEDT 2018 com.google.javascript.rhino.Node,950
+Tue Jan 16 01:48:04 AEDT 2018 com.google.javascript.rhino.Node,951
+Tue Jan 16 01:48:05 AEDT 2018 com.google.javascript.rhino.Node,952
+Tue Jan 16 01:48:06 AEDT 2018 com.google.javascript.rhino.Node,953
+Tue Jan 16 01:48:07 AEDT 2018 com.google.javascript.rhino.Node,954
+Tue Jan 16 01:48:07 AEDT 2018 com.google.javascript.rhino.Node,958
+Tue Jan 16 01:48:08 AEDT 2018 com.google.javascript.rhino.Node,959
+Tue Jan 16 01:48:56 AEDT 2018 com.google.javascript.rhino.Node,960
+Tue Jan 16 01:48:57 AEDT 2018 com.google.javascript.rhino.Node,961
+Tue Jan 16 02:05:36 AEDT 2018 com.google.javascript.rhino.Node,962
+Tue Jan 16 02:05:36 AEDT 2018 com.google.javascript.rhino.Node,963
+Tue Jan 16 02:16:22 AEDT 2018 com.google.javascript.rhino.Node,964
+Tue Jan 16 02:27:32 AEDT 2018 com.google.javascript.rhino.Node,965
+Tue Jan 16 02:38:24 AEDT 2018 Tue Jan 16 02:38:24 AEDT 2018 : com.google.javascript.rhino.Node,967=>Find no block
+Tue Jan 16 02:38:24 AEDT 2018 com.google.javascript.rhino.Node,969
+Tue Jan 16 02:38:25 AEDT 2018 com.google.javascript.rhino.Node,972
+Tue Jan 16 02:58:19 AEDT 2018 com.google.javascript.rhino.Node,973
+Tue Jan 16 02:58:20 AEDT 2018 com.google.javascript.rhino.Node,977
+Tue Jan 16 03:00:03 AEDT 2018 com.google.javascript.rhino.Node,978
+Tue Jan 16 03:00:04 AEDT 2018 Tue Jan 16 03:00:04 AEDT 2018 : com.google.javascript.rhino.Node,986=>Find no block
+Tue Jan 16 03:00:05 AEDT 2018 com.google.javascript.rhino.Node,990
+Tue Jan 16 03:00:08 AEDT 2018 com.google.javascript.rhino.Node,995
+Tue Jan 16 03:00:14 AEDT 2018 com.google.javascript.rhino.Node,996
+Tue Jan 16 03:00:15 AEDT 2018 com.google.javascript.rhino.Node,997
+Tue Jan 16 03:00:15 AEDT 2018 com.google.javascript.rhino.Node,1004
+Tue Jan 16 03:00:19 AEDT 2018 Tue Jan 16 03:00:19 AEDT 2018 : com.google.javascript.rhino.Node,1005=>Find no block
+Tue Jan 16 03:00:20 AEDT 2018 com.google.javascript.rhino.Node,1009
+Tue Jan 16 03:11:34 AEDT 2018 com.google.javascript.rhino.Node,1010
+Tue Jan 16 03:11:35 AEDT 2018 com.google.javascript.rhino.Node,1012
+Tue Jan 16 04:34:05 AEDT 2018 com.google.javascript.rhino.Node,1013
+Tue Jan 16 04:34:06 AEDT 2018 Tue Jan 16 04:34:06 AEDT 2018 : com.google.javascript.rhino.Node,1014=>Find no block
+Tue Jan 16 04:34:07 AEDT 2018 com.google.javascript.rhino.Node,1015
+Tue Jan 16 04:34:07 AEDT 2018 com.google.javascript.rhino.Node,1017
+Tue Jan 16 04:34:08 AEDT 2018 Tue Jan 16 04:34:08 AEDT 2018 : com.google.javascript.rhino.Node,1016=>Find no block
+Tue Jan 16 04:34:09 AEDT 2018 Tue Jan 16 04:34:09 AEDT 2018 : com.google.javascript.rhino.Node,1019=>Find no block
+Tue Jan 16 04:34:10 AEDT 2018 com.google.javascript.rhino.Node,1404
+Tue Jan 16 04:34:15 AEDT 2018 com.google.javascript.rhino.Node,1420
+Tue Jan 16 04:34:18 AEDT 2018 com.google.javascript.rhino.Node,1433
+Tue Jan 16 04:34:22 AEDT 2018 Tue Jan 16 04:34:22 AEDT 2018 : com.google.javascript.rhino.Node,2117=>Find no block
+Tue Jan 16 04:34:23 AEDT 2018 com.google.javascript.rhino.Node,2118
+Tue Jan 16 04:34:26 AEDT 2018 com.google.javascript.rhino.Node,2119
+Tue Jan 16 04:34:26 AEDT 2018 Tue Jan 16 04:34:26 AEDT 2018 : com.google.javascript.rhino.Node,2120=>Find no block
+Tue Jan 16 04:34:27 AEDT 2018 com.google.javascript.rhino.Node,311
+Tue Jan 16 04:34:33 AEDT 2018 com.google.javascript.jscomp.SourceFile,305
+Tue Jan 16 04:34:39 AEDT 2018 com.google.javascript.jscomp.NodeUtil,594
+Tue Jan 16 04:57:59 AEDT 2018 com.google.javascript.jscomp.Normalize,561
+Timeout time : 18/01/16 05:05

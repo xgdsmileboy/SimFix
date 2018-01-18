@@ -1,0 +1,52 @@
+=================================================
+Project : closure_24	start : 18/01/15 23:50
+Current failed test : com.google.javascript.jscomp.ScopedAliasesTest::testNonAliasLocal | 18/01/15 23:51
+Mon Jan 15 23:51:34 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,293
+Tue Jan 16 00:11:02 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,268
+Tue Jan 16 00:22:53 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,269
+Tue Jan 16 00:22:53 AEDT 2018 Tue Jan 16 00:22:53 AEDT 2018 : com.google.javascript.jscomp.ScopedAliases,270=>Find no block
+Tue Jan 16 00:22:54 AEDT 2018 com.google.javascript.jscomp.AstValidator,240
+Tue Jan 16 00:30:12 AEDT 2018 com.google.javascript.jscomp.AstValidator,241
+Tue Jan 16 00:32:50 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1177
+Tue Jan 16 00:33:03 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,234
+Tue Jan 16 00:34:33 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,558
+Tue Jan 16 00:34:45 AEDT 2018 com.google.javascript.jscomp.NodeTraversal,682
+Tue Jan 16 00:35:16 AEDT 2018 com.google.javascript.jscomp.AstValidator,203
+Tue Jan 16 00:46:49 AEDT 2018 com.google.javascript.jscomp.AstValidator,204
+Tue Jan 16 00:49:31 AEDT 2018 com.google.javascript.jscomp.AstValidator,749
+Tue Jan 16 00:54:05 AEDT 2018 com.google.javascript.jscomp.AstValidator,750
+Tue Jan 16 00:54:06 AEDT 2018 com.google.javascript.jscomp.AstValidator,751
+Tue Jan 16 00:54:06 AEDT 2018 Tue Jan 16 00:54:06 AEDT 2018 : com.google.javascript.jscomp.AstValidator,752=>Find no block
+Tue Jan 16 00:54:08 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,146
+Tue Jan 16 00:55:46 AEDT 2018 Tue Jan 16 00:55:46 AEDT 2018 : com.google.javascript.jscomp.CompilerOptions,2080=>Find no block
+Tue Jan 16 00:55:47 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,127
+Tue Jan 16 01:23:10 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,128
+Tue Jan 16 01:23:10 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,129
+Tue Jan 16 01:23:11 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,130
+Tue Jan 16 01:23:12 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,133
+Tue Jan 16 01:23:12 AEDT 2018 Tue Jan 16 01:23:12 AEDT 2018 : com.google.javascript.jscomp.ScopedAliases,134=>Find no block
+Tue Jan 16 01:23:13 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,139
+Tue Jan 16 01:25:00 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,279
+Tue Jan 16 01:25:01 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,280
+Tue Jan 16 01:25:02 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,281
+Tue Jan 16 01:25:02 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,282
+Tue Jan 16 01:25:04 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,284
+Tue Jan 16 01:25:04 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,286
+Tue Jan 16 01:25:06 AEDT 2018 Tue Jan 16 01:25:06 AEDT 2018 : com.google.javascript.jscomp.ScopedAliases,291=>Find no block
+Tue Jan 16 01:25:06 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,338
+Tue Jan 16 01:27:31 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,345
+Tue Jan 16 01:43:51 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,346
+Tue Jan 16 01:43:52 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,350
+Tue Jan 16 01:43:53 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,275
+Tue Jan 16 02:51:08 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,276
+Tue Jan 16 02:51:09 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,277
+Tue Jan 16 02:51:09 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,278
+Tue Jan 16 03:52:32 AEDT 2018 Tue Jan 16 03:52:32 AEDT 2018 : com.google.javascript.jscomp.ScopedAliases,296=>Find no block
+Tue Jan 16 03:52:32 AEDT 2018 com.google.javascript.jscomp.CompilerOptions,2070
+Tue Jan 16 03:52:49 AEDT 2018 com.google.javascript.jscomp.CompilerOptions,2071
+Tue Jan 16 03:52:50 AEDT 2018 com.google.javascript.jscomp.NodeUtil,2025
+Tue Jan 16 04:38:18 AEDT 2018 com.google.javascript.jscomp.NodeUtil,2027
+Tue Jan 16 04:38:19 AEDT 2018 com.google.javascript.jscomp.NodeUtil,2028
+Tue Jan 16 04:38:19 AEDT 2018 com.google.javascript.jscomp.SuppressDocWarningsGuard,66
+Tue Jan 16 04:47:31 AEDT 2018 com.google.javascript.jscomp.ScopedAliases,317
+Timeout time : 18/01/16 04:51

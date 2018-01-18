@@ -1,0 +1,101 @@
+=================================================
+Project : math_35	start : 18/01/17 04:14
+Current failed test : org.apache.commons.math3.genetics.ElitisticListPopulationTest::testChromosomeListConstructorTooHigh | 18/01/17 04:15
+Wed Jan 17 04:15:36 EST 2018 org.apache.commons.math3.genetics.ElitisticListPopulation,50
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(chromosomes,populationLimit);
+if(elitismRate<0||elitismRate>1){
+throw new OutOfRangeException(LocalizedFormats.ELITISM_RATE,elitismRate,0,1);
+}
+this.elitismRate=elitismRate;
+
+Time : 18/01/17 04:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.1195324975698817 : [/home/jiajun/d4j/projects/math/math_35_buggy/src/main/java/org/apache/commons/math3/genetics/ElitisticListPopulation.java=>0,0]
+if(elitismRate<0||elitismRate>1){
+throw new OutOfRangeException(LocalizedFormats.ELITISM_RATE,elitismRate,0,1);
+}
+this.elitismRate=elitismRate;
+
+Time : 18/01/17 04:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/jiajun/d4j/projects/math/math_35_buggy/src/main/java/org/apache/commons/math3/genetics/ElitisticListPopulation.java=>50,51]
+super(chromosomes,populationLimit);
+this.elitismRate=elitismRate;
+
+Time : 18/01/17 04:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/jiajun/d4j/projects/math/math_35_buggy/src/main/java/org/apache/commons/math3/genetics/ElitisticListPopulation.java=>50,51]
+super(chromosomes,populationLimit);
+if(elitismRate<0||elitismRate>1){
+throw new OutOfRangeException(LocalizedFormats.ELITISM_RATE,elitismRate,0,1);
+}
+this.elitismRate=elitismRate;
+
+Time : 18/01/17 04:17
+----------------------------------------
+Success time : 18/01/17 04:17
+Current failed test : org.apache.commons.math3.genetics.ElitisticListPopulationTest::testConstructorTooHigh | 18/01/17 04:17
+Wed Jan 17 04:17:35 EST 2018 Wed Jan 17 04:17:35 EST 2018 : org.apache.commons.math3.genetics.ElitisticListPopulation,36=>Find no block
+Wed Jan 17 04:17:35 EST 2018 org.apache.commons.math3.genetics.ElitisticListPopulation,64
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(populationLimit);
+if(elitismRate<0||elitismRate>1){
+throw new OutOfRangeException(LocalizedFormats.ELITISM_RATE,elitismRate,0,1);
+}
+this.elitismRate=elitismRate;
+
+Time : 18/01/17 04:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.1673083711820307 : [/home/jiajun/d4j/projects/math/math_35_buggy/src/main/java/org/apache/commons/math3/genetics/ElitisticListPopulation.java=>0,0]
+if(elitismRate<0||elitismRate>1){
+throw new OutOfRangeException(LocalizedFormats.ELITISM_RATE,elitismRate,0,1);
+}
+this.elitismRate=elitismRate;
+
+Time : 18/01/17 04:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/jiajun/d4j/projects/math/math_35_buggy/src/main/java/org/apache/commons/math3/genetics/ElitisticListPopulation.java=>64,65]
+super(populationLimit);
+this.elitismRate=elitismRate;
+
+Time : 18/01/17 04:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/jiajun/d4j/projects/math/math_35_buggy/src/main/java/org/apache/commons/math3/genetics/ElitisticListPopulation.java=>64,65]
+super(populationLimit);
+if(elitismRate<0||elitismRate>1){
+throw new OutOfRangeException(LocalizedFormats.ELITISM_RATE,elitismRate,0,1);
+}
+this.elitismRate=elitismRate;
+
+Time : 18/01/17 04:18
+----------------------------------------
+Success time : 18/01/17 04:18
+Current failed test : org.apache.commons.math3.genetics.ElitisticListPopulationTest::testChromosomeListConstructorTooLow | 18/01/17 04:18
+Already fixed : org.apache.commons.math3.genetics.ElitisticListPopulationTest::testChromosomeListConstructorTooLow
+Current failed test : org.apache.commons.math3.genetics.ElitisticListPopulationTest::testConstructorTooLow | 18/01/17 04:19
+Already fixed : org.apache.commons.math3.genetics.ElitisticListPopulationTest::testConstructorTooLow

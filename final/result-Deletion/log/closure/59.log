@@ -1,0 +1,40 @@
+=================================================
+Project : closure_59	start : 18/01/15 13:49
+Current failed test : com.google.javascript.jscomp.CommandLineRunnerTest::testCheckGlobalThisOff | 18/01/15 13:50
+Mon Jan 15 13:50:43 AEDT 2018 com.google.javascript.jscomp.CheckMissingReturn,170
+Mon Jan 15 13:50:56 AEDT 2018 com.google.javascript.jscomp.RemoveUnusedVars,935
+Mon Jan 15 14:04:21 AEDT 2018 com.google.javascript.jscomp.CollapseVariableDeclarations,196
+Mon Jan 15 14:04:38 AEDT 2018 com.google.javascript.jscomp.PrintStreamErrorManager,71
+Mon Jan 15 14:04:45 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,284
+Mon Jan 15 14:12:35 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,287
+Mon Jan 15 14:12:38 AEDT 2018 com.google.javascript.jscomp.MustBeReachingVariableDef,288
+Mon Jan 15 14:12:41 AEDT 2018 com.google.javascript.jscomp.CheckMissingReturn,160
+Mon Jan 15 14:13:28 AEDT 2018 com.google.javascript.jscomp.CheckMissingReturn,162
+Mon Jan 15 14:13:31 AEDT 2018 com.google.javascript.jscomp.CheckMissingReturn,166
+Mon Jan 15 14:13:39 AEDT 2018 com.google.javascript.jscomp.CheckMissingReturn,188
+Mon Jan 15 14:14:21 AEDT 2018 com.google.javascript.jscomp.CheckMissingReturn,190
+Mon Jan 15 14:14:26 AEDT 2018 com.google.javascript.jscomp.ExploitAssigns,198
+Mon Jan 15 17:28:33 AEDT 2018 Mon Jan 15 17:28:33 AEDT 2018 : com.google.javascript.jscomp.DefaultPassConfig,1102=>Find no block
+Mon Jan 15 17:28:34 AEDT 2018 com.google.javascript.jscomp.AbstractCommandLineRunner,202
+Mon Jan 15 17:29:37 AEDT 2018 Mon Jan 15 17:29:37 AEDT 2018 : com.google.javascript.jscomp.AbstractCommandLineRunner,203=>Find no block
+Mon Jan 15 17:29:41 AEDT 2018 com.google.javascript.jscomp.AbstractCommandLineRunner,1729
+Mon Jan 15 17:36:04 AEDT 2018 Mon Jan 15 17:36:04 AEDT 2018 : com.google.javascript.jscomp.AbstractCommandLineRunner,1730=>Find no block
+Mon Jan 15 17:36:06 AEDT 2018 Mon Jan 15 17:36:06 AEDT 2018 : com.google.javascript.jscomp.AbstractCommandLineRunner,1719=>Find no block
+Mon Jan 15 17:36:10 AEDT 2018 com.google.javascript.jscomp.AbstractCommandLineRunner,1720
+Mon Jan 15 17:37:00 AEDT 2018 com.google.javascript.jscomp.AbstractCommandLineRunner,1721
+Mon Jan 15 17:37:03 AEDT 2018 Mon Jan 15 17:37:03 AEDT 2018 : com.google.javascript.jscomp.AbstractCommandLineRunner,1722=>Find no block
+Mon Jan 15 17:37:06 AEDT 2018 Mon Jan 15 17:37:06 AEDT 2018 : com.google.javascript.jscomp.AbstractCommandLineRunner,1715=>Find no block
+Mon Jan 15 17:37:10 AEDT 2018 com.google.javascript.jscomp.CommandLineRunner,441
+Mon Jan 15 17:49:51 AEDT 2018 com.google.javascript.jscomp.CommandLineRunner,442
+Mon Jan 15 17:49:53 AEDT 2018 Mon Jan 15 17:49:53 AEDT 2018 : com.google.javascript.jscomp.CommandLineRunner,443=>Find no block
+Mon Jan 15 17:49:55 AEDT 2018 com.google.javascript.jscomp.DiagnosticGroups,206
+Mon Jan 15 17:58:51 AEDT 2018 com.google.javascript.jscomp.DiagnosticGroups,207
+Mon Jan 15 17:58:53 AEDT 2018 com.google.javascript.jscomp.DiagnosticGroups,208
+Mon Jan 15 17:58:58 AEDT 2018 Mon Jan 15 17:58:58 AEDT 2018 : com.google.javascript.jscomp.DiagnosticGroups,209=>Find no block
+Mon Jan 15 17:59:01 AEDT 2018 com.google.javascript.jscomp.CheckMissingReturn,156
+Mon Jan 15 17:59:03 AEDT 2018 com.google.javascript.jscomp.CheckMissingReturn,179
+Mon Jan 15 18:02:40 AEDT 2018 Mon Jan 15 18:02:40 AEDT 2018 : com.google.javascript.jscomp.DefaultPassConfig,1114=>Find no block
+Mon Jan 15 18:02:42 AEDT 2018 com.google.javascript.jscomp.DiagnosticGroups,63
+Mon Jan 15 18:03:54 AEDT 2018 com.google.javascript.jscomp.ExploitAssigns,83
+Mon Jan 15 18:18:02 AEDT 2018 com.google.javascript.jscomp.CollapseVariableDeclarations,192
+Timeout time : 18/01/15 18:50

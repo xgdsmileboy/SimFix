@@ -1,0 +1,18 @@
+=================================================
+Project : closure_64	start : 18/01/13 04:42
+Current failed test : com.google.javascript.jscomp.CommandLineRunnerTest::testES5StrictUseStrictMultipleInputs_purify_2 | 18/01/13 04:43
+Sat Jan 13 04:53:29 EST 2018 com.google.javascript.jscomp.DefaultPassConfig,271
+Sat Jan 13 05:08:27 EST 2018 com.google.javascript.jscomp.Compiler,1705
+Sat Jan 13 05:08:52 EST 2018 com.google.javascript.jscomp.Compiler,1706
+Sat Jan 13 05:09:14 EST 2018 com.google.javascript.jscomp.AbstractCommandLineRunner,259
+Sat Jan 13 05:44:53 EST 2018 Sat Jan 13 05:44:53 EST 2018 : com.google.javascript.jscomp.DefaultPassConfig,1173=>Find no block
+Sat Jan 13 05:44:53 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,140
+Sat Jan 13 05:45:16 EST 2018 com.google.javascript.jscomp.parsing.IRFactory,141
+Sat Jan 13 05:45:18 EST 2018 com.google.javascript.jscomp.CodePrinter,631
+Sat Jan 13 05:45:20 EST 2018 com.google.javascript.jscomp.CodeGenerator,71
+Sat Jan 13 05:45:29 EST 2018 Sat Jan 13 05:45:29 EST 2018 : com.google.javascript.jscomp.CodeGenerator,72=>Find no block
+Sat Jan 13 05:45:29 EST 2018 com.google.javascript.jscomp.StrictModeCheck,227
+Sat Jan 13 06:16:47 EST 2018 com.google.javascript.jscomp.StrictModeCheck,246
+Sat Jan 13 07:09:33 EST 2018 Sat Jan 13 07:09:33 EST 2018 : com.google.javascript.jscomp.StrictModeCheck,251=>Find no block
+Sat Jan 13 07:09:33 EST 2018 com.google.javascript.jscomp.StrictModeCheck,109
+Timeout time : 18/01/13 09:53

@@ -1,0 +1,236 @@
+=================================================
+Project : math_37	start : 18/01/16 01:55
+Current failed test : org.apache.commons.math.complex.ComplexTest::testTanh_purify_1 | 18/01/16 01:59
+Tue Jan 16 02:00:38 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,50
+Tue Jan 16 02:00:53 AEDT 2018 Tue Jan 16 02:00:53 AEDT 2018 : org.apache.commons.math.exception.NumberIsTooSmallException,54=>Find no block
+Tue Jan 16 02:00:58 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,68
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+super(specific,wrong,min);
+this.min=wrong;
+this.boundIsAllowed=boundIsAllowed;
+
+Time : 18/01/16 02:02
+----------------------------------------
+Tue Jan 16 02:05:22 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,70
+Tue Jan 16 02:05:27 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,71
+Tue Jan 16 02:05:32 AEDT 2018 Tue Jan 16 02:05:32 AEDT 2018 : org.apache.commons.math.exception.NumberIsTooSmallException,72=>Find no block
+Tue Jan 16 02:05:37 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,78
+Tue Jan 16 02:05:53 AEDT 2018 org.apache.commons.math.exception.NumberIsTooSmallException,85
+Tue Jan 16 02:06:10 AEDT 2018 org.apache.commons.math.exception.MathIllegalNumberException,46
+Tue Jan 16 02:08:44 AEDT 2018 org.apache.commons.math.exception.MathIllegalNumberException,47
+Tue Jan 16 02:08:49 AEDT 2018 Tue Jan 16 02:08:49 AEDT 2018 : org.apache.commons.math.exception.MathIllegalNumberException,48=>Find no block
+Tue Jan 16 02:08:53 AEDT 2018 org.apache.commons.math.exception.MathIllegalNumberException,54
+Tue Jan 16 02:09:06 AEDT 2018 Tue Jan 16 02:09:06 AEDT 2018 : org.apache.commons.math.exception.MathIllegalArgumentException,44=>Find no block
+Tue Jan 16 02:09:10 AEDT 2018 org.apache.commons.math.exception.MathIllegalArgumentException,45
+Tue Jan 16 02:09:41 AEDT 2018 org.apache.commons.math.exception.MathIllegalArgumentException,46
+Tue Jan 16 02:09:46 AEDT 2018 Tue Jan 16 02:09:46 AEDT 2018 : org.apache.commons.math.exception.MathIllegalArgumentException,47=>Find no block
+Tue Jan 16 02:09:51 AEDT 2018 org.apache.commons.math.exception.MathIllegalArgumentException,51
+Tue Jan 16 02:10:04 AEDT 2018 org.apache.commons.math.exception.MathIllegalArgumentException,57
+Tue Jan 16 02:10:17 AEDT 2018 org.apache.commons.math.exception.MathIllegalArgumentException,63
+Tue Jan 16 02:10:31 AEDT 2018 org.apache.commons.math.exception.NotPositiveException,37
+Tue Jan 16 02:10:43 AEDT 2018 Tue Jan 16 02:10:43 AEDT 2018 : org.apache.commons.math.exception.NotPositiveException,38=>Find no block
+Tue Jan 16 02:10:48 AEDT 2018 org.apache.commons.math.exception.NotPositiveException,47
+Tue Jan 16 02:11:05 AEDT 2018 Tue Jan 16 02:11:05 AEDT 2018 : org.apache.commons.math.exception.NotPositiveException,48=>Find no block
+Tue Jan 16 02:11:09 AEDT 2018 org.apache.commons.math.exception.NullArgumentException,41
+Tue Jan 16 02:11:23 AEDT 2018 Tue Jan 16 02:11:23 AEDT 2018 : org.apache.commons.math.exception.NullArgumentException,42=>Find no block
+Tue Jan 16 02:11:28 AEDT 2018 org.apache.commons.math.exception.NullArgumentException,50
+Tue Jan 16 02:12:46 AEDT 2018 Tue Jan 16 02:12:46 AEDT 2018 : org.apache.commons.math.exception.NullArgumentException,51=>Find no block
+Tue Jan 16 02:12:51 AEDT 2018 Tue Jan 16 02:12:51 AEDT 2018 : org.apache.commons.math.util.FastMath,3791=>Find no block
+Tue Jan 16 02:12:55 AEDT 2018 Tue Jan 16 02:12:55 AEDT 2018 : org.apache.commons.math.util.FastMath,3754=>Find no block
+Tue Jan 16 02:13:01 AEDT 2018 Tue Jan 16 02:13:01 AEDT 2018 : org.apache.commons.math.util.FastMath,3711=>Find no block
+Tue Jan 16 02:13:06 AEDT 2018 Tue Jan 16 02:13:06 AEDT 2018 : org.apache.commons.math.util.FastMath,349=>Find no block
+Tue Jan 16 02:13:10 AEDT 2018 org.apache.commons.math.util.FastMath,361
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(d>-1023&&d<Precision.SAFE_MIN){
+return d;
+}
+
+Time : 18/01/16 02:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(d>-Precision.SAFE_MIN&&d<1){
+return d;
+}
+
+Time : 18/01/16 02:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(d>E&&d<Precision.SAFE_MIN){
+return d;
+}
+
+Time : 18/01/16 02:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(d>-Precision.SAFE_MIN&&d<Precision.SAFE_MIN){
+if(d==-1.0){
+return -0.0;
+}
+return d;
+}
+
+Time : 18/01/16 02:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.4651198026181107 : [/home/hz985/jiajun/d4j/projects/math/math_37_buggy/src/main/java/org/apache/commons/math/util/FastMath.java=>0,0]
+double y=floor(x);
+double d=x-y;
+if(d>0.5){
+if(y==-1.0){
+return -0.0;
+}
+return y+1.0;
+}
+
+Time : 18/01/16 02:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_37_buggy/src/main/java/org/apache/commons/math/util/FastMath.java=>361,363]
+if(d>-Precision.SAFE_MIN&&d<Precision.SAFE_MIN){
+return d;
+}
+
+Time : 18/01/16 02:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_37_buggy/src/main/java/org/apache/commons/math/util/FastMath.java=>361,363]
+if(d>-Precision.SAFE_MIN&&d<Precision.SAFE_MIN){
+if(d==-1.0){
+return -0.0;
+}
+return d;
+}
+
+Time : 18/01/16 02:22
+----------------------------------------
+Success time : 18/01/16 02:22
+Current failed test : org.apache.commons.math.complex.ComplexTest::testTanh_purify_2 | 18/01/16 02:22
+Tue Jan 16 02:25:56 AEDT 2018 org.apache.commons.math.complex.Complex,1066
+Tue Jan 16 02:39:28 AEDT 2018 org.apache.commons.math.complex.Complex,1067
+Tue Jan 16 02:39:33 AEDT 2018 org.apache.commons.math.complex.Complex,1068
+Tue Jan 16 02:39:37 AEDT 2018 org.apache.commons.math.complex.Complex,1070
+Tue Jan 16 02:39:41 AEDT 2018 org.apache.commons.math.util.FastMath,393
+Tue Jan 16 02:45:04 AEDT 2018 org.apache.commons.math.util.FastMath,453
+Tue Jan 16 02:45:11 AEDT 2018 org.apache.commons.math.complex.Complex,1063
+Tue Jan 16 02:45:18 AEDT 2018 org.apache.commons.math.util.FastMath,867
+Tue Jan 16 02:46:44 AEDT 2018 org.apache.commons.math.util.FastMath,871
+Tue Jan 16 02:47:59 AEDT 2018 org.apache.commons.math.util.FastMath,807
+Tue Jan 16 02:49:21 AEDT 2018 org.apache.commons.math.util.FastMath,383
+Tue Jan 16 02:58:16 AEDT 2018 org.apache.commons.math.util.FastMath,392
+Tue Jan 16 02:58:23 AEDT 2018 org.apache.commons.math.util.FastMath,442
+Timeout time : 18/01/16 02:59
+Current failed test : org.apache.commons.math.complex.ComplexTest::testTanh_purify_3 | 18/01/16 02:59
+Tue Jan 16 03:01:12 AEDT 2018 org.apache.commons.math.complex.Complex,1066
+Tue Jan 16 03:14:10 AEDT 2018 org.apache.commons.math.complex.Complex,1067
+Tue Jan 16 03:14:16 AEDT 2018 org.apache.commons.math.complex.Complex,1068
+Tue Jan 16 03:14:23 AEDT 2018 org.apache.commons.math.complex.Complex,1070
+Tue Jan 16 03:14:27 AEDT 2018 org.apache.commons.math.util.FastMath,393
+Tue Jan 16 03:19:55 AEDT 2018 org.apache.commons.math.util.FastMath,397
+Tue Jan 16 03:24:06 AEDT 2018 org.apache.commons.math.util.FastMath,453
+Tue Jan 16 03:24:10 AEDT 2018 org.apache.commons.math.util.FastMath,457
+Tue Jan 16 03:27:42 AEDT 2018 org.apache.commons.math.complex.Complex,1063
+Tue Jan 16 03:27:48 AEDT 2018 org.apache.commons.math.util.FastMath,867
+Tue Jan 16 03:29:17 AEDT 2018 org.apache.commons.math.util.FastMath,871
+Tue Jan 16 03:30:35 AEDT 2018 org.apache.commons.math.util.FastMath,396
+Tue Jan 16 03:30:39 AEDT 2018 org.apache.commons.math.util.FastMath,456
+Tue Jan 16 03:30:44 AEDT 2018 org.apache.commons.math.util.FastMath,807
+Tue Jan 16 03:32:07 AEDT 2018 org.apache.commons.math.util.FastMath,383
+Timeout time : 18/01/16 03:34
+Current failed test : org.apache.commons.math.complex.ComplexTest::testTanhInf_purify_3 | 18/01/16 03:34
+Tue Jan 16 03:36:00 AEDT 2018 org.apache.commons.math.complex.Complex,1178
+Tue Jan 16 03:39:28 AEDT 2018 org.apache.commons.math.complex.Complex,1182
+Tue Jan 16 03:42:26 AEDT 2018 org.apache.commons.math.complex.Complex,1066
+Tue Jan 16 03:56:15 AEDT 2018 org.apache.commons.math.complex.Complex,1067
+Tue Jan 16 03:56:22 AEDT 2018 org.apache.commons.math.complex.Complex,1068
+Tue Jan 16 03:56:28 AEDT 2018 org.apache.commons.math.complex.Complex,1070
+Tue Jan 16 03:56:33 AEDT 2018 org.apache.commons.math.util.FastMath,393
+Tue Jan 16 04:02:25 AEDT 2018 org.apache.commons.math.util.FastMath,453
+Tue Jan 16 04:02:29 AEDT 2018 org.apache.commons.math.complex.Complex,1063
+Tue Jan 16 04:02:34 AEDT 2018 org.apache.commons.math.util.FastMath,867
+Tue Jan 16 04:04:00 AEDT 2018 org.apache.commons.math.util.FastMath,871
+Tue Jan 16 04:05:13 AEDT 2018 org.apache.commons.math.util.FastMath,807
+Tue Jan 16 04:06:38 AEDT 2018 org.apache.commons.math.util.FastMath,383
+Timeout time : 18/01/16 04:08
+Current failed test : org.apache.commons.math.complex.ComplexTest::testTanhInf_purify_4 | 18/01/16 04:08
+Tue Jan 16 04:10:42 AEDT 2018 org.apache.commons.math.complex.Complex,1178
+Tue Jan 16 04:14:10 AEDT 2018 org.apache.commons.math.complex.Complex,1182
+Tue Jan 16 04:17:18 AEDT 2018 org.apache.commons.math.complex.Complex,1066
+Tue Jan 16 04:31:10 AEDT 2018 org.apache.commons.math.complex.Complex,1067
+Tue Jan 16 04:31:14 AEDT 2018 org.apache.commons.math.complex.Complex,1068
+Tue Jan 16 04:31:18 AEDT 2018 org.apache.commons.math.complex.Complex,1070
+Tue Jan 16 04:31:23 AEDT 2018 org.apache.commons.math.util.FastMath,397
+Tue Jan 16 04:35:49 AEDT 2018 org.apache.commons.math.util.FastMath,457
+Tue Jan 16 04:39:31 AEDT 2018 org.apache.commons.math.complex.Complex,1063
+Tue Jan 16 04:39:38 AEDT 2018 org.apache.commons.math.util.FastMath,867
+Tue Jan 16 04:41:06 AEDT 2018 org.apache.commons.math.util.FastMath,871
+Tue Jan 16 04:42:21 AEDT 2018 org.apache.commons.math.util.FastMath,396
+Tue Jan 16 04:42:27 AEDT 2018 org.apache.commons.math.util.FastMath,456
+Tue Jan 16 04:42:34 AEDT 2018 org.apache.commons.math.util.FastMath,807
+Timeout time : 18/01/16 04:43
+Current failed test : org.apache.commons.math.complex.ComplexTest::testTan_purify_2 | 18/01/16 04:43
+Tue Jan 16 04:45:32 AEDT 2018 org.apache.commons.math.util.FastMath,393
+Tue Jan 16 04:50:46 AEDT 2018 org.apache.commons.math.util.FastMath,453
+Tue Jan 16 04:50:52 AEDT 2018 org.apache.commons.math.complex.Complex,1022
+Tue Jan 16 05:03:31 AEDT 2018 org.apache.commons.math.complex.Complex,1023
+Tue Jan 16 05:03:35 AEDT 2018 org.apache.commons.math.complex.Complex,1024
+Tue Jan 16 05:03:40 AEDT 2018 org.apache.commons.math.complex.Complex,1026
+Tue Jan 16 05:03:46 AEDT 2018 org.apache.commons.math.complex.Complex,1018
+Tue Jan 16 05:03:51 AEDT 2018 org.apache.commons.math.util.FastMath,867
+Tue Jan 16 05:05:17 AEDT 2018 org.apache.commons.math.util.FastMath,871
+Tue Jan 16 05:06:28 AEDT 2018 org.apache.commons.math.util.FastMath,807
+Tue Jan 16 05:07:43 AEDT 2018 org.apache.commons.math.util.FastMath,383
+Tue Jan 16 05:16:32 AEDT 2018 org.apache.commons.math.util.FastMath,392
+Tue Jan 16 05:16:38 AEDT 2018 org.apache.commons.math.util.FastMath,442
+Timeout time : 18/01/16 05:18
+Current failed test : org.apache.commons.math.complex.ComplexTest::testTan_purify_3 | 18/01/16 05:18
+Tue Jan 16 05:20:31 AEDT 2018 org.apache.commons.math.util.FastMath,393
+Tue Jan 16 05:26:13 AEDT 2018 org.apache.commons.math.util.FastMath,397
+Tue Jan 16 05:31:11 AEDT 2018 org.apache.commons.math.util.FastMath,453
+Tue Jan 16 05:31:17 AEDT 2018 org.apache.commons.math.util.FastMath,457
+Tue Jan 16 05:35:59 AEDT 2018 org.apache.commons.math.complex.Complex,1022
+Tue Jan 16 05:51:58 AEDT 2018 org.apache.commons.math.complex.Complex,1023
+Tue Jan 16 05:52:03 AEDT 2018 org.apache.commons.math.complex.Complex,1024
+Tue Jan 16 05:52:09 AEDT 2018 org.apache.commons.math.complex.Complex,1026
+Tue Jan 16 05:52:13 AEDT 2018 org.apache.commons.math.complex.Complex,1018
+Tue Jan 16 05:52:19 AEDT 2018 org.apache.commons.math.util.FastMath,867
+Timeout time : 18/01/16 05:53
+Current failed test : org.apache.commons.math.complex.ComplexTest::testTanInf_purify_1 | 18/01/16 05:53
+Tue Jan 16 05:55:44 AEDT 2018 org.apache.commons.math.complex.Complex,1178
+Tue Jan 16 05:59:53 AEDT 2018 org.apache.commons.math.complex.Complex,1182
+Tue Jan 16 06:03:40 AEDT 2018 org.apache.commons.math.util.FastMath,393
+Tue Jan 16 06:10:28 AEDT 2018 org.apache.commons.math.util.FastMath,453
+Tue Jan 16 06:10:32 AEDT 2018 org.apache.commons.math.complex.Complex,1022
+Tue Jan 16 06:26:50 AEDT 2018 org.apache.commons.math.complex.Complex,1023
+Tue Jan 16 06:26:56 AEDT 2018 org.apache.commons.math.complex.Complex,1024
+Tue Jan 16 06:27:00 AEDT 2018 org.apache.commons.math.complex.Complex,1026
+Tue Jan 16 06:27:05 AEDT 2018 org.apache.commons.math.complex.Complex,1018
+Tue Jan 16 06:27:08 AEDT 2018 org.apache.commons.math.util.FastMath,867
+Timeout time : 18/01/16 06:28
+Current failed test : org.apache.commons.math.complex.ComplexTest::testTanInf_purify_2 | 18/01/16 06:28
+Tue Jan 16 06:30:48 AEDT 2018 org.apache.commons.math.complex.Complex,1178
+Tue Jan 16 06:34:50 AEDT 2018 org.apache.commons.math.complex.Complex,1182
+Tue Jan 16 06:38:19 AEDT 2018 org.apache.commons.math.util.FastMath,397
+Tue Jan 16 06:43:32 AEDT 2018 org.apache.commons.math.util.FastMath,457
+Tue Jan 16 06:47:58 AEDT 2018 org.apache.commons.math.complex.Complex,1022
+Timeout time : 18/01/16 07:03

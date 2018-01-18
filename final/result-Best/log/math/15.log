@@ -1,0 +1,257 @@
+=================================================
+Project : math_15	start : 18/01/14 12:29
+Current failed test : org.apache.commons.math3.util.FastMathTest::testMath904 | 18/01/14 12:30
+Sun Jan 14 12:41:02 AEDT 2018 org.apache.commons.math3.util.FastMath,1542
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y>=TWO_POWER_52||y<=-TWO_POWER_52){
+return ((long)y&1)==0?pow(-x,y):-pow(-x,y);
+}
+
+Time : 18/01/14 12:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y>=TWO_POWER_52&&y<=-TWO_POWER_52){
+return pow(-x,y);
+}
+
+Time : 18/01/14 12:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y>=TWO_POWER_52&&y<1){
+return pow(-x,y);
+}
+
+Time : 18/01/14 12:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x>=TWO_POWER_52||x<=-TWO_POWER_52){
+return pow(-x,y);
+}
+
+Time : 18/01/14 12:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x>=TWO_POWER_52&&y<=-TWO_POWER_52){
+return pow(-x,y);
+}
+
+Time : 18/01/14 12:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y>=TWO_POWER_52&&x<=-TWO_POWER_52){
+return pow(-x,y);
+}
+
+Time : 18/01/14 13:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y>0&&y<=-TWO_POWER_52){
+return pow(-x,y);
+}
+
+Time : 18/01/14 13:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x>=TWO_POWER_52&&x<=-TWO_POWER_52){
+return pow(-x,y);
+}
+
+Time : 18/01/14 13:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y>0&&x<=-TWO_POWER_52){
+return pow(-x,y);
+}
+
+Time : 18/01/14 13:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x>TWO_POWER_52||x<=-TWO_POWER_52){
+return pow(-x,y);
+}
+
+Time : 18/01/14 13:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x>=TWO_POWER_52||x<-TWO_POWER_52){
+return pow(-x,y);
+}
+
+Time : 18/01/14 13:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x>=E||x<=-TWO_POWER_52){
+return pow(-x,y);
+}
+
+Time : 18/01/14 13:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x>TWO_POWER_52||x<-TWO_POWER_52){
+return pow(-x,y);
+}
+
+Time : 18/01/14 13:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x>E||x<=-TWO_POWER_52){
+return pow(-x,y);
+}
+
+Time : 18/01/14 13:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x>=E||x<-TWO_POWER_52){
+return pow(-x,y);
+}
+
+Time : 18/01/14 13:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y>=TWO_POWER_52&&y<-TWO_POWER_52){
+return pow(-x,y);
+}
+
+Time : 18/01/14 13:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y>=TWO_POWER_52&&x<-TWO_POWER_52){
+return pow(-x,y);
+}
+
+Time : 18/01/14 13:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y>=x&&y<=-TWO_POWER_52){
+return pow(-x,y);
+}
+
+Time : 18/01/14 13:50
+----------------------------------------
+Sun Jan 14 13:56:01 AEDT 2018 Sun Jan 14 13:56:01 AEDT 2018 : org.apache.commons.math3.random.MersenneTwister,131=>Find no block
+Sun Jan 14 13:56:09 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,132
+Sun Jan 14 13:57:08 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,133
+Sun Jan 14 13:57:17 AEDT 2018 Sun Jan 14 13:57:17 AEDT 2018 : org.apache.commons.math3.random.MersenneTwister,134=>Find no block
+Sun Jan 14 13:57:25 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,144
+Sun Jan 14 14:02:01 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,146
+Sun Jan 14 14:02:08 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,147
+Sun Jan 14 14:02:15 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,150
+Sun Jan 14 14:02:23 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,151
+Sun Jan 14 14:02:32 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,154
+Sun Jan 14 14:02:41 AEDT 2018 Sun Jan 14 14:02:41 AEDT 2018 : org.apache.commons.math3.random.MersenneTwister,155=>Find no block
+Sun Jan 14 14:02:50 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,167
+Sun Jan 14 14:03:12 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,172
+Sun Jan 14 14:06:12 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,173
+Sun Jan 14 14:09:46 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,174
+Sun Jan 14 14:09:56 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,176
+Sun Jan 14 14:54:08 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,177
+Sun Jan 14 14:57:31 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,178
+Sun Jan 14 14:57:37 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,179
+Sun Jan 14 14:59:53 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,180
+Sun Jan 14 15:02:31 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,181
+Sun Jan 14 15:10:27 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,182
+Sun Jan 14 15:10:32 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,183
+Sun Jan 14 15:10:40 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,184
+Sun Jan 14 15:10:48 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,186
+Sun Jan 14 15:10:57 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,187
+Sun Jan 14 15:11:03 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,191
+Sun Jan 14 15:21:24 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,192
+Sun Jan 14 15:21:30 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,193
+Sun Jan 14 15:21:36 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,194
+Sun Jan 14 15:21:42 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,195
+Sun Jan 14 15:21:49 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,196
+Sun Jan 14 15:21:56 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,197
+Sun Jan 14 15:22:02 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,198
+Sun Jan 14 15:22:08 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,199
+Sun Jan 14 15:22:13 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,203
+Sun Jan 14 15:31:06 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,205
+Sun Jan 14 15:39:53 AEDT 2018 Sun Jan 14 15:39:53 AEDT 2018 : org.apache.commons.math3.random.MersenneTwister,207=>Find no block
+Sun Jan 14 15:39:59 AEDT 2018 org.apache.commons.math3.random.MersenneTwister,216
+Sun Jan 14 15:41:09 AEDT 2018 Sun Jan 14 15:41:09 AEDT 2018 : org.apache.commons.math3.random.MersenneTwister,217=>Find no block
+Sun Jan 14 15:41:16 AEDT 2018 org.apache.commons.math3.util.FastMath,1541
+Sun Jan 14 15:41:23 AEDT 2018 org.apache.commons.math3.dfp.Dfp,202
+Sun Jan 14 15:41:38 AEDT 2018 Sun Jan 14 15:41:38 AEDT 2018 : org.apache.commons.math3.dfp.Dfp,203=>Find no block
+Sun Jan 14 15:41:45 AEDT 2018 Sun Jan 14 15:41:45 AEDT 2018 : org.apache.commons.math3.dfp.Dfp,209=>Find no block
+Sun Jan 14 15:41:49 AEDT 2018 org.apache.commons.math3.dfp.Dfp,212
+Sun Jan 14 15:45:35 AEDT 2018 org.apache.commons.math3.dfp.Dfp,213
+Sun Jan 14 15:45:41 AEDT 2018 org.apache.commons.math3.dfp.Dfp,214
+Sun Jan 14 15:49:42 AEDT 2018 org.apache.commons.math3.dfp.Dfp,216
+Sun Jan 14 15:52:40 AEDT 2018 org.apache.commons.math3.dfp.Dfp,217
+Sun Jan 14 15:54:28 AEDT 2018 org.apache.commons.math3.dfp.Dfp,225
+Sun Jan 14 15:59:27 AEDT 2018 org.apache.commons.math3.dfp.Dfp,229
+Sun Jan 14 15:59:35 AEDT 2018 org.apache.commons.math3.dfp.Dfp,232
+Sun Jan 14 16:06:13 AEDT 2018 org.apache.commons.math3.dfp.Dfp,233
+Sun Jan 14 16:29:52 AEDT 2018 org.apache.commons.math3.dfp.Dfp,234
+Sun Jan 14 16:29:58 AEDT 2018 org.apache.commons.math3.dfp.Dfp,235
+Sun Jan 14 16:30:06 AEDT 2018 org.apache.commons.math3.dfp.Dfp,236
+Sun Jan 14 16:30:15 AEDT 2018 org.apache.commons.math3.dfp.Dfp,237
+Sun Jan 14 16:30:21 AEDT 2018 org.apache.commons.math3.dfp.Dfp,240
+Sun Jan 14 17:08:21 AEDT 2018 Sun Jan 14 17:08:21 AEDT 2018 : org.apache.commons.math3.dfp.Dfp,250=>Find no block
+Sun Jan 14 17:08:28 AEDT 2018 Sun Jan 14 17:08:28 AEDT 2018 : org.apache.commons.math3.dfp.Dfp,334=>Find no block
+Sun Jan 14 17:08:36 AEDT 2018 org.apache.commons.math3.dfp.Dfp,337
+Sun Jan 14 17:12:35 AEDT 2018 org.apache.commons.math3.dfp.Dfp,338
+Sun Jan 14 17:12:42 AEDT 2018 org.apache.commons.math3.dfp.Dfp,339
+Sun Jan 14 17:16:02 AEDT 2018 org.apache.commons.math3.dfp.Dfp,340
+Sun Jan 14 17:20:20 AEDT 2018 org.apache.commons.math3.dfp.Dfp,341
+Sun Jan 14 17:23:57 AEDT 2018 org.apache.commons.math3.dfp.Dfp,343
+Sun Jan 14 17:27:53 AEDT 2018 org.apache.commons.math3.dfp.Dfp,344
+Sun Jan 14 17:29:24 AEDT 2018 org.apache.commons.math3.dfp.Dfp,345
+Sun Jan 14 17:32:20 AEDT 2018 org.apache.commons.math3.dfp.Dfp,346
+Sun Jan 14 17:35:57 AEDT 2018 org.apache.commons.math3.dfp.Dfp,349
+Sun Jan 14 17:38:14 AEDT 2018 org.apache.commons.math3.dfp.Dfp,355
+Sun Jan 14 17:40:27 AEDT 2018 org.apache.commons.math3.dfp.Dfp,361
+Timeout time : 18/01/14 17:41

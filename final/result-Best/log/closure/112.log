@@ -1,0 +1,115 @@
+=================================================
+Project : closure_112	start : 18/01/14 08:52
+Current failed test : com.google.javascript.jscomp.TypeCheckTest::testIssue1058 | 18/01/14 08:53
+Sun Jan 14 09:01:50 AEDT 2018 com.google.javascript.rhino.jstype.JSType,621
+Sun Jan 14 09:23:19 AEDT 2018 com.google.javascript.rhino.jstype.TemplateTypeMapReplacer,74
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hasVisitedType(type)&&!replacements.hasTemplateType(type)){
+return type;
+}else {
+JSType replacement=replacements.getTemplateType(type);
+visitedTypes.push(type);
+JSType visitedReplacement=replacement.visit(this);
+visitedTypes.pop();
+return visitedReplacement;
+}
+
+Time : 18/01/14 09:25
+----------------------------------------
+Sun Jan 14 09:29:11 AEDT 2018 com.google.javascript.jscomp.TypeInference,1041
+Sun Jan 14 09:54:27 AEDT 2018 com.google.javascript.jscomp.TypeInference,1042
+Sun Jan 14 09:54:28 AEDT 2018 com.google.javascript.jscomp.TypeInference,1151
+Sun Jan 14 09:59:04 AEDT 2018 com.google.javascript.jscomp.TypeInference,1152
+Sun Jan 14 09:59:05 AEDT 2018 com.google.javascript.jscomp.TypeInference,1356
+Sun Jan 14 10:09:33 AEDT 2018 com.google.javascript.jscomp.TypeInference,1357
+Sun Jan 14 10:09:34 AEDT 2018 com.google.javascript.jscomp.TypeInference,1359
+Sun Jan 14 10:09:36 AEDT 2018 com.google.javascript.rhino.jstype.ModificationVisitor,95
+Sun Jan 14 10:10:05 AEDT 2018 com.google.javascript.jscomp.TypeValidator,688
+Sun Jan 14 10:21:54 AEDT 2018 com.google.javascript.rhino.jstype.TemplateTypeMapReplacer,70
+Sun Jan 14 10:21:56 AEDT 2018 com.google.javascript.rhino.jstype.TemplateTypeMapReplacer,94
+Sun Jan 14 10:22:50 AEDT 2018 com.google.javascript.rhino.jstype.TemplateTypeMapReplacer,99
+Sun Jan 14 10:23:18 AEDT 2018 com.google.javascript.jscomp.TypeInference,1065
+Sun Jan 14 11:20:12 AEDT 2018 com.google.javascript.jscomp.FunctionTypeBuilder,353
+Sun Jan 14 12:35:51 AEDT 2018 com.google.javascript.jscomp.FunctionTypeBuilder,354
+Sun Jan 14 12:35:53 AEDT 2018 com.google.javascript.jscomp.FunctionTypeBuilder,355
+Sun Jan 14 12:35:55 AEDT 2018 Sun Jan 14 12:35:55 AEDT 2018 : com.google.javascript.jscomp.FunctionTypeBuilder,356=>Find no block
+Sun Jan 14 12:35:57 AEDT 2018 com.google.javascript.jscomp.FunctionTypeBuilder,357
+Sun Jan 14 12:35:59 AEDT 2018 com.google.javascript.jscomp.FunctionTypeBuilder,358
+Sun Jan 14 12:36:01 AEDT 2018 com.google.javascript.rhino.jstype.TemplateTypeMap,115
+Sun Jan 14 12:36:07 AEDT 2018 com.google.javascript.rhino.jstype.ModificationVisitor,124
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(paramNode.isVarArgs()){
+paramBuilder.addVarArgs(afterParamType);
+}else {
+paramBuilder.addRequiredParams(afterParamType);
+return null;
+}
+
+Time : 18/01/14 12:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(paramNode==null){
+return null;
+}
+if(paramNode.isVarArgs()){
+paramBuilder.addVarArgs(afterParamType);
+}else {
+paramBuilder.addRequiredParams(afterParamType);
+return null;
+}
+
+Time : 18/01/14 12:46
+----------------------------------------
+Sun Jan 14 12:51:43 AEDT 2018 com.google.javascript.rhino.jstype.ModificationVisitor,147
+Sun Jan 14 12:51:47 AEDT 2018 com.google.javascript.jscomp.TypeInference,1049
+Sun Jan 14 12:58:46 AEDT 2018 com.google.javascript.jscomp.TypeInference,1119
+Sun Jan 14 12:58:49 AEDT 2018 Sun Jan 14 12:58:49 AEDT 2018 : com.google.javascript.jscomp.TypeInference,1121=>Find no block
+Sun Jan 14 12:58:50 AEDT 2018 com.google.javascript.jscomp.TypeInference,1127
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+callParams.next();
+while(declParams.hasNext()&&callParams.hasNext()){
+Node declParam=declParams.next();
+maybeResolveTemplatedType(getJSType(declParam),getJSType(callParams.next()),resolvedTypes);
+if(declParam.isVarArgs()){
+while(callParams.hasNext()){
+maybeResolveTemplatedType(getJSType(declParam),getJSType(callParams.next()),resolvedTypes);
+}
+}
+}
+
+Time : 18/01/14 13:20
+----------------------------------------
+Sun Jan 14 13:36:45 AEDT 2018 com.google.javascript.jscomp.TypeInference,1128
+Sun Jan 14 13:36:45 AEDT 2018 com.google.javascript.jscomp.TypeInference,1129
+Sun Jan 14 13:36:46 AEDT 2018 com.google.javascript.jscomp.TypeInference,1133
+Sun Jan 14 13:36:47 AEDT 2018 Sun Jan 14 13:36:47 AEDT 2018 : com.google.javascript.jscomp.TypeInference,1141=>Find no block
+Sun Jan 14 13:36:48 AEDT 2018 Sun Jan 14 13:36:48 AEDT 2018 : com.google.javascript.jscomp.TypeInference,1142=>Find no block
+Sun Jan 14 13:36:49 AEDT 2018 com.google.javascript.jscomp.TypeInference,1148
+Sun Jan 14 13:36:50 AEDT 2018 com.google.javascript.jscomp.TypeInference,1149
+Sun Jan 14 13:36:50 AEDT 2018 com.google.javascript.jscomp.TypeInference,1171
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+madeChanges=true;
+JSType replacement=replacements.get(type);
+return replacement==null?replacement:registry.getNativeType(UNKNOWN_TYPE);
+
+Time : 18/01/14 13:41
+----------------------------------------
+Sun Jan 14 13:51:03 AEDT 2018 com.google.javascript.jscomp.TypeInference,1172
+Sun Jan 14 13:51:04 AEDT 2018 com.google.javascript.jscomp.TypeInference,1173
+Sun Jan 14 13:51:05 AEDT 2018 com.google.javascript.jscomp.TypeInference,967
+Timeout time : 18/01/14 14:02

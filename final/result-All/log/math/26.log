@@ -1,0 +1,382 @@
+=================================================
+Project : math_26	start : 18/01/13 00:08
+Current failed test : org.apache.commons.math3.fraction.FractionTest::testIntegerOverflow | 18/01/13 00:09
+Sat Jan 13 00:11:03 AEDT 2018 org.apache.commons.math3.fraction.Fraction,182
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((a0>overflow)||(serialVersionUID>overflow)){
+throw new FractionConversionException(value,a0,1l);
+}
+
+Time : 18/01/13 00:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((a0>overflow)||(serialVersionUID>overflow)){
+throw new FractionConversionException(value,a0,serialVersionUID);
+}
+
+Time : 18/01/13 00:13
+----------------------------------------
+Sat Jan 13 00:19:01 AEDT 2018 org.apache.commons.math3.fraction.Fraction,210
+Sat Jan 13 00:26:02 AEDT 2018 org.apache.commons.math3.fraction.FractionConversionException,53
+Sat Jan 13 00:26:18 AEDT 2018 Sat Jan 13 00:26:18 AEDT 2018 : org.apache.commons.math3.fraction.FractionConversionException,54=>Find no block
+Sat Jan 13 00:26:19 AEDT 2018 Sat Jan 13 00:26:19 AEDT 2018 : org.apache.commons.math3.exception.ConvergenceException,48=>Find no block
+Sat Jan 13 00:26:21 AEDT 2018 org.apache.commons.math3.exception.ConvergenceException,49
+Sat Jan 13 00:27:04 AEDT 2018 Sat Jan 13 00:27:04 AEDT 2018 : org.apache.commons.math3.exception.ConvergenceException,50=>Find no block
+Sat Jan 13 00:27:06 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,69
+Sat Jan 13 00:27:10 AEDT 2018 Sat Jan 13 00:27:10 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalStateException,70=>Find no block
+Sat Jan 13 00:27:11 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,74
+Sat Jan 13 00:27:17 AEDT 2018 Sat Jan 13 00:27:17 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalStateException,45=>Find no block
+Sat Jan 13 00:27:18 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,46
+Sat Jan 13 00:28:01 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,47
+Sat Jan 13 00:28:03 AEDT 2018 Sat Jan 13 00:28:03 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalStateException,48=>Find no block
+Sat Jan 13 00:28:04 AEDT 2018 org.apache.commons.math3.fraction.Fraction,188
+Sat Jan 13 00:43:39 AEDT 2018 org.apache.commons.math3.fraction.Fraction,189
+Sat Jan 13 00:43:40 AEDT 2018 org.apache.commons.math3.fraction.Fraction,190
+Sat Jan 13 00:43:41 AEDT 2018 org.apache.commons.math3.fraction.Fraction,215
+Sat Jan 13 01:17:21 AEDT 2018 org.apache.commons.math3.fraction.Fraction,216
+Sat Jan 13 01:17:22 AEDT 2018 org.apache.commons.math3.fraction.Fraction,217
+Sat Jan 13 01:17:24 AEDT 2018 org.apache.commons.math3.fraction.Fraction,218
+Sat Jan 13 01:17:25 AEDT 2018 org.apache.commons.math3.fraction.Fraction,219
+Sat Jan 13 01:17:26 AEDT 2018 org.apache.commons.math3.fraction.Fraction,220
+Sat Jan 13 01:17:27 AEDT 2018 org.apache.commons.math3.util.FastMath,3255
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x<=E){
+return 0;
+}
+if(y==0){
+return x*y;
+}
+
+Time : 18/01/13 01:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x<=E){
+return 0;
+}
+if(x==0){
+return x*y;
+}
+
+Time : 18/01/13 01:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y!=0){
+return x*y;
+}
+
+Time : 18/01/13 01:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x<=0){
+return 0;
+}
+if(y==0){
+return x*y;
+}
+
+Time : 18/01/13 01:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(!RECOMPUTE_TABLES_AT_RUNTIME){
+return x*y;
+}
+
+Time : 18/01/13 01:35
+----------------------------------------
+Sat Jan 13 01:46:50 AEDT 2018 org.apache.commons.math3.fraction.Fraction,193
+Sat Jan 13 02:09:06 AEDT 2018 org.apache.commons.math3.fraction.Fraction,194
+Sat Jan 13 02:10:46 AEDT 2018 org.apache.commons.math3.fraction.Fraction,195
+Sat Jan 13 02:12:23 AEDT 2018 org.apache.commons.math3.fraction.Fraction,196
+Sat Jan 13 02:21:49 AEDT 2018 org.apache.commons.math3.fraction.Fraction,198
+Sat Jan 13 02:24:16 AEDT 2018 org.apache.commons.math3.fraction.Fraction,199
+Sat Jan 13 02:45:56 AEDT 2018 org.apache.commons.math3.fraction.Fraction,201
+Sat Jan 13 02:59:23 AEDT 2018 org.apache.commons.math3.fraction.Fraction,202
+Sat Jan 13 02:59:24 AEDT 2018 org.apache.commons.math3.fraction.Fraction,204
+Sat Jan 13 03:09:11 AEDT 2018 org.apache.commons.math3.fraction.Fraction,205
+Sat Jan 13 03:09:14 AEDT 2018 org.apache.commons.math3.fraction.Fraction,206
+Sat Jan 13 03:14:48 AEDT 2018 org.apache.commons.math3.fraction.Fraction,207
+Sat Jan 13 03:19:26 AEDT 2018 org.apache.commons.math3.fraction.Fraction,208
+Sat Jan 13 03:23:03 AEDT 2018 org.apache.commons.math3.fraction.Fraction,209
+Sat Jan 13 03:23:04 AEDT 2018 org.apache.commons.math3.fraction.Fraction,213
+Sat Jan 13 03:27:55 AEDT 2018 org.apache.commons.math3.fraction.Fraction,214
+Sat Jan 13 03:27:56 AEDT 2018 org.apache.commons.math3.fraction.Fraction,224
+Sat Jan 13 04:00:22 AEDT 2018 Sat Jan 13 04:00:22 AEDT 2018 : org.apache.commons.math3.fraction.Fraction,122=>Find no block
+Sat Jan 13 04:00:24 AEDT 2018 org.apache.commons.math3.fraction.Fraction,121
+Sat Jan 13 04:01:14 AEDT 2018 Sat Jan 13 04:01:14 AEDT 2018 : org.apache.commons.math3.fraction.Fraction,177=>Find no block
+Sat Jan 13 04:01:15 AEDT 2018 org.apache.commons.math3.fraction.Fraction,178
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long overflow=Integer.MAX_VALUE;
+double r0=(1-value);
+long a0=(long)FastMath.floor(r0);
+
+Time : 18/01/13 04:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long overflow=Integer.MAX_VALUE;
+double r0=1-value;
+long a0=(long)FastMath.floor(r0);
+
+Time : 18/01/13 04:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double overflow=Integer.MAX_VALUE;
+double r0=(1-value);
+long a0=(long)FastMath.floor(r0);
+
+Time : 18/01/13 04:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double overflow=Integer.MAX_VALUE;
+double r0=1-value;
+long a0=(long)FastMath.floor(r0);
+
+Time : 18/01/13 04:09
+----------------------------------------
+Sat Jan 13 04:17:49 AEDT 2018 org.apache.commons.math3.fraction.Fraction,179
+Sat Jan 13 04:17:50 AEDT 2018 org.apache.commons.math3.fraction.Fraction,180
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double r0=Integer.MAX_VALUE;
+long a0=(long)FastMath.floor(r0);
+if(a0>overflow){
+throw new FractionConversionException(value,a0,1l);
+}
+
+Time : 18/01/13 04:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double r0=value;
+long a0=(long)FastMath.floor(r0);
+if((a0>overflow)||(serialVersionUID>overflow)){
+throw new FractionConversionException(value,a0,1l);
+}
+
+Time : 18/01/13 04:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double r0=value;
+long a0=(long)FastMath.floor(r0);
+if((a0>overflow)||(serialVersionUID>overflow)){
+throw new FractionConversionException(value,a0,serialVersionUID);
+}
+
+Time : 18/01/13 04:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double r0=(1-value);
+long a0=(long)FastMath.floor(r0);
+if(a0>overflow){
+throw new FractionConversionException(value,a0,1l);
+}
+
+Time : 18/01/13 04:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double r0=1-value;
+long a0=(long)FastMath.floor(r0);
+if(a0>overflow){
+throw new FractionConversionException(value,a0,1l);
+}
+
+Time : 18/01/13 04:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double r0=value;
+r0=value*FastMath.sqrt(value+value)-0.5;
+long a0=(long)FastMath.floor(r0);
+if(a0>overflow){
+throw new FractionConversionException(value,a0,1l);
+}
+
+Time : 18/01/13 04:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double r0=Double.doubleToLongBits(value);
+long a0=(long)FastMath.floor(r0);
+if(a0>overflow){
+throw new FractionConversionException(value,a0,1l);
+}
+
+Time : 18/01/13 04:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double r0=value+value;
+long a0=(long)FastMath.floor(r0);
+if(a0>overflow){
+throw new FractionConversionException(value,a0,1l);
+}
+
+Time : 18/01/13 04:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double r0=(FastMath.floor(value/value)+1);
+long a0=(long)FastMath.floor(r0);
+if(a0>overflow){
+throw new FractionConversionException(value,a0,1l);
+}
+
+Time : 18/01/13 04:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double r0=FastMath.floor(value/value)+1;
+long a0=(long)FastMath.floor(r0);
+if(a0>overflow){
+throw new FractionConversionException(value,a0,1l);
+}
+
+Time : 18/01/13 04:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double r0=Double.NaN;
+long a0=(long)FastMath.floor(r0);
+if(a0>overflow){
+throw new FractionConversionException(value,a0,1l);
+}
+
+Time : 18/01/13 04:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double r0=((epsilon-epsilon)/epsilon+1);
+long a0=(long)FastMath.floor(r0);
+if(a0>overflow){
+throw new FractionConversionException(value,a0,1l);
+}
+
+Time : 18/01/13 04:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double r0=(epsilon-epsilon)/epsilon+1;
+long a0=(long)FastMath.floor(r0);
+if(a0>overflow){
+throw new FractionConversionException(value,a0,1l);
+}
+
+Time : 18/01/13 04:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double r0=(epsilon-epsilon)/epsilon;
+long a0=(long)FastMath.floor(r0);
+if(a0>overflow){
+throw new FractionConversionException(value,a0,1l);
+}
+
+Time : 18/01/13 04:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double r0=(epsilon-epsilon);
+long a0=(long)FastMath.floor(r0);
+if(a0>overflow){
+throw new FractionConversionException(value,a0,1l);
+}
+
+Time : 18/01/13 04:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double r0=epsilon-epsilon;
+long a0=(long)FastMath.floor(r0);
+if(a0>overflow){
+throw new FractionConversionException(value,a0,1l);
+}
+
+Time : 18/01/13 04:53
+----------------------------------------
+Sat Jan 13 04:55:51 AEDT 2018 org.apache.commons.math3.fraction.Fraction,181
+Sat Jan 13 04:55:52 AEDT 2018 org.apache.commons.math3.fraction.Fraction,187
+Sat Jan 13 04:55:53 AEDT 2018 org.apache.commons.math3.util.FastMath,2927
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return Math.PI*F_1_4;
+
+Time : 18/01/13 04:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return Math.PI;
+
+Time : 18/01/13 05:06
+----------------------------------------
+Timeout time : 18/01/13 05:16

@@ -1,0 +1,200 @@
+=================================================
+Project : math_49	start : 18/01/15 21:05
+Current failed test : org.apache.commons.math.linear.SparseRealVectorTest::testConcurrentModification | 18/01/15 21:07
+Mon Jan 15 21:08:57 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,216
+Mon Jan 15 21:11:22 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,217
+Mon Jan 15 21:11:29 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,564
+Mon Jan 15 21:11:49 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,368
+Mon Jan 15 21:37:54 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,369
+Mon Jan 15 21:38:02 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,370
+Mon Jan 15 21:38:10 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,371
+Mon Jan 15 21:38:17 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,372
+Mon Jan 15 21:38:26 AEDT 2018 org.apache.commons.math.linear.OpenMapRealVector,373
+Mon Jan 15 21:38:34 AEDT 2018 Mon Jan 15 21:38:34 AEDT 2018 : org.apache.commons.math.linear.AbstractRealVector,67=>Find no block
+Mon Jan 15 21:38:42 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,186
+Mon Jan 15 21:41:27 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,187
+Mon Jan 15 21:41:36 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,354
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=hashOf(key);
+int index=hash&mask;
+
+Time : 18/01/15 21:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=perturb(key);
+int index=hash&mask;
+
+Time : 18/01/15 21:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=findInsertionIndex(key);
+int index=hash&mask;
+if(containsKey(key,index)){
+return doRemove(index);
+}
+
+Time : 18/01/15 21:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=findInsertionIndex(key);
+int index=hash&mask;
+
+Time : 18/01/15 21:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys=keys;
+ final int hash=hashOf(key);
+int index=hash&mask;
+
+Time : 18/01/15 21:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+ final int hash=hashOf(key);
+int index=hash&mask;
+
+Time : 18/01/15 21:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]&=0xffff8000;
+ final int hash=hashOf(key);
+int index=hash&mask;
+
+Time : 18/01/15 21:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[PERTURB_SHIFT]=PERTURB_SHIFT;
+keys[PERTURB_SHIFT]&=0xffff8000;
+ final int hash=hashOf(key);
+int index=hash&mask;
+
+Time : 18/01/15 22:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=hashOf(key);
+int index=key&mask;
+
+Time : 18/01/15 22:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=hashOf(key);
+int index=hash&key;
+
+Time : 18/01/15 22:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int hash=hashOf(key);
+int index=key&key;
+
+Time : 18/01/15 22:10
+----------------------------------------
+Mon Jan 15 22:13:31 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,355
+Mon Jan 15 22:13:32 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,356
+Mon Jan 15 22:15:10 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,357
+Mon Jan 15 22:15:19 AEDT 2018 org.apache.commons.math.util.OpenIntToDoubleHashMap,394
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[index]=0;
+states[index]=REMOVED;
+ final double previous=values[index];
+values[index]=missingEntries;
+--count;
+++count;
+return previous;
+
+Time : 18/01/15 22:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+keys[index]=0;
+states[index]=REMOVED;
+ final double previous=values[index];
+values[index]=missingEntries;
+--size;
+return previous;
+
+Time : 18/01/15 22:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.9361923692849787 : [/home/hz985/jiajun/d4j/projects/math/math_49_buggy/src/main/java/org/apache/commons/math/util/OpenIntToDoubleHashMap.java=>0,0]
+keys[index]=key;
+states[index]=FULL;
+values[index]=value;
+if(newMapping){
+++size;
+if(shouldGrowTable()){
+growTable();
+}
+++count;
+}
+return previous;
+
+Time : 18/01/15 22:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_49_buggy/src/main/java/org/apache/commons/math/util/OpenIntToDoubleHashMap.java=>394,400]
+keys[index]=0;
+states[index]=REMOVED;
+ final double previous=values[index];
+values[index]=missingEntries;
+--size;
+++count;
+return previous;
+
+Time : 18/01/15 22:20
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_49_buggy/src/main/java/org/apache/commons/math/util/OpenIntToDoubleHashMap.java=>394,400]
+keys[index]=0;
+states[index]=REMOVED;
+ final double previous=values[index];
+values[index]=missingEntries;
+--size;
+return previous;
+
+Time : 18/01/15 22:20
+----------------------------------------
+Success time : 18/01/15 22:20

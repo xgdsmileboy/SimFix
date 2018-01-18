@@ -1,0 +1,71 @@
+=================================================
+Project : math_12	start : 18/01/14 11:58
+Current failed test : org.apache.commons.math3.distribution.GammaDistributionTest::testDistributionClone | 18/01/14 11:59
+Sun Jan 14 12:07:30 AEDT 2018 org.apache.commons.math3.distribution.GammaDistribution,374
+Sun Jan 14 14:00:19 AEDT 2018 org.apache.commons.math3.distribution.GammaDistribution,413
+Sun Jan 14 14:12:07 AEDT 2018 org.apache.commons.math3.distribution.GammaDistribution,414
+Sun Jan 14 14:12:15 AEDT 2018 org.apache.commons.math3.distribution.GammaDistribution,417
+Sun Jan 14 14:23:06 AEDT 2018 org.apache.commons.math3.distribution.GammaDistribution,418
+Sun Jan 14 14:23:14 AEDT 2018 org.apache.commons.math3.distribution.GammaDistribution,420
+Sun Jan 14 14:23:22 AEDT 2018 org.apache.commons.math3.distribution.GammaDistribution,424
+Sun Jan 14 14:40:24 AEDT 2018 org.apache.commons.math3.distribution.GammaDistribution,425
+Sun Jan 14 14:54:48 AEDT 2018 org.apache.commons.math3.distribution.GammaDistribution,428
+Sun Jan 14 14:54:57 AEDT 2018 org.apache.commons.math3.distribution.GammaDistribution,429
+Sun Jan 14 14:55:03 AEDT 2018 org.apache.commons.math3.distribution.GammaDistribution,432
+Sun Jan 14 14:55:09 AEDT 2018 org.apache.commons.math3.distribution.GammaDistribution,433
+Sun Jan 14 14:55:16 AEDT 2018 org.apache.commons.math3.distribution.LogNormalDistribution,311
+Sun Jan 14 14:58:53 AEDT 2018 org.apache.commons.math3.distribution.LogNormalDistribution,312
+Sun Jan 14 14:59:01 AEDT 2018 org.apache.commons.math3.distribution.AbstractRealDistribution,246
+Sun Jan 14 15:01:19 AEDT 2018 org.apache.commons.math3.distribution.AbstractRealDistribution,247
+Sun Jan 14 15:01:26 AEDT 2018 Sun Jan 14 15:01:26 AEDT 2018 : org.apache.commons.math3.distribution.AbstractRealDistribution,248=>Find no block
+Sun Jan 14 15:01:35 AEDT 2018 org.apache.commons.math3.random.RandomDataGenerator,648
+Sun Jan 14 15:02:27 AEDT 2018 Sun Jan 14 15:02:27 AEDT 2018 : org.apache.commons.math3.random.RandomDataGenerator,649=>Find no block
+Sun Jan 14 15:02:34 AEDT 2018 org.apache.commons.math3.random.RandomDataImpl,461
+Sun Jan 14 15:03:53 AEDT 2018 Sun Jan 14 15:03:53 AEDT 2018 : org.apache.commons.math3.random.RandomDataImpl,462=>Find no block
+Sun Jan 14 15:04:00 AEDT 2018 org.apache.commons.math3.random.Well19937c,79
+Sun Jan 14 15:04:16 AEDT 2018 Sun Jan 14 15:04:16 AEDT 2018 : org.apache.commons.math3.random.Well19937c,80=>Find no block
+Sun Jan 14 15:04:23 AEDT 2018 org.apache.commons.math3.random.RandomDataGenerator,714
+Sun Jan 14 15:04:41 AEDT 2018 org.apache.commons.math3.random.RandomDataGenerator,715
+Sun Jan 14 15:04:49 AEDT 2018 org.apache.commons.math3.random.RandomDataGenerator,717
+Sun Jan 14 15:05:09 AEDT 2018 org.apache.commons.math3.random.RandomDataGenerator,725
+Sun Jan 14 15:05:24 AEDT 2018 Sun Jan 14 15:05:24 AEDT 2018 : org.apache.commons.math3.random.RandomDataGenerator,726=>Find no block
+Sun Jan 14 15:05:30 AEDT 2018 org.apache.commons.math3.random.AbstractWell,132
+Sun Jan 14 15:05:48 AEDT 2018 Sun Jan 14 15:05:48 AEDT 2018 : org.apache.commons.math3.random.AbstractWell,133=>Find no block
+Sun Jan 14 15:05:56 AEDT 2018 org.apache.commons.math3.random.Well19937c,86
+Sun Jan 14 15:08:00 AEDT 2018 org.apache.commons.math3.random.Well19937c,87
+Sun Jan 14 15:08:07 AEDT 2018 org.apache.commons.math3.random.Well19937c,89
+Sun Jan 14 15:10:06 AEDT 2018 org.apache.commons.math3.random.Well19937c,90
+Sun Jan 14 15:12:09 AEDT 2018 org.apache.commons.math3.random.Well19937c,91
+Sun Jan 14 15:12:28 AEDT 2018 org.apache.commons.math3.random.Well19937c,92
+Sun Jan 14 15:12:46 AEDT 2018 org.apache.commons.math3.random.Well19937c,94
+Sun Jan 14 15:36:24 AEDT 2018 org.apache.commons.math3.random.Well19937c,95
+Sun Jan 14 15:39:45 AEDT 2018 org.apache.commons.math3.random.Well19937c,96
+Sun Jan 14 15:41:40 AEDT 2018 org.apache.commons.math3.random.Well19937c,97
+Sun Jan 14 15:45:22 AEDT 2018 org.apache.commons.math3.random.Well19937c,98
+Sun Jan 14 15:53:11 AEDT 2018 org.apache.commons.math3.random.Well19937c,100
+Sun Jan 14 16:02:31 AEDT 2018 org.apache.commons.math3.random.Well19937c,101
+Sun Jan 14 16:05:25 AEDT 2018 org.apache.commons.math3.random.Well19937c,102
+Sun Jan 14 16:11:24 AEDT 2018 org.apache.commons.math3.random.Well19937c,103
+Sun Jan 14 16:17:25 AEDT 2018 org.apache.commons.math3.random.Well19937c,108
+Sun Jan 14 16:20:54 AEDT 2018 org.apache.commons.math3.random.Well19937c,109
+Sun Jan 14 16:23:56 AEDT 2018 org.apache.commons.math3.random.Well19937c,111
+Sun Jan 14 16:24:03 AEDT 2018 org.apache.commons.math3.random.BitsStreamGenerator,101
+Sun Jan 14 16:32:15 AEDT 2018 org.apache.commons.math3.random.BitsStreamGenerator,103
+Sun Jan 14 16:34:20 AEDT 2018 org.apache.commons.math3.random.BitsStreamGenerator,104
+Sun Jan 14 16:34:28 AEDT 2018 org.apache.commons.math3.random.BitsStreamGenerator,105
+Sun Jan 14 16:40:54 AEDT 2018 org.apache.commons.math3.random.BitsStreamGenerator,106
+Sun Jan 14 16:52:57 AEDT 2018 org.apache.commons.math3.random.BitsStreamGenerator,107
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final double r=FastMath.sqrt(-2*FastMath.log(y));
+random=r*FastMath.cos(alpha);
+if(r!=x){
+return x;
+}
+nextGaussian=r*FastMath.sin(alpha);
+
+Time : 18/01/14 17:02
+----------------------------------------
+Timeout time : 18/01/14 17:07

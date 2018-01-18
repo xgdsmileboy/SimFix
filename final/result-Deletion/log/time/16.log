@@ -1,0 +1,70 @@
+=================================================
+Project : time_16	start : 18/01/16 00:22
+Current failed test : org.joda.time.format.TestDateTimeFormatter::testParseInto_monthOnly_baseStartYear | 18/01/16 00:23
+Tue Jan 16 00:24:38 AEDT 2018 org.joda.time.format.DateTimeFormatter,698
+Tue Jan 16 00:26:28 AEDT 2018 org.joda.time.format.DateTimeFormatter,699
+Tue Jan 16 00:26:30 AEDT 2018 org.joda.time.format.DateTimeFormatter,703
+Tue Jan 16 00:36:28 AEDT 2018 org.joda.time.format.DateTimeFormatter,704
+Tue Jan 16 00:54:36 AEDT 2018 org.joda.time.format.DateTimeFormatter,705
+Tue Jan 16 01:04:09 AEDT 2018 org.joda.time.format.DateTimeFormatter,706
+Tue Jan 16 01:08:46 AEDT 2018 org.joda.time.format.DateTimeFormatter,708
+Tue Jan 16 01:21:11 AEDT 2018 org.joda.time.format.DateTimeFormatter,710
+Tue Jan 16 01:40:04 AEDT 2018 org.joda.time.format.DateTimeFormatter,711
+Tue Jan 16 02:05:55 AEDT 2018 org.joda.time.format.DateTimeFormatter,712
+Tue Jan 16 02:05:56 AEDT 2018 org.joda.time.format.DateTimeFormatter,717
+Tue Jan 16 02:05:56 AEDT 2018 org.joda.time.format.DateTimeFormatter,719
+Tue Jan 16 02:30:45 AEDT 2018 org.joda.time.format.DateTimeFormatter,720
+Tue Jan 16 02:30:45 AEDT 2018 org.joda.time.format.DateTimeFormatter,723
+Tue Jan 16 02:31:57 AEDT 2018 org.joda.time.format.DateTimeParserBucket,357
+Tue Jan 16 02:32:18 AEDT 2018 org.joda.time.format.DateTimeParserBucket,358
+Tue Jan 16 02:32:18 AEDT 2018 org.joda.time.MutableDateTime,564
+Tue Jan 16 02:32:19 AEDT 2018 Tue Jan 16 02:32:19 AEDT 2018 : org.joda.time.MutableDateTime,565=>Find no block
+Tue Jan 16 02:32:20 AEDT 2018 org.joda.time.base.BaseDateTime,329
+Tue Jan 16 02:35:57 AEDT 2018 Tue Jan 16 02:35:57 AEDT 2018 : org.joda.time.base.BaseDateTime,330=>Find no block
+Tue Jan 16 02:35:58 AEDT 2018 org.joda.time.MutableDateTime,351
+Tue Jan 16 02:36:44 AEDT 2018 Tue Jan 16 02:36:44 AEDT 2018 : org.joda.time.MutableDateTime,353=>Find no block
+Tue Jan 16 02:36:44 AEDT 2018 org.joda.time.field.BaseDurationField,150
+Tue Jan 16 02:36:46 AEDT 2018 org.joda.time.format.DateTimeParserBucket,518
+Tue Jan 16 02:37:24 AEDT 2018 org.joda.time.format.DateTimeParserBucket,421
+Tue Jan 16 02:41:20 AEDT 2018 org.joda.time.format.DateTimeParserBucket,422
+Tue Jan 16 02:41:20 AEDT 2018 org.joda.time.format.DateTimeParserBucket,423
+Tue Jan 16 02:41:21 AEDT 2018 org.joda.time.format.ISODateTimeFormat,971
+Tue Jan 16 03:01:56 AEDT 2018 org.joda.time.format.ISODateTimeFormat,977
+Tue Jan 16 03:22:36 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,938
+Tue Jan 16 03:23:19 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1541
+Tue Jan 16 03:24:27 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1577
+Tue Jan 16 03:25:02 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,511
+Tue Jan 16 03:27:00 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,514
+Tue Jan 16 03:30:11 AEDT 2018 org.joda.time.MutableDateTime,1224
+Tue Jan 16 03:30:28 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1611
+Tue Jan 16 04:08:14 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1612
+Tue Jan 16 04:08:14 AEDT 2018 org.joda.time.tz.DateTimeZoneBuilder,1613
+Tue Jan 16 04:08:15 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,1784
+Tue Jan 16 04:08:16 AEDT 2018 org.joda.time.MutableDateTime,456
+Tue Jan 16 04:08:19 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,1716
+Tue Jan 16 04:09:41 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,1717
+Tue Jan 16 04:09:41 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,1718
+Tue Jan 16 04:09:42 AEDT 2018 Tue Jan 16 04:09:42 AEDT 2018 : org.joda.time.format.DateTimeFormatterBuilder,1719=>Find no block
+Tue Jan 16 04:09:42 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,1722
+Tue Jan 16 04:09:43 AEDT 2018 Tue Jan 16 04:09:43 AEDT 2018 : org.joda.time.MutableDateTime,454=>Find no block
+Tue Jan 16 04:09:43 AEDT 2018 org.joda.time.MutableDateTime,474
+Tue Jan 16 04:42:01 AEDT 2018 Tue Jan 16 04:42:01 AEDT 2018 : org.joda.time.MutableDateTime,475=>Find no block
+Tue Jan 16 04:42:01 AEDT 2018 org.joda.time.base.BaseDateTime,317
+Tue Jan 16 04:45:10 AEDT 2018 Tue Jan 16 04:45:10 AEDT 2018 : org.joda.time.base.BaseDateTime,318=>Find no block
+Tue Jan 16 04:45:10 AEDT 2018 org.joda.time.chrono.BasicChronology,410
+Tue Jan 16 04:45:12 AEDT 2018 org.joda.time.format.DateTimeFormatter,188
+Tue Jan 16 04:48:03 AEDT 2018 org.joda.time.format.DateTimeFormatter,191
+Tue Jan 16 04:50:53 AEDT 2018 org.joda.time.format.DateTimeFormatter,202
+Tue Jan 16 04:50:54 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,2101
+Tue Jan 16 04:51:40 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,2236
+Tue Jan 16 04:51:41 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,2099
+Tue Jan 16 05:10:23 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,2100
+Tue Jan 16 05:10:23 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,2103
+Tue Jan 16 05:10:23 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,2106
+Tue Jan 16 05:10:23 AEDT 2018 org.joda.time.format.DateTimeParserBucket,152
+Tue Jan 16 05:10:32 AEDT 2018 Tue Jan 16 05:10:32 AEDT 2018 : org.joda.time.format.DateTimeFormat,687=>Find no block
+Tue Jan 16 05:10:33 AEDT 2018 org.joda.time.format.DateTimeFormat,688
+Tue Jan 16 05:10:57 AEDT 2018 org.joda.time.format.DateTimeFormat,170
+Tue Jan 16 05:10:58 AEDT 2018 org.joda.time.format.DateTimeFormat,674
+Tue Jan 16 05:17:54 AEDT 2018 org.joda.time.format.DateTimeFormat,677
+Timeout time : 18/01/16 05:24

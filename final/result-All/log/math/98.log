@@ -1,0 +1,153 @@
+=================================================
+Project : math_98	start : 18/01/12 14:05
+Current failed test : org.apache.commons.math.linear.BigMatrixImplTest::testMath209_purify_1 | 18/01/12 14:06
+Fri Jan 12 14:07:37 AEDT 2018 org.apache.commons.math.linear.BigMatrixImpl,986
+Fri Jan 12 14:32:30 AEDT 2018 org.apache.commons.math.linear.BigMatrixImpl,989
+Timeout time : 18/01/12 14:44
+Current failed test : org.apache.commons.math.linear.BigMatrixImplTest::testMath209_purify_2 | 18/01/12 14:44
+Fri Jan 12 14:45:34 AEDT 2018 org.apache.commons.math.linear.BigMatrixImpl,986
+Fri Jan 12 15:10:11 AEDT 2018 org.apache.commons.math.linear.BigMatrixImpl,989
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(v.length!=this.getColumnDimension()){
+throw new IllegalArgumentException("vector has wrong length");
+}
+ final int nRows=this.getColumnDimension();
+ final int nCols=this.getColumnDimension();
+
+Time : 18/01/12 15:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.0800182346393328 : [/home/hz985/jiajun/d4j/projects/math/math_98_buggy/src/java/org/apache/commons/math/linear/BigMatrixImpl.java=>0,0]
+if(this.isSingular()){
+throw new InvalidMatrixException("Matrix is singular.");
+}
+ final int nCol=this.getColumnDimension();
+ final int nColB=b.getColumnDimension();
+ final int nRowB=b.getRowDimension();
+ final double[][] bp=new double[nRowB][nColB];
+
+Time : 18/01/12 15:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_98_buggy/src/java/org/apache/commons/math/linear/BigMatrixImpl.java=>986,990]
+if(v.length!=this.getColumnDimension()){
+throw new IllegalArgumentException("vector has wrong length");
+}
+ final int nRows=this.getRowDimension();
+ final int nCols=this.getColumnDimension();
+
+Time : 18/01/12 15:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_98_buggy/src/java/org/apache/commons/math/linear/BigMatrixImpl.java=>986,990]
+if(v.length!=this.getColumnDimension()){
+throw new IllegalArgumentException("vector has wrong length");
+}
+ final int nRows=this.getColumnDimension();
+ final int nCols=this.getColumnDimension();
+
+Time : 18/01/12 15:13
+----------------------------------------
+Success time : 18/01/12 15:13
+Current failed test : org.apache.commons.math.linear.BigMatrixImplTest::testMath209_purify_3 | 18/01/12 15:13
+Already fixed : org.apache.commons.math.linear.BigMatrixImplTest::testMath209_purify_3
+Current failed test : org.apache.commons.math.linear.BigMatrixImplTest::testMath209_purify_4 | 18/01/12 15:13
+Fri Jan 12 15:14:56 AEDT 2018 org.apache.commons.math.linear.BigMatrixImpl,986
+Fri Jan 12 15:39:37 AEDT 2018 org.apache.commons.math.linear.BigMatrixImpl,989
+Timeout time : 18/01/12 15:51
+Current failed test : org.apache.commons.math.linear.RealMatrixImplTest::testMath209_purify_1 | 18/01/12 15:51
+Fri Jan 12 15:52:54 AEDT 2018 org.apache.commons.math.linear.RealMatrixImpl,774
+Timeout time : 18/01/12 16:29
+Current failed test : org.apache.commons.math.linear.RealMatrixImplTest::testMath209_purify_2 | 18/01/12 16:29
+Fri Jan 12 16:30:50 AEDT 2018 org.apache.commons.math.linear.RealMatrixImpl,774
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int nRows=1;
+ final int nCols=this.getColumnDimension();
+if(v.length!=nCols){
+throw new IllegalArgumentException("vector has wrong length");
+}
+
+Time : 18/01/12 16:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int nRows=1;
+ final int nCols=this.getColumnDimension();
+if(v.length!=nCols){
+throw new IllegalArgumentException("At least 3 datapoints are required to compute a spline interpolant");
+}
+
+Time : 18/01/12 16:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int nRows=this.getColumnDimension();
+ final int nCols=this.getColumnDimension();
+if(v.length!=nCols){
+throw new IllegalArgumentException("vector has wrong length");
+}
+
+Time : 18/01/12 16:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.7250332462919165 : [/home/hz985/jiajun/d4j/projects/math/math_98_buggy/src/java/org/apache/commons/math/linear/RealMatrixImpl.java=>0,0]
+if(this.isSingular()){
+throw new InvalidMatrixException("Matrix is singular.");
+}
+ final int nCol=this.getColumnDimension();
+ final int nColB=b.getColumnDimension();
+ final int nRowB=b.getRowDimension();
+ final double[][] bp=new double[nRowB][nColB];
+
+Time : 18/01/12 16:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_98_buggy/src/java/org/apache/commons/math/linear/RealMatrixImpl.java=>774,778]
+ final int nRows=this.getRowDimension();
+ final int nCols=this.getColumnDimension();
+if(v.length!=nCols){
+throw new IllegalArgumentException("vector has wrong length");
+}
+
+Time : 18/01/12 16:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_98_buggy/src/java/org/apache/commons/math/linear/RealMatrixImpl.java=>774,778]
+ final int nRows=this.getColumnDimension();
+ final int nCols=this.getColumnDimension();
+if(v.length!=nCols){
+throw new IllegalArgumentException("vector has wrong length");
+}
+
+Time : 18/01/12 16:45
+----------------------------------------
+Success time : 18/01/12 16:45
+Current failed test : org.apache.commons.math.linear.RealMatrixImplTest::testMath209_purify_3 | 18/01/12 16:45
+Already fixed : org.apache.commons.math.linear.RealMatrixImplTest::testMath209_purify_3
+Current failed test : org.apache.commons.math.linear.RealMatrixImplTest::testMath209_purify_4 | 18/01/12 16:46
+Fri Jan 12 16:47:01 AEDT 2018 org.apache.commons.math.linear.RealMatrixImpl,774
+Fri Jan 12 17:20:05 AEDT 2018 org.apache.commons.math.linear.RealMatrixImpl,775
+Fri Jan 12 17:20:05 AEDT 2018 org.apache.commons.math.linear.RealMatrixImpl,776
+Timeout time : 18/01/12 17:23

@@ -1,0 +1,102 @@
+=================================================
+Project : math_72	start : 18/01/12 14:21
+Current failed test : org.apache.commons.math.analysis.solvers.BrentSolverTest::testRootEndpoints_purify_3 | 18/01/12 14:22
+Fri Jan 12 14:23:22 AEDT 2018 org.apache.commons.math.analysis.solvers.BrentSolver,115
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Math.abs(yMin)<=functionValueAccuracy){
+setResult(min,0);
+return result;
+}
+
+Time : 18/01/12 14:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.452090549139009 : [/home/hz985/jiajun/d4j/projects/math/math_72_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BrentSolver.java=>0,0]
+if(Math.abs(yMin)<=functionValueAccuracy){
+setResult(min,0);
+ret=min;
+}else if(Math.abs(yMax)<=functionValueAccuracy){
+setResult(max,0);
+ret=max;
+}else {
+throw MathRuntimeException.createIllegalArgumentException(NON_BRACKETING_MESSAGE,min,max,yMin,yMax);
+}
+
+Time : 18/01/12 14:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_72_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BrentSolver.java=>114,117]
+if(Math.abs(yMin)<=functionValueAccuracy){
+setResult(yMin,0);
+return result;
+}
+
+Time : 18/01/12 14:24
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_72_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BrentSolver.java=>114,117]
+if(Math.abs(yMin)<=functionValueAccuracy){
+setResult(min,0);
+return result;
+}
+
+Time : 18/01/12 14:24
+----------------------------------------
+Success time : 18/01/12 14:24
+Current failed test : org.apache.commons.math.analysis.solvers.BrentSolverTest::testRootEndpoints_purify_4 | 18/01/12 14:24
+Fri Jan 12 14:25:47 AEDT 2018 org.apache.commons.math.analysis.solvers.BrentSolver,115
+Fri Jan 12 14:30:52 AEDT 2018 org.apache.commons.math.analysis.solvers.BrentSolver,116
+Fri Jan 12 14:30:53 AEDT 2018 org.apache.commons.math.analysis.solvers.BrentSolver,127
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Math.abs(yMax)<=functionValueAccuracy){
+setResult(yMax,0);
+return solve(f,yMax,yInitial,max,functionValueAccuracy,initial,yInitial);
+}
+
+Time : 18/01/12 14:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.286392673550147 : [/home/hz985/jiajun/d4j/projects/math/math_72_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BrentSolver.java=>0,0]
+if(yInitial*yMax<0){
+return solve(f,initial,yInitial,max,yMax,initial,yInitial);
+}
+
+Time : 18/01/12 14:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_72_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BrentSolver.java=>126,129]
+if(Math.abs(yMax)<=functionValueAccuracy){
+setResult(yMax,0);
+return result;
+}
+
+Time : 18/01/12 14:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_72_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BrentSolver.java=>126,129]
+if(Math.abs(yMax)<=functionValueAccuracy){
+setResult(yMax,0);
+return solve(f,yMax,yInitial,max,functionValueAccuracy,initial,yInitial);
+}
+
+Time : 18/01/12 14:36
+----------------------------------------
+Success time : 18/01/12 14:36

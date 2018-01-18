@@ -1,0 +1,199 @@
+=================================================
+Project : math_26	start : 18/01/16 01:29
+Current failed test : org.apache.commons.math3.fraction.FractionTest::testIntegerOverflow | 18/01/16 01:31
+Tue Jan 16 01:32:34 AEDT 2018 org.apache.commons.math3.fraction.Fraction,182
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((a0>overflow)||(serialVersionUID>overflow)){
+throw new FractionConversionException(value,a0,1l);
+}
+
+Time : 18/01/16 01:33
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((a0>overflow)||(serialVersionUID>overflow)){
+throw new FractionConversionException(value,a0,serialVersionUID);
+}
+
+Time : 18/01/16 01:35
+----------------------------------------
+Tue Jan 16 01:41:22 AEDT 2018 org.apache.commons.math3.fraction.Fraction,210
+Tue Jan 16 01:46:20 AEDT 2018 org.apache.commons.math3.fraction.FractionConversionException,53
+Tue Jan 16 01:46:37 AEDT 2018 Tue Jan 16 01:46:37 AEDT 2018 : org.apache.commons.math3.fraction.FractionConversionException,54=>Find no block
+Tue Jan 16 01:46:42 AEDT 2018 Tue Jan 16 01:46:42 AEDT 2018 : org.apache.commons.math3.exception.ConvergenceException,48=>Find no block
+Tue Jan 16 01:46:49 AEDT 2018 org.apache.commons.math3.exception.ConvergenceException,49
+Tue Jan 16 01:48:01 AEDT 2018 Tue Jan 16 01:48:01 AEDT 2018 : org.apache.commons.math3.exception.ConvergenceException,50=>Find no block
+Tue Jan 16 01:48:02 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,69
+Tue Jan 16 01:48:12 AEDT 2018 Tue Jan 16 01:48:12 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalStateException,70=>Find no block
+Tue Jan 16 01:48:19 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,74
+Tue Jan 16 01:48:31 AEDT 2018 Tue Jan 16 01:48:31 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalStateException,45=>Find no block
+Tue Jan 16 01:48:37 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,46
+Tue Jan 16 01:48:50 AEDT 2018 org.apache.commons.math3.exception.MathIllegalStateException,47
+Tue Jan 16 01:48:54 AEDT 2018 Tue Jan 16 01:48:54 AEDT 2018 : org.apache.commons.math3.exception.MathIllegalStateException,48=>Find no block
+Tue Jan 16 01:48:59 AEDT 2018 org.apache.commons.math3.fraction.Fraction,188
+Tue Jan 16 01:58:37 AEDT 2018 org.apache.commons.math3.fraction.Fraction,189
+Tue Jan 16 01:58:44 AEDT 2018 org.apache.commons.math3.fraction.Fraction,190
+Tue Jan 16 01:58:51 AEDT 2018 org.apache.commons.math3.fraction.Fraction,215
+Tue Jan 16 02:09:29 AEDT 2018 org.apache.commons.math3.fraction.Fraction,216
+Tue Jan 16 02:09:36 AEDT 2018 org.apache.commons.math3.fraction.Fraction,217
+Tue Jan 16 02:09:42 AEDT 2018 org.apache.commons.math3.fraction.Fraction,218
+Tue Jan 16 02:09:49 AEDT 2018 org.apache.commons.math3.fraction.Fraction,219
+Tue Jan 16 02:09:55 AEDT 2018 org.apache.commons.math3.fraction.Fraction,220
+Tue Jan 16 02:10:00 AEDT 2018 org.apache.commons.math3.util.FastMath,3255
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x<=E){
+return 0;
+}
+if(y==0){
+return x*y;
+}
+
+Time : 18/01/16 02:11
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x<=E){
+return 0;
+}
+if(x==0){
+return x*y;
+}
+
+Time : 18/01/16 02:13
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(y!=0){
+return x*y;
+}
+
+Time : 18/01/16 02:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x<=0){
+return 0;
+}
+if(y==0){
+return x*y;
+}
+
+Time : 18/01/16 02:26
+----------------------------------------
+Tue Jan 16 02:29:01 AEDT 2018 org.apache.commons.math3.fraction.Fraction,193
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+long p0=maxDenominator;
+long q0=0;
+
+Time : 18/01/16 02:44
+----------------------------------------
+Tue Jan 16 02:50:39 AEDT 2018 org.apache.commons.math3.fraction.Fraction,194
+Tue Jan 16 03:06:33 AEDT 2018 org.apache.commons.math3.fraction.Fraction,195
+Tue Jan 16 03:22:34 AEDT 2018 org.apache.commons.math3.fraction.Fraction,196
+Tue Jan 16 03:53:50 AEDT 2018 org.apache.commons.math3.fraction.Fraction,198
+Tue Jan 16 03:55:33 AEDT 2018 org.apache.commons.math3.fraction.Fraction,199
+Tue Jan 16 04:02:04 AEDT 2018 org.apache.commons.math3.fraction.Fraction,201
+Tue Jan 16 04:06:52 AEDT 2018 org.apache.commons.math3.fraction.Fraction,202
+Tue Jan 16 04:06:59 AEDT 2018 org.apache.commons.math3.fraction.Fraction,204
+Tue Jan 16 04:11:53 AEDT 2018 org.apache.commons.math3.fraction.Fraction,205
+Tue Jan 16 04:12:00 AEDT 2018 org.apache.commons.math3.fraction.Fraction,206
+Tue Jan 16 04:15:26 AEDT 2018 org.apache.commons.math3.fraction.Fraction,207
+Tue Jan 16 04:17:35 AEDT 2018 org.apache.commons.math3.fraction.Fraction,208
+Tue Jan 16 04:22:41 AEDT 2018 org.apache.commons.math3.fraction.Fraction,209
+Tue Jan 16 04:22:48 AEDT 2018 org.apache.commons.math3.fraction.Fraction,213
+Tue Jan 16 04:27:00 AEDT 2018 org.apache.commons.math3.fraction.Fraction,214
+Tue Jan 16 04:27:01 AEDT 2018 org.apache.commons.math3.fraction.Fraction,224
+Tue Jan 16 04:39:06 AEDT 2018 Tue Jan 16 04:39:06 AEDT 2018 : org.apache.commons.math3.fraction.Fraction,122=>Find no block
+Tue Jan 16 04:39:11 AEDT 2018 org.apache.commons.math3.fraction.Fraction,121
+Tue Jan 16 04:40:31 AEDT 2018 Tue Jan 16 04:40:31 AEDT 2018 : org.apache.commons.math3.fraction.Fraction,177=>Find no block
+Tue Jan 16 04:40:37 AEDT 2018 org.apache.commons.math3.fraction.Fraction,178
+Tue Jan 16 04:47:22 AEDT 2018 org.apache.commons.math3.fraction.Fraction,179
+Tue Jan 16 04:47:29 AEDT 2018 org.apache.commons.math3.fraction.Fraction,180
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double r0=value;
+long a0=(long)FastMath.floor(r0);
+if((a0>overflow)||(serialVersionUID>overflow)){
+throw new FractionConversionException(value,a0,1l);
+}
+
+Time : 18/01/16 04:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double r0=value;
+long a0=(long)FastMath.floor(r0);
+if((a0>overflow)||(serialVersionUID>overflow)){
+throw new FractionConversionException(value,a0,serialVersionUID);
+}
+
+Time : 18/01/16 04:51
+----------------------------------------
+Tue Jan 16 05:06:16 AEDT 2018 org.apache.commons.math3.fraction.Fraction,181
+Tue Jan 16 05:06:23 AEDT 2018 org.apache.commons.math3.fraction.Fraction,187
+Tue Jan 16 05:06:30 AEDT 2018 org.apache.commons.math3.util.FastMath,2927
+Tue Jan 16 05:06:45 AEDT 2018 org.apache.commons.math3.util.FastMath,3241
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x==x){
+return PI;
+}
+
+Time : 18/01/16 05:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x==x){
+return F_1_4;
+}
+
+Time : 18/01/16 05:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x==x){
+return F_3_4;
+}
+
+Time : 18/01/16 05:28
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(x==x){
+return F_1_2;
+}
+
+Time : 18/01/16 05:42
+----------------------------------------
+Tue Jan 16 05:54:04 AEDT 2018 org.apache.commons.math3.util.FastMath,3245
+Tue Jan 16 06:06:21 AEDT 2018 org.apache.commons.math3.util.FastMath,3249
+Timeout time : 18/01/16 06:32

@@ -1,0 +1,303 @@
+=================================================
+Project : time_26	start : 18/01/13 00:09
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testWithSecondOfMinuteInDstChange_purify_2 | 18/01/13 00:16
+Sat Jan 13 00:18:18 AEDT 2018 org.joda.time.DateTime,1678
+Sat Jan 13 00:27:35 AEDT 2018 Sat Jan 13 00:27:35 AEDT 2018 : org.joda.time.DateTime,220=>Find no block
+Sat Jan 13 00:27:35 AEDT 2018 org.joda.time.DateTime,219
+Sat Jan 13 00:29:00 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,2686
+Timeout time : 18/01/13 00:48
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testBug2182444_ausNSW_purify_8 | 18/01/13 00:48
+Sat Jan 13 00:50:35 AEDT 2018 org.joda.time.DateTime,1646
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return this;
+
+Time : 18/01/13 00:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return new DateTime(getMillis(),DateTimeUtils.getChronology(getChronology()));
+
+Time : 18/01/13 00:53
+----------------------------------------
+Sat Jan 13 01:00:49 AEDT 2018 org.joda.time.DateTime,518
+Sat Jan 13 01:09:43 AEDT 2018 org.joda.time.DateTime,519
+Sat Jan 13 01:11:59 AEDT 2018 org.joda.time.DateTime,522
+Sat Jan 13 01:11:59 AEDT 2018 org.joda.time.base.AbstractInstant,177
+Sat Jan 13 01:12:50 AEDT 2018 org.joda.time.tz.ZoneInfoProvider,162
+Timeout time : 18/01/13 01:20
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testBug2182444_ausNSW_purify_9 | 18/01/13 01:20
+Sat Jan 13 01:22:57 AEDT 2018 org.joda.time.DateTime,1694
+Sat Jan 13 01:32:17 AEDT 2018 org.joda.time.DateTime,518
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+chronology=DateTimeUtils.getChronology(chronology);
+if(getChronology()!=chronology){
+return this;
+}
+return super.toDateTime(chronology);
+
+Time : 18/01/13 01:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+chronology=DateTimeUtils.getChronology(chronology);
+if(getChronology()!=null){
+return this;
+}
+return super.toDateTime(chronology);
+
+Time : 18/01/13 01:38
+----------------------------------------
+Sat Jan 13 01:42:09 AEDT 2018 org.joda.time.DateTime,519
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+chronology=DateTimeUtils.getChronology(chronology).withUTC();
+if(getChronology()==chronology){
+return this;
+}
+
+Time : 18/01/13 01:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+chronology=DateTimeUtils.getChronology(chronology).withUTC();
+if(getChronology()==null){
+return this;
+}
+
+Time : 18/01/13 01:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(getChronology()!=chronology){
+return this;
+}
+
+Time : 18/01/13 01:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(getChronology()!=null){
+return this;
+}
+
+Time : 18/01/13 01:46
+----------------------------------------
+Sat Jan 13 01:46:50 AEDT 2018 org.joda.time.DateTime,522
+Sat Jan 13 01:46:51 AEDT 2018 org.joda.time.base.AbstractInstant,177
+Sat Jan 13 01:47:47 AEDT 2018 org.joda.time.tz.ZoneInfoProvider,162
+Timeout time : 18/01/13 01:53
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testBug2182444_usCentral_purify_6 | 18/01/13 01:53
+Sat Jan 13 01:55:50 AEDT 2018 org.joda.time.DateTime,1646
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return this;
+
+Time : 18/01/13 01:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return new DateTime(getMillis(),DateTimeUtils.getChronology(getChronology()));
+
+Time : 18/01/13 01:59
+----------------------------------------
+Sat Jan 13 02:06:56 AEDT 2018 org.joda.time.DateTime,518
+Sat Jan 13 02:15:46 AEDT 2018 org.joda.time.DateTime,519
+Sat Jan 13 02:17:58 AEDT 2018 org.joda.time.DateTime,522
+Sat Jan 13 02:17:58 AEDT 2018 org.joda.time.base.AbstractInstant,177
+Sat Jan 13 02:18:49 AEDT 2018 org.joda.time.tz.ZoneInfoProvider,162
+Timeout time : 18/01/13 02:26
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testBug2182444_usCentral_purify_7 | 18/01/13 02:26
+Sat Jan 13 02:28:18 AEDT 2018 org.joda.time.DateTime,1694
+Sat Jan 13 02:37:22 AEDT 2018 org.joda.time.DateTime,518
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+chronology=DateTimeUtils.getChronology(chronology);
+if(getChronology()!=chronology){
+return this;
+}
+return super.toDateTime(chronology);
+
+Time : 18/01/13 02:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+chronology=DateTimeUtils.getChronology(chronology);
+if(getChronology()!=null){
+return this;
+}
+return super.toDateTime(chronology);
+
+Time : 18/01/13 02:44
+----------------------------------------
+Sat Jan 13 02:47:23 AEDT 2018 org.joda.time.DateTime,519
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+chronology=DateTimeUtils.getChronology(chronology).withUTC();
+if(getChronology()==chronology){
+return this;
+}
+
+Time : 18/01/13 02:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+chronology=DateTimeUtils.getChronology(chronology).withUTC();
+if(getChronology()==null){
+return this;
+}
+
+Time : 18/01/13 02:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(getChronology()!=chronology){
+return this;
+}
+
+Time : 18/01/13 02:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(getChronology()!=null){
+return this;
+}
+
+Time : 18/01/13 02:51
+----------------------------------------
+Sat Jan 13 02:51:47 AEDT 2018 org.joda.time.DateTime,522
+Sat Jan 13 02:51:48 AEDT 2018 org.joda.time.base.AbstractInstant,177
+Sat Jan 13 02:52:41 AEDT 2018 org.joda.time.tz.ZoneInfoProvider,162
+Timeout time : 18/01/13 02:58
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testWithHourOfDayInDstChange_purify_2 | 18/01/13 02:58
+Sat Jan 13 03:00:32 AEDT 2018 org.joda.time.DateTime,1646
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return this;
+
+Time : 18/01/13 03:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return new DateTime(getMillis(),DateTimeUtils.getChronology(getChronology()));
+
+Time : 18/01/13 03:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return new DateTime(getMillis(),ISOChronology.getInstance(getZone()));
+
+Time : 18/01/13 03:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return new DateTime(getMillis(),getZone());
+
+Time : 18/01/13 03:10
+----------------------------------------
+Sat Jan 13 03:11:54 AEDT 2018 Sat Jan 13 03:11:54 AEDT 2018 : org.joda.time.DateTime,220=>Find no block
+Sat Jan 13 03:11:55 AEDT 2018 org.joda.time.DateTime,219
+Sat Jan 13 03:13:19 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,2686
+Timeout time : 18/01/13 03:30
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testWithMillisOfSecondInDstChange_NewYork_winter_purify_2 | 18/01/13 03:30
+Sat Jan 13 03:32:52 AEDT 2018 org.joda.time.DateTime,1694
+Sat Jan 13 03:41:39 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,2241
+Timeout time : 18/01/13 04:03
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testWithMinuteOfHourInDstChange_mockZone_purify_4 | 18/01/13 04:03
+Sat Jan 13 04:05:14 AEDT 2018 org.joda.time.DateTime,1662
+Sat Jan 13 04:14:00 AEDT 2018 org.joda.time.DateTime,285
+Sat Jan 13 04:14:57 AEDT 2018 Sat Jan 13 04:14:57 AEDT 2018 : org.joda.time.DateTime,287=>Find no block
+Sat Jan 13 04:14:58 AEDT 2018 org.joda.time.DateTimeZone,266
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hoursInMinutes<minutesOffset){
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,-minutesOffset);
+}else {
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,minutesOffset);
+}
+
+Time : 18/01/13 04:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hoursInMinutes<minutesOffset){
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,-minutesOffset);
+}else {
+hoursInMinutes=FieldUtils.safeAdd(hoursInMinutes,minutesOffset);
+}
+
+Time : 18/01/13 04:18
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(hoursOffset<minutesOffset){
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,-minutesOffset);
+}else {
+minutesOffset=FieldUtils.safeAdd(hoursInMinutes,minutesOffset);
+}
+
+Time : 18/01/13 04:21
+----------------------------------------
+Sat Jan 13 04:21:35 AEDT 2018 org.joda.time.DateTimeZone,254
+Sat Jan 13 04:21:37 AEDT 2018 org.joda.time.DateTimeZone,257
+Sat Jan 13 04:23:01 AEDT 2018 org.joda.time.DateTimeZone,260
+Timeout time : 18/01/13 04:35
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testWithMinuteOfHourInDstChange_purify_2 | 18/01/13 04:35
+Sat Jan 13 04:37:31 AEDT 2018 org.joda.time.DateTime,1662
+Sat Jan 13 04:46:11 AEDT 2018 Sat Jan 13 04:46:11 AEDT 2018 : org.joda.time.DateTime,220=>Find no block
+Sat Jan 13 04:46:12 AEDT 2018 org.joda.time.DateTime,219
+Sat Jan 13 04:47:32 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,2686
+Timeout time : 18/01/13 05:07
+Current failed test : org.joda.time.TestDateTimeZoneCutover::testWithMillisOfSecondInDstChange_Paris_summer_purify_2 | 18/01/13 05:07
+Sat Jan 13 05:09:47 AEDT 2018 org.joda.time.DateTime,1694
+Sat Jan 13 05:18:17 AEDT 2018 Sat Jan 13 05:18:17 AEDT 2018 : org.joda.time.DateTime,220=>Find no block
+Sat Jan 13 05:18:17 AEDT 2018 org.joda.time.DateTime,219
+Sat Jan 13 05:19:35 AEDT 2018 org.joda.time.format.DateTimeFormatterBuilder,2686
+Timeout time : 18/01/13 05:39

@@ -1,0 +1,535 @@
+=================================================
+Project : lang_3	start : 18/01/13 00:06
+Current failed test : org.apache.commons.lang3.math.NumberUtilsTest::testStringCreateNumberEnsureNoPrecisionLoss_purify_2 | 18/01/13 00:07
+Sat Jan 13 00:08:29 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,492
+Sat Jan 13 01:33:50 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,571
+Sat Jan 13 02:02:36 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,594
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(numDecimals<0){
+return f;
+}
+
+Time : 18/01/13 02:03
+----------------------------------------
+Sat Jan 13 02:04:05 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,595
+Sat Jan 13 02:04:06 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,489
+Sat Jan 13 02:04:08 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,496
+Timeout time : 18/01/13 02:38
+Current failed test : org.apache.commons.lang3.math.NumberUtilsTest::testStringCreateNumberEnsureNoPrecisionLoss_purify_3 | 18/01/13 02:38
+Sat Jan 13 02:39:14 AEDT 2018 Sat Jan 13 02:39:14 AEDT 2018 : org.apache.commons.lang3.math.NumberUtils,599=>Find no block
+Sat Jan 13 02:39:16 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,602
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(numDecimals<0){
+return d;
+}
+
+Time : 18/01/13 02:39
+----------------------------------------
+Sat Jan 13 02:40:44 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,603
+Sat Jan 13 02:40:45 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,492
+Sat Jan 13 04:05:15 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,571
+Sat Jan 13 04:32:28 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,594
+Sat Jan 13 04:33:20 AEDT 2018 org.apache.commons.lang3.math.NumberUtils,601
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(numDecimals<0){
+return d;
+}
+
+Time : 18/01/13 04:34
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(exp==null){
+return d;
+}
+
+Time : 18/01/13 04:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(str==null){
+return d;
+}
+
+Time : 18/01/13 04:35
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(numDecimals<0||numDecimals>str.length()){
+return d;
+}
+
+Time : 18/01/13 04:36
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(numDecimals>str.length()){
+return d;
+}
+
+Time : 18/01/13 04:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(numDecimals==1){
+return d;
+}
+
+Time : 18/01/13 04:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(pfxLen==1){
+return d;
+}
+
+Time : 18/01/13 04:38
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(numDecimals>=str.length()){
+return d;
+}
+
+Time : 18/01/13 04:39
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(numDecimals<exp.length()+2){
+return d;
+}
+
+Time : 18/01/13 04:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(expPos<decPos||expPos>str.length()){
+return d;
+}
+
+Time : 18/01/13 04:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(expPos<decPos){
+return d;
+}
+
+Time : 18/01/13 04:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(expPos>str.length()){
+return d;
+}
+
+Time : 18/01/13 04:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(str.length()<=numDecimals){
+return d;
+}
+
+Time : 18/01/13 04:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(str.length()==0){
+return d;
+}
+
+Time : 18/01/13 04:43
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(numDecimals==2){
+return d;
+}
+
+Time : 18/01/13 04:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(exp.length()==0){
+return d;
+}
+
+Time : 18/01/13 04:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(str.charAt(numDecimals)==' '){
+return d;
+}
+
+Time : 18/01/13 04:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(allZeros||allZeros&&allZeros){
+return d;
+}
+
+Time : 18/01/13 04:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(allZeros){
+return d;
+}
+
+Time : 18/01/13 04:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(allZeros&&allZeros){
+return d;
+}
+
+Time : 18/01/13 04:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(str==null||(pfxLen=str.length())==0){
+return d;
+}
+
+Time : 18/01/13 04:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if((pfxLen=str.length())==0){
+return d;
+}
+
+Time : 18/01/13 04:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(str==null||(numDecimals=str.length())==0){
+return d;
+}
+
+Time : 18/01/13 04:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if((numDecimals=str.length())==0){
+return d;
+}
+
+Time : 18/01/13 04:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(str.length()<2){
+return d;
+}
+
+Time : 18/01/13 04:52
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(numDecimals<=0){
+return d;
+}
+
+Time : 18/01/13 04:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+numDecimals=numDecimals+pfxLen;
+ final Double d=createDouble(str);
+if(numDecimals<0){
+return d;
+}
+
+Time : 18/01/13 04:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(str==null||numDecimals<=0){
+return d;
+}
+
+Time : 18/01/13 04:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(numDecimals>=2&&str.charAt(numDecimals)=='^'){
+return d;
+}
+
+Time : 18/01/13 04:56
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(str.charAt(numDecimals)=='^'){
+return d;
+}
+
+Time : 18/01/13 04:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(str.charAt(numDecimals)==lastChar){
+return d;
+}
+
+Time : 18/01/13 04:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(str==null||exp==null||str==null){
+return d;
+}
+
+Time : 18/01/13 04:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(str==null||exp==null){
+return d;
+}
+
+Time : 18/01/13 04:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(exp.indexOf(str.charAt(numDecimals))>=0){
+return d;
+}
+
+Time : 18/01/13 05:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(numDecimals<1){
+return d;
+}
+
+Time : 18/01/13 05:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(allZeros||allZeros){
+return d;
+}
+
+Time : 18/01/13 05:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(numDecimals<5){
+return d;
+}
+
+Time : 18/01/13 05:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(numDecimals<7){
+return d;
+}
+
+Time : 18/01/13 05:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(dec==null&&exp==null){
+return d;
+}
+
+Time : 18/01/13 05:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(dec==null){
+return d;
+}
+
+Time : 18/01/13 05:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(exp.charAt(0)=='-'){
+return d;
+}
+
+Time : 18/01/13 05:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(isDigits(exp)){
+return d;
+}
+
+Time : 18/01/13 05:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(numDecimals+numDecimals-3<str.length()){
+return d;
+}
+
+Time : 18/01/13 05:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(str==null||numDecimals<0){
+return d;
+}
+
+Time : 18/01/13 05:07
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final Double d=createDouble(str);
+if(numDecimals<=4){
+return d;
+}
+
+Time : 18/01/13 05:08
+----------------------------------------
+Timeout time : 18/01/13 05:09

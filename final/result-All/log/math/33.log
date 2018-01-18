@@ -1,0 +1,73 @@
+=================================================
+Project : math_33	start : 18/01/12 19:08
+Current failed test : org.apache.commons.math3.optimization.linear.SimplexSolverTest::testMath781 | 18/01/12 19:09
+Fri Jan 12 19:11:48 AEDT 2018 org.apache.commons.math3.optimization.linear.Relationship,59
+Fri Jan 12 19:12:36 AEDT 2018 org.apache.commons.math3.optimization.linear.SimplexTableau,406
+Fri Jan 12 19:35:39 AEDT 2018 org.apache.commons.math3.optimization.linear.SimplexTableau,407
+Fri Jan 12 19:35:45 AEDT 2018 Fri Jan 12 19:35:45 AEDT 2018 : org.apache.commons.math3.optimization.linear.Relationship,57=>Find no block
+Fri Jan 12 19:35:53 AEDT 2018 org.apache.commons.math3.optimization.linear.SimplexTableau,261
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(restrictToNonNegative){
+return new LinearConstraint(constraint.getCoefficients().mapMultiply(-1),constraint.getRelationship().oppositeRelationship(),-1*constraint.getValue());
+}
+
+Time : 18/01/12 19:37
+----------------------------------------
+Fri Jan 12 19:39:16 AEDT 2018 org.apache.commons.math3.optimization.linear.SimplexTableau,339
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Precision.compareTo(entry,0.0,maxUlps)>0){
+columnsToDrop=new ArrayList<Integer>();
+}
+
+Time : 18/01/12 19:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(Precision.compareTo(entry,0.0,epsilon)>0){
+columnsToDrop.add(i);
+}
+
+Time : 18/01/12 19:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.641374071802713 : [/home/hz985/jiajun/d4j/projects/math/math_33_buggy/src/main/java/org/apache/commons/math3/optimization/linear/SimplexTableau.java=>0,0]
+for(int i=getNumObjectiveFunctions();i<getWidth()-1;i++){
+ final double entry=tableau.getEntry(0,i);
+if(Precision.compareTo(entry,0.0,epsilon)<0){
+return false;
+}
+}
+
+Time : 18/01/12 19:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_33_buggy/src/main/java/org/apache/commons/math3/optimization/linear/SimplexTableau.java=>338,340]
+if(Precision.compareTo(entry,0.0,maxUlps)>0){
+columnsToDrop.add(i);
+}
+
+Time : 18/01/12 19:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_33_buggy/src/main/java/org/apache/commons/math3/optimization/linear/SimplexTableau.java=>338,340]
+if(Precision.compareTo(entry,0.0,epsilon)>0){
+columnsToDrop.add(i);
+}
+
+Time : 18/01/12 19:44
+----------------------------------------
+Success time : 18/01/12 19:44

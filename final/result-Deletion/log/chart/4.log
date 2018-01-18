@@ -1,0 +1,86 @@
+=================================================
+Project : chart_4	start : 18/01/15 13:48
+Current failed test : org.jfree.chart.axis.junit.LogAxisTests::testXYAutoRange1 | 18/01/15 13:49
+Mon Jan 15 13:52:18 AEDT 2018 org.jfree.chart.plot.XYPlot,4479
+Mon Jan 15 13:53:21 AEDT 2018 org.jfree.data.general.DatasetUtilities,647
+Mon Jan 15 13:53:34 AEDT 2018 org.jfree.data.xy.XYSeries,192
+Mon Jan 15 13:53:47 AEDT 2018 org.jfree.data.xy.XYSeries,207
+Mon Jan 15 13:54:01 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,577
+Mon Jan 15 14:11:20 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,578
+Mon Jan 15 14:11:35 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,581
+Mon Jan 15 14:13:52 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,582
+Mon Jan 15 14:13:57 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,583
+Mon Jan 15 14:29:20 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,584
+Mon Jan 15 14:29:26 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,585
+Mon Jan 15 14:29:32 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,586
+Mon Jan 15 14:29:37 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,587
+Mon Jan 15 14:29:41 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,588
+Mon Jan 15 14:29:46 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,590
+Mon Jan 15 14:29:50 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,591
+Mon Jan 15 14:29:56 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,592
+Mon Jan 15 14:30:00 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,595
+Mon Jan 15 14:30:07 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,599
+Mon Jan 15 14:30:11 AEDT 2018 org.jfree.data.general.DatasetUtilities,670
+Mon Jan 15 14:31:22 AEDT 2018 org.jfree.data.general.DatasetUtilities,671
+Mon Jan 15 14:31:28 AEDT 2018 Mon Jan 15 14:31:28 AEDT 2018 : org.jfree.data.general.DatasetUtilities,672=>Find no block
+Mon Jan 15 14:31:33 AEDT 2018 org.jfree.data.xy.IntervalXYDelegate,150
+Mon Jan 15 14:31:47 AEDT 2018 org.jfree.data.xy.IntervalXYDelegate,177
+Mon Jan 15 14:32:01 AEDT 2018 org.jfree.data.xy.IntervalXYDelegate,240
+Mon Jan 15 14:32:55 AEDT 2018 org.jfree.data.xy.IntervalXYDelegate,247
+Mon Jan 15 14:33:00 AEDT 2018 org.jfree.data.xy.IntervalXYDelegate,367
+Mon Jan 15 14:40:18 AEDT 2018 org.jfree.data.xy.IntervalXYDelegate,368
+Mon Jan 15 14:42:04 AEDT 2018 org.jfree.data.xy.IntervalXYDelegate,369
+Mon Jan 15 14:42:08 AEDT 2018 org.jfree.data.xy.IntervalXYDelegate,370
+Mon Jan 15 14:42:13 AEDT 2018 org.jfree.data.xy.IntervalXYDelegate,371
+Mon Jan 15 14:42:18 AEDT 2018 org.jfree.data.xy.IntervalXYDelegate,374
+Mon Jan 15 14:42:22 AEDT 2018 org.jfree.data.general.DatasetUtilities,663
+Mon Jan 15 14:44:15 AEDT 2018 org.jfree.data.general.DatasetUtilities,667
+Mon Jan 15 14:54:40 AEDT 2018 org.jfree.data.general.DatasetUtilities,669
+Mon Jan 15 14:54:45 AEDT 2018 org.jfree.data.general.DatasetUtilities,676
+Mon Jan 15 14:54:49 AEDT 2018 org.jfree.chart.plot.XYPlot,1749
+Mon Jan 15 14:55:41 AEDT 2018 org.jfree.data.xy.XYDataItem,218
+Mon Jan 15 14:58:13 AEDT 2018 org.jfree.data.xy.XYDataItem,219
+Mon Jan 15 15:02:42 AEDT 2018 org.jfree.data.xy.XYDataItem,220
+Mon Jan 15 15:02:47 AEDT 2018 org.jfree.data.xy.XYDataItem,222
+Mon Jan 15 15:02:52 AEDT 2018 org.jfree.data.xy.XYDataItem,226
+Mon Jan 15 15:02:57 AEDT 2018 org.jfree.data.xy.XYDataItem,227
+Mon Jan 15 15:03:02 AEDT 2018 Mon Jan 15 15:03:02 AEDT 2018 : org.jfree.data.xy.XYDataItem,233=>Find no block
+Mon Jan 15 15:03:08 AEDT 2018 org.jfree.data.xy.XYDataItem,242
+Mon Jan 15 15:08:13 AEDT 2018 org.jfree.data.xy.XYSeries,143
+Mon Jan 15 15:08:27 AEDT 2018 Mon Jan 15 15:08:27 AEDT 2018 : org.jfree.data.xy.XYSeries,144=>Find no block
+Mon Jan 15 15:08:32 AEDT 2018 org.jfree.chart.plot.XYPlot,1576
+Mon Jan 15 15:08:45 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,253
+Mon Jan 15 15:14:59 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,256
+Mon Jan 15 15:24:27 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,118
+Mon Jan 15 15:30:50 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,119
+Mon Jan 15 15:30:56 AEDT 2018 org.jfree.data.xy.AbstractXYDataset,127
+Mon Jan 15 15:32:02 AEDT 2018 org.jfree.data.xy.AbstractXYDataset,128
+Mon Jan 15 15:32:07 AEDT 2018 Mon Jan 15 15:32:07 AEDT 2018 : org.jfree.data.xy.AbstractXYDataset,129=>Find no block
+Mon Jan 15 15:32:11 AEDT 2018 org.jfree.chart.ChartFactory,1482
+Mon Jan 15 15:34:10 AEDT 2018 org.jfree.chart.ChartFactory,1485
+Mon Jan 15 15:41:32 AEDT 2018 org.jfree.chart.ChartFactory,1486
+Mon Jan 15 15:45:09 AEDT 2018 org.jfree.chart.ChartFactory,1487
+Mon Jan 15 15:47:34 AEDT 2018 org.jfree.chart.ChartFactory,1488
+Mon Jan 15 15:52:52 AEDT 2018 org.jfree.chart.ChartFactory,1490
+Mon Jan 15 16:01:47 AEDT 2018 org.jfree.data.xy.XYSeries,703
+Mon Jan 15 16:03:18 AEDT 2018 org.jfree.data.xy.XYSeries,707
+Mon Jan 15 16:03:19 AEDT 2018 org.jfree.data.xy.XYSeries,726
+Mon Jan 15 16:04:51 AEDT 2018 org.jfree.data.xy.XYSeries,730
+Mon Jan 15 16:04:57 AEDT 2018 org.jfree.data.xy.XYSeries,509
+Mon Jan 15 18:08:22 AEDT 2018 org.jfree.data.xy.XYSeries,510
+Mon Jan 15 18:14:25 AEDT 2018 org.jfree.data.xy.XYSeries,511
+Mon Jan 15 18:14:32 AEDT 2018 Mon Jan 15 18:14:32 AEDT 2018 : org.jfree.data.xy.XYSeries,532=>Find no block
+Mon Jan 15 18:14:33 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,213
+Mon Jan 15 18:14:55 AEDT 2018 Mon Jan 15 18:14:55 AEDT 2018 : org.jfree.data.xy.XYSeriesCollection,113=>Find no block
+Mon Jan 15 18:14:57 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,114
+Mon Jan 15 18:38:49 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,115
+Mon Jan 15 18:38:50 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,116
+Mon Jan 15 18:38:51 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,117
+Mon Jan 15 18:38:53 AEDT 2018 org.jfree.data.xy.XYSeriesCollection,121
+Mon Jan 15 18:38:54 AEDT 2018 Mon Jan 15 18:38:54 AEDT 2018 : org.jfree.data.xy.XYSeriesCollection,122=>Find no block
+Mon Jan 15 18:38:56 AEDT 2018 org.jfree.data.general.Series,102
+Mon Jan 15 18:39:01 AEDT 2018 Mon Jan 15 18:39:01 AEDT 2018 : org.jfree.data.general.Series,103=>Find no block
+Mon Jan 15 18:39:02 AEDT 2018 Mon Jan 15 18:39:02 AEDT 2018 : org.jfree.data.general.Series,111=>Find no block
+Mon Jan 15 18:39:03 AEDT 2018 org.jfree.data.general.Series,112
+Mon Jan 15 18:39:43 AEDT 2018 org.jfree.data.general.Series,115
+Timeout time : 18/01/15 18:52

@@ -1,0 +1,189 @@
+=================================================
+Project : chart_18	start : 18/01/14 02:58
+Current failed test : org.jfree.data.category.junit.DefaultCategoryDatasetTests::testBug1835955 | 18/01/14 03:00
+Sun Jan 14 03:02:06 AEDT 2018 org.jfree.data.category.DefaultCategoryDataset,350
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+this.data.removeColumn(columnKey);
+this.data.clear();
+fireDatasetChanged();
+
+Time : 18/01/14 03:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.2412407071619302 : [/home/hz985/jiajun/d4j/projects/chart/chart_18_buggy/source/org/jfree/data/category/DefaultCategoryDataset.java=>0,0]
+Iterator iterator=this.data.iterator();
+while(iterator.hasNext()){
+TaskSeries series=(TaskSeries)iterator.next();
+series.removeChangeListener(this);
+}
+this.data.clear();
+fireDatasetChanged();
+
+Time : 18/01/14 03:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/chart/chart_18_buggy/source/org/jfree/data/category/DefaultCategoryDataset.java=>350,351]
+this.data.removeColumn(columnKey);
+fireDatasetChanged();
+
+Time : 18/01/14 03:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/chart/chart_18_buggy/source/org/jfree/data/category/DefaultCategoryDataset.java=>350,351]
+this.data.removeColumn(columnKey);
+this.data.clear();
+fireDatasetChanged();
+
+Time : 18/01/14 03:04
+----------------------------------------
+Success time : 18/01/14 03:04
+Current failed test : org.jfree.data.junit.DefaultKeyedValuesTests::testRemoveValue_purify_3 | 18/01/14 03:04
+Sun Jan 14 03:06:30 AEDT 2018 org.jfree.data.DefaultKeyedValues,335
+Sun Jan 14 03:09:31 AEDT 2018 org.jfree.data.DefaultKeyedValues,316
+Sun Jan 14 03:14:06 AEDT 2018 org.jfree.data.DefaultKeyedValues,317
+Sun Jan 14 03:14:14 AEDT 2018 org.jfree.data.DefaultKeyedValues,318
+Sun Jan 14 03:18:30 AEDT 2018 org.jfree.data.DefaultKeyedValues,319
+Sun Jan 14 03:18:38 AEDT 2018 Sun Jan 14 03:18:38 AEDT 2018 : org.jfree.data.DefaultKeyedValues,321=>Find no block
+Sun Jan 14 03:18:46 AEDT 2018 org.jfree.data.DefaultKeyedValues,333
+Sun Jan 14 03:23:03 AEDT 2018 org.jfree.data.DefaultKeyedValues,334
+Sun Jan 14 03:23:11 AEDT 2018 org.jfree.data.DefaultKeyedValues,337
+Sun Jan 14 03:23:20 AEDT 2018 Sun Jan 14 03:23:20 AEDT 2018 : org.jfree.data.DefaultKeyedValues,338=>Find no block
+Sun Jan 14 03:23:29 AEDT 2018 org.jfree.data.DefaultKeyedValues,299
+Sun Jan 14 03:28:09 AEDT 2018 org.jfree.data.DefaultKeyedValues,300
+Sun Jan 14 03:34:48 AEDT 2018 org.jfree.data.DefaultKeyedValues,301
+Sun Jan 14 03:34:56 AEDT 2018 org.jfree.data.DefaultKeyedValues,302
+Sun Jan 14 03:35:04 AEDT 2018 Sun Jan 14 03:35:04 AEDT 2018 : org.jfree.data.DefaultKeyedValues,304=>Find no block
+Sun Jan 14 03:35:13 AEDT 2018 org.jfree.data.DefaultKeyedValues,209
+Sun Jan 14 03:37:24 AEDT 2018 Sun Jan 14 03:37:24 AEDT 2018 : org.jfree.data.DefaultKeyedValues,210=>Find no block
+Sun Jan 14 03:37:31 AEDT 2018 org.jfree.data.DefaultKeyedValues,157
+Sun Jan 14 03:41:51 AEDT 2018 org.jfree.data.DefaultKeyedValues,229
+Sun Jan 14 03:42:00 AEDT 2018 org.jfree.data.DefaultKeyedValues,232
+Sun Jan 14 03:48:16 AEDT 2018 org.jfree.data.DefaultKeyedValues,233
+Sun Jan 14 03:48:25 AEDT 2018 org.jfree.data.DefaultKeyedValues,238
+Sun Jan 14 03:48:33 AEDT 2018 org.jfree.data.DefaultKeyedValues,239
+Sun Jan 14 03:48:42 AEDT 2018 org.jfree.data.DefaultKeyedValues,240
+Sun Jan 14 03:48:49 AEDT 2018 Sun Jan 14 03:48:49 AEDT 2018 : org.jfree.data.DefaultKeyedValues,242=>Find no block
+Sun Jan 14 03:48:57 AEDT 2018 org.jfree.data.DefaultKeyedValues,150
+Sun Jan 14 03:49:02 AEDT 2018 org.jfree.data.DefaultKeyedValues,153
+Sun Jan 14 03:49:09 AEDT 2018 org.jfree.data.DefaultKeyedValues,154
+Sun Jan 14 03:49:18 AEDT 2018 org.jfree.data.DefaultKeyedValues,155
+Sun Jan 14 03:49:25 AEDT 2018 Sun Jan 14 03:49:25 AEDT 2018 : org.jfree.data.DefaultKeyedValues,98=>Find no block
+Sun Jan 14 03:49:33 AEDT 2018 org.jfree.data.DefaultKeyedValues,99
+Sun Jan 14 03:49:52 AEDT 2018 org.jfree.data.DefaultKeyedValues,100
+Sun Jan 14 03:50:01 AEDT 2018 org.jfree.data.DefaultKeyedValues,101
+Sun Jan 14 03:50:10 AEDT 2018 Sun Jan 14 03:50:10 AEDT 2018 : org.jfree.data.DefaultKeyedValues,102=>Find no block
+Sun Jan 14 03:50:18 AEDT 2018 Sun Jan 14 03:50:18 AEDT 2018 : org.jfree.data.category.DefaultCategoryDataset,73=>Find no block
+Sun Jan 14 03:50:28 AEDT 2018 org.jfree.data.category.DefaultCategoryDataset,74
+Sun Jan 14 03:50:48 AEDT 2018 Sun Jan 14 03:50:48 AEDT 2018 : org.jfree.data.category.DefaultCategoryDataset,75=>Find no block
+Sun Jan 14 03:50:56 AEDT 2018 org.jfree.data.category.DefaultCategoryDataset,85
+Sun Jan 14 03:52:16 AEDT 2018 org.jfree.data.category.DefaultCategoryDataset,96
+Sun Jan 14 03:53:28 AEDT 2018 org.jfree.data.category.DefaultCategoryDataset,110
+Sun Jan 14 03:55:11 AEDT 2018 org.jfree.data.category.DefaultCategoryDataset,124
+Sun Jan 14 03:56:14 AEDT 2018 org.jfree.data.category.DefaultCategoryDataset,138
+Sun Jan 14 03:57:45 AEDT 2018 org.jfree.data.category.DefaultCategoryDataset,149
+Sun Jan 14 03:58:47 AEDT 2018 org.jfree.data.category.DefaultCategoryDataset,162
+Sun Jan 14 03:59:49 AEDT 2018 org.jfree.data.category.DefaultCategoryDataset,176
+Sun Jan 14 04:01:15 AEDT 2018 org.jfree.data.category.DefaultCategoryDataset,187
+Sun Jan 14 04:02:19 AEDT 2018 org.jfree.data.category.DefaultCategoryDataset,203
+Sun Jan 14 04:04:04 AEDT 2018 org.jfree.data.category.DefaultCategoryDataset,218
+Sun Jan 14 04:05:50 AEDT 2018 org.jfree.data.category.DefaultCategoryDataset,219
+Sun Jan 14 04:05:59 AEDT 2018 Sun Jan 14 04:05:59 AEDT 2018 : org.jfree.data.category.DefaultCategoryDataset,220=>Find no block
+Sun Jan 14 04:06:09 AEDT 2018 org.jfree.data.category.DefaultCategoryDataset,233
+Timeout time : 18/01/14 04:06
+Current failed test : org.jfree.data.junit.DefaultKeyedValuesTests::testGetIndex2_purify_3 | 18/01/14 04:06
+Sun Jan 14 04:08:03 AEDT 2018 org.jfree.data.DefaultKeyedValues,316
+Sun Jan 14 04:12:37 AEDT 2018 org.jfree.data.DefaultKeyedValues,317
+Sun Jan 14 04:12:46 AEDT 2018 org.jfree.data.DefaultKeyedValues,318
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(index<=this.keys.size()){
+rebuildIndex();
+}
+
+Time : 18/01/14 04:14
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.2981462390204985 : [/home/hz985/jiajun/d4j/projects/chart/chart_18_buggy/source/org/jfree/data/DefaultKeyedValues.java=>0,0]
+if(position<=this.data.size()){
+this.data.add(position,item);
+}else {
+this.data.add(item);
+}
+
+Time : 18/01/14 04:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/chart/chart_18_buggy/source/org/jfree/data/DefaultKeyedValues.java=>318,320]
+if(index<this.keys.size()){
+rebuildIndex();
+}
+
+Time : 18/01/14 04:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/chart/chart_18_buggy/source/org/jfree/data/DefaultKeyedValues.java=>318,320]
+if(index<=this.keys.size()){
+rebuildIndex();
+}
+
+Time : 18/01/14 04:15
+----------------------------------------
+Success time : 18/01/14 04:15
+Current failed test : org.jfree.data.junit.DefaultKeyedValues2DTests::testRemoveColumnByKey_purify_1 | 18/01/14 04:15
+Already fixed : org.jfree.data.junit.DefaultKeyedValues2DTests::testRemoveColumnByKey_purify_1
+Current failed test : org.jfree.data.junit.DefaultKeyedValues2DTests::testRemoveColumnByKey_purify_2 | 18/01/14 04:16
+Sun Jan 14 04:17:46 AEDT 2018 org.jfree.data.DefaultKeyedValues2D,455
+Sun Jan 14 04:21:14 AEDT 2018 org.jfree.data.DefaultKeyedValues2D,456
+Sun Jan 14 04:24:39 AEDT 2018 org.jfree.data.DefaultKeyedValues2D,457
+Sun Jan 14 04:24:46 AEDT 2018 org.jfree.data.DefaultKeyedValues2D,458
+Sun Jan 14 04:24:54 AEDT 2018 Sun Jan 14 04:24:54 AEDT 2018 : org.jfree.data.DefaultKeyedValues2D,459=>Find no block
+Sun Jan 14 04:25:03 AEDT 2018 org.jfree.data.DefaultKeyedValues2D,460
+Sun Jan 14 04:25:11 AEDT 2018 Sun Jan 14 04:25:11 AEDT 2018 : org.jfree.data.DefaultKeyedValues2D,461=>Find no block
+Sun Jan 14 04:25:19 AEDT 2018 org.jfree.data.DefaultKeyedValues,335
+Sun Jan 14 04:28:21 AEDT 2018 org.jfree.data.DefaultKeyedValues,316
+Sun Jan 14 04:32:54 AEDT 2018 org.jfree.data.DefaultKeyedValues,317
+Sun Jan 14 04:33:00 AEDT 2018 org.jfree.data.DefaultKeyedValues,318
+Sun Jan 14 04:37:22 AEDT 2018 Sun Jan 14 04:37:22 AEDT 2018 : org.jfree.data.DefaultKeyedValues,321=>Find no block
+Sun Jan 14 04:37:31 AEDT 2018 org.jfree.data.DefaultKeyedValues,333
+Sun Jan 14 04:41:47 AEDT 2018 org.jfree.data.DefaultKeyedValues,334
+Sun Jan 14 04:41:55 AEDT 2018 org.jfree.data.DefaultKeyedValues,337
+Sun Jan 14 04:42:02 AEDT 2018 Sun Jan 14 04:42:02 AEDT 2018 : org.jfree.data.DefaultKeyedValues,338=>Find no block
+Sun Jan 14 04:42:09 AEDT 2018 org.jfree.data.DefaultKeyedValues,234
+Sun Jan 14 04:45:10 AEDT 2018 org.jfree.data.DefaultKeyedValues2D,323
+Sun Jan 14 04:45:31 AEDT 2018 org.jfree.data.DefaultKeyedValues2D,189
+Sun Jan 14 04:47:22 AEDT 2018 org.jfree.data.DefaultKeyedValues2D,303
+Sun Jan 14 04:49:31 AEDT 2018 Sun Jan 14 04:49:31 AEDT 2018 : org.jfree.data.DefaultKeyedValues2D,304=>Find no block
+Sun Jan 14 04:49:38 AEDT 2018 org.jfree.data.DefaultKeyedValues2D,333
+Sun Jan 14 04:52:01 AEDT 2018 org.jfree.data.DefaultKeyedValues2D,334
+Sun Jan 14 04:52:09 AEDT 2018 org.jfree.data.DefaultKeyedValues2D,182
+Sun Jan 14 04:53:32 AEDT 2018 org.jfree.data.DefaultKeyedValues2D,185
+Sun Jan 14 04:53:40 AEDT 2018 org.jfree.data.DefaultKeyedValues2D,320
+Sun Jan 14 05:01:25 AEDT 2018 org.jfree.data.DefaultKeyedValues2D,322
+Sun Jan 14 05:01:31 AEDT 2018 org.jfree.data.DefaultKeyedValues2D,326
+Sun Jan 14 05:03:47 AEDT 2018 org.jfree.data.DefaultKeyedValues2D,327
+Sun Jan 14 05:03:55 AEDT 2018 org.jfree.data.DefaultKeyedValues2D,337
+Sun Jan 14 05:08:29 AEDT 2018 org.jfree.data.DefaultKeyedValues2D,339
+Sun Jan 14 05:08:38 AEDT 2018 org.jfree.data.DefaultKeyedValues2D,340
+Sun Jan 14 05:15:14 AEDT 2018 org.jfree.data.DefaultKeyedValues2D,341
+Sun Jan 14 05:15:21 AEDT 2018 Sun Jan 14 05:15:21 AEDT 2018 : org.jfree.data.DefaultKeyedValues2D,343=>Find no block
+Sun Jan 14 05:15:28 AEDT 2018 org.jfree.data.DefaultKeyedValues2D,95
+Sun Jan 14 05:15:44 AEDT 2018 Sun Jan 14 05:15:44 AEDT 2018 : org.jfree.data.DefaultKeyedValues2D,96=>Find no block
+Sun Jan 14 05:15:50 AEDT 2018 org.jfree.data.DefaultKeyedValues,157
+Timeout time : 18/01/14 05:17

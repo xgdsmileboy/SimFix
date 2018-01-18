@@ -1,0 +1,59 @@
+=================================================
+Project : math_43	start : 18/01/14 02:19
+Current failed test : org.apache.commons.math.stat.descriptive.SummaryStatisticsTest::testOverrideMeanWithMathClass | 18/01/14 02:20
+Sun Jan 14 02:25:07 AEDT 2018 Sun Jan 14 02:25:07 AEDT 2018 : org.apache.commons.math.stat.descriptive.SummaryStatistics,647=>Find no block
+Sun Jan 14 02:25:13 AEDT 2018 org.apache.commons.math.stat.descriptive.SummaryStatistics,643
+Sun Jan 14 02:30:44 AEDT 2018 org.apache.commons.math.stat.descriptive.SummaryStatistics,577
+Sun Jan 14 02:42:38 AEDT 2018 org.apache.commons.math.stat.descriptive.SummaryStatistics,578
+Sun Jan 14 02:42:44 AEDT 2018 Sun Jan 14 02:42:44 AEDT 2018 : org.apache.commons.math.stat.descriptive.SummaryStatistics,579=>Find no block
+Sun Jan 14 02:42:49 AEDT 2018 org.apache.commons.math.stat.descriptive.SummaryStatistics,635
+Sun Jan 14 02:53:47 AEDT 2018 org.apache.commons.math.stat.descriptive.SummaryStatistics,636
+Sun Jan 14 02:53:55 AEDT 2018 Sun Jan 14 02:53:55 AEDT 2018 : org.apache.commons.math.stat.descriptive.SummaryStatistics,637=>Find no block
+Sun Jan 14 02:54:02 AEDT 2018 org.apache.commons.math.util.FastMath,1160
+Sun Jan 14 03:26:28 AEDT 2018 org.apache.commons.math.util.FastMath,1161
+Sun Jan 14 03:26:34 AEDT 2018 org.apache.commons.math.util.FastMath,1162
+Sun Jan 14 04:15:45 AEDT 2018 org.apache.commons.math.util.FastMath,1163
+Sun Jan 14 04:31:18 AEDT 2018 org.apache.commons.math.util.FastMath,1164
+Sun Jan 14 04:41:11 AEDT 2018 org.apache.commons.math.util.FastMath,1165
+Sun Jan 14 04:47:46 AEDT 2018 org.apache.commons.math.util.FastMath,1166
+Sun Jan 14 04:55:22 AEDT 2018 org.apache.commons.math.util.FastMath,1168
+Sun Jan 14 05:01:03 AEDT 2018 org.apache.commons.math.util.FastMath,1169
+Sun Jan 14 05:01:10 AEDT 2018 org.apache.commons.math.util.FastMath,1171
+Sun Jan 14 05:43:11 AEDT 2018 org.apache.commons.math.util.FastMath,1173
+Sun Jan 14 05:46:36 AEDT 2018 org.apache.commons.math.util.FastMath,1174
+Sun Jan 14 05:46:42 AEDT 2018 org.apache.commons.math.util.FastMath,1176
+Sun Jan 14 05:48:05 AEDT 2018 org.apache.commons.math.util.FastMath,1177
+Sun Jan 14 06:00:00 AEDT 2018 org.apache.commons.math.util.FastMath,1178
+Sun Jan 14 06:02:06 AEDT 2018 org.apache.commons.math.util.FastMath,1181
+Sun Jan 14 06:03:40 AEDT 2018 org.apache.commons.math.util.FastMath,1182
+Sun Jan 14 06:05:53 AEDT 2018 org.apache.commons.math.util.FastMath,1184
+Sun Jan 14 06:07:51 AEDT 2018 org.apache.commons.math.util.FastMath,1185
+Sun Jan 14 06:07:57 AEDT 2018 org.apache.commons.math.util.FastMath,1186
+Sun Jan 14 06:08:04 AEDT 2018 org.apache.commons.math.util.FastMath,1190
+Sun Jan 14 06:08:10 AEDT 2018 org.apache.commons.math.util.FastMath,1191
+Sun Jan 14 06:08:19 AEDT 2018 org.apache.commons.math.util.FastMath,1193
+Sun Jan 14 06:08:26 AEDT 2018 org.apache.commons.math.util.FastMath,1194
+Sun Jan 14 06:08:33 AEDT 2018 org.apache.commons.math.util.FastMath,1195
+Sun Jan 14 06:10:26 AEDT 2018 org.apache.commons.math.util.FastMath,1197
+Sun Jan 14 06:10:32 AEDT 2018 org.apache.commons.math.stat.descriptive.AbstractStorelessUnivariateStatistic,59
+Sun Jan 14 06:10:46 AEDT 2018 org.apache.commons.math.stat.descriptive.AbstractStorelessUnivariateStatistic,62
+Sun Jan 14 06:22:55 AEDT 2018 Sun Jan 14 06:22:55 AEDT 2018 : org.apache.commons.math.stat.descriptive.moment.Variance,124=>Find no block
+Sun Jan 14 06:23:01 AEDT 2018 org.apache.commons.math.stat.descriptive.moment.Variance,125
+Sun Jan 14 06:24:56 AEDT 2018 org.apache.commons.math.stat.descriptive.moment.Variance,126
+Sun Jan 14 06:25:03 AEDT 2018 Sun Jan 14 06:25:03 AEDT 2018 : org.apache.commons.math.stat.descriptive.moment.Variance,127=>Find no block
+Sun Jan 14 06:25:10 AEDT 2018 org.apache.commons.math.stat.descriptive.moment.Variance,420
+Sun Jan 14 06:28:49 AEDT 2018 org.apache.commons.math.stat.descriptive.SummaryStatistics,607
+Sun Jan 14 06:32:51 AEDT 2018 Sun Jan 14 06:32:51 AEDT 2018 : org.apache.commons.math.stat.descriptive.SummaryStatistics,608=>Find no block
+Sun Jan 14 06:32:58 AEDT 2018 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,163
+Sun Jan 14 06:33:03 AEDT 2018 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,167
+Sun Jan 14 06:37:07 AEDT 2018 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,171
+Sun Jan 14 06:42:25 AEDT 2018 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,175
+Sun Jan 14 06:46:26 AEDT 2018 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,180
+Sun Jan 14 06:49:37 AEDT 2018 org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic,184
+Sun Jan 14 06:53:07 AEDT 2018 org.apache.commons.math.stat.descriptive.summary.SumOfLogs,84
+Sun Jan 14 06:58:26 AEDT 2018 org.apache.commons.math.stat.descriptive.summary.SumOfLogs,85
+Sun Jan 14 06:58:33 AEDT 2018 Sun Jan 14 06:58:33 AEDT 2018 : org.apache.commons.math.stat.descriptive.summary.SumOfLogs,86=>Find no block
+Sun Jan 14 06:58:38 AEDT 2018 org.apache.commons.math.stat.descriptive.SummaryStatistics,150
+Sun Jan 14 07:15:25 AEDT 2018 org.apache.commons.math.stat.descriptive.SummaryStatistics,151
+Sun Jan 14 07:15:34 AEDT 2018 org.apache.commons.math.stat.descriptive.SummaryStatistics,152
+Timeout time : 18/01/14 07:25

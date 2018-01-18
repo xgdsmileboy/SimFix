@@ -1,0 +1,83 @@
+=================================================
+Project : closure_63	start : 18/01/16 22:00
+Current failed test : com.google.javascript.jscomp.LightweightMessageFormatterTest::testFormatErrorSpaceEndOfLine1 | 18/01/16 22:00
+Tue Jan 16 22:04:40 EST 2018 com.google.javascript.jscomp.LightweightMessageFormatter,90
+Tue Jan 16 22:21:18 EST 2018 com.google.javascript.jscomp.LightweightMessageFormatter,91
+Tue Jan 16 22:21:19 EST 2018 com.google.javascript.jscomp.LightweightMessageFormatter,92
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(excerpt.equals(LINE)&&0<=charno&&charno<=sourceExcerpt.length()){
+for(int i=0;i<charno;i++){
+char c=sourceExcerpt.charAt(i);
+if(Character.isWhitespace(c)){
+b.append(c);
+}else {
+b.append(' ');
+}
+}
+b.append("^\n");
+}
+
+Time : 18/01/16 23:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.9715598018508236 : [/home/jiajun/d4j/projects/closure/closure_63_buggy/src/com/google/javascript/jscomp/LightweightMessageFormatter.java=>0,0]
+String details=details();
+if(sourceName==null||lineNumber<=0){
+return details;
+}
+StringBuilder buf=new StringBuilder(details);
+buf.append(" (");
+if(sourceName!=null){
+buf.append(sourceName);
+}
+if(lineNumber>0){
+buf.append('#');
+buf.append(lineNumber);
+}
+buf.append(')');
+return buf.toString();
+
+Time : 18/01/16 23:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/jiajun/d4j/projects/closure/closure_63_buggy/src/com/google/javascript/jscomp/LightweightMessageFormatter.java=>97,108]
+if(excerpt.equals(LINE)&&0<=charno&&charno<sourceExcerpt.length()){
+for(int i=0;i<charno;i++){
+char c=sourceExcerpt.charAt(i);
+if(Character.isWhitespace(c)){
+b.append(c);
+}else {
+b.append(' ');
+}
+}
+b.append("^\n");
+}
+
+Time : 18/01/16 23:17
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/jiajun/d4j/projects/closure/closure_63_buggy/src/com/google/javascript/jscomp/LightweightMessageFormatter.java=>97,108]
+if(excerpt.equals(LINE)&&0<=charno&&charno<=sourceExcerpt.length()){
+for(int i=0;i<charno;i++){
+char c=sourceExcerpt.charAt(i);
+if(Character.isWhitespace(c)){
+b.append(c);
+}else {
+b.append(' ');
+}
+}
+b.append("^\n");
+}
+
+Time : 18/01/16 23:17
+----------------------------------------
+Success time : 18/01/16 23:17

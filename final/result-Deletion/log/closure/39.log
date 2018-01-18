@@ -1,0 +1,126 @@
+=================================================
+Project : closure_39	start : 18/01/15 18:49
+Current failed test : com.google.javascript.rhino.jstype.RecordTypeTest::testLongToString_purify_1 | 18/01/15 18:51
+Mon Jan 15 18:51:27 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,384
+Mon Jan 15 18:59:04 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,385
+Mon Jan 15 18:59:06 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,375
+Mon Jan 15 19:02:55 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,258
+Mon Jan 15 19:03:06 AEDT 2018 com.google.javascript.rhino.jstype.JSType,1165
+Mon Jan 15 19:03:16 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,394
+Mon Jan 15 19:03:27 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,374
+Mon Jan 15 19:03:31 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,378
+Mon Jan 15 19:17:10 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,379
+Mon Jan 15 19:31:02 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,380
+Timeout time : 18/01/15 19:41
+Current failed test : com.google.javascript.rhino.jstype.RecordTypeTest::testLongToString_purify_2 | 18/01/15 19:41
+Mon Jan 15 19:41:53 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,384
+Mon Jan 15 19:47:57 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,385
+Mon Jan 15 19:47:59 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,375
+Mon Jan 15 19:53:24 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,258
+Mon Jan 15 19:53:35 AEDT 2018 com.google.javascript.rhino.jstype.JSType,1165
+Mon Jan 15 19:53:44 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,394
+Mon Jan 15 19:53:55 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,374
+Mon Jan 15 19:53:59 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,378
+Mon Jan 15 20:07:48 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,379
+Mon Jan 15 20:14:27 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,380
+Mon Jan 15 20:20:56 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,382
+Mon Jan 15 20:29:27 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,383
+Mon Jan 15 20:29:31 AEDT 2018 Mon Jan 15 20:29:31 AEDT 2018 : com.google.javascript.rhino.jstype.PrototypeObjectType,387=>Find no block
+Mon Jan 15 20:29:34 AEDT 2018 com.google.javascript.rhino.jstype.RecordType,122
+Mon Jan 15 20:29:49 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,358
+Timeout time : 18/01/15 20:31
+Current failed test : com.google.javascript.rhino.jstype.RecordTypeTest::testRecursiveRecord_purify_1 | 18/01/15 20:31
+Mon Jan 15 20:32:05 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,384
+Mon Jan 15 20:36:13 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,385
+Mon Jan 15 20:36:14 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,375
+Mon Jan 15 20:38:42 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,258
+Mon Jan 15 20:38:45 AEDT 2018 com.google.javascript.rhino.jstype.JSType,1165
+Mon Jan 15 20:38:49 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,394
+Mon Jan 15 20:38:52 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,374
+Mon Jan 15 20:38:53 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,378
+Mon Jan 15 20:47:30 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,379
+Mon Jan 15 20:53:17 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,380
+Mon Jan 15 20:58:50 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,382
+Mon Jan 15 21:06:06 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,383
+Mon Jan 15 21:06:07 AEDT 2018 Mon Jan 15 21:06:07 AEDT 2018 : com.google.javascript.rhino.jstype.PrototypeObjectType,387=>Find no block
+Mon Jan 15 21:06:07 AEDT 2018 com.google.javascript.rhino.jstype.RecordType,122
+Mon Jan 15 21:06:13 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,358
+Mon Jan 15 21:08:55 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,361
+Mon Jan 15 21:08:56 AEDT 2018 Mon Jan 15 21:08:56 AEDT 2018 : com.google.javascript.rhino.jstype.PrototypeObjectType,362=>Find no block
+Mon Jan 15 21:08:56 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,363
+Mon Jan 15 21:10:35 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,366
+Mon Jan 15 21:10:36 AEDT 2018 Mon Jan 15 21:10:36 AEDT 2018 : com.google.javascript.rhino.jstype.PrototypeObjectType,365=>Find no block
+Mon Jan 15 21:10:36 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,369
+Timeout time : 18/01/15 21:22
+Current failed test : com.google.javascript.rhino.jstype.RecordTypeTest::testRecursiveRecord_purify_2 | 18/01/15 21:22
+Mon Jan 15 21:22:08 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,384
+Mon Jan 15 21:25:46 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,385
+Mon Jan 15 21:25:47 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,375
+Mon Jan 15 21:28:10 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,258
+Mon Jan 15 21:28:14 AEDT 2018 com.google.javascript.rhino.jstype.JSType,1165
+Mon Jan 15 21:28:18 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,394
+Mon Jan 15 21:28:20 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,374
+Mon Jan 15 21:28:22 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,378
+Mon Jan 15 21:36:48 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,379
+Mon Jan 15 21:42:26 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,380
+Mon Jan 15 21:47:56 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,382
+Mon Jan 15 21:55:07 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,383
+Mon Jan 15 21:55:07 AEDT 2018 Mon Jan 15 21:55:07 AEDT 2018 : com.google.javascript.rhino.jstype.PrototypeObjectType,387=>Find no block
+Mon Jan 15 21:55:08 AEDT 2018 com.google.javascript.rhino.jstype.RecordType,122
+Mon Jan 15 21:55:14 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,358
+Mon Jan 15 21:57:55 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,361
+Mon Jan 15 21:57:55 AEDT 2018 Mon Jan 15 21:57:55 AEDT 2018 : com.google.javascript.rhino.jstype.PrototypeObjectType,362=>Find no block
+Mon Jan 15 21:57:56 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,363
+Mon Jan 15 21:59:34 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,366
+Mon Jan 15 21:59:35 AEDT 2018 Mon Jan 15 21:59:35 AEDT 2018 : com.google.javascript.rhino.jstype.PrototypeObjectType,365=>Find no block
+Mon Jan 15 21:59:35 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,369
+Mon Jan 15 22:11:25 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,370
+Timeout time : 18/01/15 22:12
+Current failed test : com.google.javascript.rhino.jstype.RecordTypeTest::testRecursiveRecord_purify_3 | 18/01/15 22:12
+Mon Jan 15 22:12:15 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,384
+Mon Jan 15 22:15:55 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,385
+Mon Jan 15 22:15:55 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,375
+Mon Jan 15 22:18:19 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,258
+Mon Jan 15 22:18:23 AEDT 2018 com.google.javascript.rhino.jstype.JSType,1165
+Mon Jan 15 22:18:26 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,394
+Mon Jan 15 22:18:29 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,374
+Mon Jan 15 22:18:29 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,378
+Mon Jan 15 22:27:02 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,379
+Mon Jan 15 22:32:42 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,380
+Mon Jan 15 22:38:13 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,382
+Mon Jan 15 22:45:27 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,383
+Mon Jan 15 22:45:28 AEDT 2018 Mon Jan 15 22:45:28 AEDT 2018 : com.google.javascript.rhino.jstype.PrototypeObjectType,387=>Find no block
+Mon Jan 15 22:45:29 AEDT 2018 com.google.javascript.rhino.jstype.RecordType,122
+Mon Jan 15 22:45:34 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,358
+Mon Jan 15 22:48:16 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,361
+Mon Jan 15 22:48:17 AEDT 2018 Mon Jan 15 22:48:17 AEDT 2018 : com.google.javascript.rhino.jstype.PrototypeObjectType,362=>Find no block
+Mon Jan 15 22:48:18 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,363
+Mon Jan 15 22:49:56 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,366
+Mon Jan 15 22:49:57 AEDT 2018 Mon Jan 15 22:49:57 AEDT 2018 : com.google.javascript.rhino.jstype.PrototypeObjectType,365=>Find no block
+Mon Jan 15 22:49:58 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,369
+Mon Jan 15 23:01:41 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,370
+Timeout time : 18/01/15 23:02
+Current failed test : com.google.javascript.rhino.jstype.RecordTypeTest::testRecursiveRecord_purify_4 | 18/01/15 23:02
+Mon Jan 15 23:02:21 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,384
+Mon Jan 15 23:06:01 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,385
+Mon Jan 15 23:06:02 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,375
+Mon Jan 15 23:08:25 AEDT 2018 com.google.javascript.rhino.jstype.ProxyObjectType,258
+Mon Jan 15 23:08:28 AEDT 2018 com.google.javascript.rhino.jstype.JSType,1165
+Mon Jan 15 23:08:32 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,394
+Mon Jan 15 23:08:35 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,374
+Mon Jan 15 23:08:36 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,378
+Mon Jan 15 23:16:58 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,379
+Mon Jan 15 23:22:33 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,380
+Mon Jan 15 23:28:06 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,382
+Mon Jan 15 23:35:18 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,383
+Mon Jan 15 23:35:18 AEDT 2018 Mon Jan 15 23:35:18 AEDT 2018 : com.google.javascript.rhino.jstype.PrototypeObjectType,387=>Find no block
+Mon Jan 15 23:35:19 AEDT 2018 com.google.javascript.rhino.jstype.RecordType,122
+Mon Jan 15 23:35:24 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,358
+Mon Jan 15 23:38:04 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,361
+Mon Jan 15 23:38:05 AEDT 2018 Mon Jan 15 23:38:05 AEDT 2018 : com.google.javascript.rhino.jstype.PrototypeObjectType,362=>Find no block
+Mon Jan 15 23:38:06 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,363
+Mon Jan 15 23:39:45 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,366
+Mon Jan 15 23:39:45 AEDT 2018 Mon Jan 15 23:39:45 AEDT 2018 : com.google.javascript.rhino.jstype.PrototypeObjectType,365=>Find no block
+Mon Jan 15 23:39:46 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,369
+Mon Jan 15 23:51:26 AEDT 2018 com.google.javascript.rhino.jstype.PrototypeObjectType,370
+Timeout time : 18/01/15 23:52

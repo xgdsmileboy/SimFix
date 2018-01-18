@@ -1,0 +1,109 @@
+=================================================
+Project : closure_133	start : 18/01/15 14:23
+Current failed test : com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntaxTest::testIssue925 | 18/01/15 14:24
+Mon Jan 15 14:24:52 AEDT 2018 com.google.javascript.rhino.SourcePosition,87
+Mon Jan 15 14:25:04 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1838
+Mon Jan 15 15:17:29 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1839
+Mon Jan 15 15:17:34 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,2303
+Mon Jan 15 15:17:44 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,947
+Mon Jan 15 15:18:06 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,2341
+Mon Jan 15 15:18:30 AEDT 2018 Mon Jan 15 15:18:30 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,2342=>Find no block
+Mon Jan 15 15:18:34 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,2298
+Mon Jan 15 15:19:22 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,2299
+Mon Jan 15 15:19:24 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,958
+Mon Jan 15 15:26:48 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1483
+Mon Jan 15 15:28:03 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,170
+Mon Jan 15 15:28:47 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,171
+Mon Jan 15 15:28:50 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,172
+Mon Jan 15 15:28:53 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1475
+Mon Jan 15 15:46:51 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,82
+Mon Jan 15 15:49:12 AEDT 2018 Mon Jan 15 15:49:12 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,86=>Find no block
+Mon Jan 15 15:49:16 AEDT 2018 Mon Jan 15 15:49:16 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,48=>Find no block
+Mon Jan 15 15:49:20 AEDT 2018 Mon Jan 15 15:49:20 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,136=>Find no block
+Mon Jan 15 15:49:24 AEDT 2018 com.google.javascript.rhino.JSDocInfo,138
+Mon Jan 15 15:59:11 AEDT 2018 com.google.javascript.rhino.JSDocInfo,142
+Mon Jan 15 15:59:14 AEDT 2018 Mon Jan 15 15:59:14 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,143=>Find no block
+Mon Jan 15 15:59:16 AEDT 2018 Mon Jan 15 15:59:16 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,129=>Find no block
+Mon Jan 15 15:59:20 AEDT 2018 com.google.javascript.rhino.SourcePosition,86
+Mon Jan 15 15:59:23 AEDT 2018 com.google.javascript.rhino.JSDocInfo,690
+Mon Jan 15 15:59:53 AEDT 2018 com.google.javascript.rhino.JSDocInfo,691
+Mon Jan 15 15:59:55 AEDT 2018 com.google.javascript.rhino.JSDocInfo,694
+Mon Jan 15 17:11:18 AEDT 2018 com.google.javascript.rhino.JSDocInfo,695
+Mon Jan 15 17:11:21 AEDT 2018 com.google.javascript.rhino.JSDocInfo,696
+Mon Jan 15 17:11:25 AEDT 2018 Mon Jan 15 17:11:25 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,179=>Find no block
+Mon Jan 15 17:11:30 AEDT 2018 Mon Jan 15 17:11:30 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,180=>Find no block
+Mon Jan 15 17:11:34 AEDT 2018 Mon Jan 15 17:11:34 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,181=>Find no block
+Mon Jan 15 17:11:38 AEDT 2018 Mon Jan 15 17:11:38 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,182=>Find no block
+Mon Jan 15 17:11:42 AEDT 2018 Mon Jan 15 17:11:42 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,183=>Find no block
+Mon Jan 15 17:11:45 AEDT 2018 Mon Jan 15 17:11:45 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,184=>Find no block
+Mon Jan 15 17:11:50 AEDT 2018 com.google.javascript.rhino.JSDocInfo,194
+Mon Jan 15 17:12:00 AEDT 2018 Mon Jan 15 17:12:00 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,195=>Find no block
+Mon Jan 15 17:12:04 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,152
+Mon Jan 15 17:12:53 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,154
+Mon Jan 15 17:12:58 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,155
+Mon Jan 15 17:13:02 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,157
+Mon Jan 15 17:13:07 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,158
+Mon Jan 15 17:13:11 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1503
+Mon Jan 15 17:15:08 AEDT 2018 com.google.javascript.rhino.JSDocInfo,674
+Mon Jan 15 17:16:56 AEDT 2018 com.google.javascript.rhino.JSDocInfo,675
+Mon Jan 15 17:16:59 AEDT 2018 com.google.javascript.rhino.JSDocInfo,678
+Mon Jan 15 17:20:47 AEDT 2018 com.google.javascript.rhino.JSDocInfo,1577
+Mon Jan 15 17:20:58 AEDT 2018 com.google.javascript.rhino.JSDocInfo,1580
+Mon Jan 15 17:21:09 AEDT 2018 Mon Jan 15 17:21:09 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,1581=>Find no block
+Mon Jan 15 17:21:14 AEDT 2018 Mon Jan 15 17:21:14 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,110=>Find no block
+Mon Jan 15 17:21:18 AEDT 2018 Mon Jan 15 17:21:18 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,111=>Find no block
+Mon Jan 15 17:21:22 AEDT 2018 Mon Jan 15 17:21:22 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,112=>Find no block
+Mon Jan 15 17:21:25 AEDT 2018 Mon Jan 15 17:21:25 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,114=>Find no block
+Mon Jan 15 17:21:29 AEDT 2018 Mon Jan 15 17:21:29 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,115=>Find no block
+Mon Jan 15 17:21:32 AEDT 2018 Mon Jan 15 17:21:32 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,116=>Find no block
+Mon Jan 15 17:21:36 AEDT 2018 Mon Jan 15 17:21:36 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,117=>Find no block
+Mon Jan 15 17:21:40 AEDT 2018 Mon Jan 15 17:21:40 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,118=>Find no block
+Mon Jan 15 17:21:42 AEDT 2018 Mon Jan 15 17:21:42 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,119=>Find no block
+Mon Jan 15 17:21:46 AEDT 2018 Mon Jan 15 17:21:46 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,121=>Find no block
+Mon Jan 15 17:21:50 AEDT 2018 Mon Jan 15 17:21:50 AEDT 2018 : com.google.javascript.rhino.JSDocInfo,122=>Find no block
+Mon Jan 15 17:21:54 AEDT 2018 com.google.javascript.rhino.JSDocInfoBuilder,80
+Mon Jan 15 17:22:06 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,209
+Mon Jan 15 17:28:38 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,210
+Mon Jan 15 17:28:43 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,211
+Mon Jan 15 17:28:45 AEDT 2018 Mon Jan 15 17:28:45 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,214=>Find no block
+Mon Jan 15 17:28:49 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1537
+Mon Jan 15 17:47:05 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1539
+Mon Jan 15 17:47:08 AEDT 2018 Mon Jan 15 17:47:08 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,1542=>Find no block
+Mon Jan 15 17:47:12 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1546
+Mon Jan 15 17:48:17 AEDT 2018 com.google.javascript.rhino.SourcePosition,77
+Mon Jan 15 17:48:27 AEDT 2018 Mon Jan 15 17:48:27 AEDT 2018 : com.google.javascript.rhino.SourcePosition,78=>Find no block
+Mon Jan 15 17:48:30 AEDT 2018 Mon Jan 15 17:48:30 AEDT 2018 : com.google.javascript.rhino.SourcePosition,47=>Find no block
+Mon Jan 15 17:48:32 AEDT 2018 Mon Jan 15 17:48:32 AEDT 2018 : com.google.javascript.rhino.SourcePosition,51=>Find no block
+Mon Jan 15 17:48:37 AEDT 2018 Mon Jan 15 17:48:37 AEDT 2018 : com.google.javascript.rhino.SourcePosition,56=>Find no block
+Mon Jan 15 17:48:41 AEDT 2018 Mon Jan 15 17:48:41 AEDT 2018 : com.google.javascript.rhino.SourcePosition,61=>Find no block
+Mon Jan 15 17:48:46 AEDT 2018 Mon Jan 15 17:48:46 AEDT 2018 : com.google.javascript.rhino.SourcePosition,66=>Find no block
+Mon Jan 15 17:48:50 AEDT 2018 Mon Jan 15 17:48:50 AEDT 2018 : com.google.javascript.rhino.SourcePosition,71=>Find no block
+Mon Jan 15 17:48:53 AEDT 2018 com.google.javascript.rhino.SourcePosition,85
+Mon Jan 15 17:49:38 AEDT 2018 com.google.javascript.rhino.SourcePosition,101
+Mon Jan 15 17:50:42 AEDT 2018 com.google.javascript.rhino.SourcePosition,102
+Mon Jan 15 17:51:16 AEDT 2018 com.google.javascript.rhino.SourcePosition,103
+Mon Jan 15 17:51:50 AEDT 2018 com.google.javascript.rhino.SourcePosition,104
+Mon Jan 15 17:51:55 AEDT 2018 Mon Jan 15 17:51:55 AEDT 2018 : com.google.javascript.rhino.SourcePosition,105=>Find no block
+Mon Jan 15 17:51:58 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1379
+Mon Jan 15 17:52:07 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1425
+Mon Jan 15 17:52:27 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1496
+Mon Jan 15 17:52:43 AEDT 2018 Mon Jan 15 17:52:43 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,1382=>Find no block
+Mon Jan 15 17:52:47 AEDT 2018 Mon Jan 15 17:52:47 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,1387=>Find no block
+Mon Jan 15 17:52:52 AEDT 2018 Mon Jan 15 17:52:52 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,1390=>Find no block
+Mon Jan 15 17:52:56 AEDT 2018 Mon Jan 15 17:52:56 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,1393=>Find no block
+Mon Jan 15 17:52:59 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1413
+Mon Jan 15 17:58:13 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1418
+Mon Jan 15 18:10:13 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1419
+Mon Jan 15 18:12:01 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1420
+Mon Jan 15 18:14:03 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1423
+Mon Jan 15 18:17:27 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1424
+Mon Jan 15 18:17:31 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1428
+Mon Jan 15 18:29:07 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1429
+Mon Jan 15 18:42:58 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1431
+Mon Jan 15 19:06:54 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1432
+Mon Jan 15 19:16:18 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1434
+Mon Jan 15 19:21:38 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1439
+Mon Jan 15 19:21:42 AEDT 2018 Mon Jan 15 19:21:42 AEDT 2018 : com.google.javascript.jscomp.parsing.JsDocInfoParser,1442=>Find no block
+Mon Jan 15 19:21:46 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1470
+Mon Jan 15 19:22:27 AEDT 2018 com.google.javascript.jscomp.parsing.JsDocInfoParser,1471
+Timeout time : 18/01/15 19:24

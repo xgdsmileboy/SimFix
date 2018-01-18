@@ -1,0 +1,85 @@
+=================================================
+Project : lang_41	start : 18/01/13 00:09
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_4 | 18/01/13 00:11
+Sat Jan 13 00:11:57 AEDT 2018 org.apache.commons.lang.ClassUtils,172
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cls==null){
+return StringUtils.EMPTY;
+}
+return getShortCanonicalName(cls.getName());
+
+Time : 18/01/13 00:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.5 : [/home/hz985/jiajun/d4j/projects/lang/lang_41_buggy/src/java/org/apache/commons/lang/ClassUtils.java=>0,0]
+if(cls==null){
+return StringUtils.EMPTY;
+}
+return getShortCanonicalName(cls.getName());
+
+Time : 18/01/13 00:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/lang/lang_41_buggy/src/java/org/apache/commons/lang/ClassUtils.java=>169,172]
+if(cls==null){
+return StringUtils.EMPTY;
+}
+return getShortClassName(cls.getName());
+
+Time : 18/01/13 00:12
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/lang/lang_41_buggy/src/java/org/apache/commons/lang/ClassUtils.java=>169,172]
+if(cls==null){
+return StringUtils.EMPTY;
+}
+return getShortCanonicalName(cls.getName());
+
+Time : 18/01/13 00:12
+----------------------------------------
+Success time : 18/01/13 00:12
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_5 | 18/01/13 00:12
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_5
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_14 | 18/01/13 00:13
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_14
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_15 | 18/01/13 00:13
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_15
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_16 | 18/01/13 00:13
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_16
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_17 | 18/01/13 00:13
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_17
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_18 | 18/01/13 00:13
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_18
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_19 | 18/01/13 00:13
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_19
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_20 | 18/01/13 00:13
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_20
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_21 | 18/01/13 00:13
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_21
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_22 | 18/01/13 00:13
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_22
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_23 | 18/01/13 00:13
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_23
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_24 | 18/01/13 00:13
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_24
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getPackageName_Class_purify_4 | 18/01/13 00:13
+Sat Jan 13 00:14:06 AEDT 2018 org.apache.commons.lang.ClassUtils,256
+Timeout time : 18/01/13 00:31
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getPackageName_Class_purify_13 | 18/01/13 00:31
+Sat Jan 13 00:31:36 AEDT 2018 org.apache.commons.lang.ClassUtils,256
+Timeout time : 18/01/13 00:48
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getPackageName_Class_purify_14 | 18/01/13 00:48
+Sat Jan 13 00:49:06 AEDT 2018 org.apache.commons.lang.ClassUtils,256
+Timeout time : 18/01/13 01:06
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getPackageName_Class_purify_15 | 18/01/13 01:06
+Sat Jan 13 01:06:34 AEDT 2018 org.apache.commons.lang.ClassUtils,256
+Timeout time : 18/01/13 01:23

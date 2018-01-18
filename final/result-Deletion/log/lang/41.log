@@ -1,0 +1,169 @@
+=================================================
+Project : lang_41	start : 18/01/16 03:16
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_1 | 18/01/16 03:20
+Tue Jan 16 03:21:31 AEDT 2018 org.apache.commons.lang.ClassUtils,143
+Tue Jan 16 03:21:32 AEDT 2018 Tue Jan 16 03:21:32 AEDT 2018 : org.apache.commons.lang.ClassUtils,144=>Find no block
+Tue Jan 16 03:21:33 AEDT 2018 org.apache.commons.lang.ClassUtils,116
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+reverseAbbreviationMap.put(primitive,abbreviation);
+reverseAbbreviationMap.put(abbreviation,primitive);
+
+Time : 18/01/16 03:22
+----------------------------------------
+Tue Jan 16 03:22:47 AEDT 2018 org.apache.commons.lang.ClassUtils,117
+Tue Jan 16 03:22:47 AEDT 2018 Tue Jan 16 03:22:47 AEDT 2018 : org.apache.commons.lang.ClassUtils,118=>Find no block
+Tue Jan 16 03:22:47 AEDT 2018 org.apache.commons.lang.ClassUtils,156
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(object!=null){
+return valueIfNull;
+}
+
+Time : 18/01/16 03:23
+----------------------------------------
+Tue Jan 16 03:24:34 AEDT 2018 org.apache.commons.lang.ClassUtils,157
+Tue Jan 16 03:24:34 AEDT 2018 org.apache.commons.lang.ClassUtils,159
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(object==null){
+return valueIfNull;
+}
+return getPackageName(object.getClass());
+
+Time : 18/01/16 03:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(object==null){
+return valueIfNull;
+}
+return getShortCanonicalName(object.getClass());
+
+Time : 18/01/16 03:25
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.3838699100999072 : [/home/hz985/jiajun/d4j/projects/lang/lang_41_buggy/src/java/org/apache/commons/lang/ClassUtils.java=>0,0]
+if(object==null){
+return valueIfNull;
+}
+return getShortCanonicalName(object.getClass().getName());
+
+Time : 18/01/16 03:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/lang/lang_41_buggy/src/java/org/apache/commons/lang/ClassUtils.java=>156,159]
+if(object==null){
+return valueIfNull;
+}
+return getShortClassName(object.getClass());
+
+Time : 18/01/16 03:26
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/lang/lang_41_buggy/src/java/org/apache/commons/lang/ClassUtils.java=>156,159]
+if(object==null){
+return valueIfNull;
+}
+return getShortCanonicalName(object.getClass());
+
+Time : 18/01/16 03:26
+----------------------------------------
+Success time : 18/01/16 03:26
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_4 | 18/01/16 03:26
+Tue Jan 16 03:29:55 AEDT 2018 org.apache.commons.lang.ClassUtils,172
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(cls==null){
+return StringUtils.EMPTY;
+}
+return getShortCanonicalName(cls.getName());
+
+Time : 18/01/16 03:30
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.5 : [/home/hz985/jiajun/d4j/projects/lang/lang_41_buggy/src/java/org/apache/commons/lang/ClassUtils.java=>0,0]
+if(cls==null){
+return StringUtils.EMPTY;
+}
+return getShortCanonicalName(cls.getName());
+
+Time : 18/01/16 03:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/lang/lang_41_buggy/src/java/org/apache/commons/lang/ClassUtils.java=>169,172]
+if(cls==null){
+return StringUtils.EMPTY;
+}
+return getShortClassName(cls.getName());
+
+Time : 18/01/16 03:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/lang/lang_41_buggy/src/java/org/apache/commons/lang/ClassUtils.java=>169,172]
+if(cls==null){
+return StringUtils.EMPTY;
+}
+return getShortCanonicalName(cls.getName());
+
+Time : 18/01/16 03:31
+----------------------------------------
+Success time : 18/01/16 03:31
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_5 | 18/01/16 03:31
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_5
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_14 | 18/01/16 03:32
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_14
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_15 | 18/01/16 03:32
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_15
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_16 | 18/01/16 03:33
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_16
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_17 | 18/01/16 03:33
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_17
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_18 | 18/01/16 03:33
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_18
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_19 | 18/01/16 03:33
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_19
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_20 | 18/01/16 03:33
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_20
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_21 | 18/01/16 03:33
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_21
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_22 | 18/01/16 03:33
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_22
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_23 | 18/01/16 03:33
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_23
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_24 | 18/01/16 03:33
+Already fixed : org.apache.commons.lang.ClassUtilsTest::test_getShortClassName_Class_purify_24
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getPackageName_Class_purify_4 | 18/01/16 03:33
+Tue Jan 16 03:34:31 AEDT 2018 org.apache.commons.lang.ClassUtils,256
+Timeout time : 18/01/16 03:50
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getPackageName_Class_purify_13 | 18/01/16 03:50
+Tue Jan 16 03:53:27 AEDT 2018 org.apache.commons.lang.ClassUtils,256
+Timeout time : 18/01/16 04:09
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getPackageName_Class_purify_14 | 18/01/16 04:09
+Tue Jan 16 04:10:35 AEDT 2018 org.apache.commons.lang.ClassUtils,256
+Timeout time : 18/01/16 04:26
+Current failed test : org.apache.commons.lang.ClassUtilsTest::test_getPackageName_Class_purify_15 | 18/01/16 04:26
+Tue Jan 16 04:27:14 AEDT 2018 org.apache.commons.lang.ClassUtils,256
+Timeout time : 18/01/16 04:43

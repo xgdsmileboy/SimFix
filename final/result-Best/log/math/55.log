@@ -1,0 +1,133 @@
+=================================================
+Project : math_55	start : 18/01/14 02:39
+Current failed test : org.apache.commons.math.geometry.Vector3DTest::testCrossProductCancellation | 18/01/14 02:40
+Sun Jan 14 02:41:52 AEDT 2018 org.apache.commons.math.geometry.Vector3D,473
+Sun Jan 14 02:42:04 AEDT 2018 org.apache.commons.math.geometry.Vector3D,181
+Sun Jan 14 02:45:23 AEDT 2018 org.apache.commons.math.geometry.Vector3D,189
+Sun Jan 14 02:47:23 AEDT 2018 org.apache.commons.math.geometry.Vector3D,197
+Sun Jan 14 02:48:54 AEDT 2018 Sun Jan 14 02:48:54 AEDT 2018 : org.apache.commons.math.geometry.Vector3D,93=>Find no block
+Sun Jan 14 02:48:56 AEDT 2018 org.apache.commons.math.geometry.Vector3D,94
+Sun Jan 14 02:59:33 AEDT 2018 org.apache.commons.math.geometry.Vector3D,95
+Sun Jan 14 02:59:39 AEDT 2018 org.apache.commons.math.geometry.Vector3D,96
+Sun Jan 14 02:59:41 AEDT 2018 Sun Jan 14 02:59:41 AEDT 2018 : org.apache.commons.math.geometry.Vector3D,97=>Find no block
+Sun Jan 14 02:59:42 AEDT 2018 Sun Jan 14 02:59:42 AEDT 2018 : org.apache.commons.math.exception.MathArithmeticException,38=>Find no block
+Sun Jan 14 02:59:43 AEDT 2018 org.apache.commons.math.exception.MathArithmeticException,39
+Sun Jan 14 03:00:46 AEDT 2018 Sun Jan 14 03:00:46 AEDT 2018 : org.apache.commons.math.exception.MathArithmeticException,40=>Find no block
+Sun Jan 14 03:00:47 AEDT 2018 Sun Jan 14 03:00:47 AEDT 2018 : org.apache.commons.math.exception.MathArithmeticException,50=>Find no block
+Sun Jan 14 03:00:49 AEDT 2018 org.apache.commons.math.exception.MathArithmeticException,51
+Sun Jan 14 03:01:45 AEDT 2018 Sun Jan 14 03:01:45 AEDT 2018 : org.apache.commons.math.exception.MathArithmeticException,52=>Find no block
+Sun Jan 14 03:01:48 AEDT 2018 Sun Jan 14 03:01:48 AEDT 2018 : org.apache.commons.math.exception.MathRuntimeException,63=>Find no block
+Sun Jan 14 03:01:49 AEDT 2018 Sun Jan 14 03:01:49 AEDT 2018 : org.apache.commons.math.exception.MathRuntimeException,47=>Find no block
+Sun Jan 14 03:01:51 AEDT 2018 Sun Jan 14 03:01:51 AEDT 2018 : org.apache.commons.math.exception.MathRuntimeException,53=>Find no block
+Sun Jan 14 03:01:52 AEDT 2018 Sun Jan 14 03:01:52 AEDT 2018 : org.apache.commons.math.exception.MathRuntimeException,58=>Find no block
+Sun Jan 14 03:01:53 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,71
+Sun Jan 14 03:02:11 AEDT 2018 Sun Jan 14 03:02:11 AEDT 2018 : org.apache.commons.math.exception.MathRuntimeException,72=>Find no block
+Sun Jan 14 03:02:12 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,77
+Sun Jan 14 03:03:35 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,78
+Sun Jan 14 03:03:37 AEDT 2018 Sun Jan 14 03:03:37 AEDT 2018 : org.apache.commons.math.exception.MathRuntimeException,79=>Find no block
+Sun Jan 14 03:03:38 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,83
+Sun Jan 14 03:04:29 AEDT 2018 Sun Jan 14 03:04:29 AEDT 2018 : org.apache.commons.math.exception.MathRuntimeException,84=>Find no block
+Sun Jan 14 03:04:33 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,88
+Sun Jan 14 03:05:23 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,93
+Sun Jan 14 03:05:31 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,103
+Sun Jan 14 03:05:39 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,115
+Sun Jan 14 03:06:30 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,121
+Sun Jan 14 03:07:24 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,127
+Sun Jan 14 03:08:11 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,139
+Sun Jan 14 03:09:58 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,140
+Sun Jan 14 03:10:01 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,141
+Sun Jan 14 03:34:55 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,142
+Sun Jan 14 03:34:59 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,143
+Sun Jan 14 03:35:01 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,144
+Sun Jan 14 03:35:02 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,145
+Sun Jan 14 03:35:04 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,147
+Sun Jan 14 03:35:05 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,148
+Sun Jan 14 03:35:08 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,150
+Sun Jan 14 03:35:12 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,154
+Sun Jan 14 03:50:17 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,165
+Sun Jan 14 03:50:28 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,166
+Sun Jan 14 03:50:29 AEDT 2018 Sun Jan 14 03:50:29 AEDT 2018 : org.apache.commons.math.exception.MathRuntimeException,167=>Find no block
+Sun Jan 14 03:50:30 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,178
+Sun Jan 14 03:50:39 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,179
+Sun Jan 14 03:50:43 AEDT 2018 Sun Jan 14 03:50:43 AEDT 2018 : org.apache.commons.math.exception.MathRuntimeException,180=>Find no block
+Sun Jan 14 03:50:46 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,191
+Sun Jan 14 03:53:12 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,192
+Sun Jan 14 03:53:16 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,194
+Sun Jan 14 04:14:35 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,195
+Sun Jan 14 04:17:46 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,197
+Sun Jan 14 04:17:51 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,198
+Sun Jan 14 04:27:28 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,199
+Sun Jan 14 04:36:59 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,201
+Sun Jan 14 04:52:09 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,202
+Sun Jan 14 04:52:10 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,203
+Sun Jan 14 04:52:12 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,205
+Sun Jan 14 04:52:13 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,208
+Sun Jan 14 04:52:14 AEDT 2018 Sun Jan 14 04:52:14 AEDT 2018 : org.apache.commons.math.exception.MathRuntimeException,212=>Find no block
+Sun Jan 14 04:52:16 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,225
+Sun Jan 14 04:53:15 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,226
+Sun Jan 14 04:53:16 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,227
+Sun Jan 14 05:37:24 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,229
+Sun Jan 14 05:37:25 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,231
+Sun Jan 14 05:37:26 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,232
+Sun Jan 14 05:37:27 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,234
+Sun Jan 14 05:37:29 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,235
+Sun Jan 14 05:37:31 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,236
+Sun Jan 14 05:37:36 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,238
+Sun Jan 14 05:37:40 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,240
+Sun Jan 14 05:37:43 AEDT 2018 Sun Jan 14 05:37:43 AEDT 2018 : org.apache.commons.math.exception.MathRuntimeException,242=>Find no block
+Sun Jan 14 05:37:44 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,253
+Sun Jan 14 05:47:21 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,254
+Sun Jan 14 05:47:22 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,255
+Sun Jan 14 05:47:23 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,257
+Sun Jan 14 05:47:24 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,258
+Sun Jan 14 05:47:25 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,259
+Sun Jan 14 05:47:27 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,261
+Sun Jan 14 05:47:31 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,264
+Sun Jan 14 05:47:35 AEDT 2018 Sun Jan 14 05:47:35 AEDT 2018 : org.apache.commons.math.exception.MathRuntimeException,266=>Find no block
+Sun Jan 14 05:47:39 AEDT 2018 Sun Jan 14 05:47:39 AEDT 2018 : org.apache.commons.math.exception.MathRuntimeException,267=>Find no block
+Sun Jan 14 05:47:42 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,280
+Sun Jan 14 05:59:30 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,281
+Sun Jan 14 05:59:35 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,282
+Sun Jan 14 06:14:04 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,284
+Sun Jan 14 06:14:06 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,286
+Sun Jan 14 06:14:07 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,287
+Sun Jan 14 06:14:09 AEDT 2018 Sun Jan 14 06:14:09 AEDT 2018 : org.apache.commons.math.exception.MathRuntimeException,289=>Find no block
+Sun Jan 14 06:14:10 AEDT 2018 org.apache.commons.math.exception.MathRuntimeException,299
+Sun Jan 14 06:14:17 AEDT 2018 Sun Jan 14 06:14:17 AEDT 2018 : org.apache.commons.math.exception.MathParseException,40=>Find no block
+Sun Jan 14 06:14:21 AEDT 2018 org.apache.commons.math.exception.MathParseException,41
+Sun Jan 14 06:15:12 AEDT 2018 Sun Jan 14 06:15:12 AEDT 2018 : org.apache.commons.math.exception.MathParseException,43=>Find no block
+Sun Jan 14 06:15:14 AEDT 2018 Sun Jan 14 06:15:14 AEDT 2018 : org.apache.commons.math.exception.MathParseException,51=>Find no block
+Sun Jan 14 06:15:15 AEDT 2018 org.apache.commons.math.exception.MathParseException,52
+Sun Jan 14 06:16:15 AEDT 2018 Sun Jan 14 06:16:15 AEDT 2018 : org.apache.commons.math.exception.MathParseException,54=>Find no block
+Sun Jan 14 06:16:19 AEDT 2018 Sun Jan 14 06:16:19 AEDT 2018 : org.apache.commons.math.util.CompositeFormat,36=>Find no block
+Sun Jan 14 06:16:24 AEDT 2018 org.apache.commons.math.util.CompositeFormat,45
+Sun Jan 14 06:16:33 AEDT 2018 org.apache.commons.math.util.CompositeFormat,56
+Sun Jan 14 06:17:27 AEDT 2018 org.apache.commons.math.util.CompositeFormat,57
+Sun Jan 14 06:17:31 AEDT 2018 org.apache.commons.math.util.CompositeFormat,58
+Sun Jan 14 06:17:34 AEDT 2018 org.apache.commons.math.util.CompositeFormat,70
+Sun Jan 14 06:18:55 AEDT 2018 org.apache.commons.math.util.CompositeFormat,71
+Sun Jan 14 06:18:59 AEDT 2018 Sun Jan 14 06:18:59 AEDT 2018 : org.apache.commons.math.util.CompositeFormat,72=>Find no block
+Sun Jan 14 06:19:01 AEDT 2018 org.apache.commons.math.util.CompositeFormat,83
+Sun Jan 14 06:23:30 AEDT 2018 org.apache.commons.math.util.CompositeFormat,84
+Sun Jan 14 06:23:32 AEDT 2018 org.apache.commons.math.util.CompositeFormat,85
+Sun Jan 14 06:47:55 AEDT 2018 org.apache.commons.math.util.CompositeFormat,87
+Sun Jan 14 06:47:56 AEDT 2018 org.apache.commons.math.util.CompositeFormat,90
+Sun Jan 14 06:47:58 AEDT 2018 org.apache.commons.math.util.CompositeFormat,91
+Sun Jan 14 06:48:00 AEDT 2018 org.apache.commons.math.util.CompositeFormat,92
+Sun Jan 14 06:48:03 AEDT 2018 org.apache.commons.math.util.CompositeFormat,94
+Sun Jan 14 06:48:06 AEDT 2018 org.apache.commons.math.util.CompositeFormat,95
+Sun Jan 14 06:48:09 AEDT 2018 org.apache.commons.math.util.CompositeFormat,99
+Sun Jan 14 06:54:19 AEDT 2018 org.apache.commons.math.util.CompositeFormat,113
+Sun Jan 14 06:55:25 AEDT 2018 org.apache.commons.math.util.CompositeFormat,115
+Sun Jan 14 06:55:27 AEDT 2018 org.apache.commons.math.util.CompositeFormat,116
+Sun Jan 14 06:58:16 AEDT 2018 org.apache.commons.math.util.CompositeFormat,117
+Sun Jan 14 07:02:07 AEDT 2018 org.apache.commons.math.util.CompositeFormat,118
+Sun Jan 14 07:08:08 AEDT 2018 org.apache.commons.math.util.CompositeFormat,120
+Sun Jan 14 07:15:16 AEDT 2018 org.apache.commons.math.util.CompositeFormat,121
+Sun Jan 14 07:21:42 AEDT 2018 org.apache.commons.math.util.CompositeFormat,122
+Sun Jan 14 07:39:48 AEDT 2018 org.apache.commons.math.util.CompositeFormat,123
+Sun Jan 14 07:39:49 AEDT 2018 org.apache.commons.math.util.CompositeFormat,124
+Sun Jan 14 07:39:51 AEDT 2018 org.apache.commons.math.util.CompositeFormat,125
+Sun Jan 14 07:39:52 AEDT 2018 org.apache.commons.math.util.CompositeFormat,126
+Sun Jan 14 07:39:54 AEDT 2018 org.apache.commons.math.util.CompositeFormat,130
+Timeout time : 18/01/14 07:41

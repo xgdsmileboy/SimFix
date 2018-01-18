@@ -1,0 +1,73 @@
+=================================================
+Project : lang_63	start : 18/01/15 17:55
+Current failed test : org.apache.commons.lang.time.DurationFormatUtilsTest::testJiraLang281 | 18/01/15 17:56
+Mon Jan 15 17:56:43 AEDT 2018 org.apache.commons.lang.time.DurationFormatUtils,306
+Mon Jan 15 18:01:39 AEDT 2018 org.apache.commons.lang.time.DurationFormatUtils,312
+Mon Jan 15 18:01:40 AEDT 2018 org.apache.commons.lang.time.DurationFormatUtils,315
+Mon Jan 15 18:04:19 AEDT 2018 org.apache.commons.lang.time.DurationFormatUtils,316
+Mon Jan 15 18:04:19 AEDT 2018 org.apache.commons.lang.time.DurationFormatUtils,437
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(endValue<field){
+int newdiff=startValue-endValue;
+end.add(field,newdiff);
+return newdiff;
+}else {
+return 0;
+}
+
+Time : 18/01/15 18:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.2357987097133543 : [/home/hz985/jiajun/d4j/projects/lang/lang_63_buggy/src/java/org/apache/commons/lang/time/DurationFormatUtils.java=>0,0]
+if(fields[i][j]==field){
+if(round&&roundUp){
+if(field==DateUtils.SEMI_MONTH){
+if(val.get(Calendar.DATE)==1){
+val.add(Calendar.DATE,15);
+}else {
+val.add(Calendar.DATE,-15);
+val.add(Calendar.MONTH,1);
+}
+}else {
+val.add(fields[i][0],1);
+}
+}
+return ;
+}
+
+Time : 18/01/15 18:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/lang/lang_63_buggy/src/java/org/apache/commons/lang/time/DurationFormatUtils.java=>436,442]
+if(endValue<startValue){
+int newdiff=startValue-endValue;
+end.add(field,newdiff);
+return newdiff;
+}else {
+return 0;
+}
+
+Time : 18/01/15 18:04
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/lang/lang_63_buggy/src/java/org/apache/commons/lang/time/DurationFormatUtils.java=>436,442]
+if(endValue<field){
+int newdiff=startValue-endValue;
+end.add(field,newdiff);
+return newdiff;
+}else {
+return 0;
+}
+
+Time : 18/01/15 18:04
+----------------------------------------
+Success time : 18/01/15 18:04

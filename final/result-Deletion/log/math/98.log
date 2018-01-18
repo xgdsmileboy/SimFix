@@ -1,0 +1,133 @@
+=================================================
+Project : math_98	start : 18/01/17 20:23
+Current failed test : org.apache.commons.math.linear.BigMatrixImplTest::testMath209_purify_1 | 18/01/17 20:24
+Wed Jan 17 20:24:25 EST 2018 org.apache.commons.math.linear.BigMatrixImpl,986
+Wed Jan 17 20:28:41 EST 2018 org.apache.commons.math.linear.BigMatrixImpl,989
+Wed Jan 17 20:40:08 EST 2018 org.apache.commons.math.linear.BigMatrixImpl,990
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+ final int nRows=this.getRowDimension();
+ final int nCols=this.getColumnDimension();
+ final BigDecimal[] out=new BigDecimal[nRows];
+
+Time : 18/01/17 20:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 2.5634100936934288 : [/home/jiajun/d4j/projects/math/math_98_buggy/src/java/org/apache/commons/math/linear/BigMatrixImpl.java=>0,0]
+ final int nRows=this.getRowDimension();
+ final int nCols=m.getColumnDimension();
+ final int nSum=this.getColumnDimension();
+ final BigDecimal[][] outData=new BigDecimal[nRows][nCols];
+
+Time : 18/01/17 20:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/jiajun/d4j/projects/math/math_98_buggy/src/java/org/apache/commons/math/linear/BigMatrixImpl.java=>989,991]
+ final int nRows=this.getRowDimension();
+ final int nCols=this.getColumnDimension();
+ final BigDecimal[] out=new BigDecimal[v.length];
+
+Time : 18/01/17 20:40
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/jiajun/d4j/projects/math/math_98_buggy/src/java/org/apache/commons/math/linear/BigMatrixImpl.java=>989,991]
+ final int nRows=this.getRowDimension();
+ final int nCols=this.getColumnDimension();
+ final BigDecimal[] out=new BigDecimal[nRows];
+
+Time : 18/01/17 20:40
+----------------------------------------
+Success time : 18/01/17 20:40
+Current failed test : org.apache.commons.math.linear.BigMatrixImplTest::testMath209_purify_2 | 18/01/17 20:40
+Already fixed : org.apache.commons.math.linear.BigMatrixImplTest::testMath209_purify_2
+Current failed test : org.apache.commons.math.linear.BigMatrixImplTest::testMath209_purify_3 | 18/01/17 20:40
+Already fixed : org.apache.commons.math.linear.BigMatrixImplTest::testMath209_purify_3
+Current failed test : org.apache.commons.math.linear.BigMatrixImplTest::testMath209_purify_4 | 18/01/17 20:40
+Already fixed : org.apache.commons.math.linear.BigMatrixImplTest::testMath209_purify_4
+Current failed test : org.apache.commons.math.linear.RealMatrixImplTest::testMath209_purify_1 | 18/01/17 20:40
+Wed Jan 17 20:41:07 EST 2018 org.apache.commons.math.linear.RealMatrixImpl,774
+Wed Jan 17 20:56:55 EST 2018 org.apache.commons.math.linear.RealMatrixImpl,775
+Wed Jan 17 20:56:55 EST 2018 org.apache.commons.math.linear.RealMatrixImpl,776
+Wed Jan 17 21:04:16 EST 2018 org.apache.commons.math.linear.RealMatrixImpl,779
+Timeout time : 18/01/17 21:18
+Current failed test : org.apache.commons.math.linear.RealMatrixImplTest::testMath209_purify_2 | 18/01/17 21:18
+Wed Jan 17 21:18:23 EST 2018 org.apache.commons.math.linear.RealMatrixImpl,774
+Wed Jan 17 21:34:11 EST 2018 org.apache.commons.math.linear.RealMatrixImpl,775
+Wed Jan 17 21:34:11 EST 2018 org.apache.commons.math.linear.RealMatrixImpl,776
+Wed Jan 17 21:41:30 EST 2018 org.apache.commons.math.linear.RealMatrixImpl,779
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int row=0;row<nCols;row++){
+ final double[] dataRow=data[row];
+double sum=0;
+for(int i=0;i<nCols;i++){
+sum+=dataRow[i]*v[i];
+}
+out[row]=sum;
+}
+
+Time : 18/01/17 21:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.6836911421219698 : [/home/jiajun/d4j/projects/math/math_98_buggy/src/java/org/apache/commons/math/linear/RealMatrixImpl.java=>0,0]
+for(int col=0;col<nCols;col++){
+double sum=0;
+for(int i=0;i<nRows;i++){
+sum+=data[i][col]*v[i];
+}
+out[col]=sum;
+}
+
+Time : 18/01/17 21:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/jiajun/d4j/projects/math/math_98_buggy/src/java/org/apache/commons/math/linear/RealMatrixImpl.java=>780,787]
+for(int row=0;row<nRows;row++){
+ final double[] dataRow=data[row];
+double sum=0;
+for(int i=0;i<nCols;i++){
+sum+=dataRow[i]*v[i];
+}
+out[row]=sum;
+}
+
+Time : 18/01/17 21:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/jiajun/d4j/projects/math/math_98_buggy/src/java/org/apache/commons/math/linear/RealMatrixImpl.java=>780,787]
+for(int row=0;row<nCols;row++){
+ final double[] dataRow=data[row];
+double sum=0;
+for(int i=0;i<nCols;i++){
+sum+=dataRow[i]*v[i];
+}
+out[row]=sum;
+}
+
+Time : 18/01/17 21:46
+----------------------------------------
+Success time : 18/01/17 21:46
+Current failed test : org.apache.commons.math.linear.RealMatrixImplTest::testMath209_purify_3 | 18/01/17 21:46
+Already fixed : org.apache.commons.math.linear.RealMatrixImplTest::testMath209_purify_3
+Current failed test : org.apache.commons.math.linear.RealMatrixImplTest::testMath209_purify_4 | 18/01/17 21:47
+Wed Jan 17 21:47:21 EST 2018 org.apache.commons.math.linear.RealMatrixImpl,774
+Wed Jan 17 22:03:09 EST 2018 org.apache.commons.math.linear.RealMatrixImpl,775
+Wed Jan 17 22:03:09 EST 2018 org.apache.commons.math.linear.RealMatrixImpl,776
+Wed Jan 17 22:10:30 EST 2018 org.apache.commons.math.linear.RealMatrixImpl,779
+Timeout time : 18/01/17 22:24

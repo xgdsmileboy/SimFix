@@ -1,0 +1,214 @@
+=================================================
+Project : math_23	start : 18/01/12 14:05
+Current failed test : org.apache.commons.math3.optimization.univariate.BrentOptimizerTest::testKeepInitIfBest | 18/01/12 14:06
+Fri Jan 12 14:07:10 AEDT 2018 Fri Jan 12 14:07:10 AEDT 2018 : org.apache.commons.math3.util.MathArrays,143=>Find no block
+Fri Jan 12 14:07:11 AEDT 2018 Fri Jan 12 14:07:11 AEDT 2018 : org.apache.commons.math3.util.MathArrays,143=>Find no block
+Fri Jan 12 14:07:12 AEDT 2018 org.apache.commons.math3.util.MathArrays,234
+Fri Jan 12 14:34:56 AEDT 2018 org.apache.commons.math3.util.MathArrays,235
+Fri Jan 12 14:34:57 AEDT 2018 org.apache.commons.math3.util.MathArrays,239
+Fri Jan 12 14:49:58 AEDT 2018 Fri Jan 12 14:49:58 AEDT 2018 : org.apache.commons.math3.util.MathArrays,240=>Find no block
+Fri Jan 12 14:49:59 AEDT 2018 org.apache.commons.math3.util.MathArrays,242
+Fri Jan 12 14:50:00 AEDT 2018 org.apache.commons.math3.util.MathArrays,243
+Fri Jan 12 14:50:02 AEDT 2018 org.apache.commons.math3.util.MathArrays,268
+Fri Jan 12 14:56:42 AEDT 2018 org.apache.commons.math3.util.MathArrays,271
+Fri Jan 12 15:00:37 AEDT 2018 org.apache.commons.math3.util.MathArrays,273
+Fri Jan 12 15:00:38 AEDT 2018 org.apache.commons.math3.util.MathArrays,295
+Fri Jan 12 15:00:43 AEDT 2018 Fri Jan 12 15:00:43 AEDT 2018 : org.apache.commons.math3.util.MathArrays,296=>Find no block
+Fri Jan 12 15:00:44 AEDT 2018 org.apache.commons.math3.util.MathArrays,306
+Fri Jan 12 15:00:49 AEDT 2018 Fri Jan 12 15:00:49 AEDT 2018 : org.apache.commons.math3.util.MathArrays,307=>Find no block
+Fri Jan 12 15:00:50 AEDT 2018 org.apache.commons.math3.analysis.FunctionUtils,141
+Fri Jan 12 15:00:55 AEDT 2018 org.apache.commons.math3.analysis.FunctionUtils,141
+Fri Jan 12 15:00:56 AEDT 2018 org.apache.commons.math3.analysis.FunctionUtils,144
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double r=f[0].value(x);
+for(int i=1;i<f.length;i++){
+r*=f[i].value(x);
+}
+return r;
+
+Time : 18/01/12 15:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double r=f[0].value(x);
+for(int i=1;i<f.length;i++){
+r-=f[i].value(x);
+}
+return r;
+
+Time : 18/01/12 15:37
+----------------------------------------
+Fri Jan 12 15:41:31 AEDT 2018 org.apache.commons.math3.analysis.FunctionUtils,145
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=1;i<f.length;i++){
+r/=f[i].value(x);
+}
+
+Time : 18/01/12 15:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=1;i<f.length;i++){
+r*=f[i].value(x);
+}
+
+Time : 18/01/12 15:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int i=1;i<f.length;i++){
+r-=f[i].value(x);
+}
+
+Time : 18/01/12 15:51
+----------------------------------------
+Fri Jan 12 16:13:54 AEDT 2018 org.apache.commons.math3.analysis.FunctionUtils,146
+Fri Jan 12 16:13:56 AEDT 2018 org.apache.commons.math3.analysis.FunctionUtils,148
+Fri Jan 12 16:13:58 AEDT 2018 Fri Jan 12 16:13:58 AEDT 2018 : org.apache.commons.math3.analysis.function.StepFunction,64=>Find no block
+Fri Jan 12 16:14:00 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,65
+Fri Jan 12 16:16:15 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,69
+Fri Jan 12 16:33:29 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,73
+Fri Jan 12 16:55:06 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,76
+Fri Jan 12 17:23:41 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,78
+Fri Jan 12 17:23:42 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,79
+Fri Jan 12 17:23:44 AEDT 2018 Fri Jan 12 17:23:44 AEDT 2018 : org.apache.commons.math3.analysis.function.StepFunction,80=>Find no block
+Fri Jan 12 17:23:46 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,84
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int index=Arrays.binarySearch(abscissa,x);
+double fx=0;
+if(index<-1){
+fx=ordinate[-index-2];
+}else if(index>=0){
+fx=ordinate[index];
+}else {
+fx=ordinate[0];
+}
+return 2/(x-x);
+
+Time : 18/01/12 17:59
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int index=Arrays.binarySearch(abscissa,x);
+double fx=0;
+if(index<-1){
+fx=ordinate[-index-2];
+}else if(index>=0){
+fx=ordinate[index];
+}else {
+fx=ordinate[0];
+}
+return 1/(x*x);
+
+Time : 18/01/12 18:01
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int index=Arrays.binarySearch(abscissa,x);
+double fx=0;
+if(index<-1){
+fx=ordinate[-index-2];
+}else if(index>=0){
+fx=ordinate[index];
+}else {
+fx=ordinate[0];
+}
+return (x*x);
+
+Time : 18/01/12 18:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int index=Arrays.binarySearch(abscissa,x);
+double fx=0;
+if(index<-1){
+fx=ordinate[-index-2];
+}else if(index>=0){
+fx=ordinate[index];
+}else {
+fx=ordinate[0];
+}
+return x*x;
+
+Time : 18/01/12 18:05
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int index=Arrays.binarySearch(abscissa,x);
+double fx=0;
+if(index<-1){
+fx=ordinate[-index-2];
+}else if(index>=0){
+fx=ordinate[index];
+}else {
+fx=ordinate[0];
+}
+return 1/x;
+
+Time : 18/01/12 18:15
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int index=Arrays.binarySearch(abscissa,x);
+double fx=0;
+if(index<-1){
+fx=x;
+}else if(index>=0){
+fx=ordinate[index];
+}else {
+fx=ordinate[0];
+}
+return fx;
+
+Time : 18/01/12 18:32
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int index=Arrays.binarySearch(abscissa,x);
+double fx=0;
+if(index<-1){
+fx=-x;
+}else if(index>=0){
+fx=ordinate[index];
+}else {
+fx=ordinate[0];
+}
+return fx;
+
+Time : 18/01/12 18:34
+----------------------------------------
+Fri Jan 12 18:40:01 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,85
+Fri Jan 12 18:40:02 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,87
+Fri Jan 12 18:40:04 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,89
+Fri Jan 12 18:40:05 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,90
+Fri Jan 12 18:40:07 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,96
+Fri Jan 12 18:40:08 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,99
+Fri Jan 12 18:40:10 AEDT 2018 org.apache.commons.math3.optimization.univariate.BrentOptimizer,193
+Timeout time : 18/01/12 19:07

@@ -1,0 +1,152 @@
+=================================================
+Project : math_57	start : 18/01/14 07:41
+Current failed test : org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererTest::testSmallDistances | 18/01/14 07:42
+Sun Jan 14 07:43:41 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,69
+Sun Jan 14 07:43:46 AEDT 2018 Sun Jan 14 07:43:46 AEDT 2018 : org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,70=>Find no block
+Sun Jan 14 07:43:48 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,134
+Sun Jan 14 07:48:46 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,175
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double sum=0;
+for(int i=0;i<pointSet.size();i++){
+ final T p=pointSet.get(i);
+ final Cluster<T> nearest=getNearestCluster(resultSet,p);
+ final double d=p.distanceFrom(nearest.getCenter());
+sum+=d*d;
+dx2[i]=sum;
+}
+
+Time : 18/01/14 07:50
+----------------------------------------
+Sun Jan 14 08:01:58 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,176
+Sun Jan 14 08:14:58 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,177
+Sun Jan 14 08:15:01 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,178
+Sun Jan 14 08:15:04 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,179
+Sun Jan 14 08:15:06 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,180
+Sun Jan 14 08:15:08 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,181
+Sun Jan 14 08:15:12 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,186
+Sun Jan 14 08:27:36 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,187
+Sun Jan 14 09:01:16 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,188
+Sun Jan 14 09:01:18 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,189
+Sun Jan 14 09:01:19 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,190
+Sun Jan 14 09:01:20 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,191
+Sun Jan 14 09:01:22 AEDT 2018 Sun Jan 14 09:01:22 AEDT 2018 : org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,194=>Find no block
+Sun Jan 14 09:01:23 AEDT 2018 org.apache.commons.math.util.MathUtils,1873
+Sun Jan 14 09:17:52 AEDT 2018 org.apache.commons.math.util.MathUtils,1874
+Sun Jan 14 09:38:59 AEDT 2018 org.apache.commons.math.util.MathUtils,1875
+Sun Jan 14 09:39:01 AEDT 2018 org.apache.commons.math.util.MathUtils,1876
+Sun Jan 14 09:39:02 AEDT 2018 org.apache.commons.math.util.MathUtils,1878
+Sun Jan 14 09:39:03 AEDT 2018 org.apache.commons.math.util.FastMath,277
+Sun Jan 14 09:41:01 AEDT 2018 Sun Jan 14 09:41:01 AEDT 2018 : org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,78=>Find no block
+Sun Jan 14 09:41:05 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,79
+Sun Jan 14 09:41:09 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,80
+Sun Jan 14 09:41:11 AEDT 2018 Sun Jan 14 09:41:11 AEDT 2018 : org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,81=>Find no block
+Sun Jan 14 09:41:13 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,95
+Sun Jan 14 09:43:04 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,96
+Sun Jan 14 09:43:06 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,99
+Sun Jan 14 09:43:09 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,100
+Sun Jan 14 09:43:11 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,146
+Sun Jan 14 09:43:19 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,147
+Sun Jan 14 09:43:22 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,148
+Sun Jan 14 09:43:23 AEDT 2018 Sun Jan 14 09:43:23 AEDT 2018 : org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,149=>Find no block
+Sun Jan 14 09:43:24 AEDT 2018 Sun Jan 14 09:43:24 AEDT 2018 : org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,150=>Find no block
+Sun Jan 14 09:43:25 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,164
+Sun Jan 14 09:44:31 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,165
+Sun Jan 14 09:44:34 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,168
+Sun Jan 14 09:47:09 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,169
+Sun Jan 14 09:50:11 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,171
+Sun Jan 14 09:50:13 AEDT 2018 org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer,172
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+while(resultSet.size()<k){
+double sum=0;
+for(int i=0;i<pointSet.size();i++){
+ final T p=pointSet.get(i);
+ final Cluster<T> nearest=getNearestCluster(resultSet,p);
+ final double d=p.distanceFrom(nearest.getCenter());
+sum+=d*d;
+dx2[i]=sum;
+}
+ final double r=random.nextDouble()*sum;
+for(int i=0;i<dx2.length;i++){
+if(dx2[i]>=r){
+ final T p=pointSet.remove(i);
+resultSet.add(new Cluster<T>(p));
+break;
+}
+}
+}
+
+Time : 18/01/14 09:53
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.2878905757079129 : [/home/hz985/jiajun/d4j/projects/math/math_57_buggy/src/main/java/org/apache/commons/math/stat/clustering/KMeansPlusPlusClusterer.java=>0,0]
+for(int i=0;i<n;++i){
+ final double arg=residuals[i]/(6*medianResidual);
+if(arg>=1){
+robustnessWeights[i]=0;
+}else {
+ final double w=1-arg*arg;
+robustnessWeights[i]=w*w;
+}
+}
+
+Time : 18/01/14 09:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_57_buggy/src/main/java/org/apache/commons/math/stat/clustering/KMeansPlusPlusClusterer.java=>172,194]
+while(resultSet.size()<k){
+int sum=0;
+for(int i=0;i<pointSet.size();i++){
+ final T p=pointSet.get(i);
+ final Cluster<T> nearest=getNearestCluster(resultSet,p);
+ final double d=p.distanceFrom(nearest.getCenter());
+sum+=d*d;
+dx2[i]=sum;
+}
+ final double r=random.nextDouble()*sum;
+for(int i=0;i<dx2.length;i++){
+if(dx2[i]>=r){
+ final T p=pointSet.remove(i);
+resultSet.add(new Cluster<T>(p));
+break;
+}
+}
+}
+
+Time : 18/01/14 09:54
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_57_buggy/src/main/java/org/apache/commons/math/stat/clustering/KMeansPlusPlusClusterer.java=>172,194]
+while(resultSet.size()<k){
+double sum=0;
+for(int i=0;i<pointSet.size();i++){
+ final T p=pointSet.get(i);
+ final Cluster<T> nearest=getNearestCluster(resultSet,p);
+ final double d=p.distanceFrom(nearest.getCenter());
+sum+=d*d;
+dx2[i]=sum;
+}
+ final double r=random.nextDouble()*sum;
+for(int i=0;i<dx2.length;i++){
+if(dx2[i]>=r){
+ final T p=pointSet.remove(i);
+resultSet.add(new Cluster<T>(p));
+break;
+}
+}
+}
+
+Time : 18/01/14 09:54
+----------------------------------------
+Success time : 18/01/14 09:54

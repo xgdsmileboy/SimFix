@@ -1,0 +1,450 @@
+=================================================
+Project : math_99	start : 18/01/15 19:38
+Current failed test : org.apache.commons.math.util.MathUtilsTest::testGcd_purify_18 | 18/01/15 19:42
+Mon Jan 15 19:43:36 AEDT 2018 org.apache.commons.math.util.MathUtils,543
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((u==0)&&(v==0)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/15 19:44
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((v+1>=q)&&(v==0)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/15 19:55
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(v<u&&Math.abs(SAFE_MIN-SAFE_MIN)>SAFE_MIN){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/15 20:06
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(v<u&&Math.abs(SAFE_MIN-SAFE_MIN)>SAFE_MIN||(v==0)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/15 20:16
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(v<u&&Math.abs(SAFE_MIN-SAFE_MIN)>SAFE_MIN&&(v==0)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/15 20:26
+----------------------------------------
+Mon Jan 15 20:36:22 AEDT 2018 org.apache.commons.math.util.MathUtils,540
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int u=p;
+int v=q;
+
+Time : 18/01/15 20:37
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int u=p;
+int v=q;
+if((u==0)&&(v==0)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/15 20:48
+----------------------------------------
+Timeout time : 18/01/15 20:58
+Current failed test : org.apache.commons.math.util.MathUtilsTest::testGcd_purify_19 | 18/01/15 20:58
+Mon Jan 15 20:59:30 AEDT 2018 org.apache.commons.math.util.MathUtils,543
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((u==0)||((SAFE_MIN-u)<SAFE_MIN)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/15 21:00
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((u==0)&&(v==0)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/15 21:10
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((u==0)&&(Math.abs(SAFE_MIN-SAFE_MIN)<=Math.max(SAFE_MIN,SAFE_MIN*(Math.abs(SAFE_MIN)+Math.abs(SAFE_MIN))))){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/15 21:21
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if((u==0)&&(Math.abs(SAFE_MIN-SAFE_MIN)<=SAFE_MIN)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/15 21:31
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(v<u&&Math.abs(SAFE_MIN-SAFE_MIN)>SAFE_MIN){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/15 21:41
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(v<u&&Math.abs(SAFE_MIN-SAFE_MIN)>SAFE_MIN&&(v==0)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/15 21:51
+----------------------------------------
+Mon Jan 15 22:02:01 AEDT 2018 org.apache.commons.math.util.MathUtils,540
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int u=p;
+int v=q;
+
+Time : 18/01/15 22:02
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int u=p;
+int v=q;
+if((u==0)||((SAFE_MIN-u)<SAFE_MIN)){
+return (Math.abs(u)+Math.abs(v));
+}
+
+Time : 18/01/15 22:13
+----------------------------------------
+Timeout time : 18/01/15 22:23
+Current failed test : org.apache.commons.math.util.MathUtilsTest::testLcm_purify_13 | 18/01/15 22:23
+Mon Jan 15 22:24:02 AEDT 2018 org.apache.commons.math.util.MathUtils,714
+Mon Jan 15 22:29:25 AEDT 2018 org.apache.commons.math.util.MathUtils,713
+Mon Jan 15 22:29:25 AEDT 2018 org.apache.commons.math.util.MathUtils,710
+Mon Jan 15 22:29:28 AEDT 2018 org.apache.commons.math.util.MathUtils,752
+Mon Jan 15 22:30:51 AEDT 2018 org.apache.commons.math.util.MathUtils,748
+Mon Jan 15 22:30:52 AEDT 2018 org.apache.commons.math.util.MathUtils,749
+Mon Jan 15 22:30:56 AEDT 2018 org.apache.commons.math.util.MathUtils,578
+Mon Jan 15 22:30:58 AEDT 2018 org.apache.commons.math.util.MathUtils,582
+Mon Jan 15 22:33:58 AEDT 2018 org.apache.commons.math.util.MathUtils,554
+Mon Jan 15 22:35:01 AEDT 2018 org.apache.commons.math.util.MathUtils,571
+Mon Jan 15 22:37:54 AEDT 2018 org.apache.commons.math.util.MathUtils,577
+Mon Jan 15 22:37:54 AEDT 2018 org.apache.commons.math.util.MathUtils,581
+Mon Jan 15 22:37:55 AEDT 2018 org.apache.commons.math.util.MathUtils,587
+Mon Jan 15 22:38:07 AEDT 2018 org.apache.commons.math.util.MathUtils,590
+Mon Jan 15 22:38:09 AEDT 2018 org.apache.commons.math.util.MathUtils,591
+Mon Jan 15 22:38:50 AEDT 2018 org.apache.commons.math.util.MathUtils,550
+Mon Jan 15 22:39:11 AEDT 2018 org.apache.commons.math.util.MathUtils,553
+Mon Jan 15 22:39:11 AEDT 2018 org.apache.commons.math.util.MathUtils,557
+Mon Jan 15 22:44:41 AEDT 2018 org.apache.commons.math.util.MathUtils,558
+Mon Jan 15 22:44:42 AEDT 2018 org.apache.commons.math.util.MathUtils,564
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(k==0){
+throw MathRuntimeException.createArithmeticException("overflow: gcd({0}, {1}) is 2^31",new Object[]{p,q});
+}
+
+Time : 18/01/15 22:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(k==0){
+throw MathRuntimeException.createArithmeticException("cannot normalize a zero norm vector",null);
+}
+
+Time : 18/01/15 22:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(k==0){
+throw MathRuntimeException.createArithmeticException("zero norm",null);
+}
+
+Time : 18/01/15 22:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(k==0){
+throw MathRuntimeException.createArithmeticException("zero norm for rotation axis",null);
+}
+
+Time : 18/01/15 22:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(k==0){
+if((k==k)||(k==0)){
+return 0;
+}
+throw MathRuntimeException.createArithmeticException("overflow: gcd({0}, {1}) is 2^31",new Object[]{p,q});
+}
+
+Time : 18/01/15 22:49
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(k!=31){
+throw MathRuntimeException.createArithmeticException("overflow: gcd({0}, {1}) is 2^31",new Object[]{p,q});
+}
+
+Time : 18/01/15 22:50
+----------------------------------------
+Mon Jan 15 22:52:27 AEDT 2018 org.apache.commons.math.util.MathUtils,540
+Mon Jan 15 23:03:19 AEDT 2018 org.apache.commons.math.util.MathUtils,541
+Mon Jan 15 23:03:19 AEDT 2018 org.apache.commons.math.util.MathUtils,542
+Mon Jan 15 23:05:48 AEDT 2018 org.apache.commons.math.MathRuntimeException,200
+Mon Jan 15 23:05:50 AEDT 2018 org.apache.commons.math.MathRuntimeException,207
+Mon Jan 15 23:05:53 AEDT 2018 org.apache.commons.math.MathRuntimeException,105
+Mon Jan 15 23:06:40 AEDT 2018 org.apache.commons.math.MathRuntimeException,106
+Mon Jan 15 23:06:42 AEDT 2018 org.apache.commons.math.MathRuntimeException,107
+Mon Jan 15 23:06:42 AEDT 2018 Mon Jan 15 23:06:42 AEDT 2018 : org.apache.commons.math.MathRuntimeException,108=>Find no block
+Mon Jan 15 23:06:43 AEDT 2018 org.apache.commons.math.MathRuntimeException,118
+Mon Jan 15 23:07:45 AEDT 2018 org.apache.commons.math.MathRuntimeException,119
+Mon Jan 15 23:07:45 AEDT 2018 org.apache.commons.math.MathRuntimeException,120
+Mon Jan 15 23:07:48 AEDT 2018 Mon Jan 15 23:07:48 AEDT 2018 : org.apache.commons.math.MathRuntimeException,121=>Find no block
+Mon Jan 15 23:07:48 AEDT 2018 org.apache.commons.math.MathRuntimeException,134
+Mon Jan 15 23:08:33 AEDT 2018 org.apache.commons.math.MathRuntimeException,135
+Mon Jan 15 23:08:34 AEDT 2018 org.apache.commons.math.MathRuntimeException,136
+Mon Jan 15 23:08:35 AEDT 2018 Mon Jan 15 23:08:35 AEDT 2018 : org.apache.commons.math.MathRuntimeException,137=>Find no block
+Mon Jan 15 23:08:36 AEDT 2018 org.apache.commons.math.MathRuntimeException,64
+Mon Jan 15 23:08:38 AEDT 2018 org.apache.commons.math.MathRuntimeException,66
+Mon Jan 15 23:08:40 AEDT 2018 org.apache.commons.math.MathRuntimeException,70
+Mon Jan 15 23:08:42 AEDT 2018 org.apache.commons.math.MathRuntimeException,72
+Mon Jan 15 23:08:44 AEDT 2018 Mon Jan 15 23:08:44 AEDT 2018 : org.apache.commons.math.MathRuntimeException,77=>Find no block
+Mon Jan 15 23:08:45 AEDT 2018 Mon Jan 15 23:08:45 AEDT 2018 : org.apache.commons.math.MathRuntimeException,75=>Find no block
+Mon Jan 15 23:08:45 AEDT 2018 org.apache.commons.math.MathRuntimeException,81
+Mon Jan 15 23:08:48 AEDT 2018 org.apache.commons.math.MathRuntimeException,94
+Mon Jan 15 23:08:51 AEDT 2018 org.apache.commons.math.MathRuntimeException,144
+Mon Jan 15 23:08:54 AEDT 2018 org.apache.commons.math.MathRuntimeException,152
+Mon Jan 15 23:09:24 AEDT 2018 org.apache.commons.math.MathRuntimeException,162
+Mon Jan 15 23:09:27 AEDT 2018 org.apache.commons.math.MathRuntimeException,167
+Mon Jan 15 23:09:30 AEDT 2018 org.apache.commons.math.MathRuntimeException,174
+Mon Jan 15 23:09:33 AEDT 2018 Mon Jan 15 23:09:33 AEDT 2018 : org.apache.commons.math.MathRuntimeException,175=>Find no block
+Mon Jan 15 23:09:33 AEDT 2018 Mon Jan 15 23:09:33 AEDT 2018 : org.apache.commons.math.MathRuntimeException,183=>Find no block
+Mon Jan 15 23:09:34 AEDT 2018 org.apache.commons.math.MathRuntimeException,184
+Mon Jan 15 23:09:37 AEDT 2018 org.apache.commons.math.MathRuntimeException,185
+Mon Jan 15 23:09:38 AEDT 2018 org.apache.commons.math.MathRuntimeException,187
+Mon Jan 15 23:09:39 AEDT 2018 Mon Jan 15 23:09:39 AEDT 2018 : org.apache.commons.math.MathRuntimeException,188=>Find no block
+Mon Jan 15 23:09:40 AEDT 2018 Mon Jan 15 23:09:40 AEDT 2018 : org.apache.commons.math.MathRuntimeException,189=>Find no block
+Mon Jan 15 23:09:41 AEDT 2018 org.apache.commons.math.MathRuntimeException,200
+Mon Jan 15 23:09:42 AEDT 2018 org.apache.commons.math.MathRuntimeException,222
+Mon Jan 15 23:09:45 AEDT 2018 org.apache.commons.math.MathRuntimeException,244
+Mon Jan 15 23:09:47 AEDT 2018 org.apache.commons.math.MathRuntimeException,269
+Mon Jan 15 23:12:28 AEDT 2018 org.apache.commons.math.MathRuntimeException,270
+Mon Jan 15 23:12:29 AEDT 2018 org.apache.commons.math.MathRuntimeException,271
+Mon Jan 15 23:12:30 AEDT 2018 org.apache.commons.math.MathRuntimeException,283
+Mon Jan 15 23:12:32 AEDT 2018 org.apache.commons.math.MathRuntimeException,305
+Mon Jan 15 23:12:35 AEDT 2018 org.apache.commons.math.MathRuntimeException,327
+Mon Jan 15 23:12:38 AEDT 2018 org.apache.commons.math.MathRuntimeException,349
+Mon Jan 15 23:12:41 AEDT 2018 org.apache.commons.math.MathRuntimeException,374
+Mon Jan 15 23:12:44 AEDT 2018 org.apache.commons.math.util.MathUtils,66
+Mon Jan 15 23:12:47 AEDT 2018 Mon Jan 15 23:12:47 AEDT 2018 : org.apache.commons.math.util.MathUtils,67=>Find no block
+Mon Jan 15 23:12:47 AEDT 2018 org.apache.commons.math.util.MathUtils,80
+Mon Jan 15 23:13:55 AEDT 2018 org.apache.commons.math.util.MathUtils,81
+Mon Jan 15 23:14:26 AEDT 2018 org.apache.commons.math.util.MathUtils,82
+Mon Jan 15 23:14:27 AEDT 2018 org.apache.commons.math.util.MathUtils,84
+Mon Jan 15 23:14:27 AEDT 2018 org.apache.commons.math.util.MathUtils,98
+Mon Jan 15 23:14:30 AEDT 2018 org.apache.commons.math.util.MathUtils,114
+Mon Jan 15 23:16:42 AEDT 2018 org.apache.commons.math.util.MathUtils,116
+Mon Jan 15 23:16:45 AEDT 2018 org.apache.commons.math.util.MathUtils,120
+Mon Jan 15 23:16:46 AEDT 2018 org.apache.commons.math.util.MathUtils,121
+Mon Jan 15 23:16:46 AEDT 2018 org.apache.commons.math.util.MathUtils,123
+Mon Jan 15 23:16:47 AEDT 2018 org.apache.commons.math.util.MathUtils,124
+Mon Jan 15 23:16:48 AEDT 2018 org.apache.commons.math.util.MathUtils,126
+Mon Jan 15 23:16:49 AEDT 2018 org.apache.commons.math.util.MathUtils,130
+Mon Jan 15 23:16:50 AEDT 2018 org.apache.commons.math.util.MathUtils,137
+Mon Jan 15 23:16:51 AEDT 2018 org.apache.commons.math.util.MathUtils,138
+Mon Jan 15 23:16:51 AEDT 2018 org.apache.commons.math.util.MathUtils,140
+Mon Jan 15 23:16:52 AEDT 2018 org.apache.commons.math.util.MathUtils,144
+Mon Jan 15 23:17:30 AEDT 2018 org.apache.commons.math.util.MathUtils,173
+Mon Jan 15 23:24:56 AEDT 2018 org.apache.commons.math.util.MathUtils,174
+Mon Jan 15 23:24:57 AEDT 2018 org.apache.commons.math.util.MathUtils,177
+Mon Jan 15 23:29:57 AEDT 2018 org.apache.commons.math.util.MathUtils,178
+Mon Jan 15 23:29:58 AEDT 2018 org.apache.commons.math.util.MathUtils,181
+Mon Jan 15 23:33:50 AEDT 2018 org.apache.commons.math.util.MathUtils,182
+Mon Jan 15 23:33:51 AEDT 2018 org.apache.commons.math.util.MathUtils,184
+Mon Jan 15 23:38:14 AEDT 2018 org.apache.commons.math.util.MathUtils,185
+Mon Jan 15 23:38:15 AEDT 2018 org.apache.commons.math.util.MathUtils,188
+Timeout time : 18/01/15 23:39
+Current failed test : org.apache.commons.math.util.MathUtilsTest::testLcm_purify_14 | 18/01/15 23:39
+Mon Jan 15 23:39:58 AEDT 2018 org.apache.commons.math.util.MathUtils,714
+Mon Jan 15 23:46:03 AEDT 2018 org.apache.commons.math.util.MathUtils,713
+Mon Jan 15 23:46:03 AEDT 2018 org.apache.commons.math.util.MathUtils,710
+Mon Jan 15 23:46:06 AEDT 2018 org.apache.commons.math.util.MathUtils,752
+Mon Jan 15 23:47:25 AEDT 2018 org.apache.commons.math.util.MathUtils,748
+Mon Jan 15 23:47:26 AEDT 2018 org.apache.commons.math.util.MathUtils,749
+Mon Jan 15 23:47:28 AEDT 2018 org.apache.commons.math.util.MathUtils,560
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+v-=2;
+while((u&1)==0&&(v&1)==0&&k<31){
+u/=2;
+v/=2;
+k++;
+}
+
+Time : 18/01/15 23:48
+----------------------------------------
+Mon Jan 15 23:58:21 AEDT 2018 org.apache.commons.math.util.MathUtils,561
+Mon Jan 15 23:58:21 AEDT 2018 org.apache.commons.math.util.MathUtils,562
+Mon Jan 15 23:58:22 AEDT 2018 org.apache.commons.math.util.MathUtils,578
+Mon Jan 15 23:58:24 AEDT 2018 org.apache.commons.math.util.MathUtils,582
+Tue Jan 16 00:01:49 AEDT 2018 org.apache.commons.math.util.MathUtils,554
+Tue Jan 16 00:02:50 AEDT 2018 org.apache.commons.math.util.MathUtils,571
+Tue Jan 16 00:05:47 AEDT 2018 org.apache.commons.math.util.MathUtils,577
+Tue Jan 16 00:05:47 AEDT 2018 org.apache.commons.math.util.MathUtils,581
+Tue Jan 16 00:05:48 AEDT 2018 org.apache.commons.math.util.MathUtils,587
+Tue Jan 16 00:05:58 AEDT 2018 org.apache.commons.math.util.MathUtils,590
+Tue Jan 16 00:05:59 AEDT 2018 org.apache.commons.math.util.MathUtils,591
+Tue Jan 16 00:06:38 AEDT 2018 org.apache.commons.math.util.MathUtils,550
+Tue Jan 16 00:06:58 AEDT 2018 org.apache.commons.math.util.MathUtils,553
+Tue Jan 16 00:06:59 AEDT 2018 org.apache.commons.math.util.MathUtils,557
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(v>0){
+v=-v;
+}
+int k=0;
+
+Time : 18/01/16 00:08
+----------------------------------------
+Tue Jan 16 00:13:29 AEDT 2018 org.apache.commons.math.util.MathUtils,558
+Tue Jan 16 00:13:29 AEDT 2018 org.apache.commons.math.util.MathUtils,564
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(k!=31){
+throw MathRuntimeException.createArithmeticException("overflow: gcd({0}, {1}) is 2^31",new Object[]{p,q});
+}
+
+Time : 18/01/16 00:17
+----------------------------------------
+Tue Jan 16 00:20:30 AEDT 2018 org.apache.commons.math.util.MathUtils,540
+Tue Jan 16 00:32:13 AEDT 2018 org.apache.commons.math.util.MathUtils,541
+Tue Jan 16 00:32:17 AEDT 2018 org.apache.commons.math.util.MathUtils,542
+Tue Jan 16 00:35:22 AEDT 2018 org.apache.commons.math.MathRuntimeException,200
+Tue Jan 16 00:35:32 AEDT 2018 org.apache.commons.math.MathRuntimeException,207
+Tue Jan 16 00:35:42 AEDT 2018 org.apache.commons.math.MathRuntimeException,105
+Tue Jan 16 00:36:47 AEDT 2018 org.apache.commons.math.MathRuntimeException,106
+Tue Jan 16 00:36:51 AEDT 2018 org.apache.commons.math.MathRuntimeException,107
+Tue Jan 16 00:36:54 AEDT 2018 Tue Jan 16 00:36:54 AEDT 2018 : org.apache.commons.math.MathRuntimeException,108=>Find no block
+Tue Jan 16 00:36:58 AEDT 2018 org.apache.commons.math.MathRuntimeException,118
+Tue Jan 16 00:38:16 AEDT 2018 org.apache.commons.math.MathRuntimeException,119
+Tue Jan 16 00:38:19 AEDT 2018 org.apache.commons.math.MathRuntimeException,120
+Tue Jan 16 00:38:24 AEDT 2018 Tue Jan 16 00:38:24 AEDT 2018 : org.apache.commons.math.MathRuntimeException,121=>Find no block
+Tue Jan 16 00:38:27 AEDT 2018 org.apache.commons.math.MathRuntimeException,134
+Tue Jan 16 00:39:30 AEDT 2018 org.apache.commons.math.MathRuntimeException,135
+Tue Jan 16 00:39:35 AEDT 2018 org.apache.commons.math.MathRuntimeException,136
+Tue Jan 16 00:39:39 AEDT 2018 Tue Jan 16 00:39:39 AEDT 2018 : org.apache.commons.math.MathRuntimeException,137=>Find no block
+Tue Jan 16 00:39:44 AEDT 2018 org.apache.commons.math.MathRuntimeException,64
+Tue Jan 16 00:39:54 AEDT 2018 org.apache.commons.math.MathRuntimeException,66
+Tue Jan 16 00:39:58 AEDT 2018 org.apache.commons.math.MathRuntimeException,70
+Tue Jan 16 00:40:09 AEDT 2018 org.apache.commons.math.MathRuntimeException,72
+Tue Jan 16 00:40:14 AEDT 2018 Tue Jan 16 00:40:14 AEDT 2018 : org.apache.commons.math.MathRuntimeException,77=>Find no block
+Tue Jan 16 00:40:18 AEDT 2018 Tue Jan 16 00:40:18 AEDT 2018 : org.apache.commons.math.MathRuntimeException,75=>Find no block
+Tue Jan 16 00:40:22 AEDT 2018 org.apache.commons.math.MathRuntimeException,81
+Tue Jan 16 00:40:31 AEDT 2018 org.apache.commons.math.MathRuntimeException,94
+Tue Jan 16 00:40:40 AEDT 2018 org.apache.commons.math.MathRuntimeException,144
+Tue Jan 16 00:40:48 AEDT 2018 org.apache.commons.math.MathRuntimeException,152
+Tue Jan 16 00:41:31 AEDT 2018 org.apache.commons.math.MathRuntimeException,162
+Tue Jan 16 00:41:41 AEDT 2018 org.apache.commons.math.MathRuntimeException,167
+Tue Jan 16 00:41:50 AEDT 2018 org.apache.commons.math.MathRuntimeException,174
+Tue Jan 16 00:42:00 AEDT 2018 Tue Jan 16 00:42:00 AEDT 2018 : org.apache.commons.math.MathRuntimeException,175=>Find no block
+Tue Jan 16 00:42:04 AEDT 2018 Tue Jan 16 00:42:04 AEDT 2018 : org.apache.commons.math.MathRuntimeException,183=>Find no block
+Tue Jan 16 00:42:08 AEDT 2018 org.apache.commons.math.MathRuntimeException,184
+Tue Jan 16 00:42:17 AEDT 2018 org.apache.commons.math.MathRuntimeException,185
+Tue Jan 16 00:42:24 AEDT 2018 org.apache.commons.math.MathRuntimeException,187
+Tue Jan 16 00:42:28 AEDT 2018 Tue Jan 16 00:42:28 AEDT 2018 : org.apache.commons.math.MathRuntimeException,188=>Find no block
+Tue Jan 16 00:42:32 AEDT 2018 Tue Jan 16 00:42:32 AEDT 2018 : org.apache.commons.math.MathRuntimeException,189=>Find no block
+Tue Jan 16 00:42:36 AEDT 2018 org.apache.commons.math.MathRuntimeException,200
+Tue Jan 16 00:42:41 AEDT 2018 org.apache.commons.math.MathRuntimeException,222
+Tue Jan 16 00:42:51 AEDT 2018 org.apache.commons.math.MathRuntimeException,244
+Tue Jan 16 00:43:01 AEDT 2018 org.apache.commons.math.MathRuntimeException,269
+Tue Jan 16 00:46:12 AEDT 2018 org.apache.commons.math.MathRuntimeException,270
+Tue Jan 16 00:46:16 AEDT 2018 org.apache.commons.math.MathRuntimeException,271
+Tue Jan 16 00:46:21 AEDT 2018 org.apache.commons.math.MathRuntimeException,283
+Tue Jan 16 00:46:32 AEDT 2018 org.apache.commons.math.MathRuntimeException,305
+Tue Jan 16 00:46:42 AEDT 2018 org.apache.commons.math.MathRuntimeException,327
+Tue Jan 16 00:46:52 AEDT 2018 org.apache.commons.math.MathRuntimeException,349
+Tue Jan 16 00:47:03 AEDT 2018 org.apache.commons.math.MathRuntimeException,374
+Tue Jan 16 00:47:13 AEDT 2018 org.apache.commons.math.util.MathUtils,66
+Tue Jan 16 00:47:23 AEDT 2018 Tue Jan 16 00:47:23 AEDT 2018 : org.apache.commons.math.util.MathUtils,67=>Find no block
+Tue Jan 16 00:47:28 AEDT 2018 org.apache.commons.math.util.MathUtils,80
+Tue Jan 16 00:48:54 AEDT 2018 org.apache.commons.math.util.MathUtils,81
+Tue Jan 16 00:49:40 AEDT 2018 org.apache.commons.math.util.MathUtils,82
+Tue Jan 16 00:49:45 AEDT 2018 org.apache.commons.math.util.MathUtils,84
+Tue Jan 16 00:49:49 AEDT 2018 org.apache.commons.math.util.MathUtils,98
+Tue Jan 16 00:49:59 AEDT 2018 org.apache.commons.math.util.MathUtils,114
+Tue Jan 16 00:52:55 AEDT 2018 org.apache.commons.math.util.MathUtils,116
+Tue Jan 16 00:53:05 AEDT 2018 org.apache.commons.math.util.MathUtils,120
+Tue Jan 16 00:53:10 AEDT 2018 org.apache.commons.math.util.MathUtils,121
+Tue Jan 16 00:53:15 AEDT 2018 org.apache.commons.math.util.MathUtils,123
+Tue Jan 16 00:53:20 AEDT 2018 org.apache.commons.math.util.MathUtils,124
+Tue Jan 16 00:53:27 AEDT 2018 org.apache.commons.math.util.MathUtils,126
+Tue Jan 16 00:53:30 AEDT 2018 org.apache.commons.math.util.MathUtils,130
+Tue Jan 16 00:53:34 AEDT 2018 org.apache.commons.math.util.MathUtils,137
+Tue Jan 16 00:53:38 AEDT 2018 org.apache.commons.math.util.MathUtils,138
+Tue Jan 16 00:53:44 AEDT 2018 org.apache.commons.math.util.MathUtils,140
+Tue Jan 16 00:53:48 AEDT 2018 org.apache.commons.math.util.MathUtils,144
+Tue Jan 16 00:54:42 AEDT 2018 org.apache.commons.math.util.MathUtils,173
+Timeout time : 18/01/16 00:55

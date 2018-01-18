@@ -1,0 +1,63 @@
+=================================================
+Project : math_85	start : 18/01/14 05:17
+Current failed test : org.apache.commons.math.distribution.NormalDistributionTest::testMath280 | 18/01/14 05:18
+Sun Jan 14 05:19:56 AEDT 2018 org.apache.commons.math.MathException,119
+Sun Jan 14 05:20:10 AEDT 2018 org.apache.commons.math.MathException,120
+Sun Jan 14 05:20:15 AEDT 2018 org.apache.commons.math.MathException,121
+Sun Jan 14 05:20:20 AEDT 2018 Sun Jan 14 05:20:20 AEDT 2018 : org.apache.commons.math.MathException,122=>Find no block
+Sun Jan 14 05:20:26 AEDT 2018 org.apache.commons.math.MathException,166
+Sun Jan 14 05:20:39 AEDT 2018 org.apache.commons.math.MathException,172
+Sun Jan 14 05:20:51 AEDT 2018 org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils,199
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(fa*initial>=0.0){
+throw new ConvergenceException("number of iterations={0}, maximum iterations={1}, "+"initial={2}, lower bound={3}, upper bound={4}, final a value={5}, ",numIterations,maximumIterations,initial,lowerBound,upperBound,a,b,fa,fb);
+}
+
+Time : 18/01/14 05:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(fa*upperBound>=0.0){
+throw new ConvergenceException("number of iterations={0}, maximum iterations={1}, "+"initial={2}, lower bound={3}, upper bound={4}, final a value={5}, ",numIterations,maximumIterations,initial,lowerBound,upperBound,a,b,fa,fb);
+}
+
+Time : 18/01/14 05:22
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 1.3673989900565082 : [/home/hz985/jiajun/d4j/projects/math/math_85_buggy/src/java/org/apache/commons/math/analysis/solvers/UnivariateRealSolverUtils.java=>0,0]
+if(initial<lowerBound||initial>upperBound||lowerBound>=upperBound){
+throw MathRuntimeException.createIllegalArgumentException("invalid bracketing parameters:  lower bound={0},  initial={1}, upper bound={2}",lowerBound,initial,upperBound);
+}
+double a=initial;
+double b=initial;
+
+Time : 18/01/14 05:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/math/math_85_buggy/src/java/org/apache/commons/math/analysis/solvers/UnivariateRealSolverUtils.java=>198,205]
+if(fa*fb>=0.0){
+throw new ConvergenceException("number of iterations={0}, maximum iterations={1}, "+"initial={2}, lower bound={3}, upper bound={4}, final a value={5}, ",numIterations,maximumIterations,initial,lowerBound,upperBound,a,b,fa,fb);
+}
+
+Time : 18/01/14 05:23
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/math/math_85_buggy/src/java/org/apache/commons/math/analysis/solvers/UnivariateRealSolverUtils.java=>198,205]
+if(fa*upperBound>=0.0){
+throw new ConvergenceException("number of iterations={0}, maximum iterations={1}, "+"initial={2}, lower bound={3}, upper bound={4}, final a value={5}, ",numIterations,maximumIterations,initial,lowerBound,upperBound,a,b,fa,fb);
+}
+
+Time : 18/01/14 05:23
+----------------------------------------
+Success time : 18/01/14 05:23

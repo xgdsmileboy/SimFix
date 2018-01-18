@@ -1,0 +1,65 @@
+=================================================
+Project : closure_119	start : 18/01/13 23:00
+Current failed test : com.google.javascript.jscomp.CheckGlobalNamesTest::testGlobalCatch | 18/01/13 23:01
+Sat Jan 13 23:01:40 AEDT 2018 com.google.javascript.jscomp.CheckGlobalNames,220
+Sat Jan 13 23:02:13 AEDT 2018 com.google.javascript.jscomp.AstValidator,523
+Sat Jan 13 23:13:07 AEDT 2018 com.google.javascript.jscomp.AstValidator,524
+Sat Jan 13 23:13:09 AEDT 2018 com.google.javascript.jscomp.AstValidator,539
+Sat Jan 13 23:17:24 AEDT 2018 com.google.javascript.jscomp.AstValidator,540
+Sat Jan 13 23:17:28 AEDT 2018 com.google.javascript.jscomp.AstValidator,541
+Sat Jan 13 23:17:32 AEDT 2018 com.google.javascript.jscomp.AstValidator,542
+Sat Jan 13 23:17:36 AEDT 2018 Sat Jan 13 23:17:36 AEDT 2018 : com.google.javascript.jscomp.AstValidator,543=>Find no block
+Sat Jan 13 23:17:39 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,655
+Sat Jan 13 23:26:58 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,656
+Sat Jan 13 23:27:02 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,657
+Sat Jan 13 23:27:06 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,663
+Sat Jan 13 23:27:10 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,664
+Sat Jan 13 23:27:16 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1155
+Sat Jan 13 23:27:56 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1156
+Sat Jan 13 23:28:00 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1157
+Sat Jan 13 23:28:04 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1158
+Sat Jan 13 23:28:07 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1160
+Sat Jan 13 23:37:21 AEDT 2018 Sat Jan 13 23:37:21 AEDT 2018 : com.google.javascript.jscomp.parsing.IRFactory,1161=>Find no block
+Sat Jan 13 23:37:24 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,191
+Sat Jan 13 23:40:29 AEDT 2018 com.google.javascript.jscomp.SyntacticScopeCreator,149
+Sat Jan 13 23:44:57 AEDT 2018 com.google.javascript.jscomp.SyntacticScopeCreator,150
+Sat Jan 13 23:55:15 AEDT 2018 com.google.javascript.jscomp.SyntacticScopeCreator,154
+Sun Jan 14 00:16:06 AEDT 2018 com.google.javascript.jscomp.SyntacticScopeCreator,155
+Sun Jan 14 00:36:52 AEDT 2018 com.google.javascript.jscomp.SyntacticScopeCreator,157
+Sun Jan 14 00:48:10 AEDT 2018 com.google.javascript.jscomp.SyntacticScopeCreator,158
+Sun Jan 14 00:49:12 AEDT 2018 com.google.javascript.jscomp.SyntacticScopeCreator,159
+Sun Jan 14 00:50:06 AEDT 2018 com.google.javascript.jscomp.AstValidator,135
+Sun Jan 14 00:54:38 AEDT 2018 com.google.javascript.jscomp.AstValidator,136
+Sun Jan 14 00:56:58 AEDT 2018 com.google.javascript.jscomp.AstValidator,511
+Sun Jan 14 01:02:37 AEDT 2018 com.google.javascript.jscomp.AstValidator,512
+Sun Jan 14 01:02:41 AEDT 2018 com.google.javascript.jscomp.AstValidator,513
+Sun Jan 14 01:05:50 AEDT 2018 com.google.javascript.jscomp.AstValidator,514
+Sun Jan 14 01:10:33 AEDT 2018 com.google.javascript.jscomp.AstValidator,516
+Sun Jan 14 01:28:14 AEDT 2018 com.google.javascript.jscomp.AstValidator,519
+Sun Jan 14 01:48:28 AEDT 2018 com.google.javascript.jscomp.AstValidator,520
+Sun Jan 14 02:03:33 AEDT 2018 com.google.javascript.jscomp.AstValidator,521
+Sun Jan 14 02:17:57 AEDT 2018 com.google.javascript.jscomp.AstValidator,522
+Sun Jan 14 02:18:02 AEDT 2018 com.google.javascript.jscomp.AstValidator,528
+Sun Jan 14 02:22:29 AEDT 2018 com.google.javascript.jscomp.AstValidator,533
+Sun Jan 14 02:26:17 AEDT 2018 Sun Jan 14 02:26:17 AEDT 2018 : com.google.javascript.jscomp.AstValidator,536=>Find no block
+Sun Jan 14 02:26:22 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1147
+Sun Jan 14 02:30:45 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1149
+Sun Jan 14 02:30:49 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1150
+Sun Jan 14 02:44:51 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1152
+Sun Jan 14 02:44:54 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1162
+Sun Jan 14 03:07:43 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1164
+Sun Jan 14 03:22:01 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1165
+Sun Jan 14 03:25:40 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1172
+Sun Jan 14 03:27:53 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1177
+Sun Jan 14 03:35:05 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,266
+Sun Jan 14 03:38:38 AEDT 2018 com.google.javascript.jscomp.CheckGlobalNames,159
+Sun Jan 14 03:39:02 AEDT 2018 com.google.javascript.jscomp.CheckGlobalNames,218
+Sun Jan 14 03:39:05 AEDT 2018 com.google.javascript.jscomp.CheckGlobalNames,223
+Sun Jan 14 03:44:59 AEDT 2018 Sun Jan 14 03:44:59 AEDT 2018 : com.google.javascript.jscomp.CheckGlobalNames,226=>Find no block
+Sun Jan 14 03:45:03 AEDT 2018 com.google.javascript.jscomp.CheckGlobalNames,158
+Sun Jan 14 03:45:06 AEDT 2018 com.google.javascript.jscomp.CheckGlobalNames,205
+Sun Jan 14 04:00:11 AEDT 2018 com.google.javascript.jscomp.CheckGlobalNames,198
+Sun Jan 14 04:00:14 AEDT 2018 com.google.javascript.jscomp.CheckGlobalNames,199
+Sun Jan 14 04:00:18 AEDT 2018 com.google.javascript.jscomp.parsing.IRFactory,1141
+Sun Jan 14 04:00:45 AEDT 2018 com.google.javascript.jscomp.parsing.TypeSafeDispatcher,264
+Timeout time : 18/01/14 04:01

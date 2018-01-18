@@ -1,0 +1,71 @@
+=================================================
+Project : math_23	start : 18/01/15 15:23
+Current failed test : org.apache.commons.math3.optimization.univariate.BrentOptimizerTest::testKeepInitIfBest | 18/01/15 15:24
+Mon Jan 15 15:25:47 AEDT 2018 Mon Jan 15 15:25:47 AEDT 2018 : org.apache.commons.math3.util.MathArrays,143=>Find no block
+Mon Jan 15 15:25:48 AEDT 2018 Mon Jan 15 15:25:48 AEDT 2018 : org.apache.commons.math3.util.MathArrays,143=>Find no block
+Mon Jan 15 15:25:50 AEDT 2018 org.apache.commons.math3.util.MathArrays,234
+Mon Jan 15 15:42:12 AEDT 2018 org.apache.commons.math3.util.MathArrays,235
+Mon Jan 15 15:42:14 AEDT 2018 org.apache.commons.math3.util.MathArrays,239
+Mon Jan 15 15:51:00 AEDT 2018 Mon Jan 15 15:51:00 AEDT 2018 : org.apache.commons.math3.util.MathArrays,240=>Find no block
+Mon Jan 15 15:51:01 AEDT 2018 org.apache.commons.math3.util.MathArrays,242
+Mon Jan 15 15:51:03 AEDT 2018 org.apache.commons.math3.util.MathArrays,243
+Mon Jan 15 15:51:04 AEDT 2018 org.apache.commons.math3.util.MathArrays,268
+Mon Jan 15 15:56:14 AEDT 2018 org.apache.commons.math3.util.MathArrays,271
+Mon Jan 15 15:58:56 AEDT 2018 org.apache.commons.math3.util.MathArrays,273
+Mon Jan 15 15:58:58 AEDT 2018 org.apache.commons.math3.util.MathArrays,295
+Mon Jan 15 15:59:03 AEDT 2018 Mon Jan 15 15:59:03 AEDT 2018 : org.apache.commons.math3.util.MathArrays,296=>Find no block
+Mon Jan 15 15:59:04 AEDT 2018 org.apache.commons.math3.util.MathArrays,306
+Mon Jan 15 15:59:09 AEDT 2018 Mon Jan 15 15:59:09 AEDT 2018 : org.apache.commons.math3.util.MathArrays,307=>Find no block
+Mon Jan 15 15:59:10 AEDT 2018 org.apache.commons.math3.analysis.FunctionUtils,141
+Mon Jan 15 15:59:14 AEDT 2018 org.apache.commons.math3.analysis.FunctionUtils,141
+Mon Jan 15 15:59:15 AEDT 2018 org.apache.commons.math3.analysis.FunctionUtils,144
+Mon Jan 15 16:20:12 AEDT 2018 org.apache.commons.math3.analysis.FunctionUtils,145
+Mon Jan 15 16:32:32 AEDT 2018 org.apache.commons.math3.analysis.FunctionUtils,146
+Mon Jan 15 16:32:33 AEDT 2018 org.apache.commons.math3.analysis.FunctionUtils,148
+Mon Jan 15 16:32:35 AEDT 2018 Mon Jan 15 16:32:35 AEDT 2018 : org.apache.commons.math3.analysis.function.StepFunction,64=>Find no block
+Mon Jan 15 16:32:36 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,65
+Mon Jan 15 16:34:49 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,69
+Mon Jan 15 16:51:46 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,73
+Mon Jan 15 17:16:27 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,76
+Mon Jan 15 19:32:02 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,78
+Mon Jan 15 19:32:04 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,79
+Mon Jan 15 19:32:06 AEDT 2018 Mon Jan 15 19:32:06 AEDT 2018 : org.apache.commons.math3.analysis.function.StepFunction,80=>Find no block
+Mon Jan 15 19:32:08 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,84
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int index=Arrays.binarySearch(abscissa,x);
+double fx=index;
+return fx;
+
+Time : 18/01/15 19:42
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+int index=Arrays.binarySearch(abscissa,x);
+int fx=index;
+return fx;
+
+Time : 18/01/15 19:45
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double index=Arrays.binarySearch(abscissa,x);
+double fx=index;
+return fx;
+
+Time : 18/01/15 19:47
+----------------------------------------
+Mon Jan 15 20:06:58 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,85
+Mon Jan 15 20:07:02 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,87
+Mon Jan 15 20:07:05 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,89
+Mon Jan 15 20:07:07 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,90
+Mon Jan 15 20:07:09 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,96
+Mon Jan 15 20:07:12 AEDT 2018 org.apache.commons.math3.analysis.function.StepFunction,99
+Mon Jan 15 20:07:14 AEDT 2018 org.apache.commons.math3.optimization.univariate.BrentOptimizer,193
+Timeout time : 18/01/15 20:25

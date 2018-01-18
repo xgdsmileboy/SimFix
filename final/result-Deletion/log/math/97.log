@@ -1,0 +1,112 @@
+=================================================
+Project : math_97	start : 18/01/16 00:55
+Current failed test : org.apache.commons.math.analysis.BrentSolverTest::testRootEndpoints | 18/01/16 00:55
+Tue Jan 16 00:56:52 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverImpl,169
+Tue Jan 16 00:57:46 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,141
+Tue Jan 16 01:03:07 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,193
+Tue Jan 16 01:07:47 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,194
+Tue Jan 16 01:07:51 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,182
+Tue Jan 16 01:42:42 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,183
+Tue Jan 16 01:42:44 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,184
+Tue Jan 16 01:42:47 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,185
+Tue Jan 16 01:42:49 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,186
+Tue Jan 16 01:42:51 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,187
+Tue Jan 16 01:42:53 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverImpl,140
+Tue Jan 16 01:44:35 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverImpl,141
+Tue Jan 16 01:44:39 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverImpl,142
+Tue Jan 16 01:44:42 AEDT 2018 Tue Jan 16 01:44:42 AEDT 2018 : org.apache.commons.math.analysis.UnivariateRealSolverImpl,143=>Find no block
+Tue Jan 16 01:44:45 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,151
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+if(sign*ret>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+return ret;
+
+Time : 18/01/16 01:46
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+clearResult();
+if(sign*ret>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+return ret;
+
+Time : 18/01/16 01:47
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+verifyInterval(min,max);
+if(sign*ret>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+return ret;
+
+Time : 18/01/16 01:48
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+clearResult();
+verifyInterval(min,max);
+if(sign*ret>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+return ret;
+
+Time : 18/01/16 01:49
+----------------------------------------
+Tue Jan 16 01:54:02 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,147
+Tue Jan 16 01:54:05 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,175
+Tue Jan 16 02:01:09 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,176
+Tue Jan 16 02:01:13 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,178
+Tue Jan 16 02:01:15 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,179
+Tue Jan 16 04:59:51 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,180
+Tue Jan 16 04:59:51 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,189
+Tue Jan 16 04:59:52 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverImpl,149
+Tue Jan 16 05:00:52 AEDT 2018 Tue Jan 16 05:00:52 AEDT 2018 : org.apache.commons.math.analysis.UnivariateRealSolverImpl,150=>Find no block
+Tue Jan 16 05:00:53 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverImpl,295
+Tue Jan 16 05:01:27 AEDT 2018 Tue Jan 16 05:01:27 AEDT 2018 : org.apache.commons.math.analysis.UnivariateRealSolverImpl,300=>Find no block
+Tue Jan 16 05:01:28 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,128
+Tue Jan 16 05:03:34 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,129
+Tue Jan 16 05:03:34 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,131
+Tue Jan 16 05:11:09 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,133
+Tue Jan 16 05:16:31 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,134
+Tue Jan 16 05:20:34 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,137
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+double yMax=f.value(max);
+double sign=yMin*yMax;
+sign=Math.max(ret*Math.abs(min),yMin);
+if(sign>=0){
+throw new IllegalArgumentException("Function values at endpoints do not have different signs."+"  Endpoints: ["+min);
+}else {
+ret=solve(min,yMin,max,yMax,min,yMin);
+}
+
+Time : 18/01/16 05:40
+----------------------------------------
+Tue Jan 16 05:42:47 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,138
+Tue Jan 16 05:42:47 AEDT 2018 Tue Jan 16 05:42:47 AEDT 2018 : org.apache.commons.math.analysis.BrentSolver,43=>Find no block
+Tue Jan 16 05:42:48 AEDT 2018 org.apache.commons.math.analysis.BrentSolver,42
+Tue Jan 16 05:42:49 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverImpl,93
+Tue Jan 16 05:50:02 AEDT 2018 org.apache.commons.math.analysis.UnivariateRealSolverImpl,94
+Timeout time : 18/01/16 05:56

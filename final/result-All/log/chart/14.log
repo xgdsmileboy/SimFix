@@ -1,0 +1,154 @@
+=================================================
+Project : chart_14	start : 18/01/12 19:41
+Current failed test : org.jfree.chart.plot.junit.XYPlotTests::testRemoveDomainMarker | 18/01/12 19:43
+Fri Jan 12 19:47:14 AEDT 2018 org.jfree.chart.plot.XYPlot,2232
+Fri Jan 12 19:48:34 AEDT 2018 org.jfree.chart.plot.XYPlot,2248
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return false;
+
+Time : 18/01/12 19:50
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 0.9091372900969896 : [/home/hz985/jiajun/d4j/projects/chart/chart_14_buggy/source/org/jfree/chart/plot/XYPlot.java=>0,0]
+if(!this.name.equals(layer.name)){
+return false;
+}
+
+Time : 18/01/12 19:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/chart/chart_14_buggy/source/org/jfree/chart/plot/XYPlot.java=>2248,2248]
+return removeDomainMarker(0,marker,layer);
+
+Time : 18/01/12 19:51
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/chart/chart_14_buggy/source/org/jfree/chart/plot/XYPlot.java=>2248,2248]
+return false;
+
+Time : 18/01/12 19:51
+----------------------------------------
+Success time : 18/01/12 19:51
+Current failed test : org.jfree.chart.plot.junit.CategoryPlotTests::testRemoveDomainMarker | 18/01/12 19:51
+Fri Jan 12 19:54:35 AEDT 2018 org.jfree.chart.plot.CategoryPlot,2106
+Fri Jan 12 19:55:33 AEDT 2018 org.jfree.chart.plot.CategoryPlot,2122
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return false;
+
+Time : 18/01/12 19:57
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 0.9091372900969896 : [/home/hz985/jiajun/d4j/projects/chart/chart_14_buggy/source/org/jfree/chart/plot/CategoryPlot.java=>0,0]
+if(!this.name.equals(layer.name)){
+return false;
+}
+
+Time : 18/01/12 19:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/chart/chart_14_buggy/source/org/jfree/chart/plot/CategoryPlot.java=>2122,2122]
+return removeDomainMarker(0,marker,layer);
+
+Time : 18/01/12 19:58
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/chart/chart_14_buggy/source/org/jfree/chart/plot/CategoryPlot.java=>2122,2122]
+return false;
+
+Time : 18/01/12 19:58
+----------------------------------------
+Success time : 18/01/12 19:58
+Current failed test : org.jfree.chart.plot.junit.XYPlotTests::testRemoveRangeMarker | 18/01/12 19:58
+Fri Jan 12 20:00:28 AEDT 2018 org.jfree.chart.plot.XYPlot,2465
+Fri Jan 12 20:01:23 AEDT 2018 org.jfree.chart.plot.XYPlot,2481
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return false;
+
+Time : 18/01/12 20:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 0.9091372900969896 : [/home/hz985/jiajun/d4j/projects/chart/chart_14_buggy/source/org/jfree/chart/plot/XYPlot.java=>0,0]
+if(!this.name.equals(layer.name)){
+return false;
+}
+
+Time : 18/01/12 20:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/chart/chart_14_buggy/source/org/jfree/chart/plot/XYPlot.java=>2481,2481]
+return removeRangeMarker(0,marker,layer);
+
+Time : 18/01/12 20:03
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/chart/chart_14_buggy/source/org/jfree/chart/plot/XYPlot.java=>2481,2481]
+return false;
+
+Time : 18/01/12 20:03
+----------------------------------------
+Success time : 18/01/12 20:03
+Current failed test : org.jfree.chart.plot.junit.CategoryPlotTests::testRemoveRangeMarker | 18/01/12 20:03
+Fri Jan 12 20:06:23 AEDT 2018 org.jfree.chart.plot.CategoryPlot,2378
+Fri Jan 12 20:07:18 AEDT 2018 org.jfree.chart.plot.CategoryPlot,2396
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+return false;
+
+Time : 18/01/12 20:08
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Similar code block : 0.9091372900969896 : [/home/hz985/jiajun/d4j/projects/chart/chart_14_buggy/source/org/jfree/chart/plot/CategoryPlot.java=>0,0]
+if(!this.name.equals(layer.name)){
+return false;
+}
+
+Time : 18/01/12 20:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Original source code : [/home/hz985/jiajun/d4j/projects/chart/chart_14_buggy/source/org/jfree/chart/plot/CategoryPlot.java=>2396,2396]
+return removeRangeMarker(0,marker,layer);
+
+Time : 18/01/12 20:09
+----------------------------------------
+
+----------------------------------------
+----------------------------------------
+Find a patch : [/home/hz985/jiajun/d4j/projects/chart/chart_14_buggy/source/org/jfree/chart/plot/CategoryPlot.java=>2396,2396]
+return false;
+
+Time : 18/01/12 20:09
+----------------------------------------
+Success time : 18/01/12 20:09

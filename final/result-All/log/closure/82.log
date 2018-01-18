@@ -1,0 +1,24 @@
+=================================================
+Project : closure_82	start : 18/01/13 00:24
+Current failed test : com.google.javascript.jscomp.TypeCheckTest::testIssue301 | 18/01/13 00:25
+Sat Jan 13 00:51:19 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,541
+Sat Jan 13 02:18:01 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,543
+Sat Jan 13 02:30:38 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,545
+Sat Jan 13 02:30:40 AEDT 2018 com.google.javascript.rhino.jstype.UnionTypeBuilder,88
+Sat Jan 13 02:35:02 AEDT 2018 Sat Jan 13 02:35:02 AEDT 2018 : com.google.javascript.rhino.jstype.JSTypeRegistry,665=>Find no block
+Sat Jan 13 02:35:04 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,531
+Sat Jan 13 02:35:07 AEDT 2018 com.google.javascript.rhino.jstype.JSType,418
+Sat Jan 13 02:37:50 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,527
+Sat Jan 13 03:27:05 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,529
+Sat Jan 13 03:27:07 AEDT 2018 com.google.javascript.rhino.jstype.JSType,646
+Sat Jan 13 03:38:28 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,494
+Sat Jan 13 04:15:21 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,495
+Sat Jan 13 04:15:23 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,496
+Sat Jan 13 04:15:25 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,503
+Sat Jan 13 05:05:48 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,645
+Sat Jan 13 05:32:03 AEDT 2018 com.google.javascript.rhino.jstype.JSType,416
+Sat Jan 13 05:38:52 AEDT 2018 com.google.javascript.rhino.jstype.JSType,417
+Sat Jan 13 05:38:54 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,464
+Sat Jan 13 05:41:31 AEDT 2018 com.google.javascript.rhino.jstype.FunctionType,490
+Sat Jan 13 05:41:32 AEDT 2018 com.google.javascript.jscomp.TypeCheck,1296
+Timeout time : 18/01/13 05:51

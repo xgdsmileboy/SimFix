@@ -1,0 +1,108 @@
+=================================================
+Project : lang_31	start : 18/01/12 19:13
+Current failed test : org.apache.commons.lang3.StringUtilsEqualsIndexOfTest::testContainsAnyCharArrayWithSupplementaryChars | 18/01/12 19:14
+Fri Jan 12 19:14:51 AEDT 2018 org.apache.commons.lang3.StringUtils,1441
+Fri Jan 12 19:19:11 AEDT 2018 org.apache.commons.lang3.StringUtils,1444
+Fri Jan 12 19:41:44 AEDT 2018 org.apache.commons.lang3.StringUtils,1445
+
+----------------------------------------
+----------------------------------------
+Pass Single Test : [=>0,0]
+for(int j=searchLength-1;j<searchLength;j++){
+if(searchChars[j]==ch){
+return true;
+}
+}
+
+Time : 18/01/12 19:52
+----------------------------------------
+Fri Jan 12 20:26:04 AEDT 2018 org.apache.commons.lang3.StringUtils,1446
+Fri Jan 12 20:26:04 AEDT 2018 org.apache.commons.lang3.StringUtils,1447
+Fri Jan 12 20:26:05 AEDT 2018 org.apache.commons.lang3.StringUtils,1448
+Fri Jan 12 20:26:05 AEDT 2018 org.apache.commons.lang3.StringUtils,1449
+Fri Jan 12 20:26:05 AEDT 2018 org.apache.commons.lang3.StringUtils,1452
+Fri Jan 12 20:26:05 AEDT 2018 org.apache.commons.lang3.StringUtils,1487
+Fri Jan 12 20:26:06 AEDT 2018 org.apache.commons.lang3.StringUtils,1490
+Fri Jan 12 20:28:46 AEDT 2018 org.apache.commons.lang3.ArrayUtils,3279
+Fri Jan 12 20:33:23 AEDT 2018 org.apache.commons.lang3.ArrayUtils,3282
+Fri Jan 12 20:38:34 AEDT 2018 org.apache.commons.lang3.StringUtils,194
+Fri Jan 12 20:39:33 AEDT 2018 org.apache.commons.lang3.ArrayUtils,145
+Fri Jan 12 20:39:35 AEDT 2018 Fri Jan 12 20:39:35 AEDT 2018 : org.apache.commons.lang3.ArrayUtils,146=>Find no block
+Fri Jan 12 20:39:35 AEDT 2018 org.apache.commons.lang3.ArrayUtils,162
+Fri Jan 12 20:41:29 AEDT 2018 org.apache.commons.lang3.ArrayUtils,178
+Fri Jan 12 20:43:02 AEDT 2018 org.apache.commons.lang3.ArrayUtils,179
+Fri Jan 12 20:43:03 AEDT 2018 org.apache.commons.lang3.ArrayUtils,181
+Fri Jan 12 20:46:44 AEDT 2018 org.apache.commons.lang3.ArrayUtils,195
+Fri Jan 12 20:46:46 AEDT 2018 org.apache.commons.lang3.ArrayUtils,226
+Fri Jan 12 20:47:13 AEDT 2018 org.apache.commons.lang3.ArrayUtils,227
+Fri Jan 12 20:47:14 AEDT 2018 org.apache.commons.lang3.ArrayUtils,229
+Fri Jan 12 20:52:36 AEDT 2018 org.apache.commons.lang3.ArrayUtils,230
+Fri Jan 12 22:32:57 AEDT 2018 org.apache.commons.lang3.ArrayUtils,231
+Fri Jan 12 22:37:16 AEDT 2018 org.apache.commons.lang3.ArrayUtils,232
+Fri Jan 12 22:37:17 AEDT 2018 org.apache.commons.lang3.ArrayUtils,233
+Fri Jan 12 22:37:17 AEDT 2018 org.apache.commons.lang3.ArrayUtils,234
+Fri Jan 12 22:37:17 AEDT 2018 org.apache.commons.lang3.ArrayUtils,235
+Fri Jan 12 22:37:17 AEDT 2018 org.apache.commons.lang3.ArrayUtils,236
+Fri Jan 12 22:37:17 AEDT 2018 org.apache.commons.lang3.ArrayUtils,237
+Fri Jan 12 22:37:17 AEDT 2018 org.apache.commons.lang3.ArrayUtils,238
+Fri Jan 12 22:37:18 AEDT 2018 org.apache.commons.lang3.ArrayUtils,242
+Fri Jan 12 22:37:18 AEDT 2018 Fri Jan 12 22:37:18 AEDT 2018 : org.apache.commons.lang3.ArrayUtils,243=>Find no block
+Fri Jan 12 22:37:18 AEDT 2018 org.apache.commons.lang3.ArrayUtils,244
+Fri Jan 12 22:37:18 AEDT 2018 org.apache.commons.lang3.ArrayUtils,249
+Fri Jan 12 22:50:42 AEDT 2018 org.apache.commons.lang3.ArrayUtils,294
+Fri Jan 12 22:50:43 AEDT 2018 org.apache.commons.lang3.ArrayUtils,312
+Fri Jan 12 22:50:43 AEDT 2018 org.apache.commons.lang3.ArrayUtils,313
+Fri Jan 12 22:50:43 AEDT 2018 org.apache.commons.lang3.ArrayUtils,315
+Fri Jan 12 22:51:36 AEDT 2018 org.apache.commons.lang3.ArrayUtils,328
+Fri Jan 12 22:51:36 AEDT 2018 org.apache.commons.lang3.ArrayUtils,329
+Fri Jan 12 22:51:36 AEDT 2018 org.apache.commons.lang3.ArrayUtils,331
+Fri Jan 12 22:51:36 AEDT 2018 org.apache.commons.lang3.ArrayUtils,344
+Fri Jan 12 22:51:37 AEDT 2018 org.apache.commons.lang3.ArrayUtils,345
+Fri Jan 12 22:51:37 AEDT 2018 org.apache.commons.lang3.ArrayUtils,347
+Fri Jan 12 22:51:37 AEDT 2018 org.apache.commons.lang3.ArrayUtils,360
+Fri Jan 12 22:51:37 AEDT 2018 org.apache.commons.lang3.ArrayUtils,361
+Fri Jan 12 22:51:38 AEDT 2018 org.apache.commons.lang3.ArrayUtils,363
+Fri Jan 12 22:51:38 AEDT 2018 org.apache.commons.lang3.ArrayUtils,376
+Fri Jan 12 22:51:38 AEDT 2018 org.apache.commons.lang3.ArrayUtils,377
+Fri Jan 12 22:51:38 AEDT 2018 org.apache.commons.lang3.ArrayUtils,379
+Fri Jan 12 22:51:39 AEDT 2018 org.apache.commons.lang3.ArrayUtils,392
+Fri Jan 12 22:51:39 AEDT 2018 org.apache.commons.lang3.ArrayUtils,393
+Fri Jan 12 22:51:39 AEDT 2018 org.apache.commons.lang3.ArrayUtils,395
+Fri Jan 12 22:51:39 AEDT 2018 org.apache.commons.lang3.ArrayUtils,408
+Fri Jan 12 22:51:39 AEDT 2018 org.apache.commons.lang3.ArrayUtils,409
+Fri Jan 12 22:51:40 AEDT 2018 org.apache.commons.lang3.ArrayUtils,411
+Fri Jan 12 22:51:40 AEDT 2018 org.apache.commons.lang3.ArrayUtils,424
+Fri Jan 12 22:51:40 AEDT 2018 org.apache.commons.lang3.ArrayUtils,425
+Fri Jan 12 22:51:40 AEDT 2018 org.apache.commons.lang3.ArrayUtils,427
+Fri Jan 12 22:51:40 AEDT 2018 org.apache.commons.lang3.ArrayUtils,440
+Fri Jan 12 22:51:41 AEDT 2018 org.apache.commons.lang3.ArrayUtils,441
+Fri Jan 12 22:51:41 AEDT 2018 org.apache.commons.lang3.ArrayUtils,443
+Fri Jan 12 22:51:41 AEDT 2018 org.apache.commons.lang3.ArrayUtils,462
+Fri Jan 12 22:56:10 AEDT 2018 org.apache.commons.lang3.ArrayUtils,463
+Fri Jan 12 22:56:10 AEDT 2018 org.apache.commons.lang3.ArrayUtils,465
+Fri Jan 12 23:00:14 AEDT 2018 org.apache.commons.lang3.ArrayUtils,482
+Fri Jan 12 23:04:48 AEDT 2018 org.apache.commons.lang3.ArrayUtils,483
+Fri Jan 12 23:04:48 AEDT 2018 org.apache.commons.lang3.ArrayUtils,485
+Fri Jan 12 23:09:23 AEDT 2018 org.apache.commons.lang3.ArrayUtils,502
+Fri Jan 12 23:13:56 AEDT 2018 org.apache.commons.lang3.ArrayUtils,503
+Fri Jan 12 23:13:56 AEDT 2018 org.apache.commons.lang3.ArrayUtils,505
+Fri Jan 12 23:18:35 AEDT 2018 org.apache.commons.lang3.ArrayUtils,522
+Fri Jan 12 23:23:08 AEDT 2018 org.apache.commons.lang3.ArrayUtils,523
+Fri Jan 12 23:23:08 AEDT 2018 org.apache.commons.lang3.ArrayUtils,525
+Fri Jan 12 23:27:48 AEDT 2018 org.apache.commons.lang3.ArrayUtils,542
+Fri Jan 12 23:32:18 AEDT 2018 org.apache.commons.lang3.ArrayUtils,543
+Fri Jan 12 23:32:19 AEDT 2018 org.apache.commons.lang3.ArrayUtils,545
+Fri Jan 12 23:36:47 AEDT 2018 org.apache.commons.lang3.ArrayUtils,562
+Fri Jan 12 23:41:04 AEDT 2018 org.apache.commons.lang3.ArrayUtils,563
+Fri Jan 12 23:41:04 AEDT 2018 org.apache.commons.lang3.ArrayUtils,565
+Fri Jan 12 23:45:47 AEDT 2018 org.apache.commons.lang3.ArrayUtils,582
+Fri Jan 12 23:50:14 AEDT 2018 org.apache.commons.lang3.ArrayUtils,583
+Fri Jan 12 23:50:15 AEDT 2018 org.apache.commons.lang3.ArrayUtils,585
+Fri Jan 12 23:54:45 AEDT 2018 org.apache.commons.lang3.ArrayUtils,602
+Fri Jan 12 23:59:12 AEDT 2018 org.apache.commons.lang3.ArrayUtils,603
+Fri Jan 12 23:59:12 AEDT 2018 org.apache.commons.lang3.ArrayUtils,605
+Sat Jan 13 00:03:42 AEDT 2018 org.apache.commons.lang3.ArrayUtils,622
+Sat Jan 13 00:08:09 AEDT 2018 org.apache.commons.lang3.ArrayUtils,623
+Sat Jan 13 00:08:09 AEDT 2018 org.apache.commons.lang3.ArrayUtils,625
+Sat Jan 13 00:12:40 AEDT 2018 org.apache.commons.lang3.ArrayUtils,642
+Timeout time : 18/01/13 00:14
