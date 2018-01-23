@@ -7,6 +7,8 @@
 
 package cofix.common.config;
 
+import java.io.File;
+
 /**
  * This class contains all constant variables
  * @author Jiajun
@@ -15,6 +17,7 @@ package cofix.common.config;
 public class Constant {
 
 	public final static String HOME = System.getProperty("user.dir");
+	public final static char SEP_CH = File.separatorChar;
 
 	// common info
 	public final static String SOURCE_FILE_SUFFIX = ".java";
@@ -35,8 +38,18 @@ public class Constant {
 	public static String PROJ_LOG_BASE_PATH = HOME + "/log";
 	public static String PROJ_REALTIME_LOC_BASE = HOME + "/d4j-info/realtime/location";
 	
+	// for statistics
+	public final static String DIR_BASE_STATISTIC = HOME + SEP_CH + "statistic";
+	public final static String DIR_ABSO_DISTIL = DIR_BASE_STATISTIC + SEP_CH + "diffile";
+	public final static String DIR_ABSO_DIFF = DIR_BASE_STATISTIC + SEP_CH + "diff";
+	public final static String DIR_ABSO_REPO = DIR_BASE_STATISTIC + SEP_CH + "repo";
+	public final static String FILE_COMMIT_XML = DIR_BASE_STATISTIC + SEP_CH + "commit.xml";
 	
 	// command configuration
+	public final static String COMMAND_CP = "/bin/cp ";
+	public final static String COMMAND_MKDIR = "/bin/mkdir";
+	public final static String COMMAND_GIT = "/usr/local/bin/git ";
+	
 	public final static String COMMAND_CD = "cd ";
 	public final static int COMPILE_TIMEOUT = 120;
 	public final static int SBFL_TIMEOUT = 3600;

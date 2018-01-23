@@ -17,11 +17,22 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.io.OutputFormat;
+import org.dom4j.io.SAXReader;
+import org.dom4j.io.XMLWriter;
 import org.eclipse.jdt.core.ICompilationUnit;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.dom.AST;
@@ -371,6 +382,121 @@ public class JavaFile {
 			}
 		}
 		bw.close();
+	}
+	
+	/**
+	 * 
+	 * @param commits
+	 *            commit information for each {@code RepoSubject}, which
+	 *            contains the commit pair and corresponding commit message
+	 * @return true if successfully write into file
+	 *         {@code Constant.FILE_COMMIT_PAIR_XML}, false otherwise
+	 */
+	public static boolean writeCommitToFile(Map<String, Map<Pair<String, String>, String>> commits, String targetFile) {
+		boolean writen = true;
+		OutputStream outputStream = null;
+		XMLWriter xmlWriter = null;
+		Document document = null;
+		try {
+			document = DocumentHelper.createDocument();
+			Element topRoot = DocumentHelper.createElement("projects");
+			int id = 1;
+			for (Entry<String, Map<Pair<String, String>, String>> entry : commits.entrySet()) {
+				Element root = DocumentHelper.createElement("project");
+				root.addAttribute("name", entry.getKey());
+				Element pElement = DocumentHelper.createElement("pairs");
+				root.add(pElement);
+				for (Entry<Pair<String, String>, String> inEntry : entry.getValue().entrySet()) {
+					Element element = DocumentHelper.createElement("pair");
+					element.addAttribute("id", String.valueOf(id));
+					id++;
+					Element before = DocumentHelper.createElement("before");
+					before.setText(inEntry.getKey().getFirst());
+					element.add(before);
+					Element after = DocumentHelper.createElement("after");
+					after.setText(inEntry.getKey().getSecond());
+					element.add(after);
+					Element comment = DocumentHelper.createElement("message");
+					comment.setText(inEntry.getValue());
+					element.add(comment);
+					pElement.add(element);
+				}
+				topRoot.add(root);
+			}
+			document.add(topRoot);
+			OutputFormat outputFormat = new OutputFormat();
+			outputFormat.setEncoding("UTF-8");
+			outputFormat.setNewlines(true);
+			outputFormat.setIndent(true);
+			outputFormat.setIndent("    ");
+
+			outputStream = new FileOutputStream(targetFile);
+			xmlWriter = new XMLWriter(outputStream, outputFormat);
+
+			xmlWriter.write(document);
+			outputStream.close();
+			xmlWriter.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+			return false;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		} finally {
+			try {
+				if (outputStream != null) {
+					outputStream.close();
+				}
+				if (xmlWriter != null) {
+					xmlWriter.close();
+				}
+			} catch (Exception e) {
+			}
+		}
+
+		return writen;
+	}
+	
+	/**
+	 * read commit information from xml file
+	 * {@code Constant.FILE_COMMIT_XML}, which contains commit ids and
+	 * commit message information. return a map that contains
+	 * 
+	 * - all commit pairs and - commit message
+	 * 
+	 * for each subject from file.
+	 * 
+	 * @return commit information for each subject with commit message for
+	 *         each commit pair
+	 */
+	public static Map<String, Map<Pair<String, String>, String>> readCommitWithMessageFromFile(String xmlfile) {
+		Map<String, Map<Pair<String, String>, String>> commits = new HashMap<>();
+		File inputXml = new File(xmlfile);
+		SAXReader saxReader = new SAXReader();
+		try {
+			Document document = saxReader.read(inputXml);
+			Element root = document.getRootElement();
+			for (Iterator<Element> iterator = root.elementIterator(); iterator.hasNext();) {
+				Element element = iterator.next();
+				String name = element.attributeValue("name");
+				Map<Pair<String, String>, String> allPairs = new HashMap<>();
+				Element pairs = element.element("pairs");
+				if (pairs != null) {
+					for (Iterator<Element> itor = pairs.elementIterator(); itor.hasNext();) {
+						Element pair = itor.next();
+						String before = pair.elementText("before");
+						String after = pair.elementText("after");
+						Pair<String, String> change = new Pair<String, String>(before, after);
+						String message = pair.elementText("message");
+						allPairs.put(change, message);
+					}
+				}
+				commits.put(name, allPairs);
+			}
+		} catch (DocumentException e) {
+			LevelLogger.fatal(__name__ + "#readCommitWithMessageFromFile parse xml file failed !", e);
+		}
+		return commits;
 	}
 
 }
