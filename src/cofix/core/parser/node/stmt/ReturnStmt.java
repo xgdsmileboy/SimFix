@@ -82,6 +82,8 @@ public class ReturnStmt extends Stmt {
 							}
 							NodeUtils.restoreVariables(record);
 						}
+					} else {
+						match = true;
 					}
 				}
 				List<Modification> tmp = new ArrayList<>();

@@ -25,6 +25,9 @@ import cofix.common.util.LevelLogger;
 import cofix.common.util.Pair;
 import cofix.core.match.CodeBlockMatcher;
 import cofix.core.modify.Modification;
+import cofix.core.modify.diff.Diff;
+import cofix.core.modify.diff.TextDiff;
+import cofix.core.modify.diff.line.Line;
 import cofix.core.modify.pattern.Pattern;
 import cofix.core.modify.pattern.match.Matcher;
 import cofix.core.parser.node.CodeBlock;
@@ -40,17 +43,18 @@ public class Statistic {
 
 	public static void main(String[] args) {
 		// configure me
-		TESTOP op = TESTOP.EXPORT_ALL_COMMIT;
-		
+		TESTOP op = TESTOP.EXTRACT_OP_PATTERN;
+
 		Map<String, Map<Pair<String, String>, String>> allcommits = new HashMap<>();
-		switch(op) {
-		case EXPORT_ALL_COMMIT:
-		{
-			/***********extract commit pairs based on keywords, and write to file************/
-			String[] projects = new String[]{"ant","groovy","guava","hadoop","j2objc","lucene-solr"};
+		switch (op) {
+		case EXPORT_ALL_COMMIT: {
+			/***********
+			 * extract commit pairs based on keywords, and write to file
+			 ************/
+			String[] projects = new String[] { "ant", "groovy", "guava", "hadoop", "j2objc", "lucene-solr" };
 			try {
-				for(String string : projects) {
-					String path = Constant.DIR_BASE_STATISTIC + Constant.SEP_CH + string + "/log.txt";
+				for (String string : projects) {
+					String path = Constant.DIR_ABSO_REPO + Constant.SEP_CH + string + "/log.txt";
 					Map<Pair<String, String>, String> commits = Commit.parseCommit(path);
 					allcommits.put(string, commits);
 				}
@@ -60,49 +64,43 @@ public class Statistic {
 			JavaFile.writeCommitToFile(allcommits, Constant.FILE_COMMIT_XML);
 			break;
 		}
-		case EXTRACT_DIFF_TEXT:
-		{
-			/***********read commit pairs from file and extract diff files************/
+		case EXTRACT_DIFF_TEXT: {
+			/***********
+			 * read commit pairs from file and extract diff files
+			 ************/
 			allcommits = JavaFile.readCommitWithMessageFromFile(Constant.FILE_COMMIT_XML);
-			for(Entry<String, Map<Pair<String, String>, String>> entry : allcommits.entrySet()) {
+			for (Entry<String, Map<Pair<String, String>, String>> entry : allcommits.entrySet()) {
 				String name = entry.getKey();
-				if (name.equals("ant")) {
-					Commit.extractDiff(entry.getValue(), Constant.DIR_BASE_STATISTIC + Constant.SEP_CH + name,
-							Constant.DIR_ABSO_DIFF + Constant.SEP_CH + name);
-				}
+				Commit.extractDiff(entry.getValue(), Constant.DIR_ABSO_REPO + Constant.SEP_CH + name,
+						Constant.DIR_ABSO_DIFF + Constant.SEP_CH + name);
 			}
+			break;
 		}
 		case EXTRACT_DIFF_FILES: {
 			/***********
 			 * read commit from diff files and extract source files before and
 			 * after revision.
-			 ************/
-			/***********
 			 * commits in the diff files are those after manually filtering
 			 ************/
-			allcommits = JavaFile.readCommitWithMessageFromFile(Constant.FILE_COMMIT_XML);
-			for (Entry<String, Map<Pair<String, String>, String>> entry : allcommits.entrySet()) {
+			Map<String, Map<String, Pair<String, String>>> commits = Commit.readCommitFromFile(Constant.DIR_ABSO_DIFF);
+			for(Entry<String, Map<String, Pair<String, String>>> entry : commits.entrySet()) {
 				System.out.println("------------" + entry.getKey() + "--------------");
-				Commit.extractDiffFile(entry.getValue().keySet(),
-						Constant.DIR_BASE_STATISTIC + Constant.SEP_CH + entry.getKey(),
-						Constant.DIR_ABSO_DISTIL + Constant.SEP_CH + entry.getKey());
+				Commit.extractDiffFile(entry.getValue(), Constant.DIR_ABSO_REPO + Constant.SEP_CH + entry.getKey(), Constant.DIR_ABSO_DISTIL + Constant.SEP_CH + entry.getKey());
 			}
+			break;
 		}
-		case EXTRACT_OP_PATTERN:
-		{
-			Map<String, Map<String, Pair<String, String>>> commits = Commit.readCommitFromFile(Constant.FILE_COMMIT_XML);
-			Set<Pattern> patterns = getAllPatternNodes(commits);
-			
+		case EXTRACT_OP_PATTERN: {
+			Map<String, Map<String, Pair<String, String>>> commits = Commit
+					.readCommitFromFile(Constant.DIR_ABSO_DIFF);
+			Set<Pattern> patterns = getAllPatterns(commits);
+			break;
 		}
 		default:
-			
+			System.err.println("Do Nothing!");
 		}
-		
-		
-		
 	}
 	
-	protected static Set<Pattern> getAllPatternNodes(Map<String, Map<String, Pair<String, String>>> commitPairs) {
+	protected static Set<Pattern> getAllPatterns(Map<String, Map<String, Pair<String, String>>> commitPairs) {
 		Set<Pattern> patterns = new HashSet<>();
 		Map<String, Integer> modificationCount = new HashMap<>();
 		Map<String, Set<String>> manually = new HashMap<>();
@@ -121,30 +119,33 @@ public class Statistic {
 						String srcFile = srcPath + Constant.SEP_CH + fName;
 						String tarFile = tarPath + Constant.SEP_CH + fName;
 						
-						Set<String> modifies = buildPatternNode(srcFile, tarFile);
-						if(modifies == null) {
-							Set<String> set = manually.get(entry.getKey());
-							if(set == null) {
-								set = new HashSet<>();
-							}
-							set.add(innerEntry.getKey());
-							manually.put(entry.getKey(), set);
-							types = null;
-							break;
-						} else {
-							types.addAll(modifies);
+						Set<Pattern> modifies = buildPatterns(srcFile, tarFile);
+						for(Pattern pattern : modifies) {
+							System.out.println(pattern);
 						}
+//						if(modifies == null) {
+//							Set<String> set = manually.get(entry.getKey());
+//							if(set == null) {
+//								set = new HashSet<>();
+//							}
+//							set.add(innerEntry.getKey());
+//							manually.put(entry.getKey(), set);
+//							types = null;
+//							break;
+//						} else {
+//							types.addAll(modifies);
+//						}
 					}
-					if(types != null) {
-						for(String modify : types) {
-							Integer integer = modificationCount.get(modify);
-							if(integer == null) {
-								integer = new Integer(0);
-							}
-							integer ++;
-							modificationCount.put(modify, integer);
-						}
-					}
+//					if(types != null) {
+//						for(String modify : types) {
+//							Integer integer = modificationCount.get(modify);
+//							if(integer == null) {
+//								integer = new Integer(0);
+//							}
+//							integer ++;
+//							modificationCount.put(modify, integer);
+//						}
+//					}
 				}
 			}
 		}
@@ -282,8 +283,8 @@ public class Statistic {
 		return files;
 	}
 	
-	private static Set<String> buildPatternNode(String srcFile, String tarFile) {
-		Set<String> patterns = new HashSet<>();
+	private static Set<Pattern> buildPatterns(String srcFile, String tarFile) {
+		Set<Pattern> patterns = new HashSet<>();
 		CompilationUnit srcUnit = JavaFile.genASTFromFile(srcFile);
 		CompilationUnit tarUnit = JavaFile.genASTFromFile(tarFile);
 		List<Pair<MethodDeclaration, MethodDeclaration>> matchMap = Matcher.match(srcUnit, tarUnit);
@@ -300,16 +301,21 @@ public class Statistic {
 				continue;
 			}
 			//cannot change too much
-//			Diff<Line> textdiff = new TextDiff(srcNode, tarNode);
-//			if(textdiff.getMiniDiff().size() > 10) {
-//				continue;
-//			}
+			Diff<Line> textdiff = new TextDiff(srcNode, tarNode);
+			if(textdiff.getMiniDiff().size() > 10) {
+				continue;
+			}
 			
 //			// output patterns into file
 //			String teString = "--------------------------------------\n" + textdiff.toString();
 //			JavaFile.writeStringToFile("/Users/Jiajun/Desktop/patterns.txt", teString, true);
 			
 			List<Modification> modifications = CodeBlockMatcher.match(srcNode, tarNode, new HashMap<String, Type>());
+			
+			for(Modification modification : modifications) {
+				System.out.println(modification.toString());
+			}
+			
 			// filter those log information
 //			for(Modification modification : modifications) {
 //				if(modification instanceof Insertion) {

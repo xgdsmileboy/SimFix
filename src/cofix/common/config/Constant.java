@@ -45,6 +45,11 @@ public class Constant {
 	public final static String DIR_ABSO_REPO = DIR_BASE_STATISTIC + SEP_CH + "repo";
 	public final static String FILE_COMMIT_XML = DIR_BASE_STATISTIC + SEP_CH + "commit.xml";
 	
+	public final static String PATCH_ADD_LEADING = "+";
+	public final static String PATCH_DEL_LEADING = "-";
+	public final static String PATCH_KEEP_LEADING = " ";
+	public final static String NEW_LINE = "\n";
+	
 	// command configuration
 	public final static String COMMAND_CP = "/bin/cp ";
 	public final static String COMMAND_MKDIR = "/bin/mkdir";

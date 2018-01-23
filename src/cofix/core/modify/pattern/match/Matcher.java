@@ -6,8 +6,12 @@
  */
 package cofix.core.modify.pattern.match;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 import org.eclipse.jdt.core.dom.ASTVisitor;
 import org.eclipse.jdt.core.dom.CompilationUnit;
@@ -115,6 +119,78 @@ public class Matcher {
 			methodDeclarations.add(md);
 			return true;
 		}
+	}
+	
+	public static Map<Integer, Integer> match(Object[] src, Object[] tar) {
+		return match(Arrays.asList(src), Arrays.asList(tar), new Comparator<Object>() {
+			@Override
+			public int compare(Object o1, Object o2) {
+				if(o1.equals(o2)) {
+					return 1;
+				} else {
+					return 0;
+				}
+			};
+		});
+	}
+	
+	private static enum Direction {
+		LEFT,
+		UP,
+		ANDGLE
+	}
+	
+	public static <T> Map<Integer, Integer> match(List<T> src, List<T> tar, Comparator<T> comparator) {
+		Map<Integer, Integer> map = new HashMap<>();
+		int srcLen = src.size();
+		int tarLen = tar.size();
+		if(srcLen == 0 || tarLen == 0) {
+			return map;
+		}
+		int[][] score = new int[srcLen + 1][tarLen + 1];
+
+		// LCS matching with path retrieval
+		Direction[][] path = new Direction[srcLen + 1][tarLen + 1];
+		for(int i = 0; i < srcLen; i++){
+			for(int j = 0; j < tarLen; j++){
+				if(comparator.compare(src.get(i), tar.get(j)) > 0){
+					score[i + 1][j + 1] = score[i][j] + 1;
+					path[i + 1][j + 1] = Direction.ANDGLE;
+				} else {
+					int left = score[i + 1][j];
+					int up = score[i][j + 1];
+					if(left >= up) {
+						score[i + 1][j + 1] = left;
+						path[i + 1][j + 1] = Direction.LEFT;
+					} else {
+						score[i + 1][j + 1] = up;
+						path[i + 1][j + 1] = Direction.UP;
+					}
+				}
+			}
+		}
+		
+		for(int i = srcLen, j = tarLen; i > 0 && j > 0;) {
+			switch(path[i][j]){
+			case ANDGLE:
+				map.put(i-1, j-1);
+				i --;
+				j --;
+				break;
+			case LEFT:
+				j --;
+				break;
+			case UP:
+				i --;
+				break;
+			default:
+				LevelLogger.error("should not happen!");
+				System.exit(0);
+			}
+		}
+		
+		assert map.size() == score[srcLen][tarLen];
+		return map;
 	}
 
 }
