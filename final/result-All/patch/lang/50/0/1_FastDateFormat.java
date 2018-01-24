@@ -464,7 +464,7 @@ public class FastDateFormat extends Format {
         }
 // start of generated patch
 if(locale==null){
-key=locale=Locale.getDefault();
+key=Locale.getDefault();
 }
 // end of generated patch
 /* start of original code

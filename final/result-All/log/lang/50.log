@@ -11,7 +11,7 @@ Fri Jan 12 19:12:49 AEDT 2018 org.apache.commons.lang.time.FastDateFormat,465
 ----------------------------------------
 Pass Single Test : [=>0,0]
 if(locale==null){
-key=locale=Locale.getDefault();
+key=Locale.getDefault();
 }
 
 Time : 18/01/12 19:13
@@ -41,7 +41,7 @@ Time : 18/01/12 19:14
 ----------------------------------------
 Find a patch : [/home/hz985/jiajun/d4j/projects/lang/lang_50_buggy/src/java/org/apache/commons/lang/time/FastDateFormat.java=>465,467]
 if(locale==null){
-key=locale=Locale.getDefault();
+key=Locale.getDefault();
 }
 
 Time : 18/01/12 19:14
