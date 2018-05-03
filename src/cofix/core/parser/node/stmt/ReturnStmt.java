@@ -69,21 +69,21 @@ public class ReturnStmt extends Stmt {
 				match = true;
 			} else if(_expression != null && other._expression != null){
 				String otherStr = other._expression.toSrcString().toString();
-//				if(_expression.getType().toString().equals(other._expression.getType().toString()) && otherStr.length() > 1){
-//					String source = _expression.toSrcString().toString();
-//					if(!source.equals(other._expression.toSrcString().toString()) && NodeUtils.isSameNodeType(_expression, other._expression)){
-//						Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(other._expression, varTrans, allUsableVariables);
-//						if(record != null){
-//							NodeUtils.replaceVariable(record);
-//							String target = other._expression.toSrcString().toString();
-//							if(!source.equals(target)){
-//								Revision revision = new Revision(this, EXPRID, target, _nodeType);
-//								modifications.add(revision);
-//							}
-//							NodeUtils.restoreVariables(record);
-//						}
-//					}
-//				}
+				if(_expression.getType().toString().equals(other._expression.getType().toString()) && otherStr.length() > 1){
+					String source = _expression.toSrcString().toString();
+					if(!source.equals(other._expression.toSrcString().toString()) && NodeUtils.isSameNodeType(_expression, other._expression)){
+						Map<SName, Pair<String, String>> record = NodeUtils.tryReplaceAllVariables(other._expression, varTrans, allUsableVariables);
+						if(record != null){
+							NodeUtils.replaceVariable(record);
+							String target = other._expression.toSrcString().toString();
+							if(!source.equals(target)){
+								Revision revision = new Revision(this, EXPRID, target, _nodeType);
+								modifications.add(revision);
+							}
+							NodeUtils.restoreVariables(record);
+						}
+					}
+				}
 				List<Modification> tmp = new ArrayList<>();
 				if(_expression.match(other._expression, varTrans, allUsableVariables, tmp)){
 					match = true;
