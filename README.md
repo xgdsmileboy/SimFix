@@ -24,6 +24,22 @@
 4. **Modification Extraction and Intersection** : extract code modifications to faulty code snippet via AST (Abstract Syntax Tree) matching and differencing against the donor snippet, and then the frequent patterns from the mining stage will be used to take intersection with those modifications to further ruled out invalid ones.
 5. **Patch Generation & Validation** : generate repair patches by applying extracted code modifications to the faulty code snippet with combining and ranking whose modifications, then using the test suite to validate the correctness of candidate patches until a correct patch found or timeout.
 
+*if you want to use this project, please cite our technical paper published on [ISSTA'18](https://conf.researchr.org/home/issta-2018).*
+
+```tex
+@inproceedings{Simfix:2018,
+    author = {Jiang, Jiajun and Xiong, Yingfei and Zhang, Hongyu and
+              Gao, Qing and Chen, Xiangqun},
+    title = {Shaping Program Repair Space with Existing Patches and Similar Code},
+    series = {ISSTA},
+    year = {2018},
+    location = {Amsterdam, Netherlands},
+    doi = {10.1145/3213846.3213871},
+} 
+```
+
+
+
 ## II. Environment
 
 * OS: Linux (Tested on Ubuntu 16.04.2 LTS)
