@@ -28,13 +28,13 @@
 
 ```tex
 @inproceedings{Simfix:2018,
-    author = {Jiang, Jiajun and Xiong, Yingfei and Zhang, Hongyu and
-              Gao, Qing and Chen, Xiangqun},
-    title = {Shaping Program Repair Space with Existing Patches and Similar Code},
-    series = {ISSTA},
-    year = {2018},
+    author   = {Jiang, Jiajun and Xiong, Yingfei and Zhang, Hongyu and
+                Gao, Qing and Chen, Xiangqun},
+    title    = {Shaping Program Repair Space with Existing Patches and Similar Code},
+    series   = {ISSTA},
+    year     = {2018},
     location = {Amsterdam, Netherlands},
-    doi = {10.1145/3213846.3213871},
+    doi      = {10.1145/3213846.3213871},
 } 
 ```
 
