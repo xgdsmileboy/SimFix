@@ -105,59 +105,6 @@ public class Repair {
 		// restore source file
 		_subject.restore();
 	}
-	
-//	private void computeMethodCoverage() throws IOException{
-//		JUnitRuntime runtime = new JUnitRuntime(_subject);
-//		String src = _subject.getHome() + _subject.getSsrc();
-//		MethodInstrumentVisitor methodInstrumentVisitor = new MethodInstrumentVisitor();
-//		Instrument.execute(src, methodInstrumentVisitor);
-//		
-//		if(!Runner.compileSubject(_subject)){
-//			System.err.println("Build project failed!");
-//			System.exit(0);
-//		}
-//		
-//		System.out.println("Passed test classes : " + _localization.getPassedTestCases().size());
-//		for(String test : _localization.getPassedTestCases()){
-//			String[] testStr = test.split("#");
-//			String clazz = testStr[0];
-//			String methodName = testStr[1];
-//			OutStream outStream = new OutStream();
-//			Result result = JUnitEngine.getInstance(runtime).test(clazz, methodName, new PrintStream(outStream));
-//			if(result.getFailureCount() > 0){
-//				System.out.println("Error : Passed test cases running failed ! => " + clazz);
-//				System.exit(0);
-//			}
-//			for(Integer method : outStream.getOut()){
-//				Set<Pair<String, String>> tcases = _passedTestCasesMap.get(method);
-//				if(tcases == null){
-//					tcases = new HashSet<>();
-//				}
-//				tcases.add(new Pair<String, String>(clazz, methodName));
-//				_passedTestCasesMap.put(method, tcases);
-//			}
-//		}
-//		// restore source file
-//		_subject.restore();
-//	}
-	
-//	public Status splitFix(Timer timer){
-//		Status status = Status.FAILED;
-//		for(int i = 0; i < _failedTestCases.size(); i++){
-//			String failedTest = _failedTestCases.get(i);
-//			String[] clazzAndMethod = failedTest.split("::");
-//			if(clazzAndMethod.length < 2){
-//				System.out.println("Failed test case format error : " + failedTest);
-//				System.exit(0);
-//			}
-//			String clazz = clazzAndMethod[0].replace(".", "/");
-//			String testFile = _subject.getHome() + _subject.getSsrc() + "/" + clazz + ".java";
-//			String testBin = _subject.getHome() + _subject.getTbin() + "/" + clazz + ".class";
-//			
-//		}
-//		
-//		return status;
-//	}
 
 	public Status fix(Timer timer, String logFile, int currentTry) throws IOException{
 		String src = _subject.getHome() + _subject.getSsrc();
