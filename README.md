@@ -43,6 +43,7 @@
 ## II. Environment
 
 * OS: Linux (Tested on Ubuntu 16.04.2 LTS)
+* JDK: Oracle jdk1.7u79 (**important!**)
 * Download and configure [Defects4J](https://github.com/rjust/defects4j) running environment.
 * Configure the following path.
   * DEFECTS4J_HOME="home_of_defects4j"
