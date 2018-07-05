@@ -96,7 +96,7 @@ Our prototype of *SimFix* needs **three** input options for running.
   Another: --proj_home=/home/user --proj_name=chart --bug_id=1,4,8
   ```
 
-**OPTION 1** : run within eclipse (please use the old version: tested on __Mars__, which depends on Java7).
+**OPTION 1** : run within eclipse (please use the old version: tested on __[Mars](https://www.eclipse.org/mars/) __, which depends on Java7).
 
 * From the Main class:
 
