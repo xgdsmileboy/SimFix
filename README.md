@@ -44,7 +44,7 @@
 
 * OS: Linux (Tested on Ubuntu 16.04.2 LTS)
 * JDK: Oracle jdk1.7 (**important!**)
-* Download and configure [Defects4J](https://github.com/rjust/defects4j/tree/fee5ddf020d0ce9c793655b74f0ab068153c03ef) running environment.
+* Download and configure Defects4J(**branch  [fee5ddf020](https://github.com/rjust/defects4j/tree/fee5ddf020d0ce9c793655b74f0ab068153c03ef) **) running environment.
 * Configure the following path.
   * DEFECTS4J_HOME="home_of_defects4j"
 
@@ -96,7 +96,7 @@ Our prototype of *SimFix* needs **three** input options for running.
   Another: --proj_home=/home/user --proj_name=chart --bug_id=1,4,8
   ```
 
-**OPTION 1** : run within eclipse (please use the old version: tested on __[Mars](https://www.eclipse.org/mars/) __, which depends on Java7).
+**OPTION 1** : run within eclipse (please use the old version: tested on **[Mars](https://www.eclipse.org/mars/) **, which depends on Java7).
 
 * From the Main class:
 
