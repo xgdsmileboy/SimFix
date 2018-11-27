@@ -1,3 +1,5 @@
+##### NOTE: Currently, SimFix can only run on the defects4j benchmark since it tightly depends on some defects4j commands. However, we are working on the refactoring process to make it a more general framework, which can be flexibly used on other projects. It is on the way ...
+
 # SimFix
 
 * [I. Introduction of SimFix](#user-content-i-introduction)
