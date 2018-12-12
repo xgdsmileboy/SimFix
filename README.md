@@ -1,6 +1,6 @@
-##### NOTE: SimFix depends on several defects4j commands. Therefore, if you want to conduct your experiment on other projects outside defects4j, please adapt the project to defects4j framework. 
+> ##### NOTE: SimFix depends on several defects4j commands. Therefore, if you want to conduct your experiment on other projects outside defects4j, please adapt the project to defects4j framework. 
 
-##### As an alternative, if you don't want to compile SimFix by youself, you also can download the replication package [[HERE](https://drive.google.com/open?id=144h3TkD9ziHZpW_xht0iELViLiskOIPP)] directly, which will save your time for setting up the running environment.
+> ##### As an alternative, if you don't want to compile SimFix by youself, you also can download the replication package [[HERE](https://drive.google.com/open?id=144h3TkD9ziHZpW_xht0iELViLiskOIPP)] directly, which will save your time for setting up the running environment.
 
 ---
 
