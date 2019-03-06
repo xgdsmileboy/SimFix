@@ -1,4 +1,4 @@
-> ##### NOTE: SimFix depends on several defects4j commands. Therefore, if you want to conduct your experiment on other projects outside defects4j, please adapt the project to defects4j framework. 
+> ##### NOTE: SimFix depends on several [Defects4J](https://github.com/rjust/defects4j) commands. Therefore, if you want to conduct your experiment on other projects outside Defects4J, please adapt the project to the Defects4J framework. 
 
 > ##### As an alternative, if you don't want to compile SimFix by youself, you also can download the replication package [[HERE](https://drive.google.com/open?id=144h3TkD9ziHZpW_xht0iELViLiskOIPP)] directly, which will save your time for setting up the running environment.
 
@@ -20,7 +20,7 @@
 
 #### Mining Stage
 
-1. mine repair patterns from existing open-source projects, after which we can obtain a set of frequent repair patterns. Those patterns can be reused for other repairing scenarios as well.
+1. Mine repair patterns from existing open-source projects, after which we can obtain a set of frequent repair patterns. Those patterns can be reused for other repairing scenarios as well.
 
 #### Repairing Stage
 
@@ -30,7 +30,7 @@
 4. **Modification Extraction and Intersection** : extract code modifications to faulty code snippet via AST (Abstract Syntax Tree) matching and differencing against the donor snippet, and then the frequent patterns from the mining stage will be used to take intersection with those modifications to further ruled out invalid ones.
 5. **Patch Generation & Validation** : generate repair patches by applying extracted code modifications to the faulty code snippet with combining and ranking whose modifications, then using the test suite to validate the correctness of candidate patches until a correct patch found or timeout.
 
-*if you want to use this project, please cite our technical paper published at [ISSTA'18](https://conf.researchr.org/home/issta-2018).*
+*If you want to use this project, please cite our technical paper published at [ISSTA'18](https://conf.researchr.org/home/issta-2018).*
 
 ```tex
 @inproceedings{Simfix:2018,
@@ -50,7 +50,7 @@
 
 * OS: Linux (Tested on Ubuntu 16.04.2 LTS)
 * JDK: Oracle jdk1.7 (**important!**)
-* Download and configure Defects4J(**branch  [fee5ddf020](https://github.com/rjust/defects4j/tree/fee5ddf020d0ce9c793655b74f0ab068153c03ef)**) running environment.
+* Download and configure Defects4J (**branch  [fee5ddf020](https://github.com/rjust/defects4j/tree/fee5ddf020d0ce9c793655b74f0ab068153c03ef)**) running environment.
 * Configure the following path.
   * DEFECTS4J_HOME="home_of_defects4j"
 
@@ -66,11 +66,11 @@
 
 * using the command line provided by Defects4J to checkout a buggy version of benchmark for testing.
 
-   `Example: defects4j checkout -p Chart -v 1b -w ${buggy_program_path}/chart/chart_1_buggy`
+   Example: `defects4j checkout -p Chart -v 1b -w ${buggy_program_path}/chart/chart_1_buggy`
 
   **_NOTE_** : the path of the buggy version of benchmark have to be set as:
 
-  `…/projectName/projectName_id_buggy`  => `Example: /home/user/chart/chart_1_buggy`
+  `…/projectName/projectName_id_buggy`  => Example: `/home/user/chart/chart_1_buggy`
 
 #### Step 1, Build The Project
 
@@ -86,7 +86,7 @@ Our prototype of *SimFix* needs **three** input options for running.
 
 * `--bug_id` : the identifier of the buggy program. (`1` for the example)
 
-  * the option of `--bugy_id` supports multiple formats:
+  * The option of `--bugy_id` supports multiple formats:
 
     `single_id` : repair single bug, `e.g., 1`.
 
@@ -102,7 +102,7 @@ Our prototype of *SimFix* needs **three** input options for running.
   Another: --proj_home=/home/user --proj_name=chart --bug_id=1,4,8
   ```
 
-**OPTION 1** : run within eclipse (please use the old version: tested on **[Mars](https://www.eclipse.org/mars/)**, which depends on Java7).
+**OPTION 1** : Run within eclipse (please use the old version: tested on **[Mars](https://www.eclipse.org/mars/)**, which depends on Java7).
 
 * From the Main class:
 
@@ -112,7 +112,7 @@ Our prototype of *SimFix* needs **three** input options for running.
 
 * We also provide runnable jar file of *SimFix* in the home folder of the project `i.e., simfix.jar`.
 
-  set the home directory of the *SimFix* project as your correct path and then run as:
+  Set the home directory of the *SimFix* project as your correct path and then run as:
 
   `java -jar simfix.jar --proj_home=/home/user --proj_name=chart --bug_id=1`
 
@@ -143,7 +143,7 @@ After finishing the repair, there will be two additional folders: `log` and `pat
 
 ## IV. Evaluation Result
 
-Totally, *SimFix* successfully repair 34 bugs among 357 bugs in Defects4j v1.0 benchmark with generating 22 plausible but incorrect patches. The following table and venn diagram are comparison with existing approaches. More details are presented in the sub-folder [final](./final).
+Totally, *SimFix* successfully repair 34 bugs among 357 bugs in Defects4J v1.0 benchmark with generating 22 plausible but incorrect patches. The following table and venn diagram are comparison with existing approaches. More details are presented in the sub-folder [final](./final).
 
 | ![The comparison with existing approaches.\label{compare}](./doc/figure/result.png) | ![Intersection among different approaches.\label{venn}](./doc/figure/venn.png) |
 | :--------------------------------------: | :--------------------------------------: |
