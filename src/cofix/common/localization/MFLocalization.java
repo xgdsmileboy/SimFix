@@ -37,8 +37,8 @@ public class MFLocalization extends AbstractFaultlocalization {
 	
 	@Override
 	protected void locateFault(double threshold) {
-//		readFailedTests(_failedTestsPath + "/" + _subject.getName() + "/" + _subject.getId() + ".txt");
-//		readPassedTest(_allTestsPath + "/" + _subject.getName()+ "/" + _subject.getId() + ".txt");
+		readFailedTests(_failedTestsPath + "/" + _subject.getName() + "/" + _subject.getId() + ".txt");
+		readPassedTest(_allTestsPath + "/" + _subject.getName()+ "/" + _subject.getId() + ".txt");
 	}
 	
 	public void setFailedTest(List<String> failedTest){
@@ -116,7 +116,7 @@ public class MFLocalization extends AbstractFaultlocalization {
 
 	@Override
 	public List<Pair<String, Integer>> getLocations(int topK) {
-		String path = _locRsltPath + "/" + _subject.getName() + "/" + _subject.getId() + ".txt";
+		String path = _locRsltPath + "/" + _subject.getName() + "/" + _subject.getId();
 		File file = new File(path);
 		if(!file.exists()){
 			System.err.println("All test file does not exist : " + path);
@@ -138,22 +138,25 @@ public class MFLocalization extends AbstractFaultlocalization {
 			int count = 0;
 			while((line = bufferedReader.readLine()) != null){
 				if(line.length() > 0){
-					String[] info = line.split("#");
-					if(info.length < 2){
-						System.err.println("Location format error : " + line);
-						System.exit(0);
-					}
-					String[] linesInfo = info[1].split(",");
-					Integer lineNumber = Integer.parseInt(linesInfo[0]);
-					String stmt = info[0];
-					int index = stmt.indexOf("$");
-					if(index > 0){
-						stmt = stmt.substring(0, index);
-					}
-					locations.add(new Pair<String, Integer>(stmt, lineNumber));
-					count ++;
-					if(count == topK){
-						break;
+					String[] locs = line.split("\\|\\|");
+					for(String string : locs) {
+						String[] info = string.split(":");
+						if(info.length < 2){
+							System.err.println("Location format error : " + line);
+							System.exit(0);
+						}
+						Integer lineNumber = Integer.parseInt(info[1]);
+						String stmt = info[0];
+						stmt = stmt.substring(0, stmt.lastIndexOf('.'));
+						int index = stmt.indexOf("$");
+						if(index > 0){
+							stmt = stmt.substring(0, index);
+						}
+						locations.add(new Pair<String, Integer>(stmt, lineNumber));
+						count ++;
+						if(count == topK){
+							break;
+						}
 					}
 				}
 			}
