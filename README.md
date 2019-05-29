@@ -143,7 +143,7 @@ After finishing the repair, there will be two additional folders: `log` and `pat
 
 ## IV. Evaluation Result
 
-Totally, *SimFix* successfully repair 34 bugs among 357 bugs in Defects4J v1.0 benchmark with generating 22 plausible but incorrect patches. The following table and venn diagram are comparison with existing approaches. More details are presented in the sub-folder [final](./final).
+Totally, *SimFix* successfully repair 34 bugs among 357 bugs in Defects4J v1.0 benchmark with generating 22 plausible but incorrect patches. The following table and venn diagram are comparison with existing approaches. More details are presented in the sub-folder [final](./final) (latest).
 
 | ![The comparison with existing approaches.\label{compare}](./doc/figure/result.png) | ![Intersection among different approaches.\label{venn}](./doc/figure/venn.png) |
 | :--------------------------------------: | :--------------------------------------: |

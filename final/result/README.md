@@ -19,9 +19,10 @@
   * math(7) : 33, 41, 50, 57, 59, 75, 98
   * time(1) : 7
   
-######  NOTE (2019-5-29):
-  * Update: correct : 33, incorrect 21, precision: 33/(33+21)=61.1%
+######  Update (2019-5-29):
+  * Update: 
+      * correct : 33, incorrect 22, precision: 33/(33+21)=60.0%
   * Explanation:
     * The patch of lang-27 should be classified as incorrect since then the test input contains all three characters of '.', 'e', and 'E', the generated patch behaves different with the human patch. Thanks for the report of He Ye from KTH, Switzerland.
     * The patch of closure-79 should be classified as non-relavent since it cannot pass all the test cases. Thanks for the report of Deheng Yang from NUDT, China.
-  
+
