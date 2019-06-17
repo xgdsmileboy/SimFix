@@ -16,15 +16,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import cofix.common.util.*;
 import org.apache.commons.io.FileUtils;
 
 import cofix.common.config.Configure;
 import cofix.common.config.Constant;
 import cofix.common.run.Runner;
-import cofix.common.util.JavaFile;
-import cofix.common.util.Pair;
-import cofix.common.util.Status;
-import cofix.common.util.Subject;
 import cofix.core.parser.ProjectInfo;
 import cofix.test.purification.CommentTestCase;
 import cofix.test.purification.Purification;
@@ -40,16 +37,16 @@ public class Main {
 		Constant.PATCH_NUM = 1;
 		
 		Map<String, Pair<Integer, Set<Integer>>> projInfo = Configure.getProjectInfoFromJSon();
-		Pair<String, Set<Integer>> options = parseCommandLine(args, projInfo);
-		if(Constant.PROJECT_HOME == null || options.getFirst() == null || options.getSecond().size() == 0){
-			printUsage();
-			System.exit(0);
+		Command command = new Command(args, projInfo);
+		if (!command.valid()) {
+			LevelLogger.error("Error command line!");
+			System.exit(1);
 		}
-		
+		Constant.PROJECT_HOME = command.getProjHome();
 		Configure.configEnvironment();
 		System.out.println(Constant.PROJECT_HOME);
 		
-		flexibelConfigure(options.getFirst(), options.getSecond(), projInfo);
+		flexibelConfigure(command.getProjName(), command.getBugIds(), projInfo);
 	}
 	
 	private static void trySplitFix(Subject subject, boolean purify) throws IOException{
@@ -141,60 +138,8 @@ public class Main {
 		subject.restore(subject.getHome() + subject.getSsrc());
 		subject.restore(subject.getHome() + subject.getTsrc());
 	}
-	
-	private static Pair<String, Set<Integer>> parseCommandLine(String[] args, Map<String, Pair<Integer, Set<Integer>>> projInfo) {
-		Pair<String, Set<Integer>> options = new Pair<String, Set<Integer>>();
-		if(args.length < 3){
-			return options;
-		}
-		String projName = null;
-		Set<Integer> idSet = new HashSet<>();
-		for(int i = 0; i < args.length; i++){
-			if(args[i].startsWith("--proj_home=")){
-				Constant.PROJECT_HOME = args[i].substring("--proj_home=".length());
-			} else if(args[i].startsWith("--proj_name=")){
-				projName = args[i].substring("--proj_name=".length());
-			} else if(args[i].startsWith("--bug_id=")){
-				String idseq = args[i].substring("--bug_id=".length());
-				if(idseq.equalsIgnoreCase("single")){
-					idSet.addAll(projInfo.get(projName).getSecond());
-				} else if(idseq.equalsIgnoreCase("multi")){
-					for(int id = 1; id <= projInfo.get(projName).getFirst(); id++){
-						if(projInfo.get(projName).getSecond().contains(id)){
-							continue;
-						}
-						idSet.add(id);
-					}
-				} else if(idseq.equalsIgnoreCase("all")){
-					for(int id = 1; id <= projInfo.get(projName).getFirst(); id++){
-						idSet.add(id);
-					}
-				} else if(idseq.contains("-")){
-					int start = Integer.parseInt(idseq.substring(0, idseq.indexOf("-")));
-					int end = Integer.parseInt(idseq.substring(idseq.indexOf("-") + 1, idseq.length()));
-					for(int id = start; id <= end; id++){
-						idSet.add(id);
-					}
-				} else {
-					String[] split = idseq.split(",");
-					for(String string : split){
-						int id = Integer.parseInt(string);
-						idSet.add(id);
-					}
-				}
-			}
-		}
-		options.setFirst(projName);
-		options.setSecond(idSet);
-		return options;
-	}
-	
-	private static void printUsage(){
-		// --proj_home=/home/user/d4j/projects --proj_name=chart --bug_id=3-5/all/1
-		System.err.println("Usage : --proj_home=\"project home\" --proj_name=\"project name\" --bug_id=\"3-5/all/1/1,2,5/single/multi\"");
-	}
-	
-	private static void flexibelConfigure(String projName, Set<Integer> ids, Map<String, Pair<Integer, Set<Integer>>> projInfo) throws IOException{
+
+	private static void flexibelConfigure(String projName, List<Integer> ids, Map<String, Pair<Integer, Set<Integer>>> projInfo) throws IOException{
 		Pair<Integer, Set<Integer>> bugIDs = projInfo.get(projName);
 		for(Integer id : ids){
 			Subject subject = Configure.getSubject(projName, id);
