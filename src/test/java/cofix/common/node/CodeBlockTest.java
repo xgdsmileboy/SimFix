@@ -14,7 +14,7 @@ public class CodeBlockTest {
 
 //	@Test
 //	public void test_codeBlock(){
-//		Constant.PROJECT_HOME = "testfile";
+//		Constant.PROJECT_HOME = "res/testfile";
 //		Subject subject = new Subject("chart", 7, "/source", "/tests", "/build", "build-tests");
 //		ProjectInfo.init(subject);
 //		

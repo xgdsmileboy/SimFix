@@ -31,7 +31,7 @@ public class JUnitEngineTest {
 	
 	@Test
 	public void test_testClazz(){
-		Constant.PROJECT_HOME = System.getProperty("user.dir") + "/testfile";
+		Constant.PROJECT_HOME = System.getProperty("user.dir") + "/res/testfile";
 		System.out.println(Constant.PROJECT_HOME);
 		List<Subject> subjects = Configure.getSubjectFromXML("project.xml");
 		Subject subject = subjects.get(0);

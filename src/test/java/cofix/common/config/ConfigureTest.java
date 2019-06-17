@@ -20,7 +20,7 @@ public class ConfigureTest {
 
 	@Test 
 	public void test_getSubjectFromXML(){
-		Constant.PROJECT_HOME = System.getProperty("user.dir") + "/testfile";
+		Constant.PROJECT_HOME = System.getProperty("user.dir") + "/res/testfile";
 		List<Subject> subjects = Configure.getSubjectFromXML("project.xml");
 		for(Subject subject : subjects){
 			System.out.println(subject);

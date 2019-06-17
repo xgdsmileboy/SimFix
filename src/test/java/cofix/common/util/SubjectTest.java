@@ -20,7 +20,7 @@ public class SubjectTest {
 	
 	@Test
 	public void test_getTestSuiteClasses(){
-		Constant.PROJECT_HOME = "testfile";
+		Constant.PROJECT_HOME = "res/testfile";
 		Subject subject = new Subject("chart", 7, "/source", "/tests", "/build", "build-tests");
 		List<String> classes = subject.getTestClasses();
 		for(String string : classes){

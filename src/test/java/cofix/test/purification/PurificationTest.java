@@ -25,7 +25,7 @@ public class PurificationTest {
 	
 //	@Test
 //	public void testPurify_assert(){
-//		Constant.PROJECT_HOME = Constant.HOME + "/testfile";
+//		Constant.PROJECT_HOME = Constant.HOME + "/res/testfile";
 //		Subject subject = Configure.getSubject("lang", 60);
 //		String failedTest = "org.apache.commons.lang.text.StrBuilderTest::testLang295";
 //		Purification purification = new Purification(subject);
@@ -38,7 +38,7 @@ public class PurificationTest {
 //	
 	@Test
 	public void testPurify_fail(){
-//		Constant.PROJECT_HOME = Constant.HOME + "/testfile";
+//		Constant.PROJECT_HOME = Constant.HOME + "/res/testfile";
 		Configure.configEnvironment();
 		Subject subject = Configure.getSubject("math", 72);
 		try {

@@ -6,12 +6,10 @@
  */
 package cofix.common.localization;
 
-import org.junit.Test;
-
-import com.gzoltar.core.components.Statement;
-
 import cofix.common.config.Constant;
 import cofix.common.util.Subject;
+import com.gzoltar.core.components.Statement;
+import org.junit.Test;
 
 /**
  * @author Jiajun
@@ -21,7 +19,7 @@ public class FLocalizationTest {
 	@Test
 	public void test_fl2(){
 
-		Constant.PROJECT_HOME = "/Users/Jiajun/Code/Java/fault-fix/SimilarFix/testfile";
+		Constant.PROJECT_HOME = Constant.HOME + "/res/testfile";
 		Subject subject = new Subject("chart", 7, "/source", "/tests", "/build", "/build-tests");
 		
 		FLocalization fLocalization = new FLocalization(subject);
