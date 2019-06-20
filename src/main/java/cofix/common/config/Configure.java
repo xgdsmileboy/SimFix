@@ -168,8 +168,9 @@ public class Configure {
 		String sbin = source.get(1);
 		String tsrc = source.get(2);
 		String tbin = source.get(3);
-		
+
 		Subject subject = new Subject(name, id, ssrc, tsrc, sbin, tbin);
+		subject.setJHome(Constant.JDK_7_HOME);
 		return subject;
 	}
 	

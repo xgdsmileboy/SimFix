@@ -27,7 +27,7 @@ public class ProjectInfo {
 		List<String> files = JavaFile.ergodic(srcPath, new ArrayList<String>());
 		TypeParseVisitor typeParseVisitor = new TypeParseVisitor();
 		for(String file : files){
-			CompilationUnit unit = JavaFile.genAST(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
+			CompilationUnit unit = (CompilationUnit) JavaFile.genAST(JavaFile.readFileToString(file), ASTParser.K_COMPILATION_UNIT);
 			unit.accept(typeParseVisitor);
 		}
 	}

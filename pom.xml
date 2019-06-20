@@ -46,59 +46,60 @@
     </licenses>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.eclipse.jdt/org.eclipse.jdt.core -->
         <dependency>
             <groupId>org.eclipse.jdt</groupId>
             <artifactId>org.eclipse.jdt.core</artifactId>
-            <version>3.12.3</version>
+            <version>3.10.0</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.text -->
+        <!-- https://mvnrepository.com/artifact/org.eclipse.text/org.eclipse.text -->
         <dependency>
-            <groupId>org.eclipse.platform</groupId>
+            <groupId>org.eclipse.text</groupId>
             <artifactId>org.eclipse.text</artifactId>
-            <version>3.6.300</version>
+            <version>3.5.101</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.osgi -->
         <dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.osgi</artifactId>
-            <version>3.13.0</version>
+            <version>3.11.2</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.equinox.preferences -->
         <dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.equinox.preferences</artifactId>
-            <version>3.7.100</version>
+            <version>3.6.1</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.equinox.common -->
         <dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.equinox.common</artifactId>
-            <version>3.10.0</version>
+            <version>3.8.0</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.core.runtime -->
         <dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.core.runtime</artifactId>
-            <version>3.14.0</version>
+            <version>3.12.0</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.core.resources -->
         <dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.core.resources</artifactId>
-            <version>3.13.0</version>
+            <version>3.11.1</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.core.jobs -->
         <dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.core.jobs</artifactId>
-            <version>3.10.0</version>
+            <version>3.8.0</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.core.contenttype -->
@@ -229,7 +230,7 @@
                             <transformers>
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>mfix.Main</mainClass>
+                                    <mainClass>cofix.main.Main</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>

@@ -13,6 +13,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Jiajun
@@ -21,11 +22,11 @@ import java.util.List;
 public class Executor {
 	private final static String __name__ = "@Executor ";
 	
-	public static List<String> execute(String[] command) {
+	public static List<String> execute(String[] command, String jHome) {
 		Process process = null;
 		final List<String> message = new ArrayList<String>();
 		try {
-			ProcessBuilder builder = new ProcessBuilder(command);
+			ProcessBuilder builder = getProcessBuilder(command, jHome);
 			builder.redirectErrorStream(true);
 			process = builder.start();
 			final InputStream inputStream = process.getInputStream();
@@ -65,6 +66,17 @@ public class Executor {
 		}
 		
 		return message;
+	}
+
+	private static ProcessBuilder getProcessBuilder(String[] command, String jhome) {
+		ProcessBuilder builder = new ProcessBuilder(command);
+		if (jhome != null) {
+			Map<String, String> evn = builder.environment();
+			evn.put("JAVA_HOME", jhome);
+			evn.put("JAVA_TOOL_OPTIONS", "-Dfile.encoding=UTF8");
+			evn.put("PATH", jhome + "/bin:" + evn.get("PATH"));
+		}
+		return builder;
 	}
 	
 //	public static List<String> executeCommand(String[] command) throws IOException, InterruptedException {

@@ -6,11 +6,11 @@
  */
 package cofix.common.run;
 
-import java.util.List;
-
 import cofix.common.config.Constant;
 import cofix.common.util.LevelLogger;
 import cofix.common.util.Subject;
+
+import java.util.List;
 
 /**
  * @author Jiajun
@@ -26,7 +26,7 @@ public class Runner {
 		List<String> message = null;
 		try {
 			System.out.println("TESTING : " + clazzAndMethod);
-			message = Executor.execute(CmdFactory.createTestSingleTestCaseCmd(subject, 30, clazzAndMethod));
+			message = Executor.execute(CmdFactory.createTestSingleTestCaseCmd(subject, 30, clazzAndMethod), subject.getJHome());
 		} catch (Exception e) {
 			LevelLogger.fatal(__name__ + "#buildSubject run test single test case failed !", e);
 		}
@@ -51,7 +51,7 @@ public class Runner {
 		List<String> message = null;
 		try {
 			System.out.println("TESTING : " + subject.getName() + "_" + subject.getId());
-			message = Executor.execute(CmdFactory.createTestSubjectCmd(subject, 10*60));
+			message = Executor.execute(CmdFactory.createTestSubjectCmd(subject, 10*60), subject.getJHome());
 		} catch (Exception e) {
 			LevelLogger.fatal(__name__ + "#buildSubject run test single test case failed !", e);
 		}
@@ -71,7 +71,7 @@ public class Runner {
 	public static boolean compileSubject(Subject subject) {
 		List<String> message = null;
 		try {
-			message = Executor.execute(CmdFactory.createBuildSubjectCmd(subject));
+			message = Executor.execute(CmdFactory.createBuildSubjectCmd(subject), subject.getJHome());
 		} catch (Exception e) {
 			LevelLogger.fatal(__name__ + "#buildSubject run build subject failed !", e);
 		}

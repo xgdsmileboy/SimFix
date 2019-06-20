@@ -132,14 +132,13 @@ public class JavaFile {
 	}
 
 	/**
-	 * @param fileName
-	 * @param astLevel
+	 * @param icu
+	 * @param type
 	 * @return
 	 * @see #genASTFromSource(String icu, String jversion, int astLevel, int type)
 	 */
-	public static CompilationUnit genAST(String fileName, int astLevel) {
-		return (CompilationUnit) genASTFromSource(readFileToString(fileName), JavaCore.VERSION_1_7, astLevel,
-				ASTParser.K_COMPILATION_UNIT);
+	public static ASTNode genAST(String icu, int type) {
+		return genASTFromSource(icu, JavaCore.VERSION_1_7, AST.JLS8, type);
 	}
 
 	/**

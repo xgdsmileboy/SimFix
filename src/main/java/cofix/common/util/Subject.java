@@ -35,6 +35,7 @@ public class Subject {
 	private String _tsrc = null;
 	private String _sbin = null;
 	private String _tbin = null;
+	private String _jhome = null;
 	private List<String> _instrumentPackages = null;
 	private List<String> _testClasses = null;
 	private List<String> _dependency = null;
@@ -68,7 +69,9 @@ public class Subject {
 		_tbin = tbin;
 		_dependency = dependency;
 	}
-	
+
+	public void setJHome(String jhome) { _jhome = jhome; }
+
 	public void setDependency(List<String> dependency){
 		_dependency = dependency;
 	}
@@ -100,7 +103,9 @@ public class Subject {
 	public List<String> getDependency(){
 		return _dependency;
 	}
-	
+
+	public String getJHome() { return _jhome; }
+
 	public List<String> getTestClasses(){
 		if(_testClasses == null){
 			_testClasses = new ArrayList<>(getTestClasses(new File(getHome() + _tsrc)));

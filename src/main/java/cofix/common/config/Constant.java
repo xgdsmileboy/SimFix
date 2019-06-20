@@ -34,7 +34,8 @@ public class Constant {
 	public static String PROJ_JSON_FILE = HOME + "/d4j-info/project.json";
 	public static String PROJ_LOG_BASE_PATH = HOME + "/log";
 	public static String PROJ_REALTIME_LOC_BASE = HOME + "/d4j-info/realtime/location";
-	
+
+	public final static String JDK_7_HOME = "/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home";
 	
 	// command configuration
 	public final static String COMMAND_CD = "cd ";
@@ -45,7 +46,8 @@ public class Constant {
 	public final static String COMMAND_LOCATOR = LOCATOR_HOME + "/sbfl.sh ";
 	public final static String LOCATOR_SUSP_FILE_BASE = LOCATOR_HOME + "/ochiai";
 	public static String ENV_D4J = "DEFECTS4J_HOME";
-	public static String COMMAND_TIMEOUT = "/usr/bin/timeout ";
+//	public static String COMMAND_TIMEOUT = "/usr/bin/timeout ";
+	public static String COMMAND_TIMEOUT = "/usr/local/bin/gtimeout ";
 	public static String COMMAND_D4J = null;
 	
 

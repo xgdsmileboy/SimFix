@@ -9,12 +9,7 @@ package cofix.main;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import cofix.common.util.*;
 import org.apache.commons.io.FileUtils;
@@ -35,7 +30,7 @@ public class Main {
 	
 	public static void main(String[] args) throws IOException {
 		Constant.PATCH_NUM = 1;
-		
+
 		Map<String, Pair<Integer, Set<Integer>>> projInfo = Configure.getProjectInfoFromJSon();
 		Command command = new Command(args, projInfo);
 		if (!command.valid()) {
@@ -45,7 +40,7 @@ public class Main {
 		Constant.PROJECT_HOME = command.getProjHome();
 		Configure.configEnvironment();
 		System.out.println(Constant.PROJECT_HOME);
-		
+
 		flexibelConfigure(command.getProjName(), command.getBugIds(), projInfo);
 	}
 	
