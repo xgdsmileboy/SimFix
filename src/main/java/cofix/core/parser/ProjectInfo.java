@@ -1,19 +1,13 @@
 package cofix.core.parser;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
+import cofix.common.util.JavaFile;
+import cofix.common.util.LevelLogger;
+import cofix.common.util.Subject;
 import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.Type;
 
-import cofix.common.util.JavaFile;
-import cofix.common.util.Subject;
+import java.util.*;
 
 public class ProjectInfo {
 
@@ -95,8 +89,8 @@ public class ProjectInfo {
 		}
 		ClassInfo classInfo = _classMap.get(className);
 		if (classInfo == null) {
-//			System.out.println(__name__ + "#getVariableType Parse variable type failed : " + className + "::"
-//					+ methodName + "::" + varName);
+			LevelLogger.debug(__name__ + "#getVariableType Parse variable type failed : " + className + "::"
+					+ methodName + "::" + varName);
 			return null;
 		}
 		return classInfo.getVariableType(methodName, varName);
@@ -108,8 +102,8 @@ public class ProjectInfo {
 		}
 		ClassInfo classInfo = _classMap.get(className);
 		if(classInfo == null){
-//			System.out.println(__name__ + "#getMethodRetType Parse method return type failed : " + className + "::"
-//					+ methodName);
+			LevelLogger.debug(__name__ + "#getMethodRetType Parse method return type failed : " + className + "::"
+					+ methodName);
 			return null;
 		}
 		return classInfo.getMethodRetType(methodName);
@@ -171,7 +165,7 @@ class ClassInfo {
 	public boolean addFieldType(String fieldName, Type type) {
 		if (_fieldTypeMap.containsKey(fieldName) && !_fieldTypeMap.get(fieldName).equals(type)
 				&& !_fieldTypeMap.get(fieldName).toString().equals(type.toString())) {
-			System.out.println("Field type inconsistancy '" + fieldName + "' with types : "
+			LevelLogger.debug("Field type inconsistancy '" + fieldName + "' with types : "
 					+ _fieldTypeMap.get(fieldName) + " and " + type);
 			return false;
 		}
@@ -189,7 +183,7 @@ class ClassInfo {
 			Map<String, Type> map = _localTypeMap.get(methodName);
 			if (map.containsKey(varName) && !map.get(varName).equals(type)
 					&& !map.get(varName).toString().equals(type.toString())) {
-				System.out.println("Variable type inconsistancy of '" + varName + "' in method '" + methodName
+				LevelLogger.debug("Variable type inconsistancy of '" + varName + "' in method '" + methodName
 						+ "' with types : " + map.get(varName) + " and " + type);
 				return false;
 			}
@@ -234,9 +228,6 @@ class ClassInfo {
 	}
 
 	public static Class<?> convert2Class(Type type) {
-
-		System.out.println("type : " + type);
-
 		switch (type.toString()) {
 		case "void":
 			return void.class;

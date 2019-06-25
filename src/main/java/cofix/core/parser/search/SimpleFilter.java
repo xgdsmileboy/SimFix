@@ -6,23 +6,6 @@
  */
 package cofix.core.parser.search;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import org.eclipse.jdt.core.dom.ASTNode;
-import org.eclipse.jdt.core.dom.ASTVisitor;
-import org.eclipse.jdt.core.dom.AnonymousClassDeclaration;
-import org.eclipse.jdt.core.dom.CompilationUnit;
-import org.eclipse.jdt.core.dom.MethodDeclaration;
-import org.eclipse.jdt.core.dom.MethodInvocation;
-import org.eclipse.jdt.core.dom.SimpleName;
-import org.eclipse.jdt.core.dom.Statement;
-import org.eclipse.jdt.core.dom.Type;
-
 import cofix.common.config.Constant;
 import cofix.common.util.JavaFile;
 import cofix.common.util.Pair;
@@ -34,22 +17,30 @@ import cofix.core.metric.Variable;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.ProjectInfo;
 import cofix.core.parser.node.CodeBlock;
+import cofix.core.search.CodeSearcher;
+import cofix.core.search.SearchResult;
+import org.eclipse.jdt.core.dom.*;
+
+import java.util.*;
 
 /**
  * @author Jiajun
  * @date Jun 29, 2017
  */
-public class SimpleFilter {
+public class SimpleFilter extends CodeSearcher {
 	private List<CodeBlock> _candidates = new ArrayList<>();
-	private CodeBlock _buggyCode = null;
-	private Set<Variable> _variables = null;
-	private Set<CondStruct.KIND> _condStruct = null;
-	private Set<OtherStruct.KIND> _otherStruct = null;
-	private Set<String> _methods = null;
+	private CodeBlock _buggyCode;
+	private Set<Variable> _variables;
+	private Set<CondStruct.KIND> _condStruct;
+	private Set<OtherStruct.KIND> _otherStruct;
+	private Set<String> _methods;
 	private int _max_line = 0;
 	private int DELTA_LINE = 10;
-	
-	public SimpleFilter(CodeBlock buggyCode) {
+	private double _simGuard = 0.5;
+
+	public SimpleFilter(CodeBlock buggyCode, double similarity) {
+		super(buggyCode, null);
+		_simGuard = similarity;
 		_buggyCode = buggyCode;
 		_variables = new HashSet<>(buggyCode.getVariables());
 		_condStruct = new HashSet<>();
@@ -66,8 +57,15 @@ public class SimpleFilter {
 		}
 		_max_line = _buggyCode.getCurrentLine() + DELTA_LINE;
 	}
-	
-	public List<Pair<CodeBlock, Double>> filter(String srcPath, double guard){
+
+	@Override
+	public SearchResult search(String filePath) {
+		SearchResult result = new SearchResult();
+		result.setBlocks(filter(filePath));
+		return result;
+	}
+
+	private List<Pair<CodeBlock, Double>> filter(String srcPath){
 		List<String> files = JavaFile.ergodic(srcPath, new ArrayList<String>());
 		List<Pair<CodeBlock, Double>> filtered = new ArrayList<>();
 		CollectorVisitor collectorVisitor = new CollectorVisitor();
@@ -75,7 +73,7 @@ public class SimpleFilter {
 			CompilationUnit unit = JavaFile.genAST(file);
 			collectorVisitor.setUnit(file, unit);
 			unit.accept(collectorVisitor);
-			filtered = filter(filtered, guard);
+			filtered = filter(filtered, _simGuard);
 		}
 		
 		Set<String> exist = new HashSet<>();
@@ -177,7 +175,7 @@ public class SimpleFilter {
 		}
 		return filtered;
 	}
-	
+
 	class CollectorVisitor extends ASTVisitor{
 		
 		private CompilationUnit _unit = null;

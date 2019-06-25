@@ -6,28 +6,6 @@
  */
 package cofix.main;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintStream;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.regex.Pattern;
-
-import org.apache.commons.io.FileUtils;
-import org.eclipse.jdt.core.dom.ASTNode;
-import org.eclipse.jdt.core.dom.ASTParser;
-import org.eclipse.jdt.core.dom.FieldAccess;
-import org.eclipse.jdt.core.dom.Name;
-import org.eclipse.jdt.core.dom.Type;
-import org.junit.runner.Result;
-
 import cofix.common.config.Constant;
 import cofix.common.inst.Instrument;
 import cofix.common.inst.MethodInstrumentVisitor;
@@ -47,7 +25,20 @@ import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.node.Node;
 import cofix.core.parser.search.BuggyCode;
-import cofix.core.parser.search.SimpleFilter;
+import cofix.core.search.CodeSearcher;
+import cofix.core.search.SearchResult;
+import cofix.core.search.SearchType;
+import cofix.core.search.SearcherFactory;
+import org.apache.commons.io.FileUtils;
+import org.eclipse.jdt.core.dom.*;
+import org.junit.runner.Result;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.util.regex.Pattern;
 
 /**
  * @author Jiajun
@@ -55,10 +46,10 @@ import cofix.core.parser.search.SimpleFilter;
  */
 public class Repair {
 
-	private AbstractFaultlocalization _localization = null;
-	private Subject _subject = null;
-	private List<String> _failedTestCases = null;
-	private Map<Integer, Set<Pair<String, String>>> _passedTestCasesMap = null;
+	private AbstractFaultlocalization _localization;
+	private Subject _subject;
+	private List<String> _failedTestCases;
+	private Map<Integer, Set<Pair<String, String>>> _passedTestCasesMap;
 	public Repair(Subject subject, AbstractFaultlocalization fLocalization) {
 		_localization = fLocalization;
 		_subject = subject;
@@ -152,9 +143,13 @@ public class Repair {
 				// get all variables can be used at buggy line
 				Map<String, Type> usableVars = NodeUtils.getUsableVarTypes(file, loc.getSecond());
 				// search candidate similar code block
-				SimpleFilter simpleFilter = new SimpleFilter(oneBuggyBlock);
-				
-				List<Pair<CodeBlock, Double>> candidates = simpleFilter.filter(src, 0.3);
+//				SimpleFilter simpleFilter = new SimpleFilter(oneBuggyBlock);
+//				List<Pair<CodeBlock, Double>> candidates = simpleFilter.filter(src, 0.3);
+
+				CodeSearcher searcher = SearcherFactory.getSearcher(oneBuggyBlock, SearchType.SIMFIX);
+				SearchResult result = searcher.search(src);
+				List<Pair<CodeBlock, Double>> candidates = result.getCodeBlocks();
+
 				List<String> source = null;
 				try {
 					source = JavaFile.readFileToList(file);

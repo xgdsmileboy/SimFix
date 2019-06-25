@@ -446,8 +446,8 @@ public class SimpleFilterTest {
 		System.out.println(codeBlock.toSrcString());
 		System.out.println(codeBlock.getFeatureVector());
 		
-		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
-		List<Pair<CodeBlock, Double>> candidates = simpleFilter.filter(searchPath, guard);
+		SimpleFilter simpleFilter = new SimpleFilter(codeBlock, guard);
+		List<Pair<CodeBlock, Double>> candidates = simpleFilter.search(searchPath).getCodeBlocks();
 		int i = 1;
 		for(Pair<CodeBlock, Double> block : candidates){
 			System.out.println("---------------- " + (i++) + " ----Similarity : " + block.getSecond() + "-------------------------------------");

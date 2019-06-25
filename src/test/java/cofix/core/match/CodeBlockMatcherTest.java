@@ -6,12 +6,6 @@
  */
 package cofix.core.match;
 
-import java.util.List;
-import java.util.Map;
-
-import org.eclipse.jdt.core.dom.Type;
-import org.junit.Test;
-
 import cofix.common.config.Constant;
 import cofix.common.util.Pair;
 import cofix.common.util.Subject;
@@ -21,6 +15,11 @@ import cofix.core.parser.ProjectInfo;
 import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.search.BuggyCode;
 import cofix.core.parser.search.SimpleFilter;
+import org.eclipse.jdt.core.dom.Type;
+import org.junit.Test;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author Jiajun
@@ -57,8 +56,8 @@ public class CodeBlockMatcherTest {
 		
 		Map<String, Type> allUsableVariabes = NodeUtils.getUsableVarTypes(buggyFile, buggyLine);
 		
-		SimpleFilter simpleFilter = new SimpleFilter(codeBlock);
-		List<Pair<CodeBlock, Double>> candidates = simpleFilter.filter(searchPath, 0.5);
+		SimpleFilter simpleFilter = new SimpleFilter(codeBlock, 0.5);
+		List<Pair<CodeBlock, Double>> candidates = simpleFilter.search(searchPath).getCodeBlocks();
 		int i = 1;
 		for(Pair<CodeBlock, Double> block : candidates){
 			System.out.println("---------------- " + (i++) + " ----Similarity : " + block.getSecond() + "-------------------------------------");
