@@ -10,7 +10,7 @@ package cofix.core.search.struct;
 import cofix.core.parser.node.CodeBlock;
 import cofix.core.search.CodeSearcher;
 import cofix.core.search.SearchResult;
-import cofix.core.search.tool.Filter;
+import cofix.core.search.filter.Filter;
 
 /**
  * @author: Jiajun

@@ -12,8 +12,8 @@ import cofix.core.search.simple.SimpleFilter;
 import cofix.core.search.learn.DeepSearcher;
 import cofix.core.search.struct.StructSearcher;
 import cofix.core.search.text.TextSearcher;
-import cofix.core.search.tool.Filter;
-import cofix.core.search.tool.StandardFilter;
+import cofix.core.search.filter.Filter;
+import cofix.core.search.filter.StandardFilter;
 
 /**
  * @author: Jiajun

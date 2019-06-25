@@ -8,7 +8,7 @@
 package cofix.core.search;
 
 import cofix.core.parser.node.CodeBlock;
-import cofix.core.search.tool.Filter;
+import cofix.core.search.filter.Filter;
 
 /**
  * @author: Jiajun

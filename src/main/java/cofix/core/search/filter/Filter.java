@@ -5,7 +5,7 @@
  * Written by Jiajun Jiang<jiajun.jiang@pku.edu.cn>.
  */
 
-package cofix.core.search.tool;
+package cofix.core.search.filter;
 
 import cofix.core.parser.node.CodeBlock;
 import cofix.core.search.SearchResult;
@@ -14,15 +14,9 @@ import cofix.core.search.SearchResult;
  * @author: Jiajun
  * @date: 2019-06-25
  */
-public class StandardFilter implements Filter {
+public interface Filter {
 
-    @Override
-    public SearchResult filter(SearchResult result) {
-        return result;
-    }
+    SearchResult filter(SearchResult result);
 
-    @Override
-    public boolean filter(CodeBlock block) {
-        return false;
-    }
+    boolean filter(CodeBlock block);
 }
