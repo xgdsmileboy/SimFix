@@ -13,8 +13,8 @@ import cofix.core.modify.Modification;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.ProjectInfo;
 import cofix.core.parser.node.CodeBlock;
-import cofix.core.parser.search.BuggyCode;
-import cofix.core.parser.search.SimpleFilter;
+import cofix.core.parser.finder.BuggyCode;
+import cofix.core.search.simple.SimpleFilter;
 import org.eclipse.jdt.core.dom.Type;
 import org.junit.Test;
 

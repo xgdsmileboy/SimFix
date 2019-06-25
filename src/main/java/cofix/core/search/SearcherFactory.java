@@ -8,7 +8,7 @@
 package cofix.core.search;
 
 import cofix.core.parser.node.CodeBlock;
-import cofix.core.parser.search.SimpleFilter;
+import cofix.core.search.simple.SimpleFilter;
 import cofix.core.search.learn.DeepSearcher;
 import cofix.core.search.struct.StructSearcher;
 import cofix.core.search.text.TextSearcher;

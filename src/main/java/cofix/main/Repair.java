@@ -24,7 +24,7 @@ import cofix.core.modify.Revision;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.node.CodeBlock;
 import cofix.core.parser.node.Node;
-import cofix.core.parser.search.BuggyCode;
+import cofix.core.parser.finder.BuggyCode;
 import cofix.core.search.CodeSearcher;
 import cofix.core.search.SearchResult;
 import cofix.core.search.SearchType;

@@ -4,10 +4,11 @@
  * strictly prohibited Proprietary and Confidential.
  * Written by Jiajun Jiang<jiajun.jiang@pku.edu.cn>.
  */
-package cofix.core.parser.search;
+package cofix.core.parser.finder;
 
 import java.util.List;
 
+import cofix.core.search.simple.SimpleFilter;
 import org.junit.Test;
 
 import cofix.common.config.Constant;

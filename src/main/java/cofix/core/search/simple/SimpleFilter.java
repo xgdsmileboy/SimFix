@@ -4,7 +4,7 @@
  * strictly prohibited Proprietary and Confidential.
  * Written by Jiajun Jiang<jiajun.jiang@pku.edu.cn>.
  */
-package cofix.core.parser.search;
+package cofix.core.search.simple;
 
 import cofix.common.config.Constant;
 import cofix.common.util.JavaFile;
@@ -17,6 +17,7 @@ import cofix.core.metric.Variable;
 import cofix.core.parser.NodeUtils;
 import cofix.core.parser.ProjectInfo;
 import cofix.core.parser.node.CodeBlock;
+import cofix.core.parser.finder.CodeFinder;
 import cofix.core.search.CodeSearcher;
 import cofix.core.search.SearchResult;
 import org.eclipse.jdt.core.dom.*;
@@ -222,7 +223,7 @@ public class SimpleFilter extends CodeSearcher {
 				// filter out anonymous classes
 				if(parent != null && !(parent.getParent() instanceof AnonymousClassDeclaration)){
 					int line = _unit.getLineNumber(node.getStartPosition());
-					CodeSearch codeSearch = new CodeSearch(_unit, line, _buggyCode.getCurrentLine(), statement);
+					CodeFinder codeSearch = new CodeFinder(_unit, line, _buggyCode.getCurrentLine(), statement);
 					CodeBlock codeBlock = new CodeBlock(_fileName, _unit, codeSearch.getASTNodes());
 					if(codeBlock.getCurrentLine() < _max_line){
 						_candidates.add(codeBlock);

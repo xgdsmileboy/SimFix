@@ -11,7 +11,7 @@ import org.junit.Test;
 import cofix.common.config.Constant;
 import cofix.common.util.Subject;
 import cofix.core.parser.ProjectInfo;
-import cofix.core.parser.search.BuggyCode;
+import cofix.core.parser.finder.BuggyCode;
 
 /**
  * @author Jiajun

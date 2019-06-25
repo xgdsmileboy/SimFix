@@ -4,7 +4,7 @@
  * strictly prohibited Proprietary and Confidential.
  * Written by Jiajun Jiang<jiajun.jiang@pku.edu.cn>.
  */
-package cofix.core.parser.search;
+package cofix.core.parser.finder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,11 +44,11 @@ import cofix.core.parser.NodeUtils;
  * @author Jiajun
  * @date Jun 29, 2017
  */
-public class CodeSearch {
+public class CodeFinder {
 
-	private CompilationUnit _unit = null;
-	private int _extendedLine = 0;
-	private Statement _extendedStatement = null;
+	private CompilationUnit _unit;
+	private int _extendedLine;
+	private Statement _extendedStatement;
 	private int _lineRange = 0;
 	private List<ASTNode> _nodes = new ArrayList<>(); 
 	private int _currentLines = 0;
@@ -56,16 +56,16 @@ public class CodeSearch {
 	private int MAX_MORE_THRESHOLD = 5;
 	
 
-	public CodeSearch(CompilationUnit unit, int extendedLine, int lineRange) {
+	public CodeFinder(CompilationUnit unit, int extendedLine, int lineRange) {
 		this(unit, extendedLine, lineRange, null);
 	}
 	
-	public CodeSearch(CompilationUnit unit, int extendedLine, int lineRange, Statement extendedStatement){
+	public CodeFinder(CompilationUnit unit, int extendedLine, int lineRange, Statement extendedStatement){
 		this(unit, extendedLine, lineRange, extendedStatement, 0);
 	}
 	
-	public CodeSearch(CompilationUnit unit, int extendedLine, int lineRange, Statement extendedStatement,
-			int max_less_threshold) {
+	public CodeFinder(CompilationUnit unit, int extendedLine, int lineRange, Statement extendedStatement,
+					  int max_less_threshold) {
 		_unit = unit;
 		_extendedLine = extendedLine;
 		_lineRange = lineRange;

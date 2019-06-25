@@ -4,7 +4,7 @@
  * strictly prohibited Proprietary and Confidential.
  * Written by Jiajun Jiang<jiajun.jiang@pku.edu.cn>.
  */
-package cofix.core.parser.search;
+package cofix.core.parser.finder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +38,7 @@ public class BuggyCode {
 //		FindNodeVisitor visitor = new FindNodeVisitor(unit, buggyLine);
 //		unit.accept(visitor);
 //		CodeBlock codeBlock = new CodeBlock(fileName, unit, visitor.getNodes());
-		CodeSearch codeSearch = new CodeSearch(unit, buggyLine, 5, null, 3);
+		CodeFinder codeSearch = new CodeFinder(unit, buggyLine, 5, null, 3);
 		CodeBlock codeBlock = new CodeBlock(fileName, unit, codeSearch.getASTNodes());
 		return codeBlock;
 	}
