@@ -24,6 +24,7 @@
         <project.build.base>${basedir}/target</project.build.base>
         <project.build.src>${project.build.base}/classes</project.build.src>
         <project.build.test>${project.build.base}/test-classes</project.build.test>
+        <lucene.version>5.5.0</lucene.version>
     </properties>
 
     <developers>
@@ -157,6 +158,22 @@
             <version>1.0</version>
             <scope>system</scope>
             <systemPath>${project.lib}/com.gzoltar-0.1.1-jar-with-dependencies.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-core</artifactId>
+            <version>${lucene.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-analyzers-common</artifactId>
+            <version>${lucene.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-queryparser</artifactId>
+            <version>${lucene.version}</version>
         </dependency>
 
     </dependencies>
