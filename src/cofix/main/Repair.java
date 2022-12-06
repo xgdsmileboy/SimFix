@@ -452,6 +452,7 @@ public class Repair {
 		
 		// validate patch using failed test cases
 		for(String testcase : _failedTestCases){
+			if (!testcase.contains("::")) continue;
 			String[] testinfo = testcase.split("::");
 			if(!Runner.testSingleTest(_subject, testinfo[0], testinfo[1])){
 				return ValidateStatus.TEST_FAILED;
